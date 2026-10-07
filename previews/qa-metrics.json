@@ -1,0 +1,241 @@
+{
+  "date": "2026-10-07",
+  "browser": "Codex in-app Chromium",
+  "measurements": [
+    {
+      "id": "apple-product",
+      "desktop": {
+        "controls": 6,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "SONO — 产品即主角 · Design Atlas",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "stripe-platform",
+      "desktop": {
+        "controls": 4,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "TIDAL — 复杂平台的轻盈叙事 · Design Atlas",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "linear-workflow",
+      "desktop": {
+        "controls": 7,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "VECTOR — 克制的工作流精度 · Design Atlas",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "notion-editorial",
+      "desktop": {
+        "controls": 6,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "MARGIN — 有人情味的模块化工作台 · Design Atlas",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "zelda-world",
+      "desktop": {
+        "controls": 4,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "ISLAND STUDY · 群岛之间 — 世界探索 Demo",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "persona-kinetic",
+      "desktop": {
+        "controls": 4,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "After Hours · 午夜来信 — 角色拼贴 Demo",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "hand-drawn",
+      "desktop": {
+        "controls": 5,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "Field Notes — Make room for little things",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "isometric-3d",
+      "desktop": {
+        "controls": 4,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "Little Terraces — A world in balance",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "line-art",
+      "desktop": {
+        "controls": 5,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "Monoline — Space without noise",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "shape-morph",
+      "desktop": {
+        "controls": 7,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "Form / Shift — Ideas don't stand still",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "swiss-grid",
+      "desktop": {
+        "controls": 7,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "Margin Institute · 字与城市",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "bauhaus-geometry",
+      "desktop": {
+        "controls": 5,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "Form/03 · 形与功能的实验",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "retro-80s",
+      "desktop": {
+        "controls": 20,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "Nightshift · After Hours Synth",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "id": "pixel-world",
+      "desktop": {
+        "height": 1000,
+        "scrollWidth": 1425,
+        "title": "Tiny Tides · 小小潮汐岛",
+        "width": 1440
+      },
+      "mobile": {
+        "bodyWidth": 375.2000122070313,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    }
+  ],
+  "elementsLab": {
+    "desktop": {
+      "height": 1000,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    "mobile": {
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    }
+  }
+}

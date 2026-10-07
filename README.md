@@ -17,6 +17,18 @@
 
 每个详情页提供：设计机制、凸显产品的方法、浏览交互、主题、适用/慎用场景、颜色/字体/布局/动效 Tokens、完整 Prompt、负面约束、改造练习、来源、可运行 iframe、390px 手机预览、截图、调研文档及代码路径。可以从上一项/下一项依次学习。
 
+## 可交互的设计元素实验室
+
+打开 **fundamentals.html**，或点击目录中的“设计元素实验室”。它把配色、字体、布局、留白、形状、图形、层级、质感、动效直接做成控件，作用于同一份示例内容；桌面版控件和预览并排，手机版纵向重排。
+
+- 切换三套协调方案，观察颜色、字体、形状、间距如何共同表达气质。
+- 从 14 个案例带入要素，再单独替换一项，观察组合变化；详情页的实验室链接自动带入当前风格。
+- 调整背景、文字、强调色，实时查看纯色文字对比度；切换三种布局和三幅本地 SVG，改变层级、圆角、留白、质感与操作反馈。
+- 复制当前配置 JSON 和 Prompt，包含实际参数及参考来源；浏览器拒绝剪贴板时可展开文本手动复制。
+- 示例笔记可实际编辑与保存；这是本次页面的临时交互，不是持久化笔记产品。
+
+字体、间距及形状的案例带入是明确标注的教学归纳。完整网页的信息架构和关键交互仍应在对应独立 Demo 中学习。设计框架与依据见 [设计基础调研](research/foundations.md)。
+
 ## 目录
 
 ```text
@@ -27,6 +39,7 @@ demos/<id>/              14 套独立 HTML/CSS/JS/SVG
 previews/                实际浏览器渲染截图
 catalog.js               从 entries/ 生成的离线检索目录
 index.html + atlas.*     本地参考库界面
+fundamentals.*          可交互设计元素实验室
 scripts/build.mjs        生成目录，不需要打包器
 scripts/check.mjs        数据、引用、语法与依赖检查
 scripts/serve.mjs        仅绑定 127.0.0.1 的静态服务器
@@ -45,6 +58,8 @@ CONTRIBUTING.md          添加条目的字段与质量约定
 5. 用 Git 留存：`git add entries research demos previews catalog.js`，然后提交明确的变更说明。
 
 需要迁移时复制整个目录（包括 `.git`）即可保留历史。`git log --oneline` 查看分项提交，`git show <commit>` 回看来源或实现的演变。该仓库已在本地初始化与提交，未配置远端；如果以后需要云端备份，可配置你自己的远端仓库。
+
+交付的 ZIP 同时包含源码、研究、桌面/手机截图和 `.git`；旁边的 `design-atlas-history.bundle` 是独立 Git 历史备份，可以用 `git clone design-atlas-history.bundle design-atlas-restored` 恢复。
 
 ## 研究范围与素材
 

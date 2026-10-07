@@ -36,5 +36,14 @@ for(const e of entries){
   for(const match of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)){if(!match[1].trim())continue;try{new vm.Script(match[1]);scripts++;}catch(err){fail(`${e.id}: inline JS ${err.message}`);}}
   for(const file of fs.readdirSync(path.dirname(demoPath)).filter(x=>x.endsWith('.js'))){try{new vm.Script(fs.readFileSync(path.join(path.dirname(demoPath),file),'utf8'));scripts++;}catch(err){fail(`${e.id}: ${file} ${err.message}`);}}
 }
-for(const file of ['atlas.js','catalog.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
+for(const file of ['atlas.js','catalog.js','fundamentals.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
+for(const file of ['index.html','fundamentals.html']){
+  const html=fs.readFileSync(path.join(root,file),'utf8');
+  if(!/<meta[^>]+name=["']viewport["']/.test(html))fail(`${file}: missing viewport`);
+  for(const match of html.matchAll(/<(?:script|img|link)[^>]+(?:src|href)=["']([^"']+)["']/g)){
+    const ref=match[1];
+    if(/^(https?:)?\/\//.test(ref))fail(`${file}: remote asset ${ref}`);
+    else if(!ref.startsWith('data:')&&!ref.startsWith('#')&&!fs.existsSync(path.join(root,ref.split('?')[0])))fail(`${file}: missing local asset ${ref}`);
+  }
+}
 if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}else console.log(`PASS: ${entries.length} entries, ${sourceCount} source records, ${scripts} JS scripts; local assets and required fields valid${process.argv.includes('--require-previews')?', preview files present':''}.`);
