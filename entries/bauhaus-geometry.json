@@ -95,5 +95,16 @@
     "hierarchy": "形与功能主张 → 可操作构成 → 材料课程 → 制作理念。",
     "motion": "构成预设220ms过渡；reduced-motion关闭过渡",
     "coherence": "形色实验与排版共享比例关系；每个色块承担构成任务，不能把原色和几何物随机铺满。"
+  },
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "light",
+    "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+    "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+  },
+  "soundBehavior": {
+    "kind": "none",
+    "control": "本练习无背景音乐。",
+    "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
   }
 }

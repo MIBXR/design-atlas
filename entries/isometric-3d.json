@@ -98,5 +98,16 @@
     "hierarchy": "平衡主张 → 场景 → 图层聚焦 → 漫游理念。",
     "motion": "点击后 650ms 图层偏移/透明度变化；无滚轮劫持；reduced motion 即时完成",
     "coherence": "柔和调色、衬线标题和稳定投影共享安静情绪；结构展开解释层次，不能随意更换投影角度。"
+  },
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "light",
+    "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+    "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+  },
+  "soundBehavior": {
+    "kind": "none",
+    "control": "本练习无背景音乐。",
+    "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
   }
 }

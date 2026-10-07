@@ -186,6 +186,51 @@
       "bytes": 116605,
       "sha256": "79b2e9ccf178ec4fcd83dec4cb39f7e5c1b5851919359a0fc87b7a32809fc024",
       "copyright": "Apple. Brand-owned media; personal study only."
+    },
+    {
+      "file": "assets/aperture-light.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/aperture/max_light__dlmrw5m29ssy_small.jpg",
+      "purpose": "Original aperture comparison photography",
+      "bytes": 52586,
+      "sha256": "accfef76197e75ac5ce6e479dd774467fa61e1f5e5c65ee475a06a0e7142638d",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/aperture-balance.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/aperture/balance__dtrq8w3uj9iu_small.jpg",
+      "purpose": "Original aperture comparison photography",
+      "bytes": 80725,
+      "sha256": "067925147b1e069e9fe191959ec4de8473474bc8f22e2288c35e46fbdb5a6a33",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/aperture-depth.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/aperture/depth__eqlqllrh0v8m_small.jpg",
+      "purpose": "Original aperture comparison photography",
+      "bytes": 103811,
+      "sha256": "36e7a541eb594674f79a451abdf23fd18c05cdfe3830e1ee54f2f15c3c0b7820",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/aperture-maxdepth.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/aperture/max_depth__chz65982bi4i_small.jpg",
+      "purpose": "Original aperture comparison photography",
+      "bytes": 59498,
+      "sha256": "3b4ee0f55288ac5a15c0d92d75aef10531cada9e82929a813eb3aa62cad31f41",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/hls.min.js",
+      "sourceUrl": "https://cdn.jsdelivr.net/npm/hls.js@1.6.15/dist/hls.min.js",
+      "purpose": "HLS.js library for the original user-triggered Apple film; BSD-2-Clause",
+      "bytes": 541870,
+      "sha256": "413a83e2bb0c77ed0bf0be105d539d17ef45dfd984a0b13ecd3b14a901383938",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
     }
   ]
 }

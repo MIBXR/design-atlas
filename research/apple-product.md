@@ -1,35 +1,43 @@
-# Apple：真实摄影与滚动产品叙事
+# Apple iPhone 18 Pro：当前页面的设计与交互
 
-观察日期：2026-10-07。参考：[公开页面](https://www.apple.com/iphone-18-pro/)。原站内容以该日期与语言版本为准。
+来源：[https://www.apple.com/iphone-18-pro/](https://www.apple.com/iphone-18-pro/)。采集日期：2026-10-07。范围：美国英文产品页，单一当前快照。
 
-## 设计特点与分析
+以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。
 
-黑色全宽登场配44px导航与52px信息带；名称靠舞台左下、购买为右下蓝色胶囊。Highlights以深灰底、56px标题与大圆角摄影建立收益层级；Design用约96px标题和左侧七个细节胶囊。玻璃质感章节导航随浏览固定。
+## 触发、视觉响应与用途
 
-同一硬件从整体转向细节，摄影、标题尺度和负空间共同组织长叙事；固定局部导航维持方向与行动可达。这是页面分析。
+- 进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。
 
-## 交互机制与复现映射
+- Highlights 进入视口 → 圆角摄影和进度控件带入，五项图库自动推进；手动选择/暂停/最后重播 → 按相机、续航、颜色、性能、Siri 依次建立产品重点。
 
-| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
-|---|---|---|
-| 登场／首屏 | 官方产品视频与末帧；完整自动序列未稳定观察。源容器恒定scale1.40625是fit，不是镜头动画。 | 使用官方MP4、末帧与重播；首屏无额外CSS缩放。 |
-| Highlights进入视口 | 控制由translateY(180px)进入；Camera→Battery→Colors→A20 Pro→Siri AI；有限播放结束后为Replay。 | 五静帧、进度、暂停和末尾重播；每项5秒、入场.65秒为近似；专用五段媒体未迁移。 |
-| 镜头滚动 | VideoScrub加载窗口a0t−250vh至a0b+100vh；进度锚点a0t−100vh至a0b−100vh，范围[.01,1]。 | 官方2160×1620、4.984秒WebM；220vh容器内sticky，p=clamp((viewportHeight−top)/height)，seek到(.01+.99p)×duration，视频保持暂停。 |
-| 镜头标题 | 源视频2.31秒时标题opacity1、4.11秒时opacity0；为两处采样。 | 与视频共用滚动进度，p=.48→.73淡出是近似；减少动态使用poster与静态标题。 |
-| Design选择 | 胶囊切换机身、镜头、尺寸与控件视图。 | 官方静帧与配色名称同步；完整旋转3D未实现。 |
+- Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。
 
-![镜头舞台：官方视频中的尺度变化与标题交接](../previews/apple-camera-motion.jpg)
+- 镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。
 
-## 理论与约束
+- 景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。
 
-Apple HIG Motion用于动效目的与减少动态策略，属于应用规范向网页的迁移。价格、供应与交易以官网为准；完整性能、共享功能和其他章节未覆盖。
+- Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。
 
-## 来源与材料
+## 完整浏览路径
 
-- [Apple iPhone 官方分类页](https://www.apple.com/iphone/)（实例）：iPhone产品分类与比较入口；具体交互以iPhone 18 Pro页面为准。
-- [Apple iPhone 18 Pro 产品页](https://www.apple.com/iphone-18-pro/)（实例）：2026-10-07产品页：首屏、Highlights、Design与镜头滚动；图库有限播放、暂停和末尾重播。
-- [Apple HIG — Motion](https://developer.apple.com/design/human-interface-guidelines/motion)（规范）：动效目的和减少动态支持；应用规范向网页的迁移。
-- [Apple 当前页样式](https://www.apple.com/v/iphone-18-pro/c/built/styles/overview.built.css)（实例）：VideoScrub容器、gallery控制与源样式，用于区分布局缩放和视频内镜头运动。
-- [Apple 当前页脚本](https://www.apple.com/v/iphone-18-pro/c/built/scripts/overview/main.built.js)（实例）：VideoScrub加载窗口a0t−250vh至a0b+100vh；进度锚点a0t−100vh至a0b−100vh，范围.01至1。
+首屏 → Highlights → Design viewer → 相机滚动段 → 景深比较 → 摄影横向架子 → 性能 → 续航 → 机型比较 → 浅色共享功能/购物/材料架子 → 说明与页尾。较原页缩短内容量，保留主要交互类型和后段明暗交接。
 
-[原站对照](screenshots/apple-hero-source.jpg) · [Demo](../demos/apple-product/index.html) · [完整Prompt与设计元素](../entries/apple-product.json) · [还原范围](../demos/apple-product/fidelity.md) · [资产来源](../demos/apple-product/assets-manifest.json)。品牌与媒体权利归原作者。
+## 原站事实和复现边界
+
+匿名浏览器实测了七项 viewer 中 Colors 卡的 inline 展开与原站影片层；源影片 muted=false，首屏其他媒体 muted=true。源公共组件包含 StaggeredFadeIn、ProductViewer 与 VideoScrub。此环境源页处于 no-enhanced 分支，相机增强滚动视频未实际播放，不能称该状态现场验证通过。
+
+七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。
+
+## 主题与声音
+
+产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。
+
+首屏和滚动视频静音；Watch the film 点击打开官方 HLS 影片，172.38 秒，用户触发播放后有声音，可静音、调音量和全屏；关闭即暂停。 静音摄影先建立材质与镜头重点，点击影片后才加入音乐和讲解，避免读页时自动发声。
+
+## 配色、排版与元素协调
+
+主题和运动共同建立产品重点：以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。
+
+## 可复用 Prompt
+
+以 https://www.apple.com/iphone-18-pro/ 在【采集日期】的 美国英文产品页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。官方图片、字标与视频不重画，保持黑色产品舞台和后段浅色购物章节。首屏原始 MP4、Highlights 进度轮播、7 项 viewer inline 说明展开/胶囊折叠下移/图像变化/关闭/前后/配色、景深比较和机型选择均保留。用双向 sticky 段串联媒体先出现、标题淡出、说明接入；静帧替代视频也不能删除这种交接机制。横向摄影架子用原生滚动。Watch the film 必须是独立全屏官方影片，不用首屏重播冒充；声音只在用户触发后出现，关闭暂停。减少动态时给静态摄影和完整文案。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。

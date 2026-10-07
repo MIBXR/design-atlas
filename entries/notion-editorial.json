@@ -13,30 +13,29 @@
     "文档",
     "产品视频"
   ],
-  "summary": "居中巨字、六种动作词胶囊、团队插画与真实工作空间视频建立人文产品语气，Capture/Find双列和整行Automate解释三种能力。",
+  "summary": "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。",
   "accent": "#0075e6",
   "background": "#ffffff",
   "principles": [
-    "居中巨字先建立团队与AI的共同工作主题。",
-    "手绘人物与产品界面一起出现，情境与工具互相解释。",
-    "浅蓝动词与蓝色行动建立有限、清楚的视觉重点。",
-    "功能说明使用真实文档界面，避免插画替代功能证据。"
+    "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。",
+    "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+    "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+    "第一方素材保持比例；手机保留原站实际变体。"
   ],
   "productFocus": "Ramp HQ产品视频具体展示团队与agents；Capture/Find并列呈现上下文与答案，整行Automate强调任务执行。",
   "interaction": [
-    "动作胶囊自动轮换，保留点击下一项作为本地扩展；reduced-motion不自动轮换。",
-    "官方产品视频播放/暂停与真实media状态同步。",
-    "Product点击展开Capture/Find/Automate菜单。",
-    "下方Capture/Find两列与整行Automate；功能示例、工作空间栏目保留本地状态。"
+    "2500ms 自动 Think/Ship/Create/Build/Jam/Scale → 词直接替换，测量 scrollWidth 后宽度以 300ms cubic-bezier(.86,0,.07,1) 变化，底色/圆点对应变化；这是源机制，没有给文字加不存在的飞入飞出。",
+    "桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。",
+    "客户标识原生连续横移，指针停留暂停；手机保持条带，不把标识排成多行墙。",
+    "桌面 Product/Resources 指针进入与点击 → 首次 opacity/translateY(-16px) 250ms ease-out，退出 150ms ease-in、延迟 50ms；已打开分类按源 instantSwitch 直接切换，快速反转取消旧退出，减少动态直接完成；手机打开全屏菜单 → Product/AI/Resources 原地单开，切换收起前组，再点同组收起；其他分类变灰，底部 Download app/Log in 固定。源 CSS 子展开 300ms、入口 350ms，内容/底部延迟 200/250ms；关闭/Escape 恢复滚动和焦点，维持层级与行动位置。",
+    "Capture/Find 两列和 Automate 通栏保持不同层次；下方五用途横向入口、团队故事、结束行动、页尾按源顺序。页面演示账户按钮先本地说明，手机菜单链接使用已观察的原站公开入口。"
   ],
-  "theme": "高白底、近黑巨字、蓝色按钮、手绘人物；功能区不同浅色底，文档界面保持轻边框。",
+  "theme": "营销首页固定白底、浅色 Bento 和蓝色 CTA；没有全局主题切换。产品编辑器内的主题不等于这个首页主题。",
   "constraints": [
-    "官方插画、产品图、NotionInter和字标保持比例。",
-    "品牌传播文章和应用排版文章各自注明适用范围。",
-    "六词自动轮换、内容测宽；手动下一项为本地扩展。",
-    "视频自然循环、默认静音并可暂停；减少动态停止自动媒体与词轮换。",
-    "Capture/Find双列、Automate整行；手机单列，交互不依赖hover。",
-    "问答、文档与任务为本地示例；真实搜索和agent执行未覆盖。"
+    "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+    "七头像为官方原素材，组合间距、标识 24s 周期和菜单指针离开等待 150ms 是拟合；Bento 使用官方完整静帧而非全部独立浮层，三故事数量与正文缩短。详情对话框内的勾选/问答/agent 反馈是本地示范，并不声称是原站首页机制或真实模型执行。",
+    "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+    "减少动态保留可读内容、键盘焦点和手动选择。"
   ],
   "useCases": [
     "知识协作产品",
@@ -58,24 +57,25 @@
     ],
     "type": "本地 NotionInter regular/bold；首屏94px、动词72px、正文20px；手机45px。",
     "layout": "居中94px标题、1120px工作空间视频；Capture/Find双列bento、整行Automate；手机单列与官方移动图。",
-    "motion": "Think/Ship/Create/Build/Jam/Scale每2500ms轮换；内容测宽与300ms cubic-bezier(.86,0,.07,1)；10.967秒官方视频静音循环，滚出视口继续播放。"
+    "motion": "Think/Ship/Create/Build/Jam/Scale每2500ms轮换；内容测宽与300ms cubic-bezier(.86,0,.07,1)；10.967秒官方视频静音循环，滚出视口继续播放。 桌面dropdown首入250ms ease-out/-16px、退出150ms ease-in+50ms delay、分类instantSwitch来自源CSS/JS。"
   },
   "composition": {
-    "color": "高白底、近黑巨字、蓝色按钮、手绘人物；功能区不同浅色底，文档界面保持轻边框。",
+    "color": "营销首页固定白底、浅色 Bento 和蓝色 CTA；没有全局主题切换。产品编辑器内的主题不等于这个首页主题。",
     "typography": "本地 NotionInter regular/bold；首屏94px、动词72px、正文20px；手机45px。",
-    "layout": "居中94px标题、1120px工作空间视频；Capture/Find双列bento、整行Automate；手机单列与官方移动图。",
-    "imagery": "94px标题、浅蓝胶囊、官网字体；官方hero视频/poster和mobile图；官网capture/find/automate图片 + 本地示例弹窗",
+    "layout": "语言提示/导航 → 动作胶囊/头像/桌面产品视频 → 标识条带 → 两列+通栏 Bento → 五用途 → 团队故事 → 结束行动 → 页尾。",
+    "imagery": "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。",
     "shape": "大圆胶囊动词、8px按钮、20px功能区；插画自然外轮廓。",
-    "hierarchy": "Ramp HQ产品视频具体展示团队与agents；Capture/Find并列呈现上下文与答案，整行Automate强调任务执行。",
-    "motion": "Think/Ship/Create/Build/Jam/Scale每2500ms轮换；内容测宽与300ms cubic-bezier(.86,0,.07,1)；10.967秒官方视频静音循环，滚出视口继续播放。",
-    "coherence": "字体、色彩、素材、信息结构与Notion公开页一致；首屏核心构图和素材保持真实。后续功能文案为概述，部分功能背景与文档示例为局部迁移，不称整站像素级复制；未还原所有客户墙、真实搜索和agent执行。"
+    "hierarchy": "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。",
+    "motion": "2500ms 自动 Think/Ship/Create/Build/Jam/Scale → 词直接替换，测量 scrollWidth 后宽度以 300ms cubic-bezier(.86,0,.07,1) 变化，底色/圆点对应变化；这是源机制，没有给文字加不存在的飞入飞出。；桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。；客户标识原生连续横移，指针停留暂停；手机保持条带，不把标识排成多行墙。；桌面 Product/Resources 指针进入与点击 → 首次 opacity/translateY(-16px) 250ms ease-out，退出 150ms ease-in、延迟 50ms；已打开分类按源 instantSwitch 直接切换，快速反转取消旧退出，减少动态直接完成；手机打开全屏菜单 → Product/AI/Resources 原地单开，切换收起前组，再点同组收起；其他分类变灰，底部 Download app/Log in 固定。源 CSS 子展开 300ms、入口 350ms，内容/底部延迟 200/250ms；关闭/Escape 恢复滚动和焦点，维持层级与行动位置。",
+    "coherence": "七头像为官方原素材，组合间距、标识 24s 周期和菜单指针离开等待 150ms 是拟合；Bento 使用官方完整静帧而非全部独立浮层，三故事数量与正文缩短。详情对话框内的勾选/问答/agent 反馈是本地示范，并不声称是原站首页机制或真实模型执行。",
+    "scroll": "语言提示/导航 → 动作胶囊/头像/桌面产品视频 → 标识条带 → 两列+通栏 Bento → 五用途 → 团队故事 → 结束行动 → 页尾。"
   },
   "sources": [
     {
-      "title": "Notion 当前首页",
+      "title": "Notion 当前公开页面",
       "url": "https://www.notion.com/",
-      "type": "实例",
-      "note": "2026-10-07首页：六词轮换、Product点击、Capture/Find双列与Automate整行、视频播放/暂停。"
+      "note": "采集日期 2026-10-07；英文首页与简体中文语言提示",
+      "type": "实例"
     },
     {
       "title": "Notion brand campaign",
@@ -88,22 +88,10 @@
       "url": "https://www.notion.com/blog/updating-the-design-of-notion-pages",
       "type": "理论",
       "note": "2026-03-18应用页面的阅读间距与列表分组；用于本地文档示例。"
-    },
-    {
-      "title": "Notion 当前标题脚本",
-      "url": "https://www.notion.com/_next/static/chunks/1dh2_szm1xs0g.js",
-      "type": "实例",
-      "note": "六词顺序和setInterval2500，内容测宽机制。"
-    },
-    {
-      "title": "Notion 当前标题样式",
-      "url": "https://www.notion.com/_next/static/chunks/40jeqhz4ax8oh.css",
-      "type": "实例",
-      "note": "标签宽度300ms cubic-bezier(.86,0,.07,1)及对应组件样式。"
     }
   ],
-  "prompt": "以【观察日期】的【Notion官网URL】制作局部设计研究页。保留白底、居中94px巨字、官方NotionInter、原始字标、浅蓝动作胶囊与蓝色小圆角行动按钮。动作词按Think/Ship/Create/Build/Jam/Scale每2500ms自动轮换，分别配蓝/绿/橙/黄/紫/青；标签根据scrollWidth测宽，在固定mask内以300ms cubic-bezier(.86,0,.07,1)改变宽度，字体加载后重测。保留手动下一项作为本地扩展，减少动态时停止自动轮换，动态标题不持续aria-live广播。首屏使用真实团队插画与10.967秒Ramp HQ产品视频，默认静音循环，滚出视口仍播放；按钮依据真实play/pause事件更新状态，减少动态默认暂停，手机用官方移动图。下方Capture/Find使用两张浅灰bento并列，Automate占下一整行，图像和不同浅色背景按能力区分，局部箭头反馈即可。Product点击展开Capture/Find/Automate菜单；工作空间栏目、问答和任务示例可操作且明确为本地模拟。手机单列、正文可读、键盘焦点清楚、弹窗Escape关闭，保留自然滚动。记录资产与来源，区分品牌活动插画理论、应用排版原则和当前首页事实；客户墙、真实搜索、agent执行及完整后续内容列为未覆盖。复用到【目标知识产品】时以真实模块重组信息顺序。",
-  "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+  "prompt": "以 https://www.notion.com/ 在【采集日期】的 英文首页与简体中文语言提示 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 Notion 字体、字标与七头像、白底居中巨字、蓝色小圆角 CTA，动作胶囊按源 2500ms 直接替词，仅 300ms 测量宽度缓动与对应颜色，不添加飞字。桌面产品视频静音循环；手机头像居标题上方、hero 媒体隐藏，客户条带持续横移。Capture/Find 并列、Automate 通栏，再接五用途、故事、行动和页尾；正常滚动，不增加整屏遮罩。桌面菜单保留指针/键盘路径、250ms首入/-16px、150ms退出加50ms延迟和分类instantSwitch，手机 Product/AI/Resources 原地单开，300ms 展开、其他分类变灰，底部 Download app/Log in 固定，关闭恢复阅读。页面固定浅色，无背景音乐，减少动态保留静态字与手动视频。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+  "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
   "demo": "demos/notion-editorial/index.html",
   "preview": "previews/notion-editorial.jpg",
   "research": "research/notion-editorial.md",
@@ -112,5 +100,17 @@
   "implementation": "reference-study",
   "fidelity": "demos/notion-editorial/fidelity.md",
   "assetManifest": "demos/notion-editorial/assets-manifest.json",
-  "referencePreview": "research/screenshots/notion-editorial-source.png"
+  "referencePreview": "research/screenshots/notion-editorial-source.png",
+  "capturedAt": "2026-10-07",
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "light",
+    "control": "营销首页固定白底、浅色 Bento 和蓝色 CTA；没有全局主题切换。产品编辑器内的主题不等于这个首页主题。",
+    "designReason": "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。"
+  },
+  "soundBehavior": {
+    "kind": "video",
+    "control": "桌面官方 hero 产品演示默认静音循环，有本地暂停/播放；手机当前源页隐藏这一媒体区域。没有背景音乐。",
+    "interactionRole": "演示内部 UI 展示团队和 agent 的工作，静音让主标题与插画保留阅读主导。"
+  }
 }

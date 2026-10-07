@@ -111,5 +111,16 @@
     "hierarchy": "世界地图 → 地点索引 → 步进操作 → 探索手账。",
     "motion": "移动以tile步进、静态地图；reduced-motion保留即时状态更新",
     "coherence": "低分辨率地景、有限调色与清楚状态共同形成游戏感；中文说明保留正常可读字体，不强行像素化。"
+  },
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "dark",
+    "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+    "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+  },
+  "soundBehavior": {
+    "kind": "none",
+    "control": "本练习无背景音乐。",
+    "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
   }
 }

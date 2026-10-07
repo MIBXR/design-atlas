@@ -1,4 +1,4 @@
-/* Geometry read from the public reference DOM on 2026-10-07. */
+/* Public desktop and mobile DOM geometry; animation controller is local. */
 window.CHATGPT_MOTION_LAYERS = {
   "chat": [
     {
@@ -9,7 +9,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 21.652,
       "rotation": 0.0,
       "z": 1,
-      "parallax": 36
+      "parallax": 36,
+      "mobile": {
+        "x": 20.55,
+        "y": 8.76,
+        "width": 24,
+        "rotation": -10,
+        "z": 1,
+        "edge": "top"
+      }
     },
     {
       "name": "chat-mark-top",
@@ -19,7 +27,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 4.391,
       "rotation": 0.0,
       "z": 2,
-      "parallax": 42
+      "parallax": 42,
+      "mobile": {
+        "x": 78,
+        "y": 12,
+        "width": 8.015,
+        "rotation": 9,
+        "z": 4,
+        "edge": "top"
+      }
     },
     {
       "name": "chat-mark-left",
@@ -29,7 +45,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 5.23,
       "rotation": 4.5,
       "z": 3,
-      "parallax": 48
+      "parallax": 48,
+      "mobile": {
+        "x": 1.59,
+        "y": 41.79,
+        "width": 9.764,
+        "rotation": -7.5,
+        "z": 4,
+        "edge": "left"
+      }
     },
     {
       "name": "chat-mark-bottom",
@@ -39,7 +63,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 3.805,
       "rotation": 4.5,
       "z": 4,
-      "parallax": 36
+      "parallax": 36,
+      "mobile": {
+        "x": 92,
+        "y": 78.75,
+        "width": 8.866,
+        "rotation": 11.5,
+        "z": 4,
+        "edge": "right"
+      }
     },
     {
       "name": "chat-blob",
@@ -49,7 +81,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 7.19,
       "rotation": 0.0,
       "z": 5,
-      "parallax": 42
+      "parallax": 42,
+      "mobile": {
+        "x": 12.11,
+        "y": 96.88,
+        "width": 10.1,
+        "rotation": 0,
+        "z": 3,
+        "edge": "left"
+      }
     },
     {
       "name": "chat-tomato",
@@ -59,7 +99,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 16.112,
       "rotation": 0.0,
       "z": 6,
-      "parallax": 48
+      "parallax": 48,
+      "mobile": {
+        "x": 98.61,
+        "y": 36,
+        "width": 27,
+        "rotation": 8,
+        "z": 2,
+        "edge": "right"
+      }
     },
     {
       "name": "chat-flower",
@@ -69,7 +117,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 14.144,
       "rotation": 0.0,
       "z": 7,
-      "parallax": 36
+      "parallax": 36,
+      "mobile": {
+        "x": 0.87,
+        "y": 68,
+        "width": 24,
+        "rotation": -7,
+        "z": 2,
+        "edge": "left"
+      }
     }
   ],
   "work": [
@@ -81,7 +137,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 4.391,
       "rotation": 0.0,
       "z": 1,
-      "parallax": 36
+      "parallax": 36,
+      "mobile": {
+        "x": 67.81,
+        "y": 12,
+        "width": 8.015,
+        "rotation": -8,
+        "z": 4,
+        "edge": "top"
+      }
     },
     {
       "name": "work-mark-left",
@@ -91,7 +155,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 5.23,
       "rotation": 4.5,
       "z": 2,
-      "parallax": 42
+      "parallax": 42,
+      "mobile": {
+        "x": 8,
+        "y": 34,
+        "width": 9.764,
+        "rotation": 13.5,
+        "z": 4,
+        "edge": "left"
+      }
     },
     {
       "name": "work-mark-right",
@@ -101,7 +173,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 4.375,
       "rotation": 0.0,
       "z": 3,
-      "parallax": 48
+      "parallax": 48,
+      "mobile": {
+        "x": 93,
+        "y": 32,
+        "width": 8.02,
+        "rotation": -5,
+        "z": 4,
+        "edge": "right"
+      }
     },
     {
       "name": "work-mark-bottom",
@@ -111,7 +191,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 3.805,
       "rotation": 4.5,
       "z": 4,
-      "parallax": 36
+      "parallax": 36,
+      "mobile": {
+        "x": 92,
+        "y": 75,
+        "width": 8.866,
+        "rotation": 11.5,
+        "z": 4,
+        "edge": "right"
+      }
     },
     {
       "name": "work-plus",
@@ -121,7 +209,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 8.682,
       "rotation": 0.0,
       "z": 5,
-      "parallax": 42
+      "parallax": 42,
+      "mobile": {
+        "x": 27.04,
+        "y": 6.13,
+        "width": 12,
+        "rotation": -7,
+        "z": 4,
+        "edge": "top"
+      }
     },
     {
       "name": "work-attachment",
@@ -131,7 +227,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 43.559,
       "rotation": -8.56,
       "z": 6,
-      "parallax": 48
+      "parallax": 48,
+      "mobile": {
+        "x": 98,
+        "y": 5.24,
+        "width": 40,
+        "rotation": -11.56,
+        "z": 5,
+        "edge": "right"
+      }
     },
     {
       "name": "work-card",
@@ -141,7 +245,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 24.671,
       "rotation": 18.53,
       "z": 7,
-      "parallax": 36
+      "parallax": 36,
+      "mobile": {
+        "x": -1.82,
+        "y": 83.05,
+        "width": 26.267,
+        "rotation": 9.53,
+        "z": 1,
+        "edge": "left"
+      }
     }
   ],
   "code": [
@@ -153,7 +265,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 4.391,
       "rotation": 0.0,
       "z": 1,
-      "parallax": 36
+      "parallax": 36,
+      "mobile": {
+        "x": 58.73,
+        "y": -1.4,
+        "width": 8.015,
+        "rotation": 5,
+        "z": 4,
+        "edge": "top"
+      }
     },
     {
       "name": "codex-mark-bottom",
@@ -163,7 +283,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 3.805,
       "rotation": 4.5,
       "z": 2,
-      "parallax": 42
+      "parallax": 42,
+      "mobile": {
+        "x": 92,
+        "y": 75,
+        "width": 8.866,
+        "rotation": -3.5,
+        "z": 4,
+        "edge": "right"
+      }
     },
     {
       "name": "codex-ascii",
@@ -173,7 +301,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 14.8,
       "rotation": 0.0,
       "z": 3,
-      "parallax": 48
+      "parallax": 48,
+      "mobile": {
+        "x": -1.69,
+        "y": 77.98,
+        "width": 17,
+        "rotation": 7,
+        "z": 3,
+        "edge": "left"
+      }
     },
     {
       "name": "codex-code",
@@ -183,7 +319,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 15.342,
       "rotation": 5.74,
       "z": 4,
-      "parallax": 36
+      "parallax": 36,
+      "mobile": {
+        "x": 105.82,
+        "y": 37.28,
+        "width": 23.451,
+        "rotation": 9.74,
+        "z": 2,
+        "edge": "right"
+      }
     },
     {
       "name": "codex-model-image",
@@ -193,7 +337,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 9.661,
       "rotation": 0.0,
       "z": 5,
-      "parallax": 42
+      "parallax": 42,
+      "mobile": {
+        "x": 81.3,
+        "y": 11.4,
+        "width": 12.117,
+        "rotation": -8,
+        "z": 1,
+        "edge": "top"
+      }
     },
     {
       "name": "codex-model-copy",
@@ -203,7 +355,15 @@ window.CHATGPT_MOTION_LAYERS = {
       "width": 20.033,
       "rotation": -15.79,
       "z": 6,
-      "parallax": 48
+      "parallax": 48,
+      "mobile": {
+        "x": 17.67,
+        "y": 9.88,
+        "width": 21.695,
+        "rotation": -26.79,
+        "z": 4,
+        "edge": "top"
+      }
     }
   ]
 };

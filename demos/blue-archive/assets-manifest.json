@@ -17,7 +17,7 @@
       "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/media/bg.555a8a72.mp4",
       "bytes": 1602930,
       "type": "video/mp4",
-      "use": "官方公开预告/背景视频，普通模式静音背景播放且可暂停，减少动态初始停止；有声预告用户主动开始",
+      "use": "原首页城市背景影像；本地保持静音，可暂停且离屏/后台停止，减少动态初始暂停。角色声音使用各自独立WAV，PV另走官方外链。",
       "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
       "sha256": "f2e3d8ddc504774c720c625f68cf89dddb25ecbcb4efe358fc80aa737834ef10"
     },
@@ -323,6 +323,87 @@
       "type": "image/png",
       "use": "官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现",
       "rights": "NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。"
+    },
+    {
+      "file": "01.bd71aff1.wav",
+      "url": "https://webusstatic.yo-star.com/bluearchive_jp_web/media/01.bd71aff1.wav",
+      "use": "Abydos角色点击原始VOICE入口的学生语音",
+      "owner": "NEXON Games / Yostar",
+      "bytes": 697882,
+      "sha256": "18e8fa390f662f0a20637eb36124aa61f8f59f86677b2a2fda4cb0b5116d1485",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原权利人；个人学习",
+      "contentType": "audio/wav"
+    },
+    {
+      "file": "02.73ff260c.wav",
+      "url": "https://webusstatic.yo-star.com/bluearchive_jp_web/media/02.73ff260c.wav",
+      "use": "Abydos角色点击原始VOICE入口的学生语音",
+      "owner": "NEXON Games / Yostar",
+      "bytes": 398650,
+      "sha256": "de5cde3175587a67d9b39d941eb698a8522a04c4a59dde6e5d045b6e66dd56c4",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原权利人；个人学习",
+      "contentType": "audio/wav"
+    },
+    {
+      "file": "03.83e84e04.wav",
+      "url": "https://webusstatic.yo-star.com/bluearchive_jp_web/media/03.83e84e04.wav",
+      "use": "Abydos角色点击原始VOICE入口的学生语音",
+      "owner": "NEXON Games / Yostar",
+      "bytes": 786016,
+      "sha256": "45685d4770aab4bab7295d5c09bfff893daa6fe41d894f6e07d9e866a43076f3",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原权利人；个人学习",
+      "contentType": "audio/wav"
+    },
+    {
+      "file": "04.99faa124.wav",
+      "url": "https://webusstatic.yo-star.com/bluearchive_jp_web/media/04.99faa124.wav",
+      "use": "Abydos角色点击原始VOICE入口的学生语音",
+      "owner": "NEXON Games / Yostar",
+      "bytes": 503652,
+      "sha256": "edb08c1d5198f3d67dbd09a2bdc23fbec4bb10274a4172daee270fd0c172eaed",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原权利人；个人学习",
+      "contentType": "audio/wav"
+    },
+    {
+      "file": "voice-label.png",
+      "url": "https://bluearchive.jp/character",
+      "use": "官网角色页内联PNG声音控件，原始字节保存",
+      "owner": "NEXON Games / Yostar",
+      "bytes": 459,
+      "sha256": "7489f149f7c579c6fa20d9f2f3e50a7ca6e99617f2259a4f10093575972428f9",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原权利人；个人学习",
+      "contentType": "image/png",
+      "format": "PNG",
+      "width": 127,
+      "height": 21,
+      "sourceSelector": ".sound"
+    },
+    {
+      "file": "voice-microphone.png",
+      "url": "https://bluearchive.jp/character",
+      "use": "官网角色页内联PNG声音控件，原始字节保存",
+      "owner": "NEXON Games / Yostar",
+      "bytes": 1029,
+      "sha256": "3ecae794ab96c7056acce1c6192cba00317513f6335a33b77af3c7b9130b476a",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原权利人；个人学习",
+      "contentType": "image/png",
+      "format": "PNG",
+      "width": 33,
+      "height": 47,
+      "sourceSelector": ".maiku"
     }
+  ],
+  "limitations": [
+    "单次采集2026-10-07日文首页与明确CHARACTER路由；官网未来变化不维护。",
+    "首页只保留实际静音影片、下载、漫画入口与footer；不再加虚构观察/资源卡片章节。",
+    "角色页局部保留4位Abydos学生、1000ms横向轨道和真实语音；另外学院、NEWS/SYSTEM等用原站外链。",
+    "将角色局部页面置于首页下方便于本库观察，原站是独立/character路由；同页滚动为本地组合，不声称原站如此。",
+    "键盘、持续暂停、减少动态和切换人物停止旧声音为本地补充；无独立BGM。"
   ]
 }

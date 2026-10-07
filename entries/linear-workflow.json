@@ -13,30 +13,30 @@
     "工作流",
     "低对比边框"
   ],
-  "summary": "忠实保留 Linear 当前左对齐大标题、克制导航、三栏 issue 界面与从收件到规划的章节节奏。",
+  "summary": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
   "accent": "#a79ad6",
   "background": "#08090a",
   "principles": [
-    "标题先讲产品开发系统，真实工作界面紧接着提供证据。",
-    "导航与边框退到次级，任务内容获得更高对比。",
-    "局部彩色只用于状态、标签和项目，避免全屏霓虹。",
-    "章节按工作流程推进，产品结构与传播叙事一致。"
+    "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
+    "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+    "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+    "第一方素材保持比例；手机保留原站实际变体。"
   ],
   "productFocus": "通过真实官网issue结构展示团队与智能体协作：侧栏、任务正文、活动评论、属性及状态，随后把收件和规划纳入同一流程。",
   "interaction": [
-    "四个Favorites入口切换不同信息架构，下一项/上一项也可切换。",
-    "任务卡选中回执、项目资源打开回执为本地扩展；洞察表提供静态源数据快照。",
-    "issue详情可收藏、改状态和运行本地agent示例；状态符号同步更新。",
-    "Product/Resources hover菜单，点击/键盘与Esc保留。"
+    "进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。",
+    "Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。",
+    "Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。",
+    "AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
+    "Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。",
+    "手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。"
   ],
-  "theme": "接近黑的底色、温暖灰文字、低饱和项目色；细边框、中小圆角、真实官方氛围图。",
+  "theme": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
   "constraints": [
-    "当前首页与2024/2026应用UI设计文章区分来源范围。",
-    "暗色层次依靠亮度和边框；项目/状态色承担信息功能。",
-    "四类工作视图保持各自结构，任务内容与状态联动。",
-    "Intake完整消息编排、agent浮窗和实时执行未覆盖。",
-    "手机收束侧栏与次级属性；减少动态关闭局部扫光。",
-    "资源、任务执行与注册使用本地反馈，真实服务以官网为准。"
+    "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+    "消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。",
+    "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+    "减少动态保留可读内容、键盘焦点和手动选择。"
   ],
   "useCases": [
     "开发者工具官网",
@@ -61,21 +61,22 @@
     "motion": "Favorites直接切换issue、任务看板、insights和project；Working文字局部2秒linear扫光；导航指针进入展开，160ms入场为本地近似。"
   },
   "composition": {
-    "color": "接近黑的底色、温暖灰文字、低饱和项目色；细边框、中小圆角、真实官方氛围图。",
+    "color": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
     "typography": "官方 Inter variable 本地字体；桌面64px主标题、紧行高、任务22px、UI12–14px。",
-    "layout": "1280px最大宽度；左标题+横向说明；235px侧栏/任务/210px属性；收件与规划两节。",
-    "imagery": "64px标题、灰色副文、New Loops入口；侧栏/正文/属性，官方头像和Inter；Triage与规划时间线",
+    "layout": "首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。",
+    "imagery": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
     "shape": "细边框、10–15px窗口、5px行项与小圆胶囊。",
-    "hierarchy": "通过真实官网issue结构展示团队与智能体协作：侧栏、任务正文、活动评论、属性及状态，随后把收件和规划纳入同一流程。",
-    "motion": "Favorites直接切换issue、任务看板、insights和project；Working文字局部2秒linear扫光；导航指针进入展开，160ms入场为本地近似。",
-    "coherence": "字体、色彩、素材、信息结构与Linear公开页一致；官网应用截图的所有图标、评论和agent实时执行未全部复制。本地核心issue结构接近，后续收件与规划使用自建示例数据；官网完整AI/automations和发布章节未覆盖。Logo保持官方原样。"
+    "hierarchy": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
+    "motion": "进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。；Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。；Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。；AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
+    "coherence": "消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。",
+    "scroll": "首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。"
   },
   "sources": [
     {
-      "title": "Linear 首页",
+      "title": "Linear 当前公开页面",
       "url": "https://linear.app/",
-      "type": "实例",
-      "note": "2026-10-07首页：64px标题、issue演示；Favorites切换三列看板、insights和project；Product指针进入展开。"
+      "note": "采集日期 2026-10-07；英文首页",
+      "type": "实例"
     },
     {
       "title": "Linear 2026 design refresh",
@@ -94,16 +95,10 @@
       "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
       "type": "规范",
       "note": "任务与分类选择的键盘和选择状态参考。"
-    },
-    {
-      "title": "Linear 当前主页组件样式",
-      "url": "https://static.linear.app/web/_next/static/css/Dop5ZgCE.css",
-      "type": "实例",
-      "note": "Working的agentLabelSweep/agentBorderSweep为2秒linear；Intake消息opacity分阶段变化。"
     }
   ],
-  "prompt": "基于【官网URL】在【观察日期】的Linear首页制作局部学习页。保留接近黑的背景、64px左对齐标题、灰色副文、New Loops入口与细分隔线，使用官方Inter、品牌SVG、头像和氛围图。标题下重建侧栏、任务正文、活动评论、属性三栏，颜色仅标识项目和状态。Favorites必须切换四种独立结构：Faster app launch的issue详情；Offline Mode/Core Performance/UI Refresh三列11项任务看板；3389/1128/729统计、柱图与六行项目表；项目overview及Properties/Resources。采用直接切换，保留任务上下箭头、收藏、状态和Run agent本地反馈；任务及项目资源不能伪装成远程执行。Working标签保留源CSS证实的2秒linear局部文字扫光。Product指针进入展开，点击与键盘可操作，Escape和外部点击关闭且同步aria-expanded；160ms缩放淡入是本地近似。后续Triage与规划时间线使用不同结构，说明原Intake消息分阶段显现和浮动agent面板未完整复现。手机收束侧栏与次级属性，正文仍可读；保留自然滚动、可见焦点、可关闭弹窗和prefers-reduced-motion。资产本地化并记录来源、尺寸与权利；应用UI设计文章的层级原则与当前营销页事实分开。用于【目标开发工具】时重新组织其真实任务流程。",
-  "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+  "prompt": "以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+  "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
   "demo": "demos/linear-workflow/index.html",
   "preview": "previews/linear-workflow.jpg",
   "research": "research/linear-workflow.md",
@@ -112,5 +107,17 @@
   "implementation": "reference-study",
   "fidelity": "demos/linear-workflow/fidelity.md",
   "assetManifest": "demos/linear-workflow/assets-manifest.json",
-  "referencePreview": "research/screenshots/linear-workflow-source.png"
+  "referencePreview": "research/screenshots/linear-workflow-source.png",
+  "capturedAt": "2026-10-07",
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "dark",
+    "control": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
+    "designReason": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。"
+  },
+  "soundBehavior": {
+    "kind": "none",
+    "control": "当前首页没有配乐、音效和音视频播放器。",
+    "interactionRole": "消息、任务板和代码状态承担产品叙事，不靠声音强调任务。"
+  }
 }

@@ -211,6 +211,107 @@
       "width": 2880,
       "height": 1520,
       "sha256": "0ae74834c9cd01256349ab885cebce447bb7770054e1d3d0c09180c3468b4e0f"
+    },
+    {
+      "file": "top_about.mp4",
+      "url": "https://umamusume.com/assets/videos/top_about.mp4",
+      "use": "About按钮实际播放的官方PV，包含原始音乐/旁白/剪辑音轨",
+      "owner": "Cygames",
+      "bytes": 25860812,
+      "sha256": "c893f883aa5652e11dd5da5de8ebc3ac0aacaaa7a23d53a11b262243d3a8155c",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原权利人；个人学习",
+      "contentType": "video/mp4"
+    },
+    {
+      "file": "assets/logo-umamusume.png",
+      "bytes": 132471,
+      "sha256": "3a11b259f3c215c9a03a16a5ab40bb81db41a1de99d9cb81dc672adca7fa498f",
+      "capturedAt": "2026-10-07",
+      "width": 718,
+      "height": 212,
+      "format": "PNG",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/logo_umamusume.png",
+      "use": "Official header branding, interaction shapes or download dialog",
+      "retrievedAt": "2026-10-07",
+      "rights": "Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。",
+      "type": "image/png"
+    },
+    {
+      "file": "assets/horseshoe.svg",
+      "bytes": 1241,
+      "sha256": "4bf03d933b988295dd324029828e92c955b675aa657d5a80b40ef3891e2bbf8f",
+      "capturedAt": "2026-10-07",
+      "format": "SVG",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/teitetsu.BNI5mUfy.svg",
+      "use": "Official header branding, interaction shapes or download dialog",
+      "retrievedAt": "2026-10-07",
+      "rights": "Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。",
+      "type": "image/svg+xml",
+      "width": 31.0,
+      "height": 33.0
+    },
+    {
+      "file": "assets/header-arrow.svg",
+      "bytes": 344,
+      "sha256": "0b196307b2a3c654e780e0b785a18f14a9832ed0bf2880e1d2b81b99528009db",
+      "capturedAt": "2026-10-07",
+      "format": "SVG",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/arrow_double.nHmJyBTy.svg",
+      "use": "Official header branding, interaction shapes or download dialog",
+      "retrievedAt": "2026-10-07",
+      "rights": "Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。",
+      "type": "image/svg+xml",
+      "width": 38.0,
+      "height": 42.0
+    },
+    {
+      "file": "assets/header-blue.jpg",
+      "bytes": 112275,
+      "sha256": "a2b3e94f12d97c19f9b85e4281ddef3917e3770ab11ff81bcdbbeaf15823b64e",
+      "capturedAt": "2026-10-07",
+      "width": 750,
+      "height": 1626,
+      "format": "JPEG",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/bg_blue.HfYZeD0h.jpg",
+      "use": "Official header branding, interaction shapes or download dialog",
+      "retrievedAt": "2026-10-07",
+      "rights": "Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。",
+      "type": "image/jpeg"
+    },
+    {
+      "file": "assets/app-icon.png",
+      "bytes": 513750,
+      "sha256": "422f52106a9af0e67cb1b2728d084f80389c568b58ef36c6451ea90ce448eb53",
+      "capturedAt": "2026-10-07",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/app_icon.png",
+      "use": "Official header branding, interaction shapes or download dialog",
+      "retrievedAt": "2026-10-07",
+      "rights": "Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。",
+      "type": "image/png"
+    },
+    {
+      "file": "assets/download-background.png",
+      "bytes": 40907,
+      "sha256": "c2e57a548b8da4e593d88f4c25e176821b09ddb62d261cb7b09723d79dcb7c04",
+      "capturedAt": "2026-10-07",
+      "width": 1584,
+      "height": 898,
+      "format": "PNG",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/bg_playnow.zS7x0-r_.png",
+      "use": "Official header branding, interaction shapes or download dialog",
+      "retrievedAt": "2026-10-07",
+      "rights": "Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。",
+      "type": "image/png"
     }
+  ],
+  "limitations": [
+    "英文首页2026-10-07所见单次归档。",
+    "保留首屏、新闻、About真实PV与400ms有界Gameplay轨道；人物/媒体独立栏目以外链打开，没有完整内容服务。",
+    "本地键盘、触摸、study菜单和减少动态分支为易用性补充；不宣称原站全部页面复刻。",
+    "没有独立BGM；声音仅点击About开启原PV，关闭/离开前台暂停。"
   ]
 }

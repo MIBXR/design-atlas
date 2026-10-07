@@ -160,6 +160,134 @@
       "width": 33,
       "height": 78,
       "sha256": "dc8acf3bcdd5f11d13b836e6f4d457a66353f4c3be36caf59f1297e0077f4acb"
+    },
+    {
+      "file": "assets/7-802e623e.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/7-802e623e.jpg",
+      "bytes": 91661,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "a004f9263a89f780a62ffc2d526195a4d13c0e48e54944d4d3c4b40b606ece90",
+      "width": 900,
+      "height": 1451
+    },
+    {
+      "file": "assets/8-513af37d.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/8-513af37d.jpg",
+      "bytes": 87787,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "2770bd9797519d144b0ac62e2bf90149a96446927d08bd1bbe78a9887e087ee2",
+      "width": 900,
+      "height": 1454
+    },
+    {
+      "file": "assets/9-69d2baed.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/9-69d2baed.jpg",
+      "bytes": 81759,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "9f6340e5ed77997cdf7002390c8fd2b60e402e5741cb8f17fdcd6a7fc5badeb0",
+      "width": 900,
+      "height": 1454
+    },
+    {
+      "file": "assets/10-b44ce70c.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/10-b44ce70c.jpg",
+      "bytes": 112803,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "43d88117da2176134d7f2fa36f8d4f944d8e8876cab47d27f555e315b42d5486",
+      "width": 900,
+      "height": 1451
+    },
+    {
+      "file": "assets/11-bc582657.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/11-bc582657.jpg",
+      "bytes": 66803,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "12e460bab8a1cba01a8798921bb51eafe7eb1e8fad36810d3486037222bb0391",
+      "width": 900,
+      "height": 1454
+    },
+    {
+      "file": "assets/12-c9d7501d.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/12-c9d7501d.jpg",
+      "bytes": 80239,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "82b39bccca100442243161e9c21a74610e6356d8c983aa3635a19ea7d857c916",
+      "width": 900,
+      "height": 1451
+    },
+    {
+      "file": "assets/13-981028d4.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/13-981028d4.jpg",
+      "bytes": 74581,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "1e124addc5dafa0c57c5c0990d186b2dd2bc8e95bc26f90b55e821bdf3b87d04",
+      "width": 900,
+      "height": 1454
+    },
+    {
+      "file": "assets/15-56207bdd.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/15-56207bdd.jpg",
+      "bytes": 89989,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "832958b2f5d0ec3de10d5b534f8cbc7231a0323339ce0af9f189436b1167b016",
+      "width": 900,
+      "height": 1454
+    },
+    {
+      "file": "assets/16-89042586.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/16-89042586.jpg",
+      "bytes": 118633,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "778f20bf4c39472a84e03fd4a9ede96850f691291f37557ccb549977d64cc4f2",
+      "width": 900,
+      "height": 1454
+    },
+    {
+      "file": "assets/17-9f2e87bd.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/17-9f2e87bd.jpg",
+      "bytes": 100907,
+      "type": "image/jpeg",
+      "use": "当前 MV1 完整14幅竖屏画廊，按官网顺序使用",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "45eebd44f9ccbe6760c18d6f4bc4ea6e3d5e1635a2a9125fc35d5c6b1a881e84",
+      "width": 900,
+      "height": 1454
+    },
+    {
+      "file": "assets/Humanist521BT-Roman_1.woff",
+      "sourceUrl": "https://www.monumentvalleygame.com/fonts/Humanist521BT-Roman_1.woff",
+      "bytes": 24228,
+      "type": "font/woff",
+      "use": "当前 MV1 官网字体，保持品牌排版",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "a1fd5cd15b2c8e12415089c15fe302b25c8f737c89d70d40a927a77880cfe2e0"
+    },
+    {
+      "file": "assets/Humanist521BT-Bold.woff",
+      "sourceUrl": "https://www.monumentvalleygame.com/fonts/Humanist521BT-Bold.woff",
+      "bytes": 24936,
+      "type": "font/woff",
+      "use": "当前 MV1 官网字体，保持品牌排版",
+      "rights": "ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。",
+      "sha256": "170a17bd0115d0d165ca7793994e5b7ae8e1f63523b2a5dfc9c0c2f7e4473e13"
     }
   ]
 }

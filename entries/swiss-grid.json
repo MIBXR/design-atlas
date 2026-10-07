@@ -98,5 +98,16 @@
     "hierarchy": "展览主题 → 日期地点 → 分类日程 → 理念。",
     "motion": "按钮 160ms 颜色变化；prefers-reduced-motion 禁用平滑滚动",
     "coherence": "标题尺度、对齐线、间距和日期位置重复形成秩序；红色只是集中强调，不能代替信息层级。"
+  },
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "light",
+    "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+    "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+  },
+  "soundBehavior": {
+    "kind": "none",
+    "control": "本练习无背景音乐。",
+    "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
   }
 }

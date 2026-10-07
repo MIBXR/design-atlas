@@ -4,7 +4,11 @@
   const root = document.documentElement;
   const video = $('#hero-video');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  let motionEnabled = !reduced.matches;
+  let savedMotion; try { savedMotion=localStorage.getItem('material-study-motion') } catch {}
+  let motionEnabled = !reduced.matches && savedMotion!=='pause';
+  const systemTheme=matchMedia('(prefers-color-scheme: dark)');
+  let savedTheme; try { savedTheme=localStorage.getItem('material-study-theme') } catch {}
+  let drawerAnimation=null, drawerToken=0;
   let lastTrigger = null;
   const groups = [
     {id:'io',title:'Material at Google I/O 2026',rows:[[
@@ -70,6 +74,7 @@
   };
   const icons = {Home:'material_design','Get started':'apps',Develop:'code',Foundations:'book',Styles:'palette',Components:'add_circle',Blog:'pages'};
   function openDirectory(name,trigger){
+    const drawer=$('#directory'), wasOpen=drawer.open;
     lastTrigger=trigger; $('#directory-title').textContent=name||'Main menu'; $('#directory-links').replaceChildren();
     const rows=name?directories[name]:[['Home','#main'],['Get started','https://m3.material.io/get-started'],['Develop',null],['Foundations',null],['Styles',null],['Components',null],['Blog','https://m3.material.io/blog']];
     rows.forEach(([label,url])=>{
@@ -81,9 +86,22 @@
       if(!url){const next=document.createElement('span');next.className='icon next';next.textContent='arrow_forward';next.setAttribute('aria-hidden','true');el.append(next)}
       $('#directory-links').append(el);
     });
-    if(!$('#directory').open)$('#directory').showModal(); $('#open-menu').setAttribute('aria-expanded','true'); $('#close-menu').focus();
+    const token=++drawerToken; drawerAnimation?.cancel();
+    if(!wasOpen)drawer.showModal();
+    if(motionEnabled&&!reduced.matches){
+      drawerAnimation=wasOpen?$('#directory-links').animate([{opacity:0},{opacity:1}],{duration:200,delay:200,easing:'linear'}):drawer.animate([{transform:'translateX(-100%)'},{transform:'translateX(0)'}],{duration:300,easing:'cubic-bezier(.2,0,0,1)'});
+      drawerAnimation.finished.then(()=>{if(token===drawerToken)drawerAnimation=null}).catch(()=>{});
+    }
+    $('#open-menu').setAttribute('aria-expanded','true'); $('#close-menu').focus();
   }
-  function closeDirectory(){ $('#directory').close(); $('#open-menu').setAttribute('aria-expanded','false'); lastTrigger?.focus(); }
+  function closeDirectory(){
+    const drawer=$('#directory'); if(!drawer.open)return;
+    const token=++drawerToken, from=getComputedStyle(drawer).transform; drawerAnimation?.cancel();
+    const finish=()=>{if(token!==drawerToken)return;drawer.close();drawerAnimation=null;$('#open-menu').setAttribute('aria-expanded','false');lastTrigger?.focus()};
+    if(!motionEnabled||reduced.matches){finish();return}
+    drawerAnimation=drawer.animate([{transform:from},{transform:'translateX(-100%)'}],{duration:300,easing:'cubic-bezier(.2,0,0,1)',fill:'forwards'});
+    const exiting=drawerAnimation;exiting.finished.then(()=>{exiting.cancel();finish()}).catch(()=>{});
+  }
   $('#close-menu').addEventListener('click',closeDirectory);
   $('#directory').addEventListener('cancel',event=>{event.preventDefault();closeDirectory()});
   $('#directory').addEventListener('click',event=>{if(event.target===$('#directory')){const r=$('#directory').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right)closeDirectory()}});
@@ -96,8 +114,23 @@
   function playVideo(){return video.play().catch(()=>{syncVideo();announce('Press Play Video to start the muted showcase.')})}
   $('#video-toggle').addEventListener('click',()=>{if(video.paused){playVideo();announce('Muted showcase playing')}else{video.pause();announce('Showcase paused')}});
   function syncMotion(){root.dataset.motion=motionEnabled?'playing':'paused';document.querySelectorAll('[data-action=motion]').forEach(el=>{el.setAttribute('aria-checked',String(motionEnabled));el.setAttribute('aria-label',motionEnabled?'Pause animations':'Play animations');el.querySelector('.icon').textContent=motionEnabled?'pause':'play_arrow';const text=el.querySelector('.setting-text');if(text)text.textContent=el.getAttribute('aria-label')})}
-  document.querySelectorAll('[data-action=motion]').forEach(el=>el.addEventListener('click',()=>{motionEnabled=!motionEnabled;syncMotion();if(motionEnabled)playVideo();else video.pause();announce(motionEnabled?'Animations enabled':'Animations paused')}));
-  document.querySelectorAll('[data-action=theme]').forEach(el=>el.addEventListener('click',()=>{const dark=root.dataset.theme!=='dark';root.dataset.theme=dark?'dark':'light';document.querySelectorAll('[data-action=theme]').forEach(button=>{button.setAttribute('aria-checked',String(dark));button.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');button.querySelector('.icon').textContent=dark?'light_mode':'dark_mode';const text=button.querySelector('.setting-text');if(text)text.textContent=button.getAttribute('aria-label')});announce(dark?'Dark theme enabled':'Light theme enabled')}));
+  document.querySelectorAll('[data-action=motion]').forEach(el=>el.addEventListener('click',()=>{motionEnabled=!motionEnabled;try{localStorage.setItem('material-study-motion',motionEnabled?'play':'pause')}catch{};syncMotion();if(motionEnabled)playVideo();else video.pause();announce(motionEnabled?'Animations enabled':'Animations paused')}));
+  function applyTheme(dark){
+    root.dataset.theme=dark?'dark':'light';
+    document.querySelectorAll('[data-action=theme]').forEach(button=>{
+      button.setAttribute('aria-checked',String(dark));button.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
+      button.querySelector('.icon').textContent=dark?'light_mode':'dark_mode';
+      const text=button.querySelector('.setting-text');if(text)text.textContent=button.getAttribute('aria-label');
+    });
+  }
+  applyTheme(savedTheme==='dark'||(savedTheme!=='light'&&systemTheme.matches));
+  document.querySelectorAll('[data-action=theme]').forEach(el=>el.addEventListener('click',()=>{
+    const dark=root.dataset.theme!=='dark';applyTheme(dark);
+    try{localStorage.setItem('material-study-theme',dark?'dark':'light')}catch{}
+    announce(dark?'Dark theme enabled':'Light theme enabled');
+  }));
+  // The source restores system mode and clears a manual choice when the OS changes.
+  systemTheme.addEventListener('change',()=>{applyTheme(systemTheme.matches);try{localStorage.removeItem('material-study-theme')}catch{}});
   reduced.addEventListener('change',()=>{if(reduced.matches){motionEnabled=false;syncMotion();video.pause();announce('Reduced motion: showcase paused')}});
   function ripple(el,x,y){if(reduced.matches||!motionEnabled)return;const r=el.getBoundingClientRect();const size=Math.hypot(r.width,r.height)*2;const dot=document.createElement('span');dot.className='ripple';dot.setAttribute('aria-hidden','true');Object.assign(dot.style,{width:size+'px',height:size+'px',left:(x-r.left-size/2)+'px',top:(y-r.top-size/2)+'px'});el.append(dot);dot.addEventListener('animationend',()=>dot.remove(),{once:true});setTimeout(()=>dot.remove(),500)}
   document.addEventListener('pointerdown',event=>{const el=event.target.closest('.action');if(el)ripple(el,event.clientX,event.clientY)});

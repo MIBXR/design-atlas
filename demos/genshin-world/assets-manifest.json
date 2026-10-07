@@ -200,12 +200,149 @@
         2500,
         1080
       ]
+    },
+    {
+      "file": "character-background-2.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/df52fee550a8176a7b2107bf3900eda3_7139671719485021654.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "角色联动背景／原始头像／原始麦克风控件",
+      "owner": "HoYoverse",
+      "bytes": 333210,
+      "sha256": "0356766903c851de7466280ec08689a72e0ff306c092e9af76241045694e2bb4",
+      "contentType": "image/webp",
+      "format": "WEBP",
+      "width": 2500,
+      "height": 1080,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "character-icon-1.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/03/b571ba3df83b3a8b6bc6e4bc46c76d5a_452055992205394231.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "角色联动背景／原始头像／原始麦克风控件",
+      "owner": "HoYoverse",
+      "bytes": 5482,
+      "sha256": "827431b863362ebbfe895a2dda0d5dbab6811e22ef2f39411cd1b8290d067f1a",
+      "contentType": "image/webp",
+      "format": "WEBP",
+      "width": 89,
+      "height": 88,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "character-icon-2.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/03/5bdba247b18b2d55e3c0099758c75b7f_5072665736467775307.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "角色联动背景／原始头像／原始麦克风控件",
+      "owner": "HoYoverse",
+      "bytes": 3078,
+      "sha256": "8fd0541a2d22a409f87281671191e2eccc51f3d0f20f1195d080b95ac655fdb7",
+      "contentType": "image/webp",
+      "format": "WEBP",
+      "width": 89,
+      "height": 88,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "microphone-1.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/f425aa39265b91cb0236c533fc6bc986_5401498385605997979.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "角色联动背景／原始头像／原始麦克风控件",
+      "owner": "HoYoverse",
+      "bytes": 2542,
+      "sha256": "3f897893f2ca0cf939074643dd405c8760d756e8bbd536e62b3bd4ddc62a35fc",
+      "contentType": "image/webp",
+      "format": "WEBP",
+      "width": 62,
+      "height": 62,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "microphone-2.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/36dc161fa29509301443d201fb487874_9144332793810920452.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "角色联动背景／原始头像／原始麦克风控件",
+      "owner": "HoYoverse",
+      "bytes": 2600,
+      "sha256": "c45644d7b240b880fdd46980403c4a73ba492e883ba089dd996362c4491ef34d",
+      "contentType": "image/webp",
+      "format": "WEBP",
+      "width": 62,
+      "height": 62,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "voice-1-1.mp3",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/cdfadc6cfe3734708106b75d4d48ee4d_100427959985065792.mp3",
+      "use": "Vesna英文官网随机语音之一，点击原始麦克风播放/暂停",
+      "owner": "HoYoverse",
+      "bytes": 70124,
+      "sha256": "cc3cb33d58c8d6f11843b8c9e8877ca56617aa8c1ecb6c98bc446bd1d757e45c",
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "voice-1-2.mp3",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/08b8849c3b16d2099fb6c5e16e0f224b_8221994756534776448.mp3",
+      "use": "Vesna英文官网随机语音之一，点击原始麦克风播放/暂停",
+      "owner": "HoYoverse",
+      "bytes": 109484,
+      "sha256": "bf7835f4c0d9503bc8b351137a259912ae30eac68732222bfb5a87ee216da979",
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "voice-1-3.mp3",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/bf4920fb1083ca6e52903d5e68693491_2949577786974545318.mp3",
+      "use": "Vesna英文官网随机语音之一，点击原始麦克风播放/暂停",
+      "owner": "HoYoverse",
+      "bytes": 81644,
+      "sha256": "72d33cd80cbbfd4faa751f97d8ebeadfb05e7e317c6f79df7e37af8f736cb062",
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "voice-2-1.mp3",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/8d443ab69453b26060a483068bb9c6ce_5022814042510770188.mp3",
+      "use": "Vodyanitsa英文官网随机语音之一，点击原始麦克风播放/暂停",
+      "owner": "HoYoverse",
+      "bytes": 57644,
+      "sha256": "3f0f0ed788cd05a2af6d91546aa366867022bb4f40d22426049fb8de8d36ae92",
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "voice-2-2.mp3",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/6fee35483cd62756c36a8e657571c9c6_5635963746327388950.mp3",
+      "use": "Vodyanitsa英文官网随机语音之一，点击原始麦克风播放/暂停",
+      "owner": "HoYoverse",
+      "bytes": 69164,
+      "sha256": "3c721b08ed3cdf8901d76ee030696cbee724075cc0de9d5b0f5b54e6a5b9b2de",
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
+    },
+    {
+      "file": "voice-2-3.mp3",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/76a52895c751b8b02a9faa67406e737d_7308472016924941603.mp3",
+      "use": "Vodyanitsa英文官网随机语音之一，点击原始麦克风播放/暂停",
+      "owner": "HoYoverse",
+      "bytes": 181484,
+      "sha256": "aef978ef22fdaf310246bda962beec1bcef1773f09719a9efa129873f2fbd2b6",
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归HoYoverse；个人学习"
     }
   ],
   "limitations": [
-    "只实现版本首屏、两张角色立绘和活动日历，未复现武器、奖励领取、账号和分享服务。",
-    "第二角色文字尚未独立核验，明确标作第二位官网角色，未推测其名称。",
-    "首屏官方mp4为3秒静音动态主视觉，不是完整宣传片；未声称获取当前专题BGM。",
-    "本地View More为说明对话框；完整角色技能与有声PV链接回官方专题。"
+    "本次保留首屏、角色、日历、页脚的局部章节；活动福利与Xbox章节没有复制。",
+    "以transform重建全页章节切换；本地600ms过渡和650ms输入锁是近似，未宣称源Swiper全页时长。",
+    "角色100ms淡化、联动背景、官方头像与各3段随机语音有公开config及英文映射依据。",
+    "本地首屏视频不带声；未见独立BGM，有声PV链接前往原站。",
+    "日历大图与键盘/减少动态为本地补充；未复制账号、抽奖、充值服务。"
   ]
 }

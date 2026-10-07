@@ -121,6 +121,42 @@
       "sha256": "9384139241c3b0f3b9cce7bb63e605c2a84e9d1b3fc3b40a3faaaf5b1ec5e79a",
       "copyright": "Stripe 原始渲染代码归 Stripe；Three.js r178 为 MIT，仅供私人学习。",
       "derived": true
+    },
+    {
+      "file": "assets/enterprise-hertz.webp",
+      "sourceUrl": "https://images.stripeassets.com/fzn2n1nzq965/24BNV3GGtvCprFLrYovyaa/b2eac20a1d5ec75e4bff3888b998d163/enterprise-accordion-hertz.png?w=1632&fm=webp&q=90",
+      "purpose": "Original Hertz customer-story photography",
+      "bytes": 205658,
+      "sha256": "d478ae6ee3bd578ba17c178426b28262ff27319c398b691eb601429190d36819",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/enterprise-urbn.webp",
+      "sourceUrl": "https://images.stripeassets.com/fzn2n1nzq965/37wKFanVluouT2iEZUbD0H/f75e77141e1330ad81ea18c6aea65f0c/enterprise-accordion-urbn.png?w=1632&fm=webp&q=90",
+      "purpose": "Original customer-story photography; selected by accordion",
+      "bytes": 219658,
+      "sha256": "b391a0713efeab1ebd9922f3d9139c8d73cea0a92dbdd7057b3e0de6d540a237",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/enterprise-instacart.webp",
+      "sourceUrl": "https://images.stripeassets.com/fzn2n1nzq965/1v5hJ2NWvKpQfVbMqOzCpE/c900b9ed4c288f7cf0a0dced5f4983f2/enterprise-accordion-instacart.png?w=1632&fm=webp&q=90",
+      "purpose": "Original customer-story photography; selected by accordion",
+      "bytes": 187628,
+      "sha256": "e9e350bac6128d46a58bfb6bf48c32848b8309cac5825fb3efe7ab14ee0f936f",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/enterprise-lemonde.webp",
+      "sourceUrl": "https://images.stripeassets.com/fzn2n1nzq965/5AQ9A87KzwpPy4CD3uPz5C/4afd1a1e9d6e1d698c4c7c74a4868822/enterprise-accordion-lemonde.png?w=1632&fm=webp&q=90",
+      "purpose": "Original customer-story photography; selected by accordion",
+      "bytes": 148666,
+      "sha256": "b17cddb82e511ddc8b33e98159bfe30312acfd2aa9691b64972701a3e7891f62",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
     }
   ]
 }

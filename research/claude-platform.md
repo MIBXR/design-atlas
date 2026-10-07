@@ -1,29 +1,41 @@
-# Claude：衬线语气与Cowork演示
+# Claude：当前页面的设计与交互
 
-观察日期：2026-10-07。参考：[公开页面](https://claude.com/)。原站内容以该日期与语言版本为准。
+来源：[https://claude.com/](https://claude.com/)。采集日期：2026-10-07。范围：匿名英文营销页 HTTP/公共模块快照，单一当前快照。
 
-## 设计特点与分析
+以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。
 
-公开营销结构为奶油底、72px Anthropic Serif标题、Sans操作文字、陶土品牌符号和黑色行动。左栏主张与注册卡，右栏圆角Cowork视频；下方按个人/组织分套餐，再以FAQ展开细节。
+## 触发、视觉响应与用途
 
-衬线与温暖低饱和建立思考伙伴语气，真实视频解释执行能力；短注册路径与套餐分类维持行动层级。这是页面分析，没有第一方品牌策略声明依据。
+- 标题按单词 1s opacity 过渡，总交错跨度 .2s；内容组 750ms、10px、100ms 交错，在视口底部 −20% 触发 → 以较小运动保留阅读节奏。
 
-## 交互机制与复现映射
+- 桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。
 
-| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
-|---|---|---|
-| 产品视频 | 官方Cowork媒体文件约25.567秒；公开截图与HTML提供结构。源hover/scroll时序未取得。 | 静音循环，play/pause/ended/error同步按钮；减少动态暂停并允许手动播放，静止时保留首帧。 |
-| 注册与套餐 | 左注册入口、Individual/Team计划与FAQ为公开结构。 | email展开/返回/模拟反馈；受众和年/月计费切换，FAQ原生details；不发送邮箱或创建账户。 |
-| 窄屏导航 | 源具体断点未现场核验。 | 800px以下导航收为汉堡、700px以下英雄区纵排；800px为本地嵌入适配。 |
+- Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。
 
-## 理论与约束
+- FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。
 
-公开营销截图与HTML提供结构依据。WAI Tabs和Accordion分别约束套餐及FAQ。真实认证、SSO、订阅、下载、完整企业导航与FAQ未覆盖；套餐是观察日快照。
+- Continue with email → 对应原站邮箱登录 URL，不捏造首页内的邮箱注册表单；本地入口需离开演示到原站。视频和减少动态使用真实暂停状态。
 
-## 来源与材料
+## 完整浏览路径
 
-- [Claude 公开官网](https://claude.com/)（实例）：2026-10-07公开营销结构、72px衬线标题、Cowork视频与Individual/Team套餐；源hover/scroll时序未取得。
-- [WAI Tabs Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)（规范）：套餐受众切换的选择态和方向键参考。
-- [WAI Accordion Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/)（规范）：FAQ展开、键盘和状态表达；本地采用原生details。
+Think fast 主张/入口+Cowork 视频 → 套餐切换 → FAQ → 页尾；完整结构来自匿名 HTTP HTML 与当前公开模块。
 
-[原站对照](screenshots/claude-platform-source.jpg) · [Demo](../demos/claude-platform/index.html) · [完整Prompt与设计元素](../entries/claude-platform.json) · [还原范围](../demos/claude-platform/fidelity.md) · [资产来源](../demos/claude-platform/assets-manifest.json)。品牌与媒体权利归原作者。
+## 原站事实和复现边界
+
+公开源 AnimatedHeading、AnimatedReveal、Navbar、FAQAccordion、Tabs 已提取；具体时间和阈值来自这些模块/CSS。此浏览器访问 claude.com 被重定向到 claude.ai/new，已停止账户页面操作。因此源营销页桌面/手机实时操作均未验证，不能把公共代码核对称为现场浏览通过。
+
+源菜单与滚动机制属于公共源码依据的实现，本地桌面/390 手机实测；并未完成源浏览器的逐节操作。菜单条目和 FAQ/套餐内容压缩，局部曲线/布局拟合。没有认证、订阅、SSO 与下载后端，未核实全局手动主题按钮；不要添加无来源的标题飞入或缩放。
+
+## 主题与声音
+
+公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。
+
+官方 Cowork 演示静音循环，暂停/播放依据媒体真实事件；未发现首页背景音乐。 静音工作场景与低幅文字动画维持克制、可阅读的产品语气。
+
+## 配色、排版与元素协调
+
+主题和运动共同建立产品重点：以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。
+
+## 可复用 Prompt
+
+以 https://claude.com/ 在【采集日期】的 匿名英文营销页 HTTP/公共模块快照 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。以当前 claude.com 匿名 HTML/公共 CSS/JS 快照为结构依据，源浏览器若重定向账户明确记未验证。保留 Serif 主张、Sans 控件、奶油/系统深色及官方静音 Cowork 视频。具体机制：单词 1s 透明度、总 .2s 交错；组 750ms/10px/100ms 在 −20% 视口边界带入；桌面 pointer 菜单+150ms 离开；手机 clip 800ms 进入/400ms 离开与320+80i交错；套餐选中底板；FAQ 单开与400ms网格高度/透明度。邮箱动作跳到源 URL，不造首页表单或账期切换。减少动态取消动画保留内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。

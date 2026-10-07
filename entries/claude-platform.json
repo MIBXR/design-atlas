@@ -13,29 +13,29 @@
     "视频",
     "套餐切换"
   ],
-  "summary": "复现 Claude 公开营销页的衬线标题、左侧注册入口与右侧官方 Cowork 视频，并实现套餐和FAQ交互。",
+  "summary": "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。",
   "accent": "#d97757",
   "background": "#f5f5ef",
   "principles": [
-    "衬线大标题建立思考伙伴的语气，产品视频承接实际工作。",
-    "注册框在首屏即可辨识，操作层级集中而短。",
-    "温暖中性色与陶土品牌符号组合，保持低饱和。",
-    "套餐切换和FAQ减少一次性信息负担。"
+    "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。",
+    "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+    "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+    "第一方素材保持比例；手机布局依据公共模块实现，并在本地实测。"
   ],
   "productFocus": "首屏把chat思考与Cowork执行并列，右栏完整真实产品视频直接显示功能；下方套餐按个体和组织区分。",
   "interaction": [
-    "视频按钮实际切换播放/暂停，label/aria-pressed来自真实媒体事件。",
-    "Continue with email在本地切换email表单与返回；不提交账户。",
-    "Individual/Team、本地计费选择、FAQ仍可操作。"
+    "标题按单词 1s opacity 过渡，总交错跨度 .2s；内容组 750ms、10px、100ms 交错，在视口底部 −20% 触发 → 以较小运动保留阅读节奏。",
+    "桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。",
+    "Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。",
+    "FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。",
+    "Continue with email → 对应原站邮箱登录 URL，不捏造首页内的邮箱注册表单；本地入口需离开演示到原站。视频和减少动态使用真实暂停状态。"
   ],
-  "theme": "奶油浅底、Anthropic Serif大标题、Sans操作文字、黑色按钮、陶土色品牌符号、圆角视频。",
+  "theme": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
   "constraints": [
-    "仅研究公开claude.com营销页；字体、字标与Cowork视频使用官方素材。",
-    "2026-10-07结构有截图和公开HTML依据；源hover/scroll时序未取得。",
-    "邮箱输入只在本地；不创建账户、认证或订阅。",
-    "套餐为观察日快照，实际价格以官网为准。",
-    "800px导航折叠是本地适配；手机先文字后视频。",
-    "减少动态默认停播；保留首帧及手动视频控制。"
+    "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+    "源菜单与滚动机制属于公共源码依据的实现，本地桌面/390 手机实测；并未完成源浏览器的逐节操作。菜单条目和 FAQ/套餐内容压缩，局部曲线/布局拟合。没有认证、订阅、SSO 与下载后端，未核实全局手动主题按钮；不要添加无来源的标题飞入或缩放。",
+    "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+    "减少动态保留可读内容、键盘焦点和手动选择。"
   ],
   "useCases": [
     "思考与执行并重的AI产品",
@@ -60,21 +60,22 @@
     "motion": "25.567秒官方Cowork视频静音循环；play/pause/ended事件同步按钮；减少动态默认暂停并允许手动播放。"
   },
   "composition": {
-    "color": "奶油浅底、Anthropic Serif大标题、Sans操作文字、黑色按钮、陶土色品牌符号、圆角视频。",
+    "color": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
     "typography": "本地官网Anthropic Serif/Sans；72px主标题、24px副文、15–17px操作。",
-    "layout": "1440px上限；左思考/注册卡 + 右大型Cowork视频；3列套餐；左右FAQ。",
-    "imagery": "官方Anthropic字体、品牌SVG与Cowork演示视频，真实工作画面承担功能证据。",
+    "layout": "Think fast 主张/入口+Cowork 视频 → 套餐切换 → FAQ → 页尾；完整结构来自匿名 HTTP HTML 与当前公开模块。",
+    "imagery": "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。",
     "shape": "30px注册框、17px视频、圆胶囊tabs、18px计划卡。",
-    "hierarchy": "首屏把chat思考与Cowork执行并列，右栏完整真实产品视频直接显示功能；下方套餐按个体和组织区分。",
-    "motion": "25.567秒官方Cowork视频静音循环；play/pause/ended事件同步按钮；减少动态默认暂停并允许手动播放。",
-    "coherence": "字体、色彩、素材、信息结构与Claude公开页一致；没有复现服务器认证、SSO、真正下载或订阅。视频为官方本地文件；reduced-motion暂停时没有原站视频poster，保留首帧。完整企业产品导航与所有FAQ未全量复制。"
+    "hierarchy": "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。",
+    "motion": "标题按单词 1s opacity 过渡，总交错跨度 .2s；内容组 750ms、10px、100ms 交错，在视口底部 −20% 触发 → 以较小运动保留阅读节奏。；桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。；Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。；FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。",
+    "coherence": "源菜单与滚动机制属于公共源码依据的实现，本地桌面/390 手机实测；并未完成源浏览器的逐节操作。菜单条目和 FAQ/套餐内容压缩，局部曲线/布局拟合。没有认证、订阅、SSO 与下载后端，未核实全局手动主题按钮；不要添加无来源的标题飞入或缩放。",
+    "scroll": "Think fast 主张/入口+Cowork 视频 → 套餐切换 → FAQ → 页尾；完整结构来自匿名 HTTP HTML 与当前公开模块。"
   },
   "sources": [
     {
-      "title": "Claude 公开官网",
+      "title": "Claude 当前公开页面",
       "url": "https://claude.com/",
-      "type": "实例",
-      "note": "2026-10-07公开营销结构、72px衬线标题、Cowork视频与Individual/Team套餐；源hover/scroll时序未取得。"
+      "note": "采集日期 2026-10-07；匿名英文营销页 HTTP/公共模块快照",
+      "type": "实例"
     },
     {
       "title": "WAI Tabs Pattern",
@@ -89,8 +90,8 @@
       "note": "FAQ展开、键盘和状态表达；本地采用原生details。"
     }
   ],
-  "prompt": "以【观察日期】的 https://claude.com/ 公开营销页为依据制作局部学习页。保持温暖奶油底、72px Anthropic Serif标题、Sans操作文字、陶土品牌符号和黑色行动；左栏放思考主张与圆角注册卡，右栏为大型官方Cowork视频。官方SVG、字体和25.567秒视频按原比例本地保存并记录来源与权利。视频静音循环，按钮由play/pause/ended/error事件同步状态；prefers-reduced-motion初始和偏好改变时暂停，保留手动观看。Continue with email展开本地表单，可返回，提交仅显示不会发送的预览反馈；Google、登录和下载入口不伪装认证。下方Individual/Team and Enterprise分别显示套餐，年/月账期改变观察日的Pro价格，FAQ采用原生details。800px以下导航收为汉堡，700px以下英雄区转为文字先、视频后；800px断点是本地嵌入适配。保留自然滚动、可见焦点、Escape关闭和移动端可读性。此版源站hover/scroll时序未取得，只依据已保存公开结构和媒体，不增加猜测的标题缩放或滚动动画。把SSO、订阅、真实下载、企业导航和未覆盖FAQ记入还原范围；价格以官网为准。适配【目标AI产品】时依据其真实语气选择字体和内容。",
-  "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+  "prompt": "以 https://claude.com/ 在【采集日期】的 匿名英文营销页 HTTP/公共模块快照 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。以当前 claude.com 匿名 HTML/公共 CSS/JS 快照为结构依据，源浏览器若重定向账户明确记未验证。保留 Serif 主张、Sans 控件、奶油/系统深色及官方静音 Cowork 视频。具体机制：单词 1s 透明度、总 .2s 交错；组 750ms/10px/100ms 在 −20% 视口边界带入；桌面 pointer 菜单+150ms 离开；手机 clip 800ms 进入/400ms 离开与320+80i交错；套餐选中底板；FAQ 单开与400ms网格高度/透明度。邮箱动作跳到源 URL，不造首页表单或账期切换。减少动态取消动画保留内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+  "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
   "demo": "demos/claude-platform/index.html",
   "preview": "previews/claude-platform.jpg",
   "research": "research/claude-platform.md",
@@ -99,5 +100,17 @@
   "implementation": "reference-study",
   "fidelity": "demos/claude-platform/fidelity.md",
   "assetManifest": "demos/claude-platform/assets-manifest.json",
-  "referencePreview": "research/screenshots/claude-platform-source.jpg"
+  "referencePreview": "research/screenshots/claude-platform-source.jpg",
+  "capturedAt": "2026-10-07",
+  "themeBehavior": {
+    "mode": "system",
+    "default": "system",
+    "control": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
+    "designReason": "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。"
+  },
+  "soundBehavior": {
+    "kind": "video",
+    "control": "官方 Cowork 演示静音循环，暂停/播放依据媒体真实事件；未发现首页背景音乐。",
+    "interactionRole": "静音工作场景与低幅文字动画维持克制、可阅读的产品语气。"
+  }
 }
