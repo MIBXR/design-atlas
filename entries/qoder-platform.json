@@ -1,0 +1,103 @@
+{
+  "id": "qoder-platform",
+  "order": 17,
+  "title": "Qoder — 绿色工作台与多形态平台",
+  "subtitle": "An agentic platform for everyone",
+  "category": "产品",
+  "country": "中国",
+  "tags": [
+    "Qoder",
+    "真实品牌",
+    "绿色",
+    "智能体",
+    "桌面工作台",
+    "多平台"
+  ],
+  "summary": "以Qoder中国站公开主页为首屏参考，复现左侧双行标题、右侧说明、全幅强绿工作台背景与Qoder CN字标；后续五形态为能力机制的局部研究。",
+  "accent": "#2c8061",
+  "background": "#ffffff",
+  "principles": [
+    "主标题与说明分居两侧，产品工作台成为最主要的视觉证据。",
+    "绿色大面承托真实桌面界面，品牌色与代码任务保持区分。",
+    "桌面/移动/IDE/插件/CLI并列呈现不同使用入口。",
+    "智能体协作以分工和流程说明，不能只用抽象节点图。"
+  ],
+  "productFocus": "先展示桌面工作台的任务、项目和上下文，再让用户选择五种使用形态，突出从想法到可交付成果的完整工作循环。",
+  "interaction": [
+    "编码/通用模式切换改变标题、提示与任务语境。",
+    "输入任务并提交给出本地执行预览，侧栏入口和新工作区有反馈。",
+    "五种平台tabs同步切换说明、官方图与预览；协作流程可展开；下载弹窗可选择OS。"
+  ],
+  "theme": "中国站淡灰绿页面、满幅强绿工作台背景、白色产品UI和绿色胶囊下载按钮。",
+  "constraints": [
+    "country用于中文/中国参考分组，不作为司法注册地断言。",
+    "真实Qoder标识与平台图本地保存，不自行画替代logo。",
+    "任务与智能体只做固定本地预览，不声称调用模型。",
+    "手机核心界面重新排版，隐藏原桌面次级侧栏。",
+    "首屏观察是2026-10-07中文版本；活动和平台能力为日期快照。"
+  ],
+  "useCases": [
+    "多形态开发平台",
+    "智能体工作台",
+    "IDE与CLI联合宣传"
+  ],
+  "avoid": [
+    "把所有AI工具都做成深蓝霓虹页",
+    "平台tabs只改颜色不换内容",
+    "把本地演示装成在线模型执行"
+  ],
+  "tokens": {
+    "palette": [
+      "#ffffff",
+      "#141414",
+      "#2c8061",
+      "#dff5b9",
+      "#f3f6ed"
+    ],
+    "type": "原站Instrument Sans观察，当前本地使用Arial/Microsoft YaHei回退；中文标题36px、说明16px。",
+    "layout": "1680px上限；左标题/右副文；大面软件窗口；5tabs+左右产品；智能体协作/企业三项。",
+    "motion": "自然滚动、直接状态变化，装饰线静态；无自动旋转或滚动劫持。"
+  },
+  "composition": {
+    "color": "CN原站以淡灰绿顶层和满幅强绿约#80c777作工作台底景，绿色CTA与白色应用UI保持对比。",
+    "typography": "原站Instrument Sans观察，当前本地使用Arial/Microsoft YaHei回退；中文标题36px、说明16px。",
+    "layout": "66px导航、约110px起左侧标题/右侧说明、约332px起满幅强绿工作台；后续平台和协作区明确为局部研究。",
+    "imagery": "36px标题、满幅强绿背景内桌面工作区；平台tab和官方SVG/移动截图；本地任务回执、协作展开",
+    "shape": "25px下载胶囊、8px大面/窗口、细边框工作台。",
+    "hierarchy": "先展示桌面工作台的任务、项目和上下文，再让用户选择五种使用形态，突出从想法到可交付成果的完整工作循环。",
+    "motion": "自然滚动、直接状态变化，装饰线静态；无自动旋转或滚动劫持。",
+    "coherence": "字体、色彩、素材、信息结构与Qoder公开页一致；未取得Instrument Sans字体文件，明确使用系统字体回退。官方平台SVG是背景插画，产品窗口是本地DOM局部复建；未覆盖原站完整Agent SDK、QoderWake、全部案例和企业条款。country仅为中文参考归类。"
+  },
+  "sources": [
+    {
+      "title": "Qoder 中国站官方网站",
+      "url": "https://qoder.cn/",
+      "type": "实例",
+      "note": "2026-10-07 Root通过国际站可见Visit China Site入口实访CN站并保存干净源截图；本例首屏统一中国版：无促销/Qwen条，Qoder CN字标和满幅强绿工作台。"
+    },
+    {
+      "title": "Qoder 产品族官方定义",
+      "url": "https://docs.qoder.com/product-series/what-is-qoder",
+      "type": "理论",
+      "note": "第一方文档说明理解/计划/执行/验证/迭代与多形态产品族；属于产品理论，不是假称官网视觉作者意图。"
+    },
+    {
+      "title": "WAI Tabs Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+      "type": "规范",
+      "note": "模式与平台切换的语义、选择状态和键盘方向键参考。"
+    }
+  ],
+  "prompt": "请忠实研究2026-10-07 https://qoder.cn/ 中国站首页，使用实际本地官方Qoder CN黑色PNG字标（1632×344原图显示约123×26px），不放国际版promotion或Qwen标签。页面顶部淡灰绿背景，66px导航，左侧双行36px标题在约110px处开始，胶囊下载按钮靠左，产品说明在右下对齐。桌面约332px起满幅#80c777强绿背景，无圆角或左右外框；工作台应用UI占宽约84.5%，白色主区与浅灰侧栏、有真实任务输入/模式切换/工作区按钮的本地反馈。五平台资料使用已下载官方素材，但须在fidelity说明这些后续区域仅局部内容与机制研究，不宣称是CN版逐像素复制。390px标题/说明堆叠，满幅绿色底景保留，侧栏收束，横向tabs只在自身容器滚动。下载按钮打开明确本地平台选择预览并链接官方CN站，不模拟实际安装和后端执行。支持键盘tabs与Escape关闭，prefers-reduced-motion关闭平滑滚动与过渡。版权和研究注记只放页末。",
+  "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+  "demo": "demos/qoder-platform/index.html",
+  "preview": "previews/qoder-platform.jpg",
+  "research": "research/qoder-platform.md",
+  "exercise": "以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。",
+  "referenceUrl": "https://qoder.cn/",
+  "implementation": "reference-study",
+  "fidelity": "demos/qoder-platform/fidelity.md",
+  "assetManifest": "demos/qoder-platform/assets-manifest.json",
+  "edition": "2026-10-07中国站公开主页；后续能力区域为局部机制研究",
+  "referencePreview": "research/screenshots/qoder-platform-source.jpg"
+}

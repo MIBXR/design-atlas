@@ -1,0 +1,106 @@
+{
+  "brand": "qoder-platform",
+  "sourcePage": "https://qoder.cn/",
+  "scope": "本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。",
+  "assets": [
+    {
+      "file": "assets/logo-dark.png",
+      "sourceUrl": "https://img.alicdn.com/imgextra/i1/O1CN010vyJYe95doH2V5OS_!!6000000001987-2-tps-1232-344.png",
+      "purpose": "官网Qoder标识深色版本",
+      "width": 1232,
+      "height": 344,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/png",
+      "bytes": 9577,
+      "status": "downloaded",
+      "sha256": "6f7a1a35ccb823118495a37f3939a9029c6268eb34233610379fcf85167be896"
+    },
+    {
+      "file": "assets/logo-light.png",
+      "sourceUrl": "https://img.alicdn.com/imgextra/i2/O1CN01ujLij0k3MQH2V5OS_!!6000000000850-2-tps-1232-344.png",
+      "purpose": "官网Qoder标识浅色版本",
+      "width": 1232,
+      "height": 344,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/png",
+      "bytes": 9840,
+      "status": "downloaded",
+      "sha256": "3a4b34db34cecef7f91f6e77614afa656e3f561e40a5750abc3e31bf3f6638b3"
+    },
+    {
+      "file": "assets/desktop.svg",
+      "sourceUrl": "https://img.alicdn.com/imgextra/i4/O1CN01SgQ8dv1l4soOat3lE_!!6000000004766-55-tps-624-448.svg",
+      "purpose": "官方Desktop平台插画",
+      "width": 624,
+      "height": 448,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 2611,
+      "status": "downloaded",
+      "sha256": "c4661e1f36eff22edec18de174b95417777a6eb92b95f9bdebce05ba03ea6e20"
+    },
+    {
+      "file": "assets/ide.svg",
+      "sourceUrl": "https://img.alicdn.com/imgextra/i3/O1CN01VC83tu1qBMUdwnQ7y_!!6000000005457-55-tps-624-448.svg",
+      "purpose": "官方IDE平台插画",
+      "width": 624,
+      "height": 448,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/svg+xml",
+      "bytes": 2292,
+      "status": "downloaded",
+      "sha256": "79bf12fa5f0dcac61eaa47856cb025696a1a858df4234d22ae13606c1876c912"
+    },
+    {
+      "file": "assets/jetbrains.svg",
+      "sourceUrl": "https://img.alicdn.com/imgextra/i2/O1CN01rf48hD1VmoxJuaDoj_!!6000000002696-55-tps-624-448.svg",
+      "purpose": "官方JetBrains平台插画",
+      "width": 624,
+      "height": 448,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 2344,
+      "status": "downloaded",
+      "sha256": "4c9add177370cea80362af78a4f173f27adda61a2a58de180585a67e415bd842"
+    },
+    {
+      "file": "assets/cli.svg",
+      "sourceUrl": "https://img.alicdn.com/imgextra/i2/O1CN01DMdf5z1fE97yvPU4d_!!6000000003974-55-tps-624-448.svg",
+      "purpose": "官方CLI平台插画",
+      "width": 624,
+      "height": 448,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 2656,
+      "status": "downloaded",
+      "sha256": "fb2134eb29e68d6714bbd7756fa9086a83a9c905adb9fed8cc8fd9772c11f9b1"
+    },
+    {
+      "file": "assets/mobile.png",
+      "sourceUrl": "https://img.alicdn.com/imgextra/i4/O1CN01AbCUbaExqfL2BKZi_!!6000000004185-2-tps-1075-2299.png",
+      "purpose": "官方Mobile平台截图",
+      "width": 1075,
+      "height": 2299,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 1299018,
+      "status": "downloaded",
+      "sha256": "bb7a577f0a41c79c46f64779935e5d9cb762a01ceeb7eb8ee173ebcf69854627"
+    },
+    {
+      "file": "assets/logo-cn.png",
+      "sourceUrl": "https://img.alicdn.com/imgextra/i4/O1CN01tbOgUft1vxC3JRFI_!!6000000007230-2-tps-1632-344.png",
+      "purpose": "通过CN官方页pageAssets保存的Qoder CN黑色完整字标",
+      "width": 1632,
+      "height": 344,
+      "status": "bundled",
+      "retrievedAt": "2026-10-07",
+      "copyright": "官方品牌标识，私人学习副本。",
+      "bytes": 12551,
+      "sha256": "7e7a24f5247b93e05d3de2232e123826cc91730270fbc4e79db200fb498208cf"
+    }
+  ]
+}
