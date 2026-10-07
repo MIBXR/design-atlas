@@ -25,7 +25,7 @@
       const e = catalog.entries.find(entry => entry.id === button.dataset.case);
       const source = catalog.source;
       const bundleURL = source ? new URL(e.paths.bundle,source.baseUrl).href : new URL(e.paths.bundle,location.href).href;
-      const sourceHint = source ? `原始文件基址：${source.baseUrl}\n对 files 中每个 path 使用这个基址获取并核验 SHA256；网页播放文件经过部署转换。上游提交：${source.commit}` : '原始文件从 design-atlas skill 的固定提交读取；或固定 GitHub 完整提交 SHA，避免把网站播放文件当作原始源码。';
+      const sourceHint = source ? `原始文件基址：${source.baseUrl}\n对 files 中每个 path 使用这个基址获取并核验 SHA256；网页播放文件经过部署转换。此入口对应当前网页发布版本：${source.commit}。若要探索上游最新案例，请调用 design-atlas skill 开始新会话。` : '通过 design-atlas skill 开始会话，解析上游最新完整提交 SHA，并用本次会话的同一提交读取原始文件。';
       copy(`请读取 Design Atlas 案例 ${e.id} 的完整上下文：\n${bundleURL}\n先结合我的真实需求阅读 entry、webNotes（网页右侧说明）和 documents，再按 files 取用源码。保留原始约束、来源和复现边界。\n本次索引中的案例包 SHA256：${e.bundleSha256}\n${sourceHint}`);
     }));
   }

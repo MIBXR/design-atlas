@@ -6,7 +6,9 @@
 
 从真实网站学习设计，让配色、排版、图像、形状和动效共同工作。
 
+<!-- atlas-counts:start -->
 **29 个案例**　·　**21 个真实品牌／文化页面**　·　**8 种经典设计语言**
+<!-- atlas-counts:end -->
 
 [打开参考库](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览完整索引](research/CASE-INDEX.md) · [设计元素实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html)
 
@@ -27,6 +29,7 @@
 - **比较**：选择2–3项并排比较，观察同样的设计元素如何产生不同表达。
 - **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在元素实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
+- **Agent 选型**：调用 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
 - **桌面与手机**：真实1440px桌面预览保留完整断点；ChatGPT默认展示桌面动效，手机模式可切换。
 - **主题与声音**：参考库支持跟随系统／浅色／深色；每个案例说明原站的主题方式、音乐或媒体声音及其交互作用，固定品牌主题保留原貌。
 - **收藏**：浏览器localStorage保存个人策展结果，并导出／导入 JSON 备份；不同设备或域名不会自动同步。
