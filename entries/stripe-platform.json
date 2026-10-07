@@ -13,7 +13,7 @@
     "产品矩阵",
     "下拉导航"
   ],
-  "summary": "连续段落式主标题、原始SingleWave波带、不同跨度的金融产品矩阵和企业案例，让平台规模与具体支付能力同时可见。",
+  "summary": "官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。",
   "accent": "#635bff",
   "background": "#ffffff",
   "principles": [
@@ -24,20 +24,21 @@
   ],
   "productFocus": "首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。",
   "interaction": [
-    "导航悬停展开，点击与键盘保留；外部点击和Esc关闭并同步aria-expanded。",
-    "进入Payments视口后商户、终端金额及checkout场景同步自动更新；离开视口/隐藏/减弱动画暂停循环。",
-    "各产品仍有本地说明弹窗，business model选择可更新结果。",
-    "客户案例tabs切换真实说明与官网入口。",
-    "首屏第一方WebGL波带自动形变；本地暂停/继续按钮保持同一渲染时间；菜单与对话框打开时暂停，reduce/渲染能力不足显示官方静帧。"
+    "进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。",
+    "Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。",
+    "Bento 点击 → 产品详情对话框；真实官网是产品说明/界面扩展，本地内容压缩，业务模型反馈为明确的示范。",
+    "Global 四统计选择 → 当前数字强调、底部细线进度和基础设施说明对应变化；自动推进与指针停留暂停。",
+    "Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。",
+    "后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。",
+    "手机汉堡菜单 → 全屏顶层 Products/Solutions/Developers/Resources；选择分类后二级页以源 CSS 500ms 侧向进入、250ms 透明度衔接，Back 返回顶层。Start now/Contact sales 固定底部；关闭/Escape 恢复滚动和焦点，让长目录保持方向与核心行动。",
+    "桌面指针进入/点击分类 → popup 高度/位移/透明度 300ms、clip/max-height 200ms，均采用源 cubic-bezier(.45,.05,.55,.95)；分类按自然高度衔接。快速反转取消旧动画，离开/外部点击/Escape 后 hidden/inert/aria 一致；减少动态直接完成，维持目录的空间关系。"
   ],
-  "theme": "白底、海军蓝文字、紫色行动按钮与橙粉紫官网彩带；按钮小圆角，产品卡适度圆角。",
+  "theme": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
   "constraints": [
-    "2026-10-07首页与2017设计文章分别作为实例和历史理论。",
-    "SingleWave保留原shader、palette和home三档相机；官方fallback用于减少动态或GPU不可用。",
-    "产品卡跨度随内容变化；终端与checkout状态同步，自动轮换和hover分别表达。",
-    "界面金额为示例，金融指标为观察日快照；账户、销售和支付不接入。",
-    "自然滚动；手机单列；菜单、tab和弹窗具键盘状态。",
-    "渲染容器裁切、标题混色和帧率存在环境差异；部分客户字标以文字呈现。"
+    "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+    "终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。",
+    "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+    "减少动态保留可读内容、键盘焦点和手动选择。"
   ],
   "useCases": [
     "复杂平台产品官网",
@@ -58,7 +59,7 @@
     ],
     "type": "官网 Söhne 本地字体；主标题48px、连续段落、紧凑行高。",
     "layout": "1266px内容框；48px段落式首屏；产品矩阵首行Payments跨两列、Billing一列同高，随后不同产品区；4列指标与左右案例。",
-    "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒与菜单.18秒均为本地近似。"
+    "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒为本地近似；桌面popup高度/transform/opacity 300ms与clip/max-height 200ms采用源cubic-bezier(.45,.05,.55,.95)，入口位移12px为拟合；手机二级transform 500ms/opacity 250ms采用源CSS曲线，入口位移距离为拟合。"
   },
   "composition": {
     "color": "白底、海军蓝文字、紫色行动按钮与橙粉紫官网彩带；按钮小圆角，产品卡适度圆角。",
@@ -67,15 +68,16 @@
     "imagery": "官方SingleWave原始shader与folded mesh，light palette；Söhne本地字体；真实终端素材与本地支付界面结构。",
     "shape": "按钮4px、产品8px、对话框12px；官网彩带原比例。",
     "hierarchy": "首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。",
-    "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒与菜单.18秒均为本地近似。",
-    "coherence": "橙粉紫波带与紫色行动建立品牌识别，细框线、海军蓝文字和真实支付终端让复杂能力可读；部分界面为本地DOM，容器裁切和标题混色为局部还原。"
+    "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒为本地近似；桌面popup高度/transform/opacity 300ms与clip/max-height 200ms采用源cubic-bezier(.45,.05,.55,.95)，入口位移12px为拟合；手机二级transform 500ms/opacity 250ms采用源CSS曲线，入口位移距离为拟合。",
+    "coherence": "橙粉紫波带与紫色行动建立品牌识别，细框线、海军蓝文字和真实支付终端让复杂能力可读；部分界面为本地DOM，容器裁切和标题混色为局部还原。",
+    "scroll": "波浪首屏 → 6 产品 Bento → Global 4 统计 → 4 客户折叠 → Startup 横向架子 → 平台选择 → 海军蓝开发者内容 → 活动架子 → 结束行动 → 页尾。"
   },
   "sources": [
     {
-      "title": "Stripe 公开首页",
+      "title": "Stripe 当前公开页面",
       "url": "https://stripe.com/",
-      "type": "实例",
-      "note": "2026-10-07首页：Products指针进入展开、客户标识左移、Payments/Billing跨度与终端竖向换场景。"
+      "note": "采集日期 2026-10-07；英文全球首页",
+      "type": "实例"
     },
     {
       "title": "Connect frontend design",
@@ -88,22 +90,10 @@
       "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
       "type": "规范",
       "note": "客户案例与产品选择的键盘、选择状态参考。"
-    },
-    {
-      "title": "Stripe 当前页产品样式",
-      "url": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/css/0b96456ec501769a.css",
-      "type": "实例",
-      "note": "产品矩阵、终端mask和菜单的具体组件样式。"
-    },
-    {
-      "title": "Stripe SingleWave 官网组件、shader与三档相机配置",
-      "url": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
-      "type": "实例",
-      "note": "模块67103控制器、59168网格/材料、19622配置；home presets gj/P1/y7，20个纯渲染模块。"
     }
   ],
-  "prompt": "制作基于【官网URL】和【观察日期】的Stripe金融平台局部学习页。采用本地Söhne、海军蓝文字、紫色4px圆角主按钮和1266px细框线内容区；首屏是48px连续段落式定位，背景运行官方SingleWave折叠网格、shader和light palette。使用已归档的20个渲染模块、Three.js r178 MIT许可、本地Worker与纹理；home相机配置为wide gj/medium P1/small y7，speed=4e-5、timeOffset=17500，不改写成任意CSS波形。提供暂停/恢复，菜单或对话框打开、离屏、后台时暂停；reduce或GPU失败显示官方fallback。产品矩阵保持不同浅色与图形结构：首行Payments跨两列、Billing一列同高约676px，使用真实终端图和本地支付DOM。终端文本在mask内以translateY(0/-100/-200%)向上换场景，checkout同步商户、商品和金额；5秒周期和.75秒过渡为近似，轮换由时间触发。客户标识连续左移，35秒周期为近似。Products指针进入展开，点击、键盘、Escape及外部点击同步ARIA；.18秒菜单过渡和140ms离开延迟为本地适配。产品详情可选择业务模型，四个客户tab更新介绍，金额与注册反馈明确为本地示例。手机产品单列、窄屏裁切遵从已归档样式，所有弹窗可关闭，保留自然滚动、焦点和减少动态。记录资产及渲染适配来源；容器裁切、标题混色、其余金融演示和后端不称完整等价。",
-  "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+  "prompt": "以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。桌面菜单保留指针进入/离开及键盘路径，popup高度/位移/透明度300ms、裁切200ms采用源曲线，分类自然高度衔接；手机使用全屏顶层分类、500ms侧向二级、Back返回与固定底部行动，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+  "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
   "demo": "demos/stripe-platform/index.html",
   "preview": "previews/stripe-platform.jpg",
   "research": "research/stripe-platform.md",
@@ -112,5 +102,17 @@
   "implementation": "reference-study",
   "fidelity": "demos/stripe-platform/fidelity.md",
   "assetManifest": "demos/stripe-platform/assets-manifest.json",
-  "referencePreview": "research/screenshots/stripe-platform-source.png"
+  "referencePreview": "research/screenshots/stripe-platform-source.png",
+  "capturedAt": "2026-10-07",
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "light",
+    "control": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
+    "designReason": "官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。"
+  },
+  "soundBehavior": {
+    "kind": "none",
+    "control": "当前首页没有背景音乐或有声视频。",
+    "interactionRole": "波浪、产品 UI 和数据选择提供动感，保持金融信息阅读的安静环境。"
+  }
 }

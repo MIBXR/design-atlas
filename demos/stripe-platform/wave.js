@@ -7,7 +7,7 @@
   const reduce=matchMedia('(prefers-reduced-motion: reduce)');
   let wave=null,visible=true,userPaused=false,failed=false;
   const fallback=()=>{host.classList.add('single-wave--fallback');canvas.dataset.motionStatus='fallback';button.hidden=true;};
-  const menuOpen=()=>!document.querySelector('.mega').hidden||!!document.querySelector('dialog[open]');
+  const menuOpen=()=>!document.querySelector('.mega').hidden||document.querySelector('.mobile-menu').getAttribute('aria-expanded')==='true'||!!document.querySelector('dialog[open]');
   function sync(){
     if(failed||reduce.matches){if(wave&&!wave.paused)wave.paused=true;fallback();return;}
     if(!wave){init();return;}

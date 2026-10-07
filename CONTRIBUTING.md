@@ -1,22 +1,41 @@
-# 添加与更新案例
+# 添加与维护案例
 
-先观察原站，再实现代码。品牌案例以真实结构与素材为依据；经典风格练习以原作者实例和理论为依据。不要把同一个布局仅更换配色当成多种参考页。
+先观察真实页面，再实现代码。品牌案例以采集页面的实际布局、素材和交互为依据；经典风格练习以原作者实例和理论为依据。不能把同一个布局只更换配色当成不同设计。
 
-1. 记录官网实际 URL、语言/年度版本、日期；保存首屏与关键滚动状态的截图，图片扩展名与真实格式一致。
-2. 分析配色角色、字体尺度、网格留白、图像、形状、信息层级、动效及协调关系。区分可观测事实、作者解释和本库推断。
-3. 选择有辨识度的区域复现，按钮、标签、音频和滚动反馈必须可操作。使用真实素材，保留正确比例。
-4. 素材本地化，记录 URL、版权归属、用途、SHA256与处理方式；不能移入追踪像素或原站统计脚本。视频剪短或转码需公开记录。
-5. `fidelity.md` 按区域比较已复现、近似和未实现内容。购买/预约/登录可明确链接原站，不伪装成本地服务。
-6. 运行数据与资源检查，实测宽屏和390px手机、核心交互、媒体用户启用/关闭、无横向溢出，再保存预览和Git提交。
+## 观察与实现
 
-文件：`entries/<id>.json`、`research/<id>.md`、`demos/<id>/index.html`及配套文件、`previews/<id>.jpg`。手机预览位于 `previews/mobile/<id>.jpg`。图像可用 JPG/PNG/WebP/AVIF，字体/音视频也需本地化，避免运行时外网依赖。
+1. 记录原站URL、语言／年度版本和采集日期；每个案例固定为这次采集的单一快照，完成归档后不追随原站后续变化。浏览首次进入、所有章节到页尾、反向返回；检查加载／欢迎、指针进入／移动／离开、焦点、触摸和快速反向操作。
+2. 区分配色角色、字体尺度、网格留白、图像、形状、信息层级、动效和协调关系。将可观察事实、公开源码依据和本库解释分别写清。
+3. 保留有辨识度的机制：原站自然滚动就自然滚动，原站分屏切换则保留遮罩方向、出入顺序、数字／标题交接及指针反馈。可缩减章节与文案，但不能只保留静态外观而丢掉章节间的交互。
+4. 优先使用实际官方素材与正确比例。素材本地化并记录URL、归属、用途、SHA256、尺寸和处理方式；不搬入追踪、统计、账户或支付逻辑。转码／剪短影片需明确标注。
+5. 核对声音：独立BGM、开场音、操作音、影片声音、外部播放列表分别描述。保留实际启用／静音／暂停流程与原音轨，说明声音怎样帮助节奏、氛围或反馈；无音乐的原站不要臆造配乐。
+6. 核对主题：固定、系统、手动、系统＋手动分别描述。切换需协调背景、表面、文字、强调、边界；图像保留原色。强IP／摄影风格没有切换时可保留固定主题，并解释其设计作用。
+7. `fidelity.md` 只描述当前实现：触发、原站响应、本地对应、设计作用、已复现／近似／未验证的边界。登录跳转或操作受限时明确说明，不能把公开源码推断说成浏览器实测通过。交易／预约／账号可以明确链接原站。
 
-基础字段：`id, order, title, subtitle, category, tags, summary, accent, background, principles, productFocus, interaction, theme, constraints, useCases, avoid, tokens, sources, prompt, negativePrompt, demo, preview, research, exercise, composition`。分类为 `产品 / 游戏/IP / 艺术/文化 / 经典风格`。
+## 数据与文件
 
-`tokens` 包含 palette（hex数组）、type/layout/motion（字符串）。`composition` 包含 color/typography/layout/imagery/shape/hierarchy/motion/coherence 八项。`sources` 每项包含 title/url/type/note，type 是实例/理论/规范；至少有一个真实实例与一个理论或规范来源。
+终态文件包括 `entries/<id>.json`、`research/<id>.md`、`demos/<id>/`、`previews/<id>.jpg` 和 `previews/mobile/<id>.jpg`。标准预览来自实际浏览器，扩展名须匹配图片格式；素材清单包含本地字体、图像、音视频及必要的独立运行模块。
 
-原站研究再增加：`implementation: "reference-study"`、`country`、`referenceUrl`、`fidelity`、`assetManifest`，可加 `referencePreview`、`edition`。地区用于具体参考机构或创作来源，跨国与版本差异注明；经典理论不强行归为某国的现代官网风格。
+条目的基础字段以 `scripts/check.mjs` 为准。`composition` 包含 color、typography、layout、imagery、shape、hierarchy、motion、coherence。`sources` 至少含真实实例与理论／规范，注明每条来源所支持的结论。
 
-Prompt要写实际页面结构、元素尺度、资产来源、关键状态、响应式与减少动效处理，不只有风格形容词。不要照搬长段营销文案。`prefers-reduced-motion` 应保留全部可读内容；声音默认关闭或用户触发；保留浏览器原生滚动。
+`themeBehavior` 包含 `mode`（fixed / system / manual / system-and-manual）、`default`（light / dark / system）、`control` 和 `designReason`。`soundBehavior` 包含 `kind`（none / background / video / external / interactive）、`control` 和 `interactionRole`。这两项用于案例说明、比较及实验室配置；参考库显示主题与独立品牌Demo的主题分别管理。
 
-修改条目后运行 `npm run build` 和 `npm run check`，并在浏览器检查桌面、手机与主要交互；部署目录使用 `npm run build:site` 生成。
+原站案例还需要 `implementation: "reference-study"`、`country`、`referenceUrl`、`capturedAt`（YYYY-MM-DD）、`fidelity`、`assetManifest`，可增加采集页面的语言／年度标签与原站标准预览。国别指具体机构或创作来源，不把经典理论强归为某国当前风格。
+
+Prompt应写结构、尺度、素材、关键状态及交接、音乐和主题行为、响应式与减少动态处理，不只写形容词。`prefers-reduced-motion` 保留内容、操作和状态；声音由用户启用，停止／静音控制可用。
+
+## 加载与素材分发
+
+本地原始素材始终完整保留，保持原字节与尺寸。首屏必要图片、背景、可见字体与影片首帧必须在开场之前准备；后续区域按需提前加载，不能把整站下载或未启用的BGM设为进入条件。保留原站欢迎／加载机制，避免叠加另一套品牌开场。验收冷缓存与慢网络、失败重试、继续浏览、嵌入／独立打开和二次进入；缓存命中与素材就绪分别判断。
+
+大素材的GitHub备份使用公开仓库中的固定完整提交SHA，不使用浮动分支或网页中的访问令牌。增加／改变素材时，先在功能分支提交并推送包含完整素材的代码，再运行 `node scripts/build-asset-sources.mjs --commit <已推送的完整SHA>`，然后提交生成的 `asset-sources.js`。生成器校验本地字节与该提交Git对象一致；映射不得指向不存在或不匹配的文件。原始来源与权利信息继续保存在各案例的 `assets-manifest.json`。
+
+`npm run build:local` 保留完整静态素材；`npm run build:site` 仅在部署输出中省略已映射的大文件并重写引用。验证静态HTML、CSS、动态图像、音视频与字体均能访问，来源切换保持布局与状态一致。跨域媒体缓存只存成功的完整响应，不持久缓存404、未知地址或部分206响应；播放器拖动需保留Range读取。缓存失败不阻断页面，应用代码与文档不能被媒体缓存固定为旧版本。
+
+## 验收与提交
+
+运行 `npm run build`、`npm run check`，实测1440px桌面与390px手机、初次进入、章节正反切换、快速操作、关键按钮、媒体启停、主题及减少动态；检查横向溢出、资源错误和焦点。部署目录由 `npm run build:site` 生成。
+
+并行研究应先统一验证规则，分配明确的文件范围，再由主负责人独立验收。调试脚本、下载的整站源码、原始日志、临时截图和QA报告放在仓库外；不将过程报告、追加更新说明或已经清理的中间产物加入Git。变更背景与验证写入commit／PR。
+
+提交和发布前获取最新主干，处理真实冲突并保留用户的清理结果。使用功能分支提出Pull Request，不直接提交主干；发布的Site版本应对应已验证的明确commit。README、研究与复现范围始终描述当前可用内容，不累积修复日志。

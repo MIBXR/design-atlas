@@ -101,5 +101,16 @@
     "hierarchy": "空间主张 → 建筑描绘 → 工作方法 → 项目类型。",
     "motion": "3200ms 用户触发顺序描绘；滑块可中断；reduced motion 显示完成状态",
     "coherence": "线宽、清淡色彩、大留白和简短标题共同表达“减少噪声”；描绘动效与建筑构成顺序相呼应。"
+  },
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "light",
+    "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+    "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+  },
+  "soundBehavior": {
+    "kind": "none",
+    "control": "本练习无背景音乐。",
+    "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
   }
 }

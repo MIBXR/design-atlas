@@ -12,7 +12,7 @@ window.DESIGN_ATLAS = [
       "产品叙事",
       "配置器"
     ],
-    "summary": "黑色全宽产品舞台、悬浮章节导航、五项亮点图库和官方镜头视频的滚动换帧，构成从硬件整体到细节的叙事。",
+    "summary": "以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。",
     "accent": "#0071e3",
     "background": "#000000",
     "principles": [
@@ -23,18 +23,19 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "登场动画先呈现产品轮廓，亮点摄影提炼收益，细节选择器让同一舞台解释机身、镜头、尺寸与控件。",
     "interaction": [
-      "悬浮Explore章节导航可展开、Esc关闭。",
-      "五项亮点图库支持手动、播放/暂停、进度和末尾重播；静帧与每项5秒为局部近似。",
-      "设计详情与机身配色选择使用官方静帧。",
-      "镜头舞台随真实滚动进度seek官方视频，不自动播放该scrub媒体。"
+      "进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。",
+      "Highlights 进入视口 → 圆角摄影和进度控件带入，五项图库自动推进；手动选择/暂停/最后重播 → 按相机、续航、颜色、性能、Siri 依次建立产品重点。",
+      "Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。",
+      "镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。",
+      "景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。",
+      "Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。"
     ],
-    "theme": "黑色摄影棚、金属高光、巨型标题与克制蓝色入口，共同强调 Pro 硬件的精确与质感。",
+    "theme": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
     "constraints": [
-      "官方摄影和视频保持比例；滚动镜头使用视频换帧。",
-      "图库五静帧、每项5秒与标题淡出阈值为近似；专用亮点视频和完整3D未移植。",
-      "颜色选择同时提供名称与aria-pressed。",
-      "自然滚动；减少动态时使用poster、静态标题和手动图库。",
-      "价格、供应与购买以官网为准。"
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。源浏览器落在 no-enhanced 布局，增强滚动分支未完成源站实机验证；本地镜头滚动依据公开 VideoScrub 数据实现并实测。",
+      "七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
     ],
     "useCases": [
       "消费电子",
@@ -60,38 +61,20 @@ window.DESIGN_ATLAS = [
     },
     "sources": [
       {
-        "title": "Apple iPhone 官方分类页",
-        "url": "https://www.apple.com/iphone/",
-        "type": "实例",
-        "note": "iPhone产品分类与比较入口；具体交互以iPhone 18 Pro页面为准。"
-      },
-      {
-        "title": "Apple iPhone 18 Pro 产品页",
+        "title": "Apple iPhone 18 Pro 当前公开页面",
         "url": "https://www.apple.com/iphone-18-pro/",
-        "type": "实例",
-        "note": "2026-10-07产品页：首屏、Highlights、Design与镜头滚动；图库有限播放、暂停和末尾重播。"
+        "note": "采集日期 2026-10-07；美国英文产品页",
+        "type": "实例"
       },
       {
         "title": "Apple HIG — Motion",
         "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
         "type": "规范",
         "note": "动效目的和减少动态支持；应用规范向网页的迁移。"
-      },
-      {
-        "title": "Apple 当前页样式",
-        "url": "https://www.apple.com/v/iphone-18-pro/c/built/styles/overview.built.css",
-        "type": "实例",
-        "note": "VideoScrub容器、gallery控制与源样式，用于区分布局缩放和视频内镜头运动。"
-      },
-      {
-        "title": "Apple 当前页脚本",
-        "url": "https://www.apple.com/v/iphone-18-pro/c/built/scripts/overview/main.built.js",
-        "type": "实例",
-        "note": "VideoScrub加载窗口a0t−250vh至a0b+100vh；进度锚点a0t−100vh至a0b−100vh，范围.01至1。"
       }
     ],
-    "prompt": "以【观察日期】的 https://www.apple.com/iphone-18-pro/ 为依据制作局部产品页。使用官方摄影、Apple标识、登场MP4及camera-system WebM，按原比例本地保存并记录来源与权利。黑色全宽首屏保留44px导航、52px信息带、左下产品名称和右下蓝色购买胶囊；下滚显示玻璃质感章节导航，Explore可展开并支持Escape关闭。Highlights使用深灰底、56px左标题和约38px圆角摄影舞台，按Camera/Battery/Colors/A20 Pro/Siri AI排列五张静帧，进入视口时控制从下方出现，提供手动选择、进度、暂停和最后重播；每项5秒、控制入场.65秒是本地近似。Design用最大96px标题、左侧细节胶囊与右侧官方静帧，尺寸和颜色选择必须更新图像与文字状态。镜头段用220vh滚动容器和sticky视窗，p=clamp((viewportHeight-stage.top)/stage.height)，把暂停的视频seek到(.01+.99p)×duration；标题在p=.48至.73淡出，这一阈值标为近似。保留自然滚动，不为首屏摄影增加未经观察的缩放。手机重排控件，颜色选择提供名称与aria-pressed；prefers-reduced-motion使用poster、静态标题和手动图库。购买链接回官网。说明静帧图库、完整3D、专用亮点视频及其他章节的未覆盖范围。迁移到【目标硬件】时重新记录其镜头与滚动关系。",
-    "negativePrompt": "不要用原创硬件SVG替代真实产品；不要用通用两栏hero和三张卡片概括苹果整页；不要宣称完整像素复刻；不要隐藏复现范围；不要滚轮劫持或自动有声播放。",
+    "prompt": "以 https://www.apple.com/iphone-18-pro/ 在【采集日期】的 美国英文产品页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。官方图片、字标与视频不重画，保持黑色产品舞台和后段浅色购物章节。首屏原始 MP4、Highlights 进度轮播、7 项 viewer inline 说明展开/胶囊折叠下移/图像变化/关闭/前后/配色、景深比较和机型选择均保留。用双向 sticky 段串联媒体先出现、标题淡出、说明接入；静帧替代视频也不能删除这种交接机制。横向摄影架子用原生滚动。Watch the film 必须是独立全屏官方影片，不用首屏重播冒充；声音只在用户触发后出现，关闭暂停。减少动态时给静态摄影和完整文案。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
     "exercise": "保持黑色产品舞台，使用另一款真实产品摄影练习镜头与文案的滚动交接；先记录原站进度再调整曲线。",
     "demo": "demos/apple-product/index.html",
     "preview": "previews/apple-product.jpg",
@@ -104,14 +87,27 @@ window.DESIGN_ATLAS = [
       "shape": "摄影大圆角38px、导航玻璃圆角20px、功能胶囊与蓝色购买胶囊。",
       "hierarchy": "产品登场 → 核心亮点 → 可探索细节 → 镜头叙事。",
       "motion": "官方登场MP4；五项亮点进度、暂停与末尾重播；4.984秒镜头WebM按220vh舞台滚动进度换帧，标题同步淡出。",
-      "coherence": "同一硬件在不同尺度和状态中持续出现，黑底、巨字、胶囊和蓝色入口共同建立精确的产品叙事。"
+      "coherence": "同一硬件在不同尺度和状态中持续出现，黑底、巨字、胶囊和蓝色入口共同建立精确的产品叙事。",
+      "scroll": "首屏 → Highlights → Design viewer → 相机滚动段 → 景深比较 → 摄影横向架子 → 性能 → 续航 → 机型比较 → 浅色共享功能/购物/材料架子 → 说明与页尾。较原页缩短内容量，保留主要交互类型和后段明暗交接。"
     },
     "country": "美国",
     "referenceUrl": "https://www.apple.com/iphone-18-pro/",
     "implementation": "reference-study",
     "fidelity": "demos/apple-product/fidelity.md",
     "assetManifest": "demos/apple-product/assets-manifest.json",
-    "referencePreview": "research/screenshots/apple-hero-source.jpg"
+    "referencePreview": "research/screenshots/apple-hero-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
+      "designReason": "以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。"
+    },
+    "soundBehavior": {
+      "kind": "video",
+      "control": "首屏和滚动视频静音；Watch the film 点击打开官方 HLS 影片，172.38 秒，用户触发播放后有声音，可静音、调音量和全屏；关闭即暂停。",
+      "interactionRole": "静音摄影先建立材质与镜头重点，点击影片后才加入音乐和讲解，避免读页时自动发声。"
+    }
   },
   {
     "id": "stripe-platform",
@@ -128,7 +124,7 @@ window.DESIGN_ATLAS = [
       "产品矩阵",
       "下拉导航"
     ],
-    "summary": "连续段落式主标题、原始SingleWave波带、不同跨度的金融产品矩阵和企业案例，让平台规模与具体支付能力同时可见。",
+    "summary": "官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。",
     "accent": "#635bff",
     "background": "#ffffff",
     "principles": [
@@ -139,20 +135,21 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。",
     "interaction": [
-      "导航悬停展开，点击与键盘保留；外部点击和Esc关闭并同步aria-expanded。",
-      "进入Payments视口后商户、终端金额及checkout场景同步自动更新；离开视口/隐藏/减弱动画暂停循环。",
-      "各产品仍有本地说明弹窗，business model选择可更新结果。",
-      "客户案例tabs切换真实说明与官网入口。",
-      "首屏第一方WebGL波带自动形变；本地暂停/继续按钮保持同一渲染时间；菜单与对话框打开时暂停，reduce/渲染能力不足显示官方静帧。"
+      "进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。",
+      "Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。",
+      "Bento 点击 → 产品详情对话框；真实官网是产品说明/界面扩展，本地内容压缩，业务模型反馈为明确的示范。",
+      "Global 四统计选择 → 当前数字强调、底部细线进度和基础设施说明对应变化；自动推进与指针停留暂停。",
+      "Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。",
+      "后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。",
+      "手机汉堡菜单 → 全屏顶层 Products/Solutions/Developers/Resources；选择分类后二级页以源 CSS 500ms 侧向进入、250ms 透明度衔接，Back 返回顶层。Start now/Contact sales 固定底部；关闭/Escape 恢复滚动和焦点，让长目录保持方向与核心行动。",
+      "桌面指针进入/点击分类 → popup 高度/位移/透明度 300ms、clip/max-height 200ms，均采用源 cubic-bezier(.45,.05,.55,.95)；分类按自然高度衔接。快速反转取消旧动画，离开/外部点击/Escape 后 hidden/inert/aria 一致；减少动态直接完成，维持目录的空间关系。"
     ],
-    "theme": "白底、海军蓝文字、紫色行动按钮与橙粉紫官网彩带；按钮小圆角，产品卡适度圆角。",
+    "theme": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
     "constraints": [
-      "2026-10-07首页与2017设计文章分别作为实例和历史理论。",
-      "SingleWave保留原shader、palette和home三档相机；官方fallback用于减少动态或GPU不可用。",
-      "产品卡跨度随内容变化；终端与checkout状态同步，自动轮换和hover分别表达。",
-      "界面金额为示例，金融指标为观察日快照；账户、销售和支付不接入。",
-      "自然滚动；手机单列；菜单、tab和弹窗具键盘状态。",
-      "渲染容器裁切、标题混色和帧率存在环境差异；部分客户字标以文字呈现。"
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
     ],
     "useCases": [
       "复杂平台产品官网",
@@ -173,7 +170,7 @@ window.DESIGN_ATLAS = [
       ],
       "type": "官网 Söhne 本地字体；主标题48px、连续段落、紧凑行高。",
       "layout": "1266px内容框；48px段落式首屏；产品矩阵首行Payments跨两列、Billing一列同高，随后不同产品区；4列指标与左右案例。",
-      "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒与菜单.18秒均为本地近似。"
+      "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒为本地近似；桌面popup高度/transform/opacity 300ms与clip/max-height 200ms采用源cubic-bezier(.45,.05,.55,.95)，入口位移12px为拟合；手机二级transform 500ms/opacity 250ms采用源CSS曲线，入口位移距离为拟合。"
     },
     "composition": {
       "color": "白底、海军蓝文字、紫色行动按钮与橙粉紫官网彩带；按钮小圆角，产品卡适度圆角。",
@@ -182,15 +179,16 @@ window.DESIGN_ATLAS = [
       "imagery": "官方SingleWave原始shader与folded mesh，light palette；Söhne本地字体；真实终端素材与本地支付界面结构。",
       "shape": "按钮4px、产品8px、对话框12px；官网彩带原比例。",
       "hierarchy": "首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。",
-      "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒与菜单.18秒均为本地近似。",
-      "coherence": "橙粉紫波带与紫色行动建立品牌识别，细框线、海军蓝文字和真实支付终端让复杂能力可读；部分界面为本地DOM，容器裁切和标题混色为局部还原。"
+      "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒为本地近似；桌面popup高度/transform/opacity 300ms与clip/max-height 200ms采用源cubic-bezier(.45,.05,.55,.95)，入口位移12px为拟合；手机二级transform 500ms/opacity 250ms采用源CSS曲线，入口位移距离为拟合。",
+      "coherence": "橙粉紫波带与紫色行动建立品牌识别，细框线、海军蓝文字和真实支付终端让复杂能力可读；部分界面为本地DOM，容器裁切和标题混色为局部还原。",
+      "scroll": "波浪首屏 → 6 产品 Bento → Global 4 统计 → 4 客户折叠 → Startup 横向架子 → 平台选择 → 海军蓝开发者内容 → 活动架子 → 结束行动 → 页尾。"
     },
     "sources": [
       {
-        "title": "Stripe 公开首页",
+        "title": "Stripe 当前公开页面",
         "url": "https://stripe.com/",
-        "type": "实例",
-        "note": "2026-10-07首页：Products指针进入展开、客户标识左移、Payments/Billing跨度与终端竖向换场景。"
+        "note": "采集日期 2026-10-07；英文全球首页",
+        "type": "实例"
       },
       {
         "title": "Connect frontend design",
@@ -203,22 +201,10 @@ window.DESIGN_ATLAS = [
         "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
         "type": "规范",
         "note": "客户案例与产品选择的键盘、选择状态参考。"
-      },
-      {
-        "title": "Stripe 当前页产品样式",
-        "url": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/css/0b96456ec501769a.css",
-        "type": "实例",
-        "note": "产品矩阵、终端mask和菜单的具体组件样式。"
-      },
-      {
-        "title": "Stripe SingleWave 官网组件、shader与三档相机配置",
-        "url": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
-        "type": "实例",
-        "note": "模块67103控制器、59168网格/材料、19622配置；home presets gj/P1/y7，20个纯渲染模块。"
       }
     ],
-    "prompt": "制作基于【官网URL】和【观察日期】的Stripe金融平台局部学习页。采用本地Söhne、海军蓝文字、紫色4px圆角主按钮和1266px细框线内容区；首屏是48px连续段落式定位，背景运行官方SingleWave折叠网格、shader和light palette。使用已归档的20个渲染模块、Three.js r178 MIT许可、本地Worker与纹理；home相机配置为wide gj/medium P1/small y7，speed=4e-5、timeOffset=17500，不改写成任意CSS波形。提供暂停/恢复，菜单或对话框打开、离屏、后台时暂停；reduce或GPU失败显示官方fallback。产品矩阵保持不同浅色与图形结构：首行Payments跨两列、Billing一列同高约676px，使用真实终端图和本地支付DOM。终端文本在mask内以translateY(0/-100/-200%)向上换场景，checkout同步商户、商品和金额；5秒周期和.75秒过渡为近似，轮换由时间触发。客户标识连续左移，35秒周期为近似。Products指针进入展开，点击、键盘、Escape及外部点击同步ARIA；.18秒菜单过渡和140ms离开延迟为本地适配。产品详情可选择业务模型，四个客户tab更新介绍，金额与注册反馈明确为本地示例。手机产品单列、窄屏裁切遵从已归档样式，所有弹窗可关闭，保留自然滚动、焦点和减少动态。记录资产及渲染适配来源；容器裁切、标题混色、其余金融演示和后端不称完整等价。",
-    "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+    "prompt": "以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。桌面菜单保留指针进入/离开及键盘路径，popup高度/位移/透明度300ms、裁切200ms采用源曲线，分类自然高度衔接；手机使用全屏顶层分类、500ms侧向二级、Back返回与固定底部行动，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
     "demo": "demos/stripe-platform/index.html",
     "preview": "previews/stripe-platform.jpg",
     "research": "research/stripe-platform.md",
@@ -227,7 +213,19 @@ window.DESIGN_ATLAS = [
     "implementation": "reference-study",
     "fidelity": "demos/stripe-platform/fidelity.md",
     "assetManifest": "demos/stripe-platform/assets-manifest.json",
-    "referencePreview": "research/screenshots/stripe-platform-source.png"
+    "referencePreview": "research/screenshots/stripe-platform-source.png",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
+      "designReason": "官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前首页没有背景音乐或有声视频。",
+      "interactionRole": "波浪、产品 UI 和数据选择提供动感，保持金融信息阅读的安静环境。"
+    }
   },
   {
     "id": "linear-workflow",
@@ -244,30 +242,30 @@ window.DESIGN_ATLAS = [
       "工作流",
       "低对比边框"
     ],
-    "summary": "忠实保留 Linear 当前左对齐大标题、克制导航、三栏 issue 界面与从收件到规划的章节节奏。",
+    "summary": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
     "accent": "#a79ad6",
     "background": "#08090a",
     "principles": [
-      "标题先讲产品开发系统，真实工作界面紧接着提供证据。",
-      "导航与边框退到次级，任务内容获得更高对比。",
-      "局部彩色只用于状态、标签和项目，避免全屏霓虹。",
-      "章节按工作流程推进，产品结构与传播叙事一致。"
+      "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
+      "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+      "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+      "第一方素材保持比例；手机保留原站实际变体。"
     ],
     "productFocus": "通过真实官网issue结构展示团队与智能体协作：侧栏、任务正文、活动评论、属性及状态，随后把收件和规划纳入同一流程。",
     "interaction": [
-      "四个Favorites入口切换不同信息架构，下一项/上一项也可切换。",
-      "任务卡选中回执、项目资源打开回执为本地扩展；洞察表提供静态源数据快照。",
-      "issue详情可收藏、改状态和运行本地agent示例；状态符号同步更新。",
-      "Product/Resources hover菜单，点击/键盘与Esc保留。"
+      "进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。",
+      "Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。",
+      "Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。",
+      "AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
+      "Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。",
+      "手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。"
     ],
-    "theme": "接近黑的底色、温暖灰文字、低饱和项目色；细边框、中小圆角、真实官方氛围图。",
+    "theme": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
     "constraints": [
-      "当前首页与2024/2026应用UI设计文章区分来源范围。",
-      "暗色层次依靠亮度和边框；项目/状态色承担信息功能。",
-      "四类工作视图保持各自结构，任务内容与状态联动。",
-      "Intake完整消息编排、agent浮窗和实时执行未覆盖。",
-      "手机收束侧栏与次级属性；减少动态关闭局部扫光。",
-      "资源、任务执行与注册使用本地反馈，真实服务以官网为准。"
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
     ],
     "useCases": [
       "开发者工具官网",
@@ -292,21 +290,22 @@ window.DESIGN_ATLAS = [
       "motion": "Favorites直接切换issue、任务看板、insights和project；Working文字局部2秒linear扫光；导航指针进入展开，160ms入场为本地近似。"
     },
     "composition": {
-      "color": "接近黑的底色、温暖灰文字、低饱和项目色；细边框、中小圆角、真实官方氛围图。",
+      "color": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
       "typography": "官方 Inter variable 本地字体；桌面64px主标题、紧行高、任务22px、UI12–14px。",
-      "layout": "1280px最大宽度；左标题+横向说明；235px侧栏/任务/210px属性；收件与规划两节。",
-      "imagery": "64px标题、灰色副文、New Loops入口；侧栏/正文/属性，官方头像和Inter；Triage与规划时间线",
+      "layout": "首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。",
+      "imagery": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
       "shape": "细边框、10–15px窗口、5px行项与小圆胶囊。",
-      "hierarchy": "通过真实官网issue结构展示团队与智能体协作：侧栏、任务正文、活动评论、属性及状态，随后把收件和规划纳入同一流程。",
-      "motion": "Favorites直接切换issue、任务看板、insights和project；Working文字局部2秒linear扫光；导航指针进入展开，160ms入场为本地近似。",
-      "coherence": "字体、色彩、素材、信息结构与Linear公开页一致；官网应用截图的所有图标、评论和agent实时执行未全部复制。本地核心issue结构接近，后续收件与规划使用自建示例数据；官网完整AI/automations和发布章节未覆盖。Logo保持官方原样。"
+      "hierarchy": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
+      "motion": "进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。；Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。；Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。；AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
+      "coherence": "消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。",
+      "scroll": "首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。"
     },
     "sources": [
       {
-        "title": "Linear 首页",
+        "title": "Linear 当前公开页面",
         "url": "https://linear.app/",
-        "type": "实例",
-        "note": "2026-10-07首页：64px标题、issue演示；Favorites切换三列看板、insights和project；Product指针进入展开。"
+        "note": "采集日期 2026-10-07；英文首页",
+        "type": "实例"
       },
       {
         "title": "Linear 2026 design refresh",
@@ -325,16 +324,10 @@ window.DESIGN_ATLAS = [
         "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
         "type": "规范",
         "note": "任务与分类选择的键盘和选择状态参考。"
-      },
-      {
-        "title": "Linear 当前主页组件样式",
-        "url": "https://static.linear.app/web/_next/static/css/Dop5ZgCE.css",
-        "type": "实例",
-        "note": "Working的agentLabelSweep/agentBorderSweep为2秒linear；Intake消息opacity分阶段变化。"
       }
     ],
-    "prompt": "基于【官网URL】在【观察日期】的Linear首页制作局部学习页。保留接近黑的背景、64px左对齐标题、灰色副文、New Loops入口与细分隔线，使用官方Inter、品牌SVG、头像和氛围图。标题下重建侧栏、任务正文、活动评论、属性三栏，颜色仅标识项目和状态。Favorites必须切换四种独立结构：Faster app launch的issue详情；Offline Mode/Core Performance/UI Refresh三列11项任务看板；3389/1128/729统计、柱图与六行项目表；项目overview及Properties/Resources。采用直接切换，保留任务上下箭头、收藏、状态和Run agent本地反馈；任务及项目资源不能伪装成远程执行。Working标签保留源CSS证实的2秒linear局部文字扫光。Product指针进入展开，点击与键盘可操作，Escape和外部点击关闭且同步aria-expanded；160ms缩放淡入是本地近似。后续Triage与规划时间线使用不同结构，说明原Intake消息分阶段显现和浮动agent面板未完整复现。手机收束侧栏与次级属性，正文仍可读；保留自然滚动、可见焦点、可关闭弹窗和prefers-reduced-motion。资产本地化并记录来源、尺寸与权利；应用UI设计文章的层级原则与当前营销页事实分开。用于【目标开发工具】时重新组织其真实任务流程。",
-    "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+    "prompt": "以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
     "demo": "demos/linear-workflow/index.html",
     "preview": "previews/linear-workflow.jpg",
     "research": "research/linear-workflow.md",
@@ -343,7 +336,19 @@ window.DESIGN_ATLAS = [
     "implementation": "reference-study",
     "fidelity": "demos/linear-workflow/fidelity.md",
     "assetManifest": "demos/linear-workflow/assets-manifest.json",
-    "referencePreview": "research/screenshots/linear-workflow-source.png"
+    "referencePreview": "research/screenshots/linear-workflow-source.png",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
+      "designReason": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前首页没有配乐、音效和音视频播放器。",
+      "interactionRole": "消息、任务板和代码状态承担产品叙事，不靠声音强调任务。"
+    }
   },
   {
     "id": "notion-editorial",
@@ -360,30 +365,29 @@ window.DESIGN_ATLAS = [
       "文档",
       "产品视频"
     ],
-    "summary": "居中巨字、六种动作词胶囊、团队插画与真实工作空间视频建立人文产品语气，Capture/Find双列和整行Automate解释三种能力。",
+    "summary": "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。",
     "accent": "#0075e6",
     "background": "#ffffff",
     "principles": [
-      "居中巨字先建立团队与AI的共同工作主题。",
-      "手绘人物与产品界面一起出现，情境与工具互相解释。",
-      "浅蓝动词与蓝色行动建立有限、清楚的视觉重点。",
-      "功能说明使用真实文档界面，避免插画替代功能证据。"
+      "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。",
+      "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+      "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+      "第一方素材保持比例；手机保留原站实际变体。"
     ],
     "productFocus": "Ramp HQ产品视频具体展示团队与agents；Capture/Find并列呈现上下文与答案，整行Automate强调任务执行。",
     "interaction": [
-      "动作胶囊自动轮换，保留点击下一项作为本地扩展；reduced-motion不自动轮换。",
-      "官方产品视频播放/暂停与真实media状态同步。",
-      "Product点击展开Capture/Find/Automate菜单。",
-      "下方Capture/Find两列与整行Automate；功能示例、工作空间栏目保留本地状态。"
+      "2500ms 自动 Think/Ship/Create/Build/Jam/Scale → 词直接替换，测量 scrollWidth 后宽度以 300ms cubic-bezier(.86,0,.07,1) 变化，底色/圆点对应变化；这是源机制，没有给文字加不存在的飞入飞出。",
+      "桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。",
+      "客户标识原生连续横移，指针停留暂停；手机保持条带，不把标识排成多行墙。",
+      "桌面 Product/Resources 指针进入与点击 → 首次 opacity/translateY(-16px) 250ms ease-out，退出 150ms ease-in、延迟 50ms；已打开分类按源 instantSwitch 直接切换，快速反转取消旧退出，减少动态直接完成；手机打开全屏菜单 → Product/AI/Resources 原地单开，切换收起前组，再点同组收起；其他分类变灰，底部 Download app/Log in 固定。源 CSS 子展开 300ms、入口 350ms，内容/底部延迟 200/250ms；关闭/Escape 恢复滚动和焦点，维持层级与行动位置。",
+      "Capture/Find 两列和 Automate 通栏保持不同层次；下方五用途横向入口、团队故事、结束行动、页尾按源顺序。页面演示账户按钮先本地说明，手机菜单链接使用已观察的原站公开入口。"
     ],
-    "theme": "高白底、近黑巨字、蓝色按钮、手绘人物；功能区不同浅色底，文档界面保持轻边框。",
+    "theme": "营销首页固定白底、浅色 Bento 和蓝色 CTA；没有全局主题切换。产品编辑器内的主题不等于这个首页主题。",
     "constraints": [
-      "官方插画、产品图、NotionInter和字标保持比例。",
-      "品牌传播文章和应用排版文章各自注明适用范围。",
-      "六词自动轮换、内容测宽；手动下一项为本地扩展。",
-      "视频自然循环、默认静音并可暂停；减少动态停止自动媒体与词轮换。",
-      "Capture/Find双列、Automate整行；手机单列，交互不依赖hover。",
-      "问答、文档与任务为本地示例；真实搜索和agent执行未覆盖。"
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "七头像为官方原素材，组合间距、标识 24s 周期和菜单指针离开等待 150ms 是拟合；Bento 使用官方完整静帧而非全部独立浮层，三故事数量与正文缩短。详情对话框内的勾选/问答/agent 反馈是本地示范，并不声称是原站首页机制或真实模型执行。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
     ],
     "useCases": [
       "知识协作产品",
@@ -405,24 +409,25 @@ window.DESIGN_ATLAS = [
       ],
       "type": "本地 NotionInter regular/bold；首屏94px、动词72px、正文20px；手机45px。",
       "layout": "居中94px标题、1120px工作空间视频；Capture/Find双列bento、整行Automate；手机单列与官方移动图。",
-      "motion": "Think/Ship/Create/Build/Jam/Scale每2500ms轮换；内容测宽与300ms cubic-bezier(.86,0,.07,1)；10.967秒官方视频静音循环，滚出视口继续播放。"
+      "motion": "Think/Ship/Create/Build/Jam/Scale每2500ms轮换；内容测宽与300ms cubic-bezier(.86,0,.07,1)；10.967秒官方视频静音循环，滚出视口继续播放。 桌面dropdown首入250ms ease-out/-16px、退出150ms ease-in+50ms delay、分类instantSwitch来自源CSS/JS。"
     },
     "composition": {
-      "color": "高白底、近黑巨字、蓝色按钮、手绘人物；功能区不同浅色底，文档界面保持轻边框。",
+      "color": "营销首页固定白底、浅色 Bento 和蓝色 CTA；没有全局主题切换。产品编辑器内的主题不等于这个首页主题。",
       "typography": "本地 NotionInter regular/bold；首屏94px、动词72px、正文20px；手机45px。",
-      "layout": "居中94px标题、1120px工作空间视频；Capture/Find双列bento、整行Automate；手机单列与官方移动图。",
-      "imagery": "94px标题、浅蓝胶囊、官网字体；官方hero视频/poster和mobile图；官网capture/find/automate图片 + 本地示例弹窗",
+      "layout": "语言提示/导航 → 动作胶囊/头像/桌面产品视频 → 标识条带 → 两列+通栏 Bento → 五用途 → 团队故事 → 结束行动 → 页尾。",
+      "imagery": "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。",
       "shape": "大圆胶囊动词、8px按钮、20px功能区；插画自然外轮廓。",
-      "hierarchy": "Ramp HQ产品视频具体展示团队与agents；Capture/Find并列呈现上下文与答案，整行Automate强调任务执行。",
-      "motion": "Think/Ship/Create/Build/Jam/Scale每2500ms轮换；内容测宽与300ms cubic-bezier(.86,0,.07,1)；10.967秒官方视频静音循环，滚出视口继续播放。",
-      "coherence": "字体、色彩、素材、信息结构与Notion公开页一致；首屏核心构图和素材保持真实。后续功能文案为概述，部分功能背景与文档示例为局部迁移，不称整站像素级复制；未还原所有客户墙、真实搜索和agent执行。"
+      "hierarchy": "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。",
+      "motion": "2500ms 自动 Think/Ship/Create/Build/Jam/Scale → 词直接替换，测量 scrollWidth 后宽度以 300ms cubic-bezier(.86,0,.07,1) 变化，底色/圆点对应变化；这是源机制，没有给文字加不存在的飞入飞出。；桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。；客户标识原生连续横移，指针停留暂停；手机保持条带，不把标识排成多行墙。；桌面 Product/Resources 指针进入与点击 → 首次 opacity/translateY(-16px) 250ms ease-out，退出 150ms ease-in、延迟 50ms；已打开分类按源 instantSwitch 直接切换，快速反转取消旧退出，减少动态直接完成；手机打开全屏菜单 → Product/AI/Resources 原地单开，切换收起前组，再点同组收起；其他分类变灰，底部 Download app/Log in 固定。源 CSS 子展开 300ms、入口 350ms，内容/底部延迟 200/250ms；关闭/Escape 恢复滚动和焦点，维持层级与行动位置。",
+      "coherence": "七头像为官方原素材，组合间距、标识 24s 周期和菜单指针离开等待 150ms 是拟合；Bento 使用官方完整静帧而非全部独立浮层，三故事数量与正文缩短。详情对话框内的勾选/问答/agent 反馈是本地示范，并不声称是原站首页机制或真实模型执行。",
+      "scroll": "语言提示/导航 → 动作胶囊/头像/桌面产品视频 → 标识条带 → 两列+通栏 Bento → 五用途 → 团队故事 → 结束行动 → 页尾。"
     },
     "sources": [
       {
-        "title": "Notion 当前首页",
+        "title": "Notion 当前公开页面",
         "url": "https://www.notion.com/",
-        "type": "实例",
-        "note": "2026-10-07首页：六词轮换、Product点击、Capture/Find双列与Automate整行、视频播放/暂停。"
+        "note": "采集日期 2026-10-07；英文首页与简体中文语言提示",
+        "type": "实例"
       },
       {
         "title": "Notion brand campaign",
@@ -435,22 +440,10 @@ window.DESIGN_ATLAS = [
         "url": "https://www.notion.com/blog/updating-the-design-of-notion-pages",
         "type": "理论",
         "note": "2026-03-18应用页面的阅读间距与列表分组；用于本地文档示例。"
-      },
-      {
-        "title": "Notion 当前标题脚本",
-        "url": "https://www.notion.com/_next/static/chunks/1dh2_szm1xs0g.js",
-        "type": "实例",
-        "note": "六词顺序和setInterval2500，内容测宽机制。"
-      },
-      {
-        "title": "Notion 当前标题样式",
-        "url": "https://www.notion.com/_next/static/chunks/40jeqhz4ax8oh.css",
-        "type": "实例",
-        "note": "标签宽度300ms cubic-bezier(.86,0,.07,1)及对应组件样式。"
       }
     ],
-    "prompt": "以【观察日期】的【Notion官网URL】制作局部设计研究页。保留白底、居中94px巨字、官方NotionInter、原始字标、浅蓝动作胶囊与蓝色小圆角行动按钮。动作词按Think/Ship/Create/Build/Jam/Scale每2500ms自动轮换，分别配蓝/绿/橙/黄/紫/青；标签根据scrollWidth测宽，在固定mask内以300ms cubic-bezier(.86,0,.07,1)改变宽度，字体加载后重测。保留手动下一项作为本地扩展，减少动态时停止自动轮换，动态标题不持续aria-live广播。首屏使用真实团队插画与10.967秒Ramp HQ产品视频，默认静音循环，滚出视口仍播放；按钮依据真实play/pause事件更新状态，减少动态默认暂停，手机用官方移动图。下方Capture/Find使用两张浅灰bento并列，Automate占下一整行，图像和不同浅色背景按能力区分，局部箭头反馈即可。Product点击展开Capture/Find/Automate菜单；工作空间栏目、问答和任务示例可操作且明确为本地模拟。手机单列、正文可读、键盘焦点清楚、弹窗Escape关闭，保留自然滚动。记录资产与来源，区分品牌活动插画理论、应用排版原则和当前首页事实；客户墙、真实搜索、agent执行及完整后续内容列为未覆盖。复用到【目标知识产品】时以真实模块重组信息顺序。",
-    "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+    "prompt": "以 https://www.notion.com/ 在【采集日期】的 英文首页与简体中文语言提示 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 Notion 字体、字标与七头像、白底居中巨字、蓝色小圆角 CTA，动作胶囊按源 2500ms 直接替词，仅 300ms 测量宽度缓动与对应颜色，不添加飞字。桌面产品视频静音循环；手机头像居标题上方、hero 媒体隐藏，客户条带持续横移。Capture/Find 并列、Automate 通栏，再接五用途、故事、行动和页尾；正常滚动，不增加整屏遮罩。桌面菜单保留指针/键盘路径、250ms首入/-16px、150ms退出加50ms延迟和分类instantSwitch，手机 Product/AI/Resources 原地单开，300ms 展开、其他分类变灰，底部 Download app/Log in 固定，关闭恢复阅读。页面固定浅色，无背景音乐，减少动态保留静态字与手动视频。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
     "demo": "demos/notion-editorial/index.html",
     "preview": "previews/notion-editorial.jpg",
     "research": "research/notion-editorial.md",
@@ -459,7 +452,19 @@ window.DESIGN_ATLAS = [
     "implementation": "reference-study",
     "fidelity": "demos/notion-editorial/fidelity.md",
     "assetManifest": "demos/notion-editorial/assets-manifest.json",
-    "referencePreview": "research/screenshots/notion-editorial-source.png"
+    "referencePreview": "research/screenshots/notion-editorial-source.png",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "营销首页固定白底、浅色 Bento 和蓝色 CTA；没有全局主题切换。产品编辑器内的主题不等于这个首页主题。",
+      "designReason": "白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。"
+    },
+    "soundBehavior": {
+      "kind": "video",
+      "control": "桌面官方 hero 产品演示默认静音循环，有本地暂停/播放；手机当前源页隐藏这一媒体区域。没有背景音乐。",
+      "interactionRole": "演示内部 UI 展示团队和 agent 的工作，静音让主标题与插画保留阅读主导。"
+    }
   },
   {
     "id": "zelda-world",
@@ -476,27 +481,29 @@ window.DESIGN_ATLAS = [
       "BGM",
       "沉浸"
     ],
-    "summary": "真实游戏场景占据全屏，以日文主题字、三个世界章节和克制导航，让玩法先于文字被看见。",
+    "summary": "先选声音，再由古代纹章扩散进入世界；同屏三章以模糊和亮度交接，主题化削角缩略框联动。",
     "accent": "#1f9a6d",
     "background": "#0a1714",
     "principles": [
-      "世界视频是信息主角，界面只提供章节方向和声音控制。",
-      "三个动作主题“翔ける／創る／紡ぐ”把世界与玩法相连。",
-      "文字和控制依附稳定位置，低密度让场景细节承担产品证明。"
+      "声音选择先于世界，纹章扩散将古代文明意象变成真正的入口。",
+      "影片、标题分层错时进入；3秒闲置隐去界面，让景色承担产品证明。",
+      "三个缩略项复用原始古代边框，悬停和当前态削角白线与标题字标一致。"
     ],
     "productFocus": "使用 Nintendo 世界页真实 HLS 场景片段、标题和缩略图；天空、创造、未知世界成为三段连续叙事。",
     "interaction": [
-      "三个世界章节在同一舞台切换，当前视频、标题与目录同步；支持按钮、左右键和水平触摸。",
-      "短片结束推进下一章；画面可持续暂停，非当前视频停止，减少动态时初始停止。",
-      "原站BGM默认关闭，用户点击播放；页面进入后台暂停。"
+      "首次 ON/OFF → 原始纹章出现；2秒后向外发光扩散，3.6秒移交影片舞台。ON触发原开场 SE，随后原BGM接续。",
+      "点击章节 → 300ms输入锁；前片1秒模糊退场，后片1.6秒、延迟0.6秒进入；标题1.6秒、延迟1秒进入。快速选择保留最后请求。",
+      "影片片尾前1秒推进下一章；暂停画面和减少动态分支关闭自动推进。",
+      "鼠标移动或触摸唤醒界面，3秒闲置后0.8秒模糊淡出；键盘焦点保留控件为本地补充。",
+      "桌面滚轮不翻章；手机水平触摸以10px阈值切换并停在两端，竖向浏览到目录和页脚。"
     ],
     "theme": "天空蓝、古代青绿、象牙色标题；自然、神秘与开放探索。",
     "constraints": [
-      "官方资源只用于本库私人学习，原素材权利归 Nintendo。",
-      "本地同屏三章为局部复现，过渡曲线与短片长度不同于完整官网。",
-      "短片采用每章前6段，并未宣称复现完整视频。",
-      "字幕与控制保持高对比，不用持续动效阻碍阅读。",
-      "背景视频必须有持续暂停机制，音频默认关闭。"
+      "本次仅归档2026-10-07所见日文WORLD，官网后续变化不维护。",
+      "影片仍为每章前6段短片，保留同样片尾推进规则但循环更短；手机未取得竖版HLS，裁切同一短片。",
+      "仅本页三章与声音入口；其它栏目以官网外链打开，未复制业务服务。",
+      "键盘、画面持续暂停、焦点时不隐藏为本地无障碍补充；源站桌面滚轮没有翻章。",
+      "资源权利归Nintendo，个人学习使用不等于商业授权。"
     ],
     "useCases": [
       "开放世界游戏",
@@ -516,7 +523,7 @@ window.DESIGN_ATLAS = [
       ],
       "type": "官方日文标题图片 + 小字号衬线副文；控件用系统无衬线",
       "layout": "同一满屏舞台内叠放三章视频；右侧主题，左下Logo，底缘缩略目录",
-      "motion": "同一100svh舞台的三章视频联动切换；本地300ms线性亮度/淡化及标题位移近似，短片结束推进；暂停或减少动态时不自动推进。"
+      "motion": "300ms输入锁；影片退场1s模糊、入场1.6s延迟0.6s；标题入场1.6s延迟1s；片尾前1s推进；闲置3s后0.8s隐藏。"
     },
     "sources": [
       {
@@ -538,7 +545,7 @@ window.DESIGN_ATLAS = [
         "note": "2026-10-07：章节切换、300ms锁定、片尾推进和3秒闲置隐藏有脚本依据；桌面wheel翻章代码被注释。本地时长、亮度曲线及视频长度另有差异。"
       }
     ],
-    "prompt": "为【开放世界游戏】制作一个基于已核验官网的私人设计研究 demo。先记录官网实际 URL、调研日期、三个世界动作主题与声音入口，再下载有授权的官方场景、标题与字标到本地，逐项记录来源、尺寸、用途和处理方式。布局使用一个100svh舞台内叠放三段场景，当前真实视频覆盖全幅，标题在右侧，游戏Logo在左下，章节缩略目录稳定放置。信息顺序为世界场景、动作主题、章节导航、官方完整入口；避免用普通两栏功能卡替代视频叙事。使用古代青绿与象牙色细线控件，正文为可读取HTML。每章提供静态后备帧，视频可持续暂停，prefers-reduced-motion下初始停止；实际原站音乐仅在用户点击后播放，捕获play拒绝，页面离开前台暂停。手机收敛目录为三个等宽缩略项，正文与按钮保留可读尺寸。不把滚轮当作逐章翻页；由缩略按钮、方向键和水平触摸切换，说明短片长度与片尾时机的差异。输出独立HTML/CSS/JS、assets-manifest.json、fidelity.md和真实浏览器预览。 三章叠在同一舞台，非当前视频必须停止；标题和亮度采用300ms本地近似。短片结束推进，但用户暂停和减少动态时不自动换章。保留按钮、左右键与水平触摸，目录持续可见；说明官网完整HLS、片尾前1秒策略、3秒界面隐藏与本地短片的差异。",
+    "prompt": "以 https://www.nintendo.com/jp/zelda/totk/world/index.html 在2026-10-07的单一快照为依据制作私人学习页。先观察声音门→古代纹章→稳定舞台。原始ON/OFF图、背景纹样、发光纹章、标题、缩略角框都复用官方素材，禁止自行重绘替代。ON启动原开场SE，3.4秒接BGM；OFF全程静音。2秒后纹章扩散，3.6秒交接影片。三章同屏，300ms切换锁：旧片1秒模糊退，下一片1.6秒延迟0.6秒进入，标题延迟1秒；影片结束前1秒推进。3秒闲置后0.8秒模糊隐去控件，鼠标/触摸唤醒。底部使用原始古代边框和削角白线 hover/current 态；不要普通矩形框。桌面滚轮不翻章，手机水平10px触摸有边界，竖向可至页脚。保留画面暂停、减少动态和键盘补充；说明短片及手机视频的近似。输出源码、完整素材manifest、当前fidelity及预览。",
     "negativePrompt": "不要编造原站世界或曲名；不要以原创浮岛替代官方真实场景；不要自动播放声音；不要嵌入原站整页、追踪脚本或声称像素级完整复刻。",
     "demo": "demos/zelda-world/index.html",
     "preview": "previews/zelda-world.jpg",
@@ -549,16 +556,28 @@ window.DESIGN_ATLAS = [
       "typography": "官方日文标题图片 + 小字号衬线副文；控件用系统无衬线",
       "layout": "同一满屏舞台内叠放三章视频；右侧主题，左下Logo，底缘缩略目录",
       "imagery": "官方 HLS 每章前6段、本地转封装 MP4、官方字标与缩略图。",
-      "shape": "细线、细边框与低干扰矩形目录，避免遮盖景色。",
+      "shape": "原始 frame_thumbnail 古代角纹 + 8点削角白线；当前与 hover 加内框，避免普通矩形卡片。",
       "hierarchy": "场景 → 三个玩法动词 → 章节选择 → 真实官方入口。",
-      "motion": "同一100svh舞台的三章视频联动切换；本地300ms线性亮度/淡化及标题位移近似，短片结束推进；暂停或减少动态时不自动推进。",
+      "motion": "300ms输入锁；影片退场1s模糊、入场1.6s延迟0.6s；标题入场1.6s延迟1s；片尾前1s推进；闲置3s后0.8s隐藏。",
       "coherence": "游戏实景、动作主题、细线目录与原站配乐共同让体验围绕探索，而不是抽象功能卡。"
     },
     "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
     "implementation": "reference-study",
     "fidelity": "demos/zelda-world/fidelity.md",
     "assetManifest": "demos/zelda-world/assets-manifest.json",
-    "referencePreview": "research/screenshots/zelda-world-source.jpg"
+    "referencePreview": "research/screenshots/zelda-world-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "原站未见明暗切换；保留古代青绿、象牙字标和暗色影片舞台。",
+      "designReason": "青绿纹章、削角框与自然场景构成单一世界观，翻转为白底会破坏光与暗的叙事。"
+    },
+    "soundBehavior": {
+      "kind": "background",
+      "control": "入口 ON/OFF 与顶栏 SOUND；默认静音，选择 ON 后播放原始 se.mp3 与 bgm.mp3。",
+      "interactionRole": "开场 SE 对应纹章发亮扩散，BGM在入口移交世界时接续；三段影片切换时音乐不断开，维持探索节奏。"
+    }
   },
   {
     "id": "persona-kinetic",
@@ -575,28 +594,29 @@ window.DESIGN_ATLAS = [
       "红色网点",
       "服装切换"
     ],
-    "summary": "当前 Royal 官网以黑金群像开场，切入红金半调角色舞台；角色、Persona和服装共同承担产品人格。",
+    "summary": "金、红、黑的剪纸海报与真实星光贴图；角色有界横移，学校生活与怪盗行动各有独立中心轮播。",
     "accent": "#d5b360",
     "background": "#11100e",
     "principles": [
-      "首屏黑金群像、金色剪貼字与红色斜切衔接，不把所有页段误做同一红色。",
-      "角色轮廓、Persona与身份标签组成有层次的视觉焦点。",
-      "倾斜与切片用于海报和背景，正文及控件保持可读。",
-      "角色选择必须替换真实角色图与独立Persona，而非只换同一插画颜色。"
+      "真实群像、字标与剪纸箭头构成海报语汇，不能用抽象红黑卡片代替。",
+      "六种官方星光贴图以SCREEN叠加、3秒正弦往复明暗；15颗背景星随页面滚动以不同速度位移。",
+      "白天与夜晚分别用露出相邻画面的中心轮播表达双重生活，避免压成两个静态小卡。"
     ],
     "productFocus": "官方 Royal 群像、真实主人公/龙司/杏及各自制服、怪盗服、对应Persona；昼夜两种生活以官方游戏截图连接。",
     "interaction": [
-      "选择真实角色和两套服装；角色主体、Persona、姓名与资料同步更新。",
-      "方向键移动三人子集，首尾停止；角色切换为500ms水平运动，服装独立即时更换。",
-      "本地金色光点有AMBIENT暂停；官方有声PV为用户主动打开的真实外链。"
+      "原站 desktop kv-canvas 只有5颗固定位置星光；本地使用相同六种图像和3秒明暗周期，用Canvas2D重建，未运行PIXI业务包。",
+      "背景15颗星光 → 原生滚动差值 / 1–3随机系数位移，超出边界重置；没有查到原站鼠标视差，本地不补造。",
+      "三位角色横移500ms并在两端停止；学校/怪盗服装300ms换装入场。本地角色内容缩减为三位。",
+      "学校生活与怪盗行动分别采用无限中心轮播：箭头、左右键或横向触摸 → 500ms整条轨道滑动，相邻图露出；到末尾无缝接第一项。",
+      "官方PV在用户点击后前往YouTube，音轨属于影片；原站未见独立BGM/声音门。"
     ],
     "theme": "黑金首屏表达 Royal；红黑网点、金框与大号切片标题表达都市怪盗风格。",
     "constraints": [
-      "真实 ATLUS/SEGA 美术仅用于用户授权私人研究。",
-      "只保留三名角色而非原站完整十人档案。",
-      "正文不随背景倾斜，选择状态明确且键盘可操作。",
-      "不自动轮播，不加入高频闪烁。",
-      "原站未核验独立 BGM，PV使用实际官网英文视频链接。"
+      "2026-10-07英文官网单一快照；官网后续变化不维护。",
+      "本地Canvas2D依据公开PIXI星光算法重写；随机抽样与光混合不能声称逐帧一致。",
+      "角色、日常与怪盗行动内容缩减；角色入场细节、字体尺寸与全部购买/规格栏目未逐像素复制。",
+      "没有独立BGM，不用通用音乐冒充原曲；PV声音只在用户打开时播放。",
+      "所有官方图片与商标权利归ATLUS/SEGA，仅个人学习；不运行追踪或账号服务。"
     ],
     "useCases": [
       "角色游戏",
@@ -616,7 +636,7 @@ window.DESIGN_ATLAS = [
       ],
       "type": "官方剪贴标题图 + 大号无衬线身份文字；中文正文水平",
       "layout": "中心大型群像+左右独立标题；全幅红色角色舞台；倾斜昼夜画面",
-      "motion": "角色、Persona与资料整体500ms水平进退，三人子集首尾停止；服装即时更换。7秒金色光点为本地近似，可暂停；减少动态取消位移与光点。"
+      "motion": "六种官方星图，SCREEN叠加，3秒正弦明暗、0–5秒随机延迟；背景15颗随滚动差分移动；角色500ms有界，生活轮播500ms无限中心轨道。"
     },
     "sources": [
       {
@@ -644,12 +664,12 @@ window.DESIGN_ATLAS = [
         "note": "2026-10-07：非循环Slick默认500ms、角色切换及chara-box服装状态。金色闪光可见，完整Canvas登场轨迹未确认；本地7秒光点为近似。"
       }
     ],
-    "prompt": "为【角色IP游戏】制作对应真实官网的私人学习局部复现，先实访当前地区/语言版本，不根据记忆把 Royal 首页误做成红色。保留首屏黑金大型群像、左侧金色剪贴标题与PV入口、右侧发行信息、中央底部品牌Logo，以及通往红色半调角色章节的斜切金边。角色区必须使用分别核验的真实角色、学校服装、怪盗服装和对应Persona图片，前景人物与后景Persona分层，左侧黑底金框档案提供姓名、身份、配音及简介，底部肖像选择、右侧服装按钮都有真实内容变化。接着用真实截图组成学校生活与怪盗生活两个倾斜画面，再提供官方平台链接。只有标题和海报容器倾斜，正文与命中区保持水平；手机收敛偏移但保留角色尺度。所有美术本地化并写资产清单，禁止复制账号/追踪脚本。PV跳转核验的官方英文视频；找不到BGM就明确事实。采用原生按钮aria-pressed和左右键选择，减少动态偏好关闭过渡。输出完整代码、fidelity.md、来源记录与桌面手机预览。 角色、Persona和档案作为一组进行500ms水平进退，三人子集首尾停止，服装即时更新。首屏光点使用7秒本地曲线并提供AMBIENT暂停，不能声称它是原站PIXI轨迹；减少动态取消位移和光点。明确未复现十人全表、Kasumi与完整Canvas登场。",
+    "prompt": "参考 https://persona.atlus.com/p5r/?lang=en# 在2026-10-07的英文官网单一快照，先走首屏、介绍、角色、学校生活、怪盗生活、规格、购买与footer，再反向浏览。使用官方群像、字标、立绘、六种star纹理和剪纸箭头，禁止通用粒子或红黑卡片替代。桌面KV固定5颗星，背景15颗星，以SCREEN混合、3000ms正弦往复透明度和0–5000ms随机延迟；背景滚动按旧scrollY−新scrollY除1–3系数移动，越界重置。未观察到鼠标视差不要发明。角色500ms有界横移与服装切换；学校和怪盗两个独立无限中心轮播，露出相邻画面，500ms轨道位移、横触与箭头都可操作。原站只有点击PV音轨，不加虚构BGM。固定金红黑主题，提供本地暂停和减少动态补充。可缩减人物/章节但保留机制，明确Canvas2D对PIXI的近似以及未实现购买服务。输出manifest、fidelity、Prompt和预览。",
     "negativePrompt": "不要把当前黑金首页替换为通用红色两栏；不要同一角色换色冒充三人；不要编造原曲或角色技能；不要复制整页SDK、订阅或追踪服务。",
     "demo": "demos/persona-kinetic/index.html",
     "preview": "previews/persona-kinetic.jpg",
     "research": "research/persona-kinetic.md",
-    "exercise": "在不改变角色资产的情况下，重做同一章节的长文档案布局，维持红金拼贴人格并提高阅读效率。",
+    "exercise": "在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。",
     "composition": {
       "color": "黑金首屏表达 Royal；红黑网点、金框与大号切片标题表达都市怪盗风格。",
       "typography": "官方剪贴标题图 + 大号无衬线身份文字；中文正文水平",
@@ -657,14 +677,26 @@ window.DESIGN_ATLAS = [
       "imagery": "官方首屏群像、三位角色双服装、三张Persona立绘和真实游戏截图。",
       "shape": "斜切拼贴、金色边框、网点与剪贴字保持同一张海报的秩序。",
       "hierarchy": "Royal群像与发行信息 → 角色身份与形态 → 昼夜生活 → 官方平台入口。",
-      "motion": "角色、Persona与资料整体500ms水平进退，三人子集首尾停止；服装即时更换。7秒金色光点为本地近似，可暂停；减少动态取消位移与光点。",
+      "motion": "六种官方星图，SCREEN叠加，3秒正弦明暗、0–5秒随机延迟；背景15颗随滚动差分移动；角色500ms有界，生活轮播500ms无限中心轨道。",
       "coherence": "真实角色形态和Persona让视觉表达产品身份；金黑与红金按叙事阶段转换，水平正文约束强烈动势。"
     },
     "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
     "implementation": "reference-study",
     "fidelity": "demos/persona-kinetic/fidelity.md",
     "assetManifest": "demos/persona-kinetic/assets-manifest.json",
-    "referencePreview": "research/screenshots/persona-kinetic-source.jpg"
+    "referencePreview": "research/screenshots/persona-kinetic-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "原站未见明暗切换；保留金、红、黑海报主题。",
+      "designReason": "角色、美术剪纸、金色纹样与红黑文字构成同一怪盗视觉身份，不能通过整页反色切主题。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "WATCH THE OFFICIAL TRAILER 点击打开原始YouTube宣传片。",
+      "interactionRole": "音乐跟随PV镜头和字幕剪辑叙事；普通滚动和角色选择不添加原站未发现的BGM或点击声。"
+    }
   },
   {
     "id": "hand-drawn",
@@ -758,6 +790,17 @@ window.DESIGN_ATLAS = [
       "hierarchy": "生活主张 → 手帐示范 → 清单练习 → 记录入口。",
       "motion": "由点击触发的状态变化；无持续装饰动画；reduced motion 关闭平滑滚动",
       "coherence": "纸色、植物线稿、宽松排版和手工贴纸都服务于“慢下来记录”；正文使用清楚字形，避免过度装饰。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本练习无背景音乐。",
+      "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
     }
   },
   {
@@ -860,6 +903,17 @@ window.DESIGN_ATLAS = [
       "hierarchy": "平衡主张 → 场景 → 图层聚焦 → 漫游理念。",
       "motion": "点击后 650ms 图层偏移/透明度变化；无滚轮劫持；reduced motion 即时完成",
       "coherence": "柔和调色、衬线标题和稳定投影共享安静情绪；结构展开解释层次，不能随意更换投影角度。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本练习无背景音乐。",
+      "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
     }
   },
   {
@@ -965,6 +1019,17 @@ window.DESIGN_ATLAS = [
       "hierarchy": "空间主张 → 建筑描绘 → 工作方法 → 项目类型。",
       "motion": "3200ms 用户触发顺序描绘；滑块可中断；reduced motion 显示完成状态",
       "coherence": "线宽、清淡色彩、大留白和简短标题共同表达“减少噪声”；描绘动效与建筑构成顺序相呼应。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本练习无背景音乐。",
+      "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
     }
   },
   {
@@ -981,7 +1046,7 @@ window.DESIGN_ATLAS = [
       "SVG",
       "变形"
     ],
-    "summary": "以 Bryan James 的 In Pieces 及其原作者制作文章为历史证据，研究保留几何单元的形态切换；迁移为原创设计工作室的 24 片动态身份。",
+    "summary": "以 Bryan James 的 In Pieces 及其原作者制作文章为制作依据，研究保留几何单元的形态切换；迁移为原创设计工作室的 24 片动态身份。",
     "accent": "#e3ef85",
     "background": "#b7a2df",
     "principles": [
@@ -1005,7 +1070,7 @@ window.DESIGN_ATLAS = [
       "每次触发从当前中间状态继续，避免突然闪回",
       "选择、暂停、参数都必须支持键盘",
       "动态视觉不能遮住标题或改变正文布局",
-      "不把历史作者示范称为当前可访问官网，明确来源状态"
+      "不把原作者文章中的示范称为本次官网实访，明确来源状态"
     ],
     "useCases": [
       "创意工作室",
@@ -1033,10 +1098,10 @@ window.DESIGN_ATLAS = [
     },
     "sources": [
       {
-        "title": "In Pieces 历史官网",
+        "title": "In Pieces 项目官网",
         "url": "https://species-in-pieces.com/",
         "type": "实例",
-        "note": "2026-10-07 web 读取失败；不声称完成当日官网视觉核验。案例内容由下方原作者制作文章核实，属于历史设计案例。"
+        "note": "2026-10-07 web 读取失败；不声称完成当日官网视觉核验。案例内容由下方原作者制作文章核实，本条为基于作者文章的经典风格练习。"
       },
       {
         "title": "Bryan James — The Making Of In Pieces",
@@ -1048,7 +1113,7 @@ window.DESIGN_ATLAS = [
         "title": "CSSconf EU 对 Bryan James 的访谈",
         "url": "https://blog.cssconf.eu/2015/09/24/introducing-bryan-james/",
         "type": "实例",
-        "note": "原作者访谈再次说明原项目的技术实验如何与 pieces 的核心概念结合，作为历史作品旁证。"
+        "note": "原作者访谈再次说明原项目的技术实验如何与 pieces 的核心概念结合，作为原作品制作依据。"
       },
       {
         "title": "MDN — polygon()",
@@ -1057,8 +1122,8 @@ window.DESIGN_ATLAS = [
         "note": "核验多边形由有序顶点描述；本 demo 为方便暂停和参数变化使用 SVG 顶点插值，不复制原项目的 CSS clip-path 实现。"
       }
     ],
-    "prompt": "可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构设计工作室 Form / Shift 制作本地可运行的动态几何网站。以 In Pieces 的原作者制作文章为历史依据，提取‘保留几何单元、用变化承载主题’这一机制，不复制动物造型。将用户提到的集合形状变化具体化为 24 个相同身份三角片，在 Connect、Expand、Focus 三状态间重排为环状、星形、菱形。紫色整幅海报首屏配巨大标题和酸黄标志，底部状态按钮；随后浅色方法区和深色参数区，至少三节。信息顺序：品牌必须能变化的观点→手动切换的身份示范→系统制作步骤→间距和时长实验。SVG 每片保留三个顶点，使用 smoothstep 插值，从当前中间态继续；提供暂停/恢复、间距调整、下一次动画时长调整和重置。状态说明同步，控制使用原生按钮/滑块，键盘可操作，移动端重排；reduced motion 即时换态。全部素材原创本地，无CDN、无自动循环、无强制滚动。\n\n要素协调要求：变化发生在共同单元上；颜色、字体和网格保持稳定，因此读者能理解同一身份的不同表达。",
-    "negativePrompt": "不要复制 In Pieces 动物或将其作品称为本 demo；不要随机闪烁、自动无限变形、移动文字或变化点击目标；不要在顶点拓扑不匹配时硬插值；不要把未能访问的历史官网当成当日视觉事实。",
+    "prompt": "可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构设计工作室 Form / Shift 制作本地可运行的动态几何网站。以 In Pieces 的原作者制作文章为制作依据，提取‘保留几何单元、用变化承载主题’这一机制，不复制动物造型。将用户提到的集合形状变化具体化为 24 个相同身份三角片，在 Connect、Expand、Focus 三状态间重排为环状、星形、菱形。紫色整幅海报首屏配巨大标题和酸黄标志，底部状态按钮；随后浅色方法区和深色参数区，至少三节。信息顺序：品牌必须能变化的观点→手动切换的身份示范→系统制作步骤→间距和时长实验。SVG 每片保留三个顶点，使用 smoothstep 插值，从当前中间态继续；提供暂停/恢复、间距调整、下一次动画时长调整和重置。状态说明同步，控制使用原生按钮/滑块，键盘可操作，移动端重排；reduced motion 即时换态。全部素材原创本地，无CDN、无自动循环、无强制滚动。\n\n要素协调要求：变化发生在共同单元上；颜色、字体和网格保持稳定，因此读者能理解同一身份的不同表达。",
+    "negativePrompt": "不要复制 In Pieces 动物或将其作品称为本 demo；不要随机闪烁、自动无限变形、移动文字或变化点击目标；不要在顶点拓扑不匹配时硬插值；不要把未能访问的项目官网当成当日视觉事实。",
     "demo": "demos/shape-morph/index.html",
     "preview": "previews/shape-morph.jpg",
     "research": "research/shape-morph.md",
@@ -1072,6 +1137,17 @@ window.DESIGN_ATLAS = [
       "hierarchy": "变化主张 → 三个形态 → 设计方法 → 参数操作。",
       "motion": "300–2400ms smoothstep 顶点插值；默认 1200ms；当前状态可中断、暂停和恢复；reduced motion 即时完成",
       "coherence": "变化发生在共同单元上；颜色、字体和网格保持稳定，因此读者能理解同一身份的不同表达。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本练习无背景音乐。",
+      "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
     }
   },
   {
@@ -1174,6 +1250,17 @@ window.DESIGN_ATLAS = [
       "hierarchy": "展览主题 → 日期地点 → 分类日程 → 理念。",
       "motion": "按钮 160ms 颜色变化；prefers-reduced-motion 禁用平滑滚动",
       "coherence": "标题尺度、对齐线、间距和日期位置重复形成秩序；红色只是集中强调，不能代替信息层级。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本练习无背景音乐。",
+      "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
     }
   },
   {
@@ -1273,6 +1360,17 @@ window.DESIGN_ATLAS = [
       "hierarchy": "形与功能主张 → 可操作构成 → 材料课程 → 制作理念。",
       "motion": "构成预设220ms过渡；reduced-motion关闭过渡",
       "coherence": "形色实验与排版共享比例关系；每个色块承担构成任务，不能把原色和几何物随机铺满。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本练习无背景音乐。",
+      "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
     }
   },
   {
@@ -1374,6 +1472,17 @@ window.DESIGN_ATLAS = [
       "hierarchy": "声音目标 → 面板操作 → 信号流程 → 预设解释。",
       "motion": "按键激活与读数同步；低动态偏好保持静态波形，声音仍由用户控制",
       "coherence": "等宽标签、功能分区、彩色标识和直接反馈构成同一种设备语言；装饰必须对应可操作控制。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "interactive",
+      "control": "声音默认关闭；用户开启后可点击或键盘演奏，调节音量、滤波与包络，关闭会停止全部音符。",
+      "interactionRole": "原创Web Audio短音符把合成器控件和波形变成可听的反馈；不是原设备的声学复刻，也不是背景音乐。"
     }
   },
   {
@@ -1489,6 +1598,17 @@ window.DESIGN_ATLAS = [
       "hierarchy": "世界地图 → 地点索引 → 步进操作 → 探索手账。",
       "motion": "移动以tile步进、静态地图；reduced-motion保留即时状态更新",
       "coherence": "低分辨率地景、有限调色与清楚状态共同形成游戏感；中文说明保留正常可读字体，不强行像素化。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本练习无背景音乐。",
+      "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
     }
   },
   {
@@ -1507,30 +1627,30 @@ window.DESIGN_ATLAS = [
       "独立图层",
       "滚动交接"
     ],
-    "summary": "以中文公开介绍页的真实交互和公开DOM为依据，复现悬停切换、三组素材进出、滚动视差，以及同一中央窗口向右下移动后出现左侧模式说明的完整串联。",
+    "summary": "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。",
     "accent": "#00a6d3",
     "background": "#ffffff",
     "principles": [
-      "主标题本身承担功能选择，减少独立解释组件。",
-      "大留白与近黑文字形成主体，色彩仅强调当前能力。",
-      "三类能力用真实应用界面证明，而不是AI抽象符号。",
-      "胶囊按钮与低对比导航把重心留给产品叙事。"
+      "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。",
+      "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+      "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+      "第一方素材保持比例；手机保留原站实际变体。"
     ],
     "productFocus": "围绕Chat、Work、Codex三合一展开：日常对话、可交付工作成果、代码改动评审。",
     "interaction": [
-      "鼠标经过聊天/工作/编程即切换；焦点、点击及触屏也能切换。每个模式使用不同官方图层独立飞入飞出，中央真实界面交叉淡化。",
-      "滚动带入窗口与36/42/48px分层视差；先淡出周围拼贴，再将同一窗口向右下交接，显现左侧模式说明。",
-      "左侧聊天/工作/Codex随滚动分段切换；点击、上下方向键及Home/End联动滚动位置。",
-      "七种用途保留官方图片的横向卡片架，支持前后按钮与原生触屏横滑。",
-      "暂停演出控制自动切换与装饰动效；减少动态效果设置改为静态顺序浏览。导航、放大与账号按钮提供本地反馈及官网入口。"
+      "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。",
+      "选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。",
+      "向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。",
+      "桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。",
+      "手机使用三卡原生横向滚动，标题选择定位相应卡片；桌面 sticky rail 不出现在手机。导航保持桌面即时开关和手机全屏分层列表。",
+      "用途架子保留原生横滑及左右按钮；后续价格、安全、结束行动与页尾为普通滚动。"
     ],
-    "theme": "白底黑字、五行巨字、局部紫青渐变与彩色底线、黑色环、圆胶囊按钮。",
+    "theme": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
     "constraints": [
-      "仅参考公开营销页，不进入真实账户。",
-      "字体与品牌SVG使用官网原素材；不能把多层拼贴合成一张静态图片。",
-      "动画状态由同一中央窗口和同一模式控制器联动，快速悬停不得堆积离场图层。",
-      "自然滚动，移动端采用顺序阅读；减少动态效果时取消自动轮播、视差和长滚动段。",
-      "公开CSS与DOM观察、推断和本地近似必须明确分开，不能声称拿到了完整React源码。"
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
     ],
     "useCases": [
       "多能力AI产品介绍",
@@ -1557,27 +1677,22 @@ window.DESIGN_ATLAS = [
       "motion": "公开图层720ms cubic-bezier(.22,1,.36,1)，36/42/48px视差与500/1000/1500分段参考。本地退出500ms、交叉淡化500ms及连续滚动插值；不劫持滚轮。"
     },
     "composition": {
-      "color": "白底黑字、五行巨字、局部紫青渐变与彩色底线、黑色环、圆胶囊按钮。",
+      "color": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
       "typography": "官方 OpenAI Sans SC 4个Unicode分片及英文字体；中文主标题89px、5行、紧行距。",
-      "layout": "64px导航；居中5行巨字；全宽多层拼贴；2000px+100svh滚动段内中央窗口交接至左说明/右界面；七用途横向卡片架。",
-      "imagery": "三种真实产品界面，加聊天7层/工作7层/Codex6层官方独立素材；保留原比例、旋转、层级和七用途官方图片。",
+      "layout": "首屏标题和拼贴 → 约 2000px+视口的居中/交接/说明长段 → 用途横向架子 → 价格 → 安全 → 结束行动 → 页尾；上下方向可逆。手机改为原生三模式横向卡片，再顺序浏览相同后续内容。",
+      "imagery": "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。",
       "shape": "圆胶囊按钮、黑色环与直线渐变下划线、圆角界面图。",
-      "hierarchy": "围绕Chat、Work、Codex三合一展开：日常对话、可交付工作成果、代码改动评审。",
-      "motion": "公开图层720ms cubic-bezier(.22,1,.36,1)，36/42/48px视差与500/1000/1500分段参考。本地退出500ms、交叉淡化500ms及连续滚动插值；不劫持滚轮。",
-      "coherence": "五行标题、模式词、三组官方图层和同一中央窗口保持状态连续；进出方向、交错、自动周期及连续滚动插值为本地近似，完整故事和服务端未复现。"
+      "hierarchy": "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。",
+      "motion": "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。；选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。；向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。；桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。",
+      "coherence": "720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。",
+      "scroll": "首屏标题和拼贴 → 约 2000px+视口的居中/交接/说明长段 → 用途横向架子 → 价格 → 安全 → 结束行动 → 页尾；上下方向可逆。手机改为原生三模式横向卡片，再顺序浏览相同后续内容。"
     },
     "sources": [
       {
-        "title": "ChatGPT 中文公开介绍页",
+        "title": "ChatGPT 当前公开页面",
         "url": "https://chatgpt.com/zh-Hans-CN/overview/",
-        "type": "实例",
-        "note": "2026-10-07中文页：指针模式切换、三组独立图层、窗口交接和左模式栏；DOM记录坐标、720ms曲线、视差与500px分段。"
-      },
-      {
-        "title": "ChatGPT 英文介绍内容",
-        "url": "https://chatgpt.com/overview/",
-        "type": "实例",
-        "note": "同日英文正文的Chat/Work/Codex能力架构。"
+        "note": "采集日期 2026-10-07；简体中文公开介绍页",
+        "type": "实例"
       },
       {
         "title": "OpenAI Design Guidelines",
@@ -1592,8 +1707,8 @@ window.DESIGN_ATLAS = [
         "note": "左侧说明的展开状态和原生button语义；方向键及Home/End为本地增强。"
       }
     ],
-    "prompt": "以【ChatGPT中文公开介绍页】在【观察日期】的真实鼠标操作、滚动关键帧及公开DOM为依据进行局部学习还原。保留64px导航、原样ChatGPT字标与OpenAI Sans SC分片字体、约89px中文五行巨字、聊天/工作/编程可操作词和各自渐变底线。指针经过标题即切换，点击、键盘焦点与触屏也可切换。三模式分别使用真实Chat/Work/Codex中央界面和聊天7层、工作7层、Codex6层独立官方素材；保持观察到的坐标、比例、旋转和层级，进入与退出分别动画，快速连续切换只保留一组离场图层。保留滚动带入与36/42/48px分层视差，2000px+100svh长段分为intro、handoff、accordion：先将周边拼贴淡出和轻缩放，再将同一个中央窗口向右下移动，露出左侧聊天/工作/Codex说明；滚动和点击、上下方向键同步切换模式及进度线。下方采用七用途真实图片横向卡片架，支持按钮和原生横滑。不得阻止浏览器正常滚动。手机顺序阅读，减少动态效果时去掉自动切换、视差与长段，保留所有内容和控件。保存原站关键帧、素材清单、几何参数和还原边界；明确说明连续插值、进出方向与自动周期为本地近似。适配【目标产品】时重新观察其真实交互机制与素材。",
-    "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+    "prompt": "以 https://chatgpt.com/zh-Hans-CN/overview/ 在【采集日期】的 简体中文公开介绍页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留 64px 导航、五行中文标题、每个中文字符各自的当前模式强调色与原始字标/字体。20 个官方独立素材按模式使用不同坐标、比例、层级和手机几何；进场与离场分开，快速选择不堆积离场层。主窗口以垂直卡片切换；悬停选择释放后保留模式。长段必须连续保留首屏拼贴、滚动带入、拼贴收束、同一 sticky 窗口阈值触发向右下移动、左侧 rail 出现，以及三段说明/图像/进度同步；顶层模式与 rail 状态独立。手机使用原生横向三卡，不强塞桌面长段。按系统主题切换桌面真实界面图片；原站没有配乐。减少动态时停止自动运动并保留所有内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
     "demo": "demos/chatgpt-platform/index.html",
     "preview": "previews/chatgpt-platform.jpg",
     "research": "research/chatgpt-platform.md",
@@ -1602,7 +1717,19 @@ window.DESIGN_ATLAS = [
     "implementation": "reference-study",
     "fidelity": "demos/chatgpt-platform/fidelity.md",
     "assetManifest": "demos/chatgpt-platform/assets-manifest.json",
-    "referencePreview": "research/screenshots/chatgpt-official-initial.jpg"
+    "referencePreview": "research/screenshots/chatgpt-official-initial.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "system",
+      "default": "system",
+      "control": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
+      "designReason": "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "此介绍页没有背景音乐、音频或影片。",
+      "interactionRole": "利用运动和空间关系串联能力，声音不是此页叙事的一部分。"
+    }
   },
   {
     "id": "claude-platform",
@@ -1619,29 +1746,29 @@ window.DESIGN_ATLAS = [
       "视频",
       "套餐切换"
     ],
-    "summary": "复现 Claude 公开营销页的衬线标题、左侧注册入口与右侧官方 Cowork 视频，并实现套餐和FAQ交互。",
+    "summary": "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。",
     "accent": "#d97757",
     "background": "#f5f5ef",
     "principles": [
-      "衬线大标题建立思考伙伴的语气，产品视频承接实际工作。",
-      "注册框在首屏即可辨识，操作层级集中而短。",
-      "温暖中性色与陶土品牌符号组合，保持低饱和。",
-      "套餐切换和FAQ减少一次性信息负担。"
+      "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。",
+      "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+      "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+      "第一方素材保持比例；手机布局依据公共模块实现，并在本地实测。"
     ],
     "productFocus": "首屏把chat思考与Cowork执行并列，右栏完整真实产品视频直接显示功能；下方套餐按个体和组织区分。",
     "interaction": [
-      "视频按钮实际切换播放/暂停，label/aria-pressed来自真实媒体事件。",
-      "Continue with email在本地切换email表单与返回；不提交账户。",
-      "Individual/Team、本地计费选择、FAQ仍可操作。"
+      "标题按单词 1s opacity 过渡，总交错跨度 .2s；内容组 750ms、10px、100ms 交错，在视口底部 −20% 触发 → 以较小运动保留阅读节奏。",
+      "桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。",
+      "Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。",
+      "FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。",
+      "Continue with email → 对应原站邮箱登录 URL，不捏造首页内的邮箱注册表单；本地入口需离开演示到原站。视频和减少动态使用真实暂停状态。"
     ],
-    "theme": "奶油浅底、Anthropic Serif大标题、Sans操作文字、黑色按钮、陶土色品牌符号、圆角视频。",
+    "theme": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
     "constraints": [
-      "仅研究公开claude.com营销页；字体、字标与Cowork视频使用官方素材。",
-      "2026-10-07结构有截图和公开HTML依据；源hover/scroll时序未取得。",
-      "邮箱输入只在本地；不创建账户、认证或订阅。",
-      "套餐为观察日快照，实际价格以官网为准。",
-      "800px导航折叠是本地适配；手机先文字后视频。",
-      "减少动态默认停播；保留首帧及手动视频控制。"
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "源菜单与滚动机制属于公共源码依据的实现，本地桌面/390 手机实测；并未完成源浏览器的逐节操作。菜单条目和 FAQ/套餐内容压缩，局部曲线/布局拟合。没有认证、订阅、SSO 与下载后端，未核实全局手动主题按钮；不要添加无来源的标题飞入或缩放。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
     ],
     "useCases": [
       "思考与执行并重的AI产品",
@@ -1666,21 +1793,22 @@ window.DESIGN_ATLAS = [
       "motion": "25.567秒官方Cowork视频静音循环；play/pause/ended事件同步按钮；减少动态默认暂停并允许手动播放。"
     },
     "composition": {
-      "color": "奶油浅底、Anthropic Serif大标题、Sans操作文字、黑色按钮、陶土色品牌符号、圆角视频。",
+      "color": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
       "typography": "本地官网Anthropic Serif/Sans；72px主标题、24px副文、15–17px操作。",
-      "layout": "1440px上限；左思考/注册卡 + 右大型Cowork视频；3列套餐；左右FAQ。",
-      "imagery": "官方Anthropic字体、品牌SVG与Cowork演示视频，真实工作画面承担功能证据。",
+      "layout": "Think fast 主张/入口+Cowork 视频 → 套餐切换 → FAQ → 页尾；完整结构来自匿名 HTTP HTML 与当前公开模块。",
+      "imagery": "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。",
       "shape": "30px注册框、17px视频、圆胶囊tabs、18px计划卡。",
-      "hierarchy": "首屏把chat思考与Cowork执行并列，右栏完整真实产品视频直接显示功能；下方套餐按个体和组织区分。",
-      "motion": "25.567秒官方Cowork视频静音循环；play/pause/ended事件同步按钮；减少动态默认暂停并允许手动播放。",
-      "coherence": "字体、色彩、素材、信息结构与Claude公开页一致；没有复现服务器认证、SSO、真正下载或订阅。视频为官方本地文件；reduced-motion暂停时没有原站视频poster，保留首帧。完整企业产品导航与所有FAQ未全量复制。"
+      "hierarchy": "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。",
+      "motion": "标题按单词 1s opacity 过渡，总交错跨度 .2s；内容组 750ms、10px、100ms 交错，在视口底部 −20% 触发 → 以较小运动保留阅读节奏。；桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。；Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。；FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。",
+      "coherence": "源菜单与滚动机制属于公共源码依据的实现，本地桌面/390 手机实测；并未完成源浏览器的逐节操作。菜单条目和 FAQ/套餐内容压缩，局部曲线/布局拟合。没有认证、订阅、SSO 与下载后端，未核实全局手动主题按钮；不要添加无来源的标题飞入或缩放。",
+      "scroll": "Think fast 主张/入口+Cowork 视频 → 套餐切换 → FAQ → 页尾；完整结构来自匿名 HTTP HTML 与当前公开模块。"
     },
     "sources": [
       {
-        "title": "Claude 公开官网",
+        "title": "Claude 当前公开页面",
         "url": "https://claude.com/",
-        "type": "实例",
-        "note": "2026-10-07公开营销结构、72px衬线标题、Cowork视频与Individual/Team套餐；源hover/scroll时序未取得。"
+        "note": "采集日期 2026-10-07；匿名英文营销页 HTTP/公共模块快照",
+        "type": "实例"
       },
       {
         "title": "WAI Tabs Pattern",
@@ -1695,8 +1823,8 @@ window.DESIGN_ATLAS = [
         "note": "FAQ展开、键盘和状态表达；本地采用原生details。"
       }
     ],
-    "prompt": "以【观察日期】的 https://claude.com/ 公开营销页为依据制作局部学习页。保持温暖奶油底、72px Anthropic Serif标题、Sans操作文字、陶土品牌符号和黑色行动；左栏放思考主张与圆角注册卡，右栏为大型官方Cowork视频。官方SVG、字体和25.567秒视频按原比例本地保存并记录来源与权利。视频静音循环，按钮由play/pause/ended/error事件同步状态；prefers-reduced-motion初始和偏好改变时暂停，保留手动观看。Continue with email展开本地表单，可返回，提交仅显示不会发送的预览反馈；Google、登录和下载入口不伪装认证。下方Individual/Team and Enterprise分别显示套餐，年/月账期改变观察日的Pro价格，FAQ采用原生details。800px以下导航收为汉堡，700px以下英雄区转为文字先、视频后；800px断点是本地嵌入适配。保留自然滚动、可见焦点、Escape关闭和移动端可读性。此版源站hover/scroll时序未取得，只依据已保存公开结构和媒体，不增加猜测的标题缩放或滚动动画。把SSO、订阅、真实下载、企业导航和未覆盖FAQ记入还原范围；价格以官网为准。适配【目标AI产品】时依据其真实语气选择字体和内容。",
-    "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+    "prompt": "以 https://claude.com/ 在【采集日期】的 匿名英文营销页 HTTP/公共模块快照 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。以当前 claude.com 匿名 HTML/公共 CSS/JS 快照为结构依据，源浏览器若重定向账户明确记未验证。保留 Serif 主张、Sans 控件、奶油/系统深色及官方静音 Cowork 视频。具体机制：单词 1s 透明度、总 .2s 交错；组 750ms/10px/100ms 在 −20% 视口边界带入；桌面 pointer 菜单+150ms 离开；手机 clip 800ms 进入/400ms 离开与320+80i交错；套餐选中底板；FAQ 单开与400ms网格高度/透明度。邮箱动作跳到源 URL，不造首页表单或账期切换。减少动态取消动画保留内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
     "demo": "demos/claude-platform/index.html",
     "preview": "previews/claude-platform.jpg",
     "research": "research/claude-platform.md",
@@ -1705,7 +1833,19 @@ window.DESIGN_ATLAS = [
     "implementation": "reference-study",
     "fidelity": "demos/claude-platform/fidelity.md",
     "assetManifest": "demos/claude-platform/assets-manifest.json",
-    "referencePreview": "research/screenshots/claude-platform-source.jpg"
+    "referencePreview": "research/screenshots/claude-platform-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "system",
+      "default": "system",
+      "control": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
+      "designReason": "以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。"
+    },
+    "soundBehavior": {
+      "kind": "video",
+      "control": "官方 Cowork 演示静音循环，暂停/播放依据媒体真实事件；未发现首页背景音乐。",
+      "interactionRole": "静音工作场景与低幅文字动画维持克制、可阅读的产品语气。"
+    }
   },
   {
     "id": "qoder-platform",
@@ -1722,29 +1862,29 @@ window.DESIGN_ATLAS = [
       "桌面工作台",
       "多平台"
     ],
-    "summary": "以Qoder中国站公开主页为首屏参考，复现左侧双行标题、右侧说明、全幅强绿工作台背景与Qoder CN字标；后续五形态为能力机制的局部研究。",
+    "summary": "全新 Qoder 双行标题与大幅智能体工作台，五平台轮播和集成/Wake/企业章节串联从工具到交付的逻辑。",
     "accent": "#2c8061",
     "background": "#ffffff",
     "principles": [
-      "主标题与说明分居两侧，产品工作台成为最主要的视觉证据。",
-      "绿色大面承托真实桌面界面，品牌色与代码任务保持区分。",
-      "桌面/移动/IDE/插件/CLI并列呈现不同使用入口。",
-      "智能体协作以分工和流程说明，不能只用抽象节点图。"
+      "全新 Qoder 双行标题与大幅智能体工作台，五平台轮播和集成/Wake/企业章节串联从工具到交付的逻辑。",
+      "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+      "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+      "第一方素材保持比例；手机保留原站实际变体。"
     ],
     "productFocus": "先展示桌面工作台的任务、项目和上下文，再让用户选择五种使用形态，突出从想法到可交付成果的完整工作循环。",
     "interaction": [
-      "五平台tab/点控400ms水平切换，20秒自动轮播，鼠标进入暂停，手机支持滑动。",
-      "编码/通用模式、任务回执和协作展开为本地示例，不调用模型。",
-      "Hero路径13.824s/16.64s流动、4.8s/6.4s呼吸与3.8s焦点；几何为局部近似。"
+      "工作台使用公开固定任务示例，点击本地“新任务”可返回输入；本地输入/Enter/发送进入固定会话而非调用模型，九个阶段按 180/480/760/1000/1200/1400/1600/1900/2250ms 展开；交付文件开关显示旁栏。",
+      "活跃热图 pointer enter/focus 120ms 显示日期/对话提示，leave/blur 80ms 关闭 → 很小的元素也有可读状态。",
+      "五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。",
+      "后续 SDK 代码和 Cloud 任务列表 → Wake 场景选择/指针强调 → 企业 → 两侧连续证言条带 → 单开 FAQ → 页尾；所有章节使用正常滚动。",
+      "手机保留工作台整体缩放裁切与五平台原生横向选项，不删除首屏示例的侧栏结构。菜单、下载说明、Escape/方向键保持可操作。"
     ],
-    "theme": "中国站淡灰绿页面、满幅强绿工作台背景、白色产品UI和绿色胶囊下载按钮。",
+    "theme": "当前首页固定灰绿/白色及绿色工作台场景，未发现全局系统或手动主题切换。工作台局部代码颜色不改页面主题。",
     "constraints": [
-      "中国站作为语言版本参考，地区分类不推断机构注册地。",
-      "真实CN字标与平台图保持比例；Instrument Sans未取得，使用系统字体。",
-      "工作台任务和智能体为本地模拟，源模式动作未现场核验。",
-      "五平台400ms/20秒与四项FeatureSection150ms纵向/10秒是不同组件。",
-      "Hero时间取公开样式，曲线几何近似；后续平台/协作布局仅局部研究。",
-      "手机收束侧栏、tab自身横滚；减少动态时停止自动推进。"
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "工作台内容、图标、热图日期分布与空间几何为缩短的本地结构，并非完整原工作台；九阶段来源时间保留，其他曲线/几何是拟合。SDK/Cloud 文本示例不执行；Wake/企业/证言内容缩短，不称真实评价逐字复制。发送仅本地状态，原网页发送未验证；没有模型、账户、文件系统与远程交付服务。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
     ],
     "useCases": [
       "多形态开发平台",
@@ -1765,25 +1905,26 @@ window.DESIGN_ATLAS = [
         "#f3f6ed"
       ],
       "type": "原站Instrument Sans观察，当前本地使用Arial/Microsoft YaHei回退；中文标题36px、说明16px。",
-      "layout": "66px导航；约110px起36px左标题/右说明；约332px起满幅#80c777工作台；五平台与协作区为局部研究。",
-      "motion": "五平台400ms水平切换、20秒自动推进、指针进入暂停；hero两路径13.824s/16.64s流动和4.8s/6.4s呼吸、焦点3.8s，局部SVG几何近似。"
+      "layout": "66px导航；双行主张与绿色固定任务工作台、活跃热图；五平台之后接SDK/Cloud、Wake、企业、证言条带和FAQ。",
+      "motion": "固定会话九节点按180–2250ms展开；热图提示120ms进入/80ms退出；五平台400ms水平切换、20秒自动推进与手动暂停。"
     },
     "composition": {
-      "color": "CN原站以淡灰绿顶层和满幅强绿约#80c777作工作台底景，绿色CTA与白色应用UI保持对比。",
+      "color": "当前首页固定灰绿/白色及绿色工作台场景，未发现全局系统或手动主题切换。工作台局部代码颜色不改页面主题。",
       "typography": "原站Instrument Sans观察，当前本地使用Arial/Microsoft YaHei回退；中文标题36px、说明16px。",
-      "layout": "66px导航；约110px起36px左标题/右说明；约332px起满幅#80c777工作台；五平台与协作区为局部研究。",
-      "imagery": "36px标题、满幅强绿背景内桌面工作区；平台tab和官方SVG/移动截图；本地任务回执、协作展开",
+      "layout": "双行主张 → 公共固定工作台 → 五平台 → SDK/Cloud → Wake → 企业 → 证言条带 → FAQ → 页尾。以该网址在采集日期的页面为单一归档。",
+      "imagery": "全新 Qoder 双行标题与大幅智能体工作台，五平台轮播和集成/Wake/企业章节串联从工具到交付的逻辑。",
       "shape": "25px下载胶囊、8px大面/窗口、细边框工作台。",
-      "hierarchy": "先展示桌面工作台的任务、项目和上下文，再让用户选择五种使用形态，突出从想法到可交付成果的完整工作循环。",
-      "motion": "五平台400ms水平切换、20秒自动推进、指针进入暂停；hero两路径13.824s/16.64s流动和4.8s/6.4s呼吸、焦点3.8s，局部SVG几何近似。",
-      "coherence": "强绿品牌背景与白色工作台明确分工，CN字标和左右标题建立身份；系统字体、产品DOM和后续布局为局部适配，在线服务未接入。"
+      "hierarchy": "全新 Qoder 双行标题与大幅智能体工作台，五平台轮播和集成/Wake/企业章节串联从工具到交付的逻辑。",
+      "motion": "工作台使用公开固定任务示例，点击本地“新任务”可返回输入；本地输入/Enter/发送进入固定会话而非调用模型，九个阶段按 180/480/760/1000/1200/1400/1600/1900/2250ms 展开；交付文件开关显示旁栏。；活跃热图 pointer enter/focus 120ms 显示日期/对话提示，leave/blur 80ms 关闭 → 很小的元素也有可读状态。；五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。；后续 SDK 代码和 Cloud 任务列表 → Wake 场景选择/指针强调 → 企业 → 两侧连续证言条带 → 单开 FAQ → 页尾；所有章节使用正常滚动。",
+      "coherence": "工作台内容、图标、热图日期分布与空间几何为缩短的本地结构，并非完整原工作台；九阶段来源时间保留，其他曲线/几何是拟合。SDK/Cloud 文本示例不执行；Wake/企业/证言内容缩短，不称真实评价逐字复制。发送仅本地状态，原网页发送未验证；没有模型、账户、文件系统与远程交付服务。",
+      "scroll": "双行主张 → 公共固定工作台 → 五平台 → SDK/Cloud → Wake → 企业 → 证言条带 → FAQ → 页尾。以该网址在采集日期的页面为单一归档。"
     },
     "sources": [
       {
-        "title": "Qoder 中国站官方网站",
+        "title": "Qoder CN 当前公开页面",
         "url": "https://qoder.cn/",
-        "type": "实例",
-        "note": "2026-10-07中国站：CN字标、36px标题与全幅绿色工作台；公开首页样式给出路径/焦点时间。"
+        "note": "采集日期 2026-10-07；中国大陆简体中文首页",
+        "type": "实例"
       },
       {
         "title": "Qoder 产品族官方定义",
@@ -1796,16 +1937,10 @@ window.DESIGN_ATLAS = [
         "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
         "type": "规范",
         "note": "模式与平台选择的语义、选中状态和方向键参考。"
-      },
-      {
-        "title": "Qoder 当前公开组件脚本",
-        "url": "https://qoder.cn/_next/static/chunks/2071-0dba5db130b82f90.js",
-        "type": "实例",
-        "note": "ProductShowcase为Swiper speed400、delay20000、pauseOnMouseEnter及mobile touch；FeatureSection为150ms纵向和10秒循环。"
       }
     ],
-    "prompt": "以【观察日期】的 https://qoder.cn/ 中国站首页制作局部学习页，使用官方Qoder CN黑色PNG字标，1632×344原图显示约123×26px。淡灰绿顶层保留66px导航，约110px起左侧36px双行标题、胶囊下载按钮与右侧说明；约332px起满幅#80c777工作台背景，无外层圆角和左右边框。白色应用区约占84.5%宽，浅灰侧栏、任务输入、模式切换和工作区反馈使用本地DOM，任务只返回明确的模拟结果。背景两条SVG路径分别采用13.824s/16.64s linear流动与4.8s/6.4s ease-in-out呼吸，第二条delay−18s/−4.8s，焦点3.8s cubic-bezier(.4,0,.2,1)；路径几何标为近似。五平台ProductShowcase采用官方SVG和移动图，tab、点控和触摸以400ms水平进退，20秒自动推进、鼠标进入暂停，可手动暂停；减少动态时直接替换且停止自动。另一个四项FeatureSection的150ms纵向/10秒时序不用于此轮播。后续协作可展开，但平台和协作布局是局部研究；编码/通用源交互未现场核验。390px标题说明堆叠、绿色底景保持满幅、收束侧栏，tab条只在自身横滚。下载预览可选择平台并链接官网，Escape关闭，键盘状态清楚，保留自然滚动与prefers-reduced-motion。记录资产与版权；Instrument Sans未取得时注明系统字体回退，不混入国际版促销/Qwen标签。",
-    "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+    "prompt": "以 https://qoder.cn/ 在【采集日期】的 中国大陆简体中文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。只用当前 qoder.cn 在采集日的公开首页，保留官方黑色字标、双行主张、绿色工作台与五平台。公共固定会话的九节点时间要保留；本地新任务/Enter/发送和文件旁栏作为明确固定示范，不能假称源端发送已验证。热图120ms进入/80ms离开，焦点与指针同等可读；五平台400ms水平、20s自动、悬停/手动/后台暂停。按 SDK/Cloud→Wake→企业→条带→FAQ顺序，用自然滚动，手机保留完整工作台缩放。固定浅色，无BGM；章节以采集页面为依据。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
     "demo": "demos/qoder-platform/index.html",
     "preview": "previews/qoder-platform.jpg",
     "research": "research/qoder-platform.md",
@@ -1815,7 +1950,19 @@ window.DESIGN_ATLAS = [
     "fidelity": "demos/qoder-platform/fidelity.md",
     "assetManifest": "demos/qoder-platform/assets-manifest.json",
     "edition": "2026-10-07中国站公开主页；后续能力区域为局部机制研究",
-    "referencePreview": "research/screenshots/qoder-platform-source.jpg"
+    "referencePreview": "research/screenshots/qoder-platform-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "当前首页固定灰绿/白色及绿色工作台场景，未发现全局系统或手动主题切换。工作台局部代码颜色不改页面主题。",
+      "designReason": "全新 Qoder 双行标题与大幅智能体工作台，五平台轮播和集成/Wake/企业章节串联从工具到交付的逻辑。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前公开首页没有 audio/video 或配乐播放器。工作台的语音图标不等于主页实际播放音乐。",
+      "interactionRole": "代码、会话、平台轮播和热图状态提供反馈，保持工具介绍静音。"
+    }
   },
   {
     "id": "genshin-world",
@@ -1832,29 +1979,31 @@ window.DESIGN_ATLAS = [
       "群像",
       "角色立绘"
     ],
-    "summary": "当前国际官网根入口是7.1专题：深红群像、衬线巨标题，与青绿金边角色舞台形成章节色调转换。",
+    "summary": "2026-10-07 英文官网快照：深红版本群像以整屏位移进入角色舞台，角色选择同步切换完整背景、立绘、文字与原始语音。",
     "accent": "#b71936",
     "background": "#2a1027",
     "principles": [
-      "先核验有效路由；旧 /en/home 与国内 /main/ 不能作为当前页面证据。",
-      "首屏多人物满幅主视觉，让版本剧情与角色先于功能文案出现。",
-      "深红版本氛围切换到青绿角色页，颜色对应叙事章节。",
-      "角色立绘、装饰纹样、星级与圆形选择共同形成游戏界面语汇。"
+      "深红群像和巨大主题图先建立版本剧情；下载保持清晰的第二层级。",
+      "整屏垂直位移让每个章节成为独立舞台，角色舞台的完整换色承担叙事交接。",
+      "角色选择同时改变立绘、姓名、简介、圆形肖像与背景，让人物拥有自己的视觉空间。",
+      "麦克风播放该角色的官方台词；声音解释角色身份，不给静音主视觉虚构背景音乐。"
     ],
-    "productFocus": "使用当前官方 A Rekviem for the Underworld 主题标题、真实满幅画面、当前两张角色立绘与活动日历。",
+    "productFocus": "单一归档的 7.1 A Rekviem for the Underworld 版本；本地保留首屏、Vesna/Vodyanitsa 两角色、日历与末尾信息。",
     "interaction": [
-      "两位已核验官方角色立绘及简介真实切换，左右键可选。",
-      "View More打开本地说明对话框，Escape关闭；日历入口打开对应官方日历图。",
-      "3秒官方首屏MP4静音播放/暂停；离开首屏或前台暂停；没有伪造BGM。"
+      "滚轮或竖向手势推进整屏舞台，反向返回；末尾以有限位移露出 footer，避免把正常长页当作源站 Swiper。",
+      "选择 Vesna/Vodyanitsa，100ms 交叉淡入立绘，并同步切换青绿/蓝色完整背景、姓名、简介、肖像状态与麦克风图。",
+      "点击麦克风随机播放对应角色 3 条官方语音之一，再点暂停；换角色、离开角色章节与后台时停止，防止声线叠加。",
+      "首屏 3 秒无声视频可暂停；离屏停止。详情与日历以可关闭的本地 dialog 展示，后者提供原图放大。",
+      "键盘章节导航、角色左右键、最新请求队列及减少动态分支为本地补充。"
     ],
     "theme": "深红暗紫群像与青绿、浅金角色舞台；衬线与星芒、圆环、尖角纹样呈现幻想冒险。",
     "constraints": [
-      "以2026-10-07国际根入口7.1专题为准，仅复现版本群像、两角色与活动日历。",
-      "品牌美术版权归 HoYoverse/miHoYo，使用范围为用户授权私人研究。",
-      "本地主视觉mp4只有3秒且无音轨，不标作原站有声PV。",
-      "未完成第二角色文字资料核验时明确边界，不编造姓名或技能。",
-      "手机重新排人物和文字，不缩小整张桌面海报。",
-      "日历文字来自官方图片，替代文字明确用途并可放大。"
+      "只归档 https://genshin.hoyoverse.com/en/ 在 2026-10-07 的单一快照，不跟随后续版本。",
+      "源页 6 个章节缩为本地 3 个核心章节加 footer；领取、Xbox、登录、完整武器与 Wiki 不在本地范围。",
+      "源垂直 Swiper 与角色 100ms 时序已确认；整屏的精确时长未核验，本地 600ms ease / 650ms 输入锁为明确近似。",
+      "3 秒首屏本地短片没有音轨；6 条台词是官方角色语音，不能称作原站 BGM。",
+      "详情是摘要 dialog，手机人物排布及可触摸控件属于本地适配，并非逐像素移动版。",
+      "官方品牌、美术、视频与语音权利归相应权利方，资产 manifest 记录直接来源；不复制账户或追踪服务。"
     ],
     "useCases": [
       "大型游戏版本专题",
@@ -1870,11 +2019,12 @@ window.DESIGN_ATLAS = [
         "#2a1027",
         "#b71936",
         "#229a91",
+        "#21558c",
         "#efd779"
       ],
-      "type": "官方大幅衬线主题图，角色名用Georgia；说明用系统无衬线",
-      "layout": "全幅群像专题；青绿独立人物舞台；装饰框内活动日历",
-      "motion": "角色立绘100ms交叉淡化对应原站可见opacity时序；桌面原生scroll-snap近似垂直Swiper，手机自然滚动；首屏视频可暂停、离屏停止。"
+      "type": "官方巨幅主题图；本地角色名用 Georgia，说明用系统无衬线",
+      "layout": "群像整屏 → 独立角色舞台 → 日历整屏 → 部分露出的 footer",
+      "motion": "垂直 translate3d 舞台正反交接（本地 600ms ease 近似）；角色 100ms 交叉淡化与整背景同步；末尾位移有限，减少动态即时切换。"
     },
     "sources": [
       {
@@ -1899,70 +2049,87 @@ window.DESIGN_ATLAS = [
         "title": "官方公开交互脚本 · 2026-10-07",
         "url": "https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/setups.d850a780.js",
         "type": "实例",
-        "note": "2026-10-07：垂直Swiper位移而document.scrollY为0；角色opacity有100ms过渡。本地scroll-snap为近似，第二角色姓名仍未核验。"
+        "note": "2026-10-07 单次归档：垂直 Swiper 且 document.scrollY=0；角色 opacity 为100ms。人物背景/肖像/麦克风同步，随机3条语音与播放中暂停见公开配置。整屏本地600ms为近似。"
       }
     ],
-    "prompt": "为【大型游戏版本专题】先实访当前官方有效入口，记录版本、URL和观察日期。首屏用核验的官方多角色满幅主视觉、深红暗紫版本色、巨幅衬线主题字、独立圆形视频控制、尖角下载按钮与版本号，保留低密度导航。滚动进入一个明确换色的青绿金边角色舞台：右侧巨幅独立立绘，左侧角色名、星级、装饰分隔、详情入口和人物圆形选择，底部下载横条维持产品行动。最后展示官方活动日历，点击可在原生dialog中放大；人物详情同样可关闭并支持Escape。所有图片与实际短片保存本地、记录源URL和尺寸；缺少已核验角色文案时明说局部范围。视频必须可持续暂停且reduced-motion下初始停止；若短片无音轨，不伪装为有声PV，使用真实原站链接。移动端改排人物/正文，控制可触摸，保留自然滚动。输出HTML/CSS/JS、资产manifest、fidelity.md和两尺寸真实预览。 角色立绘采用100ms交叉淡化，姓名、简介和当前选择同步；桌面以原生scroll-snap近似整屏章节，手机自然滚动，明确未复现锁定滚轮Swiper。第二角色仅用已确认简介并标明姓名未核验；3秒无声主视觉可暂停、离屏和后台停止。",
+    "prompt": "归档【目标游戏版本页】一个确定 URL 和采集日期。参考原神此快照：真实群像铺满首屏，深红暗紫底、巨幅官方主题字、下载与版本号保持清楚层级。滚轮以垂直 translate3d 切换独立舞台，必须能反向回到首屏；末尾仅移动剩余距离露出 footer。人物章节以完整背景承担换色，不只替换一张立绘；选择两角色时同步姓名、简介、原始肖像、立绘及麦克风图，立绘用来源确认的 100ms 交叉淡化。麦克风只在用户操作时随机播放该角色 3 条真实台词，再点暂停，换角色或离屏即停；首屏无声短片另有暂停，不添加未证实 BGM。未核验的整屏时长需在 fidelity 中明说，本地使用 600ms ease 和 650ms 输入锁并收敛最新操作。用原生 dialog 展示局部详情与可放大官方日历，支持 Escape、焦点与键盘章节/角色操作。手机保留独立舞台与可触摸控件，减少动态取消位移且背景初始暂停。明确删减章节、手机适配与本地无障碍补充，输出 HTML/CSS/JS、完整素材 manifest、风格与复现边界以及真实两尺寸预览。",
     "negativePrompt": "不要用蓝色通用SaaS hero替代深红角色群像；不要编造当前角色名、版本或曲目；不要冒充完整官网、领奖、登录或购买流程；不要复制追踪脚本。",
     "demo": "demos/genshin-world/index.html",
     "preview": "previews/genshin-world.jpg",
     "research": "research/genshin-world.md",
-    "exercise": "替换为下一次真实版本专题，将主题色、角色、日历同时更新，并记录旧版本与新版本的构成差异。",
+    "exercise": "依据这次归档的舞台规则，设计一个虚构双角色专题：保持整屏交接、角色连背景换色、声音归属与下载层级，比较不同美术是否仍有清楚的章节识别。",
     "composition": {
       "color": "深红暗紫群像与青绿、浅金角色舞台；衬线与星芒、圆环、尖角纹样呈现幻想冒险。",
       "typography": "官方大幅衬线主题图，角色名用Georgia；说明用系统无衬线",
-      "layout": "全幅群像专题；青绿独立人物舞台；装饰框内活动日历",
+      "layout": "群像整屏 → 独立角色舞台 → 日历整屏 → 部分露出的 footer",
       "imagery": "当前官网3秒静音主视觉视频、官方标题/Logo、两张角色立绘、官方日历。",
       "shape": "红色播放圆环、金色菱角按钮、青绿圆轨与装饰分隔组成幻想语汇。",
       "hierarchy": "版本剧情群像 → 下载与版本号 → 角色展示 → 活动日历。",
-      "motion": "角色立绘100ms交叉淡化对应原站可见opacity时序；桌面原生scroll-snap近似垂直Swiper，手机自然滚动；首屏视频可暂停、离屏停止。",
+      "motion": "垂直 translate3d 舞台正反交接（本地 600ms ease 近似）；角色 100ms 交叉淡化与整背景同步；末尾位移有限，减少动态即时切换。",
       "coherence": "色调随版本/角色章节转换，人物图与幻想纹样统一；信息和操作保留清晰的固定层级。"
     },
     "referenceUrl": "https://genshin.hoyoverse.com/en/",
     "implementation": "reference-study",
     "fidelity": "demos/genshin-world/fidelity.md",
     "assetManifest": "demos/genshin-world/assets-manifest.json",
-    "referencePreview": "research/screenshots/genshin-world-source.jpg"
+    "referencePreview": "research/screenshots/genshin-world-source.jpg",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "无深浅主题切换；角色选择会改变舞台背景。",
+      "designReason": "深红版本叙事与青绿/蓝色人物舞台来自同一 IP 美术，强行换成通用浅色会破坏人物与背景关系。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "本地麦克风手动播放/暂停 6 条官方角色语音；首屏无声，完整 PV/Wiki 使用官方外链。",
+      "interactionRole": "人物选择更新声线；点击麦克风让角色自我介绍，换人和转场停止旧语音以保持人物归属，未发现独立 BGM。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "arknights-world",
     "order": 19,
-    "title": "明日方舟 · 工业档案与干员舞台",
-    "subtitle": "ARKNIGHTS / RHODES ISLAND ARCHIVE",
+    "title": "明日方舟 · 全屏档案与交互点阵",
+    "subtitle": "ARKNIGHTS / RHODES ISLAND INTERACTIVE ARCHIVE",
     "category": "游戏/IP",
     "country": "中国",
     "tags": [
       "明日方舟",
       "鹰角网络",
-      "工业",
-      "网格",
-      "真实干员",
-      "BGM"
+      "全屏章切",
+      "滚动编号",
+      "WebGL点阵",
+      "原站BGM"
     ],
-    "summary": "黑灰工业网格、青色索引、超大裁切字、双色人物层与档案导航，把世界观呈现成罗德岛系统。",
+    "summary": "全屏资源载入、侧向章切与滚动编号，将六章组织成工业系统；WORLD用真实WebGL点阵响应指针，把标识、设定和输入连成同一舞台。",
     "accent": "#00c4df",
     "background": "#080a0d",
     "principles": [
-      "背景视频和超大裁切字建立工业舞台，导航、索引及档案沿网格秩序组织。",
-      "同一人物的灰度巨背景和彩色前景产生层次，档案放在黑底阅读区。",
-      "青色只承担选中、索引与声音等状态，不铺满所有元素。",
-      "世界设定以术语目录组织，视觉氛围进入可查询内容。"
+      "真实资源进入前：暗灰全屏品牌与青色进度条 → 资源就绪后淡出 → 建立系统启动感并遮住未就绪场景。",
+      "滚轮、键盘或导航选择章节 → 场景按方向从侧面裁切覆盖、右侧数字/计数/章节名滚出再滚入 → 让空间方向与当前位置共同可读。",
+      "WORLD指针进入点阵 → 原始排斥公式推开附近点、移走后回聚 → 让静态工业标识可被触摸；选择术语会把点阵重组成对应原站形状。",
+      "BGM单独启用后持续跨章，600ms进入、300ms退出 → 用连续声音连接不同档案；人物语音由配音按钮主动触发。"
     ],
-    "productFocus": "真实官网首屏PV背景、凯尔希/阿米娅/陈双精英阶段立绘、罗德岛阵营符号；官网实际BGM和两名干员日语语音。",
+    "productFocus": "同一来源的2026-10-07中文官网快照：INDEX、INFORMATION、OPERATOR、WORLD、MEDIA、MORE与末端页脚；官方PV、BGM、三人双阶段立绘/日语语音、七组点阵与原始字体。",
     "interaction": [
-      "三个干员、两个精英阶段、语音可用性与资料同步；方向键选择干员。",
-      "阿米娅/陈使用实际官网语音；播放和暂停的aria-label跟随媒体事件。",
-      "实际官网BGM默认关闭；离开前台暂停；首屏PV只在首屏可见时播放。",
-      "六个世界术语展开真实本地摘要；原站完整世界观视觉未完全复现。"
+      "首次/缓存重载均先显示全屏LOADING；本地按五份实际图片完成数显示进度，再开放初始hash所指章节。",
+      "场景横向遮罩裁切：桌面1000ms、竖屏600ms；同方向重复轮输入锁定，快速反向和导航使用最后目标队列，单次仅一组出/入场景。",
+      "右索引数字、计数和章节名分组滚出/换值/滚入，与换章方向联动；Home/End、PageUp/PageDown及上下方向键可走完六章与页脚。",
+      "桌面WORLD先显示六术语目录与罗德岛点阵；悬停术语的原图预览跟随指针并使用同源形变/RGB偏移shader。点击进入详情，箭头/六段索引换模型，返回恢复目录。",
+      "WORLD使用官网Three导出、七组原始点位、粒子贴图和排斥公式；10,000粒子池中当前模型使用1785–5652点。竖屏直接打开源石详情，粒子在上/文字在下。",
+      "真实BGM默认关闭，单独开关并使用官网600/300ms音量渐变；三人日语语音独立按需播放，换人物或离开干员章暂停旧语音。",
+      "暂停动态独立控制PV/粒子；减少动态提供即时章切和静止同源点阵，保留手动音频选择。"
     ],
-    "theme": "黑灰冷静工业档案，青色状态、细网格、罗德岛符号与超大裁切字；角色彩色图提供情感与焦点。",
+    "theme": "暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。",
     "constraints": [
-      "官方素材只作本地私人学习，版权归鹰角网络。",
-      "本地保留3名干员，原站有6名；语音覆盖阿米娅/陈，凯尔希语音按钮明确不可用。",
-      "剧情介绍使用简短学习摘要，完整文本回原站。",
-      "本地CSS源石替代原站WebGL粒子，并明确局部差异。",
-      "BGM与角色语音不是同一类型，不混淆曲名或配音。",
-      "手机重新排档案和人物，固定索引不能挡住主操作。"
+      "本次快照归档于2026-10-07；后续官网变动不自动维护。官方美术/音乐版权归鹰角网络，限授权私人设计学习。",
+      "六章及页脚交接保留；情报只保留当前三条与单幅官方Banner，轮播及深层新闻页由官网外链承接。",
+      "干员保留3名/每人E1与E2，原站6名且阿米娅含E0；灰度背景为本地同人物图层，未移植完整背景版/6人滚动肖像轨道。",
+      "WORLD原始模型、Three导出、粒子shader和指针排斥方程迁移；独立场景控制器及帧调度是本地实现，未迁移原站额外20枚firefly层。",
+      "媒体对象取原站图片并改为四入口格；完整办公桌构图、图库/动态干员/内嵌视频目录未迁移，点击返回官网相应入口。",
+      "末章四张官方图与响应式素材保留，分类内部弹层不复制；页脚260px位移为本地收束。",
+      "加载图片集与保底1300ms是本地适配；原站加载五背景图、每次进度用1000ms插值，完成后300ms再退出1000ms。",
+      "查询参数motion=reduce是可审阅分支；不声称模拟了操作系统偏好。"
     ],
     "useCases": [
       "工业科幻游戏",
@@ -1980,16 +2147,16 @@ window.DESIGN_ATLAS = [
         "#00c4df",
         "#eceeef"
       ],
-      "type": "大号Arial Black式英文字 + 明确中文档案；小英文索引用系统无衬线",
-      "layout": "满屏PV+裁切字首页；左档案/右巨立绘；固定右索引；世界术语目录",
-      "motion": "干员和档案纵向分块进入，每块200ms错开有官网依据；本地500ms与cubic-bezier(.22,1,.36,1)为近似。PV、BGM和两位干员语音可停止。"
+      "type": "原站Bender、Oswald与Novecentosanswide字体；中文沿系统中文粗体档案。",
+      "layout": "六个固定满屏场景；侧向裁切覆盖交接；右侧同步索引；WORLD桌面目录/左右详情，竖屏图上文下。",
+      "motion": "章节按方向横向wipe：桌面1000ms/竖屏600ms；数字及标签300ms离开/300ms进入并100ms分组错列；同源WebGL点阵回聚与指针排斥，声音600/300ms渐变。"
     },
     "sources": [
       {
-        "title": "Hypergryph · 明日方舟官方网站",
+        "title": "Hypergryph · 明日方舟中文官方网站",
         "url": "https://ak.hypergryph.com/",
         "type": "实例",
-        "note": "2026-10-07：首页、OPERATOR与WORLD的工业构图，三类媒体和六项术语。"
+        "note": "2026-10-07当前快照；新鲜入场、缓存重载、六章正反路径、WORLD指针/详情与390px竖屏实访，公开模块/CSS提供原始模型、shader、章切和声音参数。"
       },
       {
         "title": "W3C · Pause, Stop, Hide",
@@ -2002,35 +2169,41 @@ window.DESIGN_ATLAS = [
         "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
         "type": "规范",
         "note": "键盘与选择状态的规范参考；本地以原生按钮/aria-pressed实现角色和阶段选择。"
-      },
-      {
-        "title": "官方公开交互脚本 · 2026-10-07",
-        "url": "https://web.hycdn.cn/arknights/official/_next/static/chunks/main-app-fccc8d83e156badb.js",
-        "type": "实例",
-        "note": "2026-10-07：OPERATOR的纵向分块delay为0/200/400/600/800/1000ms，当前官网阿米娅有E0。本地500ms曲线、三位E1/E2及CSS源石是明确的局部范围。"
       }
     ],
-    "prompt": "为【工业科幻角色游戏】先核验真实官网的首页、干员区与世界设定，保存实访截图与公开素材来源。首屏以官方PV静音视频覆盖全幅，左侧大青色矩形与超大裁切RHODES ISLAND文字，中下部ARKNIGHTS标识、下载纵列和细线分区；顶部双语导航、右侧固定编号索引。干员区以同一官方立绘灰度放大作背景、彩色完整人物作前景，左侧档案包括英文名、中文名、阵营符号、角色配音和黑底简介，底部方形肖像选择，右侧双精英阶段按钮必须实际更换对应图片。随后用六个真实世界术语组成目录与说明，WebGL无法复现时明确局部替代。仅用青色表示选中和状态，正文维持水平、高对比。背景音乐与角色语音须来自实际核验官方文件，默认关闭、点击播放、捕获拒绝、切换人物停止旧语音、离开前台暂停。手机人物在上档案在下、索引收窄、菜单命中区可操作。全部资产本地化，输出独立代码、来源尺寸manifest、fidelity与真实双尺寸截图。 干员和档案分块沿纵向进入，delay按0/200/400/600/800/1000ms排列；500ms时长及cubic-bezier(.22,1,.36,1)明确为本地近似，角色和精英阶段切换重播，减少动态即时替换。首页PV使用独立可见性控制；三位子集不包含E0，阿米娅/陈语音可播放，凯尔希语音不可用。",
-    "negativePrompt": "不要以普通白色卡片替代工业档案；不要同一立绘换色冒充干员；不要自动出声或伪称曲名；不要把CSS晶体说成完整WebGL；不要复制账号、支付或追踪服务。",
+    "prompt": "复现【明日方舟中文官网2026-10-07快照】的工业档案舞台，保留同一来源的真实品牌、字体、PV、美术、点阵与BGM。必须先显示全屏暗灰载入页：居中品牌、细边界线、实际图片资源进度、青色进度条，资源就绪后开放指定初始章节。六章INDEX/INFORMATION/OPERATOR/WORLD/MEDIA/MORE使用固定满屏舞台，不用普通长页面滚动；滚轮、章节导航和键盘按方向触发侧向裁切覆盖，桌面1000ms、竖屏600ms，右侧编号/计数/章节名在遮罩中滚出、换值、滚入。单一状态控制器处理快速反向和最后导航请求，稳定时只有一章可交互。WORLD必须用原站七套点位、粒子贴图、WebGL point shader与指针排斥方程，保留桌面目录+原图随指针形变预览、详情模型重组、左右箭头/六段索引/返回；390px竖屏直接打开第一项详情，图上文下。官方BGM与干员日语语音分开按需播放，BGM默认静音、600ms渐入/300ms渐出、跨章保持连续，离开前台停止音频；动态暂停和减少动态独立于用户声音选择，减少动态使用即时章节切换和静止真实点阵。原站固定暗色，不增设虚构浅色主题。保留三名干员E1/E2及明确子集边界；情报、媒体与更多章节可缩短内容，但真实入口、全章交接与末端页脚须连续且可反向返回。仅存最终资源与单一终态说明，证据和脚本留在仓库外。",
+    "negativePrompt": "不要用普通Observer淡入冒充全屏侧向章切；不要用静态CSS晶体或虚构粒子形状；不要漏掉首次载入/反向方向/同步滚号；不要自动出声、臆造操作音/曲名/主题切换；不要把子集、外链及本地调度说成完整官网移植。",
     "demo": "demos/arknights-world/index.html",
     "preview": "previews/arknights-world.jpg",
     "research": "research/arknights-world.md",
     "exercise": "在已授权角色素材不变时，加入一个可查询的干员职业目录，保持工业档案的网格与状态语汇。",
     "composition": {
-      "color": "黑灰冷静工业档案，青色状态、细网格、罗德岛符号与超大裁切字；角色彩色图提供情感与焦点。",
-      "typography": "大号Arial Black式英文字 + 明确中文档案；小英文索引用系统无衬线",
-      "layout": "满屏PV+裁切字首页；左档案/右巨立绘；固定右索引；世界术语目录",
-      "imagery": "官方PV04静音视频、3人两精英阶段立绘、肖像与罗德岛标识。",
-      "shape": "工业网格、细线目录、方形肖像、青色索引与CSS源石晶体局部替代。",
-      "hierarchy": "品牌舞台与下载 → 干员/阶段/声音档案 → 世界术语。",
-      "motion": "干员和档案纵向分块进入，每块200ms错开有官网依据；本地500ms与cubic-bezier(.22,1,.36,1)为近似。PV、BGM和两位干员语音可停止。",
-      "coherence": "网格、裁切字、索引和档案都表达同一工业系统；灰度背景托住彩色人物，青色只表示操作状态。"
+      "color": "暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。",
+      "typography": "原站Bender、Oswald与Novecentosanswide字体；中文沿系统中文粗体档案。",
+      "layout": "六个固定满屏场景；侧向裁切覆盖交接；右侧同步索引；WORLD桌面目录/左右详情，竖屏图上文下。",
+      "imagery": "官方PV、三名干员双阶段立绘/肖像、世界术语六幅图、七套点阵几何、媒体对象与末章四组桌面/竖屏素材。",
+      "shape": "工业横竖与斜线网格、裁切大字、方框肖像、青色位置条、原始罗德岛/源石等白色粒子点阵；无CSS晶体替代。",
+      "hierarchy": "全屏载入 → 首页/情报 → 干员 → 世界目录/详情 → 媒体入口 → 更多内容 → 页脚。",
+      "motion": "章节按方向横向wipe：桌面1000ms/竖屏600ms；数字及标签300ms离开/300ms进入并100ms分组错列；同源WebGL点阵回聚与指针排斥，声音600/300ms渐变。",
+      "coherence": "资源载入、编号、网格、点阵和媒体状态都属于同一罗德岛系统；指针、章切方向和声音给出互补反馈。"
     },
     "referenceUrl": "https://ak.hypergryph.com/",
     "implementation": "reference-study",
     "fidelity": "demos/arknights-world/fidelity.md",
     "assetManifest": "demos/arknights-world/assets-manifest.json",
-    "referencePreview": "research/screenshots/arknights-world-source.jpg"
+    "referencePreview": "research/screenshots/arknights-world-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "本次中文官网未提供深浅色切换。",
+      "designReason": "暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。"
+    },
+    "soundBehavior": {
+      "kind": "background",
+      "control": "真实原站BGM独立开关，默认静音；600ms渐入/300ms渐出。三人官方日语配音由干员按钮单独播放；页面进入后台暂停音频。",
+      "interactionRole": "BGM作为连续环境声音跨越横向章节交接，营造系统进入和世界档案氛围；人物配音提供角色身份反馈。未核验到独立章节/鼠标操作音，未添加臆造音效。"
+    }
   },
   {
     "id": "uma-musume",
@@ -2059,18 +2232,20 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "真实游戏 Umamusume: Pretty Derby 的跑马养成、学园交流与比赛；本地页复现国际官网主视觉、新闻条目、预告入口、三态玩法轮播。",
     "interaction": [
-      "三组玩法图文和立绘整体横向移动，按钮、编号、方向键均可用。",
-      "首张禁用Previous，末张禁用Next，符合源站非循环状态。",
-      "官网PV通过用户主动打开的链接访问；本地没有未核验BGM。"
+      "正常纵向浏览连接群像、新闻、About、Gameplay 和 footer，斜切条带延续赛道方向。",
+      "滚过画布宽度 7% 后 Logo 从 2.8 倍缩回导航，反向回首恢复；300ms cubic-bezier(.19,1,.22,1)。手机 1.72 倍与菜单切换，Play Now 打开下载层。",
+      "三组 Gameplay 完整面板以 400ms cubic-bezier(.25,1,.5,1) 横移；按钮、编号、左右键与手势同步，首尾禁用而不循环。",
+      "点击 About 原缩略图，站内 dialog 播放原始 top_about.mp4；该文件只有视频轨道，没有音轨，关闭/后台暂停。",
+      "本地手机菜单、键盘控制、减少动态与学习说明为补充，未添加独立 BGM。"
     ],
     "theme": "明亮赛道、彩色二次元群像、奔跑纵深和反复出现的斜切几何共同构成青春竞技主题。",
     "constraints": [
-      "该页选择国际英文版 https://umamusume.com/；不能把日本门户与国际宣传页当作同一布局。",
-      "本地官方角色、背景和截图仅作私人学习，权利仍归 Cygames；公开再发布需自行取得授权。",
-      "复杂主视觉旁的文字与按钮必须落在稳定位置，不能压在角色脸部。",
-      "三态轮播不自动翻页，保持文本、图像与当前状态同步且可键盘操作。",
-      "没有获得原站 BGM，不提供假音频开关；预告是用户主动打开的官方外链。",
-      "手机使用原站单独的竖版 KV，并重新安排徽章；reduced-motion 取消非必要过渡与平滑滚动。"
+      "只归档 https://umamusume.com/ 在 2026-10-07 的国际英文页，不混入日本门户布局或追随后续改版。",
+      "群像、新闻、About 和 Gameplay 使用官方本地素材；新闻数量和后半部角色/媒体内容有缩减。",
+      "About 原始 top_about.mp4 无音轨，播放器未静音不代表有原声；官网其他 PV 外链的声音未在本地核实，未发现独立 BGM，不给滚动章节配通用音乐。",
+      "Gameplay 不自动推进、不循环；400ms cubic-bezier(.25,1,.5,1) 与首尾边界有源样式依据。",
+      "手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。",
+      "官方品牌、群像、美术和 PV 权利归相应权利方，manifest 留存 URL/尺寸/哈希；不复制运营服务。"
     ],
     "useCases": [
       "角色阵容丰富的竞技游戏",
@@ -2118,9 +2293,15 @@ window.DESIGN_ATLAS = [
         "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
         "type": "规范",
         "note": "交互动效降级规范，条款为Level AAA；不据此声称整页无障碍认证。"
+      },
+      {
+        "title": "官方公共导航组件样式/脚本",
+        "url": "https://parts.umamusume.com/assets/js/inject-components.js",
+        "type": "实例",
+        "note": "本次同页注入的公共导航：7% 宽度阈值、2.8/1.72 Logo 缩放，.3s(.19,1,.22,1)，Play Now 站内下载层。"
       }
     ],
-    "prompt": "为[角色竞技/养成游戏]制作一个有真实素材依据的单页。首先核验目标官方地区页面，不把日本门户和国际版页面混用。参考 Umamusume 国际英文官网：使用有授权的赛道群像作为满宽主视觉，保留奔跑方向、角色纵深与绿色场景；不要在人物脸部叠营销文字。下载区域使用三枚平台徽章，真实指向对应商店。下一节是白底的新闻条目，而非卡片墙，日期、分类、标题、箭头清晰分工。标题下用荧绿斜切带重复运动主题。预告缩略图居中并轻微倾斜，用户主动打开预告信息。玩法节用大立绘、两张竖屏真实游戏画面与斜切说明板组成三组状态，箭头、场景按钮及方向键同时更新图像和文字，不自动翻页。使用白、草地绿、荧绿与深灰，标题粗重斜体而正文保持可读。提供独立手机KV或明确标注本地裁切差异；390px所有按钮可见。所有素材存本地并记录来源、尺寸和权利，优先有授权资产。未获得原站BGM就不宣称有官网音乐；音频默认关闭，外链预告由用户主动观看。支持键盘、原生对话框、可见焦点与prefers-reduced-motion，保留完整来源和复现边界。 Gameplay三个完整面板用400ms cubic-bezier(.25,1,.5,1)横向移动，前后箭头在首尾禁用，不循环、不自动推进；编号与左右键同步立绘、截图、文案及当前态。预告使用https://www.youtube.com/watch?v=uCaWqXP54Mc的官方外链，本地说明框与菜单标为教学补充。",
+    "prompt": "以一个明确 URL 和采集日期归档【竞技/养成游戏】。参考 Umamusume 国际页：官方赛道群像满宽铺开，独立竖版 KV 用于手机；下载徽章避开人物脸部。正常长页依次接入新闻条目、居中轻微倾斜的 About 缩略图和 Gameplay，不改成通用整屏 Swiper。草地绿、荧绿斜切标题带、粗重斜体标题与白底新闻形成运动方向和阅读节奏。点击 About 在站内原生 dialog 播放官方 top_about.mp4，文件无音轨，保留播放/暂停/进度与关闭或后台暂停；用比赛画面和剪辑建立节奏，不把未静音属性称为原声。官网 PV 外链的声音未在本地核实，不额外添加未核验 BGM。三组 Gameplay 必须将人物立绘、两张竖屏游戏图与文案板整块移动，400ms cubic-bezier(.25,1,.5,1)，首尾箭头禁用，不自动、不循环；按钮、编号、左右键与手势更新同一状态。保留来源证实的造型，不把所有图加统一圆角或玻璃卡片。明确内容缩减、手机适配与本地键盘/菜单补充，提供减少动态、可见焦点、原图 manifest 和真实桌面/390px 预览。 导航须保留真实 Logo 与蓝色纹理，滚过 min(viewportWidth,2000) 的7%阈值时2.8倍Logo缩回基准，300ms cubic-bezier(.19,1,.22,1)，反向恢复；手机1.72倍、马蹄图标菜单，Play Now打开原图下载层。",
     "negativePrompt": "不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。",
     "demo": "demos/uma-musume/index.html",
     "preview": "previews/uma-musume.jpg",
@@ -2129,7 +2310,7 @@ window.DESIGN_ATLAS = [
     "composition": {
       "color": "草地绿来自官方赛道KV；#c0e640斜切标题带与绿色操作入口重复，白底新闻让复杂图像后出现阅读休息。",
       "typography": "官方图内标识保留；本地段落使用粗重斜体无衬线标题、普通正文和小号日期，避免所有内容同等抢眼。",
-      "layout": "主视觉整幅铺开，新闻以横向条目排列，预告居中，玩法以截图与立绘叠合；不套统一hero卡片模板。",
+      "layout": "满宽赛道群像 → 斜切新闻 → 居中倾斜预告 → 立绘与竖屏画面轮播",
       "imagery": "原站公开KV、三名角色立绘、六张游戏截图与预告缩略图本地保存；每项有manifest来源。",
       "shape": "向前倾斜的标题带、说明板与箭头复用斜切语言，平台下载徽章保持自己的标准轮廓。",
       "hierarchy": "赛道群像先建立游戏辨识；下载次之；新闻较安静；Gameplay每态只突出一个玩法及相关人物。",
@@ -2142,7 +2323,19 @@ window.DESIGN_ATLAS = [
     "referenceUrl": "https://umamusume.com/",
     "referencePreview": "research/screenshots/uma-musume-source.jpg",
     "fidelity": "demos/uma-musume/fidelity.md",
-    "assetManifest": "demos/uma-musume/assets-manifest.json"
+    "assetManifest": "demos/uma-musume/assets-manifest.json",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "本次页面未见深浅模式开关，保持白底、草地绿与荧绿。",
+      "designReason": "明亮赛道、青春群像和斜切运动条带构成统一主题，切成通用暗色会改变比赛的情绪。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "About 原始 top_about.mp4 只有视频轨道，没有音轨；播放/暂停、进度与关闭暂停可操作。官网其他 PV 外链声音未在本地核实，未发现独立 BGM。",
+      "interactionRole": "奔跑与比赛画面的剪辑建立观看节奏，无声影片保持普通阅读安静；站外播放器的声音不冒称本地已播放。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "blue-archive",
@@ -2167,7 +2360,7 @@ window.DESIGN_ATLAS = [
       "城市动画",
       "竖排"
     ],
-    "summary": "学习日本版碧蓝档案首页如何用学园都市动画、青白Logo、右侧日文竖排标语和角落漫画入口建立轻盈的世界观，而让导航与下载保持明确。",
+    "summary": "归档日本官网蓝白学园都市映像、竖排标语与角落入口，并学习独立角色页四学生的完整资料轨道和官方声线。",
     "accent": "#00c9e5",
     "background": "#edf8fc",
     "principles": [
@@ -2178,18 +2371,20 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "真实游戏 Blue Archive 日本版；官方首页展示城市/教室背景、品牌与日常叙事，并把下载、漫画和帮助入口分配到画面角落。",
     "interaction": [
-      "首页静音城市影像可播放/暂停，离屏和后台停止；减少动态初始停止。",
-      "阿比多斯四学生资料与立绘1000ms整块水平切换，左右键和选择按钮同步；其他学院为官方外链。",
-      "三态资源观察器和构图笔记为本地教学补充；手机菜单支持Escape。"
+      "真实首页构图为城市影像与 Logo、竖排标语、边缘下载/漫画入口，向下到 footer；本地加入背景暂停。",
+      "阿比多斯四学生资料卡与完整立绘以 1000ms 整块水平移动；选择按钮、左右键及手势同步当前人物。",
+      "角色 VOICE 麦克风播放该学生对应官方 WAV，再点暂停；换人或后台停止，声线归属明确。",
+      "首页导航 CHARACTER 打开本地独立 character.html；HOME 返回首页，首页仅 KV→footer，保留源站页面职责分离。"
     ],
     "theme": "学园都市的蓝天、反光玻璃与日常场景；青白标识、日文竖排文字和可爱的漫画按钮共同表达青春与轻盈感。",
     "constraints": [
-      "country标注韩国对应开发来源；edition标注日本版对应本次官网观察，不能混同开发国与发行地区。",
-      "原站背景是公开MP4，demo保持静音，普通模式可播放，减少动态初始停止；未获得BGM，不把背景视频冒称官网音乐。",
-      "角色范围为日本官方角色页阿比多斯四名学生；其他学院、完整语音及全部档案未覆盖。",
-      "官方素材和商标权利归相应权利方，私人学习不代表获准公开再发布。",
-      "日本站390px页面中部分按钮很小，本地手机版明确作可读性改编，非逐像素移动版复刻。",
-      "下部观察器和构图笔记是教学补充，不标作官网News/System原页面；所有内容无需CDN即可显示。"
+      "归档 https://bluearchive.jp/ 在 2026-10-07 的单一快照；其可见 CHARACTER 导航进入 /character，作为同次采集的关联子页。",
+      "原首页只含 KV→footer，独立 character.html 仅复现 /character 的阿比多斯；本地使用文档导航，源为 Vue router.push，未添加无证据的入场淡化。",
+      "4 位学生姓名、CV、学年、生日、身高、立绘和 WAV 已核验；其他学院、全部人物和运营页面用官方入口。",
+      "角色整轨 1000ms 有来源依据；缓动、键盘、触摸阈值、声线暂停与减少动态为本地补充或近似。",
+      "城市视频保持静音；角色台词不是 BGM，完整 PV 使用官方外链，未添加通用音乐。",
+      "手机改为可读排布而非逐像素原页；保持透明资料卡、完整人物和蓝白色，不加强制暗色主题。",
+      "韩国为开发来源、日本为本次发行版；官方素材和商标权利归相应权利方，manifest 记录 URL/哈希。"
     ],
     "useCases": [
       "有成熟世界观的校园手游",
@@ -2209,9 +2404,9 @@ window.DESIGN_ATLAS = [
         "#a8d8ed",
         "#edf8fc"
       ],
-      "type": "拉丁导航用小号大字距；日文正文保持可读；竖排标语与官方Logo来自真实图片",
-      "layout": "满屏城市影像与边缘下载/漫画入口 → 左学院/中资料/右人物角色舞台 → 本地资源观察器",
-      "motion": "静音城市背景普通模式播放且可暂停；阿比多斯四学生资料/立绘以1000ms整体水平轨道切换，缓动为本地近似；减少动态停止背景并即时切角色。"
+      "type": "小号大字距拉丁导航；官方日文竖排标语；资料卡姓名/CV/短字段分工",
+      "layout": "首页城市 KV→footer；CHARACTER 导航进入独立学院/资料/人物舞台→footer",
+      "motion": "静音城市视频可暂停；4 学生资料/立绘以 1000ms 整轨平移，缓动近似；角色声线主动播放，减少动态停止背景并即时换人。"
     },
     "sources": [
       {
@@ -2236,7 +2431,7 @@ window.DESIGN_ATLAS = [
         "title": "W3C WAI：Carousels Tutorial",
         "url": "https://www.w3.org/WAI/tutorials/carousels/",
         "type": "规范",
-        "note": "用户控制、键盘与当前态的规范参考；本地学生和资源观察器均为手动切换。"
+        "note": "用户控制、键盘与当前态的规范参考；本地学生为手动切换。"
       },
       {
         "title": "W3C：Animation from Interactions",
@@ -2249,9 +2444,15 @@ window.DESIGN_ATLAS = [
         "url": "https://webusstatic.yo-star.com/bluearchive_jp_web/css/view-character-vue.b3742afb.css",
         "type": "实例",
         "note": "2026-10-07：官方角色页整块Swiper过渡1000ms，Hoshino资料/CV与立绘对应；本地只含阿比多斯四人，曲线及手机重排有差异。"
+      },
+      {
+        "title": "官方公开 app 路由组件",
+        "url": "https://webusstatic.yo-star.com/bluearchive_jp_web/js/app.421ac700.js",
+        "type": "实例",
+        "note": "同次采集：导航 methods.change 调用 $router.push，/character 独立路径，外壳直接 router-view+footer，没有 route transition 包装。"
       }
     ],
-    "prompt": "为[世界观成熟的学园/轻科幻手游]制作真实官网风格学习页。先核验目标地区官方页面并记录日期，不把开发国和地区版本当作一个字段。参考 Blue Archive 日本官方首页的实际构图：用有授权的蓝天学园都市影像做满幅背景，中央放透明青白品牌Logo，右侧使用窄幅竖排日文主题标语；深蓝rgba(20,39,59,.8)横向导航横贯上方，白色小号拉丁字母适度增大字距，当前项用青色线标示。下载徽章位于左下，官方漫画与帮助入口图像位于右下，中心不要塞产品卡片和长营销文案。背景视频本地化，普通模式静音播放，减少动态初始停止，提供真实播放/暂停控件；未获得原站BGM时不展示假音乐按钮。页面下部可新增明确标注为本地教学的三态素材观察器，切换时同时更新图像、文字和官方外链。手机提供实际可用的菜单与合理大小的下载按钮，并把这种改编与原站移动版区分记录。保留蓝白、深蓝和少量插画彩色的职责分工；控件使用细线和轻圆角，不把所有部分变成玻璃卡片。所有素材有URL、字节尺寸、用途和权利说明，所有CTA有实际目的地，键盘焦点清楚并响应prefers-reduced-motion。 在首页之后实现日本官方/character的学院舞台：左学院标记、中资料卡、右完整立绘，四位阿比多斯学生的姓名、CV、学年、生日、身高各自对应真实内容，1000ms整块水平轨道且不自动换人。其他学院用官网外链，未取得语音就不放假控件。减少动态停止背景、取消轨道位移，手机重排属于本地可读性适配。",
+    "prompt": "以一个 URL 和采集日期归档【学园/轻科幻 IP】。参考 Blue Archive 日本首页：原始蓝白城市视频做满幅世界，透明青白 Logo 居中，右侧窄竖排标语，上方深蓝半透明导航，下载在左下、官方漫画图像在右下；中心不堆营销卡片。源首页为 KV→footer，CHARACTER 导航必须打开独立人物页，HOME 返回首页，不能同页串接；源公开 router-view 没有转场包装，不添加无证据的跨页 fade。人物舞台保留左学院标记、中透明资料卡、右完整立绘，四个真实阿比多斯学生的姓名、CV、生日、学年、身高一一对应；点击人物用 1000ms 整轨水平平移，缓动未核验就明说，不用只淡换小头像替代。VOICE 按钮使用原图和对应官方 WAV，用户点击播放、再点暂停、换人停止，声线作为人物身份而不是 BGM。城市背景静音并可暂停，未证实的音乐不添加。手机保持完整人物并重新安排资料和可触摸选择，明确适配范围；减少动态停止背景、即时切换，键盘与焦点可用。NEWS/SYSTEM/其他学院等未实现页面链接官网，不生成冒牌内容。保留固定蓝白主题及原始商店/漫画入口轮廓，输出代码、来源与字节哈希 manifest、复现边界和真实两尺寸预览。",
     "negativePrompt": "不要通用双栏hero、紫色霓虹仪表盘、虚构人物页、假背景音乐或自动有声播放；不要复制原站跟踪、运营接口、登录与支付逻辑。",
     "demo": "demos/blue-archive/index.html",
     "preview": "previews/blue-archive.jpg",
@@ -2260,18 +2461,30 @@ window.DESIGN_ATLAS = [
     "composition": {
       "color": "青色强调、白色Logo与天空高光、深蓝透明导航在同一蓝白体系中分工；漫画插画的彩色集中在角落。",
       "typography": "小号大字距的拉丁导航与官方日文竖排标语方向不同，中心Logo承担主辨识，正文不仿造装饰字。",
-      "layout": "满屏城市影像与边缘下载/漫画入口 → 左学院/中资料/右人物角色舞台 → 本地资源观察器",
-      "imagery": "官方城市MP4、透明Logo、竖排标语、插画入口，以及四位阿比多斯学生的学院标记、资料卡和完整立绘，均本地保存。",
-      "shape": "细线、半透明深蓝长导航、少量六边形光斑、熟悉商店徽章；插画入口不强制塞进统一卡片。",
+      "layout": "首页城市 KV→footer；CHARACTER 导航进入独立学院/资料/人物舞台→footer",
+      "imagery": "官方静音城市MP4、Logo、竖排标语、漫画入口，四位阿比多斯学生完整立绘/资料卡及各自WAV，全部本地保存。",
+      "shape": "深蓝透明长导航、细线、熟悉商店徽章及原始插画入口；人物页保留透明资料卡和学院标記，不额外加六边形装饰。",
       "hierarchy": "背景建立世界、Logo确认产品、竖排标语补充主题；下载与漫画入口形成左右分工。",
-      "motion": "静音城市背景普通模式播放且可暂停；阿比多斯四学生资料/立绘以1000ms整体水平轨道切换，缓动为本地近似；减少动态停止背景并即时切角色。",
+      "motion": "静音城市视频可暂停；4 学生资料/立绘以 1000ms 整轨平移，缓动近似；角色声线主动播放，减少动态停止背景并即时换人。",
       "coherence": "同一青白品牌色将天空、Logo、导航指示和控件连起来，漫画的自由彩色保留在角色叙事入口，避免互相争抢。"
-    }
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "未见深浅切换；保持天空、青白 Logo 与深蓝透明导航。",
+      "designReason": "学园都市的天空和玻璃高光承担世界观，资料卡与立绘沿用浅色学院体系；统一暗化会破坏原插画与标语的协调。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "本地 4 名阿比多斯学生各有官方 WAV，VOICE 手动播放/暂停；PV 为官网外链，城市视频无声。",
+      "interactionRole": "每位声优的原始台词把静态档案变成有身份的人物；换人停止旧声线，音效不承担整站 BGM 或自动开场。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "monument-valley-game",
     "order": 22,
-    "title": "纪念碑谷：电影画面与安静的品牌秩序",
+    "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
     "subtitle": "Monument Valley 一代官方网站 · 真实预告、奖项与画廊",
     "category": "游戏/IP",
     "country": "英国",
@@ -2291,30 +2504,32 @@ window.DESIGN_ATLAS = [
       "渐变",
       "画廊"
     ],
-    "summary": "学习纪念碑谷一代真实官网：电影式全屏预告与居中几何字标，随后依次下载、预告、粉蓝渐变奖项、奶油色媒体区、竖屏游戏画廊与社区入口。",
+    "summary": "依据2026-10-07国际英文 /mv1 页面：一秒白色加载遮罩、真实静音电影背景、中心触发的奖项淡入上移、十四张居中游戏画廊，以及手机四项奖项的展开。固定色带将体验、下载、信任与细节依次展开。",
     "accent": "#e76399",
     "background": "#627db3",
     "principles": [
-      "官方几何字标安静居中，背景游戏影像自己描述世界，而不是添加大量解释文案。",
-      "白色固定系列导航与细小页面索引维持整体秩序；内容节使用整幅色带转换节奏。",
-      "真实预告、奖项事实和原始游戏截图依次承担体验、信任与作品细节。",
-      "截图画廊保留游戏画面的纵向比例，不能把一切裁成通用宽卡片。"
+      "真实字标与游戏影像先建立世界，Humanist521 BT 字体、小六边形索引和整幅色带维持安静秩序。",
+      "奖项仅在视口中心进入该节时，以350ms从20px下方出现；离开后复位，反向浏览仍有同一节奏。",
+      "画廊将当前图置于中央，左右图降低至0.5透明度，强调探索顺序并预告下一幅作品。",
+      "手机保留作品纵向比例，画廊一张居中并露出20%侧图；奖项先呈现四条，让Show All逐步展开其余六条。"
     ],
     "productFocus": "真实 Monument Valley 一代：安静公主Ida、不可思议建筑和视觉解谜；官网通过预告与截图呈现作品，而本地复现其宣传页的区域顺序。",
     "interaction": [
-      "背景视频实际播放/暂停，减少动态初始停止。",
-      "手动预告启用官方原声轨，声音按钮同步muted状态；播放预告时暂停背景。",
-      "四幅官方游戏图按500ms横轨移动，前后箭头、索引和方向键有效。",
-      "奖项展开和手机菜单仍为标注清楚的本地易用性补充。"
+      "首次进入：白色LOADING遮罩1000ms后直接移除，真实背景视频静音循环；可持续暂停。",
+      "桌面左侧章节索引：点击以450ms swing将章节中心对齐视口中心；悬停或键盘进入索引时，标签350ms出现、内容降至0.2透明度。",
+      "奖项：视口中心进入/离开时，350ms opacity 0↔1、translateY 20px↔0，双向有效；手机Show All/Hide通过350ms高度变化展开/收回六项。",
+      "十四图画廊：500ms整条水平轨道、3秒自动推进、无限首尾衔接；桌面三张、手机一张加20%侧图，箭头/14个索引/方向键与点击侧图有效。悬停、焦点、离屏和后台暂停。",
+      "前景预告：主动Play播放同一67.988秒官方MP4及原声轨；原生进度/暂停和实际声音开关有效，播放时暂停背景。",
+      "手机圆形菜单：350ms全屏白色面板进入/退出，Escape可关闭；本地明确增加暂停、键盘、后台节流和减少动态分支。"
     ],
-    "theme": "克制的几何字标、幻境建筑、粉蓝渐变、奶油色与深青画廊；页面体验接近安静的作品放映与展览。",
+    "theme": "固定品牌场景：白导航、深色影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区和紫页尾。几何字标与原始幻境建筑是主视觉，不以换肤替代作品世界。",
     "constraints": [
-      "参照一代官方 /mv1 页面，不把MV2/MV3配色和营销资料拼成同一个版本。",
-      "局部复现一代作品宣传页，不提供可玩的游戏或游戏引擎。",
-      "官方图像、Logo、预告和商标仅为本地私人学习，权利仍归ustwo games及相应权利方。",
-      "初始不播放音频；手动Play会播放真实官网MP4及其音轨，不称为单独BGM。",
-      "原站有视差、渐入、较多奖项和14张图画廊，本地缩减为6项/4图并取消视差，保留连续色带与顺序。",
-      "媒体评价原文未整段复制；本地奶油色区域明确改为学习观察，手机导航改为有效菜单。"
+      "唯一页面基线为2026-10-07国际英文 https://www.monumentvalleygame.com/mv1；不混入MV2的字标描边或MV3区域。",
+      "当次原站MV1 hero实际随普通滚动离屏，未观察到滚动缩放/视差；公开函数存在不等于效果发生，因此本地不添加无依据视差。",
+      "当前原站桌面前景播放操作触发React #185，未验证其实际声音播放；公开播放器与MP4声轨提供机制依据，本地主动播放已验证。",
+      "官方十四张图片、字标、月亮/月桂、Humanist字体和预告本地保存，来源/尺寸/hash见资产清单；权利仍归ustwo games及相应权利人。",
+      "保留十项奖项和交互机制；媒体区以明确标注的学习观察替代评论长文，商店保留两个徽章，社交图标以文本入口近似。",
+      "手机/桌面版式、媒体裁切和细小控件几何为可复用实现近似，非逐像素复制；原站没有独立BGM，也未发现全局深浅主题按钮。"
     ],
     "useCases": [
       "有高质量游戏影像的独立游戏",
@@ -2333,13 +2548,12 @@ window.DESIGN_ATLAS = [
         "#e76399",
         "#627db3",
         "#fcf2d2",
-        "#1d4454",
         "#e28ec0",
         "#48418c"
       ],
-      "type": "真实细线几何Logo；小号大字距导航/奖项；普通无衬线说明承担可读性",
-      "layout": "全屏预告 → 深色下载带 → 预告 → 粉蓝奖项 → 奶油媒体区 → 深青纵向画廊 → 粉色社区",
-      "motion": "67.988秒官方背景预告静音循环，可暂停；主动前景播放才启用原声轨。四图画廊500ms横向轨道，ease为本地选择；减少动态取消位移。"
+      "type": "官方几何字标SVG与本地保存的Humanist521 BT Roman/Bold；导航13px，奖项主标题28px/32px。",
+      "layout": "影像 → 下载 → 预告 → 十项奖项 → 社交 → 媒体 → 十四图画廊 → 社区 → 页尾；桌面左侧中心章节索引，手机圆形导航。",
+      "motion": "加载1000ms；章节450ms swing；奖项与手机展开350ms ease-in-out；画廊500ms ease/3000ms自动，暂停及减少动态明确可控。"
     },
     "sources": [
       {
@@ -2370,30 +2584,48 @@ window.DESIGN_ATLAS = [
         "title": "W3C：Animation from Interactions",
         "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
         "type": "规范",
-        "note": "减少非必要交互动效；本地不实现完整视差，不声称原站合规。"
+        "note": "本地减少动态分支约束：停止自动推进与背景，取消非必要位移；不声称原站合规。"
       },
       {
-        "title": "官方公开交互脚本 · 2026-10-07",
+        "title": "MV1 官方公开交互脚本",
         "url": "https://www.monumentvalleygame.com/js/main.js",
         "type": "实例",
-        "note": "2026-10-07：官方背景和预告同为67.988秒MP4，画廊transform为500ms；本地四图、系统字体和曲线保留局部边界。"
+        "note": "同一页面1000ms loader、450ms章节定位、中心活动区、手机奖项分组、Slick14图及媒体播放器机制。"
+      },
+      {
+        "title": "MV1 官方公开样式",
+        "url": "https://www.monumentvalleygame.com/style.css",
+        "type": "实例",
+        "note": "同一归档页Humanist字体、350ms奖项/高度/标签过渡及画廊0.5侧图透明度；MV2专属动画不作为MV1证据。"
       }
     ],
-    "prompt": "为[有高质量作品影像的独立游戏/数字艺术作品]制作一个基于真实官方网站的局部学习页面。明确目标版本、官方URL和观察日期。参考 Monument Valley 一代 /mv1 官网的区域序列：全屏官方预告作为视觉背景，居中放真实几何细线品牌字标，保留安静的大留白；顶部白色固定导航横向列出系列作品，右侧用小六边形索引到下载、预告、奖项、媒体和画廊。下一段使用深色底和标准商店徽章，预告区域使用用户主动点击的播放按钮与实际video控件。奖项以粉色到蓝色渐变铺满，并使用低透明月亮背景和成对月桂；事实与年份可核验。媒体区使用奶油色背景，截图或影像与简洁文字并列。后续深青画廊保留游戏竖屏比例，用前后箭头和四个索引手动切换；社区入口落到粉色宽带。所有图片、字标和MP4本地保存并记录来源、字节/尺寸与权利。音频默认关闭，用户明确播放预告后才开启真实声轨，不把它冒称单独BGM；背景视频可暂停。手机菜单和画廊按钮可用，键盘、可见焦点、当前态和reduced-motion完整。不得用自己画的浮岛替代真实游戏官网，新增教学内容须明确标注，并记录与原站奖项数量、画廊数量、视差和字体的差异。 背景普通模式静音循环且可持续暂停，主动播放前景预告时停止背景并启用同一67.988秒原文件的声轨，不称为独立BGM；离屏和后台暂停。四幅真实画面通过500ms整块水平轨道手动切换，时长对应原站，ease标为本地选择；减少动态停止背景和取消画廊位移。",
-    "negativePrompt": "不要泛用双栏营销hero、任意等轴浮岛、假游戏关卡、虚构BGM、自动有声播放或未经核验的奖项；不要复制媒体长段评价与官网追踪脚本。",
+    "prompt": "为[有真实作品影像的独立游戏/数字艺术作品]建立基于2026-10-07 Monument Valley一代国际英文 https://www.monumentvalleygame.com/mv1 的可复用交互研究。先用白色LOADING遮罩等待1000ms并直接移除，真实67.988秒官方MP4静音循环，真实几何字标居中scale1.125；只在主动Play前景预告后启用原声轨，提供实际声音/原生进度和暂停，背景保持静音且可持续暂停，不冒称独立BGM。采用官方Humanist521 BT Roman/Bold和真实字标、月桂、月亮、十四张原游戏图；本地保存来源/尺寸/字节/hash。桌面白色固定系列导航，左侧小六边形章节索引；点击450ms swing使章节中心对齐视口中心，悬停/焦点350ms进入标签并将正文透明度降至0.2。按影像、下载、预告、粉蓝奖项、社交、奶油媒体、黑色画廊、粉色社区、紫页尾展开。奖项以视口中心位于章节内为触发，350ms ease-in-out opacity0↔1且translateY20px↔0，离开复位、反向重新进入；十项事实与月桂保持成对，手机先四项，Show All/Hide用350ms高度展开其余六项并旋转箭头180度。画廊保留十四张原始竖屏图与十四索引，桌面center3张、手机center1张并露出20%侧图，当前opacity1/侧图0.5，500ms ease整体横轨、无限首尾衔接、3000ms自动推进；悬停/键盘焦点/离屏/后台暂停，快速反转仍只有一个当前索引，箭头、方向键、Home/End、侧图选择、手机水平手势可用。手机圆形菜单350ms白色全屏面板进出，关闭态不可聚焦。固定作品配色，不强加全局换肤。本地暂停/减少动态/键盘分支注明易用性扩展。不得添加当次MV1未观察到的hero视差或MV2描边动画；原站前景播放React #185未通过实测，清楚区分公开播放器依据、本地已播放与未验证来源状态；媒体评价长文可缩减为标注的学习观察但保留原章节衔接。",
+    "negativePrompt": "不要泛用营销卡片、重画浮岛、虚构奖项、自动有声播放、虚构独立BGM、无来源hero视差或混入MV2描边；不要用所有区域统一淡入替代原站中心触发和轨道机制。",
     "demo": "demos/monument-valley-game/index.html",
     "preview": "previews/monument-valley-game.jpg",
     "research": "research/monument-valley-game.md",
-    "exercise": "把四张竖屏图加入一张横屏图，保持作品比例，检查画廊高度、按钮位置、手机阅读节奏与当前编号反馈是否仍一致。",
+    "exercise": "比较桌面中心三图与手机一图加20%侧图；切至第十四张再下一张，快速反向选择并暂停自动播放，检查当前索引、轨道和可聚焦元素始终一致。再上下穿越奖项中心，观察350ms双向进入与手机Show All高度变化。",
     "composition": {
-      "color": "原CSS白色导航、#221f20下载带、#e76399→#627db3奖项渐变、#fcf2d2媒体区与粉色社区构成连续宽色带。",
-      "typography": "真实细线几何Logo居中，小号大字距导航与奖项说明保持安静；正文使用可读系统字体。",
-      "layout": "全屏影像先行，区域按下载/预告/奖项/媒体/画廊/社区连续展开，保留一代官网秩序。",
-      "imagery": "官方预告MP4、字标SVG、月亮/月桂、四张原游戏画面和社区图片均本地保存。",
-      "shape": "几何字标、微小六边形索引、月桂对称与直边色带共同建立秩序；画廊保留竖屏游戏矩形。",
-      "hierarchy": "主字标和影像表达辨识；下载徽章表达行动；奖项事实和截图逐层建立作品可信度。",
-      "motion": "67.988秒官方背景预告静音循环，可暂停；主动前景播放才启用原声轨。四图画廊500ms横向轨道，ease为本地选择；减少动态取消位移。",
-      "coherence": "建筑与字标共享几何秩序；页面控件克制，连续背景色带控制观看节奏，让真实作品图像承担细节。"
+      "color": "固定白导航、#221f20影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区与紫页尾，以整幅色带改变观看节奏。",
+      "typography": "官方细线几何字标与真实Humanist521 BT Roman/Bold，小号导航和28px奖项标题保持作品秩序。",
+      "layout": "真实影像先行，内容按下载/预告/奖项/社交/媒体/十四图画廊/社区/页尾展开，左侧索引按视口中心更新。",
+      "imagery": "官方MP4、字标SVG、月亮/月桂、十四张游戏截图和社区图均本地保存，不以自行绘制替代作品。",
+      "shape": "微小六边形索引、成对月桂与直边色带；手机圆形菜单和保留游戏原纵横比的画廊。",
+      "hierarchy": "影像建立体验，商店徽章提供行动，十项奖项建立信任，中心画廊展示细节并预告侧图。",
+      "motion": "加载1000ms；章节450ms swing；奖项与手机展开350ms ease-in-out；画廊500ms ease/3000ms自动，暂停及减少动态明确可控。",
+      "coherence": "建筑与字标共享几何秩序，克制的控件与固定色带形成放映节奏；进入、展开与轨道分别服务内容职责。"
+    },
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "当前MV1页面没有全局主题选择；固定白导航、深色影像/画廊及各章节品牌色，不随系统深浅切换。",
+      "designReason": "页面是作品世界的固定放映顺序，完整色带与原始媒体建立统一氛围。"
+    },
+    "soundBehavior": {
+      "kind": "video",
+      "control": "背景MP4静音循环；主动Play前景影片才有真实原声，原生媒体控件及Sound on/off控制实际muted。原站本次播放触发React #185，声音现场未通过；本地播放通过。",
+      "interactionRole": "影片声轨与空间/解谜画面共同营造作品气氛；没有独立BGM，用户开始观看才进入有声体验。"
     }
   },
   {
@@ -2429,10 +2661,11 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "设计文化机构的展览、研究档案、建筑与访问信息；首屏展览先呈现，后续分类帮助查询与回看。",
     "interaction": [
-      "两幅官方海报自动6000ms推进、1000ms淡化；编号、箭头、方向键同步链接/alt。",
-      "手动选择停止自动推进，暂停按钮可恢复；聚焦、离屏和后台暂停。",
-      "蓝色四类栏目导航在浏览档案时吸顶，锚点到对应栏目。",
-      "手机菜单可打开、Escape关闭并恢复焦点；减少动态停掉自动轮换。"
+      "首次加载完成：全屏白色与蓝色50px旋转标记，300ms退场。 在海报加载期间保持机构识别。",
+      "海报自动切换：6000ms间隔与1000ms淡化，指针经过不暂停。 保留展览视觉的完整阅读时间。",
+      "手机打开菜单／关闭：64px栏下的白色导航立即显示，hamburger350ms形变；固定页面并恢复原浏览位置。 小屏将机构入口与长档案分开，关闭后继续阅读。",
+      "手机展开栏目／页面回顶：四列分别先显示1／2／1／1项，“更多”即时展开；回顶按钮超过100px以200ms出现。 缩短首屏密度，档案仍可按需读全。",
+      "悬停档案与分类：标志／工具链接50ms反馈，分类300ms蓝白切换，文章300ms阴影。 用蓝色与微小深度提示选择，不覆盖海报。"
     ],
     "theme": "机构蓝标识、白色导览、全幅展览海报、浅灰四列档案；图像风格随展览改变，网站的组织规则持续统一。",
     "constraints": [
@@ -2441,7 +2674,8 @@ window.DESIGN_ATLAS = [
       "档案图片包含竖海报与横照片，保留各自比例，不强行统一卡片高度。",
       "官方Logo与展览图像只用于个人本地学习，品牌与作品权利保留。",
       "四列在760px以下变单列；菜单和轮播提供键盘、焦点与reduced-motion。",
-      "本地重建已核验的海报轮播；不运行原CMS、加载遮罩、统计或购票后端。"
+      "本地保留海报轮播与加载完成后的遮罩退场；不运行原CMS、统计或购票后端。",
+      "原站桌面全程与菜单已验证。原站手机DevTools视口调用重试后仍被保存权限拦截，手机行为由公开响应式脚本/CSS确认并在本地实测，不宣称原站手机操作已经通过。"
     ],
     "useCases": [
       "设计展览/建筑机构",
@@ -2497,7 +2731,7 @@ window.DESIGN_ATLAS = [
         "note": "2026-10-07：固定栏目及50ms链接/Logo反馈有脚本声明；6000ms/1000ms fade来自首页内联Slick配置。未确认完整hover与Vimeo联动。"
       }
     ],
-    "prompt": "为[设计展览机构/文化档案]制作可回看的网页，先实访目标官方URL并记录展览版本、日期、桌面和手机视图。参考21_21 DESIGN SIGHT：白色固定机构header使用真实授权蓝色牌形标识，导航与语言入口克制排列；首屏让1280×720海报按16:9完整铺开，不叠加营销标题与巨大CTA。不同展览保持自己的字体、图像和配色，机构蓝色负责稳定链接与栏目识别。两幅海报按已核验的6000ms间隔、1000ms淡化自动轮换，提供暂停/恢复、编号、箭头、方向键；手动选择、聚焦、离屏和后台暂停，减少动态不自动推进。图片、alt、官方详情链接和当前索引同步。蓝色四栏目导航在浏览档案时粘性固定；下方浅灰背景使用1195px内容宽度与四列结构，分别放机构信息、两个展馆和研究档案，每列图像保持横/竖原比例，不裁齐卡片。日期、蓝标题与橙色NEW形成明确分工。手机白header缩到约62px，菜单可展开及Escape关闭，四列转单列。所有图片本地保存并记录URL、字节、尺寸、hash与权利；标注展期为快照，区分官方机制与教学补充，不复制CMS、追踪、加载遮罩或交易。支持可见焦点和prefers-reduced-motion。提交可操作HTML/CSS/JS及原站/本地对照和诚实还原边界。 区分原站与补充：原站6000ms/1000ms fade、可swipe且无dots/arrows；本地编号、箭头和暂停是可用性适配，ease曲线并非核验的官方曲线。手动切换、聚焦、离屏、后台暂停，减少动态取消自动推进及淡化。",
+    "prompt": "为[项目]制作基于21_21 DESIGN SIGHT：海报与四列档案的局部交互学习页面。参考https://www.2121designsight.jp/，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：蓝色固定机构标识和链接，浅灰承托白色档案，橙色NEW形成更新角色；展览海报拥有自己的配色。 字体：导航/分类标题稳定无衬线；海报中中英文字体作为官方原图保留，避免重排破坏作品。 版式：129px header、全幅16:9海报、4个等宽但内容不等高的竖列；手机单列。 图像：真实方丈记与TYPE-XVII海报、建筑照片、访问地图、研究照片本地化，保留原比例。 形状：机构Logo圆角牌，栏目细蓝边，橙NEW圆；内容块主要矩形。 层级：海报先建立当前展览认知，分类其次，标题/日期/说明依次降低；不是每段都有大标题。 协调：展览视觉彼此不同，以恒定蓝标识、留白、列宽、标题与内容关系统一成机构档案。 关键流程：首次加载完成：全屏白色与蓝色50px旋转标记，300ms退场。 在海报加载期间保持机构识别。 海报自动切换：6000ms间隔与1000ms淡化，指针经过不暂停。 保留展览视觉的完整阅读时间。 手机打开菜单／关闭：64px栏下的白色导航立即显示，hamburger350ms形变；固定页面并恢复原浏览位置。 小屏将机构入口与长档案分开，关闭后继续阅读。 手机展开栏目／页面回顶：四列分别先显示1／2／1／1项，“更多”即时展开；回顶按钮超过100px以200ms出现。 缩短首屏密度，档案仍可按需读全。 悬停档案与分类：标志／工具链接50ms反馈，分类300ms蓝白切换，文章300ms阴影。 用蓝色与微小深度提示选择，不覆盖海报。 主题：原站白底、黑字与蓝色档案导航固定，无系统或手动主题开关。 海报保持原色，白色档案底和小尺度日期服务可读性。 声音：当前首页海报为静图，无音频或独立BGM控制。 通过海报轮换与档案层级形成节奏，不加入没有来源的音乐。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。",
     "negativePrompt": "不使用共同SaaS双栏hero模板，不嵌入整站iframe，不伪造官网功能或实时展期，不复制统计/交易脚本，不使用CDN和远程图像运行时依赖。",
     "demo": "demos/design-sight/index.html",
     "preview": "previews/design-sight.jpg",
@@ -2510,9 +2744,21 @@ window.DESIGN_ATLAS = [
       "imagery": "真实方丈记与TYPE-XVII海报、建筑照片、访问地图、研究照片本地化，保留原比例。",
       "shape": "机构Logo圆角牌，栏目细蓝边，橙NEW圆；内容块主要矩形。",
       "hierarchy": "海报先建立当前展览认知，分类其次，标题/日期/说明依次降低；不是每段都有大标题。",
-      "motion": "两张海报6000ms间隔、1000ms淡化对应官方Slick时序；ease及箭头/暂停为本地适配。聚焦、离屏、后台停轮换，减少动态仅手动；栏目吸顶。",
+      "motion": "首次加载完成时全屏白色与蓝色50px旋转标记，300ms退场。；海报自动切换时6000ms间隔与1000ms淡化，指针经过不暂停。；手机打开菜单／关闭时64px栏下的白色导航立即显示，hamburger350ms形变；固定页面并恢复原浏览位置。；手机展开栏目／页面回顶时四列分别先显示1／2／1／1项，“更多”即时展开；回顶按钮超过100px以200ms出现。；悬停档案与分类时标志／工具链接50ms反馈，分类300ms蓝白切换，文章300ms阴影。",
       "coherence": "展览视觉彼此不同，以恒定蓝标识、留白、列宽、标题与内容关系统一成机构档案。"
-    }
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "原站白底、黑字与蓝色档案导航固定，无系统或手动主题开关。",
+      "designReason": "海报保持原色，白色档案底和小尺度日期服务可读性。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前首页海报为静图，无音频或独立BGM控制。",
+      "interactionRole": "通过海报轮换与档案层级形成节奏，不加入没有来源的音乐。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "mori-art-museum",
@@ -2547,9 +2793,10 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "当前/后续展览与实际来馆信息。2026-10-07官网处于换展闭馆期，主推即将开始的森万里子：燦燦，而非过期的Ron Mueck展。",
     "interaction": [
-      "语言按钮实际展开五个官方地区链接，Escape关闭返回焦点；滚动自动收起。",
-      "导航在正文浏览时吸顶并改为小字标，返回顶部按钮在下滑后出现。",
-      "手机菜单真实展开/关闭；本地新闻分类筛选仍为教学增强。"
+      "进入首页：展览海报直接出现，无虚构加载百分比。 先看展览而非额外欢迎层。",
+      "滚动超过大字标+130px／返回：50px红色紧凑导航120ms从上方进入，回到顶部80ms退出恢复大字标。 长页仍能访问机构入口；进入展览时品牌不被小导航抢占。",
+      "手机打开／反向关闭菜单：导航330ms cubic-bezier(.47,0,.745,.715)横向进出。 侧向层级分离展览内容与机构菜单。",
+      "滚动到页面深处／页尾：回顶150ms显隐，接近页尾从fixed转为footer内定位。 回程入口可找且不挡页尾信息。"
     ],
     "theme": "白色机构页面、深红方形Logo与展期带、粉色临时公告；不断更换的当代艺术海报在稳定信息框架中展示。",
     "constraints": [
@@ -2558,7 +2805,8 @@ window.DESIGN_ATLAS = [
       "真实红方馆标：桌面240×240px、手机160×160px，在海报上方约30px开始叠置；中屏200px为本地可用性适配。",
       "Logo/艺术家作品版权归原权利人，仅作个人本地学习。",
       "使用系统字体近似导航；官网Mori专属字体没有下载，不能声称像素级一致。",
-      "本地只还原首页几个区域并加教学新闻筛选；不复制多馆门户、购票账户与追踪脚本。"
+      "本地只还原首页几个区域并加教学新闻筛选；不复制多馆门户、购票账户与追踪脚本。",
+      "完整预约与馆藏数据库不复制；新闻分类与本地反馈属于练习补充，不能冒称官网所有服务。"
     ],
     "useCases": [
       "艺术馆与多展览机构",
@@ -2614,7 +2862,7 @@ window.DESIGN_ATLAS = [
         "note": "2026-10-07：滚动固定导航与五语言入口；语言菜单滚动关闭。返回顶部200ms为本地选择，完整多馆门户未覆盖。"
       }
     ],
-    "prompt": "为[当代艺术馆/持续更换展览的文化机构]制作真实官方页面的局部学习demo，先核验当前主页主推展览、闭馆状态、日期和桌面/手机专用资产。参考森美术馆日本官网：使用白底机构导航，顶部粉色公告先说明实际来馆限制，辅助条提供真实多馆与购票入口；真实红色方形馆标按桌面240×240px、手机160×160px叠在艺术海报左上，桌面x30/y130且海报y160，Logo安全空间稳定，海报保持艺术家自己的字体和色彩。桌面海报使用2.5:1比例，手机切换官方正方形版本，不把宽图裁坏。紧贴海报的整条机构红信息带放展览标题、日期、时间与白色来馆按钮，信息顺序服务实际访问。后续以四列展览、三列推荐和四列新闻组织内容，网页栏目为粗英文名与小日文副标题，矩形图片、类型细边标签、日期与红色小方块形成固定语法，不套圆角SaaS卡片。实现手机菜单、语言展开和Escape关闭；可加入新闻类别筛选但明确它是本地教学补充，筛选同步计数和当前按钮状态。所有外链指向真实官方目的地，购票不模拟支付。系统字体近似但不声称专属字体一致；图像Logo保存本地并记录URL、尺寸、权利。标注研究日期、快照信息和未复现区域，支持390px、键盘焦点、reduced-motion及原站/本地截图对照。 桌面浏览正文后导航吸顶并换176×32小字标，手机保持160px馆标，中屏200px是本地适配。五语言入口使用真实官网外链，滚动或Escape收起；返回顶部的200ms/12px反馈为本地近似。当前单幅海报保持静态，不添加无依据轮播。",
+    "prompt": "为[项目]制作基于森美术馆：红色机构锚点与艺术海报的局部交互学习页面。参考https://www.mori.art.museum/jp/，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：#bf0d3e机构红贯穿Logo、展期、栏目、标签；粉色公告、白色底和艺术海报虹彩承担不同角色。 字体：海报原字形与网页系统字分工；粗英文栏目+小日文副标题，信息由字号和对齐建立顺序。 版式：桌面左叠加240px方形馆标（x30/y130），宽2.5:1海报自y160开始；手机160px馆标与官方方图，后续四列展览、三列推荐、四列新闻。 图像：官方森万里子桌面/手机专图、其他展览海报、购票/新闻缩略图本地归档。 形状：方形馆标、矩形海报、细边类型标签与新闻红色小方块；避免泛化大圆角。 层级：闭馆先告知行动限制，主视觉提供展览认知，展期带给日期/来馆，后续推荐新闻服务不同意图。 协调：统一机构红、图像比例、标题/日期关系使不同作品属于同一艺术馆，艺术图片保留表达自由。 关键流程：进入首页：展览海报直接出现，无虚构加载百分比。 先看展览而非额外欢迎层。 滚动超过大字标+130px／返回：50px红色紧凑导航120ms从上方进入，回到顶部80ms退出恢复大字标。 长页仍能访问机构入口；进入展览时品牌不被小导航抢占。 手机打开／反向关闭菜单：导航330ms cubic-bezier(.47,0,.745,.715)横向进出。 侧向层级分离展览内容与机构菜单。 滚动到页面深处／页尾：回顶150ms显隐，接近页尾从fixed转为footer内定位。 回程入口可找且不挡页尾信息。 主题：原站白底、红色机构识别与原色艺术海报固定，无主题开关。 红色持续标识导览，艺术品由自己的色彩表达。 声音：当前展览首页无独立BGM或有声开场。 依赖艺术海报与新闻节奏，不添加与展览无关的音轨。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。",
     "negativePrompt": "不使用共同SaaS双栏hero模板，不嵌入整站iframe，不伪造官网功能或实时展期，不复制统计/交易脚本，不使用CDN和远程图像运行时依赖。",
     "demo": "demos/mori-art-museum/index.html",
     "preview": "previews/mori-art-museum.jpg",
@@ -2627,9 +2875,21 @@ window.DESIGN_ATLAS = [
       "imagery": "官方森万里子桌面/手机专图、其他展览海报、购票/新闻缩略图本地归档。",
       "shape": "方形馆标、矩形海报、细边类型标签与新闻红色小方块；避免泛化大圆角。",
       "hierarchy": "闭馆先告知行动限制，主视觉提供展览认知，展期带给日期/来馆，后续推荐新闻服务不同意图。",
-      "motion": "导航浏览后吸顶换小字标；五语言菜单滚动收起；返回顶部200ms反馈为本地近似。主海报单幅静态，不自动轮播。",
+      "motion": "进入首页时展览海报直接出现，无虚构加载百分比。；滚动超过大字标+130px／返回时50px红色紧凑导航120ms从上方进入，回到顶部80ms退出恢复大字标。；手机打开／反向关闭菜单时导航330ms cubic-bezier(.47,0,.745,.715)横向进出。；滚动到页面深处／页尾时回顶150ms显隐，接近页尾从fixed转为footer内定位。",
       "coherence": "统一机构红、图像比例、标题/日期关系使不同作品属于同一艺术馆，艺术图片保留表达自由。"
-    }
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "原站白底、红色机构识别与原色艺术海报固定，无主题开关。",
+      "designReason": "红色持续标识导览，艺术品由自己的色彩表达。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前展览首页无独立BGM或有声开场。",
+      "interactionRole": "依赖艺术海报与新闻节奏，不添加与展览无关的音轨。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "fuji-rock",
@@ -2665,10 +2925,10 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "真实苗场音乐节现场感、演出/时间表、地点/饮食/FAQ以及新闻归档。2026年活动已在7月24–26日结束，本地明确标为2026版快照。",
     "interaction": [
-      "三组官方桌面/手机照片以3600ms间隔、800ms淡化轮换；手动与方向键选择会停自动。",
-      "MENU展示真实多列导航，600ms本地过渡期间背景退场，Escape恢复焦点。",
-      "菜单打开时背景inert，避免键盘进入遮罩后内容；减动模式直接展开。",
-      "Featured保留本地原生横滚与边界按钮；官网完整loop/自动导览未复制。"
+      "素材载入完成：32px橙色旋转标记退出，遮层与主图1200ms线性淡化。 让真实现场图准备完毕后平稳进入。",
+      "打开／关闭山形菜单：菜单400ms scale(.88)+rotate3d(.5,0,0,1rad)进出，页面背景1秒淡到.25。 放大导览层级，同时保留现场的空间背景。",
+      "照片或Featured自动／手动切换：照片3600ms间隔、800ms淡化；Featured600ms中心循环，3600ms自动，手机露出两侧邻项。 照片传递现场氛围，中心轨道突出活动主题且提示还有内容。",
+      "超过Pickup后向上／向下滚动：导览条固定后按方向显隐；语言菜单400ms展开并在离开时收起。 长页浏览随时找回实用入口，同时减少遮挡。"
     ],
     "theme": "热烈橙色标识、蓝色操作色、山形图标、真实户外照片、米色圆角面板与清晰信息模块共同形成户外音乐节语言。",
     "constraints": [
@@ -2677,7 +2937,8 @@ window.DESIGN_ATLAS = [
       "手机使用官方1200×1200图片，不单纯裁切1400×700桌面照片。",
       "原站20张照片/6条特集，本地3张/4条；照片保持自动淡化且可暂停，Featured为手动横滚。",
       "没有取得独立官网BGM；本地不自动加载视频/音频，官方回顾需明确用户动作。",
-      "本地不复制原站交易、广告追踪、自动加载遮罩和完整演出数据库。"
+      "本地不复制原站交易、广告追踪、自动加载遮罩和完整演出数据库。",
+      "20张照片和6条Featured未全部复制，系统字体近似Poppins/日文原字体；交易与演出数据库使用官方外链。"
     ],
     "useCases": [
       "音乐节与户外活动",
@@ -2699,7 +2960,7 @@ window.DESIGN_ATLAS = [
       ],
       "type": "官方窄高字标作为图片；网页用粗无衬线英文栏目与小日文说明，系统字体近似原站Poppins/日文字体",
       "layout": "固定68px橙header → 视口现场照片/右票据 → 圆角实用导航 → Featured横滚 → 米色News列表 → Content",
-      "motion": "三组照片3600ms自动间隔、800ms cubic-bezier(.25,1,.5,1)淡化对应官网；600ms菜单及背景退场为本地近似。手动/离屏/后台停止自动，减少动态即时操作。"
+      "motion": "32px加载标记与1200ms退场；照片3600/800ms淡化；菜单400ms三维缩放与背景1秒.25；Featured600ms中心无缝循环、3600ms自动；Pickup按方向回显。"
     },
     "sources": [
       {
@@ -2730,10 +2991,10 @@ window.DESIGN_ATLAS = [
         "title": "官方公开交互脚本 · 2026-10-07",
         "url": "https://www.fujirockfestival.com/2026/assets/js/top-2026.js",
         "type": "实例",
-        "note": "2026-10-07：主照片3600ms/800ms fade；Featured600ms/3600ms循环。菜单common.js声明601ms隐藏与wrapper退场，本地600ms/ease为近似。"
+        "note": "主图3600ms/800ms；Featured600ms中心循环/3600ms自动；common.js与CSS提供加载1200ms、菜单400ms三维变换及背景1秒.25。"
       }
     ],
-    "prompt": "为[音乐节/户外文化节]制作真实官网2026版局部学习demo，实访首页、菜单和手机照片，核对活动已结束与所有日期；不要把旧年份当正在售票。参考Fuji Rock：68px橙色固定顶栏放真实窄高白色Logo、短日期与地点，右上约100px白色山形菜单按钮下角圆弧，现场照片占满首屏剩余高度，照片自己的入口装置、人群、舞台与自然环境承担叙事，不叠加通用营销大标题。右侧蓝色竖票据保留真实官方链接并在照片后说明快照含义。至少三张官方照片使用桌面宽图和手机方图配对，圆点、箭头与键盘切换同步当前状态；三图自动淡化提供暂停和恢复。下方浅灰圆角实用导航使用真实图标与短标签；山菜单打开米灰大圆角面板，四列图标加层级链接，底部语言胶囊与社交入口，Escape可关闭。FEATURED用蓝色大标题和横向方图列表，新闻用橙色标题与日期-标题-箭头的列表，结构随内容变化而非所有区域卡片套皮。保留真实官方Aftermovie外链供手动观看；未取得音轨就不声称官网BGM，不加入自动声音。Logo、照片、图标本地保存并记录来源、尺寸与原版权，系统字体近似且说明差异，不复制交易、追踪、广告与原加载遮罩。支持390px自然布局、可见焦点、reduced-motion，并保留来源截图和还原边界。 三组照片按3600ms间隔、800ms cubic-bezier(.25,1,.5,1)自动淡化，手动圆点/箭头/左右键切换后暂停，提供恢复，离屏和后台停止，减少动态仅手动。大菜单600ms ease及背景opacity .08/12px退场是本地近似，正文和footer在展开时inert，Escape恢复按钮焦点。Featured四条手动横滚，不冒称源站六条600ms循环轨道。",
+    "prompt": "为[项目]制作基于Fuji Rock：现场照片与节日导览的局部交互学习页面。参考https://www.fujirockfestival.com/，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：#e64219橙贯穿header/日期，#0075ba蓝用于导览/Featured/票据，#f2efeb与#e3dbd4使菜单层级清晰。 字体：真实窄高Logo、短粗日期、大英文栏目、较小日文链接；不引入原站未提供的花体字。 版式：68px固定顶栏、右上100px山菜单、满视口照片、右竖票据；后续横向Featured与新闻列表避免同构。 图像：真实官方现场照片的desktop/mobile版本、Featured宣传图、Logo和导航图标全部本地化。 形状：山Logo、右下圆角菜单、蓝竖票据、圆点、圆角导航/大菜单重复形成可识别操作语法。 层级：日期地点保持常驻，照片先传递场景，实用入口其次，Featured与按日期排列新闻承担浏览与回看。 协调：官方现场的蓝橙布置与网站橙蓝识别呼应，灰米面板降密度；不同照片共享导航与控件位置。 关键流程：素材载入完成：32px橙色旋转标记退出，遮层与主图1200ms线性淡化。 让真实现场图准备完毕后平稳进入。 打开／关闭山形菜单：菜单400ms scale(.88)+rotate3d(.5,0,0,1rad)进出，页面背景1秒淡到.25。 放大导览层级，同时保留现场的空间背景。 照片或Featured自动／手动切换：照片3600ms间隔、800ms淡化；Featured600ms中心循环，3600ms自动，手机露出两侧邻项。 照片传递现场氛围，中心轨道突出活动主题且提示还有内容。 超过Pickup后向上／向下滚动：导览条固定后按方向显隐；语言菜单400ms展开并在离开时收起。 长页浏览随时找回实用入口，同时减少遮挡。 主题：原站无深浅色开关；橙蓝导航、米色内容和原色现场照片保持固定。 导览色贯穿照片更换与新闻，强行反色会改变节日身份。 声音：Aftermovie链接到官方YouTube；没有独立BGM开关。 音乐现场由影像承载，用户主动进入影片听声音；首页照片浏览保持安静。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。",
     "negativePrompt": "不使用共同SaaS双栏hero模板，不嵌入整站iframe，不伪造官网功能或实时展期，不复制统计/交易脚本，不使用CDN和远程图像运行时依赖。",
     "demo": "demos/fuji-rock/index.html",
     "preview": "previews/fuji-rock.jpg",
@@ -2746,9 +3007,21 @@ window.DESIGN_ATLAS = [
       "imagery": "真实官方现场照片的desktop/mobile版本、Featured宣传图、Logo和导航图标全部本地化。",
       "shape": "山Logo、右下圆角菜单、蓝竖票据、圆点、圆角导航/大菜单重复形成可识别操作语法。",
       "hierarchy": "日期地点保持常驻，照片先传递场景，实用入口其次，Featured与按日期排列新闻承担浏览与回看。",
-      "motion": "三组照片3600ms自动间隔、800ms cubic-bezier(.25,1,.5,1)淡化对应官网；600ms菜单及背景退场为本地近似。手动/离屏/后台停止自动，减少动态即时操作。",
+      "motion": "素材载入完成时32px橙色旋转标记退出，遮层与主图1200ms线性淡化。；打开／关闭山形菜单时菜单400ms scale(.88)+rotate3d(.5,0,0,1rad)进出，页面背景1秒淡到.25。；照片或Featured自动／手动切换时照片3600ms间隔、800ms淡化；Featured600ms中心循环，3600ms自动，手机露出两侧邻项。；超过Pickup后向上／向下滚动时导览条固定后按方向显隐；语言菜单400ms展开并在离开时收起。",
       "coherence": "官方现场的蓝橙布置与网站橙蓝识别呼应，灰米面板降密度；不同照片共享导航与控件位置。"
-    }
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "原站无深浅色开关；橙蓝导航、米色内容和原色现场照片保持固定。",
+      "designReason": "导览色贯穿照片更换与新闻，强行反色会改变节日身份。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "Aftermovie链接到官方YouTube；没有独立BGM开关。",
+      "interactionRole": "音乐现场由影像承载，用户主动进入影片听声音；首页照片浏览保持安静。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "rijksmuseum-art",
@@ -2776,9 +3049,9 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "参观体验、馆藏名作与购票入口。摄影提供作品尺度和到访情境，底缘文字补充时间/活动条件。",
     "interaction": [
-      "全屏菜单打开/关闭及Escape关闭，菜单内链接定位到本地对应区域。",
-      "搜索弹窗实时筛选本地三类区域并跳转。",
-      "两展览预览弹窗显示对应官方照片、日期与原站链接；购票直接打开官方页面。"
+      "进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。",
+      "打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。",
+      "悬停票务／展览与语言：橙色动作颜色反馈、链接下划线与语言列表。 行动在原色摄影上依然清晰。"
     ],
     "theme": "深色摄影、白色窄体品牌字体、巨大字标与橙色矩形CTA。",
     "constraints": [
@@ -2787,7 +3060,8 @@ window.DESIGN_ATLAS = [
       "字标使用完整官方SVG，标题与正文使用两字重Rijksmuseum字体。",
       "照片底部加局部黑色渐变支撑文字对比；不对整张照片做滤镜风格化。",
       "减弱动态模式仍能看到全部内容，滚动保持浏览器原生行为。",
-      "保留私人学习署名与真实票务跳转，不模拟付款或假装门票已预订。"
+      "保留私人学习署名与真实票务跳转，不模拟付款或假装门票已预订。",
+      "展览局部介绍与搜索dialog为本地练习补充；完整藏品检索、预约与会员不复制。"
     ],
     "useCases": [
       "艺术馆参观入口",
@@ -2828,7 +3102,7 @@ window.DESIGN_ATLAS = [
         "note": "展开内容与aria-expanded的实现参考；本地菜单及dialog有独立语义，不证明原站采用此规范。"
       }
     ],
-    "prompt": "请以2026-10-07实访的Rijksmuseum英语首页为忠实局部研究对象，使用本地assets内官方夜巡观众照片、家庭月照片、两张预告照片、完整Rijksmuseum白色SVG字标和Normal/Bold品牌字体。桌面首节100vh：上覆导航从左侧汉堡和搜索起，右侧橙色方角票务；巨幅字标距顶约96px、左右留5.5%，底缘左放白底小状态与23px大写标题和17px正文，右放合作方标识。第二节铺满家庭月照片，第三节改为两列竖向摄影预告，最后才放实用参观信息。实现全屏导航覆盖层、Escape关闭、搜索弹窗筛选本地章节，以及展览预览弹窗；票务仅链接官网。390px手机字标一行、隐藏次要导航和赞助方，两列预告堆叠，正文不溢出。禁止自动轮播与滚动劫持；prefers-reduced-motion关闭平滑滚动和过渡。官方资产署名置页末，不把研究说明放在英雄区。 全屏菜单打开采用原站观察到的500ms linear淡入，关闭直接隐藏，并提供Escape和aria-expanded；减少动态直接显隐。图片区保持原生滚动且没有自动循环；本地搜索只筛选三个章节，预览dialog是学习补充，不伪装官方完整收藏查询。",
+    "prompt": "为[项目]制作基于Rijksmuseum · 全幅摄影与巨大字标的局部交互学习页面。参考https://www.rijksmuseum.nl/en，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：照片本身提供丰富色彩，白色文字和橙色票务是UI的少数稳定颜色。 字体：巨大完整SVG字标与小尺度大写短标题形成尺度差，品牌正文保持窄体节奏。 版式：导航上覆摄影；首屏100vh，底缘左文右合作方；手机隐藏次要导航与合作方。 图像：夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。 形状：矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。 层级：品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。 协调：统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。 关键流程：进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。 打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。 悬停票务／展览与语言：橙色动作颜色反馈、链接下划线与语言列表。 行动在原色摄影上依然清晰。 主题：全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。 保持照片亮度与白字对比；橙色票务在不同图像上持续突出。 声音：当前入口没有独立BGM或音频按钮。 大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。",
     "negativePrompt": "不要虚构品牌，不用抽象blob代替夜巡摄影，不把每一节包装成圆角卡片，不用通用SaaS居中巨字模板。",
     "demo": "demos/rijksmuseum-art/index.html",
     "preview": "previews/rijksmuseum-art.jpg",
@@ -2842,14 +3116,26 @@ window.DESIGN_ATLAS = [
       "imagery": "夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。",
       "shape": "矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。",
       "hierarchy": "品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。",
-      "motion": "自然滚动满屏摄影；全屏菜单打开500ms linear淡入，关闭直接隐藏；搜索/预览为本地补充。减少动态取消过渡，主视觉无自动循环。",
+      "motion": "进入与连续上下浏览时巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。；打开／关闭菜单时全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。；悬停票务／展览与语言时橙色动作颜色反馈、链接下划线与语言列表。",
       "coherence": "统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。"
     },
     "referenceUrl": "https://www.rijksmuseum.nl/en",
     "implementation": "reference-study",
     "fidelity": "demos/rijksmuseum-art/fidelity.md",
     "assetManifest": "demos/rijksmuseum-art/assets-manifest.json",
-    "edition": "2026-10-07；英语公开官网局部"
+    "edition": "2026-10-07；英语公开官网局部",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。",
+      "designReason": "保持照片亮度与白字对比；橙色票务在不同图像上持续突出。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前入口没有独立BGM或音频按钮。",
+      "interactionRole": "大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "met-museum",
@@ -2866,30 +3152,30 @@ window.DESIGN_ATLAS = [
       "展览海报",
       "The Met"
     ],
-    "summary": "官方季节影像开场，Austin衬线欢迎区与四列参观信息接续；展览海报和馆藏以原生横架展开。",
+    "summary": "官方建筑摄影开场，Austin衬线欢迎区与四列参观信息接续；展览海报和馆藏以原生横架展开。",
     "accent": "#e4002b",
     "background": "#ffffff",
     "principles": [
-      "官方季节影像先给实体空间与到访氛围，再在独立白底区域提供欢迎语与行动。",
+      "官方建筑摄影先给实体空间与到访氛围，再在独立白底区域提供欢迎语与行动。",
       "Austin衬线大标题承载文化语气，Inter无衬线负责操作和实用信息。",
       "参观成本、交通、导览和开放状态并列而不盖在照片上。",
       "海报本身已含展览视觉，外围保持简洁、方角、图下标签。"
     ],
     "productFocus": "到访纽约实体馆、正在展览与代表馆藏。先解决实用参观问题，再让展览海报和作品自然展开选择。",
     "interaction": [
-      "官方30.49秒首页季节影像静音循环，可暂停；离开视口停止、减少动态效果时使用海报。",
-      "顶层Visit/Exhibitions/Art打开对应链接面板；手机菜单整合入口。",
-      "左右按钮操作横向海报/馆藏展架，触控原生横向浏览。",
-      "展览预览弹窗切换官方海报与观察时展期；搜索弹窗筛选章节，语言弹窗链接官方中文页。"
+      "进入页面：官方建筑静图与Met标志直接出现，无额外欢迎遮层或背景音乐。",
+      "上下浏览：欢迎与到访信息、展览横轨、馆藏和会员按原生阅读节奏组织；不新增全屏转场。",
+      "横向浏览展览：原生水平溢出，scroll-snap:none，前后按钮与触摸可操作。",
+      "打开导航：Visit等目的地立即展开；键盘焦点可操作，局部搜索与作品dialog为本地练习补充。"
     ],
-    "theme": "白底、Met红与黑灰编辑排版；官方季节影像、Austin衬线标题和方角展览海报形成文化机构语气。",
+    "theme": "白底、Met红与黑灰编辑排版；官方建筑摄影、Austin衬线标题和方角展览海报形成文化机构语气。",
     "constraints": [
       "标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。",
-      "首屏季节影像与白底欢迎标题分开；摄影仅作后备。桌面双CTA右对齐，手机转单列。",
       "四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。",
       "展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。",
       "日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。",
-      "官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。"
+      "官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。",
+      "以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。"
     ],
     "useCases": [
       "大型博物馆门户",
@@ -2908,15 +3194,15 @@ window.DESIGN_ATLAS = [
         "#e4002b"
       ],
       "type": "官方Austin Medium用于欢迎标题；官方Inter Latin用于正文与按钮。",
-      "layout": "季节影像/摄影后备 → 白底大标题双CTA → 四列参观信息 → 原生展览/馆藏横架 → 会员区",
-      "motion": "官方30.488792秒季节影像静音循环，可暂停保留帧、离屏/后台停止；减少动态使用摄影后备。展览/馆藏原生横滚，90%宽度按钮为本地辅助。"
+      "layout": "建筑摄影 → 白底大标题双CTA → 四列参观信息 → 原生展览/馆藏横架 → 会员区",
+      "motion": "原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。"
     },
     "sources": [
       {
         "title": "The Met official English homepage",
         "url": "https://www.metmuseum.org/en",
         "type": "实例",
-        "note": "2026-10-07：英语首页官方季节影像“20260925_Fall_Homepage”、白底欢迎区、参观信息和原生横架。"
+        "note": "2026-10-07采集英语首页：建筑静图、白底欢迎区、参观信息与原生展览横架。"
       },
       {
         "title": "The Met Image and Data Resources",
@@ -2931,7 +3217,7 @@ window.DESIGN_ATLAS = [
         "note": "内容显隐按钮与状态语义的实现参考，不表示机构采用该理论或已全面合规。"
       }
     ],
-    "prompt": "为[大型博物馆/编辑型文化机构]制作基于The Met英语首页2026-10-07快照的局部研究。首屏使用本地保存的官方Vimeo季节片20260925_Fall_Homepage原AVC720p轨，约30.49秒静音循环，上覆透明导航；建筑观众摄影仅作加载、失败及减少动态时后备。播放/暂停要反映实际媒体事件，用户暂停保留当前帧，离屏和后台停止，减少动态默认静止。随后白底左置约68px Austin Medium衬线欢迎标题，右置Met红与细边双CTA，再接四列图标和实用参观信息，日期注明快照。展览用四张真实海报、图下标题和展期，保留原生横向overflow而无卡框；馆藏用三件真实作品及不同长宽比例。横架额外按钮移动可视宽90%，正常smooth、减少动态instant，明确是本地可达性补充。Visit/Exhibitions/Art展开对应链接面板，本地搜索只筛选四章节；展览预览使用可Escape关闭的原生dialog，语言链接官方中文页，购票与会员指向真实官网。手机使用白色粘顶导航、单列标题与信息，横向滚动限定展架。保留官方Austin/Inter字体与字标，资产记录来源、尺寸、hash及权利；OA政策只适用于符合条件藏品，不扩大到全部品牌素材。说明未覆盖完整收藏、展览、账户和交易。",
+    "prompt": "为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。",
     "negativePrompt": "不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。",
     "demo": "demos/met-museum/index.html",
     "preview": "previews/met-museum.jpg",
@@ -2941,18 +3227,30 @@ window.DESIGN_ATLAS = [
     "composition": {
       "color": "白底黑灰字和红色操作层，图像保持展览自己的颜色。",
       "typography": "Austin衬线大标题与Inter目录型小文本产生编辑层级。",
-      "layout": "宽幅季节影像约725px高；欢迎区左右分工，横架保持白底、图下题注。",
-      "imagery": "官方Vimeo季节片20260925_Fall_Homepage的原AVC720p轨、Sanity CDN摄影后备/展览海报与符合条件的Met API藏品图。",
+      "layout": "宽幅建筑摄影约725px高；欢迎区左右分工，横架保持白底、图下题注。",
+      "imagery": "官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。",
       "shape": "方角海报与细边CTA，会员区域仅一个轻边框圆角区域。",
-      "hierarchy": "季节影像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。",
-      "motion": "官方30.488792秒季节影像静音循环，可暂停保留帧、离屏/后台停止；减少动态使用摄影后备。展览/馆藏原生横滚，90%宽度按钮为本地辅助。",
+      "hierarchy": "建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。",
+      "motion": "原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。",
       "coherence": "字形分工、Met红操作与白底图下文字一致，馆藏照片与海报使用不同图像比例。"
     },
     "referenceUrl": "https://www.metmuseum.org/en",
     "implementation": "reference-study",
     "fidelity": "demos/met-museum/fidelity.md",
     "assetManifest": "demos/met-museum/assets-manifest.json",
-    "edition": "2026-10-07；英语公开官网局部"
+    "edition": "2026-10-07；英语公开官网局部",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "原站浅色正文、红色机构标志与大图固定，没有首页深浅开关。",
+      "designReason": "保留艺术作品原色、编辑字体与Met红标识的对比。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "采集页面无音频播放器或独立BGM开关。",
+      "interactionRole": "建筑与艺术图像建立机构氛围，信息展开服务到访任务，不增加无来源的声音。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "philharmonie-music",
@@ -2980,9 +3278,11 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "音乐展的互动体验和访问时间，以及音乐会的日期、演出阵容与节目。右侧票务区域支持快速查阅时间/价格，正文保留观展体验和真实图片。",
     "interaction": [
-      "两个官方展览照片顺序穿插正文；Horaires/Tarifs/Infos Accessibilité以原生折叠展示。",
-      "音乐会使用George Benjamin/Ayano Kamei/John Stulz三人真实摄影，500ms横向滑轨、前后切换及暂停；本地6秒自动周期为近似，触屏可横滑。",
-      "Programme & distribution展开节目单；菜单定位展览/音乐会/交通，返回顶部使用自然滚动；官方Playlist入口可打开。"
+      "浏览展览／音乐会详情：原生长页与桌面sticky票务，小屏票务回文档流。 活动内容与来访决定并行，小屏避免固定面板遮挡正文。",
+      "打开主菜单和类别：浅灰全宽导航立即出现，类别切换为目的地列表；小屏菜单在页面流中展开。 机构多种活动保留层级，交互保持直接。",
+      "切换音乐会摄影：三幅署名摄影500ms横向轨道，克隆边界无缝循环；前后与暂停／触摸可操作。 用演出者肖像讲述阵容，邻接图像的运动维持观看连续。",
+      "展开Horaires／Tarifs／Programme：信息即时展开，声乐／乐器阵容以文字分段。 不离开当前详情即可完成到访和节目判断。",
+      "打开Playlist：转到官方fanlink，选择个人音乐平台。 音乐是展览主题的延伸与回看媒介。"
     ],
     "theme": "海军蓝、白色内容面板、酒红票务胶囊和官方Philharmonique字形，活动主视觉提供游戏色彩。",
     "constraints": [
@@ -2991,7 +3291,8 @@ window.DESIGN_ATLAS = [
       "手机导航精简，票务面板进入正常流优先显示，不粘在窄屏覆盖正文。",
       "音乐会为2026.10.23 20h00的George Benjamin场次，日期/阵容/节目按2026-10-07官方快照。",
       "原站视频受第三方cookie控制，本地不嵌入YouTube或追踪脚本。",
-      "自然滚动；展览摄影静态顺序阅读，音乐会滑轨可暂停，减少动态仅手动即时切换。"
+      "自然滚动；展览摄影静态顺序阅读，音乐会滑轨可暂停，减少动态仅手动即时切换。",
+      "展览与音乐会合并为局部学习区域，原独立详情长度不同；第三方视频、账号与售票后端不复制。Ayano Kamei仍是官网图轨素材，但当前节目单钢琴为Chisato Taniguchi，两者不可混为当前阵容。"
     ],
     "useCases": [
       "文化活动详情",
@@ -3040,7 +3341,7 @@ window.DESIGN_ATLAS = [
         "note": "原生details与展开状态的实现参考，不证明场馆遵循整个APG或已全面合规。"
       }
     ],
-    "prompt": "为[音乐展/有节目单的文化活动]制作巴黎爱乐厅法语Video Games & Music展览详情的局部研究，以2026-10-07快照为准，相关内容采用George Benjamin真实音乐会。桌面保留48px深蓝快速导航、105px白色主导航、中轴174×197px下垂官方sprite品牌；625px蓝色游戏手柄主图，下缘海军蓝渐变托住38px大写活动名和23px日期。右侧16px圆角白票务面板上浮约254px，正文/侧栏约2:1并用原生sticky；手机票务回正常流先于正文，不锁定滚轮。Horaires/Tarifs/Infos Accessibilité用原生details，展期2026.04.02–11.01，预约仅跳官方。两张Joachim Bertrand展览现场图按顺序穿插正文，不做轮播。相关音乐会为2026.10.23 20h00、约2小时含一次中场，Programme & distribution展开四部真实节目和阵容；George Benjamin/Ayano Kamei/John Stulz三幅署名摄影用500ms水平轨道，前后/暂停与触摸可操作。500ms来自观察，ease及6秒自动间隔为本地近似；指针、焦点、离屏和后台停止推进，减少动态仅手动即时切换。音乐会内联区域比独立原详情小，应说明边界。官方Philharmonique仅用于大写标题，正文Arial近似Source Sans Pro，禁止缺小写字体套正文。保留Playlist官方外链，不复制第三方cookie视频、追踪、账号和售票后端；记录素材URL、尺寸、hash、作者署名和真实未复现范围。",
+    "prompt": "为[项目]制作基于巴黎爱乐厅 · 音乐展与音乐会详情的局部交互学习页面。参考https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：官方CSS核验海军蓝#001b3b、白色面板、#be244f票务和#fdafe3支持入口。 字体：官方Philharmonique标题大写，正文保持分段；原站部分正文Source Sans Pro，本地该部分有字体差异。 版式：主视觉左下活动名，右侧票务面板上浮；长正文与侧栏分工，手机票务回到文档流。 图像：官方游戏手柄字母CG、Joachim Bertrand两张展览现场图，以及Matthew Lloyd、Capucine DeChocqueuse、Franck Ferville署名的三位音乐会艺术家摄影。 形状：品牌标识下垂矩形、16px圆角内容/票务块、长胶囊按钮；非所有内容统一卡片。 层级：大活动名和日期识别主题，预约按钮和折叠时间/价格解决到访问题，照片和节目单提供内容深度。 协调：统一中轴品牌与蓝色基础，展览用互动现场图、音乐会用阵容/节目单，跨内容类型保持不同表达。 关键流程：浏览展览／音乐会详情：原生长页与桌面sticky票务，小屏票务回文档流。 活动内容与来访决定并行，小屏避免固定面板遮挡正文。 打开主菜单和类别：浅灰全宽导航立即出现，类别切换为目的地列表；小屏菜单在页面流中展开。 机构多种活动保留层级，交互保持直接。 切换音乐会摄影：三幅署名摄影500ms横向轨道，克隆边界无缝循环；前后与暂停／触摸可操作。 用演出者肖像讲述阵容，邻接图像的运动维持观看连续。 展开Horaires／Tarifs／Programme：信息即时展开，声乐／乐器阵容以文字分段。 不离开当前详情即可完成到访和节目判断。 打开Playlist：转到官方fanlink，选择个人音乐平台。 音乐是展览主题的延伸与回看媒介。 主题：深蓝文字、浅灰正文和白色票务面板固定，无深浅模式开关。 音乐厅品牌、票务酒红和展览图像协调，反色可能削弱实际CG视觉。 声音：Playlist按钮链接真实官方音乐平台合集，用户主动聆听；首页没有独立BGM。 曲目把展览中的游戏音乐延续到网站外的听觉体验；不将图片轮播说成音频播放。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。",
     "negativePrompt": "不要把音乐展做成像素游戏伪官网，不捏造日期或购票成功，不套相同软件产品卡片，不把展览顺序摄影改成轮播。",
     "demo": "demos/philharmonie-music/index.html",
     "preview": "previews/philharmonie-music.jpg",
@@ -3054,7 +3355,7 @@ window.DESIGN_ATLAS = [
       "imagery": "官方游戏手柄字母CG、Joachim Bertrand两张展览现场图，以及Matthew Lloyd、Capucine DeChocqueuse、Franck Ferville署名的三位音乐会艺术家摄影。",
       "shape": "品牌标识下垂矩形、16px圆角内容/票务块、长胶囊按钮；非所有内容统一卡片。",
       "hierarchy": "大活动名和日期识别主题，预约按钮和折叠时间/价格解决到访问题，照片和节目单提供内容深度。",
-      "motion": "展览摄影为顺序静图；音乐会三人摄影500ms横轨对应观察时长，ease/6秒周期为本地近似。侧栏native details、自然滚动，减少动态仅手动即时切换。",
+      "motion": "浏览展览／音乐会详情时原生长页与桌面sticky票务，小屏票务回文档流。；打开主菜单和类别时浅灰全宽导航立即出现，类别切换为目的地列表；小屏菜单在页面流中展开。；切换音乐会摄影时三幅署名摄影500ms横向轨道，克隆边界无缝循环；前后与暂停／触摸可操作。；展开Horaires／Tarifs／Programme时信息即时展开，声乐／乐器阵容以文字分段。；打开Playlist时转到官方fanlink，选择个人音乐平台。",
       "coherence": "统一中轴品牌与蓝色基础，展览用互动现场图、音乐会用阵容/节目单，跨内容类型保持不同表达。"
     },
     "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
@@ -3062,7 +3363,19 @@ window.DESIGN_ATLAS = [
     "fidelity": "demos/philharmonie-music/fidelity.md",
     "assetManifest": "demos/philharmonie-music/assets-manifest.json",
     "edition": "2026-10-07；法语展览与音乐会详情",
-    "referencePreviewNote": "参考截图的显示配色不作为品牌依据；本地海军蓝、白色面板、票务酒红等依据官方CSS。"
+    "referencePreviewNote": "参考截图的显示配色不作为品牌依据；本地海军蓝、白色面板、票务酒红等依据官方CSS。",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "深蓝文字、浅灰正文和白色票务面板固定，无深浅模式开关。",
+      "designReason": "音乐厅品牌、票务酒红和展览图像协调，反色可能削弱实际CG视觉。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "Playlist按钮链接真实官方音乐平台合集，用户主动聆听；首页没有独立BGM。",
+      "interactionRole": "曲目把展览中的游戏音乐延续到网站外的听觉体验；不将图片轮播说成音频播放。"
+    },
+    "capturedAt": "2026-10-07"
   },
   {
     "id": "google-material",
@@ -3100,11 +3413,10 @@ window.DESIGN_ATLAS = [
     ],
     "productFocus": "Google Material 3 设计系统与当前 M3 Expressive 资源，突出颜色、动效、形状、排版与组件的协作；本例复现真实文档首页而非任意Google风格应用。",
     "interaction": [
-      "官方9秒静音循环MP4本地播放，按钮状态来自真实play/pause事件。",
-      "主题开关在官网核验的浅／深色角色token之间切换，页面不运行时加载外部媒体。",
-      "全局动效暂停会停止视频及CSS过渡／涟漪；独立播放允许用户主动观看。",
-      "CTA按压圆角48→16px，资源卡键盘聚焦／按压24→48px，指针与键盘均有涟漪和即时状态。",
-      "手机菜单可开关、进入二级目录、Escape返回；资源、文档和搜索均为真实官方外链。"
+      "进入首页：静音9秒组件视频开始循环，独立按钮可暂停；全局暂停影响视频、状态过渡和涟漪。 用真实组件变化说明设计系统，用户保有观看控制。",
+      "点击或键盘激活按钮／卡片：CTA圆角48→16px，资源卡24→48px；200/300ms cubic-bezier(.2,0,0,1)。 形状与状态层共同表达当前动作，界面表现力来自一致的反馈。",
+      "进入目录或二级主题：300ms侧向抽屉；二级内容200ms延后再200ms淡入。 导航容器保持连续，内容层级在同一位置变化。",
+      "切换主题／系统主题变化：深浅语义角色切换；手动值保存，OS变化清除保存值。 让可读性适应环境，同时保持品牌图像与层级。"
     ],
     "theme": "温暖中性底色与表面、紫色主动作及状态角色配对、Google Sans尺度层级、宽松大圆角、清晰资源图像；兼具友好表现力和文档导航秩序。",
     "constraints": [
@@ -3113,7 +3425,8 @@ window.DESIGN_ATLAS = [
       "配色以官网原始CSS角色变量和干净源截图为准。",
       "目录采用本地dialog与官方外链；营销正文改写，完整Angular路由未复制。",
       "首页CTA和卡片为时间/贝塞尔曲线；M3物理规范不能替代具体页面实现证据。",
-      "减少动态初始停播并取消非必要运动，保留焦点、颜色状态和全部内容。"
+      "减少动态初始停播并取消非必要运动，保留焦点、颜色状态和全部内容。",
+      "正文改写，完整文档路由与外链页面不在本地。首页CTA并非物理弹簧；M3物理系统只作理论来源。"
     ],
     "useCases": [
       "设计系统或开发平台主页",
@@ -3176,7 +3489,7 @@ window.DESIGN_ATLAS = [
         "note": "非必要用户触发动效可关闭，自动媒体提供独立暂停。"
       }
     ],
-    "prompt": "为[设计系统／开发者平台]制作一个基于真实官方页面的局部研究demo。明确参考URL、观察日期和语言年度版本；以2026-10-07的Material Design 3首页为结构依据，不能只凭Google四色想象页面。宽屏保留88px固定左导航，图标配短标签，底部放主题与全局动效圆形控制；主区顶部两个24px大圆角面板以8px间隙并列，左区56px内边距、Google Sans大标题96/96px、Google Sans Text正文与80px高主按钮，右区播放真实官方组件MP4并有独立暂停。浅色使用背景#fefbff、首屏表面#f8f1f6与文字#1c1b1d、主动作#6442d6与白字；1294px及以下首屏上下排列。深色切换整套角色配对而非简单反转图片。内容按I/O首个横向图文资源再两项、Expressive与组件2＋3项分组、应用指导／资讯／入门目录依次排列；使用原配图和1200px正文上限，大标题与较大节距明确主题。CTA按压圆角48→16px，卡片聚焦或按压24→48px，采用官网CSS的.2s/.3s曲线，涟漪如为近似须标明；不能把规范中的spring当官网全部实际行为。手机变64px顶栏、有效目录、45/52px标题、32px内边距、首屏纵向和单列资源。素材、字体、视频本地化并记录URL、SHA256、尺寸和权利；营销文案改写、外链真实、无追踪。实现键盘焦点、Escape返回、pointer触摸、视频状态反馈、全局暂停和prefers-reduced-motion停播，保留原生滚动与全部可读内容。注明目录路由、文案与300ms涟漪的本地差异。",
+    "prompt": "为[项目]制作基于Google Material：表现力与组件秩序的局部交互学习页面。参考https://m3.material.io/，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：原始组件样式的#f8f1f6中性hero与#1c1b1d文字承托紫色#6442d6主动作；深色切换surface/on-surface角色，丰富色彩留给真实组件图像。 字体：本地官方Google Sans 475提供96px/45px主标题与57px/36px节标题，Google Sans Text正文和Symbols图标形成清晰尺度层级。 版式：固定窄导航与宽内容分离；首屏两块8px相邻大面板，正文按真实1/2/3资源组及大节距组织，手机改顶栏和单列。 图像：真实官方9秒4000×2000MP4、元数据poster和20张官方组件／资源配图，保持原始文件并按官网区域映射。 形状：24px面板圆角、48px胶囊主动作、圆形视频及设置按钮；按压／聚焦时有有意义的圆角变化。 层级：中性品牌面板和最大标题先定位产品，紫色主按钮强调行动，单个横向I/O资源先强调更新，随后组件和入门资料逐层引导。 协调：配色角色、字体族、容器圆角和状态层贯穿导航、hero、资源和页尾；鲜活组件图像由稳定网格与中性正文容器协调。 关键流程：进入首页：静音9秒组件视频开始循环，独立按钮可暂停；全局暂停影响视频、状态过渡和涟漪。 用真实组件变化说明设计系统，用户保有观看控制。 点击或键盘激活按钮／卡片：CTA圆角48→16px，资源卡24→48px；200/300ms cubic-bezier(.2,0,0,1)。 形状与状态层共同表达当前动作，界面表现力来自一致的反馈。 进入目录或二级主题：300ms侧向抽屉；二级内容200ms延后再200ms淡入。 导航容器保持连续，内容层级在同一位置变化。 切换主题／系统主题变化：深浅语义角色切换；手动值保存，OS变化清除保存值。 让可读性适应环境，同时保持品牌图像与层级。 主题：初始读取保存的选择或系统偏好，手动开关持久保存；系统偏好改变时清除手动值并重新跟随系统。 改变 surface/on-surface、primary/on-primary 等语义角色，保留媒体原色与按钮层级。 声音：官方组件视频静音，独立播放和全局动效暂停均可操作。 动态组件展示承担行为说明；首页没有独立背景音乐，不将视频运动误作声音反馈。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。",
     "negativePrompt": "不要任意Google风格仪表盘、彩色圆球hero、所有区域同一套卡片、伪视频、自动有声、无作用暂停、强行弹簧、长段复制营销文字或原站统计代码；不要把浏览器改色当官方配色。",
     "demo": "demos/google-material/index.html",
     "preview": "previews/google-material.jpg",
@@ -3189,8 +3502,20 @@ window.DESIGN_ATLAS = [
       "imagery": "真实官方9秒4000×2000MP4、元数据poster和20张官方组件／资源配图，保持原始文件并按官网区域映射。",
       "shape": "24px面板圆角、48px胶囊主动作、圆形视频及设置按钮；按压／聚焦时有有意义的圆角变化。",
       "hierarchy": "中性品牌面板和最大标题先定位产品，紫色主按钮强调行动，单个横向I/O资源先强调更新，随后组件和入门资料逐层引导。",
-      "motion": "真实演示视频＋CTA/卡片状态过渡＋点击位置涟漪；主题和暂停有实时反馈；物理规范只作为理论而非冒称首页实现。",
+      "motion": "进入首页时静音9秒组件视频开始循环，独立按钮可暂停；全局暂停影响视频、状态过渡和涟漪。；点击或键盘激活按钮／卡片时CTA圆角48→16px，资源卡24→48px；200/300ms cubic-bezier(.2,0,0,1)。；进入目录或二级主题时300ms侧向抽屉；二级内容200ms延后再200ms淡入。；切换主题／系统主题变化时深浅语义角色切换；手动值保存，OS变化清除保存值。",
       "coherence": "配色角色、字体族、容器圆角和状态层贯穿导航、hero、资源和页尾；鲜活组件图像由稳定网格与中性正文容器协调。"
-    }
+    },
+    "themeBehavior": {
+      "mode": "system-and-manual",
+      "default": "system",
+      "control": "初始读取保存的选择或系统偏好，手动开关持久保存；系统偏好改变时清除手动值并重新跟随系统。",
+      "designReason": "改变 surface/on-surface、primary/on-primary 等语义角色，保留媒体原色与按钮层级。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "官方组件视频静音，独立播放和全局动效暂停均可操作。",
+      "interactionRole": "动态组件展示承担行为说明；首页没有独立背景音乐，不将视频运动误作声音反馈。"
+    },
+    "capturedAt": "2026-10-07"
   }
 ];

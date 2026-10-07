@@ -1,35 +1,43 @@
-# Notion：插画与真实工作空间
+# Notion：当前页面的设计与交互
 
-观察日期：2026-10-07。参考：[公开页面](https://www.notion.com/)。原站内容以该日期与语言版本为准。
+来源：[https://www.notion.com/](https://www.notion.com/)。采集日期：2026-10-07。范围：英文首页与简体中文语言提示，单一当前快照。
 
-## 设计特点与分析
+白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。
 
-白底、约94px居中巨字、浅蓝动作胶囊、蓝色主按钮与Ramp HQ团队插画形成首屏；官方工作空间视频承接产品证据。Capture/Find两列bento与下一整行Automate保持不同信息权重。
+## 触发、视觉响应与用途
 
-人物情境与真实工具互相解释；动作词的颜色与宽度确认当前主张，稳定的文档画面承担功能说明。这是页面分析；品牌活动文章解释插画传播，应用排版文章解释文档阅读，二者范围分别保留。
+- 2500ms 自动 Think/Ship/Create/Build/Jam/Scale → 词直接替换，测量 scrollWidth 后宽度以 300ms cubic-bezier(.86,0,.07,1) 变化，底色/圆点对应变化；这是源机制，没有给文字加不存在的飞入飞出。
 
-## 交互机制与复现映射
+- 桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。
 
-| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
-|---|---|---|
-| 标题自动轮换 | 公开脚本顺序Think/Ship/Create/Build/Jam/Scale、setInterval2500，颜色为蓝/绿/橙/黄/紫/青。 | 六词每2500ms轮换；点击下一项为本地扩展；减少动态停止自动。 |
-| 胶囊宽度 | 按内容scrollWidth测宽；mask内inline-size以300ms cubic-bezier(.86,0,.07,1)过渡。 | 同样内容测宽与过渡，字体加载后重测；自动标题不持续aria-live广播。 |
-| 视频与浏览 | 官方web-homepage-hero-1920x1200_final.mp4，10.966667秒、静音循环；越过首屏仍播放，Pause后为Play。 | 同一视频自然循环，真实media事件更新按钮；减少动态默认暂停，手机采用官方移动图。 |
-| Product点击 | 打开Features及Capture/Find/Automate；hover展开未确认。 | 点击分类菜单；无需为整页添加统一浮入。 |
-| 能力区 | Capture/Find双列、Automate整行。 | 保持bento分工，手机单列；问答、文档和agent反馈明确为本地示例。 |
+- 客户标识原生连续横移，指针停留暂停；手机保持条带，不把标识排成多行墙。
 
-![功能区：Capture与Find双列，Automate为下一整行](../previews/notion-bento-motion.jpg)
+- 桌面 Product/Resources 指针进入与点击 → 首次 opacity 与 translateY(-16px) 用 250ms ease-out；退出用 150ms ease-in、延迟 50ms，已打开分类间按源 instantSwitch 直接切换，使重复浏览保持响应。手机全屏菜单使用 Product/AI/Resources 原地单开，切换收起前组；关闭/Escape 恢复滚动和焦点。
 
-## 理论与约束
+- Capture/Find 两列和 Automate 通栏保持不同层次；下方五用途横向入口、团队故事、结束行动、页尾按源顺序。账户入口只在本地说明后回原站。
 
-官方插画、字标和NotionInter保持比例。完整客户墙、真实搜索、agent执行和后续能力未全量复现；视频不采用滚动换帧。
+## 完整浏览路径
 
-## 来源与材料
+语言提示/导航 → 动作胶囊/头像/桌面产品视频 → 标识条带 → 两列+通栏 Bento → 五用途 → 团队故事 → 结束行动 → 页尾。
 
-- [Notion 当前首页](https://www.notion.com/)（实例）：2026-10-07首页：六词轮换、Product点击、Capture/Find双列与Automate整行、视频播放/暂停。
-- [Notion brand campaign](https://www.notion.com/blog/the-thinking-behind-our-latest-brand-campaign)（理论）：2024品牌活动文章解释插画的手势和叙事情境。
-- [Notion page design update](https://www.notion.com/blog/updating-the-design-of-notion-pages)（理论）：2026-03-18应用页面的阅读间距与列表分组；用于本地文档示例。
-- [Notion 当前标题脚本](https://www.notion.com/_next/static/chunks/1dh2_szm1xs0g.js)（实例）：六词顺序和setInterval2500，内容测宽机制。
-- [Notion 当前标题样式](https://www.notion.com/_next/static/chunks/40jeqhz4ax8oh.css)（实例）：标签宽度300ms cubic-bezier(.86,0,.07,1)及对应组件样式。
+## 原站事实和复现边界
 
-[原站对照](screenshots/notion-editorial-source.png) · [Demo](../demos/notion-editorial/index.html) · [完整Prompt与设计元素](../entries/notion-editorial.json) · [还原范围](../demos/notion-editorial/fidelity.md) · [资产来源](../demos/notion-editorial/assets-manifest.json)。品牌与媒体权利归原作者。
+当前公开模块 ProductPillAnimation 明确 setInterval 2500ms、直接 React 文本替换、ResizeObserver 测宽；CSS 只过渡 label inline-size。真实 390px 页父容器隐藏产品媒体，头像与横移标识保留。
+
+桌面 dropdown 时序、-16px 与 instantSwitch 来自本次第一方 CSS/JS；本地 1440px 真实指针验证首次动画、分类即时切换、离开再入及关闭后 hidden/inert/aria，token 防止旧退出覆盖新状态，减少动态直接完成。桌面菜单内容与入口数量压缩。
+
+七头像为官方原素材，组合间距、标识 24s 周期和菜单指针离开等待 150ms 是拟合；Bento 使用官方完整静帧而非全部独立浮层，三故事数量与正文缩短。详情对话框内的勾选/问答/agent 反馈是本地示范，并不声称是原站首页机制或真实模型执行。
+
+## 主题与声音
+
+营销首页固定白底、浅色 Bento 和蓝色 CTA；没有全局主题切换。产品编辑器内的主题不等于这个首页主题。
+
+桌面官方 hero 产品演示默认静音循环，有本地暂停/播放；手机当前源页隐藏这一媒体区域。没有背景音乐。 演示内部 UI 展示团队和 agent 的工作，静音让主标题与插画保留阅读主导。
+
+## 配色、排版与元素协调
+
+主题和运动共同建立产品重点：白底居中标题用变宽动作胶囊、人格化官方头像和分能力 Bento 建立友好的工具定位。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。
+
+## 可复用 Prompt
+
+以 https://www.notion.com/ 在【采集日期】的 英文首页与简体中文语言提示 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 Notion 字体、字标与七头像、白底居中巨字、蓝色小圆角 CTA，动作胶囊按源 2500ms 直接替词，仅 300ms 测量宽度缓动与对应颜色，不添加飞字。桌面产品视频静音循环；手机头像居标题上方、hero 媒体隐藏，客户条带持续横移。Capture/Find 并列、Automate 通栏，再接五用途、故事、行动和页尾；正常滚动，不增加整屏遮罩。桌面菜单有250ms首入/-16px、150ms退出加50ms延迟和分类instantSwitch；手机与键盘路径保留。页面固定浅色，无背景音乐，减少动态保留静态字与手动视频。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。

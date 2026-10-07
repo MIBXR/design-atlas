@@ -10,3 +10,9 @@
 html[data-motion=reduce]{scroll-behavior:auto;scroll-snap-type:none}html[data-motion=reduce] *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 
 .ba-student{overflow:hidden}.ba-student-art{pointer-events:none}
+
+.student-voice{position:absolute;right:9%;bottom:10%;display:flex;align-items:center;gap:12px;height:45px;padding:0;background:none;border:0;cursor:pointer;z-index:3}.student-voice img:first-child{width:100px;height:auto}.student-voice img:last-child{height:40px;width:auto}.student-voice:hover,.student-voice:focus-visible{filter:brightness(1.25)}.student-voice[aria-pressed=true]{filter:drop-shadow(0 0 5px #00cbe5);animation:voice-light 800ms ease-in-out infinite alternate}@keyframes voice-light{to{opacity:.55}}.ba-character-limit{display:none}@media(max-width:760px){.student-voice{bottom:8%;right:9%;height:35px;gap:7px}.student-voice img:first-child{width:75px}.student-voice img:last-child{height:30px}.ba-student-card dl{max-width:65%}}
+
+.student-voice[aria-pressed="true"]{animation:none;filter:brightness(1.25)}
+
+body[data-view=character] .ba-character-stage{margin-top:70px}body[data-view=character] #ba-character-heading{font:inherit;margin:0}.ba-student-card h2{font:700 clamp(24px,3.4vw,52px)/1.2 Arial;margin:0;color:#4ac8e4}@media(max-width:760px){body[data-view=character] .ba-character-stage{margin-top:60px}.ba-student-card h2{font-size:26px}}@media(max-width:700px){.header nav:not(.open){pointer-events:none;visibility:hidden}.header nav.open{pointer-events:auto;visibility:visible}}

@@ -151,6 +151,69 @@
       "retrievedAt": "2026-10-07",
       "copyright": "品牌及原作者所有；仅本地私人学习，无品牌关联。",
       "sha256": "0ade10dbfe021507280a8e90aa68c1c7918e736322302ce4e9c50bf2bc599fff"
+    },
+    {
+      "file": "assets/pile-1.webp",
+      "sourceUrl": "https://www.notion.com/front-static/pages/home/teams-agents-hero/pile_1.webp",
+      "purpose": "Original teams-and-agents avatar pile",
+      "bytes": 8402,
+      "sha256": "c4619463148152cb3aad8904ce6363102b345e5486f6283a3c1dedc7773caa63",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/pile-2.webp",
+      "sourceUrl": "https://www.notion.com/front-static/pages/home/teams-agents-hero/pile_2.webp",
+      "purpose": "Original teams-and-agents avatar pile",
+      "bytes": 5750,
+      "sha256": "8aa47a7b0320bd47b70726564c4978d9fc6c2791ee3037674496081f53a32ba4",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/pile-3.webp",
+      "sourceUrl": "https://www.notion.com/front-static/pages/home/teams-agents-hero/pile_3.webp",
+      "purpose": "Original teams-and-agents avatar pile",
+      "bytes": 7340,
+      "sha256": "7ed27357188c7dafe5c0477f58a77e8834c67829d1b1a074c4532a1b531768ea",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/pile-4.webp",
+      "sourceUrl": "https://www.notion.com/front-static/pages/home/teams-agents-hero/pile_4.webp",
+      "purpose": "Original teams-and-agents avatar pile",
+      "bytes": 11942,
+      "sha256": "df0ed6e04d6195c8d71e9927653f5aeafddf4e652b8a84f58fd20e97ade20236",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/pile-5.webp",
+      "sourceUrl": "https://www.notion.com/front-static/pages/home/teams-agents-hero/pile_5.webp",
+      "purpose": "Original teams-and-agents avatar pile",
+      "bytes": 6290,
+      "sha256": "710e5540c272b6455eb81dfb23869ebd97651ec22bf74c9ab79986015c318b34",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/pile-6.webp",
+      "sourceUrl": "https://www.notion.com/front-static/pages/home/teams-agents-hero/pile_6.webp",
+      "purpose": "Original teams-and-agents avatar pile",
+      "bytes": 6276,
+      "sha256": "5b2c9f7aa405107a4a3eb102983dd9995707f8f9b69a59b3139f5b8aa7e47c87",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
+    },
+    {
+      "file": "assets/pile-7.webp",
+      "sourceUrl": "https://www.notion.com/front-static/pages/home/teams-agents-hero/pile_7.webp",
+      "purpose": "Original teams-and-agents avatar pile",
+      "bytes": 16148,
+      "sha256": "a6baf9c6cbe41b7134cfd353637673cbc9606a40e8e30fd3ac1444482e6f2457",
+      "copyright": "Original publisher; personal reference study",
+      "status": "downloaded"
     }
   ]
 }

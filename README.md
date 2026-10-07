@@ -20,13 +20,17 @@
 
 这是一份能亲手体验的设计参考。每个条目包含实际参考与观察日期、设计元素的协作方式、约束、可复制 Prompt、独立代码 Demo、原站／本地对照及素材来源。
 
+真实网站案例固定为所标注网址与采集日期的单一归档；完成后保留当时的页面与交互，不追随官网后续变化。
+
 - **查找**：按产品、游戏/IP、艺术文化、经典语言与国家／地区筛选；搜索品牌、配色、布局、交互或约束。
 - **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；手机面板限制为390px。
 - **比较**：选择2–3项并排比较，观察同样的设计元素如何产生不同表达。
-- **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在元素实验室中直接改变画面。
+- **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在元素实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
 - **桌面与手机**：真实1440px桌面预览保留完整断点；ChatGPT默认展示桌面动效，手机模式可切换。
-- **收藏**：保存个人策展结果，并导出／导入 JSON 备份。
+- **主题与声音**：参考库支持跟随系统／浅色／深色；每个案例说明原站的主题方式、音乐或媒体声音及其交互作用，固定品牌主题保留原貌。
+- **收藏**：浏览器localStorage保存个人策展结果，并导出／导入 JSON 备份；不同设备或域名不会自动同步。
+- **加载与复用**：案例先准备首屏关键图像、字体与视频第一帧，再开始开场；未就绪时显示进度与重试。固定版本的大素材在同一站点内缓存，嵌入预览与独立打开共享已经下载的内容。
 
 ![从观察到复用](docs/readme/workflow.webp)
 
@@ -41,17 +45,17 @@
 <table>
 <tr>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/apple-product"><img src="previews/apple-product.jpg" alt="Apple · 滚动产品舞台 实际代码预览" width="100%"></a><br><strong>Apple · 滚动产品舞台</strong><br><sub>镜头系统真实视频随滚动逐帧推进；胶囊图库与进度。</sub><br><br><a href="prompts/apple-product.md">Prompt</a> · <a href="research/apple-product.md">研究</a> · <a href="demos/apple-product">代码</a> · <a href="previews/mobile/apple-product.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/stripe-platform"><img src="previews/stripe-platform.jpg" alt="Stripe — 彩带与金融产品矩阵 实际代码预览" width="100%"></a><br><strong>Stripe — 彩带与金融产品矩阵</strong><br><sub>原站SingleWave WebGL缎带、金融矩阵与付款场景轮换。</sub><br><br><a href="prompts/stripe-platform.md">Prompt</a> · <a href="research/stripe-platform.md">研究</a> · <a href="demos/stripe-platform">代码</a> · <a href="previews/mobile/stripe-platform.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/linear-workflow"><img src="previews/linear-workflow.jpg" alt="Linear — 深色产品开发系统 实际代码预览" width="100%"></a><br><strong>Linear — 深色产品开发系统</strong><br><sub>深色真实界面与任务板／Insights／项目总览切换。</sub><br><br><a href="prompts/linear-workflow.md">Prompt</a> · <a href="research/linear-workflow.md">研究</a> · <a href="demos/linear-workflow">代码</a> · <a href="previews/mobile/linear-workflow.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/stripe-platform"><img src="previews/stripe-platform.jpg" alt="Stripe — 彩带与金融产品矩阵 实际代码预览" width="100%"></a><br><strong>Stripe — 彩带与金融产品矩阵</strong><br><sub>SingleWave WebGL 波面、客户面板展开与手机二级导航。</sub><br><br><a href="prompts/stripe-platform.md">Prompt</a> · <a href="research/stripe-platform.md">研究</a> · <a href="demos/stripe-platform">代码</a> · <a href="previews/mobile/stripe-platform.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/linear-workflow"><img src="previews/linear-workflow.jpg" alt="Linear — 深色产品开发系统 实际代码预览" width="100%"></a><br><strong>Linear — 深色产品开发系统</strong><br><sub>消息与任务卡接力、AI处理节拍、Build代码差异演示。</sub><br><br><a href="prompts/linear-workflow.md">Prompt</a> · <a href="research/linear-workflow.md">研究</a> · <a href="demos/linear-workflow">代码</a> · <a href="previews/mobile/linear-workflow.jpg">手机预览</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/notion-editorial"><img src="previews/notion-editorial.jpg" alt="Notion — 插画与真实工作空间 实际代码预览" width="100%"></a><br><strong>Notion — 插画与真实工作空间</strong><br><sub>动词轮换、手绘人物与不同尺度的功能拼图。</sub><br><br><a href="prompts/notion-editorial.md">Prompt</a> · <a href="research/notion-editorial.md">研究</a> · <a href="demos/notion-editorial">代码</a> · <a href="previews/mobile/notion-editorial.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/notion-editorial"><img src="previews/notion-editorial.jpg" alt="Notion — 插画与真实工作空间 实际代码预览" width="100%"></a><br><strong>Notion — 插画与真实工作空间</strong><br><sub>动词与宽度轮换、真实产品视频与手机单开导航。</sub><br><br><a href="prompts/notion-editorial.md">Prompt</a> · <a href="research/notion-editorial.md">研究</a> · <a href="demos/notion-editorial">代码</a> · <a href="previews/mobile/notion-editorial.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/chatgpt-platform"><img src="previews/chatgpt-platform.jpg" alt="ChatGPT — 巨字、飞入拼贴与滚动交接 实际代码预览" width="100%"></a><br><strong>ChatGPT — 巨字、飞入拼贴与滚动交接</strong><br><sub>悬停模式、独立素材飞入飞出、同一窗口滚动交接。</sub><br><br><a href="prompts/chatgpt-platform.md">Prompt</a> · <a href="research/chatgpt-platform.md">研究</a> · <a href="demos/chatgpt-platform">代码</a> · <a href="previews/mobile/chatgpt-platform.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/claude-platform"><img src="previews/claude-platform.jpg" alt="Claude — 衬线语气与 Cowork 演示 实际代码预览" width="100%"></a><br><strong>Claude — 衬线语气与 Cowork 演示</strong><br><sub>暖纸色、衬线巨字与真实媒体的克制叙事。</sub><br><br><a href="prompts/claude-platform.md">Prompt</a> · <a href="research/claude-platform.md">研究</a> · <a href="demos/claude-platform">代码</a> · <a href="previews/mobile/claude-platform.jpg">手机预览</a></td>
 </tr>
 <tr>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/qoder-platform"><img src="previews/qoder-platform.jpg" alt="Qoder — 绿色工作台与多形态平台 实际代码预览" width="100%"></a><br><strong>Qoder — 绿色工作台与多形态平台</strong><br><sub>无衬线巨字、产品内嵌预览、400ms横向平台切换。</sub><br><br><a href="prompts/qoder-platform.md">Prompt</a> · <a href="research/qoder-platform.md">研究</a> · <a href="demos/qoder-platform">代码</a> · <a href="previews/mobile/qoder-platform.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/google-material"><img src="previews/google-material.jpg" alt="Google Material：表现力与组件秩序 实际代码预览" width="100%"></a><br><strong>Google Material：表现力与组件秩序</strong><br><sub>固定图标轨、角色配色、9秒组件视频与圆角反馈。</sub><br><br><a href="prompts/google-material.md">Prompt</a> · <a href="research/google-material.md">研究</a> · <a href="demos/google-material">代码</a> · <a href="previews/mobile/google-material.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/google-material"><img src="previews/google-material.jpg" alt="Google Material：表现力与组件秩序 实际代码预览" width="100%"></a><br><strong>Google Material：表现力与组件秩序</strong><br><sub>系统与手动主题、300ms目录、9秒组件视频与圆角反馈。</sub><br><br><a href="prompts/google-material.md">Prompt</a> · <a href="research/google-material.md">研究</a> · <a href="demos/google-material">代码</a> · <a href="previews/mobile/google-material.jpg">手机预览</a></td>
 <td></td>
 </tr>
 </table>
@@ -62,17 +66,17 @@
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/zelda-world"><img src="previews/zelda-world.jpg" alt="塞尔达 · 全景世界舞台 实际代码预览" width="100%"></a><br><strong>塞尔达 · 全景世界舞台</strong><br><sub>同屏世界章节、官方全景视频与用户启用的BGM。</sub><br><br><a href="prompts/zelda-world.md">Prompt</a> · <a href="research/zelda-world.md">研究</a> · <a href="demos/zelda-world">代码</a> · <a href="previews/mobile/zelda-world.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/persona-kinetic"><img src="previews/persona-kinetic.jpg" alt="Persona 5 Royal · 黑金角色拼贴 实际代码预览" width="100%"></a><br><strong>Persona 5 Royal · 黑金角色拼贴</strong><br><sub>黑金拼贴、斜切图形与500ms角色滑轨。</sub><br><br><a href="prompts/persona-kinetic.md">Prompt</a> · <a href="research/persona-kinetic.md">研究</a> · <a href="demos/persona-kinetic">代码</a> · <a href="previews/mobile/persona-kinetic.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/genshin-world"><img src="previews/genshin-world.jpg" alt="原神 · 版本群像与角色舞台 实际代码预览" width="100%"></a><br><strong>原神 · 版本群像与角色舞台</strong><br><sub>真实世界与角色图层、垂直章节切换。</sub><br><br><a href="prompts/genshin-world.md">Prompt</a> · <a href="research/genshin-world.md">研究</a> · <a href="demos/genshin-world">代码</a> · <a href="previews/mobile/genshin-world.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/zelda-world"><img src="previews/zelda-world.jpg" alt="塞尔达 · 全景世界舞台 实际代码预览" width="100%"></a><br><strong>塞尔达 · 全景世界舞台</strong><br><sub>声音选择开场、古代纹样缩略图框、世界场景淡化与官方BGM。</sub><br><br><a href="prompts/zelda-world.md">Prompt</a> · <a href="research/zelda-world.md">研究</a> · <a href="demos/zelda-world">代码</a> · <a href="previews/mobile/zelda-world.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/persona-kinetic"><img src="previews/persona-kinetic.jpg" alt="Persona 5 Royal · 黑金角色拼贴 实际代码预览" width="100%"></a><br><strong>Persona 5 Royal · 黑金角色拼贴</strong><br><sub>SCREEN 星纹呼吸、滚动视差、角色服装与两套独立滑轨。</sub><br><br><a href="prompts/persona-kinetic.md">Prompt</a> · <a href="research/persona-kinetic.md">研究</a> · <a href="demos/persona-kinetic">代码</a> · <a href="previews/mobile/persona-kinetic.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/genshin-world"><img src="previews/genshin-world.jpg" alt="原神 · 版本群像与角色舞台 实际代码预览" width="100%"></a><br><strong>原神 · 版本群像与角色舞台</strong><br><sub>竖向整屏章切、角色背景联动与六条原始随机语音。</sub><br><br><a href="prompts/genshin-world.md">Prompt</a> · <a href="research/genshin-world.md">研究</a> · <a href="demos/genshin-world">代码</a> · <a href="previews/mobile/genshin-world.jpg">手机预览</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/arknights-world"><img src="previews/arknights-world.jpg" alt="明日方舟 · 工业档案与干员舞台 实际代码预览" width="100%"></a><br><strong>明日方舟 · 工业档案与干员舞台</strong><br><sub>黑白工业排版、官方角色和分区导航。</sub><br><br><a href="prompts/arknights-world.md">Prompt</a> · <a href="research/arknights-world.md">研究</a> · <a href="demos/arknights-world">代码</a> · <a href="previews/mobile/arknights-world.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/uma-musume"><img src="previews/uma-musume.jpg" alt="赛马娘：群像赛道与斜切叙事 实际代码预览" width="100%"></a><br><strong>赛马娘：群像赛道与斜切叙事</strong><br><sub>明亮品牌色、400ms角色移动与有界翻页。</sub><br><br><a href="prompts/uma-musume.md">Prompt</a> · <a href="research/uma-musume.md">研究</a> · <a href="demos/uma-musume">代码</a> · <a href="previews/mobile/uma-musume.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/blue-archive"><img src="previews/blue-archive.jpg" alt="碧蓝档案：学园都市的天空与光 实际代码预览" width="100%"></a><br><strong>碧蓝档案：学园都市的天空与光</strong><br><sub>蓝白校园语气、官方人物与1000ms学院资料滑轨。</sub><br><br><a href="prompts/blue-archive.md">Prompt</a> · <a href="research/blue-archive.md">研究</a> · <a href="demos/blue-archive">代码</a> · <a href="previews/mobile/blue-archive.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/arknights-world"><img src="previews/arknights-world.jpg" alt="明日方舟 · 全屏档案与交互点阵 实际代码预览" width="100%"></a><br><strong>明日方舟 · 全屏档案与交互点阵</strong><br><sub>全屏载入、侧向遮罩与滚号、原站点阵互动和 BGM。</sub><br><br><a href="prompts/arknights-world.md">Prompt</a> · <a href="research/arknights-world.md">研究</a> · <a href="demos/arknights-world">代码</a> · <a href="previews/mobile/arknights-world.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/uma-musume"><img src="previews/uma-musume.jpg" alt="赛马娘：群像赛道与斜切叙事 实际代码预览" width="100%"></a><br><strong>赛马娘：群像赛道与斜切叙事</strong><br><sub>马蹄菜单、Logo 滚动缩放、玩法轨道与无音轨 About 影片。</sub><br><br><a href="prompts/uma-musume.md">Prompt</a> · <a href="research/uma-musume.md">研究</a> · <a href="demos/uma-musume">代码</a> · <a href="previews/mobile/uma-musume.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/blue-archive"><img src="previews/blue-archive.jpg" alt="碧蓝档案：学园都市的天空与光 实际代码预览" width="100%"></a><br><strong>碧蓝档案：学园都市的天空与光</strong><br><sub>首页与角色独立页面、人物轨道与四条官方语音。</sub><br><br><a href="prompts/blue-archive.md">Prompt</a> · <a href="research/blue-archive.md">研究</a> · <a href="demos/blue-archive">代码</a> · <a href="previews/mobile/blue-archive.jpg">手机预览</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/monument-valley-game"><img src="previews/monument-valley-game.jpg" alt="纪念碑谷：电影画面与安静的品牌秩序 实际代码预览" width="100%"></a><br><strong>纪念碑谷：电影画面与安静的品牌秩序</strong><br><sub>真实建筑图像、克制留白与500ms横向截图画廊。</sub><br><br><a href="prompts/monument-valley-game.md">Prompt</a> · <a href="research/monument-valley-game.md">研究</a> · <a href="demos/monument-valley-game">代码</a> · <a href="previews/mobile/monument-valley-game.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/monument-valley-game"><img src="previews/monument-valley-game.jpg" alt="纪念碑谷：电影首入、奖项进入与中心画廊 实际代码预览" width="100%"></a><br><strong>纪念碑谷：电影首入、奖项进入与中心画廊</strong><br><sub>一秒加载、奖项双向进出、手机展开与十四图居中循环。</sub><br><br><a href="prompts/monument-valley-game.md">Prompt</a> · <a href="research/monument-valley-game.md">研究</a> · <a href="demos/monument-valley-game">代码</a> · <a href="previews/mobile/monument-valley-game.jpg">手机预览</a></td>
 <td></td>
 <td></td>
 </tr>
@@ -85,13 +89,13 @@
 <table>
 <tr>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/design-sight"><img src="previews/design-sight.jpg" alt="21_21 DESIGN SIGHT：海报与四列档案 实际代码预览" width="100%"></a><br><strong>21_21 DESIGN SIGHT：海报与四列档案</strong><br><sub>海报主导、双图1000ms交叉淡化与信息分层。</sub><br><br><a href="prompts/design-sight.md">Prompt</a> · <a href="research/design-sight.md">研究</a> · <a href="demos/design-sight">代码</a> · <a href="previews/mobile/design-sight.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/mori-art-museum"><img src="previews/mori-art-museum.jpg" alt="森美术馆：红色机构锚点与艺术海报 实际代码预览" width="100%"></a><br><strong>森美术馆：红色机构锚点与艺术海报</strong><br><sub>作品优先的展览编辑结构，保留克制浏览节奏。</sub><br><br><a href="prompts/mori-art-museum.md">Prompt</a> · <a href="research/mori-art-museum.md">研究</a> · <a href="demos/mori-art-museum">代码</a> · <a href="previews/mobile/mori-art-museum.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/mori-art-museum"><img src="previews/mori-art-museum.jpg" alt="森美术馆：红色机构锚点与艺术海报 实际代码预览" width="100%"></a><br><strong>森美术馆：红色机构锚点与艺术海报</strong><br><sub>大馆标与海报、滚动紧凑红导航与手机侧移菜单。</sub><br><br><a href="prompts/mori-art-museum.md">Prompt</a> · <a href="research/mori-art-museum.md">研究</a> · <a href="demos/mori-art-museum">代码</a> · <a href="previews/mobile/mori-art-museum.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/fuji-rock"><img src="previews/fuji-rock.jpg" alt="Fuji Rock：现场照片与节日导览 实际代码预览" width="100%"></a><br><strong>Fuji Rock：现场照片与节日导览</strong><br><sub>年度海报、800ms淡化轮播与展开式大菜单。</sub><br><br><a href="prompts/fuji-rock.md">Prompt</a> · <a href="research/fuji-rock.md">研究</a> · <a href="demos/fuji-rock">代码</a> · <a href="previews/mobile/fuji-rock.jpg">手机预览</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/rijksmuseum-art"><img src="previews/rijksmuseum-art.jpg" alt="Rijksmuseum · 全幅摄影与巨大字标 实际代码预览" width="100%"></a><br><strong>Rijksmuseum · 全幅摄影与巨大字标</strong><br><sub>巨幅字标、满屏摄影与500ms全屏菜单淡入。</sub><br><br><a href="prompts/rijksmuseum-art.md">Prompt</a> · <a href="research/rijksmuseum-art.md">研究</a> · <a href="demos/rijksmuseum-art">代码</a> · <a href="previews/mobile/rijksmuseum-art.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/met-museum"><img src="previews/met-museum.jpg" alt="The Met · 编辑式展览与馆藏陈列 实际代码预览" width="100%"></a><br><strong>The Met · 编辑式展览与馆藏陈列</strong><br><sub>30秒官方季节影像、编辑标题及原生展览横架。</sub><br><br><a href="prompts/met-museum.md">Prompt</a> · <a href="research/met-museum.md">研究</a> · <a href="demos/met-museum">代码</a> · <a href="previews/mobile/met-museum.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/philharmonie-music"><img src="previews/philharmonie-music.jpg" alt="巴黎爱乐厅 · 音乐展与音乐会详情 实际代码预览" width="100%"></a><br><strong>巴黎爱乐厅 · 音乐展与音乐会详情</strong><br><sub>展览海报与顺序摄影；音乐会500ms滑轨和票务侧栏。</sub><br><br><a href="prompts/philharmonie-music.md">Prompt</a> · <a href="research/philharmonie-music.md">研究</a> · <a href="demos/philharmonie-music">代码</a> · <a href="previews/mobile/philharmonie-music.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/rijksmuseum-art"><img src="previews/rijksmuseum-art.jpg" alt="Rijksmuseum · 全幅摄影与巨大字标 实际代码预览" width="100%"></a><br><strong>Rijksmuseum · 全幅摄影与巨大字标</strong><br><sub>摄影原生浏览、巨大字标与全屏菜单淡化。</sub><br><br><a href="prompts/rijksmuseum-art.md">Prompt</a> · <a href="research/rijksmuseum-art.md">研究</a> · <a href="demos/rijksmuseum-art">代码</a> · <a href="previews/mobile/rijksmuseum-art.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/met-museum"><img src="previews/met-museum.jpg" alt="The Met · 编辑式展览与馆藏陈列 实际代码预览" width="100%"></a><br><strong>The Met · 编辑式展览与馆藏陈列</strong><br><sub>官方建筑摄影、编辑标题、原生展览横架与原地展开菜单。</sub><br><br><a href="prompts/met-museum.md">Prompt</a> · <a href="research/met-museum.md">研究</a> · <a href="demos/met-museum">代码</a> · <a href="previews/mobile/met-museum.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/philharmonie-music"><img src="previews/philharmonie-music.jpg" alt="巴黎爱乐厅 · 音乐展与音乐会详情 实际代码预览" width="100%"></a><br><strong>巴黎爱乐厅 · 音乐展与音乐会详情</strong><br><sub>桌面固定票务、音乐会循环摄影与官方歌单。</sub><br><br><a href="prompts/philharmonie-music.md">Prompt</a> · <a href="research/philharmonie-music.md">研究</a> · <a href="demos/philharmonie-music">代码</a> · <a href="previews/mobile/philharmonie-music.jpg">手机预览</a></td>
 </tr>
 </table>
 
@@ -111,8 +115,8 @@
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/bauhaus-geometry"><img src="previews/bauhaus-geometry.jpg" alt="包豪斯：几何与实验 实际代码预览" width="100%"></a><br><strong>包豪斯：几何与实验</strong><br><sub>基本几何、有限色盘和均衡的非对称构成。</sub><br><br><a href="prompts/bauhaus-geometry.md">Prompt</a> · <a href="research/bauhaus-geometry.md">研究</a> · <a href="demos/bauhaus-geometry">代码</a> · <a href="previews/mobile/bauhaus-geometry.jpg">手机预览</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/retro-80s"><img src="previews/retro-80s.jpg" alt="80年代：合成器面板 实际代码预览" width="100%"></a><br><strong>80年代：合成器面板</strong><br><sub>霓虹、网格和受控的复古质感。</sub><br><br><a href="prompts/retro-80s.md">Prompt</a> · <a href="research/retro-80s.md">研究</a> · <a href="demos/retro-80s">代码</a> · <a href="previews/mobile/retro-80s.jpg">手机预览</a></td>
-<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/pixel-world"><img src="previews/pixel-world.jpg" alt="像素：微型世界 实际代码预览" width="100%"></a><br><strong>像素：微型世界</strong><br><sub>像素网格、整数尺度与逐帧角色反馈。</sub><br><br><a href="prompts/pixel-world.md">Prompt</a> · <a href="research/pixel-world.md">研究</a> · <a href="demos/pixel-world">代码</a> · <a href="previews/mobile/pixel-world.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/retro-80s"><img src="previews/retro-80s.jpg" alt="80年代：合成器面板 实际代码预览" width="100%"></a><br><strong>80年代：合成器面板</strong><br><sub>复古硬件面板、音色预设与实时短音符反馈。</sub><br><br><a href="prompts/retro-80s.md">Prompt</a> · <a href="research/retro-80s.md">研究</a> · <a href="demos/retro-80s">代码</a> · <a href="previews/mobile/retro-80s.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/pixel-world"><img src="previews/pixel-world.jpg" alt="像素：微型世界 实际代码预览" width="100%"></a><br><strong>像素：微型世界</strong><br><sub>整数像素网格、地点移动与可保存的旅行手账。</sub><br><br><a href="prompts/pixel-world.md">Prompt</a> · <a href="research/pixel-world.md">研究</a> · <a href="demos/pixel-world">代码</a> · <a href="previews/mobile/pixel-world.jpg">手机预览</a></td>
 <td></td>
 </tr>
 </table>
@@ -125,6 +129,7 @@
 | 字体与排版 | 形成语气、阅读节奏和尺度层级 | 切换字型、布局、层级与留白 |
 | 图像与图形 | 展示产品、人物、世界或作品 | 改变图形类型、比例及质感 |
 | 形状与构成 | 把按钮、容器、装饰组织成一致语言 | 改变圆角／几何形状和组合 |
+| 深浅主题 | 保持背景、表面、正文与强调的协调 | 参考／系统／浅色／深色切换与配置导出 |
 | 动效与反馈 | 解释状态变化、引导注意、保持空间连续 | 切换动效、触发反馈，并比较静态状态 |
 | 协调关系 | 让所有元素围绕同一主题和重点 | 单项混搭、加载案例方案、复制配置与 Prompt |
 
@@ -142,6 +147,20 @@ npm start
 
 打开 [http://127.0.0.1:4173](http://127.0.0.1:4173)。`Ctrl+C` 结束服务。服务只绑定本机，建议保持固定地址；改变主机名或端口会得到独立收藏。
 
+### 素材来源、加载与缓存
+
+仓库保留完整原始素材。本地运行默认 `auto`：先读自身目录，已映射的大素材加载失败时，才使用固定 Git 提交中的 GitHub 备份。在完整源码／本地构建中，独立 Demo 地址可加 `?assets=local` 强制本地，或 `?assets=github` 切换动态图像、视频与声音的来源；样式表中的背景和字体保留本地地址。Sites 构建会在输出时统一将对应CSS地址也改为固定GitHub地址，因此精简Sites包不支持强制本地或离线使用。来源切换不改变布局、动效或声音设计。
+
+复用单个真实网站 Demo 时，也需携带根目录的 `asset-sources.js`、`asset-runtime.js`、`case-loading.js/.css` 与 `asset-cache*.js`，或将这些公共模块连同引用一起迁移。入口HTML是项目的一部分，直接下载一份HTML无法包含它依赖的图像、字体和脚本。
+
+`npm run build:site` 生成引用 GitHub 大素材的部署目录，省略对应的大文件，保持素材原字节与画质。`npm run build:local` 生成包含全部素材的静态目录，可用于完整本地托管。两种构建都不修改 `demos/` 中的原始素材。GitHub 素材固定到 `asset-sources.js` 中的完整提交 SHA，避免分支变化使代码与图片不匹配；Sites 的大素材首次下载需要网络。
+
+首屏加载只等待当前画面必要的图片、可见字体和视频首帧，后续章节提前按需准备。进度按已就绪资源项统计，不伪造下载字节百分比；失败时可以重试或继续浏览。明日方舟与塞尔达保留自己的原站风格加载／声音入口，开场从资源就绪之后开始。音乐由用户启用，不进入首屏必等列表。
+
+固定 GitHub 地址的大素材使用浏览器 Cache Storage 保存；后续再次进入时优先复用，完整视频缓存支持字节区间读取与拖动。嵌入预览与独立页面同属一个站点时共享这份缓存。只按访问加载，不在进入参考库时下载所有案例；素材缓存最多256MiB，按存入顺序移除较早的素材。HTML、脚本与样式照常获取当前版本。本地服务使用 ETag／Last-Modified 条件请求，未变化的本地文件返回304并复用已下载内容。
+
+浏览器可能因空间不足、隐私模式或清理网站数据而移除缓存；此时页面正常重新加载。“收藏备份与说明”中可查看、清除素材缓存。收藏与素材缓存分别保存。Cache Storage 的容量和可用性由浏览器管理，参见 [MDN Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache)。
+
 ### 从参考到自己的设计
 
 1. 在对应 Demo 中实际操作，读清楚原站观察与本地差异。
@@ -150,7 +169,7 @@ npm start
 4. 对照制作约束，测试滚动、键盘、手机、音视频及减少动态效果。
 5. 保存对比截图、改动理由与Git提交，让个人判断也能回看。
 
-音频由用户启用；静音视频可播放并提供暂停。真实品牌素材按原比例本地保存。登录、购买、预约和实际服务入口指向官网，不在本库执行。
+音频由用户启用；静音视频可播放并提供暂停。真实品牌图片、字体及本地音视频按原比例保存；Apple 的完整产品影片按需播放官方在线流，需要网络。登录、购买、预约和实际服务入口指向官网，不在本库执行。
 
 ### 收藏与迁移
 
@@ -164,7 +183,7 @@ npm start
 entries/<id>.json              案例、设计元素、约束、来源、Prompt的单一数据源
 prompts/<id>.md                由 entries 生成的可读 Prompt
 research/<id>.md               观察、理论、分析推断、复现映射
-research/screenshots/          原站实际关键帧与状态证据
+research/screenshots/          归档页面的原站对照截图
 demos/<id>/                   HTML、CSS、JS与本地图片／字体／音视频
   fidelity.md                 已复现、近似、未实现与观察限制
   assets-manifest.json        公开来源、用途、处理方式、字节数、SHA256
@@ -173,11 +192,15 @@ docs/readme/                  本README配图
 vendor/                       固定版本的Markdown解析库、HTML清理库与许可证
 fundamentals.*                可操作的设计元素实验室
 catalog.js                    自动生成的浏览器目录
+asset-sources.js               固定 Git 提交、远端URL与本地素材字节／哈希映射
+asset-runtime.js               本地优先、失败回退与显式来源切换
+case-loading.*                首屏就绪、开场门控与章节素材准备
+asset-cache*.js                固定版本大素材缓存与视频区间读取
 scripts/                      本机服务、目录生成、静态构建与资产检查
 .openai/hosting.json           现有Sites项目与静态目录配置
 ```
 
-`npm run build` 从 entries 更新目录、完整索引及 Prompt；`npm run check` 检查字段、来源、本地引用、JS语法、预览和资产大小／哈希。`npm run build:site` 生成部署目录 `dist/`，不含Git元数据和本地服务。新增或修改案例遵循 [贡献流程](CONTRIBUTING.md)。
+`npm run build` 从 entries 更新目录、完整索引及 Prompt；`npm run check` 检查字段、来源、本地引用、JS语法、预览和资产大小／哈希。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含Git元数据和本地服务。新增或修改案例遵循 [贡献流程](CONTRIBUTING.md)。
 
 ```bash
 npm run build
@@ -187,7 +210,7 @@ npm run build:site
 
 ### 如何判断还原范围
 
-调研记录区分**直接观察、理论解释、本库分析**；每个品牌案例的 `fidelity.md` 标注**已还原、近似、未实现**。动画关键帧与运行时DOM有证据，但不能把局部实现称为完整源站克隆。原站内容会更新，所有对照以观察日期为准。
+调研记录区分**直接观察、理论解释、本库分析**；每个品牌案例的 `fidelity.md` 标注**已还原、近似、未实现**。不能把局部实现称为完整源站克隆；对照固定为所记录的采集页面，不引入后续版本分支。
 
 ## 版权与研究边界
 

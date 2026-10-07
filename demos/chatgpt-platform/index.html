@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="zh-CN"><head>
+<html lang="zh-CN"><head><script src="../../asset-sources.js"></script><script src="../../asset-runtime.js" data-case-runtime="true"></script><script src="../../asset-cache.js" async></script><link rel="stylesheet" href="../../case-loading.css"><meta name="darkreader-lock">
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ChatGPT · 聊天、工作与编程</title><link rel="stylesheet" href="style.css">
 <link rel="preload" as="image" href="assets/chat.webp"><link rel="preload" as="image" href="assets/work.webp"><link rel="preload" as="image" href="assets/code.webp">
 </head><body>
 <header>
 <a class="brand" href="#top" aria-label="ChatGPT 首页"><img src="assets/logo.svg" alt="" width="118" height="28"></a>
-<nav aria-label="主导航"><a href="#top">简介</a><button data-menu="功能" aria-expanded="false">功能</button><button data-menu="学习" aria-expanded="false">学习</button><a href="#showcase" data-select="code">Codex</a><a href="#privacy">Business</a><button data-open="定价">定价</button><button data-open="下载 ChatGPT">下载</button></nav>
-<div class="auth"><button class="black" data-open="登录">登录</button><button class="outline" data-open="免费注册">免费注册</button></div><button class="hamburger" aria-label="打开导航" aria-expanded="false">☰</button><div class="menu" hidden></div>
+<nav aria-label="主导航"><a href="#top">简介</a><button data-menu="功能" aria-expanded="false">功能</button><button data-menu="学习" aria-expanded="false">学习</button><a data-menu="Codex" href="https://chatgpt.com/zh-Hans-CN/codex/" aria-expanded="false">Codex</a><a data-menu="Business" href="https://chatgpt.com/zh-Hans-CN/business/" aria-expanded="false">Business</a><a data-menu="定价" href="https://chatgpt.com/zh-Hans-CN/pricing/" aria-expanded="false">定价</a><button data-open="下载 ChatGPT">下载</button></nav>
+<div class="auth"><a class="black" href="https://chatgpt.com/" target="_blank" rel="noreferrer">试用 ChatGPT</a></div><button class="hamburger" aria-label="打开导航" aria-expanded="false">☰</button><div class="menu" hidden></div>
 </header>
 <main id="top">
 <section class="hero" aria-label="ChatGPT 三种模式">
 <h1 aria-label="现在，你可以在同一个平台内进行聊天、工作和编程。"><span>现在，你可</span><span>以在同一个</span><span>平台内进行</span><span><button class="action-word active" data-select="chat" aria-pressed="true">聊天</button>、<button class="action-word" data-select="work" aria-pressed="false">工作</button></span><span>和<button class="action-word" data-select="code" aria-pressed="false">编程</button></span></h1>
-<div class="black-ring" aria-hidden="true"></div><div class="hero-actions"><button class="black" data-open="立即试用">立即试用*</button><button class="download" data-open="下载 ChatGPT">下载应用 ↗</button></div>
+<div class="mobile-intro-art" aria-hidden="true"><div class="mobile-artwork"></div></div><div class="black-ring" aria-hidden="true"></div><div class="hero-actions"><button class="black" data-open="立即试用">立即试用*</button><button class="download" data-open="下载 ChatGPT">下载应用 ↗</button></div>
 </section>
 <section class="mode-experience" id="showcase" aria-label="聊天、工作和 Codex 产品演示" data-phase="intro" data-mode="chat">
 <div class="intro-art" aria-hidden="true"><div class="artwork"></div></div>
@@ -24,7 +24,7 @@
 </div>
 <div class="mode-window" data-mode="chat"><div class="window-images"><img class="mode-image current" id="showcase-image" src="assets/chat.webp" alt="ChatGPT 日常对话官方界面" width="1920" height="1231"></div><button id="image-expand" aria-label="放大产品界面">↗</button></div>
 </div>
-</section>
+<div class="mobile-modes" role="region" aria-roledescription="carousel" aria-label="ChatGPT 手机模式"></div><div class="mobile-paddles"><button aria-label="上一个模式" id="mode-prev">←</button><button aria-label="下一个模式" id="mode-next">→</button></div></section>
 <section class="uses" aria-labelledby="uses-title">
 <div class="uses-heading"><h2 id="uses-title">让工作、生活，<br>以及你关心的事更进一步。</h2><div class="card-controls"><button id="card-prev" aria-label="上一个功能" disabled>←</button><button id="card-next" aria-label="下一个功能">→</button></div></div>
 <div class="feature-cards" aria-label="ChatGPT 用途">
@@ -43,6 +43,6 @@
 </main>
 <footer><strong>OpenAI</strong><div><span>研究<br>安全<br>API<br>新闻</span><span>使用条款<br>隐私政策<br>使用政策</span></div><p>* 私人学习页，参考 2026-10-07 ChatGPT 中文公开介绍页。官方图片、字标和字体归 OpenAI 及原作者所有。本地重建交互与滚动曲线，实际服务请访问官网。</p><a href="../../index.html">← Design Atlas</a><a href="https://chatgpt.com/zh-Hans-CN/overview/" target="_blank" rel="noreferrer">原始官网 ↗</a><button id="motion-toggle" aria-pressed="false">暂停演出</button></footer>
 <dialog id="account"><button class="close" aria-label="关闭弹窗">×</button><h2></h2><p>这是本地界面研究。实际使用、注册与下载请前往 ChatGPT 官网。</p><a class="black" href="https://chatgpt.com/overview/" target="_blank" rel="noreferrer">前往 ChatGPT ↗</a></dialog>
-<dialog id="image-dialog"><button class="close" aria-label="关闭图片">×</button><img alt="放大的官方产品界面"></dialog>
-<script src="motion-data.js"></script><script src="script.js"></script>
-</body></html>
+<dialog id="image-dialog"><button class="close" aria-label="关闭图片">×</button><img alt="放大的官方产品界面" loading="lazy"></dialog>
+<script type="application/x-case-script" data-src="motion-data.js"></script><script type="application/x-case-script" data-src="script.js"></script>
+<script src="../../case-loading.js" defer></script></body></html>

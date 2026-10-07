@@ -5,3 +5,9 @@
 
 /* Observable official mechanism, locally implemented without the vendor runtime. */
 html[data-motion=reduce]{scroll-behavior:auto;scroll-snap-type:none}html[data-motion=reduce] *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+
+.head{position:relative;top:auto}.head.is-compact{position:fixed;top:0;left:0;width:100%;height:50px;background:#bf0d3e;color:#fff;box-shadow:none}.head.is-compact .main-nav{color:#fff}.head.is-compact .museum-logo{top:10px;left:25px;width:154px}.head.is-compact .museum-logo img{height:28px}.head.is-compact #language-toggle{color:#fff}.top{transition:opacity 150ms ease}.top.in-footer{position:absolute;bottom:30px;right:20px}footer{position:relative}.menu-open{overflow:hidden}
+@media(max-width:760px){.head{position:sticky;top:0}.head.is-compact{position:sticky;background:#fff;color:#bf0d3e;height:68px}#mobile-nav{position:fixed;inset:68px 0 0 auto;width:100%;max-width:none;background:#fff;box-shadow:none;padding:25px 8vw;overflow-y:auto;z-index:26}.menu-open #menu-toggle{font-size:32px}.top.in-footer{right:10px;bottom:10px}}
+html[data-motion=reduce] *{animation:none!important;transition:none!important}
+
+@media(max-width:760px){.head{position:relative;top:auto}#mobile-nav{inset:0 0 0 auto;padding:12px 6vw 35px}.mobile-nav-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px}.mobile-nav-top img{width:180px}.mobile-nav-top button{width:47px;height:47px;background:#bf0d3e;border:0;color:#fff;font-size:32px}.menu-open .head>#menu-toggle{visibility:hidden}}

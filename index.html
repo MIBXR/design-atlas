@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Design Atlas — 个人风格参考库</title><meta name="description" content="从真实网页、设计理论到可复用 Prompt 与交互 Demo 的个人设计参考库。"><link rel="stylesheet" href="atlas.css"><link rel="icon" href="favicon.svg" type="image/svg+xml"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Design Atlas — 个人风格参考库</title><meta name="description" content="从真实网页、设计理论到可复用 Prompt 与交互 Demo 的个人设计参考库。"><link rel="stylesheet" href="atlas.css"><link rel="icon" href="favicon.svg" type="image/svg+xml"><script src="theme.js" defer></script></head>
 <body>
 <a class="skip" href="#main">跳到内容</a>
 <aside class="rail">
@@ -20,7 +20,7 @@
   <div class="rail-bottom"><span class="status-dot"></span> LOCAL / SOURCE-BACKED<br><span>核验日期 · 2026.10.07</span></div>
 </aside>
 <main id="main" tabindex="-1">
-  <header class="topbar"><span>你的设计灵感，有据可循。</span><div><span class="edition">VOL. 02</span><button id="compare-open" class="text-button">比较 <span id="compare-count">0</span>/3 ↗</button></div></header>
+  <header class="topbar"><span>你的设计灵感，有据可循。</span><div><label class="atlas-theme-control">显示主题<select data-atlas-theme-choice aria-label="参考库显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label><span class="edition">VOL. 02</span><button id="compare-open" class="text-button">比较 <span id="compare-count">0</span>/3 ↗</button></div></header>
   <section id="collection">
     <div class="hero"><div><p class="eyebrow">OBSERVE. UNDERSTAND. MAKE.</p><h1>从看见风格，<br>到掌握它的语言<span class="period">.</span></h1><p class="hero-desc"><span id="hero-count">29</span> 个案例与设计方向。真实案例、设计约束、可复用 Prompt，<br class="desktop">与可以亲手操作的本地代码 demo。</p></div><div class="hero-art" aria-hidden="true"><span class="a-grid"></span><span class="a-disc"></span><span class="a-square"></span><span class="a-triangle"></span><small>A STUDY OF FORM<br>AND FUNCTION / 2026</small></div></div>
     <div class="collection-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索风格、案例、交互或约束…" aria-label="搜索风格、案例、交互或约束"><kbd>/</kbd></label><label class="sort">国家 / 地区<select id="country" aria-label="按国家或地区筛选"><option value="all">全部地区</option></select></label><label class="sort">排序<select id="sort" aria-label="排序方式"><option value="curated">策展顺序</option><option value="title">名称顺序</option></select></label></div>
@@ -33,5 +33,5 @@
 </main>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-text"></span><button id="compare-go">并排比较 ↗</button><button id="compare-clear" class="text-button">清空</button></div>
 <dialog id="favorite-dialog"><form method="dialog"><button class="dialog-close" aria-label="关闭收藏管理">×</button></form><h2>收藏在你的浏览器中</h2><p>收藏保存为本网站的 localStorage 数据，只包含案例 ID。刷新仍在；浏览器、地址或端口不同会产生独立收藏。清理网站数据会删除收藏，Git 不会自动保存它。</p><button id="favorite-export" class="primary-button">导出收藏 JSON ↓</button><p>导出时，下方也会显示 JSON，方便复制或自行放进 Git 留存。粘贴备份后导入，会合并有效案例 ID：</p><textarea id="favorite-json" aria-label="收藏备份 JSON" placeholder="粘贴导出的 JSON…"></textarea><button id="favorite-import" class="primary-button">导入并合并</button><p id="favorite-status" role="status"></p></dialog><div id="toast" role="status" class="toast"></div>
-<script src="catalog.js"></script><script src="atlas.js"></script>
+<script src="asset-sources.js"></script><script src="asset-runtime.js"></script><script src="asset-cache.js"></script><script src="catalog.js"></script><script src="atlas.js"></script>
 </body></html>

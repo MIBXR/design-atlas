@@ -1,49 +1,15 @@
 {
   "sourceDate": "2026-10-07",
-  "scope": "真实官网公开资源的私人学习局部复现",
+  "referenceUrl": "https://ak.hypergryph.com/",
+  "edition": "中国大陆 / 简体中文",
+  "scope": "本次当下官网的私人学习归档，仅当前最终保留资产",
   "assets": [
     {
-      "file": "background.jpg",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/bg.c03d00a6.jpg",
-      "use": "官网场景背景",
+      "file": "amiya-e2.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/amiya_e2.6bc004b9.png",
+      "use": "阿米娅精英二立绘",
       "owner": "Hypergryph / 鹰角网络",
-      "bytes": 138403,
-      "contentType": "image/jpeg",
-      "retrievedAt": "2026-10-07",
-      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
-      "width": 1920,
-      "height": 1080,
-      "dimensions": [
-        1920,
-        1080
-      ],
-      "format": "JPEG",
-      "sha256": "e44c737212d52aa9e4f4be09322bf73bbcf8c6147f8c717e6cfc7bfdb48ceb10"
-    },
-    {
-      "file": "amiya.png",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/amiya_e1.739a31c1.png",
-      "use": "阿米娅精英一立绘",
-      "owner": "Hypergryph / 鹰角网络",
-      "bytes": 584564,
-      "contentType": "image/png",
-      "retrievedAt": "2026-10-07",
-      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
-      "width": 1024,
-      "height": 1024,
-      "dimensions": [
-        1024,
-        1024
-      ],
-      "format": "PNG",
-      "sha256": "e59f307fd5efa7a26806dc687d5fbc89fc203532f825dc8eec0d4ebec02ec0aa"
-    },
-    {
-      "file": "kaltsit.png",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit_e1.a53cfc2e.png",
-      "use": "凯尔希精英一立绘",
-      "owner": "Hypergryph / 鹰角网络",
-      "bytes": 1171898,
+      "bytes": 3379229,
       "contentType": "image/png",
       "retrievedAt": "2026-10-07",
       "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
@@ -54,61 +20,7 @@
         2048
       ],
       "format": "PNG",
-      "sha256": "55541275ebb108bf57812b604480b1d939545d78f12f2c3647c5a66c86654d34"
-    },
-    {
-      "file": "kaltsit-e2.png",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit_e2.a0c208dc.png",
-      "use": "凯尔希精英二立绘",
-      "owner": "Hypergryph / 鹰角网络",
-      "bytes": 2574398,
-      "contentType": "image/png",
-      "retrievedAt": "2026-10-07",
-      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
-      "width": 2048,
-      "height": 2048,
-      "dimensions": [
-        2048,
-        2048
-      ],
-      "format": "PNG",
-      "sha256": "cc75f8d39869df5202c320c4635cefae3d5d2ddfcd92dbd854246f8f02cbf702"
-    },
-    {
-      "file": "chen.png",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/chen_e1.54258041.png",
-      "use": "陈精英一立绘",
-      "owner": "Hypergryph / 鹰角网络",
-      "bytes": 426774,
-      "contentType": "image/png",
-      "retrievedAt": "2026-10-07",
-      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
-      "width": 1024,
-      "height": 1024,
-      "dimensions": [
-        1024,
-        1024
-      ],
-      "format": "PNG",
-      "sha256": "a14f1e8403e672ff0321b74de6907574142d38dc63319faf3ccc7b122abbe759"
-    },
-    {
-      "file": "kaltsit-thumb.png",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit.05c0f5e1.png",
-      "use": "凯尔希缩略图",
-      "owner": "Hypergryph / 鹰角网络",
-      "bytes": 140163,
-      "contentType": "image/png",
-      "retrievedAt": "2026-10-07",
-      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
-      "width": 180,
-      "height": 360,
-      "dimensions": [
-        180,
-        360
-      ],
-      "format": "PNG",
-      "sha256": "23b374fc0eae7b9722cf91388119e301d32cb62a9b7f928eef917b29426bb16c"
+      "sha256": "8fa6ef35c4384a1d39db7f5d706a1b903c1d498b335dbe43f1196286606c5b17"
     },
     {
       "file": "amiya-thumb.png",
@@ -129,42 +41,6 @@
       "sha256": "01a573d2b8c4a6be80d07dc0b90ff09d218829b21624d800f536b4b31038251e"
     },
     {
-      "file": "chen-thumb.png",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/chen.4d5cd8a0.png",
-      "use": "陈缩略图",
-      "owner": "Hypergryph / 鹰角网络",
-      "bytes": 134289,
-      "contentType": "image/png",
-      "retrievedAt": "2026-10-07",
-      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
-      "width": 180,
-      "height": 360,
-      "dimensions": [
-        180,
-        360
-      ],
-      "format": "PNG",
-      "sha256": "e1ba9ca7df65145725b372daf0fbc5a266053ad747e2a5cefa5a5b8e0bc82b14"
-    },
-    {
-      "file": "rhodes-island.png",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/rhodes_island.18d9416c.png",
-      "use": "罗德岛阵营标识",
-      "owner": "Hypergryph / 鹰角网络",
-      "bytes": 6455,
-      "contentType": "image/png",
-      "retrievedAt": "2026-10-07",
-      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
-      "width": 95,
-      "height": 81,
-      "dimensions": [
-        95,
-        81
-      ],
-      "format": "PNG",
-      "sha256": "f6faa9b6dedc3cf091f686d1278e9b6738c4981da27c63f1bcd39e05114eed75"
-    },
-    {
       "file": "amiya-voice.mp3",
       "url": "https://web.hycdn.cn/arknights/official/_next/static/media/audio/amiya_ja.eb4ec8.mp3",
       "use": "阿米娅日语角色语音，并非 BGM",
@@ -177,6 +53,151 @@
       "durationSeconds": 8.25,
       "hasAudio": true,
       "browserDurationSeconds": 8.203265
+    },
+    {
+      "file": "amiya.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/amiya_e1.739a31c1.png",
+      "use": "阿米娅精英一立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 584564,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "sha256": "e59f307fd5efa7a26806dc687d5fbc89fc203532f825dc8eec0d4ebec02ec0aa"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/animation.a945a8f3.jpg",
+      "file": "animation.jpg",
+      "bytes": 251727,
+      "sha256": "9edd6dddd4eb6e7c4f92839fac954d9cd0160d4668ed081625e9162e0908c906",
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口图像/标识",
+      "width": 480,
+      "height": 1080,
+      "dimensions": [
+        480,
+        1080
+      ],
+      "format": "JPEG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/animation_m.45c18cf8.jpg",
+      "file": "animation_m.jpg",
+      "bytes": 83199,
+      "sha256": "f05a53f644cdb1a5805e4ef3963145981f4c74acfe77913493bb69aaa4a43a62",
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口移动图像/标识",
+      "width": 660,
+      "height": 248,
+      "dimensions": [
+        660,
+        248
+      ],
+      "format": "JPEG"
+    },
+    {
+      "file": "arknights-logo.svg",
+      "url": "https://ak.hypergryph.com/",
+      "use": "当前官网 DOM 的 svg_def-title_arknights 原始路径，保持 254×119 viewBox",
+      "transform": "提取公开 SVG symbol 成独立 SVG 文件",
+      "contentType": "image/svg+xml",
+      "bytes": 31808,
+      "sha256": "ae96f3a2f7133818ec7daa6da6c5cb4898b81a8e9f1cf5a0cc42bce3e8abdffc",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "width": 254,
+      "height": 119,
+      "dimensions": [
+        254,
+        119
+      ],
+      "format": "SVG"
+    },
+    {
+      "file": "background.jpg",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/bg.c03d00a6.jpg",
+      "use": "官网场景背景",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 138403,
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "sha256": "e44c737212d52aa9e4f4be09322bf73bbcf8c6147f8c717e6cfc7bfdb48ceb10"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/Bender-Bold.b4c7998a.woff2",
+      "file": "Bender-Bold.woff2",
+      "bytes": 12512,
+      "sha256": "fb51b9dd04bfa20a086cde154242a5f896bb1971a34109248e4c8eb0c31d920b",
+      "contentType": "font/woff2",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "官网原始字体，用于本地工业档案排版"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/Bender-Regular.6950ba72.woff2",
+      "file": "Bender-Regular.woff2",
+      "bytes": 12000,
+      "sha256": "7cb65e1474ffb62df947dd6b0afe856611e61a36dd3c46653b585aa285458006",
+      "contentType": "font/woff2",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "官网原始字体，用于本地工业档案排版"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/bg2.e562d9ae.png",
+      "file": "bg2.png",
+      "bytes": 38264,
+      "sha256": "7e3808771801319cafc5eec7f0764e2feb8c418b96984e1995f7a251ef3dbef4",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "官网章节背景层",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "PNG"
+    },
+    {
+      "file": "bgm.mp3",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/audio/bgm.ea4286.mp3",
+      "use": "官网 BGM；未见公开曲名，默认关闭",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 3130419,
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "sha256": "3ea3799565739b4fecd05ff986a21d77a44c09b9c6000e1aff0bc6144e870ed1",
+      "durationSeconds": 195.65,
+      "hasAudio": true,
+      "browserDurationSeconds": 195.651188
     },
     {
       "file": "chen-e2.png",
@@ -197,22 +218,22 @@
       "sha256": "6abe7afc6f2cf9e46e3e0d5c8ce8dba7b0e057869b7ccc5da416b43abae7be35"
     },
     {
-      "file": "amiya-e2.png",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/amiya_e2.6bc004b9.png",
-      "use": "阿米娅精英二立绘",
+      "file": "chen-thumb.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/chen.4d5cd8a0.png",
+      "use": "陈缩略图",
       "owner": "Hypergryph / 鹰角网络",
-      "bytes": 3379229,
+      "bytes": 134289,
       "contentType": "image/png",
       "retrievedAt": "2026-10-07",
       "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
-      "width": 2048,
-      "height": 2048,
+      "width": 180,
+      "height": 360,
       "dimensions": [
-        2048,
-        2048
+        180,
+        360
       ],
       "format": "PNG",
-      "sha256": "8fa6ef35c4384a1d39db7f5d706a1b903c1d498b335dbe43f1196286606c5b17"
+      "sha256": "e1ba9ca7df65145725b372daf0fbc5a266053ad747e2a5cefa5a5b8e0bc82b14"
     },
     {
       "file": "chen-voice.mp3",
@@ -228,23 +249,81 @@
       "hasAudio": true
     },
     {
-      "file": "bgm.mp3",
-      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/audio/bgm.ea4286.mp3",
-      "use": "官网 BGM；未见公开曲名，默认关闭",
+      "file": "chen.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/chen_e1.54258041.png",
+      "use": "陈精英一立绘",
       "owner": "Hypergryph / 鹰角网络",
-      "bytes": 3130419,
-      "contentType": "audio/mpeg",
+      "bytes": 426774,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "sha256": "a14f1e8403e672ff0321b74de6907574142d38dc63319faf3ccc7b122abbe759"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/common_mask.55fff2e9.png",
+      "file": "common_mask.png",
+      "bytes": 452646,
+      "sha256": "743f20f36ef3fbc101388e209193f98862eef6040544eea74836f3758fced213",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "官网工业织物覆盖纹理",
+      "width": 960,
+      "height": 540,
+      "dimensions": [
+        960,
+        540
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/gallery_active.d45cfc72.png",
+      "file": "gallery_active.png",
+      "bytes": 124101,
+      "sha256": "d3d49bcfe42beadf5bc8388268e284bb9f910bb1131f458ff00500abd6aca8ef",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MEDIA 插画物件图像",
+      "width": 282,
+      "height": 425,
+      "dimensions": [
+        282,
+        425
+      ],
+      "format": "PNG"
+    },
+    {
+      "file": "home-poster.jpg",
+      "url": "https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8",
+      "use": "上述官方视频 0.1 秒静态后备帧",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 273961,
+      "transform": "ffmpeg 取静态视频帧",
       "retrievedAt": "2026-10-07",
       "license": "版权归原品牌；私人设计学习",
-      "sha256": "3ea3799565739b4fecd05ff986a21d77a44c09b9c6000e1aff0bc6144e870ed1",
-      "durationSeconds": 195.65,
-      "hasAudio": true,
-      "browserDurationSeconds": 195.651188
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "sha256": "ae3941e8d532221bf576dbbfe94a424c3c55ddbda2187ebc5a2800b23410e393"
     },
     {
       "file": "home.m3u8",
       "url": "https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8",
-      "use": "官网首屏 HLS 清单，取本地短片",
+      "use": "官网首页 HLS 来源清单，本地视频的保留来源资产",
       "owner": "Hypergryph / 鹰角网络",
       "bytes": 197,
       "contentType": "application/x-mpegurl",
@@ -276,29 +355,532 @@
       ]
     },
     {
-      "file": "home-poster.jpg",
-      "url": "https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8",
-      "use": "上述官方视频 0.1 秒静态后备帧",
-      "owner": "Hypergryph / 鹰角网络",
-      "bytes": 273961,
-      "transform": "ffmpeg 取静态视频帧",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/icon-animation.4885daff.png",
+      "file": "icon-animation.png",
+      "bytes": 3618,
+      "sha256": "8eed388e0bac29ca40763b05c842a2e1b2d7673d50ce3753857d83dc24a4c234",
+      "contentType": "image/png",
       "retrievedAt": "2026-10-07",
-      "license": "版权归原品牌；私人设计学习",
-      "width": 1920,
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口图像/标识",
+      "width": 49,
+      "height": 57,
+      "dimensions": [
+        49,
+        57
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/icon-integrated_strategies.05cfb26b.png",
+      "file": "icon-integrated_strategies.png",
+      "bytes": 4248,
+      "sha256": "bed54d6c5594bf3a4a16f227fd9b24cfe11a5db8f20f5db23185921f574c9299",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口图像/标识",
+      "width": 59,
+      "height": 59,
+      "dimensions": [
+        59,
+        59
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/icon-reclamation_algorithm.54ea704e.png",
+      "file": "icon-reclamation_algorithm.png",
+      "bytes": 3744,
+      "sha256": "e2d64d692b2074b6fc3214639ef0f6c306e2554e2ba327021323b8cff35cae31",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口图像/标识",
+      "width": 63,
+      "height": 57,
+      "dimensions": [
+        63,
+        57
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/icon-terra_historicus.fa655671.png",
+      "file": "icon-terra_historicus.png",
+      "bytes": 4419,
+      "sha256": "b1483bdb0ee5c1318ddfc58deae8f40016b8ba0716f920d401ece606c0f3c7d0",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口图像/标识",
+      "width": 36,
+      "height": 71,
+      "dimensions": [
+        36,
+        71
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/infected.da8e117c.png",
+      "file": "infected.png",
+      "bytes": 186849,
+      "sha256": "65904ef8f3921be0797471cad6a5faf612fd5d513590bddd7528d884871931bb",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "感染者目录随动预览原图",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/integrated_strategies.e6e35f3c.png",
+      "file": "integrated_strategies.png",
+      "bytes": 637476,
+      "sha256": "b0e3a8b56c513ee418a55ed7e091b3436abc0ba840c7dce001eee8ddfb8f4a70",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口图像/标识",
+      "width": 480,
       "height": 1080,
       "dimensions": [
-        1920,
+        480,
         1080
       ],
-      "format": "JPEG",
-      "sha256": "ae3941e8d532221bf576dbbfe94a424c3c55ddbda2187ebc5a2800b23410e393"
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/integrated_strategies_m.3b3e6f24.png",
+      "file": "integrated_strategies_m.png",
+      "bytes": 223218,
+      "sha256": "b615a9af304501daf5a739e80773d1deb10fb27ef7cade4c0283ebb2dfc74287",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口移动图像/标识",
+      "width": 660,
+      "height": 248,
+      "dimensions": [
+        660,
+        248
+      ],
+      "format": "PNG"
+    },
+    {
+      "file": "kaltsit-e2.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit_e2.a0c208dc.png",
+      "use": "凯尔希精英二立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 2574398,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 2048,
+      "height": 2048,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "sha256": "cc75f8d39869df5202c320c4635cefae3d5d2ddfcd92dbd854246f8f02cbf702"
+    },
+    {
+      "file": "kaltsit-thumb.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit.05c0f5e1.png",
+      "use": "凯尔希缩略图",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 140163,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 180,
+      "height": 360,
+      "dimensions": [
+        180,
+        360
+      ],
+      "format": "PNG",
+      "sha256": "23b374fc0eae7b9722cf91388119e301d32cb62a9b7f928eef917b29426bb16c"
+    },
+    {
+      "file": "kaltsit-voice.wav",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/audio/kaltsit_ja.5d52d4.wav",
+      "use": "凯尔希官方日语角色配音，非 BGM",
+      "contentType": "audio/wav",
+      "bytes": 1957836,
+      "sha256": "9c1e879e3f84d2d3652403ad1d1cdc1ffbbf6dee5cb319434269a86189809cf3",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "durationSeconds": 22.18934,
+      "hasAudio": true,
+      "format": "WAV"
+    },
+    {
+      "file": "kaltsit.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit_e1.a53cfc2e.png",
+      "use": "凯尔希精英一立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 1171898,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 2048,
+      "height": 2048,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "sha256": "55541275ebb108bf57812b604480b1d939545d78f12f2c3647c5a66c86654d34"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/monster_siren_active.8f01230d.png",
+      "file": "monster_siren_active.png",
+      "bytes": 101667,
+      "sha256": "4e60be5980eb1addc032485d6aa5c0826735bf082800d844afd1f69c52d7ec84",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MEDIA 塞壬唱片物件图像",
+      "width": 230,
+      "height": 279,
+      "dimensions": [
+        230,
+        279
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/upload/image/20260929/4b3aa10c9eaa4c046a8cda70845dba17.jpg",
+      "file": "news-yesterday-sea.jpg",
+      "bytes": 286981,
+      "sha256": "18dd2cb64bd2640d68ad12109ddd3573a42909f95f126ddf185a832020d9a576",
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "本次官网「昨日海」活动 Banner",
+      "width": 1277,
+      "height": 749,
+      "dimensions": [
+        1277,
+        749
+      ],
+      "format": "JPEG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/nomadic_city.b6c65b2a.png",
+      "file": "nomadic_city.png",
+      "bytes": 213422,
+      "sha256": "36102181a055a99923963d147f799abbc067fad4a558fcca1e342bb143f36e42",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "移动城邦目录随动预览原图",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/Novecentosanswide-Bold.9c78a9fd.woff2",
+      "file": "Novecentosanswide-Bold.woff2",
+      "bytes": 11796,
+      "sha256": "7afdbbadf081980e247734e88f6475b0787b74f805ea6cbf5e06a083bac5da79",
+      "contentType": "font/woff2",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "官网原始字体，用于本地工业档案排版"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/Novecentosanswide-UltraBold.e5e00ac9.woff2",
+      "file": "Novecentosanswide-UltraBold.woff2",
+      "bytes": 11252,
+      "sha256": "e5ab43d7c1436adb24cb33f657b6e95a3c9b2b2fb5586d7e2ca5ada92a51c04d",
+      "contentType": "font/woff2",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "官网原始字体，用于本地工业档案排版"
+    },
+    {
+      "file": "official-three.js",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/chunks/137e2e70-a4056d5d54967c27.js",
+      "use": "原站 Three.js 渲染模块93019；仅图形运行时，不包含业务、账户或遥测",
+      "contentType": "text/javascript",
+      "transform": "原始模块工厂加独立 IIFE 导出包装",
+      "owner": "Three.js authors",
+      "license": "Three.js runtime under MIT; original notices retained in the public vendor module; brand assets separately owned",
+      "bytes": 582374,
+      "sha256": "d9d1937bbf2bb1b3c5455644ce877bac0d3579dcba52e83bd8ef463280c57c78",
+      "retrievedAt": "2026-10-07"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/operator_active.d697ef2d.png",
+      "file": "operator_active.png",
+      "bytes": 147239,
+      "sha256": "145bfba0aeeb4f26816644a84e46bc7e355dae788693f9bc1a5eb08284df6ba7",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MEDIA 干员物件图像",
+      "width": 365,
+      "height": 313,
+      "dimensions": [
+        365,
+        313
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/originium_arts.59c1b8e9.png",
+      "file": "originium_arts.png",
+      "bytes": 196498,
+      "sha256": "7892c87ede064fa5ec5cd8baaaca22f07a888049a5de62b5d2722bdd4b861ec6",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "源石技艺目录随动预览原图",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/originiums.9f8e9628.png",
+      "file": "originiums.png",
+      "bytes": 147748,
+      "sha256": "4c6b8d7adb3b13a2cd5b3afed7a80e7db9c0a93adfe716772ae54bfd6bba1ae5",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "源石目录随动预览原图",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/Oswald-DemiBold.633163ca.woff2",
+      "file": "Oswald-DemiBold.woff2",
+      "bytes": 13368,
+      "sha256": "ce798669bb42d083fc896cd618e806e2168ed132d4004c2b0e26b48562c5d80f",
+      "contentType": "font/woff2",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "官网原始字体，用于本地工业档案排版"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/particle.f4b76a4f.png",
+      "file": "particle.png",
+      "bytes": 309,
+      "sha256": "1cb61db3d4026597740408c0d599739d02cc8ff6bfe76106150aa784d8bfa1d0",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "原始 WebGL 点精灵纹理",
+      "width": 16,
+      "height": 16,
+      "dimensions": [
+        16,
+        16
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/reclamation_algorithm.91dd81b0.png",
+      "file": "reclamation_algorithm.png",
+      "bytes": 697825,
+      "sha256": "8f37c9fb1cf35bf31d1c183f8f9b209a825d0f7f891c65dd6cf9bc46667c28a5",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口图像/标识",
+      "width": 481,
+      "height": 1080,
+      "dimensions": [
+        481,
+        1080
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/reclamation_algorithm_m.68fd8eb7.png",
+      "file": "reclamation_algorithm_m.png",
+      "bytes": 249470,
+      "sha256": "5e7587597311a65bf8e122e140ac7c56c7c43f00d9ebf5ab54321d453ce30070",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口移动图像/标识",
+      "width": 660,
+      "height": 248,
+      "dimensions": [
+        660,
+        248
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/reunion.0f1a9e2b.png",
+      "file": "reunion.png",
+      "bytes": 118426,
+      "sha256": "464908dcb35e8aaa569b69eda2f944d286bfe38b7c41c5a81eb9ddfae7313e31",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "整合运动目录随动预览原图",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG"
+    },
+    {
+      "file": "rhodes-island.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/rhodes_island.18d9416c.png",
+      "use": "罗德岛阵营标识",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 6455,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 95,
+      "height": 81,
+      "dimensions": [
+        95,
+        81
+      ],
+      "format": "PNG",
+      "sha256": "f6faa9b6dedc3cf091f686d1278e9b6738c4981da27c63f1bcd39e05114eed75"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/rhodes_island.4f587114.png",
+      "file": "rhodes_island.png",
+      "bytes": 111164,
+      "sha256": "9c260e8b992f81c156d83a88fc9d603d123b1ad8227d3fd532774b4356153457",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "罗德岛目录随动预览原图",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/terra_historicus.70c95ec8.jpg",
+      "file": "terra_historicus.jpg",
+      "bytes": 119808,
+      "sha256": "11f33e9a55d40a85c46b94aa1aa6a968356a0668cc6fcc4616e5dc964fd6b59e",
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口图像/标识",
+      "width": 480,
+      "height": 1080,
+      "dimensions": [
+        480,
+        1080
+      ],
+      "format": "JPEG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/terra_historicus_m.5b88c128.jpg",
+      "file": "terra_historicus_m.jpg",
+      "bytes": 85467,
+      "sha256": "d9c5637280f3f6ae2f3f9569a07b54da7ddb45a631d668ab3cc258ba7f36e776",
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MORE 官方入口移动图像/标识",
+      "width": 660,
+      "height": 248,
+      "dimensions": [
+        660,
+        248
+      ],
+      "format": "JPEG"
+    },
+    {
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/video_active.693c91f3.png",
+      "file": "video_active.png",
+      "bytes": 149048,
+      "sha256": "cdf992ef7b557d1c61a11f7c8e474b788253e8d6a6d0d5b9d10b3da28bd5965e",
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可",
+      "use": "MEDIA 影像物件图像",
+      "width": 488,
+      "height": 318,
+      "dimensions": [
+        488,
+        318
+      ],
+      "format": "PNG"
+    },
+    {
+      "file": "world-models.json",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/chunks/app/page-a96c46ff52d96bd7.js",
+      "use": "WORLD 七套原始 JSON 点位，1785/3550/4230/3882/4788/3200/5652 点",
+      "contentType": "application/json",
+      "transform": "提取公开模块11901/44007/95075/83545/54860/29285/85686，原始点位保持",
+      "bytes": 286117,
+      "sha256": "e5e4695aa9bba3e7a68c958530916ae9a223a2dbbe71725f343b357548d9df49",
+      "retrievedAt": "2026-10-07",
+      "owner": "Hypergryph / 鹰角网络",
+      "license": "官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可"
     }
   ],
   "limitations": [
-    "本地3章节与3人，省略情报、媒体、更多、账号和支付等完整业务。",
-    "HLS原首页两段本地转封装并缩为1440宽CRF26，去音轨；BGM用独立官方文件。",
-    "中文明日方舟品牌头以本地文字呈现，非官方描边字标的完全复刻。",
-    "WORLD右侧CSS晶体替代原站WebGL粒子；术语说明是学习摘要。",
-    "仅阿米娅/陈官方日语语音已下载，凯尔希未冒充可播放。"
+    "完整六章节和页脚交接；新闻为单幅活动图和三条，MEDIA 为四入口图像网格，MORE 为四个外部入口，深层业务由官网承接。",
+    "保留三位干员各E1/E2及真实日语配音；未复现六人、E0和全部语种/背景图。",
+    "WORLD 原始七套点位、纹理与隔离的公开 Three 渲染模块；点阵帧调度为本地实现，省略原站20枚独立萤火背景。",
+    "首页视频为原 HLS 两段缩至1440×810的18.13秒静音片段；完整独立官方 BGM195.65秒按需开启，未见公开曲名或核验到专用操作音。",
+    "中文使用系统字体；本地加载预算、clip-path曲线与页脚高度为明确适配，不冒称整个官网移植。"
   ]
 }

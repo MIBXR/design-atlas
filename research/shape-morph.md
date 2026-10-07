@@ -1,6 +1,6 @@
 # 几何形状变化：让单元保持连续
 
-核验日期：2026-10-07。将用户的“集合形状变化”解释为几何单元组成和变形。历史案例 [In Pieces](https://species-in-pieces.com/) 本次 web 读取失败；以 [Bryan James 原作者制作文章](https://www.smashingmagazine.com/2015/06/the-making-of-in-pieces/) 与 [CSSconf EU 原作者访谈](https://blog.cssconf.eu/2015/09/24/introducing-bryan-james/) 核实，不能称为当日官网视觉观察。
+核验日期：2026-10-07。将用户的“集合形状变化”解释为几何单元组成和变形。原作 [In Pieces](https://species-in-pieces.com/) 本次 web 读取失败；以 [Bryan James 原作者制作文章](https://www.smashingmagazine.com/2015/06/the-making-of-in-pieces/) 与 [CSSconf EU 原作者访谈](https://blog.cssconf.eu/2015/09/24/introducing-bryan-james/) 核实，不能称为当日官网视觉观察。
 
 ## 已核验事实
 
@@ -8,7 +8,7 @@
 
 CSSconf 访谈再次解释从 CSS 多边形实验到核心概念的形成。[原作者访谈](https://blog.cssconf.eu/2015/09/24/introducing-bryan-james/)
 
-这是有日期和原作者依据的历史优秀案例。本条不承诺原站当前可交互、兼容现代浏览器，也未复制原作物种、图形坐标或其他素材。
+本条为依据2015年原作者制作文章完成的经典风格练习。本条不承诺原站当前可交互、兼容现代浏览器，也未复制原作物种、图形坐标或其他素材。
 
 ## 理论和设计推断
 

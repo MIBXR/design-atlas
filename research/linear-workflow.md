@@ -1,35 +1,43 @@
-# Linear：深色产品开发系统
+# Linear：当前页面的设计与交互
 
-观察日期：2026-10-07。参考：[公开页面](https://linear.app/)。原站内容以该日期与语言版本为准。
+来源：[https://linear.app/](https://linear.app/)。采集日期：2026-10-07。范围：英文首页，单一当前快照。
 
-## 设计特点与分析
+固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。
 
-64px左对齐标题先定位团队与agents产品开发系统；灰色副文、New Loops入口与细边框退到次级。紧接三栏issue演示：Pulse/Inbox侧栏、Faster app launch、正文/活动评论和属性。官方Inter、头像与黑白氛围图保持真实产品语气。
+## 触发、视觉响应与用途
 
-任务信息优先，项目色与状态色承担识别；收件、任务与规划章节沿工作流推进。2024/2026设计文章讲应用UI，其层级原则可迁移，不能作为营销首页每个组件的作者意图。
+- 进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。
 
-## 交互机制与复现映射
+- Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。
 
-| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
-|---|---|---|
-| Favorites点击 | Agent tasks为Offline Mode/Core Performance/UI Refresh三列11任务；Insights为3389/1128/729统计、assignee图与项目表；UI Refresh为项目overview。 | issue、看板、insights六行表、项目页四种独立结构，直接切换；未测得额外过渡。 |
-| Product指针进入 | 展开Intake/Plan/AI/Build链接。 | 指针、点击、键盘与Esc；160ms局部缩放淡入为近似。 |
-| Working标签 | 源CSS的agentLabelSweep/agentBorderSweep为2秒linear。 | 只保留任务Working文字的局部扫光；减少动态关闭。 |
-| Intake下滚 | Slack式对话浮窗；消息opacity0/1分阶段变化，输入区有低透明状态。 | 下方Triage保留简化请求示例；完整自动消息与浮动agent面板未实现。 |
-| 任务与资源 | 工作视图表达不同层级。 | 状态、收藏、Run agent、任务卡和项目资源产生本地反馈；不连接真实工作空间。 |
+- Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。
 
-![Agent tasks：三列任务看板，区别于issue详情与统计页](../previews/linear-agent-tasks.jpg)
+- AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。
 
-## 理论与约束
+- Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。
 
-WAI Tabs用于选择状态和键盘。手机收束侧栏与次级属性，保留核心内容；后续图表分布和示例数据为局部近似，完整AI/automations、发布章节与实时执行未覆盖。
+- 手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。
 
-## 来源与材料
+## 完整浏览路径
 
-- [Linear 首页](https://linear.app/)（实例）：2026-10-07首页：64px标题、issue演示；Favorites切换三列看板、insights和project；Product指针进入展开。
-- [Linear 2026 design refresh](https://linear.app/now/behind-the-latest-design-refresh)（理论）：2026-03-12应用UI设计：导航退后、低饱和、内容优先；用于层级分析。
-- [Linear UI redesign](https://linear.app/now/how-we-redesigned-the-linear-ui)（理论）：2024应用界面改版文章，辅助解释信息层级。
-- [WAI Tabs Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)（规范）：任务与分类选择的键盘和选择状态参考。
-- [Linear 当前主页组件样式](https://static.linear.app/web/_next/static/css/Dop5ZgCE.css)（实例）：Working的agentLabelSweep/agentBorderSweep为2秒linear；Intake消息opacity分阶段变化。
+首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。
 
-[原站对照](screenshots/linear-workflow-source.png) · [Demo](../demos/linear-workflow/index.html) · [完整Prompt与设计元素](../entries/linear-workflow.json) · [还原范围](../demos/linear-workflow/fidelity.md) · [资产来源](../demos/linear-workflow/assets-manifest.json)。品牌与媒体权利归原作者。
+## 原站事实和复现边界
+
+源公共模块提供首屏 1.3s+1.5s、Intake 2000/1000/1400/800ms，以及 AI 思考/交错时间；匿名源 Send “create issues” 实测回复和卡插入。本地两次发送实测 Todo/In progress 数量变化、编辑及 Dracula 主题。
+
+消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。
+
+## 主题与声音
+
+营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。
+
+当前首页没有配乐、音效和音视频播放器。 消息、任务板和代码状态承担产品叙事，不靠声音强调任务。
+
+## 配色、排版与元素协调
+
+主题和运动共同建立产品重点：固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。
+
+## 可复用 Prompt
+
+以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。

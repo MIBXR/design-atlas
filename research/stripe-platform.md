@@ -1,35 +1,47 @@
-# Stripe：彩带与金融产品矩阵
+# Stripe：当前页面的设计与交互
 
-观察日期：2026-10-07。参考：[公开页面](https://stripe.com/)。原站内容以该日期与语言版本为准。
+来源：[https://stripe.com/](https://stripe.com/)。采集日期：2026-10-07。范围：英文全球首页，单一当前快照。
 
-## 设计特点与分析
+官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。
 
-48px连续段落式定位置于细框线内容区；Söhne、海军蓝文字、紫色小圆角按钮与橙粉紫彩带协作。产品以不同底色和跨度呈现，Payments约810×676、Billing约400×676；后续全球指标与客户案例连接规模和业务证据。
+## 触发、视觉响应与用途
 
-彩带建立识别，网格和真实支付界面提供秩序；产品矩阵把抽象基础设施转换成可理解的业务模型。这是页面分析。
+- 桌面指针进入/点击分类 → popup 以源 300ms 高度、位移和透明度衔接，clip/max-height 以 200ms 裁切，均为 cubic-bezier(.45,.05,.55,.95)；分类自然高度连续变化，使目录转换保持空间方向。离开、外部点击或 Escape 关闭，快速反转取消旧动画；减少动态直接完成。
 
-## 交互机制与复现映射
+- 进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。
 
-| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
-|---|---|---|
-| 首屏波带 | 画面随时间形变；SingleWave模块67103/59168/19622定义控制器、网格/材料和配置。Home为gj/P1/y7。 | 隔离20个渲染模块及Three.js r178；保留folded mesh、原shader、light palette、640/1264响应式相机。speed=4e-5、timeOffset=17500、introTimeRamp每render+.016。 |
-| Products指针进入 | 菜单展开；原站触发为指针进入。 | mouseenter幂等展开，click/keyboard、Esc及外部点击可关闭；.18秒过渡和140ms离开延迟为本地近似。 |
-| 客户标识行 | 连续向左平移。 | 双份clip marquee，35秒周期为近似；部分字标以文本呈现。 |
-| 付款UI时间轮换 | terminal文本在mask内translateY(0/−100/−200%)；ROASTERY→SHOWFLIX时商户、金额、checkout商品与颜色同步。 | 三种本地DOM场景；5秒间隔、.75秒过渡为近似，视口内循环。该状态由时间触发，额外hover shader高光未确认。 |
-| 产品与客户操作 | 产品入口、业务模型和企业介绍。 | 产品说明/业务模型和四客户tab；账户、支付与销售不连接后台。 |
+- Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。
 
-![Payments：终端文本与checkout在同一场景中联动](../previews/stripe-payment-motion.jpg)
+- Bento 点击 → 产品详情对话框；真实官网是产品说明/界面扩展，本地内容压缩，业务模型反馈为明确的示范。
 
-## 理论与约束
+- Global 四统计选择 → 当前数字强调、底部细线进度和基础设施说明对应变化；自动推进与指针停留暂停。
 
-2017 Connect文章解释复杂功能的轻盈、就地呈现，是历史理论。WAI Tabs用于本地选择状态与键盘。WebGL暂停按钮、菜单/对话框暂停、离屏/后台停渲染为本地适配；reduce/GPU失败显示官方fallback。容器裁切、标题混色、完整Billing及其他金融演示、推荐器和新闻未完整复现。源截图为中文，本地正文使用同日英文版。渲染来源及适配见[wave-provenance.json](../demos/stripe-platform/assets/wave-provenance.json)。Three.js core与renderer出处保存在该清单。
+- Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。
 
-## 来源与材料
+- 后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。
 
-- [Stripe 公开首页](https://stripe.com/)（实例）：2026-10-07首页：Products指针进入展开、客户标识左移、Payments/Billing跨度与终端竖向换场景。
-- [Connect frontend design](https://stripe.com/blog/connect-front-end-experience)（理论）：2017第一方文章解释复杂平台功能的轻盈呈现与就地产品展示；属于历史设计理论。
-- [WAI Tabs Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)（规范）：客户案例与产品选择的键盘、选择状态参考。
-- [Stripe 当前页产品样式](https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/css/0b96456ec501769a.css)（实例）：产品矩阵、终端mask和菜单的具体组件样式。
-- [Stripe SingleWave 官网组件、shader与三档相机配置](https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js)（实例）：模块67103控制器、59168网格/材料、19622配置；home presets gj/P1/y7，20个纯渲染模块。
+## 完整浏览路径
 
-[原站对照](screenshots/stripe-platform-source.png) · [Demo](../demos/stripe-platform/index.html) · [完整Prompt与设计元素](../entries/stripe-platform.json) · [还原范围](../demos/stripe-platform/fidelity.md) · [资产来源](../demos/stripe-platform/assets-manifest.json)。品牌与媒体权利归原作者。
+波浪首屏 → 6 产品 Bento → Global 4 统计 → 4 客户折叠 → Startup 横向架子 → 平台选择 → 海军蓝开发者内容 → 活动架子 → 结束行动 → 页尾。
+
+## 原站事实和复现边界
+
+源匿名浏览器完成普通滚动至页尾和返回，实测产品详情、四统计及四客户按钮；SingleWave 渲染模块与三个客户新增摄影均来自官方公开资源。没有全局主题选择和声音控制。
+
+桌面 popup 时序与曲线来自本次源 computed CSS；本地 1440px 真实 hover/click 验证首入、分类自然高度切换、离开再入及关闭后 hidden/inert/aria。桌面链接数量压缩，入口位移 12px 与离开等待 140ms 为拟合。
+
+终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。
+
+## 主题与声音
+
+首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。
+
+当前首页没有背景音乐或有声视频。 波浪、产品 UI 和数据选择提供动感，保持金融信息阅读的安静环境。
+
+## 配色、排版与元素协调
+
+主题和运动共同建立产品重点：官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。
+
+## 可复用 Prompt
+
+以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。菜单保留指针进入/离开及键盘路径，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。

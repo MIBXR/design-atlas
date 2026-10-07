@@ -11,7 +11,7 @@
     "产品叙事",
     "配置器"
   ],
-  "summary": "黑色全宽产品舞台、悬浮章节导航、五项亮点图库和官方镜头视频的滚动换帧，构成从硬件整体到细节的叙事。",
+  "summary": "以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。",
   "accent": "#0071e3",
   "background": "#000000",
   "principles": [
@@ -22,18 +22,19 @@
   ],
   "productFocus": "登场动画先呈现产品轮廓，亮点摄影提炼收益，细节选择器让同一舞台解释机身、镜头、尺寸与控件。",
   "interaction": [
-    "悬浮Explore章节导航可展开、Esc关闭。",
-    "五项亮点图库支持手动、播放/暂停、进度和末尾重播；静帧与每项5秒为局部近似。",
-    "设计详情与机身配色选择使用官方静帧。",
-    "镜头舞台随真实滚动进度seek官方视频，不自动播放该scrub媒体。"
+    "进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。",
+    "Highlights 进入视口 → 圆角摄影和进度控件带入，五项图库自动推进；手动选择/暂停/最后重播 → 按相机、续航、颜色、性能、Siri 依次建立产品重点。",
+    "Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。",
+    "镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。",
+    "景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。",
+    "Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。"
   ],
-  "theme": "黑色摄影棚、金属高光、巨型标题与克制蓝色入口，共同强调 Pro 硬件的精确与质感。",
+  "theme": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
   "constraints": [
-    "官方摄影和视频保持比例；滚动镜头使用视频换帧。",
-    "图库五静帧、每项5秒与标题淡出阈值为近似；专用亮点视频和完整3D未移植。",
-    "颜色选择同时提供名称与aria-pressed。",
-    "自然滚动；减少动态时使用poster、静态标题和手动图库。",
-    "价格、供应与购买以官网为准。"
+    "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。源浏览器落在 no-enhanced 布局，增强滚动分支未完成源站实机验证；本地镜头滚动依据公开 VideoScrub 数据实现并实测。",
+    "七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。",
+    "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+    "减少动态保留可读内容、键盘焦点和手动选择。"
   ],
   "useCases": [
     "消费电子",
@@ -59,38 +60,20 @@
   },
   "sources": [
     {
-      "title": "Apple iPhone 官方分类页",
-      "url": "https://www.apple.com/iphone/",
-      "type": "实例",
-      "note": "iPhone产品分类与比较入口；具体交互以iPhone 18 Pro页面为准。"
-    },
-    {
-      "title": "Apple iPhone 18 Pro 产品页",
+      "title": "Apple iPhone 18 Pro 当前公开页面",
       "url": "https://www.apple.com/iphone-18-pro/",
-      "type": "实例",
-      "note": "2026-10-07产品页：首屏、Highlights、Design与镜头滚动；图库有限播放、暂停和末尾重播。"
+      "note": "采集日期 2026-10-07；美国英文产品页",
+      "type": "实例"
     },
     {
       "title": "Apple HIG — Motion",
       "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
       "type": "规范",
       "note": "动效目的和减少动态支持；应用规范向网页的迁移。"
-    },
-    {
-      "title": "Apple 当前页样式",
-      "url": "https://www.apple.com/v/iphone-18-pro/c/built/styles/overview.built.css",
-      "type": "实例",
-      "note": "VideoScrub容器、gallery控制与源样式，用于区分布局缩放和视频内镜头运动。"
-    },
-    {
-      "title": "Apple 当前页脚本",
-      "url": "https://www.apple.com/v/iphone-18-pro/c/built/scripts/overview/main.built.js",
-      "type": "实例",
-      "note": "VideoScrub加载窗口a0t−250vh至a0b+100vh；进度锚点a0t−100vh至a0b−100vh，范围.01至1。"
     }
   ],
-  "prompt": "以【观察日期】的 https://www.apple.com/iphone-18-pro/ 为依据制作局部产品页。使用官方摄影、Apple标识、登场MP4及camera-system WebM，按原比例本地保存并记录来源与权利。黑色全宽首屏保留44px导航、52px信息带、左下产品名称和右下蓝色购买胶囊；下滚显示玻璃质感章节导航，Explore可展开并支持Escape关闭。Highlights使用深灰底、56px左标题和约38px圆角摄影舞台，按Camera/Battery/Colors/A20 Pro/Siri AI排列五张静帧，进入视口时控制从下方出现，提供手动选择、进度、暂停和最后重播；每项5秒、控制入场.65秒是本地近似。Design用最大96px标题、左侧细节胶囊与右侧官方静帧，尺寸和颜色选择必须更新图像与文字状态。镜头段用220vh滚动容器和sticky视窗，p=clamp((viewportHeight-stage.top)/stage.height)，把暂停的视频seek到(.01+.99p)×duration；标题在p=.48至.73淡出，这一阈值标为近似。保留自然滚动，不为首屏摄影增加未经观察的缩放。手机重排控件，颜色选择提供名称与aria-pressed；prefers-reduced-motion使用poster、静态标题和手动图库。购买链接回官网。说明静帧图库、完整3D、专用亮点视频及其他章节的未覆盖范围。迁移到【目标硬件】时重新记录其镜头与滚动关系。",
-  "negativePrompt": "不要用原创硬件SVG替代真实产品；不要用通用两栏hero和三张卡片概括苹果整页；不要宣称完整像素复刻；不要隐藏复现范围；不要滚轮劫持或自动有声播放。",
+  "prompt": "以 https://www.apple.com/iphone-18-pro/ 在【采集日期】的 美国英文产品页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。官方图片、字标与视频不重画，保持黑色产品舞台和后段浅色购物章节。首屏原始 MP4、Highlights 进度轮播、7 项 viewer inline 说明展开/胶囊折叠下移/图像变化/关闭/前后/配色、景深比较和机型选择均保留。用双向 sticky 段串联媒体先出现、标题淡出、说明接入；静帧替代视频也不能删除这种交接机制。横向摄影架子用原生滚动。Watch the film 必须是独立全屏官方影片，不用首屏重播冒充；声音只在用户触发后出现，关闭暂停。减少动态时给静态摄影和完整文案。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+  "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
   "exercise": "保持黑色产品舞台，使用另一款真实产品摄影练习镜头与文案的滚动交接；先记录原站进度再调整曲线。",
   "demo": "demos/apple-product/index.html",
   "preview": "previews/apple-product.jpg",
@@ -103,12 +86,25 @@
     "shape": "摄影大圆角38px、导航玻璃圆角20px、功能胶囊与蓝色购买胶囊。",
     "hierarchy": "产品登场 → 核心亮点 → 可探索细节 → 镜头叙事。",
     "motion": "官方登场MP4；五项亮点进度、暂停与末尾重播；4.984秒镜头WebM按220vh舞台滚动进度换帧，标题同步淡出。",
-    "coherence": "同一硬件在不同尺度和状态中持续出现，黑底、巨字、胶囊和蓝色入口共同建立精确的产品叙事。"
+    "coherence": "同一硬件在不同尺度和状态中持续出现，黑底、巨字、胶囊和蓝色入口共同建立精确的产品叙事。",
+    "scroll": "首屏 → Highlights → Design viewer → 相机滚动段 → 景深比较 → 摄影横向架子 → 性能 → 续航 → 机型比较 → 浅色共享功能/购物/材料架子 → 说明与页尾。较原页缩短内容量，保留主要交互类型和后段明暗交接。"
   },
   "country": "美国",
   "referenceUrl": "https://www.apple.com/iphone-18-pro/",
   "implementation": "reference-study",
   "fidelity": "demos/apple-product/fidelity.md",
   "assetManifest": "demos/apple-product/assets-manifest.json",
-  "referencePreview": "research/screenshots/apple-hero-source.jpg"
+  "referencePreview": "research/screenshots/apple-hero-source.jpg",
+  "capturedAt": "2026-10-07",
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "dark",
+    "control": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
+    "designReason": "以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。"
+  },
+  "soundBehavior": {
+    "kind": "video",
+    "control": "首屏和滚动视频静音；Watch the film 点击打开官方 HLS 影片，172.38 秒，用户触发播放后有声音，可静音、调音量和全屏；关闭即暂停。",
+    "interactionRole": "静音摄影先建立材质与镜头重点，点击影片后才加入音乐和讲解，避免读页时自动发声。"
+  }
 }

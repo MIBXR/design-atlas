@@ -18,6 +18,8 @@ for(const e of entries){
   if(!Array.isArray(e.tokens?.palette)||!e.tokens.palette.length||e.tokens.palette.some(x=>!/^#[0-9a-f]{6}$/i.test(x)))fail(`${e.id}: invalid token palette`);
   for(const name of ['type','layout','motion'])if(typeof e.tokens?.[name]!=='string'||!e.tokens[name])fail(`${e.id}: missing token ${name}`);
   for(const name of ['color','typography','layout','imagery','shape','hierarchy','motion','coherence'])if(typeof e.composition?.[name]!=='string'||!e.composition[name])fail(`${e.id}: missing composition ${name}`);
+  if(!['fixed','system','manual','system-and-manual'].includes(e.themeBehavior?.mode)||!['light','dark','system'].includes(e.themeBehavior?.default)||!e.themeBehavior?.control||!e.themeBehavior?.designReason)fail(`${e.id}: invalid theme behavior`);
+  if(!['none','background','video','external','interactive'].includes(e.soundBehavior?.kind)||!e.soundBehavior?.control||!e.soundBehavior?.interactionRole)fail(`${e.id}: invalid sound behavior`);
   if(!['产品','游戏/IP','经典风格','艺术/文化'].includes(e.category))fail(`${e.id}: invalid category`);
   if(typeof e.prompt!=='string'||e.prompt.length<200)fail(`${e.id}: prompt too short`);
   if(!e.sources.some(x=>x.type==='实例'))fail(`${e.id}: no real example`);
@@ -40,14 +42,16 @@ for(const e of entries){
       else if(!ref.startsWith('data:')&&!ref.startsWith('#')&&!fs.existsSync(path.resolve(path.dirname(cssPath),ref.split(/[?#]/)[0])))fail(`${e.id}: missing stylesheet asset ${ref}`);
     }
   }
-  if(e.implementation==='reference-study'){
+  if(e.referenceUrl&&e.implementation!=='reference-study')fail(`${e.id}: real website must use reference-study implementation`);
+  if(e.implementation==='reference-study'||e.referenceUrl){
     for(const key of ['country','referenceUrl','fidelity','assetManifest'])if(!e[key])fail(`${e.id}: missing reference-study ${key}`);
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(e.capturedAt||''))fail(`${e.id}: missing or invalid capture date`);
     for(const key of ['fidelity','assetManifest',...(e.referencePreview?['referencePreview']:[])])if(e[key]&&!fs.existsSync(path.join(root,e[key])))fail(`${e.id}: missing evidence ${e[key]}`);
   }
   for(const match of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)){if(!match[1].trim())continue;try{new vm.Script(match[1]);scripts++;}catch(err){fail(`${e.id}: inline JS ${err.message}`);}}
   for(const file of fs.readdirSync(path.dirname(demoPath)).filter(x=>x.endsWith('.js'))){try{new vm.Script(fs.readFileSync(path.join(path.dirname(demoPath),file),'utf8'));scripts++;}catch(err){fail(`${e.id}: ${file} ${err.message}`);}}
 }
-for(const file of ['atlas.js','catalog.js','fundamentals.js','document.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
+for(const file of ['atlas.js','catalog.js','fundamentals.js','document.js','theme.js','asset-sources.js','asset-runtime.js','asset-cache.js','asset-cache-worker.js','case-loading.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
 for(const file of ['index.html','fundamentals.html','document.html']){
   const html=fs.readFileSync(path.join(root,file),'utf8');
   if(!/<meta[^>]+name=["']viewport["']/.test(html))fail(`${file}: missing viewport`);

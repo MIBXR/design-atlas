@@ -13,7 +13,7 @@ const clean = value => String(value).replace(/\|/g, '\\|').replace(/\n/g, ' ');
 const rows = entries.map(entry => {
   const source = entry.referenceUrl || entry.sources[0]?.url;
   const label = entry.implementation === 'reference-study' ? '原站局部复现' : '经典构成练习';
-  return `| ${entry.order} | [${clean(entry.title)}](../index.html#style/${entry.id}) | ${clean(entry.category)} | ${clean(entry.country || '跨来源研究')} | ${label} | [原始案例](${source}) · [研究](${path.basename(entry.research)}) · [Prompt数据](../entries/${entry.id}.json) · [Demo](../${entry.demo}) |`;
+  return `| ${entry.order} | [${clean(entry.title)}](../index.html#style/${entry.id}) | ${clean(entry.category)} | ${clean(entry.country || '跨来源研究')} | ${label} | ${entry.capturedAt || '—'} | [原始案例](${source}) · [研究](${path.basename(entry.research)}) · [Prompt数据](../entries/${entry.id}.json) · [Demo](../${entry.demo}) |`;
 });
-fs.writeFileSync(path.join(root,'research','CASE-INDEX.md'), `# 案例与代码索引\n\n由 entries/ 自动生成，共 ${entries.length} 项。国家/地区按具体机构、创作来源或注明的页面版本收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。\n\n| 顺序 | 案例 | 分类 | 国家/地区 | 类型 | 可查询资料 |\n| --- | --- | --- | --- | --- | --- |\n${rows.join('\n')}\n`, 'utf8');
+fs.writeFileSync(path.join(root,'research','CASE-INDEX.md'), `# 案例与代码索引\n\n由 entries/ 自动生成，共 ${entries.length} 项。真实网站案例按原始网址与采集日期固定归档，不跟随官网后续变化。国家/地区按具体机构、创作来源收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。\n\n| 顺序 | 案例 | 分类 | 国家/地区 | 类型 | 采集日期 | 可查询资料 |\n| --- | --- | --- | --- | --- | --- | --- |\n${rows.join('\n')}\n`, 'utf8');
 console.log(`Built ${entries.length} entries. Open index.html or run npm start.`);
