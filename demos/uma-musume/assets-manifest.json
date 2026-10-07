@@ -1,0 +1,216 @@
+{
+  "sourcePage": "https://umamusume.com/",
+  "retrievedAt": "2026-10-07",
+  "purpose": "官方公开资产用于个人本地设计学习；未获取授权用于商业发布",
+  "assets": [
+    {
+      "file": "assets/about_bg.BBeJqHpY.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/about_bg.BBeJqHpY.avif",
+      "bytes": 133545,
+      "type": "image/avif",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 2880,
+      "height": 1800,
+      "sha256": "f5342a90b79a78266525d405cbe0839c5fc482abbab8814963715dc0db314e43"
+    },
+    {
+      "file": "assets/about_thumbnail.CGFLxShD.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/about_thumbnail.CGFLxShD.avif",
+      "bytes": 73890,
+      "type": "image/avif",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 1600,
+      "height": 900,
+      "sha256": "010da4433693aa5da260a873e1b208a7cd24f6d53e6cf4e6797f9df2bdbfa252"
+    },
+    {
+      "file": "assets/badge-appstore.png",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/badge-appstore.png",
+      "bytes": 8822,
+      "type": "image/png",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 432,
+      "height": 144,
+      "sha256": "05a1b8d6560300812b9fb87b88f8d291e8941df8e2c29e08c77ed90d441accbd"
+    },
+    {
+      "file": "assets/badge-googleplay.png",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/badge-googleplay.png",
+      "bytes": 8821,
+      "type": "image/png",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 484,
+      "height": 144,
+      "sha256": "e5eab3cc0938aabefef94a3d164249b26914c53a8c547d64df6632e7a412cfbe"
+    },
+    {
+      "file": "assets/badge-steam.png",
+      "sourceUrl": "https://parts.umamusume.com/assets/images/badge-steam.png",
+      "bytes": 16183,
+      "type": "image/png",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 409,
+      "height": 144,
+      "sha256": "e99332e838d921079a31977df718c706c8f823eaa1b41c2414e05e1188916c1c"
+    },
+    {
+      "file": "assets/gameplay_bg.BJUQipob.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_bg.BJUQipob.avif",
+      "bytes": 66752,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 8440,
+      "height": 1800,
+      "sha256": "8153f3528bfee86e29fe1c68311d79e1d64bc340b838a37785999495b53b705a"
+    },
+    {
+      "file": "assets/gameplay_image_1-1.PhrOaKih.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_image_1-1.PhrOaKih.avif",
+      "bytes": 35378,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 604,
+      "height": 1078,
+      "sha256": "b39ac77e708cf3c862fdeafea1c78b3ae9c0d34ae8f68e346f6f81dee87966e3"
+    },
+    {
+      "file": "assets/gameplay_image_1-2.DY13j7tt.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_image_1-2.DY13j7tt.avif",
+      "bytes": 23855,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 428,
+      "height": 758,
+      "sha256": "b494fc788dc1eae4e2677a8d1c98d086ce9846a2b2d9d06b38086ce1a6e41959"
+    },
+    {
+      "file": "assets/gameplay_image_2-1.BcVJ7hBy.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_image_2-1.BcVJ7hBy.avif",
+      "bytes": 51556,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 604,
+      "height": 1076,
+      "sha256": "5fbb186535ff9d7c039f7bbfa6e1424669ea698a48feb4d7c7166ce876015ff9"
+    },
+    {
+      "file": "assets/gameplay_image_2-2.BKFdgH7d.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_image_2-2.BKFdgH7d.avif",
+      "bytes": 39193,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 428,
+      "height": 758,
+      "sha256": "4d6033139036a71d4f806e2618a80d1563849063d02f58bb2ab501cee94d14f4"
+    },
+    {
+      "file": "assets/gameplay_image_3-1.BNkL4nTh.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_image_3-1.BNkL4nTh.avif",
+      "bytes": 37333,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 604,
+      "height": 1074,
+      "sha256": "3c4863def2df28300d37cd2ed34be0f3dda071c7c155666149b4bea07c278d47"
+    },
+    {
+      "file": "assets/gameplay_image_3-2.Bimj2-Ng.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_image_3-2.Bimj2-Ng.avif",
+      "bytes": 30054,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 428,
+      "height": 760,
+      "sha256": "c3f355dbcabd1a195aaef7396107162499416a86c12b5a083bcd11b9af8e1974"
+    },
+    {
+      "file": "assets/gameplay_silencesuzuka.Chw3ZKQc.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_silencesuzuka.Chw3ZKQc.avif",
+      "bytes": 51122,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 1401,
+      "height": 1556,
+      "sha256": "92bab471b1ef452ca04882b96cbf378fc5b68da2be26e31b7b53632707c9ea32"
+    },
+    {
+      "file": "assets/gameplay_specialweek.CDUq1xrt.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_specialweek.CDUq1xrt.avif",
+      "bytes": 56509,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 1401,
+      "height": 1556,
+      "sha256": "3792df0ddf7786b962fee500c3b73853c679234d44dff0bb549089691acee76c"
+    },
+    {
+      "file": "assets/gameplay_winningticket.BucYg9KM.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/gameplay_winningticket.BucYg9KM.avif",
+      "bytes": 41480,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 1401,
+      "height": 1556,
+      "sha256": "e7187e0f69f3767a06ce44ee2f1ec25d45fb1a970759446d62d4105c13b0dc60"
+    },
+    {
+      "file": "assets/kv.C6tHq3MX.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/kv.C6tHq3MX.avif",
+      "bytes": 415417,
+      "type": "image/avif",
+      "use": "首屏官方KV，桌面/手机各自版本",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 2880,
+      "height": 2148,
+      "sha256": "c24dc850168634d1f5332b5c73dfd4a216a88acebc725d216bfb0ab78bf5f33a"
+    },
+    {
+      "file": "assets/kv.CNY-_2Hw.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/kv.CNY-_2Hw.avif",
+      "bytes": 113610,
+      "type": "image/avif",
+      "use": "首屏官方KV，桌面/手机各自版本",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 750,
+      "height": 1320,
+      "sha256": "fcf6cb990488b9d7534810f15a6136ad62f158508f967b7b53136870a3865401"
+    },
+    {
+      "file": "assets/kv_txt_playnow.D6KNRgME.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/kv_txt_playnow.D6KNRgME.avif",
+      "bytes": 17353,
+      "type": "image/avif",
+      "use": "真实平台下载标识",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 412,
+      "height": 142,
+      "sha256": "d2cb2ffd0f6457f08e93a253b6a48eed35636257268fbc149b5d2f12547f6af2"
+    },
+    {
+      "file": "assets/news_bg.nsyAwrrN.avif",
+      "sourceUrl": "https://umamusume.com/_app/immutable/assets/news_bg.nsyAwrrN.avif",
+      "bytes": 4831,
+      "type": "image/avif",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。",
+      "width": 2880,
+      "height": 1520,
+      "sha256": "0ae74834c9cd01256349ab885cebce447bb7770054e1d3d0c09180c3468b4e0f"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "uma-musume",
+  "order": 20,
+  "title": "赛马娘：群像赛道与斜切叙事",
+  "subtitle": "Umamusume 国际英文官网 · 真实局部还原",
+  "category": "游戏/IP",
+  "tags": [
+    "日本",
+    "海外手游",
+    "Cygames",
+    "真实还原",
+    "群像",
+    "斜切",
+    "角色立绘",
+    "玩法轮播"
+  ],
+  "summary": "学习赛马娘国际官网如何用大幅赛道群像建立热闹、前进的运动感，再用荧绿斜切条带、角色立绘和竖屏玩法画面连接下载与游戏体验。",
+  "accent": "#a7ce36",
+  "background": "#f5faed",
+  "principles": [
+    "角色群像以纵深和奔跑方向承载主视觉，首屏不额外叠一套营销卡片。",
+    "草地绿与荧绿斜切条带重复出现，静态信息也带有向前的运动感。",
+    "玩法画面与对应角色共同切换，产品能力由真实游戏截图证明。",
+    "下载徽章保持平台的熟悉形状，在复杂插画上形成容易识别的操作区域。"
+  ],
+  "productFocus": "真实游戏 Umamusume: Pretty Derby 的跑马养成、学园交流与比赛；本地页复现国际官网主视觉、新闻条目、预告入口、三态玩法轮播。",
+  "interaction": [
+    "三组玩法可用前后箭头、场景按钮与方向键切换，立绘、游戏截图、标题和描述一起更新。",
+    "本地 Sections 菜单提供可用的锚点导航，Escape 可关闭。",
+    "About 预告信息使用原生 dialog；观看按钮连接真实官方 YouTube 预告。",
+    "商店、新闻和角色入口均连接官方目的地；页面不自动播放音频。"
+  ],
+  "theme": "明亮赛道、彩色二次元群像、奔跑纵深和反复出现的斜切几何共同构成青春竞技主题。",
+  "constraints": [
+    "该页选择国际英文版 https://umamusume.com/；不能把日本门户与国际宣传页当作同一布局。",
+    "本地官方角色、背景和截图仅作私人学习，权利仍归 Cygames；公开再发布需自行取得授权。",
+    "复杂主视觉旁的文字与按钮必须落在稳定位置，不能压在角色脸部。",
+    "三态轮播不自动翻页，保持文本、图像与当前状态同步且可键盘操作。",
+    "没有获得原站 BGM，不提供假音频开关；预告是用户主动打开的官方外链。",
+    "手机使用原站单独的竖版 KV，并重新安排徽章；reduced-motion 取消非必要过渡与平滑滚动。"
+  ],
+  "useCases": [
+    "角色阵容丰富的竞技游戏",
+    "二次元养成手游宣传",
+    "已有高质量群像插画的产品页"
+  ],
+  "avoid": [
+    "用通用双栏产品卡片替代官方群像构图",
+    "让下载按钮遮挡角色表情",
+    "声称未获取的音频是官网 BGM"
+  ],
+  "tokens": {
+    "palette": [
+      "#a7ce36",
+      "#c0e640",
+      "#6fb52a",
+      "#ffffff",
+      "#253336"
+    ],
+    "type": "粗重斜体无衬线标题；小号日期与普通正文分工；官方图像内文字保留原素材",
+    "layout": "满宽赛道群像 → 斜切新闻 → 居中倾斜预告 → 立绘与竖屏画面轮播",
+    "motion": "手动轮播即时更新；按钮轻微位移；reduced-motion 下取消过渡"
+  },
+  "sources": [
+    {
+      "title": "Umamusume: Pretty Derby 国际官方网站",
+      "url": "https://umamusume.com/",
+      "type": "实例",
+      "note": "2026-10-07：通过 Edge 实读桌面、滚动与390px竖版KV；官网图片来自其 _app/immutable/assets 与官方parts域。"
+    },
+    {
+      "title": "官方国际版 App Store 页面",
+      "url": "https://apps.apple.com/us/app/umamusume-pretty-derby/id6480433538",
+      "type": "实例",
+      "note": "确认 umamusume.com 是官方国际网站，区分于日本官方门户。"
+    },
+    {
+      "title": "W3C WAI：Carousels Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/carousels/",
+      "type": "规范",
+      "note": "手动控制、键盘可操作、轮播变更反馈和清楚的当前状态。"
+    },
+    {
+      "title": "W3C：Animation from Interactions",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "type": "规范",
+      "note": "支持减少动态偏好；此项是Level AAA的交互动效条款，未声称整站已达完整合规。"
+    }
+  ],
+  "prompt": "为[角色竞技/养成游戏]制作一个有真实素材依据的单页。首先核验目标官方地区页面，不把日本门户和国际版页面混用。参考 Umamusume 国际英文官网：使用有授权的赛道群像作为满宽主视觉，保留奔跑方向、角色纵深与绿色场景；不要在人物脸部叠营销文字。下载区域使用三枚平台徽章，真实指向对应商店。下一节是白底的新闻条目，而非卡片墙，日期、分类、标题、箭头清晰分工。标题下用荧绿斜切带重复运动主题。预告缩略图居中并轻微倾斜，用户主动打开预告信息。玩法节用大立绘、两张竖屏真实游戏画面与斜切说明板组成三组状态，箭头、场景按钮及方向键同时更新图像和文字，不自动翻页。使用白、草地绿、荧绿与深灰，标题粗重斜体而正文保持可读。提供独立手机KV或明确标注本地裁切差异；390px所有按钮可见。所有素材存本地并记录来源、尺寸和权利，优先有授权资产。未获得原站BGM就不宣称有官网音乐；音频默认关闭，外链预告由用户主动观看。支持键盘、原生对话框、可见焦点与prefers-reduced-motion，保留完整来源和复现边界。",
+  "negativePrompt": "不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。",
+  "demo": "demos/uma-musume/index.html",
+  "preview": "previews/uma-musume.jpg",
+  "research": "research/uma-musume.md",
+  "exercise": "保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。",
+  "composition": {
+    "color": "草地绿来自官方赛道KV；#c0e640斜切标题带与绿色操作入口重复，白底新闻让复杂图像后出现阅读休息。",
+    "typography": "官方图内标识保留；本地段落使用粗重斜体无衬线标题、普通正文和小号日期，避免所有内容同等抢眼。",
+    "layout": "主视觉整幅铺开，新闻以横向条目排列，预告居中，玩法以截图与立绘叠合；不套统一hero卡片模板。",
+    "imagery": "原站公开KV、三名角色立绘、六张游戏截图与预告缩略图本地保存；每项有manifest来源。",
+    "shape": "向前倾斜的标题带、说明板与箭头复用斜切语言，平台下载徽章保持自己的标准轮廓。",
+    "hierarchy": "赛道群像先建立游戏辨识；下载次之；新闻较安静；Gameplay每态只突出一个玩法及相关人物。",
+    "motion": "按钮轻微反馈与三态手动轮播；没有自动音频，reduced-motion减少过渡。",
+    "coherence": "斜切条带延续赛道纵深与角色奔跑方向；游戏截图提供玩法证据，群像负责情绪，二者各有职责。"
+  },
+  "country": "日本",
+  "edition": "国际英文版",
+  "implementation": "reference-study",
+  "referenceUrl": "https://umamusume.com/",
+  "referencePreview": "research/screenshots/uma-musume-source.jpg",
+  "fidelity": "demos/uma-musume/fidelity.md",
+  "assetManifest": "demos/uma-musume/assets-manifest.json"
+}
