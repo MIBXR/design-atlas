@@ -10,7 +10,8 @@
 
 ## 修复方式
 
-- 静态目录中的 `_headers` 为所有 `/*.md` 声明 `text/plain; charset=utf-8`，并设置 `nosniff`；构建必须复制该文件。通配符覆盖深层目录。配置依据：[Cloudflare Workers 静态资源响应头](https://developers.cloudflare.com/workers/static-assets/headers/)。配置是否被托管实际应用，须通过下方线上测试确认，不能只检查文件存在。
+- Sites 版本 4 的实际 HTTP 检查确认，托管没有应用 `_headers`：四个抽查文档仍返回不带 `charset` 的 `text/markdown`。因此没有把添加配置视为已经修好。该配置保留供支持它的静态托管使用，依据：[Cloudflare Workers 静态资源响应头](https://developers.cloudflare.com/workers/static-assets/headers/)。
+- `build-static.mjs` 为部署目录中每个 Markdown 文件添加 UTF-8 BOM（`EF BB BF`），让原始网址的文档字节也携带编码标记；仓库源文件保持原样。构建重新从源码复制，不会重复累积 BOM。标记与解码依据：[WHATWG Encoding 标准的 BOM sniff](https://encoding.spec.whatwg.org/#bom-sniff)。
 - 站内说明与调研链接统一进入 `document.html?file=...`。HTML 自身声明 UTF-8，脚本对正文的真实字节严格按 UTF-8 解码，以 `textContent` 显示源文档；保留下载原始 Markdown 和返回对应案例的入口。
 - 原始 Markdown 继续保留，可供 GitHub、编辑器及下载复用；阅读页不修改源文本、不执行其中的 HTML。
 
@@ -21,4 +22,4 @@ node scripts/check-text-delivery.mjs http://127.0.0.1:4173 --all
 node scripts/check-text-delivery.mjs https://mibxr-design-atlas.mibxranime.chatgpt.site --all
 ```
 
-该检查请求实际 HTTP 路径，要求状态 200、浏览器可显示的 `text/plain; charset=utf-8`、严格 UTF-8 解码和与仓库完全相同的 SHA-256。覆盖 Linear 原链接、README、调研总览和 Material Prompt。修复前原链接已实际产生 FAIL：`received text/markdown`。阅读页另外通过真实浏览器检查中文标题与正文；服务端响应断言不冒充浏览器编码观察。
+该检查请求实际 HTTP 路径，要求状态 200、文本类型、明确的 UTF-8 编码信号（`charset=utf-8` 或 BOM）、严格 UTF-8 解码，以及去除编码标记后与仓库完全相同的 SHA-256。覆盖 Linear 原链接、README、调研总览和 Material Prompt。修复前原链接已实际产生 FAIL，版本 4 的响应头方案也实际检查失败。阅读页另外通过真实浏览器检查中文标题与正文；服务端响应断言不冒充浏览器编码观察。客户端是否直接显示 Markdown 仍有差异，站内入口统一使用 HTML 阅读页。

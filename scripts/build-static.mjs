@@ -18,5 +18,23 @@ for (const name of [...files, ...folders]) regularTree(path.join(root, name));
 fs.rmSync(output, {recursive:true, force:true});
 fs.mkdirSync(output);
 for (const name of [...files, ...folders]) fs.cpSync(path.join(root, name), path.join(output, name), {recursive:true});
+// Sites serves Markdown without a charset and does not apply _headers.
+// A UTF-8 BOM signals the encoding without changing the tracked source text.
+let markedDocuments = 0;
+function markMarkdown(directory) {
+  for (const item of fs.readdirSync(directory, {withFileTypes:true})) {
+    const target = path.join(directory, item.name);
+    if (item.isDirectory()) markMarkdown(target);
+    else if (item.isFile() && item.name.endsWith('.md')) {
+      const bytes = fs.readFileSync(target);
+      if (!bytes.subarray(0, 3).equals(Buffer.from([0xef, 0xbb, 0xbf]))) {
+        fs.writeFileSync(target, Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), bytes]));
+      }
+      markedDocuments++;
+    }
+  }
+}
+markMarkdown(output);
 if (fs.existsSync(path.join(output, '.git'))) throw new Error('Git metadata cannot be served.');
 console.log('Prepared dist: demos, prompts, documentation and research; Git metadata and local server excluded.');
+console.log(`Marked ${markedDocuments} deployed Markdown documents as UTF-8; tracked source files unchanged.`);
