@@ -1,0 +1,304 @@
+{
+  "sourceDate": "2026-10-07",
+  "scope": "真实官网公开资源的私人学习局部复现",
+  "assets": [
+    {
+      "file": "background.jpg",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/bg.c03d00a6.jpg",
+      "use": "官网场景背景",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 138403,
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "sha256": "e44c737212d52aa9e4f4be09322bf73bbcf8c6147f8c717e6cfc7bfdb48ceb10"
+    },
+    {
+      "file": "amiya.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/amiya_e1.739a31c1.png",
+      "use": "阿米娅精英一立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 584564,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "sha256": "e59f307fd5efa7a26806dc687d5fbc89fc203532f825dc8eec0d4ebec02ec0aa"
+    },
+    {
+      "file": "kaltsit.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit_e1.a53cfc2e.png",
+      "use": "凯尔希精英一立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 1171898,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 2048,
+      "height": 2048,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "sha256": "55541275ebb108bf57812b604480b1d939545d78f12f2c3647c5a66c86654d34"
+    },
+    {
+      "file": "kaltsit-e2.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit_e2.a0c208dc.png",
+      "use": "凯尔希精英二立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 2574398,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 2048,
+      "height": 2048,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "sha256": "cc75f8d39869df5202c320c4635cefae3d5d2ddfcd92dbd854246f8f02cbf702"
+    },
+    {
+      "file": "chen.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/chen_e1.54258041.png",
+      "use": "陈精英一立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 426774,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "sha256": "a14f1e8403e672ff0321b74de6907574142d38dc63319faf3ccc7b122abbe759"
+    },
+    {
+      "file": "kaltsit-thumb.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit.05c0f5e1.png",
+      "use": "凯尔希缩略图",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 140163,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 180,
+      "height": 360,
+      "dimensions": [
+        180,
+        360
+      ],
+      "format": "PNG",
+      "sha256": "23b374fc0eae7b9722cf91388119e301d32cb62a9b7f928eef917b29426bb16c"
+    },
+    {
+      "file": "amiya-thumb.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/amiya.a410de75.png",
+      "use": "阿米娅缩略图",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 143206,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 180,
+      "height": 360,
+      "dimensions": [
+        180,
+        360
+      ],
+      "format": "PNG",
+      "sha256": "01a573d2b8c4a6be80d07dc0b90ff09d218829b21624d800f536b4b31038251e"
+    },
+    {
+      "file": "chen-thumb.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/chen.4d5cd8a0.png",
+      "use": "陈缩略图",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 134289,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 180,
+      "height": 360,
+      "dimensions": [
+        180,
+        360
+      ],
+      "format": "PNG",
+      "sha256": "e1ba9ca7df65145725b372daf0fbc5a266053ad747e2a5cefa5a5b8e0bc82b14"
+    },
+    {
+      "file": "rhodes-island.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/rhodes_island.18d9416c.png",
+      "use": "罗德岛阵营标识",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 6455,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 95,
+      "height": 81,
+      "dimensions": [
+        95,
+        81
+      ],
+      "format": "PNG",
+      "sha256": "f6faa9b6dedc3cf091f686d1278e9b6738c4981da27c63f1bcd39e05114eed75"
+    },
+    {
+      "file": "amiya-voice.mp3",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/audio/amiya_ja.eb4ec8.mp3",
+      "use": "阿米娅日语角色语音，并非 BGM",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 91941,
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "sha256": "7d5426e964e5bbbde085116222eb062e1060ab530b24d8d2fd5258769fd9acad",
+      "durationSeconds": 8.25,
+      "hasAudio": true,
+      "browserDurationSeconds": 8.203265
+    },
+    {
+      "file": "chen-e2.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/chen_e2.7c62a20a.png",
+      "use": "陈精英二立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 3842673,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 2048,
+      "height": 2048,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "sha256": "6abe7afc6f2cf9e46e3e0d5c8ce8dba7b0e057869b7ccc5da416b43abae7be35"
+    },
+    {
+      "file": "amiya-e2.png",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/amiya_e2.6bc004b9.png",
+      "use": "阿米娅精英二立绘",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 3379229,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 2048,
+      "height": 2048,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "sha256": "8fa6ef35c4384a1d39db7f5d706a1b903c1d498b335dbe43f1196286606c5b17"
+    },
+    {
+      "file": "chen-voice.mp3",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/audio/chen_ja.1b54c3.mp3",
+      "use": "陈日语角色语音，并非 BGM",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 160134,
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "sha256": "188055ebdc4722f05d881e547d76be2572ddb4ff6041ce75ff8e3805bd4d7d9a",
+      "durationSeconds": 15.02,
+      "hasAudio": true
+    },
+    {
+      "file": "bgm.mp3",
+      "url": "https://web.hycdn.cn/arknights/official/_next/static/media/audio/bgm.ea4286.mp3",
+      "use": "官网 BGM；未见公开曲名，默认关闭",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 3130419,
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "sha256": "3ea3799565739b4fecd05ff986a21d77a44c09b9c6000e1aff0bc6144e870ed1",
+      "durationSeconds": 195.65,
+      "hasAudio": true,
+      "browserDurationSeconds": 195.651188
+    },
+    {
+      "file": "home.m3u8",
+      "url": "https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8",
+      "use": "官网首屏 HLS 清单，取本地短片",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 197,
+      "contentType": "application/x-mpegurl",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "sha256": "ddcb5a1ae4c701de5a7624b6b57fc739069701970e2f33e4d2a14acc7e7c0388"
+    },
+    {
+      "file": "home.mp4",
+      "url": "https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8",
+      "segmentUrls": [
+        "https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape-00001.ts",
+        "https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape-00002.ts"
+      ],
+      "use": "官方首屏视频片段，本地无损转封装，去除音轨作为静音背景",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 4191430,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "transform": "官网HLS两段转封装后：缩为1440×810，H.264 CRF26，去音轨、faststart",
+      "width": 1440,
+      "height": 810,
+      "durationSeconds": 18.13,
+      "sha256": "af52b137550ae4bfa01463c6658866f7fd1d78c99377e604a78cbd663fbc7187",
+      "hasAudio": false,
+      "dimensions": [
+        1440,
+        810
+      ]
+    },
+    {
+      "file": "home-poster.jpg",
+      "url": "https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8",
+      "use": "上述官方视频 0.1 秒静态后备帧",
+      "owner": "Hypergryph / 鹰角网络",
+      "bytes": 273961,
+      "transform": "ffmpeg 取静态视频帧",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "sha256": "ae3941e8d532221bf576dbbfe94a424c3c55ddbda2187ebc5a2800b23410e393"
+    }
+  ],
+  "limitations": [
+    "本地3章节与3人，省略情报、媒体、更多、账号和支付等完整业务。",
+    "HLS原首页两段本地转封装并缩为1440宽CRF26，去音轨；BGM用独立官方文件。",
+    "中文明日方舟品牌头以本地文字呈现，非官方描边字标的完全复刻。",
+    "WORLD右侧CSS晶体替代原站WebGL粒子；术语说明是学习摘要。",
+    "仅阿米娅/陈官方日语语音已下载，凯尔希未冒充可播放。"
+  ]
+}

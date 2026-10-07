@@ -1,0 +1,102 @@
+{
+  "id": "arknights-world",
+  "order": 19,
+  "title": "明日方舟 · 工业档案与干员舞台",
+  "subtitle": "ARKNIGHTS / RHODES ISLAND ARCHIVE",
+  "category": "游戏/IP",
+  "country": "中国",
+  "tags": [
+    "明日方舟",
+    "鹰角网络",
+    "工业",
+    "网格",
+    "真实干员",
+    "BGM"
+  ],
+  "summary": "黑灰工业网格、青色索引、超大裁切字、双色人物层与档案导航，把世界观呈现成罗德岛系统。",
+  "accent": "#00c4df",
+  "background": "#080a0d",
+  "principles": [
+    "背景视频和超大裁切字建立工业舞台，导航、索引及档案沿网格秩序组织。",
+    "同一人物的灰度巨背景和彩色前景产生层次，档案放在黑底阅读区。",
+    "青色只承担选中、索引与声音等状态，不铺满所有元素。",
+    "世界设定以术语目录组织，视觉氛围进入可查询内容。"
+  ],
+  "productFocus": "真实官网首屏PV背景、凯尔希/阿米娅/陈双精英阶段立绘、罗德岛阵营符号；官网实际BGM和两名干员日语语音。",
+  "interaction": [
+    "章节导航与滚动同步右侧索引，保留原生滚动。",
+    "三干员选择、双精英阶段实际更换立绘；阿米娅/陈可手动播放官方日语语音。",
+    "BGM默认关闭，点击播放/关闭；页面离开前台暂停声音。",
+    "世界术语目录同步更新说明，官网下载按钮去实际官方地址。"
+  ],
+  "theme": "黑灰冷静工业档案，青色状态、细网格、罗德岛符号与超大裁切字；角色彩色图提供情感与焦点。",
+  "constraints": [
+    "官方素材只作本地私人学习，版权归鹰角网络。",
+    "本地保留3名干员，原站有6名；语音覆盖阿米娅/陈，凯尔希语音按钮明确不可用。",
+    "剧情介绍使用简短学习摘要，完整文本回原站。",
+    "本地CSS源石替代原站WebGL粒子，并明确局部差异。",
+    "BGM与角色语音不是同一类型，不混淆曲名或配音。",
+    "手机重新排档案和人物，固定索引不能挡住主操作。"
+  ],
+  "useCases": [
+    "工业科幻游戏",
+    "战术角色档案",
+    "世界设定库"
+  ],
+  "avoid": [
+    "轻松生活方式品牌",
+    "高密度交易表单"
+  ],
+  "tokens": {
+    "palette": [
+      "#080a0d",
+      "#24282d",
+      "#00c4df",
+      "#eceeef"
+    ],
+    "type": "大号Arial Black式英文字 + 明确中文档案；小英文索引用系统无衬线",
+    "layout": "满屏PV+裁切字首页；左档案/右巨立绘；固定右索引；世界术语目录",
+    "motion": "实际官网视频可暂停；手动人物/阶段选择；实际BGM与角色语音默认关闭。"
+  },
+  "sources": [
+    {
+      "title": "Hypergryph · 明日方舟官方网站",
+      "url": "https://ak.hypergryph.com/",
+      "type": "实例",
+      "note": "实访首页、OPERATOR与WORLD；核验网格、右索引、凯尔希档案、六术语以及真实 bgm.ea4286.mp3。"
+    },
+    {
+      "title": "W3C · Pause, Stop, Hide",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+      "type": "规范",
+      "note": "核验持续自动动态的暂停要求；本地背景视频提供可持续暂停按钮，减少动态偏好下初始停止。"
+    },
+    {
+      "title": "W3C · Tabs Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+      "type": "规范",
+      "note": "键盘、明确选择状态与内容切换的交互规范参考；demo采用原生按钮/aria-pressed，并提供左右键选择。"
+    }
+  ],
+  "prompt": "为【工业科幻角色游戏】先核验真实官网的首页、干员区与世界设定，保存实访截图与公开素材来源。首屏以官方PV静音视频覆盖全幅，左侧大青色矩形与超大裁切RHODES ISLAND文字，中下部ARKNIGHTS标识、下载纵列和细线分区；顶部双语导航、右侧固定编号索引。干员区以同一官方立绘灰度放大作背景、彩色完整人物作前景，左侧档案包括英文名、中文名、阵营符号、角色配音和黑底简介，底部方形肖像选择，右侧双精英阶段按钮必须实际更换对应图片。随后用六个真实世界术语组成目录与说明，WebGL无法复现时明确局部替代。仅用青色表示选中和状态，正文维持水平、高对比。背景音乐与角色语音须来自实际核验官方文件，默认关闭、点击播放、捕获拒绝、切换人物停止旧语音、离开前台暂停。手机人物在上档案在下、索引收窄、菜单命中区可操作。全部资产本地化，输出独立代码、来源尺寸manifest、fidelity与真实双尺寸截图。",
+  "negativePrompt": "不要以普通白色卡片替代工业档案；不要同一立绘换色冒充干员；不要自动出声或伪称曲名；不要把CSS晶体说成完整WebGL；不要复制账号、支付或追踪服务。",
+  "demo": "demos/arknights-world/index.html",
+  "preview": "previews/arknights-world.jpg",
+  "research": "research/arknights-world.md",
+  "exercise": "在已授权角色素材不变时，加入一个可查询的干员职业目录，保持工业档案的网格与状态语汇。",
+  "composition": {
+    "color": "黑灰冷静工业档案，青色状态、细网格、罗德岛符号与超大裁切字；角色彩色图提供情感与焦点。",
+    "typography": "大号Arial Black式英文字 + 明确中文档案；小英文索引用系统无衬线",
+    "layout": "满屏PV+裁切字首页；左档案/右巨立绘；固定右索引；世界术语目录",
+    "imagery": "官方PV04静音视频、3人两精英阶段立绘、肖像与罗德岛标识。",
+    "shape": "工业网格、细线目录、方形肖像、青色索引与CSS源石晶体局部替代。",
+    "hierarchy": "品牌舞台与下载 → 干员/阶段/声音档案 → 世界术语。",
+    "motion": "实际官网视频可暂停；手动人物/阶段选择；实际BGM与角色语音默认关闭。",
+    "coherence": "网格、裁切字、索引和档案都表达同一工业系统；灰度背景托住彩色人物，青色只表示操作状态。"
+  },
+  "referenceUrl": "https://ak.hypergryph.com/",
+  "implementation": "reference-study",
+  "fidelity": "demos/arknights-world/fidelity.md",
+  "assetManifest": "demos/arknights-world/assets-manifest.json",
+  "referencePreview": "research/screenshots/arknights-world-source.jpg"
+}
