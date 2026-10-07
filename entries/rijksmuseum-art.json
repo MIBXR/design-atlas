@@ -1,0 +1,101 @@
+{
+  "id": "rijksmuseum-art",
+  "order": 26,
+  "title": "Rijksmuseum · 全幅摄影与巨大字标",
+  "subtitle": "Dutch masterpieces, immersive museum visit",
+  "category": "艺术/文化",
+  "country": "荷兰",
+  "tags": [
+    "荷兰",
+    "艺术馆",
+    "全幅摄影",
+    "超大字标",
+    "橙色票务",
+    "Rijksmuseum"
+  ],
+  "summary": "实访英语官方首页，复现夜巡观展全屏摄影、巨幅RIJKS MUSEUM白色字标、底缘小标题以及连续摄影专题。",
+  "accent": "#db5526",
+  "background": "#242424",
+  "principles": [
+    "以作品和观众的真实关系主导首屏，主标题留在底缘。",
+    "品牌SVG跨越几乎整幅宽度；图像仍是内容主体。",
+    "橙色矩形票务按钮在摄影上有明确优先级。",
+    "家庭月全屏摄影后接两栏展览预告，图文密度随内容改变。"
+  ],
+  "productFocus": "参观体验、馆藏名作与购票入口。摄影提供作品尺度和到访情境，底缘文字补充时间/活动条件。",
+  "interaction": [
+    "全屏菜单打开/关闭及Escape关闭，菜单内链接定位到本地对应区域。",
+    "搜索弹窗实时筛选本地三类区域并跳转。",
+    "两展览预览弹窗显示对应官方照片、日期与原站链接；购票直接打开官方页面。"
+  ],
+  "theme": "深色摄影、白色窄体品牌字体、巨大字标与橙色矩形CTA。",
+  "constraints": [
+    "每个摄影专题保持约100vh，手机使用100svh避免地址栏引起布局跳动。",
+    "不要把摄影裁成圆角卡片，也不要给首屏添加摘要卡片。",
+    "字标使用完整官方SVG，标题与正文使用两字重Rijksmuseum字体。",
+    "照片底部加局部黑色渐变支撑文字对比；不对整张照片做滤镜风格化。",
+    "减弱动态模式仍能看到全部内容，滚动保持浏览器原生行为。",
+    "保留私人学习署名与真实票务跳转，不模拟付款或假装门票已预订。"
+  ],
+  "useCases": [
+    "艺术馆参观入口",
+    "摄影主导的场所展示",
+    "大型艺术节入口"
+  ],
+  "avoid": [
+    "摄影不足的抽象装饰页面",
+    "信息必须首屏密集呈现的后台"
+  ],
+  "tokens": {
+    "palette": [
+      "#242424",
+      "#ffffff",
+      "#db5526"
+    ],
+    "type": "官方Rijksmuseum Normal/Bold；桌面正文17px、短标题约23px。",
+    "layout": "100vh全幅摄影 → 100vh家庭月 → 两列整屏摄影 → 深色实用信息。",
+    "motion": "菜单开合与原生锚点；无自动轮播，reduced-motion禁用过渡和平滑滚动。"
+  },
+  "sources": [
+    {
+      "title": "Rijksmuseum official English homepage",
+      "url": "https://www.rijksmuseum.nl/en",
+      "type": "实例",
+      "note": "2026-10-07 CUA实访桌面1440×1000和390×844；观察巨大字标、100vh照片、家庭月、两栏专题和完整菜单。"
+    },
+    {
+      "title": "Rijksmuseum Accessibility Statement",
+      "url": "https://www.rijksmuseum.nl/en/visit/accessibility/accessibility-statement",
+      "type": "规范",
+      "note": "官方说明网站同时服务参观/票务与在线收藏/故事，目标WCAG2.2 AA，但列举图上文字对比、菜单和自动轮播等未达项。不能宣称原站全面合规。"
+    },
+    {
+      "title": "W3C WAI Disclosure Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "type": "规范",
+      "note": "展开按钮控制内容可见性，按钮状态应对应展开/折叠；本地使用原生details/summary或button加aria-expanded。是实现规范，不能证明机构使用该设计理论。"
+    }
+  ],
+  "prompt": "请以2026-10-07实访的Rijksmuseum英语首页为忠实局部研究对象，使用本地assets内官方夜巡观众照片、家庭月照片、两张预告照片、完整Rijksmuseum白色SVG字标和Normal/Bold品牌字体。桌面首节100vh：上覆导航从左侧汉堡和搜索起，右侧橙色方角票务；巨幅字标距顶约96px、左右留5.5%，底缘左放白底小状态与23px大写标题和17px正文，右放合作方标识。第二节铺满家庭月照片，第三节改为两列竖向摄影预告，最后才放实用参观信息。实现全屏导航覆盖层、Escape关闭、搜索弹窗筛选本地章节，以及展览预览弹窗；票务仅链接官网。390px手机字标一行、隐藏次要导航和赞助方，两列预告堆叠，正文不溢出。禁止自动轮播与滚动劫持；prefers-reduced-motion关闭平滑滚动和过渡。官方资产署名置页末，不把研究说明放在英雄区。",
+  "negativePrompt": "不要虚构品牌，不用抽象blob代替夜巡摄影，不把每一节包装成圆角卡片，不用通用SaaS居中巨字模板。",
+  "demo": "demos/rijksmuseum-art/index.html",
+  "preview": "previews/rijksmuseum-art.jpg",
+  "referencePreview": "research/screenshots/rijksmuseum-art-source.jpg",
+  "research": "research/rijksmuseum-art.md",
+  "exercise": "替换一组经过授权的场所摄影，保留文字与图像的职责分工；检查手机裁切是否保住人物与作品。",
+  "composition": {
+    "color": "照片本身提供丰富色彩，白色文字和橙色票务是UI的少数稳定颜色。",
+    "typography": "巨大完整SVG字标与小尺度大写短标题形成尺度差，品牌正文保持窄体节奏。",
+    "layout": "导航上覆摄影；首屏100vh，底缘左文右合作方；手机隐藏次要导航与合作方。",
+    "imagery": "夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。",
+    "shape": "矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。",
+    "hierarchy": "品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。",
+    "motion": "自然滚动连续摄影；菜单为覆盖层。未声称原站采用滚动锁屏或滚动劫持。",
+    "coherence": "统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。"
+  },
+  "referenceUrl": "https://www.rijksmuseum.nl/en",
+  "implementation": "reference-study",
+  "fidelity": "demos/rijksmuseum-art/fidelity.md",
+  "assetManifest": "demos/rijksmuseum-art/assets-manifest.json",
+  "edition": "2026-10-07；英语公开官网局部"
+}
