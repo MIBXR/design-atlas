@@ -1,0 +1,7 @@
+{
+  "name": "personal-design-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Source-backed personal web design reference library",
+  "scripts": { "start": "node scripts/serve.mjs", "build": "node scripts/build.mjs", "check": "node scripts/check.mjs" }
+}

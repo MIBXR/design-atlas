@@ -1,0 +1,102 @@
+{
+  "id": "swiss-grid",
+  "order": 11,
+  "title": "瑞士设计：编辑网格",
+  "subtitle": "Swissted / Müller-Brockmann → 信息优先的展览日程",
+  "category": "经典风格",
+  "tags": [
+    "瑞士",
+    "国际主义",
+    "网格",
+    "排版",
+    "展览",
+    "编辑设计"
+  ],
+  "summary": "用对齐、字号差和非对称留白构建清晰的信息秩序。不是一张红黑海报套在所有网页上，而是让名称、日期、类别和行动共享网格。",
+  "accent": "#e3402e",
+  "background": "#f2efe6",
+  "principles": [
+    "从内容层级建立网格，再决定视觉形状。",
+    "名称、日期、编号共享对齐线；非对称仍有稳定秩序。",
+    "少量无衬线字重和尺度差承担层级，不依靠组件阴影。",
+    "抽象图形表达主题节奏，同时为信息保留阅读空间。"
+  ],
+  "productFocus": "将展览主题置于最大字级，日程成为可筛选的编辑式列表；日期、类型和收藏状态无需进入详情即可理解。",
+  "interaction": [
+    "分类按钮筛选日程并宣布结果数。",
+    "收藏按钮将展览编号存到当前浏览器，状态可再次取消。",
+    "页内导航沿常规文档滚动；无滚动劫持。",
+    "键盘焦点采用高对比轮廓，筛选按钮有 aria-pressed。"
+  ],
+  "theme": "纸白、炭黑、信号红；严格基线、粗线分隔、左对齐标题，主题是现代城市中的字与信息。",
+  "constraints": [
+    "Swissted 官网明确使用 Berthold Akzidenz-Grotesk medium，并非 Helvetica；本 demo 用系统 Arial 近似结构，不声称字体等同。",
+    "桌面 12 栏，移动端折为单列；文字不能为了维持海报形状被裁切。",
+    "红色用于主视觉和状态，正文以黑字/纸白保持对比。",
+    "字号差必须伴随语义标题层级，不能以超大字替代内容组织。",
+    "几何图形只是局部节奏；不要把 Swiss 和包豪斯的形色课程混为一个流派。"
+  ],
+  "useCases": [
+    "展览与文化机构",
+    "课程日程",
+    "排版作品集",
+    "设计节"
+  ],
+  "avoid": [
+    "无序的散落大字",
+    "每节都是同规格圆角卡片",
+    "为海报构图牺牲手机阅读"
+  ],
+  "tokens": {
+    "palette": [
+      "#f2efe6",
+      "#171717",
+      "#e3402e"
+    ],
+    "type": "Arial / Microsoft YaHei；标题 48–128px，正文 16–18px，元数据 12–14px",
+    "layout": "12 栏、32px 基础间距、横向日程列表；手机为单列",
+    "motion": "按钮 160ms 颜色变化；prefers-reduced-motion 禁用平滑滚动"
+  },
+  "sources": [
+    {
+      "title": "Swissted — 官方海报商店",
+      "url": "https://www.swissted.com/",
+      "type": "实例",
+      "note": "2026-10-07 阅读：海报作品是商品主角；本例迁移其字体优先思路，不复制电商页面。"
+    },
+    {
+      "title": "About Swissted — Mike Joyce",
+      "url": "https://www.swissted.com/pages/about-us",
+      "type": "理论",
+      "note": "作者说明将真实演出传单改为 International Typographic Style，并明确 Akzidenz-Grotesk 不是 Helvetica。"
+    },
+    {
+      "title": "Josef Müller-Brockmann — MoMA",
+      "url": "https://www.moma.org/artists/4154-josef-muller-brockmann",
+      "type": "实例",
+      "note": "馆藏确认 1953–1958 音乐会海报；不是整个网页动效的证据。"
+    },
+    {
+      "title": "IBM Carbon — 2x Grid",
+      "url": "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview",
+      "type": "规范",
+      "note": "阅读于 2026-10-07：对齐线、间距尺度和响应式网格指导网页迁移，非历史 Swiss 唯一规范。"
+    }
+  ],
+  "prompt": "可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构文化机构 [品牌] 制作瑞士国际主义启发的 [展览/课程] 页面。先建立标题、日期、地点、分类和行动层级，再用桌面12栏、32px间距、手机单列落地。纸白背景、炭黑正文、单一信号红；采用本地系统无衬线字体，最多两个字重。首屏是非对称的大标题和一幅原创抽象节奏图；后续用横向编号日程而非圆角卡片。提供有aria-pressed的分类筛选、结果计数和可取消的本地收藏。至少三个内容章节。保留常规滚动、可见键盘焦点、中文可读正文与reduced-motion降级。参考Swissted与Müller-Brockmann的排版逻辑，不复制商标、海报或宣称字体与原作相同。\n\n要素协调要求：标题尺度、对齐线、间距和日期位置重复形成秩序；红色只是集中强调，不能代替信息层级。",
+  "negativePrompt": "不要玻璃拟态、渐变霓虹、满屏圆角卡片、横向滚动劫持、裁切中文标题；不要将Helvetica当作Swiss的唯一字体或混用包豪斯形色定律。",
+  "demo": "demos/swiss-grid/index.html",
+  "preview": "previews/swiss-grid.jpg",
+  "research": "research/swiss-grid.md",
+  "exercise": "将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。",
+  "composition": {
+    "color": "暖白纸面、黑色信息与少量红色海报形成清晰层级。",
+    "typography": "Arial / Microsoft YaHei；标题 48–128px，正文 16–18px，元数据 12–14px",
+    "layout": "12 栏、32px 基础间距、横向日程列表；手机为单列",
+    "imagery": "海报图形提供节奏，日程文字与日期才是主要内容。",
+    "shape": "直线、圆环和非对称版面服从信息网格；不用装饰性圆角。",
+    "hierarchy": "展览主题 → 日期地点 → 分类日程 → 理念。",
+    "motion": "按钮 160ms 颜色变化；prefers-reduced-motion 禁用平滑滚动",
+    "coherence": "标题尺度、对齐线、间距和日期位置重复形成秩序；红色只是集中强调，不能代替信息层级。"
+  }
+}

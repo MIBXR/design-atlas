@@ -1,0 +1,115 @@
+{
+  "id": "pixel-world",
+  "order": 14,
+  "title": "像素：微型世界",
+  "subtitle": "Celeste / PICO-8 / Saint11 → 地图驱动的探索页面",
+  "category": "经典风格",
+  "tags": [
+    "像素",
+    "游戏",
+    "PICO-8",
+    "地图",
+    "探索",
+    "有限色板"
+  ],
+  "summary": "以低分辨率、有限色板、清晰轮廓和可探索的场景建立主题。像素是有意识的图形结构，不是把照片缩小模糊后再放大。",
+  "accent": "#ffccaa",
+  "background": "#1d2b53",
+  "principles": [
+    "先定义像素尺度与色板，再绘制地形、物件和角色。",
+    "轮廓、明暗与空间关系在小画布内必须可辨认。",
+    "世界场景承担导航，常规文字承担说明，控制复杂度。",
+    "探索操作、角色位置和地点信息保持一致，避免只有装饰的地图。"
+  ],
+  "productFocus": "虚构 Tiny Tides 岛屿用原创128×128地图介绍四个地点；点击地点或移动角色时更新场景信息，发现进度和旅行手账可保存。",
+  "interaction": [
+    "地点按钮移动角色并更新当前地点介绍。",
+    "地图聚焦后用方向键/WASD移动；手机可用方向按钮。",
+    "靠近地点会记录发现进度，按钮状态不只通过颜色表达。",
+    "手账仅保存当前浏览器，支持清除并重新探索。"
+  ],
+  "theme": "深蓝海面、温暖沙滩、块状树林、小灯塔；像素图形与清晰中文旅行记录结合的轻探索体验。",
+  "constraints": [
+    "PICO-8的128×128/16色是这个实例的明确创作约束，不是所有像素艺术的定义。",
+    "本地图使用16色原生PICO-8色板和整数像素绘制；桌面用整数倍率，窄屏优先完整显示。",
+    "Canvas放大使用image-rendering:pixelated；禁止图片模糊插值。",
+    "关键地点有可聚焦DOM按钮与文本说明，不只隐藏在Canvas里。",
+    "长文使用可读系统字体，不能把业务信息全部压成像素小字。",
+    "无角色原作素材、复杂游戏引擎或音频自动播放；降低动态偏好时取消非必要动画。"
+  ],
+  "useCases": [
+    "独立游戏宣传",
+    "互动作品集",
+    "小型IP世界介绍",
+    "趣味导航",
+    "探索式知识页面"
+  ],
+  "avoid": [
+    "模糊或混合不一致像素尺度",
+    "只有Canvas且无键盘/文本入口",
+    "把PICO-8限制推广为所有像素艺术的规则"
+  ],
+  "tokens": {
+    "palette": [
+      "#1d2b53",
+      "#29adff",
+      "#008751",
+      "#00e436",
+      "#ffccaa",
+      "#fff1e8",
+      "#ffa300",
+      "#5f574f"
+    ],
+    "type": "Courier New用于英文界面；中文Microsoft YaHei，正文15–17px",
+    "layout": "地图主区域 + 旅行记录侧栏；手机地图上、记录下；后续地点索引与玩法说明",
+    "motion": "移动以tile步进、静态地图；reduced-motion保留即时状态更新"
+  },
+  "sources": [
+    {
+      "title": "Celeste 官方网站",
+      "url": "https://www.celestegame.com/",
+      "type": "实例",
+      "note": "2026-10-07阅读：围绕登山旅程、游戏预告和平台入口建立明确世界与产品行动；不复制其角色或场景。"
+    },
+    {
+      "title": "PICO-8 Fantasy Console — Lexaloffle",
+      "url": "https://www.lexaloffle.com/pico-8.php",
+      "type": "实例",
+      "note": "官网规定128×128显示、16色、8×8精灵等约束，并说明有限设计的表达价值。"
+    },
+    {
+      "title": "PICO-8 官方手册",
+      "url": "https://www.lexaloffle.com/dl/docs/pico-8_manual.html",
+      "type": "规范",
+      "note": "使用其明确的整数像素/16色色板/8×8 tile模型作为本demo局部创作约束。"
+    },
+    {
+      "title": "Saint11 — Pixel Art Tutorials",
+      "url": "https://saint11.art/blog/pixel-art-tutorials/",
+      "type": "理论",
+      "note": "Celeste官网列出的像素美术师Pedro Medeiros的公开教程，为轮廓、有限色彩和逐像素思考提供实践参考。"
+    },
+    {
+      "title": "MDN — image-rendering",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/image-rendering",
+      "type": "规范",
+      "note": "说明pixelated/crisp-edges的缩放行为；本例Canvas使用pixelated保留边缘。"
+    }
+  ],
+  "prompt": "可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构小型IP [品牌] 制作地图驱动的像素风介绍页。参考PICO-8的128×128、16色、8×8tile创作约束，自绘一个可辨认轮廓的岛屿世界；禁止复制Celeste或其他游戏角色/背景。使用Canvas整数像素绘制并用image-rendering:pixelated放大，桌面尽量整数倍率，手机完整显示地图。首屏地图为主，旅行手账为辅：四个可聚焦DOM地点按钮、实时地点说明、角色位置与发现计数，方向键/WASD仅在地图聚焦时生效，手机提供四向按钮。探索记录可存当前浏览器并可清除。后续至少两節为地点索引与玩法说明；中文正文使用正常可读系统字体，英文元数据可用等宽字。没有自动音频、闪烁扫描线或滚动劫持，尊重reduced-motion。注明这是PICO-8约束的局部迁移，而不是所有像素艺术的定义。\n\n要素协调要求：低分辨率地景、有限调色与清楚状态共同形成游戏感；中文说明保留正常可读字体，不强行像素化。",
+  "negativePrompt": "不要平滑缩放像素图、随机混合像素尺度、把照片马赛克当作像素美术、隐藏于Canvas的唯一导航、不可读中文小字或自动播放音效。",
+  "demo": "demos/pixel-world/index.html",
+  "preview": "previews/pixel-world.jpg",
+  "research": "research/pixel-world.md",
+  "exercise": "为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。",
+  "composition": {
+    "color": "有限16色调色板，以土色、草绿和水蓝区分离散地图区域。",
+    "typography": "Courier New用于英文界面；中文Microsoft YaHei，正文15–17px",
+    "layout": "地图主区域 + 旅行记录侧栏；手机地图上、记录下；后续地点索引与玩法说明",
+    "imagery": "128×128原生Canvas与原创像素地点构成可探索世界。",
+    "shape": "离散方格、阶梯边缘与像素按钮保持同一尺度体系。",
+    "hierarchy": "世界地图 → 地点索引 → 步进操作 → 探索手账。",
+    "motion": "移动以tile步进、静态地图；reduced-motion保留即时状态更新",
+    "coherence": "低分辨率地景、有限调色与清楚状态共同形成游戏感；中文说明保留正常可读字体，不强行像素化。"
+  }
+}

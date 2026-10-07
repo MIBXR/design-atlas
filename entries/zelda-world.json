@@ -1,0 +1,91 @@
+{
+  "id": "zelda-world",
+  "order": 5,
+  "title": "世界观 · 沉浸探索",
+  "subtitle": "ZELDA / WORLD AS THE HERO",
+  "category": "游戏/IP",
+  "tags": [
+    "塞尔达",
+    "章节叙事",
+    "世界观",
+    "场景探索"
+  ],
+  "summary": "先让人进入世界，再用章节与可探索场景解释它的独特玩法。",
+  "accent": "#d1c797",
+  "background": "#163c3f",
+  "principles": [
+    "让世界场景成为视觉主角，标题以留白和尺度建立焦点。",
+    "将抽象卖点拆成世界、探索方式、行动入口三个叙事阶段。",
+    "使用前后景层级建立空间；界面控件保持稳定、低干扰。"
+  ],
+  "productFocus": "原创群岛场景先展示探索氛围，地区切换把天空、森林与遗迹的差异转化为可见内容，后续再解释探索机制。",
+  "interaction": [
+    "地区按钮同步切换场景、色调、地标与说明。",
+    "章节导航跳转到真实内容区，保留浏览器自然滚动。",
+    "行动按钮生成本地出发清单，不伪装成真实游戏下载。"
+  ],
+  "theme": "宁静、未知、古老文明；青绿夜色与暖金文字形成探索感。",
+  "constraints": [
+    "世界素材必须承担叙事，不能以无意义粒子替代。",
+    "标题、正文与行动按钮须和景色保持足够对比。",
+    "不劫持滚轮、不自动播放声音。",
+    "手机采用自然文档顺序，场景可以缩放但文字不能缩成图片。",
+    "减少动态效果时取消过渡，场景信息仍完整。"
+  ],
+  "useCases": [
+    "开放世界游戏",
+    "幻想文学与IP",
+    "旅行目的地"
+  ],
+  "avoid": [
+    "数据密集后台",
+    "高频交易操作"
+  ],
+  "tokens": {
+    "palette": [
+      "#163c3f",
+      "#27605b",
+      "#d1c797",
+      "#f4f0df"
+    ],
+    "type": "Georgia 衬线英文 + 系统中文；标题宽松，正文稳定",
+    "layout": "首屏横向世界舞台；后续章节锚点与地图式内容",
+    "motion": "用户触发的 450ms 场景过渡，reduced-motion 归零"
+  },
+  "sources": [
+    {
+      "title": "Nintendo · Tears of the Kingdom WORLD",
+      "url": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+      "type": "实例",
+      "note": "实际浏览核验声音入口、三个世界章节、大幅游戏场景；截图在调研目录。"
+    },
+    {
+      "title": "Nintendo · Ask the Developer Part 1",
+      "url": "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-9-the-legend-of-zelda-tears-of-the-kingdom-part-1/",
+      "type": "理论",
+      "note": "世界延续与新探索的游戏设计叙述；迁移到网页叙事属于设计推断。"
+    },
+    {
+      "title": "W3C · Animation from Interactions",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "type": "规范",
+      "note": "非必要交互动效应可关闭。"
+    }
+  ],
+  "prompt": "可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为【游戏/IP名称】制作一个以世界探索为中心的宣传网页。先确定三个真实地区及各自玩法差异，以高质量自有场景素材或原创SVG呈现远景、中景、前景；不要仅放抽象渐变。首屏使用大幅场景、低干扰导航、两行衬线标题、简短世界设定和一个明确探索按钮。提供三个地区按钮，点击时同步更新环境色、地标、地区名、玩法描述与aria-pressed。页面随后依次展示世界地图、三种探索机制、出发清单。使用青绿、暖金、象牙白的有限调色板，正文置于稳定底色，不把文案烘焙成图片。保留原生滚动，章节锚点可直接跳转；按钮命中区至少44px，键盘可以完成操作；手机改为单列并保留场景尺度。所有视觉资产本地化，禁用自动音频和自动轮播；prefers-reduced-motion时关闭场景过渡。输出独立HTML/CSS/JS与素材目录，并标明演示内容是虚构。\n\n要素协调要求：空间层级、宽松衬线标题、青绿夜色与低干扰导航共同营造未知感；地区切换必须改变叙事内容。",
+  "negativePrompt": "不要使用官方角色或纹章，不要无限粒子，不要滚轮劫持，不要自动播放音频，不要把正文放在细节繁多的图上，不要只有首屏而无玩法说明。",
+  "demo": "demos/zelda-world/index.html",
+  "preview": "previews/zelda-world.jpg",
+  "research": "research/zelda-world.md",
+  "exercise": "替换为三个真实旅行地点，让地区切换同步解释各地的一项独特体验。",
+  "composition": {
+    "color": "青绿拉开景深，暖金提示地区与行动，象牙白用于标题。",
+    "typography": "Georgia 衬线英文 + 系统中文；标题宽松，正文稳定",
+    "layout": "首屏横向世界舞台；后续章节锚点与地图式内容",
+    "imagery": "原创浮岛、瀑布、遗迹与地图承担世界叙事。",
+    "shape": "远山叠层、圆形天体与细线目录统一为宁静探索语汇。",
+    "hierarchy": "世界首屏 → 地区差异 → 探索机制 → 出发清单。",
+    "motion": "用户触发的 450ms 场景过渡，reduced-motion 归零",
+    "coherence": "空间层级、宽松衬线标题、青绿夜色与低干扰导航共同营造未知感；地区切换必须改变叙事内容。"
+  }
+}
