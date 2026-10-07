@@ -30,24 +30,6 @@
 
 ![从观察到复用](docs/readme/workflow.webp)
 
-## 本轮重点：把交互作为设计的一部分
-
-### ChatGPT · 一个窗口贯穿四段流程
-
-[进入交互案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/chatgpt-platform) · [调研与原站截图](research/chatgpt-platform.md) · [Prompt](prompts/chatgpt-platform.md) · [交互源码](demos/chatgpt-platform/script.js)
-
-![ChatGPT 三个实际交互关键帧](docs/readme/chatgpt-sequence.webp)
-
-指针经过“聊天／工作／编程”即切换；三组真实周边素材独立进出。滚动带入中央界面与分层视差，拼贴先淡出，同一个窗口随后向右下交接，露出左侧说明，并随继续滚动切换模式。点击、键盘和触屏也能使用。原站几何与CSS属性有记录，未取得的完整JS时序明确标为本地近似。
-
-### Google Material · 表现力与组件秩序
-
-[进入新案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/#style/google-material) · [研究](research/google-material.md) · [Prompt](prompts/google-material.md) · [源码](demos/google-material)
-
-![Google Material 实际 Demo](previews/google-material.jpg)
-
-依据当前官方首页：固定图标侧栏、大圆角相邻首屏、真实9秒组件视频、Google Sans与角色配色，以及1／2／3项资源分组。CTA、卡片、主题与暂停控制保留不同状态反馈。规范中的物理动效体系与首页实际CSS曲线分别记录。
-
 ## 案例画廊
 
 图片进入对应在线案例，文字链接可直接阅读 Prompt、研究与代码。品牌页面是注明范围的局部学习还原，经典语言是有真实参考与理论依据的构成练习。

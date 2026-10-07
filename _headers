@@ -1,0 +1,5 @@
+# Markdown is a UTF-8 source document. Serve it inline as plain text so
+# browsers do not guess a legacy encoding or treat text/markdown as a download.
+/*.md
+  Content-Type: text/plain; charset=utf-8
+  X-Content-Type-Options: nosniff
