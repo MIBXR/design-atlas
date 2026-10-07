@@ -23,7 +23,10 @@
     $('#agent-cases').innerHTML = entries.map(e => `<article class="agent-case"><small>${esc(e.category)} · ${esc(e.country || '跨来源研究')}</small><h3>${esc(e.title)}</h3><p>${esc(e.summary)}</p><code>${esc(e.id)}</code><div class="agent-case-actions"><a class="copy-button" href="index.html#style/${encodeURIComponent(e.id)}">人工预览 ↗</a><a class="copy-button" href="${esc(e.paths.bundle)}" download="${esc(e.id)}-context.json">案例包 JSON ↓</a><button class="copy-button" data-case="${esc(e.id)}">复制 Agent 入口</button></div></article>`).join('');
     $('#agent-cases').querySelectorAll('[data-case]').forEach(button => button.addEventListener('click', () => {
       const e = catalog.entries.find(entry => entry.id === button.dataset.case);
-      copy(`请读取 Design Atlas 案例 ${e.id} 的完整上下文：\n${new URL(e.paths.bundle, location.href).href}\n先结合我的真实需求阅读 entry、webNotes（网页右侧说明）和 documents，再按 files 取用源码。保留原始约束、来源和复现边界。\n本次索引中的案例包 SHA256：${e.bundleSha256}\n可重现取材请使用 design-atlas skill 的固定提交，或固定 GitHub 完整提交 SHA。`);
+      const source = catalog.source;
+      const bundleURL = source ? new URL(e.paths.bundle,source.baseUrl).href : new URL(e.paths.bundle,location.href).href;
+      const sourceHint = source ? `原始文件基址：${source.baseUrl}\n对 files 中每个 path 使用这个基址获取并核验 SHA256；网页播放文件经过部署转换。上游提交：${source.commit}` : '原始文件从 design-atlas skill 的固定提交读取；或固定 GitHub 完整提交 SHA，避免把网站播放文件当作原始源码。';
+      copy(`请读取 Design Atlas 案例 ${e.id} 的完整上下文：\n${bundleURL}\n先结合我的真实需求阅读 entry、webNotes（网页右侧说明）和 documents，再按 files 取用源码。保留原始约束、来源和复现边界。\n本次索引中的案例包 SHA256：${e.bundleSha256}\n${sourceHint}`);
     }));
   }
   document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click',()=>copy(document.getElementById(button.dataset.copy).textContent)));

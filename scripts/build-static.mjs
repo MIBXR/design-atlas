@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
 import {loadAssetSources} from './build-asset-sources.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -112,6 +113,12 @@ export function prepareStatic(assetsMode = 'local') {
   const runtimeReady = includedRuntime.includes('asset-runtime.js') && includedRuntime.includes('asset-sources.js');
   if (assetsMode === 'github' && !runtimeReady) throw new Error('GitHub mode requires asset-sources.js and asset-runtime.js in the source checkout.');
   const sources = includedRuntime.includes('asset-sources.js') ? loadAssetSources() : {assets:{}};
+  // Hosted HTML/CSS is rewritten for playback, and Markdown gains a UTF-8 BOM.
+  // Agent source must come from the original Git bytes, not those display files.
+  const revision = spawnSync('git', ['rev-parse', 'HEAD'], {cwd:root, encoding:'utf8'});
+  const clean = spawnSync('git', ['status', '--porcelain'], {cwd:root, encoding:'utf8'});
+  const sourceCommit = revision.stdout?.trim();
+  if (revision.status !== 0 || clean.status !== 0 || clean.stdout.trim() || !/^[a-f\d]{40}$/.test(sourceCommit)) throw new Error('Commit the verified source before static packaging so Agent source URLs identify the exact original bytes.');
   for (const name of [...files, ...includedRuntime, ...folders]) regularTree(path.join(root, name));
   fs.rmSync(output, {recursive:true, force:true});
   fs.mkdirSync(output);
@@ -150,6 +157,10 @@ export function prepareStatic(assetsMode = 'local') {
     }
   }
   finalize(output);
+  const catalogPath = path.join(output, 'agent', 'catalog.json');
+  const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+  catalog.source = {repository:'MIBXR/design-atlas', commit:sourceCommit, baseUrl:`https://raw.githubusercontent.com/MIBXR/design-atlas/${sourceCommit}/`};
+  fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 2) + '\n', 'utf8');
   for (const canonical of omitted) {
     const asset = sources.assets[canonical];
     if (fs.existsSync(path.join(output, canonical)) || !asset?.url.startsWith(sources.baseUrl) || asset.bytes < sources.thresholdBytes || !/^[a-f\d]{64}$/.test(asset.sha256)) throw new Error('An omitted asset has no valid immutable source: ' + canonical);
