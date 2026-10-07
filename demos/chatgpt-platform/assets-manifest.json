@@ -1,0 +1,153 @@
+{
+  "brand": "chatgpt-platform",
+  "sourcePage": "https://chatgpt.com/overview/",
+  "scope": "本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。",
+  "assets": [
+    {
+      "file": "assets/chat.webp",
+      "sourceUrl": "https://images.ctfassets.net/8su2tbn87fck/1HKIsAZ11GjpEEyopYfLIW/094b52522ff5edf1b2b7d1b0200fd1be/Chat.png?fm=webp&q=80&w=1920",
+      "purpose": "Chat栏目真实应用图片",
+      "width": 1920,
+      "height": 1231,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 67800,
+      "status": "downloaded",
+      "sha256": "95494793b1e5985a8838f36cfdd11243c73fde5b79a0a9e76c284058c26daf0e"
+    },
+    {
+      "file": "assets/work.webp",
+      "sourceUrl": "https://images.ctfassets.net/8su2tbn87fck/2GFn68Lj3PCUE87c5oIx0m/a3de41104a526bf19da4eb4063fe29df/Work.png?fm=webp&q=80&w=1920",
+      "purpose": "Work栏目真实应用图片",
+      "width": 1920,
+      "height": 1230,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/webp",
+      "bytes": 66072,
+      "status": "downloaded",
+      "sha256": "f0dc48fe86037abd2558b13717a5ee0fb8f8212e4d9f00adb82831ac0a839d69"
+    },
+    {
+      "file": "assets/code.webp",
+      "sourceUrl": "https://images.ctfassets.net/8su2tbn87fck/1MchgWlDyoyab3xpJ3J2ZD/7f5fe4fed43af2bf78f2f88089336944/Code.png?fm=webp&q=80&w=1920",
+      "purpose": "Codex栏目真实应用图片",
+      "width": 1920,
+      "height": 1230,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 152266,
+      "status": "downloaded",
+      "sha256": "abcf7a498fd22236ee99211faa06106f1b6f3d1a81e9417587152fbae1ba303c"
+    },
+    {
+      "file": "assets/scribble.webp",
+      "sourceUrl": "https://images.ctfassets.net/8su2tbn87fck/46OL5XNwj1B8TqA1j0oPz3/16d05587849176ec583a56840d420904/overview-chat-scribble.png?fm=webp&q=80&w=624",
+      "purpose": "官网chat手绘文字图形",
+      "width": 624,
+      "height": 354,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/webp",
+      "bytes": 21184,
+      "status": "downloaded",
+      "sha256": "a6c2eb5a151d1405c40e93b1adebb2573bc3d1c6963667232aba12fc6a2b7d2a"
+    },
+    {
+      "file": "assets/OpenAISansSC-Variable-001.woff2",
+      "sourceUrl": "https://cdn.openai.com/common/fonts/openai-sans/v4/zh-hans-v2/OpenAISansSC-Variable-001.woff2",
+      "purpose": "官方页面字体，保留原始Unicode分片范围",
+      "width": null,
+      "height": null,
+      "status": "downloaded",
+      "bytes": 98688,
+      "retrievedAt": "2026-10-07",
+      "copyright": "OpenAI及字体作者所有；仅用于本地私人学习。",
+      "sha256": "038e35aa454e1cc7cb916243018294b8124b4ef264a6d7971ac5fb99f7c0d812"
+    },
+    {
+      "file": "assets/OpenAISansSC-Variable-002.woff2",
+      "sourceUrl": "https://cdn.openai.com/common/fonts/openai-sans/v4/zh-hans-v2/OpenAISansSC-Variable-002.woff2",
+      "purpose": "官方页面字体，保留原始Unicode分片范围",
+      "width": null,
+      "height": null,
+      "status": "downloaded",
+      "bytes": 207168,
+      "retrievedAt": "2026-10-07",
+      "copyright": "OpenAI及字体作者所有；仅用于本地私人学习。",
+      "sha256": "eeeaec298e7d0b6915426426d3c1b0930716cf3504e1aa8c0a2fed8e363cbdf5"
+    },
+    {
+      "file": "assets/OpenAISansSC-Variable-003.woff2",
+      "sourceUrl": "https://cdn.openai.com/common/fonts/openai-sans/v4/zh-hans-v2/OpenAISansSC-Variable-003.woff2",
+      "purpose": "官方页面字体，保留原始Unicode分片范围",
+      "width": null,
+      "height": null,
+      "status": "downloaded",
+      "bytes": 407616,
+      "retrievedAt": "2026-10-07",
+      "copyright": "OpenAI及字体作者所有；仅用于本地私人学习。",
+      "sha256": "ee710f03293ddde72265975274fbe026ed46ae7edfb91784d15a6f590f9f893b"
+    },
+    {
+      "file": "assets/OpenAISans-Regular.woff2",
+      "sourceUrl": "https://cdn.openai.com/common/fonts/openai-sans/v4/OpenAISans-Regular.woff2",
+      "purpose": "官方页面字体，保留原始Unicode分片范围",
+      "width": null,
+      "height": null,
+      "status": "downloaded",
+      "bytes": 53228,
+      "retrievedAt": "2026-10-07",
+      "copyright": "OpenAI及字体作者所有；仅用于本地私人学习。",
+      "sha256": "6b99d0284d5ed15733ea855fdacc8503d1f5e1b3945b02317d27773daa21d9dc"
+    },
+    {
+      "file": "assets/OpenAISansSC-Variable-000.woff2",
+      "sourceUrl": "https://cdn.openai.com/common/fonts/openai-sans/v4/zh-hans-v2/OpenAISansSC-Variable-000.woff2",
+      "purpose": "官方页面字体，保留原始Unicode分片范围",
+      "width": null,
+      "height": null,
+      "status": "downloaded",
+      "bytes": 87432,
+      "retrievedAt": "2026-10-07",
+      "copyright": "OpenAI及字体作者所有；仅用于本地私人学习。",
+      "sha256": "d67ef2bcf85571c4b19805372cff8f21c79fcbef1df8ea2cabe86f97a675815c"
+    },
+    {
+      "file": "assets/OpenAISans-Medium.woff2",
+      "sourceUrl": "https://cdn.openai.com/common/fonts/openai-sans/v4/OpenAISans-Medium.woff2",
+      "purpose": "官方页面字体，保留原始Unicode分片范围",
+      "width": null,
+      "height": null,
+      "status": "downloaded",
+      "bytes": 56184,
+      "retrievedAt": "2026-10-07",
+      "copyright": "OpenAI及字体作者所有；仅用于本地私人学习。",
+      "sha256": "507174d2e2c80f877d900e1346ba142509d303e2ef74424665e8493258c841e3"
+    },
+    {
+      "file": "assets/OpenAISans-Bold.woff2",
+      "sourceUrl": "https://cdn.openai.com/common/fonts/openai-sans/v4/OpenAISans-Bold.woff2",
+      "purpose": "官方页面字体，保留原始Unicode分片范围",
+      "width": null,
+      "height": null,
+      "status": "downloaded",
+      "bytes": 55624,
+      "retrievedAt": "2026-10-07",
+      "copyright": "OpenAI及字体作者所有；仅用于本地私人学习。",
+      "sha256": "2c23db1a93945fcb96f6826518848da0cc884787e4e308d9c099122c8c7e247e"
+    },
+    {
+      "file": "assets/logo.svg",
+      "sourceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+      "purpose": "CUA原样提取的官网ChatGPT完整结标与字标",
+      "width": 118,
+      "height": 28,
+      "status": "downloaded",
+      "retrievedAt": "2026-10-07",
+      "copyright": "OpenAI所有；仅本地私人学习，无品牌关联。",
+      "bytes": 5432,
+      "sha256": "dc10140b09b0eb10c0eab2917093d5586773007924d07a18622360f926744bde"
+    }
+  ]
+}
