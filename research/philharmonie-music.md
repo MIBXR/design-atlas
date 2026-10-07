@@ -61,3 +61,11 @@ W3C Disclosure规范用于实现折叠/导航按钮，不用于推断原站团�
 ## 本地验证
 
 桌面和390px手机实际浏览器验证指标与交互结果保存于[qa.json](../demos/philharmonie-music/qa.json)；预览见[desktop](../previews/philharmonie-music.jpg)与[mobile](../previews/mobile/philharmonie-music.jpg)。
+
+## 2026-10-07 动效复核
+
+2026-10-07 root IAB二次实访原生侧栏Horaires折叠；原站两张展览照片顺序穿插正文。撤掉先前自加图片轮播，恢复两个顺序摄影块，保留侧栏与日程details，并补原站Playlist入口。未添加未观察到的背景循环或飞入。
+
+### 本轮音乐会动态复核（取代此前静态摄影处理）
+
+2026-10-07再次实访官方George Benjamin详情，观察Slick三人摄影轨道及Previous/Next/Pause按钮；点击Next时computed transform为水平位移，transition 0.5s。三图分别为George Benjamin © Matthew Lloyd、Ayano Kamei © Capucine De Chocqueuse、John Stulz © Franck Ferville。本地已补三图横轨与暂停；自动间隔未取到，采用6秒并明确近似。公开JS下载部分TLS失败；未声称读取完整原站方法。相关音乐会在本Demo正文中以较小组件呈现，并不等同原站独立详情页整幅主图。

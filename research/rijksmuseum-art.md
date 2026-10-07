@@ -60,3 +60,7 @@ W3C Disclosure规范用于实现折叠/导航按钮，不用于推断原站团�
 ## 本地验证
 
 桌面和390px手机实际浏览器验证指标与交互结果保存于[qa.json](../demos/rijksmuseum-art/qa.json)；预览见[desktop](../previews/rijksmuseum-art.jpg)与[mobile](../previews/mobile/rijksmuseum-art.jpg)。
+
+## 2026-10-07 动效复核
+
+2026-10-07 root IAB二次实访：原生下滚全幅摄影、打开全屏菜单，公开computed CSS菜单opacity .5s linear。未发现首页循环视频。补回500ms菜单淡入，其余保留摄影节奏。

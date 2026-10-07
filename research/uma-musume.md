@@ -23,3 +23,9 @@
 `demos/uma-musume/index.html` 保留官方首屏KV、下载徽章、荧绿斜切标题、新闻条目、倾斜预告框和三态玩法叠合结构；本地Sections工具菜单与说明页是教学补充。Characters/Media完整区、动态运营接口、Cookie弹层、商店营销浮窗没有复制。详细差异见demo中的 `fidelity.md`。新闻是2026-10-07调研时的简化快照，链接仍指向真实公告，不是实时服务。
 
 所有素材来源、文件尺寸与用途见 `assets-manifest.json`。官方图像和商标权利归 Cygames，私人学习范围不代表获准公开再发布。
+
+## 2026-10-07 动效补审更新
+
+实点Gameplay Next，Splide list为translateX(-2000px)，transition:transform 400ms cubic-bezier(.25,1,.5,1)；初始Previous disabled，中间两箭头可用。已替换瞬时换图为完整三面板滑轨，并补首尾禁用状态。源站人物集合滚动带和完整官网内容不在局部实现范围；教学菜单/PV说明框仍明确是本地新增。
+
+本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#uma-musume)。

@@ -23,3 +23,9 @@
 [WAI轮播教程](https://www.w3.org/WAI/tutorials/carousels/) 指导按钮、键盘和当前状态。本地画廊不自动播放。[W3C交互动效说明](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) 的AAA条款支持关闭非必要互动运动，本地取消官网视差，默认背景停止/静音，所有音频由用户主动Play预告开始。
 
 详见 `demos/monument-valley-game/fidelity.md`、`assets-manifest.json`。官方图片、Logo与视频仍属ustwo games及相应权利方，私人学习不意味着可公开再发布。
+
+## 2026-10-07 动效补审更新
+
+实点官方Next，slick-track显示translate3d(-5400px,0,0)、transition:transform500ms；背景与预告均为实际67.988秒MP4。已将瞬时替换单图改为四幅横向轨道，恢复普通模式静音背景播放且可停，补后台/离屏暂停。14图缩为4图；原站部分视差和进入动画仍未覆盖，系统字体近似，不复制Humanist521字体。
+
+本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#monument-valley-game)。

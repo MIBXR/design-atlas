@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-07",
+  "browser": "Edge documented CUA",
+  "viewport": {
+    "documentWidth": 375,
+    "height": 844,
+    "overflow": false,
+    "width": 390
+  },
+  "checks": [
+    {
+      "name": "programming mode selected and official image loaded",
+      "pass": true,
+      "actual": {
+        "ariaPressed": true,
+        "image": "assets/code.webp"
+      }
+    },
+    {
+      "name": "mobile navigation open",
+      "pass": true,
+      "actual": {
+        "documentWidth": 375,
+        "expanded": "true",
+        "viewport": 390,
+        "visibleMenu": [
+          {
+            "right": 0,
+            "text": "简介",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "right": 0,
+            "text": "Codex",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "right": 0,
+            "text": "Business",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "right": 334.4000053405762,
+            "text": "简介",
+            "x": 40.79999923706055,
+            "y": 80.80000305175781
+          },
+          {
+            "right": 334.4000053405762,
+            "text": "功能",
+            "x": 40.79999923706055,
+            "y": 133.1999969482422
+          },
+          {
+            "right": 334.4000053405762,
+            "text": "学习",
+            "x": 40.79999923706055,
+            "y": 185.6000061035156
+          },
+          {
+            "right": 334.4000053405762,
+            "text": "Codex",
+            "x": 40.79999923706055,
+            "y": 238
+          },
+          {
+            "right": 334.4000053405762,
+            "text": "Business",
+            "x": 40.79999923706055,
+            "y": 290.3999938964844
+          },
+          {
+            "right": 334.4000053405762,
+            "text": "定价",
+            "x": 40.79999923706055,
+            "y": 342.8000183105469
+          },
+          {
+            "right": 334.4000053405762,
+            "text": "下载",
+            "x": 40.79999923706055,
+            "y": 395.2000122070313
+          }
+        ]
+      }
+    },
+    {
+      "name": "work mode changes image",
+      "pass": true,
+      "actual": {
+        "image": "assets/work.webp",
+        "loaded": true
+      }
+    },
+    {
+      "name": "mobile Codex accordion",
+      "pass": true,
+      "actual": {
+        "docWidth": 375,
+        "expanded": "true",
+        "image": "assets/code.webp",
+        "viewport": 390
+      }
+    }
+  ],
+  "final": {
+    "chatPressed": "true",
+    "documentWidth": 375,
+    "image": {
+      "loaded": true,
+      "src": "assets/chat.webp"
+    },
+    "menuExpanded": "false",
+    "noHorizontalOverflow": true,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "screenshots": [
+    "previews/chatgpt-platform-mobile.jpg",
+    "previews/states/chatgpt-platform-mobile-menu.jpg"
+  ]
+}

@@ -59,3 +59,9 @@ W3C资料是实现约束的参考，并非声称当前官网已完全符合全�
 - 桌面/手机首屏：`../previews/arknights-world.jpg`、`../previews/arknights-world-mobile.jpg`；另保存档案和世界观细节截图。
 
 截图由 CUA 在 Edge 浏览器保存。视口设置与浏览器实际截图像素不同：桌面 JPG 约 1425×990，手机 JPG 约 375×811；不放大或伪造分辨率。音频自动播放拒绝分支与 reduced-motion 降级均在代码中处理；本次未模拟浏览器拒绝或系统 reduced-motion 设置，不将它们记为已实测。
+
+## 2026-10-07 动效补审更新
+
+实点operator导航与阿米娅，官网标识02 OPERATOR、Amiya E0与黑泽朋世资料出现。DOM记录translateY舞台及0/200/400/600/800/1000ms分块delay。已补纵向错开进入、精英/角色更新、语音暂停状态、独立首屏可见性检查，并修立绘覆盖按钮命中区。500ms/easing为本地曲线，不称为官方参数；WebGL世界效果、E0和全部干员不在本地范围。
+
+本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#arknights-world)。

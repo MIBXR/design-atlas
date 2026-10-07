@@ -54,3 +54,14 @@ Qoder第一方产品族文档给出从理解任务到计划、执行、验证和
 ## 版本统一与2026-10-07补正
 
 Root通过国际站可见Visit China Site入口实访[中国站](https://qoder.cn/)并保存无遮挡原站截图。首屏最终统一CN版：移除国际版促销/Qwen标签，使用官网Qoder CN黑色PNG字标（1632×344）、约66px导航、110px起左侧双行标题/右侧说明，工作台背景为无圆角满幅强绿。之前调研国际版的信息不能作为CN版所有后续区域的完整观察证据。五形态图像来源、平台切换和协作步骤仅是本地局部机制研究，不宣称后续内容/布局逐区等同CN原站。
+
+
+## 2026-10-07 动效复审补正
+
+首屏公开实访后Edge显示账号/项目内容，下一步按钮操作自动审批拒绝，未重试。匿名无cookie SSR/2071脚本200验证public ProductShowcase speed400/auto20000/onClick/tab/mobile；root干净IAB只读取得HeroMotionEmbed时间。
+
+公开五平台showcase源码为400ms水平carousel、20秒auto、mouseenter暂停；本地切换方向/点控/手机滑动对应这一个组件。公开hero dash-flow/breathe时间迁移为局部SVG近似；模式动作原站未完成验证。
+
+五平台ProductShowcase是400ms/20秒Swiper，不能误套四项FeatureSection的150ms纵向出入/10秒hover循环；源演示按钮操作被自动审批拒绝，本次不宣称click结果实访。
+
+本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。

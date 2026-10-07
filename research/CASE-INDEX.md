@@ -1,6 +1,6 @@
 # 案例与代码索引
 
-由 entries/ 自动生成，共 28 项。国家/地区按具体机构、创作来源或注明的页面版本收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。
+由 entries/ 自动生成，共 29 项。国家/地区按具体机构、创作来源或注明的页面版本收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。
 
 | 顺序 | 案例 | 分类 | 国家/地区 | 类型 | 可查询资料 |
 | --- | --- | --- | --- | --- | --- |
@@ -18,7 +18,7 @@
 | 12 | [包豪斯：几何与实验](../index.html#style/bauhaus-geometry) | 经典风格 | 跨来源研究 | 经典构成练习 | [原始案例](https://bauhaus-dessau.de/en/welcome/) · [研究](bauhaus-geometry.md) · [Prompt数据](../entries/bauhaus-geometry.json) · [Demo](../demos/bauhaus-geometry/index.html) |
 | 13 | [80年代：合成器面板](../index.html#style/retro-80s) | 经典风格 | 跨来源研究 | 经典构成练习 | [原始案例](https://www.arturia.com/products/software-instruments/jup-8-v/overview) · [研究](retro-80s.md) · [Prompt数据](../entries/retro-80s.json) · [Demo](../demos/retro-80s/index.html) |
 | 14 | [像素：微型世界](../index.html#style/pixel-world) | 经典风格 | 跨来源研究 | 经典构成练习 | [原始案例](https://www.celestegame.com/) · [研究](pixel-world.md) · [Prompt数据](../entries/pixel-world.json) · [Demo](../demos/pixel-world/index.html) |
-| 15 | [ChatGPT — 三合一巨字叙事](../index.html#style/chatgpt-platform) | 产品 | 美国 | 原站局部复现 | [原始案例](https://chatgpt.com/zh-Hans-CN/overview/) · [研究](chatgpt-platform.md) · [Prompt数据](../entries/chatgpt-platform.json) · [Demo](../demos/chatgpt-platform/index.html) |
+| 15 | [ChatGPT — 巨字、飞入拼贴与滚动交接](../index.html#style/chatgpt-platform) | 产品 | 美国 | 原站局部复现 | [原始案例](https://chatgpt.com/zh-Hans-CN/overview/) · [研究](chatgpt-platform.md) · [Prompt数据](../entries/chatgpt-platform.json) · [Demo](../demos/chatgpt-platform/index.html) |
 | 16 | [Claude — 衬线语气与 Cowork 演示](../index.html#style/claude-platform) | 产品 | 美国 | 原站局部复现 | [原始案例](https://claude.com/) · [研究](claude-platform.md) · [Prompt数据](../entries/claude-platform.json) · [Demo](../demos/claude-platform/index.html) |
 | 17 | [Qoder — 绿色工作台与多形态平台](../index.html#style/qoder-platform) | 产品 | 中国 | 原站局部复现 | [原始案例](https://qoder.cn/) · [研究](qoder-platform.md) · [Prompt数据](../entries/qoder-platform.json) · [Demo](../demos/qoder-platform/index.html) |
 | 18 | [原神 · 版本群像与角色舞台](../index.html#style/genshin-world) | 游戏/IP | 中国 | 原站局部复现 | [原始案例](https://genshin.hoyoverse.com/en/) · [研究](genshin-world.md) · [Prompt数据](../entries/genshin-world.json) · [Demo](../demos/genshin-world/index.html) |
@@ -32,3 +32,4 @@
 | 26 | [Rijksmuseum · 全幅摄影与巨大字标](../index.html#style/rijksmuseum-art) | 艺术/文化 | 荷兰 | 原站局部复现 | [原始案例](https://www.rijksmuseum.nl/en) · [研究](rijksmuseum-art.md) · [Prompt数据](../entries/rijksmuseum-art.json) · [Demo](../demos/rijksmuseum-art/index.html) |
 | 27 | [The Met · 编辑式展览与馆藏陈列](../index.html#style/met-museum) | 艺术/文化 | 美国 | 原站局部复现 | [原始案例](https://www.metmuseum.org/en) · [研究](met-museum.md) · [Prompt数据](../entries/met-museum.json) · [Demo](../demos/met-museum/index.html) |
 | 28 | [巴黎爱乐厅 · 音乐展与音乐会详情](../index.html#style/philharmonie-music) | 艺术/文化 | 法国 | 原站局部复现 | [原始案例](https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music) · [研究](philharmonie-music.md) · [Prompt数据](../entries/philharmonie-music.json) · [Demo](../demos/philharmonie-music/index.html) |
+| 29 | [Google Material：表现力与组件秩序](../index.html#style/google-material) | 产品 | 美国 | 原站局部复现 | [原始案例](https://m3.material.io/) · [研究](google-material.md) · [Prompt数据](../entries/google-material.json) · [Demo](../demos/google-material/index.html) |

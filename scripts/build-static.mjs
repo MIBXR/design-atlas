@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(root, 'dist');
 const files = ['index.html', 'atlas.css', 'atlas.js', 'catalog.js', 'fundamentals.html', 'fundamentals.css', 'fundamentals.js', 'favicon.svg', 'README.md', 'QA.md', 'CONTRIBUTING.md'];
-const folders = ['demos', 'entries', 'previews', 'research'];
+const folders = ['demos', 'entries', 'previews', 'research', 'prompts', 'docs'];
 if (path.relative(root, output) !== 'dist' || fs.lstatSync(output, {throwIfNoEntry:false})?.isSymbolicLink()) {
   throw new Error('Static output must be the real dist directory inside this repository.');
 }
@@ -19,4 +19,4 @@ fs.rmSync(output, {recursive:true, force:true});
 fs.mkdirSync(output);
 for (const name of [...files, ...folders]) fs.cpSync(path.join(root, name), path.join(output, name), {recursive:true});
 if (fs.existsSync(path.join(output, '.git'))) throw new Error('Git metadata cannot be served.');
-console.log('Prepared dist: 28 demos, research and source assets; Git metadata and local server excluded.');
+console.log('Prepared dist: demos, prompts, documentation and research; Git metadata and local server excluded.');

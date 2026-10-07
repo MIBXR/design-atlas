@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private, locally archived study of the Material Design 3 homepage, observed October 7, 2026.">
+  <meta name="color-scheme" content="light dark"><meta name="darkreader-lock">
+  <title>Material Design — homepage study</title>
+  <link rel="icon" href="assets/material-logo.svg"><link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <nav class="rail" aria-label="Main">
+    <a class="rail-search action" href="https://m3.material.io/search.html" target="_blank" rel="noopener" aria-label="Search official documentation"><span class="icon" aria-hidden="true">search</span></a>
+    <a class="rail-item selected action" href="#main" aria-label="Home" aria-current="page"><span class="icon" aria-hidden="true">material_design</span><span>Home</span></a>
+    <a class="rail-item action" href="https://m3.material.io/get-started" target="_blank" rel="noopener"><span class="icon" aria-hidden="true">apps</span><span>Get started</span></a>
+    <button class="rail-item action" data-directory="Develop" aria-haspopup="dialog"><span class="icon" aria-hidden="true">code</span><span>Develop</span></button>
+    <button class="rail-item action" data-directory="Foundations" aria-haspopup="dialog"><span class="icon" aria-hidden="true">book</span><span>Foundations</span></button>
+    <button class="rail-item action" data-directory="Styles" aria-haspopup="dialog"><span class="icon" aria-hidden="true">palette</span><span>Styles</span></button>
+    <button class="rail-item action" data-directory="Components" aria-haspopup="dialog"><span class="icon" aria-hidden="true">add_circle</span><span>Components</span></button>
+    <a class="rail-item action" href="https://m3.material.io/blog" target="_blank" rel="noopener"><span class="icon" aria-hidden="true">pages</span><span>Blog</span></a>
+    <div class="rail-settings"><button class="setting action" data-action="motion" role="switch" aria-checked="true" aria-label="Pause animations"><span class="icon" aria-hidden="true">pause</span></button><button class="setting action" data-action="theme" role="switch" aria-checked="false" aria-label="Switch to dark mode"><span class="icon" aria-hidden="true">dark_mode</span></button></div>
+  </nav>
+  <header class="mobile-bar"><button id="open-menu" class="plain action" aria-label="Open menu" aria-haspopup="dialog" aria-expanded="false"><span class="icon" aria-hidden="true">menu</span></button><a href="#main" class="plain action" aria-label="Material Design homepage"><span class="icon" aria-hidden="true">material_design</span></a><a class="plain action mobile-search" href="https://m3.material.io/search.html" target="_blank" rel="noopener" aria-label="Search official documentation"><span class="icon" aria-hidden="true">search</span></a></header>
+  <dialog id="directory" aria-labelledby="directory-title">
+    <div class="drawer-top"><button class="plain action" id="close-menu" aria-label="Close menu"><span class="icon" aria-hidden="true">close</span></button><span class="icon" aria-hidden="true">material_design</span></div>
+    <h2 id="directory-title">Main menu</h2><nav id="directory-links" aria-label="Documentation directory"></nav>
+    <div class="drawer-settings"><button class="action" data-action="motion" role="switch" aria-checked="true" aria-label="Pause animations"><span class="icon" aria-hidden="true">pause</span><span class="setting-text">Pause animations</span></button><button class="action" data-action="theme" role="switch" aria-checked="false" aria-label="Switch to dark mode"><span class="icon" aria-hidden="true">dark_mode</span><span class="setting-text">Switch to dark mode</span></button></div>
+  </dialog>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-description"><div><h1 id="hero-title">Material Design</h1><p>Google’s open-source design system for expressive, usable products. Discover styles and components.</p><a class="get-started action" href="https://m3.material.io/get-started" target="_blank" rel="noopener">Get started</a></div></div>
+      <div class="hero-media"><video id="hero-video" muted loop playsinline preload="auto" poster="assets/hero-poster.png" aria-label="Official Material 3 Expressive interface showcase"><source src="assets/hero.mp4" type="video/mp4"></video><button id="video-toggle" class="video-toggle action" aria-label="Play Video"><span class="icon" aria-hidden="true">play_arrow</span></button></div>
+    </section>
+    <div class="content" id="sections"></div>
+    <footer class="site-footer">
+      <div class="footer-grid"><div class="footer-intro"><span class="icon material-mark" aria-hidden="true">material_design</span><p>Guidelines, reusable components, and implementation resources connect design decisions with the products people use.</p></div><div><h3>Social</h3><a href="https://github.com/material-components" target="_blank" rel="noopener">GitHub</a><a href="https://x.com/googledesign" target="_blank" rel="noopener">X</a><a href="https://www.youtube.com/@googledesign" target="_blank" rel="noopener">YouTube</a></div><div><h3>Libraries</h3><a href="https://m3.material.io/develop/android/mdc-android" target="_blank" rel="noopener">Android</a><a href="https://m3.material.io/develop/android/jetpack-compose" target="_blank" rel="noopener">Compose</a><a href="https://m3.material.io/develop/flutter" target="_blank" rel="noopener">Flutter</a><a href="https://m3.material.io/develop/web" target="_blank" rel="noopener">Web</a></div><div><h3>More Google sites</h3><a href="https://design.google/" target="_blank" rel="noopener">Google Design</a></div><div><h3>Archived versions</h3><a href="https://m1.material.io/" target="_blank" rel="noopener">Material 1</a><a href="https://m2.material.io/" target="_blank" rel="noopener">Material 2</a></div></div>
+      <div class="footer-bottom"><span class="google-word">Google</span><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a><a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a></div>
+      <aside class="study-note" lang="zh-CN"><strong>2026-10-07 官方首页局部学习</strong><span>图片、视频与字体来自公开官方资源；文字说明已改写。本站为个人参考库中的本地研究页面。</span><a href="../../index.html#google-material">返回设计库</a><a href="fidelity.md" target="_blank">复现范围与差异</a><a href="https://m3.material.io/" target="_blank" rel="noopener">真实官网 ↗</a></aside>
+    </footer>
+  </main>
+  <span id="feedback" class="sr-only" role="status" aria-live="polite"></span>
+</body>
+</html>

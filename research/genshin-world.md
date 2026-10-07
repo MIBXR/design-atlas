@@ -57,3 +57,9 @@ W3C资料是实现约束的参考，并非声称当前官网已完全符合全�
 - 桌面与手机真实截图：`../previews/genshin-world.jpg`、`../previews/genshin-world-mobile.jpg`。
 
 截图由 CUA 在 Edge 浏览器保存。视口设置与浏览器实际截图像素不同：桌面 JPG 约 1425×990，手机 JPG 约 375×811；不放大或伪造分辨率。音频自动播放拒绝分支与 reduced-motion 降级均在代码中处理；本次未模拟浏览器拒绝或系统 reduced-motion 设置，不将它们记为已实测。
+
+## 2026-10-07 动效补审更新
+
+实滚原站使垂直swiper-wrapper位移到-939px而scrollY仍为0；点第二个角色，第一人opacity归0并出现100ms过渡，第二人立绘/Water Imp简介出现。本地新增100ms立绘交叉淡化，桌面原生scroll-snap保留一屏节奏。原站锁定的全屏Swiper、武器/技能/完整版本弹层未重造；第二角色的姓名图未单独核验，仍明确写“官方第二角色”，不猜名。
+
+本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#genshin-world)。

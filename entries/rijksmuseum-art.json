@@ -91,7 +91,7 @@
     "shape": "矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。",
     "hierarchy": "品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。",
     "motion": "自然滚动连续摄影；菜单为覆盖层。未声称原站采用滚动锁屏或滚动劫持。",
-    "coherence": "统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。"
+    "coherence": "统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。 动效复核：2026-10-07 root IAB二次实访：原生下滚全幅摄影、打开全屏菜单，公开computed CSS菜单opacity .5s linear。未发现首页循环视频。补回500ms菜单淡入，其余保留摄影节奏。"
   },
   "referenceUrl": "https://www.rijksmuseum.nl/en",
   "implementation": "reference-study",

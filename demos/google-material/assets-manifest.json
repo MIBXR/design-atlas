@@ -1,0 +1,380 @@
+{
+  "observedAt": "2026-10-07",
+  "referenceUrl": "https://m3.material.io/",
+  "rights": "个人本地设计学习。官方图像、字体、标识与视频权利归原权利人；没有复制跟踪脚本。",
+  "assets": [
+    {
+      "file": "assets/hero.mp4",
+      "sourceUrl": "https://storage.googleapis.com/material-io-design/m3/assets/16x9_Homepage_Hero_050825.mp4",
+      "type": "video",
+      "use": "官方首页9秒静音循环组件演示；独立播放/暂停机制",
+      "bytes": 16707976,
+      "sha256": "27eb52ee151a6e996ee5befc1b84903a3e38e883e57667aa97ce71b457353d46",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 4000,
+        "height": 2000,
+        "durationSeconds": 9
+      }
+    },
+    {
+      "file": "assets/hero-poster.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpgn9o5m-01.png?alt=media&token=44256a3d-5df4-4edd-b4d8-7c83bf5f2a5b",
+      "type": "image",
+      "use": "官方首页元数据图片；减少动态与媒体加载前的静态后备",
+      "bytes": 3028014,
+      "sha256": "999217f6893b10fa663d6bbd30e762d7fb1be10efa67170c5ac87ca387c7005d",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 4000,
+        "height": 2000
+      }
+    },
+    {
+      "file": "assets/material-logo.svg",
+      "sourceUrl": "https://m3.material.io/static/assets/m3-favicon.svg",
+      "type": "image",
+      "use": "官方网站favicon；导航与页尾实际使用官方Google Symbols字体的material_design字形",
+      "bytes": 1378,
+      "sha256": "fd89d2590cb45cfde16dd7697c82aa3a9dcc99dba6d8a97cb91db109b61589b5",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 70,
+        "height": 70
+      }
+    },
+    {
+      "file": "assets/mpmb3q7e-homepage1.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpmb3q7e-homepage1.png?alt=media&token=a7de29b8-95bb-4af4-b518-3ccba7d5893e",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 213072,
+      "sha256": "837d8ee772639a4aa5bd0d213d9f5f56335b86a3fa20163728d9c993064668bf",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mpmbh0do-homepage2.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpmbh0do-homepage2.png?alt=media&token=d7997a01-1524-4098-b655-3886c8560fc9",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 32163,
+      "sha256": "600621b6ea41ab9781966c5c3556d7e826ed72fbb782da1d178e455eebace84f",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mpmbr5ty-homepage3.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpmbr5ty-homepage3.png?alt=media&token=f81042a7-05c2-44f5-877e-30331e4b8bb7",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 89643,
+      "sha256": "f604d5d7a45f38bd7e6f00c69ebe6aab284f495c45d322c443a3a90d3806abb0",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncu38ac-home1.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncu38ac-home1.png?alt=media&token=8c522682-4b4c-49d9-86cc-1d502f672ec8",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 150036,
+      "sha256": "d4d41abf27d56b15104a8e8184816246cedbb750c2ab192654b42390566df150",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncu5a6f-home.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncu5a6f-home.png?alt=media&token=97541d88-de55-41fb-91e8-fd044639bda9",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 11709,
+      "sha256": "41de2a1b660012ef95b89f3ab9f957b83ca4c579c3d9e7a637c109e7a2e1fbd0",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncu6xu7-home2.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncu6xu7-home2.png?alt=media&token=e43149c9-9e1e-4858-ba51-769d708647ca",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 197354,
+      "sha256": "a51d0c0982a46d790e81fcb8c19671640ff3c06edeb7ec1902342c6ef85be651",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncu7vjc-home3.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncu7vjc-home3.png?alt=media&token=19eede28-a643-4c74-88d1-636d4b9caca5",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 101226,
+      "sha256": "9a1ecc9a94de3b24554f7d2d35bd218c82a5bc5358c26b2b30e111a53a74cb93",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mpmc1ezt-homepage4.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpmc1ezt-homepage4.png?alt=media&token=96c27f80-ea73-41d6-90f9-801964c40de9",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 88281,
+      "sha256": "5a2dad20d3047de1d7679b2f46db01f53c5c32b4d1c030e7c72ffcfd710347d3",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "file": "assets/mncuan2l-home5.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncuan2l-home5.png?alt=media&token=4e3ee434-c7a4-45b9-9c08-e6a758d4877f",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 13346,
+      "sha256": "5a8354017b29158670290c1c4b97b2baf95587aa02dc6079631ebe0c3c1a62a8",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncuj9kj-home6.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncuj9kj-home6.png?alt=media&token=bd4a9a3f-4949-4e15-abe8-ab5ccd815314",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 12473,
+      "sha256": "ec9a15b53a0fcb84d9f3c78d38fa12c832dc9f9e7c4668bd0b62f37a5a2b2fcb",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncukpj9-home7.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncukpj9-home7.png?alt=media&token=6c616adb-7f75-4d5c-84c1-f7c77463de1b",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 13677,
+      "sha256": "1d16cbf39ceb6656073ab72fca9957a4cd1184bbda6e500bda7caf75e3f8fac0",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mnculsfx-home8.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmnculsfx-home8.png?alt=media&token=e67c0685-5ef3-48ef-ad9c-fa474a3a99b4",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 18476,
+      "sha256": "a293bc704779292aadd1952d428e348751c2a45356ab86c0aa44991314f9daf5",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncug5qb-home9.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncug5qb-home9.png?alt=media&token=5424500c-c847-461a-bb64-934b09cc4e6f",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 65746,
+      "sha256": "ae766089342658bf0b32a291d6c999575e4e46bf3fb32aab5479c023e60f0143",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncunw7s-home10.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncunw7s-home10.png?alt=media&token=c98a08da-5674-43d3-9a5f-cdc550014f26",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 51498,
+      "sha256": "8b1057de160a7b9322d38b0706c8b80a663e5707ad9515bf3c06cbd2d36f8cd6",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mncup23w-home11.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmncup23w-home11.png?alt=media&token=c45fc65b-62ea-4bc9-ba93-faffa1cdd48b",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 179174,
+      "sha256": "f4366d4e18db176fa75f2433cf7afca5404b157578cb2f7e9716426aad71cb97",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mpme6ojb-homepage5.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpme6ojb-homepage5.png?alt=media&token=4c215460-0a49-420c-a2c8-89b30d7aaf07",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 249201,
+      "sha256": "2544efcfd5452fbeb8389988a517161e3180b7d1973c7a0505473f6cebb89520",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mpmebssm-homepage6.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpmebssm-homepage6.png?alt=media&token=c10d7d63-e632-4bed-ab7b-68118614b64b",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 320708,
+      "sha256": "e19a775101e20087d0cb6fd277f5d25b97b057de090092f16378c4d5263668f1",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 960,
+        "height": 480
+      }
+    },
+    {
+      "file": "assets/mpmewref-m3-social.jpg",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpmewref-m3-social.jpg?alt=media&token=d5a81509-7861-4504-a28f-44d5f83fe2fc",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 553174,
+      "sha256": "a493f79710190496bf61a93fd8c3044062e77eb82543e8eac2644699f482462a",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 8553,
+        "height": 4811
+      }
+    },
+    {
+      "file": "assets/mpmf99wi-m3-social.jpg",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpmf99wi-m3-social.jpg?alt=media&token=8ef68c6d-11fe-4a77-b688-fec03944e2be",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 553174,
+      "sha256": "a493f79710190496bf61a93fd8c3044062e77eb82543e8eac2644699f482462a",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 8553,
+        "height": 4811
+      }
+    },
+    {
+      "file": "assets/mpmfahpc-m3-social.jpg",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fm3%2Fimages%2Fmpmfahpc-m3-social.jpg?alt=media&token=c1395193-c0d2-424b-8f33-3b9ad4b38c82",
+      "type": "image",
+      "use": "官方首页内容配图；保留原始尺寸和图像比例",
+      "bytes": 553174,
+      "sha256": "a493f79710190496bf61a93fd8c3044062e77eb82543e8eac2644699f482462a",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。",
+      "dimensions": {
+        "width": 8553,
+        "height": 4811
+      }
+    },
+    {
+      "file": "assets/google-sans-text-400.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/googlesanstext/v29/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2i0VBuxM.woff2",
+      "type": "font",
+      "use": "原站字体 Google Sans Text 400；仅本地学习，未声称字体可商用许可",
+      "bytes": 22192,
+      "sha256": "ca561a9c89b19f76dfbe02216c3f213149eb3e289106b6d0a2bbd8edf3f15b6c",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。"
+    },
+    {
+      "file": "assets/google-sans-text-500.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/googlesanstext/v29/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmhjtjm4DZw.woff2",
+      "type": "font",
+      "use": "原站字体 Google Sans Text 500；仅本地学习，未声称字体可商用许可",
+      "bytes": 23540,
+      "sha256": "761b5ddf4a09db0d4b2d43ce2c86b57a40d6659fcfe801c3635e964c63f3ed12",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。"
+    },
+    {
+      "file": "assets/google-sans-text-700.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/googlesanstext/v29/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oPFTnmhjtjm4DZw.woff2",
+      "type": "font",
+      "use": "原站字体 Google Sans Text 700；仅本地学习，未声称字体可商用许可",
+      "bytes": 23044,
+      "sha256": "85cca502dff4b9d7984375c48e9960152017412cb9b564e658a8d82def51dbe2",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。"
+    },
+    {
+      "file": "assets/google-sans-475.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/googlesans/v70/4UaRrENHsxJlGDuGo1OIlJfC6mGS6vhAK1YobMu2vgCIhM907w.woff2",
+      "type": "font",
+      "use": "原站字体 Google Sans 475；仅本地学习，未声称字体可商用许可",
+      "bytes": 47324,
+      "sha256": "442dd0a9fe2c106df977404af2a6428b49fea62cc85062f24407271dd8b77719",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。"
+    },
+    {
+      "file": "assets/google-symbols-300-600.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/googlesymbols/v462/HhyqU5Ak9u-oMExPeInvcuEmPosC9zS3FYkFU68cPrjdKM1XMoDZlWmzc3IiWvF1SbxVhQidBnv_C-yl9mm4Tw.woff2",
+      "type": "font",
+      "use": "原站字体 Google Symbols 300 600；仅本地学习，未声称字体可商用许可",
+      "bytes": 1407616,
+      "sha256": "2a545dc277112a0cbb10c3a8d1012cfe3356741c92d980dc1b1a880ea1fcf50c",
+      "rights": "Google及相应原权利人；公开素材用于个人本地研究，代码许可不授予素材商业权利。",
+      "processing": "原字节保存，无重新绘制、压缩或转码。"
+    }
+  ]
+}

@@ -48,3 +48,9 @@
 ## 本地核验
 
 通过 CUA 浏览器实测桌面1440×1000、手机390×844：无横向溢出、无破图；核心控件已按实际状态检查。记录见 `fuji-rock-qa.json`。预览来自实际浏览器截图；reduced-motion仅静态核验CSS/JS处理，没有模拟系统偏好或声称完整无障碍合规。所有资产清单已逐文件保存实际SHA256。
+
+## 2026-10-07 动效补审更新
+
+实点第二dot，源站slide style transition opacity800ms cubic-bezier(.25,1,.5,1)；菜单实开显示多列层级。top-2026.js确认为fade、speed800、autoplay、interval3600；common.js在601ms后隐藏菜单并让wrapper fade-out。已补同速三图自动淡化、手动暂停与600ms菜单/背景退场，后台/离屏停轮播。原站20图缩3图，Featured实际源站600ms循环/自动滑轨与滚动时导航上滑回显仍未全覆盖。
+
+本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#fuji-rock)。

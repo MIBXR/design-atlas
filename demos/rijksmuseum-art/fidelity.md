@@ -31,3 +31,7 @@
 ## 验证证据
 
 [qa.json](qa.json) · [桌面预览](../../previews/rijksmuseum-art.jpg) · [手机预览](../../previews/mobile/rijksmuseum-art.jpg) · [资产清单](assets-manifest.json)。
+
+## 2026-10-07 动效复核
+
+2026-10-07 root IAB二次实访：原生下滚全幅摄影、打开全屏菜单，公开computed CSS菜单opacity .5s linear。未发现首页循环视频。补回500ms菜单淡入，其余保留摄影节奏。

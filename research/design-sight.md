@@ -48,3 +48,9 @@
 ## 本地核验
 
 通过 CUA 浏览器实测桌面1440×1000、手机390×844：无横向溢出、无破图；核心控件已按实际状态检查。记录见 `design-sight-qa.json`。预览来自实际浏览器截图；reduced-motion仅静态核验CSS/JS处理，没有模拟系统偏好或声称完整无障碍合规。所有资产清单已逐文件保存实际SHA256。
+
+## 2026-10-07 动效补审更新
+
+实按PageDown后scrollY939.2、当前slide转为gallery3；官网已加载内联配置autoplaySpeed6000/fade:true/speed1000。已补同节奏自动淡化、暂停/手动控制和粘性四栏目导航。原站切换同步栏目箭头、Vimeo播放器联动与更多CMS档案未覆盖。50ms蓝色链接/Logo透明度为官方common.js声明证据；未把声明当作独立hover实测。
+
+本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#design-sight)。

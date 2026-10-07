@@ -162,6 +162,30 @@
       "bytes": 707793,
       "sha256": "428c84b2e68f0b59d13e79da914449f30c3b88872d515a425f8914c7a22df10c",
       "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/camera-system.webm",
+      "sourceUrl": "https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/anim/camera-system/large_2x.webm",
+      "purpose": "2026-10-07实际滚动观察的官方镜头系统VideoScrub序列，按滚动进度控制时间",
+      "width": 2160,
+      "height": 1620,
+      "duration": 4.983,
+      "format": "webm",
+      "bytes": 14923281,
+      "sha256": "00381bce69d67621f713220a69eda52811a68b18c3537e1294dc005a5d4ae95b",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "Apple及原作者保留权利；私人设计研究素材。"
+    },
+    {
+      "file": "assets/siri.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/siri__eprmtp3edh8i_large.jpg",
+      "usage": "Highlights Siri AI official fifth gallery image",
+      "width": 1260,
+      "height": 612,
+      "bytes": 116605,
+      "sha256": "79b2e9ccf178ec4fcd83dec4cb39f7e5c1b5851919359a0fc87b7a32809fc024",
+      "copyright": "Apple. Brand-owned media; personal study only."
     }
   ]
 }

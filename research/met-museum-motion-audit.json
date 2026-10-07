@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-07",
+  "browser": "Edge documented CUA",
+  "localUrl": "http://127.0.0.1:4173/demos/met-museum/index.html",
+  "checks": [
+    {
+      "name": "official local movie decoded and muted",
+      "pass": true,
+      "actual": {
+        "label": "Pause video",
+        "video": {
+          "duration": 30.488792,
+          "hasPlayed": true,
+          "height": 720,
+          "muted": true,
+          "paused": false,
+          "readyState": 4,
+          "time": 20.402069,
+          "visible": "visible",
+          "width": 1280
+        },
+        "viewport": {
+          "height": 939,
+          "width": 2040
+        }
+      }
+    },
+    {
+      "name": "pause freezes current frame and does not revert to poster",
+      "pass": true,
+      "first": {
+        "hasPlayed": true,
+        "label": "Play video",
+        "paused": true,
+        "time": 20.506103,
+        "visibility": "visible"
+      },
+      "second": {
+        "hasPlayed": true,
+        "paused": true,
+        "time": 20.506103,
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "resume-advances",
+      "pass": true,
+      "initial": {
+        "label": "Pause video",
+        "paused": false,
+        "time": 20.840227,
+        "visible": "visible"
+      },
+      "after": {
+        "hasPlayed": true,
+        "paused": false,
+        "time": 10.753517,
+        "visible": "visible"
+      }
+    }
+  ],
+  "consoleLogs": [],
+  "reducedMotion": {
+    "verification": "source review only; operating-system setting not changed",
+    "code": "filmMotion matchMedia change pauses video and removes has-played; initial IntersectionObserver only auto-plays when prefers-reduced-motion is false; manual Play remains available as explicit action",
+    "pauseDistinction": "Manual Pause keeps has-played class, preserving decoded current frame instead of exposing poster."
+  },
+  "frameEvidence": "research/screenshots/met-museum-paused-motion-audit.png"
+}

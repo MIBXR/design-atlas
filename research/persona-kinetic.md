@@ -55,3 +55,9 @@ W3C资料是实现约束的参考，并非声称当前官网已完全符合全�
 - 桌面与手机真实截图：`../previews/persona-kinetic.jpg`、`../previews/persona-kinetic-mobile.jpg`。
 
 截图由 CUA 在 Edge 浏览器保存。视口设置与浏览器实际截图像素不同：桌面 JPG 约 1425×990，手机 JPG 约 375×811；不放大或伪造分辨率。音频自动播放拒绝分支与 reduced-motion 降级均在代码中处理；本次未模拟浏览器拒绝或系统 reduced-motion 设置，不将它们记为已实测。
+
+## 2026-10-07 动效补审更新
+
+实点官方Next到Kasumi，slick-track变为translate3d(-1305px,0,0)；官方配置infinite:false，默认Slick速度500ms。服装按钮使当前chara-box增加on。已补500ms角色整体横移、边界及暂停光点。首屏kv-canvas/bg-stars和两帧截图确认可见金色闪光变化；本地光点曲线、周期7s为原创近似，未运行PIXI。此次源站Canvas角色群像未完整出现；不以该失败状态推断角色登场轨迹。三人子集不包含源站第二位Kasumi；服装状态未复刻全部层变换。
+
+本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#persona-kinetic)。

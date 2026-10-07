@@ -105,7 +105,7 @@
       "sourceUrl": "https://www.monumentvalleygame.com/media/mv-trailer-a0b9cbc1.mp4",
       "bytes": 6694081,
       "type": "video/mp4",
-      "use": "官方公开预告/背景视频，本地默认暂停与静音，用户主动开始",
+      "use": "官方公开预告/背景视频，普通模式静音背景播放且可暂停，减少动态初始停止；有声预告用户主动开始",
       "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
       "sha256": "8717d5e90beb2bd066ac50942c698ae2832bfeaee68720b20873f731fc9771f5"
     },

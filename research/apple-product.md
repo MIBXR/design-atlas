@@ -20,3 +20,14 @@
 Apple HIG Motion https://developer.apple.com/design/human-interface-guidelines/motion ：动效应具有明确用途，支持减少动效。这是应用规范向网页设计的迁移。
 
 本地功能范围及不一致见 ../demos/apple-product/fidelity.md；逐项资产URL与SHA256见 assets-manifest.json。保留原站真实摄影；不复制原站全部脚本或把近似滚动曲线说成完整重建。
+
+
+## 2026-10-07 动效复审补正
+
+实访首屏、滚动、图库自动状态与camera currentTime；官方VideoScrub关键帧DOM、overview.built.css与main.built.js只读核验。
+
+官方登场MP4；镜头系统以官方4.984秒WebM和220vh滚动舞台驱动video.currentTime(.01→1)，并局部淡出标题；五项亮点顺序/进度/末尾重播。首屏不再加入未观察的CSS缩放。
+
+滚动镜头必须用官方camera-system视频，不能用JPEG scale伪称原站同款；原视频进度源为scroll-container.top - 100vh至bottom - 100vh，文案淡出阈值仍为近似。
+
+本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。

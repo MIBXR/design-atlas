@@ -136,6 +136,21 @@
       "copyright": "官方站点使用的许可字型，私人学习副本；不授权再分发。",
       "bytes": 46381,
       "sha256": "ffff3293a02235e597ef4a93b9bee4f63fff7cfad4300c6166d16bc92a866465"
+    },
+    {
+      "file": "assets/fall-homepage.mp4",
+      "sourceUrl": "https://player.vimeo.com/video/1232113956",
+      "purpose": "首页 20260925_Fall_Homepage 官方静音循环影像",
+      "width": 1280,
+      "height": 720,
+      "duration": 30.488791666666668,
+      "format": "mp4",
+      "bytes": 10339607,
+      "sha256": "f7da3352582936f869f7e296e86b6a60af2f5564a328a707c644810d91c48651",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "processing": "官网公开视频 AVC 720p 表示；按原顺序拼接初始化片段与5个媒体片段，未重新编码，保留静音视频轨。临时CDN签名地址不入库。",
+      "copyright": "The Metropolitan Museum of Art / metmediaproduction；私人学习副本，未取得再分发或商业许可。"
     }
   ]
 }

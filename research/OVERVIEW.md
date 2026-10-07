@@ -33,3 +33,7 @@
 ## 案例索引
 
 结构化条目以 entries/ 与网页为准。所有新增例都包含各自调研、Prompt、真实素材来源及复现范围。目录表在最终构建时由条目生成，见 [CASE-INDEX.md](CASE-INDEX.md)。
+
+## 本轮动态复核
+
+29项包含21个品牌／文化案例和8种经典构成练习。新增Google Material真实首页。动效以触发、状态和浏览连贯性研究，逐项已实现／近似／未覆盖见 [MOTION-AUDIT.md](MOTION-AUDIT.md)。可读Prompt由entries生成于prompts/，README提供全库实际截图画廊。

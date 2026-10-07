@@ -24,17 +24,20 @@
   ],
   "productFocus": "首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。",
   "interaction": [
-    "主导航点击展开 Products/Solutions/Developers/Resources 分类面板。",
-    "六个产品卡片打开详情，业务模型选择改变本地预览状态。",
-    "Hertz/URBN/Instacart/Le Monde 切换客户介绍；注册与销售按钮打开本地说明弹窗。"
+    "导航悬停展开，点击与键盘保留；外部点击和Esc关闭并同步aria-expanded。",
+    "进入Payments视口后商户、终端金额及checkout场景同步自动更新；离开视口/隐藏/减弱动画暂停循环。",
+    "各产品仍有本地说明弹窗，business model选择可更新结果。",
+    "客户案例tabs切换真实说明与官网入口。",
+    "首屏第一方WebGL波带自动形变；本地暂停/继续按钮保持同一渲染时间；菜单与对话框打开时暂停，reduce/渲染能力不足显示官方静帧。"
   ],
   "theme": "白底、海军蓝文字、紫色行动按钮与橙粉紫官网彩带；按钮小圆角，产品卡适度圆角。",
   "constraints": [
     "以2026-10-07官网版本为基准，2017设计文章仅作历史理论。",
-    "官方彩带使用静态回退图，不宣称复现原站WebGL渲染。",
     "下载素材及字标保留原比例，不把品牌资产用于新商标。",
     "金融指标为官网日期快照，界面金额为本地样例。",
-    "自然滚动；移动端卡片单列，菜单和弹窗可键盘关闭。"
+    "自然滚动；移动端卡片单列，菜单和弹窗可键盘关闭。",
+    "原站彩带是canvas渲染，静态wave.webp仅是官方fallback；不能给静图添加任意抖动并宣称原站等价。付款自动状态与hover是不同触发。",
+    "SingleWave为官方渲染代码隔离复用；页面容器高度、标题层与浏览器GPU可能使裁切/帧率与原站不同。保留官方fallback，不声称整站shader完全等价。"
   ],
   "useCases": [
     "复杂平台产品官网",
@@ -55,16 +58,16 @@
     ],
     "type": "官网 Söhne 本地字体；主标题48px、连续段落、紧凑行高。",
     "layout": "1266px最大宽度，首屏连续段落；六产品3列矩阵；4列指标；案例左右结构。",
-    "motion": "卡片轻抬升、原生滚动；静态官网彩带；reduced-motion关闭过渡。"
+    "motion": "原始波带：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；支付UI .75s本地近似；菜单 .18s本地近似。"
   },
   "composition": {
     "color": "白底、海军蓝文字、紫色行动按钮与橙粉紫官网彩带；按钮小圆角，产品卡适度圆角。",
     "typography": "官网 Söhne 本地字体；主标题48px、连续段落、紧凑行高。",
     "layout": "1266px最大宽度，首屏连续段落；六产品3列矩阵；4列指标；案例左右结构。",
-    "imagery": "官方wave.webp + Söhne与段落式48px标题；六类产品、小圆角、真实终端与支付背景；四项可切换介绍",
+    "imagery": "官方SingleWave原始shader与folded mesh，light palette；Söhne本地字体；真实终端素材与本地支付界面结构。",
     "shape": "按钮4px、产品8px、对话框12px；官网彩带原比例。",
     "hierarchy": "首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。",
-    "motion": "卡片轻抬升、原生滚动；静态官网彩带；reduced-motion关闭过渡。",
+    "motion": "第一方 SingleWave 折叠网格+shader的时间形变；官方light配色纹理、gj/P1/y7响应式相机；客户品牌水平marquee；支付终端数字在mask内向上轮换，checkout同步变换。",
     "coherence": "字体、色彩、素材、信息结构与Stripe公开页一致；原站彩带的实时渲染、完整推荐器、新闻轮播未实现。客户字样中部分用文字代替专门字标；产品小界面为结构复现，非每个组件像素级复制。注册、登录、销售不连接服务器。"
   },
   "sources": [
@@ -72,7 +75,7 @@
       "title": "Stripe 公开首页",
       "url": "https://stripe.com/",
       "type": "实例",
-      "note": "第一方web正文和CUA首屏核验；当前英文版连续主标题、彩带、六类产品与客户案例。"
+      "note": "2026-10-07 动效复审：实访导航pointer进入、产品矩阵与masked terminal transform 0/-100/-200%，首行Payment810×676/Billing400×676；官方样式只读核验。"
     },
     {
       "title": "Connect frontend design",
@@ -85,9 +88,21 @@
       "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
       "type": "规范",
       "note": "为客户案例和产品选择提供键盘方向键、选择状态参考；本地不是官网完整组件实现。"
+    },
+    {
+      "title": "Stripe 当前页产品样式",
+      "url": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/css/0b96456ec501769a.css",
+      "type": "实例",
+      "note": "第一方公开已加载源码，只读核对具体组件/时序；不能替代未完成的实操。"
+    },
+    {
+      "title": "Stripe SingleWave 官网组件、shader与三档相机配置",
+      "url": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "type": "implementation",
+      "note": "2026-10-07匿名读取公开chunk；module67103控制器、59168网格/材料、19622配置，20个渲染模块隔离。浏览器本地canvas已实测运行。"
     }
   ],
-  "prompt": "制作一页基于【品牌官网URL】和【观察日期】的Stripe式金融平台局部学习复现。先读取首屏、产品矩阵与客户案例的真实截图，禁止把历史设计文章当当前CSS事实。首屏采用官网连续段落式48px主标题和大段留白；右上使用原比例官方彩带静态素材，明确其是WebGL动画的回退。使用已核验的Söhne本地字体、小圆角紫色主按钮、海军蓝文字和细边框。六类产品保持不同浅色背景与真实支付终端/界面层次，不能改成同一套通用白卡。产品卡可打开详情并切换业务模型；客户案例可切换，导航分类可展开。移动端单列、按钮有焦点反馈、对话框Esc关闭，自然滚动并尊重reduced motion。把素材URL、尺寸、版权及未还原区域写入清单和fidelity文件。用于【目标产品】时保留信息层级，重新核验业务结构。",
+  "prompt": "制作一页基于【品牌官网URL】和【观察日期】的Stripe式金融平台局部学习复现。先读取首屏、产品矩阵与客户案例的真实截图，禁止把历史设计文章当当前CSS事实。使用已核验的Söhne本地字体、小圆角紫色主按钮、海军蓝文字和细边框。六类产品保持不同浅色背景与真实支付终端/界面层次，不能改成同一套通用白卡。产品卡可打开详情并切换业务模型；客户案例可切换，导航分类可展开。移动端单列、按钮有焦点反馈、对话框Esc关闭，自然滚动并尊重reduced motion。把素材URL、尺寸、版权及未还原区域写入清单和fidelity文件。用于【目标产品】时保留信息层级，重新核验业务结构。\n\n动效补正：付款卡首行占两列、与Billing同高约676px；终端三种场景文字在固定高度mask内translateY(0/-100/-200%)，checkout同步在ROASTERY/SHOWFLIX/Bloom情境切换。采用视口内局部自动循环，金额本地演示不提交交易；5秒循环和.75秒ease-out是approximation，记录没有精确测得的源时序。Products使用mouseenter幂等打开菜单，click/Esc/外部点击处理关闭并同步ARIA。客户行连续水平marquee，减弱动画静止。原站single-wave canvas未移植时保留原fallback图片，明确列入unimplemented。不要全卡片悬浮或整页统一reveal。\n\n动效落地补充：首屏波带已从官方公开 chunk 提取20个 SingleWave / Three.js r178 渲染模块，保留原折叠网格、vertex/fragment shader、配色纹理及 wide gj / medium P1 / small y7 配置（speed=4e-5，timeOffset=17500）。独立本地 loader 替代 Next/React运行时；Worker URL 指向本地文件。没有复制账户、统计、完整站点组件。新增本地暂停按钮；菜单/对话框打开及视口外/文档隐藏时暂停，reduce或GPU不可用时显示官方fallback。轮播/支付UI与源时序分开记录，不把这条缎带变成任意CSS摆动。 非必要时不要重新画波形、改变shader、统一加reveal。renderer模块来源和适配必须写在assets/wave-provenance.json，Worker/palette全部本地化，GPU失败不得留下空首屏；同时保留原始素材文件hash及Three.js r178 MIT许可证。",
   "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
   "demo": "demos/stripe-platform/index.html",
   "preview": "previews/stripe-platform.jpg",
@@ -97,5 +112,6 @@
   "implementation": "reference-study",
   "fidelity": "demos/stripe-platform/fidelity.md",
   "assetManifest": "demos/stripe-platform/assets-manifest.json",
-  "referencePreview": "research/screenshots/stripe-platform-source.png"
+  "referencePreview": "research/screenshots/stripe-platform-source.png",
+  "motionAudit": "research/MOTION-AUDIT-PRODUCTS.md"
 }

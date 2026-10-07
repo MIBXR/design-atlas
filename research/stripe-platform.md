@@ -51,3 +51,21 @@ Stripe第一方Connect文章提出让复杂平台功能在前端保持清楚与�
 - [还原说明](../demos/stripe-platform/fidelity.md)
 
 私人学习记录；品牌与媒体版权保留给品牌及原作者。
+
+
+## 2026-10-07 动效复审补正
+
+实访导航pointer进入、产品矩阵与masked terminal transform 0/-100/-200%，首行Payment810×676/Billing400×676；官方样式只读核验。
+
+Products导航真实mouseenter展开；客户标识循环横移；Payments终端文字在mask内向上滚动，checkout同步换商户/商品。每轮5秒/.75秒为局部近似。官方彩带仍使用静态fallback，未冒充WebGL动画。
+
+原站彩带是canvas渲染，静态wave.webp仅是官方fallback；不能给静图添加任意抖动并宣称原站等价。付款自动状态与hover是不同触发。
+
+本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。
+
+
+### 波带源码隔离结果 · 2026-10-07
+
+首屏波带已从官方公开 chunk 提取20个 SingleWave / Three.js r178 渲染模块，保留原折叠网格、vertex/fragment shader、配色纹理及 wide gj / medium P1 / small y7 配置（speed=4e-5，timeOffset=17500）。独立本地 loader 替代 Next/React运行时；Worker URL 指向本地文件。没有复制账户、统计、完整站点组件。新增本地暂停按钮；菜单/对话框打开及视口外/文档隐藏时暂停，reduce或GPU不可用时显示官方fallback。轮播/支付UI与源时序分开记录，不把这条缎带变成任意CSS摆动。
+
+第一方模块来源：[https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js](https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js)；[Three.js core](https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/3dfade9e-4ca93d92ac876e62.js)、[Three.js renderer](https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/c67c952e-5362035f70172687.js)。源home index明确j={wide:P.gj,medium:P.P1,small:P.y7}，并非同文件其他EK/WD/nl模型。提取20个纯渲染模块后本地浏览器验证帧数/时间实际变化与暂停冻结，完整URL清单在资产provenance。

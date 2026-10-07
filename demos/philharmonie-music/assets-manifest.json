@@ -87,6 +87,32 @@
       "retrievedAt": "2026-10-07",
       "status": "downloaded",
       "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/stulz.jpg",
+      "sourceUrl": "https://deneb.philharmoniedeparis.fr/uploads/images/cache/event_large/rc/AdQpH8kV/uploads/images/John-Stulz-by-Franck-Ferville-1.jpg",
+      "purpose": "官方音乐会三人摄影滑轨：John Stulz © Franck Ferville",
+      "width": 1600,
+      "height": 633,
+      "format": "jpeg",
+      "bytes": 65735,
+      "sha256": "099eb992a29d359c228806cfff8641b8c3590e80dd6e6be19acdf34c2aa8da48",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "John Stulz © Franck Ferville；私人学习，原图字节保存，保留原作者权利。"
+    },
+    {
+      "file": "assets/kamei.jpg",
+      "sourceUrl": "https://deneb.philharmoniedeparis.fr/uploads/images/cache/event_large/rc/GGsvH7Yz/uploads/images/Ayano-Kamei-by-Capucine-De-Chocqueuse.jpg",
+      "purpose": "官方音乐会三人摄影滑轨：Ayano Kamei © Capucine De Chocqueuse",
+      "width": 1600,
+      "height": 633,
+      "format": "jpeg",
+      "bytes": 78922,
+      "sha256": "ffd2202ab1f5d51fe338c7e030cd1c1073cb4bdf07b8f9632e01f47c696c2fea",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "Ayano Kamei © Capucine De Chocqueuse；私人学习，原图字节保存，保留原作者权利。"
     }
   ]
 }

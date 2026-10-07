@@ -33,3 +33,21 @@ CUA实访claude.com，主标题计算72px、AnthropicSerif；左栏标题/注册
 ## 资产
 
 详见[assets-manifest.json](assets-manifest.json)。图片、视频、字体、商标原样或按比例显示。素材归品牌与原作者，仅本地私人学习，不代表授权、合作或正式网站。
+
+
+## 2026-10-07 动效复审（当前实现）
+
+保留官方Cowork视频静音loop、真实media事件驱动播放/暂停按钮与reduced-motion更新；本次原站重定向/Cloudflare，未给源页面hover或scroll添加未经现场核验的新动画。
+
+证据：本次官网Edge重定向到claude.ai后停止；root IAB同样重定向并遇Cloudflare。匿名claude.com HTML/CSS仍200取得；本地25.567秒媒体及按钮实操通过，源时序 unavailable。
+
+边界：2026-10-07动效复审无法在Edge或IAB打开未登录claude.com首页；本地媒体可操作不等于本次验证了原站所有hover/scroll时序。
+
+详情和实操记录见 [产品动效审计](../../research/MOTION-AUDIT-PRODUCTS.md)。本地增加 darkreader-lock meta 保护官方配色，这是本地适配，不作为原站观察。
+
+
+### 参考库窄面板适配
+
+窄桌面本地适配：参考库嵌入预览约718px宽时，原有700px收起导航断点使header右侧按钮超出。已将仅导航部分的收起断点提前到800px，保留原英雄区布局和可操作汉堡菜单。这是嵌入环境适配，因本轮官网转入登录页，不能声称其断点来自现场源站观察。
+
+本地实际复验718×844：html.clientWidth=703、scrollWidth=703、overflow=false；header nav/actions均display:none、hamburger display:block，真实click后expanded=true、菜单6链接可见。未通过系统设置修改任何偏好。

@@ -52,3 +52,14 @@ CUA实访linear.app当前首页，h1为The product development system for teams 
 - [还原说明](../demos/linear-workflow/fidelity.md)
 
 私人学习记录；品牌与媒体版权保留给品牌及原作者。
+
+
+## 2026-10-07 动效复审补正
+
+实访点击三个Favorites后AX呈现任务board/insights/project，各非同一详情；实访Product hover展开，滚动Intake聊天opacity状态0/1；Mmx1Wq和agentLabelSweep源CSS。
+
+左侧Favorites点击立即切换整种工作视图：issue/detail、三列任务board、insights、project overview；保持硬切换，不编造全局浮入。Working徽标保留2秒局部shimmer；导航mouseenter展开。
+
+Agent tasks和Agent Insights不能只更换同一issue标题；未观察到的视图切换方向/时序不得编造。下方Intake原站消息流程只观察，当前简化Triage非完整等价。
+
+本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。

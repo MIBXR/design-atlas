@@ -33,3 +33,14 @@ CUA实访linear.app当前首页，h1为The product development system for teams 
 ## 资产
 
 详见[assets-manifest.json](assets-manifest.json)。图片、视频、字体、商标原样或按比例显示。素材归品牌与原作者，仅本地私人学习，不代表授权、合作或正式网站。
+
+
+## 2026-10-07 动效复审（当前实现）
+
+左侧Favorites点击立即切换整种工作视图：issue/detail、三列任务board、insights、project overview；保持硬切换，不编造全局浮入。Working徽标保留2秒局部shimmer；导航mouseenter展开。
+
+证据：实访点击三个Favorites后AX呈现任务board/insights/project，各非同一详情；实访Product hover展开，滚动Intake聊天opacity状态0/1；Mmx1Wq和agentLabelSweep源CSS。
+
+边界：Agent tasks和Agent Insights不能只更换同一issue标题；未观察到的视图切换方向/时序不得编造。下方Intake原站消息流程只观察，当前简化Triage非完整等价。
+
+详情和实操记录见 [产品动效审计](../../research/MOTION-AUDIT-PRODUCTS.md)。本地增加 darkreader-lock meta 保护官方配色，这是本地适配，不作为原站观察。

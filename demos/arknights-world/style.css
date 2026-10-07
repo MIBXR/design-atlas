@@ -9,3 +9,7 @@ header nav a{min-height:44px;justify-content:center}header>button{min-width:44px
 .side-index{background:#07101926;pointer-events:none}.side-index>a{pointer-events:auto}
 @media(min-width:751px){.side-index{padding-top:43svh}.download-rail{right:1.3%;top:58%;width:8.5%;z-index:16}}
 @media(max-width:750px){.cyan-panel{top:27%;width:44%;height:73%}.rhodes-type{font-size:65vw;left:-14%;top:62%;width:58%;bottom:auto;line-height:.9}.download-rail{z-index:16}}
+
+/* Observable official mechanism, locally implemented without the vendor runtime. */
+html[data-motion=reduce]{scroll-behavior:auto;scroll-snap-type:none}html[data-motion=reduce] *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.operator-art,.ghost-art{pointer-events:none}.elite{z-index:5}.profile{z-index:3}

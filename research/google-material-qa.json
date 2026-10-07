@@ -1,0 +1,253 @@
+{
+  "observedAt": "2026-10-07",
+  "browser": "Edge via documented CUA",
+  "referenceUrl": "https://m3.material.io/",
+  "localUrl": "http://127.0.0.1:4173/demos/google-material/index.html",
+  "sourceScreenshotNote": "Edge existing Dark Reader alters original colours; colour tokens verified from official CSS. No browser settings changed.",
+  "desktop": {
+    "documentWidth": 1425,
+    "hero": [
+      {
+        "height": 544,
+        "width": 656.4000244140625,
+        "x": 96,
+        "y": 8
+      },
+      {
+        "height": 544,
+        "width": 656.4000244140625,
+        "x": 760.4000244140625,
+        "y": 8
+      }
+    ],
+    "horizontalOverflow": false,
+    "video": {
+      "duration": 9,
+      "height": 2000,
+      "paused": false,
+      "time": 0.253731,
+      "width": 4000
+    },
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    },
+    "finalSurface": {
+      "h1Y": 96,
+      "heroBackground": "rgb(248, 241, 246)",
+      "overflow": false,
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    }
+  },
+  "mobile": {
+    "all20ImagesLoaded": true,
+    "documentWidth": 375,
+    "firstSectionHeadingY": 701.6000366210938,
+    "h1": {
+      "font": "45px",
+      "line": "52px"
+    },
+    "hero": [
+      {
+        "height": 362,
+        "width": 359.20001220703125,
+        "x": 8,
+        "y": 72
+      },
+      {
+        "height": 179.60000610351562,
+        "width": 359.20001220703125,
+        "x": 8,
+        "y": 442
+      }
+    ],
+    "horizontalOverflow": false,
+    "video": {
+      "paused": false,
+      "time": 0.199393
+    },
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "finalSurface": {
+      "background": "rgb(248, 241, 246)",
+      "firstHeadingY": 701.6000366210938,
+      "heroY": [
+        72,
+        442
+      ],
+      "overflow": false,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  },
+  "interactions": [
+    {
+      "name": "video pause freezes currentTime",
+      "pass": true,
+      "first": {
+        "label": "Play Video",
+        "paused": true,
+        "time": 0.475435
+      },
+      "second": {
+        "paused": true,
+        "time": 0.475435
+      }
+    },
+    {
+      "name": "video resumes and advances",
+      "pass": true,
+      "first": {
+        "label": "Pause Video",
+        "paused": false,
+        "time": 5.198214
+      },
+      "second": {
+        "paused": false,
+        "time": 5.281377
+      }
+    },
+    {
+      "name": "dark theme changes role colours",
+      "pass": true,
+      "actual": {
+        "background": "rgb(20, 19, 20)",
+        "hero": "rgb(28, 27, 29)",
+        "theme": "dark"
+      }
+    },
+    {
+      "name": "global pause stops media and CSS movement",
+      "pass": true,
+      "actual": {
+        "label": "Play animations",
+        "motion": "paused",
+        "transition": "0s",
+        "videoPaused": true
+      }
+    },
+    {
+      "name": "Enter opens directory; Escape closes and returns focus",
+      "pass": true,
+      "first": {
+        "focus": "close-menu",
+        "open": true,
+        "title": "Styles"
+      },
+      "second": {
+        "focus": "paletteStyles",
+        "open": false
+      }
+    },
+    {
+      "name": "keyboard resource focus changes shape and exposes outline",
+      "pass": true,
+      "actual": {
+        "background": "rgb(220, 218, 245)",
+        "focusVisible": true,
+        "outline": "1.6px",
+        "radius": "48px"
+      }
+    },
+    {
+      "name": "mobile menu opens Styles submenu without overflow",
+      "pass": true,
+      "actual": {
+        "links": 7,
+        "open": true,
+        "title": "Styles",
+        "viewport": 390,
+        "width": 319.20001220703125
+      }
+    },
+    {
+      "name": "explicit mobile video play remains usable while global animation is paused",
+      "pass": true,
+      "actual": {
+        "label": "Pause Video",
+        "motion": "paused",
+        "paused": false
+      }
+    }
+  ],
+  "limitations": [
+    "No real mobile hardware touch test; 390px browser viewport plus pointer events.",
+    "OS reduced-motion was not changed. Media-query CSS/JS paths inspected; global pause tested live.",
+    "Not a full WCAG audit."
+  ],
+  "assets": {
+    "count": 28,
+    "totalBytes": 24728389,
+    "allSizeAndHashMatch": true,
+    "video": {
+      "width": 4000,
+      "height": 2000,
+      "durationSeconds": 9
+    }
+  },
+  "reducedMotion": {
+    "liveSystemPreferenceChanged": false,
+    "reviewed": "CSS @media(prefers-reduced-motion:reduce) disables motion; JS initial matchMedia pauses video and listens for changes. Manual Play remains user-controlled.",
+    "globalPauseLive": true
+  },
+  "screenshots": {
+    "desktop": "previews/google-material.jpg",
+    "mobile": "previews/mobile/google-material.jpg",
+    "states": [
+      "previews/states/google-material-paused.jpg",
+      "previews/states/google-material-dark.jpg",
+      "previews/states/google-material-directory.jpg",
+      "previews/states/google-material-focus.jpg",
+      "previews/states/google-material-mobile-menu.jpg",
+      "previews/states/google-material-1280.jpg"
+    ]
+  },
+  "javascriptSyntaxCheck": {
+    "pass": true,
+    "command": "node --check demos/google-material/app.js"
+  },
+  "cleanSource": {
+    "path": "research/screenshots/google-material-clean-source.jpg",
+    "browser": "Independent IAB source visit by root agent",
+    "viewport": "Default browser viewport; not resized",
+    "use": "Primary original-colour reference; Edge interaction/mobile evidence remains archived"
+  },
+  "intermediate": {
+    "heroBackground": "rgb(248, 241, 246)",
+    "heroColumns": "1160.8px",
+    "heroY": [
+      8,
+      372
+    ],
+    "overflow": false,
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "visualCorrection": {
+    "heroSurface": "Actual scoped component CSS uses surface-1, not primary-container token despite class name.",
+    "responsiveSplitBreakpoint": 1294,
+    "recheckedActualViewports": [
+      [
+        1440,
+        1000
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ]
+  }
+}

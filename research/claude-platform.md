@@ -49,3 +49,14 @@ CUA实访claude.com，主标题计算72px、AnthropicSerif；左栏标题/注册
 - [还原说明](../demos/claude-platform/fidelity.md)
 
 私人学习记录；品牌与媒体版权保留给品牌及原作者。
+
+
+## 2026-10-07 动效复审补正
+
+本次官网Edge重定向到claude.ai后停止；root IAB同样重定向并遇Cloudflare。匿名claude.com HTML/CSS仍200取得；本地25.567秒媒体及按钮实操通过，源时序 unavailable。
+
+保留官方Cowork视频静音loop、真实media事件驱动播放/暂停按钮与reduced-motion更新；本次原站重定向/Cloudflare，未给源页面hover或scroll添加未经现场核验的新动画。
+
+2026-10-07动效复审无法在Edge或IAB打开未登录claude.com首页；本地媒体可操作不等于本次验证了原站所有hover/scroll时序。
+
+本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。

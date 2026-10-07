@@ -1,0 +1,242 @@
+{
+  "date": "2026-10-07",
+  "browser": "Edge via documented CUA",
+  "localUrl": "http://127.0.0.1:4173/demos/chatgpt-platform/index.html",
+  "controller": "demos/chatgpt-platform/script.js",
+  "checks": [
+    {
+      "name": "real pointer hover selects work",
+      "pass": true,
+      "actual": {
+        "artGroups": 2,
+        "currentImages": 1,
+        "focus": "工作",
+        "hovered": [
+          "工作"
+        ],
+        "mode": "work",
+        "outgoingImages": 1,
+        "scrollY": 0,
+        "stageY": 824.1749877929688,
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "name": "9 sequential switches do not accumulate exit groups or duplicate current IDs",
+      "pass": true,
+      "samples": [
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "code",
+          "outgoingImages": 1
+        },
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "chat",
+          "outgoingImages": 1
+        },
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "work",
+          "outgoingImages": 1
+        },
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "code",
+          "outgoingImages": 1
+        },
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "work",
+          "outgoingImages": 1
+        },
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "chat",
+          "outgoingImages": 1
+        },
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "code",
+          "outgoingImages": 1
+        },
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "work",
+          "outgoingImages": 1
+        },
+        {
+          "currentIdCount": 1,
+          "currentImages": 1,
+          "groups": 2,
+          "leaving": 1,
+          "mode": "code",
+          "outgoingImages": 1
+        }
+      ]
+    },
+    {
+      "name": "exit groups clean up after transitions settle",
+      "pass": true,
+      "actual": {
+        "currentImages": 1,
+        "groups": 1,
+        "leaving": 0,
+        "outgoingImages": 0
+      }
+    },
+    {
+      "name": "native downward scrolling traverses chat/work/code stages",
+      "pass": true,
+      "samples": [
+        {
+          "mode": "code",
+          "phase": "handoff",
+          "progress": [
+            "matrix(0, 0, 0, 1, 0, 0)",
+            "matrix(0, 0, 0, 1, 0, 0)",
+            "matrix(0, 0, 0, 1, 0, 0)"
+          ],
+          "scrollY": 1077.5999755859375,
+          "stageY": -253.4250030517578
+        },
+        {
+          "groups": 2,
+          "mode": "chat",
+          "outgoing": 1,
+          "phase": "accordion",
+          "progress": [
+            "matrix(0.30685, 0, 0, 1, 0, 0)",
+            "matrix(0, 0, 0, 1, 0, 0)",
+            "matrix(0, 0, 0, 1, 0, 0)"
+          ],
+          "railInert": false,
+          "scrollY": 1477.5999755859375,
+          "stageY": -653.4249877929688
+        },
+        {
+          "groups": 1,
+          "mode": "chat",
+          "outgoing": 0,
+          "phase": "accordion",
+          "progress": [
+            "matrix(0.30685, 0, 0, 1, 0, 0)",
+            "matrix(0, 0, 0, 1, 0, 0)",
+            "matrix(0, 0, 0, 1, 0, 0)"
+          ],
+          "railInert": false,
+          "scrollY": 1477.5999755859375,
+          "stageY": -653.4249877929688
+        },
+        {
+          "groups": 1,
+          "mode": "work",
+          "outgoing": 0,
+          "phase": "accordion",
+          "progress": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(0.10685, 0, 0, 1, 0, 0)",
+            "matrix(0, 0, 0, 1, 0, 0)"
+          ],
+          "railInert": false,
+          "scrollY": 1877.5999755859375,
+          "stageY": -1053.425048828125
+        },
+        {
+          "groups": 2,
+          "mode": "code",
+          "outgoing": 1,
+          "phase": "accordion",
+          "railInert": false,
+          "scrollY": 2877.60009765625,
+          "stageY": -2053.425048828125
+        }
+      ]
+    },
+    {
+      "name": "left-rail click scrolls to chat and expands chat",
+      "pass": true,
+      "actual": {
+        "expanded": [
+          "聊天"
+        ],
+        "mode": "chat",
+        "scrollY": 1344,
+        "stageY": -519.8250122070312
+      }
+    },
+    {
+      "name": "ArrowDown selects work and transfers keyboard focus",
+      "pass": true,
+      "actual": {
+        "focus": "work",
+        "mode": "work",
+        "scrollY": 1844
+      }
+    },
+    {
+      "name": "End selects code and focuses final rail item",
+      "pass": true,
+      "actual": {
+        "focus": "code",
+        "mode": "code",
+        "scrollY": 2344
+      }
+    },
+    {
+      "name": "native upward scrolling restores manually selected code collage",
+      "pass": true,
+      "actual": {
+        "artOpacity": "1",
+        "documentWidth": 1425,
+        "groups": 1,
+        "leaving": 0,
+        "mode": "code",
+        "outgoingImages": 0,
+        "phase": "intro",
+        "railInert": true,
+        "scrollY": 0,
+        "stageY": 824.1749877929688,
+        "viewport": 1440
+      }
+    }
+  ],
+  "notes": [
+    "No root code changed. Read-only controller and DOM inspection.",
+    "Hover assessed using documented secondary click plus Escape; actual :hover state read, no injected pointer events."
+  ],
+  "consoleLogs": [],
+  "controllerReview": {
+    "exitGroups": "Removes prior .leaving/.outgoing before creating the next pair; timers remove retained outgoing refs; serial guards latest entering completion.",
+    "scroll": "Passive scroll listener schedules at most one rAF; handoff and 500px mode regions, explicit introMode restore.",
+    "reducedMotion": "CSS static presentation + scrollStageEnabled=false + inactive parallax/entry/exit; manual selection remains available.",
+    "manualPause": "Stops autoplay, entry/exit and parallax. User scroll still drives essential staged navigation; distinct from OS reduced-motion static fallback."
+  }
+}

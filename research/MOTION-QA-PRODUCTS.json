@@ -1,0 +1,424 @@
+{
+  "date": "2026-10-07T08:35:47.309Z",
+  "items": {
+    "apple-product": {
+      "samples": [
+        {
+          "opacity": "1",
+          "progress": "0.428",
+          "scrollY": 3452.800048828125,
+          "time": 2.163753
+        },
+        {
+          "opacity": "0",
+          "progress": "0.792",
+          "scrollY": 4241.60009765625,
+          "time": 3.957269
+        }
+      ],
+      "mobile": {
+        "brokenImages": [],
+        "controls": 1,
+        "height": 844,
+        "overflow": false,
+        "scrollWidth": 375,
+        "width": 390,
+        "action": {
+          "controlsOpacity": "1",
+          "image": "assets/siri.jpg",
+          "selected": "Siri AI"
+        }
+      }
+    },
+    "linear-workflow": {
+      "views": [
+        {
+          "hiddenDetail": true,
+          "overflow": false,
+          "tasks": 11,
+          "view": "1"
+        },
+        {
+          "tableRows": 6,
+          "view": "2",
+          "visible": true
+        },
+        {
+          "view": "3",
+          "visible": true
+        }
+      ],
+      "mobile": {
+        "brokenImages": [],
+        "controls": 5,
+        "height": 844,
+        "overflow": false,
+        "scrollWidth": 375,
+        "width": 390,
+        "action": {
+          "boardVisible": true,
+          "overflow": false,
+          "view": "1"
+        }
+      }
+    },
+    "stripe-platform": {
+      "hover": {
+        "copy": {
+          "bottom": 787.5500030517578,
+          "height": 710.75,
+          "left": 380.2000122070313,
+          "right": 1644.6000366210938,
+          "top": 76.80000305175781,
+          "width": 1264.4000244140625,
+          "x": 380.2000122070313,
+          "y": 76.80000305175781
+        },
+        "expanded": "false",
+        "hero": {
+          "bottom": 861.5499877929688,
+          "height": 785.5499877929688,
+          "left": 0,
+          "right": 2024.800048828125,
+          "top": 76,
+          "width": 2024.800048828125,
+          "x": 0,
+          "y": 76
+        },
+        "menuHidden": true,
+        "status": "unverified-in-local-edge-pointer-drag"
+      },
+      "scene1": {
+        "card": {
+          "bottom": 785.75,
+          "height": 676,
+          "left": 398.2000122070313,
+          "right": 1211.800048828125,
+          "top": 109.75,
+          "width": 813.6000366210938,
+          "x": 398.2000122070313,
+          "y": 109.75
+        },
+        "overflow": false,
+        "terminal": "none",
+        "y": 986.4000244140624
+      },
+      "scene2": {
+        "checkout": "1",
+        "terminal": "matrix(1, 0, 0, 1, 0, -195.675)"
+      },
+      "mobile": {
+        "brokenImages": [],
+        "controls": 3,
+        "height": 844,
+        "overflow": false,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "clickMenu": {
+        "expanded": "true",
+        "links": 6,
+        "menuHidden": false
+      },
+      "waveSample1": {
+        "canvas": {
+          "engine": "three.js r178",
+          "motionFrame": "7",
+          "motionReady": "true",
+          "motionStatus": "running",
+          "motionTime": "35621.848"
+        },
+        "fallbackOpacity": "0",
+        "height": 983,
+        "overflow": false,
+        "width": 1738
+      },
+      "waveSample2": {
+        "canvas": {
+          "engine": "three.js r178",
+          "motionFrame": "32",
+          "motionReady": "true",
+          "motionStatus": "running",
+          "motionTime": "58699.472000000016"
+        },
+        "fallbackOpacity": "0"
+      },
+      "wavePaused1": {
+        "button": "Play background animation",
+        "canvas": {
+          "engine": "three.js r178",
+          "motionFrame": "32",
+          "motionReady": "true",
+          "motionStatus": "paused",
+          "motionTime": "58699.472000000016"
+        },
+        "hoverCapability": true,
+        "pointerFine": true
+      },
+      "wavePaused2": {
+        "button": "Play background animation",
+        "canvas": {
+          "engine": "three.js r178",
+          "motionFrame": "32",
+          "motionReady": "true",
+          "motionStatus": "paused",
+          "motionTime": "58699.472000000016"
+        }
+      },
+      "waveResumed": {
+        "canvas": {
+          "engine": "three.js r178",
+          "motionFrame": "39",
+          "motionReady": "true",
+          "motionStatus": "running",
+          "motionTime": "160972.3904000001"
+        }
+      },
+      "waveMobile": {
+        "broken": [],
+        "canvas": {
+          "engine": "three.js r178",
+          "motionFrame": "13",
+          "motionReady": "true",
+          "motionStatus": "running",
+          "motionTime": "39227.5024"
+        },
+        "canvasHeight": 542,
+        "canvasWidth": 375,
+        "copyDisplay": "none",
+        "fallbackOpacity": "0",
+        "height": 844,
+        "overflow": false,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "waveFallback": {
+        "canvas": {
+          "motionError": "WebGL disabled by query param",
+          "motionStatus": "fallback"
+        },
+        "canvasVisibility": "hidden",
+        "fallbackOpacity": "1",
+        "pauseButtonHidden": true
+      },
+      "wavePreferenceReview": "Reduced -> normal now explicitly unhides the pause button when wave.loaded. Duplicate paused setter assignments are avoided to preserve renderer pause timestamps. Code review only; did not alter system/browser motion preference.",
+      "coverCapture": {
+        "canvas": {
+          "engine": "three.js r178",
+          "motionFrame": "6",
+          "motionReady": "true",
+          "motionStatus": "running",
+          "motionTime": "35640.5312"
+        },
+        "fallbackOpacity": "0",
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "notion-editorial": {
+      "sample1": {
+        "featureColumns": "593px 593px",
+        "label": "Think",
+        "paused": false,
+        "time": 0.232914,
+        "width": "172px"
+      },
+      "sample2": {
+        "label": "Think",
+        "overflow": false,
+        "paused": false,
+        "time": 0.4148,
+        "width": "172px"
+      },
+      "sample3": {
+        "label": "Think",
+        "time": 0.013248,
+        "width": "172px"
+      },
+      "pause": {
+        "label": "Play product video",
+        "paused": true
+      },
+      "mobile": {
+        "brokenImages": [],
+        "controls": 5,
+        "height": 844,
+        "overflow": false,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "automaticWord1": {
+        "allLabels": [
+          "Think"
+        ],
+        "label": "Think"
+      },
+      "automaticWord2": {
+        "hidden": false,
+        "label": "Scale",
+        "reduce": false,
+        "script": "script.js",
+        "transition": "width 0.3s cubic-bezier(0.86, 0, 0.07, 1)",
+        "width": "83px"
+      }
+    },
+    "qoder-platform": {
+      "mobile": {
+        "brokenImages": [],
+        "controls": 4,
+        "height": 844,
+        "overflow": false,
+        "scrollWidth": 375,
+        "width": 390,
+        "action": {
+          "artMobile": true,
+          "bodyHidden": true,
+          "ghosts": 0,
+          "image": "assets/mobile.png",
+          "overflow": false,
+          "selected": "true"
+        }
+      },
+      "supersededObservation": {
+        "mobile": {
+          "bodyHidden": false,
+          "ghosts": 0,
+          "image": "assets/mobile.png",
+          "overflow": false,
+          "paths": 2,
+          "selected": "true"
+        },
+        "cli": {
+          "ghosts": 1,
+          "image": "assets/cli.svg",
+          "selected": "true",
+          "title": "qoder --help"
+        },
+        "note": "Mobile overlay false was measured before scoping panel queries to the current panel; CLI ghost=1 was an in-flight transition. Superseded by final mobile.action and final CLI samples."
+      },
+      "cli": {
+        "bodyHidden": false,
+        "ghosts": 0,
+        "image": "assets/cli.svg",
+        "overflow": false,
+        "selected": "true"
+      },
+      "heroTiming": {
+        "focus": [
+          {
+            "animationName": "qoder-focus-breathe",
+            "duration": "3.8s"
+          },
+          {
+            "animationName": "qoder-focus-breathe",
+            "duration": "3.8s"
+          }
+        ],
+        "paths": [
+          {
+            "animationName": "qoder-dash-flow, qoder-dash-breathe",
+            "delay": "0s, 0s",
+            "duration": "13.824s, 4.8s"
+          },
+          {
+            "animationName": "qoder-dash-flow, qoder-dash-breathe",
+            "delay": "-18s, -4.8s",
+            "duration": "16.64s, 6.4s"
+          }
+        ],
+        "pauseSelected": "true"
+      }
+    },
+    "claude-platform": {
+      "initial": {
+        "control": "Play video",
+        "duration": 25.566667,
+        "paused": true,
+        "ready": 4,
+        "time": 0
+      },
+      "paused": {
+        "control": "Play video",
+        "paused": true,
+        "pressed": "true"
+      },
+      "playing": {
+        "control": "Pause video",
+        "paused": false,
+        "time": 0.931581
+      },
+      "email": {
+        "control": "Play video",
+        "formVisible": true,
+        "overflow": false,
+        "paused": true
+      },
+      "mobile": {
+        "brokenImages": [],
+        "controls": 4,
+        "height": 844,
+        "overflow": false,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "narrowPreview": {
+        "actionsDisplay": "none",
+        "hamburgerDisplay": "block",
+        "height": 844,
+        "htmlClientWidth": 703,
+        "navDisplay": "none",
+        "overflow": false,
+        "scrollWidth": 703,
+        "width": 718,
+        "expanded": "true",
+        "links": 6,
+        "menuHidden": false
+      }
+    }
+  },
+  "checkedAt": "2026-10-07T09:20:50.740Z",
+  "scope": [
+    "apple-product",
+    "stripe-platform",
+    "linear-workflow",
+    "notion-editorial",
+    "claude-platform",
+    "qoder-platform"
+  ],
+  "sourceAudit": {
+    "observed": [
+      "apple-product",
+      "stripe-platform",
+      "linear-workflow",
+      "notion-editorial"
+    ],
+    "partialSourceVerified": [
+      "qoder-platform"
+    ],
+    "unavailable": [
+      "claude-platform"
+    ],
+    "notes": "Qoder live-mode operation was rejected by automatic approval review; did not retry. Anonymous public SSR/JS and root public IAB timing observations were used. Claude marketing URL redirected to login/Cloudflare; no account interaction."
+  },
+  "reducedMotionValidation": "Code/CSS branches checked, no browser preference emulation was performed. Stripe official __disableWebGL query verified real fallback lifecycle.",
+  "hoverValidation": "Source Products pointer entry observed. Local Stripe click menu verified; Edge drag did not reliably trigger local hover. No synthetic events were used.",
+  "results": {
+    "checked": 6,
+    "localMobileOverflow": 0,
+    "localMobileBrokenImages": 0,
+    "verified": [
+      "Apple paused camera WebM time increases with scroll and title fades; Siri AI selection",
+      "Stripe original WebGL frame/time advances, pause freezes, resume runs, mobile rendering and GPU fallback",
+      "Linear 11-task board, insights/table, project overview",
+      "Notion six-word interval is active, 300ms width and actual video pause",
+      "Claude actual video play/pause and local email panel",
+      "Qoder correct Mobile image/current panel overlay hidden; final CLI separately sampled"
+    ],
+    "sourceLimits": {
+      "Claude": "live public marketing motion unavailable due login redirect/Cloudflare",
+      "Qoder": "source mode action blocked; public hero timing + anonymous public SSR/JS only",
+      "Stripe": "local hover pointer action not reliable; click path checked"
+    },
+    "reducedMotion": "CSS/code review; browser preference not emulated"
+  }
+}

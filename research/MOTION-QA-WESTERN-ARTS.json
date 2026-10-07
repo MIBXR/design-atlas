@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-07",
+  "method": "Root IAB: public real scroll/click + DOM/CSS; local direct-page and reference-library iframe UI",
+  "cases": {
+    "rijksmuseum-art": {
+      "sourceMenuOpacity": "500ms linear",
+      "localMenuActualCSS": "0.5s linear both rijks-menu-enter",
+      "phoneIframe": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "menuOpened": true
+      },
+      "heroVideoObserved": false
+    },
+    "met-museum": {
+      "sourceVimeoId": "1232113956",
+      "publicVideo": "20260925_Fall_Homepage",
+      "localMedia": {
+        "readyState": 4,
+        "duration": 30.488792,
+        "width": 1280,
+        "height": 720,
+        "playObserved": true,
+        "pauseObserved": true,
+        "pausedFrameVisibility": "visible"
+      },
+      "phoneIframe": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "menuOpened": true
+      },
+      "sourceRailOverflow": "scroll"
+    },
+    "philharmonie-music": {
+      "sourceExhibition": "two photographs sequential in article; Horaires button opened",
+      "sourceConcert": "three images, Slick transform 0.5s, Previous/Next/Pause",
+      "localConcert": "Next 1/3 to 2/3, translateX(-100%), no console errors in independent page",
+      "phoneIframe": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "HorairesOpened": true
+      },
+      "playlist": "https://philharmoniedeparis.fanlink.tv/Playlist-Expo-VGM",
+      "cycleBoundary": "6000ms local approximation",
+      "phoneConcertControls": {
+        "viewport": "390x844",
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "checksPassed": 6,
+        "pausePointer": true,
+        "nextPointer": "2→3 / translateX(-200%)",
+        "previousPointer": "3→2 / translateX(-100%)",
+        "pauseBeyondLocalCycle": true,
+        "consoleErrors": [],
+        "fixed": "gradient pointer-events:none; controls z-index:2",
+        "evidence": "philharmonie-music-motion-audit.json"
+      }
+    }
+  },
+  "reduceMotion": "code/style reviewed; no claimed system-preference browser emulation"
+}

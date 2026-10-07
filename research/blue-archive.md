@@ -23,3 +23,9 @@ Edge桌面首屏约2040×939，整体是学园都市背景视频、中央青白L
 本地忠实区域：深蓝导航、城市视频、Logo与标语位置、左右角落官方入口和页脚标识。教学新增：素材观察器与构图折叠说明。详情见 `demos/blue-archive/fidelity.md`；资源清单 `assets-manifest.json` 保存原URL、用途、字节与尺寸。
 
 素材与商标权利属于官方相应权利方。本地私用学习不代表得到公开再发布许可。官方[创作指南](https://bluearchive.jp/fankit/guidelines) 需在其他使用情境自行查看适用规则。
+
+## 2026-10-07 动效补审更新
+
+本轮官方/character成功加载。实点第二张头像后swiper-wrapper为translate3d(-1413px,0,0)，transition-duration:1000ms；当前profile为Hoshino、花守ゆみり。已加入4位官方学生、学院标志、资料卡和官网背景，共14份新增公开图像；1000ms轨道是真实对应机制。仅实现阿比多斯，其他学院外链；语音未取得；手机为本地可读性重排，不声称逐像素复制。背景视频补可见性/后台暂停。
+
+本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#blue-archive)。

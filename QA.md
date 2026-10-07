@@ -1,3 +1,31 @@
+# 验证记录 · 动态复核版
+
+验证日期：2026-10-07。当前29项（8产品、7游戏、6艺术文化、8经典语言）。21个品牌／文化案例逐项记录动效核对；8个未改动的经典练习沿用此前验证。所有配图为浏览器实际画面。
+
+## 本轮动态与响应式证据
+
+- [逐项动效审计](research/MOTION-AUDIT.md)：区分源站观察、公开源码核验、本地近似和未覆盖范围。
+- ChatGPT：[桌面独立操作](research/chatgpt-platform-motion-audit.json)实测悬停、9次快速切换、滚动三模式、左栏点击及方向键、上滚恢复。当前/离场图层最多2组，离场中央图最多1张，当前图ID始终唯一。 [390px检查](research/chatgpt-platform-mobile-qa.json)包含菜单、三模式与折叠；无横溢。原站四段证据见[调研](research/chatgpt-platform.md)。
+- Google Material：[1440、1280与390px状态检查](research/google-material-qa.json)，真实视频、主题、全局暂停、焦点及手机目录。干净IAB截图核对后纠正中性容器与1294px断点。
+- 其他六产品：[专项审计](research/MOTION-AUDIT-PRODUCTS.md)和[QA JSON](research/MOTION-QA-PRODUCTS.json)。Apple采用原WebM逐帧推进；Stripe移植公开SingleWave WebGL模块与原shader，保留暂停、离屏停止和静态后备；Notion保留6词真实轮换；Linear使用不同结构的视图；Qoder的五平台时序来自匿名公开脚本。
+- 游戏与日本艺术十例：[专项审计](research/MOTION-AUDIT-GAMES-ART-JP.md)，包含原站各自节奏与本地状态，宽屏/390px截图存于previews及previews/mobile。
+- 西方艺术三例：[复核JSON](research/MOTION-QA-WESTERN-ARTS.json)。Met官方季节视频实际解码为1280×720、30.488792秒，暂停保留当前帧；Rijksmuseum菜单500ms；Philharmonie展览顺序摄影、侧栏折叠与音乐会500ms摄影轨。库内手机iframe实际clientWidth/scrollWidth同为375px；音乐会控件渐变遮挡已修复，[手机实测六项通过](research/philharmonie-music-motion-audit.json)。
+
+## 集成与资料检查
+
+`npm run build` 从29份entries生成catalog、索引和29份可读Prompt。`npm run check`检查字段/来源、八项设计映射、本地引用、JS语法、预览及资产大小与SHA256。README使用29例实际预览组成封面，另有流程图和ChatGPT真实交互关键帧；相对图片／Prompt／研究／代码链接纳入集成检查。
+
+新增docs与prompts纳入静态构建，部署目录不含Git元数据或本机服务。最终集成记录见 [integration-motion-qa.json](research/integration-motion-qa.json)。
+
+## 必须保留的限制
+
+原站现场验证不是全部可用：Claude跳转登录与安全验证；Qoder演示按钮动作因可能触及账户/私有项目被自动审批拒绝，改以公开脚本/匿名页面核对。没有访问真实账户或绕过安全验证。完整原站JS未取得的部分只能标为近似；未移植区域见每例fidelity与专项审计。
+
+媒体控制与减少动态分支已检查，未把代码分支等同于系统reduce偏好下的完整实测。不同视口截图不用于声称像素一致性；原站会更新。没有宣称通过WCAG认证。
+
+<details>
+<summary>上一轮基础验证（28项）的历史记录</summary>
+
 # 验证记录 · 第二版
 
 验证日期：2026-10-07。28项中，20个品牌/文化局部复现进行了本轮浏览器检查；8个未改动的经典练习沿用首版验证。本轮截图来自本地 HTTP 页面，不是设计效果图。
@@ -65,3 +93,5 @@
 复现的是选定区域与关键机制，服务端、完整WebGL/3D、全站商业流程未克隆；原站/本地逐区差异见各例fidelity.md。巴黎原站截图受Dark Reader影响，配色取第一方CSS且图注说明；本地预览按官方色彩。其余来源也可能受视口、地区版与抓取日期影响。
 
 验证包括浏览器实际操作、资源完整性与语法；未做完整跨浏览器、性能基准或WCAG认证。减少动态CSS与静态后备已检查，但未修改操作系统偏好模拟全部环境。音频验证了播放状态、时间推进与停止，没有做听感/音质评估。图标、字体、作品与音视频的原始权利和使用范围见资产清单。
+
+</details>

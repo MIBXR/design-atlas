@@ -77,6 +77,50 @@
       "retrievedAt": "2026-10-07",
       "copyright": "品牌及原作者所有；仅本地私人学习，无品牌关联。",
       "sha256": "2228fee8f2931671a4690c35ec3a6746216f8d7fba4f51adc91f9b58a6b28f89"
+    },
+    {
+      "file": "assets/wave-palette.webp",
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/media/palette-light.3c0e6604.webp",
+      "purpose": "官网 SingleWave light 配色纹理",
+      "bytes": 11524,
+      "sha256": "dddcbdc6d7067aa190584c10cd004f7f7ff156ac9feab4fccacc89a29d54c32e",
+      "copyright": "Stripe 官方公开渲染资料仅供私人设计学习；Three.js r178 为 MIT。",
+      "width": 480,
+      "height": 480
+    },
+    {
+      "file": "assets/wave-geometry-worker.js",
+      "sourceUrl": "https://stripe.com/_workers/_next/static/chunks/waveGeometry.worker.07101200.js",
+      "purpose": "官网折叠平面网格 Worker",
+      "bytes": 1529,
+      "sha256": "6d26e053b995b994e9a2d35796cbfff061f0f4f02d57439e49fd4099c52fb66e",
+      "copyright": "Stripe 官方公开渲染资料仅供私人设计学习；Three.js r178 为 MIT。"
+    },
+    {
+      "file": "assets/three-LICENSE.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/mrdoob/three.js/r178/LICENSE",
+      "purpose": "官网捆绑 Three.js r178 的 MIT 许可证",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "copyright": "Stripe 官方公开渲染资料仅供私人设计学习；Three.js r178 为 MIT。"
+    },
+    {
+      "file": "assets/stripe-wave-renderer.js",
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "purpose": "从官方公开 chunk 精确提取20个 SingleWave/Three.js 渲染模块，仅修改 Worker 本地URL与添加独立 loader",
+      "bytes": 621926,
+      "sha256": "8832fb802144702dcc3e547a59515f7d0a57937ca97c0b58761630f74eb99884",
+      "copyright": "Stripe 原始渲染代码归 Stripe；Three.js r178 为 MIT，仅供私人学习。",
+      "derived": true
+    },
+    {
+      "file": "assets/wave-provenance.json",
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "purpose": "波带各模块的第一方URL、提取范围与本地适配清单",
+      "bytes": 4120,
+      "sha256": "9384139241c3b0f3b9cce7bb63e605c2a84e9d1b3fc3b40a3faaaf5b1ec5e79a",
+      "copyright": "Stripe 原始渲染代码归 Stripe；Three.js r178 为 MIT，仅供私人学习。",
+      "derived": true
     }
   ]
 }

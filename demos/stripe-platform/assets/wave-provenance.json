@@ -1,0 +1,114 @@
+{
+  "capturedAt": "2026-10-07T09:05:23.901Z",
+  "referenceUrl": "https://stripe.com/",
+  "modules": [
+    {
+      "id": 67103,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 8169
+    },
+    {
+      "id": 95145,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/c67c952e-5362035f70172687.js",
+      "bytes": 228863
+    },
+    {
+      "id": 34477,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 917
+    },
+    {
+      "id": 26825,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 519
+    },
+    {
+      "id": 68281,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 437
+    },
+    {
+      "id": 17952,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 552
+    },
+    {
+      "id": 59168,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 12940
+    },
+    {
+      "id": 34875,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 7146
+    },
+    {
+      "id": 71371,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 9565
+    },
+    {
+      "id": 10610,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 7509
+    },
+    {
+      "id": 19622,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 4866
+    },
+    {
+      "id": 54497,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 7346
+    },
+    {
+      "id": 75777,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 395
+    },
+    {
+      "id": 80487,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 4870
+    },
+    {
+      "id": 10722,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 158
+    },
+    {
+      "id": 49873,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 187
+    },
+    {
+      "id": 21919,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 143
+    },
+    {
+      "id": 90126,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 4067
+    },
+    {
+      "id": 42255,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/55369f66-92e84f6aba0a73a8.js",
+      "bytes": 321208
+    },
+    {
+      "id": 80931,
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js",
+      "bytes": 699
+    }
+  ],
+  "adaptations": [
+    "Minimal module loader instead of original Next/React runtime.",
+    "Geometry worker URL is changed to local assets/wave-geometry-worker.js.",
+    "Only SingleWave controller and transitive rendering/math utilities; no account/analytics/React modules.",
+    "Home configurations are original gj/P1/y7: speed 0.00004, timeOffset 17500.",
+    "Local pause control, reduced-motion/static fallback, dialog/menu pause and viewport policy live in wave.js; shader and mesh code are otherwise unchanged."
+  ],
+  "copyright": "Stripe rendering material belongs to Stripe. Private learning reference. Three.js dependency: MIT license in three-LICENSE.txt."
+}

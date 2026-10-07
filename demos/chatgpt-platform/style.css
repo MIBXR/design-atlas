@@ -3,3 +3,70 @@
 
 body{font-family:"OpenAI Sans SC","OpenAI Sans",Arial,sans-serif}.brand img{width:118px;height:28px}.brand b{display:none}
 [hidden]{display:none!important}
+
+/* The three-mode collage and handoff are separate from the secondary card shelf. */
+header{position:sticky;top:0;background:#fff;height:64px}
+.hero{padding:63px 20px 22px}h1{line-height:1;font-size:clamp(68px,6.95vw,102.4px);letter-spacing:-.047em}
+.action-word{border-radius:3px;color:#080808;transition:color 300ms}
+.action-word:after{content:'';position:absolute;left:.01em;right:.01em;bottom:-.075em;height:.035em;border-radius:20px;background:var(--gradient);transform:scaleX(0);transform-origin:left;transition:transform 550ms cubic-bezier(.22,1,.36,1)}
+.action-word[data-select=chat]{--gradient:linear-gradient(90deg,#10a0e8,#fcd448,#fc6c28,#fcc0cc)}
+.action-word[data-select=work]{--gradient:linear-gradient(90deg,#04b84c,#10a0e8,#fcd448,#fc6c28)}
+.action-word[data-select=code]{--gradient:linear-gradient(90deg,#ceb0fb,#10a0e8,#04b84c,#fcd448)}
+.action-word.active{background-image:var(--gradient);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.action-word.active:after{left:.01em;right:.01em;bottom:-.075em;height:.035em;background:var(--gradient);transform:scaleX(1)}
+.hero .black-ring{margin:66px auto 38px}
+.mode-experience{--artwork-height:min(48.6vw,700px,calc(100svh - 64px));--sticky-top:calc((100svh + 64px - var(--artwork-height))/2);--intro-opacity:1;--intro-scale:1;--handoff:0;--rail-opacity:0;--window-entry:1;height:calc(2000px + 100svh);position:relative;isolation:isolate;scroll-margin-top:64px}
+.intro-art{position:absolute;inset:0 0 auto;height:var(--artwork-height);opacity:var(--intro-opacity);transform:scale(var(--intro-scale));transform-origin:center;pointer-events:none;z-index:1}
+.artwork,.artwork-mode{position:absolute;inset:0;overflow-x:clip;overflow-y:visible}
+.motion-layer{position:absolute;transform:translate(-50%,-50%) rotate(var(--angle));pointer-events:none}
+.motion-layer img{display:block;width:100%;height:auto}
+.layer-parallax{will-change:transform}
+.entering .motion-layer img{animation:fly-in 720ms cubic-bezier(.22,1,.36,1) var(--delay) both}
+.leaving .motion-layer img{animation:fly-out 500ms cubic-bezier(.4,0,1,1) both}
+@keyframes fly-in{from{opacity:0;transform:translate3d(var(--from-x),var(--from-y),0) scale(.72) rotate(-8deg)}to{opacity:1;transform:translate3d(0,0,0) scale(1) rotate(0)}}
+@keyframes fly-out{from{opacity:1;transform:translate3d(0,0,0) scale(1)}to{opacity:0;transform:translate3d(var(--from-x),var(--from-y),0) scale(.8)}}
+.mode-sticky{position:sticky;top:var(--sticky-top);height:calc(100svh - var(--sticky-top));overflow:clip;z-index:3}
+.mode-window{position:absolute;top:calc(18px + 14px * var(--handoff));left:calc(14% + 20.5% * var(--handoff));width:72%;border-radius:12px;background:#fff;box-shadow:0 18px 28px #0002;overflow:hidden;transform:translateY(calc(56px * (1 - var(--window-entry)))) scale(calc(.93 + .07 * var(--window-entry)));transform-origin:50% 0;will-change:left,top,transform}
+.window-images{position:relative;width:100%;aspect-ratio:1920/1230}
+.mode-image{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+.mode-image.incoming{animation:window-in 500ms cubic-bezier(.22,1,.36,1) both}
+.mode-image.outgoing{animation:window-out 350ms ease both}
+@keyframes window-in{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes window-out{to{opacity:0;transform:translateY(-10px) scale(.99)}}
+#image-expand{position:absolute;right:14px;top:14px;border:1px solid #ddd;border-radius:50%;background:#fffd;width:30px;height:30px;font-size:18px;opacity:0;transition:opacity 200ms}
+.mode-window:hover #image-expand,#image-expand:focus-visible{opacity:1}
+.mode-rail{position:absolute;left:10.3%;top:80px;width:min(25%,312px);opacity:var(--rail-opacity);transform:translateX(calc(100px * (1 - var(--handoff))));will-change:transform,opacity}
+.mode-rail[inert]{visibility:hidden}
+.mode-option{border-top:1px solid #ededed;position:relative}
+.mode-option button{display:block;width:100%;padding:23px 0;font-size:21px;text-align:left;line-height:1.2}
+.mode-description{min-height:176px;padding:0 20px 26px 0;font-size:14px;line-height:1.7;color:#666;animation:rail-copy 400ms cubic-bezier(.22,1,.36,1) both}
+.mode-description strong{font-weight:600}.mode-description p{margin:25px 0 0}
+@keyframes rail-copy{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.mode-progress{position:absolute;top:-1px;left:0;width:100%;height:1px;background:#777;transform:scaleX(0);transform-origin:left}
+.uses{max-width:none;margin:100px 0 120px;padding:0 max(32px,calc((100vw - 1160px)/2))}
+.uses-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:45px}
+.uses-heading h2{font-size:clamp(32px,3.5vw,49px);font-weight:500;letter-spacing:-.03em;line-height:1.16;margin:0}
+.card-controls{display:flex;gap:10px}.card-controls button{width:40px;height:40px;border-radius:50%;background:#f4f4f4}.card-controls button:disabled{opacity:.35;cursor:default}
+.feature-cards{display:flex;gap:20px;overflow:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 0 8px;overscroll-behavior-x:contain}
+.feature-cards::-webkit-scrollbar{display:none}.feature-cards article{flex:0 0 min(370px,32vw);scroll-snap-align:start;border-radius:20px;overflow:hidden;background:#f7f7f7;display:flex;flex-direction:column}
+.feature-cards article>div{padding:30px 28px 10px;min-height:165px}.feature-cards h3{font-size:24px;font-weight:500;margin:0 0 13px}.feature-cards p{font-size:15px;line-height:1.6;color:#777;margin:0}
+.feature-cards img{display:block;width:100%;height:auto;margin-top:auto;aspect-ratio:1;object-fit:contain}
+#motion-toggle{font-size:12px;text-decoration:underline;text-underline-offset:4px;padding:0}
+.motion-paused .motion-layer img,.motion-paused .mode-image,.motion-paused .mode-description{animation:none!important}.motion-paused .action-word:after{transition:none}
+@media(max-width:1023px){
+  .mode-experience{height:auto;padding:50px 24px 70px;overflow:clip;--handoff:1;--intro-opacity:1;--window-entry:1}
+  .intro-art{top:0;height:48.6vw;opacity:.75;transform:none}.mode-sticky{position:relative;top:0;height:auto;display:flex;flex-direction:column-reverse;gap:35px;overflow:visible}
+  .mode-window{position:relative;left:0;top:0;width:100%;transform:none}.mode-rail{position:relative;left:0;top:0;width:100%;opacity:1;transform:none}
+  .mode-rail[inert]{visibility:visible}#image-expand{opacity:1}.mode-option button{padding:20px 0;font-size:20px}.mode-description{min-height:0;padding-right:0;padding-bottom:20px}.mode-description p{margin-top:14px}
+  .uses{margin-top:20px}.feature-cards article{flex-basis:350px}
+}
+@media(max-width:700px){
+  header{height:60px}.hero{padding:63px 20px 22px}h1{font-size:clamp(42px,13.5vw,64px);letter-spacing:-.047em;line-height:1.04}
+  .hero .black-ring{margin:48px auto 30px}.mode-experience{padding:28px 20px 60px}.mode-window{border-radius:9px}
+  .uses{padding:0 20px;margin-bottom:75px}.uses-heading{gap:18px;margin-bottom:28px}.uses-heading h2{font-size:30px}.card-controls button{width:32px;height:32px}.feature-cards article{flex-basis:85vw}.feature-cards article>div{padding:25px 24px 10px;min-height:155px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.mode-experience{height:auto;padding:45px 24px 70px;overflow:clip}.intro-art{display:none}.mode-sticky{position:relative;top:0;height:auto;display:flex;flex-direction:column-reverse;gap:35px;overflow:visible}
+  .mode-window{position:relative;top:0;left:0;width:min(100%,1100px);margin:auto;transform:none}.mode-rail{position:relative;top:0;left:0;width:min(100%,1100px);margin:auto;opacity:1;transform:none}.mode-rail[inert]{visibility:visible}
+  .layer-parallax{transform:none!important}.motion-layer img,.mode-image,.mode-description{animation:none!important}.action-word:after{transition:none}.mode-image.outgoing,.artwork-mode.leaving{display:none}#image-expand{opacity:1}
+}

@@ -31,3 +31,7 @@
 ## 验证证据
 
 [qa.json](qa.json) · [桌面预览](../../previews/met-museum.jpg) · [手机预览](../../previews/mobile/met-museum.jpg) · [资产清单](assets-manifest.json)。
+
+## 2026-10-07 动效复核
+
+2026-10-07 root IAB二次实访发现原静态海报实际随后加载Vimeo 20260925_Fall_Homepage（1232113956），静音循环30.49s，有暂停按钮。已保存原AVC720p视频轨并补回本地播放/暂停、视口外暂停、减少动态效果的海报降级。原站展览横架overflow:scroll，没有前后按钮；本地额外按钮为可达性辅助。

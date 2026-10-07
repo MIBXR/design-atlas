@@ -1,0 +1,129 @@
+{
+  "id": "google-material",
+  "order": 29,
+  "title": "Google Material：表现力与组件秩序",
+  "subtitle": "Material Design 3 真实首页 · 2026 I/O 与 M3 Expressive",
+  "category": "产品",
+  "country": "美国",
+  "edition": "国际英文版 · 2026-10-07快照",
+  "implementation": "reference-study",
+  "referenceUrl": "https://m3.material.io/",
+  "referencePreview": "research/screenshots/google-material-clean-source.jpg",
+  "fidelity": "demos/google-material/fidelity.md",
+  "assetManifest": "demos/google-material/assets-manifest.json",
+  "tags": [
+    "Google",
+    "美国",
+    "平台设计系统",
+    "Material 3",
+    "M3 Expressive",
+    "真实还原",
+    "字体",
+    "角色配色",
+    "圆角变形",
+    "视频"
+  ],
+  "summary": "学习当前 Material Design 3 官方首页：固定图标侧栏、相邻大圆角首屏、真实组件视频和有不同分组的资源目录。配色、字体、容器与交互状态共享规则，让表现力与可读性同时成立。",
+  "accent": "#6442d6",
+  "background": "#fefbff",
+  "principles": [
+    "中性首屏面板与大尺度标题建立身份；紫色主按钮强调行动，真实组件图像承载丰富色彩。",
+    "同一页面使用8px局部间隙和较大节距，分别表达相关内容与主题转换。",
+    "圆角、状态层与角色配色在导航、按钮和资源卡中一致，但不同状态有不同形状。",
+    "实时视频、主题切换与按压反馈提供可观察的产品行为；全局暂停保留控制权。"
+  ],
+  "productFocus": "Google Material 3 设计系统与当前 M3 Expressive 资源，突出颜色、动效、形状、排版与组件的协作；本例复现真实文档首页而非任意Google风格应用。",
+  "interaction": [
+    "官方9秒静音循环MP4本地播放，按钮状态来自真实play/pause事件。",
+    "主题开关在官网核验的浅／深色角色token之间切换，页面不运行时加载外部媒体。",
+    "全局动效暂停会停止视频及CSS过渡／涟漪；独立播放允许用户主动观看。",
+    "CTA按压圆角48→16px，资源卡键盘聚焦／按压24→48px，指针与键盘均有涟漪和即时状态。",
+    "手机菜单可开关、进入二级目录、Escape返回；资源、文档和搜索均为真实官方外链。"
+  ],
+  "theme": "温暖中性底色与表面、紫色主动作及状态角色配对、Google Sans尺度层级、宽松大圆角、清晰资源图像；兼具友好表现力和文档导航秩序。",
+  "constraints": [
+    "参照2026-10-07真实首页及I/O2026区域，不把2025发布页或泛化Google界面当原站。",
+    "Google Sans、Symbols、20张原始配图、poster与MP4本地归档；公开素材仅用于私人研究，权利仍归原权利人。",
+    "源研究Edge存在Dark Reader，配色取公开原始CSS；源截图环境差异见研究与fidelity。",
+    "较长营销文案改写；目录采用本地dialog加官方链接，不复制官网完整Angular路由或追踪脚本。",
+    "首页按钮公开CSS仍有时间和贝塞尔曲线，不能因阅读M3物理规范就声称所有首页交互使用弹簧。",
+    "减少动态初始停播并去掉非必要运动，保留色彩状态、焦点和所有内容；不声称完成WCAG认证。"
+  ],
+  "useCases": [
+    "设计系统或开发平台主页",
+    "拥有真实组件图像和演示视频的产品资源页",
+    "需要在表现力与文档秩序之间取得平衡的学习入口"
+  ],
+  "avoid": [
+    "只用Google四色和通用营销双栏就称为Material官网",
+    "把品牌网站的紫色和字体当所有Material产品的硬性规范",
+    "任意加视差或把CSS圆角过渡冒称物理弹簧",
+    "静态图片假装实时视频或复制统计脚本"
+  ],
+  "tokens": {
+    "palette": [
+      "#fefbff",
+      "#1c1b1d",
+      "#f8f1f6",
+      "#f2ecee",
+      "#6442d6",
+      "#9f86ff",
+      "#1e0060",
+      "#dcdaf5",
+      "#141314",
+      "#4b21bd",
+      "#e7deff"
+    ],
+    "type": "官网Google Sans 475标题，桌面H1 96/96px、手机45/52px、H2桌面57/64px与手机36/44px；Google Sans Text正文和官方Symbols图标。",
+    "layout": "88px固定侧栏／64px手机顶栏；8px首屏间隔与24px面板圆角；≥1295px两列544px hero，≤1294px上下排列；正文1200px上限，资源按1、2、3项分组。",
+    "motion": "官方9秒循环MP4；CTA圆角.2s、卡片.3s cubic-bezier(.2,0,0,1)，本地涟漪300ms近似；视频独立暂停／全局暂停／reduced-motion。"
+  },
+  "sources": [
+    {
+      "title": "Material Design 3 当前官方首页",
+      "url": "https://m3.material.io/",
+      "type": "实例",
+      "note": "2026-10-07独立浏览器宽屏、390px、滚动、目录、主题、视频与全局动效实访；公开CSS/JS核验圆角、曲线和角色色。"
+    },
+    {
+      "title": "Material：Motion physics system",
+      "url": "https://m3.material.io/styles/motion/overview/how-it-works",
+      "type": "规范",
+      "note": "实际读取May2025物理系统、expressive/standard、spatial/effects及速度层级，并操作演示视频暂停；与首页现有CSS实现区分。"
+    },
+    {
+      "title": "Google Design：Expressive研究",
+      "url": "https://design.google/library/expressive-material-design-google-research",
+      "type": "理论",
+      "note": "第一方研究解释颜色、形状、大小、动效和容器如何引导注意与分组，同时强调情境和基础可用性。"
+    },
+    {
+      "title": "Google Design：品牌与Material",
+      "url": "https://design.google/library/staying-true-to-your-identity-material-branding",
+      "type": "理论",
+      "note": "历史品牌指南说明字体、图像和色彩的一致使用；其旧色阶不是当前M3通用token规则。"
+    },
+    {
+      "title": "W3C：Animation from Interactions",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "type": "规范",
+      "note": "支持关闭非必要用户触发动效及响应减少动态偏好；自动媒体也提供独立暂停。"
+    }
+  ],
+  "prompt": "为[设计系统／开发者平台]制作一个基于真实官方页面的局部研究demo。明确参考URL、观察日期和语言年度版本；以2026-10-07的Material Design 3首页为结构依据，不能只凭Google四色想象页面。宽屏保留88px固定左导航，图标配短标签，底部放主题与全局动效圆形控制；主区顶部两个24px大圆角面板以8px间隙并列，左区56px内边距、Google Sans大标题96/96px、Google Sans Text正文与80px高主按钮，右区播放真实官方组件MP4并有独立暂停。浅色使用背景#fefbff、首屏表面#f8f1f6与文字#1c1b1d、主动作#6442d6与白字；1294px及以下首屏上下排列。深色切换整套角色配对而非简单反转图片。内容按I/O首个横向图文资源再两项、Expressive与组件2＋3项分组、应用指导／资讯／入门目录依次排列；使用原配图和1200px正文上限，大标题与较大节距明确主题。CTA按压圆角48→16px，卡片聚焦或按压24→48px，采用实测.2s/.3s曲线，涟漪如为近似须标明；不能把规范中的spring当官网全部实际行为。手机变64px顶栏、有效目录、45/52px标题、32px内边距、首屏纵向和单列资源。素材、字体、视频本地化并记录URL、SHA256、尺寸和权利；营销文案改写、外链真实、无追踪。实现键盘焦点、Escape返回、pointer触摸、视频状态反馈、全局暂停和prefers-reduced-motion停播，保留原生滚动与全部可读内容。最后保存原站／本地宽窄屏和关键动态状态证据，在fidelity中注明目录路由和文案差异。",
+  "negativePrompt": "不要任意Google风格仪表盘、彩色圆球hero、所有区域同一套卡片、伪视频、自动有声、无作用暂停、强行弹簧、长段复制营销文字或原站统计代码；不要把浏览器改色当官方配色。",
+  "demo": "demos/google-material/index.html",
+  "preview": "previews/google-material.jpg",
+  "research": "research/google-material.md",
+  "exercise": "先用主题开关比较角色配对，再暂停全局动效并用键盘聚焦资源卡，观察没有运动时状态是否仍清楚；若换品牌色，只改一组primary／container会怎样影响正文与按钮的协调？",
+  "composition": {
+    "color": "原始组件样式的#f8f1f6中性hero与#1c1b1d文字承托紫色#6442d6主动作；深色切换surface/on-surface角色，丰富色彩留给真实组件图像。",
+    "typography": "本地官方Google Sans 475提供96px/45px主标题与57px/36px节标题，Google Sans Text正文和Symbols图标形成清晰尺度层级。",
+    "layout": "固定窄导航与宽内容分离；首屏两块8px相邻大面板，正文按真实1/2/3资源组及大节距组织，手机改顶栏和单列。",
+    "imagery": "真实官方9秒4000×2000MP4、元数据poster和20张官方组件／资源配图，保持原始文件并按官网区域映射。",
+    "shape": "24px面板圆角、48px胶囊主动作、圆形视频及设置按钮；按压／聚焦时有有意义的圆角变化。",
+    "hierarchy": "中性品牌面板和最大标题先定位产品，紫色主按钮强调行动，单个横向I/O资源先强调更新，随后组件和入门资料逐层引导。",
+    "motion": "真实演示视频＋CTA/卡片状态过渡＋点击位置涟漪；主题和暂停有实时反馈；物理规范只作为理论而非冒称首页实现。",
+    "coherence": "配色角色、字体族、容器圆角和状态层贯穿导航、hero、资源和页尾；鲜活组件图像由稳定网格与中性正文容器协调。"
+  }
+}

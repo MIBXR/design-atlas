@@ -51,3 +51,14 @@
 - [还原说明](../demos/notion-editorial/fidelity.md)
 
 私人学习记录；品牌与媒体版权保留给品牌及原作者。
+
+
+## 2026-10-07 动效复审补正
+
+Edge实访首屏、Product点击、滚动两列bento及Pause→Play；公开脚本取得6词2500ms、源CSS宽度300ms与ease-in-out-quint。
+
+动作词按官方脚本Think/Ship/Create/Build/Jam/Scale每2500ms轮换；胶囊label宽度300ms cubic-bezier(.86,0,.07,1)。官方10.967秒视频自然循环，滚出视口仍播放，按钮真实暂停。无通用reveal。
+
+原站动作胶囊是自动label轮换而非只点击的三词选择；视频不是scroll-scrub，也不应因下滚任意暂停。动态标题不持续aria-live广播。
+
+本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。
