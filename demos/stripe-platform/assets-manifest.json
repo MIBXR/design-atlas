@@ -1,0 +1,82 @@
+{
+  "brand": "stripe-platform",
+  "sourcePage": "https://stripe.com/",
+  "scope": "本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。",
+  "assets": [
+    {
+      "file": "assets/wave.webp",
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/media/wave-fallback-desktop-2x.f0521908.webp",
+      "purpose": "首屏官网彩带静态回退",
+      "width": 2784,
+      "height": 1949,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/webp",
+      "bytes": 93584,
+      "status": "downloaded",
+      "sha256": "7e74c3681207deea5570a1997cafc553a364efc999c2e35069c064cee35e25dc"
+    },
+    {
+      "file": "assets/terminal.webp",
+      "sourceUrl": "https://images.stripeassets.com/fzn2n1nzq965/1Vf8oT9Fm6dEwpnEx5PgK1/055956f38d7fd8b0cc7419692ef29778/bento-terminal.png?w=616&fm=webp&q=90",
+      "purpose": "Payments产品卡终端",
+      "width": 616,
+      "height": 1050,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/webp",
+      "bytes": 69504,
+      "status": "downloaded",
+      "sha256": "9ff2cdcb0bb9d31869efad176b9a4c6d400b9c8f88479ba5fa74db35fb7a6df6"
+    },
+    {
+      "file": "assets/payments-bg.webp",
+      "sourceUrl": "https://images.stripeassets.com/fzn2n1nzq965/vYmk6v8n7oDAwbDpwhjV6/846f9b3e214549b8f14e2b8c8cfe9343/payment-bento-background.jpg?w=1720&fm=webp&q=80",
+      "purpose": "Payments产品卡背景",
+      "width": 1632,
+      "height": 1352,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 37176,
+      "status": "downloaded",
+      "sha256": "fd4cc5686fb44599fafa336a98bc88b30ee935fac102d70fb1aa630897a8a461"
+    },
+    {
+      "file": "assets/kettle.webp",
+      "sourceUrl": "https://images.stripeassets.com/fzn2n1nzq965/6BTjJGdjfGVA8brPwj7p3M/fcf084ff85142366e118fe85ee78b632/payments-electric-kettle.jpg?w=160&fm=webp&q=90",
+      "purpose": "支付订单商品",
+      "width": 160,
+      "height": 172,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/webp",
+      "bytes": 1354,
+      "status": "downloaded",
+      "sha256": "e7a40ad5c1bec86271fbc90695789bb242e264fdba7e0433b8073956ef2786aa"
+    },
+    {
+      "file": "assets/logo.svg",
+      "sourceUrl": "https://stripe.com/",
+      "purpose": "官方首页原样提取的品牌SVG",
+      "width": null,
+      "height": null,
+      "copyright": "品牌及原作者所有；仅本地私人学习，无品牌关联。",
+      "status": "downloaded",
+      "retrievedAt": "2026-10-07",
+      "bytes": 1922,
+      "sha256": "61a219a05909b6526c3c2a80ff06d77cad154d9753849acb70c3b1aa995df27c"
+    },
+    {
+      "file": "assets/sohne.woff2",
+      "sourceUrl": "https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/media/Sohne.cb178166.woff2",
+      "purpose": "官方营销页字体",
+      "width": null,
+      "height": null,
+      "bytes": 58852,
+      "status": "downloaded",
+      "retrievedAt": "2026-10-07",
+      "copyright": "品牌及原作者所有；仅本地私人学习，无品牌关联。",
+      "sha256": "2228fee8f2931671a4690c35ec3a6746216f8d7fba4f51adc91f9b58a6b28f89"
+    }
+  ]
+}
