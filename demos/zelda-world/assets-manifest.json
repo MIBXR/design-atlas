@@ -1,0 +1,320 @@
+{
+  "sourceDate": "2026-10-07",
+  "scope": "真实官网公开资源的私人学习局部复现",
+  "assets": [
+    {
+      "file": "chapter-2.webp",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/img/world/thumb_2.webp",
+      "use": "世界章节缩略图/视频静态后备",
+      "owner": "Nintendo",
+      "bytes": 4970,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 220,
+      "height": 124,
+      "dimensions": [
+        220,
+        124
+      ],
+      "format": "WEBP",
+      "sha256": "367216c760941db76e4782dc9875e6b493d9e808292695f80fb1f256217aa7c8"
+    },
+    {
+      "file": "chapter-1.webp",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/img/world/thumb_1.webp",
+      "use": "世界章节缩略图/视频静态后备",
+      "owner": "Nintendo",
+      "bytes": 3690,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 220,
+      "height": 124,
+      "dimensions": [
+        220,
+        124
+      ],
+      "format": "WEBP",
+      "sha256": "33decdd01296e7e15be492ce7daabfa53320c85b611e21935ce2aec9bd6a8e15"
+    },
+    {
+      "file": "title-2.webp",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/img/world/title_scene_2.webp",
+      "use": "日本官网世界章节标题",
+      "owner": "Nintendo",
+      "bytes": 30264,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 814,
+      "height": 405,
+      "dimensions": [
+        814,
+        405
+      ],
+      "format": "WEBP",
+      "sha256": "b87a5e104b47d44fe985ac29b0320e550f0422fba1420bd3fe6f64cf21241e43"
+    },
+    {
+      "file": "title-1.webp",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/img/world/title_scene_1.webp",
+      "use": "日本官网世界章节标题",
+      "owner": "Nintendo",
+      "bytes": 39864,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 814,
+      "height": 404,
+      "dimensions": [
+        814,
+        404
+      ],
+      "format": "WEBP",
+      "sha256": "ac6c0f5c1f0bea4c72d1146192e065be94f24886431d9e8d5d1832718fa19fde"
+    },
+    {
+      "file": "title-3.webp",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/img/world/title_scene_3.webp",
+      "use": "日本官网世界章节标题",
+      "owner": "Nintendo",
+      "bytes": 34808,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 814,
+      "height": 404,
+      "dimensions": [
+        814,
+        404
+      ],
+      "format": "WEBP",
+      "sha256": "134f3bdc2098b57391e918631c2fc165722a74be96bccf774ad65f871c3375c5"
+    },
+    {
+      "file": "logo.webp",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/img/common/logo_totk.webp",
+      "use": "游戏标识",
+      "owner": "Nintendo",
+      "bytes": 165894,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 1060,
+      "height": 598,
+      "dimensions": [
+        1060,
+        598
+      ],
+      "format": "WEBP",
+      "sha256": "464d2126eecc13a69c9c38d4c0f56b8f7dfb0dde505aef74e76936f2a955e8ab"
+    },
+    {
+      "file": "kakeru.m3u8",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru.m3u8",
+      "use": "官方 HLS 视频清单，供本地短片转封装取样",
+      "owner": "Nintendo",
+      "bytes": 1198,
+      "contentType": "audio/x-mpegurl",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "sha256": "29254c62014d95e35bef3182ad62ef49618cd1383778d8e497decb4b587bfad6"
+    },
+    {
+      "file": "tsukuru.m3u8",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru.m3u8",
+      "use": "官方 HLS 视频清单，供本地短片转封装取样",
+      "owner": "Nintendo",
+      "bytes": 1073,
+      "contentType": "audio/x-mpegurl",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "sha256": "94da204b63233471b4350514d7042666402715d0e276b113d03da21ff0047ca9"
+    },
+    {
+      "file": "tsumugu.m3u8",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu.m3u8",
+      "use": "官方 HLS 视频清单，供本地短片转封装取样",
+      "owner": "Nintendo",
+      "bytes": 1425,
+      "contentType": "audio/x-mpegurl",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "sha256": "c2e8d9a9c0715ca24c10c19ae6cfe9fb1756b5b0860db7d7d323f36cb60c06c1"
+    },
+    {
+      "file": "bgm.mp3",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/audio/bgm.mp3",
+      "use": "原官网 BGM，默认关闭，未发现公开曲名",
+      "owner": "Nintendo",
+      "bytes": 3182185,
+      "contentType": "audio/mpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "sha256": "b75d4ee9a456439feaed07ba36b42cf62b7009a5aa469b2be6323e084113ac34",
+      "durationSeconds": 99.44,
+      "hasAudio": true,
+      "browserDurationSeconds": 99.443281
+    },
+    {
+      "file": "chapter-3.webp",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/img/world/thumb_3.webp",
+      "use": "第三世界章节缩略图",
+      "owner": "Nintendo",
+      "bytes": 1776,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 220,
+      "height": 124,
+      "dimensions": [
+        220,
+        124
+      ],
+      "format": "WEBP",
+      "sha256": "6f20bc5b8981ab8695109ff9d24bd4b5fe672b172a43605da35506dccbbab307"
+    },
+    {
+      "file": "kakeru.mp4",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru.m3u8",
+      "segmentUrls": [
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru000.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru001.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru002.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru003.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru004.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru005.ts"
+      ],
+      "use": "官方首屏视频片段，本地无损转封装，去除音轨作为静音背景",
+      "owner": "Nintendo",
+      "bytes": 3423246,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "transform": "HLS 前 6 段 → MP4，视频 copy、去音轨",
+      "sha256": "392c355b0b83c7a0c0f3444c43a412416220d6c8fa11f7341289019d45f8df42",
+      "durationSeconds": 9.67,
+      "hasAudio": false,
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "kakeru-poster.jpg",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru.m3u8",
+      "use": "上述官方视频 0.1 秒静态后备帧",
+      "owner": "Nintendo",
+      "bytes": 206000,
+      "transform": "ffmpeg 取静态视频帧",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "sha256": "768bbedba0f6de353d5180b97dc335f00cc9e99e5a141e90be0cd4d035f5ccaa"
+    },
+    {
+      "file": "tsukuru.mp4",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru.m3u8",
+      "segmentUrls": [
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru000.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru001.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru002.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru003.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru004.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru005.ts"
+      ],
+      "use": "官方首屏视频片段，本地无损转封装，去除音轨作为静音背景",
+      "owner": "Nintendo",
+      "bytes": 3878328,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "transform": "HLS 前 6 段 → MP4，视频 copy、去音轨",
+      "sha256": "581bd2a6f584b51d92c270492484c87a96ced3f38a2978d383cdeb0159aab2c9",
+      "durationSeconds": 9.4,
+      "hasAudio": false,
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "tsukuru-poster.jpg",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru.m3u8",
+      "use": "上述官方视频 0.1 秒静态后备帧",
+      "owner": "Nintendo",
+      "bytes": 289879,
+      "transform": "ffmpeg 取静态视频帧",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "sha256": "28f74c13b70728adc00eddfab54e1ff1ec4d72d443f59bd28a4ec8040b2da6ac"
+    },
+    {
+      "file": "tsumugu.mp4",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu.m3u8",
+      "segmentUrls": [
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu000.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu001.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu002.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu003.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu004.ts",
+        "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu005.ts"
+      ],
+      "use": "官方首屏视频片段，本地无损转封装，去除音轨作为静音背景",
+      "owner": "Nintendo",
+      "bytes": 3557818,
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "transform": "HLS 前 6 段 → MP4，视频 copy、去音轨",
+      "sha256": "11142d11c48dc8ca4de587e78ca7c802fa1d0b6ef4f79d2562c01b45b172878e",
+      "durationSeconds": 9.73,
+      "hasAudio": false,
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "tsumugu-poster.jpg",
+      "url": "https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu.m3u8",
+      "use": "上述官方视频 0.1 秒静态后备帧",
+      "owner": "Nintendo",
+      "bytes": 85538,
+      "transform": "ffmpeg 取静态视频帧",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "sha256": "80a7be87a7d939780774ca43631759b47e9ffdaeb308df45ff4435ebad918fb2"
+    }
+  ],
+  "limitations": [
+    "原站三章在同一舞台转场，本地改为三段自然滚动，不拦截滚轮。",
+    "每个视频只保留 HLS 前6段，声音使用独立官网 BGM；视频背景去除音轨。",
+    "省略绿环加载动画、完整主菜单及 Nintendo 账号服务。",
+    "本地加入中文短句和私人学习说明。"
+  ]
+}
