@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 1,
+  "id": "apple-product",
+  "entry": {
+    "id": "apple-product",
+    "order": 1,
+    "title": "Apple · 滚动产品舞台",
+    "subtitle": "iPhone 18 Pro / official page study",
+    "category": "产品",
+    "tags": [
+      "Apple",
+      "极简",
+      "工业设计",
+      "产品叙事",
+      "配置器"
+    ],
+    "summary": "以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。",
+    "accent": "#0071e3",
+    "background": "#000000",
+    "principles": [
+      "全宽产品影像建立硬件辨识度，超大章节标题组织浏览节奏。",
+      "深黑舞台与深灰亮点章节交替，蓝色仅用于可行动入口。",
+      "真实摄影承担产品证据，轮廓、镜头和材质不自行重绘。",
+      "悬浮局部导航保持章节与行动入口可达。"
+    ],
+    "productFocus": "登场动画先呈现产品轮廓，亮点摄影提炼收益，细节选择器让同一舞台解释机身、镜头、尺寸与控件。",
+    "interaction": [
+      "进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。",
+      "Highlights 进入视口 → 圆角摄影和进度控件带入，五项图库自动推进；手动选择/暂停/最后重播 → 按相机、续航、颜色、性能、Siri 依次建立产品重点。",
+      "Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。",
+      "镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。",
+      "景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。",
+      "Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。"
+    ],
+    "theme": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
+    "constraints": [
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。源浏览器落在 no-enhanced 布局，增强滚动分支未完成源站实机验证；本地镜头滚动依据公开 VideoScrub 数据实现并实测。",
+      "七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
+    ],
+    "useCases": [
+      "消费电子",
+      "高端硬件",
+      "单一旗舰产品",
+      "家具与工业设计"
+    ],
+    "avoid": [
+      "大量无关卡片",
+      "营销数据代替产品证明",
+      "自动轮播占用阅读时间"
+    ],
+    "tokens": {
+      "palette": [
+        "#000000",
+        "#1d1d1f",
+        "#f5f5f7",
+        "#0071e3"
+      ],
+      "type": "系统无衬线；亮点标题56px，设计章节最大96px；紧凑字距。",
+      "layout": "44px全局导航、52px信息带、780px全宽登场；约1100px亮点摄影、满幅细节舞台。",
+      "motion": "官方登场MP4；五项亮点进度、暂停与末尾重播；4.984秒镜头WebM按220vh舞台滚动进度换帧，标题同步淡出。"
+    },
+    "sources": [
+      {
+        "title": "Apple iPhone 18 Pro 当前公开页面",
+        "url": "https://www.apple.com/iphone-18-pro/",
+        "note": "采集日期 2026-10-07；美国英文产品页",
+        "type": "实例"
+      },
+      {
+        "title": "Apple HIG — Motion",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
+        "type": "规范",
+        "note": "动效目的和减少动态支持；应用规范向网页的迁移。"
+      }
+    ],
+    "prompt": "以 https://www.apple.com/iphone-18-pro/ 在【采集日期】的 美国英文产品页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。官方图片、字标与视频不重画，保持黑色产品舞台和后段浅色购物章节。首屏原始 MP4、Highlights 进度轮播、7 项 viewer inline 说明展开/胶囊折叠下移/图像变化/关闭/前后/配色、景深比较和机型选择均保留。用双向 sticky 段串联媒体先出现、标题淡出、说明接入；静帧替代视频也不能删除这种交接机制。横向摄影架子用原生滚动。Watch the film 必须是独立全屏官方影片，不用首屏重播冒充；声音只在用户触发后出现，关闭暂停。减少动态时给静态摄影和完整文案。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
+    "exercise": "保持黑色产品舞台，使用另一款真实产品摄影练习镜头与文案的滚动交接；先记录原站进度再调整曲线。",
+    "demo": "demos/apple-product/index.html",
+    "preview": "previews/apple-product.jpg",
+    "research": "research/apple-product.md",
+    "composition": {
+      "color": "黑底展示材质，深灰划分章节；蓝色只指向行动。",
+      "typography": "系统无衬线；亮点标题56px，设计章节最大96px；紧凑字距。",
+      "layout": "44px全局导航、52px信息带、780px全宽登场；约1100px亮点摄影、满幅细节舞台。",
+      "imagery": "官方真实产品摄影、Apple标识和登场MP4，逐项来源可查。",
+      "shape": "摄影大圆角38px、导航玻璃圆角20px、功能胶囊与蓝色购买胶囊。",
+      "hierarchy": "产品登场 → 核心亮点 → 可探索细节 → 镜头叙事。",
+      "motion": "官方登场MP4；五项亮点进度、暂停与末尾重播；4.984秒镜头WebM按220vh舞台滚动进度换帧，标题同步淡出。",
+      "coherence": "同一硬件在不同尺度和状态中持续出现，黑底、巨字、胶囊和蓝色入口共同建立精确的产品叙事。",
+      "scroll": "首屏 → Highlights → Design viewer → 相机滚动段 → 景深比较 → 摄影横向架子 → 性能 → 续航 → 机型比较 → 浅色共享功能/购物/材料架子 → 说明与页尾。较原页缩短内容量，保留主要交互类型和后段明暗交接。"
+    },
+    "country": "美国",
+    "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+    "implementation": "reference-study",
+    "fidelity": "demos/apple-product/fidelity.md",
+    "assetManifest": "demos/apple-product/assets-manifest.json",
+    "referencePreview": "research/screenshots/apple-hero-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
+      "designReason": "以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。"
+    },
+    "soundBehavior": {
+      "kind": "video",
+      "control": "首屏和滚动视频静音；Watch the film 点击打开官方 HLS 影片，172.38 秒，用户触发播放后有声音，可静音、调音量和全屏；关闭即暂停。",
+      "interactionRole": "静音摄影先建立材质与镜头重点，点击影片后才加入音乐和讲解，避免读页时自动发声。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/apple-product.md",
+      "role": "research",
+      "content": "# Apple iPhone 18 Pro：当前页面的设计与交互\n\n来源：[https://www.apple.com/iphone-18-pro/](https://www.apple.com/iphone-18-pro/)。采集日期：2026-10-07。范围：美国英文产品页，单一当前快照。\n\n以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。\n\n## 触发、视觉响应与用途\n\n- 进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。\n\n- Highlights 进入视口 → 圆角摄影和进度控件带入，五项图库自动推进；手动选择/暂停/最后重播 → 按相机、续航、颜色、性能、Siri 依次建立产品重点。\n\n- Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。\n\n- 镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。\n\n- 景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。\n\n- Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。\n\n## 完整浏览路径\n\n首屏 → Highlights → Design viewer → 相机滚动段 → 景深比较 → 摄影横向架子 → 性能 → 续航 → 机型比较 → 浅色共享功能/购物/材料架子 → 说明与页尾。较原页缩短内容量，保留主要交互类型和后段明暗交接。\n\n## 原站事实和复现边界\n\n匿名浏览器实测了七项 viewer 中 Colors 卡的 inline 展开与原站影片层；源影片 muted=false，首屏其他媒体 muted=true。源公共组件包含 StaggeredFadeIn、ProductViewer 与 VideoScrub。此环境源页处于 no-enhanced 分支，相机增强滚动视频未实际播放，不能称该状态现场验证通过。\n\n七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。\n\n## 主题与声音\n\n产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。\n\n首屏和滚动视频静音；Watch the film 点击打开官方 HLS 影片，172.38 秒，用户触发播放后有声音，可静音、调音量和全屏；关闭即暂停。 静音摄影先建立材质与镜头重点，点击影片后才加入音乐和讲解，避免读页时自动发声。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 可复用 Prompt\n\n以 https://www.apple.com/iphone-18-pro/ 在【采集日期】的 美国英文产品页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。官方图片、字标与视频不重画，保持黑色产品舞台和后段浅色购物章节。首屏原始 MP4、Highlights 进度轮播、7 项 viewer inline 说明展开/胶囊折叠下移/图像变化/关闭/前后/配色、景深比较和机型选择均保留。用双向 sticky 段串联媒体先出现、标题淡出、说明接入；静帧替代视频也不能删除这种交接机制。横向摄影架子用原生滚动。Watch the film 必须是独立全屏官方影片，不用首屏重播冒充；声音只在用户触发后出现，关闭暂停。减少动态时给静态摄影和完整文案。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n",
+      "sha256": "b9c881fa7826ed9d9e17e817644004cd0d6d4aa26bbd8b630894fb50767caa31",
+      "bytes": 4275
+    },
+    {
+      "path": "prompts/apple-product.md",
+      "role": "prompt",
+      "content": "# Apple · 滚动产品舞台 · 复用 Prompt\n\n由 [结构化案例](../entries/apple-product.json) 自动生成。参考观察与具体边界见 [调研](../research/apple-product.md)。\n\n## 正向 Prompt\n\n以 https://www.apple.com/iphone-18-pro/ 在【采集日期】的 美国英文产品页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。官方图片、字标与视频不重画，保持黑色产品舞台和后段浅色购物章节。首屏原始 MP4、Highlights 进度轮播、7 项 viewer inline 说明展开/胶囊折叠下移/图像变化/关闭/前后/配色、景深比较和机型选择均保留。用双向 sticky 段串联媒体先出现、标题淡出、说明接入；静帧替代视频也不能删除这种交接机制。横向摄影架子用原生滚动。Watch the film 必须是独立全屏官方影片，不用首屏重播冒充；声音只在用户触发后出现，关闭暂停。减少动态时给静态摄影和完整文案。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。源浏览器落在 no-enhanced 布局，增强滚动分支未完成源站实机验证；本地镜头滚动依据公开 VideoScrub 数据实现并实测。\n- 七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n保持黑色产品舞台，使用另一款真实产品摄影练习镜头与文案的滚动交接；先记录原站进度再调整曲线。\n\n[查看 Demo](../demos/apple-product/index.html) · [返回参考库](../index.html#style/apple-product)\n",
+      "sha256": "a1b29bf6f4cf34ba32382a2384d43f59384e74ea4b39087bc8ce274ba88110c4",
+      "bytes": 2396
+    },
+    {
+      "path": "demos/apple-product/fidelity.md",
+      "role": "fidelity",
+      "content": "# Apple iPhone 18 Pro：当前页面的设计与交互\n\n来源：[https://www.apple.com/iphone-18-pro/](https://www.apple.com/iphone-18-pro/)。采集日期：2026-10-07。范围：美国英文产品页，单一当前快照。\n\n以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。\n\n## 触发、视觉响应与用途\n\n- 进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。\n\n- Highlights 进入视口 → 圆角摄影和进度控件带入，五项图库自动推进；手动选择/暂停/最后重播 → 按相机、续航、颜色、性能、Siri 依次建立产品重点。\n\n- Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。\n\n- 镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。\n\n- 景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。\n\n- Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。\n\n## 完整浏览路径\n\n首屏 → Highlights → Design viewer → 相机滚动段 → 景深比较 → 摄影横向架子 → 性能 → 续航 → 机型比较 → 浅色共享功能/购物/材料架子 → 说明与页尾。较原页缩短内容量，保留主要交互类型和后段明暗交接。\n\n## 原站事实和复现边界\n\n匿名浏览器实测了七项 viewer 中 Colors 卡的 inline 展开与原站影片层；源影片 muted=false，首屏其他媒体 muted=true。源公共组件包含 StaggeredFadeIn、ProductViewer 与 VideoScrub。此环境源页处于 no-enhanced 分支，相机增强滚动视频未实际播放，不能称该状态现场验证通过。\n\n七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。\n\n## 主题与声音\n\n产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。\n\n首屏和滚动视频静音；Watch the film 点击打开官方 HLS 影片，172.38 秒，用户触发播放后有声音，可静音、调音量和全屏；关闭即暂停。 静音摄影先建立材质与镜头重点，点击影片后才加入音乐和讲解，避免读页时自动发声。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 可复用 Prompt\n\n以 https://www.apple.com/iphone-18-pro/ 在【采集日期】的 美国英文产品页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。官方图片、字标与视频不重画，保持黑色产品舞台和后段浅色购物章节。首屏原始 MP4、Highlights 进度轮播、7 项 viewer inline 说明展开/胶囊折叠下移/图像变化/关闭/前后/配色、景深比较和机型选择均保留。用双向 sticky 段串联媒体先出现、标题淡出、说明接入；静帧替代视频也不能删除这种交接机制。横向摄影架子用原生滚动。Watch the film 必须是独立全屏官方影片，不用首屏重播冒充；声音只在用户触发后出现，关闭暂停。减少动态时给静态摄影和完整文案。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n",
+      "sha256": "b9c881fa7826ed9d9e17e817644004cd0d6d4aa26bbd8b630894fb50767caa31",
+      "bytes": 4275
+    },
+    {
+      "path": "demos/apple-product/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"reference\": \"https://www.apple.com/iphone-18-pro/\",\n  \"observedAt\": \"2026-10-07\",\n  \"usage\": \"本地个人学习；素材及商标属于Apple，许可不随本项目代码转移。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/hero_startframe__ck15fj8f67hy_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/media-hero/hero_startframe__ck15fj8f67hy_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 43728,\n      \"sha256\": \"88d83475eabf9106a494609e09cfedf5684d045954415169aa39f2578e74565d\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/hero_endframe__fbxsnz8txcia_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/media-hero/hero_endframe__fbxsnz8txcia_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 105372,\n      \"sha256\": \"2f73ed537c29f9905c9eba9f733935a338027b335d3fc4d9bea3af10090f910c\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/large_2x.mp4\",\n      \"sourceUrl\": \"https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/anim/hero/large_2x.mp4\",\n      \"kind\": \"video\",\n      \"bytes\": 7447723,\n      \"sha256\": \"fdb3b7dc1a225c0403a9da728e3713f84fafe6ab1f920a4315e13eb24ee7bb49\",\n      \"purpose\": \"官方登场动画\"\n    },\n    {\n      \"file\": \"assets/icon_large.svg\",\n      \"sourceUrl\": \"https://www.apple.com/ac/globalfooter/8/en_US/assets/ac-footer/breadcrumbs/apple/icon_large.svg\",\n      \"kind\": \"image\",\n      \"bytes\": 1232,\n      \"sha256\": \"dfbba515a45a8e773061e0a5671e0fd1ef22c117c30f4d403392b434789b35d6\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/main_camera_endframe__fcjfhs06rdme_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/main_camera_endframe__fcjfhs06rdme_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 217444,\n      \"sha256\": \"a7fe61cb9c48da8bfb0ca5d2cb062bee99ed034f0782a396537185d8ce8d0fe4\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/battery_endframe__ds9p2a09r9aq_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/battery_endframe__ds9p2a09r9aq_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 192789,\n      \"sha256\": \"d2c25c0bdfaf105fcdb2d8257d921cff4165bd35ae0be867b567d1bc3ec7f845\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/colors_endframe__czfie0zmty4i_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/colors_endframe__czfie0zmty4i_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 224871,\n      \"sha256\": \"28b1b79cbf4caf80dc2c4c9d477bd6877ae48fca4268d290207a119477f5c91d\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/chip_endframe__lhkymtfv1uie_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/chip_endframe__lhkymtfv1uie_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 255586,\n      \"sha256\": \"2b8fb8575b918a5174284488b4c3837244029290b65f271e223c240ff2eaaf89\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/3d_viewer__hgotqf9hvvee_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/3d_viewer__hgotqf9hvvee_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 208666,\n      \"sha256\": \"423d4bc008da4c4f7506b5243cda183ca37c0b2022ee99970230d91a1fcbde5c\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/color_burgundy__f95it7a6dnyq_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/color_burgundy__f95it7a6dnyq_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 268556,\n      \"sha256\": \"19738f9a11af8561ab66650f71d143e08a5ae2b842f026d5894ffa097d4e26d8\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/color_glacier__fkxlpbz0ruy6_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/color_glacier__fkxlpbz0ruy6_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 322531,\n      \"sha256\": \"63c43fdc992cab64f8f9f3d89a0604ab38bdfc2c75d1c1877b8b9f40d442b4f0\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/color_black__dseo2tvypuc2_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/color_black__dseo2tvypuc2_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 213558,\n      \"sha256\": \"de4def8f73d72e0a91a2473268a7ea7db5c6cb0b83e1dacdd43780a79b5ef2c7\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/color_silver__c0oudn0fzw4m_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/color_silver__c0oudn0fzw4m_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 308910,\n      \"sha256\": \"88bd331d6430190f6dbe194ab2a0ef09ab55d3212558d3e95cc30dae51f14cc3\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/size__ufk3tqa1f5e2_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/size__ufk3tqa1f5e2_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 327084,\n      \"sha256\": \"a6c284b2c698db02d833f2961ecad3ed7e0d13c25e7e61dc22b16d9f6337749a\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/viewer_aperture_endframe__2jpki8xah2au_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/viewer_aperture_endframe__2jpki8xah2au_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 184099,\n      \"sha256\": \"80acb0ce71af410fbbeefe2921c90ad21542804fc0be3eaa42973f6bbcbf617f\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/dynamic_island_endframe__edszr68pgo66_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/dynamic_island_endframe__edszr68pgo66_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 228153,\n      \"sha256\": \"ae8a278d0913cfc06fd9fd223611a89e1263cfc22c63f2000cc13f4c47ee0001\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/durability__gluy1en01nqm_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/durability__gluy1en01nqm_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 303511,\n      \"sha256\": \"9820a433515a6784c0f63ab40823a3d9af32d6d4bb6407020e9ecd7c6cf6de7d\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/action_button__f9p8n5h9xk66_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/action_button__f9p8n5h9xk66_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 268548,\n      \"sha256\": \"53d66073c3849dd0afb5216150aa27ec809ae477bfce4ee907a0b9e4abd95cf8\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/camera_control__f4t7iottmvyy_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/camera_control__f4t7iottmvyy_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 354491,\n      \"sha256\": \"489d5dbcb6018018574818f44a3f98fb82fb77c28543c25b5fd19662ad45ce09\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/camera_system_startframe__e0gisudnvv2a_large_2x.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/system/camera_system_startframe__e0gisudnvv2a_large_2x.jpg\",\n      \"kind\": \"image\",\n      \"bytes\": 707793,\n      \"sha256\": \"428c84b2e68f0b59d13e79da914449f30c3b88872d515a425f8914c7a22df10c\",\n      \"purpose\": \"官方产品摄影或标识\"\n    },\n    {\n      \"file\": \"assets/camera-system.webm\",\n      \"sourceUrl\": \"https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/anim/camera-system/large_2x.webm\",\n      \"purpose\": \"2026-10-07实际滚动观察的官方镜头系统VideoScrub序列，按滚动进度控制时间\",\n      \"width\": 2160,\n      \"height\": 1620,\n      \"duration\": 4.983,\n      \"format\": \"webm\",\n      \"bytes\": 14923281,\n      \"sha256\": \"00381bce69d67621f713220a69eda52811a68b18c3537e1294dc005a5d4ae95b\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"Apple及原作者保留权利；私人设计研究素材。\"\n    },\n    {\n      \"file\": \"assets/siri.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/siri__eprmtp3edh8i_large.jpg\",\n      \"usage\": \"Highlights Siri AI official fifth gallery image\",\n      \"width\": 1260,\n      \"height\": 612,\n      \"bytes\": 116605,\n      \"sha256\": \"79b2e9ccf178ec4fcd83dec4cb39f7e5c1b5851919359a0fc87b7a32809fc024\",\n      \"copyright\": \"Apple. Brand-owned media; personal study only.\"\n    },\n    {\n      \"file\": \"assets/aperture-light.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/aperture/max_light__dlmrw5m29ssy_small.jpg\",\n      \"purpose\": \"Original aperture comparison photography\",\n      \"bytes\": 52586,\n      \"sha256\": \"accfef76197e75ac5ce6e479dd774467fa61e1f5e5c65ee475a06a0e7142638d\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/aperture-balance.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/aperture/balance__dtrq8w3uj9iu_small.jpg\",\n      \"purpose\": \"Original aperture comparison photography\",\n      \"bytes\": 80725,\n      \"sha256\": \"067925147b1e069e9fe191959ec4de8473474bc8f22e2288c35e46fbdb5a6a33\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/aperture-depth.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/aperture/depth__eqlqllrh0v8m_small.jpg\",\n      \"purpose\": \"Original aperture comparison photography\",\n      \"bytes\": 103811,\n      \"sha256\": \"36e7a541eb594674f79a451abdf23fd18c05cdfe3830e1ee54f2f15c3c0b7820\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/aperture-maxdepth.jpg\",\n      \"sourceUrl\": \"https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/aperture/max_depth__chz65982bi4i_small.jpg\",\n      \"purpose\": \"Original aperture comparison photography\",\n      \"bytes\": 59498,\n      \"sha256\": \"3b4ee0f55288ac5a15c0d92d75aef10531cada9e82929a813eb3aa62cad31f41\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/hls.min.js\",\n      \"sourceUrl\": \"https://cdn.jsdelivr.net/npm/hls.js@1.6.15/dist/hls.min.js\",\n      \"purpose\": \"HLS.js library for the original user-triggered Apple film; BSD-2-Clause\",\n      \"bytes\": 541870,\n      \"sha256\": \"413a83e2bb0c77ed0bf0be105d539d17ef45dfd984a0b13ecd3b14a901383938\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    }\n  ]\n}",
+      "sha256": "fcd354c9066c293fa479d94bcded8276834ea46f88163f5e3f37949a5cf3320b",
+      "bytes": 11284
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/apple-product/assets-manifest.json",
+      "role": "context",
+      "sha256": "fcd354c9066c293fa479d94bcded8276834ea46f88163f5e3f37949a5cf3320b",
+      "bytes": 11284
+    },
+    {
+      "path": "demos/apple-product/assets/3d_viewer__hgotqf9hvvee_large_2x.jpg",
+      "role": "asset",
+      "sha256": "423d4bc008da4c4f7506b5243cda183ca37c0b2022ee99970230d91a1fcbde5c",
+      "bytes": 208666
+    },
+    {
+      "path": "demos/apple-product/assets/HLS-LICENSE.txt",
+      "role": "context",
+      "sha256": "ca8773cf798c7ed997d4dd7c8e23c348699f8d5b7462636694cc14de6cda12db",
+      "bytes": 1338
+    },
+    {
+      "path": "demos/apple-product/assets/action_button__f9p8n5h9xk66_large_2x.jpg",
+      "role": "asset",
+      "sha256": "53d66073c3849dd0afb5216150aa27ec809ae477bfce4ee907a0b9e4abd95cf8",
+      "bytes": 268548
+    },
+    {
+      "path": "demos/apple-product/assets/aperture-balance.jpg",
+      "role": "asset",
+      "sha256": "067925147b1e069e9fe191959ec4de8473474bc8f22e2288c35e46fbdb5a6a33",
+      "bytes": 80725
+    },
+    {
+      "path": "demos/apple-product/assets/aperture-depth.jpg",
+      "role": "asset",
+      "sha256": "36e7a541eb594674f79a451abdf23fd18c05cdfe3830e1ee54f2f15c3c0b7820",
+      "bytes": 103811
+    },
+    {
+      "path": "demos/apple-product/assets/aperture-light.jpg",
+      "role": "asset",
+      "sha256": "accfef76197e75ac5ce6e479dd774467fa61e1f5e5c65ee475a06a0e7142638d",
+      "bytes": 52586
+    },
+    {
+      "path": "demos/apple-product/assets/aperture-maxdepth.jpg",
+      "role": "asset",
+      "sha256": "3b4ee0f55288ac5a15c0d92d75aef10531cada9e82929a813eb3aa62cad31f41",
+      "bytes": 59498
+    },
+    {
+      "path": "demos/apple-product/assets/battery_endframe__ds9p2a09r9aq_large_2x.jpg",
+      "role": "asset",
+      "sha256": "d2c25c0bdfaf105fcdb2d8257d921cff4165bd35ae0be867b567d1bc3ec7f845",
+      "bytes": 192789
+    },
+    {
+      "path": "demos/apple-product/assets/camera-system.webm",
+      "role": "asset",
+      "sha256": "00381bce69d67621f713220a69eda52811a68b18c3537e1294dc005a5d4ae95b",
+      "bytes": 14923281
+    },
+    {
+      "path": "demos/apple-product/assets/camera_control__f4t7iottmvyy_large_2x.jpg",
+      "role": "asset",
+      "sha256": "489d5dbcb6018018574818f44a3f98fb82fb77c28543c25b5fd19662ad45ce09",
+      "bytes": 354491
+    },
+    {
+      "path": "demos/apple-product/assets/camera_system_startframe__e0gisudnvv2a_large_2x.jpg",
+      "role": "asset",
+      "sha256": "428c84b2e68f0b59d13e79da914449f30c3b88872d515a425f8914c7a22df10c",
+      "bytes": 707793
+    },
+    {
+      "path": "demos/apple-product/assets/chip_endframe__lhkymtfv1uie_large_2x.jpg",
+      "role": "asset",
+      "sha256": "2b8fb8575b918a5174284488b4c3837244029290b65f271e223c240ff2eaaf89",
+      "bytes": 255586
+    },
+    {
+      "path": "demos/apple-product/assets/color_black__dseo2tvypuc2_large_2x.jpg",
+      "role": "asset",
+      "sha256": "de4def8f73d72e0a91a2473268a7ea7db5c6cb0b83e1dacdd43780a79b5ef2c7",
+      "bytes": 213558
+    },
+    {
+      "path": "demos/apple-product/assets/color_burgundy__f95it7a6dnyq_large_2x.jpg",
+      "role": "asset",
+      "sha256": "19738f9a11af8561ab66650f71d143e08a5ae2b842f026d5894ffa097d4e26d8",
+      "bytes": 268556
+    },
+    {
+      "path": "demos/apple-product/assets/color_glacier__fkxlpbz0ruy6_large_2x.jpg",
+      "role": "asset",
+      "sha256": "63c43fdc992cab64f8f9f3d89a0604ab38bdfc2c75d1c1877b8b9f40d442b4f0",
+      "bytes": 322531
+    },
+    {
+      "path": "demos/apple-product/assets/color_silver__c0oudn0fzw4m_large_2x.jpg",
+      "role": "asset",
+      "sha256": "88bd331d6430190f6dbe194ab2a0ef09ab55d3212558d3e95cc30dae51f14cc3",
+      "bytes": 308910
+    },
+    {
+      "path": "demos/apple-product/assets/colors_endframe__czfie0zmty4i_large_2x.jpg",
+      "role": "asset",
+      "sha256": "28b1b79cbf4caf80dc2c4c9d477bd6877ae48fca4268d290207a119477f5c91d",
+      "bytes": 224871
+    },
+    {
+      "path": "demos/apple-product/assets/durability__gluy1en01nqm_large_2x.jpg",
+      "role": "asset",
+      "sha256": "9820a433515a6784c0f63ab40823a3d9af32d6d4bb6407020e9ecd7c6cf6de7d",
+      "bytes": 303511
+    },
+    {
+      "path": "demos/apple-product/assets/dynamic_island_endframe__edszr68pgo66_large_2x.jpg",
+      "role": "asset",
+      "sha256": "ae8a278d0913cfc06fd9fd223611a89e1263cfc22c63f2000cc13f4c47ee0001",
+      "bytes": 228153
+    },
+    {
+      "path": "demos/apple-product/assets/hero_endframe__fbxsnz8txcia_large_2x.jpg",
+      "role": "asset",
+      "sha256": "2f73ed537c29f9905c9eba9f733935a338027b335d3fc4d9bea3af10090f910c",
+      "bytes": 105372
+    },
+    {
+      "path": "demos/apple-product/assets/hero_startframe__ck15fj8f67hy_large_2x.jpg",
+      "role": "asset",
+      "sha256": "88d83475eabf9106a494609e09cfedf5684d045954415169aa39f2578e74565d",
+      "bytes": 43728
+    },
+    {
+      "path": "demos/apple-product/assets/hls.min.js",
+      "role": "asset",
+      "sha256": "413a83e2bb0c77ed0bf0be105d539d17ef45dfd984a0b13ecd3b14a901383938",
+      "bytes": 541870
+    },
+    {
+      "path": "demos/apple-product/assets/icon_large.svg",
+      "role": "asset",
+      "sha256": "dfbba515a45a8e773061e0a5671e0fd1ef22c117c30f4d403392b434789b35d6",
+      "bytes": 1232
+    },
+    {
+      "path": "demos/apple-product/assets/large_2x.mp4",
+      "role": "asset",
+      "sha256": "fdb3b7dc1a225c0403a9da728e3713f84fafe6ab1f920a4315e13eb24ee7bb49",
+      "bytes": 7447723
+    },
+    {
+      "path": "demos/apple-product/assets/main_camera_endframe__fcjfhs06rdme_large_2x.jpg",
+      "role": "asset",
+      "sha256": "a7fe61cb9c48da8bfb0ca5d2cb062bee99ed034f0782a396537185d8ce8d0fe4",
+      "bytes": 217444
+    },
+    {
+      "path": "demos/apple-product/assets/siri.jpg",
+      "role": "asset",
+      "sha256": "79b2e9ccf178ec4fcd83dec4cb39f7e5c1b5851919359a0fc87b7a32809fc024",
+      "bytes": 116605
+    },
+    {
+      "path": "demos/apple-product/assets/size__ufk3tqa1f5e2_large_2x.jpg",
+      "role": "asset",
+      "sha256": "a6c284b2c698db02d833f2961ecad3ed7e0d13c25e7e61dc22b16d9f6337749a",
+      "bytes": 327084
+    },
+    {
+      "path": "demos/apple-product/assets/viewer_aperture_endframe__2jpki8xah2au_large_2x.jpg",
+      "role": "asset",
+      "sha256": "80acb0ce71af410fbbeefe2921c90ad21542804fc0be3eaa42973f6bbcbf617f",
+      "bytes": 184099
+    },
+    {
+      "path": "demos/apple-product/fidelity.md",
+      "role": "context",
+      "sha256": "b9c881fa7826ed9d9e17e817644004cd0d6d4aa26bbd8b630894fb50767caa31",
+      "bytes": 4275
+    },
+    {
+      "path": "demos/apple-product/index.html",
+      "role": "source",
+      "sha256": "949b2171a118ac1b852cb337f167df6a3dd8e2a3b9963cbd78b4690f16b63c6d",
+      "bytes": 9938
+    },
+    {
+      "path": "demos/apple-product/journey.js",
+      "role": "source",
+      "sha256": "866fd84534b828acae65d8814b4d690385e10f873978b508782cc0df90e606e5",
+      "bytes": 4354
+    },
+    {
+      "path": "demos/apple-product/script.js",
+      "role": "source",
+      "sha256": "8e2468256375607e296e4f3d87adde33d81ebdfad44e6e9a3eadc643c4aebb3f",
+      "bytes": 6445
+    },
+    {
+      "path": "demos/apple-product/style.css",
+      "role": "source",
+      "sha256": "6f9f5a1e106c775f4dbe9b1d251432553220988385810bc9d6b1f593c2cff963",
+      "bytes": 12556
+    },
+    {
+      "path": "entries/apple-product.json",
+      "role": "context",
+      "sha256": "8c4143fa4bd0ae33553b9ff1e6d18186cac691f1792f215bbe26159afc6722a3",
+      "bytes": 7857
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/apple-product.jpg",
+      "role": "preview",
+      "sha256": "9291a446bc5464fa37c084cff2c59bc66d71348d8ae4089b9dd36a820dc8f981",
+      "bytes": 45482
+    },
+    {
+      "path": "previews/mobile/apple-product.jpg",
+      "role": "preview",
+      "sha256": "e0fb07caa8edf73c81b1eafe9f45238393567710eb641069fdbc08c3b2427da6",
+      "bytes": 17455
+    },
+    {
+      "path": "prompts/apple-product.md",
+      "role": "context",
+      "sha256": "a1b29bf6f4cf34ba32382a2384d43f59384e74ea4b39087bc8ce274ba88110c4",
+      "bytes": 2396
+    },
+    {
+      "path": "research/apple-product.md",
+      "role": "context",
+      "sha256": "b9c881fa7826ed9d9e17e817644004cd0d6d4aa26bbd8b630894fb50767caa31",
+      "bytes": 4275
+    },
+    {
+      "path": "research/screenshots/apple-hero-source.jpg",
+      "role": "preview",
+      "sha256": "99fd6c2e6bff0cf4645d154dfe815ace0f72fd0a42e80483e001e5c3e2c76141",
+      "bytes": 28513
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=apple-product\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>黑底展示材质，深灰划分章节；蓝色只指向行动。</dd></div><div class=\"\"><dt>字体排版</dt><dd>系统无衬线；亮点标题56px，设计章节最大96px；紧凑字距。</dd></div><div class=\"\"><dt>布局留白</dt><dd>44px全局导航、52px信息带、780px全宽登场；约1100px亮点摄影、满幅细节舞台。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方真实产品摄影、Apple标识和登场MP4，逐项来源可查。</dd></div><div class=\"\"><dt>线条形状</dt><dd>摄影大圆角38px、导航玻璃圆角20px、功能胶囊与蓝色购买胶囊。</dd></div><div class=\"\"><dt>信息层级</dt><dd>产品登场 → 核心亮点 → 可探索细节 → 镜头叙事。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>官方登场MP4；五项亮点进度、暂停与末尾重播；4.984秒镜头WebM按220vh舞台滚动进度换帧，标题同步淡出。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>同一硬件在不同尺度和状态中持续出现，黑底、巨字、胶囊和蓝色入口共同建立精确的产品叙事。</dd></div><div class=\"\"><dt>scroll</dt><dd>首屏 → Highlights → Design viewer → 相机滚动段 → 景深比较 → 摄影横向架子 → 性能 → 续航 → 机型比较 → 浅色共享功能/购物/材料架子 → 说明与页尾。较原页缩短内容量，保留主要交互类型和后段明暗交接。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>全宽产品影像建立硬件辨识度，超大章节标题组织浏览节奏。</li><li>深黑舞台与深灰亮点章节交替，蓝色仅用于可行动入口。</li><li>真实摄影承担产品证据，轮廓、镜头和材质不自行重绘。</li><li>悬浮局部导航保持章节与行动入口可达。</li></ul><h3>怎样凸显产品重点</h3><p>登场动画先呈现产品轮廓，亮点摄影提炼收益，细节选择器让同一舞台解释机身、镜头、尺寸与控件。</p><h3>主题与情绪</h3><p>产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。</li><li>Highlights 进入视口 → 圆角摄影和进度控件带入，五项图库自动推进；手动选择/暂停/最后重播 → 按相机、续航、颜色、性能、Siri 依次建立产品重点。</li><li>Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。</li><li>镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。</li><li>景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。</li><li>Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。</p><p>以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>媒体声音</h3><p>首屏和滚动视频静音；Watch the film 点击打开官方 HLS 影片，172.38 秒，用户触发播放后有声音，可静音、调音量和全屏；关闭即暂停。</p><p>静音摄影先建立材质与镜头重点，点击影片后才加入音乐和讲解，避免读页时自动发声。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。源浏览器落在 no-enhanced 布局，增强滚动分支未完成源站实机验证；本地镜头滚动依据公开 VideoScrub 数据实现并实测。</li><li>七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。</li><li>品牌与官方素材仅用于此个人参考库；归档来源与权利。</li><li>减少动态保留可读内容、键盘焦点和手动选择。</li></ul><h3>适合</h3><p>消费电子 / 高端硬件 / 单一旗舰产品 / 家具与工业设计</p><h3>谨慎使用</h3><p>大量无关卡片 / 营销数据代替产品证明 / 自动轮播占用阅读时间</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#000000\"></i>#000000</span><span class=\"swatch\"><i style=\"background:#1d1d1f\"></i>#1d1d1f</span><span class=\"swatch\"><i style=\"background:#f5f5f7\"></i>#f5f5f7</span><span class=\"swatch\"><i style=\"background:#0071e3\"></i>#0071e3</span></div><p><b>字体</b> · 系统无衬线；亮点标题56px，设计章节最大96px；紧凑字距。<br><b>布局</b> · 44px全局导航、52px信息带、780px全宽登场；约1100px亮点摄影、满幅细节舞台。<br><b>动效</b> · 官方登场MP4；五项亮点进度、暂停与末尾重播；4.984秒镜头WebM按220vh舞台滚动进度换帧，标题同步淡出。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>以 https://www.apple.com/iphone-18-pro/ 在【采集日期】的 美国英文产品页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。官方图片、字标与视频不重画，保持黑色产品舞台和后段浅色购物章节。首屏原始 MP4、Highlights 进度轮播、7 项 viewer inline 说明展开/胶囊折叠下移/图像变化/关闭/前后/配色、景深比较和机型选择均保留。用双向 sticky 段串联媒体先出现、标题淡出、说明接入；静帧替代视频也不能删除这种交接机制。横向摄影架子用原生滚动。Watch the film 必须是独立全屏官方影片，不用首屏重播冒充；声音只在用户触发后出现，关闭暂停。减少动态时给静态摄影和完整文案。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。</p></details><h3>改造练习</h3><p>保持黑色产品舞台，使用另一款真实产品摄影练习镜头与文案的滚动交接；先记录原站进度再调整曲线。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.apple.com/iphone-18-pro/\" target=\"_blank\" rel=\"noopener noreferrer\">Apple iPhone 18 Pro 当前公开页面 ↗</a><small>采集日期 2026-10-07；美国英文产品页</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://developer.apple.com/design/human-interface-guidelines/motion\" target=\"_blank\" rel=\"noopener noreferrer\">Apple HIG — Motion ↗</a><small>动效目的和减少动态支持；应用规范向网页的迁移。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fapple-product.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "17c09ad9b5ec0926074a29386ad8dc49566d8a010a31708fe0faf849f99711b8",
+    "bytes": 8549
+  }
+}

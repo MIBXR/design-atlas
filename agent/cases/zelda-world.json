@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "id": "zelda-world",
+  "entry": {
+    "id": "zelda-world",
+    "order": 5,
+    "title": "塞尔达 · 全景世界舞台",
+    "subtitle": "ZELDA / CINEMATIC WORLD",
+    "category": "游戏/IP",
+    "country": "日本",
+    "tags": [
+      "塞尔达",
+      "Nintendo",
+      "官方视频",
+      "世界章节",
+      "BGM",
+      "沉浸"
+    ],
+    "summary": "先选声音，再由古代纹章扩散进入世界；同屏三章以模糊和亮度交接，主题化削角缩略框联动。",
+    "accent": "#1f9a6d",
+    "background": "#0a1714",
+    "principles": [
+      "声音选择先于世界，纹章扩散将古代文明意象变成真正的入口。",
+      "影片、标题分层错时进入；3秒闲置隐去界面，让景色承担产品证明。",
+      "三个缩略项复用原始古代边框，悬停和当前态削角白线与标题字标一致。"
+    ],
+    "productFocus": "使用 Nintendo 世界页真实 HLS 场景片段、标题和缩略图；天空、创造、未知世界成为三段连续叙事。",
+    "interaction": [
+      "首次 ON/OFF → 原始纹章出现；2秒后向外发光扩散，3.6秒移交影片舞台。ON触发原开场 SE，随后原BGM接续。",
+      "点击章节 → 300ms输入锁；前片1秒模糊退场，后片1.6秒、延迟0.6秒进入；标题1.6秒、延迟1秒进入。快速选择保留最后请求。",
+      "影片片尾前1秒推进下一章；暂停画面和减少动态分支关闭自动推进。",
+      "鼠标移动或触摸唤醒界面，3秒闲置后0.8秒模糊淡出；键盘焦点保留控件为本地补充。",
+      "桌面滚轮不翻章；手机水平触摸以10px阈值切换并停在两端，竖向浏览到目录和页脚。"
+    ],
+    "theme": "天空蓝、古代青绿、象牙色标题；自然、神秘与开放探索。",
+    "constraints": [
+      "本次仅归档2026-10-07所见日文WORLD，官网后续变化不维护。",
+      "影片仍为每章前6段短片，保留同样片尾推进规则但循环更短；手机未取得竖版HLS，裁切同一短片。",
+      "仅本页三章与声音入口；其它栏目以官网外链打开，未复制业务服务。",
+      "键盘、画面持续暂停、焦点时不隐藏为本地无障碍补充；源站桌面滚轮没有翻章。",
+      "资源权利归Nintendo，个人学习使用不等于商业授权。"
+    ],
+    "useCases": [
+      "开放世界游戏",
+      "世界观宣传",
+      "沉浸式产品故事"
+    ],
+    "avoid": [
+      "密集参数后台",
+      "高频数据操作"
+    ],
+    "tokens": {
+      "palette": [
+        "#0a1714",
+        "#1f9a6d",
+        "#d5edff",
+        "#f6f0d7"
+      ],
+      "type": "官方日文标题图片 + 小字号衬线副文；控件用系统无衬线",
+      "layout": "同一满屏舞台内叠放三章视频；右侧主题，左下Logo，底缘缩略目录",
+      "motion": "300ms输入锁；影片退场1s模糊、入场1.6s延迟0.6s；标题入场1.6s延迟1s；片尾前1s推进；闲置3s后0.8s隐藏。"
+    },
+    "sources": [
+      {
+        "title": "Nintendo · Tears of the Kingdom WORLD",
+        "url": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "type": "实例",
+        "note": "2026-10-07：同屏游戏影像、三个玩法主题、底缘目录与声音入口。"
+      },
+      {
+        "title": "W3C · Pause, Stop, Hide",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+        "type": "规范",
+        "note": "持续自动动态应提供暂停；本地视频可持续停止，减少动态下初始停止。"
+      },
+      {
+        "title": "官方公开交互脚本 · 2026-10-07",
+        "url": "https://www.nintendo.com/jp/zelda/totk/assets/js/main.js",
+        "type": "实例",
+        "note": "2026-10-07：章节切换、300ms锁定、片尾推进和3秒闲置隐藏有脚本依据；桌面wheel翻章代码被注释。本地时长、亮度曲线及视频长度另有差异。"
+      }
+    ],
+    "prompt": "以 https://www.nintendo.com/jp/zelda/totk/world/index.html 在2026-10-07的单一快照为依据制作私人学习页。先观察声音门→古代纹章→稳定舞台。原始ON/OFF图、背景纹样、发光纹章、标题、缩略角框都复用官方素材，禁止自行重绘替代。ON启动原开场SE，3.4秒接BGM；OFF全程静音。2秒后纹章扩散，3.6秒交接影片。三章同屏，300ms切换锁：旧片1秒模糊退，下一片1.6秒延迟0.6秒进入，标题延迟1秒；影片结束前1秒推进。3秒闲置后0.8秒模糊隐去控件，鼠标/触摸唤醒。底部使用原始古代边框和削角白线 hover/current 态；不要普通矩形框。桌面滚轮不翻章，手机水平10px触摸有边界，竖向可至页脚。保留画面暂停、减少动态和键盘补充；说明短片及手机视频的近似。输出源码、完整素材manifest、当前fidelity及预览。",
+    "negativePrompt": "不要编造原站世界或曲名；不要以原创浮岛替代官方真实场景；不要自动播放声音；不要嵌入原站整页、追踪脚本或声称像素级完整复刻。",
+    "demo": "demos/zelda-world/index.html",
+    "preview": "previews/zelda-world.jpg",
+    "research": "research/zelda-world.md",
+    "exercise": "将三个真实场景换成另一部已授权游戏的世界章节，保持视频、标题、目录的层级并记录保真差异。",
+    "composition": {
+      "color": "天空蓝、古代青绿、象牙色标题；自然、神秘与开放探索。",
+      "typography": "官方日文标题图片 + 小字号衬线副文；控件用系统无衬线",
+      "layout": "同一满屏舞台内叠放三章视频；右侧主题，左下Logo，底缘缩略目录",
+      "imagery": "官方 HLS 每章前6段、本地转封装 MP4、官方字标与缩略图。",
+      "shape": "原始 frame_thumbnail 古代角纹 + 8点削角白线；当前与 hover 加内框，避免普通矩形卡片。",
+      "hierarchy": "场景 → 三个玩法动词 → 章节选择 → 真实官方入口。",
+      "motion": "300ms输入锁；影片退场1s模糊、入场1.6s延迟0.6s；标题入场1.6s延迟1s；片尾前1s推进；闲置3s后0.8s隐藏。",
+      "coherence": "游戏实景、动作主题、细线目录与原站配乐共同让体验围绕探索，而不是抽象功能卡。"
+    },
+    "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+    "implementation": "reference-study",
+    "fidelity": "demos/zelda-world/fidelity.md",
+    "assetManifest": "demos/zelda-world/assets-manifest.json",
+    "referencePreview": "research/screenshots/zelda-world-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "原站未见明暗切换；保留古代青绿、象牙字标和暗色影片舞台。",
+      "designReason": "青绿纹章、削角框与自然场景构成单一世界观，翻转为白底会破坏光与暗的叙事。"
+    },
+    "soundBehavior": {
+      "kind": "background",
+      "control": "入口 ON/OFF 与顶栏 SOUND；默认静音，选择 ON 后播放原始 se.mp3 与 bgm.mp3。",
+      "interactionRole": "开场 SE 对应纹章发亮扩散，BGM在入口移交世界时接续；三段影片切换时音乐不断开，维持探索节奏。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/zelda-world.md",
+      "role": "research",
+      "content": "# 塞尔达 WORLD · 单次参考快照\n\n参考 URL：https://www.nintendo.com/jp/zelda/totk/world/index.html\n采集日期：2026-10-07。日文 WORLD；归档本次所见，不维护官网后续变化。\n\n首次入口先让用户选择 ON/OFF，再显现原始古代纹章。2 秒时纹章发亮、模糊并向外扩散，3.6 秒交接世界影片。公开 main.js 明确两个原始音轨：se.mp3 对应纹章显现，bgm.mp3 在入口移交影片时接续。选择 OFF 不播放；选择 ON 后可用顶栏 SOUND 关闭。音乐跨章节延续，开场音效把视觉“打开世界”的动作变成听觉事件。没有添加通用音乐或点击声。\n\n三章“翔ける／創る／紡ぐ”叠在同一舞台，点击缩略项触发 300ms 输入锁；旧影片 1 秒模糊退场，新影片 1.6 秒、延迟 0.6 秒进入，主题字 1.6 秒、延迟 1 秒进入。片尾前 1 秒进入下一章，避免完整片尾黑场。快速选择保留最后请求。手机水平滑动阈值为 10px 并在两端停止；桌面源代码的 wheel 翻章已被注释，本地也不添加这种交互。\n\n原始 frame_thumbnail 角纹、8 点削角白线和 hover/current 内框使目录属于古代世界观。鼠标移动、触摸唤醒界面，3 秒闲置后控件在 0.8 秒内模糊淡出，留出纯影片。原站未见明暗主题入口，本地固定暗色舞台、青绿与象牙字标。\n\n本地保留以上机制和官方图像音轨。影片是每章前 6 段，沿用片尾前 1 秒规则，但循环长度短于源站；手机裁切同一影片，未取得专用竖版 HLS。外部栏目与购买均为官网外链；不运行账号或追踪服务。键盘方向、持续暂停、减少动态 query 分支及聚焦时不隐藏控件是本地补充，不能描述为官网原生行为。\n\n体验路径：首次打开→OFF/ON→纹章→三个缩略项→保持闲置→移动鼠标恢复→反向切章；手机向下浏览至目录和页脚。减少动态：在地址后加 ?motion=reduce。\n\n公开渲染依据：https://www.nintendo.com/jp/zelda/totk/assets/js/main.js 。完整最终素材来源见 assets-manifest.json。官方美术、商标与音乐版权归 Nintendo。\n\n可复用设计原则：将主题符号用作入口和控件轮廓；把影片与文字的层级转成不同进入时刻；用闲置隐藏把操作阶段与观看阶段分开。Prompt 见对应 entry。\n",
+      "sha256": "e73f7466818f3383f697f2b0fed394aa70b3f00b417d4947739f527334fbd1cc",
+      "bytes": 2394
+    },
+    {
+      "path": "prompts/zelda-world.md",
+      "role": "prompt",
+      "content": "# 塞尔达 · 全景世界舞台 · 复用 Prompt\n\n由 [结构化案例](../entries/zelda-world.json) 自动生成。参考观察与具体边界见 [调研](../research/zelda-world.md)。\n\n## 正向 Prompt\n\n以 https://www.nintendo.com/jp/zelda/totk/world/index.html 在2026-10-07的单一快照为依据制作私人学习页。先观察声音门→古代纹章→稳定舞台。原始ON/OFF图、背景纹样、发光纹章、标题、缩略角框都复用官方素材，禁止自行重绘替代。ON启动原开场SE，3.4秒接BGM；OFF全程静音。2秒后纹章扩散，3.6秒交接影片。三章同屏，300ms切换锁：旧片1秒模糊退，下一片1.6秒延迟0.6秒进入，标题延迟1秒；影片结束前1秒推进。3秒闲置后0.8秒模糊隐去控件，鼠标/触摸唤醒。底部使用原始古代边框和削角白线 hover/current 态；不要普通矩形框。桌面滚轮不翻章，手机水平10px触摸有边界，竖向可至页脚。保留画面暂停、减少动态和键盘补充；说明短片及手机视频的近似。输出源码、完整素材manifest、当前fidelity及预览。\n\n## 负向约束\n\n不要编造原站世界或曲名；不要以原创浮岛替代官方真实场景；不要自动播放声音；不要嵌入原站整页、追踪脚本或声称像素级完整复刻。\n\n## 制作约束\n\n- 本次仅归档2026-10-07所见日文WORLD，官网后续变化不维护。\n- 影片仍为每章前6段短片，保留同样片尾推进规则但循环更短；手机未取得竖版HLS，裁切同一短片。\n- 仅本页三章与声音入口；其它栏目以官网外链打开，未复制业务服务。\n- 键盘、画面持续暂停、焦点时不隐藏为本地无障碍补充；源站桌面滚轮没有翻章。\n- 资源权利归Nintendo，个人学习使用不等于商业授权。\n\n## 检查方法\n\n将三个真实场景换成另一部已授权游戏的世界章节，保持视频、标题、目录的层级并记录保真差异。\n\n[查看 Demo](../demos/zelda-world/index.html) · [返回参考库](../index.html#style/zelda-world)\n",
+      "sha256": "4547a680d1e280f55444329a59fd38246a4ce23ca8705d4d2764b9f4b8f52ca9",
+      "bytes": 2083
+    },
+    {
+      "path": "demos/zelda-world/fidelity.md",
+      "role": "fidelity",
+      "content": "# 塞尔达 WORLD · 单次参考快照\n\n参考 URL：https://www.nintendo.com/jp/zelda/totk/world/index.html\n采集日期：2026-10-07。日文 WORLD；归档本次所见，不维护官网后续变化。\n\n首次入口先让用户选择 ON/OFF，再显现原始古代纹章。2 秒时纹章发亮、模糊并向外扩散，3.6 秒交接世界影片。公开 main.js 明确两个原始音轨：se.mp3 对应纹章显现，bgm.mp3 在入口移交影片时接续。选择 OFF 不播放；选择 ON 后可用顶栏 SOUND 关闭。音乐跨章节延续，开场音效把视觉“打开世界”的动作变成听觉事件。没有添加通用音乐或点击声。\n\n三章“翔ける／創る／紡ぐ”叠在同一舞台，点击缩略项触发 300ms 输入锁；旧影片 1 秒模糊退场，新影片 1.6 秒、延迟 0.6 秒进入，主题字 1.6 秒、延迟 1 秒进入。片尾前 1 秒进入下一章，避免完整片尾黑场。快速选择保留最后请求。手机水平滑动阈值为 10px 并在两端停止；桌面源代码的 wheel 翻章已被注释，本地也不添加这种交互。\n\n原始 frame_thumbnail 角纹、8 点削角白线和 hover/current 内框使目录属于古代世界观。鼠标移动、触摸唤醒界面，3 秒闲置后控件在 0.8 秒内模糊淡出，留出纯影片。原站未见明暗主题入口，本地固定暗色舞台、青绿与象牙字标。\n\n本地保留以上机制和官方图像音轨。影片是每章前 6 段，沿用片尾前 1 秒规则，但循环长度短于源站；手机裁切同一影片，未取得专用竖版 HLS。外部栏目与购买均为官网外链；不运行账号或追踪服务。键盘方向、持续暂停、减少动态 query 分支及聚焦时不隐藏控件是本地补充，不能描述为官网原生行为。\n\n体验路径：首次打开→OFF/ON→纹章→三个缩略项→保持闲置→移动鼠标恢复→反向切章；手机向下浏览至目录和页脚。减少动态：在地址后加 ?motion=reduce。\n\n公开渲染依据：https://www.nintendo.com/jp/zelda/totk/assets/js/main.js 。完整最终素材来源见 assets-manifest.json。官方美术、商标与音乐版权归 Nintendo。\n",
+      "sha256": "bfabed3cc42a8ef952f986c48abec3f5e2c19d62e1de41887e8dd56ac9a39eed",
+      "bytes": 2190
+    },
+    {
+      "path": "demos/zelda-world/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourceDate\": \"2026-10-07\",\n  \"scope\": \"真实官网公开资源的私人学习局部复现\",\n  \"assets\": [\n    {\n      \"file\": \"chapter-2.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/thumb_2.webp\",\n      \"use\": \"世界章节缩略图/视频静态后备\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 4970,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 220,\n      \"height\": 124,\n      \"dimensions\": [\n        220,\n        124\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"367216c760941db76e4782dc9875e6b493d9e808292695f80fb1f256217aa7c8\"\n    },\n    {\n      \"file\": \"chapter-1.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/thumb_1.webp\",\n      \"use\": \"世界章节缩略图/视频静态后备\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 3690,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 220,\n      \"height\": 124,\n      \"dimensions\": [\n        220,\n        124\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"33decdd01296e7e15be492ce7daabfa53320c85b611e21935ce2aec9bd6a8e15\"\n    },\n    {\n      \"file\": \"title-2.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/title_scene_2.webp\",\n      \"use\": \"日本官网世界章节标题\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 30264,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 814,\n      \"height\": 405,\n      \"dimensions\": [\n        814,\n        405\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"b87a5e104b47d44fe985ac29b0320e550f0422fba1420bd3fe6f64cf21241e43\"\n    },\n    {\n      \"file\": \"title-1.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/title_scene_1.webp\",\n      \"use\": \"日本官网世界章节标题\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 39864,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 814,\n      \"height\": 404,\n      \"dimensions\": [\n        814,\n        404\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"ac6c0f5c1f0bea4c72d1146192e065be94f24886431d9e8d5d1832718fa19fde\"\n    },\n    {\n      \"file\": \"title-3.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/title_scene_3.webp\",\n      \"use\": \"日本官网世界章节标题\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 34808,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 814,\n      \"height\": 404,\n      \"dimensions\": [\n        814,\n        404\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"134f3bdc2098b57391e918631c2fc165722a74be96bccf774ad65f871c3375c5\"\n    },\n    {\n      \"file\": \"logo.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/common/logo_totk.webp\",\n      \"use\": \"游戏标识\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 165894,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 1060,\n      \"height\": 598,\n      \"dimensions\": [\n        1060,\n        598\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"464d2126eecc13a69c9c38d4c0f56b8f7dfb0dde505aef74e76936f2a955e8ab\"\n    },\n    {\n      \"file\": \"kakeru.m3u8\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru.m3u8\",\n      \"use\": \"官方 HLS 视频清单，供本地短片转封装取样\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1198,\n      \"contentType\": \"audio/x-mpegurl\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"sha256\": \"29254c62014d95e35bef3182ad62ef49618cd1383778d8e497decb4b587bfad6\"\n    },\n    {\n      \"file\": \"tsukuru.m3u8\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru.m3u8\",\n      \"use\": \"官方 HLS 视频清单，供本地短片转封装取样\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1073,\n      \"contentType\": \"audio/x-mpegurl\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"sha256\": \"94da204b63233471b4350514d7042666402715d0e276b113d03da21ff0047ca9\"\n    },\n    {\n      \"file\": \"tsumugu.m3u8\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu.m3u8\",\n      \"use\": \"官方 HLS 视频清单，供本地短片转封装取样\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1425,\n      \"contentType\": \"audio/x-mpegurl\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"sha256\": \"c2e8d9a9c0715ca24c10c19ae6cfe9fb1756b5b0860db7d7d323f36cb60c06c1\"\n    },\n    {\n      \"file\": \"bgm.mp3\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/audio/bgm.mp3\",\n      \"use\": \"原官网 BGM，默认关闭，未发现公开曲名\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 3182185,\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"sha256\": \"b75d4ee9a456439feaed07ba36b42cf62b7009a5aa469b2be6323e084113ac34\",\n      \"durationSeconds\": 99.44,\n      \"hasAudio\": true,\n      \"browserDurationSeconds\": 99.443281\n    },\n    {\n      \"file\": \"chapter-3.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/thumb_3.webp\",\n      \"use\": \"第三世界章节缩略图\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1776,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 220,\n      \"height\": 124,\n      \"dimensions\": [\n        220,\n        124\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"6f20bc5b8981ab8695109ff9d24bd4b5fe672b172a43605da35506dccbbab307\"\n    },\n    {\n      \"file\": \"kakeru.mp4\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru.m3u8\",\n      \"segmentUrls\": [\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru000.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru001.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru002.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru003.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru004.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru005.ts\"\n      ],\n      \"use\": \"官方首屏视频片段，本地无损转封装，去除音轨作为静音背景\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 3423246,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"transform\": \"HLS 前 6 段 → MP4，视频 copy、去音轨\",\n      \"sha256\": \"392c355b0b83c7a0c0f3444c43a412416220d6c8fa11f7341289019d45f8df42\",\n      \"durationSeconds\": 9.67,\n      \"hasAudio\": false,\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ]\n    },\n    {\n      \"file\": \"kakeru-poster.jpg\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/kakeru.m3u8\",\n      \"use\": \"上述官方视频 0.1 秒静态后备帧\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 206000,\n      \"transform\": \"ffmpeg 取静态视频帧\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"JPEG\",\n      \"sha256\": \"768bbedba0f6de353d5180b97dc335f00cc9e99e5a141e90be0cd4d035f5ccaa\"\n    },\n    {\n      \"file\": \"tsukuru.mp4\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru.m3u8\",\n      \"segmentUrls\": [\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru000.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru001.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru002.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru003.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru004.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru005.ts\"\n      ],\n      \"use\": \"官方首屏视频片段，本地无损转封装，去除音轨作为静音背景\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 3878328,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"transform\": \"HLS 前 6 段 → MP4，视频 copy、去音轨\",\n      \"sha256\": \"581bd2a6f584b51d92c270492484c87a96ced3f38a2978d383cdeb0159aab2c9\",\n      \"durationSeconds\": 9.4,\n      \"hasAudio\": false,\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ]\n    },\n    {\n      \"file\": \"tsukuru-poster.jpg\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsukuru.m3u8\",\n      \"use\": \"上述官方视频 0.1 秒静态后备帧\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 289879,\n      \"transform\": \"ffmpeg 取静态视频帧\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"JPEG\",\n      \"sha256\": \"28f74c13b70728adc00eddfab54e1ff1ec4d72d443f59bd28a4ec8040b2da6ac\"\n    },\n    {\n      \"file\": \"tsumugu.mp4\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu.m3u8\",\n      \"segmentUrls\": [\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu000.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu001.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu002.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu003.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu004.ts\",\n        \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu005.ts\"\n      ],\n      \"use\": \"官方首屏视频片段，本地无损转封装，去除音轨作为静音背景\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 3557818,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"transform\": \"HLS 前 6 段 → MP4，视频 copy、去音轨\",\n      \"sha256\": \"11142d11c48dc8ca4de587e78ca7c802fa1d0b6ef4f79d2562c01b45b172878e\",\n      \"durationSeconds\": 9.73,\n      \"hasAudio\": false,\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ]\n    },\n    {\n      \"file\": \"tsumugu-poster.jpg\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/mov/world/tsumugu.m3u8\",\n      \"use\": \"上述官方视频 0.1 秒静态后备帧\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 85538,\n      \"transform\": \"ffmpeg 取静态视频帧\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"JPEG\",\n      \"sha256\": \"80a7be87a7d939780774ca43631759b47e9ffdaeb308df45ff4435ebad918fb2\"\n    },\n    {\n      \"file\": \"txt_sound.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/loading/txt_sound.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 14243,\n      \"sha256\": \"f1fd4ca242e91e234e0cb01960e91d6241cf3b3ae811fb61ff94e3bf004edc5c\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 1118,\n      \"height\": 32,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"caption_1.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/caption_1.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1409,\n      \"sha256\": \"003502f776875e57af1b6dde58657503d9f42b5f471c4900ffb759a473c4d36c\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 80,\n      \"height\": 24,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"caption_2.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/caption_2.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1081,\n      \"sha256\": \"c4e8bea3870e7a57127be1bcb60887a53d915b0b1d343d59bcad06f4cc44885b\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 56,\n      \"height\": 24,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"caption_3.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/world/caption_3.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1073,\n      \"sha256\": \"3c36700c2366797af8bf37dce51baac18f6c4f0218f7559387bfafa4d9ce98fb\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 56,\n      \"height\": 24,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"bg_loading.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/loading/bg_loading.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1454,\n      \"sha256\": \"f8bb2751a7f502a8e5c3504ebdd4e2288856f8866d3b2f2a813cb50c46517bf8\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 414,\n      \"height\": 402,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"btn_sound_on.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/loading/btn_sound_on.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1594,\n      \"sha256\": \"45ec7a81cce09a269580435343c0e1a7eddf5cd1cf3eebc4daadf76a9154c3aa\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 65,\n      \"height\": 33,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"btn_sound_off.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/loading/btn_sound_off.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 1750,\n      \"sha256\": \"4a91109c2e89c9228544f4d1ff1de153e098b7b5742596a37e64495ac90fa7e0\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 78,\n      \"height\": 33,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"obj_loading_2.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/loading/obj_loading_2.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 136048,\n      \"sha256\": \"81906246afb8a10f5620ca41ebf9d7c64d1609febd29a54aff58a5e06d4b2017\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 762,\n      \"height\": 774,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"mask_loading.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/loading/mask_loading.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 2824,\n      \"sha256\": \"e2a31c0f0abd8fe6333db95b934e6606cca3c98a59c8ab88864d190038507cea\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 1600,\n      \"height\": 771,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"frame_thumbnail.webp\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/img/movie/frame_thumbnail.webp\",\n      \"use\": \"官网声音门／古代纹章加载／章节削角边框与字标\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 2156,\n      \"sha256\": \"921f8ec926faae21d820d1f411f40c1945140ee4592416467fe5b6fe0f4a01fe\",\n      \"contentType\": \"image/avif\",\n      \"format\": \"AVIF\",\n      \"width\": 240,\n      \"height\": 136,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；仅个人学习，公开可取不等同商业许可\"\n    },\n    {\n      \"file\": \"se.mp3\",\n      \"url\": \"https://www.nintendo.com/jp/zelda/totk/assets/audio/se.mp3\",\n      \"use\": \"选择 ON 后，古代纹章显现与扩散的原始开场音效\",\n      \"owner\": \"Nintendo\",\n      \"bytes\": 156980,\n      \"sha256\": \"3983686ce1e1ce4f7939ec4641b0b205399afb61699093afe577b393d4fc7149\",\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归 Nintendo；个人学习\"\n    }\n  ],\n  \"limitations\": [\n    \"视频保留每章前6段；沿用片尾前1秒推进，循环比完整HLS短。\",\n    \"三章转场、声音门、古代纹章、削角框和3秒闲置隐藏保留公开源机制；真实业务及其它独立页面使用官网外链。\",\n    \"手机使用同一影片居中裁切，未取得原站专用竖版HLS。\",\n    \"键盘方向、持续画面暂停和保留焦点时不隐藏控件为本地无障碍补充。\"\n  ]\n}\n",
+      "sha256": "e5b34e0d45cd0456a82c7fb81713d37b83856399b8fb4caa6e7537a056ba7f59",
+      "bytes": 18797
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/zelda-world/assets-manifest.json",
+      "role": "context",
+      "sha256": "e5b34e0d45cd0456a82c7fb81713d37b83856399b8fb4caa6e7537a056ba7f59",
+      "bytes": 18797
+    },
+    {
+      "path": "demos/zelda-world/assets/bg_loading.webp",
+      "role": "asset",
+      "sha256": "f8bb2751a7f502a8e5c3504ebdd4e2288856f8866d3b2f2a813cb50c46517bf8",
+      "bytes": 1454
+    },
+    {
+      "path": "demos/zelda-world/assets/bgm.mp3",
+      "role": "asset",
+      "sha256": "b75d4ee9a456439feaed07ba36b42cf62b7009a5aa469b2be6323e084113ac34",
+      "bytes": 3182185
+    },
+    {
+      "path": "demos/zelda-world/assets/btn_sound_off.webp",
+      "role": "asset",
+      "sha256": "4a91109c2e89c9228544f4d1ff1de153e098b7b5742596a37e64495ac90fa7e0",
+      "bytes": 1750
+    },
+    {
+      "path": "demos/zelda-world/assets/btn_sound_on.webp",
+      "role": "asset",
+      "sha256": "45ec7a81cce09a269580435343c0e1a7eddf5cd1cf3eebc4daadf76a9154c3aa",
+      "bytes": 1594
+    },
+    {
+      "path": "demos/zelda-world/assets/caption_1.webp",
+      "role": "asset",
+      "sha256": "003502f776875e57af1b6dde58657503d9f42b5f471c4900ffb759a473c4d36c",
+      "bytes": 1409
+    },
+    {
+      "path": "demos/zelda-world/assets/caption_2.webp",
+      "role": "asset",
+      "sha256": "c4e8bea3870e7a57127be1bcb60887a53d915b0b1d343d59bcad06f4cc44885b",
+      "bytes": 1081
+    },
+    {
+      "path": "demos/zelda-world/assets/caption_3.webp",
+      "role": "asset",
+      "sha256": "3c36700c2366797af8bf37dce51baac18f6c4f0218f7559387bfafa4d9ce98fb",
+      "bytes": 1073
+    },
+    {
+      "path": "demos/zelda-world/assets/chapter-1.webp",
+      "role": "asset",
+      "sha256": "33decdd01296e7e15be492ce7daabfa53320c85b611e21935ce2aec9bd6a8e15",
+      "bytes": 3690
+    },
+    {
+      "path": "demos/zelda-world/assets/chapter-2.webp",
+      "role": "asset",
+      "sha256": "367216c760941db76e4782dc9875e6b493d9e808292695f80fb1f256217aa7c8",
+      "bytes": 4970
+    },
+    {
+      "path": "demos/zelda-world/assets/chapter-3.webp",
+      "role": "asset",
+      "sha256": "6f20bc5b8981ab8695109ff9d24bd4b5fe672b172a43605da35506dccbbab307",
+      "bytes": 1776
+    },
+    {
+      "path": "demos/zelda-world/assets/frame_thumbnail.webp",
+      "role": "asset",
+      "sha256": "921f8ec926faae21d820d1f411f40c1945140ee4592416467fe5b6fe0f4a01fe",
+      "bytes": 2156
+    },
+    {
+      "path": "demos/zelda-world/assets/kakeru-poster.jpg",
+      "role": "asset",
+      "sha256": "768bbedba0f6de353d5180b97dc335f00cc9e99e5a141e90be0cd4d035f5ccaa",
+      "bytes": 206000
+    },
+    {
+      "path": "demos/zelda-world/assets/kakeru.m3u8",
+      "role": "asset",
+      "sha256": "29254c62014d95e35bef3182ad62ef49618cd1383778d8e497decb4b587bfad6",
+      "bytes": 1198
+    },
+    {
+      "path": "demos/zelda-world/assets/kakeru.mp4",
+      "role": "asset",
+      "sha256": "392c355b0b83c7a0c0f3444c43a412416220d6c8fa11f7341289019d45f8df42",
+      "bytes": 3423246
+    },
+    {
+      "path": "demos/zelda-world/assets/logo.webp",
+      "role": "asset",
+      "sha256": "464d2126eecc13a69c9c38d4c0f56b8f7dfb0dde505aef74e76936f2a955e8ab",
+      "bytes": 165894
+    },
+    {
+      "path": "demos/zelda-world/assets/mask_loading.webp",
+      "role": "asset",
+      "sha256": "e2a31c0f0abd8fe6333db95b934e6606cca3c98a59c8ab88864d190038507cea",
+      "bytes": 2824
+    },
+    {
+      "path": "demos/zelda-world/assets/obj_loading_2.webp",
+      "role": "asset",
+      "sha256": "81906246afb8a10f5620ca41ebf9d7c64d1609febd29a54aff58a5e06d4b2017",
+      "bytes": 136048
+    },
+    {
+      "path": "demos/zelda-world/assets/se.mp3",
+      "role": "asset",
+      "sha256": "3983686ce1e1ce4f7939ec4641b0b205399afb61699093afe577b393d4fc7149",
+      "bytes": 156980
+    },
+    {
+      "path": "demos/zelda-world/assets/title-1.webp",
+      "role": "asset",
+      "sha256": "ac6c0f5c1f0bea4c72d1146192e065be94f24886431d9e8d5d1832718fa19fde",
+      "bytes": 39864
+    },
+    {
+      "path": "demos/zelda-world/assets/title-2.webp",
+      "role": "asset",
+      "sha256": "b87a5e104b47d44fe985ac29b0320e550f0422fba1420bd3fe6f64cf21241e43",
+      "bytes": 30264
+    },
+    {
+      "path": "demos/zelda-world/assets/title-3.webp",
+      "role": "asset",
+      "sha256": "134f3bdc2098b57391e918631c2fc165722a74be96bccf774ad65f871c3375c5",
+      "bytes": 34808
+    },
+    {
+      "path": "demos/zelda-world/assets/tsukuru-poster.jpg",
+      "role": "asset",
+      "sha256": "28f74c13b70728adc00eddfab54e1ff1ec4d72d443f59bd28a4ec8040b2da6ac",
+      "bytes": 289879
+    },
+    {
+      "path": "demos/zelda-world/assets/tsukuru.m3u8",
+      "role": "asset",
+      "sha256": "94da204b63233471b4350514d7042666402715d0e276b113d03da21ff0047ca9",
+      "bytes": 1073
+    },
+    {
+      "path": "demos/zelda-world/assets/tsukuru.mp4",
+      "role": "asset",
+      "sha256": "581bd2a6f584b51d92c270492484c87a96ced3f38a2978d383cdeb0159aab2c9",
+      "bytes": 3878328
+    },
+    {
+      "path": "demos/zelda-world/assets/tsumugu-poster.jpg",
+      "role": "asset",
+      "sha256": "80a7be87a7d939780774ca43631759b47e9ffdaeb308df45ff4435ebad918fb2",
+      "bytes": 85538
+    },
+    {
+      "path": "demos/zelda-world/assets/tsumugu.m3u8",
+      "role": "asset",
+      "sha256": "c2e8d9a9c0715ca24c10c19ae6cfe9fb1756b5b0860db7d7d323f36cb60c06c1",
+      "bytes": 1425
+    },
+    {
+      "path": "demos/zelda-world/assets/tsumugu.mp4",
+      "role": "asset",
+      "sha256": "11142d11c48dc8ca4de587e78ca7c802fa1d0b6ef4f79d2562c01b45b172878e",
+      "bytes": 3557818
+    },
+    {
+      "path": "demos/zelda-world/assets/txt_sound.webp",
+      "role": "asset",
+      "sha256": "f1fd4ca242e91e234e0cb01960e91d6241cf3b3ae811fb61ff94e3bf004edc5c",
+      "bytes": 14243
+    },
+    {
+      "path": "demos/zelda-world/fidelity.md",
+      "role": "context",
+      "sha256": "bfabed3cc42a8ef952f986c48abec3f5e2c19d62e1de41887e8dd56ac9a39eed",
+      "bytes": 2190
+    },
+    {
+      "path": "demos/zelda-world/index.html",
+      "role": "source",
+      "sha256": "f8977eae205a1c265f8d39747c3ce00e96ac62f4d19fe7831c8b2154b17f42fc",
+      "bytes": 4666
+    },
+    {
+      "path": "demos/zelda-world/script.js",
+      "role": "source",
+      "sha256": "c60ec3f3ca139d1f8c03ec9e48c9b21def5823c1052b8e293a496dced79ddd78",
+      "bytes": 6254
+    },
+    {
+      "path": "demos/zelda-world/style.css",
+      "role": "source",
+      "sha256": "cb66ed69866d4c0b69cc6ea166b64599abd193ef47b92fd3eaa4a565bb34a9e4",
+      "bytes": 11957
+    },
+    {
+      "path": "entries/zelda-world.json",
+      "role": "context",
+      "sha256": "e56e456c7e9b685b6e922db495d1eb69b56fc4ea81b4f734406f89b2cbba439a",
+      "bytes": 7098
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/mobile/zelda-world.jpg",
+      "role": "preview",
+      "sha256": "aa6862e711bed5a5049db4f9f54b5922d76c5cd15a95e6c62efc1db5f67433ee",
+      "bytes": 41512
+    },
+    {
+      "path": "previews/zelda-world.jpg",
+      "role": "preview",
+      "sha256": "47e0378d9a4540e44d9efc1877046bd9b2882f9c256c2eb57fd66c8d6260fee2",
+      "bytes": 64074
+    },
+    {
+      "path": "prompts/zelda-world.md",
+      "role": "context",
+      "sha256": "4547a680d1e280f55444329a59fd38246a4ce23ca8705d4d2764b9f4b8f52ca9",
+      "bytes": 2083
+    },
+    {
+      "path": "research/screenshots/zelda-world-source.jpg",
+      "role": "preview",
+      "sha256": "a02f591890dc53739d6f88e29466a0990ebd709b751ce310b0376cf948fd1884",
+      "bytes": 117410
+    },
+    {
+      "path": "research/zelda-world.md",
+      "role": "context",
+      "sha256": "e73f7466818f3383f697f2b0fed394aa70b3f00b417d4947739f527334fbd1cc",
+      "bytes": 2394
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=zelda-world\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>天空蓝、古代青绿、象牙色标题；自然、神秘与开放探索。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官方日文标题图片 + 小字号衬线副文；控件用系统无衬线</dd></div><div class=\"\"><dt>布局留白</dt><dd>同一满屏舞台内叠放三章视频；右侧主题，左下Logo，底缘缩略目录</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方 HLS 每章前6段、本地转封装 MP4、官方字标与缩略图。</dd></div><div class=\"\"><dt>线条形状</dt><dd>原始 frame_thumbnail 古代角纹 + 8点削角白线；当前与 hover 加内框，避免普通矩形卡片。</dd></div><div class=\"\"><dt>信息层级</dt><dd>场景 → 三个玩法动词 → 章节选择 → 真实官方入口。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>300ms输入锁；影片退场1s模糊、入场1.6s延迟0.6s；标题入场1.6s延迟1s；片尾前1s推进；闲置3s后0.8s隐藏。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>游戏实景、动作主题、细线目录与原站配乐共同让体验围绕探索，而不是抽象功能卡。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>声音选择先于世界，纹章扩散将古代文明意象变成真正的入口。</li><li>影片、标题分层错时进入；3秒闲置隐去界面，让景色承担产品证明。</li><li>三个缩略项复用原始古代边框，悬停和当前态削角白线与标题字标一致。</li></ul><h3>怎样凸显产品重点</h3><p>使用 Nintendo 世界页真实 HLS 场景片段、标题和缩略图；天空、创造、未知世界成为三段连续叙事。</p><h3>主题与情绪</h3><p>天空蓝、古代青绿、象牙色标题；自然、神秘与开放探索。</p></section><section><h2>02 / 交互巧思</h2><ul><li>首次 ON/OFF → 原始纹章出现；2秒后向外发光扩散，3.6秒移交影片舞台。ON触发原开场 SE，随后原BGM接续。</li><li>点击章节 → 300ms输入锁；前片1秒模糊退场，后片1.6秒、延迟0.6秒进入；标题1.6秒、延迟1秒进入。快速选择保留最后请求。</li><li>影片片尾前1秒推进下一章；暂停画面和减少动态分支关闭自动推进。</li><li>鼠标移动或触摸唤醒界面，3秒闲置后0.8秒模糊淡出；键盘焦点保留控件为本地补充。</li><li>桌面滚轮不翻章；手机水平触摸以10px阈值切换并停在两端，竖向浏览到目录和页脚。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>原站未见明暗切换；保留古代青绿、象牙字标和暗色影片舞台。</p><p>青绿纹章、削角框与自然场景构成单一世界观，翻转为白底会破坏光与暗的叙事。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>背景音乐</h3><p>入口 ON/OFF 与顶栏 SOUND；默认静音，选择 ON 后播放原始 se.mp3 与 bgm.mp3。</p><p>开场 SE 对应纹章发亮扩散，BGM在入口移交世界时接续；三段影片切换时音乐不断开，维持探索节奏。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>本次仅归档2026-10-07所见日文WORLD，官网后续变化不维护。</li><li>影片仍为每章前6段短片，保留同样片尾推进规则但循环更短；手机未取得竖版HLS，裁切同一短片。</li><li>仅本页三章与声音入口；其它栏目以官网外链打开，未复制业务服务。</li><li>键盘、画面持续暂停、焦点时不隐藏为本地无障碍补充；源站桌面滚轮没有翻章。</li><li>资源权利归Nintendo，个人学习使用不等于商业授权。</li></ul><h3>适合</h3><p>开放世界游戏 / 世界观宣传 / 沉浸式产品故事</p><h3>谨慎使用</h3><p>密集参数后台 / 高频数据操作</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#0a1714\"></i>#0a1714</span><span class=\"swatch\"><i style=\"background:#1f9a6d\"></i>#1f9a6d</span><span class=\"swatch\"><i style=\"background:#d5edff\"></i>#d5edff</span><span class=\"swatch\"><i style=\"background:#f6f0d7\"></i>#f6f0d7</span></div><p><b>字体</b> · 官方日文标题图片 + 小字号衬线副文；控件用系统无衬线<br><b>布局</b> · 同一满屏舞台内叠放三章视频；右侧主题，左下Logo，底缘缩略目录<br><b>动效</b> · 300ms输入锁；影片退场1s模糊、入场1.6s延迟0.6s；标题入场1.6s延迟1s；片尾前1s推进；闲置3s后0.8s隐藏。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>以 https://www.nintendo.com/jp/zelda/totk/world/index.html 在2026-10-07的单一快照为依据制作私人学习页。先观察声音门→古代纹章→稳定舞台。原始ON/OFF图、背景纹样、发光纹章、标题、缩略角框都复用官方素材，禁止自行重绘替代。ON启动原开场SE，3.4秒接BGM；OFF全程静音。2秒后纹章扩散，3.6秒交接影片。三章同屏，300ms切换锁：旧片1秒模糊退，下一片1.6秒延迟0.6秒进入，标题延迟1秒；影片结束前1秒推进。3秒闲置后0.8秒模糊隐去控件，鼠标/触摸唤醒。底部使用原始古代边框和削角白线 hover/current 态；不要普通矩形框。桌面滚轮不翻章，手机水平10px触摸有边界，竖向可至页脚。保留画面暂停、减少动态和键盘补充；说明短片及手机视频的近似。输出源码、完整素材manifest、当前fidelity及预览。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要编造原站世界或曲名；不要以原创浮岛替代官方真实场景；不要自动播放声音；不要嵌入原站整页、追踪脚本或声称像素级完整复刻。</p></details><h3>改造练习</h3><p>将三个真实场景换成另一部已授权游戏的世界章节，保持视频、标题、目录的层级并记录保真差异。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.nintendo.com/jp/zelda/totk/world/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">Nintendo · Tears of the Kingdom WORLD ↗</a><small>2026-10-07：同屏游戏影像、三个玩法主题、底缘目录与声音入口。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Pause, Stop, Hide ↗</a><small>持续自动动态应提供暂停；本地视频可持续停止，减少动态下初始停止。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.nintendo.com/jp/zelda/totk/assets/js/main.js\" target=\"_blank\" rel=\"noopener noreferrer\">官方公开交互脚本 · 2026-10-07 ↗</a><small>2026-10-07：章节切换、300ms锁定、片尾推进和3秒闲置隐藏有脚本依据；桌面wheel翻章代码被注释。本地时长、亮度曲线及视频长度另有差异。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fzelda-world.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "1ac004a379b5eec50aebfa9c6c3dc1733909797f941ed69c56e3e6fd93c61b51",
+    "bytes": 7815
+  }
+}

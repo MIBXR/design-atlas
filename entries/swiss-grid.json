@@ -87,6 +87,7 @@
   "negativePrompt": "不要玻璃拟态、渐变霓虹、满屏圆角卡片、横向滚动劫持、裁切中文标题；不要将Helvetica当作Swiss的唯一字体或混用包豪斯形色定律。",
   "demo": "demos/swiss-grid/index.html",
   "preview": "previews/swiss-grid.jpg",
+  "theoryVerifiedAt": "2026-10-07",
   "research": "research/swiss-grid.md",
   "exercise": "将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。",
   "composition": {

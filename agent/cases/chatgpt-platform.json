@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 1,
+  "id": "chatgpt-platform",
+  "entry": {
+    "id": "chatgpt-platform",
+    "order": 15,
+    "title": "ChatGPT — 巨字、飞入拼贴与滚动交接",
+    "subtitle": "Chat, work and code in one place",
+    "category": "产品",
+    "country": "美国",
+    "tags": [
+      "ChatGPT",
+      "OpenAI",
+      "真实品牌",
+      "中文巨字",
+      "悬停切换",
+      "独立图层",
+      "滚动交接"
+    ],
+    "summary": "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。",
+    "accent": "#00a6d3",
+    "background": "#ffffff",
+    "principles": [
+      "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。",
+      "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+      "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+      "第一方素材保持比例；手机保留原站实际变体。"
+    ],
+    "productFocus": "围绕Chat、Work、Codex三合一展开：日常对话、可交付工作成果、代码改动评审。",
+    "interaction": [
+      "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。",
+      "选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。",
+      "向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。",
+      "桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。",
+      "手机使用三卡原生横向滚动，标题选择定位相应卡片；桌面 sticky rail 不出现在手机。导航保持桌面即时开关和手机全屏分层列表。",
+      "用途架子保留原生横滑及左右按钮；后续价格、安全、结束行动与页尾为普通滚动。"
+    ],
+    "theme": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
+    "constraints": [
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
+    ],
+    "useCases": [
+      "多能力AI产品介绍",
+      "功能转向的品牌叙事",
+      "中文字体与超大排版研究"
+    ],
+    "avoid": [
+      "把ChatGPT首页想象为一张聊天输入框",
+      "随意改造OpenAI结标",
+      "所有功能只用渐变blob表现",
+      "只点按钮换图而忽略周围元素飞入飞出",
+      "给所有网站套同一种滚动淡入动画"
+    ],
+    "tokens": {
+      "palette": [
+        "#070707",
+        "#ffffff",
+        "#f5f5f5",
+        "#c4a4f2",
+        "#00a6d3"
+      ],
+      "type": "官方 OpenAI Sans SC 4个Unicode分片及英文字体；中文主标题89px、5行、紧行距。",
+      "layout": "64px导航；居中5行巨字；全宽多层拼贴；2000px+100svh滚动段内中央窗口交接至左说明/右界面；七用途横向卡片架。",
+      "motion": "公开图层720ms cubic-bezier(.22,1,.36,1)，36/42/48px视差与500/1000/1500分段参考。本地退出500ms、交叉淡化500ms及连续滚动插值；不劫持滚轮。"
+    },
+    "composition": {
+      "color": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
+      "typography": "官方 OpenAI Sans SC 4个Unicode分片及英文字体；中文主标题89px、5行、紧行距。",
+      "layout": "首屏标题和拼贴 → 约 2000px+视口的居中/交接/说明长段 → 用途横向架子 → 价格 → 安全 → 结束行动 → 页尾；上下方向可逆。手机改为原生三模式横向卡片，再顺序浏览相同后续内容。",
+      "imagery": "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。",
+      "shape": "圆胶囊按钮、黑色环与直线渐变下划线、圆角界面图。",
+      "hierarchy": "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。",
+      "motion": "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。；选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。；向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。；桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。",
+      "coherence": "720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。",
+      "scroll": "首屏标题和拼贴 → 约 2000px+视口的居中/交接/说明长段 → 用途横向架子 → 价格 → 安全 → 结束行动 → 页尾；上下方向可逆。手机改为原生三模式横向卡片，再顺序浏览相同后续内容。"
+    },
+    "sources": [
+      {
+        "title": "ChatGPT 当前公开页面",
+        "url": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "note": "采集日期 2026-10-07；简体中文公开介绍页",
+        "type": "实例"
+      },
+      {
+        "title": "OpenAI Design Guidelines",
+        "url": "https://openai.com/brand/",
+        "type": "规范",
+        "note": "字标比例、留白和OpenAI Sans的几何与人文品牌语气。"
+      },
+      {
+        "title": "WAI Accordion Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/",
+        "type": "规范",
+        "note": "左侧说明的展开状态和原生button语义；方向键及Home/End为本地增强。"
+      }
+    ],
+    "prompt": "以 https://chatgpt.com/zh-Hans-CN/overview/ 在【采集日期】的 简体中文公开介绍页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留 64px 导航、五行中文标题、每个中文字符各自的当前模式强调色与原始字标/字体。20 个官方独立素材按模式使用不同坐标、比例、层级和手机几何；进场与离场分开，快速选择不堆积离场层。主窗口以垂直卡片切换；悬停选择释放后保留模式。长段必须连续保留首屏拼贴、滚动带入、拼贴收束、同一 sticky 窗口阈值触发向右下移动、左侧 rail 出现，以及三段说明/图像/进度同步；顶层模式与 rail 状态独立。手机使用原生横向三卡，不强塞桌面长段。按系统主题切换桌面真实界面图片；原站没有配乐。减少动态时停止自动运动并保留所有内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
+    "demo": "demos/chatgpt-platform/index.html",
+    "preview": "previews/chatgpt-platform.jpg",
+    "research": "research/chatgpt-platform.md",
+    "exercise": "以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。",
+    "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+    "implementation": "reference-study",
+    "fidelity": "demos/chatgpt-platform/fidelity.md",
+    "assetManifest": "demos/chatgpt-platform/assets-manifest.json",
+    "referencePreview": "research/screenshots/chatgpt-official-initial.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "system",
+      "default": "system",
+      "control": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
+      "designReason": "可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "此介绍页没有背景音乐、音频或影片。",
+      "interactionRole": "利用运动和空间关系串联能力，声音不是此页叙事的一部分。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/chatgpt-platform.md",
+      "role": "research",
+      "content": "# ChatGPT：当前页面的设计与交互\n\n来源：[https://chatgpt.com/zh-Hans-CN/overview/](https://chatgpt.com/zh-Hans-CN/overview/)。采集日期：2026-10-07。范围：简体中文公开介绍页，单一当前快照。\n\n可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。\n\n## 触发、视觉响应与用途\n\n- 首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。\n\n- 选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。\n\n- 向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。\n\n- 桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。\n\n- 手机使用三卡原生横向滚动，标题选择定位相应卡片；桌面 sticky rail 不出现在手机。导航保持桌面即时开关和手机全屏分层列表。\n\n- 用途架子保留原生横滑及左右按钮；后续价格、安全、结束行动与页尾为普通滚动。\n\n## 完整浏览路径\n\n首屏标题和拼贴 → 约 2000px+视口的居中/交接/说明长段 → 用途横向架子 → 价格 → 安全 → 结束行动 → 页尾；上下方向可逆。手机改为原生三模式横向卡片，再顺序浏览相同后续内容。\n\n## 原站事实和复现边界\n\n源 DOM 测得窗口中心比例、2562/1642 宽高比、说明状态 896px 最大宽度；rail 未激活标题缩放 0.718309859，360ms cubic-bezier(.22,1,.36,1)。源站滚动跨阈值后触发位置过渡，而非每一像素均匀插值。悬停人工选择释放后仍保持所选模式，观察超过 40 秒没有自动恢复。\n\n720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。\n\n## 主题与声音\n\n跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。\n\n此介绍页没有背景音乐、音频或影片。 利用运动和空间关系串联能力，声音不是此页叙事的一部分。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 可复用 Prompt\n\n以 https://chatgpt.com/zh-Hans-CN/overview/ 在【采集日期】的 简体中文公开介绍页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留 64px 导航、五行中文标题、每个中文字符各自的当前模式强调色与原始字标/字体。20 个官方独立素材按模式使用不同坐标、比例、层级和手机几何；进场与离场分开，快速选择不堆积离场层。主窗口以垂直卡片切换；悬停选择释放后保留模式。长段必须连续保留首屏拼贴、滚动带入、拼贴收束、同一 sticky 窗口阈值触发向右下移动、左侧 rail 出现，以及三段说明/图像/进度同步；顶层模式与 rail 状态独立。手机使用原生横向三卡，不强塞桌面长段。按系统主题切换桌面真实界面图片；原站没有配乐。减少动态时停止自动运动并保留所有内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n",
+      "sha256": "2e56c98186f5798fd01b43c56b74b8f7574d03abd2ad910781760ecdd2e289b2",
+      "bytes": 4358
+    },
+    {
+      "path": "prompts/chatgpt-platform.md",
+      "role": "prompt",
+      "content": "# ChatGPT — 巨字、飞入拼贴与滚动交接 · 复用 Prompt\n\n由 [结构化案例](../entries/chatgpt-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/chatgpt-platform.md)。\n\n## 正向 Prompt\n\n以 https://chatgpt.com/zh-Hans-CN/overview/ 在【采集日期】的 简体中文公开介绍页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留 64px 导航、五行中文标题、每个中文字符各自的当前模式强调色与原始字标/字体。20 个官方独立素材按模式使用不同坐标、比例、层级和手机几何；进场与离场分开，快速选择不堆积离场层。主窗口以垂直卡片切换；悬停选择释放后保留模式。长段必须连续保留首屏拼贴、滚动带入、拼贴收束、同一 sticky 窗口阈值触发向右下移动、左侧 rail 出现，以及三段说明/图像/进度同步；顶层模式与 rail 状态独立。手机使用原生横向三卡，不强塞桌面长段。按系统主题切换桌面真实界面图片；原站没有配乐。减少动态时停止自动运动并保留所有内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/chatgpt-platform/index.html) · [返回参考库](../index.html#style/chatgpt-platform)\n",
+      "sha256": "753e3feee8331a62fc04df0a68aefa2c5c953fce52d366cac2194eaf4f246aed",
+      "bytes": 2440
+    },
+    {
+      "path": "demos/chatgpt-platform/fidelity.md",
+      "role": "fidelity",
+      "content": "# ChatGPT：当前页面的设计与交互\n\n来源：[https://chatgpt.com/zh-Hans-CN/overview/](https://chatgpt.com/zh-Hans-CN/overview/)。采集日期：2026-10-07。范围：简体中文公开介绍页，单一当前快照。\n\n可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。\n\n## 触发、视觉响应与用途\n\n- 首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。\n\n- 选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。\n\n- 向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。\n\n- 桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。\n\n- 手机使用三卡原生横向滚动，标题选择定位相应卡片；桌面 sticky rail 不出现在手机。导航保持桌面即时开关和手机全屏分层列表。\n\n- 用途架子保留原生横滑及左右按钮；后续价格、安全、结束行动与页尾为普通滚动。\n\n## 完整浏览路径\n\n首屏标题和拼贴 → 约 2000px+视口的居中/交接/说明长段 → 用途横向架子 → 价格 → 安全 → 结束行动 → 页尾；上下方向可逆。手机改为原生三模式横向卡片，再顺序浏览相同后续内容。\n\n## 原站事实和复现边界\n\n源 DOM 测得窗口中心比例、2562/1642 宽高比、说明状态 896px 最大宽度；rail 未激活标题缩放 0.718309859，360ms cubic-bezier(.22,1,.36,1)。源站滚动跨阈值后触发位置过渡，而非每一像素均匀插值。悬停人工选择释放后仍保持所选模式，观察超过 40 秒没有自动恢复。\n\n720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。\n\n## 主题与声音\n\n跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。\n\n此介绍页没有背景音乐、音频或影片。 利用运动和空间关系串联能力，声音不是此页叙事的一部分。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 可复用 Prompt\n\n以 https://chatgpt.com/zh-Hans-CN/overview/ 在【采集日期】的 简体中文公开介绍页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留 64px 导航、五行中文标题、每个中文字符各自的当前模式强调色与原始字标/字体。20 个官方独立素材按模式使用不同坐标、比例、层级和手机几何；进场与离场分开，快速选择不堆积离场层。主窗口以垂直卡片切换；悬停选择释放后保留模式。长段必须连续保留首屏拼贴、滚动带入、拼贴收束、同一 sticky 窗口阈值触发向右下移动、左侧 rail 出现，以及三段说明/图像/进度同步；顶层模式与 rail 状态独立。手机使用原生横向三卡，不强塞桌面长段。按系统主题切换桌面真实界面图片；原站没有配乐。减少动态时停止自动运动并保留所有内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n",
+      "sha256": "2e56c98186f5798fd01b43c56b74b8f7574d03abd2ad910781760ecdd2e289b2",
+      "bytes": 4358
+    },
+    {
+      "path": "demos/chatgpt-platform/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"chatgpt-platform\",\n  \"sourcePage\": \"https://chatgpt.com/zh-Hans-CN/overview/\",\n  \"scope\": \"本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/chat.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/1HKIsAZ11GjpEEyopYfLIW/094b52522ff5edf1b2b7d1b0200fd1be/Chat.png?fm=webp&q=80&w=1920\",\n      \"purpose\": \"Chat栏目真实应用图片\",\n      \"width\": 1920,\n      \"height\": 1231,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 67800,\n      \"status\": \"downloaded\",\n      \"sha256\": \"95494793b1e5985a8838f36cfdd11243c73fde5b79a0a9e76c284058c26daf0e\"\n    },\n    {\n      \"file\": \"assets/work.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/2GFn68Lj3PCUE87c5oIx0m/a3de41104a526bf19da4eb4063fe29df/Work.png?fm=webp&q=80&w=1920\",\n      \"purpose\": \"Work栏目真实应用图片\",\n      \"width\": 1920,\n      \"height\": 1230,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 66072,\n      \"status\": \"downloaded\",\n      \"sha256\": \"f0dc48fe86037abd2558b13717a5ee0fb8f8212e4d9f00adb82831ac0a839d69\"\n    },\n    {\n      \"file\": \"assets/code.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/1MchgWlDyoyab3xpJ3J2ZD/7f5fe4fed43af2bf78f2f88089336944/Code.png?fm=webp&q=80&w=1920\",\n      \"purpose\": \"Codex栏目真实应用图片\",\n      \"width\": 1920,\n      \"height\": 1230,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 152266,\n      \"status\": \"downloaded\",\n      \"sha256\": \"abcf7a498fd22236ee99211faa06106f1b6f3d1a81e9417587152fbae1ba303c\"\n    },\n    {\n      \"file\": \"assets/scribble.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/46OL5XNwj1B8TqA1j0oPz3/16d05587849176ec583a56840d420904/overview-chat-scribble.png?fm=webp&q=80&w=624\",\n      \"purpose\": \"官网chat手绘文字图形\",\n      \"width\": 624,\n      \"height\": 354,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 21184,\n      \"status\": \"downloaded\",\n      \"sha256\": \"a6c2eb5a151d1405c40e93b1adebb2573bc3d1c6963667232aba12fc6a2b7d2a\"\n    },\n    {\n      \"file\": \"assets/OpenAISansSC-Variable-001.woff2\",\n      \"sourceUrl\": \"https://cdn.openai.com/common/fonts/openai-sans/v4/zh-hans-v2/OpenAISansSC-Variable-001.woff2\",\n      \"purpose\": \"官方页面字体，保留原始Unicode分片范围\",\n      \"width\": null,\n      \"height\": null,\n      \"status\": \"downloaded\",\n      \"bytes\": 98688,\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"OpenAI及字体作者所有；仅用于本地私人学习。\",\n      \"sha256\": \"038e35aa454e1cc7cb916243018294b8124b4ef264a6d7971ac5fb99f7c0d812\"\n    },\n    {\n      \"file\": \"assets/OpenAISansSC-Variable-002.woff2\",\n      \"sourceUrl\": \"https://cdn.openai.com/common/fonts/openai-sans/v4/zh-hans-v2/OpenAISansSC-Variable-002.woff2\",\n      \"purpose\": \"官方页面字体，保留原始Unicode分片范围\",\n      \"width\": null,\n      \"height\": null,\n      \"status\": \"downloaded\",\n      \"bytes\": 207168,\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"OpenAI及字体作者所有；仅用于本地私人学习。\",\n      \"sha256\": \"eeeaec298e7d0b6915426426d3c1b0930716cf3504e1aa8c0a2fed8e363cbdf5\"\n    },\n    {\n      \"file\": \"assets/OpenAISansSC-Variable-003.woff2\",\n      \"sourceUrl\": \"https://cdn.openai.com/common/fonts/openai-sans/v4/zh-hans-v2/OpenAISansSC-Variable-003.woff2\",\n      \"purpose\": \"官方页面字体，保留原始Unicode分片范围\",\n      \"width\": null,\n      \"height\": null,\n      \"status\": \"downloaded\",\n      \"bytes\": 407616,\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"OpenAI及字体作者所有；仅用于本地私人学习。\",\n      \"sha256\": \"ee710f03293ddde72265975274fbe026ed46ae7edfb91784d15a6f590f9f893b\"\n    },\n    {\n      \"file\": \"assets/OpenAISans-Regular.woff2\",\n      \"sourceUrl\": \"https://cdn.openai.com/common/fonts/openai-sans/v4/OpenAISans-Regular.woff2\",\n      \"purpose\": \"官方页面字体，保留原始Unicode分片范围\",\n      \"width\": null,\n      \"height\": null,\n      \"status\": \"downloaded\",\n      \"bytes\": 53228,\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"OpenAI及字体作者所有；仅用于本地私人学习。\",\n      \"sha256\": \"6b99d0284d5ed15733ea855fdacc8503d1f5e1b3945b02317d27773daa21d9dc\"\n    },\n    {\n      \"file\": \"assets/OpenAISansSC-Variable-000.woff2\",\n      \"sourceUrl\": \"https://cdn.openai.com/common/fonts/openai-sans/v4/zh-hans-v2/OpenAISansSC-Variable-000.woff2\",\n      \"purpose\": \"官方页面字体，保留原始Unicode分片范围\",\n      \"width\": null,\n      \"height\": null,\n      \"status\": \"downloaded\",\n      \"bytes\": 87432,\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"OpenAI及字体作者所有；仅用于本地私人学习。\",\n      \"sha256\": \"d67ef2bcf85571c4b19805372cff8f21c79fcbef1df8ea2cabe86f97a675815c\"\n    },\n    {\n      \"file\": \"assets/OpenAISans-Medium.woff2\",\n      \"sourceUrl\": \"https://cdn.openai.com/common/fonts/openai-sans/v4/OpenAISans-Medium.woff2\",\n      \"purpose\": \"官方页面字体，保留原始Unicode分片范围\",\n      \"width\": null,\n      \"height\": null,\n      \"status\": \"downloaded\",\n      \"bytes\": 56184,\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"OpenAI及字体作者所有；仅用于本地私人学习。\",\n      \"sha256\": \"507174d2e2c80f877d900e1346ba142509d303e2ef74424665e8493258c841e3\"\n    },\n    {\n      \"file\": \"assets/OpenAISans-Bold.woff2\",\n      \"sourceUrl\": \"https://cdn.openai.com/common/fonts/openai-sans/v4/OpenAISans-Bold.woff2\",\n      \"purpose\": \"官方页面字体，保留原始Unicode分片范围\",\n      \"width\": null,\n      \"height\": null,\n      \"status\": \"downloaded\",\n      \"bytes\": 55624,\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"OpenAI及字体作者所有；仅用于本地私人学习。\",\n      \"sha256\": \"2c23db1a93945fcb96f6826518848da0cc884787e4e308d9c099122c8c7e247e\"\n    },\n    {\n      \"file\": \"assets/logo.svg\",\n      \"sourceUrl\": \"https://chatgpt.com/zh-Hans-CN/overview/\",\n      \"purpose\": \"CUA原样提取的官网ChatGPT完整结标与字标\",\n      \"width\": 118,\n      \"height\": 28,\n      \"status\": \"downloaded\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"OpenAI所有；仅本地私人学习，无品牌关联。\",\n      \"bytes\": 5432,\n      \"sha256\": \"dc10140b09b0eb10c0eab2917093d5586773007924d07a18622360f926744bde\"\n    },\n    {\n      \"file\": \"assets/overview-chat-scribble.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/46OL5XNwj1B8TqA1j0oPz3/16d05587849176ec583a56840d420904/overview-chat-scribble.png?w=624&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 624,\n      \"height\": 354,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 21184,\n      \"status\": \"downloaded\",\n      \"sha256\": \"a6c2eb5a151d1405c40e93b1adebb2573bc3d1c6963667232aba12fc6a2b7d2a\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/star-large-light.svg\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/57FeBcFXgPOKDCxMLOK6zi/971fb95b0e3429e3b8fd00392633f022/star-large-light.svg\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/svg+xml\",\n      \"bytes\": 2170,\n      \"status\": \"downloaded\",\n      \"sha256\": \"c03db0d6b8e7dbd55f34d53831f134f9bfa1bca31951146bca8b50ab9916223b\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/merge-chat-shape.svg\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/17IadccoyUbGUvibis7OOM/687a885b60824f488304812ae47d55f1/merge-chat-shape.svg\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/svg+xml\",\n      \"bytes\": 1004,\n      \"status\": \"downloaded\",\n      \"sha256\": \"259a8a6c68bfffc8a1eb88333a243a289758c6022139236fccd2859422b53e7e\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/overview-chat-tomato.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/bKupmufUqyeIDpkYjvhlU/21c7755eb73e5eefa5eef61749454b79/overview-chat-tomato.png?w=465&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 465,\n      \"height\": 465,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 24254,\n      \"status\": \"downloaded\",\n      \"sha256\": \"3d28d2c13476f60134416b13c76d0873ef15b310e40e319a3bd1ea569670bb60\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/star-small-light.svg\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/2VZNskwrVw1zCRzdRqkuIv/2f53ce7519e9fd076da0d9a15e3afaf7/star-small-light.svg\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/svg+xml\",\n      \"bytes\": 2199,\n      \"status\": \"downloaded\",\n      \"sha256\": \"358eb27453d8218daded76f549c187450276682d8e5986519cd4553d606a5fb9\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/overview-chat-flower.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/4UDURoWUgAWiSJ6F1hf53t/049d619a8f5b141ac65d119a68aaa940/overview-chat-flower.png?w=408&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 408,\n      \"height\": 432,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 18026,\n      \"status\": \"downloaded\",\n      \"sha256\": \"bafe8660446fe90c556cd10351f65ebf9940957f0f44f089f99e61f085abace5\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/card-writing.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/1sBJ42aQ4ofKEnoqpyMApc/7248fda129dab216bcceca8957bd1184/Card_-_Writing.png?w=740&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 740,\n      \"height\": 740,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 126466,\n      \"status\": \"downloaded\",\n      \"sha256\": \"0a3d0cddf0abb1a00b81d4b84361687d062cbc100466aaf5fe1efa07b7fbd8a8\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/card-work-opt-4.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/54XCI5FXyq0NqVBKvvlAjp/c671df40e48d3ffa7bee784d3def9b27/Card_-_Work_-_opt_4.png?w=740&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 740,\n      \"height\": 740,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 67740,\n      \"status\": \"downloaded\",\n      \"sha256\": \"60f0d1698186d5d49fc34ac792c273419735f382546add7137c0de4ea4e16a57\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/card-images.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/5lA5vcIG3jm1OS0UjCDGmx/ff63ca6fa6ad13440dc62b2b90c56b37/Card_-_Images.png?w=740&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 740,\n      \"height\": 740,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 115992,\n      \"status\": \"downloaded\",\n      \"sha256\": \"17d41b6b142434808d429b3c75ec261cdf2ea8f178b5275fbae33cc10f3eeadc\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/card-coding-opt-4.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/5H92KlZdXjRaOf8eeg1wQu/90c073bfb4f38916a5e12c7f6d441388/Card_-_Coding_-_opt_4.png?w=740&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 740,\n      \"height\": 740,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 84538,\n      \"status\": \"downloaded\",\n      \"sha256\": \"7fad25d5f779db00dd64838fefc2540fd9cf3b9ed1e214e68651ac48305c1b7c\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/card-voice-opt-2.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/6HgENqZjft6N6WzAeTj4sN/3c5d5722bcab2ae2ebecf49d31e20749/Card_-_Voice_-_opt_2.png?w=740&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 740,\n      \"height\": 740,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 95128,\n      \"status\": \"downloaded\",\n      \"sha256\": \"63742a5768a4fa4bb2461ee21219401da156ce1c9402738a973f514f387939b8\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/card-finance.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/728fhdV3M06axfUPcnQokG/4046dcc504eff769f98cadaafb1c0460/Card_-_Finance.png?w=740&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 740,\n      \"height\": 818,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 63010,\n      \"status\": \"downloaded\",\n      \"sha256\": \"e40512b3817c601da1477a96a624d4763966cc28d2497964702810d86a4761d0\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/card-health-opt-5.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/6eEz4h5QALn71tmTvvhzvL/87f0138cfcb211d673ec062ba200fda0/Card_-_Health_-_opt_5.png?w=740&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 740,\n      \"height\": 740,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 107344,\n      \"status\": \"downloaded\",\n      \"sha256\": \"3f1f70b4b634c27df29d89a0b9bdd192c44a991e5ca4fcda7f9794ac4a595bb7\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/merge-work-shape-transparent.svg\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/17h8E6C0ckWtXNL9HHlZkz/a972e52057dec675947524d730eba020/merge-work-shape-transparent.svg\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/svg+xml\",\n      \"bytes\": 1060,\n      \"status\": \"downloaded\",\n      \"sha256\": \"72127a339ffe9ddc373576b5b7721ba42f5633f7a730fa128f9f2f55675a21b4\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/merge-work-deck.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/23VoabJqNdvqHDMcURWBtG/f00f791a284ddd3806035fcdbddddf17/merge-work-deck.png?w=1335&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 1335,\n      \"height\": 273,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 73576,\n      \"status\": \"downloaded\",\n      \"sha256\": \"d5094e37ead1aa21a4131f9b6025ad1f0d8ec163faf723d21d4f2b5785664861\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/merge-work-preso.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/4wl78Dke0cglYlNJOaXSyI/49fe1af38fe6b0052b9949ca7b1208d5/merge-work-preso.png?w=800&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 800,\n      \"height\": 451,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 13756,\n      \"status\": \"downloaded\",\n      \"sha256\": \"2fa5d0d9e940099c106badd5d06aa22d85e15da377d620200e798c5b1248dec9\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/merge-code-ascii.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/OfeFsbDMqSO7SofA1BTvr/ba2c0d1722bd19740badd42f93f0bd03/merge-code-ascii.png?w=427&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 427,\n      \"height\": 468,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 12982,\n      \"status\": \"downloaded\",\n      \"sha256\": \"e2c150a7dcf63782073225a34ce75e6ba732f06180e10622ee97e8893f4dd7e2\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/code-light.svg\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/1Yy4ZuiECCNqCKagaz9c26/a30982bb64f73821a006370effb35b5b/code-light.svg\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/svg+xml\",\n      \"bytes\": 159885,\n      \"status\": \"downloaded\",\n      \"sha256\": \"edc0f72129f34fc7056c4cdac524570b5ecfbe77561ea933b11d915c5b235a75\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/globe-light.svg\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/1yFnBTm7luLXge4TIWSiyg/6622540216e02d5f4c6973a8b38a4a51/globe-light.svg\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/svg+xml\",\n      \"bytes\": 2790,\n      \"status\": \"downloaded\",\n      \"sha256\": \"938562e1c728f809964883d5110b17f328558da63094365b2c4eabab5c61f343\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/merge-code-picker-light-1.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/21Euyi6IPikyjAULhHdeLa/8bfb8f2bc147bc32284127b7882f86fa/merge-code-picker-light__1_.png?w=668&q=80&fm=webp\",\n      \"purpose\": \"官方独立动效层或用途卡片；保持原始透明度、比例与图形\",\n      \"width\": 668,\n      \"height\": 344,\n      \"copyright\": \"OpenAI 及原作者所有；私人设计学习，非官方网站。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 51632,\n      \"status\": \"downloaded\",\n      \"sha256\": \"c4d1fdbb2d2d86eb09d1a7fb887d8034dbfc7fd44a2ad994665e6c9798df02c5\",\n      \"processing\": \"原始字节；扩展名按实际格式修正，未重绘。\"\n    },\n    {\n      \"file\": \"assets/chat-dark.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/2xYBCD3PoQOWTR7xAp41vu/cfa61c4d6fa4454a92c3e2e7676c2de1/Chat.png?w=1920&q=80&fm=webp\",\n      \"purpose\": \"Original system-dark desktop preview\",\n      \"bytes\": 72234,\n      \"sha256\": \"870ce210692941e1c32e0a090d2a090fb017b2fff88c54e52e0494c30a2158fa\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/work-dark.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/5rUikUj6mdESFNqKytDg4M/d195063204532ebc2358d8b9e8273436/Work_dark.png?w=1920&q=80&fm=webp\",\n      \"purpose\": \"Original system-dark desktop preview\",\n      \"bytes\": 68222,\n      \"sha256\": \"987ad827ca7135534a2e8ae0a584714ef081ec5fbeba26136187e09dc789e6b9\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/code-dark.webp\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/13UxXUQxZPAAh1cSOnnyn7/bc5bfb76deafc62090f2676d5637491e/Code_dark.png?w=1920&q=80&fm=webp\",\n      \"purpose\": \"Original system-dark desktop preview\",\n      \"bytes\": 171766,\n      \"sha256\": \"c61448ec07cf0cab5106ea7487c813e9229c1ee9253e14446d3d575cb230d049\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/star-large-dark.svg\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/46wiuW4Q8b55VuW7kiOlJc/c0a982d9f81d12b9a7799ca569c49f4a/star-large-dark.svg\",\n      \"purpose\": \"Original system-dark star decoration\",\n      \"bytes\": 2170,\n      \"sha256\": \"b8d092d87c62b3d1d93a7545319aa22b90b5921ba9961ea52ad04a375a3ad43a\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/star-small-dark.svg\",\n      \"sourceUrl\": \"https://images.ctfassets.net/8su2tbn87fck/7zYKWwz8dQFLsiaAuHEETj/5e36787f1ec04232ca5f6428c1c94804/star-small-dark.svg\",\n      \"purpose\": \"Original system-dark star decoration\",\n      \"bytes\": 2199,\n      \"sha256\": \"9ea212ca7c8845b6609f7ccd13c35d9fae9f8a2ee44952592c789d02577a242b\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    }\n  ]\n}",
+      "sha256": "5752a04d81618f3bd09409c4eec42ef4dd2f316e3715bdbdcad7c7d2afda9098",
+      "bytes": 23930
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/chatgpt-platform/assets-manifest.json",
+      "role": "context",
+      "sha256": "5752a04d81618f3bd09409c4eec42ef4dd2f316e3715bdbdcad7c7d2afda9098",
+      "bytes": 23930
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/OpenAISans-Bold.woff2",
+      "role": "asset",
+      "sha256": "2c23db1a93945fcb96f6826518848da0cc884787e4e308d9c099122c8c7e247e",
+      "bytes": 55624
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/OpenAISans-Medium.woff2",
+      "role": "asset",
+      "sha256": "507174d2e2c80f877d900e1346ba142509d303e2ef74424665e8493258c841e3",
+      "bytes": 56184
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/OpenAISans-Regular.woff2",
+      "role": "asset",
+      "sha256": "6b99d0284d5ed15733ea855fdacc8503d1f5e1b3945b02317d27773daa21d9dc",
+      "bytes": 53228
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/OpenAISansSC-Variable-000.woff2",
+      "role": "asset",
+      "sha256": "d67ef2bcf85571c4b19805372cff8f21c79fcbef1df8ea2cabe86f97a675815c",
+      "bytes": 87432
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/OpenAISansSC-Variable-001.woff2",
+      "role": "asset",
+      "sha256": "038e35aa454e1cc7cb916243018294b8124b4ef264a6d7971ac5fb99f7c0d812",
+      "bytes": 98688
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/OpenAISansSC-Variable-002.woff2",
+      "role": "asset",
+      "sha256": "eeeaec298e7d0b6915426426d3c1b0930716cf3504e1aa8c0a2fed8e363cbdf5",
+      "bytes": 207168
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/OpenAISansSC-Variable-003.woff2",
+      "role": "asset",
+      "sha256": "ee710f03293ddde72265975274fbe026ed46ae7edfb91784d15a6f590f9f893b",
+      "bytes": 407616
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/card-coding-opt-4.webp",
+      "role": "asset",
+      "sha256": "7fad25d5f779db00dd64838fefc2540fd9cf3b9ed1e214e68651ac48305c1b7c",
+      "bytes": 84538
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/card-finance.webp",
+      "role": "asset",
+      "sha256": "e40512b3817c601da1477a96a624d4763966cc28d2497964702810d86a4761d0",
+      "bytes": 63010
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/card-health-opt-5.webp",
+      "role": "asset",
+      "sha256": "3f1f70b4b634c27df29d89a0b9bdd192c44a991e5ca4fcda7f9794ac4a595bb7",
+      "bytes": 107344
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/card-images.webp",
+      "role": "asset",
+      "sha256": "17d41b6b142434808d429b3c75ec261cdf2ea8f178b5275fbae33cc10f3eeadc",
+      "bytes": 115992
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/card-voice-opt-2.webp",
+      "role": "asset",
+      "sha256": "63742a5768a4fa4bb2461ee21219401da156ce1c9402738a973f514f387939b8",
+      "bytes": 95128
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/card-work-opt-4.webp",
+      "role": "asset",
+      "sha256": "60f0d1698186d5d49fc34ac792c273419735f382546add7137c0de4ea4e16a57",
+      "bytes": 67740
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/card-writing.webp",
+      "role": "asset",
+      "sha256": "0a3d0cddf0abb1a00b81d4b84361687d062cbc100466aaf5fe1efa07b7fbd8a8",
+      "bytes": 126466
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/chat-dark.webp",
+      "role": "asset",
+      "sha256": "870ce210692941e1c32e0a090d2a090fb017b2fff88c54e52e0494c30a2158fa",
+      "bytes": 72234
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/chat.webp",
+      "role": "asset",
+      "sha256": "95494793b1e5985a8838f36cfdd11243c73fde5b79a0a9e76c284058c26daf0e",
+      "bytes": 67800
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/code-dark.webp",
+      "role": "asset",
+      "sha256": "c61448ec07cf0cab5106ea7487c813e9229c1ee9253e14446d3d575cb230d049",
+      "bytes": 171766
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/code-light.svg",
+      "role": "asset",
+      "sha256": "edc0f72129f34fc7056c4cdac524570b5ecfbe77561ea933b11d915c5b235a75",
+      "bytes": 159885
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/code.webp",
+      "role": "asset",
+      "sha256": "abcf7a498fd22236ee99211faa06106f1b6f3d1a81e9417587152fbae1ba303c",
+      "bytes": 152266
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/globe-light.svg",
+      "role": "asset",
+      "sha256": "938562e1c728f809964883d5110b17f328558da63094365b2c4eabab5c61f343",
+      "bytes": 2790
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/logo.svg",
+      "role": "asset",
+      "sha256": "dc10140b09b0eb10c0eab2917093d5586773007924d07a18622360f926744bde",
+      "bytes": 5432
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/merge-chat-shape.svg",
+      "role": "asset",
+      "sha256": "259a8a6c68bfffc8a1eb88333a243a289758c6022139236fccd2859422b53e7e",
+      "bytes": 1004
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/merge-code-ascii.webp",
+      "role": "asset",
+      "sha256": "e2c150a7dcf63782073225a34ce75e6ba732f06180e10622ee97e8893f4dd7e2",
+      "bytes": 12982
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/merge-code-picker-light-1.webp",
+      "role": "asset",
+      "sha256": "c4d1fdbb2d2d86eb09d1a7fb887d8034dbfc7fd44a2ad994665e6c9798df02c5",
+      "bytes": 51632
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/merge-work-deck.webp",
+      "role": "asset",
+      "sha256": "d5094e37ead1aa21a4131f9b6025ad1f0d8ec163faf723d21d4f2b5785664861",
+      "bytes": 73576
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/merge-work-preso.webp",
+      "role": "asset",
+      "sha256": "2fa5d0d9e940099c106badd5d06aa22d85e15da377d620200e798c5b1248dec9",
+      "bytes": 13756
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/merge-work-shape-transparent.svg",
+      "role": "asset",
+      "sha256": "72127a339ffe9ddc373576b5b7721ba42f5633f7a730fa128f9f2f55675a21b4",
+      "bytes": 1060
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/overview-chat-flower.webp",
+      "role": "asset",
+      "sha256": "bafe8660446fe90c556cd10351f65ebf9940957f0f44f089f99e61f085abace5",
+      "bytes": 18026
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/overview-chat-scribble.webp",
+      "role": "asset",
+      "sha256": "a6c2eb5a151d1405c40e93b1adebb2573bc3d1c6963667232aba12fc6a2b7d2a",
+      "bytes": 21184
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/overview-chat-tomato.webp",
+      "role": "asset",
+      "sha256": "3d28d2c13476f60134416b13c76d0873ef15b310e40e319a3bd1ea569670bb60",
+      "bytes": 24254
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/scribble.webp",
+      "role": "asset",
+      "sha256": "a6c2eb5a151d1405c40e93b1adebb2573bc3d1c6963667232aba12fc6a2b7d2a",
+      "bytes": 21184
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/star-large-dark.svg",
+      "role": "asset",
+      "sha256": "b8d092d87c62b3d1d93a7545319aa22b90b5921ba9961ea52ad04a375a3ad43a",
+      "bytes": 2170
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/star-large-light.svg",
+      "role": "asset",
+      "sha256": "c03db0d6b8e7dbd55f34d53831f134f9bfa1bca31951146bca8b50ab9916223b",
+      "bytes": 2170
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/star-small-dark.svg",
+      "role": "asset",
+      "sha256": "9ea212ca7c8845b6609f7ccd13c35d9fae9f8a2ee44952592c789d02577a242b",
+      "bytes": 2199
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/star-small-light.svg",
+      "role": "asset",
+      "sha256": "358eb27453d8218daded76f549c187450276682d8e5986519cd4553d606a5fb9",
+      "bytes": 2199
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/work-dark.webp",
+      "role": "asset",
+      "sha256": "987ad827ca7135534a2e8ae0a584714ef081ec5fbeba26136187e09dc789e6b9",
+      "bytes": 68222
+    },
+    {
+      "path": "demos/chatgpt-platform/assets/work.webp",
+      "role": "asset",
+      "sha256": "f0dc48fe86037abd2558b13717a5ee0fb8f8212e4d9f00adb82831ac0a839d69",
+      "bytes": 66072
+    },
+    {
+      "path": "demos/chatgpt-platform/fidelity.md",
+      "role": "context",
+      "sha256": "2e56c98186f5798fd01b43c56b74b8f7574d03abd2ad910781760ecdd2e289b2",
+      "bytes": 4358
+    },
+    {
+      "path": "demos/chatgpt-platform/fonts.css",
+      "role": "source",
+      "sha256": "8be5f05344fbcc9a07c40f324d376ae091c36f2c82735bc167e96fe1382a23cf",
+      "bytes": 17437
+    },
+    {
+      "path": "demos/chatgpt-platform/index.html",
+      "role": "source",
+      "sha256": "6a1b201a7f2eb1c5e0112c7c6d91953eb30c4825d2400489fb4ae3b0968a1fac",
+      "bytes": 8596
+    },
+    {
+      "path": "demos/chatgpt-platform/motion-data.js",
+      "role": "source",
+      "sha256": "c284b8665eda36f34c1a25998fe6908eab7e3caa29c5e240d0aa81a843f1e90e",
+      "bytes": 7317
+    },
+    {
+      "path": "demos/chatgpt-platform/script.js",
+      "role": "source",
+      "sha256": "a7e8264985c2cf670d128e35e832efbe8d389e9ce24e245e41c49454b256e351",
+      "bytes": 16304
+    },
+    {
+      "path": "demos/chatgpt-platform/style.css",
+      "role": "source",
+      "sha256": "1f18f84890205c0f6f88a26ff32fb4ed681aeb428a18d3883fb3ad813a83cb9f",
+      "bytes": 19037
+    },
+    {
+      "path": "entries/chatgpt-platform.json",
+      "role": "context",
+      "sha256": "e2b4e4e8dd6db1cf2935a7b7a6b768c20ef0882d5b4483885d511a5979a3cc05",
+      "bytes": 9796
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/chatgpt-platform.jpg",
+      "role": "preview",
+      "sha256": "d899106ffd7b22b10632a1746db8109ca30682ea7bd8d7553f4fcab22f818d3d",
+      "bytes": 74773
+    },
+    {
+      "path": "previews/mobile/chatgpt-platform.jpg",
+      "role": "preview",
+      "sha256": "209d079dfeb29f6f9bd09c4cc06f323aa91e27948094c7ae2260482a2bdd5e2e",
+      "bytes": 33990
+    },
+    {
+      "path": "prompts/chatgpt-platform.md",
+      "role": "context",
+      "sha256": "753e3feee8331a62fc04df0a68aefa2c5c953fce52d366cac2194eaf4f246aed",
+      "bytes": 2440
+    },
+    {
+      "path": "research/chatgpt-platform.md",
+      "role": "context",
+      "sha256": "2e56c98186f5798fd01b43c56b74b8f7574d03abd2ad910781760ecdd2e289b2",
+      "bytes": 4358
+    },
+    {
+      "path": "research/screenshots/chatgpt-official-initial.jpg",
+      "role": "preview",
+      "sha256": "da1ab10fe3d5de78bb176c05587e672febcb1a0aa81d2a9c10d84d981f10606c",
+      "bytes": 48152
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=chatgpt-platform\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官方 OpenAI Sans SC 4个Unicode分片及英文字体；中文主标题89px、5行、紧行距。</dd></div><div class=\"\"><dt>布局留白</dt><dd>首屏标题和拼贴 → 约 2000px+视口的居中/交接/说明长段 → 用途横向架子 → 价格 → 安全 → 结束行动 → 页尾；上下方向可逆。手机改为原生三模式横向卡片，再顺序浏览相同后续内容。</dd></div><div class=\"\"><dt>图像图标</dt><dd>可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。</dd></div><div class=\"\"><dt>线条形状</dt><dd>圆胶囊按钮、黑色环与直线渐变下划线、圆角界面图。</dd></div><div class=\"\"><dt>信息层级</dt><dd>可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。；选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。；向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。；桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。</dd></div><div class=\"\"><dt>scroll</dt><dd>首屏标题和拼贴 → 约 2000px+视口的居中/交接/说明长段 → 用途横向架子 → 价格 → 安全 → 结束行动 → 页尾；上下方向可逆。手机改为原生三模式横向卡片，再顺序浏览相同后续内容。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。</li><li>配色、文字密度、边框与选中状态共同表达本页面的产品语气。</li><li>动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。</li><li>第一方素材保持比例；手机保留原站实际变体。</li></ul><h3>怎样凸显产品重点</h3><p>围绕Chat、Work、Codex三合一展开：日常对话、可交付工作成果、代码改动评审。</p><h3>主题与情绪</h3><p>跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。</p></section><section><h2>02 / 交互巧思</h2><ul><li>首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。</li><li>选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。</li><li>向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。</li><li>桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。</li><li>手机使用三卡原生横向滚动，标题选择定位相应卡片；桌面 sticky rail 不出现在手机。导航保持桌面即时开关和手机全屏分层列表。</li><li>用途架子保留原生横滑及左右按钮；后续价格、安全、结束行动与页尾为普通滚动。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>跟随系统</h3><p>跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。</p><p>可操作的中文标题、分模式周边拼贴，以及同一产品窗口从居中舞台移向右侧、让出左侧说明的联动。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>此介绍页没有背景音乐、音频或影片。</p><p>利用运动和空间关系串联能力，声音不是此页叙事的一部分。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。</li><li>720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。</li><li>品牌与官方素材仅用于此个人参考库；归档来源与权利。</li><li>减少动态保留可读内容、键盘焦点和手动选择。</li></ul><h3>适合</h3><p>多能力AI产品介绍 / 功能转向的品牌叙事 / 中文字体与超大排版研究</p><h3>谨慎使用</h3><p>把ChatGPT首页想象为一张聊天输入框 / 随意改造OpenAI结标 / 所有功能只用渐变blob表现 / 只点按钮换图而忽略周围元素飞入飞出 / 给所有网站套同一种滚动淡入动画</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#070707\"></i>#070707</span><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#f5f5f5\"></i>#f5f5f5</span><span class=\"swatch\"><i style=\"background:#c4a4f2\"></i>#c4a4f2</span><span class=\"swatch\"><i style=\"background:#00a6d3\"></i>#00a6d3</span></div><p><b>字体</b> · 官方 OpenAI Sans SC 4个Unicode分片及英文字体；中文主标题89px、5行、紧行距。<br><b>布局</b> · 64px导航；居中5行巨字；全宽多层拼贴；2000px+100svh滚动段内中央窗口交接至左说明/右界面；七用途横向卡片架。<br><b>动效</b> · 公开图层720ms cubic-bezier(.22,1,.36,1)，36/42/48px视差与500/1000/1500分段参考。本地退出500ms、交叉淡化500ms及连续滚动插值；不劫持滚轮。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>以 https://chatgpt.com/zh-Hans-CN/overview/ 在【采集日期】的 简体中文公开介绍页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留 64px 导航、五行中文标题、每个中文字符各自的当前模式强调色与原始字标/字体。20 个官方独立素材按模式使用不同坐标、比例、层级和手机几何；进场与离场分开，快速选择不堆积离场层。主窗口以垂直卡片切换；悬停选择释放后保留模式。长段必须连续保留首屏拼贴、滚动带入、拼贴收束、同一 sticky 窗口阈值触发向右下移动、左侧 rail 出现，以及三段说明/图像/进度同步；顶层模式与 rail 状态独立。手机使用原生横向三卡，不强塞桌面长段。按系统主题切换桌面真实界面图片；原站没有配乐。减少动态时停止自动运动并保留所有内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。</p></details><h3>改造练习</h3><p>以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://chatgpt.com/zh-Hans-CN/overview/\" target=\"_blank\" rel=\"noopener noreferrer\">ChatGPT 当前公开页面 ↗</a><small>采集日期 2026-10-07；简体中文公开介绍页</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://openai.com/brand/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI Design Guidelines ↗</a><small>字标比例、留白和OpenAI Sans的几何与人文品牌语气。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/accordion/\" target=\"_blank\" rel=\"noopener noreferrer\">WAI Accordion Pattern ↗</a><small>左侧说明的展开状态和原生button语义；方向键及Home/End为本地增强。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fchatgpt-platform.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "9df6684db632c313b6fcd272f9886d2d7a4c1aef7e11b383f8ffef6221c1ab4b",
+    "bytes": 10508
+  }
+}

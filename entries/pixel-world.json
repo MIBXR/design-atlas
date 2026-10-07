@@ -100,6 +100,7 @@
   "negativePrompt": "不要平滑缩放像素图、随机混合像素尺度、把照片马赛克当作像素美术、隐藏于Canvas的唯一导航、不可读中文小字或自动播放音效。",
   "demo": "demos/pixel-world/index.html",
   "preview": "previews/pixel-world.jpg",
+  "theoryVerifiedAt": "2026-10-07",
   "research": "research/pixel-world.md",
   "exercise": "为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。",
   "composition": {

@@ -5,9 +5,9 @@ import {loadAssetSources} from './build-asset-sources.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(root, 'dist');
-const files = ['index.html', 'atlas.css', 'atlas.js', 'theme.js', 'catalog.js', 'fundamentals.html', 'fundamentals.css', 'fundamentals.js', 'document.html', 'document.js', 'favicon.svg', 'README.md', 'CONTRIBUTING.md'];
+const files = ['index.html', 'atlas.css', 'atlas.js', 'theme.js', 'catalog.js', 'fundamentals.html', 'fundamentals.css', 'fundamentals.js', 'document.html', 'document.js', 'favicon.svg', 'README.md', 'CONTRIBUTING.md', 'agent.html', 'agent.css', 'agent.js', 'AGENT.md', 'llms.txt'];
 const runtimeFiles = ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.js', 'case-loading.css'];
-const folders = ['demos', 'entries', 'previews', 'research', 'prompts', 'docs', 'vendor'];
+const folders = ['demos', 'entries', 'previews', 'research', 'prompts', 'docs', 'vendor', 'agent'];
 const localOrigin = 'https://design-atlas.invalid';
 
 function regularTree(source) {

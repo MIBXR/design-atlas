@@ -34,6 +34,18 @@
 
 ![从观察到复用](docs/readme/workflow.webp)
 
+## Agent 直接取材
+
+网页保留人工预览与比较；Agent 可通过 [工作流入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html)、[结构化索引](agent/catalog.json) 和按案例生成的完整上下文取得设计依据。原始条目、原 Prompt、研究、复现边界与带 SHA256 的文件清单一起读取，源码与媒体按需获取。
+
+```sh
+node scripts/atlas.mjs search "深色 产品" --limit 3
+node scripts/atlas.mjs show linear-workflow --source
+node scripts/atlas.mjs export linear-workflow --out ../linear-reference
+```
+
+命令只需 Node.js，无需安装依赖。完整导出保留运行所需相对路径和原始素材；`--code-only` 会明确列出尚未导出的媒体。数据契约与真实任务适配方法见 [AGENT.md](AGENT.md)。独立 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas) 保存获取脚本与固定上游提交，完整案例仍在本仓库，支持无需克隆整个库的远程读取。
+
 ## 案例画廊
 
 图片进入对应在线案例，文字链接可直接阅读 Prompt、研究与代码。品牌页面是注明范围的局部学习还原，经典语言是有真实参考与理论依据的构成练习。
