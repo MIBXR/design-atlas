@@ -4,6 +4,12 @@ import { fileURLToPath } from 'node:url';
 import {buildAgent} from './build-agent.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const entries = fs.readdirSync(path.join(root,'entries')).filter(x=>x.endsWith('.json')).map(x=>JSON.parse(fs.readFileSync(path.join(root,'entries',x),'utf8'))).sort((a,b)=>a.order-b.order);
+const referenceCount = entries.filter(entry=>entry.implementation==='reference-study').length;
+const readmePath = path.join(root,'README.md');
+const readme = fs.readFileSync(readmePath,'utf8');
+const counts = `<!-- atlas-counts:start -->\n**${entries.length} 个案例**　·　**${referenceCount} 个真实品牌／文化页面**　·　**${entries.length-referenceCount} 种经典设计语言**\n<!-- atlas-counts:end -->`;
+if(!readme.includes('<!-- atlas-counts:start -->') || !readme.includes('<!-- atlas-counts:end -->'))throw new Error('README case count markers are missing');
+fs.writeFileSync(readmePath,readme.replace(/<!-- atlas-counts:start -->[\s\S]*?<!-- atlas-counts:end -->/,counts),'utf8');
 fs.writeFileSync(path.join(root,'catalog.js'), 'window.DESIGN_ATLAS = ' + JSON.stringify(entries,null,2) + ';\n');
 fs.mkdirSync(path.join(root, 'prompts'), {recursive:true});
 for (const entry of entries) {

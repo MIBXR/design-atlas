@@ -7,9 +7,10 @@ snapshots; their fidelity boundaries and asset attribution travel with each case
 - [Agent workflow](AGENT.md): keyword search, complete context, source retrieval and export.
 - [Catalog](agent/catalog.json): candidate summaries and case bundle paths/hashes.
 - [Human preview](index.html): interactive browsing, comparisons and demos.
-- [Skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas): lightweight workflow with a pinned upstream commit.
+- [Skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas): explore the latest catalog, refine candidates through conversation, and retrieve complete context within one pinned session.
 
 Read catalog first, then agent/cases/<id>.json. Case bundles preserve the original
 entry, full documents, and files with bytes/SHA256. Get source only when selected.
-Use one full GitHub commit SHA for catalog, bundle and files when reproducibility
-is required. Adapt mechanisms to actual user requirements and owned assets.
+Resolve the latest default-branch SHA at the start of a new session, then use
+that same SHA for catalog, bundle and files. Refresh explicitly to discover
+newly added cases. Adapt mechanisms to actual user requirements and owned assets.
