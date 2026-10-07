@@ -170,6 +170,7 @@ demos/<id>/                   HTML、CSS、JS与本地图片／字体／音视�
   assets-manifest.json        公开来源、用途、处理方式、字节数、SHA256
 previews/                     案例桌面与手机预览
 docs/readme/                  本README配图
+vendor/                       固定版本的Markdown解析库、HTML清理库与许可证
 fundamentals.*                可操作的设计元素实验室
 catalog.js                    自动生成的浏览器目录
 scripts/                      本机服务、目录生成、静态构建与资产检查

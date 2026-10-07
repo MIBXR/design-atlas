@@ -3,3 +3,4 @@
 *.png binary
 # Preserve checksum-verified third-party bytes, including original whitespace.
 demos/**/assets/** -text -whitespace
+vendor/** -text -whitespace
