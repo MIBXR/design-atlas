@@ -1,0 +1,110 @@
+{
+  "id": "philharmonie-music",
+  "order": 28,
+  "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
+  "subtitle": "Video Games & Music + Carte blanche à George Benjamin",
+  "category": "艺术/文化",
+  "country": "法国",
+  "tags": [
+    "法国",
+    "音乐厅",
+    "音乐展",
+    "音乐会",
+    "活动详情",
+    "侧栏票务"
+  ],
+  "summary": "真实实访Video Games & Music展览详情、季节目与音乐会，复现蓝色横幅、中心品牌标识、上浮票务侧栏与活动介绍；另包含George Benjamin音乐会节目。",
+  "accent": "#be244f",
+  "background": "#f0f0f0",
+  "principles": [
+    "活动主视觉与日期先建立情境，票务侧栏与介绍承担不同任务。",
+    "中心下垂品牌标识贯穿两层导航，区别于左角产品Logo。",
+    "蓝色图像渐变保持白色标题可读，粉红/酒红胶囊承担预约操作。",
+    "展览以现场摄影证明体验，音乐会以人物、阵容和节目单提供不同内容。"
+  ],
+  "productFocus": "音乐展的互动体验和访问时间，以及音乐会的日期、演出阵容与节目。右侧票务区域支持快速查阅时间/价格，正文保留观展体验和真实图片。",
+  "interaction": [
+    "时段、Tarifs与无障碍详情为原生折叠内容，可键盘展开。",
+    "展览图库前后按钮切换两张官方现场摄影并更新计数。",
+    "音乐会Programme & distribution展开真实节目单；主菜单定位展览/音乐会/交通，返回顶部按钮使用原生滚动。"
+  ],
+  "theme": "海军蓝、白色内容面板、酒红票务胶囊和官方Philharmonique字形，活动主视觉提供游戏色彩。",
+  "constraints": [
+    "使用官方Video Games & Music主图、展览摄影、George Benjamin摄影与sprite品牌标识。",
+    "桌面主图625px高，左正文约2/3，右侧白色16px圆角票务面板跨越主图和内容边界。",
+    "手机导航精简，票务面板进入正常流优先显示，不粘在窄屏覆盖正文。",
+    "音乐会日期须来自真实详情；历史Juke-box场次不当作未来可预订事件。",
+    "原站视频受第三方cookie控制，本地不嵌入YouTube或追踪脚本。",
+    "只有原生滚动，无闪烁像素特效；reduce motion关闭平滑滚动。"
+  ],
+  "useCases": [
+    "文化活动详情",
+    "音乐会/音乐展门户",
+    "有丰富节目单的票务介绍"
+  ],
+  "avoid": [
+    "需要仿造售票结果的演示",
+    "把展览和音乐会内容抽象成同样卡片的页面"
+  ],
+  "tokens": {
+    "palette": [
+      "#001b3b",
+      "#ffffff",
+      "#f0f0f0",
+      "#be244f",
+      "#fdafe3"
+    ],
+    "type": "大写标题使用官方 Philharmonique Regular/Bold；正文使用 Arial，原站 Source Sans Pro 未下载。Philharmonique 缺小写字形，不用于正文。",
+    "layout": "双层导航中轴字标 → 蓝色横幅 → 2:1介绍/上浮sticky票务 → 当前音乐会 → 交通信息。",
+    "motion": "图库为手动切换，native details展开；无自动影像或滚动劫持。"
+  },
+  "sources": [
+    {
+      "title": "Video Games & Music exhibition — official detail",
+      "url": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+      "type": "实例",
+      "note": "2026-10-07 CUA实访桌面/390px；点击Horaires/Tarifs核验内容，主图和现场摄影从当前DOM提取。展览日期Apr2–Nov1 2026。"
+    },
+    {
+      "title": "Philharmonie saison 26/27",
+      "url": "https://philharmoniedeparis.fr/fr/programmation/saison-26-27",
+      "type": "实例",
+      "note": "实访官方季节目，发现音乐会详情链接；不将所有季节目当作当前未结束场次。"
+    },
+    {
+      "title": "Carte blanche à George Benjamin — official detail",
+      "url": "https://philharmoniedeparis.fr/fr/activite/concert/29485-carte-blanche-george-benjamin",
+      "type": "实例",
+      "note": "web与CUA双核验23 Oct2026 20h00、阵容、四部节目及约2h含1intermission；正式图片源来自CDN。"
+    },
+    {
+      "title": "W3C WAI Disclosure Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "type": "规范",
+      "note": "展开按钮控制内容可见性，按钮状态应对应展开/折叠；本地使用原生details/summary或button加aria-expanded。是实现规范，不能证明机构使用该设计理论。"
+    }
+  ],
+  "prompt": "以2026-10-07实访的巴黎爱乐厅Video Games & Music法语展览详情为基准，使用官方游戏手柄字母主视觉、两张Joachim Bertrand现场摄影、官方Philharmonique Regular/Bold大写标题与sprite字标；正文使用完整小写字形的Arial替代原站Source Sans Pro，禁止将大写展示字体套到正文，另将真实George Benjamin音乐会作为相关文化内容。桌面保留48px深蓝快速导航、105px白色主导航、中间174×197px下垂品牌区域；625px活动主图加下缘海军蓝渐变，左下38px大写活动名和23px日期，右侧白色16px圆角票务面板上浮约254px。正文左宽右窄约2:1，侧栏原生sticky，但禁止滚动锁屏。票务包含真实日期、预约官网链接和Horaires/Tarifs/无障碍折叠行；图库手动前后切两张原图。音乐会区用George Benjamin真人图、23Oct2026 20h00、阵容和可展开的四部节目。390px简化导航中轴字标、主图约380px，票务进入正常文档流置正文之前，图库与节目单单列。prefers-reduced-motion关闭平滑滚动，不加载追踪和第三方视频。版权与本地学习说明放页末，预约跳转官方站点。",
+  "negativePrompt": "不要把音乐展做成像素游戏伪官网，不捏造演出日期，不模拟购票成功，不用同一软件产品模板排列所有文化内容，不将Dark Reader黑底当作原始品牌设计。",
+  "demo": "demos/philharmonie-music/index.html",
+  "preview": "previews/philharmonie-music.jpg",
+  "referencePreview": "research/screenshots/philharmonie-music-source.jpg",
+  "research": "research/philharmonie-music.md",
+  "exercise": "再选择一场经过官方核验的音乐会，对照节目/阵容结构，保留展览与音乐会信息表达差异。",
+  "composition": {
+    "color": "官方CSS核验海军蓝#001b3b、白色面板、#be244f票务和#fdafe3支持入口。",
+    "typography": "官方Philharmonique标题大写，正文保持分段；原站部分正文Source Sans Pro，本地该部分有字体差异。",
+    "layout": "主视觉左下活动名，右侧票务面板上浮；长正文与侧栏分工，手机票务回到文档流。",
+    "imagery": "真实游戏手柄字母CG主图、Joachim Bertrand展览现场、Matthew Lloyd的George Benjamin摄影。",
+    "shape": "品牌标识下垂矩形、16px圆角内容/票务块、长胶囊按钮；非所有内容统一卡片。",
+    "hierarchy": "大活动名和日期识别主题，预约按钮和折叠时间/价格解决到访问题，照片和节目单提供内容深度。",
+    "motion": "保留菜单、折叠详情和手动图库；原站音乐会自动轮播被改为静态照片，差异明确说明。",
+    "coherence": "统一中轴品牌与蓝色基础，展览用互动现场图、音乐会用阵容/节目单，跨内容类型保持不同表达。"
+  },
+  "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+  "implementation": "reference-study",
+  "fidelity": "demos/philharmonie-music/fidelity.md",
+  "assetManifest": "demos/philharmonie-music/assets-manifest.json",
+  "edition": "2026-10-07；法语展览与音乐会详情",
+  "referencePreviewNote": "原站截图受 Dark Reader 扩展影响；本地原配色依据官方 CSS。详见复现说明。"
+}

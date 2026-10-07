@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-10-07T06:55:40.302Z",
+  "method": "CUA Edge browser: rendered DOM metrics, visible interaction checks and screenshots",
+  "baseUrl": "http://127.0.0.1:4173/demos/philharmonie-music/",
+  "desktopPreview": "previews/philharmonie-music.jpg",
+  "mobilePreview": "previews/mobile/philharmonie-music.jpg",
+  "pass": true,
+  "desktop": {
+    "bookingPosition": "sticky",
+    "bookingRect": {
+      "height": 453.8000183105469,
+      "width": 428.1125183105469,
+      "x": 961.0750122070312,
+      "y": 554
+    },
+    "brandFont": true,
+    "brokenImages": [],
+    "documentWidth": 1425,
+    "fontStatus": "loaded",
+    "heroHeight": 625,
+    "overflowX": false,
+    "scrollWidth": 1425,
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    },
+    "bodyFont": "Arial, sans-serif",
+    "titleFont": "Philharmonique, Arial, sans-serif"
+  },
+  "hours": {
+    "open": true,
+    "text": "HorairesHors vacances scolairesDu mardi au jeudi : 12h–19hVendredi : 12h–21hSamedi et dimanche : 10h–19hConsultez le site officiel pour les horaires des vacances."
+  },
+  "tariffs": {
+    "open": true,
+    "text": "TarifsTarif plein : 15 €Tarifs réduits : 11 € / 9 € / 6 €Conditions et gratuité : voir le site officiel.Observation du 7 octobre 2026.Consulter les tarifs ↗"
+  },
+  "gallery": {
+    "counter": "2 / 2",
+    "loaded": true,
+    "source": "assets/installation-2.jpg"
+  },
+  "program": {
+    "compositionCount": 4,
+    "concertDate": "23 Oct2026 — 20h00",
+    "open": true,
+    "performers": "Sir George Benjamin, directionJohn Stulz, altoChisato Taniguchi, piano"
+  },
+  "mobile": {
+    "bookingPosition": "static",
+    "brokenImages": [],
+    "documentWidth": 375,
+    "heroHeight": 380,
+    "overflowX": false,
+    "scrollWidth": 375,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "menuOpened": "true",
+    "bodyFont": "Arial, sans-serif",
+    "titleFont": "Philharmonique, Arial, sans-serif"
+  }
+}

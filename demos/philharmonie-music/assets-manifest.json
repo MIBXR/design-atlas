@@ -1,0 +1,92 @@
+{
+  "brand": "philharmonie-music",
+  "sourcePage": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+  "scope": "2026-10-07匿名官方页面实访所观察的公开媒体与字体，离线私人学习副本。",
+  "assets": [
+    {
+      "file": "assets/exhibition.jpg",
+      "sourceUrl": "https://deneb.philharmoniedeparis.fr/uploads/images/cache/event_large/rc/sNtV2RNk/uploads/images/69babed760b9e_VGM_1600x633_no-text%202.jpg",
+      "purpose": "Video Games & Music主视觉：Feelings / Périmètre",
+      "width": 1600,
+      "height": 633,
+      "format": "jpeg",
+      "bytes": 54269,
+      "sha256": "dea172e5511c8a2f801d43789d52731a9ad3aa5ea728ed848b0f1e7458ef5c0f",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/installation-1.jpg",
+      "sourceUrl": "https://deneb.philharmoniedeparis.fr/uploads/images/69ce25aa002bd_20260401Expo_VideoGames&Music_0011.jpg",
+      "purpose": "展览现场照片：Joachim Bertrand",
+      "width": 1200,
+      "height": 800,
+      "format": "jpeg",
+      "bytes": 670143,
+      "sha256": "266f3809b8be589777918e8a698f94ff0fcd91ce000b0ab6d330a8ca34124695",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/installation-2.jpg",
+      "sourceUrl": "https://deneb.philharmoniedeparis.fr/uploads/images/69ce25e438128_20260401Expo_VideoGames&Music_0027.jpg",
+      "purpose": "展览现场照片：Joachim Bertrand",
+      "width": 1200,
+      "height": 800,
+      "format": "jpeg",
+      "bytes": 636095,
+      "sha256": "0507010bbfc6191484c708efebe1718ae790fe53bf173762e1b69dc8887e9621",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/benjamin.jpg",
+      "sourceUrl": "https://deneb.philharmoniedeparis.fr/uploads/images/cache/event_large/rc/aMbxhgrn/uploads/images/Sir-George-Benjamin-by-Matthew-Lloyd.jpg",
+      "purpose": "当前音乐会George Benjamin摄影：Matthew Lloyd",
+      "width": 1600,
+      "height": 633,
+      "format": "jpeg",
+      "bytes": 197241,
+      "sha256": "c2dc63961e6efee6650c298fc5e8de3f3280e7d86b6ade74deec5e411290bb19",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/sprite.svg",
+      "sourceUrl": "https://philharmoniedeparis.fr/themes/custom/pdp_theme/images/sprite.svg?v1.0",
+      "purpose": "官方品牌标识与UI图标sprite",
+      "width": 2000,
+      "height": 2000,
+      "format": "svg",
+      "bytes": 188042,
+      "sha256": "3e7a154ae39aafabcc8f5e5557e72b4bbd6078cec70a694b40eefef0be162b05",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/philharmonique.otf",
+      "sourceUrl": "https://philharmoniedeparis.fr/themes/custom/pdp_theme/fonts/Philharmonique/Philharmonique-Regular.otf",
+      "purpose": "官方常规字体",
+      "bytes": 14784,
+      "sha256": "18a99b8e12401294f95ad89e097c7046179b108bd50d0deb4d445011fb48db58",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/philharmonique-bold.otf",
+      "sourceUrl": "https://philharmoniedeparis.fr/themes/custom/pdp_theme/fonts/Philharmonique/Philharmonique-Bold.otf",
+      "purpose": "官方粗体字体",
+      "bytes": 15020,
+      "sha256": "ec971549eb5d93174563d51d44f46f2b2310344c30c82ef3706d681114dcfeaf",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    }
+  ]
+}
