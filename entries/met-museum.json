@@ -1,0 +1,102 @@
+{
+  "id": "met-museum",
+  "order": 27,
+  "title": "The Met · 编辑式展览与馆藏陈列",
+  "subtitle": "A museum homepage as an editorial exhibition shelf",
+  "category": "艺术/文化",
+  "country": "美国",
+  "tags": [
+    "美国",
+    "艺术馆",
+    "衬线字体",
+    "编辑排版",
+    "展览海报",
+    "The Met"
+  ],
+  "summary": "以官网英文主页为基准，复现建筑摄影、Austin衬线欢迎区、四列参观信息、无卡框横向展览海报和馆藏作品陈列。",
+  "accent": "#e4002b",
+  "background": "#ffffff",
+  "principles": [
+    "大建筑照片先给地点与尺度，再在独立白底区域提供欢迎语与行动。",
+    "Austin衬线大标题承载文化语气，Inter无衬线负责操作和实用信息。",
+    "参观成本、交通、导览和开放状态并列而不盖在照片上。",
+    "海报本身已含展览视觉，外围保持简洁、方角、图下标签。"
+  ],
+  "productFocus": "到访纽约实体馆、正在展览与代表馆藏。先解决实用参观问题，再让展览海报和作品自然展开选择。",
+  "interaction": [
+    "顶层Visit/Exhibitions/Art打开对应链接面板；手机菜单整合入口。",
+    "左右按钮操作横向海报/馆藏展架，触控原生横向浏览。",
+    "展览预览弹窗切换官方海报与观察时展期；搜索弹窗筛选章节，语言弹窗链接官方中文页。"
+  ],
+  "theme": "白底、Met红、黑灰编辑排版；建筑摄影、衬线标题与方角海报形成文化机构语气。",
+  "constraints": [
+    "标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。",
+    "首屏建筑图与欢迎标题分开；桌面双CTA右对齐，手机转单列。",
+    "四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。",
+    "展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。",
+    "日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。",
+    "官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。"
+  ],
+  "useCases": [
+    "大型博物馆门户",
+    "展览信息目录",
+    "出版与编辑型机构首页"
+  ],
+  "avoid": [
+    "缺少真实作品的纯视觉着陆页",
+    "需要自动滚动制造戏剧效果的产品页"
+  ],
+  "tokens": {
+    "palette": [
+      "#ffffff",
+      "#292929",
+      "#606060",
+      "#e4002b"
+    ],
+    "type": "官方Austin Medium用于欢迎标题；官方Inter Latin用于正文与按钮。",
+    "layout": "建筑宽幅摄影 → 白底大标题双CTA → 4列实用信息 → 横向展览/馆藏 → 会员区域。",
+    "motion": "手动横向展架与原生锚点，无自动切换；reduced-motion切换为即时。"
+  },
+  "sources": [
+    {
+      "title": "The Met official English homepage",
+      "url": "https://www.metmuseum.org/en",
+      "type": "实例",
+      "note": "2026-10-07 CUA实访；官网按浏览器语言初转中文，明确访问/en得到英语结构；Root保存干净IAB1440×1000截图。"
+    },
+    {
+      "title": "The Met Image and Data Resources",
+      "url": "https://www.metmuseum.org/policies/image-resources",
+      "type": "规范",
+      "note": "Open Access政策区分公众领域作品与仍受限制作品，识别OA标记。这里不将官方海报、字体或主页摄影称为CC0。"
+    },
+    {
+      "title": "W3C WAI Disclosure Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "type": "规范",
+      "note": "展开按钮控制内容可见性，按钮状态应对应展开/折叠；本地使用原生details/summary或button加aria-expanded。是实现规范，不能证明机构使用该设计理论。"
+    }
+  ],
+  "prompt": "以2026-10-07的The Met英语首页为对象制作局部研究，必须使用assets内真实建筑观众摄影、四张当前展览海报、三张代表馆藏、官方Met字标、Austin Medium和Inter字体。首段为宽幅建筑照片，上覆透明渐变导航；第二段在白底安排左侧约68px Austin衬线欢迎标题与右侧红色/细边双CTA，之后四列图标加实用参观信息，明确观察日。展览区不采用卡片底色或大圆角：横向海报带下方标题、展期，下一张露出；馆藏图用较高比例和较小题注；会员区域才使用轻边框大区域。实现顶层导航展开、本地章节搜索、展览预览弹窗、手动左右浏览；到访/会员操作打开官方站点。390px改白色粘顶导航、43px标识、单列标题和信息，海报占可视宽约86%，横向滚动限定展架。保留prefers-reduced-motion即时滚动、原生dialog Escape、清晰焦点。研究说明和版权仅放页末，不占据主页欢迎区。",
+  "negativePrompt": "不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。",
+  "demo": "demos/met-museum/index.html",
+  "preview": "previews/met-museum.jpg",
+  "referencePreview": "research/screenshots/met-museum-source.jpg",
+  "research": "research/met-museum.md",
+  "exercise": "用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。",
+  "composition": {
+    "color": "白底黑灰字和红色操作层，图像保持展览自己的颜色。",
+    "typography": "Austin衬线大标题与Inter目录型小文本产生编辑层级。",
+    "layout": "建筑照片约725px高；欢迎区左右分工；展架外框为白底而不是UI卡片。",
+    "imagery": "官方Sanity CDN建筑/展览海报与Met collection API藏品图，均本地化。",
+    "shape": "方角海报与细边CTA，会员区域仅一个轻边框圆角区域。",
+    "hierarchy": "照片定位实体空间，欢迎区提供行动，实用信息减轻到访决策，展览海报吸引浏览。",
+    "motion": "横向展览保留相邻海报露出提示浏览；本地增手动左右按钮和预览弹窗。",
+    "coherence": "字形分工、Met红操作与白底图下文字一致，馆藏照片与海报使用不同图像比例。"
+  },
+  "referenceUrl": "https://www.metmuseum.org/en",
+  "implementation": "reference-study",
+  "fidelity": "demos/met-museum/fidelity.md",
+  "assetManifest": "demos/met-museum/assets-manifest.json",
+  "edition": "2026-10-07；英语公开官网局部"
+}

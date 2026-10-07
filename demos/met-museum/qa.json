@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-07T06:55:40.298Z",
+  "method": "CUA Edge browser: rendered DOM metrics, visible interaction checks and screenshots",
+  "baseUrl": "http://127.0.0.1:4173/demos/met-museum/",
+  "desktopPreview": "previews/met-museum.jpg",
+  "mobilePreview": "previews/mobile/met-museum.jpg",
+  "pass": true,
+  "desktop": {
+    "austin": true,
+    "background": "rgb(255, 255, 255)",
+    "brokenImages": [],
+    "documentWidth": 1425,
+    "fontStatus": "loaded",
+    "h1": "68.4px",
+    "inter": true,
+    "overflowX": false,
+    "scrollWidth": 1425,
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  "menu": {
+    "links": "Plan your visitTickets and admission ↗Become a Member",
+    "panelOpen": true
+  },
+  "rail": {
+    "clientWidth": 1282,
+    "left": 1253.5999755859375,
+    "passed": true,
+    "scrollWidth": 2536
+  },
+  "exhibition": {
+    "imageLoaded": true,
+    "open": true,
+    "title": "Costume Art"
+  },
+  "mobile": {
+    "brokenImages": [],
+    "documentWidth": 375,
+    "h1": "42px",
+    "headerPosition": "sticky",
+    "heroHeight": 300,
+    "overflowX": false,
+    "scrollWidth": 375,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "menuOpened": true,
+    "ticketTextColor": "rgb(255, 255, 255)"
+  }
+}

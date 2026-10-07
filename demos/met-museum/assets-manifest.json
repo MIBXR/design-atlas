@@ -1,0 +1,141 @@
+{
+  "brand": "met-museum",
+  "sourcePage": "https://www.metmuseum.org/en",
+  "scope": "2026-10-07匿名官方页面实访所观察的公开媒体与字体，离线私人学习副本。",
+  "assets": [
+    {
+      "file": "assets/facade.webp",
+      "sourceUrl": "https://cdn.sanity.io/images/cctd4ker/production/5ba8ee17b1b20bc28666117a93f3022a14dd9a0d-5120x2880.png?w=1920&q=75&auto=format",
+      "purpose": "首页建筑/观众照片",
+      "width": 1920,
+      "height": 1080,
+      "format": "png",
+      "bytes": 4332852,
+      "sha256": "484cc95125260e8da1e9828b4757b7812b6cb7f94cd1b8d9167a899ebc528951",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/pollock.webp",
+      "sourceUrl": "https://cdn.sanity.io/images/cctd4ker/production/8cc67ac247e9b8feec057c9398c48e546f2aa1bd-5120x2880.jpg?w=750&q=75&fit=clip&auto=format",
+      "purpose": "Krasner/Pollock展览海报",
+      "width": 750,
+      "height": 422,
+      "format": "jpeg",
+      "bytes": 62179,
+      "sha256": "85c576be20449dbe187a62dcbae835ab7c63d0228eae0b2b3bc64c8a24103162",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/costume.webp",
+      "sourceUrl": "https://cdn.sanity.io/images/cctd4ker/production/d25918d32e91614f036dc86e1e6624c790860b0b-5120x2880.jpg?w=750&q=75&fit=clip&auto=format",
+      "purpose": "Costume Art展览海报",
+      "width": 750,
+      "height": 422,
+      "format": "jpeg",
+      "bytes": 31731,
+      "sha256": "11faf8f6473b043f8a48ea8cf44827cfadbba35dfe9d1308aa05e0ebddbf085b",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/orientalism.webp",
+      "sourceUrl": "https://cdn.sanity.io/images/cctd4ker/production/1421654e887b123f803467dc6f4f82ff77a915dd-5120x2880.jpg?w=750&q=75&fit=clip&auto=format",
+      "purpose": "Orientalism展览海报",
+      "width": 750,
+      "height": 422,
+      "format": "jpeg",
+      "bytes": 38771,
+      "sha256": "237cdb88c9108bd2b99c7ef0d514ba6a5af5f1743c0028f945e02767cbaef375",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/liu-wei.webp",
+      "sourceUrl": "https://cdn.sanity.io/images/cctd4ker/production/e4305e41bf4ce6b1eb4b19d800637efb9dae65de-5120x2880.jpg?w=750&q=75&fit=clip&auto=format",
+      "purpose": "Liu Wei展览海报",
+      "width": 750,
+      "height": 422,
+      "format": "jpeg",
+      "bytes": 48130,
+      "sha256": "7f8c7b6763552673c9bcc020ebebbf935ef1a5e7770854ae24dde85d9c8402a2",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/dendur.jpg",
+      "sourceUrl": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/547802/1223802/main-image",
+      "purpose": "Dendur藏品摄影",
+      "width": 899,
+      "height": 1200,
+      "format": "jpeg",
+      "bytes": 202579,
+      "sha256": "2c89d7d21ff3cfba8c932fa710c51fa0fc2a3e439704b383885c5cdcd6644481",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/vangogh.jpg",
+      "sourceUrl": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image",
+      "purpose": "Van Gogh自画像藏品摄影",
+      "width": 964,
+      "height": 1200,
+      "format": "jpeg",
+      "bytes": 588545,
+      "sha256": "fc3764e14b0e84b0045f1a5b81f1a012a405a976ecb6f8746c79dcaf50b576ac",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/washington.jpg",
+      "sourceUrl": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11417/42494/main-image",
+      "purpose": "Leutze藏品摄影",
+      "width": 1200,
+      "height": 703,
+      "format": "jpeg",
+      "bytes": 124052,
+      "sha256": "749a477299d448cdd06f2b36a91b6409042c67f0b74f190bf4db71f5c860aa9e",
+      "retrievedAt": "2026-10-07",
+      "status": "downloaded",
+      "copyright": "品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。"
+    },
+    {
+      "file": "assets/logo.svg",
+      "sourceUrl": "https://www.metmuseum.org/en",
+      "purpose": "从官方DOM提取完整SVG字标；只移除浏览器扩展标记并固定独立文件颜色",
+      "bytes": 2889,
+      "sha256": "52f46a9d4bafefd61166300743898a09dcbcb0b96a37e2101b3d0a7000a5e11a",
+      "retrievedAt": "2026-10-07",
+      "status": "extracted",
+      "copyright": "官方品牌标识，私人设计学习。"
+    },
+    {
+      "file": "assets/inter.woff2",
+      "sourceUrl": "https://www.metmuseum.org/_next/static/immutable/media/83afe278b6a6bb3c-s.p.45535valc9rzk.woff2",
+      "purpose": "IAB pageAssets下载的官方Inter Latin正文字体",
+      "status": "bundled",
+      "retrievedAt": "2026-10-07",
+      "copyright": "官方站点使用的许可字型，私人学习副本；不授权再分发。",
+      "bytes": 48432,
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4"
+    },
+    {
+      "file": "assets/austin.woff2",
+      "sourceUrl": "https://www.metmuseum.org/_next/static/immutable/media/Austin_Medium_Web-s.p.2ougkg-w8ab0g.woff2",
+      "purpose": "IAB pageAssets下载的官方Austin Medium欢迎标题字体",
+      "status": "bundled",
+      "retrievedAt": "2026-10-07",
+      "copyright": "官方站点使用的许可字型，私人学习副本；不授权再分发。",
+      "bytes": 46381,
+      "sha256": "ffff3293a02235e597ef4a93b9bee4f63fff7cfad4300c6166d16bc92a866465"
+    }
+  ]
+}
