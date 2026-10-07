@@ -1,0 +1,211 @@
+{
+  "sourceDate": "2026-10-07",
+  "scope": "真实官网公开资源的私人学习局部复现",
+  "assets": [
+    {
+      "file": "character-background.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/dc85837c078f0e7dfc5531962cb36f9c_5927172609859244015.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "青绿色角色舞台背景",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 225730,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 2500,
+      "height": 1080,
+      "dimensions": [
+        2500,
+        1080
+      ],
+      "format": "WEBP",
+      "sha256": "5a288303e1a1c5c571d362cf476d567be909202408438bb1c0bcd2430321c35a"
+    },
+    {
+      "file": "character-1.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/9bdc3c554f889f659a3b94683c05e92d_8192922460449094200.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "当前角色 Vesna 立绘",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 181604,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 871,
+      "height": 1395,
+      "dimensions": [
+        871,
+        1395
+      ],
+      "format": "WEBP",
+      "sha256": "7b187102c054c90f7514a6d602c9e8ba1bff95a6cc1cb9c1b0bfeb13c25a6fc7"
+    },
+    {
+      "file": "page-background.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/0aff804d2728a8293e5961952bc14775_4881624822253980338.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "专题页面背景",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 425002,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 2500,
+      "height": 1080,
+      "dimensions": [
+        2500,
+        1080
+      ],
+      "format": "WEBP",
+      "sha256": "6f0c0c16718de3407d563a46ffc9df1c6a83493567f8cbb8d30b38b8e35afb38"
+    },
+    {
+      "file": "character-2.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/b95b19fcdf945b8caa0fc66884edb7a6_5475339125680283814.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "专题第二角色立绘",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 238726,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 1269,
+      "height": 1478,
+      "dimensions": [
+        1269,
+        1478
+      ],
+      "format": "WEBP",
+      "sha256": "2f6e3c048d15c79ba0f9f82d4a27c82d8b6d5061f1fd5f24ff6d5e3f8abecbb0"
+    },
+    {
+      "file": "calendar-frame.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/01b128216769de69bf54fccf498f9802_2059141327448545956.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "活动日历装饰框",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 55476,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 1300,
+      "height": 862,
+      "dimensions": [
+        1300,
+        862
+      ],
+      "format": "WEBP",
+      "sha256": "905f9d33d5d882a0d38b712cad4990c0155e83b14603aa9df3caea2657304ee2"
+    },
+    {
+      "file": "download.webp",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/03/50a4a15df1a160549f8415c2c7ce4faa_5883995896586970059.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "首屏 PC 下载按钮底图",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 31438,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 616,
+      "height": 119,
+      "dimensions": [
+        616,
+        119
+      ],
+      "format": "WEBP",
+      "sha256": "20e348cc92b047e996635a23ad49108e78802dc67e6c0d1a2bb65e729de54d9f"
+    },
+    {
+      "file": "hero-title.webp",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/ef7453f416a198eec8024de5d82ce86a_1287853403652777100.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "A Rekviem for the Underworld 官方标题",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 341036,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 1517,
+      "height": 638,
+      "dimensions": [
+        1517,
+        638
+      ],
+      "format": "WEBP",
+      "sha256": "5a570e5c0be6a22604e870900561ea55710d89ef2b5dcd7c72c1e9b504f27705"
+    },
+    {
+      "file": "logo.webp",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/47dc03396c45624c1db24ed53ff9956a_321404236429501657.png?x-oss-process=image/format,webp/quality,Q_90",
+      "use": "原神官方 logo",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 9610,
+      "contentType": "image/webp",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 233,
+      "height": 134,
+      "dimensions": [
+        233,
+        134
+      ],
+      "format": "WEBP",
+      "sha256": "666d700644755d00b7f61e82bbf60b6985e3a9d2bdedb19e1383e1a33855f88c"
+    },
+    {
+      "file": "hero-poster.jpg",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/02/30e2fbabdbd3ec4c0acc1cc07fc75a38_7419228018401278241.mp4?x-oss-process=video/snapshot,t_1,f_jpg,m_fast",
+      "use": "官网首屏视频官方 CDN 生成的静态首帧",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 179117,
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 2500,
+      "height": 1080,
+      "dimensions": [
+        2500,
+        1080
+      ],
+      "format": "JPEG",
+      "sha256": "e8bc3407e9c61b29b31ec4c7cf59e70b89da2922bfd9f3d2a59d9cfbe5e443a1"
+    },
+    {
+      "file": "calendar.jpg",
+      "url": "https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/cbd76868ab305a67fb7200715929040c_5299020819173600412.jpg",
+      "use": "7.1 官方活动日历",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 592436,
+      "contentType": "image/jpeg",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 2158,
+      "height": 1200,
+      "dimensions": [
+        2158,
+        1200
+      ],
+      "format": "JPEG",
+      "sha256": "40d350f541c823ead20f9563833cf9349cd0d888565c8172d641d5acdfb991d5"
+    },
+    {
+      "file": "hero.mp4",
+      "url": "https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/02/30e2fbabdbd3ec4c0acc1cc07fc75a38_7419228018401278241.mp4",
+      "use": "官网当前专题首屏视频，默认静音",
+      "owner": "HoYoverse / miHoYo",
+      "bytes": 3598213,
+      "contentType": "video/mp4",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 2500,
+      "height": 1080,
+      "durationSeconds": 3.0,
+      "hasAudio": false,
+      "sha256": "ce8f953bf73f2a0a559ece45b6b0dd31a6ed82d3f1df48d13c4943f77d4a1b8d",
+      "dimensions": [
+        2500,
+        1080
+      ]
+    }
+  ],
+  "limitations": [
+    "只实现版本首屏、两张角色立绘和活动日历，未复现武器、奖励领取、账号和分享服务。",
+    "第二角色文字尚未独立核验，明确标作第二位官网角色，未推测其名称。",
+    "首屏官方mp4为3秒静音动态主视觉，不是完整宣传片；未声称获取当前专题BGM。",
+    "本地View More为说明对话框；完整角色技能与有声PV链接回官方专题。"
+  ]
+}
