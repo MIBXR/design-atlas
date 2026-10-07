@@ -1,0 +1,159 @@
+{
+  "sourcePage": "https://www.2121designsight.jp/",
+  "retrievedAt": "2026-10-07",
+  "purpose": "官方公开网页资产用于个人本地学习；不代表商用授权",
+  "assets": [
+    {
+      "file": "assets/img_symbol.png",
+      "sourceUrl": "https://www.2121designsight.jp/assets2017/common/imgs/img_symbol.png",
+      "bytes": 5107,
+      "width": 426,
+      "height": 118,
+      "type": "image/png",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "ce999753f19b59fd53be11861925811a9e37be5c78c89ce69969c5bb509c211e"
+    },
+    {
+      "file": "assets/slide_hojoki-thumb-1280xauto-8283.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2026/07/slide_hojoki-thumb-1280xauto-8283.jpg",
+      "bytes": 622044,
+      "width": 1280,
+      "height": 720,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "1fef9a68f7dc8a48e2db43eb134003b451345c3285713a78ef27b30f15dbaba8"
+    },
+    {
+      "file": "assets/A-POC_2121_G3_2026_JAXAproject_KV_W1280H720px_ToGO-thumb-1280xauto-8340.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2026/09/A-POC_2121_G3_2026_JAXAproject_KV_W1280H720px_ToGO-thumb-1280xauto-8340.jpg",
+      "bytes": 877705,
+      "width": 1280,
+      "height": 720,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "face730bf3f06da2c7cbad1128b52ef736bddc2b91d11827ee727870fb2fe30a"
+    },
+    {
+      "file": "assets/top_information-thumb-630xauto-7221.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2021/07/top_information-thumb-630xauto-7221.jpg",
+      "bytes": 245621,
+      "width": 630,
+      "height": 473,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "bb4ea2ae0555e9c33e04a1f404d393163aa2200f24c4ddf35aa31e0a3fe6c472"
+    },
+    {
+      "file": "assets/jp_map-thumb-500x326-7547.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2023/05/jp_map-thumb-500x326-7547.jpg",
+      "bytes": 42535,
+      "width": 500,
+      "height": 326,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "fc0c3323cefa62e0f03fd6872eb625f6c32cf239e19a4c774baff90371263830"
+    },
+    {
+      "file": "assets/about_top-thumb-630xauto-5883.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2017/03/about_top-thumb-630xauto-5883.jpg",
+      "bytes": 32658,
+      "width": 630,
+      "height": 369,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "0687caa44470f4cb978fe4dbf4bc540001dbdf5805fbebe9bae3063127648db0"
+    },
+    {
+      "file": "assets/about_directors-thumb-500x333-5880.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2017/03/about_directors-thumb-500x333-5880.jpg",
+      "bytes": 169350,
+      "width": 500,
+      "height": 333,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "0970ca2b5b2c114f1a944b2514ca03810e2735ddf9c3b7369028987a519d939c"
+    },
+    {
+      "file": "assets/tour_architecture-thumb-500x333-8287.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2026/07/tour_architecture-thumb-500x333-8287.jpg",
+      "bytes": 93502,
+      "width": 500,
+      "height": 333,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "603850ae486f995073c7451ecf09d28791bd3a487f00d6dc3418de119d9badb9"
+    },
+    {
+      "file": "assets/topweb_hojoki-thumb-630xauto-8245.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2026/03/topweb_hojoki-thumb-630xauto-8245.jpg",
+      "bytes": 79266,
+      "width": 630,
+      "height": 891,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "7cc57625e67d5184eac22bae4b4d291b006391630438dd91e9b5989fcd3bc102"
+    },
+    {
+      "file": "assets/events_261025-thumb-630xauto-8334.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2026/09/events_261025-thumb-630xauto-8334.jpg",
+      "bytes": 26074,
+      "width": 630,
+      "height": 362,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "ae2553ecb07721e88b23423d9799e46913d27c1bc09946e3821dabc4489990b0"
+    },
+    {
+      "file": "assets/time_topweb-thumb-630xauto-8306.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2026/08/time_topweb-thumb-630xauto-8306.jpg",
+      "bytes": 27594,
+      "width": 630,
+      "height": 630,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "1f3deae2d5d66d16653a6f3d4569c5318b28f83bc8e260b183c10c8157a288ef"
+    },
+    {
+      "file": "assets/topweb_type_xvii-thumb-630xauto-8332.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2026/09/topweb_type_xvii-thumb-630xauto-8332.jpg",
+      "bytes": 165118,
+      "width": 630,
+      "height": 892,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "09005d14e42553a201e2d2571f16b618ad947faccd2f519b492a72a694f9991d"
+    },
+    {
+      "file": "assets/research_kyoto-01-thumb-630xauto-8320.jpg",
+      "sourceUrl": "https://www.2121designsight.jp/top/jp/assets_c/2026/09/research_kyoto-01-thumb-630xauto-8320.jpg",
+      "bytes": 68664,
+      "width": 630,
+      "height": 420,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "85f6f9be8cc351de738ce15897d190a0e13f700121696d31470691a6a8ea99d9"
+    },
+    {
+      "file": "assets/source-style.css",
+      "sourceUrl": "https://www.2121designsight.jp/assets2017/style.css",
+      "bytes": 42784,
+      "type": "text/css",
+      "use": "研究原站配色与版式；不被本地HTML加载",
+      "rights": "21_21 DESIGN SIGHT 及作品原作者：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "d5aede0c3dd6e032fa3c67e02a063a18b04dcd1ec3c53462409941782c1c1763"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "design-sight",
+  "order": 23,
+  "title": "21_21 DESIGN SIGHT：海报与四列档案",
+  "subtitle": "日本设计文化机构 · 当前官方海报局部还原",
+  "category": "艺术/文化",
+  "country": "日本",
+  "edition": "日本版 / 2026-10-07主页快照",
+  "implementation": "reference-study",
+  "referenceUrl": "https://www.2121designsight.jp/",
+  "referencePreview": "research/screenshots/design-sight-source.jpg",
+  "fidelity": "demos/design-sight/fidelity.md",
+  "assetManifest": "demos/design-sight/assets-manifest.json",
+  "tags": [
+    "日本",
+    "艺术",
+    "设计展览",
+    "真实还原",
+    "海报",
+    "四列档案",
+    "蓝色标识"
+  ],
+  "summary": "让展览海报主导首屏，蓝色机构标识与四个档案栏目管理不同展览的视觉差异；兼具作品展示与访问信息。",
+  "accent": "#0090df",
+  "background": "#f3f3f3",
+  "principles": [
+    "展览自己的海报保持完整，机构不再用营销大标题重复解释。",
+    "固定白色机构导航与蓝色标识，提供稳定的回看和语言切换入口。",
+    "四列分别承载机构、Gallery 1&2、Gallery 3和Documents；栏目之间对齐，栏目内部图像按原比例展开。",
+    "浅灰地面与白色内容块分离层次，蓝色标题和橙色NEW承担导航与更新提示。"
+  ],
+  "productFocus": "设计文化机构的展览、研究档案、建筑与访问信息；首屏展览先呈现，后续分类帮助查询与回看。",
+  "interaction": [
+    "2张官方海报手动切换，左右箭头、编号按钮与键盘方向键均有效，切换同步官方详情链接。",
+    "手机菜单可打开、关闭和Escape返回按钮。",
+    "四个分类与文章入口实际指向官网，访问信息另设本地锚点。"
+  ],
+  "theme": "机构蓝标识、白色导览、全幅展览海报、浅灰四列档案；图像风格随展览改变，网站的组织规则持续统一。",
+  "constraints": [
+    "明确记录2026-10-07当前日本官网，展期及休馆是快照，不作为实时访问信息。",
+    "首屏不裁成通用两列hero：使用官方1280×720海报，以16:9完整铺开。",
+    "档案图片包含竖海报与横照片，保留各自比例，不强行统一卡片高度。",
+    "官方Logo与展览图像只用于个人本地学习，品牌与作品权利保留。",
+    "四列在760px以下变单列；菜单和轮播提供键盘、焦点与reduced-motion。",
+    "本地不复制自动轮播、原CMS、加载遮罩、统计脚本和购票后端。"
+  ],
+  "useCases": [
+    "设计展览/建筑机构",
+    "海报主导的文化活动",
+    "长期内容档案"
+  ],
+  "avoid": [
+    "以统一圆角SaaS卡片覆盖展览海报",
+    "强制裁齐所有档案缩略图",
+    "把临时展期做成永久事实"
+  ],
+  "tokens": {
+    "palette": [
+      "#0090df",
+      "#ffffff",
+      "#f3f3f3",
+      "#ff9900",
+      "#444444"
+    ],
+    "type": "机构导航与栏目采用克制无衬线；展览海报原有字体作为作品图像保留",
+    "layout": "固定129px白header → 16:9全幅海报 → 1195px四列档案 → 双栏访问信息",
+    "motion": "手动海报切换，无自动推进；reduced-motion关闭平滑滚动"
+  },
+  "sources": [
+    {
+      "title": "21_21 DESIGN SIGHT 官方首页",
+      "url": "https://www.2121designsight.jp/",
+      "type": "实例",
+      "note": "2026-10-07真实浏览器实访桌面/手机/滚动；资产来自当前页面DOM和公开官方CSS，原站source.jpg与本地preview可对照。"
+    },
+    {
+      "title": "21_21 官方：名称与产品Logo设计说明",
+      "url": "https://www.2121designsight.jp/designsight/",
+      "type": "理论",
+      "note": "第一方说明“product logo”借用日常地址牌形象，连接设计场所与日常视点；这是机构自述，不将本地推断冒充作者意图。"
+    },
+    {
+      "title": "IBM Design Language：Layout overview",
+      "url": "https://www.ibm.com/design/language/layout/overview/",
+      "type": "理论",
+      "note": "2026-10-07阅读：元素关系、层级、尺度、比例、对齐与重复。用于解释构图；不把IBM品牌专属规范当普遍规则。"
+    },
+    {
+      "title": "W3C WAI：Carousels Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/carousels/",
+      "type": "规范",
+      "note": "2026-10-07阅读：可操作结构、手动控制、键盘和当前状态提示；本地不自动轮播。"
+    }
+  ],
+  "prompt": "为[设计展览机构/文化档案]制作可回看的网页，先实访目标官方URL并记录展览版本、日期、桌面和手机视图。参考21_21 DESIGN SIGHT：白色固定机构header使用真实授权蓝色牌形标识，导航与语言入口克制排列；首屏让1280×720海报按16:9完整铺开，不叠加营销标题与巨大CTA。不同展览保持自己的字体、图像和配色，机构蓝色负责稳定链接与栏目识别。下方浅灰背景使用1195px内容宽度与四列结构，分别放机构信息、两个展馆和研究档案；每列内部竖海报、横建筑照片按原比例展开，不裁齐统一卡片高度。细蓝色栏目边框、蓝标题、较小日期与橙色NEW形成明确分工。实现至少两张海报手动切换，图像、alt、详情链接和当前状态同步，方向键可用，不自动推进。手机白header缩到约62px，导航折叠为有效菜单，四列自然转为单列。页尾保留访问信息与真实官网链接。所有图像/Logo本地保存并记录来源、尺寸、版权；标注展期为快照，区分官方区域与教学补充，不复制CMS、追踪、加载遮罩或门票交易。支持可见焦点、Escape与prefers-reduced-motion，并提供原站/本地对照与还原边界。",
+  "negativePrompt": "不使用共同SaaS双栏hero模板，不嵌入整站iframe，不伪造官网功能或实时展期，不复制统计/交易脚本，不使用CDN和远程图像运行时依赖。",
+  "demo": "demos/design-sight/index.html",
+  "preview": "previews/design-sight.jpg",
+  "research": "research/design-sight.md",
+  "exercise": "保持海报不变，将四列间距从50px改为25px，观察栏目密度；再把所有缩略图强制裁成同尺寸，记录丢失的展览信息。",
+  "composition": {
+    "color": "蓝色固定机构标识和链接，浅灰承托白色档案，橙色NEW形成更新角色；展览海报拥有自己的配色。",
+    "typography": "导航/分类标题稳定无衬线；海报中中英文字体作为官方原图保留，避免重排破坏作品。",
+    "layout": "129px header、全幅16:9海报、4个等宽但内容不等高的竖列；手机单列。",
+    "imagery": "真实方丈记与TYPE-XVII海报、建筑照片、访问地图、研究照片本地化，保留原比例。",
+    "shape": "机构Logo圆角牌，栏目细蓝边，橙NEW圆；内容块主要矩形。",
+    "hierarchy": "海报先建立当前展览认知，分类其次，标题/日期/说明依次降低；不是每段都有大标题。",
+    "motion": "海报手动切换同步链接/alt/状态；菜单真实展开；仅锚点平滑且支持减少动态。",
+    "coherence": "展览视觉彼此不同，以恒定蓝标识、留白、列宽、标题与内容关系统一成机构档案。"
+  }
+}
