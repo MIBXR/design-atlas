@@ -51,7 +51,7 @@ for(const e of entries){
   for(const match of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)){if(!match[1].trim())continue;try{new vm.Script(match[1]);scripts++;}catch(err){fail(`${e.id}: inline JS ${err.message}`);}}
   for(const file of fs.readdirSync(path.dirname(demoPath)).filter(x=>x.endsWith('.js'))){try{new vm.Script(fs.readFileSync(path.join(path.dirname(demoPath),file),'utf8'));scripts++;}catch(err){fail(`${e.id}: ${file} ${err.message}`);}}
 }
-for(const file of ['atlas.js','catalog.js','fundamentals.js','document.js','theme.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
+for(const file of ['atlas.js','catalog.js','fundamentals.js','document.js','theme.js','asset-sources.js','asset-runtime.js','asset-cache.js','asset-cache-worker.js','case-loading.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
 for(const file of ['index.html','fundamentals.html','document.html']){
   const html=fs.readFileSync(path.join(root,file),'utf8');
   if(!/<meta[^>]+name=["']viewport["']/.test(html))fail(`${file}: missing viewport`);

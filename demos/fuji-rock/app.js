@@ -11,7 +11,7 @@ function loaded(){
   if(motionReduced()){loader.hidden=true;return;}
   loader.animate([{opacity:1},{opacity:0}],{duration:1200,easing:'linear'}).onfinish=()=>loader.hidden=true;
 }
-if(document.readyState==='complete')loaded();else addEventListener('load',loaded,{once:true});
+if(window.CaseLoading)window.CaseLoading.ready.then(loaded);else if(document.readyState==='complete')loaded();else addEventListener('load',loaded,{once:true});
 const menu=document.querySelector('#mega-menu'),toggle=document.querySelector('#menu-toggle');
 const menuPanel=document.createElement('div');menuPanel.className='menu-panel';
 while(menu.firstChild)menuPanel.append(menu.firstChild);menu.append(menuPanel);

@@ -17,4 +17,5 @@
 .atlas-theme-control{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:11px;color:var(--muted)}.atlas-theme-control select{font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:5px;padding:5px 8px;min-height:32px}
 :root[data-atlas-theme=dark] .a-disc{mix-blend-mode:normal}:root[data-atlas-theme=dark] .toast{color:var(--paper)}
 .behavior-block{margin-top:18px;padding-top:12px;border-top:1px solid var(--line)}.behavior-label{font-size:10px;color:var(--muted);letter-spacing:.5px}.behavior-block h3{margin-top:8px}.behavior-block p{margin:6px 0}
+.cache-controls{margin-top:24px;border-top:1px solid var(--line);padding-top:12px}.cache-controls h3{font-size:15px}.cache-controls #cache-status{font-variant-numeric:tabular-nums;color:var(--muted)}
 @media(max-width:650px){.atlas-theme-control{font-size:10px}.atlas-theme-control select{max-width:92px}}

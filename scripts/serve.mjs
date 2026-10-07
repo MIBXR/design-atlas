@@ -12,7 +12,16 @@ http.createServer((req,res) => {
   if (file !== root && !file.startsWith(root + path.sep) || pathname.split('/').some(p => p.startsWith('.'))) { res.writeHead(403); res.end('Forbidden'); return; }
   fs.stat(file,(err,stat) => {
     if(err||!stat.isFile()){res.writeHead(404);res.end('Not found');return;}
-    const headers={'Content-Type':mime[path.extname(file).toLowerCase()]||'application/octet-stream','Cache-Control':'no-store','Accept-Ranges':'bytes'};
+    const etag=`"${stat.size.toString(16)}-${Math.floor(stat.mtimeMs).toString(16)}"`;
+    const headers={'Content-Type':mime[path.extname(file).toLowerCase()]||'application/octet-stream',
+      'Cache-Control':'no-cache','ETag':etag,'Last-Modified':stat.mtime.toUTCString(),'Accept-Ranges':'bytes'};
+    // Revalidate the local file, then reuse downloaded bytes instead of disabling caching.
+    // Changed source files remain visible immediately during authoring.
+    if(!req.headers.range && (req.headers['if-none-match']===etag ||
+      (!req.headers['if-none-match'] && req.headers['if-modified-since'] &&
+       Date.parse(req.headers['if-modified-since'])>=Math.floor(stat.mtimeMs/1000)*1000))){
+      res.writeHead(304,headers);res.end();return;
+    }
     let start=0,end=stat.size-1,status=200;
     if(req.headers.range){
       const match=/^bytes=(\d*)-(\d*)$/.exec(req.headers.range);

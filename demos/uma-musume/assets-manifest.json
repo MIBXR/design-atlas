@@ -215,7 +215,7 @@
     {
       "file": "top_about.mp4",
       "url": "https://umamusume.com/assets/videos/top_about.mp4",
-      "use": "About按钮实际播放的官方PV，包含原始音乐/旁白/剪辑音轨",
+      "use": "About按钮实际播放的官方原始MP4，仅含视频轨道、无音轨；比赛画面与剪辑建立节奏。",
       "owner": "Cygames",
       "bytes": 25860812,
       "sha256": "c893f883aa5652e11dd5da5de8ebc3ac0aacaaa7a23d53a11b262243d3a8155c",
@@ -312,6 +312,6 @@
     "英文首页2026-10-07所见单次归档。",
     "保留首屏、新闻、About真实PV与400ms有界Gameplay轨道；人物/媒体独立栏目以外链打开，没有完整内容服务。",
     "本地键盘、触摸、study菜单和减少动态分支为易用性补充；不宣称原站全部页面复刻。",
-    "没有独立BGM；声音仅点击About开启原PV，关闭/离开前台暂停。"
+    "About原始MP4无音轨，未静音属性不证明有声音；官网其他PV外链的声音未在本地核实。没有独立BGM，关闭/离开前台暂停影片。"
   ]
 }

@@ -1,3 +1,4 @@
+function atlasImage(url){return window.AtlasAssets?window.AtlasAssets.attach(new Image(),url):Object.assign(new Image(),{src:url});}
 // A query override makes the reduced-motion branch reviewable without changing browser settings.
 const motionOverride=new URLSearchParams(location.search).get('motion')==='reduce';
 if(motionOverride)document.documentElement.dataset.motion='reduce';
@@ -10,7 +11,7 @@ let castAnimations=[];function switchCharacter(next){next=Math.max(0,Math.min(ca
 
 
 // The six public star textures and motion parameters follow source modules 175/558/562.
-const royalHero=document.querySelector('.hero'),ambientToggle=document.querySelector('#ambient-toggle');let ambientPaused=motionReduced();const bgCanvas=document.querySelector('#royal-bg-stars'),kvCanvas=document.querySelector('#royal-kv-stars'),bgCtx=bgCanvas.getContext('2d'),kvCtx=kvCanvas.getContext('2d'),textures=Array.from({length:6},(_,i)=>{const im=new Image();im.src='assets/star'+(i+1)+'.png';return im;});let stars=[],kvStars=[],lastY=scrollY,lastTime=0,raf;
+const royalHero=document.querySelector('.hero'),ambientToggle=document.querySelector('#ambient-toggle');let ambientPaused=motionReduced();const bgCanvas=document.querySelector('#royal-bg-stars'),kvCanvas=document.querySelector('#royal-kv-stars'),bgCtx=bgCanvas.getContext('2d'),kvCtx=kvCanvas.getContext('2d'),textures=Array.from({length:6},(_,i)=>{const im=atlasImage('assets/star'+(i+1)+'.png');return im;});let stars=[],kvStars=[],lastY=scrollY,lastTime=0,raf;
 function createStar(y){return{x:Math.random()*innerWidth,y:y??Math.random()*innerHeight+innerHeight,anchor:Math.random(),texture:Math.floor(Math.random()*6),factor:Math.random()*2+1,delay:Math.random()*5000};}
 function resizeStars(){bgCanvas.width=innerWidth;bgCanvas.height=innerHeight;kvCanvas.width=royalHero.clientWidth;kvCanvas.height=royalHero.clientHeight;stars=Array.from({length:15},()=>createStar());const w=kvCanvas.width,h=kvCanvas.height;kvStars=[[100,40],[25,180],[w-100,100],[w-170,h-230],[w/2-530,h-320]].map(([x,y])=>({...createStar(y),x,anchor:.5}));drawStars(lastTime);}
 function renderStars(ctx,items,t){ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);ctx.globalCompositeOperation='screen';for(const s of items){const im=textures[s.texture];if(!im.complete||!im.naturalWidth)continue;const elapsed=Math.max(0,t-s.delay),alpha=motionReduced()?.5:(1-Math.cos(Math.PI*elapsed/3000))/2;ctx.globalAlpha=alpha;ctx.drawImage(im,s.x-im.naturalWidth*s.anchor,s.y,im.naturalWidth,im.naturalHeight);}ctx.globalAlpha=1;}

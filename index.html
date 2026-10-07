@@ -33,5 +33,5 @@
 </main>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-text"></span><button id="compare-go">并排比较 ↗</button><button id="compare-clear" class="text-button">清空</button></div>
 <dialog id="favorite-dialog"><form method="dialog"><button class="dialog-close" aria-label="关闭收藏管理">×</button></form><h2>收藏在你的浏览器中</h2><p>收藏保存为本网站的 localStorage 数据，只包含案例 ID。刷新仍在；浏览器、地址或端口不同会产生独立收藏。清理网站数据会删除收藏，Git 不会自动保存它。</p><button id="favorite-export" class="primary-button">导出收藏 JSON ↓</button><p>导出时，下方也会显示 JSON，方便复制或自行放进 Git 留存。粘贴备份后导入，会合并有效案例 ID：</p><textarea id="favorite-json" aria-label="收藏备份 JSON" placeholder="粘贴导出的 JSON…"></textarea><button id="favorite-import" class="primary-button">导入并合并</button><p id="favorite-status" role="status"></p></dialog><div id="toast" role="status" class="toast"></div>
-<script src="catalog.js"></script><script src="atlas.js"></script>
+<script src="asset-sources.js"></script><script src="asset-runtime.js"></script><script src="asset-cache.js"></script><script src="catalog.js"></script><script src="atlas.js"></script>
 </body></html>

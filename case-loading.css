@@ -1,0 +1,24 @@
+/* Resource readiness precedes the case's own opening choreography. */
+html[data-case-loading="pending"] body{overflow:hidden!important}
+html[data-case-loading="pending"] body>*{visibility:hidden!important}
+html[data-case-loading="pending"] *,html[data-case-loading="pending"] *::before,html[data-case-loading="pending"] *::after{animation-play-state:paused!important}
+html[data-case-loading="pending"] #case-resource-loader,html[data-case-loading="pending"] #case-resource-loader *,html[data-case-loading="pending"] #entry-loader,html[data-case-loading="pending"] #entry-loader *,html[data-case-loading="pending"] #entry-gate,html[data-case-loading="pending"] #entry-gate *,html[data-case-loading="pending"] #loading-screen,html[data-case-loading="pending"] #loading-screen *,html[data-case-loading="pending"] #loader,html[data-case-loading="pending"] #loader *{visibility:visible!important}
+html[data-case-loading="pending"] #entry-gate .sound-choice{pointer-events:none}
+#case-resource-loader{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;background:var(--case-loading-background,#f6f6f5);color:var(--case-loading-color,#242424);font:14px/1.5 system-ui,sans-serif;letter-spacing:normal;text-transform:none}
+#case-resource-loader[hidden],.case-load-hint[hidden]{display:none!important}
+.case-load-panel{width:min(320px,calc(100vw - 48px));text-align:center}
+.case-load-label{font-weight:600;margin:0 0 14px}
+.case-load-track{height:2px;background:color-mix(in srgb,currentColor 16%,transparent);position:relative;overflow:hidden}
+.case-load-track>i{position:absolute;inset:0 auto 0 0;width:0;background:currentColor}
+.case-load-count{margin:10px 0 0;font:12px/1.5 system-ui,sans-serif;opacity:.7}
+.case-load-actions{display:flex;gap:10px;justify-content:center;margin-top:18px}
+.case-load-actions button,.case-load-hint button{border:1px solid currentColor;border-radius:4px;background:transparent;color:inherit;padding:7px 11px;font:12px/1.4 system-ui,sans-serif;cursor:pointer}
+.case-load-actions button:focus-visible,.case-load-hint button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.case-load-actions [hidden]{display:none!important}
+.case-load-hint{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:2147483001;max-width:calc(100vw - 32px);display:flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid #8884;border-radius:5px;background:var(--case-loading-background,#f6f6f5);color:var(--case-loading-color,#242424);box-shadow:0 3px 16px #0001;font:12px/1.4 system-ui,sans-serif;text-transform:none;letter-spacing:normal}
+html[data-case-loading="pending"] .case-load-hint{visibility:visible!important}
+#case-resource-loader.case-load-native{inset:auto auto 24px 50%;display:block;width:auto;transform:translateX(-50%);background:#111c;color:#fff;padding:10px 14px;border-radius:4px;font:12px/1.4 system-ui,sans-serif;letter-spacing:normal;text-align:center;max-width:calc(100vw - 32px)}
+html[data-case-loading="pending"] .case-load-native,html[data-case-loading="pending"] .case-load-native *{visibility:visible!important}
+.case-load-native .case-load-label,.case-load-native .case-load-track{display:none}
+.case-load-native .case-load-actions{margin-top:8px}
+@media(prefers-reduced-motion:reduce){#case-resource-loader *,.case-load-hint *{transition:none!important;animation:none!important}}
