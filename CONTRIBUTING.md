@@ -1,15 +1,22 @@
-# 条目约定
+# 添加与更新案例
 
-每个条目先完成真实来源调研，再实现可运行 demo。参考库不宣称像素级复刻；使用原创示例品牌与自绘素材，学习布局、层级与交互机制。
+先观察原站，再实现代码。品牌案例以真实结构与素材为依据；经典风格练习以原作者实例和理论为依据。不要把同一个布局仅更换配色当成多种参考页。
 
-- `entries/<id>.json`：结构化检索数据，UTF-8。
-- `research/<id>.md`：来源、直接观察、理论依据、推断、约束及 demo 映射。
-- `demos/<id>/index.html`：独立静态入口，可带本目录 CSS/JS/SVG。不依赖 CDN、联网图片或构建步骤。
-- `previews/<id>.jpg`：由实际浏览器生成的 1440 × 1000 首屏截图，使用 .jpg。
-- demo 使用语义 HTML、可聚焦按钮、移动端布局和 `prefers-reduced-motion`。不要劫持滚轮或制造空链接。演示文字明确是虚构品牌。
+1. 记录官网实际 URL、语言/年度版本、日期；保存首屏与关键滚动状态的截图，图片扩展名与真实格式一致。
+2. 分析配色角色、字体尺度、网格留白、图像、形状、信息层级、动效及协调关系。区分可观测事实、作者解释和本库推断。
+3. 选择有辨识度的区域复现，按钮、标签、音频和滚动反馈必须可操作。使用真实素材，保留正确比例。
+4. 素材本地化，记录 URL、版权归属、用途、SHA256与处理方式；不能移入追踪像素或原站统计脚本。视频剪短或转码需公开记录。
+5. `fidelity.md` 按区域比较已复现、近似和未实现内容。购买/预约/登录可明确链接原站，不伪装成本地服务。
+6. 运行数据与资源检查，实测宽屏和390px手机、核心交互、媒体用户启用/关闭、无横向溢出，再保存预览和Git提交。
 
-JSON 字段：`id`（kebab-case）、`order`（整数）、`title`（中文）、`subtitle`、`category`（产品 / 游戏/IP / 经典风格）、`tags`（数组）、`summary`、`accent`（hex）、`background`（hex）、`principles`（3-5 字符串）、`productFocus`（字符串）、`interaction`（3-5 字符串）、`theme`（字符串）、`constraints`（4-6 字符串）、`useCases`（数组）、`avoid`（数组）、`tokens`（对象：palette 数组、type 字符串、layout 字符串、motion 字符串）、`sources`（对象数组，每项含 title/url/type/note；type 为 实例 / 理论 / 规范）、`prompt`（完整中文字符串）、`negativePrompt`（字符串）、`demo`（如 demos/apple-product/index.html）、`preview`（如 previews/apple-product.jpg）、`research`（如 research/apple-product.md）、`exercise`（一条改造任务）。
+文件：`entries/<id>.json`、`research/<id>.md`、`demos/<id>/index.html`及配套文件、`previews/<id>.jpg`。手机截图位置记入验证记录。图像可用 JPG/PNG/WebP/AVIF，字体/音视频也需本地化，避免运行时外网依赖。
 
-每项至少一个真实官网案例和一个理论或规范来源。记录核验日期 2026-10-07；区分已观察到的事实和设计推断。引用采用近旁链接，简短转述，不大段复制文案。经典风格若找不到完全符合的官网，注明是局部对应或理论迁移。
+基础字段：`id, order, title, subtitle, category, tags, summary, accent, background, principles, productFocus, interaction, theme, constraints, useCases, avoid, tokens, sources, prompt, negativePrompt, demo, preview, research, exercise, composition`。分类为 `产品 / 游戏/IP / 艺术/文化 / 经典风格`。
 
-新增条目还需 `composition` 对象：color、typography、layout、imagery、shape、hierarchy、motion、coherence 八项；记录本地demo的要素映射及协调逻辑。可通过 fundamentals.html?style=<id> 进入交互实验。
+`tokens` 包含 palette（hex数组）、type/layout/motion（字符串）。`composition` 包含 color/typography/layout/imagery/shape/hierarchy/motion/coherence 八项。`sources` 每项包含 title/url/type/note，type 是实例/理论/规范；至少有一个真实实例与一个理论或规范来源。
+
+原站研究再增加：`implementation: "reference-study"`、`country`、`referenceUrl`、`fidelity`、`assetManifest`，可加 `referencePreview`、`edition`。地区用于具体参考机构或创作来源，跨国与版本差异注明；经典理论不强行归为某国的现代官网风格。
+
+Prompt要写实际页面结构、元素尺度、资产来源、关键状态、响应式与减少动效处理，不只有风格形容词。不要照搬长段营销文案。`prefers-reduced-motion` 应保留全部可读内容；声音默认关闭或用户触发；保留浏览器原生滚动。
+
+检查命令：`npm run build` → `npm run check` → 浏览器操作 → `node scripts/check.mjs --require-previews`。截图与资产成功存在不能替代实际交互验证。

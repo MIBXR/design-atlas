@@ -8,7 +8,7 @@ const entries=files.map(file=>JSON.parse(fs.readFileSync(path.join(root,'entries
 const required=['id','order','title','subtitle','category','tags','summary','accent','background','principles','productFocus','interaction','theme','constraints','useCases','avoid','tokens','sources','prompt','negativePrompt','demo','preview','research','exercise','composition'];
 const failures=[]; let scripts=0; let sourceCount=0;
 function fail(message){failures.push(message);}
-if(entries.length!==14)fail(`Expected 14 entries; found ${entries.length}`);
+if(entries.length<14)fail(`Expected at least the original 14 entries; found ${entries.length}`);
 if(new Set(entries.map(x=>x.id)).size!==entries.length)fail('Duplicate ids');
 if(new Set(entries.map(x=>x.order)).size!==entries.length)fail('Duplicate order values');
 for(const e of entries){
@@ -18,7 +18,7 @@ for(const e of entries){
   if(!Array.isArray(e.tokens?.palette)||!e.tokens.palette.length||e.tokens.palette.some(x=>!/^#[0-9a-f]{6}$/i.test(x)))fail(`${e.id}: invalid token palette`);
   for(const name of ['type','layout','motion'])if(typeof e.tokens?.[name]!=='string'||!e.tokens[name])fail(`${e.id}: missing token ${name}`);
   for(const name of ['color','typography','layout','imagery','shape','hierarchy','motion','coherence'])if(typeof e.composition?.[name]!=='string'||!e.composition[name])fail(`${e.id}: missing composition ${name}`);
-  if(!['产品','游戏/IP','经典风格'].includes(e.category))fail(`${e.id}: invalid category`);
+  if(!['产品','游戏/IP','经典风格','艺术/文化'].includes(e.category))fail(`${e.id}: invalid category`);
   if(typeof e.prompt!=='string'||e.prompt.length<200)fail(`${e.id}: prompt too short`);
   if(!e.sources.some(x=>x.type==='实例'))fail(`${e.id}: no real example`);
   if(!e.sources.some(x=>['理论','规范'].includes(x.type)))fail(`${e.id}: no theory or standard`);
@@ -29,9 +29,20 @@ for(const e of entries){
   const html=fs.readFileSync(demoPath,'utf8');
   if(!/<meta[^>]+name=["']viewport["']/.test(html))fail(`${e.id}: missing viewport`);
   if(!html.includes('prefers-reduced-motion')&&!fs.readdirSync(path.dirname(demoPath)).filter(x=>x.endsWith('.css')).some(x=>fs.readFileSync(path.join(path.dirname(demoPath),x),'utf8').includes('prefers-reduced-motion')))fail(`${e.id}: missing reduced-motion rule`);
-  for(const match of html.matchAll(/<(?:script|img|link)[^>]+(?:src|href)=["']([^"']+)["']/g)){
+  for(const match of html.matchAll(/<(?:script|img|link|source|video|audio)[^>]+(?:src|href|poster)=["']([^"']+)["']/g)){
     const ref=match[1];if(/^(https?:)?\/\//.test(ref))fail(`${e.id}: remote asset ${ref}`);
-    else if(!ref.startsWith('data:')&&!ref.startsWith('#')&&!fs.existsSync(path.resolve(path.dirname(demoPath),ref.split('?')[0])))fail(`${e.id}: missing local asset ${ref}`);
+    else if(!ref.startsWith('data:')&&!ref.startsWith('#')&&!fs.existsSync(path.resolve(path.dirname(demoPath),ref.split(/[?#]/)[0])))fail(`${e.id}: missing local asset ${ref}`);
+  }
+  for(const match of html.matchAll(/<link[^>]+href=["']([^"']+\.css)["']/g)){
+    const cssPath=path.resolve(path.dirname(demoPath),match[1]);if(!fs.existsSync(cssPath))continue;
+    for(const url of fs.readFileSync(cssPath,'utf8').matchAll(/url\(\s*["']?([^"')\s]+)["']?\s*\)/g)){
+      const ref=url[1];if(/^(https?:)?\/\//.test(ref))fail(`${e.id}: remote stylesheet asset ${ref}`);
+      else if(!ref.startsWith('data:')&&!ref.startsWith('#')&&!fs.existsSync(path.resolve(path.dirname(cssPath),ref.split(/[?#]/)[0])))fail(`${e.id}: missing stylesheet asset ${ref}`);
+    }
+  }
+  if(e.implementation==='reference-study'){
+    for(const key of ['country','referenceUrl','fidelity','assetManifest'])if(!e[key])fail(`${e.id}: missing reference-study ${key}`);
+    for(const key of ['fidelity','assetManifest',...(e.referencePreview?['referencePreview']:[])])if(e[key]&&!fs.existsSync(path.join(root,e[key])))fail(`${e.id}: missing evidence ${e[key]}`);
   }
   for(const match of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)){if(!match[1].trim())continue;try{new vm.Script(match[1]);scripts++;}catch(err){fail(`${e.id}: inline JS ${err.message}`);}}
   for(const file of fs.readdirSync(path.dirname(demoPath)).filter(x=>x.endsWith('.js'))){try{new vm.Script(fs.readFileSync(path.join(path.dirname(demoPath),file),'utf8'));scripts++;}catch(err){fail(`${e.id}: ${file} ${err.message}`);}}

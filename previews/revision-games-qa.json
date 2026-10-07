@@ -1,0 +1,58 @@
+[
+  {
+    "id": "monument-valley-game",
+    "viewport": "390x844",
+    "metrics": {
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    }
+  },
+  {
+    "id": "uma-musume",
+    "viewport": "390x844",
+    "metrics": {
+      "brokenImages": [],
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    }
+  },
+  {
+    "id": "blue-archive",
+    "viewport": "390x844",
+    "metrics": {
+      "brokenImages": [],
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    }
+  },
+  {
+    "id": "uma-musume",
+    "viewport": "1440x1000",
+    "metrics": {
+      "height": 1000,
+      "scrollWidth": 1425,
+      "width": 1440
+    }
+  },
+  {
+    "id": "blue-archive",
+    "viewport": "1440x1000",
+    "metrics": {
+      "height": 1000,
+      "scrollWidth": 1425,
+      "width": 1440
+    }
+  },
+  {
+    "id": "monument-valley-game",
+    "viewport": "1440x1000",
+    "metrics": {
+      "height": 1000,
+      "scrollWidth": 1425,
+      "width": 1440
+    }
+  }
+]

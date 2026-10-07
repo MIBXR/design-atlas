@@ -1,0 +1,205 @@
+{
+  "date": "2026-10-07",
+  "browser": "Edge via CUA",
+  "catalogObserved": 25,
+  "checks": [
+    {
+      "test": "favorites backup display",
+      "result": {
+        "format": "design-atlas-favorites",
+        "version": 1,
+        "exportedAt": "2026-10-07T06:41:47.426Z",
+        "favorites": []
+      },
+      "pass": true
+    },
+    {
+      "test": "favorites import dedupe / invalid ID filtering",
+      "result": {
+        "exportedAt": "2026-10-07T06:42:15.664Z",
+        "favorites": [
+          "design-sight"
+        ],
+        "format": "design-atlas-favorites",
+        "version": 1
+      },
+      "pass": true
+    },
+    {
+      "test": "favorites restored after QA",
+      "result": {
+        "exportedAt": "2026-10-07T06:42:29.134Z",
+        "favorites": [],
+        "format": "design-atlas-favorites",
+        "version": 1
+      },
+      "pass": true
+    },
+    {
+      "test": "art culture category with Japan country filter",
+      "pass": true,
+      "result": {
+        "country": "日本",
+        "overflow": false,
+        "titles": [
+          "21_21 DESIGN SIGHT：海报与四列档案",
+          "森美术馆：红色机构锚点与艺术海报",
+          "Fuji Rock：现场照片与节日导览"
+        ],
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "test": "search within category and country filters",
+      "result": {
+        "query": "森美术馆",
+        "titles": [
+          "森美术馆：红色机构锚点与艺术海报"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "two case comparison",
+      "result": {
+        "links": [
+          "21_21 DESIGN SIGHT：海报与四列档案 ↗",
+          "森美术馆：红色机构锚点与艺术海报 ↗"
+        ],
+        "overflow": false,
+        "sections": [
+          "信息焦点",
+          "设计机制",
+          "交互",
+          "主题",
+          "要素协调",
+          "硬约束",
+          "适用 / 不适用",
+          "信息焦点",
+          "设计机制",
+          "交互",
+          "主题",
+          "要素协调",
+          "硬约束",
+          "适用 / 不适用"
+        ],
+        "url": "#compare"
+      },
+      "pass": true
+    },
+    {
+      "test": "expanded original/local screenshot comparison",
+      "result": {
+        "images": [
+          {
+            "alt": "21_21 DESIGN SIGHT：海报与四列档案原站实访截图",
+            "loaded": true,
+            "naturalWidth": 1265,
+            "src": "research/screenshots/design-sight-source.jpg"
+          },
+          {
+            "alt": "21_21 DESIGN SIGHT：海报与四列档案本地截图",
+            "loaded": true,
+            "naturalWidth": 1425,
+            "src": "previews/design-sight.jpg"
+          }
+        ],
+        "overflow": false
+      },
+      "pass": true
+    },
+    {
+      "test": "phone iframe and embedded carousel interaction",
+      "result": {
+        "iframes": [
+          {
+            "height": 720,
+            "id": "",
+            "src": "demos/design-sight/index.html",
+            "title": "21_21 DESIGN SIGHT：海报与四列档案交互 demo",
+            "width": 390
+          }
+        ],
+        "overflow": false,
+        "selected": [
+          "手机 ≤390px"
+        ],
+        "posterAfterClick": "TYPE-XVII",
+        "interactionObserved": "official image alt/link and current indicator changed from 1 to 2"
+      },
+      "pass": true
+    },
+    {
+      "test": "mobile detail responsive iframe",
+      "result": {
+        "documentWidth": 375,
+        "iframes": [
+          {
+            "height": 720,
+            "width": 309.6000061035156
+          }
+        ],
+        "overflow": false,
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      "pass": true
+    },
+    {
+      "test": "mobile library category/filter/list responsive layout",
+      "result": {
+        "documentWidth": 375,
+        "images": [
+          {
+            "loaded": true,
+            "src": "previews/design-sight.jpg"
+          },
+          {
+            "loaded": true,
+            "src": "previews/mori-art-museum.jpg"
+          },
+          {
+            "loaded": true,
+            "src": "previews/fuji-rock.jpg"
+          }
+        ],
+        "overflow": false,
+        "titles": [
+          "21_21 DESIGN SIGHT：海报与四列档案",
+          "森美术馆：红色机构锚点与艺术海报",
+          "Fuji Rock：现场照片与节日导览"
+        ],
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      "pass": true
+    }
+  ],
+  "status": "passed on observed 25-case revision",
+  "scope": "Library public UI; 25 entries at capture. Root will repeat catalog count after later additions.",
+  "notes": [
+    "All interactions performed through Edge CUA UI. DOM reads were read-only.",
+    "Favorites baseline [] and post-test [] verified via visible export JSON; comparisons cleared after test.",
+    "Viewport is CSS viewport requested and observed; screenshot pixel dimensions recorded separately, unscaled browser output.",
+    "No code edited for library QA; no external uploads or messages."
+  ],
+  "screenshot": {
+    "path": "previews/library-mobile.jpg",
+    "requestedCssViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "actualPixels": {
+      "width": 375,
+      "height": 811
+    },
+    "note": "Raw Edge browser content capture; no resize. CSS viewport390x844 verified separately."
+  }
+}
