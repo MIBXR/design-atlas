@@ -25,7 +25,7 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 - `agent/cases/<id>.json`：完整上下文和文件清单。
 - [轻量 skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)：按固定提交远程读取与导出，内容仍在本仓库。
 
-在线站也提供同样的 `/agent/catalog.json` 与 `/agent/cases/<id>.json` 路径。先取得一次索引，再核对其 `bundleSha256`；在线更新时发现不一致就重新取得索引与案例，不能混用两个版本。要求可重现时，使用 GitHub Raw 的完整提交 SHA 读取所有文件。
+在线站也提供同样的 `/agent/catalog.json` 与 `/agent/cases/<id>.json` 路径。部署索引额外提供 `source.commit` 与 `source.baseUrl`，把 `files[].path` 接在此基址后取得原始文件；“复制 Agent 入口”也使用这个固定提交。网站中的播放 HTML／CSS 会转换素材地址、文档会加 UTF-8 标记，因此源码与哈希校验使用原始 Git 文件。先取得一次索引，再核对其 `bundleSha256`；在线更新时发现不一致就重新取得索引与案例。直接读 GitHub 时使用完整提交 SHA 读取所有文件。
 
 ## 从案例适配真实任务
 
