@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-07",
+  "browser": "Edge via CUA",
+  "checks": [
+    {
+      "id": "fuji-rock",
+      "size": "desktop",
+      "data": {
+        "brokenImages": [],
+        "overflow": false,
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "interaction": "photo next",
+      "result": {
+        "image": "assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4spc.jpg",
+        "mobile": "assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4ssp.jpg",
+        "pressed": "true",
+        "status": "2 / 3"
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "interaction": "desktop mega menu",
+      "result": {
+        "columns": "280px 280px 280px 280px",
+        "expanded": "true",
+        "open": true
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "interaction": "language open",
+      "result": {
+        "open": true
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "interaction": "desktop Featured next",
+      "result": {
+        "left": 427.2000122070313,
+        "status": "特集 2 / 4"
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "size": "mobile",
+      "data": {
+        "brokenImages": [],
+        "hero": "http://127.0.0.1:4173/demos/fuji-rock/assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJsp.jpg",
+        "overflow": false,
+        "scrollY": 0,
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "interaction": "mobile mega menu",
+      "result": {
+        "columns": "152.1px 152.1px",
+        "open": true,
+        "panelWidth": 363.2000122070313,
+        "scrollable": false,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "interaction": "mobile menu close",
+      "result": {
+        "closed": true,
+        "expanded": "false"
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "interaction": "mobile Featured next",
+      "result": {
+        "left": 288,
+        "status": "特集 2 / 4"
+      }
+    },
+    {
+      "id": "fuji-rock",
+      "interaction": "final desktop menu close after layout fix",
+      "result": {
+        "closed": true,
+        "expanded": "false"
+      }
+    }
+  ],
+  "reducedMotion": "CSS rules inspected; actual OS preference not emulated",
+  "screenshots": [
+    {
+      "path": "previews/fuji-rock.jpg",
+      "actualPixelWidth": 1425,
+      "actualPixelHeight": 990,
+      "requestedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "note": "Edge CUA returns content capture excluding scrollbars/browser inset; no resizing applied"
+    },
+    {
+      "path": "previews/mobile/fuji-rock.jpg",
+      "actualPixelWidth": 375,
+      "actualPixelHeight": 811,
+      "requestedViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "note": "Edge CUA returns content capture excluding scrollbars/browser inset; no resizing applied"
+    }
+  ]
+}

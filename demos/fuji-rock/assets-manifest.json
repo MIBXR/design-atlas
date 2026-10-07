@@ -1,0 +1,258 @@
+{
+  "sourcePage": "https://www.fujirockfestival.com/",
+  "retrievedAt": "2026-10-07",
+  "purpose": "官方公开网页资产用于个人本地学习；不代表商用授权",
+  "assets": [
+    {
+      "file": "assets/logo_type.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/logo_type.png",
+      "bytes": 13562,
+      "width": 970,
+      "height": 128,
+      "type": "image/png",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "7746286c6d5a6585ddcf85dc60976d8972db73f8f73acea29052536ab4aa8de2"
+    },
+    {
+      "file": "assets/logo_mountain.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/logo_mountain.png",
+      "bytes": 127508,
+      "width": 614,
+      "height": 316,
+      "type": "image/png",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "9db448d558aedf8032f71bc3cf0511155e735c80c8f1fd6154e0268b49d7e1f9"
+    },
+    {
+      "file": "assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJpc.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJpc.jpg",
+      "bytes": 193956,
+      "width": 1400,
+      "height": 700,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "5cc2abaf680c53d253b6aacac0b359f3aeed7576ee150b19b9c0a5cba66dc4c3"
+    },
+    {
+      "file": "assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4spc.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4spc.jpg",
+      "bytes": 195099,
+      "width": 1400,
+      "height": 700,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "700792c3e539966484c7c7ddd455021467b7821a5544cb9405545718e12ee026"
+    },
+    {
+      "file": "assets/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjpc.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjpc.jpg",
+      "bytes": 259735,
+      "width": 1400,
+      "height": 700,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "eeb09021388eb39b9b629bd19c9875a129de974cc72d7d32fe7a1e2de434d465"
+    },
+    {
+      "file": "assets/W2upzapTzUVTHJJK0lsN7vMw4gUaVuSQWU6Z2qUb.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/W2upzapTzUVTHJJK0lsN7vMw4gUaVuSQWU6Z2qUb.jpg",
+      "bytes": 57556,
+      "width": 800,
+      "height": 800,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "1b1dee3440426f0697b318f4f4f6b6de4198a5b1d406943d86945704ef17d67e"
+    },
+    {
+      "file": "assets/aC8sy0ycHbxdRqtlOkZQXy8CrGnlxFEKz3yPwGxJ.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/aC8sy0ycHbxdRqtlOkZQXy8CrGnlxFEKz3yPwGxJ.jpg",
+      "bytes": 54288,
+      "width": 800,
+      "height": 800,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "04554915fd4d0972d0a963d45574b8943eb145565267da067f0cfad8e36bfd3b"
+    },
+    {
+      "file": "assets/teHObwbhgXgjKLqX8HrBRJln7mxMNiwc5nSEcBsA.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/teHObwbhgXgjKLqX8HrBRJln7mxMNiwc5nSEcBsA.jpg",
+      "bytes": 60901,
+      "width": 800,
+      "height": 800,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "76a309558bfd29f6c6099d8cc4bfe53202661914ee8bf4b0e0629fd35fc4d75f"
+    },
+    {
+      "file": "assets/xQh5p3rAKkRkA04nH6TGqX7Pnp7hYgJ947xpjHyJ.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/xQh5p3rAKkRkA04nH6TGqX7Pnp7hYgJ947xpjHyJ.jpg",
+      "bytes": 100665,
+      "width": 800,
+      "height": 800,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "985bb00ecc7f9f8108b8f2a5acbc061378b9e083d3b2127adb7aca3a93bb5c83"
+    },
+    {
+      "file": "assets/source-style.css",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/css/style.css?v=1.0.0",
+      "bytes": 101057,
+      "type": "text/css",
+      "use": "研究原站配色与版式；不被本地HTML加载",
+      "rights": "SMASH 及图像原作者：仅限个人本地设计学习，商标及照片版权保留。",
+      "sha256": "403f66d78cbf648b89392802acfc1df1a2d77a978543f068037d79ba8cda4d39"
+    },
+    {
+      "file": "assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJsp.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJsp.jpg",
+      "bytes": 185883,
+      "type": "image/jpeg",
+      "use": "手机专用方形现场图片",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 1200,
+      "height": 1200,
+      "sha256": "d6dfcd3ce75298613f989eb15834c236bade9c3cd47efd4badacb4f6971b9c98"
+    },
+    {
+      "file": "assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4ssp.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4ssp.jpg",
+      "bytes": 175940,
+      "type": "image/jpeg",
+      "use": "手机专用方形现场图片",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 1200,
+      "height": 1200,
+      "sha256": "b19c3fb469aad894b5947077577c781bc51a39d78f4b252e47bd57790557aa97"
+    },
+    {
+      "file": "assets/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjsp.jpg",
+      "sourceUrl": "https://cdn.fujirockfestival.com/smash/top/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjsp.jpg",
+      "bytes": 334202,
+      "type": "image/jpeg",
+      "use": "手机专用方形现场图片",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 1200,
+      "height": 1200,
+      "sha256": "7a85aabbe58ec7526cbdfb896193b6d2baa4759df9696313a3d821fe2e7bf67c"
+    },
+    {
+      "file": "assets/buy_ticket.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/buy_ticket.png",
+      "bytes": 7844,
+      "type": "image/png",
+      "use": "原站票据或菜单图标",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 160,
+      "height": 374,
+      "sha256": "77adf8e9fffa841819e40edf20a009dcdc9456e08c5c16bda26c7a9d6b65e2f8"
+    },
+    {
+      "file": "assets/nav_icon02.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/nav_icon02.png",
+      "bytes": 2543,
+      "type": "image/png",
+      "use": "原站票据或菜单图标",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 200,
+      "height": 200,
+      "sha256": "9d68b28710f2dcac4ef163daf974907f6618a988da4b4b4a94fe0a81d6254555"
+    },
+    {
+      "file": "assets/nav_icon04.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/nav_icon04.png",
+      "bytes": 4416,
+      "type": "image/png",
+      "use": "原站票据或菜单图标",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 200,
+      "height": 200,
+      "sha256": "21121d4077298bd511d2ac787a130603db1e52223c8b530fd458392eb6e7d7e4"
+    },
+    {
+      "file": "assets/nav_icon05.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/nav_icon05.png",
+      "bytes": 2872,
+      "type": "image/png",
+      "use": "原站票据或菜单图标",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 200,
+      "height": 200,
+      "sha256": "c2dd72c228fc2209c475151fb5d026fed483f5a9a42ef091147a57091b4916ad"
+    },
+    {
+      "file": "assets/nav_icon06.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/nav_icon06.png",
+      "bytes": 4796,
+      "type": "image/png",
+      "use": "原站票据或菜单图标",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 200,
+      "height": 200,
+      "sha256": "4bc35e55d36d9fdb03f29980dc8f89039f10ecbddc9ad5dac4b11cb339ee720a"
+    },
+    {
+      "file": "assets/nav_icon11.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/nav_icon11.png",
+      "bytes": 4124,
+      "type": "image/png",
+      "use": "原站票据或菜单图标",
+      "rights": "SMASH 及图像原作者：个人本地设计学习，原权利保留。",
+      "width": 200,
+      "height": 200,
+      "sha256": "a838369a500aa842caa336ab4cccffa7c37e6ead7a19e61e00872c7a04fb9e16"
+    },
+    {
+      "file": "assets/punav_icon07.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/punav_icon07.png",
+      "bytes": 7604,
+      "type": "image/png",
+      "use": "实际DOM导航对应图标：时间表/区域/饮食/FAQ",
+      "rights": "SMASH：个人本地设计学习，原权利保留。",
+      "sha256": "ec6ba7115495fd3010f64cb19162d18737d9e4ea070c9a6216ee9d5ec0201dc9",
+      "width": 240,
+      "height": 240
+    },
+    {
+      "file": "assets/punav_icon08.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/punav_icon08.png",
+      "bytes": 5556,
+      "type": "image/png",
+      "use": "实际DOM导航对应图标：时间表/区域/饮食/FAQ",
+      "rights": "SMASH：个人本地设计学习，原权利保留。",
+      "sha256": "eb60565993257e52e0c4fcea2a69dc71dda3efc60b44e4c160509cf9439b3dee",
+      "width": 240,
+      "height": 240
+    },
+    {
+      "file": "assets/punav_icon09.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/punav_icon09.png",
+      "bytes": 4083,
+      "type": "image/png",
+      "use": "实际DOM导航对应图标：时间表/区域/饮食/FAQ",
+      "rights": "SMASH：个人本地设计学习，原权利保留。",
+      "sha256": "9528f294e8193dfeff191690711048b4debddfbdfc4b1dce2eca0e3643e16e46",
+      "width": 240,
+      "height": 240
+    },
+    {
+      "file": "assets/punav_icon10.png",
+      "sourceUrl": "https://www.fujirockfestival.com/2026/assets/img/punav_icon10.png",
+      "bytes": 6457,
+      "type": "image/png",
+      "use": "实际DOM导航对应图标：时间表/区域/饮食/FAQ",
+      "rights": "SMASH：个人本地设计学习，原权利保留。",
+      "sha256": "c7012d9bf230ff6ba33bd096afe120c9a6fcf6712979e5e8f1d0c73802e4eab0",
+      "width": 240,
+      "height": 240
+    }
+  ]
+}
