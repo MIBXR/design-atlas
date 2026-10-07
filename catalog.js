@@ -779,6 +779,7 @@ window.DESIGN_ATLAS = [
     "negativePrompt": "不要复制 Excalidraw 商标或官网素材；不要把全部正文写成手写字；不要随机抖动、过密纹理、过多旋转、悬空链接或只有换色的通用卡片。",
     "demo": "demos/hand-drawn/index.html",
     "preview": "previews/hand-drawn.jpg",
+    "theoryVerifiedAt": "2026-10-07",
     "research": "research/hand-drawn.md",
     "exercise": "将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。",
     "composition": {
@@ -892,6 +893,7 @@ window.DESIGN_ATLAS = [
     "negativePrompt": "不要混合透视消失点与等轴投影；不要复制原游戏地图；不要自动旋转、强制视差或密集热点；不要声称 SVG 是真正可旋转的实时 3D。",
     "demo": "demos/isometric-3d/index.html",
     "preview": "previews/isometric-3d.jpg",
+    "theoryVerifiedAt": "2026-10-07",
     "research": "research/isometric-3d.md",
     "exercise": "把浮岛替换成数据平台的等轴系统图，让三种焦点分别对应计算、存储、网络，保留统一坐标与分层解释。",
     "composition": {
@@ -1008,6 +1010,7 @@ window.DESIGN_ATLAS = [
     "negativePrompt": "不要把细线作为唯一信息；不要启动时隐藏全页等待动画；不要把填色块错误称为线描；不要复制原示范插图；不要依赖过时库限制或让动画阻塞键盘。",
     "demo": "demos/line-art/index.html",
     "preview": "previews/line-art.jpg",
+    "theoryVerifiedAt": "2026-10-07",
     "research": "research/line-art.md",
     "exercise": "将建筑线稿改为原创机械产品分解图，让绘制顺序对应支架、外壳、接口，并保持全文始终可读。",
     "composition": {
@@ -1126,6 +1129,7 @@ window.DESIGN_ATLAS = [
     "negativePrompt": "不要复制 In Pieces 动物或将其作品称为本 demo；不要随机闪烁、自动无限变形、移动文字或变化点击目标；不要在顶点拓扑不匹配时硬插值；不要把未能访问的项目官网当成当日视觉事实。",
     "demo": "demos/shape-morph/index.html",
     "preview": "previews/shape-morph.jpg",
+    "theoryVerifiedAt": "2026-10-07",
     "research": "research/shape-morph.md",
     "exercise": "将三种形态映射为一个产品的收集、处理、输出阶段，让每次变形同步切换解释文本，并保留相同三角片。",
     "composition": {
@@ -1239,6 +1243,7 @@ window.DESIGN_ATLAS = [
     "negativePrompt": "不要玻璃拟态、渐变霓虹、满屏圆角卡片、横向滚动劫持、裁切中文标题；不要将Helvetica当作Swiss的唯一字体或混用包豪斯形色定律。",
     "demo": "demos/swiss-grid/index.html",
     "preview": "previews/swiss-grid.jpg",
+    "theoryVerifiedAt": "2026-10-07",
     "research": "research/swiss-grid.md",
     "exercise": "将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。",
     "composition": {
@@ -1349,6 +1354,7 @@ window.DESIGN_ATLAS = [
     "negativePrompt": "不要把红黄蓝随机撒满画面，不要声称包豪斯只包含圆三角方形，不要给文字加3D阴影或霓虹，不要让几何覆盖按钮；不要只换颜色却不改变构成。",
     "demo": "demos/bauhaus-geometry/index.html",
     "preview": "previews/bauhaus-geometry.jpg",
+    "theoryVerifiedAt": "2026-10-07",
     "research": "research/bauhaus-geometry.md",
     "exercise": "加入第二组不使用原色的材料色板，检验相同几何关系是否仍能表达平衡与张力。",
     "composition": {
@@ -1461,6 +1467,7 @@ window.DESIGN_ATLAS = [
     "negativePrompt": "不要假旋钮、无效播放按钮、自动音频、版权曲目、巨量霓虹、反复闪烁扫描线；不要宣称8复音或精确模拟不存在的功能。",
     "demo": "demos/retro-80s/index.html",
     "preview": "previews/retro-80s.jpg",
+    "theoryVerifiedAt": "2026-10-07",
     "research": "research/retro-80s.md",
     "exercise": "增加一个真正可编辑的8步音序器；让步骤、速率与播放状态在视觉和声音上同步。",
     "composition": {
@@ -1587,6 +1594,7 @@ window.DESIGN_ATLAS = [
     "negativePrompt": "不要平滑缩放像素图、随机混合像素尺度、把照片马赛克当作像素美术、隐藏于Canvas的唯一导航、不可读中文小字或自动播放音效。",
     "demo": "demos/pixel-world/index.html",
     "preview": "previews/pixel-world.jpg",
+    "theoryVerifiedAt": "2026-10-07",
     "research": "research/pixel-world.md",
     "exercise": "为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。",
     "composition": {

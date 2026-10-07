@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "id": "blue-archive",
+  "entry": {
+    "id": "blue-archive",
+    "order": 21,
+    "title": "碧蓝档案：学园都市的天空与光",
+    "subtitle": "Blue Archive 日本官方首页 · 城市映像与竖排标语",
+    "category": "游戏/IP",
+    "country": "韩国",
+    "edition": "日本版",
+    "implementation": "reference-study",
+    "referenceUrl": "https://bluearchive.jp/",
+    "referencePreview": "research/screenshots/blue-archive-source.jpg",
+    "fidelity": "demos/blue-archive/fidelity.md",
+    "assetManifest": "demos/blue-archive/assets-manifest.json",
+    "tags": [
+      "韩国",
+      "日本版",
+      "海外手游",
+      "Yostar",
+      "真实还原",
+      "蓝白",
+      "城市动画",
+      "竖排"
+    ],
+    "summary": "归档日本官网蓝白学园都市映像、竖排标语与角落入口，并学习独立角色页四学生的完整资料轨道和官方声线。",
+    "accent": "#00c9e5",
+    "background": "#edf8fc",
+    "principles": [
+      "背景世界先建立氛围，居中品牌标识与右侧竖排标语保持不同角色。",
+      "深蓝半透明横向导航与蓝白城市映像共享色系，同时稳定承载白色导航文字。",
+      "下载在左下，漫画/帮助图像入口在右下，主视觉中心留给世界观。",
+      "官方插画入口有各自的表现力，外围控件使用简洁线条维持轻量界面。"
+    ],
+    "productFocus": "真实游戏 Blue Archive 日本版；官方首页展示城市/教室背景、品牌与日常叙事，并把下载、漫画和帮助入口分配到画面角落。",
+    "interaction": [
+      "真实首页构图为城市影像与 Logo、竖排标语、边缘下载/漫画入口，向下到 footer；本地加入背景暂停。",
+      "阿比多斯四学生资料卡与完整立绘以 1000ms 整块水平移动；选择按钮、左右键及手势同步当前人物。",
+      "角色 VOICE 麦克风播放该学生对应官方 WAV，再点暂停；换人或后台停止，声线归属明确。",
+      "首页导航 CHARACTER 打开本地独立 character.html；HOME 返回首页，首页仅 KV→footer，保留源站页面职责分离。"
+    ],
+    "theme": "学园都市的蓝天、反光玻璃与日常场景；青白标识、日文竖排文字和可爱的漫画按钮共同表达青春与轻盈感。",
+    "constraints": [
+      "归档 https://bluearchive.jp/ 在 2026-10-07 的单一快照；其可见 CHARACTER 导航进入 /character，作为同次采集的关联子页。",
+      "原首页只含 KV→footer，独立 character.html 仅复现 /character 的阿比多斯；本地使用文档导航，源为 Vue router.push，未添加无证据的入场淡化。",
+      "4 位学生姓名、CV、学年、生日、身高、立绘和 WAV 已核验；其他学院、全部人物和运营页面用官方入口。",
+      "角色整轨 1000ms 有来源依据；缓动、键盘、触摸阈值、声线暂停与减少动态为本地补充或近似。",
+      "城市视频保持静音；角色台词不是 BGM，完整 PV 使用官方外链，未添加通用音乐。",
+      "手机改为可读排布而非逐像素原页；保持透明资料卡、完整人物和蓝白色，不加强制暗色主题。",
+      "韩国为开发来源、日本为本次发行版；官方素材和商标权利归相应权利方，manifest 记录 URL/哈希。"
+    ],
+    "useCases": [
+      "有成熟世界观的校园手游",
+      "柔和科幻IP宣传",
+      "背景氛围与轻量导航共存的官网"
+    ],
+    "avoid": [
+      "把青白学园主题写成泛用科技仪表盘",
+      "所有信息都覆盖在动画最复杂的位置",
+      "未核验的角色页与假BGM状态"
+    ],
+    "tokens": {
+      "palette": [
+        "#00c9e5",
+        "#14273b",
+        "#ffffff",
+        "#a8d8ed",
+        "#edf8fc"
+      ],
+      "type": "小号大字距拉丁导航；官方日文竖排标语；资料卡姓名/CV/短字段分工",
+      "layout": "首页城市 KV→footer；CHARACTER 导航进入独立学院/资料/人物舞台→footer",
+      "motion": "静音城市视频可暂停；4 学生资料/立绘以 1000ms 整轨平移，缓动近似；角色声线主动播放，减少动态停止背景并即时换人。"
+    },
+    "sources": [
+      {
+        "title": "Blue Archive 日本官方网站",
+        "url": "https://bluearchive.jp/",
+        "type": "实例",
+        "note": "2026-10-07：日本发行版首页蓝白影像、Logo、竖排标语与下载/漫画入口；开发来源和地区版本分开记录。"
+      },
+      {
+        "title": "Blue Archive 日本官方角色页",
+        "url": "https://bluearchive.jp/character",
+        "type": "实例",
+        "note": "2026-10-07：学院、资料卡与立绘分层，四位阿比多斯学生的姓名/CV/学年/生日/身高以及1000ms水平轨道。"
+      },
+      {
+        "title": "Blue Archive 日本官方创作指南",
+        "url": "https://bluearchive.jp/fankit/guidelines",
+        "type": "规范",
+        "note": "官方IP创作指南入口；本地学习不因此获得全部品牌与资产的再发布许可。"
+      },
+      {
+        "title": "W3C WAI：Carousels Tutorial",
+        "url": "https://www.w3.org/WAI/tutorials/carousels/",
+        "type": "规范",
+        "note": "用户控制、键盘与当前态的规范参考；本地学生为手动切换。"
+      },
+      {
+        "title": "W3C：Animation from Interactions",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+        "type": "规范",
+        "note": "非必要交互动效支持减少动态偏好，不据此声称完整合规。"
+      },
+      {
+        "title": "官方公开角色样式 · 2026-10-07",
+        "url": "https://webusstatic.yo-star.com/bluearchive_jp_web/css/view-character-vue.b3742afb.css",
+        "type": "实例",
+        "note": "2026-10-07：官方角色页整块Swiper过渡1000ms，Hoshino资料/CV与立绘对应；本地只含阿比多斯四人，曲线及手机重排有差异。"
+      },
+      {
+        "title": "官方公开 app 路由组件",
+        "url": "https://webusstatic.yo-star.com/bluearchive_jp_web/js/app.421ac700.js",
+        "type": "实例",
+        "note": "同次采集：导航 methods.change 调用 $router.push，/character 独立路径，外壳直接 router-view+footer，没有 route transition 包装。"
+      }
+    ],
+    "prompt": "以一个 URL 和采集日期归档【学园/轻科幻 IP】。参考 Blue Archive 日本首页：原始蓝白城市视频做满幅世界，透明青白 Logo 居中，右侧窄竖排标语，上方深蓝半透明导航，下载在左下、官方漫画图像在右下；中心不堆营销卡片。源首页为 KV→footer，CHARACTER 导航必须打开独立人物页，HOME 返回首页，不能同页串接；源公开 router-view 没有转场包装，不添加无证据的跨页 fade。人物舞台保留左学院标记、中透明资料卡、右完整立绘，四个真实阿比多斯学生的姓名、CV、生日、学年、身高一一对应；点击人物用 1000ms 整轨水平平移，缓动未核验就明说，不用只淡换小头像替代。VOICE 按钮使用原图和对应官方 WAV，用户点击播放、再点暂停、换人停止，声线作为人物身份而不是 BGM。城市背景静音并可暂停，未证实的音乐不添加。手机保持完整人物并重新安排资料和可触摸选择，明确适配范围；减少动态停止背景、即时切换，键盘与焦点可用。NEWS/SYSTEM/其他学院等未实现页面链接官网，不生成冒牌内容。保留固定蓝白主题及原始商店/漫画入口轮廓，输出代码、来源与字节哈希 manifest、复现边界和真实两尺寸预览。",
+    "negativePrompt": "不要通用双栏hero、紫色霓虹仪表盘、虚构人物页、假背景音乐或自动有声播放；不要复制原站跟踪、运营接口、登录与支付逻辑。",
+    "demo": "demos/blue-archive/index.html",
+    "preview": "previews/blue-archive.jpg",
+    "research": "research/blue-archive.md",
+    "exercise": "改变背景映像的一个静态画面，保持Logo和下载位置，观察天空、建筑和高光是否遮挡标语，再记录允许控件落点的安全区域。",
+    "composition": {
+      "color": "青色强调、白色Logo与天空高光、深蓝透明导航在同一蓝白体系中分工；漫画插画的彩色集中在角落。",
+      "typography": "小号大字距的拉丁导航与官方日文竖排标语方向不同，中心Logo承担主辨识，正文不仿造装饰字。",
+      "layout": "首页城市 KV→footer；CHARACTER 导航进入独立学院/资料/人物舞台→footer",
+      "imagery": "官方静音城市MP4、Logo、竖排标语、漫画入口，四位阿比多斯学生完整立绘/资料卡及各自WAV，全部本地保存。",
+      "shape": "深蓝透明长导航、细线、熟悉商店徽章及原始插画入口；人物页保留透明资料卡和学院标記，不额外加六边形装饰。",
+      "hierarchy": "背景建立世界、Logo确认产品、竖排标语补充主题；下载与漫画入口形成左右分工。",
+      "motion": "静音城市视频可暂停；4 学生资料/立绘以 1000ms 整轨平移，缓动近似；角色声线主动播放，减少动态停止背景并即时换人。",
+      "coherence": "同一青白品牌色将天空、Logo、导航指示和控件连起来，漫画的自由彩色保留在角色叙事入口，避免互相争抢。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "未见深浅切换；保持天空、青白 Logo 与深蓝透明导航。",
+      "designReason": "学园都市的天空和玻璃高光承担世界观，资料卡与立绘沿用浅色学院体系；统一暗化会破坏原插画与标语的协调。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "本地 4 名阿比多斯学生各有官方 WAV，VOICE 手动播放/暂停；PV 为官网外链，城市视频无声。",
+      "interactionRole": "每位声优的原始台词把静态档案变成有身份的人物；换人停止旧声线，音效不承担整站 BGM 或自动开场。"
+    },
+    "capturedAt": "2026-10-07"
+  },
+  "documents": [
+    {
+      "path": "research/blue-archive.md",
+      "role": "research",
+      "content": "# 碧蓝档案：城市映像、人物档案与原始声线\n\n单一来源：[Blue Archive 日本官网](https://bluearchive.jp/)，采集日期 **2026-10-07**。该次可见 CHARACTER 导航进入 [角色子页](https://bluearchive.jp/character)，记录同次旅程，不引入其他版本。\n\n## 真实旅程\n\n首页首入为蓝白城市视频、青白 Logo、右侧竖排标语、顶部深蓝导航，以及左右下角的下载/漫画入口。实际首页向下就是 footer，现场 2040×935 最大滚动约 571px；没有本地此前添加的资源卡和教学笔记章节。反向回到首屏，再由 CHARACTER 导航打开角色页。\n\n本地以文档导航替代源 Vue SPA 路由，并未添加无证据的跨页淡化。角色页学院标记、透明资料卡和完整立绘分层。阿比多斯四学生选择后，整块轨道以 **1000ms** 水平移动。现场点击 Hoshino，姓名、CV、生日/学年/身高与原立绘同步。点击 Shiroko VOICE 后，官方 WAV 实际播放，另三名各有自己的 WAV；这些是角色台词，不是背景音乐。\n\n## 触发 → 响应 → 目的\n\n| 触发 | 响应 | 目的 |\n| --- | --- | --- |\n| 首页正常上下滚动 | KV 与 footer 之间浏览 | 空间中心让给世界观，实用入口放边缘 |\n| CHARACTER 导航 | 原站进入独立人物页 | 将人物查询和首页品牌氛围分开 |\n| 人物选择 | 1000ms 资料卡和立绘整轨横移 | 整个人物档案共同到场，保持查询连续性 |\n| VOICE 麦克风 | 对应学生的官方台词 | 声优与台词补充人物身份，声音来源清楚 |\n| 换人/后台 | 本地停止原台词 | 防止旧人物声线在新档案叠加 |\n\n## 风格与理论\n\n天空、玻璃高光和青白 Logo 统一成轻盈的学园世界；深蓝透明导航为白字提供稳定底色，竖排标语补充文化气质，角落漫画图像保留自己的插画轮廓。人物页用透明资料卡与完整立绘延续同一世界。此快照未见深浅主题开关，本地固定浅色，不把背景夜色等场景误解成主题切换。\n\n[W3C Carousels Tutorial](https://www.w3.org/WAI/tutorials/carousels/) 支持本地键盘和当前态，[Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) 支持减少动态。角色公开样式：[view-character-vue](https://webusstatic.yo-star.com/bluearchive_jp_web/css/view-character-vue.b3742afb.css)，其整轨结构与现场 1000ms 位移相互佐证。\n\n## 本地范围\n\n本地首页仅 KV→footer；CHARACTER 进入独立 `character.html`，HOME 返回首页。源公开导航调用 `$router.push`，外壳直接渲染 `router-view` 与 footer，现场路由切换后未见额外入场动画。四学生完整资料和 WAV 本地保存，其他学院、NEWS/SYSTEM/完整 PV 链接官网。删除未有来源依据的资源卡、构图笔记和装饰六边形。缓动、手机重排、键盘/手势、暂停与减少动态属于适配；未发现独立 BGM。参数、Prompt 和素材记录见条目与 [fidelity](../demos/blue-archive/fidelity.md)。\n",
+      "sha256": "ef8fe80bb6b433a872d23c41b618477ca14509e3496153a354ef05a8c4b2fe5a",
+      "bytes": 3087
+    },
+    {
+      "path": "prompts/blue-archive.md",
+      "role": "prompt",
+      "content": "# 碧蓝档案：学园都市的天空与光 · 复用 Prompt\n\n由 [结构化案例](../entries/blue-archive.json) 自动生成。参考观察与具体边界见 [调研](../research/blue-archive.md)。\n\n## 正向 Prompt\n\n以一个 URL 和采集日期归档【学园/轻科幻 IP】。参考 Blue Archive 日本首页：原始蓝白城市视频做满幅世界，透明青白 Logo 居中，右侧窄竖排标语，上方深蓝半透明导航，下载在左下、官方漫画图像在右下；中心不堆营销卡片。源首页为 KV→footer，CHARACTER 导航必须打开独立人物页，HOME 返回首页，不能同页串接；源公开 router-view 没有转场包装，不添加无证据的跨页 fade。人物舞台保留左学院标记、中透明资料卡、右完整立绘，四个真实阿比多斯学生的姓名、CV、生日、学年、身高一一对应；点击人物用 1000ms 整轨水平平移，缓动未核验就明说，不用只淡换小头像替代。VOICE 按钮使用原图和对应官方 WAV，用户点击播放、再点暂停、换人停止，声线作为人物身份而不是 BGM。城市背景静音并可暂停，未证实的音乐不添加。手机保持完整人物并重新安排资料和可触摸选择，明确适配范围；减少动态停止背景、即时切换，键盘与焦点可用。NEWS/SYSTEM/其他学院等未实现页面链接官网，不生成冒牌内容。保留固定蓝白主题及原始商店/漫画入口轮廓，输出代码、来源与字节哈希 manifest、复现边界和真实两尺寸预览。\n\n## 负向约束\n\n不要通用双栏hero、紫色霓虹仪表盘、虚构人物页、假背景音乐或自动有声播放；不要复制原站跟踪、运营接口、登录与支付逻辑。\n\n## 制作约束\n\n- 归档 https://bluearchive.jp/ 在 2026-10-07 的单一快照；其可见 CHARACTER 导航进入 /character，作为同次采集的关联子页。\n- 原首页只含 KV→footer，独立 character.html 仅复现 /character 的阿比多斯；本地使用文档导航，源为 Vue router.push，未添加无证据的入场淡化。\n- 4 位学生姓名、CV、学年、生日、身高、立绘和 WAV 已核验；其他学院、全部人物和运营页面用官方入口。\n- 角色整轨 1000ms 有来源依据；缓动、键盘、触摸阈值、声线暂停与减少动态为本地补充或近似。\n- 城市视频保持静音；角色台词不是 BGM，完整 PV 使用官方外链，未添加通用音乐。\n- 手机改为可读排布而非逐像素原页；保持透明资料卡、完整人物和蓝白色，不加强制暗色主题。\n- 韩国为开发来源、日本为本次发行版；官方素材和商标权利归相应权利方，manifest 记录 URL/哈希。\n\n## 检查方法\n\n改变背景映像的一个静态画面，保持Logo和下载位置，观察天空、建筑和高光是否遮挡标语，再记录允许控件落点的安全区域。\n\n[查看 Demo](../demos/blue-archive/index.html) · [返回参考库](../index.html#style/blue-archive)\n",
+      "sha256": "b5b0bafd4bdfddb97b9c0f693df5c70e3849caca382498954c46c797a3fbe88e",
+      "bytes": 3025
+    },
+    {
+      "path": "demos/blue-archive/fidelity.md",
+      "role": "fidelity",
+      "content": "# Blue Archive 复现边界\n\n- 来源 URL：https://bluearchive.jp/\n- 采集日期：2026-10-07；日本版单一快照。关联子页由该次可见 CHARACTER 导航进入 https://bluearchive.jp/character。\n\n## 来源确认与本地实现\n\n| 源行为 | 本地实现 |\n| --- | --- |\n| 首页 KV→footer；城市视频、Logo、竖排标语、下载/漫画图入口 | 原始图像/视频和角落构图，背景增加真实暂停；删除自制资源墙和笔记 |\n| CHARACTER 进入独立角色页 | 本地独立 character.html 文档导航；HOME 回首页，未把人物并进首页滚动章节 |\n| 4 学生完整资料/立绘以 1000ms 整轨水平移动 | 完整原始立绘及对应资料卡，同为 1000ms；缓动未声称精确 |\n| 每位学生 VOICE 播放自己的官方 WAV | 4 条原 WAV 与原麦克风/标签图；主动播放/暂停，换人/后台停止为本地防叠加 |\n\n## 明确近似和未覆盖\n\n本地与源相同职责：首页 KV→footer，人物为独立页。源公开 app.421ac700.js 中导航调用 $router.push，外壳直接 router-view，无 route transition 包装；本地文档导航不同于 Vue SPA 引擎，不加未证实的入场淡化。只含阿比多斯四人，不复制全部学院、人物、NEWS/SYSTEM、漫画和运营页；入口保留官网链接。手机可读排布、键盘、手势阈值、背景暂停、声线停止及减少动态为本地补充。原声播放标志采用可访问 pressed 状态，不声称重建原站频谱分析。\n\n主题固定蓝白浅色；源未见深浅切换。城市视频静音，台词服务人物介绍，PV 外链；未发现独立 BGM，不提供虚构音乐开关。资产 manifest 留存 URL、用途、尺寸和 SHA-256；不加载原账户与追踪服务。\n",
+      "sha256": "62c60f1b8238f7367df6e7e3011295dabac38819ed801f6b775fd4d9a09709de",
+      "bytes": 1759
+    },
+    {
+      "path": "demos/blue-archive/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourcePage\": \"https://bluearchive.jp/\",\n  \"retrievedAt\": \"2026-10-07\",\n  \"purpose\": \"官方公开资产用于个人本地设计学习；未获取授权用于商业发布\",\n  \"assets\": [\n    {\n      \"file\": \"assets/app.47b744a6.css\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/css/app.47b744a6.css\",\n      \"bytes\": 23913,\n      \"type\": \"text/css\",\n      \"use\": \"研究用原始样式，仅核验颜色/尺寸；不被本地HTML加载\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"sha256\": \"f05ed69f2a9dae591d6f7d7b34c5c6810ba4ae665317660b399a57aae7883f0a\"\n    },\n    {\n      \"file\": \"assets/bg.555a8a72.mp4\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/media/bg.555a8a72.mp4\",\n      \"bytes\": 1602930,\n      \"type\": \"video/mp4\",\n      \"use\": \"原首页城市背景影像；本地保持静音，可暂停且离屏/后台停止，减少动态初始暂停。角色声音使用各自独立WAV，PV另走官方外链。\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"sha256\": \"f2e3d8ddc504774c720c625f68cf89dddb25ecbcb4efe358fc80aa737834ef10\"\n    },\n    {\n      \"file\": \"assets/bg_cover.9bd1cfea.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/bg_cover.9bd1cfea.png\",\n      \"bytes\": 16149,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"sha256\": \"d65cff27b0f138589f4d706b76d1a2c13b81d8ff4de48e1c2a73c449a1caa001\"\n    },\n    {\n      \"file\": \"assets/bluearhive.f833c198.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/bluearhive.f833c198.png\",\n      \"bytes\": 4309,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 157,\n      \"height\": 57,\n      \"sha256\": \"ddb782fcf89a6c42e302af97c5228c074cd2d73eaad72ac879ae3fc4cd8d08ec\"\n    },\n    {\n      \"file\": \"assets/comicEntry.2de61182.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/comicEntry.2de61182.png\",\n      \"bytes\": 122086,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 380,\n      \"height\": 350,\n      \"sha256\": \"fa912239fc6a7c0980eae63395c6882fe0041f70ec7b765b5827c7f09a6ebfd4\"\n    },\n    {\n      \"file\": \"assets/ffcLogo.f1e83d2f.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/ffcLogo.f1e83d2f.png\",\n      \"bytes\": 58442,\n      \"type\": \"image/png\",\n      \"use\": \"官方品牌标识\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 430,\n      \"height\": 342,\n      \"sha256\": \"2f0e031caef27fef63f9a9693afdf04ea6ca59e528a2b68c700004fc15cceeb6\"\n    },\n    {\n      \"file\": \"assets/google-play.8c692266.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/google-play.8c692266.png\",\n      \"bytes\": 14651,\n      \"type\": \"image/png\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 378,\n      \"height\": 113,\n      \"sha256\": \"d73e9329b8f2f3b4d83df1ee26a75ee6f6c199824202fd57ce2a4843b061d5ff\"\n    },\n    {\n      \"file\": \"assets/help-enter.69f99d8a.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/help-enter.69f99d8a.png\",\n      \"bytes\": 86201,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 305,\n      \"height\": 178,\n      \"sha256\": \"5ff3d04c3268f30982307ccda540c9fc4f9b3d75d9a75f3c09db819adc275895\"\n    },\n    {\n      \"file\": \"assets/ios-play.02d9f9a4.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/ios-play.02d9f9a4.png\",\n      \"bytes\": 27736,\n      \"type\": \"image/png\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 375,\n      \"height\": 113,\n      \"sha256\": \"38c091f79a0b030481112c7b6ae6624fbc4b812b8a071edb969312e4f48653fb\"\n    },\n    {\n      \"file\": \"assets/LogoJP.92d9dcd0.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/LogoJP.92d9dcd0.png\",\n      \"bytes\": 88704,\n      \"type\": \"image/png\",\n      \"use\": \"官方品牌标识\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 725,\n      \"height\": 294,\n      \"sha256\": \"ac49245da46686689f1b9e4c6de2ee32e261ef1e637aef9372b0a0b38de40134\"\n    },\n    {\n      \"file\": \"assets/slogan.1ab23877.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/slogan.1ab23877.png\",\n      \"bytes\": 112692,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 309,\n      \"height\": 987,\n      \"sha256\": \"70963ad9c69f8ef2b146bceee5e4cad2bfa9f2ea922ca104abc5f1ab86068258\"\n    },\n    {\n      \"file\": \"assets/windows.2b8dd344.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/windows.2b8dd344.png\",\n      \"bytes\": 8196,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 443,\n      \"height\": 131,\n      \"sha256\": \"93fceaf70a3bd541f7108a132980d847ce568da4420588e3fb5d6cad50bed1a2\"\n    },\n    {\n      \"file\": \"assets/yostarBottom.6aef7d4b.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/yostarBottom.6aef7d4b.png\",\n      \"bytes\": 19687,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。\",\n      \"width\": 838,\n      \"height\": 146,\n      \"sha256\": \"89a517897af3e0e147dc04d479a139ad16adafa4c3234b0c413d475fd9945954\"\n    },\n    {\n      \"file\": \"assets/school-abydos.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/ABYDOS.8057f790.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 6613,\n      \"sha256\": \"d09e2ea075cf0d4c32500973e2f49f58099101d09cabe9323250044d1392690b\",\n      \"width\": 265,\n      \"height\": 208,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/school-gehenna.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/Gehenna.b55b47ab.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 5476,\n      \"sha256\": \"ff9f7f98b54c909c771d8dc24c5f4fb42ef39bfbcf5a0937bc3fe2e3f68f11ec\",\n      \"width\": 265,\n      \"height\": 143,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/school-millennium.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/Millennium.005f51d2.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 7594,\n      \"sha256\": \"cb7770d6079d69fd11bcd0002c0cd0ffed9b2cace4868721ed550469dd6820af\",\n      \"width\": 265,\n      \"height\": 184,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/school-trinity.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/Trinity.80b52cbf.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 14952,\n      \"sha256\": \"f7625772388bdd32685878201df5ff47177043ad7779be4543db5c2962c90311\",\n      \"width\": 265,\n      \"height\": 249,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/school-abydos-card.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/ab.f83cdf73.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 4831,\n      \"sha256\": \"6985221242a9b9416cd5dc2c0ff8806074804fb56d81ce2a336e901c4c7e95f5\",\n      \"width\": 120,\n      \"height\": 90,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/shiroko.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/c1.902d2ae5.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 318153,\n      \"sha256\": \"228a1e53b94ef0ab014f05c160c776d5aa61956f3b886de15e89c0cc4c63222d\",\n      \"width\": 1080,\n      \"height\": 2186,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/hoshino.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/c2.d55bf5c5.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 340576,\n      \"sha256\": \"07eb5a84d715cb62dc1cfdcc63517381082b833fe0c9f2a4761eab872ad77cea\",\n      \"width\": 1161,\n      \"height\": 2077,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/serika.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/c3.153a4f1f.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 183477,\n      \"sha256\": \"99531fc0fc4cc39dd9962b83ce0fbfe427393ada397f1e3b2e4b05bada55468b\",\n      \"width\": 735,\n      \"height\": 1657,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/nonomi.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/c4.e6262261.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 288977,\n      \"sha256\": \"53d12909adb258dce9e6e0a588d00273c13543829b1100067cb6a6d1206be6ea\",\n      \"width\": 850,\n      \"height\": 1922,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/shiroko-thumb.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/a1.ab9af5cd.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 27602,\n      \"sha256\": \"50f0ec48abaae52eb1c8a438b7ee6c50ea2bdac8fb00de80d3171211641e0973\",\n      \"width\": 265,\n      \"height\": 266,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/hoshino-thumb.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/a2.51f5fae3.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 23789,\n      \"sha256\": \"f6c315eaa1d38b54d02c1795ea02b62bcd7dce1d9c9c9a0751358562efbbf9ad\",\n      \"width\": 265,\n      \"height\": 266,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/character-background.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/character_bk.bb649dd0.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 453388,\n      \"sha256\": \"f348448c6e1a4542cebafbb1d939bc875b63df573738086ea94159735f2d3577\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/student-card.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/studentid.294d8ed1.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 31793,\n      \"sha256\": \"d0ee1ec71f5af0565be9bf85528b79ddaa0d0f102f7c4d112d3456635dd515fb\",\n      \"width\": 866,\n      \"height\": 524,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"assets/character-background-mobile.png\",\n      \"sourceUrl\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/img/character_bks.b688892f.png\",\n      \"sourcePage\": \"https://bluearchive.jp/character\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 809436,\n      \"sha256\": \"41917c5e8a78713bb1e338aa54afcf4e72525d1de0856c80289c184a95c60daf\",\n      \"width\": 1080,\n      \"height\": 1920,\n      \"type\": \"image/png\",\n      \"use\": \"官方角色页观察到的学院标识、学生立绘、资料卡或背景；本地角色舞台局部复现\",\n      \"rights\": \"NEXON Games / Yostar 及对应权利人：用户授权的个人本地设计学习，不代表商业发布许可。\"\n    },\n    {\n      \"file\": \"01.bd71aff1.wav\",\n      \"url\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/media/01.bd71aff1.wav\",\n      \"use\": \"Abydos角色点击原始VOICE入口的学生语音\",\n      \"owner\": \"NEXON Games / Yostar\",\n      \"bytes\": 697882,\n      \"sha256\": \"18e8fa390f662f0a20637eb36124aa61f8f59f86677b2a2fda4cb0b5116d1485\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原权利人；个人学习\",\n      \"contentType\": \"audio/wav\"\n    },\n    {\n      \"file\": \"02.73ff260c.wav\",\n      \"url\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/media/02.73ff260c.wav\",\n      \"use\": \"Abydos角色点击原始VOICE入口的学生语音\",\n      \"owner\": \"NEXON Games / Yostar\",\n      \"bytes\": 398650,\n      \"sha256\": \"de5cde3175587a67d9b39d941eb698a8522a04c4a59dde6e5d045b6e66dd56c4\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原权利人；个人学习\",\n      \"contentType\": \"audio/wav\"\n    },\n    {\n      \"file\": \"03.83e84e04.wav\",\n      \"url\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/media/03.83e84e04.wav\",\n      \"use\": \"Abydos角色点击原始VOICE入口的学生语音\",\n      \"owner\": \"NEXON Games / Yostar\",\n      \"bytes\": 786016,\n      \"sha256\": \"45685d4770aab4bab7295d5c09bfff893daa6fe41d894f6e07d9e866a43076f3\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原权利人；个人学习\",\n      \"contentType\": \"audio/wav\"\n    },\n    {\n      \"file\": \"04.99faa124.wav\",\n      \"url\": \"https://webusstatic.yo-star.com/bluearchive_jp_web/media/04.99faa124.wav\",\n      \"use\": \"Abydos角色点击原始VOICE入口的学生语音\",\n      \"owner\": \"NEXON Games / Yostar\",\n      \"bytes\": 503652,\n      \"sha256\": \"edb08c1d5198f3d67dbd09a2bdc23fbec4bb10274a4172daee270fd0c172eaed\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原权利人；个人学习\",\n      \"contentType\": \"audio/wav\"\n    },\n    {\n      \"file\": \"voice-label.png\",\n      \"url\": \"https://bluearchive.jp/character\",\n      \"use\": \"官网角色页内联PNG声音控件，原始字节保存\",\n      \"owner\": \"NEXON Games / Yostar\",\n      \"bytes\": 459,\n      \"sha256\": \"7489f149f7c579c6fa20d9f2f3e50a7ca6e99617f2259a4f10093575972428f9\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原权利人；个人学习\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 127,\n      \"height\": 21,\n      \"sourceSelector\": \".sound\"\n    },\n    {\n      \"file\": \"voice-microphone.png\",\n      \"url\": \"https://bluearchive.jp/character\",\n      \"use\": \"官网角色页内联PNG声音控件，原始字节保存\",\n      \"owner\": \"NEXON Games / Yostar\",\n      \"bytes\": 1029,\n      \"sha256\": \"3ecae794ab96c7056acce1c6192cba00317513f6335a33b77af3c7b9130b476a\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原权利人；个人学习\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 33,\n      \"height\": 47,\n      \"sourceSelector\": \".maiku\"\n    }\n  ],\n  \"limitations\": [\n    \"单次采集2026-10-07日文首页与明确CHARACTER路由；官网未来变化不维护。\",\n    \"首页只保留实际静音影片、下载、漫画入口与footer；不再加虚构观察/资源卡片章节。\",\n    \"角色页局部保留4位Abydos学生、1000ms横向轨道和真实语音；另外学院、NEWS/SYSTEM等用原站外链。\",\n    \"将角色局部页面置于首页下方便于本库观察，原站是独立/character路由；同页滚动为本地组合，不声称原站如此。\",\n    \"键盘、持续暂停、减少动态和切换人物停止旧声音为本地补充；无独立BGM。\"\n  ]\n}\n",
+      "sha256": "7369cf7bda4200713568f669bfcc8bfdf0d41f5ae9b36d2966c5d4d9d65d9227",
+      "bytes": 20099
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/blue-archive/app.js",
+      "role": "source",
+      "sha256": "842b77e4d4a50fb33de98e924a01294f67bc0b6c196d4eb4f7af527e7f6a1b98",
+      "bytes": 6522
+    },
+    {
+      "path": "demos/blue-archive/assets-manifest.json",
+      "role": "context",
+      "sha256": "7369cf7bda4200713568f669bfcc8bfdf0d41f5ae9b36d2966c5d4d9d65d9227",
+      "bytes": 20099
+    },
+    {
+      "path": "demos/blue-archive/assets/01.bd71aff1.wav",
+      "role": "asset",
+      "sha256": "18e8fa390f662f0a20637eb36124aa61f8f59f86677b2a2fda4cb0b5116d1485",
+      "bytes": 697882
+    },
+    {
+      "path": "demos/blue-archive/assets/02.73ff260c.wav",
+      "role": "asset",
+      "sha256": "de5cde3175587a67d9b39d941eb698a8522a04c4a59dde6e5d045b6e66dd56c4",
+      "bytes": 398650
+    },
+    {
+      "path": "demos/blue-archive/assets/03.83e84e04.wav",
+      "role": "asset",
+      "sha256": "45685d4770aab4bab7295d5c09bfff893daa6fe41d894f6e07d9e866a43076f3",
+      "bytes": 786016
+    },
+    {
+      "path": "demos/blue-archive/assets/04.99faa124.wav",
+      "role": "asset",
+      "sha256": "edb08c1d5198f3d67dbd09a2bdc23fbec4bb10274a4172daee270fd0c172eaed",
+      "bytes": 503652
+    },
+    {
+      "path": "demos/blue-archive/assets/LogoJP.92d9dcd0.png",
+      "role": "asset",
+      "sha256": "ac49245da46686689f1b9e4c6de2ee32e261ef1e637aef9372b0a0b38de40134",
+      "bytes": 88704
+    },
+    {
+      "path": "demos/blue-archive/assets/app.47b744a6.css",
+      "role": "asset",
+      "sha256": "f05ed69f2a9dae591d6f7d7b34c5c6810ba4ae665317660b399a57aae7883f0a",
+      "bytes": 23913
+    },
+    {
+      "path": "demos/blue-archive/assets/bg.555a8a72.mp4",
+      "role": "asset",
+      "sha256": "f2e3d8ddc504774c720c625f68cf89dddb25ecbcb4efe358fc80aa737834ef10",
+      "bytes": 1602930
+    },
+    {
+      "path": "demos/blue-archive/assets/bg_cover.9bd1cfea.png",
+      "role": "asset",
+      "sha256": "d65cff27b0f138589f4d706b76d1a2c13b81d8ff4de48e1c2a73c449a1caa001",
+      "bytes": 16149
+    },
+    {
+      "path": "demos/blue-archive/assets/bluearhive.f833c198.png",
+      "role": "asset",
+      "sha256": "ddb782fcf89a6c42e302af97c5228c074cd2d73eaad72ac879ae3fc4cd8d08ec",
+      "bytes": 4309
+    },
+    {
+      "path": "demos/blue-archive/assets/character-background-mobile.png",
+      "role": "asset",
+      "sha256": "41917c5e8a78713bb1e338aa54afcf4e72525d1de0856c80289c184a95c60daf",
+      "bytes": 809436
+    },
+    {
+      "path": "demos/blue-archive/assets/character-background.png",
+      "role": "asset",
+      "sha256": "f348448c6e1a4542cebafbb1d939bc875b63df573738086ea94159735f2d3577",
+      "bytes": 453388
+    },
+    {
+      "path": "demos/blue-archive/assets/comicEntry.2de61182.png",
+      "role": "asset",
+      "sha256": "fa912239fc6a7c0980eae63395c6882fe0041f70ec7b765b5827c7f09a6ebfd4",
+      "bytes": 122086
+    },
+    {
+      "path": "demos/blue-archive/assets/ffcLogo.f1e83d2f.png",
+      "role": "asset",
+      "sha256": "2f0e031caef27fef63f9a9693afdf04ea6ca59e528a2b68c700004fc15cceeb6",
+      "bytes": 58442
+    },
+    {
+      "path": "demos/blue-archive/assets/google-play.8c692266.png",
+      "role": "asset",
+      "sha256": "d73e9329b8f2f3b4d83df1ee26a75ee6f6c199824202fd57ce2a4843b061d5ff",
+      "bytes": 14651
+    },
+    {
+      "path": "demos/blue-archive/assets/help-enter.69f99d8a.png",
+      "role": "asset",
+      "sha256": "5ff3d04c3268f30982307ccda540c9fc4f9b3d75d9a75f3c09db819adc275895",
+      "bytes": 86201
+    },
+    {
+      "path": "demos/blue-archive/assets/hoshino-thumb.png",
+      "role": "asset",
+      "sha256": "f6c315eaa1d38b54d02c1795ea02b62bcd7dce1d9c9c9a0751358562efbbf9ad",
+      "bytes": 23789
+    },
+    {
+      "path": "demos/blue-archive/assets/hoshino.png",
+      "role": "asset",
+      "sha256": "07eb5a84d715cb62dc1cfdcc63517381082b833fe0c9f2a4761eab872ad77cea",
+      "bytes": 340576
+    },
+    {
+      "path": "demos/blue-archive/assets/ios-play.02d9f9a4.png",
+      "role": "asset",
+      "sha256": "38c091f79a0b030481112c7b6ae6624fbc4b812b8a071edb969312e4f48653fb",
+      "bytes": 27736
+    },
+    {
+      "path": "demos/blue-archive/assets/nonomi.png",
+      "role": "asset",
+      "sha256": "53d12909adb258dce9e6e0a588d00273c13543829b1100067cb6a6d1206be6ea",
+      "bytes": 288977
+    },
+    {
+      "path": "demos/blue-archive/assets/school-abydos-card.png",
+      "role": "asset",
+      "sha256": "6985221242a9b9416cd5dc2c0ff8806074804fb56d81ce2a336e901c4c7e95f5",
+      "bytes": 4831
+    },
+    {
+      "path": "demos/blue-archive/assets/school-abydos.png",
+      "role": "asset",
+      "sha256": "d09e2ea075cf0d4c32500973e2f49f58099101d09cabe9323250044d1392690b",
+      "bytes": 6613
+    },
+    {
+      "path": "demos/blue-archive/assets/school-gehenna.png",
+      "role": "asset",
+      "sha256": "ff9f7f98b54c909c771d8dc24c5f4fb42ef39bfbcf5a0937bc3fe2e3f68f11ec",
+      "bytes": 5476
+    },
+    {
+      "path": "demos/blue-archive/assets/school-millennium.png",
+      "role": "asset",
+      "sha256": "cb7770d6079d69fd11bcd0002c0cd0ffed9b2cace4868721ed550469dd6820af",
+      "bytes": 7594
+    },
+    {
+      "path": "demos/blue-archive/assets/school-trinity.png",
+      "role": "asset",
+      "sha256": "f7625772388bdd32685878201df5ff47177043ad7779be4543db5c2962c90311",
+      "bytes": 14952
+    },
+    {
+      "path": "demos/blue-archive/assets/serika.png",
+      "role": "asset",
+      "sha256": "99531fc0fc4cc39dd9962b83ce0fbfe427393ada397f1e3b2e4b05bada55468b",
+      "bytes": 183477
+    },
+    {
+      "path": "demos/blue-archive/assets/shiroko-thumb.png",
+      "role": "asset",
+      "sha256": "50f0ec48abaae52eb1c8a438b7ee6c50ea2bdac8fb00de80d3171211641e0973",
+      "bytes": 27602
+    },
+    {
+      "path": "demos/blue-archive/assets/shiroko.png",
+      "role": "asset",
+      "sha256": "228a1e53b94ef0ab014f05c160c776d5aa61956f3b886de15e89c0cc4c63222d",
+      "bytes": 318153
+    },
+    {
+      "path": "demos/blue-archive/assets/slogan.1ab23877.png",
+      "role": "asset",
+      "sha256": "70963ad9c69f8ef2b146bceee5e4cad2bfa9f2ea922ca104abc5f1ab86068258",
+      "bytes": 112692
+    },
+    {
+      "path": "demos/blue-archive/assets/student-card.png",
+      "role": "asset",
+      "sha256": "d0ee1ec71f5af0565be9bf85528b79ddaa0d0f102f7c4d112d3456635dd515fb",
+      "bytes": 31793
+    },
+    {
+      "path": "demos/blue-archive/assets/voice-label.png",
+      "role": "asset",
+      "sha256": "7489f149f7c579c6fa20d9f2f3e50a7ca6e99617f2259a4f10093575972428f9",
+      "bytes": 459
+    },
+    {
+      "path": "demos/blue-archive/assets/voice-microphone.png",
+      "role": "asset",
+      "sha256": "3ecae794ab96c7056acce1c6192cba00317513f6335a33b77af3c7b9130b476a",
+      "bytes": 1029
+    },
+    {
+      "path": "demos/blue-archive/assets/windows.2b8dd344.png",
+      "role": "asset",
+      "sha256": "93fceaf70a3bd541f7108a132980d847ce568da4420588e3fb5d6cad50bed1a2",
+      "bytes": 8196
+    },
+    {
+      "path": "demos/blue-archive/assets/yostarBottom.6aef7d4b.png",
+      "role": "asset",
+      "sha256": "89a517897af3e0e147dc04d479a139ad16adafa4c3234b0c413d475fd9945954",
+      "bytes": 19687
+    },
+    {
+      "path": "demos/blue-archive/character.html",
+      "role": "source",
+      "sha256": "35be8d1518b2d78abded6b9748f804d37e852036e288cb9c47022d1f88a22e11",
+      "bytes": 4404
+    },
+    {
+      "path": "demos/blue-archive/fidelity.md",
+      "role": "context",
+      "sha256": "62c60f1b8238f7367df6e7e3011295dabac38819ed801f6b775fd4d9a09709de",
+      "bytes": 1759
+    },
+    {
+      "path": "demos/blue-archive/index.html",
+      "role": "source",
+      "sha256": "11e623eb85db0e238143b9b962ec7a74d892e1a51be20f9fbbc7a0da9e5ba49c",
+      "bytes": 4776
+    },
+    {
+      "path": "demos/blue-archive/style.css",
+      "role": "source",
+      "sha256": "074f88af757e338453243427149e24c34a29d3bb0d076f533c45f3320f4ccf34",
+      "bytes": 13453
+    },
+    {
+      "path": "entries/blue-archive.json",
+      "role": "context",
+      "sha256": "9ca990a059ca42ae8342a7a4dfafde51429561eacb2c8b99a16f220728d34e0e",
+      "bytes": 9974
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/blue-archive.jpg",
+      "role": "preview",
+      "sha256": "eb65a5396d590d7acf93621f7be0273219383797788e62f719c1174295058e03",
+      "bytes": 241005
+    },
+    {
+      "path": "previews/mobile/blue-archive.jpg",
+      "role": "preview",
+      "sha256": "759a7aad9bda15e92c00f15932a74858efee5b929eafe573006a4ea9f3e16eee",
+      "bytes": 80306
+    },
+    {
+      "path": "prompts/blue-archive.md",
+      "role": "context",
+      "sha256": "b5b0bafd4bdfddb97b9c0f693df5c70e3849caca382498954c46c797a3fbe88e",
+      "bytes": 3025
+    },
+    {
+      "path": "research/blue-archive.md",
+      "role": "context",
+      "sha256": "ef8fe80bb6b433a872d23c41b618477ca14509e3496153a354ef05a8c4b2fe5a",
+      "bytes": 3087
+    },
+    {
+      "path": "research/screenshots/blue-archive-source.jpg",
+      "role": "preview",
+      "sha256": "48d9f31299c2cb273d2a0a1bcd21d6ec75d442bc7dbe880df23e9c57e4f56dbe",
+      "bytes": 168907
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=blue-archive\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>青色强调、白色Logo与天空高光、深蓝透明导航在同一蓝白体系中分工；漫画插画的彩色集中在角落。</dd></div><div class=\"\"><dt>字体排版</dt><dd>小号大字距的拉丁导航与官方日文竖排标语方向不同，中心Logo承担主辨识，正文不仿造装饰字。</dd></div><div class=\"\"><dt>布局留白</dt><dd>首页城市 KV→footer；CHARACTER 导航进入独立学院/资料/人物舞台→footer</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方静音城市MP4、Logo、竖排标语、漫画入口，四位阿比多斯学生完整立绘/资料卡及各自WAV，全部本地保存。</dd></div><div class=\"\"><dt>线条形状</dt><dd>深蓝透明长导航、细线、熟悉商店徽章及原始插画入口；人物页保留透明资料卡和学院标記，不额外加六边形装饰。</dd></div><div class=\"\"><dt>信息层级</dt><dd>背景建立世界、Logo确认产品、竖排标语补充主题；下载与漫画入口形成左右分工。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>静音城市视频可暂停；4 学生资料/立绘以 1000ms 整轨平移，缓动近似；角色声线主动播放，减少动态停止背景并即时换人。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>同一青白品牌色将天空、Logo、导航指示和控件连起来，漫画的自由彩色保留在角色叙事入口，避免互相争抢。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>背景世界先建立氛围，居中品牌标识与右侧竖排标语保持不同角色。</li><li>深蓝半透明横向导航与蓝白城市映像共享色系，同时稳定承载白色导航文字。</li><li>下载在左下，漫画/帮助图像入口在右下，主视觉中心留给世界观。</li><li>官方插画入口有各自的表现力，外围控件使用简洁线条维持轻量界面。</li></ul><h3>怎样凸显产品重点</h3><p>真实游戏 Blue Archive 日本版；官方首页展示城市/教室背景、品牌与日常叙事，并把下载、漫画和帮助入口分配到画面角落。</p><h3>主题与情绪</h3><p>学园都市的蓝天、反光玻璃与日常场景；青白标识、日文竖排文字和可爱的漫画按钮共同表达青春与轻盈感。</p></section><section><h2>02 / 交互巧思</h2><ul><li>真实首页构图为城市影像与 Logo、竖排标语、边缘下载/漫画入口，向下到 footer；本地加入背景暂停。</li><li>阿比多斯四学生资料卡与完整立绘以 1000ms 整块水平移动；选择按钮、左右键及手势同步当前人物。</li><li>角色 VOICE 麦克风播放该学生对应官方 WAV，再点暂停；换人或后台停止，声线归属明确。</li><li>首页导航 CHARACTER 打开本地独立 character.html；HOME 返回首页，首页仅 KV→footer，保留源站页面职责分离。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>未见深浅切换；保持天空、青白 Logo 与深蓝透明导航。</p><p>学园都市的天空和玻璃高光承担世界观，资料卡与立绘沿用浅色学院体系；统一暗化会破坏原插画与标语的协调。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>外部音乐入口</h3><p>本地 4 名阿比多斯学生各有官方 WAV，VOICE 手动播放/暂停；PV 为官网外链，城市视频无声。</p><p>每位声优的原始台词把静态档案变成有身份的人物；换人停止旧声线，音效不承担整站 BGM 或自动开场。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>归档 https://bluearchive.jp/ 在 2026-10-07 的单一快照；其可见 CHARACTER 导航进入 /character，作为同次采集的关联子页。</li><li>原首页只含 KV→footer，独立 character.html 仅复现 /character 的阿比多斯；本地使用文档导航，源为 Vue router.push，未添加无证据的入场淡化。</li><li>4 位学生姓名、CV、学年、生日、身高、立绘和 WAV 已核验；其他学院、全部人物和运营页面用官方入口。</li><li>角色整轨 1000ms 有来源依据；缓动、键盘、触摸阈值、声线暂停与减少动态为本地补充或近似。</li><li>城市视频保持静音；角色台词不是 BGM，完整 PV 使用官方外链，未添加通用音乐。</li><li>手机改为可读排布而非逐像素原页；保持透明资料卡、完整人物和蓝白色，不加强制暗色主题。</li><li>韩国为开发来源、日本为本次发行版；官方素材和商标权利归相应权利方，manifest 记录 URL/哈希。</li></ul><h3>适合</h3><p>有成熟世界观的校园手游 / 柔和科幻IP宣传 / 背景氛围与轻量导航共存的官网</p><h3>谨慎使用</h3><p>把青白学园主题写成泛用科技仪表盘 / 所有信息都覆盖在动画最复杂的位置 / 未核验的角色页与假BGM状态</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#00c9e5\"></i>#00c9e5</span><span class=\"swatch\"><i style=\"background:#14273b\"></i>#14273b</span><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#a8d8ed\"></i>#a8d8ed</span><span class=\"swatch\"><i style=\"background:#edf8fc\"></i>#edf8fc</span></div><p><b>字体</b> · 小号大字距拉丁导航；官方日文竖排标语；资料卡姓名/CV/短字段分工<br><b>布局</b> · 首页城市 KV→footer；CHARACTER 导航进入独立学院/资料/人物舞台→footer<br><b>动效</b> · 静音城市视频可暂停；4 学生资料/立绘以 1000ms 整轨平移，缓动近似；角色声线主动播放，减少动态停止背景并即时换人。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>以一个 URL 和采集日期归档【学园/轻科幻 IP】。参考 Blue Archive 日本首页：原始蓝白城市视频做满幅世界，透明青白 Logo 居中，右侧窄竖排标语，上方深蓝半透明导航，下载在左下、官方漫画图像在右下；中心不堆营销卡片。源首页为 KV→footer，CHARACTER 导航必须打开独立人物页，HOME 返回首页，不能同页串接；源公开 router-view 没有转场包装，不添加无证据的跨页 fade。人物舞台保留左学院标记、中透明资料卡、右完整立绘，四个真实阿比多斯学生的姓名、CV、生日、学年、身高一一对应；点击人物用 1000ms 整轨水平平移，缓动未核验就明说，不用只淡换小头像替代。VOICE 按钮使用原图和对应官方 WAV，用户点击播放、再点暂停、换人停止，声线作为人物身份而不是 BGM。城市背景静音并可暂停，未证实的音乐不添加。手机保持完整人物并重新安排资料和可触摸选择，明确适配范围；减少动态停止背景、即时切换，键盘与焦点可用。NEWS/SYSTEM/其他学院等未实现页面链接官网，不生成冒牌内容。保留固定蓝白主题及原始商店/漫画入口轮廓，输出代码、来源与字节哈希 manifest、复现边界和真实两尺寸预览。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要通用双栏hero、紫色霓虹仪表盘、虚构人物页、假背景音乐或自动有声播放；不要复制原站跟踪、运营接口、登录与支付逻辑。</p></details><h3>改造练习</h3><p>改变背景映像的一个静态画面，保持Logo和下载位置，观察天空、建筑和高光是否遮挡标语，再记录允许控件落点的安全区域。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://bluearchive.jp/\" target=\"_blank\" rel=\"noopener noreferrer\">Blue Archive 日本官方网站 ↗</a><small>2026-10-07：日本发行版首页蓝白影像、Logo、竖排标语与下载/漫画入口；开发来源和地区版本分开记录。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://bluearchive.jp/character\" target=\"_blank\" rel=\"noopener noreferrer\">Blue Archive 日本官方角色页 ↗</a><small>2026-10-07：学院、资料卡与立绘分层，四位阿比多斯学生的姓名/CV/学年/生日/身高以及1000ms水平轨道。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://bluearchive.jp/fankit/guidelines\" target=\"_blank\" rel=\"noopener noreferrer\">Blue Archive 日本官方创作指南 ↗</a><small>官方IP创作指南入口；本地学习不因此获得全部品牌与资产的再发布许可。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/tutorials/carousels/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI：Carousels Tutorial ↗</a><small>用户控制、键盘与当前态的规范参考；本地学生为手动切换。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C：Animation from Interactions ↗</a><small>非必要交互动效支持减少动态偏好，不据此声称完整合规。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://webusstatic.yo-star.com/bluearchive_jp_web/css/view-character-vue.b3742afb.css\" target=\"_blank\" rel=\"noopener noreferrer\">官方公开角色样式 · 2026-10-07 ↗</a><small>2026-10-07：官方角色页整块Swiper过渡1000ms，Hoshino资料/CV与立绘对应；本地只含阿比多斯四人，曲线及手机重排有差异。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://webusstatic.yo-star.com/bluearchive_jp_web/js/app.421ac700.js\" target=\"_blank\" rel=\"noopener noreferrer\">官方公开 app 路由组件 ↗</a><small>同次采集：导航 methods.change 调用 $router.push，/character 独立路径，外壳直接 router-view+footer，没有 route transition 包装。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fblue-archive.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "1a163fbf7264decf39bfa52fd5e222bff3347593f5c5acc47d744a8e9b60628f",
+    "bytes": 10869
+  }
+}

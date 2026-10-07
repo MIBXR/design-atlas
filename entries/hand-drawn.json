@@ -79,6 +79,7 @@
   "negativePrompt": "不要复制 Excalidraw 商标或官网素材；不要把全部正文写成手写字；不要随机抖动、过密纹理、过多旋转、悬空链接或只有换色的通用卡片。",
   "demo": "demos/hand-drawn/index.html",
   "preview": "previews/hand-drawn.jpg",
+  "theoryVerifiedAt": "2026-10-07",
   "research": "research/hand-drawn.md",
   "exercise": "将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。",
   "composition": {

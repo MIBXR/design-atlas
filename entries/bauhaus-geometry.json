@@ -84,6 +84,7 @@
   "negativePrompt": "不要把红黄蓝随机撒满画面，不要声称包豪斯只包含圆三角方形，不要给文字加3D阴影或霓虹，不要让几何覆盖按钮；不要只换颜色却不改变构成。",
   "demo": "demos/bauhaus-geometry/index.html",
   "preview": "previews/bauhaus-geometry.jpg",
+  "theoryVerifiedAt": "2026-10-07",
   "research": "research/bauhaus-geometry.md",
   "exercise": "加入第二组不使用原色的材料色板，检验相同几何关系是否仍能表达平衡与张力。",
   "composition": {

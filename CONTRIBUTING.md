@@ -22,6 +22,8 @@
 
 原站案例还需要 `implementation: "reference-study"`、`country`、`referenceUrl`、`capturedAt`（YYYY-MM-DD）、`fidelity`、`assetManifest`，可增加采集页面的语言／年度标签与原站标准预览。国别指具体机构或创作来源，不把经典理论强归为某国当前风格。
 
+经典风格练习的 `theoryVerifiedAt`（YYYY-MM-DD）记录归档时核验理论来源的日期；它保留已有页面显示的核验记录，不表示此后重新核验。未记录日期时明确显示“理论来源核验日期未记录”，不能用当前日期或固定默认日期补填。
+
 Prompt应写结构、尺度、素材、关键状态及交接、音乐和主题行为、响应式与减少动态处理，不只写形容词。`prefers-reduced-motion` 保留内容、操作和状态；声音由用户启用，停止／静音控制可用。
 
 ## 加载与素材分发

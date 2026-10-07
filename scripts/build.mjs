@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {buildAgent} from './build-agent.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const entries = fs.readdirSync(path.join(root,'entries')).filter(x=>x.endsWith('.json')).map(x=>JSON.parse(fs.readFileSync(path.join(root,'entries',x),'utf8'))).sort((a,b)=>a.order-b.order);
 fs.writeFileSync(path.join(root,'catalog.js'), 'window.DESIGN_ATLAS = ' + JSON.stringify(entries,null,2) + ';\n');
@@ -17,3 +18,5 @@ const rows = entries.map(entry => {
 });
 fs.writeFileSync(path.join(root,'research','CASE-INDEX.md'), `# 案例与代码索引\n\n由 entries/ 自动生成，共 ${entries.length} 项。真实网站案例按原始网址与采集日期固定归档，不跟随官网后续变化。国家/地区按具体机构、创作来源收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。\n\n| 顺序 | 案例 | 分类 | 国家/地区 | 类型 | 采集日期 | 可查询资料 |\n| --- | --- | --- | --- | --- | --- | --- |\n${rows.join('\n')}\n`, 'utf8');
 console.log(`Built ${entries.length} entries. Open index.html or run npm start.`);
+const {catalog} = buildAgent();
+console.log(`Built ${catalog.entryCount} Agent case bundles (${catalog.contentVersion.slice(0,12)}).`);

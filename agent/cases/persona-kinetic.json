@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 1,
+  "id": "persona-kinetic",
+  "entry": {
+    "id": "persona-kinetic",
+    "order": 6,
+    "title": "Persona 5 Royal · 黑金角色拼贴",
+    "subtitle": "P5R / GOLD CUTOUT & RED HALFTONE",
+    "category": "游戏/IP",
+    "country": "日本",
+    "tags": [
+      "Persona",
+      "ATLUS",
+      "真实角色",
+      "黑金",
+      "红色网点",
+      "服装切换"
+    ],
+    "summary": "金、红、黑的剪纸海报与真实星光贴图；角色有界横移，学校生活与怪盗行动各有独立中心轮播。",
+    "accent": "#d5b360",
+    "background": "#11100e",
+    "principles": [
+      "真实群像、字标与剪纸箭头构成海报语汇，不能用抽象红黑卡片代替。",
+      "六种官方星光贴图以SCREEN叠加、3秒正弦往复明暗；15颗背景星随页面滚动以不同速度位移。",
+      "白天与夜晚分别用露出相邻画面的中心轮播表达双重生活，避免压成两个静态小卡。"
+    ],
+    "productFocus": "官方 Royal 群像、真实主人公/龙司/杏及各自制服、怪盗服、对应Persona；昼夜两种生活以官方游戏截图连接。",
+    "interaction": [
+      "原站 desktop kv-canvas 只有5颗固定位置星光；本地使用相同六种图像和3秒明暗周期，用Canvas2D重建，未运行PIXI业务包。",
+      "背景15颗星光 → 原生滚动差值 / 1–3随机系数位移，超出边界重置；没有查到原站鼠标视差，本地不补造。",
+      "三位角色横移500ms并在两端停止；学校/怪盗服装300ms换装入场。本地角色内容缩减为三位。",
+      "学校生活与怪盗行动分别采用无限中心轮播：箭头、左右键或横向触摸 → 500ms整条轨道滑动，相邻图露出；到末尾无缝接第一项。",
+      "官方PV在用户点击后前往YouTube，音轨属于影片；原站未见独立BGM/声音门。"
+    ],
+    "theme": "黑金首屏表达 Royal；红黑网点、金框与大号切片标题表达都市怪盗风格。",
+    "constraints": [
+      "2026-10-07英文官网单一快照；官网后续变化不维护。",
+      "本地Canvas2D依据公开PIXI星光算法重写；随机抽样与光混合不能声称逐帧一致。",
+      "角色、日常与怪盗行动内容缩减；角色入场细节、字体尺寸与全部购买/规格栏目未逐像素复制。",
+      "没有独立BGM，不用通用音乐冒充原曲；PV声音只在用户打开时播放。",
+      "所有官方图片与商标权利归ATLUS/SEGA，仅个人学习；不运行追踪或账号服务。"
+    ],
+    "useCases": [
+      "角色游戏",
+      "青年文化IP",
+      "音乐宣传"
+    ],
+    "avoid": [
+      "长篇规范文档",
+      "密集企业后台"
+    ],
+    "tokens": {
+      "palette": [
+        "#11100e",
+        "#98142b",
+        "#e0c483",
+        "#f7e9be"
+      ],
+      "type": "官方剪贴标题图 + 大号无衬线身份文字；中文正文水平",
+      "layout": "中心大型群像+左右独立标题；全幅红色角色舞台；倾斜昼夜画面",
+      "motion": "六种官方星图，SCREEN叠加，3秒正弦明暗、0–5秒随机延迟；背景15颗随滚动差分移动；角色500ms有界，生活轮播500ms无限中心轨道。"
+    },
+    "sources": [
+      {
+        "title": "ATLUS · Persona 5 Royal 官方英文页",
+        "url": "https://persona.atlus.com/p5r/?lang=en#",
+        "type": "实例",
+        "note": "2026-10-07：黑金开场、PV/发行信息、红色网点角色舞台与双服装。"
+      },
+      {
+        "title": "MoMA · Collage",
+        "url": "https://www.moma.org/collection/terms/collage",
+        "type": "理论",
+        "note": "拼贴术语与作品资料帮助分析切片、群像、层叠；不是ATLUS作者意图声明。"
+      },
+      {
+        "title": "W3C · Tabs Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+        "type": "规范",
+        "note": "内容切换的键盘与选择状态参考；本地采用button/aria-pressed，不宣称是完整APG Tabs实现。"
+      },
+      {
+        "title": "官方公开交互脚本 · 2026-10-07",
+        "url": "https://persona.atlus.com/p5r/resources/js/top.d7194e2d6bcaddee6e3c.js",
+        "type": "实例",
+        "note": "2026-10-07：非循环Slick默认500ms、角色切换及chara-box服装状态。金色闪光可见，完整Canvas登场轨迹未确认；本地7秒光点为近似。"
+      }
+    ],
+    "prompt": "参考 https://persona.atlus.com/p5r/?lang=en# 在2026-10-07的英文官网单一快照，先走首屏、介绍、角色、学校生活、怪盗生活、规格、购买与footer，再反向浏览。使用官方群像、字标、立绘、六种star纹理和剪纸箭头，禁止通用粒子或红黑卡片替代。桌面KV固定5颗星，背景15颗星，以SCREEN混合、3000ms正弦往复透明度和0–5000ms随机延迟；背景滚动按旧scrollY−新scrollY除1–3系数移动，越界重置。未观察到鼠标视差不要发明。角色500ms有界横移与服装切换；学校和怪盗两个独立无限中心轮播，露出相邻画面，500ms轨道位移、横触与箭头都可操作。原站只有点击PV音轨，不加虚构BGM。固定金红黑主题，提供本地暂停和减少动态补充。可缩减人物/章节但保留机制，明确Canvas2D对PIXI的近似以及未实现购买服务。输出manifest、fidelity、Prompt和预览。",
+    "negativePrompt": "不要把当前黑金首页替换为通用红色两栏；不要同一角色换色冒充三人；不要编造原曲或角色技能；不要复制整页SDK、订阅或追踪服务。",
+    "demo": "demos/persona-kinetic/index.html",
+    "preview": "previews/persona-kinetic.jpg",
+    "research": "research/persona-kinetic.md",
+    "exercise": "在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。",
+    "composition": {
+      "color": "黑金首屏表达 Royal；红黑网点、金框与大号切片标题表达都市怪盗风格。",
+      "typography": "官方剪贴标题图 + 大号无衬线身份文字；中文正文水平",
+      "layout": "中心大型群像+左右独立标题；全幅红色角色舞台；倾斜昼夜画面",
+      "imagery": "官方首屏群像、三位角色双服装、三张Persona立绘和真实游戏截图。",
+      "shape": "斜切拼贴、金色边框、网点与剪贴字保持同一张海报的秩序。",
+      "hierarchy": "Royal群像与发行信息 → 角色身份与形态 → 昼夜生活 → 官方平台入口。",
+      "motion": "六种官方星图，SCREEN叠加，3秒正弦明暗、0–5秒随机延迟；背景15颗随滚动差分移动；角色500ms有界，生活轮播500ms无限中心轨道。",
+      "coherence": "真实角色形态和Persona让视觉表达产品身份；金黑与红金按叙事阶段转换，水平正文约束强烈动势。"
+    },
+    "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+    "implementation": "reference-study",
+    "fidelity": "demos/persona-kinetic/fidelity.md",
+    "assetManifest": "demos/persona-kinetic/assets-manifest.json",
+    "referencePreview": "research/screenshots/persona-kinetic-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "原站未见明暗切换；保留金、红、黑海报主题。",
+      "designReason": "角色、美术剪纸、金色纹样与红黑文字构成同一怪盗视觉身份，不能通过整页反色切主题。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "WATCH THE OFFICIAL TRAILER 点击打开原始YouTube宣传片。",
+      "interactionRole": "音乐跟随PV镜头和字幕剪辑叙事；普通滚动和角色选择不添加原站未发现的BGM或点击声。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/persona-kinetic.md",
+      "role": "research",
+      "content": "# Persona 5 Royal · 单次参考快照\n\n参考 URL：https://persona.atlus.com/p5r/?lang=en#\n采集日期：2026-10-07，英文首页。归档本次所见，不维护未来官网版本。\n\n原站完整路径是 KV→介绍→角色→学校生活→怪盗生活→规格→底部信息与购买→页脚；本次已从入口向下走到实际 footer，再反向。角色 Next 和两个生活轮播实际操作并检查公开 CSS/JS。\n\n公开渲染模块 175/558/562 区分两层：desktop kv-canvas 是 5 颗固定位置星光，背景 bg-stars 是 15 颗随机星。星纹理从六张官方PNG随机选，SCREEN混合；透明度以 3000ms inOutSine 往复，起始延迟0–5000ms。背景星在滚动时按“旧位置减新位置”的差值除以1–3系数移动，越界重置。没有发现原站鼠标视差，本地没有添加。Canvas2D重写这些图像与运动规则，没有执行包含账号/追踪依赖的官网包；随机抽样及Canvas混合是近似，不宣称原PIXI逐帧结果。\n\n角色横向轨道500ms切换并停在首尾，服装有独立状态。学校生活与怪盗生活原站是分别无限循环、露出相邻画面的中心轮播；本地用两个独立500ms轨道保留箭头/横触与循环交接，保留5张学校和3张怪盗真实画面。三位人物与文案缩减，入场局部装饰、所有规格与购买栏目不在本地完整重建范围；剪纸海报、真实立绘及原始箭头保留，不能以统一卡片风代替。\n\n原站未见独立BGM、声音门或界面操作音。用户点击WATCH THE OFFICIAL TRAILER才打开官方YouTubePV，音乐作用于影片镜头剪辑，而不覆盖普通浏览。未见明暗主题控件，金、红、黑维持固定主题。暂停星光、键盘和?motion=reduce是本地补充。\n\n体验路径：首屏星光→原生下滚时背景不同速移动→三位角色正反切换和换装→学校轮播末尾接首项→怪盗独立轮播→购买外链和footer→向上。\n\n公开源： https://persona.atlus.com/p5r/resources/js/top.d7194e2d6bcaddee6e3c.js 和 https://persona.atlus.com/p5r/resources/css/top.bfd93acea98167fad971.css 。最终图像逐项来源见 assets-manifest.json。版权归ATLUS/SEGA。\n\n迁移原则：把主题纹理用作实际运动层；用相邻画面的可见预告表达内容连续性；白天与夜晚使用独立状态而不是换色同卡。Prompt见entry。\n",
+      "sha256": "bc4534752ef73efae7751f88ee564495736891e1eeb7faef65b30e0a61225f73",
+      "bytes": 2400
+    },
+    {
+      "path": "prompts/persona-kinetic.md",
+      "role": "prompt",
+      "content": "# Persona 5 Royal · 黑金角色拼贴 · 复用 Prompt\n\n由 [结构化案例](../entries/persona-kinetic.json) 自动生成。参考观察与具体边界见 [调研](../research/persona-kinetic.md)。\n\n## 正向 Prompt\n\n参考 https://persona.atlus.com/p5r/?lang=en# 在2026-10-07的英文官网单一快照，先走首屏、介绍、角色、学校生活、怪盗生活、规格、购买与footer，再反向浏览。使用官方群像、字标、立绘、六种star纹理和剪纸箭头，禁止通用粒子或红黑卡片替代。桌面KV固定5颗星，背景15颗星，以SCREEN混合、3000ms正弦往复透明度和0–5000ms随机延迟；背景滚动按旧scrollY−新scrollY除1–3系数移动，越界重置。未观察到鼠标视差不要发明。角色500ms有界横移与服装切换；学校和怪盗两个独立无限中心轮播，露出相邻画面，500ms轨道位移、横触与箭头都可操作。原站只有点击PV音轨，不加虚构BGM。固定金红黑主题，提供本地暂停和减少动态补充。可缩减人物/章节但保留机制，明确Canvas2D对PIXI的近似以及未实现购买服务。输出manifest、fidelity、Prompt和预览。\n\n## 负向约束\n\n不要把当前黑金首页替换为通用红色两栏；不要同一角色换色冒充三人；不要编造原曲或角色技能；不要复制整页SDK、订阅或追踪服务。\n\n## 制作约束\n\n- 2026-10-07英文官网单一快照；官网后续变化不维护。\n- 本地Canvas2D依据公开PIXI星光算法重写；随机抽样与光混合不能声称逐帧一致。\n- 角色、日常与怪盗行动内容缩减；角色入场细节、字体尺寸与全部购买/规格栏目未逐像素复制。\n- 没有独立BGM，不用通用音乐冒充原曲；PV声音只在用户打开时播放。\n- 所有官方图片与商标权利归ATLUS/SEGA，仅个人学习；不运行追踪或账号服务。\n\n## 检查方法\n\n在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。\n\n[查看 Demo](../demos/persona-kinetic/index.html) · [返回参考库](../index.html#style/persona-kinetic)\n",
+      "sha256": "5a00316c2840ccad0d6b048e67a391a90de0acd4e9b7e83d7dde9d912a6709f2",
+      "bytes": 2210
+    },
+    {
+      "path": "demos/persona-kinetic/fidelity.md",
+      "role": "fidelity",
+      "content": "# Persona 5 Royal · 单次参考快照\n\n参考 URL：https://persona.atlus.com/p5r/?lang=en#\n采集日期：2026-10-07，英文首页。归档本次所见，不维护未来官网版本。\n\n原站完整路径是 KV→介绍→角色→学校生活→怪盗生活→规格→底部信息与购买→页脚；本次已从入口向下走到实际 footer，再反向。角色 Next 和两个生活轮播实际操作并检查公开 CSS/JS。\n\n公开渲染模块 175/558/562 区分两层：desktop kv-canvas 是 5 颗固定位置星光，背景 bg-stars 是 15 颗随机星。星纹理从六张官方PNG随机选，SCREEN混合；透明度以 3000ms inOutSine 往复，起始延迟0–5000ms。背景星在滚动时按“旧位置减新位置”的差值除以1–3系数移动，越界重置。没有发现原站鼠标视差，本地没有添加。Canvas2D重写这些图像与运动规则，没有执行包含账号/追踪依赖的官网包；随机抽样及Canvas混合是近似，不宣称原PIXI逐帧结果。\n\n角色横向轨道500ms切换并停在首尾，服装有独立状态。学校生活与怪盗生活原站是分别无限循环、露出相邻画面的中心轮播；本地用两个独立500ms轨道保留箭头/横触与循环交接，保留5张学校和3张怪盗真实画面。三位人物与文案缩减，入场局部装饰、所有规格与购买栏目不在本地完整重建范围；剪纸海报、真实立绘及原始箭头保留，不能以统一卡片风代替。\n\n原站未见独立BGM、声音门或界面操作音。用户点击WATCH THE OFFICIAL TRAILER才打开官方YouTubePV，音乐作用于影片镜头剪辑，而不覆盖普通浏览。未见明暗主题控件，金、红、黑维持固定主题。暂停星光、键盘和?motion=reduce是本地补充。\n\n体验路径：首屏星光→原生下滚时背景不同速移动→三位角色正反切换和换装→学校轮播末尾接首项→怪盗独立轮播→购买外链和footer→向上。\n\n公开源： https://persona.atlus.com/p5r/resources/js/top.d7194e2d6bcaddee6e3c.js 和 https://persona.atlus.com/p5r/resources/css/top.bfd93acea98167fad971.css 。最终图像逐项来源见 assets-manifest.json。版权归ATLUS/SEGA。\n",
+      "sha256": "2ef44050bd8fb4183a7f4c74e892de3247a8c3ec1d277cdb5904308f4dbd5cca",
+      "bytes": 2216
+    },
+    {
+      "path": "demos/persona-kinetic/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourceDate\": \"2026-10-07\",\n  \"scope\": \"真实官网公开资源的私人学习局部复现\",\n  \"assets\": [\n    {\n      \"file\": \"logo.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/fv_logo_ae5920709075a263e06ab44c15fef53e.png\",\n      \"use\": \"游戏标识\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 33174,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 824,\n      \"height\": 567,\n      \"dimensions\": [\n        824,\n        567\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"339bda24c6af4e1fe54595c7a39c15946e1e176b2e792eb9cf70d31c7d79d1b3\"\n    },\n    {\n      \"file\": \"hero.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/fv_ab0c5ced14efdec6867ce9faf5ea6a92.png\",\n      \"use\": \"首屏角色群像\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 1024306,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 918,\n      \"height\": 670,\n      \"dimensions\": [\n        918,\n        670\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"f0f088ce61ee16ead49520dc5f60fff756f12724921f2bf721cc6a632de2c242\"\n    },\n    {\n      \"file\": \"joker-school.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara1_costume1_1547cf3551257504f0798dc89ca1be08.png\",\n      \"use\": \"主人公制服立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 146592,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 465,\n      \"height\": 545,\n      \"dimensions\": [\n        465,\n        545\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"243d6383fe3d5f2fffcc3a15a8f90d8d16cef79e8c6be095efd58e28d59f0ac1\"\n    },\n    {\n      \"file\": \"joker-thief.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara1_costume2_f44dcfe012ae7b8b2241c093a5df2ef8.png\",\n      \"use\": \"主人公怪盗立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 230126,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 583,\n      \"height\": 670,\n      \"dimensions\": [\n        583,\n        670\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"f01124b844274ea0995969d2cd43da4bda3d5bd3661582d5bb58997faf6643e7\"\n    },\n    {\n      \"file\": \"star.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara_star_cfcec8f4369957f9414149cac0b89260.png\",\n      \"use\": \"角色章节装饰\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 134072,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 739,\n      \"height\": 719,\n      \"dimensions\": [\n        739,\n        719\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"b0c0e67c5aee966fd9b050f054201cce4c9d815796dce06384c6dbc03de5bd11\"\n    },\n    {\n      \"file\": \"ryuji-school.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara2_costume1_da269ff2112720df2e3ee96c4cbd5537.png\",\n      \"use\": \"龙司制服立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 204388,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 408,\n      \"height\": 704,\n      \"dimensions\": [\n        408,\n        704\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"23465d441fda6be1ee9513b56581a0ff1be4fc2feae86dbf86849c994c8fdd40\"\n    },\n    {\n      \"file\": \"arsene.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara1_persona_d28fc1ec829cd07bc2b8442490ef7696.png\",\n      \"use\": \"阿尔赛纳立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 338362,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 765,\n      \"height\": 739,\n      \"dimensions\": [\n        765,\n        739\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"f49f66520d1ad54767d6c4d41e6865049fa42582b831ba846e8a30e2c690ed55\"\n    },\n    {\n      \"file\": \"ann-school.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara3_costume1_18f64489579d2cc5930178f2c789dbc9.png\",\n      \"use\": \"杏制服立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 131781,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 351,\n      \"height\": 580,\n      \"dimensions\": [\n        351,\n        580\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"0e01b65dfdf4e626715c662546a3398581ad6d14ca4348d548b7bbf7e383451e\"\n    },\n    {\n      \"file\": \"ann-thief.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara3_costume2_1d25bc2175aa9af991d2115d5b415683.png\",\n      \"use\": \"杏怪盗立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 273001,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 599,\n      \"height\": 646,\n      \"dimensions\": [\n        599,\n        646\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"7b5541a528a2f6139be6753772f9cce356319a79bbd348b7a90a1acba2dd4df0\"\n    },\n    {\n      \"file\": \"captain-kidd.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara2_persona_738dcfc2d53f149596f2c3045d2c64f8.png\",\n      \"use\": \"船长基德立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 399261,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 687,\n      \"height\": 517,\n      \"dimensions\": [\n        687,\n        517\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"981ca214f24effb840befc8f480f2e179e8b4ad77bbb8d0102085d108530c550\"\n    },\n    {\n      \"file\": \"carmen.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara3_persona_dbe3fdf5c61db34bfa88fc283413b220.png\",\n      \"use\": \"卡门立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 400500,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 644,\n      \"height\": 513,\n      \"dimensions\": [\n        644,\n        513\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"a4412eae1b5455f3aa88d505d3477b76f820970ea938c3c6461ac3e444fa239d\"\n    },\n    {\n      \"file\": \"dot.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/bg_red_dot_d849572b3f0934e660bdd7b972b54869.png\",\n      \"use\": \"红色网点背景\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 9890450,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 1920,\n      \"height\": 6584,\n      \"dimensions\": [\n        1920,\n        6584\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"67451ae237fe0fe09c4bc467c19105baa061a60118b67bfb5b1f0b8f6462e449\"\n    },\n    {\n      \"file\": \"title-en.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/fv_5869cf4a7f4beec0b9462d13571db602.png\",\n      \"use\": \"首屏英文剪贴标题\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 55689,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 374,\n      \"height\": 243,\n      \"dimensions\": [\n        374,\n        243\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"ebd2c63c8cd13127ef7b7bdb4bf9be2250794bb56754b7b9f90d24f3f59ddf05\"\n    },\n    {\n      \"file\": \"now-en.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/fv_available_now_dda20f64994eec8eee12aa1e7cf01bb9.png\",\n      \"use\": \"Available Now 剪贴标题\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 16882,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 168,\n      \"height\": 126,\n      \"dimensions\": [\n        168,\n        126\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"78bb6ff6f0df0655e15e84e68cd0e8d89b2ab3df9bc66a1e28b75b3428b3a7f0\"\n    },\n    {\n      \"file\": \"characters-en.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/chara_title_9360ea48fded644943740f7c33b30266.png\",\n      \"use\": \"角色章节标题\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 43886,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 565,\n      \"height\": 176,\n      \"dimensions\": [\n        565,\n        176\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"27fed528726727c1d9e1da4da92f84be44d3ed020617e038077be5f88bb10285\"\n    },\n    {\n      \"file\": \"school.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/school_life_ss1_7061bd0551c9fbab690699c0f508200e.png\",\n      \"use\": \"学校生活截图\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 133749,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 366,\n      \"height\": 277,\n      \"dimensions\": [\n        366,\n        277\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"c426c91cb8dde1ccf3fb7c7200e59e0a2c5ca1ddc9137f9269c417f72f9a87e3\"\n    },\n    {\n      \"file\": \"phantom.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/phantom_life_ss1_81a6cda3351b5d9559504fddf177046b.png\",\n      \"use\": \"怪盗生活截图\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 86049,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 297,\n      \"height\": 202,\n      \"dimensions\": [\n        297,\n        202\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"15aa533dd55f50b8925515334cd64a004a05d1b96370ff28ea70b2d0da81511d\"\n    },\n    {\n      \"file\": \"ryuji-thief.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/chara2_costume2_c4d9fb67c0fac8d77d406dc05382c438.png\",\n      \"use\": \"龙司怪盗立绘\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 211956,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 504,\n      \"height\": 601,\n      \"dimensions\": [\n        504,\n        601\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"c12f9368371a40bce93641be5c6b94a5dc767d25f4d4db2113f24f7d4ca3cb84\"\n    },\n    {\n      \"file\": \"carousel_arrow_right.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/carousel_arrow_right_e1043735642854de433d4f50ecb6cda1.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 4532,\n      \"sha256\": \"4ffc8db6c4818f562703aeabc533e70e3e92cd73edb57d7a0717e3dd8014aeda\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 62,\n      \"height\": 99,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"carousel_arrow_left.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/carousel_arrow_left_15679eca4ca2528d133afcf49efaf347.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 4473,\n      \"sha256\": \"30dcd87bf0e9e5aa35c3981be68976e21b25a27166d6e73a5e7100a976157155\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 62,\n      \"height\": 99,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"phantom_life_ss1.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/phantom_life_ss1_81a6cda3351b5d9559504fddf177046b.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 86049,\n      \"sha256\": \"15aa533dd55f50b8925515334cd64a004a05d1b96370ff28ea70b2d0da81511d\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 297,\n      \"height\": 202,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"phantom_life_ss2.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/phantom_life_ss2_070ba05ef5b3351a8579142a541bcd1b.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 95889,\n      \"sha256\": \"1dcb291833d68bbfb2786d18ad52c7b095d89af8badbd166259168e56db1287c\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 300,\n      \"height\": 218,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"phantom_life_ss3.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/phantom_life_ss3_3f73aae185cd8529d28014036187c0d8.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 97461,\n      \"sha256\": \"294f6f1be606ceab9c9c7cb94f5863f7eb415068d17ae69aa6e659174d531ed1\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 303,\n      \"height\": 209,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"school_life_ss1.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/school_life_ss1_7061bd0551c9fbab690699c0f508200e.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 133749,\n      \"sha256\": \"c426c91cb8dde1ccf3fb7c7200e59e0a2c5ca1ddc9137f9269c417f72f9a87e3\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 366,\n      \"height\": 277,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"school_life_ss2.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/school_life_ss2_3befd6f6b9023eb275d252e206f6dc4b.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 129416,\n      \"sha256\": \"a3cffe7dae1110fe364f2c1bfbc191e6f9ea42ab94ca745b19358811a12ba8f7\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 358,\n      \"height\": 254,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"school_life_ss3.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/school_life_ss3_cad806dbd2f9b7c01a2177b6ccc987ab.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 154219,\n      \"sha256\": \"7686368984069acb5798dd21b7cb840b9bda1e27fcb8dbb293db9db20c254b17\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 375,\n      \"height\": 291,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"school_life_ss4.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/school_life_ss4_6aa2e9bd1517d9179fd1a085129c54f6.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 123833,\n      \"sha256\": \"dcfcfbc8127df27ed936fff264156b2d7393a280ef466f3d2b6a84c6b062e052\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 337,\n      \"height\": 233,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"school_life_ss5.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/school_life_ss5_4718dd37725cd8eb85b0cbde51e5edcf.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 74358,\n      \"sha256\": \"0d2673f2a9562a228b785e840211248973d8fd1f347e07855ac7014403e36080\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 362,\n      \"height\": 249,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"star1.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/sp/p5r/stars/star1_8aa5c5bd9c672649434b14d89afd7cf7.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 188148,\n      \"sha256\": \"7d01da542985e505c51fbf703c0882c437e8a98c1a4515f562e274499b450254\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 557,\n      \"height\": 578,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"star2.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/sp/p5r/stars/star2_e1dc673795be1a06c26458c8e70e7ea4.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 9576,\n      \"sha256\": \"c08681869c62638a3e8ffc573e95cf00aee2b17d05dbf1fb359cb0c2f7dbc061\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 329,\n      \"height\": 342,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"star3.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/sp/p5r/stars/star3_d045a33a518fb9a584fe836e4fc2f012.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 6964,\n      \"sha256\": \"8d7c4fdb29be10b4d573296326469fda8151188dcf2e790cc494687b86326ef5\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 547,\n      \"height\": 579,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"star4.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/sp/p5r/stars/star4_9c9b64995b79898feb532fcc0d2a2b6c.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 13717,\n      \"sha256\": \"bb44730ecdac3253dad9ab465f7383afbfa486ebed200edb96d0228b49fadabc\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 494,\n      \"height\": 485,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"star5.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/sp/p5r/stars/star5_0cc8ce5c05a6b0ff74e7fec4e8bf5780.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 2432,\n      \"sha256\": \"6eef09a3f87c2cdfea72cedd04180ecfc4e6bbbf421d73c7c18b6559fee0132c\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 206,\n      \"height\": 205,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    },\n    {\n      \"file\": \"star6.png\",\n      \"url\": \"https://persona.atlus.com/p5r/resources/img/sp/p5r/stars/star6_89bfd9957f98ec46bf82437f43905c0e.png\",\n      \"use\": \"官方六种星光贴图／日常与怪盗轮播截图／剪纸箭头\",\n      \"owner\": \"ATLUS / SEGA\",\n      \"bytes\": 2269,\n      \"sha256\": \"aba94da9f108634fbbefcaddbdacd99ca9b9f327afe944b6c5a39ff90094d68b\",\n      \"contentType\": \"image/png\",\n      \"format\": \"PNG\",\n      \"width\": 299,\n      \"height\": 294,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归ATLUS/SEGA；个人学习\"\n    }\n  ],\n  \"limitations\": [\n    \"本地3人档案，原站完整角色数量更多；不复现全部资料。\",\n    \"用CSS光线替代完整官网星芒/动效；字标、角色与主要标题使用官方素材。\",\n    \"PV跳转官网实际英文视频，不内嵌年龄验证或第三方播放器。\",\n    \"购买按钮去真实官网平台入口，无本地交易流程。\"\n  ]\n}\n",
+      "sha256": "f8ae22d06f44312319f564ae0dd9932ea5a15217195554c0ea17eb212280c185",
+      "bytes": 21404
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/persona-kinetic/assets-manifest.json",
+      "role": "context",
+      "sha256": "f8ae22d06f44312319f564ae0dd9932ea5a15217195554c0ea17eb212280c185",
+      "bytes": 21404
+    },
+    {
+      "path": "demos/persona-kinetic/assets/ann-school.png",
+      "role": "asset",
+      "sha256": "0e01b65dfdf4e626715c662546a3398581ad6d14ca4348d548b7bbf7e383451e",
+      "bytes": 131781
+    },
+    {
+      "path": "demos/persona-kinetic/assets/ann-thief.png",
+      "role": "asset",
+      "sha256": "7b5541a528a2f6139be6753772f9cce356319a79bbd348b7a90a1acba2dd4df0",
+      "bytes": 273001
+    },
+    {
+      "path": "demos/persona-kinetic/assets/arsene.png",
+      "role": "asset",
+      "sha256": "f49f66520d1ad54767d6c4d41e6865049fa42582b831ba846e8a30e2c690ed55",
+      "bytes": 338362
+    },
+    {
+      "path": "demos/persona-kinetic/assets/captain-kidd.png",
+      "role": "asset",
+      "sha256": "981ca214f24effb840befc8f480f2e179e8b4ad77bbb8d0102085d108530c550",
+      "bytes": 399261
+    },
+    {
+      "path": "demos/persona-kinetic/assets/carmen.png",
+      "role": "asset",
+      "sha256": "a4412eae1b5455f3aa88d505d3477b76f820970ea938c3c6461ac3e444fa239d",
+      "bytes": 400500
+    },
+    {
+      "path": "demos/persona-kinetic/assets/carousel_arrow_left.png",
+      "role": "asset",
+      "sha256": "30dcd87bf0e9e5aa35c3981be68976e21b25a27166d6e73a5e7100a976157155",
+      "bytes": 4473
+    },
+    {
+      "path": "demos/persona-kinetic/assets/carousel_arrow_right.png",
+      "role": "asset",
+      "sha256": "4ffc8db6c4818f562703aeabc533e70e3e92cd73edb57d7a0717e3dd8014aeda",
+      "bytes": 4532
+    },
+    {
+      "path": "demos/persona-kinetic/assets/characters-en.png",
+      "role": "asset",
+      "sha256": "27fed528726727c1d9e1da4da92f84be44d3ed020617e038077be5f88bb10285",
+      "bytes": 43886
+    },
+    {
+      "path": "demos/persona-kinetic/assets/dot.png",
+      "role": "asset",
+      "sha256": "67451ae237fe0fe09c4bc467c19105baa061a60118b67bfb5b1f0b8f6462e449",
+      "bytes": 9890450
+    },
+    {
+      "path": "demos/persona-kinetic/assets/hero.png",
+      "role": "asset",
+      "sha256": "f0f088ce61ee16ead49520dc5f60fff756f12724921f2bf721cc6a632de2c242",
+      "bytes": 1024306
+    },
+    {
+      "path": "demos/persona-kinetic/assets/joker-school.png",
+      "role": "asset",
+      "sha256": "243d6383fe3d5f2fffcc3a15a8f90d8d16cef79e8c6be095efd58e28d59f0ac1",
+      "bytes": 146592
+    },
+    {
+      "path": "demos/persona-kinetic/assets/joker-thief.png",
+      "role": "asset",
+      "sha256": "f01124b844274ea0995969d2cd43da4bda3d5bd3661582d5bb58997faf6643e7",
+      "bytes": 230126
+    },
+    {
+      "path": "demos/persona-kinetic/assets/logo.png",
+      "role": "asset",
+      "sha256": "339bda24c6af4e1fe54595c7a39c15946e1e176b2e792eb9cf70d31c7d79d1b3",
+      "bytes": 33174
+    },
+    {
+      "path": "demos/persona-kinetic/assets/now-en.png",
+      "role": "asset",
+      "sha256": "78bb6ff6f0df0655e15e84e68cd0e8d89b2ab3df9bc66a1e28b75b3428b3a7f0",
+      "bytes": 16882
+    },
+    {
+      "path": "demos/persona-kinetic/assets/phantom.png",
+      "role": "asset",
+      "sha256": "15aa533dd55f50b8925515334cd64a004a05d1b96370ff28ea70b2d0da81511d",
+      "bytes": 86049
+    },
+    {
+      "path": "demos/persona-kinetic/assets/phantom_life_ss1.png",
+      "role": "asset",
+      "sha256": "15aa533dd55f50b8925515334cd64a004a05d1b96370ff28ea70b2d0da81511d",
+      "bytes": 86049
+    },
+    {
+      "path": "demos/persona-kinetic/assets/phantom_life_ss2.png",
+      "role": "asset",
+      "sha256": "1dcb291833d68bbfb2786d18ad52c7b095d89af8badbd166259168e56db1287c",
+      "bytes": 95889
+    },
+    {
+      "path": "demos/persona-kinetic/assets/phantom_life_ss3.png",
+      "role": "asset",
+      "sha256": "294f6f1be606ceab9c9c7cb94f5863f7eb415068d17ae69aa6e659174d531ed1",
+      "bytes": 97461
+    },
+    {
+      "path": "demos/persona-kinetic/assets/ryuji-school.png",
+      "role": "asset",
+      "sha256": "23465d441fda6be1ee9513b56581a0ff1be4fc2feae86dbf86849c994c8fdd40",
+      "bytes": 204388
+    },
+    {
+      "path": "demos/persona-kinetic/assets/ryuji-thief.png",
+      "role": "asset",
+      "sha256": "c12f9368371a40bce93641be5c6b94a5dc767d25f4d4db2113f24f7d4ca3cb84",
+      "bytes": 211956
+    },
+    {
+      "path": "demos/persona-kinetic/assets/school.png",
+      "role": "asset",
+      "sha256": "c426c91cb8dde1ccf3fb7c7200e59e0a2c5ca1ddc9137f9269c417f72f9a87e3",
+      "bytes": 133749
+    },
+    {
+      "path": "demos/persona-kinetic/assets/school_life_ss1.png",
+      "role": "asset",
+      "sha256": "c426c91cb8dde1ccf3fb7c7200e59e0a2c5ca1ddc9137f9269c417f72f9a87e3",
+      "bytes": 133749
+    },
+    {
+      "path": "demos/persona-kinetic/assets/school_life_ss2.png",
+      "role": "asset",
+      "sha256": "a3cffe7dae1110fe364f2c1bfbc191e6f9ea42ab94ca745b19358811a12ba8f7",
+      "bytes": 129416
+    },
+    {
+      "path": "demos/persona-kinetic/assets/school_life_ss3.png",
+      "role": "asset",
+      "sha256": "7686368984069acb5798dd21b7cb840b9bda1e27fcb8dbb293db9db20c254b17",
+      "bytes": 154219
+    },
+    {
+      "path": "demos/persona-kinetic/assets/school_life_ss4.png",
+      "role": "asset",
+      "sha256": "dcfcfbc8127df27ed936fff264156b2d7393a280ef466f3d2b6a84c6b062e052",
+      "bytes": 123833
+    },
+    {
+      "path": "demos/persona-kinetic/assets/school_life_ss5.png",
+      "role": "asset",
+      "sha256": "0d2673f2a9562a228b785e840211248973d8fd1f347e07855ac7014403e36080",
+      "bytes": 74358
+    },
+    {
+      "path": "demos/persona-kinetic/assets/star.png",
+      "role": "asset",
+      "sha256": "b0c0e67c5aee966fd9b050f054201cce4c9d815796dce06384c6dbc03de5bd11",
+      "bytes": 134072
+    },
+    {
+      "path": "demos/persona-kinetic/assets/star1.png",
+      "role": "asset",
+      "sha256": "7d01da542985e505c51fbf703c0882c437e8a98c1a4515f562e274499b450254",
+      "bytes": 188148
+    },
+    {
+      "path": "demos/persona-kinetic/assets/star2.png",
+      "role": "asset",
+      "sha256": "c08681869c62638a3e8ffc573e95cf00aee2b17d05dbf1fb359cb0c2f7dbc061",
+      "bytes": 9576
+    },
+    {
+      "path": "demos/persona-kinetic/assets/star3.png",
+      "role": "asset",
+      "sha256": "8d7c4fdb29be10b4d573296326469fda8151188dcf2e790cc494687b86326ef5",
+      "bytes": 6964
+    },
+    {
+      "path": "demos/persona-kinetic/assets/star4.png",
+      "role": "asset",
+      "sha256": "bb44730ecdac3253dad9ab465f7383afbfa486ebed200edb96d0228b49fadabc",
+      "bytes": 13717
+    },
+    {
+      "path": "demos/persona-kinetic/assets/star5.png",
+      "role": "asset",
+      "sha256": "6eef09a3f87c2cdfea72cedd04180ecfc4e6bbbf421d73c7c18b6559fee0132c",
+      "bytes": 2432
+    },
+    {
+      "path": "demos/persona-kinetic/assets/star6.png",
+      "role": "asset",
+      "sha256": "aba94da9f108634fbbefcaddbdacd99ca9b9f327afe944b6c5a39ff90094d68b",
+      "bytes": 2269
+    },
+    {
+      "path": "demos/persona-kinetic/assets/title-en.png",
+      "role": "asset",
+      "sha256": "ebd2c63c8cd13127ef7b7bdb4bf9be2250794bb56754b7b9f90d24f3f59ddf05",
+      "bytes": 55689
+    },
+    {
+      "path": "demos/persona-kinetic/fidelity.md",
+      "role": "context",
+      "sha256": "2ef44050bd8fb4183a7f4c74e892de3247a8c3ec1d277cdb5904308f4dbd5cca",
+      "bytes": 2216
+    },
+    {
+      "path": "demos/persona-kinetic/index.html",
+      "role": "source",
+      "sha256": "48fdffa7267c9851e71606dd5f2ebd85a6c2f57797cedf9c77254803ab60fbeb",
+      "bytes": 5130
+    },
+    {
+      "path": "demos/persona-kinetic/script.js",
+      "role": "source",
+      "sha256": "80e56c16c771383941ed26017c2e90b25ae76b8b138d4cbb44b2aaf11620e918",
+      "bytes": 9619
+    },
+    {
+      "path": "demos/persona-kinetic/style.css",
+      "role": "source",
+      "sha256": "738acbddbc03a23cf2e054eecbec726627faf150dcb44577400e382ed0c6e14f",
+      "bytes": 12170
+    },
+    {
+      "path": "entries/persona-kinetic.json",
+      "role": "context",
+      "sha256": "c499fa64f7ff76503e5fb83985db6cfb51670d9095cd8ea0e193c24c3cb714e6",
+      "bytes": 7639
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/mobile/persona-kinetic.jpg",
+      "role": "preview",
+      "sha256": "eb693d761c9cfc228be8a138e51eb745198aef8e782530333e891c8de5cb9423",
+      "bytes": 88180
+    },
+    {
+      "path": "previews/persona-kinetic.jpg",
+      "role": "preview",
+      "sha256": "7fe61d6caf9175e29a12a7b842e4f3ca2a7b32b421775618f040158b4c9d5e54",
+      "bytes": 258032
+    },
+    {
+      "path": "prompts/persona-kinetic.md",
+      "role": "context",
+      "sha256": "5a00316c2840ccad0d6b048e67a391a90de0acd4e9b7e83d7dde9d912a6709f2",
+      "bytes": 2210
+    },
+    {
+      "path": "research/persona-kinetic.md",
+      "role": "context",
+      "sha256": "bc4534752ef73efae7751f88ee564495736891e1eeb7faef65b30e0a61225f73",
+      "bytes": 2400
+    },
+    {
+      "path": "research/screenshots/persona-kinetic-source.jpg",
+      "role": "preview",
+      "sha256": "d313880e6cfa41cdf3cdccd9013a5aff00a3167ba1a52fe324d8b5c9e5f9dfe4",
+      "bytes": 176860
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=persona-kinetic\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>黑金首屏表达 Royal；红黑网点、金框与大号切片标题表达都市怪盗风格。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官方剪贴标题图 + 大号无衬线身份文字；中文正文水平</dd></div><div class=\"\"><dt>布局留白</dt><dd>中心大型群像+左右独立标题；全幅红色角色舞台；倾斜昼夜画面</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方首屏群像、三位角色双服装、三张Persona立绘和真实游戏截图。</dd></div><div class=\"\"><dt>线条形状</dt><dd>斜切拼贴、金色边框、网点与剪贴字保持同一张海报的秩序。</dd></div><div class=\"\"><dt>信息层级</dt><dd>Royal群像与发行信息 → 角色身份与形态 → 昼夜生活 → 官方平台入口。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>六种官方星图，SCREEN叠加，3秒正弦明暗、0–5秒随机延迟；背景15颗随滚动差分移动；角色500ms有界，生活轮播500ms无限中心轨道。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>真实角色形态和Persona让视觉表达产品身份；金黑与红金按叙事阶段转换，水平正文约束强烈动势。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>真实群像、字标与剪纸箭头构成海报语汇，不能用抽象红黑卡片代替。</li><li>六种官方星光贴图以SCREEN叠加、3秒正弦往复明暗；15颗背景星随页面滚动以不同速度位移。</li><li>白天与夜晚分别用露出相邻画面的中心轮播表达双重生活，避免压成两个静态小卡。</li></ul><h3>怎样凸显产品重点</h3><p>官方 Royal 群像、真实主人公/龙司/杏及各自制服、怪盗服、对应Persona；昼夜两种生活以官方游戏截图连接。</p><h3>主题与情绪</h3><p>黑金首屏表达 Royal；红黑网点、金框与大号切片标题表达都市怪盗风格。</p></section><section><h2>02 / 交互巧思</h2><ul><li>原站 desktop kv-canvas 只有5颗固定位置星光；本地使用相同六种图像和3秒明暗周期，用Canvas2D重建，未运行PIXI业务包。</li><li>背景15颗星光 → 原生滚动差值 / 1–3随机系数位移，超出边界重置；没有查到原站鼠标视差，本地不补造。</li><li>三位角色横移500ms并在两端停止；学校/怪盗服装300ms换装入场。本地角色内容缩减为三位。</li><li>学校生活与怪盗行动分别采用无限中心轮播：箭头、左右键或横向触摸 → 500ms整条轨道滑动，相邻图露出；到末尾无缝接第一项。</li><li>官方PV在用户点击后前往YouTube，音轨属于影片；原站未见独立BGM/声音门。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>原站未见明暗切换；保留金、红、黑海报主题。</p><p>角色、美术剪纸、金色纹样与红黑文字构成同一怪盗视觉身份，不能通过整页反色切主题。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>外部音乐入口</h3><p>WATCH THE OFFICIAL TRAILER 点击打开原始YouTube宣传片。</p><p>音乐跟随PV镜头和字幕剪辑叙事；普通滚动和角色选择不添加原站未发现的BGM或点击声。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>2026-10-07英文官网单一快照；官网后续变化不维护。</li><li>本地Canvas2D依据公开PIXI星光算法重写；随机抽样与光混合不能声称逐帧一致。</li><li>角色、日常与怪盗行动内容缩减；角色入场细节、字体尺寸与全部购买/规格栏目未逐像素复制。</li><li>没有独立BGM，不用通用音乐冒充原曲；PV声音只在用户打开时播放。</li><li>所有官方图片与商标权利归ATLUS/SEGA，仅个人学习；不运行追踪或账号服务。</li></ul><h3>适合</h3><p>角色游戏 / 青年文化IP / 音乐宣传</p><h3>谨慎使用</h3><p>长篇规范文档 / 密集企业后台</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#11100e\"></i>#11100e</span><span class=\"swatch\"><i style=\"background:#98142b\"></i>#98142b</span><span class=\"swatch\"><i style=\"background:#e0c483\"></i>#e0c483</span><span class=\"swatch\"><i style=\"background:#f7e9be\"></i>#f7e9be</span></div><p><b>字体</b> · 官方剪贴标题图 + 大号无衬线身份文字；中文正文水平<br><b>布局</b> · 中心大型群像+左右独立标题；全幅红色角色舞台；倾斜昼夜画面<br><b>动效</b> · 六种官方星图，SCREEN叠加，3秒正弦明暗、0–5秒随机延迟；背景15颗随滚动差分移动；角色500ms有界，生活轮播500ms无限中心轨道。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>参考 https://persona.atlus.com/p5r/?lang=en# 在2026-10-07的英文官网单一快照，先走首屏、介绍、角色、学校生活、怪盗生活、规格、购买与footer，再反向浏览。使用官方群像、字标、立绘、六种star纹理和剪纸箭头，禁止通用粒子或红黑卡片替代。桌面KV固定5颗星，背景15颗星，以SCREEN混合、3000ms正弦往复透明度和0–5000ms随机延迟；背景滚动按旧scrollY−新scrollY除1–3系数移动，越界重置。未观察到鼠标视差不要发明。角色500ms有界横移与服装切换；学校和怪盗两个独立无限中心轮播，露出相邻画面，500ms轨道位移、横触与箭头都可操作。原站只有点击PV音轨，不加虚构BGM。固定金红黑主题，提供本地暂停和减少动态补充。可缩减人物/章节但保留机制，明确Canvas2D对PIXI的近似以及未实现购买服务。输出manifest、fidelity、Prompt和预览。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把当前黑金首页替换为通用红色两栏；不要同一角色换色冒充三人；不要编造原曲或角色技能；不要复制整页SDK、订阅或追踪服务。</p></details><h3>改造练习</h3><p>在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://persona.atlus.com/p5r/?lang=en#\" target=\"_blank\" rel=\"noopener noreferrer\">ATLUS · Persona 5 Royal 官方英文页 ↗</a><small>2026-10-07：黑金开场、PV/发行信息、红色网点角色舞台与双服装。</small></div><div class=\"source-item\"><span class=\"source-badge\">理论</span><a href=\"https://www.moma.org/collection/terms/collage\" target=\"_blank\" rel=\"noopener noreferrer\">MoMA · Collage ↗</a><small>拼贴术语与作品资料帮助分析切片、群像、层叠；不是ATLUS作者意图声明。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/tabs/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Tabs Pattern ↗</a><small>内容切换的键盘与选择状态参考；本地采用button/aria-pressed，不宣称是完整APG Tabs实现。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://persona.atlus.com/p5r/resources/js/top.d7194e2d6bcaddee6e3c.js\" target=\"_blank\" rel=\"noopener noreferrer\">官方公开交互脚本 · 2026-10-07 ↗</a><small>2026-10-07：非循环Slick默认500ms、角色切换及chara-box服装状态。金色闪光可见，完整Canvas登场轨迹未确认；本地7秒光点为近似。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fpersona-kinetic.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "a52f6f976e394ad92d7d57e4e4ebb535811641d17a55728b8c42103c08624709",
+    "bytes": 8395
+  }
+}

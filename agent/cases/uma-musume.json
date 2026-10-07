@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "id": "uma-musume",
+  "entry": {
+    "id": "uma-musume",
+    "order": 20,
+    "title": "赛马娘：群像赛道与斜切叙事",
+    "subtitle": "Umamusume 国际英文官网 · 真实局部还原",
+    "category": "游戏/IP",
+    "tags": [
+      "日本",
+      "海外手游",
+      "Cygames",
+      "真实还原",
+      "群像",
+      "斜切",
+      "角色立绘",
+      "玩法轮播"
+    ],
+    "summary": "学习赛马娘国际官网如何用大幅赛道群像建立热闹、前进的运动感，再用荧绿斜切条带、角色立绘和竖屏玩法画面连接下载与游戏体验。",
+    "accent": "#a7ce36",
+    "background": "#f5faed",
+    "principles": [
+      "角色群像以纵深和奔跑方向承载主视觉，首屏不额外叠一套营销卡片。",
+      "草地绿与荧绿斜切条带重复出现，静态信息也带有向前的运动感。",
+      "玩法画面与对应角色共同切换，产品能力由真实游戏截图证明。",
+      "下载徽章保持平台的熟悉形状，在复杂插画上形成容易识别的操作区域。"
+    ],
+    "productFocus": "真实游戏 Umamusume: Pretty Derby 的跑马养成、学园交流与比赛；本地页复现国际官网主视觉、新闻条目、预告入口、三态玩法轮播。",
+    "interaction": [
+      "正常纵向浏览连接群像、新闻、About、Gameplay 和 footer，斜切条带延续赛道方向。",
+      "滚过画布宽度 7% 后 Logo 从 2.8 倍缩回导航，反向回首恢复；300ms cubic-bezier(.19,1,.22,1)。手机 1.72 倍与菜单切换，Play Now 打开下载层。",
+      "三组 Gameplay 完整面板以 400ms cubic-bezier(.25,1,.5,1) 横移；按钮、编号、左右键与手势同步，首尾禁用而不循环。",
+      "点击 About 原缩略图，站内 dialog 播放原始 top_about.mp4；该文件只有视频轨道，没有音轨，关闭/后台暂停。",
+      "本地手机菜单、键盘控制、减少动态与学习说明为补充，未添加独立 BGM。"
+    ],
+    "theme": "明亮赛道、彩色二次元群像、奔跑纵深和反复出现的斜切几何共同构成青春竞技主题。",
+    "constraints": [
+      "只归档 https://umamusume.com/ 在 2026-10-07 的国际英文页，不混入日本门户布局或追随后续改版。",
+      "群像、新闻、About 和 Gameplay 使用官方本地素材；新闻数量和后半部角色/媒体内容有缩减。",
+      "About 原始 top_about.mp4 无音轨，播放器未静音不代表有原声；官网其他 PV 外链的声音未在本地核实，未发现独立 BGM，不给滚动章节配通用音乐。",
+      "Gameplay 不自动推进、不循环；400ms cubic-bezier(.25,1,.5,1) 与首尾边界有源样式依据。",
+      "手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。",
+      "官方品牌、群像、美术和 PV 权利归相应权利方，manifest 留存 URL/尺寸/哈希；不复制运营服务。"
+    ],
+    "useCases": [
+      "角色阵容丰富的竞技游戏",
+      "二次元养成手游宣传",
+      "已有高质量群像插画的产品页"
+    ],
+    "avoid": [
+      "用通用双栏产品卡片替代官方群像构图",
+      "让下载按钮遮挡角色表情",
+      "声称未获取的音频是官网 BGM"
+    ],
+    "tokens": {
+      "palette": [
+        "#a7ce36",
+        "#c0e640",
+        "#6fb52a",
+        "#ffffff",
+        "#253336"
+      ],
+      "type": "粗重斜体无衬线标题；小号日期与普通正文分工；官方图像内文字保留原素材",
+      "layout": "满宽赛道群像 → 斜切新闻 → 居中倾斜预告 → 立绘与竖屏画面轮播",
+      "motion": "三组完整玩法面板400ms cubic-bezier(.25,1,.5,1)水平移动，原站时序与边界被保留；首尾停止、无自动推进，减少动态即时切换。"
+    },
+    "sources": [
+      {
+        "title": "Umamusume: Pretty Derby 国际官方网站",
+        "url": "https://umamusume.com/",
+        "type": "实例",
+        "note": "2026-10-07：国际英文版赛道群像、手机竖版KV、新闻、About和Gameplay；素材来自公开官方资源。"
+      },
+      {
+        "title": "官方国际版 App Store 页面",
+        "url": "https://apps.apple.com/us/app/umamusume-pretty-derby/id6480433538",
+        "type": "实例",
+        "note": "官方国际版商店页确认产品与官网入口，区分国际宣传页和日本门户。"
+      },
+      {
+        "title": "W3C WAI：Carousels Tutorial",
+        "url": "https://www.w3.org/WAI/tutorials/carousels/",
+        "type": "规范",
+        "note": "轮播应有用户控制、键盘、当前状态和变更反馈；本地Gameplay手动且非循环。"
+      },
+      {
+        "title": "W3C：Animation from Interactions",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+        "type": "规范",
+        "note": "交互动效降级规范，条款为Level AAA；不据此声称整页无障碍认证。"
+      },
+      {
+        "title": "官方公共导航组件样式/脚本",
+        "url": "https://parts.umamusume.com/assets/js/inject-components.js",
+        "type": "实例",
+        "note": "本次同页注入的公共导航：7% 宽度阈值、2.8/1.72 Logo 缩放，.3s(.19,1,.22,1)，Play Now 站内下载层。"
+      }
+    ],
+    "prompt": "以一个明确 URL 和采集日期归档【竞技/养成游戏】。参考 Umamusume 国际页：官方赛道群像满宽铺开，独立竖版 KV 用于手机；下载徽章避开人物脸部。正常长页依次接入新闻条目、居中轻微倾斜的 About 缩略图和 Gameplay，不改成通用整屏 Swiper。草地绿、荧绿斜切标题带、粗重斜体标题与白底新闻形成运动方向和阅读节奏。点击 About 在站内原生 dialog 播放官方 top_about.mp4，文件无音轨，保留播放/暂停/进度与关闭或后台暂停；用比赛画面和剪辑建立节奏，不把未静音属性称为原声。官网 PV 外链的声音未在本地核实，不额外添加未核验 BGM。三组 Gameplay 必须将人物立绘、两张竖屏游戏图与文案板整块移动，400ms cubic-bezier(.25,1,.5,1)，首尾箭头禁用，不自动、不循环；按钮、编号、左右键与手势更新同一状态。保留来源证实的造型，不把所有图加统一圆角或玻璃卡片。明确内容缩减、手机适配与本地键盘/菜单补充，提供减少动态、可见焦点、原图 manifest 和真实桌面/390px 预览。 导航须保留真实 Logo 与蓝色纹理，滚过 min(viewportWidth,2000) 的7%阈值时2.8倍Logo缩回基准，300ms cubic-bezier(.19,1,.22,1)，反向恢复；手机1.72倍、马蹄图标菜单，Play Now打开原图下载层。",
+    "negativePrompt": "不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。",
+    "demo": "demos/uma-musume/index.html",
+    "preview": "previews/uma-musume.jpg",
+    "research": "research/uma-musume.md",
+    "exercise": "保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。",
+    "composition": {
+      "color": "草地绿来自官方赛道KV；#c0e640斜切标题带与绿色操作入口重复，白底新闻让复杂图像后出现阅读休息。",
+      "typography": "官方图内标识保留；本地段落使用粗重斜体无衬线标题、普通正文和小号日期，避免所有内容同等抢眼。",
+      "layout": "满宽赛道群像 → 斜切新闻 → 居中倾斜预告 → 立绘与竖屏画面轮播",
+      "imagery": "原站公开KV、三名角色立绘、六张游戏截图与预告缩略图本地保存；每项有manifest来源。",
+      "shape": "向前倾斜的标题带、说明板与箭头复用斜切语言，平台下载徽章保持自己的标准轮廓。",
+      "hierarchy": "赛道群像先建立游戏辨识；下载次之；新闻较安静；Gameplay每态只突出一个玩法及相关人物。",
+      "motion": "三组完整玩法面板400ms cubic-bezier(.25,1,.5,1)水平移动，原站时序与边界被保留；首尾停止、无自动推进，减少动态即时切换。",
+      "coherence": "斜切条带延续赛道纵深与角色奔跑方向；游戏截图提供玩法证据，群像负责情绪，二者各有职责。"
+    },
+    "country": "日本",
+    "edition": "国际英文版",
+    "implementation": "reference-study",
+    "referenceUrl": "https://umamusume.com/",
+    "referencePreview": "research/screenshots/uma-musume-source.jpg",
+    "fidelity": "demos/uma-musume/fidelity.md",
+    "assetManifest": "demos/uma-musume/assets-manifest.json",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "本次页面未见深浅模式开关，保持白底、草地绿与荧绿。",
+      "designReason": "明亮赛道、青春群像和斜切运动条带构成统一主题，切成通用暗色会改变比赛的情绪。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "About 原始 top_about.mp4 只有视频轨道，没有音轨；播放/暂停、进度与关闭暂停可操作。官网其他 PV 外链声音未在本地核实，未发现独立 BGM。",
+      "interactionRole": "奔跑与比赛画面的剪辑建立观看节奏，无声影片保持普通阅读安静；站外播放器的声音不冒称本地已播放。"
+    },
+    "capturedAt": "2026-10-07"
+  },
+  "documents": [
+    {
+      "path": "research/uma-musume.md",
+      "role": "research",
+      "content": "# 赛马娘：群像、斜切节奏与玩法轨道\n\n单一来源：[Umamusume 国际英文官网](https://umamusume.com/)，采集日期 **2026-10-07**。本次归档不混入日本门户，也不维护官网后续变化。\n\n## 真实旅程\n\n正常首入见赛道群像、品牌与平台下载徽章；向下依次经过 News、About、Gameplay、Characters、Media 到 footer，再反向回到首屏。2040×938 的现场，各章是原生长页并非整屏滚轮锁定。未见独立声音门或深浅主题切换。\n\nGameplay 三态由真实角色立绘、两张游戏截图与文字板共同水平移动，源样式为 **400ms cubic-bezier(.25,1,.5,1)**；第 1 态禁用 Previous，第 3 态禁用 Next。没有确认角色区域持续滚动的 marquee，因此本地没有凭空补上。\n\nAbout 缩略图点击后在站内出现原生视频：[top_about.mp4](https://umamusume.com/assets/videos/top_about.mp4)。原始 MP4 容器仅有视频轨道、没有音轨；现场播放器 unmuted 不能证明有声音。关闭返回长页，比赛画面的剪辑承担节奏。官网其他 PV 外链的声音未在本地核实，未发现独立 BGM。\n\n## 触发 → 响应 → 目的\n\n| 触发 | 响应 | 目的 |\n| --- | --- | --- |\n| 正常上下滚动 | 群像后进入安静新闻，再进 PV 和复杂玩法 | 情绪与信息密度交替，而不把每章套一张卡片 |\n| Gameplay Next/编号 | 400ms 整块横移，立绘/截图/文案对应 | 以真实玩法证据解释一个玩法主题 |\n| 到轮播首尾 | 对应箭头禁用 | 明确内容数量，不制造无尽自动翻页 |\n| 点击 About | 原始无音轨 MP4 在 modal 播放 | 奔跑与比赛画面的剪辑表现赛场节奏，用户决定进入 |\n| 关闭 About 视频 | 本地暂停、返回原浏览位置 | 结束影片观看并继续阅读；文件没有声音轨道 |\n\n## 风格与理论\n\n奔跑方向与赛道纵深建立运动感；反复出现的斜切标题带、人物与游戏截图负责统一。白底新闻降低视觉负担，真实平台徽章提供熟悉操作。固定白/绿主题来自赛场情境，未强加暗色版本。\n\n[W3C Carousels Tutorial](https://www.w3.org/WAI/tutorials/carousels/) 支持用户控制、键盘和当前状态，[Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) 支持本地减少动态。它们用于本地适配，不代表源站通过完整认证。\n\n## 本地范围\n\n保存官方桌面/手机 KV、Gameplay、预告缩略图及原始 PV。本地新闻缩为少量静态条目，后半部 Characters/Media 内容未完整照搬；菜单、键盘和学习说明是补充。保留长页→站内 PV→有限三态 Gameplay 的关键机制。参数、Prompt、素材记录和终态预览见案例条目与 [fidelity](../demos/uma-musume/fidelity.md)。\n\n### 同次采集的固定导航\n\n原页异步注入公共导航。待其加载后确认固定蓝色纹理导航、真实 Logo：首屏桌面放大 2.8 倍，滚过 `min(innerWidth,2000)*0.07` 缩回基准，反向恢复，过渡 300ms cubic-bezier(.19,1,.22,1)；手机比例为 1.72。公开样式和 inject-components.js 与现场大小相互佐证。本地保留该阈值、比例和时序、马蹄菜单图、导航悬停箭头及 Play Now 下载层；下载层内容缩为三平台，手机菜单排版与 dialog 语义有适配。\n",
+      "sha256": "c4d4b724a4c679aa78c8d821ec2efb0f0c6712c10aecb1e40d01e21fa381a29b",
+      "bytes": 3372
+    },
+    {
+      "path": "prompts/uma-musume.md",
+      "role": "prompt",
+      "content": "# 赛马娘：群像赛道与斜切叙事 · 复用 Prompt\n\n由 [结构化案例](../entries/uma-musume.json) 自动生成。参考观察与具体边界见 [调研](../research/uma-musume.md)。\n\n## 正向 Prompt\n\n以一个明确 URL 和采集日期归档【竞技/养成游戏】。参考 Umamusume 国际页：官方赛道群像满宽铺开，独立竖版 KV 用于手机；下载徽章避开人物脸部。正常长页依次接入新闻条目、居中轻微倾斜的 About 缩略图和 Gameplay，不改成通用整屏 Swiper。草地绿、荧绿斜切标题带、粗重斜体标题与白底新闻形成运动方向和阅读节奏。点击 About 在站内原生 dialog 播放官方 top_about.mp4，文件无音轨，保留播放/暂停/进度与关闭或后台暂停；用比赛画面和剪辑建立节奏，不把未静音属性称为原声。官网 PV 外链的声音未在本地核实，不额外添加未核验 BGM。三组 Gameplay 必须将人物立绘、两张竖屏游戏图与文案板整块移动，400ms cubic-bezier(.25,1,.5,1)，首尾箭头禁用，不自动、不循环；按钮、编号、左右键与手势更新同一状态。保留来源证实的造型，不把所有图加统一圆角或玻璃卡片。明确内容缩减、手机适配与本地键盘/菜单补充，提供减少动态、可见焦点、原图 manifest 和真实桌面/390px 预览。 导航须保留真实 Logo 与蓝色纹理，滚过 min(viewportWidth,2000) 的7%阈值时2.8倍Logo缩回基准，300ms cubic-bezier(.19,1,.22,1)，反向恢复；手机1.72倍、马蹄图标菜单，Play Now打开原图下载层。\n\n## 负向约束\n\n不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。\n\n## 制作约束\n\n- 只归档 https://umamusume.com/ 在 2026-10-07 的国际英文页，不混入日本门户布局或追随后续改版。\n- 群像、新闻、About 和 Gameplay 使用官方本地素材；新闻数量和后半部角色/媒体内容有缩减。\n- About 原始 top_about.mp4 无音轨，播放器未静音不代表有原声；官网其他 PV 外链的声音未在本地核实，未发现独立 BGM，不给滚动章节配通用音乐。\n- Gameplay 不自动推进、不循环；400ms cubic-bezier(.25,1,.5,1) 与首尾边界有源样式依据。\n- 手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。\n- 官方品牌、群像、美术和 PV 权利归相应权利方，manifest 留存 URL/尺寸/哈希；不复制运营服务。\n\n## 检查方法\n\n保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。\n\n[查看 Demo](../demos/uma-musume/index.html) · [返回参考库](../index.html#style/uma-musume)\n",
+      "sha256": "7c9eb66bfed589a9758921b19c55af399346361721aa8032fef4602c8afe1c00",
+      "bytes": 2932
+    },
+    {
+      "path": "demos/uma-musume/fidelity.md",
+      "role": "fidelity",
+      "content": "# Umamusume 复现边界\n\n- 来源 URL：https://umamusume.com/\n- 采集日期：2026-10-07；国际英文页单一快照。\n\n## 来源确认与本地实现\n\n| 源行为 | 本地实现 |\n| --- | --- |\n| 正常纵向长页；群像→News→About→Gameplay→Characters→Media→footer | 保留核心顺序和斜切章节；新闻与后半内容缩减，未改成整屏滑动 |\n| Gameplay 3 态完整面板 400ms cubic-bezier(.25,1,.5,1)，首尾禁用 | 完整立绘/游戏截图/文案轨道，同样时序、非循环、无自动推进 |\n| About 原始 top_about.mp4 站内播放；容器只有视频轨道、没有音轨 | 原视频本地保存，dialog + 原生播放/暂停/进度；关闭和后台暂停，以比赛画面剪辑建立节奏 |\n| 原站独立竖版 KV | 手机使用原始竖版，徽章和文案有本地排布 |\n\n## 明确近似和未覆盖\n\n新闻条目数量、完整 Characters/Media 章节、所有运营内容未复制；相关入口去官网。触摸阈值、键盘控制、手机菜单、学习说明和减少动态为本地补充。没有确认持续角色 marquee，未把它列作已复现机制。\n\n固定明亮白/绿主题；本次现场未见主题开关。About 原始 MP4 没有音轨，未静音属性不能证明原声；官网其他 PV 外链的声音未在本地核实。未发现独立 BGM，不添加配乐；比赛画面与剪辑承担观看节奏。素材来源、字节、SHA-256 与用途见 assets-manifest.json；不调用原账户、购买或追踪服务。\n\n### 同次采集的固定导航\n\n原页异步注入公共导航。待其加载后确认固定蓝色纹理导航、真实 Logo：首屏桌面放大 2.8 倍，滚过 `min(innerWidth,2000)*0.07` 缩回基准，反向恢复，过渡 300ms cubic-bezier(.19,1,.22,1)；手机比例为 1.72。公开样式和 inject-components.js 与现场大小相互佐证。本地保留该阈值、比例和时序、马蹄菜单图、导航悬停箭头及 Play Now 下载层；下载层内容缩为三平台，手机菜单排版与 dialog 语义有适配。\n",
+      "sha256": "aa06504f399ba840a4516c97dd86a3a31d33ca596d501d36a898f3316e6c1ecf",
+      "bytes": 2049
+    },
+    {
+      "path": "demos/uma-musume/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourcePage\": \"https://umamusume.com/\",\n  \"retrievedAt\": \"2026-10-07\",\n  \"purpose\": \"官方公开资产用于个人本地设计学习；未获取授权用于商业发布\",\n  \"assets\": [\n    {\n      \"file\": \"assets/about_bg.BBeJqHpY.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/about_bg.BBeJqHpY.avif\",\n      \"bytes\": 133545,\n      \"type\": \"image/avif\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 2880,\n      \"height\": 1800,\n      \"sha256\": \"f5342a90b79a78266525d405cbe0839c5fc482abbab8814963715dc0db314e43\"\n    },\n    {\n      \"file\": \"assets/about_thumbnail.CGFLxShD.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/about_thumbnail.CGFLxShD.avif\",\n      \"bytes\": 73890,\n      \"type\": \"image/avif\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 1600,\n      \"height\": 900,\n      \"sha256\": \"010da4433693aa5da260a873e1b208a7cd24f6d53e6cf4e6797f9df2bdbfa252\"\n    },\n    {\n      \"file\": \"assets/badge-appstore.png\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/badge-appstore.png\",\n      \"bytes\": 8822,\n      \"type\": \"image/png\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 432,\n      \"height\": 144,\n      \"sha256\": \"05a1b8d6560300812b9fb87b88f8d291e8941df8e2c29e08c77ed90d441accbd\"\n    },\n    {\n      \"file\": \"assets/badge-googleplay.png\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/badge-googleplay.png\",\n      \"bytes\": 8821,\n      \"type\": \"image/png\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 484,\n      \"height\": 144,\n      \"sha256\": \"e5eab3cc0938aabefef94a3d164249b26914c53a8c547d64df6632e7a412cfbe\"\n    },\n    {\n      \"file\": \"assets/badge-steam.png\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/badge-steam.png\",\n      \"bytes\": 16183,\n      \"type\": \"image/png\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 409,\n      \"height\": 144,\n      \"sha256\": \"e99332e838d921079a31977df718c706c8f823eaa1b41c2414e05e1188916c1c\"\n    },\n    {\n      \"file\": \"assets/gameplay_bg.BJUQipob.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_bg.BJUQipob.avif\",\n      \"bytes\": 66752,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 8440,\n      \"height\": 1800,\n      \"sha256\": \"8153f3528bfee86e29fe1c68311d79e1d64bc340b838a37785999495b53b705a\"\n    },\n    {\n      \"file\": \"assets/gameplay_image_1-1.PhrOaKih.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_image_1-1.PhrOaKih.avif\",\n      \"bytes\": 35378,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 604,\n      \"height\": 1078,\n      \"sha256\": \"b39ac77e708cf3c862fdeafea1c78b3ae9c0d34ae8f68e346f6f81dee87966e3\"\n    },\n    {\n      \"file\": \"assets/gameplay_image_1-2.DY13j7tt.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_image_1-2.DY13j7tt.avif\",\n      \"bytes\": 23855,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 428,\n      \"height\": 758,\n      \"sha256\": \"b494fc788dc1eae4e2677a8d1c98d086ce9846a2b2d9d06b38086ce1a6e41959\"\n    },\n    {\n      \"file\": \"assets/gameplay_image_2-1.BcVJ7hBy.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_image_2-1.BcVJ7hBy.avif\",\n      \"bytes\": 51556,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 604,\n      \"height\": 1076,\n      \"sha256\": \"5fbb186535ff9d7c039f7bbfa6e1424669ea698a48feb4d7c7166ce876015ff9\"\n    },\n    {\n      \"file\": \"assets/gameplay_image_2-2.BKFdgH7d.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_image_2-2.BKFdgH7d.avif\",\n      \"bytes\": 39193,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 428,\n      \"height\": 758,\n      \"sha256\": \"4d6033139036a71d4f806e2618a80d1563849063d02f58bb2ab501cee94d14f4\"\n    },\n    {\n      \"file\": \"assets/gameplay_image_3-1.BNkL4nTh.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_image_3-1.BNkL4nTh.avif\",\n      \"bytes\": 37333,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 604,\n      \"height\": 1074,\n      \"sha256\": \"3c4863def2df28300d37cd2ed34be0f3dda071c7c155666149b4bea07c278d47\"\n    },\n    {\n      \"file\": \"assets/gameplay_image_3-2.Bimj2-Ng.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_image_3-2.Bimj2-Ng.avif\",\n      \"bytes\": 30054,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 428,\n      \"height\": 760,\n      \"sha256\": \"c3f355dbcabd1a195aaef7396107162499416a86c12b5a083bcd11b9af8e1974\"\n    },\n    {\n      \"file\": \"assets/gameplay_silencesuzuka.Chw3ZKQc.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_silencesuzuka.Chw3ZKQc.avif\",\n      \"bytes\": 51122,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 1401,\n      \"height\": 1556,\n      \"sha256\": \"92bab471b1ef452ca04882b96cbf378fc5b68da2be26e31b7b53632707c9ea32\"\n    },\n    {\n      \"file\": \"assets/gameplay_specialweek.CDUq1xrt.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_specialweek.CDUq1xrt.avif\",\n      \"bytes\": 56509,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 1401,\n      \"height\": 1556,\n      \"sha256\": \"3792df0ddf7786b962fee500c3b73853c679234d44dff0bb549089691acee76c\"\n    },\n    {\n      \"file\": \"assets/gameplay_winningticket.BucYg9KM.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/gameplay_winningticket.BucYg9KM.avif\",\n      \"bytes\": 41480,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 1401,\n      \"height\": 1556,\n      \"sha256\": \"e7187e0f69f3767a06ce44ee2f1ec25d45fb1a970759446d62d4105c13b0dc60\"\n    },\n    {\n      \"file\": \"assets/kv.C6tHq3MX.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/kv.C6tHq3MX.avif\",\n      \"bytes\": 415417,\n      \"type\": \"image/avif\",\n      \"use\": \"首屏官方KV，桌面/手机各自版本\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 2880,\n      \"height\": 2148,\n      \"sha256\": \"c24dc850168634d1f5332b5c73dfd4a216a88acebc725d216bfb0ab78bf5f33a\"\n    },\n    {\n      \"file\": \"assets/kv.CNY-_2Hw.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/kv.CNY-_2Hw.avif\",\n      \"bytes\": 113610,\n      \"type\": \"image/avif\",\n      \"use\": \"首屏官方KV，桌面/手机各自版本\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 750,\n      \"height\": 1320,\n      \"sha256\": \"fcf6cb990488b9d7534810f15a6136ad62f158508f967b7b53136870a3865401\"\n    },\n    {\n      \"file\": \"assets/kv_txt_playnow.D6KNRgME.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/kv_txt_playnow.D6KNRgME.avif\",\n      \"bytes\": 17353,\n      \"type\": \"image/avif\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 412,\n      \"height\": 142,\n      \"sha256\": \"d2cb2ffd0f6457f08e93a253b6a48eed35636257268fbc149b5d2f12547f6af2\"\n    },\n    {\n      \"file\": \"assets/news_bg.nsyAwrrN.avif\",\n      \"sourceUrl\": \"https://umamusume.com/_app/immutable/assets/news_bg.nsyAwrrN.avif\",\n      \"bytes\": 4831,\n      \"type\": \"image/avif\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"Cygames：公开页面素材，品牌/角色权利归原权利人；仅限此个人参考库本地私有学习。\",\n      \"width\": 2880,\n      \"height\": 1520,\n      \"sha256\": \"0ae74834c9cd01256349ab885cebce447bb7770054e1d3d0c09180c3468b4e0f\"\n    },\n    {\n      \"file\": \"top_about.mp4\",\n      \"url\": \"https://umamusume.com/assets/videos/top_about.mp4\",\n      \"use\": \"About按钮实际播放的官方原始MP4，仅含视频轨道、无音轨；比赛画面与剪辑建立节奏。\",\n      \"owner\": \"Cygames\",\n      \"bytes\": 25860812,\n      \"sha256\": \"c893f883aa5652e11dd5da5de8ebc3ac0aacaaa7a23d53a11b262243d3a8155c\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原权利人；个人学习\",\n      \"contentType\": \"video/mp4\"\n    },\n    {\n      \"file\": \"assets/logo-umamusume.png\",\n      \"bytes\": 132471,\n      \"sha256\": \"3a11b259f3c215c9a03a16a5ab40bb81db41a1de99d9cb81dc672adca7fa498f\",\n      \"capturedAt\": \"2026-10-07\",\n      \"width\": 718,\n      \"height\": 212,\n      \"format\": \"PNG\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/logo_umamusume.png\",\n      \"use\": \"Official header branding, interaction shapes or download dialog\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"rights\": \"Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。\",\n      \"type\": \"image/png\"\n    },\n    {\n      \"file\": \"assets/horseshoe.svg\",\n      \"bytes\": 1241,\n      \"sha256\": \"4bf03d933b988295dd324029828e92c955b675aa657d5a80b40ef3891e2bbf8f\",\n      \"capturedAt\": \"2026-10-07\",\n      \"format\": \"SVG\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/teitetsu.BNI5mUfy.svg\",\n      \"use\": \"Official header branding, interaction shapes or download dialog\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"rights\": \"Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。\",\n      \"type\": \"image/svg+xml\",\n      \"width\": 31.0,\n      \"height\": 33.0\n    },\n    {\n      \"file\": \"assets/header-arrow.svg\",\n      \"bytes\": 344,\n      \"sha256\": \"0b196307b2a3c654e780e0b785a18f14a9832ed0bf2880e1d2b81b99528009db\",\n      \"capturedAt\": \"2026-10-07\",\n      \"format\": \"SVG\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/arrow_double.nHmJyBTy.svg\",\n      \"use\": \"Official header branding, interaction shapes or download dialog\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"rights\": \"Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。\",\n      \"type\": \"image/svg+xml\",\n      \"width\": 38.0,\n      \"height\": 42.0\n    },\n    {\n      \"file\": \"assets/header-blue.jpg\",\n      \"bytes\": 112275,\n      \"sha256\": \"a2b3e94f12d97c19f9b85e4281ddef3917e3770ab11ff81bcdbbeaf15823b64e\",\n      \"capturedAt\": \"2026-10-07\",\n      \"width\": 750,\n      \"height\": 1626,\n      \"format\": \"JPEG\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/bg_blue.HfYZeD0h.jpg\",\n      \"use\": \"Official header branding, interaction shapes or download dialog\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"rights\": \"Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。\",\n      \"type\": \"image/jpeg\"\n    },\n    {\n      \"file\": \"assets/app-icon.png\",\n      \"bytes\": 513750,\n      \"sha256\": \"422f52106a9af0e67cb1b2728d084f80389c568b58ef36c6451ea90ce448eb53\",\n      \"capturedAt\": \"2026-10-07\",\n      \"width\": 512,\n      \"height\": 512,\n      \"format\": \"PNG\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/app_icon.png\",\n      \"use\": \"Official header branding, interaction shapes or download dialog\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"rights\": \"Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。\",\n      \"type\": \"image/png\"\n    },\n    {\n      \"file\": \"assets/download-background.png\",\n      \"bytes\": 40907,\n      \"sha256\": \"c2e57a548b8da4e593d88f4c25e176821b09ddb62d261cb7b09723d79dcb7c04\",\n      \"capturedAt\": \"2026-10-07\",\n      \"width\": 1584,\n      \"height\": 898,\n      \"format\": \"PNG\",\n      \"sourceUrl\": \"https://parts.umamusume.com/assets/images/bg_playnow.zS7x0-r_.png\",\n      \"use\": \"Official header branding, interaction shapes or download dialog\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"rights\": \"Cygames 及相应权利人：公开官方图形，仅用于此个人设计参考库。\",\n      \"type\": \"image/png\"\n    }\n  ],\n  \"limitations\": [\n    \"英文首页2026-10-07所见单次归档。\",\n    \"保留首屏、新闻、About真实PV与400ms有界Gameplay轨道；人物/媒体独立栏目以外链打开，没有完整内容服务。\",\n    \"本地键盘、触摸、study菜单和减少动态分支为易用性补充；不宣称原站全部页面复刻。\",\n    \"About原始MP4无音轨，未静音属性不证明有声音；官网其他PV外链的声音未在本地核实。没有独立BGM，关闭/离开前台暂停影片。\"\n  ]\n}\n",
+      "sha256": "948e525403a8c19c1317fb4673f3b0b67f9f1b1f58cd55af202db985b97f4c1d",
+      "bytes": 14505
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/uma-musume/app.js",
+      "role": "source",
+      "sha256": "bb1e76bf27540796a9daac3d2a7ecbe59d82fc14aee9b8357cccc46fa3d195b8",
+      "bytes": 6587
+    },
+    {
+      "path": "demos/uma-musume/assets-manifest.json",
+      "role": "context",
+      "sha256": "948e525403a8c19c1317fb4673f3b0b67f9f1b1f58cd55af202db985b97f4c1d",
+      "bytes": 14505
+    },
+    {
+      "path": "demos/uma-musume/assets/about_bg.BBeJqHpY.avif",
+      "role": "asset",
+      "sha256": "f5342a90b79a78266525d405cbe0839c5fc482abbab8814963715dc0db314e43",
+      "bytes": 133545
+    },
+    {
+      "path": "demos/uma-musume/assets/about_thumbnail.CGFLxShD.avif",
+      "role": "asset",
+      "sha256": "010da4433693aa5da260a873e1b208a7cd24f6d53e6cf4e6797f9df2bdbfa252",
+      "bytes": 73890
+    },
+    {
+      "path": "demos/uma-musume/assets/app-icon.png",
+      "role": "asset",
+      "sha256": "422f52106a9af0e67cb1b2728d084f80389c568b58ef36c6451ea90ce448eb53",
+      "bytes": 513750
+    },
+    {
+      "path": "demos/uma-musume/assets/badge-appstore.png",
+      "role": "asset",
+      "sha256": "05a1b8d6560300812b9fb87b88f8d291e8941df8e2c29e08c77ed90d441accbd",
+      "bytes": 8822
+    },
+    {
+      "path": "demos/uma-musume/assets/badge-googleplay.png",
+      "role": "asset",
+      "sha256": "e5eab3cc0938aabefef94a3d164249b26914c53a8c547d64df6632e7a412cfbe",
+      "bytes": 8821
+    },
+    {
+      "path": "demos/uma-musume/assets/badge-steam.png",
+      "role": "asset",
+      "sha256": "e99332e838d921079a31977df718c706c8f823eaa1b41c2414e05e1188916c1c",
+      "bytes": 16183
+    },
+    {
+      "path": "demos/uma-musume/assets/download-background.png",
+      "role": "asset",
+      "sha256": "c2e57a548b8da4e593d88f4c25e176821b09ddb62d261cb7b09723d79dcb7c04",
+      "bytes": 40907
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_bg.BJUQipob.avif",
+      "role": "asset",
+      "sha256": "8153f3528bfee86e29fe1c68311d79e1d64bc340b838a37785999495b53b705a",
+      "bytes": 66752
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_image_1-1.PhrOaKih.avif",
+      "role": "asset",
+      "sha256": "b39ac77e708cf3c862fdeafea1c78b3ae9c0d34ae8f68e346f6f81dee87966e3",
+      "bytes": 35378
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_image_1-2.DY13j7tt.avif",
+      "role": "asset",
+      "sha256": "b494fc788dc1eae4e2677a8d1c98d086ce9846a2b2d9d06b38086ce1a6e41959",
+      "bytes": 23855
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_image_2-1.BcVJ7hBy.avif",
+      "role": "asset",
+      "sha256": "5fbb186535ff9d7c039f7bbfa6e1424669ea698a48feb4d7c7166ce876015ff9",
+      "bytes": 51556
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_image_2-2.BKFdgH7d.avif",
+      "role": "asset",
+      "sha256": "4d6033139036a71d4f806e2618a80d1563849063d02f58bb2ab501cee94d14f4",
+      "bytes": 39193
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_image_3-1.BNkL4nTh.avif",
+      "role": "asset",
+      "sha256": "3c4863def2df28300d37cd2ed34be0f3dda071c7c155666149b4bea07c278d47",
+      "bytes": 37333
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_image_3-2.Bimj2-Ng.avif",
+      "role": "asset",
+      "sha256": "c3f355dbcabd1a195aaef7396107162499416a86c12b5a083bcd11b9af8e1974",
+      "bytes": 30054
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_silencesuzuka.Chw3ZKQc.avif",
+      "role": "asset",
+      "sha256": "92bab471b1ef452ca04882b96cbf378fc5b68da2be26e31b7b53632707c9ea32",
+      "bytes": 51122
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_specialweek.CDUq1xrt.avif",
+      "role": "asset",
+      "sha256": "3792df0ddf7786b962fee500c3b73853c679234d44dff0bb549089691acee76c",
+      "bytes": 56509
+    },
+    {
+      "path": "demos/uma-musume/assets/gameplay_winningticket.BucYg9KM.avif",
+      "role": "asset",
+      "sha256": "e7187e0f69f3767a06ce44ee2f1ec25d45fb1a970759446d62d4105c13b0dc60",
+      "bytes": 41480
+    },
+    {
+      "path": "demos/uma-musume/assets/header-arrow.svg",
+      "role": "asset",
+      "sha256": "0b196307b2a3c654e780e0b785a18f14a9832ed0bf2880e1d2b81b99528009db",
+      "bytes": 344
+    },
+    {
+      "path": "demos/uma-musume/assets/header-blue.jpg",
+      "role": "asset",
+      "sha256": "a2b3e94f12d97c19f9b85e4281ddef3917e3770ab11ff81bcdbbeaf15823b64e",
+      "bytes": 112275
+    },
+    {
+      "path": "demos/uma-musume/assets/horseshoe.svg",
+      "role": "asset",
+      "sha256": "4bf03d933b988295dd324029828e92c955b675aa657d5a80b40ef3891e2bbf8f",
+      "bytes": 1241
+    },
+    {
+      "path": "demos/uma-musume/assets/kv.C6tHq3MX.avif",
+      "role": "asset",
+      "sha256": "c24dc850168634d1f5332b5c73dfd4a216a88acebc725d216bfb0ab78bf5f33a",
+      "bytes": 415417
+    },
+    {
+      "path": "demos/uma-musume/assets/kv.CNY-_2Hw.avif",
+      "role": "asset",
+      "sha256": "fcf6cb990488b9d7534810f15a6136ad62f158508f967b7b53136870a3865401",
+      "bytes": 113610
+    },
+    {
+      "path": "demos/uma-musume/assets/kv_txt_playnow.D6KNRgME.avif",
+      "role": "asset",
+      "sha256": "d2cb2ffd0f6457f08e93a253b6a48eed35636257268fbc149b5d2f12547f6af2",
+      "bytes": 17353
+    },
+    {
+      "path": "demos/uma-musume/assets/logo-umamusume.png",
+      "role": "asset",
+      "sha256": "3a11b259f3c215c9a03a16a5ab40bb81db41a1de99d9cb81dc672adca7fa498f",
+      "bytes": 132471
+    },
+    {
+      "path": "demos/uma-musume/assets/news_bg.nsyAwrrN.avif",
+      "role": "asset",
+      "sha256": "0ae74834c9cd01256349ab885cebce447bb7770054e1d3d0c09180c3468b4e0f",
+      "bytes": 4831
+    },
+    {
+      "path": "demos/uma-musume/assets/top_about.mp4",
+      "role": "asset",
+      "sha256": "c893f883aa5652e11dd5da5de8ebc3ac0aacaaa7a23d53a11b262243d3a8155c",
+      "bytes": 25860812
+    },
+    {
+      "path": "demos/uma-musume/fidelity.md",
+      "role": "context",
+      "sha256": "aa06504f399ba840a4516c97dd86a3a31d33ca596d501d36a898f3316e6c1ecf",
+      "bytes": 2049
+    },
+    {
+      "path": "demos/uma-musume/index.html",
+      "role": "source",
+      "sha256": "a14ca36bc1ceae00f9b3e6e743c328e56b929ff95c4623bcf93818b1e4073a67",
+      "bytes": 8415
+    },
+    {
+      "path": "demos/uma-musume/style.css",
+      "role": "source",
+      "sha256": "95c92cabb1f3f76b6dc3f8cfaf2fdbc1d11d65c457430cf61e671c8e0e548c4e",
+      "bytes": 14745
+    },
+    {
+      "path": "entries/uma-musume.json",
+      "role": "context",
+      "sha256": "34b08e8cef713e0d9e8975abe13912a60f2a8f42052172880534050ae82164ff",
+      "bytes": 9342
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/mobile/uma-musume.jpg",
+      "role": "preview",
+      "sha256": "04e7da9529443aaf01cea53a1134999b89baec8dc2d3702db008b1c2b0be392e",
+      "bytes": 84434
+    },
+    {
+      "path": "previews/uma-musume.jpg",
+      "role": "preview",
+      "sha256": "e5ecbb32231038405242116312445fdce6aa525a5a813f61c3a7f79ecf0aa734",
+      "bytes": 430946
+    },
+    {
+      "path": "prompts/uma-musume.md",
+      "role": "context",
+      "sha256": "7c9eb66bfed589a9758921b19c55af399346361721aa8032fef4602c8afe1c00",
+      "bytes": 2932
+    },
+    {
+      "path": "research/screenshots/uma-musume-source.jpg",
+      "role": "preview",
+      "sha256": "e358f4e70bb7e2b76ed2e73a2c078e9e5f13fa12247003d99e60467af489466d",
+      "bytes": 216259
+    },
+    {
+      "path": "research/uma-musume.md",
+      "role": "context",
+      "sha256": "c4d4b724a4c679aa78c8d821ec2efb0f0c6712c10aecb1e40d01e21fa381a29b",
+      "bytes": 3372
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=uma-musume\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>草地绿来自官方赛道KV；#c0e640斜切标题带与绿色操作入口重复，白底新闻让复杂图像后出现阅读休息。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官方图内标识保留；本地段落使用粗重斜体无衬线标题、普通正文和小号日期，避免所有内容同等抢眼。</dd></div><div class=\"\"><dt>布局留白</dt><dd>满宽赛道群像 → 斜切新闻 → 居中倾斜预告 → 立绘与竖屏画面轮播</dd></div><div class=\"\"><dt>图像图标</dt><dd>原站公开KV、三名角色立绘、六张游戏截图与预告缩略图本地保存；每项有manifest来源。</dd></div><div class=\"\"><dt>线条形状</dt><dd>向前倾斜的标题带、说明板与箭头复用斜切语言，平台下载徽章保持自己的标准轮廓。</dd></div><div class=\"\"><dt>信息层级</dt><dd>赛道群像先建立游戏辨识；下载次之；新闻较安静；Gameplay每态只突出一个玩法及相关人物。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>三组完整玩法面板400ms cubic-bezier(.25,1,.5,1)水平移动，原站时序与边界被保留；首尾停止、无自动推进，减少动态即时切换。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>斜切条带延续赛道纵深与角色奔跑方向；游戏截图提供玩法证据，群像负责情绪，二者各有职责。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>角色群像以纵深和奔跑方向承载主视觉，首屏不额外叠一套营销卡片。</li><li>草地绿与荧绿斜切条带重复出现，静态信息也带有向前的运动感。</li><li>玩法画面与对应角色共同切换，产品能力由真实游戏截图证明。</li><li>下载徽章保持平台的熟悉形状，在复杂插画上形成容易识别的操作区域。</li></ul><h3>怎样凸显产品重点</h3><p>真实游戏 Umamusume: Pretty Derby 的跑马养成、学园交流与比赛；本地页复现国际官网主视觉、新闻条目、预告入口、三态玩法轮播。</p><h3>主题与情绪</h3><p>明亮赛道、彩色二次元群像、奔跑纵深和反复出现的斜切几何共同构成青春竞技主题。</p></section><section><h2>02 / 交互巧思</h2><ul><li>正常纵向浏览连接群像、新闻、About、Gameplay 和 footer，斜切条带延续赛道方向。</li><li>滚过画布宽度 7% 后 Logo 从 2.8 倍缩回导航，反向回首恢复；300ms cubic-bezier(.19,1,.22,1)。手机 1.72 倍与菜单切换，Play Now 打开下载层。</li><li>三组 Gameplay 完整面板以 400ms cubic-bezier(.25,1,.5,1) 横移；按钮、编号、左右键与手势同步，首尾禁用而不循环。</li><li>点击 About 原缩略图，站内 dialog 播放原始 top_about.mp4；该文件只有视频轨道，没有音轨，关闭/后台暂停。</li><li>本地手机菜单、键盘控制、减少动态与学习说明为补充，未添加独立 BGM。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>本次页面未见深浅模式开关，保持白底、草地绿与荧绿。</p><p>明亮赛道、青春群像和斜切运动条带构成统一主题，切成通用暗色会改变比赛的情绪。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>About 原始 top_about.mp4 只有视频轨道，没有音轨；播放/暂停、进度与关闭暂停可操作。官网其他 PV 外链声音未在本地核实，未发现独立 BGM。</p><p>奔跑与比赛画面的剪辑建立观看节奏，无声影片保持普通阅读安静；站外播放器的声音不冒称本地已播放。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>只归档 https://umamusume.com/ 在 2026-10-07 的国际英文页，不混入日本门户布局或追随后续改版。</li><li>群像、新闻、About 和 Gameplay 使用官方本地素材；新闻数量和后半部角色/媒体内容有缩减。</li><li>About 原始 top_about.mp4 无音轨，播放器未静音不代表有原声；官网其他 PV 外链的声音未在本地核实，未发现独立 BGM，不给滚动章节配通用音乐。</li><li>Gameplay 不自动推进、不循环；400ms cubic-bezier(.25,1,.5,1) 与首尾边界有源样式依据。</li><li>手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。</li><li>官方品牌、群像、美术和 PV 权利归相应权利方，manifest 留存 URL/尺寸/哈希；不复制运营服务。</li></ul><h3>适合</h3><p>角色阵容丰富的竞技游戏 / 二次元养成手游宣传 / 已有高质量群像插画的产品页</p><h3>谨慎使用</h3><p>用通用双栏产品卡片替代官方群像构图 / 让下载按钮遮挡角色表情 / 声称未获取的音频是官网 BGM</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#a7ce36\"></i>#a7ce36</span><span class=\"swatch\"><i style=\"background:#c0e640\"></i>#c0e640</span><span class=\"swatch\"><i style=\"background:#6fb52a\"></i>#6fb52a</span><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#253336\"></i>#253336</span></div><p><b>字体</b> · 粗重斜体无衬线标题；小号日期与普通正文分工；官方图像内文字保留原素材<br><b>布局</b> · 满宽赛道群像 → 斜切新闻 → 居中倾斜预告 → 立绘与竖屏画面轮播<br><b>动效</b> · 三组完整玩法面板400ms cubic-bezier(.25,1,.5,1)水平移动，原站时序与边界被保留；首尾停止、无自动推进，减少动态即时切换。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>以一个明确 URL 和采集日期归档【竞技/养成游戏】。参考 Umamusume 国际页：官方赛道群像满宽铺开，独立竖版 KV 用于手机；下载徽章避开人物脸部。正常长页依次接入新闻条目、居中轻微倾斜的 About 缩略图和 Gameplay，不改成通用整屏 Swiper。草地绿、荧绿斜切标题带、粗重斜体标题与白底新闻形成运动方向和阅读节奏。点击 About 在站内原生 dialog 播放官方 top_about.mp4，文件无音轨，保留播放/暂停/进度与关闭或后台暂停；用比赛画面和剪辑建立节奏，不把未静音属性称为原声。官网 PV 外链的声音未在本地核实，不额外添加未核验 BGM。三组 Gameplay 必须将人物立绘、两张竖屏游戏图与文案板整块移动，400ms cubic-bezier(.25,1,.5,1)，首尾箭头禁用，不自动、不循环；按钮、编号、左右键与手势更新同一状态。保留来源证实的造型，不把所有图加统一圆角或玻璃卡片。明确内容缩减、手机适配与本地键盘/菜单补充，提供减少动态、可见焦点、原图 manifest 和真实桌面/390px 预览。 导航须保留真实 Logo 与蓝色纹理，滚过 min(viewportWidth,2000) 的7%阈值时2.8倍Logo缩回基准，300ms cubic-bezier(.19,1,.22,1)，反向恢复；手机1.72倍、马蹄图标菜单，Play Now打开原图下载层。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。</p></details><h3>改造练习</h3><p>保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://umamusume.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Umamusume: Pretty Derby 国际官方网站 ↗</a><small>2026-10-07：国际英文版赛道群像、手机竖版KV、新闻、About和Gameplay；素材来自公开官方资源。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://apps.apple.com/us/app/umamusume-pretty-derby/id6480433538\" target=\"_blank\" rel=\"noopener noreferrer\">官方国际版 App Store 页面 ↗</a><small>官方国际版商店页确认产品与官网入口，区分国际宣传页和日本门户。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/tutorials/carousels/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI：Carousels Tutorial ↗</a><small>轮播应有用户控制、键盘、当前状态和变更反馈；本地Gameplay手动且非循环。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C：Animation from Interactions ↗</a><small>交互动效降级规范，条款为Level AAA；不据此声称整页无障碍认证。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://parts.umamusume.com/assets/js/inject-components.js\" target=\"_blank\" rel=\"noopener noreferrer\">官方公共导航组件样式/脚本 ↗</a><small>本次同页注入的公共导航：7% 宽度阈值、2.8/1.72 Logo 缩放，.3s(.19,1,.22,1)，Play Now 站内下载层。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fuma-musume.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "cd78502061deba9fd2a6cfb362bb75eb6efab5b2bdc0d31ae3fd51dde89fe519",
+    "bytes": 10107
+  }
+}

@@ -90,6 +90,7 @@
   "negativePrompt": "不要把细线作为唯一信息；不要启动时隐藏全页等待动画；不要把填色块错误称为线描；不要复制原示范插图；不要依赖过时库限制或让动画阻塞键盘。",
   "demo": "demos/line-art/index.html",
   "preview": "previews/line-art.jpg",
+  "theoryVerifiedAt": "2026-10-07",
   "research": "research/line-art.md",
   "exercise": "将建筑线稿改为原创机械产品分解图，让绘制顺序对应支架、外壳、接口，并保持全文始终可读。",
   "composition": {

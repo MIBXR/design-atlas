@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "id": "hand-drawn",
+  "entry": {
+    "id": "hand-drawn",
+    "order": 7,
+    "title": "手绘：把不完美变成亲近感",
+    "subtitle": "Excalidraw / Field Notes",
+    "category": "经典风格",
+    "tags": [
+      "手绘",
+      "纸张",
+      "草稿",
+      "协作",
+      "贴纸",
+      "SVG"
+    ],
+    "summary": "以 Excalidraw 的手绘产品表达和 Rough.js 的线条机制为依据，学习受控的不规则轮廓、纸面层次与低压力参与感；迁移为原创手帐俱乐部。",
+    "accent": "#b17451",
+    "background": "#f4f0e4",
+    "principles": [
+      "不规则轮廓只承载情绪，信息层级保持稳定",
+      "手绘图要解释真实产品活动，而非四处点缀",
+      "纸张、胶带、批注组成可辨识的实体隐喻",
+      "少量色块强调一个值得开始的动作"
+    ],
+    "productFocus": "让用户理解记录生活的低门槛：先看到一本已经开始的笔记，再亲手勾选三个小步骤。",
+    "interaction": [
+      "三项原生复选框更新收集进度",
+      "贴纸按钮切换装饰并同步 aria-pressed",
+      "开始按钮自然滚动到仪式清单",
+      "重置清单便于反复体验"
+    ],
+    "theme": "奶油纸张、深橄榄墨色、陶土铅笔与低饱和植物绿；温和、好奇、允许草稿的日常创作气质。",
+    "constraints": [
+      "正文使用清晰字体，手写感仅用于批注和图内短句",
+      "倾斜角度限制在小范围，不能影响阅读和触达",
+      "线宽与排线密度要保持统一",
+      "SVG 不规则线条固定生成，避免每帧抖动",
+      "复选框与按钮使用原生语义和键盘焦点",
+      "小屏纸页完整缩放，不让贴纸挡住核心文案"
+    ],
+    "useCases": [
+      "创作工具",
+      "教育与社区",
+      "手帐文具",
+      "轻量规划产品"
+    ],
+    "avoid": [
+      "高精度交易数据主界面",
+      "需要严肃医疗可信度的关键信息",
+      "长篇正文全部使用手写字体",
+      "无限制的纸纹和装饰叠加"
+    ],
+    "tokens": {
+      "palette": [
+        "#f4f0e4",
+        "#343e2f",
+        "#b17451",
+        "#a6af83",
+        "#e5e8cf"
+      ],
+      "type": "标题 Georgia 44–72px；正文 Georgia 15–18px；元信息 Arial 9–12px",
+      "layout": "双栏纸页首屏 + 非对称仪式清单 + 三种记录页；大面积留白，小角度旋转",
+      "motion": "由点击触发的状态变化；无持续装饰动画；reduced motion 关闭平滑滚动"
+    },
+    "sources": [
+      {
+        "title": "Excalidraw Plus 官方网站",
+        "url": "https://plus.excalidraw.com/",
+        "type": "实例",
+        "note": "2026-10-07 核验：官网以简单白板、协作与快速草稿组织产品信息；手绘产品表达的局部参考，不宣称官网采用本 demo 的整套纸张拼贴。"
+      },
+      {
+        "title": "Rough.js 官方说明与绘图示例",
+        "url": "https://roughjs.com/",
+        "type": "理论",
+        "note": "官方展示线条粗糙度、弯曲度、排线等可调机制；demo 以原创 SVG 固定曲线迁移该表达思想，不依赖库。"
+      }
+    ],
+    "prompt": "可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构手帐俱乐部 Field Notes 制作可离线运行的英文网页。参考 Excalidraw 的手绘产品表达和 Rough.js 的受控轮廓/排线机制，但使用原创名称、文案和 SVG 插画。信息顺序：生活记录价值主张→已经写过的植物与咖啡笔记→三个低门槛开始步骤→不同记录场景。首屏用深橄榄色衬线大标题和奶油纸张；右侧原创笔记本带细横线、胶带、铅笔、小角度旋转和一张可切换贴纸。手绘不是全页面凌乱：正文正常排版，线宽统一，主 CTA 明显。三项清单必须可以勾选并更新可读进度，提供清单重置；贴纸按钮需 aria-pressed。至少三节完整内容，移动端将两栏重排成单栏；保留键盘焦点与 reduced motion；全部素材本地，不使用 CDN 或他人插画。\n\n要素协调要求：纸色、植物线稿、宽松排版和手工贴纸都服务于“慢下来记录”；正文使用清楚字形，避免过度装饰。",
+    "negativePrompt": "不要复制 Excalidraw 商标或官网素材；不要把全部正文写成手写字；不要随机抖动、过密纹理、过多旋转、悬空链接或只有换色的通用卡片。",
+    "demo": "demos/hand-drawn/index.html",
+    "preview": "previews/hand-drawn.jpg",
+    "theoryVerifiedAt": "2026-10-07",
+    "research": "research/hand-drawn.md",
+    "exercise": "将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。",
+    "composition": {
+      "color": "奶油纸色和低饱和植物绿保持柔和，黑色线稿提供可读性。",
+      "typography": "标题 Georgia 44–72px；正文 Georgia 15–18px；元信息 Arial 9–12px",
+      "layout": "双栏纸页首屏 + 非对称仪式清单 + 三种记录页；大面积留白，小角度旋转",
+      "imagery": "自绘植物、笔记页与贴纸解释记录生活的场景。",
+      "shape": "适度不规则笔触与纸页质感模拟手工；按钮仍有稳定边界。",
+      "hierarchy": "生活主张 → 手帐示范 → 清单练习 → 记录入口。",
+      "motion": "由点击触发的状态变化；无持续装饰动画；reduced motion 关闭平滑滚动",
+      "coherence": "纸色、植物线稿、宽松排版和手工贴纸都服务于“慢下来记录”；正文使用清楚字形，避免过度装饰。"
+    },
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。",
+      "designReason": "风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本练习无背景音乐。",
+      "interactionRole": "不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/hand-drawn.md",
+      "role": "research",
+      "content": "# 手绘：受控的不完美\n\n核验日期：2026-10-07。主案例是 [Excalidraw Plus 官方网站](https://plus.excalidraw.com/)；制作机制依据 [Rough.js 官方说明](https://roughjs.com/)。本条为局部对应与风格迁移，原创 demo 并非官网复刻。\n\n## 证据与观察边界\n\n- 官网页面内容已读取。它先说明简单白板，再按 Create、Collaborate、Use cases 等分段讲解，展示产品画布，并提供开始绘图入口。[Excalidraw Plus](https://plus.excalidraw.com/)\n- 官网文本明确围绕快速草稿、简单使用与交流组织信息；手绘美学属于产品表达。本次文本核验不足以支持“全站是纸张拼贴”这种判断，本 demo 的胶带、铅笔、手帐纸面是原创迁移。\n- Rough.js 官方列出线条、曲线、多边形等图元，示例展示 roughness、bowing、strokeWidth、hachureGap 与多种填充。[官方示例](https://roughjs.com/)\n\n## 设计推断\n\n1. 草稿轮廓可以表达“先说清想法，再精修形式”，适合参与、学习和创作场景。这是从产品任务与视觉机制的结合得出的推断，并非对转化率的实证结论。\n2. 不规则线条需要稳定的信息骨架。把装饰的不完美限制在短批注、轮廓与实体材料中，可以让正文、导航、操作仍然清晰。\n3. 纸面隐喻只有与记录任务相连才有价值。相同技法若用于支付表单，可能增加信息噪声。\n\n## Demo 映射\n\n| 参考机制 | 本地实现 | 目的 |\n| --- | --- | --- |\n| 产品画布作为价值证明 | 原创植物与咖啡笔记 SVG | 先让用户看懂“记录什么” |\n| 可辨识的草稿轮廓 | 固定 SVG 曲线、少量双线、植物排线 | 表达亲近感，同时避免随机抖动 |\n| 低门槛开始 | 三项复选框与实时进度 | 把品牌态度变成可操作流程 |\n| 亲手整理的体验 | 可切换贴纸、清单重置 | 保持短小、可重复的参与感 |\n\n布局为大标题与真实纸页并置，随后是非对称清单，最后介绍三种记录场景。大幅纸页、小角度倾斜和有限材料构成视觉层次；未使用他人插画、品牌资产或字体文件。\n\n## 约束与适用边界\n\n- 正文保持常规字体；手写感只用于批注。\n- 插画线宽及排线密度统一，不通过高频噪点模拟真实纸张。\n- 倾斜不能侵入阅读区、焦点轮廓或触控区。\n- 原生复选框、按钮与 `aria-pressed` 提供明确状态；小屏纸页按比例缩放。\n- `prefers-reduced-motion` 关闭平滑滚动。此页没有必须播放的动画。\n- 适合创作、社区、文具与教育入口；精确数据主界面应保留更严整的信息表达。\n\n## 复用入口\n\n[结构化条目与完整 Prompt](../entries/hand-drawn.json) · [独立 Demo](../demos/hand-drawn/index.html)\n\n改造练习：将手帐变成团队复盘工具。保留草稿感，换成原创流程图，清单对应回顾、发现、行动。\n",
+      "sha256": "15377928bc36494195b0131d0dc164c007a59d712f2797ad6852516198ce0fad",
+      "bytes": 2955
+    },
+    {
+      "path": "prompts/hand-drawn.md",
+      "role": "prompt",
+      "content": "# 手绘：把不完美变成亲近感 · 复用 Prompt\n\n由 [结构化案例](../entries/hand-drawn.json) 自动生成。参考观察与具体边界见 [调研](../research/hand-drawn.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构手帐俱乐部 Field Notes 制作可离线运行的英文网页。参考 Excalidraw 的手绘产品表达和 Rough.js 的受控轮廓/排线机制，但使用原创名称、文案和 SVG 插画。信息顺序：生活记录价值主张→已经写过的植物与咖啡笔记→三个低门槛开始步骤→不同记录场景。首屏用深橄榄色衬线大标题和奶油纸张；右侧原创笔记本带细横线、胶带、铅笔、小角度旋转和一张可切换贴纸。手绘不是全页面凌乱：正文正常排版，线宽统一，主 CTA 明显。三项清单必须可以勾选并更新可读进度，提供清单重置；贴纸按钮需 aria-pressed。至少三节完整内容，移动端将两栏重排成单栏；保留键盘焦点与 reduced motion；全部素材本地，不使用 CDN 或他人插画。\n\n要素协调要求：纸色、植物线稿、宽松排版和手工贴纸都服务于“慢下来记录”；正文使用清楚字形，避免过度装饰。\n\n## 负向约束\n\n不要复制 Excalidraw 商标或官网素材；不要把全部正文写成手写字；不要随机抖动、过密纹理、过多旋转、悬空链接或只有换色的通用卡片。\n\n## 制作约束\n\n- 正文使用清晰字体，手写感仅用于批注和图内短句\n- 倾斜角度限制在小范围，不能影响阅读和触达\n- 线宽与排线密度要保持统一\n- SVG 不规则线条固定生成，避免每帧抖动\n- 复选框与按钮使用原生语义和键盘焦点\n- 小屏纸页完整缩放，不让贴纸挡住核心文案\n\n## 检查方法\n\n将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。\n\n[查看 Demo](../demos/hand-drawn/index.html) · [返回参考库](../index.html#style/hand-drawn)\n",
+      "sha256": "4e33977aadbfcf0dec2b0d3ef1f6404a5d89e2995cc902c63c777224cccc336b",
+      "bytes": 2277
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/hand-drawn/index.html",
+      "role": "source",
+      "sha256": "739c2b94f7ab9c6212460f4a69d43e160f85158ce99c27ffefc60960393cc13f",
+      "bytes": 5247
+    },
+    {
+      "path": "demos/hand-drawn/script.js",
+      "role": "source",
+      "sha256": "bda85a3d0998e9ad1cc2811ebe422ab804c38d732bf8e2c6f4cab4110561fdc7",
+      "bytes": 664
+    },
+    {
+      "path": "demos/hand-drawn/style.css",
+      "role": "source",
+      "sha256": "33cba705b55ba0c0ca9b31696401c8938d39e6eae088e3592beff6376f301f42",
+      "bytes": 5980
+    },
+    {
+      "path": "entries/hand-drawn.json",
+      "role": "context",
+      "sha256": "348db42d48b5119e0100bda60641cdbac385bb4dcaadb53293ff000ab5ab02ad",
+      "bytes": 6244
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/hand-drawn.jpg",
+      "role": "preview",
+      "sha256": "fa35d42c5b094031c8ab6a25ca20192a5185488792115468641277e0451fc2a5",
+      "bytes": 93848
+    },
+    {
+      "path": "previews/mobile/hand-drawn.jpg",
+      "role": "preview",
+      "sha256": "3f9ae252b588727961c8bd5ecf01d3e4ba718fa5902bc1839d30709882bc2e1c",
+      "bytes": 39510
+    },
+    {
+      "path": "prompts/hand-drawn.md",
+      "role": "context",
+      "sha256": "4e33977aadbfcf0dec2b0d3ef1f6404a5d89e2995cc902c63c777224cccc336b",
+      "bytes": 2277
+    },
+    {
+      "path": "research/hand-drawn.md",
+      "role": "context",
+      "sha256": "15377928bc36494195b0131d0dc164c007a59d712f2797ad6852516198ce0fad",
+      "bytes": 2955
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=hand-drawn\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>奶油纸色和低饱和植物绿保持柔和，黑色线稿提供可读性。</dd></div><div class=\"\"><dt>字体排版</dt><dd>标题 Georgia 44–72px；正文 Georgia 15–18px；元信息 Arial 9–12px</dd></div><div class=\"\"><dt>布局留白</dt><dd>双栏纸页首屏 + 非对称仪式清单 + 三种记录页；大面积留白，小角度旋转</dd></div><div class=\"\"><dt>图像图标</dt><dd>自绘植物、笔记页与贴纸解释记录生活的场景。</dd></div><div class=\"\"><dt>线条形状</dt><dd>适度不规则笔触与纸页质感模拟手工；按钮仍有稳定边界。</dd></div><div class=\"\"><dt>信息层级</dt><dd>生活主张 → 手帐示范 → 清单练习 → 记录入口。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>由点击触发的状态变化；无持续装饰动画；reduced motion 关闭平滑滚动</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>纸色、植物线稿、宽松排版和手工贴纸都服务于“慢下来记录”；正文使用清楚字形，避免过度装饰。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>不规则轮廓只承载情绪，信息层级保持稳定</li><li>手绘图要解释真实产品活动，而非四处点缀</li><li>纸张、胶带、批注组成可辨识的实体隐喻</li><li>少量色块强调一个值得开始的动作</li></ul><h3>怎样凸显产品重点</h3><p>让用户理解记录生活的低门槛：先看到一本已经开始的笔记，再亲手勾选三个小步骤。</p><h3>主题与情绪</h3><p>奶油纸张、深橄榄墨色、陶土铅笔与低饱和植物绿；温和、好奇、允许草稿的日常创作气质。</p></section><section><h2>02 / 交互巧思</h2><ul><li>三项原生复选框更新收集进度</li><li>贴纸按钮切换装饰并同步 aria-pressed</li><li>开始按钮自然滚动到仪式清单</li><li>重置清单便于反复体验</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>此构成练习保留指定风格配色；实验室可另行比较系统／手动深浅主题。</p><p>风格不是一组可直接反转的颜色；改变主题时需重新配对文字、表面、强调与边框，保留图像原色。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>本练习无背景音乐。</p><p>不按风格标签臆造音乐；若引入声音，应有真实来源、主动启用、停止控制与明确的交互作用。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>正文使用清晰字体，手写感仅用于批注和图内短句</li><li>倾斜角度限制在小范围，不能影响阅读和触达</li><li>线宽与排线密度要保持统一</li><li>SVG 不规则线条固定生成，避免每帧抖动</li><li>复选框与按钮使用原生语义和键盘焦点</li><li>小屏纸页完整缩放，不让贴纸挡住核心文案</li></ul><h3>适合</h3><p>创作工具 / 教育与社区 / 手帐文具 / 轻量规划产品</p><h3>谨慎使用</h3><p>高精度交易数据主界面 / 需要严肃医疗可信度的关键信息 / 长篇正文全部使用手写字体 / 无限制的纸纹和装饰叠加</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#f4f0e4\"></i>#f4f0e4</span><span class=\"swatch\"><i style=\"background:#343e2f\"></i>#343e2f</span><span class=\"swatch\"><i style=\"background:#b17451\"></i>#b17451</span><span class=\"swatch\"><i style=\"background:#a6af83\"></i>#a6af83</span><span class=\"swatch\"><i style=\"background:#e5e8cf\"></i>#e5e8cf</span></div><p><b>字体</b> · 标题 Georgia 44–72px；正文 Georgia 15–18px；元信息 Arial 9–12px<br><b>布局</b> · 双栏纸页首屏 + 非对称仪式清单 + 三种记录页；大面积留白，小角度旋转<br><b>动效</b> · 由点击触发的状态变化；无持续装饰动画；reduced motion 关闭平滑滚动</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构手帐俱乐部 Field Notes 制作可离线运行的英文网页。参考 Excalidraw 的手绘产品表达和 Rough.js 的受控轮廓/排线机制，但使用原创名称、文案和 SVG 插画。信息顺序：生活记录价值主张→已经写过的植物与咖啡笔记→三个低门槛开始步骤→不同记录场景。首屏用深橄榄色衬线大标题和奶油纸张；右侧原创笔记本带细横线、胶带、铅笔、小角度旋转和一张可切换贴纸。手绘不是全页面凌乱：正文正常排版，线宽统一，主 CTA 明显。三项清单必须可以勾选并更新可读进度，提供清单重置；贴纸按钮需 aria-pressed。至少三节完整内容，移动端将两栏重排成单栏；保留键盘焦点与 reduced motion；全部素材本地，不使用 CDN 或他人插画。\n\n要素协调要求：纸色、植物线稿、宽松排版和手工贴纸都服务于“慢下来记录”；正文使用清楚字形，避免过度装饰。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要复制 Excalidraw 商标或官网素材；不要把全部正文写成手写字；不要随机抖动、过密纹理、过多旋转、悬空链接或只有换色的通用卡片。</p></details><h3>改造练习</h3><p>将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://plus.excalidraw.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Excalidraw Plus 官方网站 ↗</a><small>2026-10-07 核验：官网以简单白板、协作与快速草稿组织产品信息；手绘产品表达的局部参考，不宣称官网采用本 demo 的整套纸张拼贴。</small></div><div class=\"source-item\"><span class=\"source-badge\">理论</span><a href=\"https://roughjs.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Rough.js 官方说明与绘图示例 ↗</a><small>官方展示线条粗糙度、弯曲度、排线等可调机制；demo 以原创 SVG 固定曲线迁移该表达思想，不依赖库。</small></div><p>理论来源核验：2026-10-07。详细观察、推断与限制见<a href=\"document.html?file=research%2Fhand-drawn.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "8c96b78b26bd410837ec67aa48581db8d00e60dc9cca35d384ba2f5afd861613",
+    "bytes": 7169
+  }
+}

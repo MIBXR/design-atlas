@@ -92,6 +92,7 @@
   "negativePrompt": "不要复制 In Pieces 动物或将其作品称为本 demo；不要随机闪烁、自动无限变形、移动文字或变化点击目标；不要在顶点拓扑不匹配时硬插值；不要把未能访问的项目官网当成当日视觉事实。",
   "demo": "demos/shape-morph/index.html",
   "preview": "previews/shape-morph.jpg",
+  "theoryVerifiedAt": "2026-10-07",
   "research": "research/shape-morph.md",
   "exercise": "将三种形态映射为一个产品的收集、处理、输出阶段，让每次变形同步切换解释文本，并保留相同三角片。",
   "composition": {

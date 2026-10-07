@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 1,
+  "id": "genshin-world",
+  "entry": {
+    "id": "genshin-world",
+    "order": 18,
+    "title": "原神 · 版本群像与角色舞台",
+    "subtitle": "GENSHIN / VERSION CAMPAIGN",
+    "category": "游戏/IP",
+    "country": "中国",
+    "tags": [
+      "原神",
+      "米哈游",
+      "HoYoverse",
+      "版本宣传",
+      "群像",
+      "角色立绘"
+    ],
+    "summary": "2026-10-07 英文官网快照：深红版本群像以整屏位移进入角色舞台，角色选择同步切换完整背景、立绘、文字与原始语音。",
+    "accent": "#b71936",
+    "background": "#2a1027",
+    "principles": [
+      "深红群像和巨大主题图先建立版本剧情；下载保持清晰的第二层级。",
+      "整屏垂直位移让每个章节成为独立舞台，角色舞台的完整换色承担叙事交接。",
+      "角色选择同时改变立绘、姓名、简介、圆形肖像与背景，让人物拥有自己的视觉空间。",
+      "麦克风播放该角色的官方台词；声音解释角色身份，不给静音主视觉虚构背景音乐。"
+    ],
+    "productFocus": "单一归档的 7.1 A Rekviem for the Underworld 版本；本地保留首屏、Vesna/Vodyanitsa 两角色、日历与末尾信息。",
+    "interaction": [
+      "滚轮或竖向手势推进整屏舞台，反向返回；末尾以有限位移露出 footer，避免把正常长页当作源站 Swiper。",
+      "选择 Vesna/Vodyanitsa，100ms 交叉淡入立绘，并同步切换青绿/蓝色完整背景、姓名、简介、肖像状态与麦克风图。",
+      "点击麦克风随机播放对应角色 3 条官方语音之一，再点暂停；换角色、离开角色章节与后台时停止，防止声线叠加。",
+      "首屏 3 秒无声视频可暂停；离屏停止。详情与日历以可关闭的本地 dialog 展示，后者提供原图放大。",
+      "键盘章节导航、角色左右键、最新请求队列及减少动态分支为本地补充。"
+    ],
+    "theme": "深红暗紫群像与青绿、浅金角色舞台；衬线与星芒、圆环、尖角纹样呈现幻想冒险。",
+    "constraints": [
+      "只归档 https://genshin.hoyoverse.com/en/ 在 2026-10-07 的单一快照，不跟随后续版本。",
+      "源页 6 个章节缩为本地 3 个核心章节加 footer；领取、Xbox、登录、完整武器与 Wiki 不在本地范围。",
+      "源垂直 Swiper 与角色 100ms 时序已确认；整屏的精确时长未核验，本地 600ms ease / 650ms 输入锁为明确近似。",
+      "3 秒首屏本地短片没有音轨；6 条台词是官方角色语音，不能称作原站 BGM。",
+      "详情是摘要 dialog，手机人物排布及可触摸控件属于本地适配，并非逐像素移动版。",
+      "官方品牌、美术、视频与语音权利归相应权利方，资产 manifest 记录直接来源；不复制账户或追踪服务。"
+    ],
+    "useCases": [
+      "大型游戏版本专题",
+      "角色更新",
+      "IP活动"
+    ],
+    "avoid": [
+      "后台系统",
+      "纯文字教程"
+    ],
+    "tokens": {
+      "palette": [
+        "#2a1027",
+        "#b71936",
+        "#229a91",
+        "#21558c",
+        "#efd779"
+      ],
+      "type": "官方巨幅主题图；本地角色名用 Georgia，说明用系统无衬线",
+      "layout": "群像整屏 → 独立角色舞台 → 日历整屏 → 部分露出的 footer",
+      "motion": "垂直 translate3d 舞台正反交接（本地 600ms ease 近似）；角色 100ms 交叉淡化与整背景同步；末尾位移有限，减少动态即时切换。"
+    },
+    "sources": [
+      {
+        "title": "Genshin Impact · 当前国际官网根入口",
+        "url": "https://genshin.hoyoverse.com/en/",
+        "type": "实例",
+        "note": "2026-10-07：国际根入口为7.1专题，深红群像、青绿角色舞台与活动日历。"
+      },
+      {
+        "title": "W3C · Pause, Stop, Hide",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+        "type": "规范",
+        "note": "持续自动动态应有暂停；本地背景视频可持续停止，减少动态初始停止。"
+      },
+      {
+        "title": "W3C · Modal Dialog Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+        "type": "规范",
+        "note": "本地原生dialog的键盘、关闭与焦点语义参考，不代表原站完整遵循此模式。"
+      },
+      {
+        "title": "官方公开交互脚本 · 2026-10-07",
+        "url": "https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/setups.d850a780.js",
+        "type": "实例",
+        "note": "2026-10-07 单次归档：垂直 Swiper 且 document.scrollY=0；角色 opacity 为100ms。人物背景/肖像/麦克风同步，随机3条语音与播放中暂停见公开配置。整屏本地600ms为近似。"
+      }
+    ],
+    "prompt": "归档【目标游戏版本页】一个确定 URL 和采集日期。参考原神此快照：真实群像铺满首屏，深红暗紫底、巨幅官方主题字、下载与版本号保持清楚层级。滚轮以垂直 translate3d 切换独立舞台，必须能反向回到首屏；末尾仅移动剩余距离露出 footer。人物章节以完整背景承担换色，不只替换一张立绘；选择两角色时同步姓名、简介、原始肖像、立绘及麦克风图，立绘用来源确认的 100ms 交叉淡化。麦克风只在用户操作时随机播放该角色 3 条真实台词，再点暂停，换角色或离屏即停；首屏无声短片另有暂停，不添加未证实 BGM。未核验的整屏时长需在 fidelity 中明说，本地使用 600ms ease 和 650ms 输入锁并收敛最新操作。用原生 dialog 展示局部详情与可放大官方日历，支持 Escape、焦点与键盘章节/角色操作。手机保留独立舞台与可触摸控件，减少动态取消位移且背景初始暂停。明确删减章节、手机适配与本地无障碍补充，输出 HTML/CSS/JS、完整素材 manifest、风格与复现边界以及真实两尺寸预览。",
+    "negativePrompt": "不要用蓝色通用SaaS hero替代深红角色群像；不要编造当前角色名、版本或曲目；不要冒充完整官网、领奖、登录或购买流程；不要复制追踪脚本。",
+    "demo": "demos/genshin-world/index.html",
+    "preview": "previews/genshin-world.jpg",
+    "research": "research/genshin-world.md",
+    "exercise": "依据这次归档的舞台规则，设计一个虚构双角色专题：保持整屏交接、角色连背景换色、声音归属与下载层级，比较不同美术是否仍有清楚的章节识别。",
+    "composition": {
+      "color": "深红暗紫群像与青绿、浅金角色舞台；衬线与星芒、圆环、尖角纹样呈现幻想冒险。",
+      "typography": "官方大幅衬线主题图，角色名用Georgia；说明用系统无衬线",
+      "layout": "群像整屏 → 独立角色舞台 → 日历整屏 → 部分露出的 footer",
+      "imagery": "当前官网3秒静音主视觉视频、官方标题/Logo、两张角色立绘、官方日历。",
+      "shape": "红色播放圆环、金色菱角按钮、青绿圆轨与装饰分隔组成幻想语汇。",
+      "hierarchy": "版本剧情群像 → 下载与版本号 → 角色展示 → 活动日历。",
+      "motion": "垂直 translate3d 舞台正反交接（本地 600ms ease 近似）；角色 100ms 交叉淡化与整背景同步；末尾位移有限，减少动态即时切换。",
+      "coherence": "色调随版本/角色章节转换，人物图与幻想纹样统一；信息和操作保留清晰的固定层级。"
+    },
+    "referenceUrl": "https://genshin.hoyoverse.com/en/",
+    "implementation": "reference-study",
+    "fidelity": "demos/genshin-world/fidelity.md",
+    "assetManifest": "demos/genshin-world/assets-manifest.json",
+    "referencePreview": "research/screenshots/genshin-world-source.jpg",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "无深浅主题切换；角色选择会改变舞台背景。",
+      "designReason": "深红版本叙事与青绿/蓝色人物舞台来自同一 IP 美术，强行换成通用浅色会破坏人物与背景关系。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "本地麦克风手动播放/暂停 6 条官方角色语音；首屏无声，完整 PV/Wiki 使用官方外链。",
+      "interactionRole": "人物选择更新声线；点击麦克风让角色自我介绍，换人和转场停止旧语音以保持人物归属，未发现独立 BGM。"
+    },
+    "capturedAt": "2026-10-07"
+  },
+  "documents": [
+    {
+      "path": "research/genshin-world.md",
+      "role": "research",
+      "content": "# 原神：版本舞台、人物换色与声线\n\n单一来源：[Genshin Impact 英文官网](https://genshin.hoyoverse.com/en/)，采集日期 **2026-10-07**。归档对象为 7.1「A Rekviem for the Underworld」，不维护后续变更。\n\n## 真实浏览与公开代码\n\n首屏进入后依次向下到角色/武器、登录福利、活动日历、Xbox/Paimon、footer，再反向返回。文档滚动位置保持 0，垂直 Swiper wrapper 发生位移；1440×1000 中主要画布高度为 810，外侧留出上下空白。末尾的 footer 使用不足一个整屏的最终位移。\n\n选择 Vesna 与 Vodyanitsa 时，立绘和姓名以 100ms opacity 变化，完整人物背景也从青绿变为蓝色，肖像与麦克风随人改变。麦克风实际加载官方音频；公开配置明确 `playMode: random`、`clickOnPlaying: pause`，英文语言包为每位角色列出 3 条 MP3。源首页只有静音循环主视觉视频，没有发现独立背景音乐。\n\n代码依据：[公开 setups](https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/setups.d850a780.js)、[公开配置](https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/config.73224177.js)。这些是本次快照的佐证，不作为另一个设计版本。\n\n## 触发 → 响应 → 目的\n\n| 触发 | 页面响应 | 设计目的 |\n| --- | --- | --- |\n| 向下/向上滚轮 | 整块舞台正反位移，末尾有限位移 | 每节有完整构图与节奏，保留前后章节关系 |\n| 选择人物肖像 | 100ms 立绘交叉淡化；人物与整个背景同步 | 人物拥有自己的色彩身份，而不是共用模板 |\n| 点击人物麦克风 | 对应角色随机台词，再点暂停 | 用声音补充人物性格，操作和声线有明确归属 |\n| 离开人物/换人 | 本地停止原台词 | 避免旧人物声音跨场景干扰 |\n| 放大日历 | 本地原图 dialog | 保留官方细节，同时让小字可查询 |\n\n## 理论与主题\n\n群像和巨标题负责情绪，下载区域负责行动；章节换色属于信息分组和视觉层级。人物、肖像、字体、金色边饰与完整背景协同维持幻想游戏语言。此快照为固定 IP 主题，未见深浅切换；角色背景变化是人物状态，不是系统主题。\n\n[W3C Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) 支持本地持续动画暂停，[Modal Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) 支持本地焦点和关闭流程。这些是本地可访问性依据，不是源站已完整满足规范的结论。\n\n## 本地范围\n\n保留首屏、两角色、日历与 footer；其余内容章节缩减。整屏精确时长未确认，本地 600ms ease、650ms 输入锁为近似；人物 100ms 有来源依据。详情仅摘要，手机排布为适配。首屏只有 3 秒无声片段；人物 6 条真语音独立保存，未伪造 BGM。参数、Prompt、资产记录与终态预览见案例条目和 [fidelity](../demos/genshin-world/fidelity.md)。\n",
+      "sha256": "cf155aa50b6b56f3b3d4023c354d1e3aeeb8b3ce40afd6e4284242141f1e1c93",
+      "bytes": 2993
+    },
+    {
+      "path": "prompts/genshin-world.md",
+      "role": "prompt",
+      "content": "# 原神 · 版本群像与角色舞台 · 复用 Prompt\n\n由 [结构化案例](../entries/genshin-world.json) 自动生成。参考观察与具体边界见 [调研](../research/genshin-world.md)。\n\n## 正向 Prompt\n\n归档【目标游戏版本页】一个确定 URL 和采集日期。参考原神此快照：真实群像铺满首屏，深红暗紫底、巨幅官方主题字、下载与版本号保持清楚层级。滚轮以垂直 translate3d 切换独立舞台，必须能反向回到首屏；末尾仅移动剩余距离露出 footer。人物章节以完整背景承担换色，不只替换一张立绘；选择两角色时同步姓名、简介、原始肖像、立绘及麦克风图，立绘用来源确认的 100ms 交叉淡化。麦克风只在用户操作时随机播放该角色 3 条真实台词，再点暂停，换角色或离屏即停；首屏无声短片另有暂停，不添加未证实 BGM。未核验的整屏时长需在 fidelity 中明说，本地使用 600ms ease 和 650ms 输入锁并收敛最新操作。用原生 dialog 展示局部详情与可放大官方日历，支持 Escape、焦点与键盘章节/角色操作。手机保留独立舞台与可触摸控件，减少动态取消位移且背景初始暂停。明确删减章节、手机适配与本地无障碍补充，输出 HTML/CSS/JS、完整素材 manifest、风格与复现边界以及真实两尺寸预览。\n\n## 负向约束\n\n不要用蓝色通用SaaS hero替代深红角色群像；不要编造当前角色名、版本或曲目；不要冒充完整官网、领奖、登录或购买流程；不要复制追踪脚本。\n\n## 制作约束\n\n- 只归档 https://genshin.hoyoverse.com/en/ 在 2026-10-07 的单一快照，不跟随后续版本。\n- 源页 6 个章节缩为本地 3 个核心章节加 footer；领取、Xbox、登录、完整武器与 Wiki 不在本地范围。\n- 源垂直 Swiper 与角色 100ms 时序已确认；整屏的精确时长未核验，本地 600ms ease / 650ms 输入锁为明确近似。\n- 3 秒首屏本地短片没有音轨；6 条台词是官方角色语音，不能称作原站 BGM。\n- 详情是摘要 dialog，手机人物排布及可触摸控件属于本地适配，并非逐像素移动版。\n- 官方品牌、美术、视频与语音权利归相应权利方，资产 manifest 记录直接来源；不复制账户或追踪服务。\n\n## 检查方法\n\n依据这次归档的舞台规则，设计一个虚构双角色专题：保持整屏交接、角色连背景换色、声音归属与下载层级，比较不同美术是否仍有清楚的章节识别。\n\n[查看 Demo](../demos/genshin-world/index.html) · [返回参考库](../index.html#style/genshin-world)\n",
+      "sha256": "7447bc9f8b69f793b12c68ded6f2d69f88185880d81be589e322faf2eba40252",
+      "bytes": 2674
+    },
+    {
+      "path": "demos/genshin-world/fidelity.md",
+      "role": "fidelity",
+      "content": "# Genshin 复现边界\n\n- 来源 URL：https://genshin.hoyoverse.com/en/\n- 采集日期：2026-10-07；仅此一次版本快照。\n\n## 来源确认与本地实现\n\n| 源行为 | 本地实现与准确性 |\n| --- | --- |\n| 6 章垂直 Swiper，document.scrollY=0，末尾部分 footer | translate3d 的 3 核心章节加 footer，正反滚轮/手势，有限末尾位移；不再以长页 scroll-snap 冒充 |\n| 两角色选择连同整背景、肖像、文字换态，立绘 100ms opacity | 原始两背景/两立绘/两肖像/麦克风同步；100ms 交叉淡化 |\n| 每人 3 条官方 MP3，随机；播放中再点暂停 | 用户点击原始麦克风随机选择对应文件，二次点击暂停；换人/离屏/后台停止是本地防叠加补充 |\n| 静音主视觉视频 | 本地 3 秒无声片段，真实暂停、离屏停止；没有背景音乐按钮 |\n| 日历与角色详情入口 | 原始日历可放大；人物 dialog 只含摘要和官方详情外链 |\n\n## 明确近似和未覆盖\n\n整屏 Swiper 精确时长未核验，本地 600ms ease + 650ms 输入锁不是源参数；最新请求队列、键盘导航、dialog 焦点、减少动态和手机排布为本地补充。源的登录福利、Xbox、完整武器、领奖/登录、Wiki 全页未复制。桌面画布未逐像素保持源 1920 基准的 810px letterbox 比例。\n\n固定主题；角色换色保留 IP 美术，不加深浅主题开关。原始台词服务人物认知，主视觉静音；两者不能混称 BGM。素材 URL、字节、SHA-256 与用途见 assets-manifest.json；未加载原账户与追踪服务。\n",
+      "sha256": "acbf40ee3c4ce38c36556e96473d9bb3272f68a60d196f4d6bb6bb977296b963",
+      "bytes": 1597
+    },
+    {
+      "path": "demos/genshin-world/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourceDate\": \"2026-10-07\",\n  \"scope\": \"真实官网公开资源的私人学习局部复现\",\n  \"assets\": [\n    {\n      \"file\": \"character-background.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/dc85837c078f0e7dfc5531962cb36f9c_5927172609859244015.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"青绿色角色舞台背景\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 225730,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 2500,\n      \"height\": 1080,\n      \"dimensions\": [\n        2500,\n        1080\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"5a288303e1a1c5c571d362cf476d567be909202408438bb1c0bcd2430321c35a\"\n    },\n    {\n      \"file\": \"character-1.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/9bdc3c554f889f659a3b94683c05e92d_8192922460449094200.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"当前角色 Vesna 立绘\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 181604,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 871,\n      \"height\": 1395,\n      \"dimensions\": [\n        871,\n        1395\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"7b187102c054c90f7514a6d602c9e8ba1bff95a6cc1cb9c1b0bfeb13c25a6fc7\"\n    },\n    {\n      \"file\": \"page-background.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/0aff804d2728a8293e5961952bc14775_4881624822253980338.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"专题页面背景\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 425002,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 2500,\n      \"height\": 1080,\n      \"dimensions\": [\n        2500,\n        1080\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"6f0c0c16718de3407d563a46ffc9df1c6a83493567f8cbb8d30b38b8e35afb38\"\n    },\n    {\n      \"file\": \"character-2.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/b95b19fcdf945b8caa0fc66884edb7a6_5475339125680283814.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"专题第二角色立绘\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 238726,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 1269,\n      \"height\": 1478,\n      \"dimensions\": [\n        1269,\n        1478\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"2f6e3c048d15c79ba0f9f82d4a27c82d8b6d5061f1fd5f24ff6d5e3f8abecbb0\"\n    },\n    {\n      \"file\": \"calendar-frame.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/01b128216769de69bf54fccf498f9802_2059141327448545956.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"活动日历装饰框\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 55476,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 1300,\n      \"height\": 862,\n      \"dimensions\": [\n        1300,\n        862\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"905f9d33d5d882a0d38b712cad4990c0155e83b14603aa9df3caea2657304ee2\"\n    },\n    {\n      \"file\": \"download.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/03/50a4a15df1a160549f8415c2c7ce4faa_5883995896586970059.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"首屏 PC 下载按钮底图\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 31438,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 616,\n      \"height\": 119,\n      \"dimensions\": [\n        616,\n        119\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"20e348cc92b047e996635a23ad49108e78802dc67e6c0d1a2bb65e729de54d9f\"\n    },\n    {\n      \"file\": \"hero-title.webp\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/ef7453f416a198eec8024de5d82ce86a_1287853403652777100.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"A Rekviem for the Underworld 官方标题\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 341036,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 1517,\n      \"height\": 638,\n      \"dimensions\": [\n        1517,\n        638\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"5a570e5c0be6a22604e870900561ea55710d89ef2b5dcd7c72c1e9b504f27705\"\n    },\n    {\n      \"file\": \"logo.webp\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/47dc03396c45624c1db24ed53ff9956a_321404236429501657.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"原神官方 logo\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 9610,\n      \"contentType\": \"image/webp\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 233,\n      \"height\": 134,\n      \"dimensions\": [\n        233,\n        134\n      ],\n      \"format\": \"WEBP\",\n      \"sha256\": \"666d700644755d00b7f61e82bbf60b6985e3a9d2bdedb19e1383e1a33855f88c\"\n    },\n    {\n      \"file\": \"hero-poster.jpg\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/02/30e2fbabdbd3ec4c0acc1cc07fc75a38_7419228018401278241.mp4?x-oss-process=video/snapshot,t_1,f_jpg,m_fast\",\n      \"use\": \"官网首屏视频官方 CDN 生成的静态首帧\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 179117,\n      \"contentType\": \"image/jpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 2500,\n      \"height\": 1080,\n      \"dimensions\": [\n        2500,\n        1080\n      ],\n      \"format\": \"JPEG\",\n      \"sha256\": \"e8bc3407e9c61b29b31ec4c7cf59e70b89da2922bfd9f3d2a59d9cfbe5e443a1\"\n    },\n    {\n      \"file\": \"calendar.jpg\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/cbd76868ab305a67fb7200715929040c_5299020819173600412.jpg\",\n      \"use\": \"7.1 官方活动日历\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 592436,\n      \"contentType\": \"image/jpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 2158,\n      \"height\": 1200,\n      \"dimensions\": [\n        2158,\n        1200\n      ],\n      \"format\": \"JPEG\",\n      \"sha256\": \"40d350f541c823ead20f9563833cf9349cd0d888565c8172d641d5acdfb991d5\"\n    },\n    {\n      \"file\": \"hero.mp4\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/02/30e2fbabdbd3ec4c0acc1cc07fc75a38_7419228018401278241.mp4\",\n      \"use\": \"官网当前专题首屏视频，默认静音\",\n      \"owner\": \"HoYoverse / miHoYo\",\n      \"bytes\": 3598213,\n      \"contentType\": \"video/mp4\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 2500,\n      \"height\": 1080,\n      \"durationSeconds\": 3.0,\n      \"hasAudio\": false,\n      \"sha256\": \"ce8f953bf73f2a0a559ece45b6b0dd31a6ed82d3f1df48d13c4943f77d4a1b8d\",\n      \"dimensions\": [\n        2500,\n        1080\n      ]\n    },\n    {\n      \"file\": \"character-background-2.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/df52fee550a8176a7b2107bf3900eda3_7139671719485021654.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"角色联动背景／原始头像／原始麦克风控件\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 333210,\n      \"sha256\": \"0356766903c851de7466280ec08689a72e0ff306c092e9af76241045694e2bb4\",\n      \"contentType\": \"image/webp\",\n      \"format\": \"WEBP\",\n      \"width\": 2500,\n      \"height\": 1080,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"character-icon-1.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/03/b571ba3df83b3a8b6bc6e4bc46c76d5a_452055992205394231.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"角色联动背景／原始头像／原始麦克风控件\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 5482,\n      \"sha256\": \"827431b863362ebbfe895a2dda0d5dbab6811e22ef2f39411cd1b8290d067f1a\",\n      \"contentType\": \"image/webp\",\n      \"format\": \"WEBP\",\n      \"width\": 89,\n      \"height\": 88,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"character-icon-2.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/03/5bdba247b18b2d55e3c0099758c75b7f_5072665736467775307.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"角色联动背景／原始头像／原始麦克风控件\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 3078,\n      \"sha256\": \"8fd0541a2d22a409f87281671191e2eccc51f3d0f20f1195d080b95ac655fdb7\",\n      \"contentType\": \"image/webp\",\n      \"format\": \"WEBP\",\n      \"width\": 89,\n      \"height\": 88,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"microphone-1.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/f425aa39265b91cb0236c533fc6bc986_5401498385605997979.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"角色联动背景／原始头像／原始麦克风控件\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 2542,\n      \"sha256\": \"3f897893f2ca0cf939074643dd405c8760d756e8bbd536e62b3bd4ddc62a35fc\",\n      \"contentType\": \"image/webp\",\n      \"format\": \"WEBP\",\n      \"width\": 62,\n      \"height\": 62,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"microphone-2.webp\",\n      \"url\": \"https://act-webstatic.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/resource/puzzle/2026/09/01/36dc161fa29509301443d201fb487874_9144332793810920452.png?x-oss-process=image/format,webp/quality,Q_90\",\n      \"use\": \"角色联动背景／原始头像／原始麦克风控件\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 2600,\n      \"sha256\": \"c45644d7b240b880fdd46980403c4a73ba492e883ba089dd996362c4491ef34d\",\n      \"contentType\": \"image/webp\",\n      \"format\": \"WEBP\",\n      \"width\": 62,\n      \"height\": 62,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"voice-1-1.mp3\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/cdfadc6cfe3734708106b75d4d48ee4d_100427959985065792.mp3\",\n      \"use\": \"Vesna英文官网随机语音之一，点击原始麦克风播放/暂停\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 70124,\n      \"sha256\": \"cc3cb33d58c8d6f11843b8c9e8877ca56617aa8c1ecb6c98bc446bd1d757e45c\",\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"voice-1-2.mp3\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/08b8849c3b16d2099fb6c5e16e0f224b_8221994756534776448.mp3\",\n      \"use\": \"Vesna英文官网随机语音之一，点击原始麦克风播放/暂停\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 109484,\n      \"sha256\": \"bf7835f4c0d9503bc8b351137a259912ae30eac68732222bfb5a87ee216da979\",\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"voice-1-3.mp3\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/bf4920fb1083ca6e52903d5e68693491_2949577786974545318.mp3\",\n      \"use\": \"Vesna英文官网随机语音之一，点击原始麦克风播放/暂停\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 81644,\n      \"sha256\": \"72d33cd80cbbfd4faa751f97d8ebeadfb05e7e317c6f79df7e37af8f736cb062\",\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"voice-2-1.mp3\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/8d443ab69453b26060a483068bb9c6ce_5022814042510770188.mp3\",\n      \"use\": \"Vodyanitsa英文官网随机语音之一，点击原始麦克风播放/暂停\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 57644,\n      \"sha256\": \"3f0f0ed788cd05a2af6d91546aa366867022bb4f40d22426049fb8de8d36ae92\",\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"voice-2-2.mp3\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/6fee35483cd62756c36a8e657571c9c6_5635963746327388950.mp3\",\n      \"use\": \"Vodyanitsa英文官网随机语音之一，点击原始麦克风播放/暂停\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 69164,\n      \"sha256\": \"3c721b08ed3cdf8901d76ee030696cbee724075cc0de9d5b0f5b54e6a5b9b2de\",\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    },\n    {\n      \"file\": \"voice-2-3.mp3\",\n      \"url\": \"https://fastcdn.hoyoverse.com/mi18n/hk4e_global/m20260831hy5hazqvb4/upload/76a52895c751b8b02a9faa67406e737d_7308472016924941603.mp3\",\n      \"use\": \"Vodyanitsa英文官网随机语音之一，点击原始麦克风播放/暂停\",\n      \"owner\": \"HoYoverse\",\n      \"bytes\": 181484,\n      \"sha256\": \"aef978ef22fdaf310246bda962beec1bcef1773f09719a9efa129873f2fbd2b6\",\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归HoYoverse；个人学习\"\n    }\n  ],\n  \"limitations\": [\n    \"本次保留首屏、角色、日历、页脚的局部章节；活动福利与Xbox章节没有复制。\",\n    \"以transform重建全页章节切换；本地600ms过渡和650ms输入锁是近似，未宣称源Swiper全页时长。\",\n    \"角色100ms淡化、联动背景、官方头像与各3段随机语音有公开config及英文映射依据。\",\n    \"本地首屏视频不带声；未见独立BGM，有声PV链接前往原站。\",\n    \"日历大图与键盘/减少动态为本地补充；未复制账号、抽奖、充值服务。\"\n  ]\n}\n",
+      "sha256": "e919eb7d832faa675f2d1ed08af257fa3eff07a36d58160bc579a90f04bed274",
+      "bytes": 14875
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/genshin-world/assets-manifest.json",
+      "role": "context",
+      "sha256": "e919eb7d832faa675f2d1ed08af257fa3eff07a36d58160bc579a90f04bed274",
+      "bytes": 14875
+    },
+    {
+      "path": "demos/genshin-world/assets/calendar-frame.webp",
+      "role": "asset",
+      "sha256": "905f9d33d5d882a0d38b712cad4990c0155e83b14603aa9df3caea2657304ee2",
+      "bytes": 55476
+    },
+    {
+      "path": "demos/genshin-world/assets/calendar.jpg",
+      "role": "asset",
+      "sha256": "40d350f541c823ead20f9563833cf9349cd0d888565c8172d641d5acdfb991d5",
+      "bytes": 592436
+    },
+    {
+      "path": "demos/genshin-world/assets/character-1.webp",
+      "role": "asset",
+      "sha256": "7b187102c054c90f7514a6d602c9e8ba1bff95a6cc1cb9c1b0bfeb13c25a6fc7",
+      "bytes": 181604
+    },
+    {
+      "path": "demos/genshin-world/assets/character-2.webp",
+      "role": "asset",
+      "sha256": "2f6e3c048d15c79ba0f9f82d4a27c82d8b6d5061f1fd5f24ff6d5e3f8abecbb0",
+      "bytes": 238726
+    },
+    {
+      "path": "demos/genshin-world/assets/character-background-2.webp",
+      "role": "asset",
+      "sha256": "0356766903c851de7466280ec08689a72e0ff306c092e9af76241045694e2bb4",
+      "bytes": 333210
+    },
+    {
+      "path": "demos/genshin-world/assets/character-background.webp",
+      "role": "asset",
+      "sha256": "5a288303e1a1c5c571d362cf476d567be909202408438bb1c0bcd2430321c35a",
+      "bytes": 225730
+    },
+    {
+      "path": "demos/genshin-world/assets/character-icon-1.webp",
+      "role": "asset",
+      "sha256": "827431b863362ebbfe895a2dda0d5dbab6811e22ef2f39411cd1b8290d067f1a",
+      "bytes": 5482
+    },
+    {
+      "path": "demos/genshin-world/assets/character-icon-2.webp",
+      "role": "asset",
+      "sha256": "8fd0541a2d22a409f87281671191e2eccc51f3d0f20f1195d080b95ac655fdb7",
+      "bytes": 3078
+    },
+    {
+      "path": "demos/genshin-world/assets/download.webp",
+      "role": "asset",
+      "sha256": "20e348cc92b047e996635a23ad49108e78802dc67e6c0d1a2bb65e729de54d9f",
+      "bytes": 31438
+    },
+    {
+      "path": "demos/genshin-world/assets/hero-poster.jpg",
+      "role": "asset",
+      "sha256": "e8bc3407e9c61b29b31ec4c7cf59e70b89da2922bfd9f3d2a59d9cfbe5e443a1",
+      "bytes": 179117
+    },
+    {
+      "path": "demos/genshin-world/assets/hero-title.webp",
+      "role": "asset",
+      "sha256": "5a570e5c0be6a22604e870900561ea55710d89ef2b5dcd7c72c1e9b504f27705",
+      "bytes": 341036
+    },
+    {
+      "path": "demos/genshin-world/assets/hero.mp4",
+      "role": "asset",
+      "sha256": "ce8f953bf73f2a0a559ece45b6b0dd31a6ed82d3f1df48d13c4943f77d4a1b8d",
+      "bytes": 3598213
+    },
+    {
+      "path": "demos/genshin-world/assets/logo.webp",
+      "role": "asset",
+      "sha256": "666d700644755d00b7f61e82bbf60b6985e3a9d2bdedb19e1383e1a33855f88c",
+      "bytes": 9610
+    },
+    {
+      "path": "demos/genshin-world/assets/microphone-1.webp",
+      "role": "asset",
+      "sha256": "3f897893f2ca0cf939074643dd405c8760d756e8bbd536e62b3bd4ddc62a35fc",
+      "bytes": 2542
+    },
+    {
+      "path": "demos/genshin-world/assets/microphone-2.webp",
+      "role": "asset",
+      "sha256": "c45644d7b240b880fdd46980403c4a73ba492e883ba089dd996362c4491ef34d",
+      "bytes": 2600
+    },
+    {
+      "path": "demos/genshin-world/assets/page-background.webp",
+      "role": "asset",
+      "sha256": "6f0c0c16718de3407d563a46ffc9df1c6a83493567f8cbb8d30b38b8e35afb38",
+      "bytes": 425002
+    },
+    {
+      "path": "demos/genshin-world/assets/voice-1-1.mp3",
+      "role": "asset",
+      "sha256": "cc3cb33d58c8d6f11843b8c9e8877ca56617aa8c1ecb6c98bc446bd1d757e45c",
+      "bytes": 70124
+    },
+    {
+      "path": "demos/genshin-world/assets/voice-1-2.mp3",
+      "role": "asset",
+      "sha256": "bf7835f4c0d9503bc8b351137a259912ae30eac68732222bfb5a87ee216da979",
+      "bytes": 109484
+    },
+    {
+      "path": "demos/genshin-world/assets/voice-1-3.mp3",
+      "role": "asset",
+      "sha256": "72d33cd80cbbfd4faa751f97d8ebeadfb05e7e317c6f79df7e37af8f736cb062",
+      "bytes": 81644
+    },
+    {
+      "path": "demos/genshin-world/assets/voice-2-1.mp3",
+      "role": "asset",
+      "sha256": "3f0f0ed788cd05a2af6d91546aa366867022bb4f40d22426049fb8de8d36ae92",
+      "bytes": 57644
+    },
+    {
+      "path": "demos/genshin-world/assets/voice-2-2.mp3",
+      "role": "asset",
+      "sha256": "3c721b08ed3cdf8901d76ee030696cbee724075cc0de9d5b0f5b54e6a5b9b2de",
+      "bytes": 69164
+    },
+    {
+      "path": "demos/genshin-world/assets/voice-2-3.mp3",
+      "role": "asset",
+      "sha256": "aef978ef22fdaf310246bda962beec1bcef1773f09719a9efa129873f2fbd2b6",
+      "bytes": 181484
+    },
+    {
+      "path": "demos/genshin-world/fidelity.md",
+      "role": "context",
+      "sha256": "acbf40ee3c4ce38c36556e96473d9bb3272f68a60d196f4d6bb6bb977296b963",
+      "bytes": 1597
+    },
+    {
+      "path": "demos/genshin-world/index.html",
+      "role": "source",
+      "sha256": "cdac3a1ee2ffc96a5d6624a9e99a86a03d2426e10321a0a3eb6f1b0a70d489bd",
+      "bytes": 5171
+    },
+    {
+      "path": "demos/genshin-world/script.js",
+      "role": "source",
+      "sha256": "52326b5576d6c4cf617357fb965eddcc9659a8704e7742eade72a8e318b83efa",
+      "bytes": 7771
+    },
+    {
+      "path": "demos/genshin-world/style.css",
+      "role": "source",
+      "sha256": "79d20d0a92b9136085fa0ae28d582bec87fa852606b6128e5a203594cd2ae303",
+      "bytes": 12536
+    },
+    {
+      "path": "entries/genshin-world.json",
+      "role": "context",
+      "sha256": "03a7bfbdbfd507bd503bd4a116bdd412ba8809f1345d653a81d7c1c0239acb26",
+      "bytes": 8361
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/genshin-world.jpg",
+      "role": "preview",
+      "sha256": "7fbc430fdda649af1b97743d885a80a9ff9e48fd2b0e86d667dfdffa1a1c9964",
+      "bytes": 285335
+    },
+    {
+      "path": "previews/mobile/genshin-world.jpg",
+      "role": "preview",
+      "sha256": "048a922c53b2903c60e7a31798ef2246fbecf90bc7711bbe249b6294858525be",
+      "bytes": 77365
+    },
+    {
+      "path": "prompts/genshin-world.md",
+      "role": "context",
+      "sha256": "7447bc9f8b69f793b12c68ded6f2d69f88185880d81be589e322faf2eba40252",
+      "bytes": 2674
+    },
+    {
+      "path": "research/genshin-world.md",
+      "role": "context",
+      "sha256": "cf155aa50b6b56f3b3d4023c354d1e3aeeb8b3ce40afd6e4284242141f1e1c93",
+      "bytes": 2993
+    },
+    {
+      "path": "research/screenshots/genshin-world-source.jpg",
+      "role": "preview",
+      "sha256": "d967b90341613e2bf9d3c5612423b73496c29c2986ce4c7f75ea3279d029fe83",
+      "bytes": 277034
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=genshin-world\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>深红暗紫群像与青绿、浅金角色舞台；衬线与星芒、圆环、尖角纹样呈现幻想冒险。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官方大幅衬线主题图，角色名用Georgia；说明用系统无衬线</dd></div><div class=\"\"><dt>布局留白</dt><dd>群像整屏 → 独立角色舞台 → 日历整屏 → 部分露出的 footer</dd></div><div class=\"\"><dt>图像图标</dt><dd>当前官网3秒静音主视觉视频、官方标题/Logo、两张角色立绘、官方日历。</dd></div><div class=\"\"><dt>线条形状</dt><dd>红色播放圆环、金色菱角按钮、青绿圆轨与装饰分隔组成幻想语汇。</dd></div><div class=\"\"><dt>信息层级</dt><dd>版本剧情群像 → 下载与版本号 → 角色展示 → 活动日历。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>垂直 translate3d 舞台正反交接（本地 600ms ease 近似）；角色 100ms 交叉淡化与整背景同步；末尾位移有限，减少动态即时切换。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>色调随版本/角色章节转换，人物图与幻想纹样统一；信息和操作保留清晰的固定层级。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>深红群像和巨大主题图先建立版本剧情；下载保持清晰的第二层级。</li><li>整屏垂直位移让每个章节成为独立舞台，角色舞台的完整换色承担叙事交接。</li><li>角色选择同时改变立绘、姓名、简介、圆形肖像与背景，让人物拥有自己的视觉空间。</li><li>麦克风播放该角色的官方台词；声音解释角色身份，不给静音主视觉虚构背景音乐。</li></ul><h3>怎样凸显产品重点</h3><p>单一归档的 7.1 A Rekviem for the Underworld 版本；本地保留首屏、Vesna/Vodyanitsa 两角色、日历与末尾信息。</p><h3>主题与情绪</h3><p>深红暗紫群像与青绿、浅金角色舞台；衬线与星芒、圆环、尖角纹样呈现幻想冒险。</p></section><section><h2>02 / 交互巧思</h2><ul><li>滚轮或竖向手势推进整屏舞台，反向返回；末尾以有限位移露出 footer，避免把正常长页当作源站 Swiper。</li><li>选择 Vesna/Vodyanitsa，100ms 交叉淡入立绘，并同步切换青绿/蓝色完整背景、姓名、简介、肖像状态与麦克风图。</li><li>点击麦克风随机播放对应角色 3 条官方语音之一，再点暂停；换角色、离开角色章节与后台时停止，防止声线叠加。</li><li>首屏 3 秒无声视频可暂停；离屏停止。详情与日历以可关闭的本地 dialog 展示，后者提供原图放大。</li><li>键盘章节导航、角色左右键、最新请求队列及减少动态分支为本地补充。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>无深浅主题切换；角色选择会改变舞台背景。</p><p>深红版本叙事与青绿/蓝色人物舞台来自同一 IP 美术，强行换成通用浅色会破坏人物与背景关系。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>外部音乐入口</h3><p>本地麦克风手动播放/暂停 6 条官方角色语音；首屏无声，完整 PV/Wiki 使用官方外链。</p><p>人物选择更新声线；点击麦克风让角色自我介绍，换人和转场停止旧语音以保持人物归属，未发现独立 BGM。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>只归档 https://genshin.hoyoverse.com/en/ 在 2026-10-07 的单一快照，不跟随后续版本。</li><li>源页 6 个章节缩为本地 3 个核心章节加 footer；领取、Xbox、登录、完整武器与 Wiki 不在本地范围。</li><li>源垂直 Swiper 与角色 100ms 时序已确认；整屏的精确时长未核验，本地 600ms ease / 650ms 输入锁为明确近似。</li><li>3 秒首屏本地短片没有音轨；6 条台词是官方角色语音，不能称作原站 BGM。</li><li>详情是摘要 dialog，手机人物排布及可触摸控件属于本地适配，并非逐像素移动版。</li><li>官方品牌、美术、视频与语音权利归相应权利方，资产 manifest 记录直接来源；不复制账户或追踪服务。</li></ul><h3>适合</h3><p>大型游戏版本专题 / 角色更新 / IP活动</p><h3>谨慎使用</h3><p>后台系统 / 纯文字教程</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#2a1027\"></i>#2a1027</span><span class=\"swatch\"><i style=\"background:#b71936\"></i>#b71936</span><span class=\"swatch\"><i style=\"background:#229a91\"></i>#229a91</span><span class=\"swatch\"><i style=\"background:#21558c\"></i>#21558c</span><span class=\"swatch\"><i style=\"background:#efd779\"></i>#efd779</span></div><p><b>字体</b> · 官方巨幅主题图；本地角色名用 Georgia，说明用系统无衬线<br><b>布局</b> · 群像整屏 → 独立角色舞台 → 日历整屏 → 部分露出的 footer<br><b>动效</b> · 垂直 translate3d 舞台正反交接（本地 600ms ease 近似）；角色 100ms 交叉淡化与整背景同步；末尾位移有限，减少动态即时切换。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>归档【目标游戏版本页】一个确定 URL 和采集日期。参考原神此快照：真实群像铺满首屏，深红暗紫底、巨幅官方主题字、下载与版本号保持清楚层级。滚轮以垂直 translate3d 切换独立舞台，必须能反向回到首屏；末尾仅移动剩余距离露出 footer。人物章节以完整背景承担换色，不只替换一张立绘；选择两角色时同步姓名、简介、原始肖像、立绘及麦克风图，立绘用来源确认的 100ms 交叉淡化。麦克风只在用户操作时随机播放该角色 3 条真实台词，再点暂停，换角色或离屏即停；首屏无声短片另有暂停，不添加未证实 BGM。未核验的整屏时长需在 fidelity 中明说，本地使用 600ms ease 和 650ms 输入锁并收敛最新操作。用原生 dialog 展示局部详情与可放大官方日历，支持 Escape、焦点与键盘章节/角色操作。手机保留独立舞台与可触摸控件，减少动态取消位移且背景初始暂停。明确删减章节、手机适配与本地无障碍补充，输出 HTML/CSS/JS、完整素材 manifest、风格与复现边界以及真实两尺寸预览。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要用蓝色通用SaaS hero替代深红角色群像；不要编造当前角色名、版本或曲目；不要冒充完整官网、领奖、登录或购买流程；不要复制追踪脚本。</p></details><h3>改造练习</h3><p>依据这次归档的舞台规则，设计一个虚构双角色专题：保持整屏交接、角色连背景换色、声音归属与下载层级，比较不同美术是否仍有清楚的章节识别。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://genshin.hoyoverse.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Genshin Impact · 当前国际官网根入口 ↗</a><small>2026-10-07：国际根入口为7.1专题，深红群像、青绿角色舞台与活动日历。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Pause, Stop, Hide ↗</a><small>持续自动动态应有暂停；本地背景视频可持续停止，减少动态初始停止。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Modal Dialog Pattern ↗</a><small>本地原生dialog的键盘、关闭与焦点语义参考，不代表原站完整遵循此模式。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/setups.d850a780.js\" target=\"_blank\" rel=\"noopener noreferrer\">官方公开交互脚本 · 2026-10-07 ↗</a><small>2026-10-07 单次归档：垂直 Swiper 且 document.scrollY=0；角色 opacity 为100ms。人物背景/肖像/麦克风同步，随机3条语音与播放中暂停见公开配置。整屏本地600ms为近似。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fgenshin-world.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "bbe7298ae0a83d179df018dc406e13786c3ef48ea672f3ee7657f930fd1e8f78",
+    "bytes": 9163
+  }
+}

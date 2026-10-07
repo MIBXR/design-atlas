@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 1,
+  "id": "monument-valley-game",
+  "entry": {
+    "id": "monument-valley-game",
+    "order": 22,
+    "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
+    "subtitle": "Monument Valley 一代官方网站 · 真实预告、奖项与画廊",
+    "category": "游戏/IP",
+    "country": "英国",
+    "edition": "国际英文版",
+    "implementation": "reference-study",
+    "referenceUrl": "https://www.monumentvalleygame.com/mv1",
+    "referencePreview": "research/screenshots/monument-valley-game-source.jpg",
+    "fidelity": "demos/monument-valley-game/fidelity.md",
+    "assetManifest": "demos/monument-valley-game/assets-manifest.json",
+    "tags": [
+      "英国",
+      "海外手游",
+      "ustwo games",
+      "真实还原",
+      "几何字标",
+      "全屏视频",
+      "渐变",
+      "画廊"
+    ],
+    "summary": "依据2026-10-07国际英文 /mv1 页面：一秒白色加载遮罩、真实静音电影背景、中心触发的奖项淡入上移、十四张居中游戏画廊，以及手机四项奖项的展开。固定色带将体验、下载、信任与细节依次展开。",
+    "accent": "#e76399",
+    "background": "#627db3",
+    "principles": [
+      "真实字标与游戏影像先建立世界，Humanist521 BT 字体、小六边形索引和整幅色带维持安静秩序。",
+      "奖项仅在视口中心进入该节时，以350ms从20px下方出现；离开后复位，反向浏览仍有同一节奏。",
+      "画廊将当前图置于中央，左右图降低至0.5透明度，强调探索顺序并预告下一幅作品。",
+      "手机保留作品纵向比例，画廊一张居中并露出20%侧图；奖项先呈现四条，让Show All逐步展开其余六条。"
+    ],
+    "productFocus": "真实 Monument Valley 一代：安静公主Ida、不可思议建筑和视觉解谜；官网通过预告与截图呈现作品，而本地复现其宣传页的区域顺序。",
+    "interaction": [
+      "首次进入：白色LOADING遮罩1000ms后直接移除，真实背景视频静音循环；可持续暂停。",
+      "桌面左侧章节索引：点击以450ms swing将章节中心对齐视口中心；悬停或键盘进入索引时，标签350ms出现、内容降至0.2透明度。",
+      "奖项：视口中心进入/离开时，350ms opacity 0↔1、translateY 20px↔0，双向有效；手机Show All/Hide通过350ms高度变化展开/收回六项。",
+      "十四图画廊：500ms整条水平轨道、3秒自动推进、无限首尾衔接；桌面三张、手机一张加20%侧图，箭头/14个索引/方向键与点击侧图有效。悬停、焦点、离屏和后台暂停。",
+      "前景预告：主动Play播放同一67.988秒官方MP4及原声轨；原生进度/暂停和实际声音开关有效，播放时暂停背景。",
+      "手机圆形菜单：350ms全屏白色面板进入/退出，Escape可关闭；本地明确增加暂停、键盘、后台节流和减少动态分支。"
+    ],
+    "theme": "固定品牌场景：白导航、深色影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区和紫页尾。几何字标与原始幻境建筑是主视觉，不以换肤替代作品世界。",
+    "constraints": [
+      "唯一页面基线为2026-10-07国际英文 https://www.monumentvalleygame.com/mv1；不混入MV2的字标描边或MV3区域。",
+      "当次原站MV1 hero实际随普通滚动离屏，未观察到滚动缩放/视差；公开函数存在不等于效果发生，因此本地不添加无依据视差。",
+      "当前原站桌面前景播放操作触发React #185，未验证其实际声音播放；公开播放器与MP4声轨提供机制依据，本地主动播放已验证。",
+      "官方十四张图片、字标、月亮/月桂、Humanist字体和预告本地保存，来源/尺寸/hash见资产清单；权利仍归ustwo games及相应权利人。",
+      "保留十项奖项和交互机制；媒体区以明确标注的学习观察替代评论长文，商店保留两个徽章，社交图标以文本入口近似。",
+      "手机/桌面版式、媒体裁切和细小控件几何为可复用实现近似，非逐像素复制；原站没有独立BGM，也未发现全局深浅主题按钮。"
+    ],
+    "useCases": [
+      "有高质量游戏影像的独立游戏",
+      "建筑与视觉解谜作品宣传",
+      "适合安静观看的数字艺术作品"
+    ],
+    "avoid": [
+      "以自行绘制浮岛替代真实官网证据",
+      "在全屏画面中堆满CTA和卡片",
+      "把官网视频的声轨声称为下载BGM"
+    ],
+    "tokens": {
+      "palette": [
+        "#fefefe",
+        "#221f20",
+        "#e76399",
+        "#627db3",
+        "#fcf2d2",
+        "#e28ec0",
+        "#48418c"
+      ],
+      "type": "官方几何字标SVG与本地保存的Humanist521 BT Roman/Bold；导航13px，奖项主标题28px/32px。",
+      "layout": "影像 → 下载 → 预告 → 十项奖项 → 社交 → 媒体 → 十四图画廊 → 社区 → 页尾；桌面左侧中心章节索引，手机圆形导航。",
+      "motion": "加载1000ms；章节450ms swing；奖项与手机展开350ms ease-in-out；画廊500ms ease/3000ms自动，暂停及减少动态明确可控。"
+    },
+    "sources": [
+      {
+        "title": "Monument Valley 一代官方宣传页",
+        "url": "https://www.monumentvalleygame.com/mv1",
+        "type": "实例",
+        "note": "2026-10-07：一代宣传页的白导航、影像、粉蓝奖项、奶油媒体区、画廊及社区。"
+      },
+      {
+        "title": "ustwo games：Monument Valley作品页",
+        "url": "https://ustwogames.co.uk/our-games/monument-valley/",
+        "type": "实例",
+        "note": "开发者介绍Ida、不可思议建筑和视觉幻象，支撑产品重点；本地使用实际游戏画面。"
+      },
+      {
+        "title": "ustwo games：联系信息",
+        "url": "https://ustwogames.co.uk/contact-us/",
+        "type": "实例",
+        "note": "官方伦敦工作室地址是国家分类的依据，不代表英国页面有固定风格。"
+      },
+      {
+        "title": "W3C WAI：Carousels Tutorial",
+        "url": "https://www.w3.org/WAI/tutorials/carousels/",
+        "type": "规范",
+        "note": "画廊用户控制、键盘和当前状态的规范参考。"
+      },
+      {
+        "title": "W3C：Animation from Interactions",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+        "type": "规范",
+        "note": "本地减少动态分支约束：停止自动推进与背景，取消非必要位移；不声称原站合规。"
+      },
+      {
+        "title": "MV1 官方公开交互脚本",
+        "url": "https://www.monumentvalleygame.com/js/main.js",
+        "type": "实例",
+        "note": "同一页面1000ms loader、450ms章节定位、中心活动区、手机奖项分组、Slick14图及媒体播放器机制。"
+      },
+      {
+        "title": "MV1 官方公开样式",
+        "url": "https://www.monumentvalleygame.com/style.css",
+        "type": "实例",
+        "note": "同一归档页Humanist字体、350ms奖项/高度/标签过渡及画廊0.5侧图透明度；MV2专属动画不作为MV1证据。"
+      }
+    ],
+    "prompt": "为[有真实作品影像的独立游戏/数字艺术作品]建立基于2026-10-07 Monument Valley一代国际英文 https://www.monumentvalleygame.com/mv1 的可复用交互研究。先用白色LOADING遮罩等待1000ms并直接移除，真实67.988秒官方MP4静音循环，真实几何字标居中scale1.125；只在主动Play前景预告后启用原声轨，提供实际声音/原生进度和暂停，背景保持静音且可持续暂停，不冒称独立BGM。采用官方Humanist521 BT Roman/Bold和真实字标、月桂、月亮、十四张原游戏图；本地保存来源/尺寸/字节/hash。桌面白色固定系列导航，左侧小六边形章节索引；点击450ms swing使章节中心对齐视口中心，悬停/焦点350ms进入标签并将正文透明度降至0.2。按影像、下载、预告、粉蓝奖项、社交、奶油媒体、黑色画廊、粉色社区、紫页尾展开。奖项以视口中心位于章节内为触发，350ms ease-in-out opacity0↔1且translateY20px↔0，离开复位、反向重新进入；十项事实与月桂保持成对，手机先四项，Show All/Hide用350ms高度展开其余六项并旋转箭头180度。画廊保留十四张原始竖屏图与十四索引，桌面center3张、手机center1张并露出20%侧图，当前opacity1/侧图0.5，500ms ease整体横轨、无限首尾衔接、3000ms自动推进；悬停/键盘焦点/离屏/后台暂停，快速反转仍只有一个当前索引，箭头、方向键、Home/End、侧图选择、手机水平手势可用。手机圆形菜单350ms白色全屏面板进出，关闭态不可聚焦。固定作品配色，不强加全局换肤。本地暂停/减少动态/键盘分支注明易用性扩展。不得添加当次MV1未观察到的hero视差或MV2描边动画；原站前景播放React #185未通过实测，清楚区分公开播放器依据、本地已播放与未验证来源状态；媒体评价长文可缩减为标注的学习观察但保留原章节衔接。",
+    "negativePrompt": "不要泛用营销卡片、重画浮岛、虚构奖项、自动有声播放、虚构独立BGM、无来源hero视差或混入MV2描边；不要用所有区域统一淡入替代原站中心触发和轨道机制。",
+    "demo": "demos/monument-valley-game/index.html",
+    "preview": "previews/monument-valley-game.jpg",
+    "research": "research/monument-valley-game.md",
+    "exercise": "比较桌面中心三图与手机一图加20%侧图；切至第十四张再下一张，快速反向选择并暂停自动播放，检查当前索引、轨道和可聚焦元素始终一致。再上下穿越奖项中心，观察350ms双向进入与手机Show All高度变化。",
+    "composition": {
+      "color": "固定白导航、#221f20影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区与紫页尾，以整幅色带改变观看节奏。",
+      "typography": "官方细线几何字标与真实Humanist521 BT Roman/Bold，小号导航和28px奖项标题保持作品秩序。",
+      "layout": "真实影像先行，内容按下载/预告/奖项/社交/媒体/十四图画廊/社区/页尾展开，左侧索引按视口中心更新。",
+      "imagery": "官方MP4、字标SVG、月亮/月桂、十四张游戏截图和社区图均本地保存，不以自行绘制替代作品。",
+      "shape": "微小六边形索引、成对月桂与直边色带；手机圆形菜单和保留游戏原纵横比的画廊。",
+      "hierarchy": "影像建立体验，商店徽章提供行动，十项奖项建立信任，中心画廊展示细节并预告侧图。",
+      "motion": "加载1000ms；章节450ms swing；奖项与手机展开350ms ease-in-out；画廊500ms ease/3000ms自动，暂停及减少动态明确可控。",
+      "coherence": "建筑与字标共享几何秩序，克制的控件与固定色带形成放映节奏；进入、展开与轨道分别服务内容职责。"
+    },
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "当前MV1页面没有全局主题选择；固定白导航、深色影像/画廊及各章节品牌色，不随系统深浅切换。",
+      "designReason": "页面是作品世界的固定放映顺序，完整色带与原始媒体建立统一氛围。"
+    },
+    "soundBehavior": {
+      "kind": "video",
+      "control": "背景MP4静音循环；主动Play前景影片才有真实原声，原生媒体控件及Sound on/off控制实际muted。原站本次播放触发React #185，声音现场未通过；本地播放通过。",
+      "interactionRole": "影片声轨与空间/解谜画面共同营造作品气氛；没有独立BGM，用户开始观看才进入有声体验。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/monument-valley-game.md",
+      "role": "research",
+      "content": "# 纪念碑谷：电影首入、奖项进入与中心画廊\n\n唯一页面基线：[Monument Valley一代国际英文页](https://www.monumentvalleygame.com/mv1)；采集于 **2026-10-07**。国别用于机构来源检索，不推断国家存在固定风格。\n\n## 参考与证据\n\n- [Monument Valley 一代官方宣传页](https://www.monumentvalleygame.com/mv1)（实例）：2026-10-07：一代宣传页的白导航、影像、粉蓝奖项、奶油媒体区、画廊及社区。\n- [ustwo games：Monument Valley作品页](https://ustwogames.co.uk/our-games/monument-valley/)（实例）：开发者介绍Ida、不可思议建筑和视觉幻象，支撑产品重点；本地使用实际游戏画面。\n- [ustwo games：联系信息](https://ustwogames.co.uk/contact-us/)（实例）：官方伦敦工作室地址是国家分类的依据，不代表英国页面有固定风格。\n- [W3C WAI：Carousels Tutorial](https://www.w3.org/WAI/tutorials/carousels/)（规范）：画廊用户控制、键盘和当前状态的规范参考。\n- [W3C：Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)（规范）：本地减少动态分支约束：停止自动推进与背景，取消非必要位移；不声称原站合规。\n- [MV1 官方公开交互脚本](https://www.monumentvalleygame.com/js/main.js)（实例）：同一页面1000ms loader、450ms章节定位、中心活动区、手机奖项分组、Slick14图及媒体播放器机制。\n- [MV1 官方公开样式](https://www.monumentvalleygame.com/style.css)（实例）：同一归档页Humanist字体、350ms奖项/高度/标签过渡及画廊0.5侧图透明度；MV2专属动画不作为MV1证据。\n\n[原站首屏](screenshots/monument-valley-game-source.jpg) · [本地桌面](../previews/monument-valley-game.jpg) · [本地手机](../previews/mobile/monument-valley-game.jpg)\n\n## 构成与设计分析\n\n**可观察事实：**MV1从一秒加载和静音影片进入，按下载、预告、奖项、社交、媒体、十四图画廊、社区、页尾展开。当前活动区由视口中心决定；奖项350ms双向出现，画廊500ms轨道与3000ms自动、悬停/焦点暂停。真实Humanist字体与品牌资产维持作品比例。\n\n**本库分析：**影片与竖屏游戏图承担细节；几何字标、小索引、月桂与整幅色带只建立秩序。奖项在阅读中心出现强调事实，中心画廊让当前作品突出而侧图提示探索。此分析不冒充品牌作者声明。\n\n| 维度 | 设计职责与约束 |\n|---|---|\n| 配色 | 固定白导航、#221f20影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区与紫页尾，以整幅色带改变观看节奏。 |\n| 字体 | 官方细线几何字标与真实Humanist521 BT Roman/Bold，小号导航和28px奖项标题保持作品秩序。 |\n| 版式 | 真实影像先行，内容按下载/预告/奖项/社交/媒体/十四图画廊/社区/页尾展开，左侧索引按视口中心更新。 |\n| 素材 | 官方MP4、字标SVG、月亮/月桂、十四张游戏截图和社区图均本地保存，不以自行绘制替代作品。 |\n| 形状 | 微小六边形索引、成对月桂与直边色带；手机圆形菜单和保留游戏原纵横比的画廊。 |\n| 层级 | 影像建立体验，商店徽章提供行动，十项奖项建立信任，中心画廊展示细节并预告侧图。 |\n| 动态 | 加载1000ms；章节450ms swing；奖项与手机展开350ms ease-in-out；画廊500ms ease/3000ms自动，暂停及减少动态明确可控。 |\n| 协调关系 | 建筑与字标共享几何秩序，克制的控件与固定色带形成放映节奏；进入、展开与轨道分别服务内容职责。 |\n\n## 触发、响应与体验位置\n\n- 首次进入：白色LOADING遮罩1000ms后直接移除，真实背景视频静音循环；可持续暂停。\n- 桌面左侧章节索引：点击以450ms swing将章节中心对齐视口中心；悬停或键盘进入索引时，标签350ms出现、内容降至0.2透明度。\n- 奖项：视口中心进入/离开时，350ms opacity 0↔1、translateY 20px↔0，双向有效；手机Show All/Hide通过350ms高度变化展开/收回六项。\n- 十四图画廊：500ms整条水平轨道、3秒自动推进、无限首尾衔接；桌面三张、手机一张加20%侧图，箭头/14个索引/方向键与点击侧图有效。悬停、焦点、离屏和后台暂停。\n- 前景预告：主动Play播放同一67.988秒官方MP4及原声轨；原生进度/暂停和实际声音开关有效，播放时暂停背景。\n- 手机圆形菜单：350ms全屏白色面板进入/退出，Escape可关闭；本地明确增加暂停、键盘、后台节流和减少动态分支。\n\n## 主题与声音\n\n当前MV1页面没有全局主题选择；固定白导航、深色影像/画廊及各章节品牌色，不随系统深浅切换。 页面是作品世界的固定放映顺序，完整色带与原始媒体建立统一氛围。\n\n背景MP4静音循环；主动Play前景影片才有真实原声，原生媒体控件及Sound on/off控制实际muted。原站本次播放触发React #185，声音现场未通过；本地播放通过。 影片声轨与空间/解谜画面共同营造作品气氛；没有独立BGM，用户开始观看才进入有声体验。\n\n## 对应边界与复用约束\n\n- 唯一页面基线为2026-10-07国际英文 https://www.monumentvalleygame.com/mv1；不混入MV2的字标描边或MV3区域。\n- 当次原站MV1 hero实际随普通滚动离屏，未观察到滚动缩放/视差；公开函数存在不等于效果发生，因此本地不添加无依据视差。\n- 当前原站桌面前景播放操作触发React #185，未验证其实际声音播放；公开播放器与MP4声轨提供机制依据，本地主动播放已验证。\n- 官方十四张图片、字标、月亮/月桂、Humanist字体和预告本地保存，来源/尺寸/hash见资产清单；权利仍归ustwo games及相应权利人。\n- 保留十项奖项和交互机制；媒体区以明确标注的学习观察替代评论长文，商店保留两个徽章，社交图标以文本入口近似。\n- 手机/桌面版式、媒体裁切和细小控件几何为可复用实现近似，非逐像素复制；原站没有独立BGM，也未发现全局深浅主题按钮。\n\n减少动态、后台/离屏暂停、键盘与显式暂停为本地易用性约束，原站未提供同一分支；规范用于改进学习样本，不冒称原站合规。完整对应表见[对应范围](../demos/monument-valley-game/fidelity.md)。\n\n## 复用入口\n\n[Prompt](../prompts/monument-valley-game.md) · [案例条目](../entries/monument-valley-game.json) · [Demo](../demos/monument-valley-game/index.html) · [资产清单](../demos/monument-valley-game/assets-manifest.json)\n",
+      "sha256": "2e72449865e531d7a712d48e1167800da877b04ff5a8d11238f86d846f52ca30",
+      "bytes": 6771
+    },
+    {
+      "path": "prompts/monument-valley-game.md",
+      "role": "prompt",
+      "content": "# 纪念碑谷：电影首入、奖项进入与中心画廊 · 复用 Prompt\n\n由 [结构化案例](../entries/monument-valley-game.json) 自动生成。参考观察与具体边界见 [调研](../research/monument-valley-game.md)。\n\n## 正向 Prompt\n\n为[有真实作品影像的独立游戏/数字艺术作品]建立基于2026-10-07 Monument Valley一代国际英文 https://www.monumentvalleygame.com/mv1 的可复用交互研究。先用白色LOADING遮罩等待1000ms并直接移除，真实67.988秒官方MP4静音循环，真实几何字标居中scale1.125；只在主动Play前景预告后启用原声轨，提供实际声音/原生进度和暂停，背景保持静音且可持续暂停，不冒称独立BGM。采用官方Humanist521 BT Roman/Bold和真实字标、月桂、月亮、十四张原游戏图；本地保存来源/尺寸/字节/hash。桌面白色固定系列导航，左侧小六边形章节索引；点击450ms swing使章节中心对齐视口中心，悬停/焦点350ms进入标签并将正文透明度降至0.2。按影像、下载、预告、粉蓝奖项、社交、奶油媒体、黑色画廊、粉色社区、紫页尾展开。奖项以视口中心位于章节内为触发，350ms ease-in-out opacity0↔1且translateY20px↔0，离开复位、反向重新进入；十项事实与月桂保持成对，手机先四项，Show All/Hide用350ms高度展开其余六项并旋转箭头180度。画廊保留十四张原始竖屏图与十四索引，桌面center3张、手机center1张并露出20%侧图，当前opacity1/侧图0.5，500ms ease整体横轨、无限首尾衔接、3000ms自动推进；悬停/键盘焦点/离屏/后台暂停，快速反转仍只有一个当前索引，箭头、方向键、Home/End、侧图选择、手机水平手势可用。手机圆形菜单350ms白色全屏面板进出，关闭态不可聚焦。固定作品配色，不强加全局换肤。本地暂停/减少动态/键盘分支注明易用性扩展。不得添加当次MV1未观察到的hero视差或MV2描边动画；原站前景播放React #185未通过实测，清楚区分公开播放器依据、本地已播放与未验证来源状态；媒体评价长文可缩减为标注的学习观察但保留原章节衔接。\n\n## 负向约束\n\n不要泛用营销卡片、重画浮岛、虚构奖项、自动有声播放、虚构独立BGM、无来源hero视差或混入MV2描边；不要用所有区域统一淡入替代原站中心触发和轨道机制。\n\n## 制作约束\n\n- 唯一页面基线为2026-10-07国际英文 https://www.monumentvalleygame.com/mv1；不混入MV2的字标描边或MV3区域。\n- 当次原站MV1 hero实际随普通滚动离屏，未观察到滚动缩放/视差；公开函数存在不等于效果发生，因此本地不添加无依据视差。\n- 当前原站桌面前景播放操作触发React #185，未验证其实际声音播放；公开播放器与MP4声轨提供机制依据，本地主动播放已验证。\n- 官方十四张图片、字标、月亮/月桂、Humanist字体和预告本地保存，来源/尺寸/hash见资产清单；权利仍归ustwo games及相应权利人。\n- 保留十项奖项和交互机制；媒体区以明确标注的学习观察替代评论长文，商店保留两个徽章，社交图标以文本入口近似。\n- 手机/桌面版式、媒体裁切和细小控件几何为可复用实现近似，非逐像素复制；原站没有独立BGM，也未发现全局深浅主题按钮。\n\n## 检查方法\n\n比较桌面中心三图与手机一图加20%侧图；切至第十四张再下一张，快速反向选择并暂停自动播放，检查当前索引、轨道和可聚焦元素始终一致。再上下穿越奖项中心，观察350ms双向进入与手机Show All高度变化。\n\n[查看 Demo](../demos/monument-valley-game/index.html) · [返回参考库](../index.html#style/monument-valley-game)\n",
+      "sha256": "3d5b2da5611d140c7eff09fc25ca2eba6f98ab0effe698e10f7f3f7a8c1c0231",
+      "bytes": 3857
+    },
+    {
+      "path": "demos/monument-valley-game/fidelity.md",
+      "role": "fidelity",
+      "content": "# 纪念碑谷一代：对应范围\n\n唯一页面基线：[Monument Valley /mv1 国际英文页](https://www.monumentvalleygame.com/mv1)，采集于 **2026-10-07**。研究从首入向下至页尾，再反向返回。公开 [JS](https://www.monumentvalleygame.com/js/main.js) 与 [CSS](https://www.monumentvalleygame.com/style.css) 仅用于核对该页面机制。\n\n| 在哪里体验 | 触发 → 画面响应 → 设计作用 | 原站依据与本地对应 |\n|---|---|---|\n| 刷新首屏 | 一秒白色 LOADING 遮罩直接移除 → 真实静音影片与几何字标出现 → 让作品先建立世界 | 原站1000ms计时与display:none；本地同样保留。字标固定scale1.125，未添加未观察到的MV1视差或MV2描边。 |\n| 桌面左侧章节索引 | 点击 → 450ms swing将章节中心对齐视口中心；悬停/焦点 → 标签350ms出现、正文降至0.2 → 随时跳转且强化索引可读性 | 450ms/中心判断/标签与透明度有公开源码依据；本地使用独立实现，细小六边形和间距近似。 |\n| 上下穿越Awards中心 | 视口中心进入/离开该章节 → 350ms ease-in-out opacity 0↔1、translateY 20px↔0 → 让事实在阅读位置出现 | 原站回程实际观测到进入和离开复位；本地双向响应，十项真实奖项与官方月桂/月亮。 |\n| 手机Awards的Show All | 点击 → 350ms高度展开其余六项，箭头180°；Hide收回 → 先给四项核心事实再展开 | 这是原站机制。字体本地保存Humanist521 BT；文本断行使本地首组/余组高度与源站有差异，按实际高度计算。 |\n| Images章节 | 自动每3000ms/箭头/14索引/点击侧图 → 500ms ease整体轨道移动，当前图opacity1/侧图0.5 → 当前作品清楚、侧图提示探索 | 原站Slick14图center3/手机center1+20%侧图、默认speed500/auto3000/hover/focus暂停；本地保留全部14张与无限首尾衔接。轨道独立实现，支持快速反转。 |\n| 手机左上圆形菜单 | 打开/关闭 → 350ms白色全屏面板进出 → 在竖屏保留系列导航 | 圆形控件与手机专用布局据源；面板几何近似，关闭态inert、Escape为本地易用性约束。 |\n| 预告的Play与Sound按钮 | 主动播放 → 67.988秒官方MP4及真实原声轨；声音开关同步muted → 进入有声作品体验 | 源站同文件背景静音/前景非静音，播放器包含播放/进度/音量。**当次原站桌面播放触发React #185，实际原声播放未验证**；本地主动播放、原生暂停和声音开关已验证。没有独立BGM。 |\n\n## 主题、素材和近似\n\n当前MV1固定白导航、深色下载/影像/画廊、粉蓝奖项、奶油媒体、粉社区、紫页尾；未发现全局主题控件或系统深浅分支。本地保持固定品牌配色。官方十四张图、Humanist Roman/Bold、字标、月亮/月桂、预告和社区图均本地保存，尺寸/字节/hash/来源见[资产清单](assets-manifest.json)。\n\n媒体区域用明确标注的学习观察替代评论长文；商店保留两个徽章，社交图标以文本入口近似。媒体裁切、章节高度、手机菜单形状与细小控件不是逐像素复制。当前MV1英雄图实测随普通滚动离屏，没有可证实的滚动缩放视差；公开函数名不作为效果发生的证据。\n\n背景暂停、画廊暂停、键盘/Home/End、后台与离屏节流、可见焦点和减少动态是本地明确的易用性扩展。减少动态（系统偏好或`?motion=reduce`）下，背景初始停止、画廊不自动推进、手动切换即时、奖项保持可读。原站CSS没有同一减少动态分支，不声称整站合规。\n\n[设计研究](../../research/monument-valley-game.md) · [Prompt](../../prompts/monument-valley-game.md) · [桌面预览](../../previews/monument-valley-game.jpg) · [手机预览](../../previews/mobile/monument-valley-game.jpg) · [Demo源码](index.html)\n",
+      "sha256": "cf0c2967422e3e299d364db0a8f75bb00b1e72d64290a963140463566c0297ce",
+      "bytes": 3924
+    },
+    {
+      "path": "demos/monument-valley-game/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourcePage\": \"https://www.monumentvalleygame.com/mv1\",\n  \"retrievedAt\": \"2026-10-07\",\n  \"purpose\": \"官方公开资产用于个人本地设计学习；未获取授权用于商业发布\",\n  \"assets\": [\n    {\n      \"file\": \"assets/3-6cd6eb91.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/3-6cd6eb91.jpg\",\n      \"bytes\": 73804,\n      \"type\": \"image/jpeg\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 900,\n      \"height\": 1454,\n      \"sha256\": \"ac22bd69238c65734542d6be6011d9b5e822c79734948ebb496d7a22db6b1645\"\n    },\n    {\n      \"file\": \"assets/4-8f27e7fa.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/4-8f27e7fa.jpg\",\n      \"bytes\": 185406,\n      \"type\": \"image/jpeg\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 900,\n      \"height\": 1451,\n      \"sha256\": \"091e55a3abafcd6b8719111222e51428cd0b8ef42521d1dfad6b7b1caa30f6b1\"\n    },\n    {\n      \"file\": \"assets/5-ecebe13c.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/5-ecebe13c.jpg\",\n      \"bytes\": 85642,\n      \"type\": \"image/jpeg\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 900,\n      \"height\": 1454,\n      \"sha256\": \"ca6f823ac86453bde73e0b9c8b25d8b15365f913c1378746b3d801d882a97bb0\"\n    },\n    {\n      \"file\": \"assets/6-d85fcf35.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/6-d85fcf35.jpg\",\n      \"bytes\": 103488,\n      \"type\": \"image/jpeg\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 900,\n      \"height\": 1454,\n      \"sha256\": \"91f7dfa08950abbc8acc74b4346f06c86bbe48f5091e3d00fadb93a1513bf369\"\n    },\n    {\n      \"file\": \"assets/appstore-badge-d0558d91.svg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/appstore-badge-d0558d91.svg\",\n      \"bytes\": 12353,\n      \"type\": \"image/svg+xml\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"viewBox\": \"0 0 135 40\",\n      \"sha256\": \"25178aeef6eb6b83b96f5f2d004eda3bffbb37122de64afbaef7107b384a4132\"\n    },\n    {\n      \"file\": \"assets/background-006780ed.png\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/background-006780ed.png\",\n      \"bytes\": 99232,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 800,\n      \"height\": 745,\n      \"sha256\": \"c637978e3f627fb20e3fa1de5168c5b5bf1a5d11d53692e2df52c2de4ed6ee1d\"\n    },\n    {\n      \"file\": \"assets/googleplay-badge-67e13ee2.png\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/googleplay-badge-67e13ee2.png\",\n      \"bytes\": 13991,\n      \"type\": \"image/png\",\n      \"use\": \"真实平台下载标识\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 564,\n      \"height\": 168,\n      \"sha256\": \"71257aec9febb9a36d68add87997107c8e318bfb4b25fa71d44f66afa449dc11\"\n    },\n    {\n      \"file\": \"assets/logo-6a71a66e.svg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/logo-6a71a66e.svg\",\n      \"bytes\": 2122,\n      \"type\": \"image/svg+xml\",\n      \"use\": \"官方品牌标识\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"viewBox\": \"16.994 256.54 572.999 139.46\",\n      \"sha256\": \"9043a0954f7e62861b47bdd97a94cc2032de91382fa8245823ca5180d35de687\"\n    },\n    {\n      \"file\": \"assets/monument-friends-a53de6d4.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/monument-friends-a53de6d4.jpg\",\n      \"bytes\": 17535,\n      \"type\": \"image/jpeg\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 1366,\n      \"height\": 200,\n      \"sha256\": \"fb0ce1f2ae81e25f31827ee5c63265d03c1d682afc742994dfd0b21bb2645b41\"\n    },\n    {\n      \"file\": \"assets/mv-trailer-a0b9cbc1.mp4\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/mv-trailer-a0b9cbc1.mp4\",\n      \"bytes\": 6694081,\n      \"type\": \"video/mp4\",\n      \"use\": \"官方公开预告/背景视频，普通模式静音背景播放且可暂停，减少动态初始停止；有声预告用户主动开始\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"sha256\": \"8717d5e90beb2bd066ac50942c698ae2832bfeaee68720b20873f731fc9771f5\"\n    },\n    {\n      \"file\": \"assets/style.css\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/style.css\",\n      \"bytes\": 46822,\n      \"type\": \"text/css\",\n      \"use\": \"研究用原始样式，仅核验颜色/尺寸；不被本地HTML加载\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"sha256\": \"4d50d6be89f072d2d5fa6ae2648f2066fc43fe7b52c48183a45883b2399dd4a6\"\n    },\n    {\n      \"file\": \"assets/trailer-landscape-poster-e2193d06.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/trailer-landscape-poster-e2193d06.jpg\",\n      \"bytes\": 532455,\n      \"type\": \"image/jpeg\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 1280,\n      \"height\": 720,\n      \"sha256\": \"21de0d6d56b0f81f292cc8cdc557f7343cbbce249a953bdd754af50cf39c9d49\"\n    },\n    {\n      \"file\": \"assets/ustwo-games-logo-f5327f6a.svg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/ustwo-games-logo-f5327f6a.svg\",\n      \"bytes\": 4628,\n      \"type\": \"image/svg+xml\",\n      \"use\": \"官方品牌标识\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"viewBox\": \"0 0 634 285\",\n      \"sha256\": \"d26fc55b8d4e147d246b92454bb0506bb6b073d758551b17eff61f034fe7ea85\"\n    },\n    {\n      \"file\": \"assets/wreath-left-965e57a1.png\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/wreath-left-965e57a1.png\",\n      \"bytes\": 2304,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 33,\n      \"height\": 78,\n      \"sha256\": \"815b57e4fe9579b185beeaa84611b62c48be7e936a1002b5513fe5880b462ea1\"\n    },\n    {\n      \"file\": \"assets/wreath-right-10f731c4.png\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/wreath-right-10f731c4.png\",\n      \"bytes\": 2314,\n      \"type\": \"image/png\",\n      \"use\": \"对应页面区域官方图像，见 fidelity.md\",\n      \"rights\": \"ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。\",\n      \"width\": 33,\n      \"height\": 78,\n      \"sha256\": \"dc8acf3bcdd5f11d13b836e6f4d457a66353f4c3be36caf59f1297e0077f4acb\"\n    },\n    {\n      \"file\": \"assets/7-802e623e.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/7-802e623e.jpg\",\n      \"bytes\": 91661,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"a004f9263a89f780a62ffc2d526195a4d13c0e48e54944d4d3c4b40b606ece90\",\n      \"width\": 900,\n      \"height\": 1451\n    },\n    {\n      \"file\": \"assets/8-513af37d.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/8-513af37d.jpg\",\n      \"bytes\": 87787,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"2770bd9797519d144b0ac62e2bf90149a96446927d08bd1bbe78a9887e087ee2\",\n      \"width\": 900,\n      \"height\": 1454\n    },\n    {\n      \"file\": \"assets/9-69d2baed.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/9-69d2baed.jpg\",\n      \"bytes\": 81759,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"9f6340e5ed77997cdf7002390c8fd2b60e402e5741cb8f17fdcd6a7fc5badeb0\",\n      \"width\": 900,\n      \"height\": 1454\n    },\n    {\n      \"file\": \"assets/10-b44ce70c.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/10-b44ce70c.jpg\",\n      \"bytes\": 112803,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"43d88117da2176134d7f2fa36f8d4f944d8e8876cab47d27f555e315b42d5486\",\n      \"width\": 900,\n      \"height\": 1451\n    },\n    {\n      \"file\": \"assets/11-bc582657.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/11-bc582657.jpg\",\n      \"bytes\": 66803,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"12e460bab8a1cba01a8798921bb51eafe7eb1e8fad36810d3486037222bb0391\",\n      \"width\": 900,\n      \"height\": 1454\n    },\n    {\n      \"file\": \"assets/12-c9d7501d.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/12-c9d7501d.jpg\",\n      \"bytes\": 80239,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"82b39bccca100442243161e9c21a74610e6356d8c983aa3635a19ea7d857c916\",\n      \"width\": 900,\n      \"height\": 1451\n    },\n    {\n      \"file\": \"assets/13-981028d4.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/13-981028d4.jpg\",\n      \"bytes\": 74581,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"1e124addc5dafa0c57c5c0990d186b2dd2bc8e95bc26f90b55e821bdf3b87d04\",\n      \"width\": 900,\n      \"height\": 1454\n    },\n    {\n      \"file\": \"assets/15-56207bdd.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/15-56207bdd.jpg\",\n      \"bytes\": 89989,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"832958b2f5d0ec3de10d5b534f8cbc7231a0323339ce0af9f189436b1167b016\",\n      \"width\": 900,\n      \"height\": 1454\n    },\n    {\n      \"file\": \"assets/16-89042586.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/16-89042586.jpg\",\n      \"bytes\": 118633,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"778f20bf4c39472a84e03fd4a9ede96850f691291f37557ccb549977d64cc4f2\",\n      \"width\": 900,\n      \"height\": 1454\n    },\n    {\n      \"file\": \"assets/17-9f2e87bd.jpg\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/media/17-9f2e87bd.jpg\",\n      \"bytes\": 100907,\n      \"type\": \"image/jpeg\",\n      \"use\": \"当前 MV1 完整14幅竖屏画廊，按官网顺序使用\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"45eebd44f9ccbe6760c18d6f4bc4ea6e3d5e1635a2a9125fc35d5c6b1a881e84\",\n      \"width\": 900,\n      \"height\": 1454\n    },\n    {\n      \"file\": \"assets/Humanist521BT-Roman_1.woff\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/fonts/Humanist521BT-Roman_1.woff\",\n      \"bytes\": 24228,\n      \"type\": \"font/woff\",\n      \"use\": \"当前 MV1 官网字体，保持品牌排版\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"a1fd5cd15b2c8e12415089c15fe302b25c8f737c89d70d40a927a77880cfe2e0\"\n    },\n    {\n      \"file\": \"assets/Humanist521BT-Bold.woff\",\n      \"sourceUrl\": \"https://www.monumentvalleygame.com/fonts/Humanist521BT-Bold.woff\",\n      \"bytes\": 24936,\n      \"type\": \"font/woff\",\n      \"use\": \"当前 MV1 官网字体，保持品牌排版\",\n      \"rights\": \"ustwo games 及相应素材/字体权利人；仅用于此私人学习，保留原权利。\",\n      \"sha256\": \"170a17bd0115d0d165ca7793994e5b7ae8e1f63523b2a5dfc9c0c2f7e4473e13\"\n    }\n  ]\n}\n",
+      "sha256": "c1d3be26a92b8e4cee99415347921097674eddbe55ff770f69226f1e0e3959e6",
+      "bytes": 13513
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/monument-valley-game/app.js",
+      "role": "source",
+      "sha256": "6c8ff002471ef8661abf4e88fe5bf0af6fb0f4139daa8d9df8d497f9ad21ef99",
+      "bytes": 11481
+    },
+    {
+      "path": "demos/monument-valley-game/assets-manifest.json",
+      "role": "context",
+      "sha256": "c1d3be26a92b8e4cee99415347921097674eddbe55ff770f69226f1e0e3959e6",
+      "bytes": 13513
+    },
+    {
+      "path": "demos/monument-valley-game/assets/10-b44ce70c.jpg",
+      "role": "asset",
+      "sha256": "43d88117da2176134d7f2fa36f8d4f944d8e8876cab47d27f555e315b42d5486",
+      "bytes": 112803
+    },
+    {
+      "path": "demos/monument-valley-game/assets/11-bc582657.jpg",
+      "role": "asset",
+      "sha256": "12e460bab8a1cba01a8798921bb51eafe7eb1e8fad36810d3486037222bb0391",
+      "bytes": 66803
+    },
+    {
+      "path": "demos/monument-valley-game/assets/12-c9d7501d.jpg",
+      "role": "asset",
+      "sha256": "82b39bccca100442243161e9c21a74610e6356d8c983aa3635a19ea7d857c916",
+      "bytes": 80239
+    },
+    {
+      "path": "demos/monument-valley-game/assets/13-981028d4.jpg",
+      "role": "asset",
+      "sha256": "1e124addc5dafa0c57c5c0990d186b2dd2bc8e95bc26f90b55e821bdf3b87d04",
+      "bytes": 74581
+    },
+    {
+      "path": "demos/monument-valley-game/assets/15-56207bdd.jpg",
+      "role": "asset",
+      "sha256": "832958b2f5d0ec3de10d5b534f8cbc7231a0323339ce0af9f189436b1167b016",
+      "bytes": 89989
+    },
+    {
+      "path": "demos/monument-valley-game/assets/16-89042586.jpg",
+      "role": "asset",
+      "sha256": "778f20bf4c39472a84e03fd4a9ede96850f691291f37557ccb549977d64cc4f2",
+      "bytes": 118633
+    },
+    {
+      "path": "demos/monument-valley-game/assets/17-9f2e87bd.jpg",
+      "role": "asset",
+      "sha256": "45eebd44f9ccbe6760c18d6f4bc4ea6e3d5e1635a2a9125fc35d5c6b1a881e84",
+      "bytes": 100907
+    },
+    {
+      "path": "demos/monument-valley-game/assets/3-6cd6eb91.jpg",
+      "role": "asset",
+      "sha256": "ac22bd69238c65734542d6be6011d9b5e822c79734948ebb496d7a22db6b1645",
+      "bytes": 73804
+    },
+    {
+      "path": "demos/monument-valley-game/assets/4-8f27e7fa.jpg",
+      "role": "asset",
+      "sha256": "091e55a3abafcd6b8719111222e51428cd0b8ef42521d1dfad6b7b1caa30f6b1",
+      "bytes": 185406
+    },
+    {
+      "path": "demos/monument-valley-game/assets/5-ecebe13c.jpg",
+      "role": "asset",
+      "sha256": "ca6f823ac86453bde73e0b9c8b25d8b15365f913c1378746b3d801d882a97bb0",
+      "bytes": 85642
+    },
+    {
+      "path": "demos/monument-valley-game/assets/6-d85fcf35.jpg",
+      "role": "asset",
+      "sha256": "91f7dfa08950abbc8acc74b4346f06c86bbe48f5091e3d00fadb93a1513bf369",
+      "bytes": 103488
+    },
+    {
+      "path": "demos/monument-valley-game/assets/7-802e623e.jpg",
+      "role": "asset",
+      "sha256": "a004f9263a89f780a62ffc2d526195a4d13c0e48e54944d4d3c4b40b606ece90",
+      "bytes": 91661
+    },
+    {
+      "path": "demos/monument-valley-game/assets/8-513af37d.jpg",
+      "role": "asset",
+      "sha256": "2770bd9797519d144b0ac62e2bf90149a96446927d08bd1bbe78a9887e087ee2",
+      "bytes": 87787
+    },
+    {
+      "path": "demos/monument-valley-game/assets/9-69d2baed.jpg",
+      "role": "asset",
+      "sha256": "9f6340e5ed77997cdf7002390c8fd2b60e402e5741cb8f17fdcd6a7fc5badeb0",
+      "bytes": 81759
+    },
+    {
+      "path": "demos/monument-valley-game/assets/Humanist521BT-Bold.woff",
+      "role": "asset",
+      "sha256": "170a17bd0115d0d165ca7793994e5b7ae8e1f63523b2a5dfc9c0c2f7e4473e13",
+      "bytes": 24936
+    },
+    {
+      "path": "demos/monument-valley-game/assets/Humanist521BT-Roman_1.woff",
+      "role": "asset",
+      "sha256": "a1fd5cd15b2c8e12415089c15fe302b25c8f737c89d70d40a927a77880cfe2e0",
+      "bytes": 24228
+    },
+    {
+      "path": "demos/monument-valley-game/assets/appstore-badge-d0558d91.svg",
+      "role": "asset",
+      "sha256": "25178aeef6eb6b83b96f5f2d004eda3bffbb37122de64afbaef7107b384a4132",
+      "bytes": 12353
+    },
+    {
+      "path": "demos/monument-valley-game/assets/background-006780ed.png",
+      "role": "asset",
+      "sha256": "c637978e3f627fb20e3fa1de5168c5b5bf1a5d11d53692e2df52c2de4ed6ee1d",
+      "bytes": 99232
+    },
+    {
+      "path": "demos/monument-valley-game/assets/googleplay-badge-67e13ee2.png",
+      "role": "asset",
+      "sha256": "71257aec9febb9a36d68add87997107c8e318bfb4b25fa71d44f66afa449dc11",
+      "bytes": 13991
+    },
+    {
+      "path": "demos/monument-valley-game/assets/logo-6a71a66e.svg",
+      "role": "asset",
+      "sha256": "9043a0954f7e62861b47bdd97a94cc2032de91382fa8245823ca5180d35de687",
+      "bytes": 2122
+    },
+    {
+      "path": "demos/monument-valley-game/assets/monument-friends-a53de6d4.jpg",
+      "role": "asset",
+      "sha256": "fb0ce1f2ae81e25f31827ee5c63265d03c1d682afc742994dfd0b21bb2645b41",
+      "bytes": 17535
+    },
+    {
+      "path": "demos/monument-valley-game/assets/mv-trailer-a0b9cbc1.mp4",
+      "role": "asset",
+      "sha256": "8717d5e90beb2bd066ac50942c698ae2832bfeaee68720b20873f731fc9771f5",
+      "bytes": 6694081
+    },
+    {
+      "path": "demos/monument-valley-game/assets/style.css",
+      "role": "asset",
+      "sha256": "4d50d6be89f072d2d5fa6ae2648f2066fc43fe7b52c48183a45883b2399dd4a6",
+      "bytes": 46822
+    },
+    {
+      "path": "demos/monument-valley-game/assets/trailer-landscape-poster-e2193d06.jpg",
+      "role": "asset",
+      "sha256": "21de0d6d56b0f81f292cc8cdc557f7343cbbce249a953bdd754af50cf39c9d49",
+      "bytes": 532455
+    },
+    {
+      "path": "demos/monument-valley-game/assets/ustwo-games-logo-f5327f6a.svg",
+      "role": "asset",
+      "sha256": "d26fc55b8d4e147d246b92454bb0506bb6b073d758551b17eff61f034fe7ea85",
+      "bytes": 4628
+    },
+    {
+      "path": "demos/monument-valley-game/assets/wreath-left-965e57a1.png",
+      "role": "asset",
+      "sha256": "815b57e4fe9579b185beeaa84611b62c48be7e936a1002b5513fe5880b462ea1",
+      "bytes": 2304
+    },
+    {
+      "path": "demos/monument-valley-game/assets/wreath-right-10f731c4.png",
+      "role": "asset",
+      "sha256": "dc8acf3bcdd5f11d13b836e6f4d457a66353f4c3be36caf59f1297e0077f4acb",
+      "bytes": 2314
+    },
+    {
+      "path": "demos/monument-valley-game/fidelity.md",
+      "role": "context",
+      "sha256": "cf0c2967422e3e299d364db0a8f75bb00b1e72d64290a963140463566c0297ce",
+      "bytes": 3924
+    },
+    {
+      "path": "demos/monument-valley-game/index.html",
+      "role": "source",
+      "sha256": "385962e69c935944e748f063aeab2802686cd8e0f4da620872fb9d8a232c9a44",
+      "bytes": 9118
+    },
+    {
+      "path": "demos/monument-valley-game/style.css",
+      "role": "source",
+      "sha256": "98a956f84c6b25fd0259ebc0b47e5062e70fba9a77abf7042f5d3067ae6dd3e3",
+      "bytes": 11515
+    },
+    {
+      "path": "entries/monument-valley-game.json",
+      "role": "context",
+      "sha256": "fb1c87c2d26b8d00cdf241f90591b15378332627fddf85b7daec31037f6cc351",
+      "bytes": 11594
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/mobile/monument-valley-game.jpg",
+      "role": "preview",
+      "sha256": "4721f86bcec1f9a159d78c9c74dc4cbb7cd06d06ce1c95b1163b4efb7b90c9ff",
+      "bytes": 29012
+    },
+    {
+      "path": "previews/monument-valley-game.jpg",
+      "role": "preview",
+      "sha256": "eac709ee1a5928e595561c8de0ed884313c5afbec13b0a3104a8eb04b596feab",
+      "bytes": 70646
+    },
+    {
+      "path": "prompts/monument-valley-game.md",
+      "role": "context",
+      "sha256": "3d5b2da5611d140c7eff09fc25ca2eba6f98ab0effe698e10f7f3f7a8c1c0231",
+      "bytes": 3857
+    },
+    {
+      "path": "research/monument-valley-game.md",
+      "role": "context",
+      "sha256": "2e72449865e531d7a712d48e1167800da877b04ff5a8d11238f86d846f52ca30",
+      "bytes": 6771
+    },
+    {
+      "path": "research/screenshots/monument-valley-game-source.jpg",
+      "role": "preview",
+      "sha256": "88cf1a76d1d92faa4de4394cee30515f236166c77655532ae9223d43bf8f85b2",
+      "bytes": 85059
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=monument-valley-game\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>固定白导航、#221f20影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区与紫页尾，以整幅色带改变观看节奏。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官方细线几何字标与真实Humanist521 BT Roman/Bold，小号导航和28px奖项标题保持作品秩序。</dd></div><div class=\"\"><dt>布局留白</dt><dd>真实影像先行，内容按下载/预告/奖项/社交/媒体/十四图画廊/社区/页尾展开，左侧索引按视口中心更新。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方MP4、字标SVG、月亮/月桂、十四张游戏截图和社区图均本地保存，不以自行绘制替代作品。</dd></div><div class=\"\"><dt>线条形状</dt><dd>微小六边形索引、成对月桂与直边色带；手机圆形菜单和保留游戏原纵横比的画廊。</dd></div><div class=\"\"><dt>信息层级</dt><dd>影像建立体验，商店徽章提供行动，十项奖项建立信任，中心画廊展示细节并预告侧图。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>加载1000ms；章节450ms swing；奖项与手机展开350ms ease-in-out；画廊500ms ease/3000ms自动，暂停及减少动态明确可控。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>建筑与字标共享几何秩序，克制的控件与固定色带形成放映节奏；进入、展开与轨道分别服务内容职责。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>真实字标与游戏影像先建立世界，Humanist521 BT 字体、小六边形索引和整幅色带维持安静秩序。</li><li>奖项仅在视口中心进入该节时，以350ms从20px下方出现；离开后复位，反向浏览仍有同一节奏。</li><li>画廊将当前图置于中央，左右图降低至0.5透明度，强调探索顺序并预告下一幅作品。</li><li>手机保留作品纵向比例，画廊一张居中并露出20%侧图；奖项先呈现四条，让Show All逐步展开其余六条。</li></ul><h3>怎样凸显产品重点</h3><p>真实 Monument Valley 一代：安静公主Ida、不可思议建筑和视觉解谜；官网通过预告与截图呈现作品，而本地复现其宣传页的区域顺序。</p><h3>主题与情绪</h3><p>固定品牌场景：白导航、深色影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区和紫页尾。几何字标与原始幻境建筑是主视觉，不以换肤替代作品世界。</p></section><section><h2>02 / 交互巧思</h2><ul><li>首次进入：白色LOADING遮罩1000ms后直接移除，真实背景视频静音循环；可持续暂停。</li><li>桌面左侧章节索引：点击以450ms swing将章节中心对齐视口中心；悬停或键盘进入索引时，标签350ms出现、内容降至0.2透明度。</li><li>奖项：视口中心进入/离开时，350ms opacity 0↔1、translateY 20px↔0，双向有效；手机Show All/Hide通过350ms高度变化展开/收回六项。</li><li>十四图画廊：500ms整条水平轨道、3秒自动推进、无限首尾衔接；桌面三张、手机一张加20%侧图，箭头/14个索引/方向键与点击侧图有效。悬停、焦点、离屏和后台暂停。</li><li>前景预告：主动Play播放同一67.988秒官方MP4及原声轨；原生进度/暂停和实际声音开关有效，播放时暂停背景。</li><li>手机圆形菜单：350ms全屏白色面板进入/退出，Escape可关闭；本地明确增加暂停、键盘、后台节流和减少动态分支。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>当前MV1页面没有全局主题选择；固定白导航、深色影像/画廊及各章节品牌色，不随系统深浅切换。</p><p>页面是作品世界的固定放映顺序，完整色带与原始媒体建立统一氛围。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>媒体声音</h3><p>背景MP4静音循环；主动Play前景影片才有真实原声，原生媒体控件及Sound on/off控制实际muted。原站本次播放触发React #185，声音现场未通过；本地播放通过。</p><p>影片声轨与空间/解谜画面共同营造作品气氛；没有独立BGM，用户开始观看才进入有声体验。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>唯一页面基线为2026-10-07国际英文 https://www.monumentvalleygame.com/mv1；不混入MV2的字标描边或MV3区域。</li><li>当次原站MV1 hero实际随普通滚动离屏，未观察到滚动缩放/视差；公开函数存在不等于效果发生，因此本地不添加无依据视差。</li><li>当前原站桌面前景播放操作触发React #185，未验证其实际声音播放；公开播放器与MP4声轨提供机制依据，本地主动播放已验证。</li><li>官方十四张图片、字标、月亮/月桂、Humanist字体和预告本地保存，来源/尺寸/hash见资产清单；权利仍归ustwo games及相应权利人。</li><li>保留十项奖项和交互机制；媒体区以明确标注的学习观察替代评论长文，商店保留两个徽章，社交图标以文本入口近似。</li><li>手机/桌面版式、媒体裁切和细小控件几何为可复用实现近似，非逐像素复制；原站没有独立BGM，也未发现全局深浅主题按钮。</li></ul><h3>适合</h3><p>有高质量游戏影像的独立游戏 / 建筑与视觉解谜作品宣传 / 适合安静观看的数字艺术作品</p><h3>谨慎使用</h3><p>以自行绘制浮岛替代真实官网证据 / 在全屏画面中堆满CTA和卡片 / 把官网视频的声轨声称为下载BGM</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#fefefe\"></i>#fefefe</span><span class=\"swatch\"><i style=\"background:#221f20\"></i>#221f20</span><span class=\"swatch\"><i style=\"background:#e76399\"></i>#e76399</span><span class=\"swatch\"><i style=\"background:#627db3\"></i>#627db3</span><span class=\"swatch\"><i style=\"background:#fcf2d2\"></i>#fcf2d2</span><span class=\"swatch\"><i style=\"background:#e28ec0\"></i>#e28ec0</span><span class=\"swatch\"><i style=\"background:#48418c\"></i>#48418c</span></div><p><b>字体</b> · 官方几何字标SVG与本地保存的Humanist521 BT Roman/Bold；导航13px，奖项主标题28px/32px。<br><b>布局</b> · 影像 → 下载 → 预告 → 十项奖项 → 社交 → 媒体 → 十四图画廊 → 社区 → 页尾；桌面左侧中心章节索引，手机圆形导航。<br><b>动效</b> · 加载1000ms；章节450ms swing；奖项与手机展开350ms ease-in-out；画廊500ms ease/3000ms自动，暂停及减少动态明确可控。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为[有真实作品影像的独立游戏/数字艺术作品]建立基于2026-10-07 Monument Valley一代国际英文 https://www.monumentvalleygame.com/mv1 的可复用交互研究。先用白色LOADING遮罩等待1000ms并直接移除，真实67.988秒官方MP4静音循环，真实几何字标居中scale1.125；只在主动Play前景预告后启用原声轨，提供实际声音/原生进度和暂停，背景保持静音且可持续暂停，不冒称独立BGM。采用官方Humanist521 BT Roman/Bold和真实字标、月桂、月亮、十四张原游戏图；本地保存来源/尺寸/字节/hash。桌面白色固定系列导航，左侧小六边形章节索引；点击450ms swing使章节中心对齐视口中心，悬停/焦点350ms进入标签并将正文透明度降至0.2。按影像、下载、预告、粉蓝奖项、社交、奶油媒体、黑色画廊、粉色社区、紫页尾展开。奖项以视口中心位于章节内为触发，350ms ease-in-out opacity0↔1且translateY20px↔0，离开复位、反向重新进入；十项事实与月桂保持成对，手机先四项，Show All/Hide用350ms高度展开其余六项并旋转箭头180度。画廊保留十四张原始竖屏图与十四索引，桌面center3张、手机center1张并露出20%侧图，当前opacity1/侧图0.5，500ms ease整体横轨、无限首尾衔接、3000ms自动推进；悬停/键盘焦点/离屏/后台暂停，快速反转仍只有一个当前索引，箭头、方向键、Home/End、侧图选择、手机水平手势可用。手机圆形菜单350ms白色全屏面板进出，关闭态不可聚焦。固定作品配色，不强加全局换肤。本地暂停/减少动态/键盘分支注明易用性扩展。不得添加当次MV1未观察到的hero视差或MV2描边动画；原站前景播放React #185未通过实测，清楚区分公开播放器依据、本地已播放与未验证来源状态；媒体评价长文可缩减为标注的学习观察但保留原章节衔接。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要泛用营销卡片、重画浮岛、虚构奖项、自动有声播放、虚构独立BGM、无来源hero视差或混入MV2描边；不要用所有区域统一淡入替代原站中心触发和轨道机制。</p></details><h3>改造练习</h3><p>比较桌面中心三图与手机一图加20%侧图；切至第十四张再下一张，快速反向选择并暂停自动播放，检查当前索引、轨道和可聚焦元素始终一致。再上下穿越奖项中心，观察350ms双向进入与手机Show All高度变化。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.monumentvalleygame.com/mv1\" target=\"_blank\" rel=\"noopener noreferrer\">Monument Valley 一代官方宣传页 ↗</a><small>2026-10-07：一代宣传页的白导航、影像、粉蓝奖项、奶油媒体区、画廊及社区。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://ustwogames.co.uk/our-games/monument-valley/\" target=\"_blank\" rel=\"noopener noreferrer\">ustwo games：Monument Valley作品页 ↗</a><small>开发者介绍Ida、不可思议建筑和视觉幻象，支撑产品重点；本地使用实际游戏画面。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://ustwogames.co.uk/contact-us/\" target=\"_blank\" rel=\"noopener noreferrer\">ustwo games：联系信息 ↗</a><small>官方伦敦工作室地址是国家分类的依据，不代表英国页面有固定风格。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/tutorials/carousels/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI：Carousels Tutorial ↗</a><small>画廊用户控制、键盘和当前状态的规范参考。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C：Animation from Interactions ↗</a><small>本地减少动态分支约束：停止自动推进与背景，取消非必要位移；不声称原站合规。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.monumentvalleygame.com/js/main.js\" target=\"_blank\" rel=\"noopener noreferrer\">MV1 官方公开交互脚本 ↗</a><small>同一页面1000ms loader、450ms章节定位、中心活动区、手机奖项分组、Slick14图及媒体播放器机制。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.monumentvalleygame.com/style.css\" target=\"_blank\" rel=\"noopener noreferrer\">MV1 官方公开样式 ↗</a><small>同一归档页Humanist字体、350ms奖项/高度/标签过渡及画廊0.5侧图透明度；MV2专属动画不作为MV1证据。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fmonument-valley-game.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "39a47a8964bc2a7a8df10c79c13f0bf6bf0e5623e969f32a7a53002a12665faf",
+    "bytes": 12386
+  }
+}

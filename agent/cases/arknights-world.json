@@ -1,0 +1,612 @@
+{
+  "schemaVersion": 1,
+  "id": "arknights-world",
+  "entry": {
+    "id": "arknights-world",
+    "order": 19,
+    "title": "明日方舟 · 全屏档案与交互点阵",
+    "subtitle": "ARKNIGHTS / RHODES ISLAND INTERACTIVE ARCHIVE",
+    "category": "游戏/IP",
+    "country": "中国",
+    "tags": [
+      "明日方舟",
+      "鹰角网络",
+      "全屏章切",
+      "滚动编号",
+      "WebGL点阵",
+      "原站BGM"
+    ],
+    "summary": "全屏资源载入、侧向章切与滚动编号，将六章组织成工业系统；WORLD用真实WebGL点阵响应指针，把标识、设定和输入连成同一舞台。",
+    "accent": "#00c4df",
+    "background": "#080a0d",
+    "principles": [
+      "真实资源进入前：暗灰全屏品牌与青色进度条 → 资源就绪后淡出 → 建立系统启动感并遮住未就绪场景。",
+      "滚轮、键盘或导航选择章节 → 场景按方向从侧面裁切覆盖、右侧数字/计数/章节名滚出再滚入 → 让空间方向与当前位置共同可读。",
+      "WORLD指针进入点阵 → 原始排斥公式推开附近点、移走后回聚 → 让静态工业标识可被触摸；选择术语会把点阵重组成对应原站形状。",
+      "BGM单独启用后持续跨章，600ms进入、300ms退出 → 用连续声音连接不同档案；人物语音由配音按钮主动触发。"
+    ],
+    "productFocus": "同一来源的2026-10-07中文官网快照：INDEX、INFORMATION、OPERATOR、WORLD、MEDIA、MORE与末端页脚；官方PV、BGM、三人双阶段立绘/日语语音、七组点阵与原始字体。",
+    "interaction": [
+      "首次/缓存重载均先显示全屏LOADING；本地按五份实际图片完成数显示进度，再开放初始hash所指章节。",
+      "场景横向遮罩裁切：桌面1000ms、竖屏600ms；同方向重复轮输入锁定，快速反向和导航使用最后目标队列，单次仅一组出/入场景。",
+      "右索引数字、计数和章节名分组滚出/换值/滚入，与换章方向联动；Home/End、PageUp/PageDown及上下方向键可走完六章与页脚。",
+      "桌面WORLD先显示六术语目录与罗德岛点阵；悬停术语的原图预览跟随指针并使用同源形变/RGB偏移shader。点击进入详情，箭头/六段索引换模型，返回恢复目录。",
+      "WORLD使用官网Three导出、七组原始点位、粒子贴图和排斥公式；10,000粒子池中当前模型使用1785–5652点。竖屏直接打开源石详情，粒子在上/文字在下。",
+      "真实BGM默认关闭，单独开关并使用官网600/300ms音量渐变；三人日语语音独立按需播放，换人物或离开干员章暂停旧语音。",
+      "暂停动态独立控制PV/粒子；减少动态提供即时章切和静止同源点阵，保留手动音频选择。"
+    ],
+    "theme": "暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。",
+    "constraints": [
+      "本次快照归档于2026-10-07；后续官网变动不自动维护。官方美术/音乐版权归鹰角网络，限授权私人设计学习。",
+      "六章及页脚交接保留；情报只保留当前三条与单幅官方Banner，轮播及深层新闻页由官网外链承接。",
+      "干员保留3名/每人E1与E2，原站6名且阿米娅含E0；灰度背景为本地同人物图层，未移植完整背景版/6人滚动肖像轨道。",
+      "WORLD原始模型、Three导出、粒子shader和指针排斥方程迁移；独立场景控制器及帧调度是本地实现，未迁移原站额外20枚firefly层。",
+      "媒体对象取原站图片并改为四入口格；完整办公桌构图、图库/动态干员/内嵌视频目录未迁移，点击返回官网相应入口。",
+      "末章四张官方图与响应式素材保留，分类内部弹层不复制；页脚260px位移为本地收束。",
+      "加载图片集与保底1300ms是本地适配；原站加载五背景图、每次进度用1000ms插值，完成后300ms再退出1000ms。",
+      "查询参数motion=reduce是可审阅分支；不声称模拟了操作系统偏好。"
+    ],
+    "useCases": [
+      "工业科幻游戏",
+      "战术角色档案",
+      "世界设定库"
+    ],
+    "avoid": [
+      "轻松生活方式品牌",
+      "高密度交易表单"
+    ],
+    "tokens": {
+      "palette": [
+        "#080a0d",
+        "#24282d",
+        "#00c4df",
+        "#eceeef"
+      ],
+      "type": "原站Bender、Oswald与Novecentosanswide字体；中文沿系统中文粗体档案。",
+      "layout": "六个固定满屏场景；侧向裁切覆盖交接；右侧同步索引；WORLD桌面目录/左右详情，竖屏图上文下。",
+      "motion": "章节按方向横向wipe：桌面1000ms/竖屏600ms；数字及标签300ms离开/300ms进入并100ms分组错列；同源WebGL点阵回聚与指针排斥，声音600/300ms渐变。"
+    },
+    "sources": [
+      {
+        "title": "Hypergryph · 明日方舟中文官方网站",
+        "url": "https://ak.hypergryph.com/",
+        "type": "实例",
+        "note": "2026-10-07当前快照；新鲜入场、缓存重载、六章正反路径、WORLD指针/详情与390px竖屏实访，公开模块/CSS提供原始模型、shader、章切和声音参数。"
+      },
+      {
+        "title": "W3C · Pause, Stop, Hide",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+        "type": "规范",
+        "note": "持续自动动态应有暂停；本地PV可停止，减少动态初始停止。"
+      },
+      {
+        "title": "W3C · Tabs Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+        "type": "规范",
+        "note": "键盘与选择状态的规范参考；本地以原生按钮/aria-pressed实现角色和阶段选择。"
+      }
+    ],
+    "prompt": "复现【明日方舟中文官网2026-10-07快照】的工业档案舞台，保留同一来源的真实品牌、字体、PV、美术、点阵与BGM。必须先显示全屏暗灰载入页：居中品牌、细边界线、实际图片资源进度、青色进度条，资源就绪后开放指定初始章节。六章INDEX/INFORMATION/OPERATOR/WORLD/MEDIA/MORE使用固定满屏舞台，不用普通长页面滚动；滚轮、章节导航和键盘按方向触发侧向裁切覆盖，桌面1000ms、竖屏600ms，右侧编号/计数/章节名在遮罩中滚出、换值、滚入。单一状态控制器处理快速反向和最后导航请求，稳定时只有一章可交互。WORLD必须用原站七套点位、粒子贴图、WebGL point shader与指针排斥方程，保留桌面目录+原图随指针形变预览、详情模型重组、左右箭头/六段索引/返回；390px竖屏直接打开第一项详情，图上文下。官方BGM与干员日语语音分开按需播放，BGM默认静音、600ms渐入/300ms渐出、跨章保持连续，离开前台停止音频；动态暂停和减少动态独立于用户声音选择，减少动态使用即时章节切换和静止真实点阵。原站固定暗色，不增设虚构浅色主题。保留三名干员E1/E2及明确子集边界；情报、媒体与更多章节可缩短内容，但真实入口、全章交接与末端页脚须连续且可反向返回。仅存最终资源与单一终态说明，证据和脚本留在仓库外。",
+    "negativePrompt": "不要用普通Observer淡入冒充全屏侧向章切；不要用静态CSS晶体或虚构粒子形状；不要漏掉首次载入/反向方向/同步滚号；不要自动出声、臆造操作音/曲名/主题切换；不要把子集、外链及本地调度说成完整官网移植。",
+    "demo": "demos/arknights-world/index.html",
+    "preview": "previews/arknights-world.jpg",
+    "research": "research/arknights-world.md",
+    "exercise": "在已授权角色素材不变时，加入一个可查询的干员职业目录，保持工业档案的网格与状态语汇。",
+    "composition": {
+      "color": "暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。",
+      "typography": "原站Bender、Oswald与Novecentosanswide字体；中文沿系统中文粗体档案。",
+      "layout": "六个固定满屏场景；侧向裁切覆盖交接；右侧同步索引；WORLD桌面目录/左右详情，竖屏图上文下。",
+      "imagery": "官方PV、三名干员双阶段立绘/肖像、世界术语六幅图、七套点阵几何、媒体对象与末章四组桌面/竖屏素材。",
+      "shape": "工业横竖与斜线网格、裁切大字、方框肖像、青色位置条、原始罗德岛/源石等白色粒子点阵；无CSS晶体替代。",
+      "hierarchy": "全屏载入 → 首页/情报 → 干员 → 世界目录/详情 → 媒体入口 → 更多内容 → 页脚。",
+      "motion": "章节按方向横向wipe：桌面1000ms/竖屏600ms；数字及标签300ms离开/300ms进入并100ms分组错列；同源WebGL点阵回聚与指针排斥，声音600/300ms渐变。",
+      "coherence": "资源载入、编号、网格、点阵和媒体状态都属于同一罗德岛系统；指针、章切方向和声音给出互补反馈。"
+    },
+    "referenceUrl": "https://ak.hypergryph.com/",
+    "implementation": "reference-study",
+    "fidelity": "demos/arknights-world/fidelity.md",
+    "assetManifest": "demos/arknights-world/assets-manifest.json",
+    "referencePreview": "research/screenshots/arknights-world-source.jpg",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "本次中文官网未提供深浅色切换。",
+      "designReason": "暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。"
+    },
+    "soundBehavior": {
+      "kind": "background",
+      "control": "真实原站BGM独立开关，默认静音；600ms渐入/300ms渐出。三人官方日语配音由干员按钮单独播放；页面进入后台暂停音频。",
+      "interactionRole": "BGM作为连续环境声音跨越横向章节交接，营造系统进入和世界档案氛围；人物配音提供角色身份反馈。未核验到独立章节/鼠标操作音，未添加臆造音效。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/arknights-world.md",
+      "role": "research",
+      "content": "# 明日方舟 · 全屏档案与交互点阵\n\n唯一来源：[中国大陆简体中文明日方舟官网](https://ak.hypergryph.com/)。采集日期 **2026-10-07**。这是本次当下页面的归档快照；下述原站事实来自全新入口、重新载入、六章节正反遍历、WORLD 指针与词条操作、390×844 竖屏以及公开 CSS/JavaScript。设计目的为本库分析，不冒称品牌作者自述。\n\n## 交互巧思\n\n| 触发 | 可观察响应 | 可复用的设计目的 |\n|---|---|---|\n| 首次进入 | 满屏灰色字标与 LOADING 计数先占据视野，载入完成后才打开首页。 | 把真实资源等待纳入品牌叙事，让重媒体首屏有明确入口。 |\n| 向下切章 / 向上返回 | 下一章从右边/左边水平揭入；旧章与新章的裁切边界相接，右侧编号和名称同步在小窗口里滚动。 | 用方向与位置同时解释章节转换；始终保持一屏一个完整舞台，避免电影构图被普通文档滚动截断。 |\n| WORLD 内移动指针 | 组成罗德岛标识的白色点在指针周围分开，移开后重新聚集；悬停术语显示带弯曲与色彩偏移的随动原图。 | 让“世界资料”具有材料反馈，鼠标成为探索工具；反馈来自内容形状而非通用光标装饰。 |\n| 点击术语 | 点阵变成真实词条模型，目录转为说明与分段导航；竖屏直接呈现第一词条详情。 | 同一数据舞台同时承担浏览和阅读，手机减少一次进入目录的操作。 |\n| 选择干员 / 阶段 | 原始角色图保持焦点裁切，档案按 200ms 间隔分块进入，配音有独立触发。 | 将人物、文字与声音绑到同一选择，建立角色而非模板式卡片。 |\n| 音乐开关 | 官方音轨 600ms 线性渐入、300ms 渐出后暂停，章节切换延续同一背景声。 | 声音支撑开场与连续章节的氛围，音量变化缓和操作反馈。未确认原站专用点击或章节音效，不能把 BGM 当作操作音。 |\n\n## 视觉系统如何支撑机制\n\n黑灰网格与原始织物纹理给资料舞台统一坐标；青色只集中表达当前编号、进度、选中状态与行动。Bender 提供工业状态文字，Oswald 和 Novecento 提供压缩/宽体的标题对比。固定暗色承托彩色立绘和白色粒子，首页 PV 与场景内容无需切换主题；本次官网未观察到深浅色控制。\n\n源站 SectionItem 在固定 100vw 内容外改变水平宽度；横屏转换 1000ms、竖屏 600ms，方向对应左右锚点。Indicator 的三组窗口采用 300ms 出/入和 100ms 错开。WORLD 采用 10,000 点池；罗德岛标识 1785 点，六项模型依次为 3550、4230、3882、4788、3200、5652 点。指针力按距离平方衰减，点同时向目标回归；这解释了移入时的局部空洞与移开后的复原，不能替换成静态晶体或整块缩放。\n\n## 最终本地范围\n\n六章与页脚都由同一状态控制器衔接；正反蒙版、编号时间线、真实几何、原始图像 shader、词条阅读和三个角色的 E1/E2/日语配音均可操作。Three.js 仅从公开包隔离渲染模块，点阵模型保持原始数据；页面没有引入官网账户或遥测模块。本地 clip-path 模拟源站宽度裁切，曲线为 easeInOutQuad 的 CSS 近似；编号结束时统一归位，首次加载的最短展示时间为本地媒体预算。\n\nINFORMATION 内容缩为一张活动图与三条新闻；MEDIA 用四类图像链接网格近似原站桌面物件构图；MORE 保留四个外部入口和移动图像，页脚托起高度为本地 260px。省略完整新闻分页、六人/E0、全部语种、深层媒体浏览和独立 20 点背景萤火。首屏视频保留约 18.13 秒静音片段，BGM 使用完整独立官方音轨。\n\n本地声音默认关闭，点击后按官网 600/300ms 音量曲线开关；角色语音与 BGM 分离，动态暂停和减少动态不代替静音。页面失去前台时暂停音频与动态，音频返回不自动续播。减少动态保留相同静态点阵及完整导航；键盘和 50px 竖向手势触发章节控制器，横向手势让给浏览器，内层可滚内容先消费输入。\n\n[对应范围](../demos/arknights-world/fidelity.md)包含逐项差异；[最终资产清单](../demos/arknights-world/assets-manifest.json)记录当前保留的来源与校验。[案例条目](../entries/arknights-world.json)、[Prompt](../prompts/arknights-world.md)、[独立 Demo](../demos/arknights-world/index.html)、[桌面预览](../previews/arknights-world.jpg)与[手机预览](../previews/mobile/arknights-world.jpg)是复用入口。官方媒体、美术与字体权利仍归原权利人，私人学习不构成开放商业授权。\n",
+      "sha256": "590f47ab09edc7d3933a4a38ed9e3094a0f081afc04a7f3d407e1e529f729e56",
+      "bytes": 4727
+    },
+    {
+      "path": "prompts/arknights-world.md",
+      "role": "prompt",
+      "content": "# 明日方舟 · 全屏档案与交互点阵 · 复用 Prompt\n\n由 [结构化案例](../entries/arknights-world.json) 自动生成。参考观察与具体边界见 [调研](../research/arknights-world.md)。\n\n## 正向 Prompt\n\n复现【明日方舟中文官网2026-10-07快照】的工业档案舞台，保留同一来源的真实品牌、字体、PV、美术、点阵与BGM。必须先显示全屏暗灰载入页：居中品牌、细边界线、实际图片资源进度、青色进度条，资源就绪后开放指定初始章节。六章INDEX/INFORMATION/OPERATOR/WORLD/MEDIA/MORE使用固定满屏舞台，不用普通长页面滚动；滚轮、章节导航和键盘按方向触发侧向裁切覆盖，桌面1000ms、竖屏600ms，右侧编号/计数/章节名在遮罩中滚出、换值、滚入。单一状态控制器处理快速反向和最后导航请求，稳定时只有一章可交互。WORLD必须用原站七套点位、粒子贴图、WebGL point shader与指针排斥方程，保留桌面目录+原图随指针形变预览、详情模型重组、左右箭头/六段索引/返回；390px竖屏直接打开第一项详情，图上文下。官方BGM与干员日语语音分开按需播放，BGM默认静音、600ms渐入/300ms渐出、跨章保持连续，离开前台停止音频；动态暂停和减少动态独立于用户声音选择，减少动态使用即时章节切换和静止真实点阵。原站固定暗色，不增设虚构浅色主题。保留三名干员E1/E2及明确子集边界；情报、媒体与更多章节可缩短内容，但真实入口、全章交接与末端页脚须连续且可反向返回。仅存最终资源与单一终态说明，证据和脚本留在仓库外。\n\n## 负向约束\n\n不要用普通Observer淡入冒充全屏侧向章切；不要用静态CSS晶体或虚构粒子形状；不要漏掉首次载入/反向方向/同步滚号；不要自动出声、臆造操作音/曲名/主题切换；不要把子集、外链及本地调度说成完整官网移植。\n\n## 制作约束\n\n- 本次快照归档于2026-10-07；后续官网变动不自动维护。官方美术/音乐版权归鹰角网络，限授权私人设计学习。\n- 六章及页脚交接保留；情报只保留当前三条与单幅官方Banner，轮播及深层新闻页由官网外链承接。\n- 干员保留3名/每人E1与E2，原站6名且阿米娅含E0；灰度背景为本地同人物图层，未移植完整背景版/6人滚动肖像轨道。\n- WORLD原始模型、Three导出、粒子shader和指针排斥方程迁移；独立场景控制器及帧调度是本地实现，未迁移原站额外20枚firefly层。\n- 媒体对象取原站图片并改为四入口格；完整办公桌构图、图库/动态干员/内嵌视频目录未迁移，点击返回官网相应入口。\n- 末章四张官方图与响应式素材保留，分类内部弹层不复制；页脚260px位移为本地收束。\n- 加载图片集与保底1300ms是本地适配；原站加载五背景图、每次进度用1000ms插值，完成后300ms再退出1000ms。\n- 查询参数motion=reduce是可审阅分支；不声称模拟了操作系统偏好。\n\n## 检查方法\n\n在已授权角色素材不变时，加入一个可查询的干员职业目录，保持工业档案的网格与状态语汇。\n\n[查看 Demo](../demos/arknights-world/index.html) · [返回参考库](../index.html#style/arknights-world)\n",
+      "sha256": "4b3621ab0f4f95d91294710eba9392101083502a95c60c12e20bccc8745b33de",
+      "bytes": 3390
+    },
+    {
+      "path": "demos/arknights-world/fidelity.md",
+      "role": "fidelity",
+      "content": "# 明日方舟 · 全屏档案与交互点阵\n\n采集快照：**2026-10-07**，中国大陆简体中文 [明日方舟官网](https://ak.hypergryph.com/)。本案例归档这次观察的页面状态，后续官网变化不纳入维护范围。\n\n| 机制 | 官网的触发 → 响应 → 目的 | 本地对应与边界 |\n|---|---|---|\n| 开场载入 | 首次进入或重新载入 → 深灰全屏字标、百分比与工业状态行，资源就绪后退出 → 把等待包装成罗德岛系统启动。 | 使用原始 SVG 字标与五项实际本地图片预载；百分比跟随资源完成，最短展示 1300ms、就绪延迟 300ms、遮层退出 1000ms。最短展示与百分比平滑是本地预算，不冒称官网网络耗时。 |\n| 六章转换 | 滚轮、章节导航或竖向手势 → 下一画面从右侧水平揭开，返回时从左侧揭开，旧画面同步被裁掉 → 保持档案章节的完整舞台与方向感。 | INDEX → INFORMATION → OPERATOR → WORLD → MEDIA → MORE → 页脚，完整正反路径；固定内层 100vw，使用互补 clip-path 裁切复现源站 SectionItem 宽度蒙版。横屏 1000ms、竖屏 600ms；CSS 曲线近似官网 easeInOutQuad。原生文档不滚动。 |\n| 右侧滚动编号 | 章节切换 → 当前编号、章名与计数在窗口中沿相同方向退出和进入 → 在画面变换中给出位置反馈。 | 保留 300ms 出/入与组间 100ms 错开，文字更新属于同一章节事务；局部时间线以结束时归位保障短屏和快速导航一致。不是瞬间替换数字或普通淡入。 |\n| WORLD 点阵 | 鼠标移入/移动 → 原始模型的点在指针附近排斥、移开后回归；目录悬停出现随指针运动的术语图 → 让世界设定具有可探索的物质感。 | 隔离官网公开 Three.js 渲染模块；10,000 点池，真实七组 JSON 几何、原始粒子纹理、颜色、变形公式与摄影机布局。目录模型 1785 点，六项模型 3200–5652 点；没有用 CSS 晶体替代。目录预览沿用公开弯曲/RGB 位移 shader。省略独立的 20 点萤火背景。 |\n| 世界词条 | 桌面点击词条 → 目录退出，模型移至左侧、说明进入右侧；箭头与分段进度切换模型和文本 → 把抽象术语变成同一系统里的档案。 | 六条官网说明、原始几何、箭头、进度与桌面返回；竖屏与官网一样直接进入源石详情，模型上方、说明下方。快速选择保留最后一次目标。中文使用系统字体，未打包完整中文字体。 |\n| 干员档案 | 选择人物/精英阶段 → 原始立绘与档案分块纵向进入；主动播放配音 → 把角色舞台与资料绑定。 | 三位干员、各 E1/E2、官网焦点裁切参数与三段官方日语配音；档案进入每块 200ms 错开，500ms 曲线是本地近似。未复现六人、E0、全部语种和完整档案。 |\n| 音乐 | 音乐开关 → 官方 BGM 600ms 线性渐入，300ms 渐出后暂停 → 为开场与连续章节维持听觉氛围，避免开关生硬截断。 | 真实 195.65 秒 BGM，未取得公开曲名；本地默认静音，需点击开启。跨章连续播放，不虚构章节音效。配音、动态暂停与 BGM 相互独立；离开前台暂停声音，返回需再次开启。官网源码确认 BGM 渐变；未核验到专用点击/章节音效。 |\n\n页面保持固定暗色：官网本次观察未提供深浅色切换。黑灰格网、原始纹理、青色状态、Bender/Oswald/Novecento 字体及罗德岛标识服务同一工业资料系统；彩色人物与点阵成为视觉焦点。\n\n本地 INFORMATION 为一张官方活动图与三则可筛选新闻；MEDIA 保留四类原始图像链接，网格编排近似官网桌面物件，不复现深层画廊/播放器；MORE 保留四项入口及竖屏素材，页脚采用 260px 本地托起布局。账户、支付和站外业务由官方链接承接。\n\n键盘可用 PageUp/PageDown、方向上下、Home/End 切章，WORLD 左右切词条，Escape 关闭目录/页脚。滚轮、触控只由章节舞台消费，内层可滚内容优先；快速反向输入与导航由单一控制器串行收束。动态暂停停止 PV 与点阵，不静音 BGM；减少动态显示同一静态几何，取消蒙版/编号/档案运动，仍保留所有选择和声音开关。URL `?motion=reduce` 可直接体验该分支，不代表操作系统偏好已被模拟。\n\n本地包含失去前台时的暂停与 50px 触控阈值处理；本次 IAB 多页仍报告前台可见，真实后台 visibilitychange 与触屏硬件手势未获得现场验证。390px 是实际浏览器视口，非操作系统或触屏设备仿真。\n\n官方视频为本地约 18.13 秒 1440×810 静音片段；完整 PV、图像、字体和音轨的来源、处理、尺寸及校验见[最终资产清单](assets-manifest.json)。素材权利归相应品牌与作者，学习使用不代表通用开放许可。\n\n[设计研究](../../research/arknights-world.md) · [案例条目](../../entries/arknights-world.json) · [Prompt](../../prompts/arknights-world.md) · [桌面预览](../../previews/arknights-world.jpg) · [手机预览](../../previews/mobile/arknights-world.jpg) · [Demo](index.html)\n",
+      "sha256": "8d290c265abe6ecfced10ac58d40d328db3c240bbc4d3bc61d420fe385d4f401",
+      "bytes": 5227
+    },
+    {
+      "path": "demos/arknights-world/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourceDate\": \"2026-10-07\",\n  \"referenceUrl\": \"https://ak.hypergryph.com/\",\n  \"edition\": \"中国大陆 / 简体中文\",\n  \"scope\": \"本次当下官网的私人学习归档，仅当前最终保留资产\",\n  \"assets\": [\n    {\n      \"file\": \"amiya-e2.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/amiya_e2.6bc004b9.png\",\n      \"use\": \"阿米娅精英二立绘\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 3379229,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 2048,\n      \"height\": 2048,\n      \"dimensions\": [\n        2048,\n        2048\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"8fa6ef35c4384a1d39db7f5d706a1b903c1d498b335dbe43f1196286606c5b17\"\n    },\n    {\n      \"file\": \"amiya-thumb.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/amiya.a410de75.png\",\n      \"use\": \"阿米娅缩略图\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 143206,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 180,\n      \"height\": 360,\n      \"dimensions\": [\n        180,\n        360\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"01a573d2b8c4a6be80d07dc0b90ff09d218829b21624d800f536b4b31038251e\"\n    },\n    {\n      \"file\": \"amiya-voice.mp3\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/audio/amiya_ja.eb4ec8.mp3\",\n      \"use\": \"阿米娅日语角色语音，并非 BGM\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 91941,\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"sha256\": \"7d5426e964e5bbbde085116222eb062e1060ab530b24d8d2fd5258769fd9acad\",\n      \"durationSeconds\": 8.25,\n      \"hasAudio\": true,\n      \"browserDurationSeconds\": 8.203265\n    },\n    {\n      \"file\": \"amiya.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/amiya_e1.739a31c1.png\",\n      \"use\": \"阿米娅精英一立绘\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 584564,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"dimensions\": [\n        1024,\n        1024\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"e59f307fd5efa7a26806dc687d5fbc89fc203532f825dc8eec0d4ebec02ec0aa\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/animation.a945a8f3.jpg\",\n      \"file\": \"animation.jpg\",\n      \"bytes\": 251727,\n      \"sha256\": \"9edd6dddd4eb6e7c4f92839fac954d9cd0160d4668ed081625e9162e0908c906\",\n      \"contentType\": \"image/jpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口图像/标识\",\n      \"width\": 480,\n      \"height\": 1080,\n      \"dimensions\": [\n        480,\n        1080\n      ],\n      \"format\": \"JPEG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/animation_m.45c18cf8.jpg\",\n      \"file\": \"animation_m.jpg\",\n      \"bytes\": 83199,\n      \"sha256\": \"f05a53f644cdb1a5805e4ef3963145981f4c74acfe77913493bb69aaa4a43a62\",\n      \"contentType\": \"image/jpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口移动图像/标识\",\n      \"width\": 660,\n      \"height\": 248,\n      \"dimensions\": [\n        660,\n        248\n      ],\n      \"format\": \"JPEG\"\n    },\n    {\n      \"file\": \"arknights-logo.svg\",\n      \"url\": \"https://ak.hypergryph.com/\",\n      \"use\": \"当前官网 DOM 的 svg_def-title_arknights 原始路径，保持 254×119 viewBox\",\n      \"transform\": \"提取公开 SVG symbol 成独立 SVG 文件\",\n      \"contentType\": \"image/svg+xml\",\n      \"bytes\": 31808,\n      \"sha256\": \"ae96f3a2f7133818ec7daa6da6c5cb4898b81a8e9f1cf5a0cc42bce3e8abdffc\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"width\": 254,\n      \"height\": 119,\n      \"dimensions\": [\n        254,\n        119\n      ],\n      \"format\": \"SVG\"\n    },\n    {\n      \"file\": \"background.jpg\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/bg.c03d00a6.jpg\",\n      \"use\": \"官网场景背景\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 138403,\n      \"contentType\": \"image/jpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"JPEG\",\n      \"sha256\": \"e44c737212d52aa9e4f4be09322bf73bbcf8c6147f8c717e6cfc7bfdb48ceb10\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/Bender-Bold.b4c7998a.woff2\",\n      \"file\": \"Bender-Bold.woff2\",\n      \"bytes\": 12512,\n      \"sha256\": \"fb51b9dd04bfa20a086cde154242a5f896bb1971a34109248e4c8eb0c31d920b\",\n      \"contentType\": \"font/woff2\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"官网原始字体，用于本地工业档案排版\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/Bender-Regular.6950ba72.woff2\",\n      \"file\": \"Bender-Regular.woff2\",\n      \"bytes\": 12000,\n      \"sha256\": \"7cb65e1474ffb62df947dd6b0afe856611e61a36dd3c46653b585aa285458006\",\n      \"contentType\": \"font/woff2\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"官网原始字体，用于本地工业档案排版\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/bg2.e562d9ae.png\",\n      \"file\": \"bg2.png\",\n      \"bytes\": 38264,\n      \"sha256\": \"7e3808771801319cafc5eec7f0764e2feb8c418b96984e1995f7a251ef3dbef4\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"官网章节背景层\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"file\": \"bgm.mp3\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/audio/bgm.ea4286.mp3\",\n      \"use\": \"官网 BGM；未见公开曲名，默认关闭\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 3130419,\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"sha256\": \"3ea3799565739b4fecd05ff986a21d77a44c09b9c6000e1aff0bc6144e870ed1\",\n      \"durationSeconds\": 195.65,\n      \"hasAudio\": true,\n      \"browserDurationSeconds\": 195.651188\n    },\n    {\n      \"file\": \"chen-e2.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/chen_e2.7c62a20a.png\",\n      \"use\": \"陈精英二立绘\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 3842673,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 2048,\n      \"height\": 2048,\n      \"dimensions\": [\n        2048,\n        2048\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"6abe7afc6f2cf9e46e3e0d5c8ce8dba7b0e057869b7ccc5da416b43abae7be35\"\n    },\n    {\n      \"file\": \"chen-thumb.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/chen.4d5cd8a0.png\",\n      \"use\": \"陈缩略图\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 134289,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 180,\n      \"height\": 360,\n      \"dimensions\": [\n        180,\n        360\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"e1ba9ca7df65145725b372daf0fbc5a266053ad747e2a5cefa5a5b8e0bc82b14\"\n    },\n    {\n      \"file\": \"chen-voice.mp3\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/audio/chen_ja.1b54c3.mp3\",\n      \"use\": \"陈日语角色语音，并非 BGM\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 160134,\n      \"contentType\": \"audio/mpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"sha256\": \"188055ebdc4722f05d881e547d76be2572ddb4ff6041ce75ff8e3805bd4d7d9a\",\n      \"durationSeconds\": 15.02,\n      \"hasAudio\": true\n    },\n    {\n      \"file\": \"chen.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/chen_e1.54258041.png\",\n      \"use\": \"陈精英一立绘\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 426774,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"dimensions\": [\n        1024,\n        1024\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"a14f1e8403e672ff0321b74de6907574142d38dc63319faf3ccc7b122abbe759\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/common_mask.55fff2e9.png\",\n      \"file\": \"common_mask.png\",\n      \"bytes\": 452646,\n      \"sha256\": \"743f20f36ef3fbc101388e209193f98862eef6040544eea74836f3758fced213\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"官网工业织物覆盖纹理\",\n      \"width\": 960,\n      \"height\": 540,\n      \"dimensions\": [\n        960,\n        540\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/gallery_active.d45cfc72.png\",\n      \"file\": \"gallery_active.png\",\n      \"bytes\": 124101,\n      \"sha256\": \"d3d49bcfe42beadf5bc8388268e284bb9f910bb1131f458ff00500abd6aca8ef\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MEDIA 插画物件图像\",\n      \"width\": 282,\n      \"height\": 425,\n      \"dimensions\": [\n        282,\n        425\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"file\": \"home-poster.jpg\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8\",\n      \"use\": \"上述官方视频 0.1 秒静态后备帧\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 273961,\n      \"transform\": \"ffmpeg 取静态视频帧\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"JPEG\",\n      \"sha256\": \"ae3941e8d532221bf576dbbfe94a424c3c55ddbda2187ebc5a2800b23410e393\"\n    },\n    {\n      \"file\": \"home.m3u8\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8\",\n      \"use\": \"官网首页 HLS 来源清单，本地视频的保留来源资产\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 197,\n      \"contentType\": \"application/x-mpegurl\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"sha256\": \"ddcb5a1ae4c701de5a7624b6b57fc739069701970e2f33e4d2a14acc7e7c0388\"\n    },\n    {\n      \"file\": \"home.mp4\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape.m3u8\",\n      \"segmentUrls\": [\n        \"https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape-00001.ts\",\n        \"https://web.hycdn.cn/arknights/official/home_videos/PV04_landscape-00002.ts\"\n      ],\n      \"use\": \"官方首屏视频片段，本地无损转封装，去除音轨作为静音背景\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 4191430,\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"版权归原品牌；私人设计学习\",\n      \"transform\": \"官网HLS两段转封装后：缩为1440×810，H.264 CRF26，去音轨、faststart\",\n      \"width\": 1440,\n      \"height\": 810,\n      \"durationSeconds\": 18.13,\n      \"sha256\": \"af52b137550ae4bfa01463c6658866f7fd1d78c99377e604a78cbd663fbc7187\",\n      \"hasAudio\": false,\n      \"dimensions\": [\n        1440,\n        810\n      ]\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/icon-animation.4885daff.png\",\n      \"file\": \"icon-animation.png\",\n      \"bytes\": 3618,\n      \"sha256\": \"8eed388e0bac29ca40763b05c842a2e1b2d7673d50ce3753857d83dc24a4c234\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口图像/标识\",\n      \"width\": 49,\n      \"height\": 57,\n      \"dimensions\": [\n        49,\n        57\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/icon-integrated_strategies.05cfb26b.png\",\n      \"file\": \"icon-integrated_strategies.png\",\n      \"bytes\": 4248,\n      \"sha256\": \"bed54d6c5594bf3a4a16f227fd9b24cfe11a5db8f20f5db23185921f574c9299\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口图像/标识\",\n      \"width\": 59,\n      \"height\": 59,\n      \"dimensions\": [\n        59,\n        59\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/icon-reclamation_algorithm.54ea704e.png\",\n      \"file\": \"icon-reclamation_algorithm.png\",\n      \"bytes\": 3744,\n      \"sha256\": \"e2d64d692b2074b6fc3214639ef0f6c306e2554e2ba327021323b8cff35cae31\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口图像/标识\",\n      \"width\": 63,\n      \"height\": 57,\n      \"dimensions\": [\n        63,\n        57\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/icon-terra_historicus.fa655671.png\",\n      \"file\": \"icon-terra_historicus.png\",\n      \"bytes\": 4419,\n      \"sha256\": \"b1483bdb0ee5c1318ddfc58deae8f40016b8ba0716f920d401ece606c0f3c7d0\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口图像/标识\",\n      \"width\": 36,\n      \"height\": 71,\n      \"dimensions\": [\n        36,\n        71\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/infected.da8e117c.png\",\n      \"file\": \"infected.png\",\n      \"bytes\": 186849,\n      \"sha256\": \"65904ef8f3921be0797471cad6a5faf612fd5d513590bddd7528d884871931bb\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"感染者目录随动预览原图\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"dimensions\": [\n        1024,\n        1024\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/integrated_strategies.e6e35f3c.png\",\n      \"file\": \"integrated_strategies.png\",\n      \"bytes\": 637476,\n      \"sha256\": \"b0e3a8b56c513ee418a55ed7e091b3436abc0ba840c7dce001eee8ddfb8f4a70\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口图像/标识\",\n      \"width\": 480,\n      \"height\": 1080,\n      \"dimensions\": [\n        480,\n        1080\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/integrated_strategies_m.3b3e6f24.png\",\n      \"file\": \"integrated_strategies_m.png\",\n      \"bytes\": 223218,\n      \"sha256\": \"b615a9af304501daf5a739e80773d1deb10fb27ef7cade4c0283ebb2dfc74287\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口移动图像/标识\",\n      \"width\": 660,\n      \"height\": 248,\n      \"dimensions\": [\n        660,\n        248\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"file\": \"kaltsit-e2.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit_e2.a0c208dc.png\",\n      \"use\": \"凯尔希精英二立绘\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 2574398,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 2048,\n      \"height\": 2048,\n      \"dimensions\": [\n        2048,\n        2048\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"cc75f8d39869df5202c320c4635cefae3d5d2ddfcd92dbd854246f8f02cbf702\"\n    },\n    {\n      \"file\": \"kaltsit-thumb.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit.05c0f5e1.png\",\n      \"use\": \"凯尔希缩略图\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 140163,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 180,\n      \"height\": 360,\n      \"dimensions\": [\n        180,\n        360\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"23b374fc0eae7b9722cf91388119e301d32cb62a9b7f928eef917b29426bb16c\"\n    },\n    {\n      \"file\": \"kaltsit-voice.wav\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/audio/kaltsit_ja.5d52d4.wav\",\n      \"use\": \"凯尔希官方日语角色配音，非 BGM\",\n      \"contentType\": \"audio/wav\",\n      \"bytes\": 1957836,\n      \"sha256\": \"9c1e879e3f84d2d3652403ad1d1cdc1ffbbf6dee5cb319434269a86189809cf3\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"durationSeconds\": 22.18934,\n      \"hasAudio\": true,\n      \"format\": \"WAV\"\n    },\n    {\n      \"file\": \"kaltsit.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/kaltsit_e1.a53cfc2e.png\",\n      \"use\": \"凯尔希精英一立绘\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 1171898,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 2048,\n      \"height\": 2048,\n      \"dimensions\": [\n        2048,\n        2048\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"55541275ebb108bf57812b604480b1d939545d78f12f2c3647c5a66c86654d34\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/monster_siren_active.8f01230d.png\",\n      \"file\": \"monster_siren_active.png\",\n      \"bytes\": 101667,\n      \"sha256\": \"4e60be5980eb1addc032485d6aa5c0826735bf082800d844afd1f69c52d7ec84\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MEDIA 塞壬唱片物件图像\",\n      \"width\": 230,\n      \"height\": 279,\n      \"dimensions\": [\n        230,\n        279\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/upload/image/20260929/4b3aa10c9eaa4c046a8cda70845dba17.jpg\",\n      \"file\": \"news-yesterday-sea.jpg\",\n      \"bytes\": 286981,\n      \"sha256\": \"18dd2cb64bd2640d68ad12109ddd3573a42909f95f126ddf185a832020d9a576\",\n      \"contentType\": \"image/jpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"本次官网「昨日海」活动 Banner\",\n      \"width\": 1277,\n      \"height\": 749,\n      \"dimensions\": [\n        1277,\n        749\n      ],\n      \"format\": \"JPEG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/nomadic_city.b6c65b2a.png\",\n      \"file\": \"nomadic_city.png\",\n      \"bytes\": 213422,\n      \"sha256\": \"36102181a055a99923963d147f799abbc067fad4a558fcca1e342bb143f36e42\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"移动城邦目录随动预览原图\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"dimensions\": [\n        1024,\n        1024\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/Novecentosanswide-Bold.9c78a9fd.woff2\",\n      \"file\": \"Novecentosanswide-Bold.woff2\",\n      \"bytes\": 11796,\n      \"sha256\": \"7afdbbadf081980e247734e88f6475b0787b74f805ea6cbf5e06a083bac5da79\",\n      \"contentType\": \"font/woff2\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"官网原始字体，用于本地工业档案排版\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/Novecentosanswide-UltraBold.e5e00ac9.woff2\",\n      \"file\": \"Novecentosanswide-UltraBold.woff2\",\n      \"bytes\": 11252,\n      \"sha256\": \"e5ab43d7c1436adb24cb33f657b6e95a3c9b2b2fb5586d7e2ca5ada92a51c04d\",\n      \"contentType\": \"font/woff2\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"官网原始字体，用于本地工业档案排版\"\n    },\n    {\n      \"file\": \"official-three.js\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/chunks/137e2e70-a4056d5d54967c27.js\",\n      \"use\": \"原站 Three.js 渲染模块93019；仅图形运行时，不包含业务、账户或遥测\",\n      \"contentType\": \"text/javascript\",\n      \"transform\": \"原始模块工厂加独立 IIFE 导出包装\",\n      \"owner\": \"Three.js authors\",\n      \"license\": \"Three.js runtime under MIT; original notices retained in the public vendor module; brand assets separately owned\",\n      \"bytes\": 582374,\n      \"sha256\": \"d9d1937bbf2bb1b3c5455644ce877bac0d3579dcba52e83bd8ef463280c57c78\",\n      \"retrievedAt\": \"2026-10-07\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/operator_active.d697ef2d.png\",\n      \"file\": \"operator_active.png\",\n      \"bytes\": 147239,\n      \"sha256\": \"145bfba0aeeb4f26816644a84e46bc7e355dae788693f9bc1a5eb08284df6ba7\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MEDIA 干员物件图像\",\n      \"width\": 365,\n      \"height\": 313,\n      \"dimensions\": [\n        365,\n        313\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/originium_arts.59c1b8e9.png\",\n      \"file\": \"originium_arts.png\",\n      \"bytes\": 196498,\n      \"sha256\": \"7892c87ede064fa5ec5cd8baaaca22f07a888049a5de62b5d2722bdd4b861ec6\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"源石技艺目录随动预览原图\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"dimensions\": [\n        1024,\n        1024\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/originiums.9f8e9628.png\",\n      \"file\": \"originiums.png\",\n      \"bytes\": 147748,\n      \"sha256\": \"4c6b8d7adb3b13a2cd5b3afed7a80e7db9c0a93adfe716772ae54bfd6bba1ae5\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"源石目录随动预览原图\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"dimensions\": [\n        1024,\n        1024\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/Oswald-DemiBold.633163ca.woff2\",\n      \"file\": \"Oswald-DemiBold.woff2\",\n      \"bytes\": 13368,\n      \"sha256\": \"ce798669bb42d083fc896cd618e806e2168ed132d4004c2b0e26b48562c5d80f\",\n      \"contentType\": \"font/woff2\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"官网原始字体，用于本地工业档案排版\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/particle.f4b76a4f.png\",\n      \"file\": \"particle.png\",\n      \"bytes\": 309,\n      \"sha256\": \"1cb61db3d4026597740408c0d599739d02cc8ff6bfe76106150aa784d8bfa1d0\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"原始 WebGL 点精灵纹理\",\n      \"width\": 16,\n      \"height\": 16,\n      \"dimensions\": [\n        16,\n        16\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/reclamation_algorithm.91dd81b0.png\",\n      \"file\": \"reclamation_algorithm.png\",\n      \"bytes\": 697825,\n      \"sha256\": \"8f37c9fb1cf35bf31d1c183f8f9b209a825d0f7f891c65dd6cf9bc46667c28a5\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口图像/标识\",\n      \"width\": 481,\n      \"height\": 1080,\n      \"dimensions\": [\n        481,\n        1080\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/reclamation_algorithm_m.68fd8eb7.png\",\n      \"file\": \"reclamation_algorithm_m.png\",\n      \"bytes\": 249470,\n      \"sha256\": \"5e7587597311a65bf8e122e140ac7c56c7c43f00d9ebf5ab54321d453ce30070\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口移动图像/标识\",\n      \"width\": 660,\n      \"height\": 248,\n      \"dimensions\": [\n        660,\n        248\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/reunion.0f1a9e2b.png\",\n      \"file\": \"reunion.png\",\n      \"bytes\": 118426,\n      \"sha256\": \"464908dcb35e8aaa569b69eda2f944d286bfe38b7c41c5a81eb9ddfae7313e31\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"整合运动目录随动预览原图\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"dimensions\": [\n        1024,\n        1024\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"file\": \"rhodes-island.png\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/rhodes_island.18d9416c.png\",\n      \"use\": \"罗德岛阵营标识\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"bytes\": 6455,\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"license\": \"商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布\",\n      \"width\": 95,\n      \"height\": 81,\n      \"dimensions\": [\n        95,\n        81\n      ],\n      \"format\": \"PNG\",\n      \"sha256\": \"f6faa9b6dedc3cf091f686d1278e9b6738c4981da27c63f1bcd39e05114eed75\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/rhodes_island.4f587114.png\",\n      \"file\": \"rhodes_island.png\",\n      \"bytes\": 111164,\n      \"sha256\": \"9c260e8b992f81c156d83a88fc9d603d123b1ad8227d3fd532774b4356153457\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"罗德岛目录随动预览原图\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"dimensions\": [\n        1024,\n        1024\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/terra_historicus.70c95ec8.jpg\",\n      \"file\": \"terra_historicus.jpg\",\n      \"bytes\": 119808,\n      \"sha256\": \"11f33e9a55d40a85c46b94aa1aa6a968356a0668cc6fcc4616e5dc964fd6b59e\",\n      \"contentType\": \"image/jpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口图像/标识\",\n      \"width\": 480,\n      \"height\": 1080,\n      \"dimensions\": [\n        480,\n        1080\n      ],\n      \"format\": \"JPEG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/terra_historicus_m.5b88c128.jpg\",\n      \"file\": \"terra_historicus_m.jpg\",\n      \"bytes\": 85467,\n      \"sha256\": \"d9c5637280f3f6ae2f3f9569a07b54da7ddb45a631d668ab3cc258ba7f36e776\",\n      \"contentType\": \"image/jpeg\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MORE 官方入口移动图像/标识\",\n      \"width\": 660,\n      \"height\": 248,\n      \"dimensions\": [\n        660,\n        248\n      ],\n      \"format\": \"JPEG\"\n    },\n    {\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/media/video_active.693c91f3.png\",\n      \"file\": \"video_active.png\",\n      \"bytes\": 149048,\n      \"sha256\": \"cdf992ef7b557d1c61a11f7c8e474b788253e8d6a6d0d5b9d10b3da28bd5965e\",\n      \"contentType\": \"image/png\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\",\n      \"use\": \"MEDIA 影像物件图像\",\n      \"width\": 488,\n      \"height\": 318,\n      \"dimensions\": [\n        488,\n        318\n      ],\n      \"format\": \"PNG\"\n    },\n    {\n      \"file\": \"world-models.json\",\n      \"url\": \"https://web.hycdn.cn/arknights/official/_next/static/chunks/app/page-a96c46ff52d96bd7.js\",\n      \"use\": \"WORLD 七套原始 JSON 点位，1785/3550/4230/3882/4788/3200/5652 点\",\n      \"contentType\": \"application/json\",\n      \"transform\": \"提取公开模块11901/44007/95075/83545/54860/29285/85686，原始点位保持\",\n      \"bytes\": 286117,\n      \"sha256\": \"e5e4695aa9bba3e7a68c958530916ae9a223a2dbbe71725f343b357548d9df49\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"license\": \"官方美术、音频、品牌与字体权利归原权利人；用于授权私人设计研究，学习使用不等于开放商业许可\"\n    }\n  ],\n  \"limitations\": [\n    \"完整六章节和页脚交接；新闻为单幅活动图和三条，MEDIA 为四入口图像网格，MORE 为四个外部入口，深层业务由官网承接。\",\n    \"保留三位干员各E1/E2及真实日语配音；未复现六人、E0和全部语种/背景图。\",\n    \"WORLD 原始七套点位、纹理与隔离的公开 Three 渲染模块；点阵帧调度为本地实现，省略原站20枚独立萤火背景。\",\n    \"首页视频为原 HLS 两段缩至1440×810的18.13秒静音片段；完整独立官方 BGM195.65秒按需开启，未见公开曲名或核验到专用操作音。\",\n    \"中文使用系统字体；本地加载预算、clip-path曲线与页脚高度为明确适配，不冒称整个官网移植。\"\n  ]\n}\n",
+      "sha256": "129a35aa3ce5947b508f95e8b79786e3fbef95598b16486903288469aabb104e",
+      "bytes": 35981
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/arknights-world/assets-manifest.json",
+      "role": "context",
+      "sha256": "129a35aa3ce5947b508f95e8b79786e3fbef95598b16486903288469aabb104e",
+      "bytes": 35981
+    },
+    {
+      "path": "demos/arknights-world/assets/Bender-Bold.woff2",
+      "role": "asset",
+      "sha256": "fb51b9dd04bfa20a086cde154242a5f896bb1971a34109248e4c8eb0c31d920b",
+      "bytes": 12512
+    },
+    {
+      "path": "demos/arknights-world/assets/Bender-Regular.woff2",
+      "role": "asset",
+      "sha256": "7cb65e1474ffb62df947dd6b0afe856611e61a36dd3c46653b585aa285458006",
+      "bytes": 12000
+    },
+    {
+      "path": "demos/arknights-world/assets/Novecentosanswide-Bold.woff2",
+      "role": "asset",
+      "sha256": "7afdbbadf081980e247734e88f6475b0787b74f805ea6cbf5e06a083bac5da79",
+      "bytes": 11796
+    },
+    {
+      "path": "demos/arknights-world/assets/Novecentosanswide-UltraBold.woff2",
+      "role": "asset",
+      "sha256": "e5ab43d7c1436adb24cb33f657b6e95a3c9b2b2fb5586d7e2ca5ada92a51c04d",
+      "bytes": 11252
+    },
+    {
+      "path": "demos/arknights-world/assets/Oswald-DemiBold.woff2",
+      "role": "asset",
+      "sha256": "ce798669bb42d083fc896cd618e806e2168ed132d4004c2b0e26b48562c5d80f",
+      "bytes": 13368
+    },
+    {
+      "path": "demos/arknights-world/assets/amiya-e2.png",
+      "role": "asset",
+      "sha256": "8fa6ef35c4384a1d39db7f5d706a1b903c1d498b335dbe43f1196286606c5b17",
+      "bytes": 3379229
+    },
+    {
+      "path": "demos/arknights-world/assets/amiya-thumb.png",
+      "role": "asset",
+      "sha256": "01a573d2b8c4a6be80d07dc0b90ff09d218829b21624d800f536b4b31038251e",
+      "bytes": 143206
+    },
+    {
+      "path": "demos/arknights-world/assets/amiya-voice.mp3",
+      "role": "asset",
+      "sha256": "7d5426e964e5bbbde085116222eb062e1060ab530b24d8d2fd5258769fd9acad",
+      "bytes": 91941
+    },
+    {
+      "path": "demos/arknights-world/assets/amiya.png",
+      "role": "asset",
+      "sha256": "e59f307fd5efa7a26806dc687d5fbc89fc203532f825dc8eec0d4ebec02ec0aa",
+      "bytes": 584564
+    },
+    {
+      "path": "demos/arknights-world/assets/animation.jpg",
+      "role": "asset",
+      "sha256": "9edd6dddd4eb6e7c4f92839fac954d9cd0160d4668ed081625e9162e0908c906",
+      "bytes": 251727
+    },
+    {
+      "path": "demos/arknights-world/assets/animation_m.jpg",
+      "role": "asset",
+      "sha256": "f05a53f644cdb1a5805e4ef3963145981f4c74acfe77913493bb69aaa4a43a62",
+      "bytes": 83199
+    },
+    {
+      "path": "demos/arknights-world/assets/arknights-logo.svg",
+      "role": "asset",
+      "sha256": "ae96f3a2f7133818ec7daa6da6c5cb4898b81a8e9f1cf5a0cc42bce3e8abdffc",
+      "bytes": 31808
+    },
+    {
+      "path": "demos/arknights-world/assets/background.jpg",
+      "role": "asset",
+      "sha256": "e44c737212d52aa9e4f4be09322bf73bbcf8c6147f8c717e6cfc7bfdb48ceb10",
+      "bytes": 138403
+    },
+    {
+      "path": "demos/arknights-world/assets/bg2.png",
+      "role": "asset",
+      "sha256": "7e3808771801319cafc5eec7f0764e2feb8c418b96984e1995f7a251ef3dbef4",
+      "bytes": 38264
+    },
+    {
+      "path": "demos/arknights-world/assets/bgm.mp3",
+      "role": "asset",
+      "sha256": "3ea3799565739b4fecd05ff986a21d77a44c09b9c6000e1aff0bc6144e870ed1",
+      "bytes": 3130419
+    },
+    {
+      "path": "demos/arknights-world/assets/chen-e2.png",
+      "role": "asset",
+      "sha256": "6abe7afc6f2cf9e46e3e0d5c8ce8dba7b0e057869b7ccc5da416b43abae7be35",
+      "bytes": 3842673
+    },
+    {
+      "path": "demos/arknights-world/assets/chen-thumb.png",
+      "role": "asset",
+      "sha256": "e1ba9ca7df65145725b372daf0fbc5a266053ad747e2a5cefa5a5b8e0bc82b14",
+      "bytes": 134289
+    },
+    {
+      "path": "demos/arknights-world/assets/chen-voice.mp3",
+      "role": "asset",
+      "sha256": "188055ebdc4722f05d881e547d76be2572ddb4ff6041ce75ff8e3805bd4d7d9a",
+      "bytes": 160134
+    },
+    {
+      "path": "demos/arknights-world/assets/chen.png",
+      "role": "asset",
+      "sha256": "a14f1e8403e672ff0321b74de6907574142d38dc63319faf3ccc7b122abbe759",
+      "bytes": 426774
+    },
+    {
+      "path": "demos/arknights-world/assets/common_mask.png",
+      "role": "asset",
+      "sha256": "743f20f36ef3fbc101388e209193f98862eef6040544eea74836f3758fced213",
+      "bytes": 452646
+    },
+    {
+      "path": "demos/arknights-world/assets/gallery_active.png",
+      "role": "asset",
+      "sha256": "d3d49bcfe42beadf5bc8388268e284bb9f910bb1131f458ff00500abd6aca8ef",
+      "bytes": 124101
+    },
+    {
+      "path": "demos/arknights-world/assets/home-poster.jpg",
+      "role": "asset",
+      "sha256": "ae3941e8d532221bf576dbbfe94a424c3c55ddbda2187ebc5a2800b23410e393",
+      "bytes": 273961
+    },
+    {
+      "path": "demos/arknights-world/assets/home.m3u8",
+      "role": "asset",
+      "sha256": "ddcb5a1ae4c701de5a7624b6b57fc739069701970e2f33e4d2a14acc7e7c0388",
+      "bytes": 197
+    },
+    {
+      "path": "demos/arknights-world/assets/home.mp4",
+      "role": "asset",
+      "sha256": "af52b137550ae4bfa01463c6658866f7fd1d78c99377e604a78cbd663fbc7187",
+      "bytes": 4191430
+    },
+    {
+      "path": "demos/arknights-world/assets/icon-animation.png",
+      "role": "asset",
+      "sha256": "8eed388e0bac29ca40763b05c842a2e1b2d7673d50ce3753857d83dc24a4c234",
+      "bytes": 3618
+    },
+    {
+      "path": "demos/arknights-world/assets/icon-integrated_strategies.png",
+      "role": "asset",
+      "sha256": "bed54d6c5594bf3a4a16f227fd9b24cfe11a5db8f20f5db23185921f574c9299",
+      "bytes": 4248
+    },
+    {
+      "path": "demos/arknights-world/assets/icon-reclamation_algorithm.png",
+      "role": "asset",
+      "sha256": "e2d64d692b2074b6fc3214639ef0f6c306e2554e2ba327021323b8cff35cae31",
+      "bytes": 3744
+    },
+    {
+      "path": "demos/arknights-world/assets/icon-terra_historicus.png",
+      "role": "asset",
+      "sha256": "b1483bdb0ee5c1318ddfc58deae8f40016b8ba0716f920d401ece606c0f3c7d0",
+      "bytes": 4419
+    },
+    {
+      "path": "demos/arknights-world/assets/infected.png",
+      "role": "asset",
+      "sha256": "65904ef8f3921be0797471cad6a5faf612fd5d513590bddd7528d884871931bb",
+      "bytes": 186849
+    },
+    {
+      "path": "demos/arknights-world/assets/integrated_strategies.png",
+      "role": "asset",
+      "sha256": "b0e3a8b56c513ee418a55ed7e091b3436abc0ba840c7dce001eee8ddfb8f4a70",
+      "bytes": 637476
+    },
+    {
+      "path": "demos/arknights-world/assets/integrated_strategies_m.png",
+      "role": "asset",
+      "sha256": "b615a9af304501daf5a739e80773d1deb10fb27ef7cade4c0283ebb2dfc74287",
+      "bytes": 223218
+    },
+    {
+      "path": "demos/arknights-world/assets/kaltsit-e2.png",
+      "role": "asset",
+      "sha256": "cc75f8d39869df5202c320c4635cefae3d5d2ddfcd92dbd854246f8f02cbf702",
+      "bytes": 2574398
+    },
+    {
+      "path": "demos/arknights-world/assets/kaltsit-thumb.png",
+      "role": "asset",
+      "sha256": "23b374fc0eae7b9722cf91388119e301d32cb62a9b7f928eef917b29426bb16c",
+      "bytes": 140163
+    },
+    {
+      "path": "demos/arknights-world/assets/kaltsit-voice.wav",
+      "role": "asset",
+      "sha256": "9c1e879e3f84d2d3652403ad1d1cdc1ffbbf6dee5cb319434269a86189809cf3",
+      "bytes": 1957836
+    },
+    {
+      "path": "demos/arknights-world/assets/kaltsit.png",
+      "role": "asset",
+      "sha256": "55541275ebb108bf57812b604480b1d939545d78f12f2c3647c5a66c86654d34",
+      "bytes": 1171898
+    },
+    {
+      "path": "demos/arknights-world/assets/monster_siren_active.png",
+      "role": "asset",
+      "sha256": "4e60be5980eb1addc032485d6aa5c0826735bf082800d844afd1f69c52d7ec84",
+      "bytes": 101667
+    },
+    {
+      "path": "demos/arknights-world/assets/news-yesterday-sea.jpg",
+      "role": "asset",
+      "sha256": "18dd2cb64bd2640d68ad12109ddd3573a42909f95f126ddf185a832020d9a576",
+      "bytes": 286981
+    },
+    {
+      "path": "demos/arknights-world/assets/nomadic_city.png",
+      "role": "asset",
+      "sha256": "36102181a055a99923963d147f799abbc067fad4a558fcca1e342bb143f36e42",
+      "bytes": 213422
+    },
+    {
+      "path": "demos/arknights-world/assets/official-three.js",
+      "role": "asset",
+      "sha256": "d9d1937bbf2bb1b3c5455644ce877bac0d3579dcba52e83bd8ef463280c57c78",
+      "bytes": 582374
+    },
+    {
+      "path": "demos/arknights-world/assets/operator_active.png",
+      "role": "asset",
+      "sha256": "145bfba0aeeb4f26816644a84e46bc7e355dae788693f9bc1a5eb08284df6ba7",
+      "bytes": 147239
+    },
+    {
+      "path": "demos/arknights-world/assets/originium_arts.png",
+      "role": "asset",
+      "sha256": "7892c87ede064fa5ec5cd8baaaca22f07a888049a5de62b5d2722bdd4b861ec6",
+      "bytes": 196498
+    },
+    {
+      "path": "demos/arknights-world/assets/originiums.png",
+      "role": "asset",
+      "sha256": "4c6b8d7adb3b13a2cd5b3afed7a80e7db9c0a93adfe716772ae54bfd6bba1ae5",
+      "bytes": 147748
+    },
+    {
+      "path": "demos/arknights-world/assets/particle.png",
+      "role": "asset",
+      "sha256": "1cb61db3d4026597740408c0d599739d02cc8ff6bfe76106150aa784d8bfa1d0",
+      "bytes": 309
+    },
+    {
+      "path": "demos/arknights-world/assets/reclamation_algorithm.png",
+      "role": "asset",
+      "sha256": "8f37c9fb1cf35bf31d1c183f8f9b209a825d0f7f891c65dd6cf9bc46667c28a5",
+      "bytes": 697825
+    },
+    {
+      "path": "demos/arknights-world/assets/reclamation_algorithm_m.png",
+      "role": "asset",
+      "sha256": "5e7587597311a65bf8e122e140ac7c56c7c43f00d9ebf5ab54321d453ce30070",
+      "bytes": 249470
+    },
+    {
+      "path": "demos/arknights-world/assets/reunion.png",
+      "role": "asset",
+      "sha256": "464908dcb35e8aaa569b69eda2f944d286bfe38b7c41c5a81eb9ddfae7313e31",
+      "bytes": 118426
+    },
+    {
+      "path": "demos/arknights-world/assets/rhodes-island.png",
+      "role": "asset",
+      "sha256": "f6faa9b6dedc3cf091f686d1278e9b6738c4981da27c63f1bcd39e05114eed75",
+      "bytes": 6455
+    },
+    {
+      "path": "demos/arknights-world/assets/rhodes_island.png",
+      "role": "asset",
+      "sha256": "9c260e8b992f81c156d83a88fc9d603d123b1ad8227d3fd532774b4356153457",
+      "bytes": 111164
+    },
+    {
+      "path": "demos/arknights-world/assets/terra_historicus.jpg",
+      "role": "asset",
+      "sha256": "11f33e9a55d40a85c46b94aa1aa6a968356a0668cc6fcc4616e5dc964fd6b59e",
+      "bytes": 119808
+    },
+    {
+      "path": "demos/arknights-world/assets/terra_historicus_m.jpg",
+      "role": "asset",
+      "sha256": "d9c5637280f3f6ae2f3f9569a07b54da7ddb45a631d668ab3cc258ba7f36e776",
+      "bytes": 85467
+    },
+    {
+      "path": "demos/arknights-world/assets/video_active.png",
+      "role": "asset",
+      "sha256": "cdf992ef7b557d1c61a11f7c8e474b788253e8d6a6d0d5b9d10b3da28bd5965e",
+      "bytes": 149048
+    },
+    {
+      "path": "demos/arknights-world/assets/world-models.json",
+      "role": "context",
+      "sha256": "e5e4695aa9bba3e7a68c958530916ae9a223a2dbbe71725f343b357548d9df49",
+      "bytes": 286117
+    },
+    {
+      "path": "demos/arknights-world/fidelity.md",
+      "role": "context",
+      "sha256": "8d290c265abe6ecfced10ac58d40d328db3c240bbc4d3bc61d420fe385d4f401",
+      "bytes": 5227
+    },
+    {
+      "path": "demos/arknights-world/index.html",
+      "role": "source",
+      "sha256": "8de3d25c2f5907ec7763126947ddaed98bf585737c5d1ed28968a3a3de7eb721",
+      "bytes": 12683
+    },
+    {
+      "path": "demos/arknights-world/particles.js",
+      "role": "source",
+      "sha256": "f9dad4d7a6ec29158e4dd441aaca901737d3b54aa2894e0b42fe06c963b9b8c5",
+      "bytes": 9096
+    },
+    {
+      "path": "demos/arknights-world/script.js",
+      "role": "source",
+      "sha256": "e92209d68acda9fa863eafb3627108894aafc22d4ae2e71bed1d8f44194e8407",
+      "bytes": 24146
+    },
+    {
+      "path": "demos/arknights-world/style.css",
+      "role": "source",
+      "sha256": "4b59e1a3c82e5c240ead0ac5d4377dabbb4eeb1bdb162e44e680b67ceb20c65f",
+      "bytes": 22776
+    },
+    {
+      "path": "entries/arknights-world.json",
+      "role": "context",
+      "sha256": "991aca6973560600b752e23269201847fbe4ea03f763bb6de9dfaf4052c6b47e",
+      "bytes": 10043
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/arknights-world.jpg",
+      "role": "preview",
+      "sha256": "1b252ef191bc19fd44c77151fb7d84eee3b6568809351a43200548aaebd2d1c5",
+      "bytes": 102390
+    },
+    {
+      "path": "previews/mobile/arknights-world.jpg",
+      "role": "preview",
+      "sha256": "bc172beb4b9918473f7e4cc816da373cb9ea0cfeefb3d5b814cbb0233ba7a446",
+      "bytes": 30072
+    },
+    {
+      "path": "prompts/arknights-world.md",
+      "role": "context",
+      "sha256": "4b3621ab0f4f95d91294710eba9392101083502a95c60c12e20bccc8745b33de",
+      "bytes": 3390
+    },
+    {
+      "path": "research/arknights-world.md",
+      "role": "context",
+      "sha256": "590f47ab09edc7d3933a4a38ed9e3094a0f081afc04a7f3d407e1e529f729e56",
+      "bytes": 4727
+    },
+    {
+      "path": "research/screenshots/arknights-world-source.jpg",
+      "role": "preview",
+      "sha256": "739be51852540c84d08744ada6c0bc3e8b16882bb0e9ba2ab5d6bd1caf2d3cef",
+      "bytes": 69195
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=arknights-world\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。</dd></div><div class=\"\"><dt>字体排版</dt><dd>原站Bender、Oswald与Novecentosanswide字体；中文沿系统中文粗体档案。</dd></div><div class=\"\"><dt>布局留白</dt><dd>六个固定满屏场景；侧向裁切覆盖交接；右侧同步索引；WORLD桌面目录/左右详情，竖屏图上文下。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方PV、三名干员双阶段立绘/肖像、世界术语六幅图、七套点阵几何、媒体对象与末章四组桌面/竖屏素材。</dd></div><div class=\"\"><dt>线条形状</dt><dd>工业横竖与斜线网格、裁切大字、方框肖像、青色位置条、原始罗德岛/源石等白色粒子点阵；无CSS晶体替代。</dd></div><div class=\"\"><dt>信息层级</dt><dd>全屏载入 → 首页/情报 → 干员 → 世界目录/详情 → 媒体入口 → 更多内容 → 页脚。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>章节按方向横向wipe：桌面1000ms/竖屏600ms；数字及标签300ms离开/300ms进入并100ms分组错列；同源WebGL点阵回聚与指针排斥，声音600/300ms渐变。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>资源载入、编号、网格、点阵和媒体状态都属于同一罗德岛系统；指针、章切方向和声音给出互补反馈。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>真实资源进入前：暗灰全屏品牌与青色进度条 → 资源就绪后淡出 → 建立系统启动感并遮住未就绪场景。</li><li>滚轮、键盘或导航选择章节 → 场景按方向从侧面裁切覆盖、右侧数字/计数/章节名滚出再滚入 → 让空间方向与当前位置共同可读。</li><li>WORLD指针进入点阵 → 原始排斥公式推开附近点、移走后回聚 → 让静态工业标识可被触摸；选择术语会把点阵重组成对应原站形状。</li><li>BGM单独启用后持续跨章，600ms进入、300ms退出 → 用连续声音连接不同档案；人物语音由配音按钮主动触发。</li></ul><h3>怎样凸显产品重点</h3><p>同一来源的2026-10-07中文官网快照：INDEX、INFORMATION、OPERATOR、WORLD、MEDIA、MORE与末端页脚；官方PV、BGM、三人双阶段立绘/日语语音、七组点阵与原始字体。</p><h3>主题与情绪</h3><p>暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。</p></section><section><h2>02 / 交互巧思</h2><ul><li>首次/缓存重载均先显示全屏LOADING；本地按五份实际图片完成数显示进度，再开放初始hash所指章节。</li><li>场景横向遮罩裁切：桌面1000ms、竖屏600ms；同方向重复轮输入锁定，快速反向和导航使用最后目标队列，单次仅一组出/入场景。</li><li>右索引数字、计数和章节名分组滚出/换值/滚入，与换章方向联动；Home/End、PageUp/PageDown及上下方向键可走完六章与页脚。</li><li>桌面WORLD先显示六术语目录与罗德岛点阵；悬停术语的原图预览跟随指针并使用同源形变/RGB偏移shader。点击进入详情，箭头/六段索引换模型，返回恢复目录。</li><li>WORLD使用官网Three导出、七组原始点位、粒子贴图和排斥公式；10,000粒子池中当前模型使用1785–5652点。竖屏直接打开源石详情，粒子在上/文字在下。</li><li>真实BGM默认关闭，单独开关并使用官网600/300ms音量渐变；三人日语语音独立按需播放，换人物或离开干员章暂停旧语音。</li><li>暂停动态独立控制PV/粒子；减少动态提供即时章切和静止同源点阵，保留手动音频选择。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>本次中文官网未提供深浅色切换。</p><p>暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>背景音乐</h3><p>真实原站BGM独立开关，默认静音；600ms渐入/300ms渐出。三人官方日语配音由干员按钮单独播放；页面进入后台暂停音频。</p><p>BGM作为连续环境声音跨越横向章节交接，营造系统进入和世界档案氛围；人物配音提供角色身份反馈。未核验到独立章节/鼠标操作音，未添加臆造音效。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>本次快照归档于2026-10-07；后续官网变动不自动维护。官方美术/音乐版权归鹰角网络，限授权私人设计学习。</li><li>六章及页脚交接保留；情报只保留当前三条与单幅官方Banner，轮播及深层新闻页由官网外链承接。</li><li>干员保留3名/每人E1与E2，原站6名且阿米娅含E0；灰度背景为本地同人物图层，未移植完整背景版/6人滚动肖像轨道。</li><li>WORLD原始模型、Three导出、粒子shader和指针排斥方程迁移；独立场景控制器及帧调度是本地实现，未迁移原站额外20枚firefly层。</li><li>媒体对象取原站图片并改为四入口格；完整办公桌构图、图库/动态干员/内嵌视频目录未迁移，点击返回官网相应入口。</li><li>末章四张官方图与响应式素材保留，分类内部弹层不复制；页脚260px位移为本地收束。</li><li>加载图片集与保底1300ms是本地适配；原站加载五背景图、每次进度用1000ms插值，完成后300ms再退出1000ms。</li><li>查询参数motion=reduce是可审阅分支；不声称模拟了操作系统偏好。</li></ul><h3>适合</h3><p>工业科幻游戏 / 战术角色档案 / 世界设定库</p><h3>谨慎使用</h3><p>轻松生活方式品牌 / 高密度交易表单</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#080a0d\"></i>#080a0d</span><span class=\"swatch\"><i style=\"background:#24282d\"></i>#24282d</span><span class=\"swatch\"><i style=\"background:#00c4df\"></i>#00c4df</span><span class=\"swatch\"><i style=\"background:#eceeef\"></i>#eceeef</span></div><p><b>字体</b> · 原站Bender、Oswald与Novecentosanswide字体；中文沿系统中文粗体档案。<br><b>布局</b> · 六个固定满屏场景；侧向裁切覆盖交接；右侧同步索引；WORLD桌面目录/左右详情，竖屏图上文下。<br><b>动效</b> · 章节按方向横向wipe：桌面1000ms/竖屏600ms；数字及标签300ms离开/300ms进入并100ms分组错列；同源WebGL点阵回聚与指针排斥，声音600/300ms渐变。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>复现【明日方舟中文官网2026-10-07快照】的工业档案舞台，保留同一来源的真实品牌、字体、PV、美术、点阵与BGM。必须先显示全屏暗灰载入页：居中品牌、细边界线、实际图片资源进度、青色进度条，资源就绪后开放指定初始章节。六章INDEX/INFORMATION/OPERATOR/WORLD/MEDIA/MORE使用固定满屏舞台，不用普通长页面滚动；滚轮、章节导航和键盘按方向触发侧向裁切覆盖，桌面1000ms、竖屏600ms，右侧编号/计数/章节名在遮罩中滚出、换值、滚入。单一状态控制器处理快速反向和最后导航请求，稳定时只有一章可交互。WORLD必须用原站七套点位、粒子贴图、WebGL point shader与指针排斥方程，保留桌面目录+原图随指针形变预览、详情模型重组、左右箭头/六段索引/返回；390px竖屏直接打开第一项详情，图上文下。官方BGM与干员日语语音分开按需播放，BGM默认静音、600ms渐入/300ms渐出、跨章保持连续，离开前台停止音频；动态暂停和减少动态独立于用户声音选择，减少动态使用即时章节切换和静止真实点阵。原站固定暗色，不增设虚构浅色主题。保留三名干员E1/E2及明确子集边界；情报、媒体与更多章节可缩短内容，但真实入口、全章交接与末端页脚须连续且可反向返回。仅存最终资源与单一终态说明，证据和脚本留在仓库外。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要用普通Observer淡入冒充全屏侧向章切；不要用静态CSS晶体或虚构粒子形状；不要漏掉首次载入/反向方向/同步滚号；不要自动出声、臆造操作音/曲名/主题切换；不要把子集、外链及本地调度说成完整官网移植。</p></details><h3>改造练习</h3><p>在已授权角色素材不变时，加入一个可查询的干员职业目录，保持工业档案的网格与状态语汇。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://ak.hypergryph.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Hypergryph · 明日方舟中文官方网站 ↗</a><small>2026-10-07当前快照；新鲜入场、缓存重载、六章正反路径、WORLD指针/详情与390px竖屏实访，公开模块/CSS提供原始模型、shader、章切和声音参数。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Pause, Stop, Hide ↗</a><small>持续自动动态应有暂停；本地PV可停止，减少动态初始停止。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/tabs/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Tabs Pattern ↗</a><small>键盘与选择状态的规范参考；本地以原生按钮/aria-pressed实现角色和阶段选择。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Farknights-world.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "b6d5a2a24e18ecebdbb634ff3f8089573b455edd7841e96e7d8724df8527999d",
+    "bytes": 10676
+  }
+}

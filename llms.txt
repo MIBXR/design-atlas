@@ -1,0 +1,15 @@
+# Design Atlas
+
+Frontend design references with human previews and machine-readable context.
+The source of truth is entries/, research/, and demos/. Brand studies are dated
+snapshots; their fidelity boundaries and asset attribution travel with each case.
+
+- [Agent workflow](AGENT.md): keyword search, complete context, source retrieval and export.
+- [Catalog](agent/catalog.json): candidate summaries and case bundle paths/hashes.
+- [Human preview](index.html): interactive browsing, comparisons and demos.
+- [Skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas): lightweight workflow with a pinned upstream commit.
+
+Read catalog first, then agent/cases/<id>.json. Case bundles preserve the original
+entry, full documents, and files with bytes/SHA256. Get source only when selected.
+Use one full GitHub commit SHA for catalog, bundle and files when reproducibility
+is required. Adapt mechanisms to actual user requirements and owned assets.

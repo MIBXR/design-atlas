@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "id": "linear-workflow",
+  "entry": {
+    "id": "linear-workflow",
+    "order": 3,
+    "title": "Linear — 深色产品开发系统",
+    "subtitle": "The product development system for teams and agents",
+    "category": "产品",
+    "country": "美国",
+    "tags": [
+      "Linear",
+      "真实品牌",
+      "深色",
+      "产品界面",
+      "工作流",
+      "低对比边框"
+    ],
+    "summary": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
+    "accent": "#a79ad6",
+    "background": "#08090a",
+    "principles": [
+      "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
+      "配色、文字密度、边框与选中状态共同表达本页面的产品语气。",
+      "动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。",
+      "第一方素材保持比例；手机保留原站实际变体。"
+    ],
+    "productFocus": "通过真实官网issue结构展示团队与智能体协作：侧栏、任务正文、活动评论、属性及状态，随后把收件和规划纳入同一流程。",
+    "interaction": [
+      "进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。",
+      "Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。",
+      "Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。",
+      "AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
+      "Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。",
+      "手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。"
+    ],
+    "theme": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
+    "constraints": [
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
+    ],
+    "useCases": [
+      "开发者工具官网",
+      "复杂协作产品",
+      "工作流程展示"
+    ],
+    "avoid": [
+      "泛用霓虹SaaS模板",
+      "把营销页变成满屏仪表盘",
+      "滚轮接管与大段不可读的小字"
+    ],
+    "tokens": {
+      "palette": [
+        "#08090a",
+        "#191a1c",
+        "#f7f8f8",
+        "#929298",
+        "#a79ad6"
+      ],
+      "type": "官方 Inter variable 本地字体；桌面64px主标题、紧行高、任务22px、UI12–14px。",
+      "layout": "1280px最大宽度；左标题+横向说明；235px侧栏/任务/210px属性；收件与规划两节。",
+      "motion": "Favorites直接切换issue、任务看板、insights和project；Working文字局部2秒linear扫光；导航指针进入展开，160ms入场为本地近似。"
+    },
+    "composition": {
+      "color": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
+      "typography": "官方 Inter variable 本地字体；桌面64px主标题、紧行高、任务22px、UI12–14px。",
+      "layout": "首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。",
+      "imagery": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
+      "shape": "细边框、10–15px窗口、5px行项与小圆胶囊。",
+      "hierarchy": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。",
+      "motion": "进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。；Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。；Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。；AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
+      "coherence": "消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。",
+      "scroll": "首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。"
+    },
+    "sources": [
+      {
+        "title": "Linear 当前公开页面",
+        "url": "https://linear.app/",
+        "note": "采集日期 2026-10-07；英文首页",
+        "type": "实例"
+      },
+      {
+        "title": "Linear 2026 design refresh",
+        "url": "https://linear.app/now/behind-the-latest-design-refresh",
+        "type": "理论",
+        "note": "2026-03-12应用UI设计：导航退后、低饱和、内容优先；用于层级分析。"
+      },
+      {
+        "title": "Linear UI redesign",
+        "url": "https://linear.app/now/how-we-redesigned-the-linear-ui",
+        "type": "理论",
+        "note": "2024应用界面改版文章，辅助解释信息层级。"
+      },
+      {
+        "title": "WAI Tabs Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+        "type": "规范",
+        "note": "任务与分类选择的键盘和选择状态参考。"
+      }
+    ],
+    "prompt": "以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
+    "demo": "demos/linear-workflow/index.html",
+    "preview": "previews/linear-workflow.jpg",
+    "research": "research/linear-workflow.md",
+    "exercise": "以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。",
+    "referenceUrl": "https://linear.app/",
+    "implementation": "reference-study",
+    "fidelity": "demos/linear-workflow/fidelity.md",
+    "assetManifest": "demos/linear-workflow/assets-manifest.json",
+    "referencePreview": "research/screenshots/linear-workflow-source.png",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。",
+      "designReason": "固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前首页没有配乐、音效和音视频播放器。",
+      "interactionRole": "消息、任务板和代码状态承担产品叙事，不靠声音强调任务。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/linear-workflow.md",
+      "role": "research",
+      "content": "# Linear：当前页面的设计与交互\n\n来源：[https://linear.app/](https://linear.app/)。采集日期：2026-10-07。范围：英文首页，单一当前快照。\n\n固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。\n\n## 触发、视觉响应与用途\n\n- 进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。\n\n- Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。\n\n- Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。\n\n- AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。\n\n- Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。\n\n- 手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。\n\n## 完整浏览路径\n\n首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。\n\n## 原站事实和复现边界\n\n源公共模块提供首屏 1.3s+1.5s、Intake 2000/1000/1400/800ms，以及 AI 思考/交错时间；匿名源 Send “create issues” 实测回复和卡插入。本地两次发送实测 Todo/In progress 数量变化、编辑及 Dracula 主题。\n\n消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。\n\n## 主题与声音\n\n营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。\n\n当前首页没有配乐、音效和音视频播放器。 消息、任务板和代码状态承担产品叙事，不靠声音强调任务。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 可复用 Prompt\n\n以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n",
+      "sha256": "bcaff33c665233ea000949bb09b64d8742f1279b79f208a62b07133e91285db5",
+      "bytes": 3750
+    },
+    {
+      "path": "prompts/linear-workflow.md",
+      "role": "prompt",
+      "content": "# Linear — 深色产品开发系统 · 复用 Prompt\n\n由 [结构化案例](../entries/linear-workflow.json) 自动生成。参考观察与具体边界见 [调研](../research/linear-workflow.md)。\n\n## 正向 Prompt\n\n以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/linear-workflow/index.html) · [返回参考库](../index.html#style/linear-workflow)\n",
+      "sha256": "c6be239f53a29dfafdc605d5431c492d1784eefcf73346be037423138a3651f9",
+      "bytes": 2223
+    },
+    {
+      "path": "demos/linear-workflow/fidelity.md",
+      "role": "fidelity",
+      "content": "# Linear：当前页面的设计与交互\n\n来源：[https://linear.app/](https://linear.app/)。采集日期：2026-10-07。范围：英文首页，单一当前快照。\n\n固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。\n\n## 触发、视觉响应与用途\n\n- 进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。\n\n- Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。\n\n- Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。\n\n- AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。\n\n- Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。\n\n- 手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。\n\n## 完整浏览路径\n\n首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。\n\n## 原站事实和复现边界\n\n源公共模块提供首屏 1.3s+1.5s、Intake 2000/1000/1400/800ms，以及 AI 思考/交错时间；匿名源 Send “create issues” 实测回复和卡插入。本地两次发送实测 Todo/In progress 数量变化、编辑及 Dracula 主题。\n\n消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。\n\n## 主题与声音\n\n营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。\n\n当前首页没有配乐、音效和音视频播放器。 消息、任务板和代码状态承担产品叙事，不靠声音强调任务。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 可复用 Prompt\n\n以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n",
+      "sha256": "bcaff33c665233ea000949bb09b64d8742f1279b79f208a62b07133e91285db5",
+      "bytes": 3750
+    },
+    {
+      "path": "demos/linear-workflow/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"linear-workflow\",\n  \"sourcePage\": \"https://linear.app/\",\n  \"scope\": \"本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/hero-atmosphere.webp\",\n      \"sourceUrl\": \"https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/6600ca96-e49b-4fd9-c03a-7979faddad00/f=auto,fit=scale-down,metadata=none,width=2560\",\n      \"purpose\": \"官方首屏氛围图片\",\n      \"width\": 2560,\n      \"height\": 1188,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/png\",\n      \"bytes\": 106586,\n      \"status\": \"downloaded\",\n      \"sha256\": \"922674803bbd9b3ac8c3b097e34d101fd4bac349cbd953e58fb32df2092cb7cf\"\n    },\n    {\n      \"file\": \"assets/product-depth.webp\",\n      \"sourceUrl\": \"https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/c7fa8f5f-d439-4329-6a65-de549b51e300/f=auto,fit=scale-down,metadata=none,width=2560\",\n      \"purpose\": \"官方首屏第二张氛围/深度图片\",\n      \"width\": 2560,\n      \"height\": 1429,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 162273,\n      \"status\": \"downloaded\",\n      \"sha256\": \"6553308a3ae76d09f080a96ba62a19cffd28fb6e444b37bf87f4bce466d4be26\"\n    },\n    {\n      \"file\": \"assets/karri.png\",\n      \"sourceUrl\": \"https://webassets.linear.app/images/ornj730p/production/f79251b06e9edeeacbf2875384defe629e000b3c-352x352.png?w=72&q=95&auto=format&dpr=2\",\n      \"purpose\": \"官网issue人物头像\",\n      \"width\": 144,\n      \"height\": 144,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 24269,\n      \"status\": \"downloaded\",\n      \"sha256\": \"caaca14c6685ae0a9003f29a63007c4062373259248174a59ea898dce94350f4\"\n    },\n    {\n      \"file\": \"assets/inter.woff2\",\n      \"sourceUrl\": \"https://static.linear.app/fonts/InterVariable.woff2?v=4.1\",\n      \"purpose\": \"官方页面Inter变量字体\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 352240,\n      \"status\": \"downloaded\",\n      \"sha256\": \"693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3\"\n    },\n    {\n      \"file\": \"assets/logo.svg\",\n      \"sourceUrl\": \"https://linear.app/\",\n      \"purpose\": \"官方首页原样提取的品牌SVG\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅本地私人学习，无品牌关联。\",\n      \"status\": \"downloaded\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 3116,\n      \"sha256\": \"4925c827664f5db037b12e815b8091d0b62b8fd702fe230e7b8ba14ccc240f1b\"\n    }\n  ]\n}",
+      "sha256": "00aaf13e5d7e7d83fdc56125b5561b07f6a9d076a7eed42eac1da1c2954e6574",
+      "bytes": 3026
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/linear-workflow/assets-manifest.json",
+      "role": "context",
+      "sha256": "00aaf13e5d7e7d83fdc56125b5561b07f6a9d076a7eed42eac1da1c2954e6574",
+      "bytes": 3026
+    },
+    {
+      "path": "demos/linear-workflow/assets/hero-atmosphere.webp",
+      "role": "asset",
+      "sha256": "922674803bbd9b3ac8c3b097e34d101fd4bac349cbd953e58fb32df2092cb7cf",
+      "bytes": 106586
+    },
+    {
+      "path": "demos/linear-workflow/assets/inter.woff2",
+      "role": "asset",
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+      "bytes": 352240
+    },
+    {
+      "path": "demos/linear-workflow/assets/karri.png",
+      "role": "asset",
+      "sha256": "caaca14c6685ae0a9003f29a63007c4062373259248174a59ea898dce94350f4",
+      "bytes": 24269
+    },
+    {
+      "path": "demos/linear-workflow/assets/logo.svg",
+      "role": "asset",
+      "sha256": "4925c827664f5db037b12e815b8091d0b62b8fd702fe230e7b8ba14ccc240f1b",
+      "bytes": 3116
+    },
+    {
+      "path": "demos/linear-workflow/assets/product-depth.webp",
+      "role": "asset",
+      "sha256": "6553308a3ae76d09f080a96ba62a19cffd28fb6e444b37bf87f4bce466d4be26",
+      "bytes": 162273
+    },
+    {
+      "path": "demos/linear-workflow/fidelity.md",
+      "role": "context",
+      "sha256": "bcaff33c665233ea000949bb09b64d8742f1279b79f208a62b07133e91285db5",
+      "bytes": 3750
+    },
+    {
+      "path": "demos/linear-workflow/index.html",
+      "role": "source",
+      "sha256": "71c3877c1646913fb8a66350fcdbf1a0390c0f06287ada73babb262d188fe7ce",
+      "bytes": 18493
+    },
+    {
+      "path": "demos/linear-workflow/journey.js",
+      "role": "source",
+      "sha256": "d09fa4674517624ece35963d212f2e2feb10e6f962a6dac0670deebd39c8e8e4",
+      "bytes": 5132
+    },
+    {
+      "path": "demos/linear-workflow/script.js",
+      "role": "source",
+      "sha256": "d597e616fcd47d5205c2aab9101db57130374ef3bd0f97bddfd3b541a26a15fc",
+      "bytes": 5612
+    },
+    {
+      "path": "demos/linear-workflow/style.css",
+      "role": "source",
+      "sha256": "14553999ad60b9f19fe603706d24b5482a2a64b7c32e584d90572097d7936ad7",
+      "bytes": 22648
+    },
+    {
+      "path": "entries/linear-workflow.json",
+      "role": "context",
+      "sha256": "63bbe171931884b1cc80fc0e96d804413710d3665902dd2c8e138a8d5724af6d",
+      "bytes": 8974
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/linear-workflow.jpg",
+      "role": "preview",
+      "sha256": "acd8e34503860841de0a913c8a4b69959a3890995d1c4ef2ea342318d007813b",
+      "bytes": 79136
+    },
+    {
+      "path": "previews/mobile/linear-workflow.jpg",
+      "role": "preview",
+      "sha256": "879c88e22ea0eb8fe04929985e2f2c96f3f36454b910ac4fb9d29689d37f9e0a",
+      "bytes": 32351
+    },
+    {
+      "path": "prompts/linear-workflow.md",
+      "role": "context",
+      "sha256": "c6be239f53a29dfafdc605d5431c492d1784eefcf73346be037423138a3651f9",
+      "bytes": 2223
+    },
+    {
+      "path": "research/linear-workflow.md",
+      "role": "context",
+      "sha256": "bcaff33c665233ea000949bb09b64d8742f1279b79f208a62b07133e91285db5",
+      "bytes": 3750
+    },
+    {
+      "path": "research/screenshots/linear-workflow-source.png",
+      "role": "preview",
+      "sha256": "218eb677d0a6004dcd0227b4e4bbf1657982ff26b32df12643f7d13cf2bde951",
+      "bytes": 285471
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=linear-workflow\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官方 Inter variable 本地字体；桌面64px主标题、紧行高、任务22px、UI12–14px。</dd></div><div class=\"\"><dt>布局留白</dt><dd>首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。</dd></div><div class=\"\"><dt>图像图标</dt><dd>固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。</dd></div><div class=\"\"><dt>线条形状</dt><dd>细边框、10–15px窗口、5px行项与小圆胶囊。</dd></div><div class=\"\"><dt>信息层级</dt><dd>固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。；Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。；Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。；AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。</dd></div><div class=\"\"><dt>scroll</dt><dd>首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。</li><li>配色、文字密度、边框与选中状态共同表达本页面的产品语气。</li><li>动作有明确触发与状态关系，采用同一源 URL 的当前页面，近似和未验证状态分别说明。</li><li>第一方素材保持比例；手机保留原站实际变体。</li></ul><h3>怎样凸显产品重点</h3><p>通过真实官网issue结构展示团队与智能体协作：侧栏、任务正文、活动评论、属性及状态，随后把收件和规划纳入同一流程。</p><h3>主题与情绪</h3><p>营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。</li><li>Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。</li><li>Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。</li><li>AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。</li><li>Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。</li><li>手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。</p><p>固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>当前首页没有配乐、音效和音视频播放器。</p><p>消息、任务板和代码状态承担产品叙事，不靠声音强调任务。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。</li><li>消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。</li><li>品牌与官方素材仅用于此个人参考库；归档来源与权利。</li><li>减少动态保留可读内容、键盘焦点和手动选择。</li></ul><h3>适合</h3><p>开发者工具官网 / 复杂协作产品 / 工作流程展示</p><h3>谨慎使用</h3><p>泛用霓虹SaaS模板 / 把营销页变成满屏仪表盘 / 滚轮接管与大段不可读的小字</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#08090a\"></i>#08090a</span><span class=\"swatch\"><i style=\"background:#191a1c\"></i>#191a1c</span><span class=\"swatch\"><i style=\"background:#f7f8f8\"></i>#f7f8f8</span><span class=\"swatch\"><i style=\"background:#929298\"></i>#929298</span><span class=\"swatch\"><i style=\"background:#a79ad6\"></i>#a79ad6</span></div><p><b>字体</b> · 官方 Inter variable 本地字体；桌面64px主标题、紧行高、任务22px、UI12–14px。<br><b>布局</b> · 1280px最大宽度；左标题+横向说明；235px侧栏/任务/210px属性；收件与规划两节。<br><b>动效</b> · Favorites直接切换issue、任务看板、insights和project；Working文字局部2秒linear扫光；导航指针进入展开，160ms入场为本地近似。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。</p></details><h3>改造练习</h3><p>以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://linear.app/\" target=\"_blank\" rel=\"noopener noreferrer\">Linear 当前公开页面 ↗</a><small>采集日期 2026-10-07；英文首页</small></div><div class=\"source-item\"><span class=\"source-badge\">理论</span><a href=\"https://linear.app/now/behind-the-latest-design-refresh\" target=\"_blank\" rel=\"noopener noreferrer\">Linear 2026 design refresh ↗</a><small>2026-03-12应用UI设计：导航退后、低饱和、内容优先；用于层级分析。</small></div><div class=\"source-item\"><span class=\"source-badge\">理论</span><a href=\"https://linear.app/now/how-we-redesigned-the-linear-ui\" target=\"_blank\" rel=\"noopener noreferrer\">Linear UI redesign ↗</a><small>2024应用界面改版文章，辅助解释信息层级。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/tabs/\" target=\"_blank\" rel=\"noopener noreferrer\">WAI Tabs Pattern ↗</a><small>任务与分类选择的键盘和选择状态参考。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Flinear-workflow.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "52ff423ba35cb45c371a4fb39bce455ef14ba6d6cf042e0ce49734d60a01e987",
+    "bytes": 9804
+  }
+}

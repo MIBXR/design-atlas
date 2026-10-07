@@ -87,6 +87,7 @@
   "negativePrompt": "不要混合透视消失点与等轴投影；不要复制原游戏地图；不要自动旋转、强制视差或密集热点；不要声称 SVG 是真正可旋转的实时 3D。",
   "demo": "demos/isometric-3d/index.html",
   "preview": "previews/isometric-3d.jpg",
+  "theoryVerifiedAt": "2026-10-07",
   "research": "research/isometric-3d.md",
   "exercise": "把浮岛替换成数据平台的等轴系统图，让三种焦点分别对应计算、存储、网络，保留统一坐标与分层解释。",
   "composition": {

@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "id": "rijksmuseum-art",
+  "entry": {
+    "id": "rijksmuseum-art",
+    "order": 26,
+    "title": "Rijksmuseum · 全幅摄影与巨大字标",
+    "subtitle": "Dutch masterpieces, immersive museum visit",
+    "category": "艺术/文化",
+    "country": "荷兰",
+    "tags": [
+      "荷兰",
+      "艺术馆",
+      "全幅摄影",
+      "超大字标",
+      "橙色票务",
+      "Rijksmuseum"
+    ],
+    "summary": "实访英语官方首页，复现夜巡观展全屏摄影、巨幅RIJKS MUSEUM白色字标、底缘小标题以及连续摄影专题。",
+    "accent": "#db5526",
+    "background": "#242424",
+    "principles": [
+      "以作品和观众的真实关系主导首屏，主标题留在底缘。",
+      "品牌SVG跨越几乎整幅宽度；图像仍是内容主体。",
+      "橙色矩形票务按钮在摄影上有明确优先级。",
+      "家庭月全屏摄影后接两栏展览预告，图文密度随内容改变。"
+    ],
+    "productFocus": "参观体验、馆藏名作与购票入口。摄影提供作品尺度和到访情境，底缘文字补充时间/活动条件。",
+    "interaction": [
+      "进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。",
+      "打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。",
+      "悬停票务／展览与语言：橙色动作颜色反馈、链接下划线与语言列表。 行动在原色摄影上依然清晰。"
+    ],
+    "theme": "深色摄影、白色窄体品牌字体、巨大字标与橙色矩形CTA。",
+    "constraints": [
+      "每个摄影专题保持约100vh，手机使用100svh避免地址栏引起布局跳动。",
+      "不要把摄影裁成圆角卡片，也不要给首屏添加摘要卡片。",
+      "字标使用完整官方SVG，标题与正文使用两字重Rijksmuseum字体。",
+      "照片底部加局部黑色渐变支撑文字对比；不对整张照片做滤镜风格化。",
+      "减弱动态模式仍能看到全部内容，滚动保持浏览器原生行为。",
+      "保留私人学习署名与真实票务跳转，不模拟付款或假装门票已预订。",
+      "展览局部介绍与搜索dialog为本地练习补充；完整藏品检索、预约与会员不复制。"
+    ],
+    "useCases": [
+      "艺术馆参观入口",
+      "摄影主导的场所展示",
+      "大型艺术节入口"
+    ],
+    "avoid": [
+      "摄影不足的抽象装饰页面",
+      "信息必须首屏密集呈现的后台"
+    ],
+    "tokens": {
+      "palette": [
+        "#242424",
+        "#ffffff",
+        "#db5526"
+      ],
+      "type": "官方Rijksmuseum Normal/Bold；桌面正文17px、短标题约23px。",
+      "layout": "100vh全幅摄影 → 100vh家庭月 → 两列整屏摄影 → 深色实用信息。",
+      "motion": "自然滚动满屏摄影；全屏菜单打开500ms linear淡入，关闭直接隐藏；搜索/预览为本地补充。减少动态取消过渡，主视觉无自动循环。"
+    },
+    "sources": [
+      {
+        "title": "Rijksmuseum official English homepage",
+        "url": "https://www.rijksmuseum.nl/en",
+        "type": "实例",
+        "note": "2026-10-07：英语首页《夜巡》观众摄影、巨幅字标、家庭月、两列专题与全屏菜单。"
+      },
+      {
+        "title": "Rijksmuseum Accessibility Statement",
+        "url": "https://www.rijksmuseum.nl/en/visit/accessibility/accessibility-statement",
+        "type": "规范",
+        "note": "网站服务参观/票务和在线收藏；官方以WCAG2.2 AA为目标并列举未达项，不能称全面合规。"
+      },
+      {
+        "title": "W3C WAI Disclosure Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+        "type": "规范",
+        "note": "展开内容与aria-expanded的实现参考；本地菜单及dialog有独立语义，不证明原站采用此规范。"
+      }
+    ],
+    "prompt": "为[项目]制作基于Rijksmuseum · 全幅摄影与巨大字标的局部交互学习页面。参考https://www.rijksmuseum.nl/en，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：照片本身提供丰富色彩，白色文字和橙色票务是UI的少数稳定颜色。 字体：巨大完整SVG字标与小尺度大写短标题形成尺度差，品牌正文保持窄体节奏。 版式：导航上覆摄影；首屏100vh，底缘左文右合作方；手机隐藏次要导航与合作方。 图像：夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。 形状：矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。 层级：品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。 协调：统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。 关键流程：进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。 打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。 悬停票务／展览与语言：橙色动作颜色反馈、链接下划线与语言列表。 行动在原色摄影上依然清晰。 主题：全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。 保持照片亮度与白字对比；橙色票务在不同图像上持续突出。 声音：当前入口没有独立BGM或音频按钮。 大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。",
+    "negativePrompt": "不要虚构品牌，不用抽象blob代替夜巡摄影，不把每一节包装成圆角卡片，不用通用SaaS居中巨字模板。",
+    "demo": "demos/rijksmuseum-art/index.html",
+    "preview": "previews/rijksmuseum-art.jpg",
+    "referencePreview": "research/screenshots/rijksmuseum-art-source.jpg",
+    "research": "research/rijksmuseum-art.md",
+    "exercise": "替换一组经过授权的场所摄影，保留文字与图像的职责分工；检查手机裁切是否保住人物与作品。",
+    "composition": {
+      "color": "照片本身提供丰富色彩，白色文字和橙色票务是UI的少数稳定颜色。",
+      "typography": "巨大完整SVG字标与小尺度大写短标题形成尺度差，品牌正文保持窄体节奏。",
+      "layout": "导航上覆摄影；首屏100vh，底缘左文右合作方；手机隐藏次要导航与合作方。",
+      "imagery": "夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。",
+      "shape": "矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。",
+      "hierarchy": "品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。",
+      "motion": "进入与连续上下浏览时巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。；打开／关闭菜单时全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。；悬停票务／展览与语言时橙色动作颜色反馈、链接下划线与语言列表。",
+      "coherence": "统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。"
+    },
+    "referenceUrl": "https://www.rijksmuseum.nl/en",
+    "implementation": "reference-study",
+    "fidelity": "demos/rijksmuseum-art/fidelity.md",
+    "assetManifest": "demos/rijksmuseum-art/assets-manifest.json",
+    "edition": "2026-10-07；英语公开官网局部",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。",
+      "designReason": "保持照片亮度与白字对比；橙色票务在不同图像上持续突出。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前入口没有独立BGM或音频按钮。",
+      "interactionRole": "大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。"
+    },
+    "capturedAt": "2026-10-07"
+  },
+  "documents": [
+    {
+      "path": "research/rijksmuseum-art.md",
+      "role": "research",
+      "content": "# Rijksmuseum · 全幅摄影与巨大字标\n\n观察：**2026-10-07**。[真实页面](https://www.rijksmuseum.nl/en)。国家／地区指参考机构来源，不概括一个国家的所有设计。\n\n## 观察范围与来源\n\n官网入口到页尾和返回、全屏菜单与真实照片层级，公开CSS检查菜单500ms linear。\n\n- [Rijksmuseum official English homepage](https://www.rijksmuseum.nl/en)（实例）：2026-10-07：英语首页《夜巡》观众摄影、巨幅字标、家庭月、两列专题与全屏菜单。\n- [Rijksmuseum Accessibility Statement](https://www.rijksmuseum.nl/en/visit/accessibility/accessibility-statement)（规范）：网站服务参观/票务和在线收藏；官方以WCAG2.2 AA为目标并列举未达项，不能称全面合规。\n- [W3C WAI Disclosure Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)（规范）：展开内容与aria-expanded的实现参考；本地菜单及dialog有独立语义，不证明原站采用此规范。\n\n## 构成与设计逻辑\n\n实访英语官方首页，复现夜巡观展全屏摄影、巨幅RIJKS MUSEUM白色字标、底缘小标题以及连续摄影专题。\n\n以下构成职责是本库对观察的分析，时序和动作分别在下一表注明。\n\n| 元素 | 职责与约束 |\n|---|---|\n| 配色 | 照片本身提供丰富色彩，白色文字和橙色票务是UI的少数稳定颜色。 |\n| 字体 | 巨大完整SVG字标与小尺度大写短标题形成尺度差，品牌正文保持窄体节奏。 |\n| 排版 | 导航上覆摄影；首屏100vh，底缘左文右合作方；手机隐藏次要导航与合作方。 |\n| 图像 | 夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。 |\n| 形状 | 矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。 |\n| 层级 | 品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。 |\n| 整体协调 | 统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。 |\n\n## 交互巧思与本地对应\n\n| 触发 | 原站行为与本地对应 | 设计作用 | 范围与差异 |\n|---|---|---|---|\n| 进入与连续上下浏览 | 巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 | 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。 | 不人为增加全页锁滚／遮罩转场。 |\n| 打开／关闭菜单 | 全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 | 给导航独立的视觉场景，保持品牌和空间关系。 | 对应当前CSS；本地搜索／展览dialog是额外的局部学习功能。 |\n| 悬停票务／展览与语言 | 橙色动作颜色反馈、链接下划线与语言列表。 | 行动在原色摄影上依然清晰。 | 预约／藏品外链回官方，不伪装交易成功。 |\n\n## 主题与声音\n\n**主题（fixed）：**全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。 保持照片亮度与白字对比；橙色票务在不同图像上持续突出。\n\n**声音（none）：**当前入口没有独立BGM或音频按钮。 大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。\n\n## 边界与练习\n\n展览局部介绍与搜索dialog为本地练习补充；完整藏品检索、预约与会员不复制。\n\n替换一组经过授权的场所摄影，保留文字与图像的职责分工；检查手机裁切是否保住人物与作品。\n\n[Demo](../demos/rijksmuseum-art/index.html) · [桌面预览](../previews/rijksmuseum-art.jpg) · [手机预览](../previews/mobile/rijksmuseum-art.jpg) · [Prompt](../prompts/rijksmuseum-art.md) · [素材归属与hash](../demos/rijksmuseum-art/assets-manifest.json)\n",
+      "sha256": "d65bc981fafaca3e9f89e58d93c19dd9fd83fe9bfbbaf27dab365dab31e06fb3",
+      "bytes": 3789
+    },
+    {
+      "path": "prompts/rijksmuseum-art.md",
+      "role": "prompt",
+      "content": "# Rijksmuseum · 全幅摄影与巨大字标 · 复用 Prompt\n\n由 [结构化案例](../entries/rijksmuseum-art.json) 自动生成。参考观察与具体边界见 [调研](../research/rijksmuseum-art.md)。\n\n## 正向 Prompt\n\n为[项目]制作基于Rijksmuseum · 全幅摄影与巨大字标的局部交互学习页面。参考https://www.rijksmuseum.nl/en，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：照片本身提供丰富色彩，白色文字和橙色票务是UI的少数稳定颜色。 字体：巨大完整SVG字标与小尺度大写短标题形成尺度差，品牌正文保持窄体节奏。 版式：导航上覆摄影；首屏100vh，底缘左文右合作方；手机隐藏次要导航与合作方。 图像：夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。 形状：矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。 层级：品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。 协调：统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。 关键流程：进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。 打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。 悬停票务／展览与语言：橙色动作颜色反馈、链接下划线与语言列表。 行动在原色摄影上依然清晰。 主题：全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。 保持照片亮度与白字对比；橙色票务在不同图像上持续突出。 声音：当前入口没有独立BGM或音频按钮。 大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。\n\n## 负向约束\n\n不要虚构品牌，不用抽象blob代替夜巡摄影，不把每一节包装成圆角卡片，不用通用SaaS居中巨字模板。\n\n## 制作约束\n\n- 每个摄影专题保持约100vh，手机使用100svh避免地址栏引起布局跳动。\n- 不要把摄影裁成圆角卡片，也不要给首屏添加摘要卡片。\n- 字标使用完整官方SVG，标题与正文使用两字重Rijksmuseum字体。\n- 照片底部加局部黑色渐变支撑文字对比；不对整张照片做滤镜风格化。\n- 减弱动态模式仍能看到全部内容，滚动保持浏览器原生行为。\n- 保留私人学习署名与真实票务跳转，不模拟付款或假装门票已预订。\n- 展览局部介绍与搜索dialog为本地练习补充；完整藏品检索、预约与会员不复制。\n\n## 检查方法\n\n替换一组经过授权的场所摄影，保留文字与图像的职责分工；检查手机裁切是否保住人物与作品。\n\n[查看 Demo](../demos/rijksmuseum-art/index.html) · [返回参考库](../index.html#style/rijksmuseum-art)\n",
+      "sha256": "0753e28319973b69e4749e7299989374f79da499bcaccea2afe0eab25fa6f188",
+      "bytes": 3629
+    },
+    {
+      "path": "demos/rijksmuseum-art/fidelity.md",
+      "role": "fidelity",
+      "content": "# Rijksmuseum · 全幅摄影与巨大字标：复现范围\n\n参考：[真实页面](https://www.rijksmuseum.nl/en)，**2026-10-07**。\n\n| 触发／区域 | 行为 | 保留的设计作用 | 差异 |\n|---|---|---|---|\n| 进入与连续上下浏览 | 巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 | 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。 | 不人为增加全页锁滚／遮罩转场。 |\n| 打开／关闭菜单 | 全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 | 给导航独立的视觉场景，保持品牌和空间关系。 | 对应当前CSS；本地搜索／展览dialog是额外的局部学习功能。 |\n| 悬停票务／展览与语言 | 橙色动作颜色反馈、链接下划线与语言列表。 | 行动在原色摄影上依然清晰。 | 预约／藏品外链回官方，不伪装交易成功。 |\n\n## 主题、声音与范围\n\n全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。 保持照片亮度与白字对比；橙色票务在不同图像上持续突出。\n\n当前入口没有独立BGM或音频按钮。 大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。\n\n展览局部介绍与搜索dialog为本地练习补充；完整藏品检索、预约与会员不复制。\n\n官网入口到页尾和返回、全屏菜单与真实照片层级，公开CSS检查菜单500ms linear。\n\n本地素材权利归原品牌与作者，归档用于个人学习。交易、账号及完整数据库使用官方外链。减少动态保留可读内容与操作状态，不以静态首屏冒充全部交互。\n\n[设计研究](../../research/rijksmuseum-art.md) · [Prompt](../../prompts/rijksmuseum-art.md) · [资产清单](assets-manifest.json) · [Demo](index.html)\n",
+      "sha256": "078625f5bbe1ba641bf603915b62a01d4a809898b3b8ddcaf00d77d786219d40",
+      "bytes": 1844
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"rijksmuseum-art\",\n  \"sourcePage\": \"https://www.rijksmuseum.nl/en\",\n  \"scope\": \"2026-10-07匿名官方页面实访所观察的公开媒体与字体，离线私人学习副本。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/hero.webp\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/assets/147dde9e-c250-4ed9-b941-39800085a4e3?w=2880&h=1476&fx=1190&fy=1235&format=webp&c=217c7cf71aef923fa6c56bdb6547d5cf156c956961753cf468d1576c90eb3924\",\n      \"purpose\": \"主页夜巡观众摄影\",\n      \"width\": 2880,\n      \"height\": 1476,\n      \"format\": \"webp\",\n      \"bytes\": 203870,\n      \"sha256\": \"fc51390d78be279e10d9e51e17eef7c5eb2f57f871750e2a346a003302757c52\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/family.jpg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/assets/35f4ca91-47fe-4e26-9764-c1db6f6559d2?w=1920&h=1080&fx=961&fy=540&c=5910907f00feaa9d839d39f492bd494ad60efc6a05c5468a44481d7abf51695d\",\n      \"purpose\": \"家庭月全幅照片\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"format\": \"jpeg\",\n      \"bytes\": 439288,\n      \"sha256\": \"cb671b1e8950b4da8947370298c11dcf5c168daa5b496d1e72749b96ba460dcf\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/de-kooning.jpg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/assets/f429e5a9-a6c5-4fc9-a79b-6ac944124dab?w=960&h=1080&fx=1713&fy=121&c=a3a63c8c585bc8597303caf29b433590528fa8f9fff581289d422ae3e15460eb\",\n      \"purpose\": \"de Kooning预告摄影\",\n      \"width\": 916,\n      \"height\": 1031,\n      \"format\": \"png\",\n      \"bytes\": 2324847,\n      \"sha256\": \"2c3d236015509e7a42304cc091aee9d4b6552fc06cf14615814be417901ce0a4\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/chintz.jpg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/assets/00d5ad24-93eb-4445-9554-8c85653713af?w=960&h=1080&fx=691&fy=677&c=af0ebdd69c5b33b9eeed30d9032cd8e86a4ff6c595fc17d1d4ca236141bd935f\",\n      \"purpose\": \"纺织/花布系列摄影\",\n      \"width\": 960,\n      \"height\": 1080,\n      \"format\": \"jpeg\",\n      \"bytes\": 322630,\n      \"sha256\": \"b6108728c8d43ac3267c25fa70d2714167e84c411b4d78489ea6d7bb4972d63d\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/rijks-normal.woff2\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/statics/fonts/Rijksmuseum-Normal.woff2\",\n      \"purpose\": \"官方正文品牌字体\",\n      \"bytes\": 15552,\n      \"sha256\": \"cec6ddf3855c18b00de720d0f84e8949353cdd6f07533993c6ebd90122a7b56e\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/rijks-bold.woff2\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/statics/fonts/Rijksmuseum-Bold.woff2\",\n      \"purpose\": \"官方标题品牌字体\",\n      \"bytes\": 15004,\n      \"sha256\": \"6b6fae62e398eff8bdf9bf5203b8fde104a1e1aa76bfa247b67d622a557bb981\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/founder.svg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/statics/logos/m-ocw-en.svg\",\n      \"purpose\": \"创办方字标\",\n      \"width\": 73,\n      \"height\": 25,\n      \"format\": \"svg\",\n      \"bytes\": 41164,\n      \"sha256\": \"40461300f0c5e56c24f895746e299de61147d9b7ab419064235a21083862d93b\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/kpn.svg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/statics/logos/kpn-logo-white.svg\",\n      \"purpose\": \"合作方字标\",\n      \"width\": 503,\n      \"height\": 192,\n      \"format\": \"svg\",\n      \"bytes\": 3049,\n      \"sha256\": \"618feece4223f1955ff9367ab77c9152b82b536c605a964f5d344042041d5eed\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/lottery.svg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/statics/logos/vrienden-loterij.svg\",\n      \"purpose\": \"合作方字标\",\n      \"width\": 76,\n      \"height\": 25,\n      \"format\": \"svg\",\n      \"bytes\": 5911,\n      \"sha256\": \"4b234dc1751930e6b0dede96dcdb798000520457c7811b8f5a96952bb220c6c1\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/ing.svg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/statics/logos/ing.svg\",\n      \"purpose\": \"合作方字标\",\n      \"width\": 66,\n      \"height\": 25,\n      \"format\": \"svg\",\n      \"bytes\": 22570,\n      \"sha256\": \"306fb724885223da3bcd94fc23716ac5fd053caffe62d3654991e36d98774109\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/logo.svg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/en\",\n      \"purpose\": \"从官方DOM提取完整SVG字标；只移除浏览器扩展标记并固定独立文件颜色\",\n      \"bytes\": 2794,\n      \"sha256\": \"249eab55ed878725f29dcd65b5a57925c04d0211749fea7549570bb31aaf7923\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"extracted\",\n      \"copyright\": \"官方品牌标识，私人设计学习。\"\n    },\n    {\n      \"file\": \"assets/hero-desktop.jpg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/assets/147dde9e-c250-4ed9-b941-39800085a4e3?w=1920&h=1080&fx=1190&fy=1235&c=a599ade3545b23102774e6e6d9f8b25e7820ec2d55e7210023ca91cfb408efb6\",\n      \"purpose\": \"实访DOM已观察的桌面官方焦点裁切，用于对应picture媒体\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"bytes\": 283237,\n      \"sha256\": \"3262fc63e16d76935f51942db7ae7614c059b88d2ed02ef386fa1881c8d51b0d\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"Rijksmuseum官方摄影，私人设计学习。\"\n    },\n    {\n      \"file\": \"assets/hero-mobile.jpg\",\n      \"sourceUrl\": \"https://www.rijksmuseum.nl/assets/147dde9e-c250-4ed9-b941-39800085a4e3?w=960&h=1080&fx=1190&fy=1235&c=911b02c83374c6faa087e90f879d25025cfda62bf28b029e5ac3ca0d1085181e\",\n      \"purpose\": \"实访DOM已观察的手机官方焦点裁切，用于对应picture媒体\",\n      \"width\": 960,\n      \"height\": 1080,\n      \"bytes\": 175584,\n      \"sha256\": \"5eb873c38463d2ebdcc9f7436090800682b9ad876a4fd17d7ad345afe124c01c\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"Rijksmuseum官方摄影，私人设计学习。\"\n    }\n  ]\n}",
+      "sha256": "2d6c2d47baa7189b4d5aac642069ac88e8ebf3ad9a353e3f5c490dc9c150f307",
+      "bytes": 7860
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets-manifest.json",
+      "role": "context",
+      "sha256": "2d6c2d47baa7189b4d5aac642069ac88e8ebf3ad9a353e3f5c490dc9c150f307",
+      "bytes": 7860
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/chintz.jpg",
+      "role": "asset",
+      "sha256": "b6108728c8d43ac3267c25fa70d2714167e84c411b4d78489ea6d7bb4972d63d",
+      "bytes": 322630
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/de-kooning.jpg",
+      "role": "asset",
+      "sha256": "2c3d236015509e7a42304cc091aee9d4b6552fc06cf14615814be417901ce0a4",
+      "bytes": 2324847
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/family.jpg",
+      "role": "asset",
+      "sha256": "cb671b1e8950b4da8947370298c11dcf5c168daa5b496d1e72749b96ba460dcf",
+      "bytes": 439288
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/founder.svg",
+      "role": "asset",
+      "sha256": "40461300f0c5e56c24f895746e299de61147d9b7ab419064235a21083862d93b",
+      "bytes": 41164
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/hero-desktop.jpg",
+      "role": "asset",
+      "sha256": "3262fc63e16d76935f51942db7ae7614c059b88d2ed02ef386fa1881c8d51b0d",
+      "bytes": 283237
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/hero-mobile.jpg",
+      "role": "asset",
+      "sha256": "5eb873c38463d2ebdcc9f7436090800682b9ad876a4fd17d7ad345afe124c01c",
+      "bytes": 175584
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/hero.webp",
+      "role": "asset",
+      "sha256": "fc51390d78be279e10d9e51e17eef7c5eb2f57f871750e2a346a003302757c52",
+      "bytes": 203870
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/ing.svg",
+      "role": "asset",
+      "sha256": "306fb724885223da3bcd94fc23716ac5fd053caffe62d3654991e36d98774109",
+      "bytes": 22570
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/kpn.svg",
+      "role": "asset",
+      "sha256": "618feece4223f1955ff9367ab77c9152b82b536c605a964f5d344042041d5eed",
+      "bytes": 3049
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/logo.svg",
+      "role": "asset",
+      "sha256": "249eab55ed878725f29dcd65b5a57925c04d0211749fea7549570bb31aaf7923",
+      "bytes": 2794
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/lottery.svg",
+      "role": "asset",
+      "sha256": "4b234dc1751930e6b0dede96dcdb798000520457c7811b8f5a96952bb220c6c1",
+      "bytes": 5911
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/rijks-bold.woff2",
+      "role": "asset",
+      "sha256": "6b6fae62e398eff8bdf9bf5203b8fde104a1e1aa76bfa247b67d622a557bb981",
+      "bytes": 15004
+    },
+    {
+      "path": "demos/rijksmuseum-art/assets/rijks-normal.woff2",
+      "role": "asset",
+      "sha256": "cec6ddf3855c18b00de720d0f84e8949353cdd6f07533993c6ebd90122a7b56e",
+      "bytes": 15552
+    },
+    {
+      "path": "demos/rijksmuseum-art/fidelity.md",
+      "role": "context",
+      "sha256": "078625f5bbe1ba641bf603915b62a01d4a809898b3b8ddcaf00d77d786219d40",
+      "bytes": 1844
+    },
+    {
+      "path": "demos/rijksmuseum-art/index.html",
+      "role": "source",
+      "sha256": "45a65f90378c19f46d4837f7a73a58dd1a534caf567925ada6256ddb24a00b48",
+      "bytes": 5806
+    },
+    {
+      "path": "demos/rijksmuseum-art/script.js",
+      "role": "source",
+      "sha256": "f4ee464f50d1e3a5310b414ef20ed7fb38b1f3c5f21e95678710bc27156486ae",
+      "bytes": 3203
+    },
+    {
+      "path": "demos/rijksmuseum-art/style.css",
+      "role": "source",
+      "sha256": "720040062080ac679b916cd76461754d6819f91bfc246171283682378a6540fd",
+      "bytes": 7060
+    },
+    {
+      "path": "entries/rijksmuseum-art.json",
+      "role": "context",
+      "sha256": "bc1e810ba155acc1eeac1cbbab3291ce7a748c7aaa0fbdf43468da4d92742109",
+      "bytes": 8728
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/mobile/rijksmuseum-art.jpg",
+      "role": "preview",
+      "sha256": "e0b1c08940ba03031b223db1b5d31ecbc5397568e85b766ca52729799fb018ad",
+      "bytes": 58722
+    },
+    {
+      "path": "previews/rijksmuseum-art.jpg",
+      "role": "preview",
+      "sha256": "76c14c7408315f82779eb7ac3e0827474ee8060499b98e2be792054aac6edda5",
+      "bytes": 182846
+    },
+    {
+      "path": "prompts/rijksmuseum-art.md",
+      "role": "context",
+      "sha256": "0753e28319973b69e4749e7299989374f79da499bcaccea2afe0eab25fa6f188",
+      "bytes": 3629
+    },
+    {
+      "path": "research/rijksmuseum-art.md",
+      "role": "context",
+      "sha256": "d65bc981fafaca3e9f89e58d93c19dd9fd83fe9bfbbaf27dab365dab31e06fb3",
+      "bytes": 3789
+    },
+    {
+      "path": "research/screenshots/rijksmuseum-art-source.jpg",
+      "role": "preview",
+      "sha256": "e1f9db97968f22ffb135f8e3af64cafb060e8d1aa37eb545df210b5fe20aaed3",
+      "bytes": 135512
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=rijksmuseum-art\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>照片本身提供丰富色彩，白色文字和橙色票务是UI的少数稳定颜色。</dd></div><div class=\"\"><dt>字体排版</dt><dd>巨大完整SVG字标与小尺度大写短标题形成尺度差，品牌正文保持窄体节奏。</dd></div><div class=\"\"><dt>布局留白</dt><dd>导航上覆摄影；首屏100vh，底缘左文右合作方；手机隐藏次要导航与合作方。</dd></div><div class=\"\"><dt>图像图标</dt><dd>夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。</dd></div><div class=\"\"><dt>线条形状</dt><dd>矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。</dd></div><div class=\"\"><dt>信息层级</dt><dd>品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>进入与连续上下浏览时巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。；打开／关闭菜单时全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。；悬停票务／展览与语言时橙色动作颜色反馈、链接下划线与语言列表。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>以作品和观众的真实关系主导首屏，主标题留在底缘。</li><li>品牌SVG跨越几乎整幅宽度；图像仍是内容主体。</li><li>橙色矩形票务按钮在摄影上有明确优先级。</li><li>家庭月全屏摄影后接两栏展览预告，图文密度随内容改变。</li></ul><h3>怎样凸显产品重点</h3><p>参观体验、馆藏名作与购票入口。摄影提供作品尺度和到访情境，底缘文字补充时间/活动条件。</p><h3>主题与情绪</h3><p>深色摄影、白色窄体品牌字体、巨大字标与橙色矩形CTA。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。</li><li>打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。</li><li>悬停票务／展览与语言：橙色动作颜色反馈、链接下划线与语言列表。 行动在原色摄影上依然清晰。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。</p><p>保持照片亮度与白字对比；橙色票务在不同图像上持续突出。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>当前入口没有独立BGM或音频按钮。</p><p>大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>每个摄影专题保持约100vh，手机使用100svh避免地址栏引起布局跳动。</li><li>不要把摄影裁成圆角卡片，也不要给首屏添加摘要卡片。</li><li>字标使用完整官方SVG，标题与正文使用两字重Rijksmuseum字体。</li><li>照片底部加局部黑色渐变支撑文字对比；不对整张照片做滤镜风格化。</li><li>减弱动态模式仍能看到全部内容，滚动保持浏览器原生行为。</li><li>保留私人学习署名与真实票务跳转，不模拟付款或假装门票已预订。</li><li>展览局部介绍与搜索dialog为本地练习补充；完整藏品检索、预约与会员不复制。</li></ul><h3>适合</h3><p>艺术馆参观入口 / 摄影主导的场所展示 / 大型艺术节入口</p><h3>谨慎使用</h3><p>摄影不足的抽象装饰页面 / 信息必须首屏密集呈现的后台</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#242424\"></i>#242424</span><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#db5526\"></i>#db5526</span></div><p><b>字体</b> · 官方Rijksmuseum Normal/Bold；桌面正文17px、短标题约23px。<br><b>布局</b> · 100vh全幅摄影 → 100vh家庭月 → 两列整屏摄影 → 深色实用信息。<br><b>动效</b> · 自然滚动满屏摄影；全屏菜单打开500ms linear淡入，关闭直接隐藏；搜索/预览为本地补充。减少动态取消过渡，主视觉无自动循环。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为[项目]制作基于Rijksmuseum · 全幅摄影与巨大字标的局部交互学习页面。参考https://www.rijksmuseum.nl/en，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：照片本身提供丰富色彩，白色文字和橙色票务是UI的少数稳定颜色。 字体：巨大完整SVG字标与小尺度大写短标题形成尺度差，品牌正文保持窄体节奏。 版式：导航上覆摄影；首屏100vh，底缘左文右合作方；手机隐藏次要导航与合作方。 图像：夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。 形状：矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。 层级：品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。 协调：统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。 关键流程：进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。 打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。 悬停票务／展览与语言：橙色动作颜色反馈、链接下划线与语言列表。 行动在原色摄影上依然清晰。 主题：全幅照片上白色字标、深色页尾为固定摄影主题，没有独立深浅模式。 保持照片亮度与白字对比；橙色票务在不同图像上持续突出。 声音：当前入口没有独立BGM或音频按钮。 大字标、连续摄影和菜单覆盖形成沉浸感，声音并非这版首页的机制。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要虚构品牌，不用抽象blob代替夜巡摄影，不把每一节包装成圆角卡片，不用通用SaaS居中巨字模板。</p></details><h3>改造练习</h3><p>替换一组经过授权的场所摄影，保留文字与图像的职责分工；检查手机裁切是否保住人物与作品。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.rijksmuseum.nl/en\" target=\"_blank\" rel=\"noopener noreferrer\">Rijksmuseum official English homepage ↗</a><small>2026-10-07：英语首页《夜巡》观众摄影、巨幅字标、家庭月、两列专题与全屏菜单。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.rijksmuseum.nl/en/visit/accessibility/accessibility-statement\" target=\"_blank\" rel=\"noopener noreferrer\">Rijksmuseum Accessibility Statement ↗</a><small>网站服务参观/票务和在线收藏；官方以WCAG2.2 AA为目标并列举未达项，不能称全面合规。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI Disclosure Pattern ↗</a><small>展开内容与aria-expanded的实现参考；本地菜单及dialog有独立语义，不证明原站采用此规范。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Frijksmuseum-art.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "c6555ced71332dabe78e64e22211ff7c2c870206cbc9ca27e90a6ac284d45ac2",
+    "bytes": 9299
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "id": "stripe-platform",
+  "entry": {
+    "id": "stripe-platform",
+    "order": 2,
+    "title": "Stripe — 彩带与金融产品矩阵",
+    "subtitle": "Financial infrastructure, made visible",
+    "category": "产品",
+    "country": "美国",
+    "tags": [
+      "Stripe",
+      "真实品牌",
+      "金融科技",
+      "彩带",
+      "产品矩阵",
+      "下拉导航"
+    ],
+    "summary": "官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。",
+    "accent": "#635bff",
+    "background": "#ffffff",
+    "principles": [
+      "一段连续的大字号叙述同时给出平台定位与交易规模。",
+      "彩带提供品牌识别，细框线与产品界面维持金融工具的秩序。",
+      "用产品而非抽象图形展示收款、订阅、卡片与平台能力。",
+      "同一套主色用于核心行动，低饱和背景区分不同金融产品。"
+    ],
+    "productFocus": "首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。",
+    "interaction": [
+      "进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。",
+      "Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。",
+      "Bento 点击 → 产品详情对话框；真实官网是产品说明/界面扩展，本地内容压缩，业务模型反馈为明确的示范。",
+      "Global 四统计选择 → 当前数字强调、底部细线进度和基础设施说明对应变化；自动推进与指针停留暂停。",
+      "Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。",
+      "后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。",
+      "手机汉堡菜单 → 全屏顶层 Products/Solutions/Developers/Resources；选择分类后二级页以源 CSS 500ms 侧向进入、250ms 透明度衔接，Back 返回顶层。Start now/Contact sales 固定底部；关闭/Escape 恢复滚动和焦点，让长目录保持方向与核心行动。",
+      "桌面指针进入/点击分类 → popup 高度/位移/透明度 300ms、clip/max-height 200ms，均采用源 cubic-bezier(.45,.05,.55,.95)；分类按自然高度衔接。快速反转取消旧动画，离开/外部点击/Escape 后 hidden/inert/aria 一致；减少动态直接完成，维持目录的空间关系。"
+    ],
+    "theme": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
+    "constraints": [
+      "保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。",
+      "终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。",
+      "品牌与官方素材仅用于此个人参考库；归档来源与权利。",
+      "减少动态保留可读内容、键盘焦点和手动选择。"
+    ],
+    "useCases": [
+      "复杂平台产品官网",
+      "金融工具能力介绍",
+      "多产品业务入口"
+    ],
+    "avoid": [
+      "用一个渐变blob代替实际平台功能",
+      "把所有产品塞进同样的白卡",
+      "复制支付表单并连接真实交易"
+    ],
+    "tokens": {
+      "palette": [
+        "#0a2540",
+        "#635bff",
+        "#f6f9fc",
+        "#ff9151"
+      ],
+      "type": "官网 Söhne 本地字体；主标题48px、连续段落、紧凑行高。",
+      "layout": "1266px内容框；48px段落式首屏；产品矩阵首行Payments跨两列、Billing一列同高，随后不同产品区；4列指标与左右案例。",
+      "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒为本地近似；桌面popup高度/transform/opacity 300ms与clip/max-height 200ms采用源cubic-bezier(.45,.05,.55,.95)，入口位移12px为拟合；手机二级transform 500ms/opacity 250ms采用源CSS曲线，入口位移距离为拟合。"
+    },
+    "composition": {
+      "color": "白底、海军蓝文字、紫色行动按钮与橙粉紫官网彩带；按钮小圆角，产品卡适度圆角。",
+      "typography": "官网 Söhne 本地字体；主标题48px、连续段落、紧凑行高。",
+      "layout": "1266px内容框；48px段落式首屏；产品矩阵首行Payments跨两列、Billing一列同高，随后不同产品区；4列指标与左右案例。",
+      "imagery": "官方SingleWave原始shader与folded mesh，light palette；Söhne本地字体；真实终端素材与本地支付界面结构。",
+      "shape": "按钮4px、产品8px、对话框12px；官网彩带原比例。",
+      "hierarchy": "首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。",
+      "motion": "官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒为本地近似；桌面popup高度/transform/opacity 300ms与clip/max-height 200ms采用源cubic-bezier(.45,.05,.55,.95)，入口位移12px为拟合；手机二级transform 500ms/opacity 250ms采用源CSS曲线，入口位移距离为拟合。",
+      "coherence": "橙粉紫波带与紫色行动建立品牌识别，细框线、海军蓝文字和真实支付终端让复杂能力可读；部分界面为本地DOM，容器裁切和标题混色为局部还原。",
+      "scroll": "波浪首屏 → 6 产品 Bento → Global 4 统计 → 4 客户折叠 → Startup 横向架子 → 平台选择 → 海军蓝开发者内容 → 活动架子 → 结束行动 → 页尾。"
+    },
+    "sources": [
+      {
+        "title": "Stripe 当前公开页面",
+        "url": "https://stripe.com/",
+        "note": "采集日期 2026-10-07；英文全球首页",
+        "type": "实例"
+      },
+      {
+        "title": "Connect frontend design",
+        "url": "https://stripe.com/blog/connect-front-end-experience",
+        "type": "理论",
+        "note": "2017第一方文章解释复杂平台功能的轻盈呈现与就地产品展示；属于历史设计理论。"
+      },
+      {
+        "title": "WAI Tabs Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+        "type": "规范",
+        "note": "客户案例与产品选择的键盘、选择状态参考。"
+      }
+    ],
+    "prompt": "以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。桌面菜单保留指针进入/离开及键盘路径，popup高度/位移/透明度300ms、裁切200ms采用源曲线，分类自然高度衔接；手机使用全屏顶层分类、500ms侧向二级、Back返回与固定底部行动，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。",
+    "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
+    "demo": "demos/stripe-platform/index.html",
+    "preview": "previews/stripe-platform.jpg",
+    "research": "research/stripe-platform.md",
+    "exercise": "以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。",
+    "referenceUrl": "https://stripe.com/",
+    "implementation": "reference-study",
+    "fidelity": "demos/stripe-platform/fidelity.md",
+    "assetManifest": "demos/stripe-platform/assets-manifest.json",
+    "referencePreview": "research/screenshots/stripe-platform-source.png",
+    "capturedAt": "2026-10-07",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
+      "designReason": "官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "当前首页没有背景音乐或有声视频。",
+      "interactionRole": "波浪、产品 UI 和数据选择提供动感，保持金融信息阅读的安静环境。"
+    }
+  },
+  "documents": [
+    {
+      "path": "research/stripe-platform.md",
+      "role": "research",
+      "content": "# Stripe：当前页面的设计与交互\n\n来源：[https://stripe.com/](https://stripe.com/)。采集日期：2026-10-07。范围：英文全球首页，单一当前快照。\n\n官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。\n\n## 触发、视觉响应与用途\n\n- 桌面指针进入/点击分类 → popup 以源 300ms 高度、位移和透明度衔接，clip/max-height 以 200ms 裁切，均为 cubic-bezier(.45,.05,.55,.95)；分类自然高度连续变化，使目录转换保持空间方向。离开、外部点击或 Escape 关闭，快速反转取消旧动画；减少动态直接完成。\n\n- 进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。\n\n- Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。\n\n- Bento 点击 → 产品详情对话框；真实官网是产品说明/界面扩展，本地内容压缩，业务模型反馈为明确的示范。\n\n- Global 四统计选择 → 当前数字强调、底部细线进度和基础设施说明对应变化；自动推进与指针停留暂停。\n\n- Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。\n\n- 后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。\n\n## 完整浏览路径\n\n波浪首屏 → 6 产品 Bento → Global 4 统计 → 4 客户折叠 → Startup 横向架子 → 平台选择 → 海军蓝开发者内容 → 活动架子 → 结束行动 → 页尾。\n\n## 原站事实和复现边界\n\n源匿名浏览器完成普通滚动至页尾和返回，实测产品详情、四统计及四客户按钮；SingleWave 渲染模块与三个客户新增摄影均来自官方公开资源。没有全局主题选择和声音控制。\n\n桌面 popup 时序与曲线来自本次源 computed CSS；本地 1440px 真实 hover/click 验证首入、分类自然高度切换、离开再入及关闭后 hidden/inert/aria。桌面链接数量压缩，入口位移 12px 与离开等待 140ms 为拟合。\n\n终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。\n\n## 主题与声音\n\n首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。\n\n当前首页没有背景音乐或有声视频。 波浪、产品 UI 和数据选择提供动感，保持金融信息阅读的安静环境。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 可复用 Prompt\n\n以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。菜单保留指针进入/离开及键盘路径，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n",
+      "sha256": "32b7306fbad72a41aaa336c52a43ed97b91859729b88bf68b2ee9283a9a1a509",
+      "bytes": 4261
+    },
+    {
+      "path": "prompts/stripe-platform.md",
+      "role": "prompt",
+      "content": "# Stripe — 彩带与金融产品矩阵 · 复用 Prompt\n\n由 [结构化案例](../entries/stripe-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/stripe-platform.md)。\n\n## 正向 Prompt\n\n以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。桌面菜单保留指针进入/离开及键盘路径，popup高度/位移/透明度300ms、裁切200ms采用源曲线，分类自然高度衔接；手机使用全屏顶层分类、500ms侧向二级、Back返回与固定底部行动，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/stripe-platform/index.html) · [返回参考库](../index.html#style/stripe-platform)\n",
+      "sha256": "095b6771be53e534a605204acff847ec0dc66f7f6a8a37465d0c852fbd1211ef",
+      "bytes": 2331
+    },
+    {
+      "path": "demos/stripe-platform/fidelity.md",
+      "role": "fidelity",
+      "content": "# Stripe：当前页面的设计与交互\n\n来源：[https://stripe.com/](https://stripe.com/)。采集日期：2026-10-07。范围：英文全球首页，单一当前快照。\n\n官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。\n\n## 触发、视觉响应与用途\n\n- 桌面指针进入/点击分类 → popup 以 300ms 高度、位移和透明度衔接，clip/max-height 以 200ms 裁切，曲线均为 cubic-bezier(.45,.05,.55,.95)；分类切换测量新内容的自然高度，让不同目录保持连续空间关系。离开、外部点击或 Escape 关闭，快速反转取消旧动画并保留当前帧。\n\n- 手机汉堡菜单 → 全屏顶层 Products/Solutions/Developers/Resources；选择分类后二级页侧向进入，Back 返回顶层，关闭恢复阅读。顶层和二级各自滚动，Start now/Contact sales 固定在底部，让长产品目录保留层级方向与核心行动。\n\n- 进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。\n\n- Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。\n\n- Bento 点击 → 产品详情对话框；真实官网是产品说明/界面扩展，本地内容压缩，业务模型反馈为明确的示范。\n\n- Global 四统计选择 → 当前数字强调、底部细线进度和基础设施说明对应变化；自动推进与指针停留暂停。\n\n- Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。\n\n- 后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。\n\n## 完整浏览路径\n\n波浪首屏 → 6 产品 Bento → Global 4 统计 → 4 客户折叠 → Startup 横向架子 → 平台选择 → 海军蓝开发者内容 → 活动架子 → 结束行动 → 页尾。\n\n## 原站事实和复现边界\n\n源匿名浏览器完成普通滚动至页尾和返回，实测产品详情、四统计及四客户按钮；SingleWave 渲染模块与三个客户新增摄影均来自官方公开资源。没有全局主题选择和声音控制。\n\n桌面 popup 的 300/200ms 时序和缓动来自本次源页面 computed CSS；本地 1440px 真实指针验证首入、分类高度衔接、离开再入和关闭。桌面链接数量压缩，入口位移 12px 与离开等待 140ms 为拟合；减少动态直接完成，关闭后 hidden/inert/aria 一致。\n\n手机导航按本次 390px 源快照保留四类顶层、32 个产品入口及其他分类的公开分组；本地 390×844 实测分类进入/Back、Escape、连续关闭再打开。二级 transform 500ms、opacity 250ms 使用源 CSS 的 cubic-bezier(.4,0,.2,1)，覆盖层 300ms 使用 cubic-bezier(.45,.05,.55,.95)。入口位移距离、推荐卡排版为拟合，省略 Sessions 推广旁栏；链接指向已观察的公开入口，不复制账户流程。键盘焦点被限制在打开的菜单内，减少动态分支直接切换层级，底层页面恢复时解除 inert 和滚动锁。\n\n终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。\n\n## 主题与声音\n\n首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。\n\n当前首页没有背景音乐或有声视频。 波浪、产品 UI 和数据选择提供动感，保持金融信息阅读的安静环境。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 可复用 Prompt\n\n以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。桌面菜单保留指针进入/离开及键盘路径，popup高度/位移/透明度300ms与裁切200ms采用源曲线、分类自然高度衔接；手机使用全屏顶层分类、500ms 侧向二级、Back 返回与固定底部行动，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n",
+      "sha256": "bcb7edd81519b2898f1f31a05c8fad4a35da66ef03a6ff21797ee18a47ea9caa",
+      "bytes": 5397
+    },
+    {
+      "path": "demos/stripe-platform/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"stripe-platform\",\n  \"sourcePage\": \"https://stripe.com/\",\n  \"scope\": \"本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/wave.webp\",\n      \"sourceUrl\": \"https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/media/wave-fallback-desktop-2x.f0521908.webp\",\n      \"purpose\": \"首屏官网彩带静态回退\",\n      \"width\": 2784,\n      \"height\": 1949,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 93584,\n      \"status\": \"downloaded\",\n      \"sha256\": \"7e74c3681207deea5570a1997cafc553a364efc999c2e35069c064cee35e25dc\"\n    },\n    {\n      \"file\": \"assets/terminal.webp\",\n      \"sourceUrl\": \"https://images.stripeassets.com/fzn2n1nzq965/1Vf8oT9Fm6dEwpnEx5PgK1/055956f38d7fd8b0cc7419692ef29778/bento-terminal.png?w=616&fm=webp&q=90\",\n      \"purpose\": \"Payments产品卡终端\",\n      \"width\": 616,\n      \"height\": 1050,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 69504,\n      \"status\": \"downloaded\",\n      \"sha256\": \"9ff2cdcb0bb9d31869efad176b9a4c6d400b9c8f88479ba5fa74db35fb7a6df6\"\n    },\n    {\n      \"file\": \"assets/payments-bg.webp\",\n      \"sourceUrl\": \"https://images.stripeassets.com/fzn2n1nzq965/vYmk6v8n7oDAwbDpwhjV6/846f9b3e214549b8f14e2b8c8cfe9343/payment-bento-background.jpg?w=1720&fm=webp&q=80\",\n      \"purpose\": \"Payments产品卡背景\",\n      \"width\": 1632,\n      \"height\": 1352,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 37176,\n      \"status\": \"downloaded\",\n      \"sha256\": \"fd4cc5686fb44599fafa336a98bc88b30ee935fac102d70fb1aa630897a8a461\"\n    },\n    {\n      \"file\": \"assets/kettle.webp\",\n      \"sourceUrl\": \"https://images.stripeassets.com/fzn2n1nzq965/6BTjJGdjfGVA8brPwj7p3M/fcf084ff85142366e118fe85ee78b632/payments-electric-kettle.jpg?w=160&fm=webp&q=90\",\n      \"purpose\": \"支付订单商品\",\n      \"width\": 160,\n      \"height\": 172,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/webp\",\n      \"bytes\": 1354,\n      \"status\": \"downloaded\",\n      \"sha256\": \"e7a40ad5c1bec86271fbc90695789bb242e264fdba7e0433b8073956ef2786aa\"\n    },\n    {\n      \"file\": \"assets/logo.svg\",\n      \"sourceUrl\": \"https://stripe.com/\",\n      \"purpose\": \"官方首页原样提取的品牌SVG\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅本地私人学习，无品牌关联。\",\n      \"status\": \"downloaded\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 1922,\n      \"sha256\": \"61a219a05909b6526c3c2a80ff06d77cad154d9753849acb70c3b1aa995df27c\"\n    },\n    {\n      \"file\": \"assets/sohne.woff2\",\n      \"sourceUrl\": \"https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/media/Sohne.cb178166.woff2\",\n      \"purpose\": \"官方营销页字体\",\n      \"width\": null,\n      \"height\": null,\n      \"bytes\": 58852,\n      \"status\": \"downloaded\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"品牌及原作者所有；仅本地私人学习，无品牌关联。\",\n      \"sha256\": \"2228fee8f2931671a4690c35ec3a6746216f8d7fba4f51adc91f9b58a6b28f89\"\n    },\n    {\n      \"file\": \"assets/wave-palette.webp\",\n      \"sourceUrl\": \"https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/media/palette-light.3c0e6604.webp\",\n      \"purpose\": \"官网 SingleWave light 配色纹理\",\n      \"bytes\": 11524,\n      \"sha256\": \"dddcbdc6d7067aa190584c10cd004f7f7ff156ac9feab4fccacc89a29d54c32e\",\n      \"copyright\": \"Stripe 官方公开渲染资料仅供私人设计学习；Three.js r178 为 MIT。\",\n      \"width\": 480,\n      \"height\": 480\n    },\n    {\n      \"file\": \"assets/wave-geometry-worker.js\",\n      \"sourceUrl\": \"https://stripe.com/_workers/_next/static/chunks/waveGeometry.worker.07101200.js\",\n      \"purpose\": \"官网折叠平面网格 Worker\",\n      \"bytes\": 1529,\n      \"sha256\": \"6d26e053b995b994e9a2d35796cbfff061f0f4f02d57439e49fd4099c52fb66e\",\n      \"copyright\": \"Stripe 官方公开渲染资料仅供私人设计学习；Three.js r178 为 MIT。\"\n    },\n    {\n      \"file\": \"assets/three-LICENSE.txt\",\n      \"sourceUrl\": \"https://raw.githubusercontent.com/mrdoob/three.js/r178/LICENSE\",\n      \"purpose\": \"官网捆绑 Three.js r178 的 MIT 许可证\",\n      \"bytes\": 1081,\n      \"sha256\": \"bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601\",\n      \"copyright\": \"Stripe 官方公开渲染资料仅供私人设计学习；Three.js r178 为 MIT。\"\n    },\n    {\n      \"file\": \"assets/stripe-wave-renderer.js\",\n      \"sourceUrl\": \"https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js\",\n      \"purpose\": \"从官方公开 chunk 精确提取20个 SingleWave/Three.js 渲染模块，仅修改 Worker 本地URL与添加独立 loader\",\n      \"bytes\": 621926,\n      \"sha256\": \"8832fb802144702dcc3e547a59515f7d0a57937ca97c0b58761630f74eb99884\",\n      \"copyright\": \"Stripe 原始渲染代码归 Stripe；Three.js r178 为 MIT，仅供私人学习。\",\n      \"derived\": true\n    },\n    {\n      \"file\": \"assets/wave-provenance.json\",\n      \"sourceUrl\": \"https://b.stripecdn.com/mkt-ssr-statics/assets/_next/static/chunks/73692-415e845f6c581657.js\",\n      \"purpose\": \"波带各模块的第一方URL、提取范围与本地适配清单\",\n      \"bytes\": 4120,\n      \"sha256\": \"9384139241c3b0f3b9cce7bb63e605c2a84e9d1b3fc3b40a3faaaf5b1ec5e79a\",\n      \"copyright\": \"Stripe 原始渲染代码归 Stripe；Three.js r178 为 MIT，仅供私人学习。\",\n      \"derived\": true\n    },\n    {\n      \"file\": \"assets/enterprise-hertz.webp\",\n      \"sourceUrl\": \"https://images.stripeassets.com/fzn2n1nzq965/24BNV3GGtvCprFLrYovyaa/b2eac20a1d5ec75e4bff3888b998d163/enterprise-accordion-hertz.png?w=1632&fm=webp&q=90\",\n      \"purpose\": \"Original Hertz customer-story photography\",\n      \"bytes\": 205658,\n      \"sha256\": \"d478ae6ee3bd578ba17c178426b28262ff27319c398b691eb601429190d36819\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/enterprise-urbn.webp\",\n      \"sourceUrl\": \"https://images.stripeassets.com/fzn2n1nzq965/37wKFanVluouT2iEZUbD0H/f75e77141e1330ad81ea18c6aea65f0c/enterprise-accordion-urbn.png?w=1632&fm=webp&q=90\",\n      \"purpose\": \"Original customer-story photography; selected by accordion\",\n      \"bytes\": 219658,\n      \"sha256\": \"b391a0713efeab1ebd9922f3d9139c8d73cea0a92dbdd7057b3e0de6d540a237\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/enterprise-instacart.webp\",\n      \"sourceUrl\": \"https://images.stripeassets.com/fzn2n1nzq965/1v5hJ2NWvKpQfVbMqOzCpE/c900b9ed4c288f7cf0a0dced5f4983f2/enterprise-accordion-instacart.png?w=1632&fm=webp&q=90\",\n      \"purpose\": \"Original customer-story photography; selected by accordion\",\n      \"bytes\": 187628,\n      \"sha256\": \"e9e350bac6128d46a58bfb6bf48c32848b8309cac5825fb3efe7ab14ee0f936f\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    },\n    {\n      \"file\": \"assets/enterprise-lemonde.webp\",\n      \"sourceUrl\": \"https://images.stripeassets.com/fzn2n1nzq965/5AQ9A87KzwpPy4CD3uPz5C/4afd1a1e9d6e1d698c4c7c74a4868822/enterprise-accordion-lemonde.png?w=1632&fm=webp&q=90\",\n      \"purpose\": \"Original customer-story photography; selected by accordion\",\n      \"bytes\": 148666,\n      \"sha256\": \"b17cddb82e511ddc8b33e98159bfe30312acfd2aa9691b64972701a3e7891f62\",\n      \"copyright\": \"Original publisher; personal reference study\",\n      \"status\": \"downloaded\"\n    }\n  ]\n}",
+      "sha256": "0228ad25d70641b345070123f3b155038e4ddba5fcb1db7d58ff54db41c50e07",
+      "bytes": 8035
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/stripe-platform/assets-manifest.json",
+      "role": "context",
+      "sha256": "0228ad25d70641b345070123f3b155038e4ddba5fcb1db7d58ff54db41c50e07",
+      "bytes": 8035
+    },
+    {
+      "path": "demos/stripe-platform/assets/enterprise-hertz.webp",
+      "role": "asset",
+      "sha256": "d478ae6ee3bd578ba17c178426b28262ff27319c398b691eb601429190d36819",
+      "bytes": 205658
+    },
+    {
+      "path": "demos/stripe-platform/assets/enterprise-instacart.webp",
+      "role": "asset",
+      "sha256": "e9e350bac6128d46a58bfb6bf48c32848b8309cac5825fb3efe7ab14ee0f936f",
+      "bytes": 187628
+    },
+    {
+      "path": "demos/stripe-platform/assets/enterprise-lemonde.webp",
+      "role": "asset",
+      "sha256": "b17cddb82e511ddc8b33e98159bfe30312acfd2aa9691b64972701a3e7891f62",
+      "bytes": 148666
+    },
+    {
+      "path": "demos/stripe-platform/assets/enterprise-urbn.webp",
+      "role": "asset",
+      "sha256": "b391a0713efeab1ebd9922f3d9139c8d73cea0a92dbdd7057b3e0de6d540a237",
+      "bytes": 219658
+    },
+    {
+      "path": "demos/stripe-platform/assets/kettle.webp",
+      "role": "asset",
+      "sha256": "e7a40ad5c1bec86271fbc90695789bb242e264fdba7e0433b8073956ef2786aa",
+      "bytes": 1354
+    },
+    {
+      "path": "demos/stripe-platform/assets/logo.svg",
+      "role": "asset",
+      "sha256": "61a219a05909b6526c3c2a80ff06d77cad154d9753849acb70c3b1aa995df27c",
+      "bytes": 1922
+    },
+    {
+      "path": "demos/stripe-platform/assets/payments-bg.webp",
+      "role": "asset",
+      "sha256": "fd4cc5686fb44599fafa336a98bc88b30ee935fac102d70fb1aa630897a8a461",
+      "bytes": 37176
+    },
+    {
+      "path": "demos/stripe-platform/assets/sohne.woff2",
+      "role": "asset",
+      "sha256": "2228fee8f2931671a4690c35ec3a6746216f8d7fba4f51adc91f9b58a6b28f89",
+      "bytes": 58852
+    },
+    {
+      "path": "demos/stripe-platform/assets/stripe-wave-renderer.js",
+      "role": "asset",
+      "sha256": "8832fb802144702dcc3e547a59515f7d0a57937ca97c0b58761630f74eb99884",
+      "bytes": 621926
+    },
+    {
+      "path": "demos/stripe-platform/assets/terminal.webp",
+      "role": "asset",
+      "sha256": "9ff2cdcb0bb9d31869efad176b9a4c6d400b9c8f88479ba5fa74db35fb7a6df6",
+      "bytes": 69504
+    },
+    {
+      "path": "demos/stripe-platform/assets/three-LICENSE.txt",
+      "role": "context",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    {
+      "path": "demos/stripe-platform/assets/wave-geometry-worker.js",
+      "role": "asset",
+      "sha256": "6d26e053b995b994e9a2d35796cbfff061f0f4f02d57439e49fd4099c52fb66e",
+      "bytes": 1529
+    },
+    {
+      "path": "demos/stripe-platform/assets/wave-palette.webp",
+      "role": "asset",
+      "sha256": "dddcbdc6d7067aa190584c10cd004f7f7ff156ac9feab4fccacc89a29d54c32e",
+      "bytes": 11524
+    },
+    {
+      "path": "demos/stripe-platform/assets/wave-provenance.json",
+      "role": "context",
+      "sha256": "9384139241c3b0f3b9cce7bb63e605c2a84e9d1b3fc3b40a3faaaf5b1ec5e79a",
+      "bytes": 4120
+    },
+    {
+      "path": "demos/stripe-platform/assets/wave.webp",
+      "role": "asset",
+      "sha256": "7e74c3681207deea5570a1997cafc553a364efc999c2e35069c064cee35e25dc",
+      "bytes": 93584
+    },
+    {
+      "path": "demos/stripe-platform/fidelity.md",
+      "role": "context",
+      "sha256": "bcb7edd81519b2898f1f31a05c8fad4a35da66ef03a6ff21797ee18a47ea9caa",
+      "bytes": 5397
+    },
+    {
+      "path": "demos/stripe-platform/index.html",
+      "role": "source",
+      "sha256": "2fa16c1f286f426a79b7e0b63f617ceadfdcda16870f3fffd5c5d5093b4ef6bf",
+      "bytes": 10600
+    },
+    {
+      "path": "demos/stripe-platform/journey.js",
+      "role": "source",
+      "sha256": "45535e1347b0ad9f25c0ea4b440e8c4fd71ef7900c5784703bce4b21d8fb0376",
+      "bytes": 12662
+    },
+    {
+      "path": "demos/stripe-platform/script.js",
+      "role": "source",
+      "sha256": "637589a31b9ee2fa58ca6fba0ca427251de225775b68265f3c53e7a85cc24d64",
+      "bytes": 8359
+    },
+    {
+      "path": "demos/stripe-platform/style.css",
+      "role": "source",
+      "sha256": "d664afbfbab07431d985754dc7f1017eddfe3fb91a2c081155f5bf53c65d3d9a",
+      "bytes": 19579
+    },
+    {
+      "path": "demos/stripe-platform/wave.js",
+      "role": "source",
+      "sha256": "0c9020ef8c6ceab42498770426618a96cc8ac4883e5164680fada94434997a6c",
+      "bytes": 3018
+    },
+    {
+      "path": "entries/stripe-platform.json",
+      "role": "context",
+      "sha256": "cb1ae236529444fc70900448a3efa1cf859a0c6d292e48f36609282f3653a58e",
+      "bytes": 9251
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/mobile/stripe-platform.jpg",
+      "role": "preview",
+      "sha256": "adba49fe44f6a2819a9d3600b94936e1e21cf3ed22fe102a84c435f24408fbae",
+      "bytes": 41392
+    },
+    {
+      "path": "previews/stripe-platform.jpg",
+      "role": "preview",
+      "sha256": "268e46b9dce5a65f54fccbb7142a461bd95870912798ab55604d19eeab5a8d87",
+      "bytes": 116684
+    },
+    {
+      "path": "prompts/stripe-platform.md",
+      "role": "context",
+      "sha256": "095b6771be53e534a605204acff847ec0dc66f7f6a8a37465d0c852fbd1211ef",
+      "bytes": 2331
+    },
+    {
+      "path": "research/screenshots/stripe-platform-source.png",
+      "role": "preview",
+      "sha256": "2760148e906513f767291374d7f8313a5e153fedcc17120caa7e0acd10121074",
+      "bytes": 676090
+    },
+    {
+      "path": "research/stripe-platform.md",
+      "role": "context",
+      "sha256": "32b7306fbad72a41aaa336c52a43ed97b91859729b88bf68b2ee9283a9a1a509",
+      "bytes": 4261
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=stripe-platform\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>白底、海军蓝文字、紫色行动按钮与橙粉紫官网彩带；按钮小圆角，产品卡适度圆角。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官网 Söhne 本地字体；主标题48px、连续段落、紧凑行高。</dd></div><div class=\"\"><dt>布局留白</dt><dd>1266px内容框；48px段落式首屏；产品矩阵首行Payments跨两列、Billing一列同高，随后不同产品区；4列指标与左右案例。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方SingleWave原始shader与folded mesh，light palette；Söhne本地字体；真实终端素材与本地支付界面结构。</dd></div><div class=\"\"><dt>线条形状</dt><dd>按钮4px、产品8px、对话框12px；官网彩带原比例。</dd></div><div class=\"\"><dt>信息层级</dt><dd>首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒为本地近似；桌面popup高度/transform/opacity 300ms与clip/max-height 200ms采用源cubic-bezier(.45,.05,.55,.95)，入口位移12px为拟合；手机二级transform 500ms/opacity 250ms采用源CSS曲线，入口位移距离为拟合。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>橙粉紫波带与紫色行动建立品牌识别，细框线、海军蓝文字和真实支付终端让复杂能力可读；部分界面为本地DOM，容器裁切和标题混色为局部还原。</dd></div><div class=\"\"><dt>scroll</dt><dd>波浪首屏 → 6 产品 Bento → Global 4 统计 → 4 客户折叠 → Startup 横向架子 → 平台选择 → 海军蓝开发者内容 → 活动架子 → 结束行动 → 页尾。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>一段连续的大字号叙述同时给出平台定位与交易规模。</li><li>彩带提供品牌识别，细框线与产品界面维持金融工具的秩序。</li><li>用产品而非抽象图形展示收款、订阅、卡片与平台能力。</li><li>同一套主色用于核心行动，低饱和背景区分不同金融产品。</li></ul><h3>怎样凸显产品重点</h3><p>首屏从营收增长引向支付与金融能力，产品矩阵按业务模型组织；真实终端素材和界面局部让复杂基础设施可见。</p><h3>主题与情绪</h3><p>首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。</li><li>Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。</li><li>Bento 点击 → 产品详情对话框；真实官网是产品说明/界面扩展，本地内容压缩，业务模型反馈为明确的示范。</li><li>Global 四统计选择 → 当前数字强调、底部细线进度和基础设施说明对应变化；自动推进与指针停留暂停。</li><li>Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。</li><li>后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。</li><li>手机汉堡菜单 → 全屏顶层 Products/Solutions/Developers/Resources；选择分类后二级页以源 CSS 500ms 侧向进入、250ms 透明度衔接，Back 返回顶层。Start now/Contact sales 固定底部；关闭/Escape 恢复滚动和焦点，让长目录保持方向与核心行动。</li><li>桌面指针进入/点击分类 → popup 高度/位移/透明度 300ms、clip/max-height 200ms，均采用源 cubic-bezier(.45,.05,.55,.95)；分类按自然高度衔接。快速反转取消旧动画，离开/外部点击/Escape 后 hidden/inert/aria 一致；减少动态直接完成，维持目录的空间关系。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。</p><p>官方 WebGL 折叠波浪配合连贯段落式主张，产品矩阵、统计和客户故事使用各自的交互机制。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>当前首页没有背景音乐或有声视频。</p><p>波浪、产品 UI 和数据选择提供动感，保持金融信息阅读的安静环境。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。</li><li>终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。</li><li>品牌与官方素材仅用于此个人参考库；归档来源与权利。</li><li>减少动态保留可读内容、键盘焦点和手动选择。</li></ul><h3>适合</h3><p>复杂平台产品官网 / 金融工具能力介绍 / 多产品业务入口</p><h3>谨慎使用</h3><p>用一个渐变blob代替实际平台功能 / 把所有产品塞进同样的白卡 / 复制支付表单并连接真实交易</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#0a2540\"></i>#0a2540</span><span class=\"swatch\"><i style=\"background:#635bff\"></i>#635bff</span><span class=\"swatch\"><i style=\"background:#f6f9fc\"></i>#f6f9fc</span><span class=\"swatch\"><i style=\"background:#ff9151\"></i>#ff9151</span></div><p><b>字体</b> · 官网 Söhne 本地字体；主标题48px、连续段落、紧凑行高。<br><b>布局</b> · 1266px内容框；48px段落式首屏；产品矩阵首行Payments跨两列、Billing一列同高，随后不同产品区；4列指标与左右案例。<br><b>动效</b> · 官方SingleWave：speed 0.00004、timeOffset 17500、introTimeRamp每render +.016；付款UI每5秒/.75秒、客户横移35秒为本地近似；桌面popup高度/transform/opacity 300ms与clip/max-height 200ms采用源cubic-bezier(.45,.05,.55,.95)，入口位移12px为拟合；手机二级transform 500ms/opacity 250ms采用源CSS曲线，入口位移距离为拟合。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。桌面菜单保留指针进入/离开及键盘路径，popup高度/位移/透明度300ms、裁切200ms采用源曲线，分类自然高度衔接；手机使用全屏顶层分类、500ms侧向二级、Back返回与固定底部行动，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。</p></details><h3>改造练习</h3><p>以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://stripe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Stripe 当前公开页面 ↗</a><small>采集日期 2026-10-07；英文全球首页</small></div><div class=\"source-item\"><span class=\"source-badge\">理论</span><a href=\"https://stripe.com/blog/connect-front-end-experience\" target=\"_blank\" rel=\"noopener noreferrer\">Connect frontend design ↗</a><small>2017第一方文章解释复杂平台功能的轻盈呈现与就地产品展示；属于历史设计理论。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/tabs/\" target=\"_blank\" rel=\"noopener noreferrer\">WAI Tabs Pattern ↗</a><small>客户案例与产品选择的键盘、选择状态参考。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fstripe-platform.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "0e6b3030d4a77ac3c0d34602c10962d79e40af9af7642c6e58b7d577813e72d9",
+    "bytes": 9992
+  }
+}

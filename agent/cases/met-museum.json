@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 1,
+  "id": "met-museum",
+  "entry": {
+    "id": "met-museum",
+    "order": 27,
+    "title": "The Met · 编辑式展览与馆藏陈列",
+    "subtitle": "A museum homepage as an editorial exhibition shelf",
+    "category": "艺术/文化",
+    "country": "美国",
+    "tags": [
+      "美国",
+      "艺术馆",
+      "衬线字体",
+      "编辑排版",
+      "展览海报",
+      "The Met"
+    ],
+    "summary": "官方建筑摄影开场，Austin衬线欢迎区与四列参观信息接续；展览海报和馆藏以原生横架展开。",
+    "accent": "#e4002b",
+    "background": "#ffffff",
+    "principles": [
+      "官方建筑摄影先给实体空间与到访氛围，再在独立白底区域提供欢迎语与行动。",
+      "Austin衬线大标题承载文化语气，Inter无衬线负责操作和实用信息。",
+      "参观成本、交通、导览和开放状态并列而不盖在照片上。",
+      "海报本身已含展览视觉，外围保持简洁、方角、图下标签。"
+    ],
+    "productFocus": "到访纽约实体馆、正在展览与代表馆藏。先解决实用参观问题，再让展览海报和作品自然展开选择。",
+    "interaction": [
+      "进入页面：官方建筑静图与Met标志直接出现，无额外欢迎遮层或背景音乐。",
+      "上下浏览：欢迎与到访信息、展览横轨、馆藏和会员按原生阅读节奏组织；不新增全屏转场。",
+      "横向浏览展览：原生水平溢出，scroll-snap:none，前后按钮与触摸可操作。",
+      "打开导航：Visit等目的地立即展开；键盘焦点可操作，局部搜索与作品dialog为本地练习补充。"
+    ],
+    "theme": "白底、Met红与黑灰编辑排版；官方建筑摄影、Austin衬线标题和方角展览海报形成文化机构语气。",
+    "constraints": [
+      "标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。",
+      "四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。",
+      "展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。",
+      "日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。",
+      "官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。",
+      "以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。"
+    ],
+    "useCases": [
+      "大型博物馆门户",
+      "展览信息目录",
+      "出版与编辑型机构首页"
+    ],
+    "avoid": [
+      "缺少真实作品的纯视觉着陆页",
+      "需要自动滚动制造戏剧效果的产品页"
+    ],
+    "tokens": {
+      "palette": [
+        "#ffffff",
+        "#292929",
+        "#606060",
+        "#e4002b"
+      ],
+      "type": "官方Austin Medium用于欢迎标题；官方Inter Latin用于正文与按钮。",
+      "layout": "建筑摄影 → 白底大标题双CTA → 四列参观信息 → 原生展览/馆藏横架 → 会员区",
+      "motion": "原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。"
+    },
+    "sources": [
+      {
+        "title": "The Met official English homepage",
+        "url": "https://www.metmuseum.org/en",
+        "type": "实例",
+        "note": "2026-10-07采集英语首页：建筑静图、白底欢迎区、参观信息与原生展览横架。"
+      },
+      {
+        "title": "The Met Image and Data Resources",
+        "url": "https://www.metmuseum.org/policies/image-resources",
+        "type": "规范",
+        "note": "Open Access区分公众领域与受限制作品；本地OA藏品资源不扩大为海报、字体、品牌及首页影像的CC0许可。"
+      },
+      {
+        "title": "W3C WAI Disclosure Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+        "type": "规范",
+        "note": "内容显隐按钮与状态语义的实现参考，不表示机构采用该理论或已全面合规。"
+      }
+    ],
+    "prompt": "为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。",
+    "negativePrompt": "不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。",
+    "demo": "demos/met-museum/index.html",
+    "preview": "previews/met-museum.jpg",
+    "referencePreview": "research/screenshots/met-museum-source.jpg",
+    "research": "research/met-museum.md",
+    "exercise": "用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。",
+    "composition": {
+      "color": "白底黑灰字和红色操作层，图像保持展览自己的颜色。",
+      "typography": "Austin衬线大标题与Inter目录型小文本产生编辑层级。",
+      "layout": "宽幅建筑摄影约725px高；欢迎区左右分工，横架保持白底、图下题注。",
+      "imagery": "官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。",
+      "shape": "方角海报与细边CTA，会员区域仅一个轻边框圆角区域。",
+      "hierarchy": "建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。",
+      "motion": "原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。",
+      "coherence": "字形分工、Met红操作与白底图下文字一致，馆藏照片与海报使用不同图像比例。"
+    },
+    "referenceUrl": "https://www.metmuseum.org/en",
+    "implementation": "reference-study",
+    "fidelity": "demos/met-museum/fidelity.md",
+    "assetManifest": "demos/met-museum/assets-manifest.json",
+    "edition": "2026-10-07；英语公开官网局部",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "原站浅色正文、红色机构标志与大图固定，没有首页深浅开关。",
+      "designReason": "保留艺术作品原色、编辑字体与Met红标识的对比。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "采集页面无音频播放器或独立BGM开关。",
+      "interactionRole": "建筑与艺术图像建立机构氛围，信息展开服务到访任务，不增加无来源的声音。"
+    },
+    "capturedAt": "2026-10-07"
+  },
+  "documents": [
+    {
+      "path": "research/met-museum.md",
+      "role": "research",
+      "content": "# The Met · 编辑式展览与馆藏陈列\n\n归档采集：**2026-10-07**，[https://www.metmuseum.org/en](https://www.metmuseum.org/en)，英语首页。此案例固定为这次采集的页面，不追随官网后续变化。\n\n## 真实来源与理论\n\n- [The Met official English homepage](https://www.metmuseum.org/en)（实例）：2026-10-07采集英语首页：建筑静图、白底欢迎区、参观信息与原生展览横架。\n- [The Met Image and Data Resources](https://www.metmuseum.org/policies/image-resources)（规范）：Open Access区分公众领域与受限制作品；本地OA藏品资源不扩大为海报、字体、品牌及首页影像的CC0许可。\n- [W3C WAI Disclosure Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)（规范）：内容显隐按钮与状态语义的实现参考，不表示机构采用该理论或已全面合规。\n\n## 构成与设计逻辑\n\n官方建筑摄影开场，Austin衬线欢迎区与四列参观信息接续；展览海报和馆藏以原生横架展开。\n\n| 元素 | 职责与约束 |\n|---|---|\n| 配色 | 白底黑灰字和红色操作层，图像保持展览自己的颜色。 |\n| 字体 | Austin衬线大标题与Inter目录型小文本产生编辑层级。 |\n| 版式 | 宽幅建筑摄影约725px高；欢迎区左右分工，横架保持白底、图下题注。 |\n| 图像 | 官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。 |\n| 形状 | 方角海报与细边CTA，会员区域仅一个轻边框圆角区域。 |\n| 层级 | 建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。 |\n| 动态 | 原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。 |\n| 协调 | 字形分工、Met红操作与白底图下文字一致，馆藏照片与海报使用不同图像比例。 |\n\n## 交互巧思\n\n| 触发 | 采集页面与本地对应 | 设计作用与范围 |\n|---|---|---|\n| 进入首页 | 建筑静图与品牌立即进入，无额外加载欢迎层。 | 先定位机构与实体空间，随后欢迎区突出到访行动。 |\n| 上下浏览 | 原生长页，欢迎信息、展览、馆藏与会员依次展开。 | 保持编辑式阅读节奏，不加入原站没有的全屏遮罩。 |\n| 横向浏览展览 | 原生溢出，scroll-snap:none，按钮与触摸可操作。 | 并列比较展览，方向反馈清楚。 |\n| 打开Visit等导航 | 目的地即时展开。 | 到访任务直接可达；局部搜索／作品dialog是本地练习补充。 |\n\n\n## 主题与声音\n\n浅色正文、红色机构标志与原色作品固定，无深浅开关。编辑式字体和艺术图像承担氛围；采集页面没有独立BGM或音频播放器，本地不新增声音。\n\n## 复现边界\n\n当前构成分析是本库对采集页面的解释。原站桌面从入口到页尾、反向和Visit导航已实操作；展览轨道和媒体DOM已核对。CSS资源返回429时未绕过限制。完整版馆藏、捐赠、预约、会员不复制，相关链接回官方。\n\n[Demo](../demos/met-museum/index.html) · [Prompt](../prompts/met-museum.md) · [桌面预览](../previews/met-museum.jpg) · [手机预览](../previews/mobile/met-museum.jpg) · [素材清单](../demos/met-museum/assets-manifest.json)\n",
+      "sha256": "3935f227f8ef50b126b7eb47be55d9fc203fdded2cf210bc5b8c3c817787f15d",
+      "bytes": 3408
+    },
+    {
+      "path": "prompts/met-museum.md",
+      "role": "prompt",
+      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回参考库](../index.html#style/met-museum)\n",
+      "sha256": "4bc7f8e36f69c9a3e49497f19e1cb98abbfce95a622a3b9e57441eb9b79ec153",
+      "bytes": 2058
+    },
+    {
+      "path": "demos/met-museum/fidelity.md",
+      "role": "fidelity",
+      "content": "# The Met：复现范围\n\n归档采集：**2026-10-07**，[英语首页](https://www.metmuseum.org/en)。单一快照，后续官网变化不改变本案例。\n\n| 触发 | 采集页面与本地对应 | 设计作用与范围 |\n|---|---|---|\n| 进入首页 | 建筑静图与品牌立即进入，无额外加载欢迎层。 | 先定位机构与实体空间，随后欢迎区突出到访行动。 |\n| 上下浏览 | 原生长页，欢迎信息、展览、馆藏与会员依次展开。 | 保持编辑式阅读节奏，不加入原站没有的全屏遮罩。 |\n| 横向浏览展览 | 原生溢出，scroll-snap:none，按钮与触摸可操作。 | 并列比较展览，方向反馈清楚。 |\n| 打开Visit等导航 | 目的地即时展开。 | 到访任务直接可达；局部搜索／作品dialog是本地练习补充。 |\n\n\n固定浅色与Met红，作品保持原色；采集页面无背景音乐或音频控件。完整馆藏、预约、会员、捐赠使用官方外链。局部搜索／作品dialog为练习补充，不冒称官网业务。\n\n原站入口到页尾、反向、Visit导航和媒体DOM已核对；本地另测桌面、390px手机、前后轨道、主题说明与减少动态。\n\n[研究](../../research/met-museum.md) · [Prompt](../../prompts/met-museum.md) · [素材清单](assets-manifest.json) · [Demo](index.html)\n",
+      "sha256": "6232ef042ab1a2b52089be0b6c729e77fc4dba22186d47276dbae7ca0540a34d",
+      "bytes": 1336
+    },
+    {
+      "path": "demos/met-museum/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"met-museum\",\n  \"sourcePage\": \"https://www.metmuseum.org/en\",\n  \"scope\": \"2026-10-07匿名官方页面实访所观察的公开媒体与字体，离线私人学习副本。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/facade.webp\",\n      \"sourceUrl\": \"https://cdn.sanity.io/images/cctd4ker/production/5ba8ee17b1b20bc28666117a93f3022a14dd9a0d-5120x2880.png?w=1920&q=75&auto=format\",\n      \"purpose\": \"首页建筑/观众照片\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"format\": \"png\",\n      \"bytes\": 4332852,\n      \"sha256\": \"484cc95125260e8da1e9828b4757b7812b6cb7f94cd1b8d9167a899ebc528951\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/pollock.webp\",\n      \"sourceUrl\": \"https://cdn.sanity.io/images/cctd4ker/production/8cc67ac247e9b8feec057c9398c48e546f2aa1bd-5120x2880.jpg?w=750&q=75&fit=clip&auto=format\",\n      \"purpose\": \"Krasner/Pollock展览海报\",\n      \"width\": 750,\n      \"height\": 422,\n      \"format\": \"jpeg\",\n      \"bytes\": 62179,\n      \"sha256\": \"85c576be20449dbe187a62dcbae835ab7c63d0228eae0b2b3bc64c8a24103162\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/costume.webp\",\n      \"sourceUrl\": \"https://cdn.sanity.io/images/cctd4ker/production/d25918d32e91614f036dc86e1e6624c790860b0b-5120x2880.jpg?w=750&q=75&fit=clip&auto=format\",\n      \"purpose\": \"Costume Art展览海报\",\n      \"width\": 750,\n      \"height\": 422,\n      \"format\": \"jpeg\",\n      \"bytes\": 31731,\n      \"sha256\": \"11faf8f6473b043f8a48ea8cf44827cfadbba35dfe9d1308aa05e0ebddbf085b\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/orientalism.webp\",\n      \"sourceUrl\": \"https://cdn.sanity.io/images/cctd4ker/production/1421654e887b123f803467dc6f4f82ff77a915dd-5120x2880.jpg?w=750&q=75&fit=clip&auto=format\",\n      \"purpose\": \"Orientalism展览海报\",\n      \"width\": 750,\n      \"height\": 422,\n      \"format\": \"jpeg\",\n      \"bytes\": 38771,\n      \"sha256\": \"237cdb88c9108bd2b99c7ef0d514ba6a5af5f1743c0028f945e02767cbaef375\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/liu-wei.webp\",\n      \"sourceUrl\": \"https://cdn.sanity.io/images/cctd4ker/production/e4305e41bf4ce6b1eb4b19d800637efb9dae65de-5120x2880.jpg?w=750&q=75&fit=clip&auto=format\",\n      \"purpose\": \"Liu Wei展览海报\",\n      \"width\": 750,\n      \"height\": 422,\n      \"format\": \"jpeg\",\n      \"bytes\": 48130,\n      \"sha256\": \"7f8c7b6763552673c9bcc020ebebbf935ef1a5e7770854ae24dde85d9c8402a2\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/dendur.jpg\",\n      \"sourceUrl\": \"https://collectionapi.metmuseum.org/api/collection/v1/iiif/547802/1223802/main-image\",\n      \"purpose\": \"Dendur藏品摄影\",\n      \"width\": 899,\n      \"height\": 1200,\n      \"format\": \"jpeg\",\n      \"bytes\": 202579,\n      \"sha256\": \"2c89d7d21ff3cfba8c932fa710c51fa0fc2a3e439704b383885c5cdcd6644481\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/vangogh.jpg\",\n      \"sourceUrl\": \"https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image\",\n      \"purpose\": \"Van Gogh自画像藏品摄影\",\n      \"width\": 964,\n      \"height\": 1200,\n      \"format\": \"jpeg\",\n      \"bytes\": 588545,\n      \"sha256\": \"fc3764e14b0e84b0045f1a5b81f1a012a405a976ecb6f8746c79dcaf50b576ac\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/washington.jpg\",\n      \"sourceUrl\": \"https://collectionapi.metmuseum.org/api/collection/v1/iiif/11417/42494/main-image\",\n      \"purpose\": \"Leutze藏品摄影\",\n      \"width\": 1200,\n      \"height\": 703,\n      \"format\": \"jpeg\",\n      \"bytes\": 124052,\n      \"sha256\": \"749a477299d448cdd06f2b36a91b6409042c67f0b74f190bf4db71f5c860aa9e\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"downloaded\",\n      \"copyright\": \"品牌与摄影/字型原作者持有，保存用于本地私人设计学习；不将官方主页摄影、海报或字型等同于CC0。\"\n    },\n    {\n      \"file\": \"assets/logo.svg\",\n      \"sourceUrl\": \"https://www.metmuseum.org/en\",\n      \"purpose\": \"从官方DOM提取完整SVG字标；只移除浏览器扩展标记并固定独立文件颜色\",\n      \"bytes\": 2889,\n      \"sha256\": \"52f46a9d4bafefd61166300743898a09dcbcb0b96a37e2101b3d0a7000a5e11a\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"status\": \"extracted\",\n      \"copyright\": \"官方品牌标识，私人设计学习。\"\n    },\n    {\n      \"file\": \"assets/inter.woff2\",\n      \"sourceUrl\": \"https://www.metmuseum.org/_next/static/immutable/media/83afe278b6a6bb3c-s.p.45535valc9rzk.woff2\",\n      \"purpose\": \"IAB pageAssets下载的官方Inter Latin正文字体\",\n      \"status\": \"bundled\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"官方站点使用的许可字型，私人学习副本；不授权再分发。\",\n      \"bytes\": 48432,\n      \"sha256\": \"c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4\"\n    },\n    {\n      \"file\": \"assets/austin.woff2\",\n      \"sourceUrl\": \"https://www.metmuseum.org/_next/static/immutable/media/Austin_Medium_Web-s.p.2ougkg-w8ab0g.woff2\",\n      \"purpose\": \"IAB pageAssets下载的官方Austin Medium欢迎标题字体\",\n      \"status\": \"bundled\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"copyright\": \"官方站点使用的许可字型，私人学习副本；不授权再分发。\",\n      \"bytes\": 46381,\n      \"sha256\": \"ffff3293a02235e597ef4a93b9bee4f63fff7cfad4300c6166d16bc92a866465\"\n    }\n  ]\n}\n",
+      "sha256": "235e6709b4aa3238875ae2d53f5d25e617cff5b4273f258bfd47d01969010655",
+      "bytes": 6689
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/met-museum/assets-manifest.json",
+      "role": "context",
+      "sha256": "235e6709b4aa3238875ae2d53f5d25e617cff5b4273f258bfd47d01969010655",
+      "bytes": 6689
+    },
+    {
+      "path": "demos/met-museum/assets/austin.woff2",
+      "role": "asset",
+      "sha256": "ffff3293a02235e597ef4a93b9bee4f63fff7cfad4300c6166d16bc92a866465",
+      "bytes": 46381
+    },
+    {
+      "path": "demos/met-museum/assets/costume.webp",
+      "role": "asset",
+      "sha256": "11faf8f6473b043f8a48ea8cf44827cfadbba35dfe9d1308aa05e0ebddbf085b",
+      "bytes": 31731
+    },
+    {
+      "path": "demos/met-museum/assets/dendur.jpg",
+      "role": "asset",
+      "sha256": "2c89d7d21ff3cfba8c932fa710c51fa0fc2a3e439704b383885c5cdcd6644481",
+      "bytes": 202579
+    },
+    {
+      "path": "demos/met-museum/assets/facade.webp",
+      "role": "asset",
+      "sha256": "484cc95125260e8da1e9828b4757b7812b6cb7f94cd1b8d9167a899ebc528951",
+      "bytes": 4332852
+    },
+    {
+      "path": "demos/met-museum/assets/inter.woff2",
+      "role": "asset",
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "bytes": 48432
+    },
+    {
+      "path": "demos/met-museum/assets/liu-wei.webp",
+      "role": "asset",
+      "sha256": "7f8c7b6763552673c9bcc020ebebbf935ef1a5e7770854ae24dde85d9c8402a2",
+      "bytes": 48130
+    },
+    {
+      "path": "demos/met-museum/assets/logo.svg",
+      "role": "asset",
+      "sha256": "52f46a9d4bafefd61166300743898a09dcbcb0b96a37e2101b3d0a7000a5e11a",
+      "bytes": 2889
+    },
+    {
+      "path": "demos/met-museum/assets/orientalism.webp",
+      "role": "asset",
+      "sha256": "237cdb88c9108bd2b99c7ef0d514ba6a5af5f1743c0028f945e02767cbaef375",
+      "bytes": 38771
+    },
+    {
+      "path": "demos/met-museum/assets/pollock.webp",
+      "role": "asset",
+      "sha256": "85c576be20449dbe187a62dcbae835ab7c63d0228eae0b2b3bc64c8a24103162",
+      "bytes": 62179
+    },
+    {
+      "path": "demos/met-museum/assets/vangogh.jpg",
+      "role": "asset",
+      "sha256": "fc3764e14b0e84b0045f1a5b81f1a012a405a976ecb6f8746c79dcaf50b576ac",
+      "bytes": 588545
+    },
+    {
+      "path": "demos/met-museum/assets/washington.jpg",
+      "role": "asset",
+      "sha256": "749a477299d448cdd06f2b36a91b6409042c67f0b74f190bf4db71f5c860aa9e",
+      "bytes": 124052
+    },
+    {
+      "path": "demos/met-museum/fidelity.md",
+      "role": "context",
+      "sha256": "6232ef042ab1a2b52089be0b6c729e77fc4dba22186d47276dbae7ca0540a34d",
+      "bytes": 1336
+    },
+    {
+      "path": "demos/met-museum/index.html",
+      "role": "source",
+      "sha256": "602abccfdbe757cdf3f6743ac53d273ca44f6bd1866debd8cff527cf26ec03e0",
+      "bytes": 7547
+    },
+    {
+      "path": "demos/met-museum/script.js",
+      "role": "source",
+      "sha256": "8fbf31e9e4062d5b6231bbb6792e0a9b3329260472d9a9f8667086c805d9e3a1",
+      "bytes": 4874
+    },
+    {
+      "path": "demos/met-museum/style.css",
+      "role": "source",
+      "sha256": "06b3d99bb1c20f454da8e2657ca690f4afd6590c7b6bdf29f0c8b47db95e4469",
+      "bytes": 8464
+    },
+    {
+      "path": "entries/met-museum.json",
+      "role": "context",
+      "sha256": "711d755661304cd15d6ed4a613570cf97a0b3b90f71a4235c1598c8550e823e6",
+      "bytes": 7042
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
+      "bytes": 240
+    },
+    {
+      "path": "previews/met-museum.jpg",
+      "role": "preview",
+      "sha256": "7bcf4df876a5a2dd76735871304b0b07b4ff86b5f3446e41dcc599aab045b265",
+      "bytes": 243835
+    },
+    {
+      "path": "previews/mobile/met-museum.jpg",
+      "role": "preview",
+      "sha256": "b13156b6c7717a568fe011e8f2be805a9e056003157d6affa27518b43fe80f19",
+      "bytes": 67796
+    },
+    {
+      "path": "prompts/met-museum.md",
+      "role": "context",
+      "sha256": "4bc7f8e36f69c9a3e49497f19e1cb98abbfce95a622a3b9e57441eb9b79ec153",
+      "bytes": 2058
+    },
+    {
+      "path": "research/met-museum.md",
+      "role": "context",
+      "sha256": "3935f227f8ef50b126b7eb47be55d9fc203fdded2cf210bc5b8c3c817787f15d",
+      "bytes": 3408
+    },
+    {
+      "path": "research/screenshots/met-museum-source.jpg",
+      "role": "preview",
+      "sha256": "6b4fe39c32e3cc11c253178ad43a0a56528122358d1fa88f05477655b36f1b42",
+      "bytes": 160684
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
+      "bytes": 1029
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=met-museum\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>白底黑灰字和红色操作层，图像保持展览自己的颜色。</dd></div><div class=\"\"><dt>字体排版</dt><dd>Austin衬线大标题与Inter目录型小文本产生编辑层级。</dd></div><div class=\"\"><dt>布局留白</dt><dd>宽幅建筑摄影约725px高；欢迎区左右分工，横架保持白底、图下题注。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。</dd></div><div class=\"\"><dt>线条形状</dt><dd>方角海报与细边CTA，会员区域仅一个轻边框圆角区域。</dd></div><div class=\"\"><dt>信息层级</dt><dd>建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>字形分工、Met红操作与白底图下文字一致，馆藏照片与海报使用不同图像比例。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>官方建筑摄影先给实体空间与到访氛围，再在独立白底区域提供欢迎语与行动。</li><li>Austin衬线大标题承载文化语气，Inter无衬线负责操作和实用信息。</li><li>参观成本、交通、导览和开放状态并列而不盖在照片上。</li><li>海报本身已含展览视觉，外围保持简洁、方角、图下标签。</li></ul><h3>怎样凸显产品重点</h3><p>到访纽约实体馆、正在展览与代表馆藏。先解决实用参观问题，再让展览海报和作品自然展开选择。</p><h3>主题与情绪</h3><p>白底、Met红与黑灰编辑排版；官方建筑摄影、Austin衬线标题和方角展览海报形成文化机构语气。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入页面：官方建筑静图与Met标志直接出现，无额外欢迎遮层或背景音乐。</li><li>上下浏览：欢迎与到访信息、展览横轨、馆藏和会员按原生阅读节奏组织；不新增全屏转场。</li><li>横向浏览展览：原生水平溢出，scroll-snap:none，前后按钮与触摸可操作。</li><li>打开导航：Visit等目的地立即展开；键盘焦点可操作，局部搜索与作品dialog为本地练习补充。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>原站浅色正文、红色机构标志与大图固定，没有首页深浅开关。</p><p>保留艺术作品原色、编辑字体与Met红标识的对比。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>采集页面无音频播放器或独立BGM开关。</p><p>建筑与艺术图像建立机构氛围，信息展开服务到访任务，不增加无来源的声音。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。</li><li>四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。</li><li>展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。</li><li>日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。</li><li>官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。</li><li>以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。</li></ul><h3>适合</h3><p>大型博物馆门户 / 展览信息目录 / 出版与编辑型机构首页</p><h3>谨慎使用</h3><p>缺少真实作品的纯视觉着陆页 / 需要自动滚动制造戏剧效果的产品页</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#292929\"></i>#292929</span><span class=\"swatch\"><i style=\"background:#606060\"></i>#606060</span><span class=\"swatch\"><i style=\"background:#e4002b\"></i>#e4002b</span></div><p><b>字体</b> · 官方Austin Medium用于欢迎标题；官方Inter Latin用于正文与按钮。<br><b>布局</b> · 建筑摄影 → 白底大标题双CTA → 四列参观信息 → 原生展览/馆藏横架 → 会员区<br><b>动效</b> · 原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。</p></details><h3>改造练习</h3><p>用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.metmuseum.org/en\" target=\"_blank\" rel=\"noopener noreferrer\">The Met official English homepage ↗</a><small>2026-10-07采集英语首页：建筑静图、白底欢迎区、参观信息与原生展览横架。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.metmuseum.org/policies/image-resources\" target=\"_blank\" rel=\"noopener noreferrer\">The Met Image and Data Resources ↗</a><small>Open Access区分公众领域与受限制作品；本地OA藏品资源不扩大为海报、字体、品牌及首页影像的CC0许可。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI Disclosure Pattern ↗</a><small>内容显隐按钮与状态语义的实现参考，不表示机构采用该理论或已全面合规。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fmet-museum.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "d26ddcd8a1436f69bdb1750a28e9de000366983d1c4340f7d0fcb5b5feb88208",
+    "bytes": 7699
+  }
+}

@@ -86,6 +86,7 @@
   "negativePrompt": "不要假旋钮、无效播放按钮、自动音频、版权曲目、巨量霓虹、反复闪烁扫描线；不要宣称8复音或精确模拟不存在的功能。",
   "demo": "demos/retro-80s/index.html",
   "preview": "previews/retro-80s.jpg",
+  "theoryVerifiedAt": "2026-10-07",
   "research": "research/retro-80s.md",
   "exercise": "增加一个真正可编辑的8步音序器；让步骤、速率与播放状态在视觉和声音上同步。",
   "composition": {

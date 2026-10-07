@@ -2,7 +2,7 @@ const content = document.querySelector('#content');
 const file = new URLSearchParams(location.search).get('file') || '';
 const libraryURL = new URL('.', document.baseURI);
 function isAllowedDocument(value) {
-  return /^(?:README\.md|CONTRIBUTING\.md|(?:demos|research|prompts|docs)\/[A-Za-z0-9_./-]+\.md)$/.test(value)
+  return /^(?:README\.md|CONTRIBUTING\.md|AGENT\.md|(?:demos|research|prompts|docs|agent)\/[A-Za-z0-9_./-]+\.md)$/.test(value)
     && !value.split('/').some(part => !part || part.startsWith('.'));
 }
 function localPath(url) {
