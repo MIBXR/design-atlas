@@ -1,53 +1,14 @@
-# Claude — 衬线语气与 Cowork 演示 · 局部还原说明
+# Claude：局部还原范围
 
-参考URL：[https://claude.com/](https://claude.com/)
+参考：[Claude公开营销页](https://claude.com/)，2026-10-07。结构依据公开截图与HTML；源hover/scroll时序未取得。
 
-版本：2026-10-07公开营销页。implementation: reference-study。
-
-## 观察依据
-
-CUA实访claude.com，主标题计算72px、AnthropicSerif；左栏标题/注册框/下载按钮，右栏圆角cowork-login-hero.mp4。初次 Edge 观察受 Dark Reader 影响，后续 Root 已用 IAB 保存无扩展的公开官网截图（research/screenshots/claude-platform-source.jpg），当前对照图以该清洁截图为准。本地浅底、字号和左右结构依据官网素材及原始样式。后续一次导航自动去claude.ai/login，因此立即停止该路径，不读取任何账户内容。匿名HTML核验公开营销信息及品牌SVG。
-
-## 局部还原范围
-
-| 原站观察/机制 | 本地映射 | 差异/边界 |
+| 区域 | 本地保留 | 近似／未覆盖 |
 |---|---|---|
-| 衬线首屏 | 真实AnthropicSerif、72px、注册卡/视频左右结构 | 原始品牌SVG与视频本地化 |
-| 注册展开 | email按钮切换表单、有效邮箱后本地反馈 | 不发送、不创建账号 |
-| 套餐与FAQ | 受众/账期切换、原生details | 计划信息为日期快照 |
+| 首屏 | Anthropic Serif 72px、奶油底、左注册卡/右官方Cowork视频 | 文案与部分间距缩减 |
+| 媒体 | 25.567秒静音循环、事件驱动播放/暂停，减少动态默认暂停 | 无原站专用poster，静止保留首帧 |
+| 注册/套餐/FAQ | email展开返回、受众与账期切换、原生details | 本地反馈，不认证/发送邮箱/订阅；价格为观察日快照 |
+| 响应式 | 800px以下导航折叠、700px以下英雄区纵排 | 800px是本地嵌入适配，非源断点观察 |
 
-## 交互对照
+完整企业导航、全部FAQ、SSO、真实下载与服务端未覆盖；没有依据猜测添加标题或滚动演出。
 
-- Continue with email展开本地邮箱表单，提交只给模拟反馈。
-- 官方视频默认静音，可播放暂停；reduced motion默认暂停。
-- Individual/Team and Enterprise切换套餐，年/月账期更改Pro价格；FAQ原生展开。
-
-所有账户/订阅/服务端操作均止于本地弹窗或示例反馈；官网入口由用户自行访问。原站机制的具体点击结果未逐一完成端到端验证，不能称整站功能克隆。
-
-## 差异
-
-没有复现服务器认证、SSO、真正下载或订阅。视频为官方本地文件；reduced-motion暂停时没有原站视频poster，保留首帧。完整企业产品导航与所有FAQ未全量复制。
-
-手机根据观察或合理响应式适配；所有页面自然滚动并包含prefers-reduced-motion，视频有暂停。浏览器最终像素QA由主任务统一执行，本文件不把静态检查称为完整视觉验收。
-
-## 资产
-
-详见[assets-manifest.json](assets-manifest.json)。图片、视频、字体、商标原样或按比例显示。素材归品牌与原作者，仅本地私人学习，不代表授权、合作或正式网站。
-
-
-## 2026-10-07 动效复审（当前实现）
-
-保留官方Cowork视频静音loop、真实media事件驱动播放/暂停按钮与reduced-motion更新；本次原站重定向/Cloudflare，未给源页面hover或scroll添加未经现场核验的新动画。
-
-证据：本次官网Edge重定向到claude.ai后停止；root IAB同样重定向并遇Cloudflare。匿名claude.com HTML/CSS仍200取得；本地25.567秒媒体及按钮实操通过，源时序 unavailable。
-
-边界：2026-10-07动效复审无法在Edge或IAB打开未登录claude.com首页；本地媒体可操作不等于本次验证了原站所有hover/scroll时序。
-
-详情和实操记录见 [产品动效审计](../../research/MOTION-AUDIT-PRODUCTS.md)。本地增加 darkreader-lock meta 保护官方配色，这是本地适配，不作为原站观察。
-
-
-### 参考库窄面板适配
-
-窄桌面本地适配：参考库嵌入预览约718px宽时，原有700px收起导航断点使header右侧按钮超出。已将仅导航部分的收起断点提前到800px，保留原英雄区布局和可操作汉堡菜单。这是嵌入环境适配，因本轮官网转入登录页，不能声称其断点来自现场源站观察。
-
-本地实际复验718×844：html.clientWidth=703、scrollWidth=703、overflow=false；header nav/actions均display:none、hamburger display:block，真实click后expanded=true、菜单6链接可见。未通过系统设置修改任何偏好。
+[设计与交互依据](../../research/claude-platform.md) · [资产来源](assets-manifest.json)。品牌与媒体权利归原作者。

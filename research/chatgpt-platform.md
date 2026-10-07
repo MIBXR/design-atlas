@@ -1,41 +1,41 @@
-# ChatGPT · 巨字、飞入拼贴与滚动交接
+# ChatGPT：巨字、飞入拼贴与滚动交接
 
-观察日期：2026-10-07。参考：[中文公开介绍页](https://chatgpt.com/zh-Hans-CN/overview/)。本记录依据真实指针操作、点击与原生滚动，以及浏览器公开 DOM/CSS 属性。
+观察日期：2026-10-07。参考：[公开页面](https://chatgpt.com/zh-Hans-CN/overview/)。原站内容以该日期与语言版本为准。
 
-## 从静态结构补回交互
+## 设计特点与分析
 
-首屏字体约88.96px、64px导航和五行巨字保留。关键在于标题、周边拼贴、中央界面、左侧模式说明构成同一个连续状态系统。它先让用户用几个词选择能力，再通过相同的产品窗口把注意力引向工作成果。这是本地分析，未冒充原设计团队意图。
+中文公开页用64px导航、约88.96px五行巨字和聊天/工作/编程词选择能力。官方OpenAI Sans SC、渐变下划线、独立拼贴和同一中央产品窗口持续串联标题、体验与说明。
 
-| 原站直接观察 | 本地实现 | 边界 |
+用户先通过词选择能力，再由同一个产品窗口把注意转向工作结果；连续状态和空间交接让信息转换可追踪。这是页面分析。
+
+## 交互机制与复现映射
+
+| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
 |---|---|---|
-| 指针经过模式词触发切换，渐变与界面联动 | pointerenter、焦点及点击使用同一控制器 | 原站自动轮播周期未精确取得，本地6500ms |
-| Chat 7 / Work 7 / Codex 6 独立图层 | 官方透明素材逐层进出、旋转与层级；快速切换限制离场组 | 进入方向和22ms交错为本地近似 |
-| 图层CSS720ms及36/42/48px视差 | 分层视差、720ms进入、500ms离场、中央交叉淡化 | 未取得完整原站JS，缓动串联为本地实现 |
-| intro→handoff→accordion，长段2000px+100svh | 拼贴先淡出至.96轻缩放，然后同一窗口向右下移动 | 连续插值按关键帧拟合 |
-| 左侧三模式及500/1000/1500px分段 | 自然滚动联动说明；点击、方向键、Home/End | 文案缩写，保留任务含义 |
-| 七用途横向图片卡片架 | 官方图片、前后按钮、触屏原生横滑 | 正文缩写，未复现完整文章 |
+| 指针经过模式词 | 标题渐变、界面与周边素材联动；Chat7层/Work7层/Codex6层独立图层。 | pointerenter、焦点、点击和触屏使用同一控制器；进入方向与22ms交错为近似，快速切换最多一组离场图层。 |
+| 图层时序 | 公开图层720ms cubic-bezier(.22,1,.36,1)，36/42/48px视差。 | 720ms进入；500ms离场与中央交叉淡化、6500ms自动周期为近似。 |
+| 向下浏览 | intro→handoff→accordion；2000px+100svh长段；中央窗口向右下移，左模式说明显现。 | 先使拼贴淡出并缩至.96，再交接同一窗口；连续插值按关键帧拟合，不接管滚轮。 |
+| 模式说明 | 500/1000/1500px分段参考，聊天/工作/Codex随浏览切换。 | 点击与方向键/Home/End联动自然滚动，当前项和进度线同步。 |
+| 用途浏览 | 七用途真实图片横向卡片架。 | 官方图片、前后按钮及原生横滑；正文缩写。 |
 
 ## 原站关键帧
 
-![原站首屏](screenshots/chatgpt-official-initial.jpg)
-![工作模式周边独立素材](screenshots/chatgpt-work-scroll.jpg)
-![拼贴淡出与窗口交接](screenshots/chatgpt-handoff.jpg)
-![窗口移向右侧，左侧模式说明显现](screenshots/chatgpt-mode-rail.jpg)
+![首屏：五行巨字与模式词](screenshots/chatgpt-official-initial.jpg)
+![工作模式：周边素材独立围绕中央界面](screenshots/chatgpt-work-scroll.jpg)
+![交接阶段：拼贴退场，中央窗口继续移动](screenshots/chatgpt-handoff.jpg)
+![模式栏：窗口移向右侧，左侧说明显现](screenshots/chatgpt-mode-rail.jpg)
 
-可查询的图层坐标、比例、旋转、视差和滚动观测见 [motion-evidence.json](chatgpt-motion-evidence.json)。源码中的 `motion-data.js` 对应这些观察值，`script.js` 为独立本地实现。
+[源站几何与滚动证据](chatgpt-motion-evidence.json)记录图层坐标、比例、旋转、视差和阶段读值；与本地插值规则分别保存。
 
-## 使用与约束
+## 理论与约束
 
-指针经过首屏三个模式词后向下滚动，观察周围素材退出、中央窗口交接、左模式栏出现，继续滚动体验 Work/Codex；再向上滚动检查逆向流程。左模式栏可直接点击，或用方向键/Home/End。用途卡片可横滑。页脚可暂停演出。
+原站完整JS未取得，连续插值、进出方向与自动周期不能称同源实现。手机与减少动态采用顺序布局，取消自动、视差和长段，所有内容可访问；暂停控制装饰与自动切换。账户、价格、安全文章和完整故事未全量复现。图层参数见本地代码[motion-data.js](../demos/chatgpt-platform/motion-data.js)。
 
-只使用公开营销页。官方字标、图片、字体按原比例保留；不嵌入账户。手机采用顺序阅读，减少动态效果时去掉视差、自动切换及长滚动段。账户与价格按钮止于本地弹窗。价格、安全文章及完整故事画廊未全量还原。
+## 来源与材料
 
-浏览器实访与公开DOM读取成功；原站JS直接下载遇403/TLS限制。这里不声称拿到React源码或完全一致的动画曲线。
+- [ChatGPT 中文公开介绍页](https://chatgpt.com/zh-Hans-CN/overview/)（实例）：2026-10-07中文页：指针模式切换、三组独立图层、窗口交接和左模式栏；DOM记录坐标、720ms曲线、视差与500px分段。
+- [ChatGPT 英文介绍内容](https://chatgpt.com/overview/)（实例）：同日英文正文的Chat/Work/Codex能力架构。
+- [OpenAI Design Guidelines](https://openai.com/brand/)（规范）：字标比例、留白和OpenAI Sans的几何与人文品牌语气。
+- [WAI Accordion Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/)（规范）：左侧说明的展开状态和原生button语义；方向键及Home/End为本地增强。
 
-## 材料
-
-- [Demo](../demos/chatgpt-platform/index.html) · [Prompt与设计元素](../entries/chatgpt-platform.json)
-- [素材清单](../demos/chatgpt-platform/assets-manifest.json) · [还原说明](../demos/chatgpt-platform/fidelity.md)
-- [OpenAI品牌规范](https://openai.com/brand/) · [WAI Accordion](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/)
-
-品牌与媒体归原作者；私人设计学习副本。
+[原站对照](screenshots/chatgpt-official-initial.jpg) · [Demo](../demos/chatgpt-platform/index.html) · [完整Prompt与设计元素](../entries/chatgpt-platform.json) · [还原范围](../demos/chatgpt-platform/fidelity.md) · [资产来源](../demos/chatgpt-platform/assets-manifest.json)。品牌与媒体权利归原作者。

@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(root, 'dist');
-const files = ['index.html', 'atlas.css', 'atlas.js', 'catalog.js', 'fundamentals.html', 'fundamentals.css', 'fundamentals.js', 'document.html', 'document.js', 'favicon.svg', 'README.md', 'QA.md', 'CONTRIBUTING.md', '_headers'];
+const files = ['index.html', 'atlas.css', 'atlas.js', 'catalog.js', 'fundamentals.html', 'fundamentals.css', 'fundamentals.js', 'document.html', 'document.js', 'favicon.svg', 'README.md', 'CONTRIBUTING.md'];
 const folders = ['demos', 'entries', 'previews', 'research', 'prompts', 'docs'];
 if (path.relative(root, output) !== 'dist' || fs.lstatSync(output, {throwIfNoEntry:false})?.isSymbolicLink()) {
   throw new Error('Static output must be the real dist directory inside this repository.');
@@ -18,8 +18,7 @@ for (const name of [...files, ...folders]) regularTree(path.join(root, name));
 fs.rmSync(output, {recursive:true, force:true});
 fs.mkdirSync(output);
 for (const name of [...files, ...folders]) fs.cpSync(path.join(root, name), path.join(output, name), {recursive:true});
-// Sites serves Markdown without a charset and does not apply _headers.
-// A UTF-8 BOM signals the encoding without changing the tracked source text.
+// Signal UTF-8 for static hosts that omit charset; tracked source stays unchanged.
 let markedDocuments = 0;
 function markMarkdown(directory) {
   for (const item of fs.readdirSync(directory, {withFileTypes:true})) {

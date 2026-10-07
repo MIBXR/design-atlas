@@ -1,33 +1,35 @@
 # Apple：真实摄影与滚动产品叙事
 
-观察日期：2026-10-07；原站 https://www.apple.com/iphone-18-pro/ 。
+观察日期：2026-10-07。参考：[公开页面](https://www.apple.com/iphone-18-pro/)。原站内容以该日期与语言版本为准。
 
-初版耳机是风格练习，不能作为Apple页面还原。本次移除该原型，使用实访产品页的真实素材和布局。浏览器核验首屏、Highlights、Design；原站完整页包含很长的摄像、性能和共享功能叙事。
+## 设计特点与分析
 
-## 可观测事实
+黑色全宽登场配44px导航与52px信息带；名称靠舞台左下、购买为右下蓝色胶囊。Highlights以深灰底、56px标题与大圆角摄影建立收益层级；Design用约96px标题和左侧七个细节胶囊。玻璃质感章节导航随浏览固定。
 
-- 黑色全宽登场，44px全局导航和52px信息带。产品标题位于舞台下部，购买是小型蓝色胶囊。
-- Highlights深灰底，标题约56px，摄影卡片大圆角，底部圆角分页控制。
-- Design标题约96px；左侧七个胶囊细节按钮，对应右侧官方硬件视图。
-- 滚动后玻璃质感局部导航固定在顶端内缩位置。摄像段的尺度和文案变化由滚动进度驱动。
+同一硬件从整体转向细节，摄影、标题尺度和负空间共同组织长叙事；固定局部导航维持方向与行动可达。这是页面分析。
 
-## 机制解释
+## 交互机制与复现映射
 
-真实硬件持续占据视觉主位；尺度变化让同一物体从整体转向细节。大字与负空间分割长叙事；固定导航维持方向与行动可达。此解释是本地设计分析，不是Apple发布的意图声明。
+| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
+|---|---|---|
+| 登场／首屏 | 官方产品视频与末帧；完整自动序列未稳定观察。源容器恒定scale1.40625是fit，不是镜头动画。 | 使用官方MP4、末帧与重播；首屏无额外CSS缩放。 |
+| Highlights进入视口 | 控制由translateY(180px)进入；Camera→Battery→Colors→A20 Pro→Siri AI；有限播放结束后为Replay。 | 五静帧、进度、暂停和末尾重播；每项5秒、入场.65秒为近似；专用五段媒体未迁移。 |
+| 镜头滚动 | VideoScrub加载窗口a0t−250vh至a0b+100vh；进度锚点a0t−100vh至a0b−100vh，范围[.01,1]。 | 官方2160×1620、4.984秒WebM；220vh容器内sticky，p=clamp((viewportHeight−top)/height)，seek到(.01+.99p)×duration，视频保持暂停。 |
+| 镜头标题 | 源视频2.31秒时标题opacity1、4.11秒时opacity0；为两处采样。 | 与视频共用滚动进度，p=.48→.73淡出是近似；减少动态使用poster与静态标题。 |
+| Design选择 | 胶囊切换机身、镜头、尺寸与控件视图。 | 官方静帧与配色名称同步；完整旋转3D未实现。 |
+
+![镜头舞台：官方视频中的尺度变化与标题交接](../previews/apple-camera-motion.jpg)
 
 ## 理论与约束
 
-Apple HIG Motion https://developer.apple.com/design/human-interface-guidelines/motion ：动效应具有明确用途，支持减少动效。这是应用规范向网页设计的迁移。
+Apple HIG Motion用于动效目的与减少动态策略，属于应用规范向网页的迁移。价格、供应与交易以官网为准；完整性能、共享功能和其他章节未覆盖。
 
-本地功能范围及不一致见 ../demos/apple-product/fidelity.md；逐项资产URL与SHA256见 assets-manifest.json。保留原站真实摄影；不复制原站全部脚本或把近似滚动曲线说成完整重建。
+## 来源与材料
 
+- [Apple iPhone 官方分类页](https://www.apple.com/iphone/)（实例）：iPhone产品分类与比较入口；具体交互以iPhone 18 Pro页面为准。
+- [Apple iPhone 18 Pro 产品页](https://www.apple.com/iphone-18-pro/)（实例）：2026-10-07产品页：首屏、Highlights、Design与镜头滚动；图库有限播放、暂停和末尾重播。
+- [Apple HIG — Motion](https://developer.apple.com/design/human-interface-guidelines/motion)（规范）：动效目的和减少动态支持；应用规范向网页的迁移。
+- [Apple 当前页样式](https://www.apple.com/v/iphone-18-pro/c/built/styles/overview.built.css)（实例）：VideoScrub容器、gallery控制与源样式，用于区分布局缩放和视频内镜头运动。
+- [Apple 当前页脚本](https://www.apple.com/v/iphone-18-pro/c/built/scripts/overview/main.built.js)（实例）：VideoScrub加载窗口a0t−250vh至a0b+100vh；进度锚点a0t−100vh至a0b−100vh，范围.01至1。
 
-## 2026-10-07 动效复审补正
-
-实访首屏、滚动、图库自动状态与camera currentTime；官方VideoScrub关键帧DOM、overview.built.css与main.built.js只读核验。
-
-官方登场MP4；镜头系统以官方4.984秒WebM和220vh滚动舞台驱动video.currentTime(.01→1)，并局部淡出标题；五项亮点顺序/进度/末尾重播。首屏不再加入未观察的CSS缩放。
-
-滚动镜头必须用官方camera-system视频，不能用JPEG scale伪称原站同款；原视频进度源为scroll-container.top - 100vh至bottom - 100vh，文案淡出阈值仍为近似。
-
-本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。
+[原站对照](screenshots/apple-hero-source.jpg) · [Demo](../demos/apple-product/index.html) · [完整Prompt与设计元素](../entries/apple-product.json) · [还原范围](../demos/apple-product/fidelity.md) · [资产来源](../demos/apple-product/assets-manifest.json)。品牌与媒体权利归原作者。

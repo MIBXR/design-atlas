@@ -1,67 +1,31 @@
-# Qoder — 绿色工作台与多形态平台
+# Qoder：中国站工作台与多形态平台
 
-观察日期：2026-10-07。公开参考页：[https://qoder.cn/](https://qoder.cn/)。
+观察日期：2026-10-07。参考：[公开页面](https://qoder.cn/)。原站内容以该日期与语言版本为准。
 
-## 直接观察与证据
+## 设计特点与分析
 
-初次 Edge 观察国际版后，Root 在 IAB 经 “Visit China Site” 实访并核验 https://qoder.cn/。本案例最终使用中国站版本与清洁1280×720截图：约66px导航、Qoder CN黑字标、36px左标题和右说明；无国际版促销/Qwen条，首屏工作台满幅强绿且无外层圆角。原始国际版资产仅作为官方产品界面素材来源，后续平台/协作节是局部交互研究，不能视为整个CN站逐像素观察。
+中国站用约66px导航、约110px起的36px双行左标题和右说明，Qoder CN字标约123×26px。约y332起#80c777绿色工作台满幅铺开，无外层圆角；白色主区与浅灰侧栏区分品牌底景和应用内容。国际版促销/Qwen标签不属于这一版。
 
-## 第一方资料及交互规范
+应用工作台先提供任务与上下文证据，再按使用形态解释入口；绿色大面建立品牌识别，产品内容保持中性色。产品族文档的理解、计划、执行、验证与迭代用于流程组织，是产品理论而非视觉作者声明。
 
-- [Qoder 中国站](https://qoder.cn/)（实例）：Root IAB 实访并保存清洁桌面截图，当前首屏按CN版统一；本地390px适配经CUA测试，后续平台章节是官方素材与局部机制研究。
-- [Qoder 产品族官方定义](https://docs.qoder.com/product-series/what-is-qoder)（理论）：第一方文档说明理解/计划/执行/验证/迭代与多形态产品族；属于产品理论，不是假称官网视觉作者意图。
-- [WAI Tabs Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)（规范）：模式与平台切换的语义、选择状态和键盘方向键参考。
+## 交互机制与复现映射
 
-Qoder第一方产品族文档给出从理解任务到计划、执行、验证和迭代的循环，并明确各形态职责；本地把此循环用于任务预览与多平台信息架构。视觉舒适/绿色语气为观察推断，不冒充官方设计哲学。
-
-## 分析推断
-
-- 主标题与说明分居两侧，产品工作台成为最主要的视觉证据。
-- 绿色大面承托真实桌面界面，品牌色与代码任务保持区分。
-- 桌面/移动/IDE/插件/CLI并列呈现不同使用入口。
-- 智能体协作以分工和流程说明，不能只用抽象节点图。
-
-以上是对已观察页面的分析，除明确标注的来源内容外，不冒充官方作者意图。
-
-## 复现映射
-
-| 原站观察/机制 | 本地映射 | 差异/边界 |
+| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
 |---|---|---|
-| 左右首屏与大面UI | 36px标题、满幅强绿背景内桌面工作区 | UI本地HTML结构复建，数据为示例 |
-| 五形态入口 | 平台tab和官方SVG/移动截图 | IDE/CLI局部框架用HTML绘制 |
-| 智能体工作循环 | 本地任务回执、协作展开 | 不执行在线AI任务 |
+| Hero路径 | 公开样式：路径1为13.824s linear flow与4.8s ease-in-out breathe；路径2为16.64s/6.4s，delay−18s/−4.8s；焦点3.8s cubic-bezier(.4,0,.2,1)。 | 保留时序，SVG曲线及焦点位置为局部近似。 |
+| 五平台ProductShowcase | 公开2071脚本：tab onClick、Swiper speed400、autoplay delay20000、pauseOnMouseEnter、mobile allowTouchMove。 | 400ms横向进退、20秒自动、鼠标进入暂停、点控/手动暂停/手机滑动；减少动态即时切换并停止自动。 |
+| 四项FeatureSection | 另一个组件为mouseenter、10秒自动，image y100%→0→−100%、150ms。 | 未迁移；该时序不用于五平台轮播。 |
+| 模式与任务 | 源演示模式动作未现场核验；公开首页预览无iframe。 | 编码/通用、任务回执与协作展开为本地模拟，不调用模型。 |
 
-## 约束与差异
+## 理论与约束
 
-- country用于中文/中国参考分组，不作为司法注册地断言。
-- 真实Qoder标识与平台图本地保存，不自行画替代logo。
-- 任务与智能体只做固定本地预览，不声称调用模型。
-- 手机核心界面重新排版，隐藏原桌面次级侧栏。
-- 首屏观察是2026-10-07中文版本；活动和平台能力为日期快照。
+五平台与协作章节仅局部研究，不称CN首页所有后续区域等价。官方SVG、手机图与CN字标本地保存；Instrument Sans未取得，回退Arial/Microsoft YaHei。移动端重排核心UI、收束侧栏，tab只在自身容器横滚；完整Agent SDK、QoderWake、企业条款和真实在线任务未覆盖。
 
-未取得Instrument Sans字体文件，明确使用系统字体回退。官方平台SVG是背景插画，产品窗口是本地DOM局部复建；未覆盖原站完整Agent SDK、QoderWake、全部案例和企业条款。country仅为中文参考归类。
+## 来源与材料
 
-## 本地材料
+- [Qoder 中国站官方网站](https://qoder.cn/)（实例）：2026-10-07中国站：CN字标、36px标题与全幅绿色工作台；公开首页样式给出路径/焦点时间。
+- [Qoder 产品族官方定义](https://docs.qoder.com/product-series/what-is-qoder)（理论）：第一方文档定义理解、计划、执行、验证与迭代的产品循环及多形态职责。
+- [WAI Tabs Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)（规范）：模式与平台选择的语义、选中状态和方向键参考。
+- [Qoder 当前公开组件脚本](https://qoder.cn/_next/static/chunks/2071-0dba5db130b82f90.js)（实例）：ProductShowcase为Swiper speed400、delay20000、pauseOnMouseEnter及mobile touch；FeatureSection为150ms纵向和10秒循环。
 
-- [Demo](../demos/qoder-platform/index.html)
-- [完整Prompt与设计约束](../entries/qoder-platform.json)
-- [素材清单](../demos/qoder-platform/assets-manifest.json)
-- [还原说明](../demos/qoder-platform/fidelity.md)
-
-私人学习记录；品牌与媒体版权保留给品牌及原作者。
-
-
-## 版本统一与2026-10-07补正
-
-Root通过国际站可见Visit China Site入口实访[中国站](https://qoder.cn/)并保存无遮挡原站截图。首屏最终统一CN版：移除国际版促销/Qwen标签，使用官网Qoder CN黑色PNG字标（1632×344）、约66px导航、110px起左侧双行标题/右侧说明，工作台背景为无圆角满幅强绿。之前调研国际版的信息不能作为CN版所有后续区域的完整观察证据。五形态图像来源、平台切换和协作步骤仅是本地局部机制研究，不宣称后续内容/布局逐区等同CN原站。
-
-
-## 2026-10-07 动效复审补正
-
-首屏公开实访后Edge显示账号/项目内容，下一步按钮操作自动审批拒绝，未重试。匿名无cookie SSR/2071脚本200验证public ProductShowcase speed400/auto20000/onClick/tab/mobile；root干净IAB只读取得HeroMotionEmbed时间。
-
-公开五平台showcase源码为400ms水平carousel、20秒auto、mouseenter暂停；本地切换方向/点控/手机滑动对应这一个组件。公开hero dash-flow/breathe时间迁移为局部SVG近似；模式动作原站未完成验证。
-
-五平台ProductShowcase是400ms/20秒Swiper，不能误套四项FeatureSection的150ms纵向出入/10秒hover循环；源演示按钮操作被自动审批拒绝，本次不宣称click结果实访。
-
-本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。
+[原站对照](screenshots/qoder-platform-source.jpg) · [Demo](../demos/qoder-platform/index.html) · [完整Prompt与设计元素](../entries/qoder-platform.json) · [还原范围](../demos/qoder-platform/fidelity.md) · [资产来源](../demos/qoder-platform/assets-manifest.json)。品牌与媒体权利归原作者。

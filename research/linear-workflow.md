@@ -1,65 +1,35 @@
-# Linear — 深色产品开发系统
+# Linear：深色产品开发系统
 
-观察日期：2026-10-07。公开参考页：[https://linear.app/](https://linear.app/)。
+观察日期：2026-10-07。参考：[公开页面](https://linear.app/)。原站内容以该日期与语言版本为准。
 
-## 直接观察与证据
+## 设计特点与分析
 
-CUA实访linear.app当前首页，h1为The product development system for teams and agents、字号64px，左对齐；说明在左、New Loops在右。紧接着是实际DOM issue演示，含Pulse/Inbox侧栏、Faster app launch、活动评论及In Progress属性。下载官网Inter、头像和黑白氛围图。
+64px左对齐标题先定位团队与agents产品开发系统；灰色副文、New Loops入口与细边框退到次级。紧接三栏issue演示：Pulse/Inbox侧栏、Faster app launch、正文/活动评论和属性。官方Inter、头像与黑白氛围图保持真实产品语气。
 
-同日原站截图：[research/screenshots/linear-workflow-source.png](../research/screenshots/linear-workflow-source.png)。
+任务信息优先，项目色与状态色承担识别；收件、任务与规划章节沿工作流推进。2024/2026设计文章讲应用UI，其层级原则可迁移，不能作为营销首页每个组件的作者意图。
 
-## 第一方资料及交互规范
+## 交互机制与复现映射
 
-- [Linear 首页](https://linear.app/)（实例）：2026-10-07 CUA核验当前64px主标题与Faster app launch真实DOM演示。
-- [Linear 2026 design refresh](https://linear.app/now/behind-the-latest-design-refresh)（理论）：2026-03-12第一方UI设计更新：导航退后、低饱和视觉、内容优先；这是应用UI叙述。
-- [Linear UI redesign](https://linear.app/now/how-we-redesigned-the-linear-ui)（理论）：2024第一方应用界面改版文章，辅助理解信息层级，不作为首页组件逐项出处。
-- [WAI Tabs Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)（规范）：任务与分类选择的键盘/状态参考。
-
-2026设计更新把导航和视觉装饰退到次级，让任务内容成为焦点；该来源描述应用UI，本地仅把它用于三栏任务界面与页面信息层级。
-
-## 分析推断
-
-- 标题先讲产品开发系统，真实工作界面紧接着提供证据。
-- 导航与边框退到次级，任务内容获得更高对比。
-- 局部彩色只用于状态、标签和项目，避免全屏霓虹。
-- 章节按工作流程推进，产品结构与传播叙事一致。
-
-以上是对已观察页面的分析，除明确标注的来源内容外，不冒充官方作者意图。
-
-## 复现映射
-
-| 原站观察/机制 | 本地映射 | 差异/边界 |
+| 触发与元素 | 原站观察／公开源码 | 本地实现与差异 |
 |---|---|---|
-| 克制首屏 | 64px标题、灰色副文、New Loops入口 | 未复制原站全部动态呈现 |
-| 实际任务界面 | 侧栏/正文/属性，官方头像和Inter | 四项本地任务，状态与收藏可操作 |
-| 流程章节 | Triage与规划时间线 | 按官网工作流次序局部复现，非完整软件 |
+| Favorites点击 | Agent tasks为Offline Mode/Core Performance/UI Refresh三列11任务；Insights为3389/1128/729统计、assignee图与项目表；UI Refresh为项目overview。 | issue、看板、insights六行表、项目页四种独立结构，直接切换；未测得额外过渡。 |
+| Product指针进入 | 展开Intake/Plan/AI/Build链接。 | 指针、点击、键盘与Esc；160ms局部缩放淡入为近似。 |
+| Working标签 | 源CSS的agentLabelSweep/agentBorderSweep为2秒linear。 | 只保留任务Working文字的局部扫光；减少动态关闭。 |
+| Intake下滚 | Slack式对话浮窗；消息opacity0/1分阶段变化，输入区有低透明状态。 | 下方Triage保留简化请求示例；完整自动消息与浮动agent面板未实现。 |
+| 任务与资源 | 工作视图表达不同层级。 | 状态、收藏、Run agent、任务卡和项目资源产生本地反馈；不连接真实工作空间。 |
 
-## 约束与差异
+![Agent tasks：三列任务看板，区别于issue详情与统计页](../previews/linear-agent-tasks.jpg)
 
-- 当前首页实访与2024/2026应用UI文章分开记载。
-- 黑色层次靠边框和亮度差，不靠蓝紫光晕覆盖所有内容。
-- Issue界面文字保持可读；手机折叠侧栏和属性次级信息。
-- 活动、状态与任务内容必须联动，不能只有按钮变色。
-- 官方氛围图与Inter本地化，注册不连接账户。
+## 理论与约束
 
-官网应用截图的所有图标、评论和agent实时执行未全部复制。本地核心issue结构接近，后续收件与规划使用自建示例数据；官网完整AI/automations和发布章节未覆盖。Logo保持官方原样。
+WAI Tabs用于选择状态和键盘。手机收束侧栏与次级属性，保留核心内容；后续图表分布和示例数据为局部近似，完整AI/automations、发布章节与实时执行未覆盖。
 
-## 本地材料
+## 来源与材料
 
-- [Demo](../demos/linear-workflow/index.html)
-- [完整Prompt与设计约束](../entries/linear-workflow.json)
-- [素材清单](../demos/linear-workflow/assets-manifest.json)
-- [还原说明](../demos/linear-workflow/fidelity.md)
+- [Linear 首页](https://linear.app/)（实例）：2026-10-07首页：64px标题、issue演示；Favorites切换三列看板、insights和project；Product指针进入展开。
+- [Linear 2026 design refresh](https://linear.app/now/behind-the-latest-design-refresh)（理论）：2026-03-12应用UI设计：导航退后、低饱和、内容优先；用于层级分析。
+- [Linear UI redesign](https://linear.app/now/how-we-redesigned-the-linear-ui)（理论）：2024应用界面改版文章，辅助解释信息层级。
+- [WAI Tabs Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)（规范）：任务与分类选择的键盘和选择状态参考。
+- [Linear 当前主页组件样式](https://static.linear.app/web/_next/static/css/Dop5ZgCE.css)（实例）：Working的agentLabelSweep/agentBorderSweep为2秒linear；Intake消息opacity分阶段变化。
 
-私人学习记录；品牌与媒体版权保留给品牌及原作者。
-
-
-## 2026-10-07 动效复审补正
-
-实访点击三个Favorites后AX呈现任务board/insights/project，各非同一详情；实访Product hover展开，滚动Intake聊天opacity状态0/1；Mmx1Wq和agentLabelSweep源CSS。
-
-左侧Favorites点击立即切换整种工作视图：issue/detail、三列任务board、insights、project overview；保持硬切换，不编造全局浮入。Working徽标保留2秒局部shimmer；导航mouseenter展开。
-
-Agent tasks和Agent Insights不能只更换同一issue标题；未观察到的视图切换方向/时序不得编造。下方Intake原站消息流程只观察，当前简化Triage非完整等价。
-
-本次原站操作、源码证据、observed/approximation/unavailable与本地实操详情见 [产品动效审计](MOTION-AUDIT-PRODUCTS.md)。旧观察的失联说明仅指早一轮，不覆盖本次成功实访；Claude和Qoder具体限制以上述复审为准。
+[原站对照](screenshots/linear-workflow-source.png) · [Demo](../demos/linear-workflow/index.html) · [完整Prompt与设计元素](../entries/linear-workflow.json) · [还原范围](../demos/linear-workflow/fidelity.md) · [资产来源](../demos/linear-workflow/assets-manifest.json)。品牌与媒体权利归原作者。

@@ -1,26 +1,19 @@
-# 21_21 DESIGN SIGHT：海报与四列档案：局部还原说明
+# 21_21 DESIGN SIGHT：海报与四列档案：对应范围
 
-原站：https://www.2121designsight.jp/
+参考日期：**2026-10-07**。[官方页面](https://www.2121designsight.jp/)。这是局部页面研究，以下时序分别标明官网依据与本地近似。
 
-观察：2026-10-07，日本官方版本。`research/screenshots/design-sight-source.jpg`为实访来源；`previews/design-sight.jpg`为本地入口；不是整站镜像。
-
-## 对应区域
-
-| 原站观察 | 本地对应 | 保留 / 差异 |
+| 区域 | 原站依据 | 最终本地对应 |
 |---|---|---|
-| 白色固定header/蓝牌形机构Logo | header | 保留官方Logo、129px桌面高度；简化辅助导航 |
-| 两张全幅展览海报 | .poster | 保留原16:9海报，不裁作卡片；恢复6000ms间隔/1000ms淡化；增加手动与暂停控制 |
-| 蓝分类与浅灰4列档案 | .archive | 保留4类、横/竖各自比例；精选档案，部分简介改成本地说明 |
-| 访问信息与机构footer | .visit / footer | 保留地址/时间与真实官网链接；简化社交、伙伴、地图入口 |
+| 展览海报 | 内联Slick配置6000ms间隔、1000ms fade，pauseOnHover:false，可swipe，无原生dots/arrows。 | 两幅官方方丈记/TYPE-XVII海报按6000ms/1000ms淡化，ease为本地曲线；手动、聚焦、离屏和后台暂停。编号、箭头及暂停/恢复是本地补充。 |
+| 分类导航 | 四栏目在浏览档案时保持稳定位置；common.js有固定导航声明。 | 蓝色四栏目导航粘性定位，图片/alt/详情外链随海报同步。桌面header约129px，手机约62px。 |
+| 细微反馈 | common.js声明链接蓝色与Logo opacity .7的50ms反馈，未确认独立hover现场效果。 | 保持本地可见焦点及链接反馈；不把源码声明当作完整hover动作证据。 |
 
-核心操作：`#poster-prev/#poster-next`、`[data-poster]`、`.poster`方向键、`#menu-toggle`、Escape、本地#visit锚点。海报自动轮播与粘性栏目导航已重建；更多播放器/CMS联动未复制。手机实访原站是62pxheader、全幅海报和单列档案，本地保持该结构。
+## 构成与边界
 
-## 共通还原边界
+没有CMS完整档案、原站栏目箭头同步、Vimeo联动和加载遮罩。减少动态不自动推进且取消淡化，手动选择保持有效；展期/休馆仅为2026-10-07快照。
 
-官方素材只作个人本地设计学习，图像、作品、Logo与商标权利归原权利人。HTML/CSS/JS为独立编写，没有整页iframe、外部运行时资源、统计或交易脚本。可键盘使用、手机重排、遵从reduced-motion；尚未声称完整WCAG合规。源CSS仅研究存档。
+129px header、全幅16:9海报、4个等宽但内容不等高的竖列；手机单列。。导航/分类标题稳定无衬线；海报中中英文字体作为官方原图保留，避免重排破坏作品。。展览视觉彼此不同，以恒定蓝标识、留白、列宽、标题与内容关系统一成机构档案。
 
-## 动效补审 · 2026-10-07
+官方媒体与美术的来源、处理、尺寸、字节及hash见[资产清单](assets-manifest.json)，权利仍归对应品牌、创作者与原权利人；学习使用不等于所有素材有通用开放许可。本地曲线、裁切和可用性补充不冒称官方原始机制。
 
-实按PageDown后scrollY939.2、当前slide转为gallery3；官网已加载内联配置autoplaySpeed6000/fade:true/speed1000。已补同节奏自动淡化、暂停/手动控制和粘性四栏目导航。原站切换同步栏目箭头、Vimeo播放器联动与更多CMS档案未覆盖。50ms蓝色链接/Logo透明度为官方common.js声明证据；未把声明当作独立hover实测。
-
-验证说明：1440×1000桌面和390×844手机均实际操作。减少动态采用本页`?motion=reduce`应用级入口测试，系统prefers-reduced-motion当时为false，没有更改系统/浏览器设置。它覆盖同一降级逻辑，但不等同于OS偏好切换实测。完整观察与验证见 [十例审计](../../research/MOTION-AUDIT-GAMES-ART-JP.md#design-sight)。
+[设计研究](../../research/design-sight.md) · [完整Prompt](../../prompts/design-sight.md) · [桌面预览](../../previews/design-sight.jpg) · [手机预览](../../previews/mobile/design-sight.jpg) · [Demo源码](index.html)

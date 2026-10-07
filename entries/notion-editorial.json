@@ -13,7 +13,7 @@
     "文档",
     "产品视频"
   ],
-  "summary": "复现 Notion 真实大字号居中标题、浅蓝动词胶囊、蓝色按钮、团队插画和工作空间视频，之后分节展示知识、答案与自动化。",
+  "summary": "居中巨字、六种动作词胶囊、团队插画与真实工作空间视频建立人文产品语气，Capture/Find双列和整行Automate解释三种能力。",
   "accent": "#0075e6",
   "background": "#ffffff",
   "principles": [
@@ -22,7 +22,7 @@
     "浅蓝动词与蓝色行动建立有限、清楚的视觉重点。",
     "功能说明使用真实文档界面，避免插画替代功能证据。"
   ],
-  "productFocus": "首屏真实Ramp HQ视频让团队与agents主题具体化，随后用捕获知识、搜索答案、自动化三节展示实际功能。",
+  "productFocus": "Ramp HQ产品视频具体展示团队与agents；Capture/Find并列呈现上下文与答案，整行Automate强调任务执行。",
   "interaction": [
     "动作胶囊自动轮换，保留点击下一项作为本地扩展；reduced-motion不自动轮换。",
     "官方产品视频播放/暂停与真实media状态同步。",
@@ -31,12 +31,12 @@
   ],
   "theme": "高白底、近黑巨字、蓝色按钮、手绘人物；功能区不同浅色底，文档界面保持轻边框。",
   "constraints": [
-    "首屏必须采用真实官方插画/产品素材，不画一个泛用纸片人物代替。",
-    "品牌活动文章和Notion应用排版更新的适用范围注明。",
-    "使用NotionInter本地字体，字标与插画不拉伸。",
-    "视频默认静音；reduced motion默认暂停。",
-    "手机用官网移动端图，功能区纵向重排，操作不依赖hover。",
-    "原站动作胶囊是自动label轮换而非只点击的三词选择；视频不是scroll-scrub，也不应因下滚任意暂停。动态标题不持续aria-live广播。"
+    "官方插画、产品图、NotionInter和字标保持比例。",
+    "品牌传播文章和应用排版文章各自注明适用范围。",
+    "六词自动轮换、内容测宽；手动下一项为本地扩展。",
+    "视频自然循环、默认静音并可暂停；减少动态停止自动媒体与词轮换。",
+    "Capture/Find双列、Automate整行；手机单列，交互不依赖hover。",
+    "问答、文档与任务为本地示例；真实搜索和agent执行未覆盖。"
   ],
   "useCases": [
     "知识协作产品",
@@ -57,17 +57,17 @@
       "#fff5e5"
     ],
     "type": "本地 NotionInter regular/bold；首屏94px、动词72px、正文20px；手机45px。",
-    "layout": "居中标题与1120px视频；客户字标；3个分节左右组合；底部真实文档布局。",
-    "motion": "动作词按官方脚本Think/Ship/Create/Build/Jam/Scale每2500ms轮换；胶囊label宽度300ms cubic-bezier(.86,0,.07,1)。官方10.967秒视频自然循环，滚出视口仍播放，按钮真实暂停。无通用reveal。"
+    "layout": "居中94px标题、1120px工作空间视频；Capture/Find双列bento、整行Automate；手机单列与官方移动图。",
+    "motion": "Think/Ship/Create/Build/Jam/Scale每2500ms轮换；内容测宽与300ms cubic-bezier(.86,0,.07,1)；10.967秒官方视频静音循环，滚出视口继续播放。"
   },
   "composition": {
     "color": "高白底、近黑巨字、蓝色按钮、手绘人物；功能区不同浅色底，文档界面保持轻边框。",
     "typography": "本地 NotionInter regular/bold；首屏94px、动词72px、正文20px；手机45px。",
-    "layout": "居中标题与1120px视频；客户字标；3个分节左右组合；底部真实文档布局。",
+    "layout": "居中94px标题、1120px工作空间视频；Capture/Find双列bento、整行Automate；手机单列与官方移动图。",
     "imagery": "94px标题、浅蓝胶囊、官网字体；官方hero视频/poster和mobile图；官网capture/find/automate图片 + 本地示例弹窗",
     "shape": "大圆胶囊动词、8px按钮、20px功能区；插画自然外轮廓。",
-    "hierarchy": "首屏真实Ramp HQ视频让团队与agents主题具体化，随后用捕获知识、搜索答案、自动化三节展示实际功能。",
-    "motion": "动作词按官方脚本Think/Ship/Create/Build/Jam/Scale每2500ms轮换；胶囊label宽度300ms cubic-bezier(.86,0,.07,1)。官方10.967秒视频自然循环，滚出视口仍播放，按钮真实暂停。无通用reveal。",
+    "hierarchy": "Ramp HQ产品视频具体展示团队与agents；Capture/Find并列呈现上下文与答案，整行Automate强调任务执行。",
+    "motion": "Think/Ship/Create/Build/Jam/Scale每2500ms轮换；内容测宽与300ms cubic-bezier(.86,0,.07,1)；10.967秒官方视频静音循环，滚出视口继续播放。",
     "coherence": "字体、色彩、素材、信息结构与Notion公开页一致；首屏核心构图和素材保持真实。后续功能文案为概述，部分功能背景与文档示例为局部迁移，不称整站像素级复制；未还原所有客户墙、真实搜索和agent执行。"
   },
   "sources": [
@@ -75,34 +75,34 @@
       "title": "Notion 当前首页",
       "url": "https://www.notion.com/",
       "type": "实例",
-      "note": "2026-10-07 动效复审：Edge实访首屏、Product点击、滚动两列bento及Pause→Play；公开脚本取得6词2500ms、源CSS宽度300ms与ease-in-out-quint。"
+      "note": "2026-10-07首页：六词轮换、Product点击、Capture/Find双列与Automate整行、视频播放/暂停。"
     },
     {
       "title": "Notion brand campaign",
       "url": "https://www.notion.com/blog/the-thinking-behind-our-latest-brand-campaign",
       "type": "理论",
-      "note": "2024第一方文章解释插画驱动、手势感和故事性；不等同于2026首页的全部设计说明。"
+      "note": "2024品牌活动文章解释插画的手势和叙事情境。"
     },
     {
       "title": "Notion page design update",
       "url": "https://www.notion.com/blog/updating-the-design-of-notion-pages",
       "type": "理论",
-      "note": "2026-03-18应用页面的阅读间距、列表分组；仅迁移至本地工作空间示例。"
+      "note": "2026-03-18应用页面的阅读间距与列表分组；用于本地文档示例。"
     },
     {
       "title": "Notion 当前标题脚本",
       "url": "https://www.notion.com/_next/static/chunks/1dh2_szm1xs0g.js",
       "type": "实例",
-      "note": "第一方公开已加载源码，只读核对具体组件/时序；不能替代未完成的实操。"
+      "note": "六词顺序和setInterval2500，内容测宽机制。"
     },
     {
       "title": "Notion 当前标题样式",
       "url": "https://www.notion.com/_next/static/chunks/40jeqhz4ax8oh.css",
       "type": "实例",
-      "note": "第一方公开已加载源码，只读核对具体组件/时序；不能替代未完成的实操。"
+      "note": "标签宽度300ms cubic-bezier(.86,0,.07,1)及对应组件样式。"
     }
   ],
-  "prompt": "以【Notion官网URL】在【观察日期】的真实公开首页为依据制作局部设计研究。保持居中巨字标题、浅蓝动词胶囊、蓝色小圆角主按钮与白色空间，优先使用官方NotionInter和原始品牌SVG。首屏必须使用已核验的官网团队插画和真实工作空间视频，视频静音并提供暂停，reduced motion时默认停在poster，手机切换官方移动图。后续按捕获上下文、寻找答案、自动化任务分别排版，使用对应官方产品图与不同浅色底，不把所有内容改成统一卡片。导航分类可展开；动词可选择；工作空间栏目和任务清单有真实本地状态；问答示例显式是模拟。保持文档段落呼吸与列表紧凑，手机可阅读、按钮可键盘操作、Esc可关闭。记录来源截图、资产尺寸、理论适用范围和服务端差异。迁移到【目标知识产品】时依据真实模块定义信息顺序。\n\n动效补正：按官方1dh2_szm1xs0g.js的六词和配色，Think蓝/Ship绿/Create橙/Build黄/Jam紫/Scale青每2500ms替换。标签以内容测宽，mask内inline-size过渡300ms cubic-bezier(.86,0,.07,1)，不对标题做飞入动画；reduced-motion保持Think。真实工作台视频10.967秒静音loop，按钮同步play/pause，原站实访滚出视口仍播放，保持自然文档滚动。Capture/Find并列两张浅灰bento、Automate占下一整行，箭头局部hover位移；手机单列。保留额外本地文档/问答但标为扩展。导航本次实际证实的是点击展开，不声称hover必触发。",
+  "prompt": "以【观察日期】的【Notion官网URL】制作局部设计研究页。保留白底、居中94px巨字、官方NotionInter、原始字标、浅蓝动作胶囊与蓝色小圆角行动按钮。动作词按Think/Ship/Create/Build/Jam/Scale每2500ms自动轮换，分别配蓝/绿/橙/黄/紫/青；标签根据scrollWidth测宽，在固定mask内以300ms cubic-bezier(.86,0,.07,1)改变宽度，字体加载后重测。保留手动下一项作为本地扩展，减少动态时停止自动轮换，动态标题不持续aria-live广播。首屏使用真实团队插画与10.967秒Ramp HQ产品视频，默认静音循环，滚出视口仍播放；按钮依据真实play/pause事件更新状态，减少动态默认暂停，手机用官方移动图。下方Capture/Find使用两张浅灰bento并列，Automate占下一整行，图像和不同浅色背景按能力区分，局部箭头反馈即可。Product点击展开Capture/Find/Automate菜单；工作空间栏目、问答和任务示例可操作且明确为本地模拟。手机单列、正文可读、键盘焦点清楚、弹窗Escape关闭，保留自然滚动。记录资产与来源，区分品牌活动插画理论、应用排版原则和当前首页事实；客户墙、真实搜索、agent执行及完整后续内容列为未覆盖。复用到【目标知识产品】时以真实模块重组信息顺序。",
   "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
   "demo": "demos/notion-editorial/index.html",
   "preview": "previews/notion-editorial.jpg",
@@ -112,6 +112,5 @@
   "implementation": "reference-study",
   "fidelity": "demos/notion-editorial/fidelity.md",
   "assetManifest": "demos/notion-editorial/assets-manifest.json",
-  "referencePreview": "research/screenshots/notion-editorial-source.png",
-  "motionAudit": "research/MOTION-AUDIT-PRODUCTS.md"
+  "referencePreview": "research/screenshots/notion-editorial-source.png"
 }

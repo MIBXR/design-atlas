@@ -1,28 +1,19 @@
-# Fuji Rock：现场照片与节日导览：局部还原说明
+# Fuji Rock：现场照片与节日导览：对应范围
 
-原站：https://www.fujirockfestival.com/
+参考日期：**2026-10-07**。[官方页面](https://www.fujirockfestival.com/)。这是局部页面研究，以下时序分别标明官网依据与本地近似。
 
-观察：2026-10-07，日本官方版本。`research/screenshots/fuji-rock-source.jpg`为实访来源；`previews/fuji-rock.jpg`为本地入口；不是整站镜像。
-
-## 对应区域
-
-| 原站观察 | 本地对应 | 保留 / 差异 |
+| 区域 | 原站依据 | 最终本地对应 |
 |---|---|---|
-| 68px橙栏/窄高白字Logo/山形MENU/右蓝票据 | header / #menu-toggle / .ticket | 使用官方PNG标识，固定位置与圆角；票据仍外链并注明活动已结束 |
-| 满首屏真实照片与20个dots | .photo-hero | 本地3张，实际桌面/手机配对源图；恢复3600ms间隔/800ms淡化，增暂停、左右按钮和键盘 |
-| 米灰大圆角多列菜单 | #mega-menu | 4列层级、原图标、语言带；部分栏目/社交缩减 |
-| 圆角实用导航/横Featured/日期新闻 | .pickup / .featured / .news | 对应官方图标、4图特集、4新闻；选取局部，未复制赞助商滚动 |
+| 主视觉照片 | top-2026.js为fade、speed800、interval3600，曲线cubic-bezier(.25,1,.5,1)；原站20张。 | 三组官方desktop/mobile配对照片保持3600ms/800ms曲线；箭头/圆点/键盘同步，手动后暂停，可恢复；离屏、后台及减少动态停自动。 |
+| 大菜单 | 多列图标层级；common.js有601ms后隐藏菜单及wrapper退场。 | 600ms ease菜单进退与背景opacity .08/12px退场为本地近似；打开后正文/footer inert，Escape关闭回到按钮。 |
+| Featured | 原站六条，600ms循环水平轨道，3600ms自动间隔。 | 四条真实宣传图原生横滚和有界按钮，不实现源站完整循环/自动轨道。 |
 
-核心操作：`#photo-prev/#photo-next`、`[data-photo]`、`.photo-hero`方向键，`#menu-toggle/#menu-close`、`#language-toggle`、Escape，`#feature-next/#feature-prev`和横滚列表。原站20张照片与赞助商/全部内容未复刻。Edge一度源站loader伴随common.js错误；打开/关闭MENU后正常显示，主任务IAB独立实访显示正常，干净截图已保存。本地无此加载脚本。
+## 构成与边界
 
-**2026版快照学习：活动已结束。** 官方Aftermovie是主动点击的YouTube外链，未下载独立BGM，不声称官网音乐已本地化。
+没有20张全部照片、六条完整Featured、导航上滑回显、加载遮罩、交易与演出数据库。未取得独立BGM；Aftermovie为官方YouTube外链，用户主动观看。系统字体近似原站Poppins/日文字体。
 
-## 共通还原边界
+68px固定顶栏、右上100px山菜单、满视口照片、右竖票据；后续横向Featured与新闻列表避免同构。。真实窄高Logo、短粗日期、大英文栏目、较小日文链接；不引入原站未提供的花体字。。官方现场的蓝橙布置与网站橙蓝识别呼应，灰米面板降密度；不同照片共享导航与控件位置。
 
-官方素材只作个人本地设计学习，图像、作品、Logo与商标权利归原权利人。HTML/CSS/JS为独立编写，没有整页iframe、外部运行时资源、统计或交易脚本。可键盘使用、手机重排、遵从reduced-motion；尚未声称完整WCAG合规。源CSS仅研究存档。
+官方媒体与美术的来源、处理、尺寸、字节及hash见[资产清单](assets-manifest.json)，权利仍归对应品牌、创作者与原权利人；学习使用不等于所有素材有通用开放许可。本地曲线、裁切和可用性补充不冒称官方原始机制。
 
-## 动效补审 · 2026-10-07
-
-实点第二dot，源站slide style transition opacity800ms cubic-bezier(.25,1,.5,1)；菜单实开显示多列层级。top-2026.js确认为fade、speed800、autoplay、interval3600；common.js在601ms后隐藏菜单并让wrapper fade-out。已补同速三图自动淡化、手动暂停与600ms菜单/背景退场，后台/离屏停轮播。原站20图缩3图，Featured实际源站600ms循环/自动滑轨与滚动时导航上滑回显仍未全覆盖。
-
-验证说明：1440×1000桌面和390×844手机均实际操作。减少动态采用本页`?motion=reduce`应用级入口测试，系统prefers-reduced-motion当时为false，没有更改系统/浏览器设置。它覆盖同一降级逻辑，但不等同于OS偏好切换实测。完整观察与验证见 [十例审计](../../research/MOTION-AUDIT-GAMES-ART-JP.md#fuji-rock)。
+[设计研究](../../research/fuji-rock.md) · [完整Prompt](../../prompts/fuji-rock.md) · [桌面预览](../../previews/fuji-rock.jpg) · [手机预览](../../previews/mobile/fuji-rock.jpg) · [Demo源码](index.html)

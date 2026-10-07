@@ -1,24 +1,14 @@
-# Apple 产品页对照
+# Apple：局部还原范围
 
-原站：https://www.apple.com/iphone-18-pro/ ，观察日期 2026-10-07。
+参考：[iPhone 18 Pro](https://www.apple.com/iphone-18-pro/)，2026-10-07。
 
-| 区域 | 原站观察 | 本地实现与边界 |
+| 区域 | 本地保留 | 近似／未覆盖 |
 |---|---|---|
-| 登场 | 全黑、全幅真实产品视频，名称左下、蓝色购买右下 | 使用官方同一MP4/末帧与相似布局；信息带改为学习说明，文案部分中文释义 |
-| 导航 | 滚动后玻璃质感悬浮胶囊，Explore展开章节 | 本地固定导航与展开关闭，章节数量缩为3 |
-| Highlights | 深灰背景、56px标题、圆角摄影舞台、分页与播放 | 五张官方摄影、原顺序、进度/暂停/重播；未迁移各亮点专用视频，5秒时序近似 |
-| Design | 96px章节标题、左侧胶囊控件、右侧3D产品舞台 | 同区官方静帧选择器；没有完整3D旋转引擎 |
-| Cameras | 镜头放大与回退、章节连续交接 | 官方4.984秒WebM、220vh舞台与源scroll关键帧映射；文字fade阈值为本地近似 |
+| 登场与导航 | 官方MP4/末帧、黑色舞台、玻璃章节导航、Explore开关 | 部分文案中文释义；章节缩减，完整首屏自动序列未现场确认 |
+| Highlights | Camera/Battery/Colors/A20 Pro/Siri AI五帧、进度、暂停和末尾重播 | 专用亮点媒体未移植；5秒间隔和.65秒控件入场近似 |
+| Design | 官方细节静帧、尺寸与配色选择 | 无完整旋转3D引擎 |
+| Cameras | 官方4.984秒WebM、220vh sticky滚动换帧 | 标题p=.48→.73淡出阈值近似；减少动态使用poster与静态标题 |
 
-原站证据：../../research/screenshots/apple-hero-source.jpg 与 apple-design-source.jpg。本地文本不作为产品参数来源；价格、供应、购买在原站完成。Apple没有默认背景音乐，本案例不添加任意配乐。减少动效时暂停登场/图库，镜头用poster与静态标题。
+镜头运动来自官方视频；登场画面没有额外CSS缩放。完整性能、共享功能、其他章节和交易未覆盖；价格与购买回官网。手机重排控件，保留可读文字和名称/选中状态。
 
-
-## 2026-10-07 动效复审（当前实现）
-
-官方登场MP4；镜头系统以官方4.984秒WebM和220vh滚动舞台驱动video.currentTime(.01→1)，并局部淡出标题；五项亮点顺序/进度/末尾重播。首屏不再加入未观察的CSS缩放。
-
-证据：实访首屏、滚动、图库自动状态与camera currentTime；官方VideoScrub关键帧DOM、overview.built.css与main.built.js只读核验。
-
-边界：滚动镜头必须用官方camera-system视频，不能用JPEG scale伪称原站同款；原视频进度源为scroll-container.top - 100vh至bottom - 100vh，文案淡出阈值仍为近似。
-
-详情和实操记录见 [产品动效审计](../../research/MOTION-AUDIT-PRODUCTS.md)。本地增加 darkreader-lock meta 保护官方配色，这是本地适配，不作为原站观察。
+[设计与交互依据](../../research/apple-product.md) · [资产来源](assets-manifest.json)。品牌与媒体权利归原作者。

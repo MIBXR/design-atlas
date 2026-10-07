@@ -54,29 +54,29 @@
     ],
     "type": "官方Rijksmuseum Normal/Bold；桌面正文17px、短标题约23px。",
     "layout": "100vh全幅摄影 → 100vh家庭月 → 两列整屏摄影 → 深色实用信息。",
-    "motion": "菜单开合与原生锚点；无自动轮播，reduced-motion禁用过渡和平滑滚动。"
+    "motion": "自然滚动满屏摄影；全屏菜单打开500ms linear淡入，关闭直接隐藏；搜索/预览为本地补充。减少动态取消过渡，主视觉无自动循环。"
   },
   "sources": [
     {
       "title": "Rijksmuseum official English homepage",
       "url": "https://www.rijksmuseum.nl/en",
       "type": "实例",
-      "note": "2026-10-07 CUA实访桌面1440×1000和390×844；观察巨大字标、100vh照片、家庭月、两栏专题和完整菜单。"
+      "note": "2026-10-07：英语首页《夜巡》观众摄影、巨幅字标、家庭月、两列专题与全屏菜单。"
     },
     {
       "title": "Rijksmuseum Accessibility Statement",
       "url": "https://www.rijksmuseum.nl/en/visit/accessibility/accessibility-statement",
       "type": "规范",
-      "note": "官方说明网站同时服务参观/票务与在线收藏/故事，目标WCAG2.2 AA，但列举图上文字对比、菜单和自动轮播等未达项。不能宣称原站全面合规。"
+      "note": "网站服务参观/票务和在线收藏；官方以WCAG2.2 AA为目标并列举未达项，不能称全面合规。"
     },
     {
       "title": "W3C WAI Disclosure Pattern",
       "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
       "type": "规范",
-      "note": "展开按钮控制内容可见性，按钮状态应对应展开/折叠；本地使用原生details/summary或button加aria-expanded。是实现规范，不能证明机构使用该设计理论。"
+      "note": "展开内容与aria-expanded的实现参考；本地菜单及dialog有独立语义，不证明原站采用此规范。"
     }
   ],
-  "prompt": "请以2026-10-07实访的Rijksmuseum英语首页为忠实局部研究对象，使用本地assets内官方夜巡观众照片、家庭月照片、两张预告照片、完整Rijksmuseum白色SVG字标和Normal/Bold品牌字体。桌面首节100vh：上覆导航从左侧汉堡和搜索起，右侧橙色方角票务；巨幅字标距顶约96px、左右留5.5%，底缘左放白底小状态与23px大写标题和17px正文，右放合作方标识。第二节铺满家庭月照片，第三节改为两列竖向摄影预告，最后才放实用参观信息。实现全屏导航覆盖层、Escape关闭、搜索弹窗筛选本地章节，以及展览预览弹窗；票务仅链接官网。390px手机字标一行、隐藏次要导航和赞助方，两列预告堆叠，正文不溢出。禁止自动轮播与滚动劫持；prefers-reduced-motion关闭平滑滚动和过渡。官方资产署名置页末，不把研究说明放在英雄区。",
+  "prompt": "请以2026-10-07实访的Rijksmuseum英语首页为忠实局部研究对象，使用本地assets内官方夜巡观众照片、家庭月照片、两张预告照片、完整Rijksmuseum白色SVG字标和Normal/Bold品牌字体。桌面首节100vh：上覆导航从左侧汉堡和搜索起，右侧橙色方角票务；巨幅字标距顶约96px、左右留5.5%，底缘左放白底小状态与23px大写标题和17px正文，右放合作方标识。第二节铺满家庭月照片，第三节改为两列竖向摄影预告，最后才放实用参观信息。实现全屏导航覆盖层、Escape关闭、搜索弹窗筛选本地章节，以及展览预览弹窗；票务仅链接官网。390px手机字标一行、隐藏次要导航和赞助方，两列预告堆叠，正文不溢出。禁止自动轮播与滚动劫持；prefers-reduced-motion关闭平滑滚动和过渡。官方资产署名置页末，不把研究说明放在英雄区。 全屏菜单打开采用原站观察到的500ms linear淡入，关闭直接隐藏，并提供Escape和aria-expanded；减少动态直接显隐。图片区保持原生滚动且没有自动循环；本地搜索只筛选三个章节，预览dialog是学习补充，不伪装官方完整收藏查询。",
   "negativePrompt": "不要虚构品牌，不用抽象blob代替夜巡摄影，不把每一节包装成圆角卡片，不用通用SaaS居中巨字模板。",
   "demo": "demos/rijksmuseum-art/index.html",
   "preview": "previews/rijksmuseum-art.jpg",
@@ -90,8 +90,8 @@
     "imagery": "夜巡观众、家庭月、工作室与纺织照片均来自官方首页公开URL。",
     "shape": "矩形票务、方角专题、细小白底状态标记；不泛化为通用圆角卡片。",
     "hierarchy": "品牌字标建立识别，作品摄影建立情境，购票按钮和底缘标题引导下一步。",
-    "motion": "自然滚动连续摄影；菜单为覆盖层。未声称原站采用滚动锁屏或滚动劫持。",
-    "coherence": "统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。 动效复核：2026-10-07 root IAB二次实访：原生下滚全幅摄影、打开全屏菜单，公开computed CSS菜单opacity .5s linear。未发现首页循环视频。补回500ms菜单淡入，其余保留摄影节奏。"
+    "motion": "自然滚动满屏摄影；全屏菜单打开500ms linear淡入，关闭直接隐藏；搜索/预览为本地补充。减少动态取消过渡，主视觉无自动循环。",
+    "coherence": "统一摄影铺满、底缘文字与品牌字形；两栏预告改变内容节奏而非重复组件。"
   },
   "referenceUrl": "https://www.rijksmuseum.nl/en",
   "implementation": "reference-study",

@@ -9,7 +9,7 @@
 5. `fidelity.md` 按区域比较已复现、近似和未实现内容。购买/预约/登录可明确链接原站，不伪装成本地服务。
 6. 运行数据与资源检查，实测宽屏和390px手机、核心交互、媒体用户启用/关闭、无横向溢出，再保存预览和Git提交。
 
-文件：`entries/<id>.json`、`research/<id>.md`、`demos/<id>/index.html`及配套文件、`previews/<id>.jpg`。手机截图位置记入验证记录。图像可用 JPG/PNG/WebP/AVIF，字体/音视频也需本地化，避免运行时外网依赖。
+文件：`entries/<id>.json`、`research/<id>.md`、`demos/<id>/index.html`及配套文件、`previews/<id>.jpg`。手机预览位于 `previews/mobile/<id>.jpg`。图像可用 JPG/PNG/WebP/AVIF，字体/音视频也需本地化，避免运行时外网依赖。
 
 基础字段：`id, order, title, subtitle, category, tags, summary, accent, background, principles, productFocus, interaction, theme, constraints, useCases, avoid, tokens, sources, prompt, negativePrompt, demo, preview, research, exercise, composition`。分类为 `产品 / 游戏/IP / 艺术/文化 / 经典风格`。
 
@@ -19,4 +19,4 @@
 
 Prompt要写实际页面结构、元素尺度、资产来源、关键状态、响应式与减少动效处理，不只有风格形容词。不要照搬长段营销文案。`prefers-reduced-motion` 应保留全部可读内容；声音默认关闭或用户触发；保留浏览器原生滚动。
 
-检查命令：`npm run build` → `npm run check` → 浏览器操作 → `node scripts/check.mjs --require-previews`。截图与资产成功存在不能替代实际交互验证。
+修改条目后运行 `npm run build` 和 `npm run check`，并在浏览器检查桌面、手机与主要交互；部署目录使用 `npm run build:site` 生成。

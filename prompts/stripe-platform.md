@@ -4,11 +4,7 @@
 
 ## 正向 Prompt
 
-制作一页基于【品牌官网URL】和【观察日期】的Stripe式金融平台局部学习复现。先读取首屏、产品矩阵与客户案例的真实截图，禁止把历史设计文章当当前CSS事实。使用已核验的Söhne本地字体、小圆角紫色主按钮、海军蓝文字和细边框。六类产品保持不同浅色背景与真实支付终端/界面层次，不能改成同一套通用白卡。产品卡可打开详情并切换业务模型；客户案例可切换，导航分类可展开。移动端单列、按钮有焦点反馈、对话框Esc关闭，自然滚动并尊重reduced motion。把素材URL、尺寸、版权及未还原区域写入清单和fidelity文件。用于【目标产品】时保留信息层级，重新核验业务结构。
-
-动效补正：付款卡首行占两列、与Billing同高约676px；终端三种场景文字在固定高度mask内translateY(0/-100/-200%)，checkout同步在ROASTERY/SHOWFLIX/Bloom情境切换。采用视口内局部自动循环，金额本地演示不提交交易；5秒循环和.75秒ease-out是approximation，记录没有精确测得的源时序。Products使用mouseenter幂等打开菜单，click/Esc/外部点击处理关闭并同步ARIA。客户行连续水平marquee，减弱动画静止。原站single-wave canvas未移植时保留原fallback图片，明确列入unimplemented。不要全卡片悬浮或整页统一reveal。
-
-动效落地补充：首屏波带已从官方公开 chunk 提取20个 SingleWave / Three.js r178 渲染模块，保留原折叠网格、vertex/fragment shader、配色纹理及 wide gj / medium P1 / small y7 配置（speed=4e-5，timeOffset=17500）。独立本地 loader 替代 Next/React运行时；Worker URL 指向本地文件。没有复制账户、统计、完整站点组件。新增本地暂停按钮；菜单/对话框打开及视口外/文档隐藏时暂停，reduce或GPU不可用时显示官方fallback。轮播/支付UI与源时序分开记录，不把这条缎带变成任意CSS摆动。 非必要时不要重新画波形、改变shader、统一加reveal。renderer模块来源和适配必须写在assets/wave-provenance.json，Worker/palette全部本地化，GPU失败不得留下空首屏；同时保留原始素材文件hash及Three.js r178 MIT许可证。
+制作基于【官网URL】和【观察日期】的Stripe金融平台局部学习页。采用本地Söhne、海军蓝文字、紫色4px圆角主按钮和1266px细框线内容区；首屏是48px连续段落式定位，背景运行官方SingleWave折叠网格、shader和light palette。使用已归档的20个渲染模块、Three.js r178 MIT许可、本地Worker与纹理；home相机配置为wide gj/medium P1/small y7，speed=4e-5、timeOffset=17500，不改写成任意CSS波形。提供暂停/恢复，菜单或对话框打开、离屏、后台时暂停；reduce或GPU失败显示官方fallback。产品矩阵保持不同浅色与图形结构：首行Payments跨两列、Billing一列同高约676px，使用真实终端图和本地支付DOM。终端文本在mask内以translateY(0/-100/-200%)向上换场景，checkout同步商户、商品和金额；5秒周期和.75秒过渡为近似，轮换由时间触发。客户标识连续左移，35秒周期为近似。Products指针进入展开，点击、键盘、Escape及外部点击同步ARIA；.18秒菜单过渡和140ms离开延迟为本地适配。产品详情可选择业务模型，四个客户tab更新介绍，金额与注册反馈明确为本地示例。手机产品单列、窄屏裁切遵从已归档样式，所有弹窗可关闭，保留自然滚动、焦点和减少动态。记录资产及渲染适配来源；容器裁切、标题混色、其余金融演示和后端不称完整等价。
 
 ## 负向约束
 
@@ -16,12 +12,12 @@
 
 ## 制作约束
 
-- 以2026-10-07官网版本为基准，2017设计文章仅作历史理论。
-- 下载素材及字标保留原比例，不把品牌资产用于新商标。
-- 金融指标为官网日期快照，界面金额为本地样例。
-- 自然滚动；移动端卡片单列，菜单和弹窗可键盘关闭。
-- 原站彩带是canvas渲染，静态wave.webp仅是官方fallback；不能给静图添加任意抖动并宣称原站等价。付款自动状态与hover是不同触发。
-- SingleWave为官方渲染代码隔离复用；页面容器高度、标题层与浏览器GPU可能使裁切/帧率与原站不同。保留官方fallback，不声称整站shader完全等价。
+- 2026-10-07首页与2017设计文章分别作为实例和历史理论。
+- SingleWave保留原shader、palette和home三档相机；官方fallback用于减少动态或GPU不可用。
+- 产品卡跨度随内容变化；终端与checkout状态同步，自动轮换和hover分别表达。
+- 界面金额为示例，金融指标为观察日快照；账户、销售和支付不接入。
+- 自然滚动；手机单列；菜单、tab和弹窗具键盘状态。
+- 渲染容器裁切、标题混色和帧率存在环境差异；部分客户字标以文字呈现。
 
 ## 检查方法
 

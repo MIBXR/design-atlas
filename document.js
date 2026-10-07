@@ -1,6 +1,6 @@
 const content = document.querySelector('#content');
 const file = new URLSearchParams(location.search).get('file') || '';
-const allowed = /^(?:README\.md|QA\.md|CONTRIBUTING\.md|(?:demos|research|prompts|docs)\/[A-Za-z0-9_./-]+\.md)$/.test(file)
+const allowed = /^(?:README\.md|CONTRIBUTING\.md|(?:demos|research|prompts|docs)\/[A-Za-z0-9_./-]+\.md)$/.test(file)
   && !file.split('/').some(part => !part || part.startsWith('.'));
 async function readDocument() {
   try {

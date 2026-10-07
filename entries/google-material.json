@@ -42,12 +42,12 @@
   ],
   "theme": "温暖中性底色与表面、紫色主动作及状态角色配对、Google Sans尺度层级、宽松大圆角、清晰资源图像；兼具友好表现力和文档导航秩序。",
   "constraints": [
-    "参照2026-10-07真实首页及I/O2026区域，不把2025发布页或泛化Google界面当原站。",
-    "Google Sans、Symbols、20张原始配图、poster与MP4本地归档；公开素材仅用于私人研究，权利仍归原权利人。",
-    "源研究Edge存在Dark Reader，配色取公开原始CSS；源截图环境差异见研究与fidelity。",
-    "较长营销文案改写；目录采用本地dialog加官方链接，不复制官网完整Angular路由或追踪脚本。",
-    "首页按钮公开CSS仍有时间和贝塞尔曲线，不能因阅读M3物理规范就声称所有首页交互使用弹簧。",
-    "减少动态初始停播并去掉非必要运动，保留色彩状态、焦点和所有内容；不声称完成WCAG认证。"
+    "2026-10-07英文首页及I/O 2026区域为实例，设计规范另作理论来源。",
+    "Google Sans、Symbols、20张配图、poster和MP4本地归档，权利归原作者。",
+    "配色以官网原始CSS角色变量和干净源截图为准。",
+    "目录采用本地dialog与官方外链；营销正文改写，完整Angular路由未复制。",
+    "首页CTA和卡片为时间/贝塞尔曲线；M3物理规范不能替代具体页面实现证据。",
+    "减少动态初始停播并取消非必要运动，保留焦点、颜色状态和全部内容。"
   ],
   "useCases": [
     "设计系统或开发平台主页",
@@ -83,34 +83,34 @@
       "title": "Material Design 3 当前官方首页",
       "url": "https://m3.material.io/",
       "type": "实例",
-      "note": "2026-10-07独立浏览器宽屏、390px、滚动、目录、主题、视频与全局动效实访；公开CSS/JS核验圆角、曲线和角色色。"
+      "note": "2026-10-07英文首页：88px侧栏/64px手机顶栏、主题与暂停、真实视频、CTA与卡片圆角状态、1294px首屏断点。"
     },
     {
       "title": "Material：Motion physics system",
       "url": "https://m3.material.io/styles/motion/overview/how-it-works",
       "type": "规范",
-      "note": "实际读取May2025物理系统、expressive/standard、spatial/effects及速度层级，并操作演示视频暂停；与首页现有CSS实现区分。"
+      "note": "May2025物理系统：expressive/standard、spatial/effects和速度层级，与首页时间曲线区分。"
     },
     {
       "title": "Google Design：Expressive研究",
       "url": "https://design.google/library/expressive-material-design-google-research",
       "type": "理论",
-      "note": "第一方研究解释颜色、形状、大小、动效和容器如何引导注意与分组，同时强调情境和基础可用性。"
+      "note": "颜色、形状、大小、动效与容器共同引导注意和分组，并保留情境与基础可用性。"
     },
     {
       "title": "Google Design：品牌与Material",
       "url": "https://design.google/library/staying-true-to-your-identity-material-branding",
       "type": "理论",
-      "note": "历史品牌指南说明字体、图像和色彩的一致使用；其旧色阶不是当前M3通用token规则。"
+      "note": "历史品牌指南的字体、图像和颜色一致性；旧色阶例子不是当前M3通用token。"
     },
     {
       "title": "W3C：Animation from Interactions",
       "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
       "type": "规范",
-      "note": "支持关闭非必要用户触发动效及响应减少动态偏好；自动媒体也提供独立暂停。"
+      "note": "非必要用户触发动效可关闭，自动媒体提供独立暂停。"
     }
   ],
-  "prompt": "为[设计系统／开发者平台]制作一个基于真实官方页面的局部研究demo。明确参考URL、观察日期和语言年度版本；以2026-10-07的Material Design 3首页为结构依据，不能只凭Google四色想象页面。宽屏保留88px固定左导航，图标配短标签，底部放主题与全局动效圆形控制；主区顶部两个24px大圆角面板以8px间隙并列，左区56px内边距、Google Sans大标题96/96px、Google Sans Text正文与80px高主按钮，右区播放真实官方组件MP4并有独立暂停。浅色使用背景#fefbff、首屏表面#f8f1f6与文字#1c1b1d、主动作#6442d6与白字；1294px及以下首屏上下排列。深色切换整套角色配对而非简单反转图片。内容按I/O首个横向图文资源再两项、Expressive与组件2＋3项分组、应用指导／资讯／入门目录依次排列；使用原配图和1200px正文上限，大标题与较大节距明确主题。CTA按压圆角48→16px，卡片聚焦或按压24→48px，采用实测.2s/.3s曲线，涟漪如为近似须标明；不能把规范中的spring当官网全部实际行为。手机变64px顶栏、有效目录、45/52px标题、32px内边距、首屏纵向和单列资源。素材、字体、视频本地化并记录URL、SHA256、尺寸和权利；营销文案改写、外链真实、无追踪。实现键盘焦点、Escape返回、pointer触摸、视频状态反馈、全局暂停和prefers-reduced-motion停播，保留原生滚动与全部可读内容。最后保存原站／本地宽窄屏和关键动态状态证据，在fidelity中注明目录路由和文案差异。",
+  "prompt": "为[设计系统／开发者平台]制作一个基于真实官方页面的局部研究demo。明确参考URL、观察日期和语言年度版本；以2026-10-07的Material Design 3首页为结构依据，不能只凭Google四色想象页面。宽屏保留88px固定左导航，图标配短标签，底部放主题与全局动效圆形控制；主区顶部两个24px大圆角面板以8px间隙并列，左区56px内边距、Google Sans大标题96/96px、Google Sans Text正文与80px高主按钮，右区播放真实官方组件MP4并有独立暂停。浅色使用背景#fefbff、首屏表面#f8f1f6与文字#1c1b1d、主动作#6442d6与白字；1294px及以下首屏上下排列。深色切换整套角色配对而非简单反转图片。内容按I/O首个横向图文资源再两项、Expressive与组件2＋3项分组、应用指导／资讯／入门目录依次排列；使用原配图和1200px正文上限，大标题与较大节距明确主题。CTA按压圆角48→16px，卡片聚焦或按压24→48px，采用官网CSS的.2s/.3s曲线，涟漪如为近似须标明；不能把规范中的spring当官网全部实际行为。手机变64px顶栏、有效目录、45/52px标题、32px内边距、首屏纵向和单列资源。素材、字体、视频本地化并记录URL、SHA256、尺寸和权利；营销文案改写、外链真实、无追踪。实现键盘焦点、Escape返回、pointer触摸、视频状态反馈、全局暂停和prefers-reduced-motion停播，保留原生滚动与全部可读内容。注明目录路由、文案与300ms涟漪的本地差异。",
   "negativePrompt": "不要任意Google风格仪表盘、彩色圆球hero、所有区域同一套卡片、伪视频、自动有声、无作用暂停、强行弹簧、长段复制营销文字或原站统计代码；不要把浏览器改色当官方配色。",
   "demo": "demos/google-material/index.html",
   "preview": "previews/google-material.jpg",

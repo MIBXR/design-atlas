@@ -5,3 +5,7 @@ work/
 .DS_Store
 dist/
 .sites-runtime/
+**/*-qa.json
+**/qa.json
+/research/*-audit.json
+/research/MOTION-QA-*.json

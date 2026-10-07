@@ -1,56 +1,55 @@
 # 21_21 DESIGN SIGHT：海报与四列档案
 
-研究日期：2026-10-07。观察版本：日本版 / 2026-10-07主页快照。国家分类：日本。
+观察日期：**2026-10-07**。对象为[对应官方页面](https://www.2121designsight.jp/)的指定地区与版本，国别字段用于参考机构或创作者来源检索，不推断国家有固定风格。
 
-官方实例：[首页](https://www.2121designsight.jp/)。使用临时 Edge 研究页进行了桌面、390px手机与滚动观察；源站图像URL、自然尺寸、公开CSS用于核验。源站干净IAB截图由主任务保存，避免Edge Dark Reader改变白底/品牌色。
+## 参考与证据
 
-## 直接观察与实物资产
+- [21_21 DESIGN SIGHT 官方首页](https://www.2121designsight.jp/)（实例）：2026-10-07：日本首页完整16:9展览海报、蓝色机构标识、四列档案与访问区域。
+- [21_21 官方：名称与产品Logo设计说明](https://www.2121designsight.jp/designsight/)（理论）：第一方说明product logo借用日常地址牌形象，连接设计场所与日常视点。
+- [IBM Design Language：Layout overview](https://www.ibm.com/design/language/layout/overview/)（理论）：比例、尺度、对齐与重复可解释档案构成；不把IBM品牌规范当作机构采用的标准。
+- [W3C WAI：Carousels Tutorial](https://www.w3.org/WAI/tutorials/carousels/)（规范）：自动轮播应有暂停、手动控制、键盘与当前状态反馈；本地保留6秒自动模式并提供停止。
+- [官方公开交互脚本 · 2026-10-07](https://www.2121designsight.jp/assets2017/common/js/common.js)（实例）：2026-10-07：固定栏目及50ms链接/Logo反馈有脚本声明；6000ms/1000ms fade来自首页内联Slick配置。未确认完整hover与Vimeo联动。
 
-- 展览自己的海报保持完整，机构不再用营销大标题重复解释。
-- 固定白色机构导航与蓝色标识，提供稳定的回看和语言切换入口。
-- 四列分别承载机构、Gallery 1&2、Gallery 3和Documents；栏目之间对齐，栏目内部图像按原比例展开。
-- 浅灰地面与白色内容块分离层次，蓝色标题和橙色NEW承担导航与更新提示。
+[原站首屏](screenshots/design-sight-source.jpg) · [本地桌面](../previews/design-sight.jpg) · [本地手机](../previews/mobile/design-sight.jpg)
 
-配色与布局具体值来源于原站公开CSS和实际海报比例。下载素材列表在 [assets-manifest.json](../demos/design-sight/assets-manifest.json)：包含来源URL、文件字节、图像尺寸与用途，CSS仅保留为研究证据，不被本地HTML加载。
+## 构成与设计分析
 
-## 第一方依据与理论边界
+**可观察事实：**21_21日本首页以白色固定机构header和蓝色牌形标识开场，16:9展览海报完整铺开，不另盖营销标题。下方浅灰1195px内容区分成机构、Gallery1&2、Gallery3和Documents四列，列宽稳定、图像高宽比各异。官方自述product logo借用日常地址牌形象，这是第一方设计解释。
 
-- [21_21 官方：名称与产品Logo设计说明](https://www.2121designsight.jp/designsight/)：第一方说明“product logo”借用日常地址牌形象，连接设计场所与日常视点；这是机构自述，不将本地推断冒充作者意图。
-- [IBM Layout overview](https://www.ibm.com/design/language/layout/overview/)：以层级、尺度、比例与对齐/重复解释各要素关系。这里使用分析词汇；机构的品牌颜色/Logo与IBM品牌规则无关。
-- [W3C WAI Carousels Tutorial](https://www.w3.org/WAI/tutorials/carousels/)：支持用户控制、键盘和当前状态提示；本地去掉自动推进。
+**本库分析：**恒定蓝色与栏目关系把不同展览视觉收进机构档案；不裁齐的横/竖图片保留展览和记录本身的差异。IBM关于比例、对齐和重复的材料用于分析这层秩序，不表示机构采用IBM规范。
 
-## 设计推断与协调
+| 维度 | 设计职责与约束 |
+|---|---|
+| 配色 | 蓝色固定机构标识和链接，浅灰承托白色档案，橙色NEW形成更新角色；展览海报拥有自己的配色。 |
+| 字体 | 导航/分类标题稳定无衬线；海报中中英文字体作为官方原图保留，避免重排破坏作品。 |
+| 版式 | 129px header、全幅16:9海报、4个等宽但内容不等高的竖列；手机单列。 |
+| 素材 | 真实方丈记与TYPE-XVII海报、建筑照片、访问地图、研究照片本地化，保留原比例。 |
+| 形状 | 机构Logo圆角牌，栏目细蓝边，橙NEW圆；内容块主要矩形。 |
+| 层级 | 海报先建立当前展览认知，分类其次，标题/日期/说明依次降低；不是每段都有大标题。 |
+| 动态 | 两张海报6000ms间隔、1000ms淡化对应官方Slick时序；ease及箭头/暂停为本地适配。聚焦、离屏、后台停轮换，减少动态仅手动；栏目吸顶。 |
+| 整体关系 | 展览视觉彼此不同，以恒定蓝标识、留白、列宽、标题与内容关系统一成机构档案。 |
 
-展览视觉彼此不同，以恒定蓝标识、留白、列宽、标题与内容关系统一成机构档案。 这是观察后的解释，不冒充设计团队口述。
+## 动态机制与本地映射
 
-- **color**：蓝色固定机构标识和链接，浅灰承托白色档案，橙色NEW形成更新角色；展览海报拥有自己的配色。
-- **typography**：导航/分类标题稳定无衬线；海报中中英文字体作为官方原图保留，避免重排破坏作品。
-- **layout**：129px header、全幅16:9海报、4个等宽但内容不等高的竖列；手机单列。
-- **imagery**：真实方丈记与TYPE-XVII海报、建筑照片、访问地图、研究照片本地化，保留原比例。
-- **shape**：机构Logo圆角牌，栏目细蓝边，橙NEW圆；内容块主要矩形。
-- **hierarchy**：海报先建立当前展览认知，分类其次，标题/日期/说明依次降低；不是每段都有大标题。
-- **motion**：海报手动切换同步链接/alt/状态；菜单真实展开；仅锚点平滑且支持减少动态。
-- **coherence**：展览视觉彼此不同，以恒定蓝标识、留白、列宽、标题与内容关系统一成机构档案。
+| 区域 | 原站依据 | 最终本地实现与差异 |
+|---|---|---|
+| 展览海报 | 内联Slick配置6000ms间隔、1000ms fade，pauseOnHover:false，可swipe，无原生dots/arrows。 | 两幅官方方丈记/TYPE-XVII海报按6000ms/1000ms淡化，ease为本地曲线；手动、聚焦、离屏和后台暂停。编号、箭头及暂停/恢复是本地补充。 |
+| 分类导航 | 四栏目在浏览档案时保持稳定位置；common.js有固定导航声明。 | 蓝色四栏目导航粘性定位，图片/alt/详情外链随海报同步。桌面header约129px，手机约62px。 |
+| 细微反馈 | common.js声明链接蓝色与Logo opacity .7的50ms反馈，未确认独立hover现场效果。 | 保持本地可见焦点及链接反馈；不把源码声明当作完整hover动作证据。 |
 
-## 局部实现与约束
+没有CMS完整档案、原站栏目箭头同步、Vimeo联动和加载遮罩。减少动态不自动推进且取消淡化，手动选择保持有效；展期/休馆仅为2026-10-07快照。
 
-固定129px白header → 16:9全幅海报 → 1195px四列档案 → 双栏访问信息。
+## 复用约束
 
 - 明确记录2026-10-07当前日本官网，展期及休馆是快照，不作为实时访问信息。
 - 首屏不裁成通用两列hero：使用官方1280×720海报，以16:9完整铺开。
 - 档案图片包含竖海报与横照片，保留各自比例，不强行统一卡片高度。
 - 官方Logo与展览图像只用于个人本地学习，品牌与作品权利保留。
 - 四列在760px以下变单列；菜单和轮播提供键盘、焦点与reduced-motion。
-- 本地不复制自动轮播、原CMS、加载遮罩、统计脚本和购票后端。
+- 本地重建已核验的海报轮播；不运行原CMS、加载遮罩、统计或购票后端。
 
-完整Prompt和负面约束存于 [entry JSON](../entries/design-sight.json)。具体还原对照见 [fidelity.md](../demos/design-sight/fidelity.md)。
+规范来源用于本地交互约束；除明确标注的第一方自述外，设计理念解释均为本库对选定样本的分析，不冒充品牌作者声明或整站合规结论。
 
-## 本地核验
+## 复用入口
 
-通过 CUA 浏览器实测桌面1440×1000、手机390×844：无横向溢出、无破图；核心控件已按实际状态检查。记录见 `design-sight-qa.json`。预览来自实际浏览器截图；reduced-motion仅静态核验CSS/JS处理，没有模拟系统偏好或声称完整无障碍合规。所有资产清单已逐文件保存实际SHA256。
-
-## 2026-10-07 动效补审更新
-
-实按PageDown后scrollY939.2、当前slide转为gallery3；官网已加载内联配置autoplaySpeed6000/fade:true/speed1000。已补同节奏自动淡化、暂停/手动控制和粘性四栏目导航。原站切换同步栏目箭头、Vimeo播放器联动与更多CMS档案未覆盖。50ms蓝色链接/Logo透明度为官方common.js声明证据；未把声明当作独立hover实测。
-
-本轮记录优先于初版的静态/手动实现描述。原站触发、脚本证据、实际手机/键盘验证与诚实限制见 [十例动效审计](MOTION-AUDIT-GAMES-ART-JP.md#design-sight)。
+完整可复用描述见[Prompt](../prompts/design-sight.md)，结构化信息见[案例条目](../entries/design-sight.json)。[独立Demo](../demos/design-sight/index.html)、[对应范围](../demos/design-sight/fidelity.md)与[资产来源清单](../demos/design-sight/assets-manifest.json)保留实现、媒体来源和限制；正文不重复一份完整Prompt。
