@@ -1,0 +1,68 @@
+{
+  "brand": "linear-workflow",
+  "sourcePage": "https://linear.app/",
+  "scope": "本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。",
+  "assets": [
+    {
+      "file": "assets/hero-atmosphere.webp",
+      "sourceUrl": "https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/6600ca96-e49b-4fd9-c03a-7979faddad00/f=auto,fit=scale-down,metadata=none,width=2560",
+      "purpose": "官方首屏氛围图片",
+      "width": 2560,
+      "height": 1188,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "image/png",
+      "bytes": 106586,
+      "status": "downloaded",
+      "sha256": "922674803bbd9b3ac8c3b097e34d101fd4bac349cbd953e58fb32df2092cb7cf"
+    },
+    {
+      "file": "assets/product-depth.webp",
+      "sourceUrl": "https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/c7fa8f5f-d439-4329-6a65-de549b51e300/f=auto,fit=scale-down,metadata=none,width=2560",
+      "purpose": "官方首屏第二张氛围/深度图片",
+      "width": 2560,
+      "height": 1429,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 162273,
+      "status": "downloaded",
+      "sha256": "6553308a3ae76d09f080a96ba62a19cffd28fb6e444b37bf87f4bce466d4be26"
+    },
+    {
+      "file": "assets/karri.png",
+      "sourceUrl": "https://webassets.linear.app/images/ornj730p/production/f79251b06e9edeeacbf2875384defe629e000b3c-352x352.png?w=72&q=95&auto=format&dpr=2",
+      "purpose": "官网issue人物头像",
+      "width": 144,
+      "height": 144,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 24269,
+      "status": "downloaded",
+      "sha256": "caaca14c6685ae0a9003f29a63007c4062373259248174a59ea898dce94350f4"
+    },
+    {
+      "file": "assets/inter.woff2",
+      "sourceUrl": "https://static.linear.app/fonts/InterVariable.woff2?v=4.1",
+      "purpose": "官方页面Inter变量字体",
+      "width": null,
+      "height": null,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "bytes": 352240,
+      "status": "downloaded",
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    {
+      "file": "assets/logo.svg",
+      "sourceUrl": "https://linear.app/",
+      "purpose": "官方首页原样提取的品牌SVG",
+      "width": null,
+      "height": null,
+      "copyright": "品牌及原作者所有；仅本地私人学习，无品牌关联。",
+      "status": "downloaded",
+      "retrievedAt": "2026-10-07",
+      "bytes": 3116,
+      "sha256": "4925c827664f5db037b12e815b8091d0b62b8fd702fe230e7b8ba14ccc240f1b"
+    }
+  ]
+}
