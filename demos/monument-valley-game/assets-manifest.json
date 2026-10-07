@@ -1,0 +1,165 @@
+{
+  "sourcePage": "https://www.monumentvalleygame.com/mv1",
+  "retrievedAt": "2026-10-07",
+  "purpose": "官方公开资产用于个人本地设计学习；未获取授权用于商业发布",
+  "assets": [
+    {
+      "file": "assets/3-6cd6eb91.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/3-6cd6eb91.jpg",
+      "bytes": 73804,
+      "type": "image/jpeg",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 900,
+      "height": 1454,
+      "sha256": "ac22bd69238c65734542d6be6011d9b5e822c79734948ebb496d7a22db6b1645"
+    },
+    {
+      "file": "assets/4-8f27e7fa.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/4-8f27e7fa.jpg",
+      "bytes": 185406,
+      "type": "image/jpeg",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 900,
+      "height": 1451,
+      "sha256": "091e55a3abafcd6b8719111222e51428cd0b8ef42521d1dfad6b7b1caa30f6b1"
+    },
+    {
+      "file": "assets/5-ecebe13c.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/5-ecebe13c.jpg",
+      "bytes": 85642,
+      "type": "image/jpeg",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 900,
+      "height": 1454,
+      "sha256": "ca6f823ac86453bde73e0b9c8b25d8b15365f913c1378746b3d801d882a97bb0"
+    },
+    {
+      "file": "assets/6-d85fcf35.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/6-d85fcf35.jpg",
+      "bytes": 103488,
+      "type": "image/jpeg",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 900,
+      "height": 1454,
+      "sha256": "91f7dfa08950abbc8acc74b4346f06c86bbe48f5091e3d00fadb93a1513bf369"
+    },
+    {
+      "file": "assets/appstore-badge-d0558d91.svg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/appstore-badge-d0558d91.svg",
+      "bytes": 12353,
+      "type": "image/svg+xml",
+      "use": "真实平台下载标识",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "viewBox": "0 0 135 40",
+      "sha256": "25178aeef6eb6b83b96f5f2d004eda3bffbb37122de64afbaef7107b384a4132"
+    },
+    {
+      "file": "assets/background-006780ed.png",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/background-006780ed.png",
+      "bytes": 99232,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 800,
+      "height": 745,
+      "sha256": "c637978e3f627fb20e3fa1de5168c5b5bf1a5d11d53692e2df52c2de4ed6ee1d"
+    },
+    {
+      "file": "assets/googleplay-badge-67e13ee2.png",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/googleplay-badge-67e13ee2.png",
+      "bytes": 13991,
+      "type": "image/png",
+      "use": "真实平台下载标识",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 564,
+      "height": 168,
+      "sha256": "71257aec9febb9a36d68add87997107c8e318bfb4b25fa71d44f66afa449dc11"
+    },
+    {
+      "file": "assets/logo-6a71a66e.svg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/logo-6a71a66e.svg",
+      "bytes": 2122,
+      "type": "image/svg+xml",
+      "use": "官方品牌标识",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "viewBox": "16.994 256.54 572.999 139.46",
+      "sha256": "9043a0954f7e62861b47bdd97a94cc2032de91382fa8245823ca5180d35de687"
+    },
+    {
+      "file": "assets/monument-friends-a53de6d4.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/monument-friends-a53de6d4.jpg",
+      "bytes": 17535,
+      "type": "image/jpeg",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 1366,
+      "height": 200,
+      "sha256": "fb0ce1f2ae81e25f31827ee5c63265d03c1d682afc742994dfd0b21bb2645b41"
+    },
+    {
+      "file": "assets/mv-trailer-a0b9cbc1.mp4",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/mv-trailer-a0b9cbc1.mp4",
+      "bytes": 6694081,
+      "type": "video/mp4",
+      "use": "官方公开预告/背景视频，本地默认暂停与静音，用户主动开始",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "sha256": "8717d5e90beb2bd066ac50942c698ae2832bfeaee68720b20873f731fc9771f5"
+    },
+    {
+      "file": "assets/style.css",
+      "sourceUrl": "https://www.monumentvalleygame.com/style.css",
+      "bytes": 46822,
+      "type": "text/css",
+      "use": "研究用原始样式，仅核验颜色/尺寸；不被本地HTML加载",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "sha256": "4d50d6be89f072d2d5fa6ae2648f2066fc43fe7b52c48183a45883b2399dd4a6"
+    },
+    {
+      "file": "assets/trailer-landscape-poster-e2193d06.jpg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/trailer-landscape-poster-e2193d06.jpg",
+      "bytes": 532455,
+      "type": "image/jpeg",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 1280,
+      "height": 720,
+      "sha256": "21de0d6d56b0f81f292cc8cdc557f7343cbbce249a953bdd754af50cf39c9d49"
+    },
+    {
+      "file": "assets/ustwo-games-logo-f5327f6a.svg",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/ustwo-games-logo-f5327f6a.svg",
+      "bytes": 4628,
+      "type": "image/svg+xml",
+      "use": "官方品牌标识",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "viewBox": "0 0 634 285",
+      "sha256": "d26fc55b8d4e147d246b92454bb0506bb6b073d758551b17eff61f034fe7ea85"
+    },
+    {
+      "file": "assets/wreath-left-965e57a1.png",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/wreath-left-965e57a1.png",
+      "bytes": 2304,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 33,
+      "height": 78,
+      "sha256": "815b57e4fe9579b185beeaa84611b62c48be7e936a1002b5513fe5880b462ea1"
+    },
+    {
+      "file": "assets/wreath-right-10f731c4.png",
+      "sourceUrl": "https://www.monumentvalleygame.com/media/wreath-right-10f731c4.png",
+      "bytes": 2314,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "ustwo games 及相应权利人：Logo/图像/预告保留原权利；仅用于本地私有学习。",
+      "width": 33,
+      "height": 78,
+      "sha256": "dc8acf3bcdd5f11d13b836e6f4d457a66353f4c3be36caf59f1297e0077f4acb"
+    }
+  ]
+}
