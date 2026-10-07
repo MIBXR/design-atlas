@@ -1,102 +1,102 @@
 {
   "id": "notion-editorial",
   "order": 4,
-  "title": "Notion · 有人情味的模块化工作台",
-  "subtitle": "Human stories, modular thinking",
+  "title": "Notion — 插画与真实工作空间",
+  "subtitle": "Where teams and agents think together",
   "category": "产品",
+  "country": "美国",
   "tags": [
     "Notion",
-    "编辑式",
-    "手绘",
-    "模块化",
-    "文档"
+    "真实品牌",
+    "手绘插画",
+    "巨字",
+    "文档",
+    "产品视频"
   ],
-  "summary": "以大字主张和有故事的手绘图解降低抽象工具的距离感，再用真实文档模块与舒适阅读节奏证明灵活性。",
-  "accent": "#1677df",
-  "background": "#fffdf9",
+  "summary": "复现 Notion 真实大字号居中标题、浅蓝动词胶囊、蓝色按钮、团队插画和工作空间视频，之后分节展示知识、答案与自动化。",
+  "accent": "#0075e6",
+  "background": "#ffffff",
   "principles": [
-    "人物与工具共同构成故事，插画解释思考而非纯装饰。",
-    "大字标题与紧凑行动区帮助用户理解用途。",
-    "模块化概念用可切换文档内容与块类型具体化。",
-    "段落留出呼吸，连续列表紧密分组，保持阅读节奏。"
+    "居中巨字先建立团队与AI的共同工作主题。",
+    "手绘人物与产品界面一起出现，情境与工具互相解释。",
+    "浅蓝动词与蓝色行动建立有限、清楚的视觉重点。",
+    "功能说明使用真实文档界面，避免插画替代功能证据。"
   ],
-  "productFocus": "通过团队手册、项目计划、创作笔记三种文档模块呈现同一工具的不同用途；清单勾选让页面真正像工具。",
+  "productFocus": "首屏真实Ramp HQ视频让团队与agents主题具体化，随后用捕获知识、搜索答案、自动化三节展示实际功能。",
   "interaction": [
-    "文档标签切换标题、页面图标与完整模块内容。",
-    "检查清单可勾选并即时更新完成提示。",
-    "原生details展示阅读问题答案；行动锚点进入工作台。"
+    "首屏动词可切换Think/Work/Build，产品视频可播放/暂停。",
+    "Product/AI/Resources导航展开；主要按钮引导本地工作空间。",
+    "知识、问答与任务代理打开本地操作示例；工作空间三个文档栏目切换内容。"
   ],
-  "theme": "奶白纸张、墨黑手绘、淡蓝强调与一小块明黄：聪明、温暖、可亲近。",
+  "theme": "高白底、近黑巨字、蓝色按钮、手绘人物；功能区不同浅色底，文档界面保持轻边框。",
   "constraints": [
-    "手绘线条允许轻微不规则，文字和交互必须规整清晰。",
-    "插画不得复制Notion现有人物，需要原创情境。",
-    "内容块保持语义与节奏，不能把每行都做成独立卡片。",
-    "选中文档有文字与背景提示；勾选器使用原生input。",
-    "移动端工具列换行，插画压缩，文档维持可读行宽。"
+    "首屏必须采用真实官方插画/产品素材，不画一个泛用纸片人物代替。",
+    "品牌活动文章和Notion应用排版更新的适用范围注明。",
+    "使用NotionInter本地字体，字标与插画不拉伸。",
+    "视频默认静音；reduced motion默认暂停。",
+    "手机用官网移动端图，功能区纵向重排，操作不依赖hover。"
   ],
   "useCases": [
-    "知识管理",
-    "文档协作",
-    "个人创作工具",
-    "教育产品"
+    "知识协作产品",
+    "模块化文档工具",
+    "人文感AI产品"
   ],
   "avoid": [
-    "把手绘当作随机涂鸦",
-    "全文同一间距",
-    "照搬品牌人物与图标"
+    "仿旧泛黄纸张代表所有Notion版本",
+    "只有插画没有产品内容",
+    "所有功能复用相同卡片模板"
   ],
   "tokens": {
     "palette": [
-      "#fffdf9",
-      "#20201e",
-      "#1677df",
-      "#e8f2fc",
-      "#ffd851"
+      "#101010",
+      "#ffffff",
+      "#0075e6",
+      "#e6f3ff",
+      "#fff5e5"
     ],
-    "type": "标题系统无衬线搭配少量Georgia手记；大标题60–84px，文档正文16px。",
-    "layout": "标题与原创插画并列；下方完整文档工作台；编辑式FAQ收尾。",
-    "motion": "标签反馈150ms，文档无夸张缩放；减少动效时静态切换。"
+    "type": "本地 NotionInter regular/bold；首屏94px、动词72px、正文20px；手机45px。",
+    "layout": "居中标题与1120px视频；客户字标；3个分节左右组合；底部真实文档布局。",
+    "motion": "官方静音视频，显式暂停；局部直接切换，不接管滚轮。"
+  },
+  "composition": {
+    "color": "高白底、近黑巨字、蓝色按钮、手绘人物；功能区不同浅色底，文档界面保持轻边框。",
+    "typography": "本地 NotionInter regular/bold；首屏94px、动词72px、正文20px；手机45px。",
+    "layout": "居中标题与1120px视频；客户字标；3个分节左右组合；底部真实文档布局。",
+    "imagery": "94px标题、浅蓝胶囊、官网字体；官方hero视频/poster和mobile图；官网capture/find/automate图片 + 本地示例弹窗",
+    "shape": "大圆胶囊动词、8px按钮、20px功能区；插画自然外轮廓。",
+    "hierarchy": "首屏真实Ramp HQ视频让团队与agents主题具体化，随后用捕获知识、搜索答案、自动化三节展示实际功能。",
+    "motion": "官方静音视频，显式暂停；局部直接切换，不接管滚轮。",
+    "coherence": "字体、色彩、素材、信息结构与Notion公开页一致；首屏核心构图和素材保持真实。后续功能文案为概述，部分功能背景与文档示例为局部迁移，不称整站像素级复制；未还原所有客户墙、真实搜索和agent执行。"
   },
   "sources": [
     {
-      "title": "Notion 官方首页",
+      "title": "Notion 当前首页",
       "url": "https://www.notion.com/",
       "type": "实例",
-      "note": "2026-10-07 文字与截图核验：大字、浅蓝动作词、手绘角色与真实工作台。"
+      "note": "官方web正文、匿名HTML与早先保存的干净首屏截图核验；本轮Edge连接关闭，未当作新视觉观察。"
     },
     {
-      "title": "The thinking behind our latest brand campaign",
+      "title": "Notion brand campaign",
       "url": "https://www.notion.com/blog/the-thinking-behind-our-latest-brand-campaign",
       "type": "理论",
-      "note": "2024-07-10 第一方：插画驱动叙事、角色近景、营销原色。"
+      "note": "2024第一方文章解释插画驱动、手势感和故事性；不等同于2026首页的全部设计说明。"
     },
     {
-      "title": "Updating the design of Notion pages",
+      "title": "Notion page design update",
       "url": "https://www.notion.com/blog/updating-the-design-of-notion-pages",
       "type": "理论",
-      "note": "2026-03-18 第一方：标准化间距与相邻列表块紧密分组。"
-    },
-    {
-      "title": "Notion brand usage guidelines",
-      "url": "https://notion.notion.site/Notion-s-brand-usage-guidelines-How-to-use-Notion-s-brand-in-your-marketing-30a5510bc5644475a28844e427008bee",
-      "type": "规范",
-      "note": "原创品牌居主位，不能将Notion写入自己的产品名；本demo使用虚构品牌。"
+      "note": "2026-03-18应用页面的阅读间距、列表分组；仅迁移至本地工作空间示例。"
     }
   ],
-  "prompt": "可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构模块化知识工具 MARGIN 制作一页有人情味的编辑式宣传 demo，提取 Notion 的大字主张、手绘叙事与文档节奏。奶白底与墨黑文字，浅蓝用于动作提示，明黄只点亮插画。首屏左侧大标题“给想法，一个生长的地方”，右侧自绘黑线插画：桌前创作者、笔记、植物和逐步连接的纸片，必须是有因果关系的原创情境。第二节建立可操作文档工作台，用按钮切换团队手册、项目计划、创作笔记三份文档；每份有标题、段落、清单和小表格。清单用原生复选框并同步完成计数。段落间距舒展、相邻清单紧密，不给每行加卡片。第三节展示三个阅读/协作原则，最后原生details FAQ。小屏上下排列，工作台按钮可换行，语义结构、焦点可见、减少动效、无CDN或远程素材。\n\n要素协调要求：宽松段落和紧密清单形成阅读节奏；手绘人物提供亲近感，正文与模块使用稳定对齐保持实用。",
-  "negativePrompt": "不要复制Notion人物，不要随机涂鸦、浮夸渐变、无效注册按钮、巨型空白文档、全页面统一大卡片。",
-  "exercise": "新增“课堂笔记”文档类型，保留相邻列表节奏并为知识回顾增加可用交互。",
+  "prompt": "以【Notion官网URL】在【观察日期】的真实公开首页为依据制作局部设计研究。保持居中巨字标题、浅蓝动词胶囊、蓝色小圆角主按钮与白色空间，优先使用官方NotionInter和原始品牌SVG。首屏必须使用已核验的官网团队插画和真实工作空间视频，视频静音并提供暂停，reduced motion时默认停在poster，手机切换官方移动图。后续按捕获上下文、寻找答案、自动化任务分别排版，使用对应官方产品图与不同浅色底，不把所有内容改成统一卡片。导航分类可展开；动词可选择；工作空间栏目和任务清单有真实本地状态；问答示例显式是模拟。保持文档段落呼吸与列表紧凑，手机可阅读、按钮可键盘操作、Esc可关闭。记录来源截图、资产尺寸、理论适用范围和服务端差异。迁移到【目标知识产品】时依据真实模块定义信息顺序。",
+  "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
   "demo": "demos/notion-editorial/index.html",
   "preview": "previews/notion-editorial.jpg",
   "research": "research/notion-editorial.md",
-  "composition": {
-    "color": "暖白与黑字承担阅读，蓝色标记行动，少量原色用于图解。",
-    "typography": "标题系统无衬线搭配少量Georgia手记；大标题60–84px，文档正文16px。",
-    "layout": "标题与原创插画并列；下方完整文档工作台；编辑式FAQ收尾。",
-    "imagery": "原创手绘工作人物连接人的故事，文档模块证明工具能力。",
-    "shape": "细边框、轻图标与模块化白面板保持文档的开放感。",
-    "hierarchy": "工作主张 → 人物图解 → 可切换文档 → 使用问答。",
-    "motion": "标签反馈150ms，文档无夸张缩放；减少动效时静态切换。",
-    "coherence": "宽松段落和紧密清单形成阅读节奏；手绘人物提供亲近感，正文与模块使用稳定对齐保持实用。"
-  }
+  "exercise": "以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。",
+  "referenceUrl": "https://www.notion.com/",
+  "implementation": "reference-study",
+  "fidelity": "demos/notion-editorial/fidelity.md",
+  "assetManifest": "demos/notion-editorial/assets-manifest.json",
+  "referencePreview": "research/screenshots/notion-editorial-source.png"
 }
