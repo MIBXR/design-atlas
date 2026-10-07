@@ -1,0 +1,58 @@
+{
+  "brand": "claude-platform",
+  "sourcePage": "https://claude.com/",
+  "scope": "本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。",
+  "assets": [
+    {
+      "file": "assets/cowork.mp4",
+      "sourceUrl": "https://assets.claude.ai/videos/cowork-login-hero.mp4",
+      "purpose": "官网右栏Cowork视频",
+      "width": null,
+      "height": null,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "video/mp4",
+      "bytes": 3811999,
+      "status": "downloaded",
+      "sha256": "4e8fa322a4948bba7c5ff1cc461a63714f7b682b4f4ec86d6261eb2a50a6dd62"
+    },
+    {
+      "file": "assets/sans.woff2",
+      "sourceUrl": "https://claude.com/_next/static/media/AnthropicSans_Roman_Web-s.p.050e7498.woff2",
+      "purpose": "官网Anthropic Sans字体",
+      "width": null,
+      "height": null,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "font/woff2",
+      "bytes": 118340,
+      "status": "downloaded",
+      "sha256": "1b75c8ee81a05fa77331366e9602b82072bb5223593c928a6488dfe6fd023f1b"
+    },
+    {
+      "file": "assets/serif.woff2",
+      "sourceUrl": "https://claude.com/_next/static/media/AnthropicSerif_Roman_Web-s.p.c28786b4.woff2",
+      "purpose": "官网Anthropic Serif字体",
+      "width": null,
+      "height": null,
+      "copyright": "品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。",
+      "retrievedAt": "2026-10-07",
+      "contentType": "font/woff2",
+      "bytes": 175356,
+      "status": "downloaded",
+      "sha256": "e96fe97bb7ba2190a9a227d27380e0c79894408bfc6acea5a511774d93a16f69"
+    },
+    {
+      "file": "assets/logo.svg",
+      "sourceUrl": "https://claude.com/",
+      "purpose": "官方首页原样提取的品牌SVG",
+      "width": null,
+      "height": null,
+      "copyright": "品牌及原作者所有；仅本地私人学习，无品牌关联。",
+      "status": "downloaded",
+      "retrievedAt": "2026-10-07",
+      "bytes": 7969,
+      "sha256": "04bdac6bbb584728ac9ba637d3a89535bf133a32aaa7baae06d8823baf78186a"
+    }
+  ]
+}

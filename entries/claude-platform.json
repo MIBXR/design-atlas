@@ -1,0 +1,102 @@
+{
+  "id": "claude-platform",
+  "order": 16,
+  "title": "Claude — 衬线语气与 Cowork 演示",
+  "subtitle": "Think fast, build faster",
+  "category": "产品",
+  "country": "美国",
+  "tags": [
+    "Claude",
+    "Anthropic",
+    "真实品牌",
+    "衬线",
+    "视频",
+    "套餐切换"
+  ],
+  "summary": "复现 Claude 公开营销页的衬线标题、左侧注册入口与右侧官方 Cowork 视频，并实现套餐和FAQ交互。",
+  "accent": "#d97757",
+  "background": "#f5f5ef",
+  "principles": [
+    "衬线大标题建立思考伙伴的语气，产品视频承接实际工作。",
+    "注册框在首屏即可辨识，操作层级集中而短。",
+    "温暖中性色与陶土品牌符号组合，保持低饱和。",
+    "套餐切换和FAQ减少一次性信息负担。"
+  ],
+  "productFocus": "首屏把chat思考与Cowork执行并列，右栏完整真实产品视频直接显示功能；下方套餐按个体和组织区分。",
+  "interaction": [
+    "Continue with email展开本地邮箱表单，提交只给模拟反馈。",
+    "官方视频默认静音，可播放暂停；reduced motion默认暂停。",
+    "Individual/Team and Enterprise切换套餐，年/月账期更改Pro价格；FAQ原生展开。"
+  ],
+  "theme": "奶油浅底、Anthropic Serif大标题、Sans操作文字、黑色按钮、陶土色品牌符号、圆角视频。",
+  "constraints": [
+    "公开claude.com版本为基准，不读取claude.ai已登录账户。",
+    "使用实际官网字标、Anthropic字体和Cowork视频。",
+    "初次Edge观察受扩展变色影响，已由Root IAB补清洁公开官网截图；本地配色依据该截图与官网原始样式。",
+    "邮箱输入只在浏览器内，不发送、不创建账户。",
+    "套餐为2026-10-07快照，实际价格通过官方入口查看。"
+  ],
+  "useCases": [
+    "思考与执行并重的AI产品",
+    "人文语气软件营销",
+    "首屏转化与真实演示组合"
+  ],
+  "avoid": [
+    "衬线标题配泛用霓虹blob",
+    "把第三方传闻当官网设计理论",
+    "模拟Google认证或真实支付"
+  ],
+  "tokens": {
+    "palette": [
+      "#f5f5ef",
+      "#141413",
+      "#d97757",
+      "#faf9f5",
+      "#8c8c80"
+    ],
+    "type": "本地官网Anthropic Serif/Sans；72px主标题、24px副文、15–17px操作。",
+    "layout": "1440px上限；左思考/注册卡 + 右大型Cowork视频；3列套餐；左右FAQ。",
+    "motion": "官方视频静音循环并可暂停；套餐和FAQ直接切换，无滚轮劫持。"
+  },
+  "composition": {
+    "color": "奶油浅底、Anthropic Serif大标题、Sans操作文字、黑色按钮、陶土色品牌符号、圆角视频。",
+    "typography": "本地官网Anthropic Serif/Sans；72px主标题、24px副文、15–17px操作。",
+    "layout": "1440px上限；左思考/注册卡 + 右大型Cowork视频；3列套餐；左右FAQ。",
+    "imagery": "真实AnthropicSerif、72px、注册卡/视频左右结构；email按钮切换表单、有效邮箱后本地反馈；受众/账期切换、原生details",
+    "shape": "30px注册框、17px视频、圆胶囊tabs、18px计划卡。",
+    "hierarchy": "首屏把chat思考与Cowork执行并列，右栏完整真实产品视频直接显示功能；下方套餐按个体和组织区分。",
+    "motion": "官方视频静音循环并可暂停；套餐和FAQ直接切换，无滚轮劫持。",
+    "coherence": "字体、色彩、素材、信息结构与Claude公开页一致；没有复现服务器认证、SSO、真正下载或订阅。视频为官方本地文件；reduced-motion暂停时没有原站视频poster，保留首帧。完整企业产品导航与所有FAQ未全量复制。"
+  },
+  "sources": [
+    {
+      "title": "Claude 公开官网",
+      "url": "https://claude.com/",
+      "type": "实例",
+      "note": "2026-10-07 CUA首屏及匿名HTML核验，Think fast/build faster、Cowork视频、Individual/Team计划。"
+    },
+    {
+      "title": "WAI Tabs Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+      "type": "规范",
+      "note": "套餐受众切换的选择态和方向键参考。"
+    },
+    {
+      "title": "WAI Accordion Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/",
+      "type": "规范",
+      "note": "FAQ展开、键盘操作和状态表达依据；本地采用原生details。"
+    }
+  ],
+  "prompt": "以【claude.com公开营销页URL】在【观察日期】的真实首屏为依据做局部学习复现，不读取登录账户。保持温暖奶油底、72px Anthropic Serif标题、Sans操作文字，左栏思考主张与圆角注册卡，右栏大型官方Cowork演示视频。品牌SVG不重绘，字体视频均下载本地并记录URL、尺寸与归属。邮箱按钮可展开本地表单和返回，提交只显示不会发送的预览反馈；Google/登录入口不伪装认证。视频静音循环、有暂停，reduced motion默认暂停。下方Individual和Team/Enterprise切换不同套餐布局，年/月账期改变Pro展示，FAQ用可键盘展开的details。手机先文字后视频，注册框保留宽度与层级，导航折叠菜单、焦点明确、自然滚动。将观察、分析推断与W3C交互规范分开，明确未实现的SSO/付款/服务端能力。用于【目标AI品牌】时依据其真实语气选择字体而非机械套衬线。",
+  "negativePrompt": "不要虚构品牌或素材；不要复制通用Hero+三卡片模板；不要用抽象blob替代真实产品界面；不要接管滚轮；不要把历史文章说成当前观察；不要伪装真实账户、支付或AI执行。",
+  "demo": "demos/claude-platform/index.html",
+  "preview": "previews/claude-platform.jpg",
+  "research": "research/claude-platform.md",
+  "exercise": "以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。",
+  "referenceUrl": "https://claude.com/",
+  "implementation": "reference-study",
+  "fidelity": "demos/claude-platform/fidelity.md",
+  "assetManifest": "demos/claude-platform/assets-manifest.json",
+  "referencePreview": "research/screenshots/claude-platform-source.jpg"
+}
