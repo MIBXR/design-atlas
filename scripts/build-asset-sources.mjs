@@ -44,7 +44,7 @@ export function buildAssetSources(sourceRoot = root, commit = ASSET_COMMIT) {
     const target = path.join(sourceRoot, folder);
     if (fs.existsSync(target)) visit(target);
   }
-  return {commit:ASSET_COMMIT, baseUrl, thresholdBytes:ASSET_THRESHOLD, assets};
+  return {commit, baseUrl, thresholdBytes:ASSET_THRESHOLD, assets};
 }
 
 export function serializeAssetSources(sources) {
