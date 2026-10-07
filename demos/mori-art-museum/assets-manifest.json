@@ -1,0 +1,159 @@
+{
+  "sourcePage": "https://www.mori.art.museum/jp/",
+  "retrievedAt": "2026-10-07",
+  "purpose": "官方公开网页资产用于个人本地学习；不代表商用授权",
+  "assets": [
+    {
+      "file": "assets/mam_logo.svg",
+      "sourceUrl": "https://www.mori.art.museum/jp/common/img/mam_logo.svg",
+      "bytes": 18388,
+      "width": 160,
+      "height": 160,
+      "type": "image/svg+xml",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "9626542d9bce3016ad97a1c0050c2a757ab532e9c2b47cc8bffbc8817bffba15"
+    },
+    {
+      "file": "assets/mam_logo_small.svg",
+      "sourceUrl": "https://www.mori.art.museum/jp/common/img/mam_logo_small.svg",
+      "bytes": 17421,
+      "width": 176,
+      "height": 32,
+      "type": "image/svg+xml",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "0af783ce2699c6064af451bbfc1ca8328e4b3c38eb511181ebf2582aec1ae303"
+    },
+    {
+      "file": "assets/bnr_mori_mariko_1280_261001-thumb-1600xauto-19211.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/10/bnr_mori_mariko_1280_261001-thumb-1600xauto-19211.jpg",
+      "bytes": 97395,
+      "width": 1600,
+      "height": 640,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "051e38e10673217de771633307d3c02d2851a9bf08cfb5c619f164150ed26885"
+    },
+    {
+      "file": "assets/bnr_mori_mariko_1280_260916-thumb-450xauto-19115.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/09/bnr_mori_mariko_1280_260916-thumb-450xauto-19115.jpg",
+      "bytes": 19253,
+      "width": 450,
+      "height": 225,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "d5b2abaa27d92b48c1a6f9d14542beec0eec33c2b64197e0def3ee84ef035c63"
+    },
+    {
+      "file": "assets/bnr_mams024_1280-thumb-450xauto-18960.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/09/bnr_mams024_1280-thumb-450xauto-18960.jpg",
+      "bytes": 16022,
+      "width": 450,
+      "height": 225,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "4b639decbbf7805321266d634a0310f819c6e4c0ad430f3c0cf7b0e5d771f2a0"
+    },
+    {
+      "file": "assets/bnr_mamproject035_1280-thumb-450xauto-18855.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/08/bnr_mamproject035_1280-thumb-450xauto-18855.jpg",
+      "bytes": 12821,
+      "width": 450,
+      "height": 225,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "78ccfe7996bf759ca3f8802ebc55f7d94bb47ad6be6c7194129a94abdee94070"
+    },
+    {
+      "file": "assets/bnr_moricaf2026_1280-thumb-450xauto-17981.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/05/bnr_moricaf2026_1280-thumb-450xauto-17981.jpg",
+      "bytes": 37445,
+      "width": 450,
+      "height": 225,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "25524e02c8d83d6f1988ec384ed5c75a7b2eccacc416279b958f96f7bfe464bb"
+    },
+    {
+      "file": "assets/TicketEc_thum_2024.jpg",
+      "sourceUrl": "https://www.mori.art.museum/files/news/2024/07/09/TicketEc_thum_2024.jpg",
+      "bytes": 30105,
+      "width": 450,
+      "height": 225,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "a0084a3663f6f2614250e61a91ce6a3ad12e2b6382296248969e6212e801d0cf"
+    },
+    {
+      "file": "assets/bnr_marikomori_schoolprograms_450_225-thumb-450xauto-19151.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/09/bnr_marikomori_schoolprograms_450_225-thumb-450xauto-19151.jpg",
+      "bytes": 16761,
+      "width": 450,
+      "height": 225,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "0cfccee8bc22f09c8a0534cf45bd3750f14cee1796d8e98afa58e426b4e12787"
+    },
+    {
+      "file": "assets/bnr_ATRoMap41_450_225-thumb-450xauto-19213.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/10/bnr_ATRoMap41_450_225-thumb-450xauto-19213.jpg",
+      "bytes": 27989,
+      "width": 450,
+      "height": 225,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "d2dd47c159cc7414d30a8727ae13a4877609be0dd6201eeaac95be4aa0554a5b"
+    },
+    {
+      "file": "assets/bnr_ronmueck_advanceticket_450_225-thumb-450xauto-19133.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/09/bnr_ronmueck_advanceticket_450_225-thumb-450xauto-19133.jpg",
+      "bytes": 17731,
+      "width": 450,
+      "height": 225,
+      "type": "image/jpeg",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "73cbf292737d4d5222a80d6868ca940f1e2a75c0d963a20f6b137626b43706eb"
+    },
+    {
+      "file": "assets/mam_logo450_225-thumb-450xauto-18509.png",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/07/mam_logo450_225-thumb-450xauto-18509.png",
+      "bytes": 15285,
+      "width": 450,
+      "height": 225,
+      "type": "image/png",
+      "use": "官方页面已观察到的标识/海报/缩略图，对应局部复现",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "eeb6a83a435b8e97e5d8027a2d3633a0ab3ecfb8c1b690c50c4e73bd35cc03ab"
+    },
+    {
+      "file": "assets/source-style.css",
+      "sourceUrl": "https://www.mori.art.museum/jp/common/css/base.css?20261007092134",
+      "bytes": 125381,
+      "type": "text/css",
+      "use": "研究原站配色与版式；不被本地HTML加载",
+      "rights": "Mori Building / 森美术馆及艺术家：仅限个人本地设计学习，标识及作品版权保留。",
+      "sha256": "f433e796bd80652f50354277948ca75477c7aa0d80a889726d4501ef1a63a2e3"
+    },
+    {
+      "file": "assets/bnr_mori_mariko_450_260916-thumb-450xauto-19114.jpg",
+      "sourceUrl": "https://www.mori.art.museum/assets_c/2026/09/bnr_mori_mariko_450_260916-thumb-450xauto-19114.jpg",
+      "bytes": 29608,
+      "type": "image/jpeg",
+      "use": "手机专用展览主视觉",
+      "rights": "Mori Building / 艺术家：个人本地设计学习，原权利保留。",
+      "width": 450,
+      "height": 450,
+      "sha256": "75fc6476d6945e746fe0b9dc62d2bf0b9661e68c7cf2fd55b3a8323dcd1bdd71"
+    }
+  ]
+}
