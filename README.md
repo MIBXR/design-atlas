@@ -48,7 +48,13 @@ QA.md                     实际验证及未验证事项
 
 新增流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。修改条目并保存实际截图后运行 `npm run build`、`npm run check`；检查覆盖数据、代码、本地引用及素材来源/字节数/SHA256。完整 Demo 要复制整个目录，“入口源码”下载仅用于阅读。
 
-本地 `.git` 保存版本；`git log --oneline` 回看分项提交，`git show <commit>` 对照旧实现。未配置远端。交付 ZIP 含研究、素材、源码、截图与 `.git`；旁边的 history.bundle 可用 `git clone design-atlas-history.bundle design-atlas-restored` 恢复 Git 历史。
+本地 `.git` 保存版本；`git log --oneline` 回看分项提交，`git show <commit>` 对照旧实现。GitHub 远端为 [MIBXR/design-atlas](https://github.com/MIBXR/design-atlas)，采用私有仓库。交付 ZIP 含研究、素材、源码、截图与 `.git`；旁边的 history.bundle 可用 `git clone design-atlas-history.bundle design-atlas-restored` 恢复 Git 历史。
+
+## Sites 部署
+
+本站通过 Sites 托管，保持仅所有者可访问。部署配置在 `.openai/hosting.json`，运行 `npm run build:site` 生成 `dist/`，保留页面、Demo、研究、预览和素材；不包含 `.git`、本地服务或启动脚本。`dist/` 不纳入 Git。Sites 源码同步和发布使用 Sites 技能的原生流程，运行凭证不写入文件。
+
+线上域名与 `127.0.0.1:4173` 有各自的浏览器收藏。迁移时在本地导出收藏 JSON，再在线上导入；仅部署页面不会上传个人收藏。
 
 ## 学习范围
 

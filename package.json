@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
+    "build:site": "node scripts/build.mjs && node scripts/build-static.mjs",
     "check": "node scripts/check.mjs --require-previews && node scripts/check-assets.mjs"
   }
 }
