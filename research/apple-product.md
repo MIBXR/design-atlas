@@ -1,30 +1,22 @@
-# Apple：产品即主角
+# Apple：真实摄影与滚动产品叙事
 
-核验日期：2026-10-07。目标是迁移设计方法，不做商标、素材或文案复刻。
+观察日期：2026-10-07；原站 https://www.apple.com/iphone-18-pro/ 。
 
-## 直接观察
+初版耳机是风格练习，不能作为Apple页面还原。本次移除该原型，使用实访产品页的真实素材和布局。浏览器核验首屏、Highlights、Design；原站完整页包含很长的摄像、性能和共享功能叙事。
 
-[Apple iPhone 分类页](https://www.apple.com/iphone/) 的首屏截图保存于 screenshots/apple-product-source.png：极大分类标题、可辨识硬件导航和宽大产品面板。正文按使用收益展开，而不在首屏罗列全部技术参数。
+## 可观测事实
 
-[当前 iPhone Pro 产品页](https://www.apple.com/iphone-18-pro/) 的正文显示 Highlights→Design→Cameras→Performance 等章节，设计部分有颜色输入，升级部分有机型比较选择器。官网可能持续更新；此记录仅对应核验当日。截图来自分类页，产品页仅做文本核验，未把其动效效果当作已视觉观察。
+- 黑色全宽登场，44px全局导航和52px信息带。产品标题位于舞台下部，购买是小型蓝色胶囊。
+- Highlights深灰底，标题约56px，摄影卡片大圆角，底部圆角分页控制。
+- Design标题约96px；左侧七个胶囊细节按钮，对应右侧官方硬件视图。
+- 滚动后玻璃质感局部导航固定在顶端内缩位置。摄像段的尺度和文案变化由滚动进度驱动。
 
-## 理论与推断
+## 机制解释
 
-[HIG Motion](https://developer.apple.com/design/human-interface-guidelines/motion) 说明动效应有明确目的、简短且可以选择关闭。HIG面向Apple平台应用；用于网页是本库的迁移选择，并非Apple官网必须遵循的规范。
+真实硬件持续占据视觉主位；尺度变化让同一物体从整体转向细节。大字与负空间分割长叙事；固定导航维持方向与行动可达。此解释是本地设计分析，不是Apple发布的意图声明。
 
-设计推断：大尺寸本体+逐章证据构成“先感知、后理解、再决策”；局部配置器减少用户在选择和产品之间来回寻找的成本。
+## 理论与约束
 
-## 实现映射
+Apple HIG Motion https://developer.apple.com/design/human-interface-guidelines/motion ：动效应具有明确用途，支持减少动效。这是应用规范向网页设计的迁移。
 
-|依据|本地实现|检验方式|
-|---|---|---|
-|硬件本体主视觉|原创SONO耳机SVG：头梁、衬垫、调节臂、耳罩与高光|首屏可辨识真实产品构造|
-|颜色输入|陶土/石墨/苔绿三个按钮|颜色、名称、pressed状态同步|
-|逐章特写|深色声学图、舒适度与规格章节|每节只承担一个主张|
-|有目的动效|仅配置与模式的短反馈|减少动效下功能完整|
-
-## 约束与边界
-
-不使用苹果照片与标志。SONO、数值和性能均为虚构。SVG是适合示范的材质近似，不代替真实产品摄影。布局需要有高质量产品视觉支持，图片匮乏时不应机械套用。颜色选择也提供文本，原生滚动不被劫持。
-
-对应代码：../demos/apple-product/index.html。复用Prompt和tokens见 ../entries/apple-product.json。
+本地功能范围及不一致见 ../demos/apple-product/fidelity.md；逐项资产URL与SHA256见 assets-manifest.json。保留原站真实摄影；不复制原站全部脚本或把近似滚动曲线说成完整重建。

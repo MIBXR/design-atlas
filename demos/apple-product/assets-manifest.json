@@ -1,0 +1,167 @@
+{
+  "reference": "https://www.apple.com/iphone-18-pro/",
+  "observedAt": "2026-10-07",
+  "usage": "本地个人学习；素材及商标属于Apple，许可不随本项目代码转移。",
+  "assets": [
+    {
+      "file": "assets/hero_startframe__ck15fj8f67hy_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/media-hero/hero_startframe__ck15fj8f67hy_large_2x.jpg",
+      "kind": "image",
+      "bytes": 43728,
+      "sha256": "88d83475eabf9106a494609e09cfedf5684d045954415169aa39f2578e74565d",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/hero_endframe__fbxsnz8txcia_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/media-hero/hero_endframe__fbxsnz8txcia_large_2x.jpg",
+      "kind": "image",
+      "bytes": 105372,
+      "sha256": "2f73ed537c29f9905c9eba9f733935a338027b335d3fc4d9bea3af10090f910c",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/large_2x.mp4",
+      "sourceUrl": "https://www.apple.com/105/media/us/iphone-18-pro/2026/591df885-5ee2-4173-86e6-401021249f7c/anim/hero/large_2x.mp4",
+      "kind": "video",
+      "bytes": 7447723,
+      "sha256": "fdb3b7dc1a225c0403a9da728e3713f84fafe6ab1f920a4315e13eb24ee7bb49",
+      "purpose": "官方登场动画"
+    },
+    {
+      "file": "assets/icon_large.svg",
+      "sourceUrl": "https://www.apple.com/ac/globalfooter/8/en_US/assets/ac-footer/breadcrumbs/apple/icon_large.svg",
+      "kind": "image",
+      "bytes": 1232,
+      "sha256": "dfbba515a45a8e773061e0a5671e0fd1ef22c117c30f4d403392b434789b35d6",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/main_camera_endframe__fcjfhs06rdme_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/main_camera_endframe__fcjfhs06rdme_large_2x.jpg",
+      "kind": "image",
+      "bytes": 217444,
+      "sha256": "a7fe61cb9c48da8bfb0ca5d2cb062bee99ed034f0782a396537185d8ce8d0fe4",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/battery_endframe__ds9p2a09r9aq_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/battery_endframe__ds9p2a09r9aq_large_2x.jpg",
+      "kind": "image",
+      "bytes": 192789,
+      "sha256": "d2c25c0bdfaf105fcdb2d8257d921cff4165bd35ae0be867b567d1bc3ec7f845",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/colors_endframe__czfie0zmty4i_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/colors_endframe__czfie0zmty4i_large_2x.jpg",
+      "kind": "image",
+      "bytes": 224871,
+      "sha256": "28b1b79cbf4caf80dc2c4c9d477bd6877ae48fca4268d290207a119477f5c91d",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/chip_endframe__lhkymtfv1uie_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/highlights/chip_endframe__lhkymtfv1uie_large_2x.jpg",
+      "kind": "image",
+      "bytes": 255586,
+      "sha256": "2b8fb8575b918a5174284488b4c3837244029290b65f271e223c240ff2eaaf89",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/3d_viewer__hgotqf9hvvee_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/3d_viewer__hgotqf9hvvee_large_2x.jpg",
+      "kind": "image",
+      "bytes": 208666,
+      "sha256": "423d4bc008da4c4f7506b5243cda183ca37c0b2022ee99970230d91a1fcbde5c",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/color_burgundy__f95it7a6dnyq_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/color_burgundy__f95it7a6dnyq_large_2x.jpg",
+      "kind": "image",
+      "bytes": 268556,
+      "sha256": "19738f9a11af8561ab66650f71d143e08a5ae2b842f026d5894ffa097d4e26d8",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/color_glacier__fkxlpbz0ruy6_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/color_glacier__fkxlpbz0ruy6_large_2x.jpg",
+      "kind": "image",
+      "bytes": 322531,
+      "sha256": "63c43fdc992cab64f8f9f3d89a0604ab38bdfc2c75d1c1877b8b9f40d442b4f0",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/color_black__dseo2tvypuc2_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/color_black__dseo2tvypuc2_large_2x.jpg",
+      "kind": "image",
+      "bytes": 213558,
+      "sha256": "de4def8f73d72e0a91a2473268a7ea7db5c6cb0b83e1dacdd43780a79b5ef2c7",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/color_silver__c0oudn0fzw4m_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/color_silver__c0oudn0fzw4m_large_2x.jpg",
+      "kind": "image",
+      "bytes": 308910,
+      "sha256": "88bd331d6430190f6dbe194ab2a0ef09ab55d3212558d3e95cc30dae51f14cc3",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/size__ufk3tqa1f5e2_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/size__ufk3tqa1f5e2_large_2x.jpg",
+      "kind": "image",
+      "bytes": 327084,
+      "sha256": "a6c284b2c698db02d833f2961ecad3ed7e0d13c25e7e61dc22b16d9f6337749a",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/viewer_aperture_endframe__2jpki8xah2au_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/viewer_aperture_endframe__2jpki8xah2au_large_2x.jpg",
+      "kind": "image",
+      "bytes": 184099,
+      "sha256": "80acb0ce71af410fbbeefe2921c90ad21542804fc0be3eaa42973f6bbcbf617f",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/dynamic_island_endframe__edszr68pgo66_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/dynamic_island_endframe__edszr68pgo66_large_2x.jpg",
+      "kind": "image",
+      "bytes": 228153,
+      "sha256": "ae8a278d0913cfc06fd9fd223611a89e1263cfc22c63f2000cc13f4c47ee0001",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/durability__gluy1en01nqm_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/durability__gluy1en01nqm_large_2x.jpg",
+      "kind": "image",
+      "bytes": 303511,
+      "sha256": "9820a433515a6784c0f63ab40823a3d9af32d6d4bb6407020e9ecd7c6cf6de7d",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/action_button__f9p8n5h9xk66_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/action_button__f9p8n5h9xk66_large_2x.jpg",
+      "kind": "image",
+      "bytes": 268548,
+      "sha256": "53d66073c3849dd0afb5216150aa27ec809ae477bfce4ee907a0b9e4abd95cf8",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/camera_control__f4t7iottmvyy_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/product-viewer/camera_control__f4t7iottmvyy_large_2x.jpg",
+      "kind": "image",
+      "bytes": 354491,
+      "sha256": "489d5dbcb6018018574818f44a3f98fb82fb77c28543c25b5fd19662ad45ce09",
+      "purpose": "官方产品摄影或标识"
+    },
+    {
+      "file": "assets/camera_system_startframe__e0gisudnvv2a_large_2x.jpg",
+      "sourceUrl": "https://www.apple.com/v/iphone-18-pro/c/images/overview/pro-camera/system/camera_system_startframe__e0gisudnvv2a_large_2x.jpg",
+      "kind": "image",
+      "bytes": 707793,
+      "sha256": "428c84b2e68f0b59d13e79da914449f30c3b88872d515a425f8914c7a22df10c",
+      "purpose": "官方产品摄影或标识"
+    }
+  ]
+}
