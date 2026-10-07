@@ -1,0 +1,146 @@
+{
+  "sourcePage": "https://bluearchive.jp/",
+  "retrievedAt": "2026-10-07",
+  "purpose": "官方公开资产用于个人本地设计学习；未获取授权用于商业发布",
+  "assets": [
+    {
+      "file": "assets/app.47b744a6.css",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/css/app.47b744a6.css",
+      "bytes": 23913,
+      "type": "text/css",
+      "use": "研究用原始样式，仅核验颜色/尺寸；不被本地HTML加载",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "sha256": "f05ed69f2a9dae591d6f7d7b34c5c6810ba4ae665317660b399a57aae7883f0a"
+    },
+    {
+      "file": "assets/bg.555a8a72.mp4",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/media/bg.555a8a72.mp4",
+      "bytes": 1602930,
+      "type": "video/mp4",
+      "use": "官方公开预告/背景视频，本地默认暂停与静音，用户主动开始",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "sha256": "f2e3d8ddc504774c720c625f68cf89dddb25ecbcb4efe358fc80aa737834ef10"
+    },
+    {
+      "file": "assets/bg_cover.9bd1cfea.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/bg_cover.9bd1cfea.png",
+      "bytes": 16149,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "d65cff27b0f138589f4d706b76d1a2c13b81d8ff4de48e1c2a73c449a1caa001"
+    },
+    {
+      "file": "assets/bluearhive.f833c198.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/bluearhive.f833c198.png",
+      "bytes": 4309,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 157,
+      "height": 57,
+      "sha256": "ddb782fcf89a6c42e302af97c5228c074cd2d73eaad72ac879ae3fc4cd8d08ec"
+    },
+    {
+      "file": "assets/comicEntry.2de61182.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/comicEntry.2de61182.png",
+      "bytes": 122086,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 380,
+      "height": 350,
+      "sha256": "fa912239fc6a7c0980eae63395c6882fe0041f70ec7b765b5827c7f09a6ebfd4"
+    },
+    {
+      "file": "assets/ffcLogo.f1e83d2f.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/ffcLogo.f1e83d2f.png",
+      "bytes": 58442,
+      "type": "image/png",
+      "use": "官方品牌标识",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 430,
+      "height": 342,
+      "sha256": "2f0e031caef27fef63f9a9693afdf04ea6ca59e528a2b68c700004fc15cceeb6"
+    },
+    {
+      "file": "assets/google-play.8c692266.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/google-play.8c692266.png",
+      "bytes": 14651,
+      "type": "image/png",
+      "use": "真实平台下载标识",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 378,
+      "height": 113,
+      "sha256": "d73e9329b8f2f3b4d83df1ee26a75ee6f6c199824202fd57ce2a4843b061d5ff"
+    },
+    {
+      "file": "assets/help-enter.69f99d8a.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/help-enter.69f99d8a.png",
+      "bytes": 86201,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 305,
+      "height": 178,
+      "sha256": "5ff3d04c3268f30982307ccda540c9fc4f9b3d75d9a75f3c09db819adc275895"
+    },
+    {
+      "file": "assets/ios-play.02d9f9a4.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/ios-play.02d9f9a4.png",
+      "bytes": 27736,
+      "type": "image/png",
+      "use": "真实平台下载标识",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 375,
+      "height": 113,
+      "sha256": "38c091f79a0b030481112c7b6ae6624fbc4b812b8a071edb969312e4f48653fb"
+    },
+    {
+      "file": "assets/LogoJP.92d9dcd0.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/LogoJP.92d9dcd0.png",
+      "bytes": 88704,
+      "type": "image/png",
+      "use": "官方品牌标识",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 725,
+      "height": 294,
+      "sha256": "ac49245da46686689f1b9e4c6de2ee32e261ef1e637aef9372b0a0b38de40134"
+    },
+    {
+      "file": "assets/slogan.1ab23877.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/slogan.1ab23877.png",
+      "bytes": 112692,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 309,
+      "height": 987,
+      "sha256": "70963ad9c69f8ef2b146bceee5e4cad2bfa9f2ea922ca104abc5f1ab86068258"
+    },
+    {
+      "file": "assets/windows.2b8dd344.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/windows.2b8dd344.png",
+      "bytes": 8196,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 443,
+      "height": 131,
+      "sha256": "93fceaf70a3bd541f7108a132980d847ce568da4420588e3fb5d6cad50bed1a2"
+    },
+    {
+      "file": "assets/yostarBottom.6aef7d4b.png",
+      "sourceUrl": "https://webusstatic.yo-star.com/bluearchive_jp_web/img/yostarBottom.6aef7d4b.png",
+      "bytes": 19687,
+      "type": "image/png",
+      "use": "对应页面区域官方图像，见 fidelity.md",
+      "rights": "NEXON Games / Yostar 及相应权利人：公开页面素材，仅限本地私有学习，不代表商用授权。",
+      "width": 838,
+      "height": 146,
+      "sha256": "89a517897af3e0e147dc04d479a139ad16adafa4c3234b0c413d475fd9945954"
+    }
+  ]
+}
