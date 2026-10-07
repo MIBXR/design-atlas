@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Design Atlas — 个人风格参考库</title><meta name="description" content="从真实网页、设计理论到可复用 Prompt 与交互 Demo 的个人设计参考库。"><link rel="stylesheet" href="atlas.css"><link rel="icon" href="favicon.svg" type="image/svg+xml"></head>
+<body>
+<a class="skip" href="#main">跳到内容</a>
+<aside class="rail">
+  <a href="#" class="brand" aria-label="Design Atlas 首页"><span class="brand-mark" aria-hidden="true">✳</span><span>DESIGN<br>ATLAS<span class="brand-small">个人风格参考库</span></span></a>
+  <a class="nav-item lab-link" href="fundamentals.html"><span>设计要素实验室</span><b>LAB ↗</b></a><span class="rail-label">COLLECTION / 01</span>
+  <nav aria-label="参考库分类">
+    <button class="nav-item active" data-filter="all"><span>全部风格</span><b id="all-count">14</b></button>
+    <button class="nav-item" data-filter="产品"><span>产品与平台</span><b>04</b></button>
+    <button class="nav-item" data-filter="游戏/IP"><span>游戏与 IP</span><b>02</b></button>
+    <button class="nav-item" data-filter="经典风格"><span>经典设计语言</span><b>08</b></button>
+    <button class="nav-item" data-filter="favorites"><span>我的收藏</span><b id="fav-count">00</b></button>
+  </nav>
+  <div class="rail-rule"></div>
+  <a class="rail-link" href="README.md" target="_blank">使用与维护指南 ↗</a>
+  <a class="rail-link" href="research/OVERVIEW.md" target="_blank">调研方法与风格地图 ↗</a>
+  <a class="rail-link" href="QA.md" target="_blank">验证记录 ↗</a>
+  <div class="rail-bottom"><span class="status-dot"></span> LOCAL / SOURCE-BACKED<br><span>核验日期 · 2026.10.07</span></div>
+</aside>
+<main id="main" tabindex="-1">
+  <header class="topbar"><span>你的设计灵感，有据可循。</span><div><span class="edition">VOL. 01</span><button id="compare-open" class="text-button">比较 <span id="compare-count">0</span>/3 ↗</button></div></header>
+  <section id="collection">
+    <div class="hero"><div><p class="eyebrow">OBSERVE. UNDERSTAND. MAKE.</p><h1>从看见风格，<br>到掌握它的语言<span class="period">.</span></h1><p class="hero-desc">14 种设计方向。真实案例、设计约束、可复用 Prompt，<br class="desktop">与可以亲手操作的本地代码 demo。</p></div><div class="hero-art" aria-hidden="true"><span class="a-grid"></span><span class="a-disc"></span><span class="a-square"></span><span class="a-triangle"></span><small>A STUDY OF FORM<br>AND FUNCTION / 2026</small></div></div>
+    <div class="collection-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索风格、案例、交互或约束…" aria-label="搜索风格、案例、交互或约束"><kbd>/</kbd></label><label class="sort">排序<select id="sort" aria-label="排序方式"><option value="curated">策展顺序</option><option value="title">名称顺序</option></select></label></div>
+    <div class="list-caption"><span id="results-label" role="status">全部风格 / 14 个条目</span><span>每一种风格，都有来处</span></div>
+    <div id="cards" class="cards"></div><div id="empty" class="empty" hidden><h2>没有找到对应条目</h2><p>试试“网格”“角色”“手绘”或某个真实案例名称。</p><button id="reset-search">清除筛选</button></div>
+    <footer class="collection-footer"><span>以设计机制为线索，持续积累。</span><span>14 DEMOS · 8 CLASSIC STYLES · GIT ARCHIVE</span></footer>
+  </section>
+  <section id="detail" hidden></section>
+  <section id="comparison" hidden></section>
+</main>
+<div id="compare-tray" class="compare-tray" hidden><span id="tray-text"></span><button id="compare-go">并排比较 ↗</button><button id="compare-clear" class="text-button">清空</button></div>
+<div id="toast" role="status" class="toast"></div>
+<script src="catalog.js"></script><script src="atlas.js"></script>
+</body></html>
