@@ -1,0 +1,336 @@
+{
+  "sourceDate": "2026-10-07",
+  "scope": "真实官网公开资源的私人学习局部复现",
+  "assets": [
+    {
+      "file": "logo.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/fv_logo_ae5920709075a263e06ab44c15fef53e.png",
+      "use": "游戏标识",
+      "owner": "ATLUS / SEGA",
+      "bytes": 33174,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 824,
+      "height": 567,
+      "dimensions": [
+        824,
+        567
+      ],
+      "format": "PNG",
+      "sha256": "339bda24c6af4e1fe54595c7a39c15946e1e176b2e792eb9cf70d31c7d79d1b3"
+    },
+    {
+      "file": "hero.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/fv_ab0c5ced14efdec6867ce9faf5ea6a92.png",
+      "use": "首屏角色群像",
+      "owner": "ATLUS / SEGA",
+      "bytes": 1024306,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 918,
+      "height": 670,
+      "dimensions": [
+        918,
+        670
+      ],
+      "format": "PNG",
+      "sha256": "f0f088ce61ee16ead49520dc5f60fff756f12724921f2bf721cc6a632de2c242"
+    },
+    {
+      "file": "joker-school.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara1_costume1_1547cf3551257504f0798dc89ca1be08.png",
+      "use": "主人公制服立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 146592,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 465,
+      "height": 545,
+      "dimensions": [
+        465,
+        545
+      ],
+      "format": "PNG",
+      "sha256": "243d6383fe3d5f2fffcc3a15a8f90d8d16cef79e8c6be095efd58e28d59f0ac1"
+    },
+    {
+      "file": "joker-thief.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara1_costume2_f44dcfe012ae7b8b2241c093a5df2ef8.png",
+      "use": "主人公怪盗立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 230126,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 583,
+      "height": 670,
+      "dimensions": [
+        583,
+        670
+      ],
+      "format": "PNG",
+      "sha256": "f01124b844274ea0995969d2cd43da4bda3d5bd3661582d5bb58997faf6643e7"
+    },
+    {
+      "file": "star.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara_star_cfcec8f4369957f9414149cac0b89260.png",
+      "use": "角色章节装饰",
+      "owner": "ATLUS / SEGA",
+      "bytes": 134072,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 739,
+      "height": 719,
+      "dimensions": [
+        739,
+        719
+      ],
+      "format": "PNG",
+      "sha256": "b0c0e67c5aee966fd9b050f054201cce4c9d815796dce06384c6dbc03de5bd11"
+    },
+    {
+      "file": "ryuji-school.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara2_costume1_da269ff2112720df2e3ee96c4cbd5537.png",
+      "use": "龙司制服立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 204388,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 408,
+      "height": 704,
+      "dimensions": [
+        408,
+        704
+      ],
+      "format": "PNG",
+      "sha256": "23465d441fda6be1ee9513b56581a0ff1be4fc2feae86dbf86849c994c8fdd40"
+    },
+    {
+      "file": "arsene.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara1_persona_d28fc1ec829cd07bc2b8442490ef7696.png",
+      "use": "阿尔赛纳立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 338362,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 765,
+      "height": 739,
+      "dimensions": [
+        765,
+        739
+      ],
+      "format": "PNG",
+      "sha256": "f49f66520d1ad54767d6c4d41e6865049fa42582b831ba846e8a30e2c690ed55"
+    },
+    {
+      "file": "ann-school.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara3_costume1_18f64489579d2cc5930178f2c789dbc9.png",
+      "use": "杏制服立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 131781,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 351,
+      "height": 580,
+      "dimensions": [
+        351,
+        580
+      ],
+      "format": "PNG",
+      "sha256": "0e01b65dfdf4e626715c662546a3398581ad6d14ca4348d548b7bbf7e383451e"
+    },
+    {
+      "file": "ann-thief.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara3_costume2_1d25bc2175aa9af991d2115d5b415683.png",
+      "use": "杏怪盗立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 273001,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 599,
+      "height": 646,
+      "dimensions": [
+        599,
+        646
+      ],
+      "format": "PNG",
+      "sha256": "7b5541a528a2f6139be6753772f9cce356319a79bbd348b7a90a1acba2dd4df0"
+    },
+    {
+      "file": "captain-kidd.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara2_persona_738dcfc2d53f149596f2c3045d2c64f8.png",
+      "use": "船长基德立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 399261,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 687,
+      "height": 517,
+      "dimensions": [
+        687,
+        517
+      ],
+      "format": "PNG",
+      "sha256": "981ca214f24effb840befc8f480f2e179e8b4ad77bbb8d0102085d108530c550"
+    },
+    {
+      "file": "carmen.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara3_persona_dbe3fdf5c61db34bfa88fc283413b220.png",
+      "use": "卡门立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 400500,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 644,
+      "height": 513,
+      "dimensions": [
+        644,
+        513
+      ],
+      "format": "PNG",
+      "sha256": "a4412eae1b5455f3aa88d505d3477b76f820970ea938c3c6461ac3e444fa239d"
+    },
+    {
+      "file": "dot.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/bg_red_dot_d849572b3f0934e660bdd7b972b54869.png",
+      "use": "红色网点背景",
+      "owner": "ATLUS / SEGA",
+      "bytes": 9890450,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 1920,
+      "height": 6584,
+      "dimensions": [
+        1920,
+        6584
+      ],
+      "format": "PNG",
+      "sha256": "67451ae237fe0fe09c4bc467c19105baa061a60118b67bfb5b1f0b8f6462e449"
+    },
+    {
+      "file": "title-en.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/fv_5869cf4a7f4beec0b9462d13571db602.png",
+      "use": "首屏英文剪贴标题",
+      "owner": "ATLUS / SEGA",
+      "bytes": 55689,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 374,
+      "height": 243,
+      "dimensions": [
+        374,
+        243
+      ],
+      "format": "PNG",
+      "sha256": "ebd2c63c8cd13127ef7b7bdb4bf9be2250794bb56754b7b9f90d24f3f59ddf05"
+    },
+    {
+      "file": "now-en.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/fv_available_now_dda20f64994eec8eee12aa1e7cf01bb9.png",
+      "use": "Available Now 剪贴标题",
+      "owner": "ATLUS / SEGA",
+      "bytes": 16882,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 168,
+      "height": 126,
+      "dimensions": [
+        168,
+        126
+      ],
+      "format": "PNG",
+      "sha256": "78bb6ff6f0df0655e15e84e68cd0e8d89b2ab3df9bc66a1e28b75b3428b3a7f0"
+    },
+    {
+      "file": "characters-en.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/chara_title_9360ea48fded644943740f7c33b30266.png",
+      "use": "角色章节标题",
+      "owner": "ATLUS / SEGA",
+      "bytes": 43886,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 565,
+      "height": 176,
+      "dimensions": [
+        565,
+        176
+      ],
+      "format": "PNG",
+      "sha256": "27fed528726727c1d9e1da4da92f84be44d3ed020617e038077be5f88bb10285"
+    },
+    {
+      "file": "school.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/school_life_ss1_7061bd0551c9fbab690699c0f508200e.png",
+      "use": "学校生活截图",
+      "owner": "ATLUS / SEGA",
+      "bytes": 133749,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 366,
+      "height": 277,
+      "dimensions": [
+        366,
+        277
+      ],
+      "format": "PNG",
+      "sha256": "c426c91cb8dde1ccf3fb7c7200e59e0a2c5ca1ddc9137f9269c417f72f9a87e3"
+    },
+    {
+      "file": "phantom.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/img/en/p5r/phantom_life_ss1_81a6cda3351b5d9559504fddf177046b.png",
+      "use": "怪盗生活截图",
+      "owner": "ATLUS / SEGA",
+      "bytes": 86049,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "商标、美术、音频版权归原品牌；用户授权私人设计研究，未经许可不可商业发布",
+      "width": 297,
+      "height": 202,
+      "dimensions": [
+        297,
+        202
+      ],
+      "format": "PNG",
+      "sha256": "15aa533dd55f50b8925515334cd64a004a05d1b96370ff28ea70b2d0da81511d"
+    },
+    {
+      "file": "ryuji-thief.png",
+      "url": "https://persona.atlus.com/p5r/resources/img/p5r/chara2_costume2_c4d9fb67c0fac8d77d406dc05382c438.png",
+      "use": "龙司怪盗立绘",
+      "owner": "ATLUS / SEGA",
+      "bytes": 211956,
+      "contentType": "image/png",
+      "retrievedAt": "2026-10-07",
+      "license": "版权归原品牌；私人设计学习",
+      "width": 504,
+      "height": 601,
+      "dimensions": [
+        504,
+        601
+      ],
+      "format": "PNG",
+      "sha256": "c12f9368371a40bce93641be5c6b94a5dc767d25f4d4db2113f24f7d4ca3cb84"
+    }
+  ],
+  "limitations": [
+    "本地3人档案，原站完整角色数量更多；不复现全部资料。",
+    "用CSS光线替代完整官网星芒/动效；字标、角色与主要标题使用官方素材。",
+    "PV跳转官网实际英文视频，不内嵌年龄验证或第三方播放器。",
+    "购买按钮去真实官网平台入口，无本地交易流程。"
+  ]
+}
