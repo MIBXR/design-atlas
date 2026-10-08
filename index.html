@@ -6,14 +6,14 @@
 <title>Design Atlas — 从案例到实践</title>
 <meta name="description" content="浏览真实网页案例与设计理念，动手调配设计元素，让 Agent 带着完整设计参考去实现。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="landing.css"><link rel="stylesheet" href="site-nav.css">
-</head>
+<script src="site-shell.js" defer></script></head>
 <body class="landing-page">
 <a class="landing-skip" href="#main">跳到内容</a>
-<header class="atlas-site-header">
-<a class="atlas-site-brand" href="index.html" aria-label="Design Atlas 首页"><span class="landing-brand-mark" aria-hidden="true">✳</span><span>DESIGN ATLAS<small>从案例到实践</small></span></a>
+<header class="atlas-site-header"><div class="atlas-site-header-inner">
+<a class="atlas-site-brand" href="index.html" aria-label="Design Atlas 首页"><span class="atlas-site-mark" aria-hidden="true">✳</span><span class="atlas-site-wordmark"><strong>DESIGN ATLAS</strong><small>从案例到实践</small></span></a>
 <nav class="atlas-site-nav" aria-label="主导航"><a href="index.html" aria-current="page">首页</a><a href="cases.html">浏览案例</a><a href="fundamentals.html">设计实验室</a><a href="agent.html">Agent 工作流</a></nav>
-<label class="atlas-site-theme">主题<select data-atlas-theme-choice aria-label="参考库显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label>
-</header>
+<label class="atlas-site-theme">显示主题<select data-atlas-theme-choice aria-label="网站显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label>
+</div></header>
 <main class="landing-main" id="main" tabindex="-1">
 <section class="landing-hero" aria-labelledby="hero-title">
 <p class="landing-kicker">OBSERVE. UNDERSTAND. MAKE.</p>
@@ -35,11 +35,7 @@
 </article>
 <article class="landing-module landing-module--lab">
 <div class="landing-module-copy"><p class="landing-module-tag">02 / 设计实验室</p><h3>同样的内容，<br>不同的表达。</h3><p class="landing-description">调配配色、字体、布局、形状与留白，观察它们如何共同工作，再带走当前配置与 Prompt。</p><a class="landing-module-link" href="fundamentals.html#lab">动手调配设计元素 <span aria-hidden="true">↗</span></a></div>
-<div class="landing-lab-preview">
-<div class="landing-lab-options" role="group" aria-label="查看实验室现有方案的截图"><button type="button" data-home-scheme="paper" aria-pressed="true">纸页<span>安静 · 阅读</span></button><button type="button" data-home-scheme="friendly" aria-pressed="false">亲和<span>轻松 · 上手</span></button><button type="button" data-home-scheme="tool" aria-pressed="false">工具<span>直接 · 扫描</span></button></div>
-<img id="home-lab-image" src="previews/landing/lab-paper.jpg" width="1425" height="990" loading="lazy" alt="现有实验室纸页方案，拾光笔记的暖色阅读界面">
-<p class="landing-lab-status" id="home-lab-status" role="status">纸页：暖纸底、衬线字与疏朗留白。</p>
-</div><p class="landing-caption">上方是现有实验室的方案截图；进入实验室可以自由调整。</p>
+<div class="landing-lab-preview"><iframe class="landing-lab-frame" src="fundamentals.html?embed=home" title="设计实验室交互预览" loading="lazy" height="650"></iframe></div><p class="landing-caption">直接切换方案，调配颜色、字体与留白；打开设计实验室可使用完整功能。</p>
 </article>
 <article class="landing-module landing-module--agent">
 <div class="landing-module-copy"><p class="landing-module-tag">03 / AGENT 工作流</p><h3>把参考，<br>变成构建的上下文。</h3><p class="landing-description">和 Agent 围绕需求选方向。确认后取得设计说明、研究、Prompt 与源码，把设计机制用到自己的项目。</p><a class="landing-module-link" href="agent.html">进入 Agent 工作流 <span aria-hidden="true">↗</span></a></div>
@@ -60,7 +56,7 @@
 </section>
 <section class="landing-ending" aria-labelledby="ending-title"><p class="landing-kicker">YOUR NEXT DESIGN</p><h2 id="ending-title">下一次灵感，<br>从这里开始。</h2><div class="landing-actions"><a class="landing-button landing-button--primary" href="cases.html">浏览案例 ↗</a><a class="landing-button" href="fundamentals.html">进入实验室 ↗</a><a class="landing-button" href="agent.html">探索 Agent 工作流 ↗</a></div><p><span data-home-count="studies">21</span> 个真实品牌／文化页面 · <span data-home-count="classics">8</span> 种经典设计语言</p></section>
 </main>
-<footer class="landing-footer"><div><strong>✳ DESIGN ATLAS</strong><p>个人网页设计参考库 · 以设计机制为线索，持续积累。</p><small>案例按采集快照归档，标明来源、近似与未验证范围。品牌与素材归原作者所有。</small></div><nav aria-label="资料与来源"><a href="document.html?file=README.md">使用与维护</a><a href="document.html?file=research%2FOVERVIEW.md">调研方法</a><a href="https://github.com/MIBXR/design-atlas" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></footer>
+<footer class="landing-footer"><div><strong>✳ DESIGN ATLAS</strong><p>个人网页设计案例库 · 以设计机制为线索，持续积累。</p><small>案例按采集快照归档，标明来源、近似与未验证范围。品牌与素材归原作者所有。</small></div><nav aria-label="资料与来源"><a href="document.html?file=README.md">使用与维护</a><a href="document.html?file=research%2FOVERVIEW.md">调研方法</a><a href="https://github.com/MIBXR/design-atlas" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></footer>
 <script src="catalog.js"></script><script src="home.js"></script>
 </body>
 </html>

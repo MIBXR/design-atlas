@@ -131,9 +131,9 @@
     {
       "path": "prompts/persona-kinetic.md",
       "role": "prompt",
-      "content": "# Persona 5 Royal · 黑金角色拼贴 · 复用 Prompt\n\n由 [结构化案例](../entries/persona-kinetic.json) 自动生成。参考观察与具体边界见 [调研](../research/persona-kinetic.md)。\n\n## 正向 Prompt\n\n参考 https://persona.atlus.com/p5r/?lang=en# 在2026-10-07的英文官网单一快照，先走首屏、介绍、角色、学校生活、怪盗生活、规格、购买与footer，再反向浏览。使用官方群像、字标、立绘、六种star纹理和剪纸箭头，禁止通用粒子或红黑卡片替代。桌面KV固定5颗星，背景15颗星，以SCREEN混合、3000ms正弦往复透明度和0–5000ms随机延迟；背景滚动按旧scrollY−新scrollY除1–3系数移动，越界重置。未观察到鼠标视差不要发明。角色500ms有界横移与服装切换；学校和怪盗两个独立无限中心轮播，露出相邻画面，500ms轨道位移、横触与箭头都可操作。原站只有点击PV音轨，不加虚构BGM。固定金红黑主题，提供本地暂停和减少动态补充。可缩减人物/章节但保留机制，明确Canvas2D对PIXI的近似以及未实现购买服务。输出manifest、fidelity、Prompt和预览。\n\n## 负向约束\n\n不要把当前黑金首页替换为通用红色两栏；不要同一角色换色冒充三人；不要编造原曲或角色技能；不要复制整页SDK、订阅或追踪服务。\n\n## 制作约束\n\n- 2026-10-07英文官网单一快照；官网后续变化不维护。\n- 本地Canvas2D依据公开PIXI星光算法重写；随机抽样与光混合不能声称逐帧一致。\n- 角色、日常与怪盗行动内容缩减；角色入场细节、字体尺寸与全部购买/规格栏目未逐像素复制。\n- 没有独立BGM，不用通用音乐冒充原曲；PV声音只在用户打开时播放。\n- 所有官方图片与商标权利归ATLUS/SEGA，仅个人学习；不运行追踪或账号服务。\n\n## 检查方法\n\n在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。\n\n[查看 Demo](../demos/persona-kinetic/index.html) · [返回参考库](../cases.html#style/persona-kinetic)\n",
-      "sha256": "d5c97da42661421c16be7f806aabab90c39b3c65cc18739ccc090ecbbb0c07ab",
-      "bytes": 2210
+      "content": "# Persona 5 Royal · 黑金角色拼贴 · 复用 Prompt\n\n由 [结构化案例](../entries/persona-kinetic.json) 自动生成。参考观察与具体边界见 [调研](../research/persona-kinetic.md)。\n\n## 正向 Prompt\n\n参考 https://persona.atlus.com/p5r/?lang=en# 在2026-10-07的英文官网单一快照，先走首屏、介绍、角色、学校生活、怪盗生活、规格、购买与footer，再反向浏览。使用官方群像、字标、立绘、六种star纹理和剪纸箭头，禁止通用粒子或红黑卡片替代。桌面KV固定5颗星，背景15颗星，以SCREEN混合、3000ms正弦往复透明度和0–5000ms随机延迟；背景滚动按旧scrollY−新scrollY除1–3系数移动，越界重置。未观察到鼠标视差不要发明。角色500ms有界横移与服装切换；学校和怪盗两个独立无限中心轮播，露出相邻画面，500ms轨道位移、横触与箭头都可操作。原站只有点击PV音轨，不加虚构BGM。固定金红黑主题，提供本地暂停和减少动态补充。可缩减人物/章节但保留机制，明确Canvas2D对PIXI的近似以及未实现购买服务。输出manifest、fidelity、Prompt和预览。\n\n## 负向约束\n\n不要把当前黑金首页替换为通用红色两栏；不要同一角色换色冒充三人；不要编造原曲或角色技能；不要复制整页SDK、订阅或追踪服务。\n\n## 制作约束\n\n- 2026-10-07英文官网单一快照；官网后续变化不维护。\n- 本地Canvas2D依据公开PIXI星光算法重写；随机抽样与光混合不能声称逐帧一致。\n- 角色、日常与怪盗行动内容缩减；角色入场细节、字体尺寸与全部购买/规格栏目未逐像素复制。\n- 没有独立BGM，不用通用音乐冒充原曲；PV声音只在用户打开时播放。\n- 所有官方图片与商标权利归ATLUS/SEGA，仅个人学习；不运行追踪或账号服务。\n\n## 检查方法\n\n在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。\n\n[查看 Demo](../demos/persona-kinetic/index.html) · [返回浏览案例](../cases.html#style/persona-kinetic)\n",
+      "sha256": "18bd910ff69421b0504e0392d175e09580a9394690b1789634eac22a727a9b9c",
+      "bytes": 2213
     },
     {
       "path": "demos/persona-kinetic/fidelity.md",
@@ -422,16 +422,22 @@
       "bytes": 12170
     },
     {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
       "path": "document.html",
       "role": "source",
-      "sha256": "57fa2420b57e4b13342cb71e2cd9f156f512f1874ce74d1623994e152ef56eda",
-      "bytes": 5139
+      "sha256": "ca5fed10cd546e1cd6b6f73f8a48815df63bd0f9c798396c939ffb8d8e3da17f",
+      "bytes": 2095
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "f11b76b4cc987f15767ea427aebe114edeb3c169dd7702eaf24901d6ea561eac",
-      "bytes": 3789
+      "sha256": "f2a840c11cdf44f60b948e2e175724567d7ddd724ebff8820f62f11ed0b17e7c",
+      "bytes": 3968
     },
     {
       "path": "entries/persona-kinetic.json",
@@ -460,8 +466,8 @@
     {
       "path": "prompts/persona-kinetic.md",
       "role": "context",
-      "sha256": "d5c97da42661421c16be7f806aabab90c39b3c65cc18739ccc090ecbbb0c07ab",
-      "bytes": 2210
+      "sha256": "18bd910ff69421b0504e0392d175e09580a9394690b1789634eac22a727a9b9c",
+      "bytes": 2213
     },
     {
       "path": "research/persona-kinetic.md",
@@ -476,10 +482,22 @@
       "bytes": 176860
     },
     {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "520fe684c690c846ed84544a4767a8c4b67737561d0aca41a0adaf805c8b962e",
+      "bytes": 11217
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "13627fca6fffc5faf217369904bf397969d9df0faad0f92b755649ac6a2d2b9b",
+      "bytes": 739
+    },
+    {
       "path": "theme.js",
       "role": "source",
-      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
-      "bytes": 1029
+      "sha256": "1f09e049e74adc0bbd04531826f8830483ad6bfee4e8fadc4fc5683d7f388a62",
+      "bytes": 1322
     },
     {
       "path": "vendor/LICENSES.txt",

@@ -27,4 +27,4 @@
 
 将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。
 
-[查看 Demo](../demos/hand-drawn/index.html) · [返回参考库](../cases.html#style/hand-drawn)
+[查看 Demo](../demos/hand-drawn/index.html) · [返回浏览案例](../cases.html#style/hand-drawn)

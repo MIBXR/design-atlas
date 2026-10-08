@@ -17,3 +17,52 @@
 @media(max-width:700px){.site-header nav{flex-wrap:wrap}.atlas-theme-control{font-size:10px}}
 
 @media(forced-colors:active){select{appearance:auto;background-image:none}}
+
+/* Stable Atlas controls surround the experiment; .sample keeps its own design. */
+:root{
+  --page:#f7f6f2;--paper:#f7f6f2;--ink:#252822;--muted:#62695b;--line:#dcded4;
+  --field:#fdfdf9;--surface:#ecefe5;--layer-surface:#ecefe5;--note-surface:#eef0e8;
+  --label-surface:#ecefe5;--art-surface:#ecefe5;--art-shadow:#eef0e8;
+  --selected-surface:#ecefe5;--select-accent:#657d2b;--accent:#657d2b;--soft:#ecefe5;
+}
+:root[data-atlas-theme=dark]{
+  --page:#1a1e19;--paper:#1a1e19;--ink:#edf0e6;--muted:#b8bfb0;--line:#40483b;
+  --field:#252c23;--surface:#30382b;--layer-surface:#252c23;--note-surface:#30382b;
+  --label-surface:#30382b;--art-surface:#30382b;--art-shadow:#252c23;
+  --selected-surface:#35442a;--select-accent:#c9e86c;--accent:#c9e86c;--soft:#30382b;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+.page,.site-footer{max-width:1280px}
+.intro-art,.layer,.element-controls,.experiment,.reading-note{border-radius:var(--atlas-card-radius,14px)}
+.intro-art{box-shadow:0 8px 24px #2427210a}
+:root[data-atlas-theme=dark] .intro-art{box-shadow:0 8px 24px #0003}
+.layer{background:var(--layer-surface);border-color:var(--line)}
+.scheme-btn{border-radius:var(--atlas-ui-radius,7px);border-color:var(--line);background:var(--field);min-height:57px}
+.scheme-btn[aria-pressed=true]{background:var(--selected-surface);border-color:var(--select-accent);box-shadow:inset 0 -2px 0 var(--select-accent)}
+.plain-btn{min-height:44px;border:1px solid var(--line);border-radius:var(--atlas-ui-radius,7px);background:var(--field);color:var(--ink)}
+.plain-btn:hover{background:var(--surface);border-color:var(--select-accent)}
+.element-controls{background:var(--surface);border-color:var(--line)}
+:root[data-atlas-theme=dark] .lab-controls,:root[data-atlas-theme=dark] .observation,:root[data-atlas-theme=dark] .configuration-tools{background:transparent}
+.element-controls select,.single-control select{min-height:44px;border-radius:var(--atlas-ui-radius,7px);border-color:var(--line);background-color:var(--field);color:var(--ink)}
+.element-controls select:hover,.single-control select:hover{border-color:var(--select-accent)}
+.reference-control,.type-control,.layout-control,.shape-control,.space-control,.graphic-control,.hierarchy-control,.texture-control,.motion-control,.theme-control{border-color:var(--line)}
+.color-controls input{width:44px;height:44px;padding:2px;border:1px solid var(--line);border-radius:var(--atlas-ui-radius,7px);background:var(--field);cursor:pointer}
+.color-controls input::-webkit-color-swatch-wrapper{padding:0}
+.color-controls input::-webkit-color-swatch{border:0;border-radius:4px}
+.color-controls input::-moz-color-swatch{border:0;border-radius:4px}
+.space-control input{height:44px;accent-color:var(--select-accent)}
+.motion-switch{min-height:44px}
+.motion-switch input{accent-color:var(--select-accent)}
+.prompt-tools{border:1px solid var(--line);border-bottom:0;border-radius:var(--atlas-card-radius,14px) var(--atlas-card-radius,14px) 0 0;background:var(--label-surface)}
+.prompt-text{border-radius:0 0 var(--atlas-card-radius,14px) var(--atlas-card-radius,14px);border-color:var(--line);background:var(--field)}
+.configuration-tools textarea{border-color:var(--line);border-radius:var(--atlas-ui-radius,7px);background:var(--field)}
+.configuration-tools summary{min-height:44px;display:flex;align-items:center;padding:9px 0;cursor:pointer}
+.source-list>a{min-height:44px}
+.source-list>a:focus-visible,.plain-btn:focus-visible,.scheme-btn:focus-visible,.element-controls input:focus-visible,.element-controls select:focus-visible,.single-control select:focus-visible,.prompt-text:focus-visible,.configuration-tools textarea:focus-visible,.configuration-tools summary:focus-visible{outline:3px solid var(--select-accent);outline-offset:3px}
+@media(min-width:1101px){.lab-workspace .experiment{top:calc(var(--atlas-header-height,88px) + 20px)}}
+@media(max-width:700px){.color-controls input{height:44px}.intro-art{box-shadow:0 8px 24px #2427210a}}
+@media(forced-colors:active){
+  .layer,.element-controls,.experiment,.prompt-tools,.prompt-text,.configuration-tools textarea,.color-controls input{border-color:CanvasText}
+  .scheme-btn[aria-pressed=true]{border:2px solid Highlight;box-shadow:none;color:Highlight}
+  .intro-art{box-shadow:none}
+}

@@ -118,9 +118,9 @@
     {
       "path": "prompts/hand-drawn.md",
       "role": "prompt",
-      "content": "# 手绘：把不完美变成亲近感 · 复用 Prompt\n\n由 [结构化案例](../entries/hand-drawn.json) 自动生成。参考观察与具体边界见 [调研](../research/hand-drawn.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构手帐俱乐部 Field Notes 制作可离线运行的英文网页。参考 Excalidraw 的手绘产品表达和 Rough.js 的受控轮廓/排线机制，但使用原创名称、文案和 SVG 插画。信息顺序：生活记录价值主张→已经写过的植物与咖啡笔记→三个低门槛开始步骤→不同记录场景。首屏用深橄榄色衬线大标题和奶油纸张；右侧原创笔记本带细横线、胶带、铅笔、小角度旋转和一张可切换贴纸。手绘不是全页面凌乱：正文正常排版，线宽统一，主 CTA 明显。三项清单必须可以勾选并更新可读进度，提供清单重置；贴纸按钮需 aria-pressed。至少三节完整内容，移动端将两栏重排成单栏；保留键盘焦点与 reduced motion；全部素材本地，不使用 CDN 或他人插画。\n\n要素协调要求：纸色、植物线稿、宽松排版和手工贴纸都服务于“慢下来记录”；正文使用清楚字形，避免过度装饰。\n\n## 负向约束\n\n不要复制 Excalidraw 商标或官网素材；不要把全部正文写成手写字；不要随机抖动、过密纹理、过多旋转、悬空链接或只有换色的通用卡片。\n\n## 制作约束\n\n- 正文使用清晰字体，手写感仅用于批注和图内短句\n- 倾斜角度限制在小范围，不能影响阅读和触达\n- 线宽与排线密度要保持统一\n- SVG 不规则线条固定生成，避免每帧抖动\n- 复选框与按钮使用原生语义和键盘焦点\n- 小屏纸页完整缩放，不让贴纸挡住核心文案\n\n## 检查方法\n\n将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。\n\n[查看 Demo](../demos/hand-drawn/index.html) · [返回参考库](../cases.html#style/hand-drawn)\n",
-      "sha256": "486792062b66e9daddce98cf017727012095beade41a6bdc43b0680db0005e2d",
-      "bytes": 2277
+      "content": "# 手绘：把不完美变成亲近感 · 复用 Prompt\n\n由 [结构化案例](../entries/hand-drawn.json) 自动生成。参考观察与具体边界见 [调研](../research/hand-drawn.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构手帐俱乐部 Field Notes 制作可离线运行的英文网页。参考 Excalidraw 的手绘产品表达和 Rough.js 的受控轮廓/排线机制，但使用原创名称、文案和 SVG 插画。信息顺序：生活记录价值主张→已经写过的植物与咖啡笔记→三个低门槛开始步骤→不同记录场景。首屏用深橄榄色衬线大标题和奶油纸张；右侧原创笔记本带细横线、胶带、铅笔、小角度旋转和一张可切换贴纸。手绘不是全页面凌乱：正文正常排版，线宽统一，主 CTA 明显。三项清单必须可以勾选并更新可读进度，提供清单重置；贴纸按钮需 aria-pressed。至少三节完整内容，移动端将两栏重排成单栏；保留键盘焦点与 reduced motion；全部素材本地，不使用 CDN 或他人插画。\n\n要素协调要求：纸色、植物线稿、宽松排版和手工贴纸都服务于“慢下来记录”；正文使用清楚字形，避免过度装饰。\n\n## 负向约束\n\n不要复制 Excalidraw 商标或官网素材；不要把全部正文写成手写字；不要随机抖动、过密纹理、过多旋转、悬空链接或只有换色的通用卡片。\n\n## 制作约束\n\n- 正文使用清晰字体，手写感仅用于批注和图内短句\n- 倾斜角度限制在小范围，不能影响阅读和触达\n- 线宽与排线密度要保持统一\n- SVG 不规则线条固定生成，避免每帧抖动\n- 复选框与按钮使用原生语义和键盘焦点\n- 小屏纸页完整缩放，不让贴纸挡住核心文案\n\n## 检查方法\n\n将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。\n\n[查看 Demo](../demos/hand-drawn/index.html) · [返回浏览案例](../cases.html#style/hand-drawn)\n",
+      "sha256": "5401d3f7fd6b0b8d88cf4ff7c80ae90ac09c3f364eef12582d5ec4238da21fb5",
+      "bytes": 2280
     }
   ],
   "files": [
@@ -179,16 +179,22 @@
       "bytes": 5980
     },
     {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
       "path": "document.html",
       "role": "source",
-      "sha256": "57fa2420b57e4b13342cb71e2cd9f156f512f1874ce74d1623994e152ef56eda",
-      "bytes": 5139
+      "sha256": "ca5fed10cd546e1cd6b6f73f8a48815df63bd0f9c798396c939ffb8d8e3da17f",
+      "bytes": 2095
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "f11b76b4cc987f15767ea427aebe114edeb3c169dd7702eaf24901d6ea561eac",
-      "bytes": 3789
+      "sha256": "f2a840c11cdf44f60b948e2e175724567d7ddd724ebff8820f62f11ed0b17e7c",
+      "bytes": 3968
     },
     {
       "path": "entries/hand-drawn.json",
@@ -217,8 +223,8 @@
     {
       "path": "prompts/hand-drawn.md",
       "role": "context",
-      "sha256": "486792062b66e9daddce98cf017727012095beade41a6bdc43b0680db0005e2d",
-      "bytes": 2277
+      "sha256": "5401d3f7fd6b0b8d88cf4ff7c80ae90ac09c3f364eef12582d5ec4238da21fb5",
+      "bytes": 2280
     },
     {
       "path": "research/hand-drawn.md",
@@ -227,10 +233,22 @@
       "bytes": 2955
     },
     {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "520fe684c690c846ed84544a4767a8c4b67737561d0aca41a0adaf805c8b962e",
+      "bytes": 11217
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "13627fca6fffc5faf217369904bf397969d9df0faad0f92b755649ac6a2d2b9b",
+      "bytes": 739
+    },
+    {
       "path": "theme.js",
       "role": "source",
-      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
-      "bytes": 1029
+      "sha256": "1f09e049e74adc0bbd04531826f8830483ad6bfee4e8fadc4fc5683d7f388a62",
+      "bytes": 1322
     },
     {
       "path": "vendor/LICENSES.txt",

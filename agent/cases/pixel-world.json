@@ -139,9 +139,9 @@
     {
       "path": "prompts/pixel-world.md",
       "role": "prompt",
-      "content": "# 像素：微型世界 · 复用 Prompt\n\n由 [结构化案例](../entries/pixel-world.json) 自动生成。参考观察与具体边界见 [调研](../research/pixel-world.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构小型IP [品牌] 制作地图驱动的像素风介绍页。参考PICO-8的128×128、16色、8×8tile创作约束，自绘一个可辨认轮廓的岛屿世界；禁止复制Celeste或其他游戏角色/背景。使用Canvas整数像素绘制并用image-rendering:pixelated放大，桌面尽量整数倍率，手机完整显示地图。首屏地图为主，旅行手账为辅：四个可聚焦DOM地点按钮、实时地点说明、角色位置与发现计数，方向键/WASD仅在地图聚焦时生效，手机提供四向按钮。探索记录可存当前浏览器并可清除。后续至少两節为地点索引与玩法说明；中文正文使用正常可读系统字体，英文元数据可用等宽字。没有自动音频、闪烁扫描线或滚动劫持，尊重reduced-motion。注明这是PICO-8约束的局部迁移，而不是所有像素艺术的定义。\n\n要素协调要求：低分辨率地景、有限调色与清楚状态共同形成游戏感；中文说明保留正常可读字体，不强行像素化。\n\n## 负向约束\n\n不要平滑缩放像素图、随机混合像素尺度、把照片马赛克当作像素美术、隐藏于Canvas的唯一导航、不可读中文小字或自动播放音效。\n\n## 制作约束\n\n- PICO-8的128×128/16色是这个实例的明确创作约束，不是所有像素艺术的定义。\n- 本地图使用16色原生PICO-8色板和整数像素绘制；桌面用整数倍率，窄屏优先完整显示。\n- Canvas放大使用image-rendering:pixelated；禁止图片模糊插值。\n- 关键地点有可聚焦DOM按钮与文本说明，不只隐藏在Canvas里。\n- 长文使用可读系统字体，不能把业务信息全部压成像素小字。\n- 无角色原作素材、复杂游戏引擎或音频自动播放；降低动态偏好时取消非必要动画。\n\n## 检查方法\n\n为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。\n\n[查看 Demo](../demos/pixel-world/index.html) · [返回参考库](../cases.html#style/pixel-world)\n",
-      "sha256": "4a137401234a19e8d26ced42510ff53a8aa1c796a6bbf189f23478b2fc6da52f",
-      "bytes": 2476
+      "content": "# 像素：微型世界 · 复用 Prompt\n\n由 [结构化案例](../entries/pixel-world.json) 自动生成。参考观察与具体边界见 [调研](../research/pixel-world.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构小型IP [品牌] 制作地图驱动的像素风介绍页。参考PICO-8的128×128、16色、8×8tile创作约束，自绘一个可辨认轮廓的岛屿世界；禁止复制Celeste或其他游戏角色/背景。使用Canvas整数像素绘制并用image-rendering:pixelated放大，桌面尽量整数倍率，手机完整显示地图。首屏地图为主，旅行手账为辅：四个可聚焦DOM地点按钮、实时地点说明、角色位置与发现计数，方向键/WASD仅在地图聚焦时生效，手机提供四向按钮。探索记录可存当前浏览器并可清除。后续至少两節为地点索引与玩法说明；中文正文使用正常可读系统字体，英文元数据可用等宽字。没有自动音频、闪烁扫描线或滚动劫持，尊重reduced-motion。注明这是PICO-8约束的局部迁移，而不是所有像素艺术的定义。\n\n要素协调要求：低分辨率地景、有限调色与清楚状态共同形成游戏感；中文说明保留正常可读字体，不强行像素化。\n\n## 负向约束\n\n不要平滑缩放像素图、随机混合像素尺度、把照片马赛克当作像素美术、隐藏于Canvas的唯一导航、不可读中文小字或自动播放音效。\n\n## 制作约束\n\n- PICO-8的128×128/16色是这个实例的明确创作约束，不是所有像素艺术的定义。\n- 本地图使用16色原生PICO-8色板和整数像素绘制；桌面用整数倍率，窄屏优先完整显示。\n- Canvas放大使用image-rendering:pixelated；禁止图片模糊插值。\n- 关键地点有可聚焦DOM按钮与文本说明，不只隐藏在Canvas里。\n- 长文使用可读系统字体，不能把业务信息全部压成像素小字。\n- 无角色原作素材、复杂游戏引擎或音频自动播放；降低动态偏好时取消非必要动画。\n\n## 检查方法\n\n为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。\n\n[查看 Demo](../demos/pixel-world/index.html) · [返回浏览案例](../cases.html#style/pixel-world)\n",
+      "sha256": "d3a6c84cf7b5048749f61060e0425d90b6a9a9a419b386b5fe0979f665bac291",
+      "bytes": 2479
     }
   ],
   "files": [
@@ -188,16 +188,22 @@
       "bytes": 21190
     },
     {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
       "path": "document.html",
       "role": "source",
-      "sha256": "57fa2420b57e4b13342cb71e2cd9f156f512f1874ce74d1623994e152ef56eda",
-      "bytes": 5139
+      "sha256": "ca5fed10cd546e1cd6b6f73f8a48815df63bd0f9c798396c939ffb8d8e3da17f",
+      "bytes": 2095
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "f11b76b4cc987f15767ea427aebe114edeb3c169dd7702eaf24901d6ea561eac",
-      "bytes": 3789
+      "sha256": "f2a840c11cdf44f60b948e2e175724567d7ddd724ebff8820f62f11ed0b17e7c",
+      "bytes": 3968
     },
     {
       "path": "entries/pixel-world.json",
@@ -226,8 +232,8 @@
     {
       "path": "prompts/pixel-world.md",
       "role": "context",
-      "sha256": "4a137401234a19e8d26ced42510ff53a8aa1c796a6bbf189f23478b2fc6da52f",
-      "bytes": 2476
+      "sha256": "d3a6c84cf7b5048749f61060e0425d90b6a9a9a419b386b5fe0979f665bac291",
+      "bytes": 2479
     },
     {
       "path": "research/pixel-world.md",
@@ -236,10 +242,22 @@
       "bytes": 2862
     },
     {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "520fe684c690c846ed84544a4767a8c4b67737561d0aca41a0adaf805c8b962e",
+      "bytes": 11217
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "13627fca6fffc5faf217369904bf397969d9df0faad0f92b755649ac6a2d2b9b",
+      "bytes": 739
+    },
+    {
       "path": "theme.js",
       "role": "source",
-      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
-      "bytes": 1029
+      "sha256": "1f09e049e74adc0bbd04531826f8830483ad6bfee4e8fadc4fc5683d7f388a62",
+      "bytes": 1322
     },
     {
       "path": "vendor/LICENSES.txt",

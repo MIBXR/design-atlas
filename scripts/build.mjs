@@ -13,7 +13,7 @@ fs.writeFileSync(readmePath,readme.replace(/<!-- atlas-counts:start -->[\s\S]*?<
 fs.writeFileSync(path.join(root,'catalog.js'), 'window.DESIGN_ATLAS = ' + JSON.stringify(entries,null,2) + ';\n');
 fs.mkdirSync(path.join(root, 'prompts'), {recursive:true});
 for (const entry of entries) {
-  const prompt = `# ${entry.title} · 复用 Prompt\n\n由 [结构化案例](../entries/${entry.id}.json) 自动生成。参考观察与具体边界见 [调研](../${entry.research})。\n\n## 正向 Prompt\n\n${entry.prompt}\n\n## 负向约束\n\n${entry.negativePrompt}\n\n## 制作约束\n\n${entry.constraints.map(item => '- ' + item).join('\n')}\n\n## 检查方法\n\n${entry.exercise}\n\n[查看 Demo](../${entry.demo}) · [返回参考库](../cases.html#style/${entry.id})\n`;
+  const prompt = `# ${entry.title} · 复用 Prompt\n\n由 [结构化案例](../entries/${entry.id}.json) 自动生成。参考观察与具体边界见 [调研](../${entry.research})。\n\n## 正向 Prompt\n\n${entry.prompt}\n\n## 负向约束\n\n${entry.negativePrompt}\n\n## 制作约束\n\n${entry.constraints.map(item => '- ' + item).join('\n')}\n\n## 检查方法\n\n${entry.exercise}\n\n[查看 Demo](../${entry.demo}) · [返回浏览案例](../cases.html#style/${entry.id})\n`;
   fs.writeFileSync(path.join(root, 'prompts', entry.id + '.md'), prompt, 'utf8');
 }
 const clean = value => String(value).replace(/\|/g, '\\|').replace(/\n/g, ' ');

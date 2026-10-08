@@ -2,7 +2,7 @@
 
 # DESIGN ATLAS
 
-### 可交互 · 可查询 · 可回看的个人网页设计参考库
+### 可交互 · 可查询 · 可回看的个人网页设计案例库
 
 从真实网站学习设计，让配色、排版、图像、形状和动效共同工作。
 
@@ -10,7 +10,7 @@
 **29 个案例**　·　**21 个真实品牌／文化页面**　·　**8 种经典设计语言**
 <!-- atlas-counts:end -->
 
-[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计元素实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
+[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
 
 ![Design Atlas 实际 Demo 全景](docs/readme/cover.webp)
 
@@ -29,11 +29,11 @@
 - **查找**：按产品、游戏/IP、艺术文化、经典语言与国家／地区筛选；搜索品牌、配色、布局、交互或约束。分类、地区、搜索与排序保留在 URL 中，支持刷新恢复、浏览器前进／后退和分享筛选结果（例如 `cases.html?category=games`）。
 - **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；手机面板限制为390px。
 - **比较**：选择2–3项并排比较，观察同样的设计元素如何产生不同表达。
-- **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在元素实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
+- **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在设计实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
 - **Agent 选型**：调用 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
 - **桌面与手机**：真实1440px桌面预览保留完整断点；ChatGPT默认展示桌面动效，手机模式可切换。
-- **主题与声音**：参考库支持跟随系统／浅色／深色；每个案例说明原站的主题方式、音乐或媒体声音及其交互作用，固定品牌主题保留原貌。
+- **主题与声音**：案例库支持跟随系统／浅色／深色；每个案例说明原站的主题方式、音乐或媒体声音及其交互作用，固定品牌主题保留原貌。
 - **收藏**：浏览器localStorage保存个人策展结果，并导出／导入 JSON 备份；不同设备或域名不会自动同步。
 - **加载与复用**：案例先准备首屏关键图像、字体与视频第一帧，再开始开场；未就绪时显示进度与重试。固定版本的大素材在同一站点内缓存，嵌入预览与独立打开共享已经下载的内容。
 
@@ -174,7 +174,7 @@ npm start
 
 首屏加载只等待当前画面必要的图片、可见字体和视频首帧，后续章节提前按需准备。进度按已就绪资源项统计，不伪造下载字节百分比；失败时可以重试或继续浏览。明日方舟与塞尔达保留自己的原站风格加载／声音入口，开场从资源就绪之后开始。音乐由用户启用，不进入首屏必等列表。
 
-固定 GitHub 地址的大素材使用浏览器 Cache Storage 保存；后续再次进入时优先复用，完整视频缓存支持字节区间读取与拖动。嵌入预览与独立页面同属一个站点时共享这份缓存。只按访问加载，不在进入参考库时下载所有案例；素材缓存最多256MiB，按存入顺序移除较早的素材。HTML、脚本与样式照常获取当前版本。本地服务使用 ETag／Last-Modified 条件请求，未变化的本地文件返回304并复用已下载内容。
+固定 GitHub 地址的大素材使用浏览器 Cache Storage 保存；后续再次进入时优先复用，完整视频缓存支持字节区间读取与拖动。嵌入预览与独立页面同属一个站点时共享这份缓存。只按访问加载，不在进入案例库时下载所有案例；素材缓存最多256MiB，按存入顺序移除较早的素材。HTML、脚本与样式照常获取当前版本。本地服务使用 ETag／Last-Modified 条件请求，未变化的本地文件返回304并复用已下载内容。
 
 浏览器可能因空间不足、隐私模式或清理网站数据而移除缓存；此时页面正常重新加载。“收藏备份与说明”中可查看、清除素材缓存。收藏与素材缓存分别保存。Cache Storage 的容量和可用性由浏览器管理，参见 [MDN Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache)。
 
@@ -207,7 +207,7 @@ demos/<id>/                   HTML、CSS、JS与本地图片／字体／音视�
 previews/                     案例桌面与手机预览
 docs/readme/                  本README配图
 vendor/                       固定版本的Markdown解析库、HTML清理库与许可证
-fundamentals.*                可操作的设计元素实验室
+fundamentals.*                可操作的设计实验室
 catalog.js                    自动生成的浏览器目录
 asset-sources.js               固定 Git 提交、远端URL与本地素材字节／哈希映射
 asset-runtime.js               本地优先、失败回退与显式来源切换

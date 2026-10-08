@@ -135,9 +135,9 @@
     {
       "path": "prompts/linear-workflow.md",
       "role": "prompt",
-      "content": "# Linear — 深色产品开发系统 · 复用 Prompt\n\n由 [结构化案例](../entries/linear-workflow.json) 自动生成。参考观察与具体边界见 [调研](../research/linear-workflow.md)。\n\n## 正向 Prompt\n\n以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/linear-workflow/index.html) · [返回参考库](../cases.html#style/linear-workflow)\n",
-      "sha256": "62fcda98d0a06aa341e7f29f7c8c1d45ef4657667d34f4d88835619643864666",
-      "bytes": 2223
+      "content": "# Linear — 深色产品开发系统 · 复用 Prompt\n\n由 [结构化案例](../entries/linear-workflow.json) 自动生成。参考观察与具体边界见 [调研](../research/linear-workflow.md)。\n\n## 正向 Prompt\n\n以 https://linear.app/ 在【采集日期】的 英文首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。使用原字体、字标、近黑背景和三栏 issue/board 信息密度。必须保留延迟的首屏 UI 入场与滚动 mask；Favorites 的四种独立结构；Intake 消息→回复→两卡 Todo 插入→第二请求→两卡移动，按 2000/1000/1400/800ms 节点串联并可重播。AI 进入视口启动、离屏停止，三列代理时间有交错；Build 可编辑与六种局部代码主题。手机应用缩放裁切、Intake 只留消息线程，隐藏复杂图示而保留文案。原营销页固定暗色、没有配乐；不用全页切幕或泛化淡入替代消息和任务板机制。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 消息文本和任务数量缩短；后续板的布局/卡高 spring 用 CSS 拟合，原源码中的全部 spring 物理参数未逐一移植。AI 为固定演示，代码不会执行；Run agent 与 Favorites 并非可登录的完整 Linear。未复制 Changelog 和后段用户故事卡与完整产品后端。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/linear-workflow/index.html) · [返回浏览案例](../cases.html#style/linear-workflow)\n",
+      "sha256": "da0dcd42c04572c427b4f83dcc07e5165de28607fe3bd9c75c4e75b8317f04f6",
+      "bytes": 2226
     },
     {
       "path": "demos/linear-workflow/fidelity.md",
@@ -258,16 +258,22 @@
       "bytes": 22648
     },
     {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
       "path": "document.html",
       "role": "source",
-      "sha256": "57fa2420b57e4b13342cb71e2cd9f156f512f1874ce74d1623994e152ef56eda",
-      "bytes": 5139
+      "sha256": "ca5fed10cd546e1cd6b6f73f8a48815df63bd0f9c798396c939ffb8d8e3da17f",
+      "bytes": 2095
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "f11b76b4cc987f15767ea427aebe114edeb3c169dd7702eaf24901d6ea561eac",
-      "bytes": 3789
+      "sha256": "f2a840c11cdf44f60b948e2e175724567d7ddd724ebff8820f62f11ed0b17e7c",
+      "bytes": 3968
     },
     {
       "path": "entries/linear-workflow.json",
@@ -296,8 +302,8 @@
     {
       "path": "prompts/linear-workflow.md",
       "role": "context",
-      "sha256": "62fcda98d0a06aa341e7f29f7c8c1d45ef4657667d34f4d88835619643864666",
-      "bytes": 2223
+      "sha256": "da0dcd42c04572c427b4f83dcc07e5165de28607fe3bd9c75c4e75b8317f04f6",
+      "bytes": 2226
     },
     {
       "path": "research/linear-workflow.md",
@@ -312,10 +318,22 @@
       "bytes": 285471
     },
     {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "520fe684c690c846ed84544a4767a8c4b67737561d0aca41a0adaf805c8b962e",
+      "bytes": 11217
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "13627fca6fffc5faf217369904bf397969d9df0faad0f92b755649ac6a2d2b9b",
+      "bytes": 739
+    },
+    {
       "path": "theme.js",
       "role": "source",
-      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
-      "bytes": 1029
+      "sha256": "1f09e049e74adc0bbd04531826f8830483ad6bfee4e8fadc4fc5683d7f388a62",
+      "bytes": 1322
     },
     {
       "path": "vendor/LICENSES.txt",

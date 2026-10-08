@@ -127,9 +127,9 @@
     {
       "path": "prompts/met-museum.md",
       "role": "prompt",
-      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回参考库](../cases.html#style/met-museum)\n",
-      "sha256": "2a850f99c3149293c5f7d2e3ab5a65287060beff1aa26d7928ad115c8f7fdebb",
-      "bytes": 2058
+      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回浏览案例](../cases.html#style/met-museum)\n",
+      "sha256": "4621d7250cac09d814e3b5ad6fcc55919bcfb4ebe04102135772ea59c1a06bdb",
+      "bytes": 2061
     },
     {
       "path": "demos/met-museum/fidelity.md",
@@ -280,16 +280,22 @@
       "bytes": 8464
     },
     {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
       "path": "document.html",
       "role": "source",
-      "sha256": "57fa2420b57e4b13342cb71e2cd9f156f512f1874ce74d1623994e152ef56eda",
-      "bytes": 5139
+      "sha256": "ca5fed10cd546e1cd6b6f73f8a48815df63bd0f9c798396c939ffb8d8e3da17f",
+      "bytes": 2095
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "f11b76b4cc987f15767ea427aebe114edeb3c169dd7702eaf24901d6ea561eac",
-      "bytes": 3789
+      "sha256": "f2a840c11cdf44f60b948e2e175724567d7ddd724ebff8820f62f11ed0b17e7c",
+      "bytes": 3968
     },
     {
       "path": "entries/met-museum.json",
@@ -318,8 +324,8 @@
     {
       "path": "prompts/met-museum.md",
       "role": "context",
-      "sha256": "2a850f99c3149293c5f7d2e3ab5a65287060beff1aa26d7928ad115c8f7fdebb",
-      "bytes": 2058
+      "sha256": "4621d7250cac09d814e3b5ad6fcc55919bcfb4ebe04102135772ea59c1a06bdb",
+      "bytes": 2061
     },
     {
       "path": "research/met-museum.md",
@@ -334,10 +340,22 @@
       "bytes": 160684
     },
     {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "520fe684c690c846ed84544a4767a8c4b67737561d0aca41a0adaf805c8b962e",
+      "bytes": 11217
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "13627fca6fffc5faf217369904bf397969d9df0faad0f92b755649ac6a2d2b9b",
+      "bytes": 739
+    },
+    {
       "path": "theme.js",
       "role": "source",
-      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
-      "bytes": 1029
+      "sha256": "1f09e049e74adc0bbd04531826f8830483ad6bfee4e8fadc4fc5683d7f388a62",
+      "bytes": 1322
     },
     {
       "path": "vendor/LICENSES.txt",

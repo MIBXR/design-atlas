@@ -21,4 +21,4 @@
 
 保持黑色产品舞台，使用另一款真实产品摄影练习镜头与文案的滚动交接；先记录原站进度再调整曲线。
 
-[查看 Demo](../demos/apple-product/index.html) · [返回参考库](../cases.html#style/apple-product)
+[查看 Demo](../demos/apple-product/index.html) · [返回浏览案例](../cases.html#style/apple-product)

@@ -59,7 +59,7 @@ function renderMarkdown(text, sourceURL) {
 }
 async function readDocument() {
   try {
-    if (!isAllowedDocument(file)) throw new Error('请选择参考库中的 Markdown 文档。');
+    if (!isAllowedDocument(file)) throw new Error('请选择案例库中的 Markdown 文档。');
     const sourceURL = new URL(file, libraryURL);
     const response = await fetch(sourceURL);
     if (!response.ok) throw new Error(`文档读取失败（${response.status}）。`);
@@ -74,7 +74,11 @@ async function readDocument() {
     download.download = file.split('/').pop();
     download.hidden = false;
     const caseId = file.match(/^demos\/([A-Za-z0-9_-]+)\//)?.[1];
-    if (caseId) document.querySelector('#back').href = `cases.html#style/${caseId}`;
+    if (caseId) {
+      const back = document.querySelector('#back');
+      back.href = `cases.html#style/${caseId}`;
+      back.textContent = '← 返回案例详情';
+    }
   } catch (error) {
     content.textContent = error.message;
     content.setAttribute('role', 'alert');

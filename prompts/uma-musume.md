@@ -23,4 +23,4 @@
 
 保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。
 
-[查看 Demo](../demos/uma-musume/index.html) · [返回参考库](../cases.html#style/uma-musume)
+[查看 Demo](../demos/uma-musume/index.html) · [返回浏览案例](../cases.html#style/uma-musume)

@@ -2,11 +2,14 @@
   'use strict';
   const key = 'atlas-color-scheme';
   const preference = matchMedia('(prefers-color-scheme: dark)');
-  let choice = 'system';
-  try {
-    const saved = localStorage.getItem(key);
-    if (['system', 'light', 'dark'].includes(saved)) choice = saved;
-  } catch {}
+  function savedChoice() {
+    try {
+      const saved = localStorage.getItem(key);
+      if (['system', 'light', 'dark'].includes(saved)) return saved;
+    } catch {}
+    return 'system';
+  }
+  let choice = savedChoice();
   function apply() {
     const resolved = choice === 'system' ? (preference.matches ? 'dark' : 'light') : choice;
     document.documentElement.dataset.atlasTheme = resolved;
@@ -20,6 +23,12 @@
     apply();
   });
   preference.addEventListener('change', () => { if (choice === 'system') apply(); });
+  // Same-origin embedded experiments share the website's display preference.
+  window.addEventListener('storage', event => {
+    if (event.key !== key && event.key !== null) return;
+    choice = savedChoice();
+    apply();
+  });
   document.addEventListener('DOMContentLoaded', apply, { once: true });
   apply();
 })();

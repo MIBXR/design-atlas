@@ -126,9 +126,9 @@
     {
       "path": "prompts/swiss-grid.md",
       "role": "prompt",
-      "content": "# 瑞士设计：编辑网格 · 复用 Prompt\n\n由 [结构化案例](../entries/swiss-grid.json) 自动生成。参考观察与具体边界见 [调研](../research/swiss-grid.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构文化机构 [品牌] 制作瑞士国际主义启发的 [展览/课程] 页面。先建立标题、日期、地点、分类和行动层级，再用桌面12栏、32px间距、手机单列落地。纸白背景、炭黑正文、单一信号红；采用本地系统无衬线字体，最多两个字重。首屏是非对称的大标题和一幅原创抽象节奏图；后续用横向编号日程而非圆角卡片。提供有aria-pressed的分类筛选、结果计数和可取消的本地收藏。至少三个内容章节。保留常规滚动、可见键盘焦点、中文可读正文与reduced-motion降级。参考Swissted与Müller-Brockmann的排版逻辑，不复制商标、海报或宣称字体与原作相同。\n\n要素协调要求：标题尺度、对齐线、间距和日期位置重复形成秩序；红色只是集中强调，不能代替信息层级。\n\n## 负向约束\n\n不要玻璃拟态、渐变霓虹、满屏圆角卡片、横向滚动劫持、裁切中文标题；不要将Helvetica当作Swiss的唯一字体或混用包豪斯形色定律。\n\n## 制作约束\n\n- Swissted 官网明确使用 Berthold Akzidenz-Grotesk medium，并非 Helvetica；本 demo 用系统 Arial 近似结构，不声称字体等同。\n- 桌面 12 栏，移动端折为单列；文字不能为了维持海报形状被裁切。\n- 红色用于主视觉和状态，正文以黑字/纸白保持对比。\n- 字号差必须伴随语义标题层级，不能以超大字替代内容组织。\n- 几何图形只是局部节奏；不要把 Swiss 和包豪斯的形色课程混为一个流派。\n\n## 检查方法\n\n将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。\n\n[查看 Demo](../demos/swiss-grid/index.html) · [返回参考库](../cases.html#style/swiss-grid)\n",
-      "sha256": "4d2d3776c875421cde7338e8f4e25eea99151c4ede262c21ec61c8e70291223f",
-      "bytes": 2244
+      "content": "# 瑞士设计：编辑网格 · 复用 Prompt\n\n由 [结构化案例](../entries/swiss-grid.json) 自动生成。参考观察与具体边界见 [调研](../research/swiss-grid.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构文化机构 [品牌] 制作瑞士国际主义启发的 [展览/课程] 页面。先建立标题、日期、地点、分类和行动层级，再用桌面12栏、32px间距、手机单列落地。纸白背景、炭黑正文、单一信号红；采用本地系统无衬线字体，最多两个字重。首屏是非对称的大标题和一幅原创抽象节奏图；后续用横向编号日程而非圆角卡片。提供有aria-pressed的分类筛选、结果计数和可取消的本地收藏。至少三个内容章节。保留常规滚动、可见键盘焦点、中文可读正文与reduced-motion降级。参考Swissted与Müller-Brockmann的排版逻辑，不复制商标、海报或宣称字体与原作相同。\n\n要素协调要求：标题尺度、对齐线、间距和日期位置重复形成秩序；红色只是集中强调，不能代替信息层级。\n\n## 负向约束\n\n不要玻璃拟态、渐变霓虹、满屏圆角卡片、横向滚动劫持、裁切中文标题；不要将Helvetica当作Swiss的唯一字体或混用包豪斯形色定律。\n\n## 制作约束\n\n- Swissted 官网明确使用 Berthold Akzidenz-Grotesk medium，并非 Helvetica；本 demo 用系统 Arial 近似结构，不声称字体等同。\n- 桌面 12 栏，移动端折为单列；文字不能为了维持海报形状被裁切。\n- 红色用于主视觉和状态，正文以黑字/纸白保持对比。\n- 字号差必须伴随语义标题层级，不能以超大字替代内容组织。\n- 几何图形只是局部节奏；不要把 Swiss 和包豪斯的形色课程混为一个流派。\n\n## 检查方法\n\n将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。\n\n[查看 Demo](../demos/swiss-grid/index.html) · [返回浏览案例](../cases.html#style/swiss-grid)\n",
+      "sha256": "f29c218718cca2161fa9265c079c03d8608536353ac4457b93961651a225c30c",
+      "bytes": 2247
     }
   ],
   "files": [
@@ -175,16 +175,22 @@
       "bytes": 10196
     },
     {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
       "path": "document.html",
       "role": "source",
-      "sha256": "57fa2420b57e4b13342cb71e2cd9f156f512f1874ce74d1623994e152ef56eda",
-      "bytes": 5139
+      "sha256": "ca5fed10cd546e1cd6b6f73f8a48815df63bd0f9c798396c939ffb8d8e3da17f",
+      "bytes": 2095
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "f11b76b4cc987f15767ea427aebe114edeb3c169dd7702eaf24901d6ea561eac",
-      "bytes": 3789
+      "sha256": "f2a840c11cdf44f60b948e2e175724567d7ddd724ebff8820f62f11ed0b17e7c",
+      "bytes": 3968
     },
     {
       "path": "entries/swiss-grid.json",
@@ -213,8 +219,8 @@
     {
       "path": "prompts/swiss-grid.md",
       "role": "context",
-      "sha256": "4d2d3776c875421cde7338e8f4e25eea99151c4ede262c21ec61c8e70291223f",
-      "bytes": 2244
+      "sha256": "f29c218718cca2161fa9265c079c03d8608536353ac4457b93961651a225c30c",
+      "bytes": 2247
     },
     {
       "path": "research/swiss-grid.md",
@@ -223,10 +229,22 @@
       "bytes": 3257
     },
     {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "520fe684c690c846ed84544a4767a8c4b67737561d0aca41a0adaf805c8b962e",
+      "bytes": 11217
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "13627fca6fffc5faf217369904bf397969d9df0faad0f92b755649ac6a2d2b9b",
+      "bytes": 739
+    },
+    {
       "path": "theme.js",
       "role": "source",
-      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
-      "bytes": 1029
+      "sha256": "1f09e049e74adc0bbd04531826f8830483ad6bfee4e8fadc4fc5683d7f388a62",
+      "bytes": 1322
     },
     {
       "path": "vendor/LICENSES.txt",

@@ -204,4 +204,16 @@
   setScheme('paper');
   const requested=new URLSearchParams(location.search).get('style');
   if(requested){const entry=catalog.find(item=>item.id===requested);if(entry)applyReference(entry);else el('style-context').textContent='未找到这个风格编号，已保留纸页基础方案。请从选择器重新选择。'}
+  if(document.documentElement.dataset.labEmbed==='home' && window.parent!==window){
+    const experiment=el('lab');
+    let reportedHeight=0;
+    const reportHeight=()=>{
+      const height=Math.ceil(experiment.getBoundingClientRect().height);
+      if(!Number.isFinite(height)||height<=0||height===reportedHeight)return;
+      reportedHeight=height;
+      window.parent.postMessage({type:'design-atlas:lab-height',height},location.origin);
+    };
+    new ResizeObserver(reportHeight).observe(experiment);
+    reportHeight();
+  }
 })();

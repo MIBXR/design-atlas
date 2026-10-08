@@ -7,30 +7,8 @@
   <script src="theme.js"></script>
   <title>参考文档 · Design Atlas</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <style>
-    :root{color-scheme:light;--paper:#f5f4ee;--ink:#24251f;--muted:#6b705d;--line:#d9dbcd;--accent:#a5ac80;--surface:#e8edce;--field:#fafbf5;--code:#e8e9df;--link:#52622e;--quote:#5a614d;--focus:#798642;background:var(--paper);color:var(--ink);font-family:system-ui,"Microsoft YaHei",sans-serif}
-    :root[data-atlas-theme=dark]{color-scheme:dark;--paper:#181c18;--ink:#e8ebdf;--muted:#b2b8a8;--line:#3b4437;--accent:#a5ba71;--surface:#303a2b;--field:#242c23;--code:#242c23;--link:#d4ef76;--quote:#c3cbbb;--focus:#c9e86c}
-    @media(prefers-color-scheme:dark){:root:not([data-atlas-theme]){color-scheme:dark;--paper:#181c18;--ink:#e8ebdf;--muted:#b2b8a8;--line:#3b4437;--accent:#a5ba71;--surface:#303a2b;--field:#242c23;--code:#242c23;--link:#d4ef76;--quote:#c3cbbb;--focus:#c9e86c}}
-    *{box-sizing:border-box}body{margin:0}header{border-bottom:1px solid var(--line);padding:20px clamp(20px,5vw,70px);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-    a{color:inherit;text-underline-offset:4px}header a:first-child{font-weight:800;letter-spacing:.05em;margin-right:auto;text-decoration:none}
-    #download{border:1px solid var(--accent);border-radius:6px;padding:8px 12px;background:var(--surface)}a:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
-    .theme-control{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;white-space:nowrap}.theme-control select{font:inherit;min-height:36px;padding:7px 10px;border:1px solid var(--accent);border-radius:6px;background:var(--field);color:var(--ink)}.theme-control option{background:var(--field);color:var(--ink)}
-    main{max-width:1100px;margin:auto;padding:40px clamp(20px,5vw,64px) 80px}h1{font-size:clamp(26px,4vw,40px);line-height:1.25;margin:0 0 12px}
-    #path{color:var(--muted);font-size:13px;overflow-wrap:anywhere;margin-bottom:28px}
-    .markdown-body{border-top:1px solid var(--line);padding-top:24px;font-size:16px;line-height:1.8;overflow-wrap:anywhere}
-    .markdown-body> :first-child{margin-top:0}.markdown-body h2{font-size:26px;line-height:1.4;margin:2em 0 .7em}.markdown-body h3{font-size:21px;line-height:1.5;margin:1.6em 0 .6em}
-    .markdown-body p{margin:0 0 1.2em}.markdown-body ul,.markdown-body ol{padding-left:1.6em;margin:0 0 1.3em}.markdown-body li+li{margin-top:.35em}
-    .markdown-body a{color:var(--link)}.markdown-body blockquote{margin:1.5em 0;padding:.2em 1.2em;border-left:3px solid var(--accent);color:var(--quote)}
-    .markdown-body code{font-family:"Cascadia Code",Consolas,monospace;font-size:.88em;padding:.15em .35em;background:var(--code);border-radius:4px}
-    .markdown-body pre{max-width:100%;overflow-x:auto;padding:18px;background:var(--code);border:1px solid var(--line);border-radius:8px;line-height:1.65;margin:1.3em 0}
-    .markdown-body pre code{padding:0;background:none;white-space:pre;overflow-wrap:normal}
-    .markdown-body img{display:block;max-width:100%;height:auto;margin:1.5em auto}.markdown-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
-    .table-scroll{max-width:100%;overflow-x:auto;margin:1.4em 0;border:1px solid var(--line);border-radius:8px}.table-scroll:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-    .markdown-body table{width:100%;min-width:640px;border-collapse:collapse;font-size:14px;line-height:1.7}
-    .markdown-body th,.markdown-body td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
-    .markdown-body th{background:var(--surface);font-weight:700}.markdown-body tr:last-child td{border-bottom:0}.markdown-body td img{margin:0 0 12px}.markdown-body div[align="center"]{text-align:center}
-    [hidden]{display:none!important}@media(max-width:600px){header{font-size:13px}main{padding-top:28px}.markdown-body{font-size:15px}.markdown-body h2{font-size:23px}.markdown-body th,.markdown-body td{padding:12px}}
-  </style>
+  <link rel="stylesheet" href="document.css"><link rel="stylesheet" href="site-nav.css">
+  <script src="site-shell.js" defer></script>
   <script src="asset-sources.js" defer></script>
   <script src="asset-runtime.js" defer></script>
   <script src="asset-cache.js" defer></script>
@@ -38,8 +16,13 @@
   <script src="vendor/purify.min.js" defer></script>
   <script src="document.js" defer></script>
 </head>
-<body>
-  <header><a href="index.html">DESIGN ATLAS</a><a id="back" href="cases.html">返回参考库</a><label class="theme-control">显示主题<select data-atlas-theme-choice aria-label="文档显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label><a id="download" hidden>下载 Markdown ↓</a></header>
-  <main><h1 id="title">参考文档</h1><p id="path"></p><article id="content" class="markdown-body" aria-live="polite" aria-busy="true">正在读取文档…</article></main>
+<body class="document-page">
+<a class="atlas-skip" href="#main">跳到内容</a>
+  <header class="atlas-site-header"><div class="atlas-site-header-inner">
+<a class="atlas-site-brand" href="index.html" aria-label="Design Atlas 首页"><span class="atlas-site-mark" aria-hidden="true">✳</span><span class="atlas-site-wordmark"><strong>DESIGN ATLAS</strong><small>从案例到实践</small></span></a>
+<nav class="atlas-site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="cases.html">浏览案例</a><a href="fundamentals.html">设计实验室</a><a href="agent.html">Agent 工作流</a></nav>
+<label class="atlas-site-theme">显示主题<select data-atlas-theme-choice aria-label="网站显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label>
+</div></header>
+  <main class="document-main" id="main" tabindex="-1"><div class="document-toolbar"><a id="back" class="atlas-ui-button" href="cases.html">← 返回浏览案例</a><a id="download" class="atlas-ui-button" hidden>下载 Markdown ↓</a></div><h1 id="title">参考文档</h1><p id="path"></p><article id="content" class="markdown-body" aria-live="polite" aria-busy="true">正在读取文档…</article></main>
 </body>
 </html>
