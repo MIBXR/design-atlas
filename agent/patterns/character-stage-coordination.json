@@ -91,7 +91,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "08bd5304398575b1f9fb1ba4cf0a04278b22c46f3047855ec7c9ae32b66d2bc7"
+      "bundleSha256": "e8cbe5d8e1afbd105817aac1d4852e18cf9c23238f7ec2003c887954894133fa"
     },
     {
       "id": "blue-archive",
@@ -100,7 +100,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "479a9308c2b0f6ef26964b1c801f42d05f5fbb698f34c57b87c4b773f9afbc49"
+      "bundleSha256": "518052187b563e4d154f14faa2d9a97e4c7bdd9bcf65786f6ef12efb0ca3ee05"
     },
     {
       "id": "genshin-world",
@@ -109,7 +109,7 @@
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/genshin-world/index.html"
       },
-      "bundleSha256": "d8d1d411afd801c6129447a8af6f3a3f9710ef40b1cb5f8052e38e0f79d68dde"
+      "bundleSha256": "42477a890916830fc1a62679c04a986e7382bc05602126b64ee424356d5ae66f"
     }
   ]
 }

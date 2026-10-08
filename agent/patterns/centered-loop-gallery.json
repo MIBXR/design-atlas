@@ -104,7 +104,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "43822211c33fde8c277195d59585ea204d903f6ac1bc499c0e2aa0a4fcf88c1a"
+      "bundleSha256": "8fe3cba97e0f3461d14500f3f3d646f0117d4888b1f736fb0ddaf681f2fded19"
     },
     {
       "id": "monument-valley-game",
@@ -113,7 +113,7 @@
         "bundle": "agent/cases/monument-valley-game.json",
         "demo": "demos/monument-valley-game/index.html"
       },
-      "bundleSha256": "97dae9f58b1032166466930a0c2d8c908670a97ddd4cf1a907676a919013fcbf"
+      "bundleSha256": "88fe5e20467f55fe4b4d976fdf18b110588c09884ff44f5eeedce9c15c7346fd"
     },
     {
       "id": "persona-kinetic",
@@ -122,7 +122,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "5dae1e9a01660b1fd16f938b7c23188af8a4c24680a923d7dfd20fa74077c9b3"
+      "bundleSha256": "aed77634292125d322c9d4e05f3e3c6af66625cf4ef6d78c0d278584c2ffbfb5"
     },
     {
       "id": "philharmonie-music",
@@ -131,7 +131,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "ad27454e9d969c73c194dca6facbf011d200e0729682ab8d605773c2ff908a4a"
+      "bundleSha256": "a3740f22a04ddfadcde9ac5aa99e48d8a4fa205dbad6825e5e3e139957a2b7ad"
     }
   ]
 }

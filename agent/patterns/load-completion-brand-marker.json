@@ -85,7 +85,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "00274dc8a1035d5d87c02223b0ef71df4f8b0d490a996d1fd924683b51803f17"
+      "bundleSha256": "a217b1eb3327955420387577dc4c8e9eb230448964eef31df5ffbf64b0c9485f"
     },
     {
       "id": "fuji-rock",
@@ -94,7 +94,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "43822211c33fde8c277195d59585ea204d903f6ac1bc499c0e2aa0a4fcf88c1a"
+      "bundleSha256": "8fe3cba97e0f3461d14500f3f3d646f0117d4888b1f736fb0ddaf681f2fded19"
     }
   ]
 }
