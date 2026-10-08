@@ -72,12 +72,13 @@ async function readDocument() {
     const download = document.querySelector('#download');
     download.href = file;
     download.download = file.split('/').pop();
+    download.textContent = `下载 ${download.download}`;
     download.hidden = false;
     const caseId = file.match(/^demos\/([A-Za-z0-9_-]+)\//)?.[1];
     if (caseId) {
       const back = document.querySelector('#back');
       back.href = `cases.html#style/${caseId}`;
-      back.textContent = '← 返回案例详情';
+      back.textContent = '返回案例详情';
     }
   } catch (error) {
     content.textContent = error.message;

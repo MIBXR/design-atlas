@@ -68,7 +68,7 @@
       function updateControls(isPaused) {
         stage.dataset.paused = String(isPaused);
         setStatus(isPaused ? '画面已停留。完成操作后，继续下一步。' : '滚动探索，也可选择左侧入口。');
-        nextButton.textContent = active === 0 ? '继续调配元素 ↓' : active === 1 ? '继续参考构建 ↓' : '继续往下了解 ↓';
+        nextButton.textContent = active === 0 ? '继续调配元素' : active === 1 ? '继续参考构建' : '继续往下了解';
       }
       function renderSelection() {
         stage.dataset.mode = buttons[active].dataset.homeMode;

@@ -70,7 +70,7 @@ body.cases-page #compare-go{min-height:var(--atlas-control-height);height:var(--
 body.cases-page .favorite{width:var(--atlas-control-height);min-width:var(--atlas-control-height);height:var(--atlas-control-height);min-height:var(--atlas-control-height);border-radius:var(--atlas-control-radius)}
 body.cases-page .dialog-close{width:var(--atlas-control-height);height:var(--atlas-control-height)}
 
-/* Main content controls are compact. The header, directories and footer keep 44px targets. */
+/* Dense workspace controls are compact; home entry actions have their own scale. */
 body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
   :is(.landing-main,.case-layout main,.agent-main,.document-main,.lab-layout main)
   :where(button,select,.landing-button,.copy-button,.primary-button,.atlas-ui-button,.plain-btn,.text-button):not(.sample,.sample *,.home-story-rail button){
@@ -81,6 +81,29 @@ body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
   padding-bottom:5px;
   border-radius:var(--atlas-control-radius);
   line-height:1.5;
+}
+body.landing-page .landing-main .landing-actions>.landing-button{
+  height:52px;
+  min-height:52px;
+  padding:12px 16px;
+  font-size:16px;
+}
+@media(max-width:800px){
+  body.landing-page .landing-main .landing-actions>.landing-button{height:48px;min-height:48px;padding:10px 16px}
+}
+/* External-link marks share the text baseline and do not gain a second underline. */
+body :is(.landing-main,.case-layout,.agent-main,.document-main,.lab-layout,.atlas-site-footer) :is(a,a:hover){
+  text-decoration-thickness:1px;
+  text-underline-offset:4px;
+}
+body.lab-page .source-list>a:hover strong{ text-decoration-thickness:1px;text-underline-offset:4px }
+.atlas-external-icon{
+  display:inline-block;
+  font:inherit;
+  line-height:inherit;
+  white-space:nowrap;
+  text-decoration:none;
+  flex-shrink:0;
 }
 body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
   :is(.landing-main,.case-layout main,.agent-main,.document-main,.lab-layout main) .scheme-btn{

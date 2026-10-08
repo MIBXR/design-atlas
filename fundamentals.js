@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const el = id => document.getElementById(id);
+  const isExternalLink = href => {try {const url=new URL(href,location.href);return /^https?:$/.test(url.protocol)&&url.origin!==location.origin;}catch{return false;}};
   const sample = el('sample');
   const elementPanel = document.querySelector('.element-controls');
   document.querySelector('.experiment').before(elementPanel);
@@ -17,7 +18,7 @@
   document.querySelector('.note-preview-top').after(graphic);
   const feedback = document.createElement('div');
   feedback.className='sample-feedback';
-  feedback.innerHTML='<button id="feedback-demo" class="sample-primary" type="button">体验操作反馈 ↗︎</button><p id="feedback-message" role="status" aria-live="polite">点击后查看文字与视觉反馈。</p>';
+  feedback.innerHTML='<button id="feedback-demo" class="sample-primary" type="button">体验操作反馈</button><p id="feedback-message" role="status" aria-live="polite">点击后查看文字与视觉反馈。</p>';
   el('sample-features').after(feedback);
   const graphicNames={line:'线描',geometry:'几何',product:'产品'};
   const graphics={
@@ -185,7 +186,7 @@
     referenceEntry=entry;groupOrigins={palette:'条目色板',type:'教学映射',shape:'教学映射',space:'教学映射'};clearSchemeButtons();syncInputs();render();
     el('reference-style').value=entry.id;el('current-plan').textContent='当前：'+entry.title+' / 教学迁移';
     el('style-context').textContent='“'+entry.title+'”已带入：色板来自本地条目；字体、布局、形状与间距按条目ID/类别归纳为可比较的教学配置。不是官网或原demo的像素复刻。';
-    const links=el('style-source-links');links.replaceChildren();for(const source of entry.sources.slice(0,2)){const a=document.createElement('a');a.href=source.url;a.textContent=source.title+' ↗︎';a.target='_blank';a.rel='noreferrer';links.append(a)}
+    const links=el('style-source-links');links.replaceChildren();for(const source of entry.sources.slice(0,2)){const a=document.createElement('a');a.href=source.url;a.textContent=source.title;a.target='_blank';a.rel='noreferrer';if(isExternalLink(a.href)){const icon=document.createElement('span');icon.className='atlas-external-icon';icon.setAttribute('aria-hidden','true');icon.textContent='↗︎';a.append(' ',icon)}links.append(a)}
     message('从风格库迁移','保持“拾光笔记”的同一产品内容，借用“'+entry.title+'”的元素特征。若要学习其完整信息架构与核心交互，请回到该条目的独立demo。','观察：同一内容借用不同风格后，气质、视觉重点与阅读密度有什么变化？再单独改一项，检验它与其他元素的关系。');
   }
   el('reference-style').addEventListener('change',event=>{const entry=catalog.find(item=>item.id===event.target.value);if(entry)applyReference(entry);else setScheme('paper');try{const url=new URL(location.href);if(entry)url.searchParams.set('style',entry.id);else url.searchParams.delete('style');history.replaceState(null,'',url)}catch{}});

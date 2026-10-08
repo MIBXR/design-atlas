@@ -21,6 +21,10 @@
     // Set in the head, before the header exists, so its icon and page theme agree at first paint.
     document.documentElement.dataset.atlasThemeChoice = choice;
     document.documentElement.style.colorScheme = resolved;
+    document.querySelectorAll('link[rel~="icon"]').forEach(icon => {
+      const href = `favicon-${resolved}.svg?v=atlas-cross-1`;
+      if (icon.getAttribute('href') !== href) icon.setAttribute('href', href);
+    });
     document.querySelectorAll('button[data-theme-toggle]').forEach(button => {
       const description = `显示主题：${names[choice]}；点击切换为${names[nextChoice()]}`;
       button.dataset.themeState = choice;

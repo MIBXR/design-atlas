@@ -30,6 +30,7 @@ function sharedStorage() {
 function page({ store = sharedStorage(), systemDark = false, denied = false, embedded = false, mounted = true } = {}) {
   const documentListeners = new Map(), windowListeners = new Map(), mediaListeners = new Map();
   const root = { dataset: embedded ? { labEmbed: 'home' } : {}, style: {} };
+  const favicon = { href: 'favicon.svg', getAttribute: () => favicon.href, setAttribute: (name, value) => { favicon[name] = value; } };
   const button = {
     dataset: {}, setAttribute() {},
     closest: selector => selector === 'button[data-theme-toggle]' ? button : null,
@@ -43,12 +44,12 @@ function page({ store = sharedStorage(), systemDark = false, denied = false, emb
     document: {
       documentElement: root,
       addEventListener: (name, listener) => documentListeners.set(name, listener),
-      querySelectorAll: selector => mounted && selector === 'button[data-theme-toggle]' ? [button] : [],
+      querySelectorAll: selector => selector === 'link[rel~="icon"]' ? [favicon] : mounted && selector === 'button[data-theme-toggle]' ? [button] : [],
     },
     window: { addEventListener: (name, listener) => windowListeners.set(name, listener) },
   }, { timeout: 1000, filename: 'theme.js' });
   return {
-    button, mode: () => root.dataset.atlasThemeChoice, resolved: () => root.dataset.atlasTheme,
+    button, favicon, mode: () => root.dataset.atlasThemeChoice, resolved: () => root.dataset.atlasTheme,
     mount() { mounted = true; documentListeners.get('DOMContentLoaded')?.(); },
     click(target = button) { documentListeners.get('click')({ target }); },
     system(dark) { media.matches = dark; mediaListeners.get('change')?.(); },
@@ -110,4 +111,19 @@ test('a click on an SVG child delegates to its theme button', () => {
   const path = { closest: selector => selector === 'button[data-theme-toggle]' ? fixture.button : null };
   fixture.click(path);
   assert.equal(fixture.mode(), 'dark');
+});
+
+test('favicon tracks resolved system appearance and manual theme overrides', () => {
+  const fixture = page();
+  assert.equal(fixture.favicon.href, 'favicon-light.svg?v=atlas-cross-1');
+  fixture.system(true);
+  assert.equal(fixture.favicon.href, 'favicon-dark.svg?v=atlas-cross-1');
+  fixture.click(); // Manual dark, even when the OS becomes light.
+  fixture.system(false);
+  assert.equal(fixture.favicon.href, 'favicon-dark.svg?v=atlas-cross-1');
+  fixture.click(); // Manual light, even when the OS becomes dark.
+  fixture.system(true);
+  assert.equal(fixture.favicon.href, 'favicon-light.svg?v=atlas-cross-1');
+  fixture.click(); // Follow the dark OS again.
+  assert.equal(fixture.favicon.href, 'favicon-dark.svg?v=atlas-cross-1');
 });
