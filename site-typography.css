@@ -82,6 +82,8 @@ body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
   border-radius:var(--atlas-control-radius);
   line-height:1.5;
 }
+/* The home tabs use a straight underline, independent of workspace button corners. */
+body.landing-page main.landing-main .home-story-intro-actions>button{border-radius:0}
 body.landing-page .landing-main .landing-actions>.landing-button{
   height:52px;
   min-height:52px;

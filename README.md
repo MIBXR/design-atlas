@@ -39,6 +39,20 @@
 
 ![从观察到复用](docs/readme/workflow.webp)
 
+## 网站也从自己的案例中学习
+
+Design Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案例](research/chatgpt-platform.md) 的滚动交接，用同一展示窗串起浏览案例、调配元素与参考构建；实验室把案例的配色、排版与构成机制迁移到同一份内容上，让方案可以实际操作与比较。
+
+从案例中找依据，在实际使用中观察，再结合人的反馈改进网站本体。这也是这份案例库从参考走向实践的过程。
+
+![Design Atlas 首页：三大功能的统一入口](docs/site/home.png)
+
+| 首页中的真实实验室 | 浏览案例 |
+| --- | --- |
+| ![首页实验室展示：左侧调配元素，右侧查看真实效果](docs/site/workflow.png) | ![浏览案例界面：筛选设计方向与查看案例预览](docs/site/cases.png) |
+
+以上为网站本体的实际浏览器截图；各案例的独立 Demo 预览见下方画廊。
+
 ## Agent 直接取材
 
 网页保留人工预览与比较；Agent 可通过 [工作流入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html)、[结构化索引](agent/catalog.json) 和按案例生成的完整上下文取得设计依据。原始条目、原 Prompt、研究、复现边界与带 SHA256 的文件清单一起读取，源码与媒体按需获取。
@@ -206,6 +220,7 @@ demos/<id>/                   HTML、CSS、JS与本地图片／字体／音视�
   assets-manifest.json        公开来源、用途、处理方式、字节数、SHA256
 previews/                     案例桌面与手机预览
 docs/readme/                  本README配图
+docs/site/                    网站本体的实际浏览器截图
 vendor/                       固定版本的Markdown解析库、HTML清理库与许可证
 fundamentals.*                可操作的设计实验室
 catalog.js                    自动生成的浏览器目录
