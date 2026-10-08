@@ -1,7 +1,7 @@
 const panel=document.querySelector('#nav-panel');const menus={visit:[['Plan your visit','#visit-info'],['Tickets and admission','https://www.metmuseum.org/visit'],['Become a Member','#membership']],exhibitions:[['Now On View','#exhibitions'],['All exhibitions','https://www.metmuseum.org/exhibitions']],art:[['Collection Highlights','#art'],['Explore the collection','https://www.metmuseum.org/art/collection']]};let active;
 const mobileToggle=document.querySelector('#mobile-menu');
-function hide(){panel.hidden=true;panel.classList.remove('mobile-navigation');document.body.classList.remove('mobile-nav-open');document.querySelectorAll('[data-menu],#mobile-menu').forEach(b=>b.setAttribute('aria-expanded','false'));mobileToggle.setAttribute('aria-label','Open menu');mobileToggle.textContent='☰';active=null}
-function destination(text,href){const a=document.createElement('a');a.textContent=text+(href.startsWith('http')?' ↗':'');a.href=href;if(href.startsWith('http')){a.target='_blank';a.rel='noopener'}a.onclick=hide;return a}
+function hide(){panel.hidden=true;panel.classList.remove('mobile-navigation');document.body.classList.remove('mobile-nav-open');document.querySelectorAll('[data-menu],#mobile-menu').forEach(b=>b.setAttribute('aria-expanded','false'));mobileToggle.setAttribute('aria-label','Open menu');mobileToggle.textContent='☰︎';active=null}
+function destination(text,href){const a=document.createElement('a');a.textContent=text+(href.startsWith('http')?' ↗︎':'');a.href=href;if(href.startsWith('http')){a.target='_blank';a.rel='noopener'}a.onclick=hide;return a}
 function menu(name,button){
  if(active===name){hide();return}hide();active=name;panel.replaceChildren();
  if(name==='mobile'){

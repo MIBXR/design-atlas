@@ -27,4 +27,4 @@
 
 将三种形态映射为一个产品的收集、处理、输出阶段，让每次变形同步切换解释文本，并保留相同三角片。
 
-[查看 Demo](../demos/shape-morph/index.html) · [返回参考库](../index.html#style/shape-morph)
+[查看 Demo](../demos/shape-morph/index.html) · [返回浏览案例](../cases.html#style/shape-morph)

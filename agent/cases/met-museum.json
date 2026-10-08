@@ -127,9 +127,9 @@
     {
       "path": "prompts/met-museum.md",
       "role": "prompt",
-      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回参考库](../index.html#style/met-museum)\n",
-      "sha256": "4bc7f8e36f69c9a3e49497f19e1cb98abbfce95a622a3b9e57441eb9b79ec153",
-      "bytes": 2058
+      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回浏览案例](../cases.html#style/met-museum)\n",
+      "sha256": "4621d7250cac09d814e3b5ad6fcc55919bcfb4ebe04102135772ea59c1a06bdb",
+      "bytes": 2061
     },
     {
       "path": "demos/met-museum/fidelity.md",
@@ -264,14 +264,14 @@
     {
       "path": "demos/met-museum/index.html",
       "role": "source",
-      "sha256": "602abccfdbe757cdf3f6743ac53d273ca44f6bd1866debd8cff527cf26ec03e0",
-      "bytes": 7547
+      "sha256": "c84a233c8a8129775e67ec331fadfaa82fb653b75e15209e17df53f8e3f8e70c",
+      "bytes": 7559
     },
     {
       "path": "demos/met-museum/script.js",
       "role": "source",
-      "sha256": "8fbf31e9e4062d5b6231bbb6792e0a9b3329260472d9a9f8667086c805d9e3a1",
-      "bytes": 4874
+      "sha256": "67629fbe552124f600c60bf22ef354787a5434700935b34e564a8dbc667dad36",
+      "bytes": 4880
     },
     {
       "path": "demos/met-museum/style.css",
@@ -280,16 +280,22 @@
       "bytes": 8464
     },
     {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
       "path": "document.html",
       "role": "source",
-      "sha256": "9e3dd6b269aa54c53eb7c6477c1a7011d5552c62a1d683150974aabb9b556046",
-      "bytes": 5139
+      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
+      "bytes": 4329
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
-      "bytes": 3789
+      "sha256": "62272c11c8a4d6c72933b548a6f9664cac102a0620dae609eee50d92898788ac",
+      "bytes": 4023
     },
     {
       "path": "entries/met-museum.json",
@@ -300,8 +306,8 @@
     {
       "path": "favicon.svg",
       "role": "asset",
-      "sha256": "f2b0cc23b3ff29e1ee92375b17fdd2627d51c90b3c6b732a5e0a84de26b54e09",
-      "bytes": 240
+      "sha256": "dc26891beb1bbf6fa227594bc248be56cf11971433fcaef7d0ab1a9353dcacbf",
+      "bytes": 256
     },
     {
       "path": "previews/met-museum.jpg",
@@ -318,8 +324,8 @@
     {
       "path": "prompts/met-museum.md",
       "role": "context",
-      "sha256": "4bc7f8e36f69c9a3e49497f19e1cb98abbfce95a622a3b9e57441eb9b79ec153",
-      "bytes": 2058
+      "sha256": "4621d7250cac09d814e3b5ad6fcc55919bcfb4ebe04102135772ea59c1a06bdb",
+      "bytes": 2061
     },
     {
       "path": "research/met-museum.md",
@@ -334,10 +340,40 @@
       "bytes": 160684
     },
     {
+      "path": "site-footer.css",
+      "role": "source",
+      "sha256": "c02e4d66015d205b9e82b143085aafdeae707b1df4feb734df69a129d8c34840",
+      "bytes": 3146
+    },
+    {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "2a79fc17f01578c1438e972173bbc79616c48cc24f13a6a915fb77b532a62425",
+      "bytes": 11110
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "13627fca6fffc5faf217369904bf397969d9df0faad0f92b755649ac6a2d2b9b",
+      "bytes": 739
+    },
+    {
+      "path": "site-typography.css",
+      "role": "source",
+      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
+      "bytes": 15208
+    },
+    {
+      "path": "theme-control.css",
+      "role": "source",
+      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
+      "bytes": 2236
+    },
+    {
       "path": "theme.js",
       "role": "source",
-      "sha256": "e8157eae0710d3b103ee40b19e2772e1d9129a911b195336f10b5840283aab78",
-      "bytes": 1029
+      "sha256": "a58190fc01230d486eecaa99264bf132ba127d68918131a6f2f4798fb2e2cadf",
+      "bytes": 2716
     },
     {
       "path": "vendor/LICENSES.txt",
@@ -361,8 +397,8 @@
   "webNotes": {
     "format": "text/html",
     "renderer": "atlas.js",
-    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=met-museum\">调配这个风格的设计要素 ↗</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>白底黑灰字和红色操作层，图像保持展览自己的颜色。</dd></div><div class=\"\"><dt>字体排版</dt><dd>Austin衬线大标题与Inter目录型小文本产生编辑层级。</dd></div><div class=\"\"><dt>布局留白</dt><dd>宽幅建筑摄影约725px高；欢迎区左右分工，横架保持白底、图下题注。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。</dd></div><div class=\"\"><dt>线条形状</dt><dd>方角海报与细边CTA，会员区域仅一个轻边框圆角区域。</dd></div><div class=\"\"><dt>信息层级</dt><dd>建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>字形分工、Met红操作与白底图下文字一致，馆藏照片与海报使用不同图像比例。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>官方建筑摄影先给实体空间与到访氛围，再在独立白底区域提供欢迎语与行动。</li><li>Austin衬线大标题承载文化语气，Inter无衬线负责操作和实用信息。</li><li>参观成本、交通、导览和开放状态并列而不盖在照片上。</li><li>海报本身已含展览视觉，外围保持简洁、方角、图下标签。</li></ul><h3>怎样凸显产品重点</h3><p>到访纽约实体馆、正在展览与代表馆藏。先解决实用参观问题，再让展览海报和作品自然展开选择。</p><h3>主题与情绪</h3><p>白底、Met红与黑灰编辑排版；官方建筑摄影、Austin衬线标题和方角展览海报形成文化机构语气。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入页面：官方建筑静图与Met标志直接出现，无额外欢迎遮层或背景音乐。</li><li>上下浏览：欢迎与到访信息、展览横轨、馆藏和会员按原生阅读节奏组织；不新增全屏转场。</li><li>横向浏览展览：原生水平溢出，scroll-snap:none，前后按钮与触摸可操作。</li><li>打开导航：Visit等目的地立即展开；键盘焦点可操作，局部搜索与作品dialog为本地练习补充。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>原站浅色正文、红色机构标志与大图固定，没有首页深浅开关。</p><p>保留艺术作品原色、编辑字体与Met红标识的对比。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>采集页面无音频播放器或独立BGM开关。</p><p>建筑与艺术图像建立机构氛围，信息展开服务到访任务，不增加无来源的声音。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。</li><li>四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。</li><li>展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。</li><li>日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。</li><li>官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。</li><li>以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。</li></ul><h3>适合</h3><p>大型博物馆门户 / 展览信息目录 / 出版与编辑型机构首页</p><h3>谨慎使用</h3><p>缺少真实作品的纯视觉着陆页 / 需要自动滚动制造戏剧效果的产品页</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#292929\"></i>#292929</span><span class=\"swatch\"><i style=\"background:#606060\"></i>#606060</span><span class=\"swatch\"><i style=\"background:#e4002b\"></i>#e4002b</span></div><p><b>字体</b> · 官方Austin Medium用于欢迎标题；官方Inter Latin用于正文与按钮。<br><b>布局</b> · 建筑摄影 → 白底大标题双CTA → 四列参观信息 → 原生展览/馆藏横架 → 会员区<br><b>动效</b> · 原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。</p></details><h3>改造练习</h3><p>用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.metmuseum.org/en\" target=\"_blank\" rel=\"noopener noreferrer\">The Met official English homepage ↗</a><small>2026-10-07采集英语首页：建筑静图、白底欢迎区、参观信息与原生展览横架。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.metmuseum.org/policies/image-resources\" target=\"_blank\" rel=\"noopener noreferrer\">The Met Image and Data Resources ↗</a><small>Open Access区分公众领域与受限制作品；本地OA藏品资源不扩大为海报、字体、品牌及首页影像的CC0许可。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI Disclosure Pattern ↗</a><small>内容显隐按钮与状态语义的实现参考，不表示机构采用该理论或已全面合规。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fmet-museum.md\" target=\"_blank\">调研记录</a>。</p></section>",
-    "sha256": "d26ddcd8a1436f69bdb1750a28e9de000366983d1c4340f7d0fcb5b5feb88208",
-    "bytes": 7699
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=met-museum\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>白底黑灰字和红色操作层，图像保持展览自己的颜色。</dd></div><div class=\"\"><dt>字体排版</dt><dd>Austin衬线大标题与Inter目录型小文本产生编辑层级。</dd></div><div class=\"\"><dt>布局留白</dt><dd>宽幅建筑摄影约725px高；欢迎区左右分工，横架保持白底、图下题注。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。</dd></div><div class=\"\"><dt>线条形状</dt><dd>方角海报与细边CTA，会员区域仅一个轻边框圆角区域。</dd></div><div class=\"\"><dt>信息层级</dt><dd>建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>字形分工、Met红操作与白底图下文字一致，馆藏照片与海报使用不同图像比例。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>官方建筑摄影先给实体空间与到访氛围，再在独立白底区域提供欢迎语与行动。</li><li>Austin衬线大标题承载文化语气，Inter无衬线负责操作和实用信息。</li><li>参观成本、交通、导览和开放状态并列而不盖在照片上。</li><li>海报本身已含展览视觉，外围保持简洁、方角、图下标签。</li></ul><h3>怎样凸显产品重点</h3><p>到访纽约实体馆、正在展览与代表馆藏。先解决实用参观问题，再让展览海报和作品自然展开选择。</p><h3>主题与情绪</h3><p>白底、Met红与黑灰编辑排版；官方建筑摄影、Austin衬线标题和方角展览海报形成文化机构语气。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入页面：官方建筑静图与Met标志直接出现，无额外欢迎遮层或背景音乐。</li><li>上下浏览：欢迎与到访信息、展览横轨、馆藏和会员按原生阅读节奏组织；不新增全屏转场。</li><li>横向浏览展览：原生水平溢出，scroll-snap:none，前后按钮与触摸可操作。</li><li>打开导航：Visit等目的地立即展开；键盘焦点可操作，局部搜索与作品dialog为本地练习补充。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>原站浅色正文、红色机构标志与大图固定，没有首页深浅开关。</p><p>保留艺术作品原色、编辑字体与Met红标识的对比。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>采集页面无音频播放器或独立BGM开关。</p><p>建筑与艺术图像建立机构氛围，信息展开服务到访任务，不增加无来源的声音。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。</li><li>四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。</li><li>展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。</li><li>日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。</li><li>官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。</li><li>以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。</li></ul><h3>适合</h3><p>大型博物馆门户 / 展览信息目录 / 出版与编辑型机构首页</p><h3>谨慎使用</h3><p>缺少真实作品的纯视觉着陆页 / 需要自动滚动制造戏剧效果的产品页</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#292929\"></i>#292929</span><span class=\"swatch\"><i style=\"background:#606060\"></i>#606060</span><span class=\"swatch\"><i style=\"background:#e4002b\"></i>#e4002b</span></div><p><b>字体</b> · 官方Austin Medium用于欢迎标题；官方Inter Latin用于正文与按钮。<br><b>布局</b> · 建筑摄影 → 白底大标题双CTA → 四列参观信息 → 原生展览/馆藏横架 → 会员区<br><b>动效</b> · 原生连续阅读与水平展览轨道，导航即时展开；本地详情／搜索dialog有明确范围。无背景音乐或强制章节转场。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。</p></details><h3>改造练习</h3><p>用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.metmuseum.org/en\" target=\"_blank\" rel=\"noopener noreferrer\">The Met official English homepage <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-07采集英语首页：建筑静图、白底欢迎区、参观信息与原生展览横架。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.metmuseum.org/policies/image-resources\" target=\"_blank\" rel=\"noopener noreferrer\">The Met Image and Data Resources <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>Open Access区分公众领域与受限制作品；本地OA藏品资源不扩大为海报、字体、品牌及首页影像的CC0许可。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI Disclosure Pattern <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>内容显隐按钮与状态语义的实现参考，不表示机构采用该理论或已全面合规。</small></div><p>参考站采集：2026-10-07。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fmet-museum.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "7365ddebe152082850428c40946c90b8ff2e4bb42b269767a5ca86130d9c9eb4",
+    "bytes": 7884
   }
 }

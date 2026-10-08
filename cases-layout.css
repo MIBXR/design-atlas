@@ -1,0 +1,43 @@
+/* The catalogue uses the same outer header as every other Atlas page. */
+.cases-page{--case-gutter:32px;--case-rail-width:228px;--case-column-gap:32px}
+.cases-page .case-layout{display:grid;grid-template-columns:var(--case-rail-width) minmax(0,1fr);gap:var(--case-column-gap);width:100%;max-width:none;margin:0;padding:0 var(--case-gutter);align-items:start}
+.cases-page .rail{position:sticky;inset:auto;top:calc(var(--atlas-header-height,88px) + 24px);width:100%;height:auto;max-height:calc(100svh - var(--atlas-header-height,88px) - 48px);margin:24px 0;padding:16px;overflow-y:auto;border-radius:12px;display:block;z-index:2}
+.cases-page .rail .case-menu{width:100%;margin:0;padding:0}
+.cases-page .rail .case-menu>summary{color:#f5f4ed;background:#30362a;border-color:#4b5442}
+.cases-page .rail .case-menu>summary::after{color:#d4ef76}
+.cases-page .rail .case-menu-content{padding-top:10px}
+.cases-page .rail .rail-label{display:block;margin:12px 12px 14px;font-size:9px;letter-spacing:1.4px}
+.cases-page .rail nav{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;margin:0;overflow:visible}
+.cases-page .rail .nav-item,.cases-page .rail .rail-link{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;margin:0;padding:12px;border:0;border-radius:7px;font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;letter-spacing:0;text-align:left;text-decoration:none;white-space:normal}
+.cases-page .rail .nav-item b,.cases-page .rail .rail-link b{flex:none;font:11px/1.6 ui-monospace,monospace;font-weight:400}
+.cases-page .rail .rail-link{background:none;color:#d5dacb;cursor:pointer}
+.cases-page .rail .rail-link:hover{background:#353a2e}
+.cases-page .rail .rail-rule{display:block;margin:20px 12px 12px}
+.cases-page .rail .rail-bottom{display:block;margin:24px 12px 4px}
+.cases-page .rail a:focus-visible,.cases-page .rail button:focus-visible,.cases-page .rail summary:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
+.cases-page .case-layout>main{margin:0;padding:0;max-width:none;min-width:0}
+.case-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;border-bottom:1px solid var(--line);font:10px/1.6 ui-monospace,monospace;color:var(--muted)}
+.case-toolbar .text-button{min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:7px;background:var(--field);color:var(--ink);font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;white-space:nowrap}
+.cases-page .hero{padding:36px 0}
+.cases-page .hero h1{font-size:clamp(40px,4.3vw,64px)}
+.cases-page.has-tray .case-layout>main{padding-bottom:115px}
+.cases-page .compare-tray{left:calc(var(--case-gutter) + var(--case-rail-width) + var(--case-column-gap));right:var(--case-gutter)}
+.cases-page .demo-panel{top:calc(var(--atlas-header-height,88px) + 18px)}
+@media(min-width:801px) and (max-width:1159px){.cases-page{--case-gutter:24px;--case-rail-width:196px;--case-column-gap:24px}.cases-page .rail{padding:12px}}
+@media(max-width:1050px){.cases-page .hero-art{display:none}}
+@media(max-width:800px){
+  .cases-page{--case-gutter:20px;--case-rail-width:0px;--case-column-gap:0px}
+  .cases-page .case-layout{display:block}
+  .cases-page .rail{position:static;max-height:none;margin:20px 0 0;padding:8px 12px}
+  .cases-page .rail .case-menu-content{padding-top:4px}
+  .cases-page .rail nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .cases-page .rail .rail-link{font-size:12px}
+  .cases-page .rail .rail-bottom{margin-top:16px}
+  .case-toolbar{min-height:64px;font-size:9px}
+  .cases-page .hero{padding:28px 0}
+  .cases-page .hero h1{font-size:40px}
+  .cases-page.has-tray .case-layout>main{padding-bottom:90px}
+  .cases-page .compare-tray{bottom:10px}
+}
+@media(max-width:360px){.cases-page{--case-gutter:16px}.cases-page .rail .nav-item{font-size:11px;padding:10px}.case-toolbar{gap:8px}}
+@media(forced-colors:active){.cases-page .rail{border:1px solid CanvasText}.cases-page .rail .nav-item.active{outline:1px solid Highlight}.cases-page .rail a:focus-visible,.cases-page .rail button:focus-visible,.cases-page .rail summary:focus-visible{outline-color:Highlight}}

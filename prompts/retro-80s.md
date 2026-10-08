@@ -27,4 +27,4 @@
 
 增加一个真正可编辑的8步音序器；让步骤、速率与播放状态在视觉和声音上同步。
 
-[查看 Demo](../demos/retro-80s/index.html) · [返回参考库](../index.html#style/retro-80s)
+[查看 Demo](../demos/retro-80s/index.html) · [返回浏览案例](../cases.html#style/retro-80s)

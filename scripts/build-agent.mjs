@@ -9,7 +9,7 @@ export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.u
 export const sha256 = data => crypto.createHash('sha256').update(data).digest('hex');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8');
 const catalogFields = ['id', 'title', 'category', 'tags', 'summary', 'useCases', 'avoid', 'country', 'implementation', 'capturedAt', 'theoryVerifiedAt', 'tokens', 'composition', 'interaction', 'themeBehavior', 'soundBehavior'];
-const sharedFiles = ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.css', 'case-loading.js', 'theme.js', 'favicon.svg', 'document.html', 'document.js'];
+const sharedFiles = ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.css', 'case-loading.js', 'theme.js', 'favicon.svg', 'document.html', 'document.js', 'document.css', 'site-nav.css', 'theme-control.css', 'site-typography.css', 'site-footer.css', 'site-shell.js'];
 
 // Public paths always use the repository's portable, relative path syntax.
 // Check every existing component rather than trusting a lexical prefix alone.

@@ -27,4 +27,4 @@
 
 为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。
 
-[查看 Demo](../demos/pixel-world/index.html) · [返回参考库](../index.html#style/pixel-world)
+[查看 Demo](../demos/pixel-world/index.html) · [返回浏览案例](../cases.html#style/pixel-world)

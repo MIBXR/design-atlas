@@ -24,4 +24,4 @@
 
 保持海报不变，将四列间距从50px改为25px，观察栏目密度；再把所有缩略图强制裁成同尺寸，记录丢失的展览信息。
 
-[查看 Demo](../demos/design-sight/index.html) · [返回参考库](../index.html#style/design-sight)
+[查看 Demo](../demos/design-sight/index.html) · [返回浏览案例](../cases.html#style/design-sight)

@@ -1,0 +1,292 @@
+/* The common site shell owns its palette and geometry on every page. */
+:root{
+  --atlas-header-height:88px;
+  --atlas-shell-paper:#f7f6f2;
+  --atlas-shell-ink:#252822;
+  --atlas-shell-muted:#62695b;
+  --atlas-shell-line:#dcded4;
+  --atlas-shell-field:#fdfdf9;
+  --atlas-shell-surface:#ecefe5;
+  --atlas-shell-lime:#d4ef76;
+  --atlas-shell-focus:#657d2b;
+  --atlas-ui-radius:7px;
+  --atlas-card-radius:14px;
+}
+:root[data-atlas-theme=dark]{
+  --atlas-shell-paper:#1a1e19;
+  --atlas-shell-ink:#edf0e6;
+  --atlas-shell-muted:#b8bfb0;
+  --atlas-shell-line:#40483b;
+  --atlas-shell-field:#252c23;
+  --atlas-shell-surface:#30382b;
+  --atlas-shell-focus:#c9e86c;
+}
+html{scrollbar-gutter:stable;scroll-padding-top:calc(var(--atlas-header-height) + 16px)}
+.atlas-site-header{
+  box-sizing:border-box;
+  position:sticky;
+  top:0;
+  z-index:60;
+  width:100%;
+  max-width:none;
+  height:var(--atlas-header-height);
+  margin:0;
+  padding:0;
+  border-bottom:1px solid var(--atlas-shell-line);
+  background:var(--atlas-shell-paper);
+  color:var(--atlas-shell-ink);
+  font:12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+}
+.atlas-site-header-inner{
+  box-sizing:border-box;
+  display:grid;
+  grid-template-columns:200px minmax(0,1fr) 160px;
+  align-items:center;
+  gap:28px;
+  width:100%;
+  max-width:1280px;
+  height:calc(var(--atlas-header-height) - 1px);
+  margin:0 auto;
+  padding:0 40px;
+}
+.atlas-site-header .atlas-site-brand{
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  min-height:44px;
+  height:44px;
+  margin:0;
+  padding:0;
+  color:var(--atlas-shell-ink);
+  font:15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  letter-spacing:0;
+  text-decoration:none;
+}
+.atlas-site-header .atlas-site-mark{
+  display:block;
+  flex-shrink:0;
+  width:32px;
+  height:32px;
+  margin:0;
+  color:var(--atlas-shell-focus);
+}
+.atlas-site-header .atlas-site-wordmark{display:block;margin:0;min-width:0}
+.atlas-site-header .atlas-site-wordmark strong{
+  display:block;
+  margin:0;
+  color:var(--atlas-shell-ink);
+  font:750 15px/1.25 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  letter-spacing:.7px;
+  white-space:nowrap;
+}
+.atlas-site-header .atlas-site-wordmark small{
+  display:block;
+  margin:6px 0 0;
+  color:var(--atlas-shell-muted);
+  font:9px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  letter-spacing:.6px;
+  white-space:nowrap;
+}
+.atlas-site-header .atlas-site-nav{
+  display:grid;
+  grid-template-columns:60px 100px 110px 128px;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  min-width:0;
+  height:44px;
+  margin:0;
+  padding:0;
+  font:12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+}
+.atlas-site-header .atlas-site-nav>a{
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  min-height:44px;
+  height:44px;
+  margin:0;
+  padding:8px 7px;
+  border:1px solid transparent;
+  border-radius:var(--atlas-ui-radius);
+  color:var(--atlas-shell-ink);
+  font:500 12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  letter-spacing:0;
+  white-space:nowrap;
+  text-decoration:none;
+  touch-action:manipulation;
+  transition:background-color 150ms ease,border-color 150ms ease;
+}
+.atlas-site-header .atlas-site-nav>a:hover{background:var(--atlas-shell-surface)}
+.atlas-site-header .atlas-site-nav>a[aria-current=page]{background:var(--atlas-shell-lime);color:#252822;font-weight:650}
+.atlas-site-header .atlas-site-theme{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:7px;
+  width:160px;
+  height:44px;
+  margin:0;
+  padding:0;
+  color:var(--atlas-shell-ink);
+  font:10px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  letter-spacing:0;
+  white-space:nowrap;
+}
+.atlas-site-header .atlas-site-theme select{
+  box-sizing:border-box;
+  appearance:none;
+  display:block;
+  flex:none;
+  width:104px;
+  min-width:0;
+  min-height:44px;
+  max-width:none;
+  height:44px;
+  margin:0;
+  padding:8px 26px 8px 10px;
+  border:1px solid var(--atlas-shell-line);
+  border-radius:var(--atlas-ui-radius);
+  background-color:var(--atlas-shell-field);
+  background-image:linear-gradient(45deg,transparent 50%,var(--atlas-shell-ink) 50%),linear-gradient(135deg,var(--atlas-shell-ink) 50%,transparent 50%);
+  background-position:right 13px center,right 8px center;
+  background-size:5px 5px;
+  background-repeat:no-repeat;
+  color:var(--atlas-shell-ink);
+  font:10px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  letter-spacing:0;
+  cursor:pointer;
+}
+.atlas-site-header .atlas-site-theme select:hover{border-color:var(--atlas-shell-focus)}
+.atlas-site-header .atlas-site-theme option{background:var(--atlas-shell-field);color:var(--atlas-shell-ink)}
+.atlas-site-header a:focus-visible,.atlas-site-header select:focus-visible,
+.atlas-page-menu>summary:focus-visible,.atlas-section-nav>a:focus-visible,
+.atlas-ui-button:focus-visible{
+  outline:3px solid var(--atlas-shell-focus);
+  outline-offset:3px;
+}
+body>.skip,body>.landing-skip{z-index:90}
+.atlas-skip{position:fixed;top:8px;left:20px;z-index:90;padding:12px 16px;border-radius:var(--atlas-ui-radius);background:var(--atlas-shell-field);color:var(--atlas-shell-ink);transform:translateY(-160%)}
+.atlas-skip:focus{transform:translateY(0)}
+.atlas-page-menu{min-width:0}
+.atlas-page-menu>summary{
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  min-height:44px;
+  padding:10px 13px;
+  margin:0;
+  list-style:none;
+  border:1px solid var(--atlas-shell-line);
+  border-radius:var(--atlas-ui-radius);
+  background:var(--atlas-shell-field);
+  color:var(--atlas-shell-ink);
+  font:600 12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+.atlas-page-menu>summary::-webkit-details-marker{display:none}
+.atlas-page-menu>summary:after{content:'+';font-size:18px;font-weight:400;line-height:1}
+.atlas-page-menu[open]>summary:after{content:'−'}
+.atlas-page-menu>summary:hover{background:var(--atlas-shell-surface);border-color:var(--atlas-shell-focus)}
+.atlas-lab-menu{box-sizing:border-box;width:100%;max-width:1280px;margin:20px auto 0;padding:0 40px}
+.atlas-section-nav{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px 12px;
+  margin:0;
+  padding:12px 0;
+  color:var(--atlas-shell-ink);
+  font:11px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+}
+.atlas-section-nav>span,.atlas-section-nav>label{color:var(--atlas-shell-muted);font-size:10px;margin-right:3px}
+.atlas-section-nav>a{
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:9px 13px;
+  border:1px solid var(--atlas-shell-line);
+  border-radius:var(--atlas-ui-radius);
+  background:var(--atlas-shell-field);
+  color:var(--atlas-shell-ink);
+  font:11px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  text-decoration:none;
+  touch-action:manipulation;
+}
+.atlas-section-nav>a:hover{border-color:var(--atlas-shell-focus);background:var(--atlas-shell-surface)}
+@media(min-width:801px){.atlas-lab-menu>summary{display:none}.atlas-lab-menu .atlas-section-nav{padding:0}}
+a.atlas-ui-button,button.atlas-ui-button{
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:44px;
+  padding:10px 14px;
+  border:1px solid var(--atlas-shell-line);
+  border-radius:var(--atlas-ui-radius);
+  background:var(--atlas-shell-field);
+  color:var(--atlas-shell-ink);
+  font:11px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  text-decoration:none;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+a.atlas-ui-button:hover,button.atlas-ui-button:hover{border-color:var(--atlas-shell-focus);background:var(--atlas-shell-surface)}
+@media(max-width:1050px){
+  .atlas-site-header-inner{grid-template-columns:170px minmax(0,1fr) 148px;gap:12px}
+  .atlas-site-header .atlas-site-brand{gap:8px}
+  .atlas-site-header .atlas-site-wordmark strong{font-size:13px;letter-spacing:.4px}
+  .atlas-site-header .atlas-site-wordmark small{font-size:8px}
+  .atlas-site-header .atlas-site-nav{grid-template-columns:50px 85px 105px 118px}
+  .atlas-site-header .atlas-site-nav>a{font-size:11px}
+  .atlas-site-header .atlas-site-theme{width:148px;gap:6px;font-size:9px}
+  .atlas-site-header .atlas-site-theme select{width:100px;font-size:9px}
+}
+@media(max-width:800px){
+  :root{--atlas-header-height:133px}
+  .atlas-site-header-inner{grid-template-columns:minmax(0,1fr) 136px;grid-template-rows:44px 44px;gap:12px 10px;padding:16px 20px}
+  .atlas-site-header .atlas-site-brand{grid-column:1;grid-row:1}
+  .atlas-site-header .atlas-site-mark{width:28px;height:28px}
+  .atlas-site-header .atlas-site-theme{grid-column:2;grid-row:1;width:136px;font-size:9px}
+  .atlas-site-header .atlas-site-theme select{width:94px;padding-left:8px}
+  .atlas-site-header .atlas-site-nav{grid-column:1/-1;grid-row:2;grid-template-columns:repeat(4,minmax(0,1fr));justify-content:stretch;width:100%}
+  .atlas-site-header .atlas-site-nav>a{padding:8px 5px;font-size:11px}
+  .atlas-lab-menu{margin-top:16px;padding:0 20px}
+  .atlas-section-nav{gap:7px}
+  .atlas-section-nav>span,.atlas-section-nav>label{flex-basis:100%;margin:0 0 1px}
+  .atlas-section-nav>a{flex:1;font-size:10px;padding:9px 10px}
+}
+@media(max-width:360px){
+  :root{--atlas-header-height:181px}
+  .atlas-site-header-inner{grid-template-rows:44px 92px;gap:12px 8px}
+  .atlas-site-header .atlas-site-brand{gap:6px}
+  .atlas-site-header .atlas-site-wordmark strong{font-size:12px;letter-spacing:.2px}
+  .atlas-site-header .atlas-site-wordmark small{font-size:8px;letter-spacing:.3px}
+  .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:44px 44px;height:92px}
+  .atlas-site-header .atlas-site-nav>a{font-size:11px}
+  .atlas-section-nav>a{padding-right:7px;padding-left:7px;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.atlas-site-header .atlas-site-nav>a{transition:none}}
+@media(prefers-reduced-motion:no-preference){
+  @view-transition{navigation:auto}
+  .atlas-site-header{view-transition-name:atlas-header}
+  ::view-transition-group(root),::view-transition-old(root),::view-transition-new(root){animation-duration:140ms;animation-timing-function:ease-out}
+  ::view-transition-group(atlas-header),::view-transition-new(atlas-header){animation:none}
+  ::view-transition-old(atlas-header){display:none}
+  ::view-transition-new(atlas-header){mix-blend-mode:normal}
+}
+@media(forced-colors:active){
+  .atlas-site-header .atlas-site-nav>a[aria-current=page]{border-color:Highlight;background:Canvas;color:Highlight}
+  .atlas-site-header .atlas-site-theme select{appearance:auto;background-image:none}
+  .atlas-page-menu>summary,.atlas-section-nav>a,a.atlas-ui-button,button.atlas-ui-button{border-color:ButtonText}
+}

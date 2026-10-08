@@ -6,7 +6,8 @@ snapshots; their fidelity boundaries and asset attribution travel with each case
 
 - [Agent workflow](AGENT.md): keyword search, complete context, source retrieval and export.
 - [Catalog](agent/catalog.json): candidate summaries and case bundle paths/hashes.
-- [Human preview](index.html): interactive browsing, comparisons and demos.
+- [Overview](index.html): introductions to cases, the design lab and the Agent workflow.
+- [Human preview](cases.html): interactive browsing, comparisons and demos.
 - [Skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas): explore the latest catalog, refine candidates through conversation, and retrieve complete context within one pinned session.
 
 Read catalog first, then agent/cases/<id>.json. Case bundles preserve the original

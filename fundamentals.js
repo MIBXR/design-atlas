@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const el = id => document.getElementById(id);
+  const isExternalLink = href => {try {const url=new URL(href,location.href);return /^https?:$/.test(url.protocol)&&url.origin!==location.origin;}catch{return false;}};
   const sample = el('sample');
   const elementPanel = document.querySelector('.element-controls');
   document.querySelector('.experiment').before(elementPanel);
@@ -17,7 +18,7 @@
   document.querySelector('.note-preview-top').after(graphic);
   const feedback = document.createElement('div');
   feedback.className='sample-feedback';
-  feedback.innerHTML='<button id="feedback-demo" class="sample-primary" type="button">体验操作反馈 ↗</button><p id="feedback-message" role="status" aria-live="polite">点击后查看文字与视觉反馈。</p>';
+  feedback.innerHTML='<button id="feedback-demo" class="sample-primary" type="button">体验操作反馈</button><p id="feedback-message" role="status" aria-live="polite">点击后查看文字与视觉反馈。</p>';
   el('sample-features').after(feedback);
   const graphicNames={line:'线描',geometry:'几何',product:'产品'};
   const graphics={
@@ -29,18 +30,19 @@
   const labels = { palette:'配色', type:'字体', shape:'形状', space:'留白' };
   const fontNames = { serif:'衬线', sans:'无衬线', mono:'等宽' };
   const layoutNames = { split:'左文右图', center:'居中纵向', editorial:'左图右文' };
-  const shapeNames = { sharp:'直角 / 0px', soft:'小圆角 / 10px', round:'大圆角 / 24px' };
+  const shapeNames = { sharp:'直角 / 0px', soft:'小圆角 / 8px', round:'大圆角 / 24px' };
   const schemes = {
-    paper:{ name:'纸页', palette:{bg:'#f4eee2',ink:'#272b27',accent:'#844c35'},type:'serif',layout:'split',shape:'soft',space:40,graphic:'line',hierarchy:'clear',texture:'grain',motion:true, description:'暖纸底、墨色正文与陶土强调，配合衬线标题、细框和疏朗间距，表达安静阅读。' },
-    friendly:{ name:'亲和',palette:{bg:'#e8f0df',ink:'#183b2b',accent:'#713a4f'},type:'sans',layout:'split',shape:'round',space:32,graphic:'geometry',hierarchy:'clear',texture:'lift',motion:true,description:'浅绿色、深绿文字与莓色强调，配合无衬线字、大圆角和适中留白，表达轻松上手。' },
-    tool:{name:'工具',palette:{bg:'#17272b',ink:'#eef4ec',accent:'#86c9b0'},type:'mono',layout:'editorial',shape:'sharp',space:20,graphic:'product',hierarchy:'clear',texture:'flat',motion:false,description:'深色底、亮文字与青色强调，配合等宽字、直角和紧凑间距，表达直接的工具信息。'}
+    // Snapshot references: Notion's neutral workspace, Material's tonal purple, Swiss's paper/ink/red.
+    paper:{ name:'纸页', palette:{bg:'#f7f7f5',ink:'#101010',accent:'#373737'},type:'sans',layout:'split',shape:'soft',space:32,graphic:'line',hierarchy:'clear',texture:'flat',motion:true, description:'中性纸面、墨色信息与少量深灰强调，配合清楚的无衬线层级、细框和留白，表达安静阅读。' },
+    friendly:{ name:'亲和',palette:{bg:'#fefbff',ink:'#1c1b1d',accent:'#6442d6'},type:'sans',layout:'split',shape:'round',space:28,graphic:'geometry',hierarchy:'clear',texture:'flat',motion:true,description:'柔白表面、深色正文与紫色行动，配合柔和图形和适中留白，让信息清楚、操作亲和。' },
+    tool:{name:'工具',palette:{bg:'#f2efe6',ink:'#171717',accent:'#e3402e'},type:'sans',layout:'editorial',shape:'sharp',space:24,graphic:'product',hierarchy:'clear',texture:'flat',motion:false,description:'纸白、炭黑与信号红，配合严格对齐、直线边界与紧凑间距，突出可扫描的工具信息。'}
   };
   const fontRules = {
     serif:{title:'Georgia,"SimSun",serif',body:'Arial,"Microsoft YaHei",sans-serif',weight:'500',track:'-1px'},
-    sans:{title:'Arial,"Microsoft YaHei",sans-serif',body:'Arial,"Microsoft YaHei",sans-serif',weight:'700',track:'-.8px'},
+    sans:{title:'"Microsoft YaHei","微软雅黑","Segoe UI",Arial,sans-serif',body:'"Microsoft YaHei","微软雅黑","Segoe UI",Arial,sans-serif',weight:'650',track:'-.5px'},
     mono:{title:'"Courier New","Microsoft YaHei",monospace',body:'"Courier New","Microsoft YaHei",monospace',weight:'700',track:'-.8px'}
   };
-  const shapeRules = {sharp:{radius:0,stroke:1.5,cap:'butt',shadow:'none'},soft:{radius:10,stroke:1,cap:'round',shadow:'none'},round:{radius:24,stroke:1.5,cap:'round',shadow:'0 6px 18px #0000000d'}};
+  const shapeRules = {sharp:{radius:0,stroke:1,cap:'butt',shadow:'none'},soft:{radius:8,stroke:1,cap:'round',shadow:'none'},round:{radius:24,stroke:1,cap:'round',shadow:'none'}};
   let state;
   let groupOrigins;
   let referenceEntry = null;
@@ -72,7 +74,7 @@
       sound:referenceEntry?.soundBehavior||{kind:'none',control:'教学示例不添加BGM',interactionRole:'反馈由文字和微动效表达'},
       typography:{choice:state.type,titleFont:fontRules[state.type].title,bodyFont:fontRules[state.type].body},
       layout:{choice:state.layout,meaning:layoutNames[state.layout]},
-      shape:{choice:state.shape,radiusPx:shapeRules[state.shape].radius,strokePx:shapeRules[state.shape].stroke},
+      shape:{choice:state.shape,radiusPx:shapeRules[state.shape].radius,strokePx:shapeRules[state.shape].stroke,buttonRadiusPx:8},
       spacing:{basePx:state.space,note:'手机外边距上限28px，组间距离继续按所选尺度变化'},
       graphic:{choice:state.graphic,meaning:graphicNames[state.graphic],asset:'本地原创SVG，无外部素材'},
       hierarchy:state.hierarchy,
@@ -157,7 +159,7 @@
   }));
   el('type-choice').addEventListener('change',event=>{state.type=event.target.value;changed('type','调整字体','标题与正文切换为“'+fontNames[state.type]+'”关系，产品文字保持不变。','观察：字形、字重和换行是否改变阅读气质？与现有线条、形状的关系是否清晰？')});
   el('layout-choice').addEventListener('change',event=>{state.layout=event.target.value;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 布局调整';message('调整布局','切换为“'+layoutNames[state.layout]+'”。手机会重排为纵向，但图文顺序仍体现这个选择。','观察：先看到的是文案还是示例笔记？布局是否将产品重点带到了更明确的位置？')});
-  el('shape-choice').addEventListener('change',event=>{state.shape=event.target.value;changed('shape','调整形状与圆角','采用“'+shapeNames[state.shape]+'”，按钮、笔记和边线处理一起更新。','观察：多个元素重复同一种形状规则后，是否更容易被理解为一个整体？')});
+  el('shape-choice').addEventListener('change',event=>{state.shape=event.target.value;changed('shape','调整形状与圆角','采用“'+shapeNames[state.shape]+'”，笔记卡片与边线处理一起更新，行动按钮保留统一圆角。','观察：多个元素重复同一种形状规则后，是否更容易被理解为一个整体？')});
   el('space-choice').addEventListener('input',event=>{state.space=Number(event.target.value);changed('space','调整留白','基准间距改为'+state.space+'px；外边距、组间距与内距按同一尺度变化。手机外边距有28px上限。','观察：哪些内容成了一组？重点周围是否有空间？密集与疏朗会如何改变阅读速度？')});
   el('graphic-choice').addEventListener('change',event=>{state.graphic=event.target.value;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 图形调整';message('调整图形素材','换成“'+graphicNames[state.graphic]+'”呈现方式；三幅SVG沿用当前配色与线条规则，文字卖点保持相同。','观察：线描、抽象构成与具体产品图分别强调了什么？哪一种更适合解释当前卖点？')});
   el('hierarchy-choice').addEventListener('change',event=>{state.hierarchy=event.target.value;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 层级调整';message('调整信息层级',state.hierarchy==='clear'?'恢复明显的标题尺度与字重差。':'把标题尺度和字重拉近正文，观察视觉更趋平级时的阅读变化。','观察：第一眼先看到什么？标题和主要行动还容易找到吗？语义标题没有改变，只改变视觉关系。')});
@@ -165,7 +167,7 @@
   el('sample-theme').addEventListener('change',event=>{state.themeChoice=event.target.value;clearSchemeButtons();render();message('切换显示主题','比较同一内容在浅深色中的背景、表面、文字、按钮与分组边界。不是把所有颜色直接反转。','观察：主行动是否仍突出？文字、边框、图形是否仍可读？强主题原站是否值得提供切换？');});
   systemTheme.addEventListener('change',()=>{if(state?.themeChoice==='system')render();});
   el('motion-choice').addEventListener('change',event=>{state.motion=event.target.checked;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 动效调整';message('调整微动效',state.motion?'已允许短暂反馈动效；系统减少动态偏好仍优先。':'已关闭非必要动效，点击反馈按钮仍会显示结果文字。','用示例下方按钮体验：动效可以帮助确认操作，但不能成为反馈的唯一方式。')});
-  el('feedback-demo').addEventListener('click',()=>{const button=el('feedback-demo');button.classList.remove('feedback-pulse');if(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches)requestAnimationFrame(()=>button.classList.add('feedback-pulse'));el('feedback-message').textContent='✓ 操作已完成。'+(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches?'同时提供短暂视觉反馈。':'当前使用静态文字反馈。')});
+  el('feedback-demo').addEventListener('click',()=>{const button=el('feedback-demo');button.classList.remove('feedback-pulse');if(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches)requestAnimationFrame(()=>button.classList.add('feedback-pulse'));el('feedback-message').textContent='✓︎ 操作已完成。'+(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches?'同时提供短暂视觉反馈。':'当前使用静态文字反馈。')});
   const catalog=Array.isArray(window.DESIGN_ATLAS)?window.DESIGN_ATLAS:[];
   for(const entry of catalog){const option=document.createElement('option');option.value=entry.id;option.textContent=String(entry.order).padStart(2,'0')+' / '+entry.title;el('reference-style').append(option)}
   function applyReference(entry){
@@ -184,7 +186,7 @@
     referenceEntry=entry;groupOrigins={palette:'条目色板',type:'教学映射',shape:'教学映射',space:'教学映射'};clearSchemeButtons();syncInputs();render();
     el('reference-style').value=entry.id;el('current-plan').textContent='当前：'+entry.title+' / 教学迁移';
     el('style-context').textContent='“'+entry.title+'”已带入：色板来自本地条目；字体、布局、形状与间距按条目ID/类别归纳为可比较的教学配置。不是官网或原demo的像素复刻。';
-    const links=el('style-source-links');links.replaceChildren();for(const source of entry.sources.slice(0,2)){const a=document.createElement('a');a.href=source.url;a.textContent=source.title+' ↗';a.target='_blank';a.rel='noreferrer';links.append(a)}
+    const links=el('style-source-links');links.replaceChildren();for(const source of entry.sources.slice(0,2)){const a=document.createElement('a');a.href=source.url;a.textContent=source.title;a.target='_blank';a.rel='noreferrer';if(isExternalLink(a.href)){const icon=document.createElement('span');icon.className='atlas-external-icon';icon.setAttribute('aria-hidden','true');icon.textContent='↗︎';a.append(' ',icon)}links.append(a)}
     message('从风格库迁移','保持“拾光笔记”的同一产品内容，借用“'+entry.title+'”的元素特征。若要学习其完整信息架构与核心交互，请回到该条目的独立demo。','观察：同一内容借用不同风格后，气质、视觉重点与阅读密度有什么变化？再单独改一项，检验它与其他元素的关系。');
   }
   el('reference-style').addEventListener('change',event=>{const entry=catalog.find(item=>item.id===event.target.value);if(entry)applyReference(entry);else setScheme('paper');try{const url=new URL(location.href);if(entry)url.searchParams.set('style',entry.id);else url.searchParams.delete('style');history.replaceState(null,'',url)}catch{}});
@@ -199,9 +201,25 @@
     const source=referenceEntry?'\n参考方向：'+referenceEntry.title+'；来源：'+referenceEntry.sources.map(s=>s.url).join('，')+'。这是元素教学迁移，请结合原条目研究其完整布局与交互。':'';
     const text=el('prompt-text').value+source+'\n\n当前元素配置（可据项目内容调整，不作为审美评分）：\n'+JSON.stringify(config(),null,2);copy(text,el('config-copy-status'));
   });
-  el('sample-action').addEventListener('click',()=>{const compose=el('sample-compose');compose.hidden=!compose.hidden;el('sample-action').setAttribute('aria-expanded',String(!compose.hidden));if(!compose.hidden)el('sample-note').focus()});
+  function showComposer(open){el('sample-compose').hidden=!open;el('sample-action').setAttribute('aria-expanded',String(open));if(open)el('sample-note').focus();}
+  el('sample-action').addEventListener('click',()=>showComposer(el('sample-compose').hidden));
+  el('sample-cancel').addEventListener('click',()=>{showComposer(false);el('sample-action').focus({preventScroll:true});});
   el('sample-compose').addEventListener('submit',event=>{event.preventDefault();const text=el('sample-note').value.trim();if(!text){el('sample-message').textContent='先写一句发现，再保存。';el('sample-note').focus();return}document.querySelector('.note-preview h4').textContent=text;el('sample-message').textContent='已在本次页面保存。示例笔记已更新；刷新后不会保留。'});
   setScheme('paper');
   const requested=new URLSearchParams(location.search).get('style');
   if(requested){const entry=catalog.find(item=>item.id===requested);if(entry)applyReference(entry);else el('style-context').textContent='未找到这个风格编号，已保留纸页基础方案。请从选择器重新选择。'}
+  if(document.documentElement.dataset.labEmbed==='home' && window.parent!==window){
+    const experiment=el('lab');
+    let reportedHeight=0;
+    let reportedWidth=0;
+    const reportHeight=()=>{
+      const height=Math.ceil(experiment.getBoundingClientRect().height);
+      const width=Math.round(window.innerWidth);
+      if(!Number.isFinite(height)||height<=0||!Number.isFinite(width)||width<=0||(height===reportedHeight&&width===reportedWidth))return;
+      reportedHeight=height;reportedWidth=width;
+      window.parent.postMessage({type:'design-atlas:lab-height',height,width},location.origin);
+    };
+    new ResizeObserver(reportHeight).observe(experiment);
+    reportHeight();
+  }
 })();

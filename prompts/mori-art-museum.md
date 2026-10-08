@@ -24,4 +24,4 @@
 
 保持艺术海报不变，只移除红色方形馆标与展期带，观察观众还是否能迅速知道机构、展名和日期；恢复后比较信息路径。
 
-[查看 Demo](../demos/mori-art-museum/index.html) · [返回参考库](../index.html#style/mori-art-museum)
+[查看 Demo](../demos/mori-art-museum/index.html) · [返回浏览案例](../cases.html#style/mori-art-museum)

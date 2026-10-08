@@ -22,4 +22,4 @@
 
 在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。
 
-[查看 Demo](../demos/persona-kinetic/index.html) · [返回参考库](../index.html#style/persona-kinetic)
+[查看 Demo](../demos/persona-kinetic/index.html) · [返回浏览案例](../cases.html#style/persona-kinetic)

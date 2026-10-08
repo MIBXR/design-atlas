@@ -27,4 +27,4 @@
 
 把浮岛替换成数据平台的等轴系统图，让三种焦点分别对应计算、存储、网络，保留统一坐标与分层解释。
 
-[查看 Demo](../demos/isometric-3d/index.html) · [返回参考库](../index.html#style/isometric-3d)
+[查看 Demo](../demos/isometric-3d/index.html) · [返回浏览案例](../cases.html#style/isometric-3d)

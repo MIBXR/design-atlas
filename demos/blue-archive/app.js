@@ -13,7 +13,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 function initHome(){
   const video=document.querySelector('#background-video'),button=document.querySelector('#motion-toggle');if(!video)return;
   let visible=true;
-  function state(){const playing=!video.paused&&!video.ended;button.setAttribute('aria-pressed',String(playing));button.textContent=playing?'Ⅱ 背景映像を停止':'▶ 背景映像を再生';}
+  function state(){const playing=!video.paused&&!video.ended;button.setAttribute('aria-pressed',String(playing));button.textContent=playing?'Ⅱ 背景映像を停止':'▶︎ 背景映像を再生';}
   const homeFrameReady=()=>{video.currentTime=Math.min(.1,video.duration||.1);if(!motionReduced()&&visible&&!document.hidden)video.play().catch(state);};video.addEventListener('loadedmetadata',homeFrameReady);if(video.readyState>=1)homeFrameReady();
   ['play','pause','ended'].forEach(event=>video.addEventListener(event,state));
   button.addEventListener('click',()=>{if(video.paused)video.play().catch(()=>{button.textContent='再生できません · もう一度';button.setAttribute('aria-pressed','false');});else video.pause();});
