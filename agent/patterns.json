@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "4676c7a41b10844783870f83c6c318fe6946a13c2c1552798d831e14d27a17cf",
+  "contentVersion": "d660960d17515f43634955becacf6a578acd60177d8c43817d5951fe9f2f0423",
   "patternCount": 116,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -58,7 +58,7 @@
       "paths": {
         "bundle": "agent/patterns/activity-title-ticket-overlap.json"
       },
-      "bundleSha256": "a2060a7e5895cc1de7fd4d16e9b6abef0d31e0bcec99b328aed198aec92f516f"
+      "bundleSha256": "ae10bb4edd9cc846f67d430035373578443636cee282641044c5fe3b10ede67b"
     },
     {
       "id": "aligned-metadata-rows",
@@ -109,7 +109,7 @@
       "paths": {
         "bundle": "agent/patterns/aligned-metadata-rows.json"
       },
-      "bundleSha256": "569173ae9fab8ff90f730d60ee0b8bb65ec6a7a15867eb0943e88447828af293"
+      "bundleSha256": "a01ee8d7393e9d07983cabf54dfc92e8a6f0c7842e7beabc6d845ba57c83cd9b"
     },
     {
       "id": "artwork-caption-separation",
@@ -188,7 +188,7 @@
       "paths": {
         "bundle": "agent/patterns/artwork-caption-separation.json"
       },
-      "bundleSha256": "878bf75f4e148b10b4169986b3bdbdffdf21491c12f9f00195298657d0dcc2e8"
+      "bundleSha256": "b11f81f8a182db9916d0b4b73827fc8f3e528ee6ca4458659f151163df7c5474"
     },
     {
       "id": "audio-signal-panel",
@@ -239,7 +239,7 @@
       "paths": {
         "bundle": "agent/patterns/audio-signal-panel.json"
       },
-      "bundleSha256": "8227b705b2a1f44548ac0ddd79c5a750c2b6aaf2d90334585188aba610d33e4e"
+      "bundleSha256": "2b4023b1a8e5e7780d059e460697c43380b9a9db4f22c87d6364cf75eeb08854"
     },
     {
       "id": "avatar-pile-personality",
@@ -295,7 +295,7 @@
       "paths": {
         "bundle": "agent/patterns/avatar-pile-personality.json"
       },
-      "bundleSha256": "3b2706858852eb9bb94977909bab9a8b7d7b77507259bff3e3c89865cac59e20"
+      "bundleSha256": "ab11e05aa3dbf74f8b4fdafdec5448377a547a3ead32ba3bf17685d0cd99b6ae"
     },
     {
       "id": "blurred-layered-video-handoff",
@@ -362,7 +362,7 @@
       "paths": {
         "bundle": "agent/patterns/blurred-layered-video-handoff.json"
       },
-      "bundleSha256": "8c9eaef7ef45df5d1117d9d5ec9e2623b69ad612d1c6aef80dc22de24d233ffc"
+      "bundleSha256": "cdd69f0dc5a11f0d0905e84fa343b93d3752190b17c1070e57852717726d078a"
     },
     {
       "id": "bounded-panel-track",
@@ -448,7 +448,7 @@
       "paths": {
         "bundle": "agent/patterns/bounded-panel-track.json"
       },
-      "bundleSha256": "485366105ae8f5507c07b257d92dd37c6c73588d1ce81989402623f6bc557470"
+      "bundleSha256": "c12f27bf8ed74aa0b881a78bd417869eaa8b0b5b844d9bcaa07d90326aa7bdd9"
     },
     {
       "id": "capability-bento-hierarchy",
@@ -520,7 +520,7 @@
       "paths": {
         "bundle": "agent/patterns/capability-bento-hierarchy.json"
       },
-      "bundleSha256": "39996bdac01dde96cbf68c85bad5616a9fb22e959e76de6b238a0029b85e0905"
+      "bundleSha256": "2a2f1ca1447781277351ae997c8d2c8d4186ad4c35ceb9a79596c5a05829cfb4"
     },
     {
       "id": "center-aligned-section-index",
@@ -581,7 +581,7 @@
       "paths": {
         "bundle": "agent/patterns/center-aligned-section-index.json"
       },
-      "bundleSha256": "7756200023c008621e56fbcc40028a402e0b4937260de289ef8d111154b74c73"
+      "bundleSha256": "e49d25ca12eae9bc3ad64d69c2a9cbabb2d5e81f2edfa42f55c7103f197b6337"
     },
     {
       "id": "centered-loop-gallery",
@@ -680,7 +680,7 @@
       "paths": {
         "bundle": "agent/patterns/centered-loop-gallery.json"
       },
-      "bundleSha256": "bce9b5016c1b0d4fcee673b12c7c7346c5a1c8b08fe8aff60135bf850e940677"
+      "bundleSha256": "622a8d6a733c328db4fe8a05c1f5b090ae98df7d1c8e8cacf4e2540ace4c9ce6"
     },
     {
       "id": "character-stage-coordination",
@@ -766,7 +766,7 @@
       "paths": {
         "bundle": "agent/patterns/character-stage-coordination.json"
       },
-      "bundleSha256": "362cb345dfbf20334395725bc198d6f41d5e7130309f9f3343e665af8ccb48fe"
+      "bundleSha256": "f7990b71108a8d62ae82172bd6781b20b072c4bb9543491256bdb6370f765538"
     },
     {
       "id": "character-voice-ownership",
@@ -852,7 +852,7 @@
       "paths": {
         "bundle": "agent/patterns/character-voice-ownership.json"
       },
-      "bundleSha256": "262183bae6056a09baaec7e1e5fd27474cafa1a72079c8dd53269ad84675915f"
+      "bundleSha256": "970c0df83c67cf6ce2386e63ba3931948be20bc97e65e9456ef08d371850af88"
     },
     {
       "id": "checklist-progress",
@@ -905,7 +905,7 @@
       "paths": {
         "bundle": "agent/patterns/checklist-progress.json"
       },
-      "bundleSha256": "edce6a8227469fc1dfd4f3e5a5c2aab2b3e7843a23a656e27915a6c7697397f4"
+      "bundleSha256": "a8317f027acacb9b9bf91ced6e6a9d97cb08281c5d62815526057824e9a423d4"
     },
     {
       "id": "client-logo-marquee",
@@ -977,7 +977,7 @@
       "paths": {
         "bundle": "agent/patterns/client-logo-marquee.json"
       },
-      "bundleSha256": "d469923d4ec19d43f2a0186c9908a494c55ce13adfb16eef5d9fdcdad33120f3"
+      "bundleSha256": "a91e65be972be35b84288dd5c61fe07f323c6020fbb72ccb5b3f4026c7e17a72"
     },
     {
       "id": "clip-tail-advance",
@@ -1039,7 +1039,7 @@
       "paths": {
         "bundle": "agent/patterns/clip-tail-advance.json"
       },
-      "bundleSha256": "a1a5047c81eec2786339129aedab9ef033b7ed169dd0f25a46e0fab2d614ba20"
+      "bundleSha256": "b4f5cd004d27e0d683d80df33f4e506dd37b18a77714e1e69abe1a1ecc5a6a6e"
     },
     {
       "id": "compact-scroll-header",
@@ -1101,7 +1101,7 @@
       "paths": {
         "bundle": "agent/patterns/compact-scroll-header.json"
       },
-      "bundleSha256": "3b5a6f9cf6bc2bad75572bce1051533f6c98b8e0b91abdd3a11c110d73daf44f"
+      "bundleSha256": "b8388c3c558f096e131d43ca5f65c04c07acfa6528630831809285642c0b78be"
     },
     {
       "id": "continuous-bgm-bridge",
@@ -1178,7 +1178,7 @@
       "paths": {
         "bundle": "agent/patterns/continuous-bgm-bridge.json"
       },
-      "bundleSha256": "92740113ae1bc346aa67e94a789816a0e8048e557b6510e8abaf75a6c30eca13"
+      "bundleSha256": "60ab905cc699e9284bc8abe9b2d9f494aab6d51f0a28a818eae7f5c83ffe64f1"
     },
     {
       "id": "controlled-rough-outlines",
@@ -1230,7 +1230,7 @@
       "paths": {
         "bundle": "agent/patterns/controlled-rough-outlines.json"
       },
-      "bundleSha256": "abc0ebbeab757c16d3e5e12cc8a835d887f20256b0d335aa888da2d902b16724"
+      "bundleSha256": "4ef1bf39436446f29330589b63fd4d630b1034011431dfdb6dac075767597e9f"
     },
     {
       "id": "current-state-svg-export",
@@ -1280,7 +1280,7 @@
       "paths": {
         "bundle": "agent/patterns/current-state-svg-export.json"
       },
-      "bundleSha256": "0117ac6773a310d9b1dae16e943bbf523d9c4e3584c408165b590e7ed3a3fd93"
+      "bundleSha256": "ff3c75d697eba6410a9b6cff705ffafa96a3f94bef61f9700ff7cad81f745147"
     },
     {
       "id": "direct-purpose-navigation",
@@ -1352,7 +1352,7 @@
       "paths": {
         "bundle": "agent/patterns/direct-purpose-navigation.json"
       },
-      "bundleSha256": "90069b34f1069bd3d8739811fe190de406f6aecbf7e315ae42cb1a343ad7d0c4"
+      "bundleSha256": "cf1c59040d3528eaefda65dd52a21938264b5cbec3086a448fe178b6666fe162"
     },
     {
       "id": "directional-section-wipe",
@@ -1417,7 +1417,7 @@
       "paths": {
         "bundle": "agent/patterns/directional-section-wipe.json"
       },
-      "bundleSha256": "2c895a76f8188f5e329c8cbcd56b3dc4686e66cc5bc24a764d8b71f8b5297e3f"
+      "bundleSha256": "0c6fc9da74e5f01fbd0264e9d9c9903a6423ce4433f2bf72eeb1eb6c77657491"
     },
     {
       "id": "directional-sticky-navigation",
@@ -1473,7 +1473,7 @@
       "paths": {
         "bundle": "agent/patterns/directional-sticky-navigation.json"
       },
-      "bundleSha256": "2a26862d4c9ac75e8112ca7ff4a33082263a99f1483b1b63293ce9c0992a4361"
+      "bundleSha256": "08ce58da6963268559e4bd799b5157c4cdf811b44580016222a206dd632610e7"
     },
     {
       "id": "discovery-progress-journal",
@@ -1530,7 +1530,7 @@
       "paths": {
         "bundle": "agent/patterns/discovery-progress-journal.json"
       },
-      "bundleSha256": "cb368bdfec7f32fa72afcbcbbc55d318ad053c7e720959ad5326571e353e1ffc"
+      "bundleSha256": "4f4b50a9030fdb5b0c2bb030cda267bccf073b9147667493b4f1e565c6934a6a"
     },
     {
       "id": "edge-action-world-composition",
@@ -1586,7 +1586,7 @@
       "paths": {
         "bundle": "agent/patterns/edge-action-world-composition.json"
       },
-      "bundleSha256": "a0e193a73cb6fa9edcdcc4b1f4644cdd0a7e0944894b947afaa9855e95b83366"
+      "bundleSha256": "20c1cadefc4e1d2e1acc5332af46bbd059fb247eefd0ae250cfb6aec94a72498"
     },
     {
       "id": "editorial-alignment-grid",
@@ -1643,7 +1643,7 @@
       "paths": {
         "bundle": "agent/patterns/editorial-alignment-grid.json"
       },
-      "bundleSha256": "a43c1f623abd822fe23bef828d02fe54ad918a6e71d109fed438ee484a94a36f"
+      "bundleSha256": "3549f153b0389d0cf6afb6350b1324cdce247756d46f2f0def436dd136f090ff"
     },
     {
       "id": "exploded-layer-view",
@@ -1696,7 +1696,7 @@
       "paths": {
         "bundle": "agent/patterns/exploded-layer-view.json"
       },
-      "bundleSha256": "e2364672523c3c56466c91ce41a3368982f5e52de91909b885b9a986ca02f11b"
+      "bundleSha256": "d5245962df8c4c88605b929c7497d8c14e160ee62a900e9ba1f0c3c9b5f84809"
     },
     {
       "id": "film-overlay",
@@ -1781,7 +1781,7 @@
       "paths": {
         "bundle": "agent/patterns/film-overlay.json"
       },
-      "bundleSha256": "156cf9cbcf8e332b9401cd9ed0b737ff78b099e9854b60b4ccbbd399c608555a"
+      "bundleSha256": "50f1e0ec586fc15e916d664281c6bb9f2a9eb839eb68ae73ad0fb470716638ca"
     },
     {
       "id": "filter-count-feedback",
@@ -1845,7 +1845,7 @@
       "paths": {
         "bundle": "agent/patterns/filter-count-feedback.json"
       },
-      "bundleSha256": "08af692c6a8e7a56d07517c70865d4f9e1d11d988f373bd1371e0ecc05109a52"
+      "bundleSha256": "3716da6616b6f60840557f61dbe4c958164956aa5f5097c4b57645bd11bed323"
     },
     {
       "id": "fixed-star-glow-layer",
@@ -1906,7 +1906,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-star-glow-layer.json"
       },
-      "bundleSha256": "0ced245cd38668e700ef3388e5436887aa1e9be11de136a4644c2d849b2a2d37"
+      "bundleSha256": "1ac6ed9a8686631b04f76b31c0525f92eaa46fcb33d5d3bb33afd80d77399603"
     },
     {
       "id": "fixed-task-timeline",
@@ -1963,7 +1963,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-task-timeline.json"
       },
-      "bundleSha256": "c8340cd88328567f302846c19797738d2e42e80450ae517bb086384c03c70ea7"
+      "bundleSha256": "4ac925bc560ed4a9abc91d762f2e2ea8a79a58ed6c22255e0a1749f1ec618949"
     },
     {
       "id": "fixed-topology-morph",
@@ -2022,7 +2022,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-topology-morph.json"
       },
-      "bundleSha256": "e08332b217ac92f1467fec21c3942f6519e96ef01398c831ac4f903ef52fa530"
+      "bundleSha256": "d9fa0b0e013bb5ce5b4a12c95f7b966c8f7fefc9efc7b09e0b8e32f93ebb83e2"
     },
     {
       "id": "folded-wave-hero",
@@ -2080,7 +2080,7 @@
       "paths": {
         "bundle": "agent/patterns/folded-wave-hero.json"
       },
-      "bundleSha256": "ba53c6b8d6af4c1e8b52dc453debf6f44969601d90f79ae82293f6c78b391936"
+      "bundleSha256": "2612ce33085648c176e2bc567154a2db377038ca3f318a99e4c45eac778f6155"
     },
     {
       "id": "footer-aware-back-to-top",
@@ -2136,7 +2136,7 @@
       "paths": {
         "bundle": "agent/patterns/footer-aware-back-to-top.json"
       },
-      "bundleSha256": "e6719871009c0fa146081e23306a37253d3bb37a265b4caecd253b050ef344ad"
+      "bundleSha256": "8a1ceadd7515ef9b049f4025a05ba7fc365075cdbfd30d43d82fb5ead3eb7b4f"
     },
     {
       "id": "full-bleed-photography-brand",
@@ -2193,7 +2193,7 @@
       "paths": {
         "bundle": "agent/patterns/full-bleed-photography-brand.json"
       },
-      "bundleSha256": "ce23ebb7bddb4a69978103ae4cb4ce9fb07b143a0c8c78d694845cec34f804fc"
+      "bundleSha256": "5819ee024ada2d0e5989e13d1ea3dea048fb63e944a6d32120d397452148268b"
     },
     {
       "id": "fullscreen-photography-menu",
@@ -2254,7 +2254,7 @@
       "paths": {
         "bundle": "agent/patterns/fullscreen-photography-menu.json"
       },
-      "bundleSha256": "c4e6e6953f2d97975e801286d7d7beda320757eb17d7dbe4fcc25781e89d3b05"
+      "bundleSha256": "1df0a3d0fb4b0524974d2a7f322965eb2f4a814f1a83931de339abd3eae74e30"
     },
     {
       "id": "geometric-balance-presets",
@@ -2305,7 +2305,7 @@
       "paths": {
         "bundle": "agent/patterns/geometric-balance-presets.json"
       },
-      "bundleSha256": "28c2f90142038dae3c90321adb079066f3b0490c538e80ee86543bb70b4c6e33"
+      "bundleSha256": "117e52f9e631382528256d4d7f907104773acbeca5a217621f100178bef74aa0"
     },
     {
       "id": "header-below-mobile-navigation",
@@ -2366,7 +2366,7 @@
       "paths": {
         "bundle": "agent/patterns/header-below-mobile-navigation.json"
       },
-      "bundleSha256": "10d25b64283d45176bce55b7be854faec4d9e6bed0a99ba001dec0cd6ed9f000"
+      "bundleSha256": "f3fc7af24c7116b6049c37665e231543321d1f19bfacd8bc6315667b160f97fe"
     },
     {
       "id": "heatmap-focus-tooltip",
@@ -2426,7 +2426,7 @@
       "paths": {
         "bundle": "agent/patterns/heatmap-focus-tooltip.json"
       },
-      "bundleSha256": "a8551bf303f0ee1080ff1db80fcee8cd2285e4c056a7e440bc32fc62bae04a48"
+      "bundleSha256": "dbe442fb95ce3931407144534c5ec98cfb5b4e0c089c399fffc2e3aebf3441b9"
     },
     {
       "id": "highlight-progress-gallery",
@@ -2488,7 +2488,7 @@
       "paths": {
         "bundle": "agent/patterns/highlight-progress-gallery.json"
       },
-      "bundleSha256": "a37546cc2b5166f23f48c49609b14d6de10efed233b270565acd9a69d83bfc48"
+      "bundleSha256": "aa137d22f23eed1b57cdf1359206f818606f3b38c741be45991c106eff482509"
     },
     {
       "id": "hover-focus-mode-selection",
@@ -2547,7 +2547,7 @@
       "paths": {
         "bundle": "agent/patterns/hover-focus-mode-selection.json"
       },
-      "bundleSha256": "f54b660261068c48198e4d0ad042167571dc3c27f5362c7b9e0e3d5ea3736ae3"
+      "bundleSha256": "53b0825f6d0c2e6b25dc4dad771e5e64f28be7ab01dd17ee74c32ac3c5cd2a34"
     },
     {
       "id": "idle-interface-retreat",
@@ -2608,7 +2608,7 @@
       "paths": {
         "bundle": "agent/patterns/idle-interface-retreat.json"
       },
-      "bundleSha256": "c31daaab19d61aa6c5d13ee5fe15c8d9d4028769f08998e0c1a2da917a0dd86a"
+      "bundleSha256": "d1dca966eddee2b00efa526654033e80bc0693b1e43e44b4075f879e95dcd8d5"
     },
     {
       "id": "inclined-motion-bands",
@@ -2677,7 +2677,7 @@
       "paths": {
         "bundle": "agent/patterns/inclined-motion-bands.json"
       },
-      "bundleSha256": "deaf4fa6ff22f874890d7b36e1e71326e53803edf913d6b0dda9c4e9633514d8"
+      "bundleSha256": "cfd1541a3f308461b53b186486034fc953737bba1e28cca46b706c9ba822de48"
     },
     {
       "id": "independent-character-page",
@@ -2734,7 +2734,7 @@
       "paths": {
         "bundle": "agent/patterns/independent-character-page.json"
       },
-      "bundleSha256": "86953dd2e164b2ec702ca9a2a5554df2827d992aaa38b2f0f380f19f504771a5"
+      "bundleSha256": "8b900b96d4590992935e6840c1ab5e03ea76bbc504beb4369675620b2385b311"
     },
     {
       "id": "independent-outfit-state",
@@ -2790,7 +2790,7 @@
       "paths": {
         "bundle": "agent/patterns/independent-outfit-state.json"
       },
-      "bundleSha256": "848f2b6b980c1d72e238910275781b723870137f80b93d31386d95784ca28bfe"
+      "bundleSha256": "6c3aaac3948cda7a9dec2bdc8e865733771181fff8a902ba5f4b14a80320bddb"
     },
     {
       "id": "inline-detail-disclosure",
@@ -2868,7 +2868,7 @@
       "paths": {
         "bundle": "agent/patterns/inline-detail-disclosure.json"
       },
-      "bundleSha256": "a4b21177325b6ab3d294e433a2d6f4e7f5a01022544b1b93bb0e503698b3e088"
+      "bundleSha256": "0f78d5468f3f81e426e60dc00b5af385ec4b5fadf0678f4e9160ed3d035b5ad2"
     },
     {
       "id": "inline-product-detail-viewer",
@@ -2924,7 +2924,7 @@
       "paths": {
         "bundle": "agent/patterns/inline-product-detail-viewer.json"
       },
-      "bundleSha256": "d27f538aff46223e0ecaebd82cfe2ca7220743402f11e350a4c4d362a7bc0afd"
+      "bundleSha256": "ddcdabc3d203cbac463346be0d7cc7ecde8e61fadfa662053893ffb347817a50"
     },
     {
       "id": "instant-open-menu-category-switch",
@@ -2988,7 +2988,7 @@
       "paths": {
         "bundle": "agent/patterns/instant-open-menu-category-switch.json"
       },
-      "bundleSha256": "f6326e7d1c693c4c034c2daca6089500c9d069db616e6e0453e12905e73a0021"
+      "bundleSha256": "b5d400b227d96d15484805f32954389da1f09f6e3aa1e0ef6c9f541ade7766d1"
     },
     {
       "id": "institution-overlap-logo",
@@ -3045,7 +3045,7 @@
       "paths": {
         "bundle": "agent/patterns/institution-overlap-logo.json"
       },
-      "bundleSha256": "ea68323a8231fcdd70925eaf6c721f46dea02e14a7650d197bbb3d198d46535f"
+      "bundleSha256": "e9877d33c1502ece8e9afdcac78407b889369b6230520ca1d203d6a9fbbe675e"
     },
     {
       "id": "integer-pixel-canvas",
@@ -3101,7 +3101,7 @@
       "paths": {
         "bundle": "agent/patterns/integer-pixel-canvas.json"
       },
-      "bundleSha256": "188c199d54d3afe86826abd2a28a9503c6e02a9b81ff19a4ead864e16bf8036f"
+      "bundleSha256": "d353a7d02d78d5352aa95ff2e13de300c63af4b5e86cb31ca9036b0b50426010"
     },
     {
       "id": "interruptible-morph",
@@ -3160,7 +3160,7 @@
       "paths": {
         "bundle": "agent/patterns/interruptible-morph.json"
       },
-      "bundleSha256": "185c05b0b22c5946c52a9452fcfc2d5018732a8cbe711e88d08a146c8f726b04"
+      "bundleSha256": "1bdf1ea09bad5b3493d49b2aadd1d88481faf28799df41ed80446c234e00f7f6"
     },
     {
       "id": "keyboard-playable-notes",
@@ -3211,7 +3211,7 @@
       "paths": {
         "bundle": "agent/patterns/keyboard-playable-notes.json"
       },
-      "bundleSha256": "bdc0b25a8b5028fc1ca34262f11565f2689aadab46c189ee91cf541dc02403c3"
+      "bundleSha256": "5be26b35a172fa041d7227459e241e3267ba7320e040c785fd0ffca13cf1960c"
     },
     {
       "id": "last-request-transition",
@@ -3314,7 +3314,7 @@
       "paths": {
         "bundle": "agent/patterns/last-request-transition.json"
       },
-      "bundleSha256": "3e9cb966ac6851128ddd93314cde6f43df09769ec2e7497db12956f4258f9298"
+      "bundleSha256": "aa298e3be8a542d87eb82ffa9fae31e374b79dccda003518cd2ce0bfbd96466a"
     },
     {
       "id": "layer-focus-dimming",
@@ -3367,7 +3367,7 @@
       "paths": {
         "bundle": "agent/patterns/layer-focus-dimming.json"
       },
-      "bundleSha256": "c31a953a6efe032fb3943c97ae4417052e31c1f8b0ec5b0b5a5ee8ee1b8bf599"
+      "bundleSha256": "32ea724cfc97eefaa6d945a2934dcb1b33a21c3a5e7e85f3992bf20ce7bb81a8"
     },
     {
       "id": "layered-navigation-drawer",
@@ -3428,7 +3428,7 @@
       "paths": {
         "bundle": "agent/patterns/layered-navigation-drawer.json"
       },
-      "bundleSha256": "425162c20ee13946bed897166e0f1960c1f2e1efbbbb7086dca72660ad3845eb"
+      "bundleSha256": "035b59f21871edaca790fbbe9cf57af48acd195f148efb1943d8f7caf8ceb63a"
     },
     {
       "id": "live-parameter-readout",
@@ -3500,7 +3500,7 @@
       "paths": {
         "bundle": "agent/patterns/live-parameter-readout.json"
       },
-      "bundleSha256": "0f30c634ea7b6757c22d1772f3b6bc7bfc889d9c3f12fc8d59d77723d92286c3"
+      "bundleSha256": "7938533601acaae5daa41269f68bafa74e8354f1f37b851378beacfc7b30e98c"
     },
     {
       "id": "load-completion-brand-marker",
@@ -3580,7 +3580,7 @@
       "paths": {
         "bundle": "agent/patterns/load-completion-brand-marker.json"
       },
-      "bundleSha256": "0670e56435716a622c3a7850065602aa280da0956b1fbe7d59cec2e928d4566d"
+      "bundleSha256": "5b844374c68d4034a0ea299d48cb001b161d09bccbf7ecfe2056f0f52fe468f4"
     },
     {
       "id": "local-code-theme-preview",
@@ -3636,7 +3636,7 @@
       "paths": {
         "bundle": "agent/patterns/local-code-theme-preview.json"
       },
-      "bundleSha256": "78a730e272a36780fbd5f3fa1cc46aede9edf512845c60bc228e3a385e0b1087"
+      "bundleSha256": "c00807910cc2e0bf5b1181c1e77cc095001a6625d9bfbd11f2c05a4a6fbe4a3b"
     },
     {
       "id": "local-save-toggle",
@@ -3684,7 +3684,7 @@
       "paths": {
         "bundle": "agent/patterns/local-save-toggle.json"
       },
-      "bundleSha256": "8770b270c92b687dc74c09e448d50add2e81f1b11a9bfadf8f399b40486e90ad"
+      "bundleSha256": "4ba46af22293b852611b55d1a9ded3fae8fac7b50c49a8d43a8eb2847dba8f88"
     },
     {
       "id": "masked-transaction-rotation",
@@ -3741,7 +3741,7 @@
       "paths": {
         "bundle": "agent/patterns/masked-transaction-rotation.json"
       },
-      "bundleSha256": "e55992250bd2c232c18e20e2547cec0974fbc2a4ef615e4835ef3efe6f5f1cce"
+      "bundleSha256": "5b76b958771f972e0cf665c605e35eac0c41da075152eb13d7dce638a0c7b0fa"
     },
     {
       "id": "measured-width-action-pill",
@@ -3803,7 +3803,7 @@
       "paths": {
         "bundle": "agent/patterns/measured-width-action-pill.json"
       },
-      "bundleSha256": "30e49e1a0f5b5b14b86976934a0a961bf913597a54785db939d9fc0f886b899f"
+      "bundleSha256": "d5a598c951ae1b79719747feaf9436da64ab0d50a5b7a265af8a50fb3a7ba4fb"
     },
     {
       "id": "message-to-board-demonstration",
@@ -3860,7 +3860,7 @@
       "paths": {
         "bundle": "agent/patterns/message-to-board-demonstration.json"
       },
-      "bundleSha256": "389d21da3420799b06fa8160f1c76aa63dcd6e4b0118035de0f7cd2c85898a7f"
+      "bundleSha256": "bc9d3acb0e5cc143f7d38157cbabc53cb8f4a16f4e99ad1b17d791b7a311c861"
     },
     {
       "id": "metric-explanation-selector",
@@ -3917,7 +3917,7 @@
       "paths": {
         "bundle": "agent/patterns/metric-explanation-selector.json"
       },
-      "bundleSha256": "ac4f3b2c845f8250993bc77bf20b649e14ea9fb3853b445b430926f6cd0ddb47"
+      "bundleSha256": "d5b6f1550dd56368e93addfeb34874165d20dd33c4ce03292e56a1045c3a33b8"
     },
     {
       "id": "mixed-ratio-archive-columns",
@@ -3981,7 +3981,7 @@
       "paths": {
         "bundle": "agent/patterns/mixed-ratio-archive-columns.json"
       },
-      "bundleSha256": "de6dbb2856a08da616cfe024a01d5ea0255865d686a5e5bbdf63503d38d655f0"
+      "bundleSha256": "860c9dc243497b77a0f9edd07a964cb7005097fd6af913555e7d5735f5880816"
     },
     {
       "id": "mobile-drilldown-menu",
@@ -4039,7 +4039,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-drilldown-menu.json"
       },
-      "bundleSha256": "f0d5c37b3aacea0ca2dc6d5d37bbe5edcb4e1205e4086d704e7dcbd31de3a62f"
+      "bundleSha256": "6605ee1bc60b6e7dd3c1ea530a7bc8c2ad6eb1a7693565b2cd77a3269bdee092"
     },
     {
       "id": "mobile-media-prioritization",
@@ -4110,7 +4110,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-media-prioritization.json"
       },
-      "bundleSha256": "618a2573a36ce85aed749f67159120bfb121de565eb47e5dfe670958e464f84e"
+      "bundleSha256": "768ec056ea04c7371d7e80cc26e28e07671bdd8cfc2af3b797504b88225af9bf"
     },
     {
       "id": "mobile-native-mode-cards",
@@ -4169,7 +4169,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-native-mode-cards.json"
       },
-      "bundleSha256": "22e3ca062fe40c3ec02fa90f1254ec75b34d4e7aba229af06617c03c81746817"
+      "bundleSha256": "a82680b94aec638ad2a6f509fe6a6652a90246977bd79bdbaf66ae07810f1851"
     },
     {
       "id": "mobile-single-open-navigation",
@@ -4227,7 +4227,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-single-open-navigation.json"
       },
-      "bundleSha256": "12e25bea7422d5b20cb357e842a227ee21fae6a695d8f7d1f9ea3b52d62c512b"
+      "bundleSha256": "36629e3fc7413731ed90060b34742b7b7c4bde55adc40e590579a0fcefa5315d"
     },
     {
       "id": "mode-character-accent",
@@ -4285,7 +4285,7 @@
       "paths": {
         "bundle": "agent/patterns/mode-character-accent.json"
       },
-      "bundleSha256": "d45c21a800bb08a3e494f6994f57c4e290f2b18710765b9d0f9a4aceabaf1e0c"
+      "bundleSha256": "18b0d351c6848197b45807e928ceb84b198e380040738b2f72abcf710c9ce5fc"
     },
     {
       "id": "mode-specific-collage",
@@ -4344,7 +4344,7 @@
       "paths": {
         "bundle": "agent/patterns/mode-specific-collage.json"
       },
-      "bundleSha256": "2cb2341c29b2322ebca2613922d72a04d120f5bbc0f4592bb8ea4148c66a10dd"
+      "bundleSha256": "ca2804a7d1d427fd6935bdf7e2be07c9639f36d015eae13c7628f355e0c1b963"
     },
     {
       "id": "mountain-scaled-menu",
@@ -4405,7 +4405,7 @@
       "paths": {
         "bundle": "agent/patterns/mountain-scaled-menu.json"
       },
-      "bundleSha256": "330ca68d1f641e66102c6a3b52c15810f9d48fdf42e108ea1c6beb7143769a15"
+      "bundleSha256": "c1161761ff6ac0044b65642437901b9b52e487e34305e7278285cc47b198e936"
     },
     {
       "id": "moving-tab-selection-bed",
@@ -4461,7 +4461,7 @@
       "paths": {
         "bundle": "agent/patterns/moving-tab-selection-bed.json"
       },
-      "bundleSha256": "c2dca2c9c2aa003a683540de7a6531007b4e879d6db970c90eef9ecf700143a8"
+      "bundleSha256": "02e19348e14205dd8e1ea2de589e381b272ff87bcdb3bbca4beee0cddfa5a1d7"
     },
     {
       "id": "native-document-reading",
@@ -4563,7 +4563,7 @@
       "paths": {
         "bundle": "agent/patterns/native-document-reading.json"
       },
-      "bundleSha256": "ec86db336052db7a21fd0f81436fe741c66e5ca00c244106563042a07ac9ed9f"
+      "bundleSha256": "848fe08b87ae6dc6b0b9633aceb364af8a0c79e8d4170e81b0e859dfb0b0e516"
     },
     {
       "id": "native-horizontal-shelf",
@@ -4665,7 +4665,7 @@
       "paths": {
         "bundle": "agent/patterns/native-horizontal-shelf.json"
       },
-      "bundleSha256": "9434c7f179aa18b98773723ac4b2d9db5514d0da2598b7b155307088ebae9c3f"
+      "bundleSha256": "93a8aef692b2d7498c52bdd8430fa209d947cb5ace15a70917c3dac4bc078dd7"
     },
     {
       "id": "natural-height-mega-menu",
@@ -4728,7 +4728,7 @@
       "paths": {
         "bundle": "agent/patterns/natural-height-mega-menu.json"
       },
-      "bundleSha256": "bdf7894c8c8d06e3eb9cdb7d0e698bf5b2445366584269198949600cc8174000"
+      "bundleSha256": "b876eaa2b3b7810212e915fb01ee4c88531601de3580d65421765c34a027df23"
     },
     {
       "id": "offsite-playlist-extension",
@@ -4811,7 +4811,7 @@
       "paths": {
         "bundle": "agent/patterns/offsite-playlist-extension.json"
       },
-      "bundleSha256": "6cdff1052d175803d2b065a62099e5bf1d92d4b3b43f6626f690f88ab23523ef"
+      "bundleSha256": "26053b318a93fb7d88fe797bbfe32c133313ad0df94656aeaa621d90cd35647c"
     },
     {
       "id": "paper-material-collage",
@@ -4864,7 +4864,7 @@
       "paths": {
         "bundle": "agent/patterns/paper-material-collage.json"
       },
-      "bundleSha256": "06fabc53ffb606f8ff9a803a1debcde9b8125ef0ce73235b704ae8df85c83322"
+      "bundleSha256": "7b7d894462c8c43f23c7ca8af493f4e7f7e31528fc07b555b6f0b63441cf528a"
     },
     {
       "id": "parallel-isometric-projection",
@@ -4917,7 +4917,7 @@
       "paths": {
         "bundle": "agent/patterns/parallel-isometric-projection.json"
       },
-      "bundleSha256": "6d29290b71416908227302a511c5d7b7cc6cb696913e12aaa5418ade6b508b02"
+      "bundleSha256": "5d0d3d53bb08b37cb51d169a01a928259111a53b3a525b475d1942a584fed1e1"
     },
     {
       "id": "particle-model-reformation",
@@ -4982,7 +4982,7 @@
       "paths": {
         "bundle": "agent/patterns/particle-model-reformation.json"
       },
-      "bundleSha256": "b192e2f0bd8a5e8b503492672f4ecfaf09060c00084b2bb49414398f6c146407"
+      "bundleSha256": "86ad59414fad31b8e763c905c9115b2f91de7833c9ef0d0453152407a550f471"
     },
     {
       "id": "permanent-event-metadata",
@@ -5038,7 +5038,7 @@
       "paths": {
         "bundle": "agent/patterns/permanent-event-metadata.json"
       },
-      "bundleSha256": "00a10f3e76e52d406d89f811a30a8f8092b8b962d5782c54924ec0f153b26f02"
+      "bundleSha256": "72a9f2e312c127f96b8781e20a91a58b247230f58a0a66b6e2098046a6cac979"
     },
     {
       "id": "photo-crossfade-cycle",
@@ -5118,7 +5118,7 @@
       "paths": {
         "bundle": "agent/patterns/photo-crossfade-cycle.json"
       },
-      "bundleSha256": "a9a89a3330dc3eab1eeb096d973e2320e1d8d54cbfc36344df943b9868f92bf8"
+      "bundleSha256": "3dffcdc7eeecfcf6bd5f5eaf5fba63d11f2c8831724b829c3662e94856063635"
     },
     {
       "id": "photo-edge-text-contrast",
@@ -5174,7 +5174,7 @@
       "paths": {
         "bundle": "agent/patterns/photo-edge-text-contrast.json"
       },
-      "bundleSha256": "faf16a18afc0e7d3c306ab84df391b43878324b9f048c78846e66b6748a912a3"
+      "bundleSha256": "e4e6f510ab4197e3d5f8b30757b851557224f9f83f983d9b10e4283e830d8704"
     },
     {
       "id": "photography-option-selector",
@@ -5238,7 +5238,7 @@
       "paths": {
         "bundle": "agent/patterns/photography-option-selector.json"
       },
-      "bundleSha256": "efdcbaed603c8a7338cbddc5bc71f6e47d391c392705e3f7d653f877188f26fa"
+      "bundleSha256": "76cc546a5fbe8a57d3b95b8b1a5c5dda041c6bf75703e1ea3426b4860a74d719"
     },
     {
       "id": "pointer-image-shader-preview",
@@ -5294,7 +5294,7 @@
       "paths": {
         "bundle": "agent/patterns/pointer-image-shader-preview.json"
       },
-      "bundleSha256": "1dfe5a7d033c0382fd00067df14119ff6c064cee62c204e87ea9c6c5747d3a5b"
+      "bundleSha256": "3e1e2b38ca2832797fd3ead36c11e6a72580d0ff92a8c9fd2d34bc90e5a9d6e3"
     },
     {
       "id": "pointer-repulsion-particles",
@@ -5359,7 +5359,7 @@
       "paths": {
         "bundle": "agent/patterns/pointer-repulsion-particles.json"
       },
-      "bundleSha256": "fd76b742664809e5e8a6306cd08dca053353a3d6f1c147f7d5ee4fc800ce8fa4"
+      "bundleSha256": "2138962b3c541b0acc6eda94dfef3b6568a8dd41ef1d94b9ff4372a32606f5f8"
     },
     {
       "id": "product-entrance-film",
@@ -5416,7 +5416,7 @@
       "paths": {
         "bundle": "agent/patterns/product-entrance-film.json"
       },
-      "bundleSha256": "b29ee4de28846681ca05691af291f2ae07f580736283c74ad865e25ca57894d8"
+      "bundleSha256": "ff38b6d30ce6da761ff1300c9220981f5c2a36e88095dcabd3cecd8bf9426662"
     },
     {
       "id": "resource-bound-fullscreen-loading",
@@ -5479,7 +5479,7 @@
       "paths": {
         "bundle": "agent/patterns/resource-bound-fullscreen-loading.json"
       },
-      "bundleSha256": "2ba018db296dbc12d1d07abc2e300cbcd5daab6c22b42fa4f3c1e8ceb50465f5"
+      "bundleSha256": "f6fec079c1ebcf3691af0d7a184db72e2bf53fa0d4c8bc15e434113dc8bf83a5"
     },
     {
       "id": "responsive-art-direction",
@@ -5563,7 +5563,7 @@
       "paths": {
         "bundle": "agent/patterns/responsive-art-direction.json"
       },
-      "bundleSha256": "e91bc66be18a30038957e494cc47d12802010df09dd025be4de63cff708d1c6d"
+      "bundleSha256": "fcd0e70f61dec4dcf89a82f92b16e05904eb231cee968d72f83b7433655a5fcc"
     },
     {
       "id": "restrained-signal-color",
@@ -5642,7 +5642,7 @@
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
       },
-      "bundleSha256": "ddfedb07270ee8136683017b2518104a195e5f8c06d9246151261078c62c45dd"
+      "bundleSha256": "5a7bd72998968e26649ebda0207b8bed3a49e56e6da10cf7ce6a9e6ac3621540"
     },
     {
       "id": "reversible-center-reveal",
@@ -5704,7 +5704,7 @@
       "paths": {
         "bundle": "agent/patterns/reversible-center-reveal.json"
       },
-      "bundleSha256": "7d07e2380ad1ccd58ebd6a10a91960eda4437398b808b08c6c256bd07c086100"
+      "bundleSha256": "31a7128839b5050ec365d152e69a7010c0b32c5523883725c09b0279cb85373c"
     },
     {
       "id": "scroll-differential-stars",
@@ -5766,7 +5766,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-differential-stars.json"
       },
-      "bundleSha256": "da484adc22e33896d2cc4593767f9ab9832e8c5991eedb7dbbd3a9dca8560c41"
+      "bundleSha256": "b5c02f559bb82f9d601d2a5de9bd6728573340b5e5a1df2a165e913848850c2c"
     },
     {
       "id": "scroll-logo-contraction",
@@ -5832,7 +5832,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-logo-contraction.json"
       },
-      "bundleSha256": "de6aa110565129acc32f775f2c82e0e451f351d6e067436d12a1ed9d9605c519"
+      "bundleSha256": "86b3210ea43ae3607b52dd79cca5e6f2660de90fca9ebd39df883ce10de1974b"
     },
     {
       "id": "scroll-synchronized-rail",
@@ -5889,7 +5889,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-synchronized-rail.json"
       },
-      "bundleSha256": "1a5dccbd27f8440f9139bb39a0b2e3ab624a31d7e5419c1e4bf8cd5ab8fde844"
+      "bundleSha256": "6bd0d12fd0281b94b690d219b26600c9a0a32acc7a73dd7ad9739e6ebf1d6db8"
     },
     {
       "id": "scroll-video-scrub",
@@ -5951,7 +5951,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-video-scrub.json"
       },
-      "bundleSha256": "4eae0e523d1de2b71e8d8fb00200800de9e61fb5708a52a263678e421da12c21"
+      "bundleSha256": "546cbb9e07b39014e455e2c0db4b461f2302600d67b8608258a2bbc75b295763"
     },
     {
       "id": "scrubbable-animation-progress",
@@ -6010,7 +6010,7 @@
       "paths": {
         "bundle": "agent/patterns/scrubbable-animation-progress.json"
       },
-      "bundleSha256": "9f8d0b3fada218b332fd1ebbcf21496d2b5369bf0bb42cd283b875c06ac3b9c7"
+      "bundleSha256": "25da691e4dfbc50eec078de24fe0cf588141fef4e67d3cf5594e9254a4183da4"
     },
     {
       "id": "section-color-rhythm",
@@ -6096,7 +6096,7 @@
       "paths": {
         "bundle": "agent/patterns/section-color-rhythm.json"
       },
-      "bundleSha256": "39aab6dd9903255e1af758c0602bdfb7690e51ce092515305d5bb8bea8705f4f"
+      "bundleSha256": "e174c611f12ed6db6058a788c86734b37e2a57e28b69488018db704c4914e343"
     },
     {
       "id": "semantic-theme-roles",
@@ -6152,7 +6152,7 @@
       "paths": {
         "bundle": "agent/patterns/semantic-theme-roles.json"
       },
-      "bundleSha256": "d13dde042085d1517306db3ec81d8a0f30dc1c89a3e172b2f0c210383074bca0"
+      "bundleSha256": "b149376110bad2e9f5a9e0ceee61fcecd003923769b2365efc33ea15d499f315"
     },
     {
       "id": "sequential-stroke-reveal",
@@ -6210,7 +6210,7 @@
       "paths": {
         "bundle": "agent/patterns/sequential-stroke-reveal.json"
       },
-      "bundleSha256": "69fa2b8af6c5330a34b504610d474bee946a6045e8dec71fa0e47579389d0855"
+      "bundleSha256": "d740b897dd8c22166b5f468c206f1fa35b77593e309e20f1313d9de4b210123a"
     },
     {
       "id": "single-open-accordion",
@@ -6297,7 +6297,7 @@
       "paths": {
         "bundle": "agent/patterns/single-open-accordion.json"
       },
-      "bundleSha256": "ca03ee6f0c4dec83c9fd37295937c3cb56f148f15df52e3b42bb77c59c80067d"
+      "bundleSha256": "f90fcb82c23af9c528fffc81eb06e5cd81e8bb517b493fac39cd61d757517ba8"
     },
     {
       "id": "sound-choice-emblem-opening",
@@ -6360,7 +6360,7 @@
       "paths": {
         "bundle": "agent/patterns/sound-choice-emblem-opening.json"
       },
-      "bundleSha256": "57b666ba31ce5fc16effc07e9b6f1f2f7ed878885a0d16dc3d02e7bdf232f240"
+      "bundleSha256": "66b0a9e534ecbcb74a1ee929ca7472921a013cfa4707331020f60b83d77d8338"
     },
     {
       "id": "sound-opt-in",
@@ -6440,7 +6440,7 @@
       "paths": {
         "bundle": "agent/patterns/sound-opt-in.json"
       },
-      "bundleSha256": "437e7b6b00fe8b1f63a78d72ebe49616ac88dc4cb01f47aef1ad85390c70d2c4"
+      "bundleSha256": "022cc8717b2c9ebc294858c7527d84219af354d1239b4a7bcb37b96c6ee19722"
     },
     {
       "id": "spatial-navigation-map",
@@ -6491,7 +6491,7 @@
       "paths": {
         "bundle": "agent/patterns/spatial-navigation-map.json"
       },
-      "bundleSha256": "a39ce5ede2384f1a7a7a648aeee25028c585e00555a13818348106dba46ae1fd"
+      "bundleSha256": "a9fd9af07e72f76da66b14fd167f7af34df6dd0fa69bac9d08a67191242b8252"
     },
     {
       "id": "staged-product-ui-entrance",
@@ -6553,7 +6553,7 @@
       "paths": {
         "bundle": "agent/patterns/staged-product-ui-entrance.json"
       },
-      "bundleSha256": "2ca4369b0d2fd6ce00df940f634fc1ece216674c7b520e401ad5da9fac3f8e91"
+      "bundleSha256": "778421bbc9eff72dc46e8011016056097f363585e3e8f463f65dfab6c2b3a7d4"
     },
     {
       "id": "staggered-agent-columns",
@@ -6609,7 +6609,7 @@
       "paths": {
         "bundle": "agent/patterns/staggered-agent-columns.json"
       },
-      "bundleSha256": "5a96ae8ad42bea81899f269ce9ce0601c7e7a507ceae06eab9276a5638d91edf"
+      "bundleSha256": "0e03a82c21819ca1c119812b7df2e7de4cfb214e5d28f6fcc38db7dd60bdeff5"
     },
     {
       "id": "state-shape-feedback",
@@ -6670,7 +6670,7 @@
       "paths": {
         "bundle": "agent/patterns/state-shape-feedback.json"
       },
-      "bundleSha256": "6b90caf455c6565d0db6edefb9aa8a590b9ca0e5d551d970c9a7fcd308b252a1"
+      "bundleSha256": "e21bbe9ba4d88a25df5ff9484d4db4a2e27368bee674357cc375100330a041ce"
     },
     {
       "id": "sticky-action-sidebar",
@@ -6729,7 +6729,7 @@
       "paths": {
         "bundle": "agent/patterns/sticky-action-sidebar.json"
       },
-      "bundleSha256": "6e56b7b6323d1b5af8532668614a4cb6d5a4f2644699246d03c22218028e7f05"
+      "bundleSha256": "b9cd70f8f6b77e3550722746aedd9f88ab029250aee4ab733e3bee1e39dac9bc"
     },
     {
       "id": "sticky-stage-handoff",
@@ -6802,7 +6802,7 @@
       "paths": {
         "bundle": "agent/patterns/sticky-stage-handoff.json"
       },
-      "bundleSha256": "ce07348e904a42d2d6565b965dcaac8d31e86b68ce7fa2538105ed77e7364898"
+      "bundleSha256": "7f0c18e939b43079a1825712a59a80c3542042a1c15f4b73dd218e394643eb79"
     },
     {
       "id": "synchronized-rolling-index",
@@ -6864,7 +6864,7 @@
       "paths": {
         "bundle": "agent/patterns/synchronized-rolling-index.json"
       },
-      "bundleSha256": "feed50e5c89e394eb3f5e7ac6ccae8292625e015a960f702a3d6e04c21e9ea90"
+      "bundleSha256": "82dd22815154c2ae9c48e016c596c7edcab2d0f88fd33f71e0c04110dc547734"
     },
     {
       "id": "system-theme-without-toggle",
@@ -6936,7 +6936,7 @@
       "paths": {
         "bundle": "agent/patterns/system-theme-without-toggle.json"
       },
-      "bundleSha256": "67ea4d39f1d4e28f3f2ed1a6915e89a29d3b561fd12419632fdb091509b7bb21"
+      "bundleSha256": "2c9f5af9a8041717de2658e4eb3385203a4b074eec9ec99db2b94310e0a08294"
     },
     {
       "id": "timed-platform-carousel",
@@ -6999,7 +6999,7 @@
       "paths": {
         "bundle": "agent/patterns/timed-platform-carousel.json"
       },
-      "bundleSha256": "23f83bee08e2485d52f54d98460f0f21496e1e175c02474e421bcc9f2effdfd2"
+      "bundleSha256": "e98d1590abc3c4f5062981aa052e30e07a5a465f1a2966084abd3e9c02a66663"
     },
     {
       "id": "top-down-clipped-menu",
@@ -7066,7 +7066,7 @@
       "paths": {
         "bundle": "agent/patterns/top-down-clipped-menu.json"
       },
-      "bundleSha256": "0af43e30f769a6db9fe68cf6263c76b654958b0adfe7650b44f864eba4fd69f7"
+      "bundleSha256": "b5b867a01ac77165f0ff5c5d1938089c1fec9320ab8cd897b4bee4df9f920b2c"
     },
     {
       "id": "vertical-card-swap",
@@ -7130,7 +7130,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-card-swap.json"
       },
-      "bundleSha256": "ff25a26cda65804902437664dd296b0ae5e9515bdca7a34a22798b8685752c2e"
+      "bundleSha256": "581d512dede700621192c36ccf8f15c5246323f52a5f1dc8e89cb90d6ca339e9"
     },
     {
       "id": "vertical-fullscreen-stage",
@@ -7188,7 +7188,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-fullscreen-stage.json"
       },
-      "bundleSha256": "60ba4cfc5fe334685b9d36318229c8808d126f6630d79c3d6fdcf6e3bfac847c"
+      "bundleSha256": "74187305f4d8f3f3ef8f7eecb197f60e22d87be558c124df5a5a7bc8d3d5fb09"
     },
     {
       "id": "viewport-animation-lifecycle",
@@ -7276,7 +7276,7 @@
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
       },
-      "bundleSha256": "aa6ea597f4352b6346d5836f502603bdf78b059fd4bcc8ba2656855dcdeb2310"
+      "bundleSha256": "d637950ca7f20c4ae173b2f0694079847e0c9e0610206839a9abc196edf9c467"
     },
     {
       "id": "visit-facts-grid",
@@ -7332,7 +7332,7 @@
       "paths": {
         "bundle": "agent/patterns/visit-facts-grid.json"
       },
-      "bundleSha256": "1881c9c8bd27c94bc40d9377b60b7560add15fb2753ab69ca8dc1dbf1172ad1c"
+      "bundleSha256": "982d26cc104e5ac0972f73d7963355f3b1b30f57baee93dfa4c0bc02bd8695b5"
     },
     {
       "id": "word-opacity-stagger",
@@ -7399,7 +7399,7 @@
       "paths": {
         "bundle": "agent/patterns/word-opacity-stagger.json"
       },
-      "bundleSha256": "0634652c502c9acb987aeea8e212a1aeadee356236fcb3c49884e3b2fcd0c1eb"
+      "bundleSha256": "6f24e21a652ebbd97d8537965b1960b910e03bfd66cb23cde1599b89a57523e7"
     },
     {
       "id": "world-shaped-thumbnail-frame",
@@ -7454,7 +7454,7 @@
       "paths": {
         "bundle": "agent/patterns/world-shaped-thumbnail-frame.json"
       },
-      "bundleSha256": "641bb8da025a17bc46582df2238f0debe3b773c5f9c8b609469bd8ef84f3fb94"
+      "bundleSha256": "11929a6be8ec77a7d9725092e2db60f55beb98d2b56eeb89d927575edc3e18b0"
     }
   ]
 }

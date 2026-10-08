@@ -61,7 +61,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "0790424b4a7e903fa3bb3ec1eb7e3f7affeac445bca5466d33acc6937b4d3bd7"
+      "bundleSha256": "ed2eccbfb3db672b51570fd4ceb8335c050334a52ae8cbb021bedac6aadb24a5"
     }
   ]
 }

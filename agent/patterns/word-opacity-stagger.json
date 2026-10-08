@@ -72,7 +72,7 @@
         "bundle": "agent/cases/claude-platform.json",
         "demo": "demos/claude-platform/index.html"
       },
-      "bundleSha256": "8df27e54d0ac65984926d2435af5a6ce3ed3c044d0c622e7ffa72cb79a9f8cf8"
+      "bundleSha256": "187874b244c6e475f140921657bd2fddc3c23100b21d4347391775a0d3900eb2"
     }
   ]
 }

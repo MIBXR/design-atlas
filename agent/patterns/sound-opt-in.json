@@ -85,7 +85,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "417ff5da7fb6c6b60de9ac874f57a375a69fe69942caf2150fb8a02e3121ac61"
+      "bundleSha256": "8d36767d350fd65881ac35e5b98c32ebedd5358e4e5261204a0100c94e3e5818"
     },
     {
       "id": "retro-80s",
@@ -94,7 +94,7 @@
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
       },
-      "bundleSha256": "86b670824c7c1c595b0eaa0e994196d45d61280e3d16a78f371d91df8ba3d604"
+      "bundleSha256": "1d49b76f365e8bd151e88ec3ccb52b36e16dcb97e3491ea62e09fc7fa19778a0"
     },
     {
       "id": "zelda-world",
@@ -103,7 +103,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "308992d0ad7231b44cc898643bfe47689e077d4f2ba634ac633cad37faac4735"
+      "bundleSha256": "26e2c8b7c90adb3b296e8eec6383bbf41eae639a9a22977584fa323b6c7de0e4"
     }
   ]
 }

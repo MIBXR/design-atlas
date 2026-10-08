@@ -63,7 +63,7 @@
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/genshin-world/index.html"
       },
-      "bundleSha256": "d3bd8fe05a4a23d6ee76bd679eb16a5c3ad6223146761e83d917e0b5ada716ef"
+      "bundleSha256": "3f1c58237518671b9f806dc7c27ea969f322c55c7c80cc613fa03a7fd8878352"
     }
   ]
 }

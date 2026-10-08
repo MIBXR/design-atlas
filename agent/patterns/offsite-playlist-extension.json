@@ -88,7 +88,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "aaf904a0bcc2d6a7ae8f9c9132e29404d05073518d7280a1b28d8e0198882e6e"
+      "bundleSha256": "4cc8884539fbb47e1566b647f9f9fdda913859822bb01901bf8997152e395728"
     },
     {
       "id": "persona-kinetic",
@@ -97,7 +97,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "3af7ea79221f76c983323659f8c176c1a3769f9e2ae14e278cfc1db5fa6f71a4"
+      "bundleSha256": "ae0fd5cc090a0cabe7385171c384a7071c8edf3ef60816236353f31cb3a2e036"
     },
     {
       "id": "philharmonie-music",
@@ -106,7 +106,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "c4db4e93ad73ad2df6469e389a67db08763d3b3ee92d2f0c4f231d99888632cb"
+      "bundleSha256": "a331ddfa353b71a504285c51aeda68dd3b85ee236caaa101711a75e93123ff86"
     }
   ]
 }
