@@ -121,6 +121,18 @@
       "interactionRole": "利用运动和空间关系串联能力，声音不是此页叙事的一部分。"
     }
   },
+  "patternIds": [
+    "hover-focus-mode-selection",
+    "last-request-transition",
+    "mobile-native-mode-cards",
+    "mode-character-accent",
+    "mode-specific-collage",
+    "native-horizontal-shelf",
+    "scroll-synchronized-rail",
+    "sticky-stage-handoff",
+    "system-theme-without-toggle",
+    "vertical-card-swap"
+  ],
   "documents": [
     {
       "path": "research/chatgpt-platform.md",
@@ -467,8 +479,8 @@
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "62272c11c8a4d6c72933b548a6f9664cac102a0620dae609eee50d92898788ac",
-      "bytes": 4023
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
     },
     {
       "path": "entries/chatgpt-platform.json",

@@ -1,0 +1,61 @@
+{
+  "id": "directional-section-wipe",
+  "title": "按方向侧向裁切交接整章",
+  "category": "滚动叙事",
+  "summary": "让章节空间方向与输入方向一致。",
+  "mechanism": "两个整屏场景以横向遮罩覆盖出入，旧场景退出与新场景进入共享方向；稳定后只有一章可交互。",
+  "trigger": "滚轮、章节导航或键盘换章",
+  "effect": "整页档案保持单一舞台及方向线索。",
+  "useCases": [
+    "章节数量有限的工业档案"
+  ],
+  "avoid": [
+    "给普通长文强行锁为全屏切幕"
+  ],
+  "constraints": [
+    "输入锁与最后请求队列分别处理重复和反向，页脚仍有可逆回程。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "负责整个场景的章间交接，可搭配同步滚号与最后目标队列。与自然长文阅读共用于同一主滚动容器时会争夺滚轮；应按内容长度选一种主浏览结构。",
+    "pairsWellWith": [
+      "last-request-transition",
+      "synchronized-rolling-index"
+    ],
+    "conflicts": [
+      "native-document-reading"
+    ]
+  },
+  "accessibility": {
+    "keyboard": "提供章节按钮以及方向键/PageUp/PageDown/Home/End，当前章标示清楚。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [
+    {
+      "name": "来源章切",
+      "value": "桌面1000ms / 竖屏600ms",
+      "note": "归档侧向wipe时间"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「按方向侧向裁切交接整章」。两个整屏场景以横向遮罩覆盖出入，旧场景退出与新场景进入共享方向；稳定后只有一章可交互。触发：滚轮、章节导航或键盘换章。可见结果：整页档案保持单一舞台及方向线索。适用任务：章节数量有限的工业档案。输入锁与最后请求队列分别处理重复和反向，页脚仍有可逆回程。键盘：提供章节按钮以及方向键/PageUp/PageDown/Home/End，当前章标示清楚。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责整个场景的章间交接，可搭配同步滚号与最后目标队列。与自然长文阅读共用于同一主滚动容器时会争夺滚轮；应按内容长度选一种主浏览结构。",
+  "sources": [
+    {
+      "caseId": "arknights-world",
+      "locator": "entries/arknights-world.json#interaction/1",
+      "observation": "场景横向遮罩裁切：桌面1000ms、竖屏600ms；同方向重复轮输入锁定，快速反向和导航使用最后目标队列，单次仅一组出/入场景。",
+      "evidence": "adapted",
+      "referenceUrl": "https://ak.hypergryph.com/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/arknights-world/fidelity.md",
+    "demos/arknights-world/index.html",
+    "demos/arknights-world/particles.js",
+    "demos/arknights-world/script.js",
+    "demos/arknights-world/style.css",
+    "entries/arknights-world.json",
+    "research/arknights-world.md"
+  ]
+}

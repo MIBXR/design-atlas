@@ -1,0 +1,53 @@
+{
+  "id": "editorial-alignment-grid",
+  "title": "共享对齐线的编辑网格",
+  "category": "视觉构成",
+  "summary": "用共同基线连接标题、日期和行动。",
+  "mechanism": "先按内容角色建立列网格，再让标题、日期、类别和行动反复对齐；非对称留白仍服从共同线。",
+  "trigger": "阅读首屏及列表",
+  "effect": "不同密度的信息保持可扫描关系。",
+  "useCases": [
+    "日程、展览与课程索引"
+  ],
+  "avoid": [
+    "为保持海报外形裁切正文"
+  ],
+  "constraints": [
+    "手机从跨栏折为单列，保留完整日期和行动。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "该原子负责不同密度的信息保持可扫描关系，职责限定在当前区域。组合时手机从跨栏折为单列，保留完整日期和行动。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "restrained-signal-color",
+      "aligned-metadata-rows"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+    "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+  },
+  "parameters": [
+    {
+      "name": "本地网格",
+      "value": "12 栏 / 32px 间距",
+      "note": "原创示范选择，非历史固定规范"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「共享对齐线的编辑网格」。先按内容角色建立列网格，再让标题、日期、类别和行动反复对齐；非对称留白仍服从共同线。触发：阅读首屏及列表。可见结果：不同密度的信息保持可扫描关系。适用任务：日程、展览与课程索引。手机从跨栏折为单列，保留完整日期和行动。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责不同密度的信息保持可扫描关系，职责限定在当前区域。组合时手机从跨栏折为单列，保留完整日期和行动。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "swiss-grid",
+      "locator": "entries/swiss-grid.json#composition/layout",
+      "observation": "12 栏、32px 基础间距、横向日程列表；手机为单列",
+      "evidence": "adapted"
+    }
+  ],
+  "sourceFiles": [
+    "demos/swiss-grid/index.html",
+    "entries/swiss-grid.json",
+    "research/swiss-grid.md"
+  ]
+}

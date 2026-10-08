@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "restrained-signal-color",
+  "pattern": {
+    "id": "restrained-signal-color",
+    "title": "单一信号色集中强调",
+    "category": "视觉构成",
+    "summary": "用少量品牌色建立可识别的操作角色。",
+    "mechanism": "正文采用稳定中性色，强调色只分配给行动、选中态或机构锚点；作品图像保持自己的原色。",
+    "trigger": "查看行动和状态",
+    "effect": "行动入口与艺术内容各有明确职责。",
+    "useCases": [
+      "编辑页面与文化机构"
+    ],
+    "avoid": [
+      "全部正文都使用强调色"
+    ],
+    "constraints": [
+      "同时提供文字、边界或图标状态，不能只靠颜色。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责行动入口与艺术内容各有明确职责，职责限定在当前区域。组合时同时提供文字、边界或图标状态，不能只靠颜色。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "editorial-alignment-grid",
+        "artwork-caption-separation"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「单一信号色集中强调」。正文采用稳定中性色，强调色只分配给行动、选中态或机构锚点；作品图像保持自己的原色。触发：查看行动和状态。可见结果：行动入口与艺术内容各有明确职责。适用任务：编辑页面与文化机构。同时提供文字、边界或图标状态，不能只靠颜色。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责行动入口与艺术内容各有明确职责，职责限定在当前区域。组合时同时提供文字、边界或图标状态，不能只靠颜色。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "swiss-grid",
+        "locator": "entries/swiss-grid.json#composition/color",
+        "observation": "暖白纸面、黑色信息与少量红色海报形成清晰层级。",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#composition/color",
+        "observation": "白底黑灰字和红色操作层，图像保持展览自己的颜色。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "mori-art-museum",
+        "locator": "entries/mori-art-museum.json#composition/color",
+        "observation": "#bf0d3e机构红贯穿Logo、展期、栏目、标签；粉色公告、白色底和艺术海报虹彩承担不同角色。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.mori.art.museum/jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "demos/mori-art-museum/app.js",
+      "demos/mori-art-museum/fidelity.md",
+      "demos/mori-art-museum/index.html",
+      "demos/mori-art-museum/style.css",
+      "demos/swiss-grid/index.html",
+      "entries/met-museum.json",
+      "entries/mori-art-museum.json",
+      "entries/swiss-grid.json",
+      "research/met-museum.md",
+      "research/mori-art-museum.md",
+      "research/swiss-grid.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "met-museum",
+      "title": "The Met · 编辑式展览与馆藏陈列",
+      "paths": {
+        "bundle": "agent/cases/met-museum.json",
+        "demo": "demos/met-museum/index.html"
+      },
+      "bundleSha256": "0790424b4a7e903fa3bb3ec1eb7e3f7affeac445bca5466d33acc6937b4d3bd7"
+    },
+    {
+      "id": "mori-art-museum",
+      "title": "森美术馆：红色机构锚点与艺术海报",
+      "paths": {
+        "bundle": "agent/cases/mori-art-museum.json",
+        "demo": "demos/mori-art-museum/index.html"
+      },
+      "bundleSha256": "1fb0dbf5fbbec09b2d41adfe4f20caa3d3386029ad27577f8add362414bec0f6"
+    },
+    {
+      "id": "swiss-grid",
+      "title": "瑞士设计：编辑网格",
+      "paths": {
+        "bundle": "agent/cases/swiss-grid.json",
+        "demo": "demos/swiss-grid/index.html"
+      },
+      "bundleSha256": "d7e90cae0d702b10dc0d8a07f9e603ab4194bb502d5beff7510626404c0d116d"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "message-to-board-demonstration",
+  "pattern": {
+    "id": "message-to-board-demonstration",
+    "title": "消息到任务板的可重播演示",
+    "category": "交互反馈",
+    "summary": "把自然语言请求的结果变成可见工作项。",
+    "mechanism": "按请求、回复、卡片插入和状态移动分阶段展示同一任务；Replay恢复初态，消息与任务数量同步。",
+    "trigger": "发送示例请求或重播",
+    "effect": "用户能看到请求如何转为Todo/In progress。",
+    "useCases": [
+      "自动化与团队工具说明"
+    ],
+    "avoid": [
+      "把固定演示说成真正执行模型任务"
+    ],
+    "constraints": [
+      "固定示例与真正后端能力明确区分，减少动态保留完整终态。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户能看到请求如何转为Todo/In progress，职责限定在当前区域。组合时固定示例与真正后端能力明确区分，减少动态保留完整终态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「消息到任务板的可重播演示」。按请求、回复、卡片插入和状态移动分阶段展示同一任务；Replay恢复初态，消息与任务数量同步。触发：发送示例请求或重播。可见结果：用户能看到请求如何转为Todo/In progress。适用任务：自动化与团队工具说明。固定示例与真正后端能力明确区分，减少动态保留完整终态。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户能看到请求如何转为Todo/In progress，职责限定在当前区域。组合时固定示例与真正后端能力明确区分，减少动态保留完整终态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "linear-workflow",
+        "locator": "entries/linear-workflow.json#interaction/2",
+        "observation": "Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。",
+        "evidence": "observed",
+        "referenceUrl": "https://linear.app/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/linear-workflow/fidelity.md",
+      "demos/linear-workflow/index.html",
+      "demos/linear-workflow/journey.js",
+      "demos/linear-workflow/script.js",
+      "demos/linear-workflow/style.css",
+      "entries/linear-workflow.json",
+      "research/linear-workflow.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "linear-workflow",
+      "title": "Linear — 深色产品开发系统",
+      "paths": {
+        "bundle": "agent/cases/linear-workflow.json",
+        "demo": "demos/linear-workflow/index.html"
+      },
+      "bundleSha256": "568314e2ace621102db6fe67feb3e033eaaa03e3522e4eefe725d20406384c35"
+    }
+  ]
+}

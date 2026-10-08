@@ -1,0 +1,69 @@
+{
+  "id": "sticky-stage-handoff",
+  "title": "同一媒体从主舞台交给说明",
+  "category": "滚动叙事",
+  "summary": "滚动时让同一对象继续承担叙事。",
+  "mechanism": "媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。",
+  "trigger": "上下穿越交接段",
+  "effect": "注意力从看产品转向理解产品。",
+  "useCases": [
+    "产品长页与功能解释"
+  ],
+  "avoid": [
+    "复制第二张无关联图冒充连续交接"
+  ],
+  "constraints": [
+    "不劫持自然滚动，移动端可替换为顺序内容，完整说明始终可达。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "负责同一媒体从吸引到解释的连续关系；说明rail可以同步其阶段。使用自然滚动为主时更适合，整页全屏章切需另设计段内滚动，不能直接叠加两个控制器。",
+    "pairsWellWith": [
+      "scroll-synchronized-rail",
+      "mode-specific-collage"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「同一媒体从主舞台交给说明」。媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。触发：上下穿越交接段。可见结果：注意力从看产品转向理解产品。适用任务：产品长页与功能解释。不劫持自然滚动，移动端可替换为顺序内容，完整说明始终可达。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责同一媒体从吸引到解释的连续关系；说明rail可以同步其阶段。使用自然滚动为主时更适合，整页全屏章切需另设计段内滚动，不能直接叠加两个控制器。",
+  "sources": [
+    {
+      "caseId": "chatgpt-platform",
+      "locator": "entries/chatgpt-platform.json#interaction/2",
+      "observation": "向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。",
+      "evidence": "observed",
+      "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+      "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "apple-product",
+      "locator": "entries/apple-product.json#interaction/3",
+      "observation": "镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。",
+      "evidence": "adapted",
+      "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/apple-product/fidelity.md",
+    "demos/apple-product/index.html",
+    "demos/apple-product/journey.js",
+    "demos/apple-product/script.js",
+    "demos/apple-product/style.css",
+    "demos/chatgpt-platform/fidelity.md",
+    "demos/chatgpt-platform/fonts.css",
+    "demos/chatgpt-platform/index.html",
+    "demos/chatgpt-platform/motion-data.js",
+    "demos/chatgpt-platform/script.js",
+    "demos/chatgpt-platform/style.css",
+    "entries/apple-product.json",
+    "entries/chatgpt-platform.json",
+    "research/apple-product.md",
+    "research/chatgpt-platform.md"
+  ]
+}

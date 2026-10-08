@@ -1,0 +1,52 @@
+{
+  "id": "semantic-theme-roles",
+  "title": "语义颜色角色整体切换",
+  "category": "视觉构成",
+  "summary": "背景、文字、表面和行动成对适应主题。",
+  "mechanism": "按surface/on-surface、primary/on-primary等角色一起切换，保存手动值并明确系统变化时的优先规则，媒体保持原色。",
+  "trigger": "手动选择或系统主题改变",
+  "effect": "深浅环境中阅读与品牌层级都保持一致。",
+  "useCases": [
+    "有双主题设计的系统与产品"
+  ],
+  "avoid": [
+    "仅对全页反色或保留错误文字对比"
+  ],
+  "constraints": [
+    "本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "该原子负责深浅环境中阅读与品牌层级都保持一致，职责限定在当前区域。组合时本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "state-shape-feedback",
+      "system-theme-without-toggle"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "主题开关可聚焦、有当前名称/状态；系统策略同时以文字说明。",
+    "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「语义颜色角色整体切换」。按surface/on-surface、primary/on-primary等角色一起切换，保存手动值并明确系统变化时的优先规则，媒体保持原色。触发：手动选择或系统主题改变。可见结果：深浅环境中阅读与品牌层级都保持一致。适用任务：有双主题设计的系统与产品。本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。键盘：主题开关可聚焦、有当前名称/状态；系统策略同时以文字说明。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责深浅环境中阅读与品牌层级都保持一致，职责限定在当前区域。组合时本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "google-material",
+      "locator": "entries/google-material.json#interaction/3",
+      "observation": "切换主题／系统主题变化：深浅语义角色切换；手动值保存，OS变化清除保存值。 让可读性适应环境，同时保持品牌图像与层级。",
+      "evidence": "observed",
+      "referenceUrl": "https://m3.material.io/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/google-material/app.js",
+    "demos/google-material/fidelity.md",
+    "demos/google-material/index.html",
+    "demos/google-material/style.css",
+    "entries/google-material.json",
+    "research/google-material.md"
+  ]
+}

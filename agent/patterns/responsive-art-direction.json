@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "responsive-art-direction",
+  "pattern": {
+    "id": "responsive-art-direction",
+    "title": "桌面与手机使用专门主图",
+    "category": "视觉构成",
+    "summary": "按画面意图替换素材，而非盲目裁切。",
+    "mechanism": "通过picture或响应式资源选择桌面宽图与手机专图，保留主体位置及图内文字，正文与控件按设备重新排。",
+    "trigger": "视口进入手机断点",
+    "effect": "人物和海报在窄屏仍保持完整表达。",
+    "useCases": [
+      "有官方横竖图的展览与游戏"
+    ],
+    "avoid": [
+      "把桌面海报硬裁到丢标题和人物"
+    ],
+    "constraints": [
+      "不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责人物和海报在窄屏仍保持完整表达，职责限定在当前区域。组合时不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "full-bleed-photography-brand",
+        "edge-action-world-composition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「桌面与手机使用专门主图」。通过picture或响应式资源选择桌面宽图与手机专图，保留主体位置及图内文字，正文与控件按设备重新排。触发：视口进入手机断点。可见结果：人物和海报在窄屏仍保持完整表达。适用任务：有官方横竖图的展览与游戏。不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责人物和海报在窄屏仍保持完整表达，职责限定在当前区域。组合时不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "mori-art-museum",
+        "locator": "entries/mori-art-museum.json#constraints/1",
+        "observation": "大屏主图1600×640，小屏使用450×450官方专用图，不直接裁剪桌面海报。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.mori.art.museum/jp/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#constraints/2",
+        "observation": "手机使用官方1200×1200图片，不单纯裁切1400×700桌面照片。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#constraints/4",
+        "observation": "手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。",
+        "evidence": "adapted",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "demos/mori-art-museum/app.js",
+      "demos/mori-art-museum/fidelity.md",
+      "demos/mori-art-museum/index.html",
+      "demos/mori-art-museum/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/fuji-rock.json",
+      "entries/mori-art-museum.json",
+      "entries/uma-musume.json",
+      "research/fuji-rock.md",
+      "research/mori-art-museum.md",
+      "research/uma-musume.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "fuji-rock",
+      "title": "Fuji Rock：现场照片与节日导览",
+      "paths": {
+        "bundle": "agent/cases/fuji-rock.json",
+        "demo": "demos/fuji-rock/index.html"
+      },
+      "bundleSha256": "aaf904a0bcc2d6a7ae8f9c9132e29404d05073518d7280a1b28d8e0198882e6e"
+    },
+    {
+      "id": "mori-art-museum",
+      "title": "森美术馆：红色机构锚点与艺术海报",
+      "paths": {
+        "bundle": "agent/cases/mori-art-museum.json",
+        "demo": "demos/mori-art-museum/index.html"
+      },
+      "bundleSha256": "1fb0dbf5fbbec09b2d41adfe4f20caa3d3386029ad27577f8add362414bec0f6"
+    },
+    {
+      "id": "uma-musume",
+      "title": "赛马娘：群像赛道与斜切叙事",
+      "paths": {
+        "bundle": "agent/cases/uma-musume.json",
+        "demo": "demos/uma-musume/index.html"
+      },
+      "bundleSha256": "e7ccf2772f21464d11d9c12b6d534dc60d4242e955b4bb4ba6010fa3a526b356"
+    }
+  ]
+}

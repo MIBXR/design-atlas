@@ -118,6 +118,14 @@
       "interactionRole": "代码、会话、平台轮播和热图状态提供反馈，保持工具介绍静音。"
     }
   },
+  "patternIds": [
+    "fixed-task-timeline",
+    "heatmap-focus-tooltip",
+    "last-request-transition",
+    "single-open-accordion",
+    "timed-platform-carousel",
+    "viewport-animation-lifecycle"
+  ],
   "documents": [
     {
       "path": "research/qoder-platform.md",
@@ -284,8 +292,8 @@
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "62272c11c8a4d6c72933b548a6f9664cac102a0620dae609eee50d92898788ac",
-      "bytes": 4023
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
     },
     {
       "path": "entries/qoder-platform.json",

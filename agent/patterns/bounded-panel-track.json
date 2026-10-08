@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "bounded-panel-track",
+  "pattern": {
+    "id": "bounded-panel-track",
+    "title": "有界的完整面板横向轨道",
+    "category": "导航与状态",
+    "summary": "图像、资料与说明作为同一面板移动。",
+    "mechanism": "每次选择使整块相关内容沿单一轨道平移，首尾禁用前后按钮并停止；人物或玩法状态同步更新。",
+    "trigger": "选择编号、箭头或手势",
+    "effect": "相关信息保持组合关系，边界可预期。",
+    "useCases": [
+      "角色资料与玩法演示"
+    ],
+    "avoid": [
+      "内容明确有顺序却强制无限循环"
+    ],
+    "constraints": [
+      "一次只一个稳定场景可交互，移动时保留当前选中说明。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责有顺序面板的整体移动，人物语音按当前面板停止/切换。首尾是内容边界；若改为无限图集，应同时改变提示、禁用与焦点模型。",
+      "pairsWellWith": [
+        "character-voice-ownership"
+      ],
+      "conflicts": [
+        "centered-loop-gallery"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「有界的完整面板横向轨道」。每次选择使整块相关内容沿单一轨道平移，首尾禁用前后按钮并停止；人物或玩法状态同步更新。触发：选择编号、箭头或手势。可见结果：相关信息保持组合关系，边界可预期。适用任务：角色资料与玩法演示。一次只一个稳定场景可交互，移动时保留当前选中说明。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责有顺序面板的整体移动，人物语音按当前面板停止/切换。首尾是内容边界；若改为无限图集，应同时改变提示、禁用与焦点模型。",
+    "sources": [
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#interaction/2",
+        "observation": "三组 Gameplay 完整面板以 400ms cubic-bezier(.25,1,.5,1) 横移；按钮、编号、左右键与手势同步，首尾禁用而不循环。",
+        "evidence": "adapted",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#interaction/2",
+        "observation": "三位角色横移500ms并在两端停止；学校/怪盗服装300ms换装入场。本地角色内容缩减为三位。",
+        "evidence": "adapted",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "blue-archive",
+        "locator": "entries/blue-archive.json#interaction/1",
+        "observation": "阿比多斯四学生资料卡与完整立绘以 1000ms 整块水平移动；选择按钮、左右键及手势同步当前人物。",
+        "evidence": "adapted",
+        "referenceUrl": "https://bluearchive.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/blue-archive/app.js",
+      "demos/blue-archive/character.html",
+      "demos/blue-archive/fidelity.md",
+      "demos/blue-archive/index.html",
+      "demos/blue-archive/style.css",
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/blue-archive.json",
+      "entries/persona-kinetic.json",
+      "entries/uma-musume.json",
+      "research/blue-archive.md",
+      "research/persona-kinetic.md",
+      "research/uma-musume.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "blue-archive",
+      "title": "碧蓝档案：学园都市的天空与光",
+      "paths": {
+        "bundle": "agent/cases/blue-archive.json",
+        "demo": "demos/blue-archive/index.html"
+      },
+      "bundleSha256": "0458774bd3cae29a5c98a55ab03ed9fae5a2f2cd87d6445f2c1b9a4e0f029bd7"
+    },
+    {
+      "id": "persona-kinetic",
+      "title": "Persona 5 Royal · 黑金角色拼贴",
+      "paths": {
+        "bundle": "agent/cases/persona-kinetic.json",
+        "demo": "demos/persona-kinetic/index.html"
+      },
+      "bundleSha256": "3af7ea79221f76c983323659f8c176c1a3769f9e2ae14e278cfc1db5fa6f71a4"
+    },
+    {
+      "id": "uma-musume",
+      "title": "赛马娘：群像赛道与斜切叙事",
+      "paths": {
+        "bundle": "agent/cases/uma-musume.json",
+        "demo": "demos/uma-musume/index.html"
+      },
+      "bundleSha256": "e7ccf2772f21464d11d9c12b6d534dc60d4242e955b4bb4ba6010fa3a526b356"
+    }
+  ]
+}

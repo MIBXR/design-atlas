@@ -26,3 +26,4 @@ fs.writeFileSync(path.join(root,'research','CASE-INDEX.md'), `# 案例与代码�
 console.log(`Built ${entries.length} entries. Open index.html or run npm start.`);
 const {catalog} = buildAgent();
 console.log(`Built ${catalog.entryCount} Agent case bundles (${catalog.contentVersion.slice(0,12)}).`);
+console.log(`Built ${catalog.patterns?.patternCount || 0} curated design patterns with linked, verifiable sources.`);

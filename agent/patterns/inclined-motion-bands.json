@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "inclined-motion-bands",
+  "pattern": {
+    "id": "inclined-motion-bands",
+    "title": "斜切条带延续运动方向",
+    "category": "视觉构成",
+    "summary": "通过有限倾斜建立运动或海报节奏。",
+    "mechanism": "标题带、说明板与箭头重复同一倾斜方向，正文水平可读，下载徽章保留自己的标准轮廓。",
+    "trigger": "阅读章节分隔与行动入口",
+    "effect": "方向感贯穿不同内容区域。",
+    "useCases": [
+      "运动游戏与强海报主题"
+    ],
+    "avoid": [
+      "全部长文倾斜或任意方向拼贴"
+    ],
+    "constraints": [
+      "倾斜仅用于短标题与装饰，文字和触控边界不被裁掉。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责方向感贯穿不同内容区域，职责限定在当前区域。组合时倾斜仅用于短标题与装饰，文字和触控边界不被裁掉。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "section-color-rhythm"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「斜切条带延续运动方向」。标题带、说明板与箭头重复同一倾斜方向，正文水平可读，下载徽章保留自己的标准轮廓。触发：阅读章节分隔与行动入口。可见结果：方向感贯穿不同内容区域。适用任务：运动游戏与强海报主题。倾斜仅用于短标题与装饰，文字和触控边界不被裁掉。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责方向感贯穿不同内容区域，职责限定在当前区域。组合时倾斜仅用于短标题与装饰，文字和触控边界不被裁掉。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#composition/shape",
+        "observation": "向前倾斜的标题带、说明板与箭头复用斜切语言，平台下载徽章保持自己的标准轮廓。",
+        "evidence": "observed",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#composition/shape",
+        "observation": "斜切拼贴、金色边框、网点与剪贴字保持同一张海报的秩序。",
+        "evidence": "observed",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/persona-kinetic.json",
+      "entries/uma-musume.json",
+      "research/persona-kinetic.md",
+      "research/uma-musume.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "persona-kinetic",
+      "title": "Persona 5 Royal · 黑金角色拼贴",
+      "paths": {
+        "bundle": "agent/cases/persona-kinetic.json",
+        "demo": "demos/persona-kinetic/index.html"
+      },
+      "bundleSha256": "3af7ea79221f76c983323659f8c176c1a3769f9e2ae14e278cfc1db5fa6f71a4"
+    },
+    {
+      "id": "uma-musume",
+      "title": "赛马娘：群像赛道与斜切叙事",
+      "paths": {
+        "bundle": "agent/cases/uma-musume.json",
+        "demo": "demos/uma-musume/index.html"
+      },
+      "bundleSha256": "e7ccf2772f21464d11d9c12b6d534dc60d4242e955b4bb4ba6010fa3a526b356"
+    }
+  ]
+}

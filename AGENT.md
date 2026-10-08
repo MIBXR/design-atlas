@@ -1,6 +1,6 @@
 # Design Atlas：从真实需求取得设计依据
 
-这是前端设计参考库。`entries/`、研究和可运行 Demo 是内容源，`agent/` 是构建时生成的读取接口。网页继续供人预览、对照和调配。真实品牌案例固定为标注日期的局部学习快照；经典风格条目是构成练习。
+这是前端设计参考库。`entries/`、`patterns/`、研究和可运行 Demo 是内容源，`agent/` 是构建时生成的读取接口。完整案例说明机制如何协作，设计巧思保存可独立借用的原子。网页继续供人预览、对照和调配。真实品牌案例固定为标注日期的局部学习快照；经典风格条目是构成练习。
 
 ## skill 与案例库的关系
 
@@ -8,11 +8,15 @@
 
 “案例包”是 `agent/cases/<id>.json`：完整 `entry`、网页右侧说明 `webNotes`、文档原文 `documents`、源码与素材清单 `files`。JSON 包含资料原文及文件路径／字节数／SHA256；源码和二进制素材通过清单自动获取，导出时保存为可运行的原始文件。
 
+“巧思包”是 `agent/patterns/<id>.json`：完整 `pattern` 与 `sourceCases`。先用 `agent/catalog.json` 中的 `patterns` 描述校验 `agent/patterns.json`，再按其中的 `paths.bundle` 与 `bundleSha256` 读取原子。使用巧思的 `sources.caseId`、精确字段定位与案例包哈希回到完整来源；源码按 `sourceFiles` 及来源案例文件清单校验取得。每个案例包的 `patternIds` 提供反向关联。
+
 ## 先探索，再围绕需求迭代
 
 用户可以先问“有哪些案例”，无需预先选择案例或提供完整需求。读取完整目录，按用途、布局和交互介绍方向；已有明确案例时直接取材。用户给出产品、受众、页面任务、内容量和设备约束后，推荐少量候选，说明适合的机制与限制。需求变化时保留已知约束，重新筛选并比较，而不是要求用户先去网站挑选。
 
-候选比较应依据完整条目和文档；关键词得分只是召回线索。多案例结合时明确主参考负责整体结构，辅助参考负责具体交互或表现，解释冲突处理。用户只在探索时，完成候选讨论；用户要求构建时，自动取得实际采用案例的完整资料和必要源码后实施。
+候选比较应依据完整条目和文档；关键词得分只是召回线索。用户需要组合巧思时先按真实任务、触发和设备筛选原子，读取其完整机制与来源案例，再明确哪个负责当前区域的骨架、衔接和反馈。`composition.role`、配对与冲突是适配建议，需要解释共享滚动容器、输入、自动周期和声音状态的处理。用户只在探索时完成讨论；要求构建时取得所采用巧思及完整来源的必要资料和源码后实施。
+
+巧思按视觉构成、交互反馈、滚动叙事、导航与状态、加载与媒体、内容组织检索。优先读 `mechanism`、`trigger`、`effect`、`useCases`、`avoid`、`constraints`、`composition`、`accessibility` 与 `parameters`。`sources.evidence` 的 `observed`／`adapted`／`inferred` 分别保留源端观察、本地迁移、公共资料推断的边界；归档日期来自案例，不表示巧思被再次实访。
 
 ## 本地检索与取材
 
@@ -36,9 +40,13 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 - [索引](agent/catalog.json)：候选摘要、设计要素、交互、行为与案例包位置。
 - `agent/cases/<id>.json`：完整上下文和文件清单。
+- [设计巧思目录](agent/patterns.json)：完整原子记录、来源、组合关系与巧思包位置／哈希。
+- `agent/patterns/<id>.json`：完整 `pattern` 与关联 `sourceCases`；不会把巧思声称为另一个独立运行Demo。
 - [轻量 skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)：发现最新目录，在同一会话版本中筛选、读取与导出。
 
 在线站也提供同样的 `/agent/catalog.json` 与 `/agent/cases/<id>.json` 路径。部署索引额外提供 `source.commit` 与 `source.baseUrl`，把 `files[].path` 接在此基址后取得原始文件；“复制 Agent 入口”使用当前网页发布版本对应的固定提交。新发布会自动换成新提交。探索仓库最新内容可通过 skill 开始新会话，即使网页尚未发布也能发现已合入上游的案例。网站中的播放 HTML／CSS 会转换素材地址、文档会加 UTF-8 标记，因此源码与哈希校验使用原始 Git 文件。先取得一次索引，再核对其 `bundleSha256`；在线更新时发现不一致就重新取得索引与案例。直接读 GitHub 时先解析最新完整 SHA，再从同一个 SHA 读取所有文件。
+
+在线站的 `/agent/patterns.json` 和 `/agent/patterns/<id>.json` 保留原始JSON字节，使用主索引的巧思描述核验。选择原子后，skill 提供 `pattern-search`（类别／来源／查询）、`pattern-show`（完整资料，可加 `--source`）与 `pattern-export`（新目录，可加 `--code-only`）；具体选项见skill命令帮助。Case／pattern索引、完整包及源码必须来自同一固定会话SHA。测试未合并PR或与网页一致的功能分支内容时，显式使用 `--ref <网页source.commit的完整SHA>`；默认新会话仍以默认分支为准。
 
 ## 从案例适配真实任务
 
@@ -50,6 +58,8 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 ## 数据契约与维护
 
-Schema 当前为 `1`。`catalog.contentVersion` 是全部案例包路径与 SHA256 的确定性摘要；`bundleSha256` 校验原始 UTF-8 JSON 字节。案例包保留原 `entry` 对象，`documents` 保留原文，`files` 覆盖单例运行文件。SHA256 保证读取一致性，不替代来源或权利判断。
+Case与pattern的Schema均为 `1`，案例协议通过 `patternIds` 和主索引 `patterns` 扩展保持兼容。巧思目录 `contentVersion` 对按ID排序的 `id:bundleSha256\n` UTF-8文本计算SHA256；总库 `catalog.contentVersion` 对同样排序的案例记录文本追加 `patterns:<巧思contentVersion>\n` 后计算SHA256。案例包只保存巧思ID，巧思包再引用来源案例哈希，因此没有哈希循环或Git SHA自引用。`bundleSha256` 校验原始UTF-8 JSON字节，巧思目录描述另校验其 `sha256` 与 `bytes`。
 
-修改案例或源码后运行 `npm run build`，再运行 `npm run check`；构建动态扫描全部 `entries/*.json`，同步网页目录、Prompt、Agent 索引、案例包和 README 数量。检查会拒绝过期或不一致的 Agent 生成文件。维护贡献标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。提交合入上游后，skill 新会话即可发现；网页还需构建部署目录并发布。普通新增案例无需修改 skill 或复制内容过去；数据协议变化才需要同步调整获取脚本。
+案例包保留原 `entry`、文档与完整文件清单；巧思保留来源定位及原观察文本。SHA256保证读取一致性，不替代来源或权利判断。巧思 `sourceFiles` 只列取材文件，完整运行依赖由来源案例的 `files` 提供；新读取器接受原来没有巧思目录的schema1仓库。
+
+修改案例、巧思或源码后运行 `npm run build`，再运行 `npm run check`；构建扫描全部案例和巧思，同步网页、Prompt、两个Agent目录、完整包及反向关联。检查会拒绝未拆巧思的案例、过期观察原文、不存在的组合ID和不一致生成内容。维护标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。功能分支推送后可用同一SHA发布Site与验证skill，PR是否合入按用户授权；合入默认分支之后新会话自动发现。普通新增内容无需复制到skill，数据协议变化才同步获取脚本。

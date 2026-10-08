@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "continuous-bgm-bridge",
+  "pattern": {
+    "id": "continuous-bgm-bridge",
+    "title": "跨章节连续的环境声音",
+    "category": "加载与媒体",
+    "summary": "以连续音轨连接不同场景。",
+    "mechanism": "用户开启后BGM跨章节保持同一播放位置，启停使用有依据的音量渐变；人物语音与环境音乐分开管理。",
+    "trigger": "主动开启或关闭BGM、切换章节",
+    "effect": "章切保留世界氛围，声音职责可辨认。",
+    "useCases": [
+      "有真实授权音轨的游戏世界"
+    ],
+    "avoid": [
+      "换章反复重启BGM或添加虚构曲目"
+    ],
+    "constraints": [
+      "默认静音，后台暂停，动态暂停独立于声音选择。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "只连接环境氛围，人物台词仍单独启停，前景影片开启时需要制定混音或暂停策略。声音必须主动启用，动态减少不等于撤销用户的声音选择。",
+      "pairsWellWith": [
+        "sound-opt-in",
+        "character-voice-ownership"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "独立BGM按钮有当前启用/静音状态，可随时停止。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "Arknights来源音量",
+        "value": "600ms进入 / 300ms退出",
+        "note": "原站BGM参数；其他来源另行选择"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「跨章节连续的环境声音」。用户开启后BGM跨章节保持同一播放位置，启停使用有依据的音量渐变；人物语音与环境音乐分开管理。触发：主动开启或关闭BGM、切换章节。可见结果：章切保留世界氛围，声音职责可辨认。适用任务：有真实授权音轨的游戏世界。默认静音，后台暂停，动态暂停独立于声音选择。键盘：独立BGM按钮有当前启用/静音状态，可随时停止。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只连接环境氛围，人物台词仍单独启停，前景影片开启时需要制定混音或暂停策略。声音必须主动启用，动态减少不等于撤销用户的声音选择。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/5",
+        "observation": "真实BGM默认关闭，单独开关并使用官网600/300ms音量渐变；三人日语语音独立按需播放，换人物或离开干员章暂停旧语音。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#soundBehavior/interactionRole",
+        "observation": "开场 SE 对应纹章发亮扩散，BGM在入口移交世界时接续；三段影片切换时音乐不断开，维持探索节奏。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/arknights-world.json",
+      "entries/zelda-world.json",
+      "research/arknights-world.md",
+      "research/zelda-world.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "arknights-world",
+      "title": "明日方舟 · 全屏档案与交互点阵",
+      "paths": {
+        "bundle": "agent/cases/arknights-world.json",
+        "demo": "demos/arknights-world/index.html"
+      },
+      "bundleSha256": "417ff5da7fb6c6b60de9ac874f57a375a69fe69942caf2150fb8a02e3121ac61"
+    },
+    {
+      "id": "zelda-world",
+      "title": "塞尔达 · 全景世界舞台",
+      "paths": {
+        "bundle": "agent/cases/zelda-world.json",
+        "demo": "demos/zelda-world/index.html"
+      },
+      "bundleSha256": "308992d0ad7231b44cc898643bfe47689e077d4f2ba634ac633cad37faac4735"
+    }
+  ]
+}

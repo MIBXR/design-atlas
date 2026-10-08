@@ -33,7 +33,7 @@
   $('#agent-query').addEventListener('input', () => { if(catalog)render(); });
   fetch('agent/catalog.json').then(response => { if(!response.ok)throw new Error('HTTP '+response.status);return response.json(); }).then(data => {
     if(data.schemaVersion!==1 || !Array.isArray(data.entries))throw new Error('不支持的索引版本');
-    catalog=data;$('#agent-count').textContent=catalog.entryCount;$('#agent-version').textContent=`CONTENT ${catalog.contentVersion.slice(0,12)} / SCHEMA 1`;
+    catalog=data;$('#agent-count').textContent=catalog.entryCount;$('#agent-pattern-count').textContent=catalog.patterns?.patternCount ?? 0;$('#agent-version').textContent=`CONTENT ${catalog.contentVersion.slice(0,12)} / SCHEMA 1`;
     const selected = decodeURIComponent(location.hash.slice(1));
     if(catalog.entries.some(entry => entry.id === selected)) $('#agent-query').value = selected;
     render();

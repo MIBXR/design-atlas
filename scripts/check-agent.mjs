@@ -18,6 +18,15 @@ export function verifyAgent({ root = defaultRoot } = {}) {
   const catalog = JSON.parse(fs.readFileSync(resolveRepositoryPath(root, 'agent/catalog.json'), 'utf8'));
   assert.equal(catalog.schemaVersion, 1);
   assert.equal(catalog.entryCount, expected.bundles.length);
+  if (catalog.patterns) {
+    const bytes = fs.readFileSync(resolveRepositoryPath(root, catalog.patterns.path));
+    assert.equal(sha256(bytes), catalog.patterns.sha256, 'Pattern index hash differs');
+    assert.equal(bytes.length, catalog.patterns.bytes, 'Pattern index size differs');
+    const patterns = JSON.parse(bytes);
+    assert.equal(patterns.patternCount, catalog.patterns.patternCount);
+    assert.equal(patterns.contentVersion, catalog.patterns.contentVersion);
+    assert.deepEqual(fs.readdirSync(resolveRepositoryPath(root, 'agent/patterns')).sort(), expected.patternBundles.map(bundle => bundle.id + '.json').sort(), 'Unexpected or missing pattern bundle');
+  }
   let files = 0, documents = 0;
   for (const record of catalog.entries) {
     const bundleBytes = fs.readFileSync(resolveRepositoryPath(root, record.paths.bundle));
@@ -25,6 +34,7 @@ export function verifyAgent({ root = defaultRoot } = {}) {
     const bundle = JSON.parse(bundleBytes);
     const original = JSON.parse(fs.readFileSync(resolveRepositoryPath(root, record.paths.entry), 'utf8'));
     assert.deepEqual(bundle.entry, original, `${record.id}: original entry was changed or omitted`);
+    assert.deepEqual(bundle.patternIds, expected.bundles.find(item => item.id === record.id).patternIds, `${record.id}: extracted pattern association differs`);
     assert.equal(bundle.webNotes?.format, 'text/html', `${record.id}: missing original website notes`);
     assert.equal(bundle.webNotes?.sha256, sha256(Buffer.from(bundle.webNotes.content, 'utf8')), `${record.id}: website notes hash differs`);
     assert.equal(bundle.webNotes?.bytes, Buffer.byteLength(bundle.webNotes.content, 'utf8'), `${record.id}: website notes byte size differs`);

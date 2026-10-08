@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "sound-choice-emblem-opening",
+  "pattern": {
+    "id": "sound-choice-emblem-opening",
+    "title": "声音选择与纹章开场同步",
+    "category": "加载与媒体",
+    "summary": "视觉打开世界与声音启用属于同一次选择。",
+    "mechanism": "入口先提供ON/OFF，选择后显示纹章并向外发光扩散；开场SE对应显现，移交影片时BGM接续。",
+    "trigger": "选择声音ON或OFF",
+    "effect": "用户掌握声音且开场动作有一致节奏。",
+    "useCases": [
+      "具象世界观与仪式性入口"
+    ],
+    "avoid": [
+      "把开场音效、影片轨与BGM混称一种声音"
+    ],
+    "constraints": [
+      "保留无声完整路径，不能为内容增加不可跳过的漫长开场。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "入口先决定声音，再交接纹章与影片；资源载入若同时需要，可共用一个开场状态机，避免双重阻塞。OFF路径仍有完整视觉内容。",
+      "pairsWellWith": [
+        "sound-opt-in",
+        "continuous-bgm-bridge",
+        "blurred-layered-video-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "保留ON/OFF，纹章静态或直接移交可读影片静帧，主动声音选择仍有效。"
+    },
+    "parameters": [
+      {
+        "name": "来源开场",
+        "value": "2s扩散 / 3.6s交接",
+        "note": "纹章开场时点"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「声音选择与纹章开场同步」。入口先提供ON/OFF，选择后显示纹章并向外发光扩散；开场SE对应显现，移交影片时BGM接续。触发：选择声音ON或OFF。可见结果：用户掌握声音且开场动作有一致节奏。适用任务：具象世界观与仪式性入口。保留无声完整路径，不能为内容增加不可跳过的漫长开场。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：保留ON/OFF，纹章静态或直接移交可读影片静帧，主动声音选择仍有效。组合边界：入口先决定声音，再交接纹章与影片；资源载入若同时需要，可共用一个开场状态机，避免双重阻塞。OFF路径仍有完整视觉内容。",
+    "sources": [
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#interaction/0",
+        "observation": "首次 ON/OFF → 原始纹章出现；2秒后向外发光扩散，3.6秒移交影片舞台。ON触发原开场 SE，随后原BGM接续。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/zelda-world.json",
+      "research/zelda-world.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "zelda-world",
+      "title": "塞尔达 · 全景世界舞台",
+      "paths": {
+        "bundle": "agent/cases/zelda-world.json",
+        "demo": "demos/zelda-world/index.html"
+      },
+      "bundleSha256": "308992d0ad7231b44cc898643bfe47689e077d4f2ba634ac633cad37faac4735"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "idle-interface-retreat",
+  "title": "闲置时控件退隐、操作时恢复",
+  "category": "导航与状态",
+  "summary": "在观看状态让界面暂时让出画面。",
+  "mechanism": "指针移动或触摸唤醒控件，闲置短时间后模糊淡出；焦点仍在操作区时保持可见。",
+  "trigger": "闲置、指针移动、触摸或聚焦",
+  "effect": "纯观看与可操作状态有可逆切换。",
+  "useCases": [
+    "沉浸影片舞台"
+  ],
+  "avoid": [
+    "键盘焦点已存在却把控件隐藏"
+  ],
+  "constraints": [
+    "聚焦不隐藏为本地可达性补充，触摸至少能唤醒再操作。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "该原子负责纯观看与可操作状态有可逆切换，职责限定在当前区域。组合时聚焦不隐藏为本地可达性补充，触摸至少能唤醒再操作。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "blurred-layered-video-handoff"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "焦点在控件时不退隐，Tab立即唤醒并保持明显焦点。",
+    "reducedMotion": "控件保持可见，不使用模糊退隐。"
+  },
+  "parameters": [
+    {
+      "name": "来源闲置",
+      "value": "3s等待 / 0.8s退隐",
+      "note": "控制层时间"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「闲置时控件退隐、操作时恢复」。指针移动或触摸唤醒控件，闲置短时间后模糊淡出；焦点仍在操作区时保持可见。触发：闲置、指针移动、触摸或聚焦。可见结果：纯观看与可操作状态有可逆切换。适用任务：沉浸影片舞台。聚焦不隐藏为本地可达性补充，触摸至少能唤醒再操作。键盘：焦点在控件时不退隐，Tab立即唤醒并保持明显焦点。减少动态：控件保持可见，不使用模糊退隐。组合边界：该原子负责纯观看与可操作状态有可逆切换，职责限定在当前区域。组合时聚焦不隐藏为本地可达性补充，触摸至少能唤醒再操作。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "zelda-world",
+      "locator": "entries/zelda-world.json#interaction/3",
+      "observation": "鼠标移动或触摸唤醒界面，3秒闲置后0.8秒模糊淡出；键盘焦点保留控件为本地补充。",
+      "evidence": "adapted",
+      "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/zelda-world/fidelity.md",
+    "demos/zelda-world/index.html",
+    "demos/zelda-world/script.js",
+    "demos/zelda-world/style.css",
+    "entries/zelda-world.json",
+    "research/zelda-world.md"
+  ]
+}

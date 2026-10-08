@@ -120,6 +120,15 @@
       "interactionRole": "音乐跟随PV镜头和字幕剪辑叙事；普通滚动和角色选择不添加原站未发现的BGM或点击声。"
     }
   },
+  "patternIds": [
+    "bounded-panel-track",
+    "centered-loop-gallery",
+    "fixed-star-glow-layer",
+    "inclined-motion-bands",
+    "independent-outfit-state",
+    "offsite-playlist-extension",
+    "scroll-differential-stars"
+  ],
   "documents": [
     {
       "path": "research/persona-kinetic.md",
@@ -436,8 +445,8 @@
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "62272c11c8a4d6c72933b548a6f9664cac102a0620dae609eee50d92898788ac",
-      "bytes": 4023
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
     },
     {
       "path": "entries/persona-kinetic.json",

@@ -1,0 +1,60 @@
+{
+  "id": "filter-count-feedback",
+  "title": "筛选与结果计数同步",
+  "category": "交互反馈",
+  "summary": "筛选动作立即给出结果数量。",
+  "mechanism": "改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。",
+  "trigger": "激活分类按钮",
+  "effect": "用户知道条件是否生效及还剩多少内容。",
+  "useCases": [
+    "活动与新闻目录"
+  ],
+  "avoid": [
+    "把筛选效果仅藏在卡片消失中"
+  ],
+  "constraints": [
+    "结果区域用温和的状态宣布，焦点留在触发按钮。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "accent",
+    "notes": "该原子负责用户知道条件是否生效及还剩多少内容，职责限定在当前区域。组合时结果区域用温和的状态宣布，焦点留在触发按钮。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "aligned-metadata-rows"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "原生按钮带aria-pressed，Tab可达；结果计数使用role=status或aria-live=polite。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「筛选与结果计数同步」。改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。触发：激活分类按钮。可见结果：用户知道条件是否生效及还剩多少内容。适用任务：活动与新闻目录。结果区域用温和的状态宣布，焦点留在触发按钮。键盘：原生按钮带aria-pressed，Tab可达；结果计数使用role=status或aria-live=polite。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户知道条件是否生效及还剩多少内容，职责限定在当前区域。组合时结果区域用温和的状态宣布，焦点留在触发按钮。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "swiss-grid",
+      "locator": "entries/swiss-grid.json#interaction/0",
+      "observation": "分类按钮筛选日程并宣布结果数。",
+      "evidence": "adapted"
+    },
+    {
+      "caseId": "mori-art-museum",
+      "locator": "entries/mori-art-museum.json#constraints/5",
+      "observation": "本地只还原首页几个区域并加教学新闻筛选；不复制多馆门户、购票账户与追踪脚本。",
+      "evidence": "adapted",
+      "referenceUrl": "https://www.mori.art.museum/jp/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/mori-art-museum/app.js",
+    "demos/mori-art-museum/fidelity.md",
+    "demos/mori-art-museum/index.html",
+    "demos/mori-art-museum/style.css",
+    "demos/swiss-grid/index.html",
+    "entries/mori-art-museum.json",
+    "entries/swiss-grid.json",
+    "research/mori-art-museum.md",
+    "research/swiss-grid.md"
+  ]
+}

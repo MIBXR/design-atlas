@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "photo-edge-text-contrast",
+  "pattern": {
+    "id": "photo-edge-text-contrast",
+    "title": "仅在照片文字边缘增强对比",
+    "category": "视觉构成",
+    "summary": "局部文字能读，整张照片保持原色。",
+    "mechanism": "在底缘文字所在区域加有限黑色渐变，白字、橙色行动与摄影形成稳定角色，其他图像区域不整体滤镜化。",
+    "trigger": "查看照片底部标题和行动",
+    "effect": "文字清楚但作品未被全图调色。",
+    "useCases": [
+      "全幅摄影和主视觉"
+    ],
+    "avoid": [
+      "用巨大黑罩掩盖艺术作品"
+    ],
+    "constraints": [
+      "针对每张照片测试对比，必要时给动作独立表面。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责文字清楚但作品未被全图调色，职责限定在当前区域。组合时针对每张照片测试对比，必要时给动作独立表面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "full-bleed-photography-brand",
+        "restrained-signal-color"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「仅在照片文字边缘增强对比」。在底缘文字所在区域加有限黑色渐变，白字、橙色行动与摄影形成稳定角色，其他图像区域不整体滤镜化。触发：查看照片底部标题和行动。可见结果：文字清楚但作品未被全图调色。适用任务：全幅摄影和主视觉。针对每张照片测试对比，必要时给动作独立表面。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责文字清楚但作品未被全图调色，职责限定在当前区域。组合时针对每张照片测试对比，必要时给动作独立表面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "rijksmuseum-art",
+        "locator": "entries/rijksmuseum-art.json#constraints/3",
+        "observation": "照片底部加局部黑色渐变支撑文字对比；不对整张照片做滤镜风格化。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.rijksmuseum.nl/en",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/rijksmuseum-art/fidelity.md",
+      "demos/rijksmuseum-art/index.html",
+      "demos/rijksmuseum-art/script.js",
+      "demos/rijksmuseum-art/style.css",
+      "entries/rijksmuseum-art.json",
+      "research/rijksmuseum-art.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "rijksmuseum-art",
+      "title": "Rijksmuseum · 全幅摄影与巨大字标",
+      "paths": {
+        "bundle": "agent/cases/rijksmuseum-art.json",
+        "demo": "demos/rijksmuseum-art/index.html"
+      },
+      "bundleSha256": "2c8975396d98b5c9b1d2ef5e37615e3d218a060af6e39a12cd6162ab5ea2c472"
+    }
+  ]
+}

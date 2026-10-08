@@ -1,13 +1,15 @@
 # Design Atlas
 
 Frontend design references with human previews and machine-readable context.
-The source of truth is entries/, research/, and demos/. Brand studies are dated
+The source of truth is entries/, patterns/, research/, and demos/. Brand studies are dated
 snapshots; their fidelity boundaries and asset attribution travel with each case.
 
 - [Agent workflow](AGENT.md): keyword search, complete context, source retrieval and export.
 - [Catalog](agent/catalog.json): candidate summaries and case bundle paths/hashes.
+- [Design patterns](agent/patterns.json): independently reusable mechanisms with triggers, effects, constraints, composition guidance, evidence and bundle hashes.
 - [Overview](index.html): introductions to cases, the design lab and the Agent workflow.
 - [Human preview](cases.html): interactive browsing, comparisons and demos.
+- [Human pattern library](cases.html#patterns): browse atoms, filter by source case, and return to the complete case.
 - [Skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas): explore the latest catalog, refine candidates through conversation, and retrieve complete context within one pinned session.
 
 Read catalog first, then agent/cases/<id>.json. Case bundles preserve the original
@@ -15,3 +17,14 @@ entry, full documents, and files with bytes/SHA256. Get source only when selecte
 Resolve the latest default-branch SHA at the start of a new session, then use
 that same SHA for catalog, bundle and files. Refresh explicitly to discover
 newly added cases. Adapt mechanisms to actual user requirements and owned assets.
+
+For cross-case composition, read catalog.patterns, verify patterns.json by its
+SHA256/bytes, then read agent/patterns/<id>.json by bundleSha256. Each bundle keeps
+the complete pattern and sourceCases with case bundle paths/hashes. Use the
+sourceCases manifests to verify sourceFiles and retrieve runnable dependencies.
+Keep case and pattern indexes, bundles and files on one pinned SHA. Respect
+observed/adapted/inferred provenance and each atom's keyboard/reduced-motion
+guidance. Pattern composition roles and links guide adaptation, not rigid rules.
+Case bundles include patternIds. The skill supports pattern-search, pattern-show
+and pattern-export. For an unmerged PR or the exact live Site version, explicitly
+pin the full source.commit SHA; latest default-branch discovery stays separate.

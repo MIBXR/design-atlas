@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "timed-platform-carousel",
+  "pattern": {
+    "id": "timed-platform-carousel",
+    "title": "可暂停的平台场景轮换",
+    "category": "导航与状态",
+    "summary": "平台tabs、点控和场景保持同一索引。",
+    "mechanism": "选择平台让场景水平交接，自动周期可由悬停或手动暂停，后台停止，快速选择只留下一个场景。",
+    "trigger": "选择平台、手势或自动周期",
+    "effect": "同一产品在不同平台的形态可比较。",
+    "useCases": [
+      "跨平台软件介绍"
+    ],
+    "avoid": [
+      "自动轮换覆盖用户刚选的平台"
+    ],
+    "constraints": [
+      "平台名称与当前选中状态可读，降低动态保留手动即时选择。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责平台间场景切换，热图和固定任务可以留在各自场景内。手动选择后停止或重置自动周期需明确，快速切换由一个最新目标状态收束。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源时间",
+        "value": "400ms / 20s",
+        "note": "场景水平交接/自动周期"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「可暂停的平台场景轮换」。选择平台让场景水平交接，自动周期可由悬停或手动暂停，后台停止，快速选择只留下一个场景。触发：选择平台、手势或自动周期。可见结果：同一产品在不同平台的形态可比较。适用任务：跨平台软件介绍。平台名称与当前选中状态可读，降低动态保留手动即时选择。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责平台间场景切换，热图和固定任务可以留在各自场景内。手动选择后停止或重置自动周期需明确，快速切换由一个最新目标状态收束。",
+    "sources": [
+      {
+        "caseId": "qoder-platform",
+        "locator": "entries/qoder-platform.json#interaction/2",
+        "observation": "五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。",
+        "evidence": "observed",
+        "referenceUrl": "https://qoder.cn/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/qoder-platform/fidelity.md",
+      "demos/qoder-platform/index.html",
+      "demos/qoder-platform/journey.js",
+      "demos/qoder-platform/script.js",
+      "demos/qoder-platform/style.css",
+      "entries/qoder-platform.json",
+      "research/qoder-platform.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "qoder-platform",
+      "title": "Qoder — 绿色工作台与多形态平台",
+      "paths": {
+        "bundle": "agent/cases/qoder-platform.json",
+        "demo": "demos/qoder-platform/index.html"
+      },
+      "bundleSha256": "df21b53d5ec6500528ac5add69fb3d025bc595380944c09a2a2d5a36e8a676a4"
+    }
+  ]
+}

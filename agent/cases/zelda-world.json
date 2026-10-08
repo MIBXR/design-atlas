@@ -114,6 +114,16 @@
       "interactionRole": "开场 SE 对应纹章发亮扩散，BGM在入口移交世界时接续；三段影片切换时音乐不断开，维持探索节奏。"
     }
   },
+  "patternIds": [
+    "blurred-layered-video-handoff",
+    "clip-tail-advance",
+    "continuous-bgm-bridge",
+    "idle-interface-retreat",
+    "last-request-transition",
+    "sound-choice-emblem-opening",
+    "sound-opt-in",
+    "world-shaped-thumbnail-frame"
+  ],
   "documents": [
     {
       "path": "research/zelda-world.md",
@@ -394,8 +404,8 @@
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "62272c11c8a4d6c72933b548a6f9664cac102a0620dae609eee50d92898788ac",
-      "bytes": 4023
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
     },
     {
       "path": "entries/zelda-world.json",

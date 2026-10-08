@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "activity-title-ticket-overlap",
+  "pattern": {
+    "id": "activity-title-ticket-overlap",
+    "title": "活动标题与票务跨区并置",
+    "category": "视觉构成",
+    "summary": "视觉主题与行动面板处于同一视线。",
+    "mechanism": "大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。",
+    "trigger": "查看活动首屏并继续阅读",
+    "effect": "情境、日期和预约入口关联。",
+    "useCases": [
+      "展览与演出详情"
+    ],
+    "avoid": [
+      "票务卡变成通用营销卡压住活动名"
+    ],
+    "constraints": [
+      "手机票务回文档流，作品署名与主图主题保留。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责情境、日期和预约入口关联，职责限定在当前区域。组合时手机票务回文档流，作品署名与主图主题保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sticky-action-sidebar",
+        "responsive-art-direction"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「活动标题与票务跨区并置」。大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。触发：查看活动首屏并继续阅读。可见结果：情境、日期和预约入口关联。适用任务：展览与演出详情。手机票务回文档流，作品署名与主图主题保留。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责情境、日期和预约入口关联，职责限定在当前区域。组合时手机票务回文档流，作品署名与主图主题保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "philharmonie-music",
+        "locator": "entries/philharmonie-music.json#composition/layout",
+        "observation": "主视觉左下活动名，右侧票务面板上浮；长正文与侧栏分工，手机票务回到文档流。",
+        "evidence": "observed",
+        "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/philharmonie-music/fidelity.md",
+      "demos/philharmonie-music/index.html",
+      "demos/philharmonie-music/script.js",
+      "demos/philharmonie-music/style.css",
+      "entries/philharmonie-music.json",
+      "research/philharmonie-music.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "philharmonie-music",
+      "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
+      "paths": {
+        "bundle": "agent/cases/philharmonie-music.json",
+        "demo": "demos/philharmonie-music/index.html"
+      },
+      "bundleSha256": "c4db4e93ad73ad2df6469e389a67db08763d3b3ee92d2f0c4f231d99888632cb"
+    }
+  ]
+}

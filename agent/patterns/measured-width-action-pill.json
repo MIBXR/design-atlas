@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "measured-width-action-pill",
+  "pattern": {
+    "id": "measured-width-action-pill",
+    "title": "测量文字宽度的动作胶囊",
+    "category": "交互反馈",
+    "summary": "换词时只让容器宽度平稳变化。",
+    "mechanism": "动作词直接替换，再测量内容宽度并过渡胶囊inline-size；颜色与圆点随语义同步，不给字加额外飞入。",
+    "trigger": "固定词轮换周期",
+    "effect": "主张保持一行连续，词长变化可读。",
+    "useCases": [
+      "多个等价动作的产品主张"
+    ],
+    "avoid": [
+      "所有文字同时滚动造成阅读跳失"
+    ],
+    "constraints": [
+      "保留完整静态句子供读屏，减少动态固定一个可读词。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责主张保持一行连续，词长变化可读，职责限定在当前区域。组合时保留完整静态句子供读屏，减少动态固定一个可读词。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "avatar-pile-personality"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源周期/宽度",
+        "value": "2500ms / 300ms",
+        "note": "文字直接替换，仅宽度过渡"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「测量文字宽度的动作胶囊」。动作词直接替换，再测量内容宽度并过渡胶囊inline-size；颜色与圆点随语义同步，不给字加额外飞入。触发：固定词轮换周期。可见结果：主张保持一行连续，词长变化可读。适用任务：多个等价动作的产品主张。保留完整静态句子供读屏，减少动态固定一个可读词。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责主张保持一行连续，词长变化可读，职责限定在当前区域。组合时保留完整静态句子供读屏，减少动态固定一个可读词。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "notion-editorial",
+        "locator": "entries/notion-editorial.json#interaction/0",
+        "observation": "2500ms 自动 Think/Ship/Create/Build/Jam/Scale → 词直接替换，测量 scrollWidth 后宽度以 300ms cubic-bezier(.86,0,.07,1) 变化，底色/圆点对应变化；这是源机制，没有给文字加不存在的飞入飞出。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.notion.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/notion-editorial/fidelity.md",
+      "demos/notion-editorial/index.html",
+      "demos/notion-editorial/journey.js",
+      "demos/notion-editorial/script.js",
+      "demos/notion-editorial/style.css",
+      "entries/notion-editorial.json",
+      "research/notion-editorial.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "notion-editorial",
+      "title": "Notion — 插画与真实工作空间",
+      "paths": {
+        "bundle": "agent/cases/notion-editorial.json",
+        "demo": "demos/notion-editorial/index.html"
+      },
+      "bundleSha256": "75a92f61dca4fe382a1f8a4c4e73bea278671ead25d5cf0edd89391679f3fef0"
+    }
+  ]
+}

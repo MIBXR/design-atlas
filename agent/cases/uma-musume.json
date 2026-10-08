@@ -133,6 +133,14 @@
     },
     "capturedAt": "2026-10-07"
   },
+  "patternIds": [
+    "bounded-panel-track",
+    "film-overlay",
+    "inclined-motion-bands",
+    "native-document-reading",
+    "responsive-art-direction",
+    "scroll-logo-contraction"
+  ],
   "documents": [
     {
       "path": "research/uma-musume.md",
@@ -401,8 +409,8 @@
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "62272c11c8a4d6c72933b548a6f9664cac102a0620dae609eee50d92898788ac",
-      "bytes": 4023
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
     },
     {
       "path": "entries/uma-musume.json",
