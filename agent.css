@@ -6,16 +6,18 @@
 .agent-page .agent-stats{align-items:baseline;gap:12px 24px}
 .agent-page .agent-stats>span{display:inline-flex;align-items:baseline;gap:6px;line-height:1.5}
 .agent-page .agent-stats b{line-height:1;font-variant-numeric:tabular-nums}
-.agent-page :is(.agent-start,.agent-local){grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);column-gap:40px;row-gap:20px;align-items:start}
+.agent-page :is(.agent-start,.agent-local){grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px;row-gap:20px;align-items:stretch}
 .agent-page .agent-section-intro{grid-column:1/-1;min-width:0}
 .agent-page .agent-section-intro .eyebrow{margin:0 0 12px}
 .agent-page .agent-section-intro h2{margin:0;line-height:1.4}
-.agent-page .agent-section-copy{display:flex;flex-direction:column;align-items:flex-start;gap:18px;min-width:0}
+.agent-page .agent-section-copy{display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;gap:24px;min-width:0}
 .agent-page .agent-section-copy>p{margin:0}
+.agent-page .agent-section-copy>.copy-button{width:100%;flex-shrink:0}
 .agent-page .agent-command{align-self:start;padding:20px}
 .agent-page .agent-command pre{font-family:var(--atlas-font-mono,"Cascadia Code",Consolas,"Microsoft YaHei",monospace)}
 @media(max-width:800px){
   .agent-page :is(.agent-start,.agent-local){grid-template-columns:minmax(0,1fr);gap:20px}
   .agent-page .agent-section-intro{grid-column:auto}
+  .agent-page .agent-section-copy{gap:18px}
   .agent-page .agent-command{padding:16px}
 }
