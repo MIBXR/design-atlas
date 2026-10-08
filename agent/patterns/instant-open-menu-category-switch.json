@@ -69,7 +69,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "75a92f61dca4fe382a1f8a4c4e73bea278671ead25d5cf0edd89391679f3fef0"
+      "bundleSha256": "0f0a2dd370ba64318000be73190a2291350e285f1a46955ddda3bc55fe7473f3"
     }
   ]
 }

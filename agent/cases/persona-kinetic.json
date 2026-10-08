@@ -499,14 +499,14 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "2a79fc17f01578c1438e972173bbc79616c48cc24f13a6a915fb77b532a62425",
-      "bytes": 11110
+      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
+      "bytes": 14852
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "13627fca6fffc5faf217369904bf397969d9df0faad0f92b755649ac6a2d2b9b",
-      "bytes": 739
+      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
+      "bytes": 4447
     },
     {
       "path": "site-typography.css",
