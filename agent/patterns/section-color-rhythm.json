@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "section-color-rhythm",
+  "pattern": {
+    "id": "section-color-rhythm",
+    "title": "整节配色形成阅读节奏",
+    "category": "视觉构成",
+    "summary": "通过章节背景切换划分不同内容任务。",
+    "mechanism": "产品摄影、技术说明或行动区域各用明确的整节色带；文字与表面在每节成对定义，图像不反色。",
+    "trigger": "依次阅读不同章节",
+    "effect": "章节职责变化可被感知。",
+    "useCases": [
+      "长产品页与作品介绍"
+    ],
+    "avoid": [
+      "把章节配色变化说成全局主题功能"
+    ],
+    "constraints": [
+      "每节单独验证对比和焦点，主题模式与章节配色分别描述。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责章节职责变化可被感知，职责限定在当前区域。组合时每节单独验证对比和焦点，主题模式与章节配色分别描述。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sticky-stage-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「整节配色形成阅读节奏」。产品摄影、技术说明或行动区域各用明确的整节色带；文字与表面在每节成对定义，图像不反色。触发：依次阅读不同章节。可见结果：章节职责变化可被感知。适用任务：长产品页与作品介绍。每节单独验证对比和焦点，主题模式与章节配色分别描述。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责章节职责变化可被感知，职责限定在当前区域。组合时每节单独验证对比和焦点，主题模式与章节配色分别描述。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#themeBehavior/control",
+        "observation": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#themeBehavior/control",
+        "observation": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
+        "evidence": "observed",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "monument-valley-game",
+        "locator": "entries/monument-valley-game.json#composition/color",
+        "observation": "固定白导航、#221f20影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区与紫页尾，以整幅色带改变观看节奏。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.monumentvalleygame.com/mv1",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "demos/monument-valley-game/app.js",
+      "demos/monument-valley-game/fidelity.md",
+      "demos/monument-valley-game/index.html",
+      "demos/monument-valley-game/style.css",
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/apple-product.json",
+      "entries/monument-valley-game.json",
+      "entries/stripe-platform.json",
+      "research/apple-product.md",
+      "research/monument-valley-game.md",
+      "research/stripe-platform.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "apple-product",
+      "title": "Apple · 滚动产品舞台",
+      "paths": {
+        "bundle": "agent/cases/apple-product.json",
+        "demo": "demos/apple-product/index.html"
+      },
+      "bundleSha256": "14de63b0d25ac26a4a2fb2f1aac3c4d78077b538e240d329c56a45115680310a"
+    },
+    {
+      "id": "monument-valley-game",
+      "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
+      "paths": {
+        "bundle": "agent/cases/monument-valley-game.json",
+        "demo": "demos/monument-valley-game/index.html"
+      },
+      "bundleSha256": "9676b7b9763d631f35235da9120427dd274843960695d1a74a11ba44462c86a3"
+    },
+    {
+      "id": "stripe-platform",
+      "title": "Stripe — 彩带与金融产品矩阵",
+      "paths": {
+        "bundle": "agent/cases/stripe-platform.json",
+        "demo": "demos/stripe-platform/index.html"
+      },
+      "bundleSha256": "be613c18db63adac6884a6a1e0f371f0f03119e8ab8a6c079e0fb9709bfce391"
+    }
+  ]
+}

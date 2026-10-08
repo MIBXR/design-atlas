@@ -1,0 +1,67 @@
+{
+  "id": "mobile-media-prioritization",
+  "title": "按手机信息任务裁减复杂演示",
+  "category": "内容组织",
+  "summary": "复杂媒体变体与正文分别管理。",
+  "mechanism": "窄屏保留主张、操作和说明，按来源变体隐藏重型演示或仅保留消息线程，避免把桌面全部缩到不可读。",
+  "trigger": "进入窄屏布局",
+  "effect": "核心信息无需理解极小界面也可读。",
+  "useCases": [
+    "密集工具产品的移动营销页"
+  ],
+  "avoid": [
+    "隐藏整节内容或把不同来源规则混用"
+  ],
+  "constraints": [
+    "Notion手机隐藏hero媒体，Linear保留首屏应用裁切；具体变体须按任务决定。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "该原子负责核心信息无需理解极小界面也可读，职责限定在当前区域。组合时Notion手机隐藏hero媒体，Linear保留首屏应用裁切；具体变体须按任务决定。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "capability-bento-hierarchy"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+    "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「按手机信息任务裁减复杂演示」。窄屏保留主张、操作和说明，按来源变体隐藏重型演示或仅保留消息线程，避免把桌面全部缩到不可读。触发：进入窄屏布局。可见结果：核心信息无需理解极小界面也可读。适用任务：密集工具产品的移动营销页。Notion手机隐藏hero媒体，Linear保留首屏应用裁切；具体变体须按任务决定。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责核心信息无需理解极小界面也可读，职责限定在当前区域。组合时Notion手机隐藏hero媒体，Linear保留首屏应用裁切；具体变体须按任务决定。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "notion-editorial",
+      "locator": "entries/notion-editorial.json#interaction/1",
+      "observation": "桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。",
+      "evidence": "adapted",
+      "referenceUrl": "https://www.notion.com/",
+      "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "linear-workflow",
+      "locator": "entries/linear-workflow.json#interaction/5",
+      "observation": "手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。",
+      "evidence": "observed",
+      "referenceUrl": "https://linear.app/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/linear-workflow/fidelity.md",
+    "demos/linear-workflow/index.html",
+    "demos/linear-workflow/journey.js",
+    "demos/linear-workflow/script.js",
+    "demos/linear-workflow/style.css",
+    "demos/notion-editorial/fidelity.md",
+    "demos/notion-editorial/index.html",
+    "demos/notion-editorial/journey.js",
+    "demos/notion-editorial/script.js",
+    "demos/notion-editorial/style.css",
+    "entries/linear-workflow.json",
+    "entries/notion-editorial.json",
+    "research/linear-workflow.md",
+    "research/notion-editorial.md"
+  ]
+}

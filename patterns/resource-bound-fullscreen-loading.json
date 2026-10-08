@@ -1,0 +1,59 @@
+{
+  "id": "resource-bound-fullscreen-loading",
+  "title": "真实资源驱动的全屏载入",
+  "category": "加载与媒体",
+  "summary": "在关键场景就绪前以品牌载入页承接等待。",
+  "mechanism": "居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。",
+  "trigger": "首次进入或缓存重载",
+  "effect": "未就绪场景被遮住，等待属于世界观入口。",
+  "useCases": [
+    "资源较重的游戏档案与展览"
+  ],
+  "avoid": [
+    "定时伪造百分比或等待全站素材"
+  ],
+  "constraints": [
+    "失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "只负责首屏必要资源就绪前的入口交接。可接章切与点阵静帧；同一入口避免再叠另一套欢迎开场，不能等待未启用BGM或全站素材。",
+    "pairsWellWith": [
+      "directional-section-wipe",
+      "synchronized-rolling-index"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "载入状态提供可读进度与重试/继续按钮；就绪后焦点进入当前章节。",
+    "reducedMotion": "载入进度保持文本和静止品牌图，取消装饰运动，资源就绪后即时进入。"
+  },
+  "parameters": [
+    {
+      "name": "本地资源集",
+      "value": "5份图片 / 保底1300ms",
+      "note": "本地适配，非官网完整载入策略"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「真实资源驱动的全屏载入」。居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。触发：首次进入或缓存重载。可见结果：未就绪场景被遮住，等待属于世界观入口。适用任务：资源较重的游戏档案与展览。失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。键盘：载入状态提供可读进度与重试/继续按钮；就绪后焦点进入当前章节。减少动态：载入进度保持文本和静止品牌图，取消装饰运动，资源就绪后即时进入。组合边界：只负责首屏必要资源就绪前的入口交接。可接章切与点阵静帧；同一入口避免再叠另一套欢迎开场，不能等待未启用BGM或全站素材。",
+  "sources": [
+    {
+      "caseId": "arknights-world",
+      "locator": "entries/arknights-world.json#interaction/0",
+      "observation": "首次/缓存重载均先显示全屏LOADING；本地按五份实际图片完成数显示进度，再开放初始hash所指章节。",
+      "evidence": "adapted",
+      "referenceUrl": "https://ak.hypergryph.com/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/arknights-world/fidelity.md",
+    "demos/arknights-world/index.html",
+    "demos/arknights-world/particles.js",
+    "demos/arknights-world/script.js",
+    "demos/arknights-world/style.css",
+    "entries/arknights-world.json",
+    "research/arknights-world.md"
+  ]
+}

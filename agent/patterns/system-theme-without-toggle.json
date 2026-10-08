@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "system-theme-without-toggle",
+  "pattern": {
+    "id": "system-theme-without-toggle",
+    "title": "跟随系统的媒体与文字主题",
+    "category": "视觉构成",
+    "summary": "按系统偏好换配色，不虚构手动按钮。",
+    "mechanism": "根据prefers-color-scheme选用对应的表面、文字与产品截图；主题范围明确到实际有变体的区域。",
+    "trigger": "系统深浅偏好改变",
+    "effect": "界面适应环境且图像保持合理配色。",
+    "useCases": [
+      "已有双版本资产的营销页"
+    ],
+    "avoid": [
+      "给来源没提供的页面宣称手动主题"
+    ],
+    "constraints": [
+      "ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责界面适应环境且图像保持合理配色，职责限定在当前区域。组合时ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "semantic-theme-roles"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「跟随系统的媒体与文字主题」。根据prefers-color-scheme选用对应的表面、文字与产品截图；主题范围明确到实际有变体的区域。触发：系统深浅偏好改变。可见结果：界面适应环境且图像保持合理配色。适用任务：已有双版本资产的营销页。ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责界面适应环境且图像保持合理配色，职责限定在当前区域。组合时ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#themeBehavior/control",
+        "observation": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "claude-platform",
+        "locator": "entries/claude-platform.json#themeBehavior/control",
+        "observation": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
+        "evidence": "inferred",
+        "referenceUrl": "https://claude.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "demos/claude-platform/fidelity.md",
+      "demos/claude-platform/index.html",
+      "demos/claude-platform/journey.js",
+      "demos/claude-platform/script.js",
+      "demos/claude-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "entries/claude-platform.json",
+      "research/chatgpt-platform.md",
+      "research/claude-platform.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "chatgpt-platform",
+      "title": "ChatGPT — 巨字、飞入拼贴与滚动交接",
+      "paths": {
+        "bundle": "agent/cases/chatgpt-platform.json",
+        "demo": "demos/chatgpt-platform/index.html"
+      },
+      "bundleSha256": "5a3aea36f0b87617685acd4a456f6e8486a54fa7feb9320e0cbeae593eb94bc0"
+    },
+    {
+      "id": "claude-platform",
+      "title": "Claude — 衬线语气与 Cowork 演示",
+      "paths": {
+        "bundle": "agent/cases/claude-platform.json",
+        "demo": "demos/claude-platform/index.html"
+      },
+      "bundleSha256": "8df27e54d0ac65984926d2435af5a6ce3ed3c044d0c622e7ffa72cb79a9f8cf8"
+    }
+  ]
+}

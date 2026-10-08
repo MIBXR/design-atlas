@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "staged-product-ui-entrance",
+  "pattern": {
+    "id": "staged-product-ui-entrance",
+    "title": "延迟产品界面与扫光入场",
+    "category": "加载与媒体",
+    "summary": "让主张先出现，再揭示工作系统。",
+    "mechanism": "稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。",
+    "trigger": "进入页面及继续下滚",
+    "effect": "界面密度逐步出现而不遮住主张。",
+    "useCases": [
+      "工作系统营销首屏"
+    ],
+    "avoid": [
+      "用加载遮层强制等待产品UI"
+    ],
+    "constraints": [
+      "动作不阻止阅读与操作，减少动态直接显示终态界面。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责界面密度逐步出现而不遮住主张，职责限定在当前区域。组合时动作不阻止阅读与操作，减少动态直接显示终态界面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "mobile-media-prioritization"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源延迟/带入",
+        "value": "1.3s / 1.5s",
+        "note": "Linear当前归档公开模块参数"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「延迟产品界面与扫光入场」。稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。触发：进入页面及继续下滚。可见结果：界面密度逐步出现而不遮住主张。适用任务：工作系统营销首屏。动作不阻止阅读与操作，减少动态直接显示终态界面。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责界面密度逐步出现而不遮住主张，职责限定在当前区域。组合时动作不阻止阅读与操作，减少动态直接显示终态界面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "linear-workflow",
+        "locator": "entries/linear-workflow.json#interaction/0",
+        "observation": "进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。",
+        "evidence": "observed",
+        "referenceUrl": "https://linear.app/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/linear-workflow/fidelity.md",
+      "demos/linear-workflow/index.html",
+      "demos/linear-workflow/journey.js",
+      "demos/linear-workflow/script.js",
+      "demos/linear-workflow/style.css",
+      "entries/linear-workflow.json",
+      "research/linear-workflow.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "linear-workflow",
+      "title": "Linear — 深色产品开发系统",
+      "paths": {
+        "bundle": "agent/cases/linear-workflow.json",
+        "demo": "demos/linear-workflow/index.html"
+      },
+      "bundleSha256": "568314e2ace621102db6fe67feb3e033eaaa03e3522e4eefe725d20406384c35"
+    }
+  ]
+}

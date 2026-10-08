@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "load-completion-brand-marker",
+  "pattern": {
+    "id": "load-completion-brand-marker",
+    "title": "资源完成后品牌标记退场",
+    "category": "加载与媒体",
+    "summary": "等待真实图片就绪，不编造长进度。",
+    "mechanism": "关键图片加载期间显示轻量品牌旋转标记，load完成后载入层与主图淡化交接；失败可继续读页。",
+    "trigger": "首屏资源完成",
+    "effect": "品牌识别贯穿短暂等待。",
+    "useCases": [
+      "海报与现场照片首屏"
+    ],
+    "avoid": [
+      "以长假百分比制造仪式"
+    ],
+    "constraints": [
+      "仅等待当前首图，旋转标记不是实际数值进度，避免再叠一套通用欢迎。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责品牌识别贯穿短暂等待，职责限定在当前区域。组合时仅等待当前首图，旋转标记不是实际数值进度，避免再叠一套通用欢迎。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "photo-crossfade-cycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "加载说明可读，失败时继续/重试按钮可聚焦，不困住焦点。",
+      "reducedMotion": "旋转改为静止标识，就绪后即时显示主图。"
+    },
+    "parameters": [
+      {
+        "name": "DESIGN SIGHT来源",
+        "value": "50px蓝标 / 300ms退场",
+        "note": "public common.js/CSS依据"
+      },
+      {
+        "name": "Fuji Rock来源",
+        "value": "32px橙标 / 1200ms淡化",
+        "note": "load完成交接"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「资源完成后品牌标记退场」。关键图片加载期间显示轻量品牌旋转标记，load完成后载入层与主图淡化交接；失败可继续读页。触发：首屏资源完成。可见结果：品牌识别贯穿短暂等待。适用任务：海报与现场照片首屏。仅等待当前首图，旋转标记不是实际数值进度，避免再叠一套通用欢迎。键盘：加载说明可读，失败时继续/重试按钮可聚焦，不困住焦点。减少动态：旋转改为静止标识，就绪后即时显示主图。组合边界：该原子负责品牌识别贯穿短暂等待，职责限定在当前区域。组合时仅等待当前首图，旋转标记不是实际数值进度，避免再叠一套通用欢迎。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#interaction/0",
+        "observation": "首次加载完成：全屏白色与蓝色50px旋转标记，300ms退场。 在海报加载期间保持机构识别。",
+        "evidence": "inferred",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#interaction/0",
+        "observation": "素材载入完成：32px橙色旋转标记退出，遮层与主图1200ms线性淡化。 让真实现场图准备完毕后平稳进入。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/design-sight/app.js",
+      "demos/design-sight/fidelity.md",
+      "demos/design-sight/index.html",
+      "demos/design-sight/style.css",
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "entries/design-sight.json",
+      "entries/fuji-rock.json",
+      "research/design-sight.md",
+      "research/fuji-rock.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "design-sight",
+      "title": "21_21 DESIGN SIGHT：海报与四列档案",
+      "paths": {
+        "bundle": "agent/cases/design-sight.json",
+        "demo": "demos/design-sight/index.html"
+      },
+      "bundleSha256": "c44d0a56ac4f27edee9a10953950c95488725c331588ecc7e2199f15b4b3d4bc"
+    },
+    {
+      "id": "fuji-rock",
+      "title": "Fuji Rock：现场照片与节日导览",
+      "paths": {
+        "bundle": "agent/cases/fuji-rock.json",
+        "demo": "demos/fuji-rock/index.html"
+      },
+      "bundleSha256": "aaf904a0bcc2d6a7ae8f9c9132e29404d05073518d7280a1b28d8e0198882e6e"
+    }
+  ]
+}

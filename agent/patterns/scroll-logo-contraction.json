@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "scroll-logo-contraction",
+  "pattern": {
+    "id": "scroll-logo-contraction",
+    "title": "滚动后品牌标识收回导航",
+    "category": "滚动叙事",
+    "summary": "首屏大标识与长页导航共享身份。",
+    "mechanism": "首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。",
+    "trigger": "跨越滚动阈值或返回",
+    "effect": "主视觉先建立品牌，后续减少导航遮挡。",
+    "useCases": [
+      "长游戏与节日页面"
+    ],
+    "avoid": [
+      "滚动时Logo覆盖正文或抖动换态"
+    ],
+    "constraints": [
+      "阈值按画布宽度计算，转换期间点击区域保持可达。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "只转换机构标识的规模，固定导航与主文档保持自身布局。不要与另一套紧凑导航阈值同时叠在相同位置；回首恢复大标识的规则需统一。",
+      "pairsWellWith": [
+        "inclined-motion-bands"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源桌面",
+        "value": "2.8倍→1倍 / 宽度7%",
+        "note": "300ms cubic-bezier(.19,1,.22,1)"
+      },
+      {
+        "name": "来源手机",
+        "value": "1.72倍→1倍",
+        "note": "对应竖屏标识"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「滚动后品牌标识收回导航」。首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。触发：跨越滚动阈值或返回。可见结果：主视觉先建立品牌，后续减少导航遮挡。适用任务：长游戏与节日页面。阈值按画布宽度计算，转换期间点击区域保持可达。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只转换机构标识的规模，固定导航与主文档保持自身布局。不要与另一套紧凑导航阈值同时叠在相同位置；回首恢复大标识的规则需统一。",
+    "sources": [
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#interaction/1",
+        "observation": "滚过画布宽度 7% 后 Logo 从 2.8 倍缩回导航，反向回首恢复；300ms cubic-bezier(.19,1,.22,1)。手机 1.72 倍与菜单切换，Play Now 打开下载层。",
+        "evidence": "observed",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/uma-musume.json",
+      "research/uma-musume.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "uma-musume",
+      "title": "赛马娘：群像赛道与斜切叙事",
+      "paths": {
+        "bundle": "agent/cases/uma-musume.json",
+        "demo": "demos/uma-musume/index.html"
+      },
+      "bundleSha256": "e7ccf2772f21464d11d9c12b6d534dc60d4242e955b4bb4ba6010fa3a526b356"
+    }
+  ]
+}

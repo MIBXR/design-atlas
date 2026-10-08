@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "layer-focus-dimming",
+  "pattern": {
+    "id": "layer-focus-dimming",
+    "title": "聚焦一层并减弱其余层",
+    "category": "交互反馈",
+    "summary": "在完整系统中强调一个子系统。",
+    "mechanism": "选定图层保持清晰，其余图层降低透明度但仍留在原位，文字说明与选中按钮同步。",
+    "trigger": "选择花园/建筑/整体",
+    "effect": "用户理解局部及其整体位置。",
+    "useCases": [
+      "空间与技术系统介绍"
+    ],
+    "avoid": [
+      "将非当前层完全删除导致关系丢失"
+    ],
+    "constraints": [
+      "透明度只作用于图形，正文始终保持对比。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户理解局部及其整体位置，职责限定在当前区域。组合时透明度只作用于图形，正文始终保持对比。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "parallel-isometric-projection",
+        "exploded-layer-view"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「聚焦一层并减弱其余层」。选定图层保持清晰，其余图层降低透明度但仍留在原位，文字说明与选中按钮同步。触发：选择花园/建筑/整体。可见结果：用户理解局部及其整体位置。适用任务：空间与技术系统介绍。透明度只作用于图形，正文始终保持对比。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户理解局部及其整体位置，职责限定在当前区域。组合时透明度只作用于图形，正文始终保持对比。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "isometric-3d",
+        "locator": "entries/isometric-3d.json#interaction/0",
+        "observation": "整岛、花园、建筑三种焦点切换",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/isometric-3d/index.html",
+      "demos/isometric-3d/script.js",
+      "demos/isometric-3d/style.css",
+      "entries/isometric-3d.json",
+      "research/isometric-3d.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "isometric-3d",
+      "title": "等轴 3D：让空间讲述系统",
+      "paths": {
+        "bundle": "agent/cases/isometric-3d.json",
+        "demo": "demos/isometric-3d/index.html"
+      },
+      "bundleSha256": "fcaf35cef02f92fb568221128b08bf1e4fa966cec5098cca2c7e834b3caf3393"
+    }
+  ]
+}

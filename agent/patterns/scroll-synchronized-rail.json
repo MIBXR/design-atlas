@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "scroll-synchronized-rail",
+  "pattern": {
+    "id": "scroll-synchronized-rail",
+    "title": "说明索引与窗口进度同步",
+    "category": "滚动叙事",
+    "summary": "文字、窗口模式和进度共同指示当前段落。",
+    "mechanism": "长段内用多个内容哨兵更新侧栏展开、标题尺度、产品窗口与进度；点击或方向键定位同一状态。",
+    "trigger": "滚动或选择说明索引",
+    "effect": "当前说明与界面演示对应。",
+    "useCases": [
+      "多步骤能力说明"
+    ],
+    "avoid": [
+      "顶层模式与下段索引共用状态互相覆盖"
+    ],
+    "constraints": [
+      "首屏选择和说明rail独立管理；手机用原生横向卡片。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责当前说明与界面演示对应，职责限定在当前区域。组合时首屏选择和说明rail独立管理；手机用原生横向卡片。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sticky-stage-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "rail按钮支持方向键及Home/End，展开与当前状态文字同步。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「说明索引与窗口进度同步」。长段内用多个内容哨兵更新侧栏展开、标题尺度、产品窗口与进度；点击或方向键定位同一状态。触发：滚动或选择说明索引。可见结果：当前说明与界面演示对应。适用任务：多步骤能力说明。首屏选择和说明rail独立管理；手机用原生横向卡片。键盘：rail按钮支持方向键及Home/End，展开与当前状态文字同步。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责当前说明与界面演示对应，职责限定在当前区域。组合时首屏选择和说明rail独立管理；手机用原生横向卡片。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/3",
+        "observation": "桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。",
+        "evidence": "adapted",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "research/chatgpt-platform.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "chatgpt-platform",
+      "title": "ChatGPT — 巨字、飞入拼贴与滚动交接",
+      "paths": {
+        "bundle": "agent/cases/chatgpt-platform.json",
+        "demo": "demos/chatgpt-platform/index.html"
+      },
+      "bundleSha256": "5a3aea36f0b87617685acd4a456f6e8486a54fa7feb9320e0cbeae593eb94bc0"
+    }
+  ]
+}

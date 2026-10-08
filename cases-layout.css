@@ -41,3 +41,30 @@
 }
 @media(max-width:360px){.cases-page{--case-gutter:16px}.cases-page .rail .nav-item{font-size:11px;padding:10px}.case-toolbar{gap:8px}}
 @media(forced-colors:active){.cases-page .rail{border:1px solid CanvasText}.cases-page .rail .nav-item.active{outline:1px solid Highlight}.cases-page .rail a:focus-visible,.cases-page .rail button:focus-visible,.cases-page .rail summary:focus-visible{outline-color:Highlight}}
+
+/* Each semantic section is one native table row. Row height follows the
+   longest cell and grows with text, zoom and font loading without truncation. */
+.compare-scroll{width:100%;overflow-x:auto;overscroll-behavior-inline:contain;margin:20px 0 40px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.compare-scroll:focus-visible{outline:3px solid var(--select-accent);outline-offset:4px}
+.compare-table{width:100%;min-width:1000px;table-layout:fixed;border-collapse:separate;border-spacing:0;text-align:left;font-size:16px;line-height:1.85}
+.compare-table.two{min-width:720px}
+.compare-table caption{padding:16px 20px;text-align:left;font-size:14px;color:var(--muted);border-bottom:1px solid var(--line)}
+.compare-table .compare-label-col{width:112px}
+.compare-table th,.compare-table td{padding:20px;vertical-align:top;border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.compare-table tr>*:last-child{border-right:0}
+.compare-table tbody tr:last-child>*{border-bottom:0}
+.compare-table thead th{font-weight:400}
+.compare-table .compare-corner,.compare-table .compare-row-label{font-size:14px;font-weight:600;color:var(--noteheading);background:var(--surface)}
+.compare-table .compare-corner{vertical-align:bottom}
+.compare-table thead img{width:100%;aspect-ratio:1.6;display:block;object-fit:cover;object-position:top;border:1px solid var(--line);border-radius:5px}
+.compare-table h2{font-size:20px;line-height:1.5;margin:14px 0 0;letter-spacing:-.3px}
+.compare-table p,.compare-table ul{margin:0;color:var(--note)}
+.compare-table ul{padding-left:20px}
+.compare-table li+li{margin-top:8px}
+.compare-table .behavior-block{margin-top:20px;padding-top:16px}
+.compare-table .behavior-block h3{font-size:16px;margin:8px 0;color:var(--noteheading)}
+.compare-table .behavior-block p+p{margin-top:10px}
+.compare-table .swatches{margin:16px 0 0}
+.compare-table .compare-actions{display:flex;flex-wrap:wrap;gap:10px}
+.compare-scroll-hint{color:var(--muted);font-size:14px;margin:0}
+@media(max-width:650px){.compare-table{min-width:980px}.compare-table.two{min-width:700px}.compare-table .compare-label-col{width:96px}.compare-table th,.compare-table td{padding:16px}.compare-table .compare-row-label{font-size:14px}.compare-scroll{margin-bottom:28px}}

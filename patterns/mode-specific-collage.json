@@ -1,0 +1,55 @@
+{
+  "id": "mode-specific-collage",
+  "title": "按模式组织独立拼贴层",
+  "category": "视觉构成",
+  "summary": "一组周边素材共同解释一种用途。",
+  "mechanism": "每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。",
+  "trigger": "选择不同能力模式",
+  "effect": "主窗口周边形成具有语义的场景。",
+  "useCases": [
+    "需要多类型成果证明的产品"
+  ],
+  "avoid": [
+    "为所有模式复用同一组装饰"
+  ],
+  "constraints": [
+    "素材必须解释对应能力，不能盖住标题与控制。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "负责模式对应的成果场景，中央产品窗口负责产品身份，巨字负责选择。图层坐标按素材重设；不能将多来源拼贴叠成遮挡标题的无限装饰。",
+    "pairsWellWith": [
+      "hover-focus-mode-selection",
+      "sticky-stage-handoff",
+      "last-request-transition"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+    "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「按模式组织独立拼贴层」。每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。触发：选择不同能力模式。可见结果：主窗口周边形成具有语义的场景。适用任务：需要多类型成果证明的产品。素材必须解释对应能力，不能盖住标题与控制。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：负责模式对应的成果场景，中央产品窗口负责产品身份，巨字负责选择。图层坐标按素材重设；不能将多来源拼贴叠成遮挡标题的无限装饰。",
+  "sources": [
+    {
+      "caseId": "chatgpt-platform",
+      "locator": "entries/chatgpt-platform.json#interaction/1",
+      "observation": "选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。",
+      "evidence": "observed",
+      "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/chatgpt-platform/fidelity.md",
+    "demos/chatgpt-platform/fonts.css",
+    "demos/chatgpt-platform/index.html",
+    "demos/chatgpt-platform/motion-data.js",
+    "demos/chatgpt-platform/script.js",
+    "demos/chatgpt-platform/style.css",
+    "entries/chatgpt-platform.json",
+    "research/chatgpt-platform.md"
+  ]
+}

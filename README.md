@@ -10,7 +10,7 @@
 **29 个案例**　·　**21 个真实品牌／文化页面**　·　**8 种经典设计语言**
 <!-- atlas-counts:end -->
 
-[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
+[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计巧思](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#patterns) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
 
 ![Design Atlas 实际 Demo 全景](docs/readme/cover.webp)
 
@@ -28,7 +28,8 @@
 
 - **查找**：按产品、游戏/IP、艺术文化、经典语言与国家／地区筛选；搜索品牌、配色、布局、交互或约束。分类、地区、搜索与排序保留在 URL 中，支持刷新恢复、浏览器前进／后退和分享筛选结果（例如 `cases.html?category=games`）。
 - **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；手机面板限制为390px。
-- **比较**：选择2–3项并排比较，观察同样的设计元素如何产生不同表达。
+- **比较**：选择2–3项并排比较，七节说明按同名章节逐行对齐；每行采用最长内容所需的自然高度，便于比较不同案例在同一设计维度上的区别。
+- **设计巧思**：在“浏览案例”的侧栏切换到原子库，按机制类别、来源案例与关键词找可单独借用的设计；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
 - **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在设计实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
 - **Agent 选型**：调用 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
@@ -56,6 +57,8 @@ Design Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案
 ## Agent 直接取材
 
 网页保留人工预览与比较；Agent 可通过 [工作流入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html)、[结构化索引](agent/catalog.json) 和按案例生成的完整上下文取得设计依据。原始条目、原 Prompt、研究、复现边界与带 SHA256 的文件清单一起读取，源码与媒体按需获取。
+
+组合机制时先读 [设计巧思目录](agent/patterns.json)，再取得 `agent/patterns/<id>.json`。巧思包保留完整机制资料、证据类型、参数来源、组合关系、取材文件及关联案例包位置／哈希；例如 [标题悬停与聚焦选择](patterns/hover-focus-mode-selection.json)、[窗口垂直进出](patterns/vertical-card-swap.json) 和 [指针排斥点阵](patterns/pointer-repulsion-particles.json)。完整案例继续帮助判断多个机制在一个页面中如何协作。普通新增巧思由构建扫描，无需复制内容到skill仓库。
 
 ```sh
 node scripts/atlas.mjs search "深色 产品" --limit 3

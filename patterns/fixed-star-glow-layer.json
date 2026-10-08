@@ -1,0 +1,57 @@
+{
+  "id": "fixed-star-glow-layer",
+  "title": "固定星光的明暗呼吸层",
+  "category": "视觉构成",
+  "summary": "少量光点为群像提供节奏。",
+  "mechanism": "固定位置的星图使用低密度明暗周期与错峰延迟，保持正文和人物轮廓稳定。",
+  "trigger": "观看首屏",
+  "effect": "主图有轻微光感而不更换主体。",
+  "useCases": [
+    "已有星光视觉语汇的IP首屏"
+  ],
+  "avoid": [
+    "把固定星层说成鼠标视差"
+  ],
+  "constraints": [
+    "本地Canvas2D为PIXI算法迁移，随机抽样与混合非逐帧相同。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "该原子负责主图有轻微光感而不更换主体，职责限定在当前区域。组合时本地Canvas2D为PIXI算法迁移，随机抽样与混合非逐帧相同。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "scroll-differential-stars"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+    "reducedMotion": "显示静止光点或停在固定明度，保留主图和全部文字。"
+  },
+  "parameters": [
+    {
+      "name": "来源KV",
+      "value": "5颗固定星 / 3秒周期",
+      "note": "不等于背景15颗随机星"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「固定星光的明暗呼吸层」。固定位置的星图使用低密度明暗周期与错峰延迟，保持正文和人物轮廓稳定。触发：观看首屏。可见结果：主图有轻微光感而不更换主体。适用任务：已有星光视觉语汇的IP首屏。本地Canvas2D为PIXI算法迁移，随机抽样与混合非逐帧相同。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：显示静止光点或停在固定明度，保留主图和全部文字。组合边界：该原子负责主图有轻微光感而不更换主体，职责限定在当前区域。组合时本地Canvas2D为PIXI算法迁移，随机抽样与混合非逐帧相同。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "persona-kinetic",
+      "locator": "entries/persona-kinetic.json#interaction/0",
+      "observation": "原站 desktop kv-canvas 只有5颗固定位置星光；本地使用相同六种图像和3秒明暗周期，用Canvas2D重建，未运行PIXI业务包。",
+      "evidence": "adapted",
+      "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/persona-kinetic/fidelity.md",
+    "demos/persona-kinetic/index.html",
+    "demos/persona-kinetic/script.js",
+    "demos/persona-kinetic/style.css",
+    "entries/persona-kinetic.json",
+    "research/persona-kinetic.md"
+  ]
+}

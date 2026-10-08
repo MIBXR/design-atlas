@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "sticky-action-sidebar",
+  "pattern": {
+    "id": "sticky-action-sidebar",
+    "title": "桌面粘性行动栏、手机回文档流",
+    "category": "内容组织",
+    "summary": "内容阅读和到访决定并行。",
+    "mechanism": "桌面正文旁的票务/行动面板保持sticky，时间与价格在面板内展开；窄屏把面板置回内容流前部。",
+    "trigger": "阅读长详情",
+    "effect": "用户无需找回行动，小屏正文不被遮挡。",
+    "useCases": [
+      "活动详情与可行动长文"
+    ],
+    "avoid": [
+      "手机固定大面板盖住正文"
+    ],
+    "constraints": [
+      "粘性区域不超过可用视口，行动连接真实服务，归档信息标注观察日。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责用户无需找回行动，小屏正文不被遮挡，职责限定在当前区域。组合时粘性区域不超过可用视口，行动连接真实服务，归档信息标注观察日。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "inline-detail-disclosure",
+        "visit-facts-grid"
+      ],
+      "conflicts": [
+        "vertical-fullscreen-stage",
+        "directional-section-wipe"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「桌面粘性行动栏、手机回文档流」。桌面正文旁的票务/行动面板保持sticky，时间与价格在面板内展开；窄屏把面板置回内容流前部。触发：阅读长详情。可见结果：用户无需找回行动，小屏正文不被遮挡。适用任务：活动详情与可行动长文。粘性区域不超过可用视口，行动连接真实服务，归档信息标注观察日。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责用户无需找回行动，小屏正文不被遮挡，职责限定在当前区域。组合时粘性区域不超过可用视口，行动连接真实服务，归档信息标注观察日。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "philharmonie-music",
+        "locator": "entries/philharmonie-music.json#interaction/0",
+        "observation": "浏览展览／音乐会详情：原生长页与桌面sticky票务，小屏票务回文档流。 活动内容与来访决定并行，小屏避免固定面板遮挡正文。",
+        "evidence": "observed",
+        "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/philharmonie-music/fidelity.md",
+      "demos/philharmonie-music/index.html",
+      "demos/philharmonie-music/script.js",
+      "demos/philharmonie-music/style.css",
+      "entries/philharmonie-music.json",
+      "research/philharmonie-music.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "philharmonie-music",
+      "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
+      "paths": {
+        "bundle": "agent/cases/philharmonie-music.json",
+        "demo": "demos/philharmonie-music/index.html"
+      },
+      "bundleSha256": "c4db4e93ad73ad2df6469e389a67db08763d3b3ee92d2f0c4f231d99888632cb"
+    }
+  ]
+}

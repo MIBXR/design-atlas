@@ -120,6 +120,19 @@
       "interactionRole": "BGM作为连续环境声音跨越横向章节交接，营造系统进入和世界档案氛围；人物配音提供角色身份反馈。未核验到独立章节/鼠标操作音，未添加臆造音效。"
     }
   },
+  "patternIds": [
+    "character-stage-coordination",
+    "character-voice-ownership",
+    "continuous-bgm-bridge",
+    "directional-section-wipe",
+    "last-request-transition",
+    "particle-model-reformation",
+    "pointer-image-shader-preview",
+    "pointer-repulsion-particles",
+    "resource-bound-fullscreen-loading",
+    "sound-opt-in",
+    "synchronized-rolling-index"
+  ],
   "documents": [
     {
       "path": "research/arknights-world.md",
@@ -550,8 +563,8 @@
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "62272c11c8a4d6c72933b548a6f9664cac102a0620dae609eee50d92898788ac",
-      "bytes": 4023
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
     },
     {
       "path": "entries/arknights-world.json",

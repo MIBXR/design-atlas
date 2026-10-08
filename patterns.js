@@ -1,0 +1,6990 @@
+window.DESIGN_PATTERNS = [
+  {
+    "id": "activity-title-ticket-overlap",
+    "title": "活动标题与票务跨区并置",
+    "category": "视觉构成",
+    "summary": "视觉主题与行动面板处于同一视线。",
+    "mechanism": "大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。",
+    "trigger": "查看活动首屏并继续阅读",
+    "effect": "情境、日期和预约入口关联。",
+    "useCases": [
+      "展览与演出详情"
+    ],
+    "avoid": [
+      "票务卡变成通用营销卡压住活动名"
+    ],
+    "constraints": [
+      "手机票务回文档流，作品署名与主图主题保留。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责情境、日期和预约入口关联，职责限定在当前区域。组合时手机票务回文档流，作品署名与主图主题保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sticky-action-sidebar",
+        "responsive-art-direction"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「活动标题与票务跨区并置」。大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。触发：查看活动首屏并继续阅读。可见结果：情境、日期和预约入口关联。适用任务：展览与演出详情。手机票务回文档流，作品署名与主图主题保留。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责情境、日期和预约入口关联，职责限定在当前区域。组合时手机票务回文档流，作品署名与主图主题保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "philharmonie-music",
+        "locator": "entries/philharmonie-music.json#composition/layout",
+        "observation": "主视觉左下活动名，右侧票务面板上浮；长正文与侧栏分工，手机票务回到文档流。",
+        "evidence": "observed",
+        "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/philharmonie-music/fidelity.md",
+      "demos/philharmonie-music/index.html",
+      "demos/philharmonie-music/script.js",
+      "demos/philharmonie-music/style.css",
+      "entries/philharmonie-music.json",
+      "research/philharmonie-music.md"
+    ]
+  },
+  {
+    "id": "aligned-metadata-rows",
+    "title": "编号与元数据对齐列表",
+    "category": "内容组织",
+    "summary": "让编号、名称、日期和操作横向可比。",
+    "mechanism": "用稳定列宽组织每行的编号、名称、类别、日期与收藏；手机将次级元数据折到名称下方。",
+    "trigger": "逐行浏览目录",
+    "effect": "同类事实沿纵向落在固定位置。",
+    "useCases": [
+      "多日期活动与资源清单"
+    ],
+    "avoid": [
+      "把不同字段压成一个混排段落"
+    ],
+    "constraints": [
+      "小屏操作仍可触达，筛选后不得失去字段标签。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责同类事实沿纵向落在固定位置，职责限定在当前区域。组合时小屏操作仍可触达，筛选后不得失去字段标签。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "editorial-alignment-grid",
+        "filter-count-feedback"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「编号与元数据对齐列表」。用稳定列宽组织每行的编号、名称、类别、日期与收藏；手机将次级元数据折到名称下方。触发：逐行浏览目录。可见结果：同类事实沿纵向落在固定位置。适用任务：多日期活动与资源清单。小屏操作仍可触达，筛选后不得失去字段标签。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责同类事实沿纵向落在固定位置，职责限定在当前区域。组合时小屏操作仍可触达，筛选后不得失去字段标签。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "swiss-grid",
+        "locator": "entries/swiss-grid.json#composition/hierarchy",
+        "observation": "展览主题 → 日期地点 → 分类日程 → 理念。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/swiss-grid/index.html",
+      "entries/swiss-grid.json",
+      "research/swiss-grid.md"
+    ]
+  },
+  {
+    "id": "artwork-caption-separation",
+    "title": "作品原图与图下题注分工",
+    "category": "内容组织",
+    "summary": "让作品保持自己的视觉，说明放在图外。",
+    "mechanism": "海报、馆藏或艺术摄影保留原色及比例，名称、日期与来源放在图下正文，不在原图上重复绘制标题。",
+    "trigger": "浏览作品与展览目录",
+    "effect": "作品表达与机构信息都可辨认。",
+    "useCases": [
+      "艺术作品与文化档案"
+    ],
+    "avoid": [
+      "大渐变和重复文字盖住原作品"
+    ],
+    "constraints": [
+      "许可范围按具体素材确认，替代文字与署名随图保留。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责作品表达与机构信息都可辨认，职责限定在当前区域。组合时许可范围按具体素材确认，替代文字与署名随图保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "native-horizontal-shelf",
+        "restrained-signal-color",
+        "mixed-ratio-archive-columns"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「作品原图与图下题注分工」。海报、馆藏或艺术摄影保留原色及比例，名称、日期与来源放在图下正文，不在原图上重复绘制标题。触发：浏览作品与展览目录。可见结果：作品表达与机构信息都可辨认。适用任务：艺术作品与文化档案。许可范围按具体素材确认，替代文字与署名随图保留。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责作品表达与机构信息都可辨认，职责限定在当前区域。组合时许可范围按具体素材确认，替代文字与署名随图保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#composition/imagery",
+        "observation": "官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#constraints/2",
+        "observation": "展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#composition/imagery",
+        "observation": "真实方丈记与TYPE-XVII海报、建筑照片、访问地图、研究照片本地化，保留原比例。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/design-sight/app.js",
+      "demos/design-sight/fidelity.md",
+      "demos/design-sight/index.html",
+      "demos/design-sight/style.css",
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "entries/design-sight.json",
+      "entries/met-museum.json",
+      "research/design-sight.md",
+      "research/met-museum.md"
+    ]
+  },
+  {
+    "id": "audio-signal-panel",
+    "title": "按信号流程组织声音面板",
+    "category": "内容组织",
+    "summary": "让功能邻接关系解释声音制作流程。",
+    "mechanism": "将预设、波形显示、滤波/包络/输出和演奏按实际信号链组织，改变控件确实改变音频节点。",
+    "trigger": "查看并操作合成器面板",
+    "effect": "复古外观与可用功能形成同一逻辑。",
+    "useCases": [
+      "乐器与参数化工具展示"
+    ],
+    "avoid": [
+      "没有功能的假旋钮"
+    ],
+    "constraints": [
+      "此例为简化单振荡器，不能声称原硬件声学复刻。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责复古外观与可用功能形成同一逻辑，职责限定在当前区域。组合时此例为简化单振荡器，不能声称原硬件声学复刻。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "live-parameter-readout",
+        "sound-opt-in"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「按信号流程组织声音面板」。将预设、波形显示、滤波/包络/输出和演奏按实际信号链组织，改变控件确实改变音频节点。触发：查看并操作合成器面板。可见结果：复古外观与可用功能形成同一逻辑。适用任务：乐器与参数化工具展示。此例为简化单振荡器，不能声称原硬件声学复刻。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责复古外观与可用功能形成同一逻辑，职责限定在当前区域。组合时此例为简化单振荡器，不能声称原硬件声学复刻。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "retro-80s",
+        "locator": "entries/retro-80s.json#composition/layout",
+        "observation": "硬件面板横向分区、预设/显示/参数/琴键；手机纵向排列",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/retro-80s/index.html",
+      "entries/retro-80s.json",
+      "research/retro-80s.md"
+    ]
+  },
+  {
+    "id": "avatar-pile-personality",
+    "title": "组合头像表达团队人格",
+    "category": "视觉构成",
+    "summary": "用一组独立头像为工具加入团队气质。",
+    "mechanism": "多张真实授权头像以小范围叠放组成一个稳定装饰层，手机调整到标题上方，文字仍是主要信息。",
+    "trigger": "浏览团队主张",
+    "effect": "团队主题有可识别的人格化线索。",
+    "useCases": [
+      "协作与创作产品"
+    ],
+    "avoid": [
+      "无关头像遮住标题和行动"
+    ],
+    "constraints": [
+      "头像只作装饰时不重复读屏，使用真实对应的授权素材。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责团队主题有可识别的人格化线索，职责限定在当前区域。组合时头像只作装饰时不重复读屏，使用真实对应的授权素材。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "measured-width-action-pill"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「组合头像表达团队人格」。多张真实授权头像以小范围叠放组成一个稳定装饰层，手机调整到标题上方，文字仍是主要信息。触发：浏览团队主张。可见结果：团队主题有可识别的人格化线索。适用任务：协作与创作产品。头像只作装饰时不重复读屏，使用真实对应的授权素材。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责团队主题有可识别的人格化线索，职责限定在当前区域。组合时头像只作装饰时不重复读屏，使用真实对应的授权素材。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "notion-editorial",
+        "locator": "entries/notion-editorial.json#interaction/1",
+        "observation": "桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.notion.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/notion-editorial/fidelity.md",
+      "demos/notion-editorial/index.html",
+      "demos/notion-editorial/journey.js",
+      "demos/notion-editorial/script.js",
+      "demos/notion-editorial/style.css",
+      "entries/notion-editorial.json",
+      "research/notion-editorial.md"
+    ]
+  },
+  {
+    "id": "blurred-layered-video-handoff",
+    "title": "旧片模糊退出、新片延后进入",
+    "category": "加载与媒体",
+    "summary": "影片与主题字按不同阶段交接。",
+    "mechanism": "旧影片先模糊退出，新影片稍后进入，标题再延迟进入；同一舞台叠层和最后请求队列管理快选。",
+    "trigger": "选择影片章节",
+    "effect": "镜头间更替保持观看连续。",
+    "useCases": [
+      "少量世界玩法章节"
+    ],
+    "avoid": [
+      "同时播放多层影片或让标题先于正确场景出现"
+    ],
+    "constraints": [
+      "切出影片必须暂停，降低动态直接显示当前片静帧与标题。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责镜头间更替保持观看连续，职责限定在当前区域。组合时切出影片必须暂停，降低动态直接显示当前片静帧与标题。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "last-request-transition",
+        "clip-tail-advance"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源影片",
+        "value": "1s退；1.6s入、延迟0.6s",
+        "note": "旧片/新片分开"
+      },
+      {
+        "name": "来源标题",
+        "value": "1.6s、延迟1s",
+        "note": "标题晚于场景带入"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「旧片模糊退出、新片延后进入」。旧影片先模糊退出，新影片稍后进入，标题再延迟进入；同一舞台叠层和最后请求队列管理快选。触发：选择影片章节。可见结果：镜头间更替保持观看连续。适用任务：少量世界玩法章节。切出影片必须暂停，降低动态直接显示当前片静帧与标题。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责镜头间更替保持观看连续，职责限定在当前区域。组合时切出影片必须暂停，降低动态直接显示当前片静帧与标题。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#interaction/1",
+        "observation": "点击章节 → 300ms输入锁；前片1秒模糊退场，后片1.6秒、延迟0.6秒进入；标题1.6秒、延迟1秒进入。快速选择保留最后请求。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/zelda-world.json",
+      "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "bounded-panel-track",
+    "title": "有界的完整面板横向轨道",
+    "category": "导航与状态",
+    "summary": "图像、资料与说明作为同一面板移动。",
+    "mechanism": "每次选择使整块相关内容沿单一轨道平移，首尾禁用前后按钮并停止；人物或玩法状态同步更新。",
+    "trigger": "选择编号、箭头或手势",
+    "effect": "相关信息保持组合关系，边界可预期。",
+    "useCases": [
+      "角色资料与玩法演示"
+    ],
+    "avoid": [
+      "内容明确有顺序却强制无限循环"
+    ],
+    "constraints": [
+      "一次只一个稳定场景可交互，移动时保留当前选中说明。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责有顺序面板的整体移动，人物语音按当前面板停止/切换。首尾是内容边界；若改为无限图集，应同时改变提示、禁用与焦点模型。",
+      "pairsWellWith": [
+        "character-voice-ownership"
+      ],
+      "conflicts": [
+        "centered-loop-gallery"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「有界的完整面板横向轨道」。每次选择使整块相关内容沿单一轨道平移，首尾禁用前后按钮并停止；人物或玩法状态同步更新。触发：选择编号、箭头或手势。可见结果：相关信息保持组合关系，边界可预期。适用任务：角色资料与玩法演示。一次只一个稳定场景可交互，移动时保留当前选中说明。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责有顺序面板的整体移动，人物语音按当前面板停止/切换。首尾是内容边界；若改为无限图集，应同时改变提示、禁用与焦点模型。",
+    "sources": [
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#interaction/2",
+        "observation": "三组 Gameplay 完整面板以 400ms cubic-bezier(.25,1,.5,1) 横移；按钮、编号、左右键与手势同步，首尾禁用而不循环。",
+        "evidence": "adapted",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#interaction/2",
+        "observation": "三位角色横移500ms并在两端停止；学校/怪盗服装300ms换装入场。本地角色内容缩减为三位。",
+        "evidence": "adapted",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "blue-archive",
+        "locator": "entries/blue-archive.json#interaction/1",
+        "observation": "阿比多斯四学生资料卡与完整立绘以 1000ms 整块水平移动；选择按钮、左右键及手势同步当前人物。",
+        "evidence": "adapted",
+        "referenceUrl": "https://bluearchive.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/blue-archive/app.js",
+      "demos/blue-archive/character.html",
+      "demos/blue-archive/fidelity.md",
+      "demos/blue-archive/index.html",
+      "demos/blue-archive/style.css",
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/blue-archive.json",
+      "entries/persona-kinetic.json",
+      "entries/uma-musume.json",
+      "research/blue-archive.md",
+      "research/persona-kinetic.md",
+      "research/uma-musume.md"
+    ]
+  },
+  {
+    "id": "capability-bento-hierarchy",
+    "title": "以跨列比例表达能力层次",
+    "category": "内容组织",
+    "summary": "不同产品权重使用不同面积。",
+    "mechanism": "根据功能关系设置跨列主能力、并列辅助能力或通栏协作能力，图文各有稳定位置。",
+    "trigger": "阅读能力矩阵",
+    "effect": "面积与排列说明能力之间的层级。",
+    "useCases": [
+      "多能力产品介绍"
+    ],
+    "avoid": [
+      "所有功能无差别铺成同尺寸卡墙"
+    ],
+    "constraints": [
+      "手机重排仍保留能力顺序，不把面积当唯一信息提示。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责面积与排列说明能力之间的层级，职责限定在当前区域。组合时手机重排仍保留能力顺序，不把面积当唯一信息提示。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "native-horizontal-shelf"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「以跨列比例表达能力层次」。根据功能关系设置跨列主能力、并列辅助能力或通栏协作能力，图文各有稳定位置。触发：阅读能力矩阵。可见结果：面积与排列说明能力之间的层级。适用任务：多能力产品介绍。手机重排仍保留能力顺序，不把面积当唯一信息提示。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责面积与排列说明能力之间的层级，职责限定在当前区域。组合时手机重排仍保留能力顺序，不把面积当唯一信息提示。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#composition/layout",
+        "observation": "1266px内容框；48px段落式首屏；产品矩阵首行Payments跨两列、Billing一列同高，随后不同产品区；4列指标与左右案例。",
+        "evidence": "observed",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "notion-editorial",
+        "locator": "entries/notion-editorial.json#composition/layout",
+        "observation": "语言提示/导航 → 动作胶囊/头像/桌面产品视频 → 标识条带 → 两列+通栏 Bento → 五用途 → 团队故事 → 结束行动 → 页尾。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.notion.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/notion-editorial/fidelity.md",
+      "demos/notion-editorial/index.html",
+      "demos/notion-editorial/journey.js",
+      "demos/notion-editorial/script.js",
+      "demos/notion-editorial/style.css",
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/notion-editorial.json",
+      "entries/stripe-platform.json",
+      "research/notion-editorial.md",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "center-aligned-section-index",
+    "title": "章节中心定位的侧边索引",
+    "category": "导航与状态",
+    "summary": "点击时让阅读目标落在视口中心。",
+    "mechanism": "侧边索引按视口中心更新，点击将目标章中心对齐；指针/焦点进入索引显示标签并降低内容强调。",
+    "trigger": "点击索引或聚焦索引区",
+    "effect": "跳转位置和当前章节清楚。",
+    "useCases": [
+      "章节高度明确的作品长页"
+    ],
+    "avoid": [
+      "只给无文字的小点且无法键盘操作"
+    ],
+    "constraints": [
+      "索引强调时正文仍可辨认，小屏改为可读菜单。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责跳转位置和当前章节清楚，职责限定在当前区域。组合时索引强调时正文仍可辨认，小屏改为可读菜单。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "native-document-reading"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "索引button或链接有完整章节名，焦点显示标签，键盘可跳到每章。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源定位",
+        "value": "450ms swing / 标签350ms",
+        "note": "内容透明度降为0.2"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「章节中心定位的侧边索引」。侧边索引按视口中心更新，点击将目标章中心对齐；指针/焦点进入索引显示标签并降低内容强调。触发：点击索引或聚焦索引区。可见结果：跳转位置和当前章节清楚。适用任务：章节高度明确的作品长页。索引强调时正文仍可辨认，小屏改为可读菜单。键盘：索引button或链接有完整章节名，焦点显示标签，键盘可跳到每章。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责跳转位置和当前章节清楚，职责限定在当前区域。组合时索引强调时正文仍可辨认，小屏改为可读菜单。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "monument-valley-game",
+        "locator": "entries/monument-valley-game.json#interaction/1",
+        "observation": "桌面左侧章节索引：点击以450ms swing将章节中心对齐视口中心；悬停或键盘进入索引时，标签350ms出现、内容降至0.2透明度。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.monumentvalleygame.com/mv1",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/monument-valley-game/app.js",
+      "demos/monument-valley-game/fidelity.md",
+      "demos/monument-valley-game/index.html",
+      "demos/monument-valley-game/style.css",
+      "entries/monument-valley-game.json",
+      "research/monument-valley-game.md"
+    ]
+  },
+  {
+    "id": "centered-loop-gallery",
+    "title": "中心图与邻图预告的循环轨道",
+    "category": "导航与状态",
+    "summary": "当前图突出，侧图提示还有内容。",
+    "mechanism": "同一水平轨道移位，中心图清晰、邻图部分露出；首尾以克隆衔接后复位，手动与自动状态共享索引。",
+    "trigger": "箭头、索引、触摸或自动周期",
+    "effect": "浏览连续且下一项有可见预告。",
+    "useCases": [
+      "作品与演出摄影画廊"
+    ],
+    "avoid": [
+      "末尾突然跳到另一幅或焦点落在克隆项"
+    ],
+    "constraints": [
+      "克隆仅用于视觉，真实焦点与索引按内容ID管理，自动推进提供暂停。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责视觉连续与邻图预告，适合没有明确首尾次序的作品集合。与有界人物/玩法轨道的边界规则不同；同一轨道不能同时循环与首尾禁用。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": [
+        "bounded-panel-track"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「中心图与邻图预告的循环轨道」。同一水平轨道移位，中心图清晰、邻图部分露出；首尾以克隆衔接后复位，手动与自动状态共享索引。触发：箭头、索引、触摸或自动周期。可见结果：浏览连续且下一项有可见预告。适用任务：作品与演出摄影画廊。克隆仅用于视觉，真实焦点与索引按内容ID管理，自动推进提供暂停。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责视觉连续与邻图预告，适合没有明确首尾次序的作品集合。与有界人物/玩法轨道的边界规则不同；同一轨道不能同时循环与首尾禁用。",
+    "sources": [
+      {
+        "caseId": "monument-valley-game",
+        "locator": "entries/monument-valley-game.json#interaction/3",
+        "observation": "十四图画廊：500ms整条水平轨道、3秒自动推进、无限首尾衔接；桌面三张、手机一张加20%侧图，箭头/14个索引/方向键与点击侧图有效。悬停、焦点、离屏和后台暂停。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.monumentvalleygame.com/mv1",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#interaction/3",
+        "observation": "学校生活与怪盗行动分别采用无限中心轮播：箭头、左右键或横向触摸 → 500ms整条轨道滑动，相邻图露出；到末尾无缝接第一项。",
+        "evidence": "adapted",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "philharmonie-music",
+        "locator": "entries/philharmonie-music.json#interaction/2",
+        "observation": "切换音乐会摄影：三幅署名摄影500ms横向轨道，克隆边界无缝循环；前后与暂停／触摸可操作。 用演出者肖像讲述阵容，邻接图像的运动维持观看连续。",
+        "evidence": "observed",
+        "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#interaction/2",
+        "observation": "照片或Featured自动／手动切换：照片3600ms间隔、800ms淡化；Featured600ms中心循环，3600ms自动，手机露出两侧邻项。 照片传递现场氛围，中心轨道突出活动主题且提示还有内容。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "demos/monument-valley-game/app.js",
+      "demos/monument-valley-game/fidelity.md",
+      "demos/monument-valley-game/index.html",
+      "demos/monument-valley-game/style.css",
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "demos/philharmonie-music/fidelity.md",
+      "demos/philharmonie-music/index.html",
+      "demos/philharmonie-music/script.js",
+      "demos/philharmonie-music/style.css",
+      "entries/fuji-rock.json",
+      "entries/monument-valley-game.json",
+      "entries/persona-kinetic.json",
+      "entries/philharmonie-music.json",
+      "research/fuji-rock.md",
+      "research/monument-valley-game.md",
+      "research/persona-kinetic.md",
+      "research/philharmonie-music.md"
+    ]
+  },
+  {
+    "id": "character-stage-coordination",
+    "title": "人物、背景与资料成组换态",
+    "category": "交互反馈",
+    "summary": "换人时保持所有身份线索一致。",
+    "mechanism": "选中人物统一更新立绘、姓名、简介、肖像与背景/资料卡；人物阶段或服装作为独立状态，避免图片和声音归属错位。",
+    "trigger": "选择人物或阶段",
+    "effect": "人物身份与当前场景共同可读。",
+    "useCases": [
+      "角色档案与人物作品展示"
+    ],
+    "avoid": [
+      "只换立绘而保留错误姓名/资料"
+    ],
+    "constraints": [
+      "保留完整立绘比例，阶段内容子集明确，不能把原学院或全角色库说成已迁移。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责人物身份与当前场景共同可读，职责限定在当前区域。组合时保留完整立绘比例，阶段内容子集明确，不能把原学院或全角色库说成已迁移。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "character-voice-ownership",
+        "bounded-panel-track"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「人物、背景与资料成组换态」。选中人物统一更新立绘、姓名、简介、肖像与背景/资料卡；人物阶段或服装作为独立状态，避免图片和声音归属错位。触发：选择人物或阶段。可见结果：人物身份与当前场景共同可读。适用任务：角色档案与人物作品展示。保留完整立绘比例，阶段内容子集明确，不能把原学院或全角色库说成已迁移。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责人物身份与当前场景共同可读，职责限定在当前区域。组合时保留完整立绘比例，阶段内容子集明确，不能把原学院或全角色库说成已迁移。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "genshin-world",
+        "locator": "entries/genshin-world.json#interaction/1",
+        "observation": "选择 Vesna/Vodyanitsa，100ms 交叉淡入立绘，并同步切换青绿/蓝色完整背景、姓名、简介、肖像状态与麦克风图。",
+        "evidence": "observed",
+        "referenceUrl": "https://genshin.hoyoverse.com/en/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "blue-archive",
+        "locator": "entries/blue-archive.json#interaction/1",
+        "observation": "阿比多斯四学生资料卡与完整立绘以 1000ms 整块水平移动；选择按钮、左右键及手势同步当前人物。",
+        "evidence": "adapted",
+        "referenceUrl": "https://bluearchive.jp/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#constraints/2",
+        "observation": "干员保留3名/每人E1与E2，原站6名且阿米娅含E0；灰度背景为本地同人物图层，未移植完整背景版/6人滚动肖像轨道。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "demos/blue-archive/app.js",
+      "demos/blue-archive/character.html",
+      "demos/blue-archive/fidelity.md",
+      "demos/blue-archive/index.html",
+      "demos/blue-archive/style.css",
+      "demos/genshin-world/fidelity.md",
+      "demos/genshin-world/index.html",
+      "demos/genshin-world/script.js",
+      "demos/genshin-world/style.css",
+      "entries/arknights-world.json",
+      "entries/blue-archive.json",
+      "entries/genshin-world.json",
+      "research/arknights-world.md",
+      "research/blue-archive.md",
+      "research/genshin-world.md"
+    ]
+  },
+  {
+    "id": "character-voice-ownership",
+    "title": "声线主动播放并归属于当前人物",
+    "category": "加载与媒体",
+    "summary": "切换人物时不会叠加上一人的声音。",
+    "mechanism": "麦克风主动播放当前人物对应音轨，再次点击暂停；换人、离开角色区域或后台停止旧声音。",
+    "trigger": "点击人物VOICE或换人",
+    "effect": "台词为人物身份补充听觉线索。",
+    "useCases": [
+      "有真实授权语音的角色档案"
+    ],
+    "avoid": [
+      "把台词说成BGM或给错误人物播放音轨"
+    ],
+    "constraints": [
+      "语音对应关系按素材核验，播放状态由真实音频事件更新。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责台词为人物身份补充听觉线索，职责限定在当前区域。组合时语音对应关系按素材核验，播放状态由真实音频事件更新。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "character-stage-coordination",
+        "sound-opt-in"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "麦克风用有角色名的button，aria-pressed与实际播放/暂停一致。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「声线主动播放并归属于当前人物」。麦克风主动播放当前人物对应音轨，再次点击暂停；换人、离开角色区域或后台停止旧声音。触发：点击人物VOICE或换人。可见结果：台词为人物身份补充听觉线索。适用任务：有真实授权语音的角色档案。语音对应关系按素材核验，播放状态由真实音频事件更新。键盘：麦克风用有角色名的button，aria-pressed与实际播放/暂停一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责台词为人物身份补充听觉线索，职责限定在当前区域。组合时语音对应关系按素材核验，播放状态由真实音频事件更新。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "genshin-world",
+        "locator": "entries/genshin-world.json#interaction/2",
+        "observation": "点击麦克风随机播放对应角色 3 条官方语音之一，再点暂停；换角色、离开角色章节与后台时停止，防止声线叠加。",
+        "evidence": "adapted",
+        "referenceUrl": "https://genshin.hoyoverse.com/en/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "blue-archive",
+        "locator": "entries/blue-archive.json#interaction/2",
+        "observation": "角色 VOICE 麦克风播放该学生对应官方 WAV，再点暂停；换人或后台停止，声线归属明确。",
+        "evidence": "adapted",
+        "referenceUrl": "https://bluearchive.jp/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/5",
+        "observation": "真实BGM默认关闭，单独开关并使用官网600/300ms音量渐变；三人日语语音独立按需播放，换人物或离开干员章暂停旧语音。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "demos/blue-archive/app.js",
+      "demos/blue-archive/character.html",
+      "demos/blue-archive/fidelity.md",
+      "demos/blue-archive/index.html",
+      "demos/blue-archive/style.css",
+      "demos/genshin-world/fidelity.md",
+      "demos/genshin-world/index.html",
+      "demos/genshin-world/script.js",
+      "demos/genshin-world/style.css",
+      "entries/arknights-world.json",
+      "entries/blue-archive.json",
+      "entries/genshin-world.json",
+      "research/arknights-world.md",
+      "research/blue-archive.md",
+      "research/genshin-world.md"
+    ]
+  },
+  {
+    "id": "checklist-progress",
+    "title": "短清单与即时完成进度",
+    "category": "交互反馈",
+    "summary": "把抽象品牌主张变成几个可完成动作。",
+    "mechanism": "原生复选框代表真实步骤，改变勾选即更新完成数，并提供清单重置。",
+    "trigger": "勾选/取消或重置",
+    "effect": "用户可看到自己的参与结果。",
+    "useCases": [
+      "入门仪式与轻任务引导"
+    ],
+    "avoid": [
+      "用假进度阻止正文阅读"
+    ],
+    "constraints": [
+      "任务文字具体，重置可见且仅影响清单。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户可看到自己的参与结果，职责限定在当前区域。组合时任务文字具体，重置可见且仅影响清单。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "paper-material-collage",
+        "discovery-progress-journal"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "带文本label的原生checkbox，状态与完成数同步。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「短清单与即时完成进度」。原生复选框代表真实步骤，改变勾选即更新完成数，并提供清单重置。触发：勾选/取消或重置。可见结果：用户可看到自己的参与结果。适用任务：入门仪式与轻任务引导。任务文字具体，重置可见且仅影响清单。键盘：带文本label的原生checkbox，状态与完成数同步。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户可看到自己的参与结果，职责限定在当前区域。组合时任务文字具体，重置可见且仅影响清单。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "hand-drawn",
+        "locator": "entries/hand-drawn.json#interaction/0",
+        "observation": "三项原生复选框更新收集进度",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/hand-drawn/index.html",
+      "demos/hand-drawn/script.js",
+      "demos/hand-drawn/style.css",
+      "entries/hand-drawn.json",
+      "research/hand-drawn.md"
+    ]
+  },
+  {
+    "id": "client-logo-marquee",
+    "title": "可停的连续客户标识条带",
+    "category": "加载与媒体",
+    "summary": "用连续条带提供客户范围线索。",
+    "mechanism": "重复标识轨道缓慢横移以形成连续序列，指针停留暂停；重复视觉不增加重复读屏内容。",
+    "trigger": "查看条带或停留",
+    "effect": "客户事实以低密度节奏出现。",
+    "useCases": [
+      "已有真实客户依据的品牌介绍"
+    ],
+    "avoid": [
+      "虚构客户标识或永不停止的移动正文"
+    ],
+    "constraints": [
+      "提供暂停，减少动态展示静态可读标识，不能把滚动当证言验证。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责客户事实以低密度节奏出现，职责限定在当前区域。组合时提供暂停，减少动态展示静态可读标识，不能把滚动当证言验证。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "提供可聚焦暂停入口，重复轨道设aria-hidden；真实标识有替代文字。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「可停的连续客户标识条带」。重复标识轨道缓慢横移以形成连续序列，指针停留暂停；重复视觉不增加重复读屏内容。触发：查看条带或停留。可见结果：客户事实以低密度节奏出现。适用任务：已有真实客户依据的品牌介绍。提供暂停，减少动态展示静态可读标识，不能把滚动当证言验证。键盘：提供可聚焦暂停入口，重复轨道设aria-hidden；真实标识有替代文字。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责客户事实以低密度节奏出现，职责限定在当前区域。组合时提供暂停，减少动态展示静态可读标识，不能把滚动当证言验证。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "notion-editorial",
+        "locator": "entries/notion-editorial.json#interaction/2",
+        "observation": "客户标识原生连续横移，指针停留暂停；手机保持条带，不把标识排成多行墙。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.notion.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/1",
+        "observation": "Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。",
+        "evidence": "observed",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/notion-editorial/fidelity.md",
+      "demos/notion-editorial/index.html",
+      "demos/notion-editorial/journey.js",
+      "demos/notion-editorial/script.js",
+      "demos/notion-editorial/style.css",
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/notion-editorial.json",
+      "entries/stripe-platform.json",
+      "research/notion-editorial.md",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "clip-tail-advance",
+    "title": "在影片片尾前交给下一章",
+    "category": "加载与媒体",
+    "summary": "避免片尾黑场打断章节观看。",
+    "mechanism": "监测当前影片剩余时间，在片尾前固定余量触发下一章，用户暂停或降低动态时关闭自动推进。",
+    "trigger": "影片到达尾段",
+    "effect": "主题影片连续展示。",
+    "useCases": [
+      "短片组成的主题世界"
+    ],
+    "avoid": [
+      "暂停时仍自动换章"
+    ],
+    "constraints": [
+      "剩余阈值以实际媒体时长计算，本地截短片会导致循环更短。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责主题影片连续展示，职责限定在当前区域。组合时剩余阈值以实际媒体时长计算，本地截短片会导致循环更短。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "blurred-layered-video-handoff",
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源余量",
+        "value": "片尾前1秒",
+        "note": "影片交接触发，非定时整页切换"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「在影片片尾前交给下一章」。监测当前影片剩余时间，在片尾前固定余量触发下一章，用户暂停或降低动态时关闭自动推进。触发：影片到达尾段。可见结果：主题影片连续展示。适用任务：短片组成的主题世界。剩余阈值以实际媒体时长计算，本地截短片会导致循环更短。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责主题影片连续展示，职责限定在当前区域。组合时剩余阈值以实际媒体时长计算，本地截短片会导致循环更短。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#interaction/2",
+        "observation": "影片片尾前1秒推进下一章；暂停画面和减少动态分支关闭自动推进。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/zelda-world.json",
+      "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "compact-scroll-header",
+    "title": "跨过品牌区出现紧凑导航",
+    "category": "滚动叙事",
+    "summary": "大标识与持久导航按阅读位置交接。",
+    "mechanism": "顶部保留大机构标志，超过标志高度加偏移后从上方出现紧凑导航，返回顶部退出恢复大标志。",
+    "trigger": "跨越阈值或回到首屏",
+    "effect": "阅读长页时随时可访问机构入口。",
+    "useCases": [
+      "有大标识首图的机构长页"
+    ],
+    "avoid": [
+      "同时叠两套导航持续遮住作品"
+    ],
+    "constraints": [
+      "转换不改变文档高度，快速反向以当前状态收束。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责阅读长页时随时可访问机构入口，职责限定在当前区域。组合时转换不改变文档高度，快速反向以当前状态收束。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "institution-overlap-logo",
+        "native-document-reading"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源阈值/时序",
+        "value": "标志高度+130px / 120ms入、80ms退",
+        "note": "50px紧凑导航"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「跨过品牌区出现紧凑导航」。顶部保留大机构标志，超过标志高度加偏移后从上方出现紧凑导航，返回顶部退出恢复大标志。触发：跨越阈值或回到首屏。可见结果：阅读长页时随时可访问机构入口。适用任务：有大标识首图的机构长页。转换不改变文档高度，快速反向以当前状态收束。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责阅读长页时随时可访问机构入口，职责限定在当前区域。组合时转换不改变文档高度，快速反向以当前状态收束。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "mori-art-museum",
+        "locator": "entries/mori-art-museum.json#interaction/1",
+        "observation": "滚动超过大字标+130px／返回：50px红色紧凑导航120ms从上方进入，回到顶部80ms退出恢复大字标。 长页仍能访问机构入口；进入展览时品牌不被小导航抢占。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.mori.art.museum/jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/mori-art-museum/app.js",
+      "demos/mori-art-museum/fidelity.md",
+      "demos/mori-art-museum/index.html",
+      "demos/mori-art-museum/style.css",
+      "entries/mori-art-museum.json",
+      "research/mori-art-museum.md"
+    ]
+  },
+  {
+    "id": "continuous-bgm-bridge",
+    "title": "跨章节连续的环境声音",
+    "category": "加载与媒体",
+    "summary": "以连续音轨连接不同场景。",
+    "mechanism": "用户开启后BGM跨章节保持同一播放位置，启停使用有依据的音量渐变；人物语音与环境音乐分开管理。",
+    "trigger": "主动开启或关闭BGM、切换章节",
+    "effect": "章切保留世界氛围，声音职责可辨认。",
+    "useCases": [
+      "有真实授权音轨的游戏世界"
+    ],
+    "avoid": [
+      "换章反复重启BGM或添加虚构曲目"
+    ],
+    "constraints": [
+      "默认静音，后台暂停，动态暂停独立于声音选择。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "只连接环境氛围，人物台词仍单独启停，前景影片开启时需要制定混音或暂停策略。声音必须主动启用，动态减少不等于撤销用户的声音选择。",
+      "pairsWellWith": [
+        "sound-opt-in",
+        "character-voice-ownership"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "独立BGM按钮有当前启用/静音状态，可随时停止。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "Arknights来源音量",
+        "value": "600ms进入 / 300ms退出",
+        "note": "原站BGM参数；其他来源另行选择"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「跨章节连续的环境声音」。用户开启后BGM跨章节保持同一播放位置，启停使用有依据的音量渐变；人物语音与环境音乐分开管理。触发：主动开启或关闭BGM、切换章节。可见结果：章切保留世界氛围，声音职责可辨认。适用任务：有真实授权音轨的游戏世界。默认静音，后台暂停，动态暂停独立于声音选择。键盘：独立BGM按钮有当前启用/静音状态，可随时停止。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只连接环境氛围，人物台词仍单独启停，前景影片开启时需要制定混音或暂停策略。声音必须主动启用，动态减少不等于撤销用户的声音选择。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/5",
+        "observation": "真实BGM默认关闭，单独开关并使用官网600/300ms音量渐变；三人日语语音独立按需播放，换人物或离开干员章暂停旧语音。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#soundBehavior/interactionRole",
+        "observation": "开场 SE 对应纹章发亮扩散，BGM在入口移交世界时接续；三段影片切换时音乐不断开，维持探索节奏。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/arknights-world.json",
+      "entries/zelda-world.json",
+      "research/arknights-world.md",
+      "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "controlled-rough-outlines",
+    "title": "受控不规则轮廓",
+    "category": "视觉构成",
+    "summary": "以稳定骨架承托草稿感轮廓。",
+    "mechanism": "用固定SVG曲线、有限双线与统一排线密度制造手绘感；正文和操作边界保持清楚稳定。",
+    "trigger": "浏览插画与短批注",
+    "effect": "可感受到手工气质而不失去阅读秩序。",
+    "useCases": [
+      "创作、文具与教育入口"
+    ],
+    "avoid": [
+      "每帧随机抖动的线条"
+    ],
+    "constraints": [
+      "不规则只作用于插画与短批注，不能侵入触控区。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责可感受到手工气质而不失去阅读秩序，职责限定在当前区域。组合时不规则只作用于插画与短批注，不能侵入触控区。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "paper-material-collage"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「受控不规则轮廓」。用固定SVG曲线、有限双线与统一排线密度制造手绘感；正文和操作边界保持清楚稳定。触发：浏览插画与短批注。可见结果：可感受到手工气质而不失去阅读秩序。适用任务：创作、文具与教育入口。不规则只作用于插画与短批注，不能侵入触控区。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责可感受到手工气质而不失去阅读秩序，职责限定在当前区域。组合时不规则只作用于插画与短批注，不能侵入触控区。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "hand-drawn",
+        "locator": "entries/hand-drawn.json#composition/shape",
+        "observation": "适度不规则笔触与纸页质感模拟手工；按钮仍有稳定边界。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/hand-drawn/index.html",
+      "demos/hand-drawn/script.js",
+      "demos/hand-drawn/style.css",
+      "entries/hand-drawn.json",
+      "research/hand-drawn.md"
+    ]
+  },
+  {
+    "id": "current-state-svg-export",
+    "title": "导出当前构成",
+    "category": "导航与状态",
+    "summary": "把操作结果变成可使用的原创SVG。",
+    "mechanism": "导出时读取当前几何位置与角度，生成与画布一致的SVG文件；文件内容包含当前状态。",
+    "trigger": "激活导出按钮",
+    "effect": "探索结果可以保存与继续编辑。",
+    "useCases": [
+      "图形工具与教学作品"
+    ],
+    "avoid": [
+      "下载固定模板冒充当前结果"
+    ],
+    "constraints": [
+      "只导出当前原创构成，不发起远端服务。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责探索结果可以保存与继续编辑，职责限定在当前区域。组合时只导出当前原创构成，不发起远端服务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "geometric-balance-presets"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「导出当前构成」。导出时读取当前几何位置与角度，生成与画布一致的SVG文件；文件内容包含当前状态。触发：激活导出按钮。可见结果：探索结果可以保存与继续编辑。适用任务：图形工具与教学作品。只导出当前原创构成，不发起远端服务。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责探索结果可以保存与继续编辑，职责限定在当前区域。组合时只导出当前原创构成，不发起远端服务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "bauhaus-geometry",
+        "locator": "entries/bauhaus-geometry.json#interaction/2",
+        "observation": "导出按钮下载当前原创构成的SVG文件。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/bauhaus-geometry/index.html",
+      "entries/bauhaus-geometry.json",
+      "research/bauhaus-geometry.md"
+    ]
+  },
+  {
+    "id": "direct-purpose-navigation",
+    "title": "机构目的地即时展开",
+    "category": "导航与状态",
+    "summary": "把到访、活动等常见目的直接组织成入口。",
+    "mechanism": "点击目的类别立即显示相应目的地列表，层级结构留在同一导航区域；小屏可以在文档流展开。",
+    "trigger": "打开Visit或主菜单类别",
+    "effect": "任务路径直接可读。",
+    "useCases": [
+      "文化机构与实用内容门户"
+    ],
+    "avoid": [
+      "为了装饰重复长转场拖慢导航"
+    ],
+    "constraints": [
+      "真实目的地和链接保留，搜索/作品dialog为本地练习时明确边界。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责任务路径直接可读，职责限定在当前区域。组合时真实目的地和链接保留，搜索/作品dialog为本地练习时明确边界。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "visit-facts-grid",
+        "sticky-action-sidebar"
+      ],
+      "conflicts": [
+        "top-down-clipped-menu"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「机构目的地即时展开」。点击目的类别立即显示相应目的地列表，层级结构留在同一导航区域；小屏可以在文档流展开。触发：打开Visit或主菜单类别。可见结果：任务路径直接可读。适用任务：文化机构与实用内容门户。真实目的地和链接保留，搜索/作品dialog为本地练习时明确边界。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责任务路径直接可读，职责限定在当前区域。组合时真实目的地和链接保留，搜索/作品dialog为本地练习时明确边界。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#interaction/3",
+        "observation": "打开导航：Visit等目的地立即展开；键盘焦点可操作，局部搜索与作品dialog为本地练习补充。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "philharmonie-music",
+        "locator": "entries/philharmonie-music.json#interaction/1",
+        "observation": "打开主菜单和类别：浅灰全宽导航立即出现，类别切换为目的地列表；小屏菜单在页面流中展开。 机构多种活动保留层级，交互保持直接。",
+        "evidence": "observed",
+        "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "demos/philharmonie-music/fidelity.md",
+      "demos/philharmonie-music/index.html",
+      "demos/philharmonie-music/script.js",
+      "demos/philharmonie-music/style.css",
+      "entries/met-museum.json",
+      "entries/philharmonie-music.json",
+      "research/met-museum.md",
+      "research/philharmonie-music.md"
+    ]
+  },
+  {
+    "id": "directional-section-wipe",
+    "title": "按方向侧向裁切交接整章",
+    "category": "滚动叙事",
+    "summary": "让章节空间方向与输入方向一致。",
+    "mechanism": "两个整屏场景以横向遮罩覆盖出入，旧场景退出与新场景进入共享方向；稳定后只有一章可交互。",
+    "trigger": "滚轮、章节导航或键盘换章",
+    "effect": "整页档案保持单一舞台及方向线索。",
+    "useCases": [
+      "章节数量有限的工业档案"
+    ],
+    "avoid": [
+      "给普通长文强行锁为全屏切幕"
+    ],
+    "constraints": [
+      "输入锁与最后请求队列分别处理重复和反向，页脚仍有可逆回程。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责整个场景的章间交接，可搭配同步滚号与最后目标队列。与自然长文阅读共用于同一主滚动容器时会争夺滚轮；应按内容长度选一种主浏览结构。",
+      "pairsWellWith": [
+        "last-request-transition",
+        "synchronized-rolling-index"
+      ],
+      "conflicts": [
+        "native-document-reading"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "提供章节按钮以及方向键/PageUp/PageDown/Home/End，当前章标示清楚。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源章切",
+        "value": "桌面1000ms / 竖屏600ms",
+        "note": "归档侧向wipe时间"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「按方向侧向裁切交接整章」。两个整屏场景以横向遮罩覆盖出入，旧场景退出与新场景进入共享方向；稳定后只有一章可交互。触发：滚轮、章节导航或键盘换章。可见结果：整页档案保持单一舞台及方向线索。适用任务：章节数量有限的工业档案。输入锁与最后请求队列分别处理重复和反向，页脚仍有可逆回程。键盘：提供章节按钮以及方向键/PageUp/PageDown/Home/End，当前章标示清楚。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责整个场景的章间交接，可搭配同步滚号与最后目标队列。与自然长文阅读共用于同一主滚动容器时会争夺滚轮；应按内容长度选一种主浏览结构。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/1",
+        "observation": "场景横向遮罩裁切：桌面1000ms、竖屏600ms；同方向重复轮输入锁定，快速反向和导航使用最后目标队列，单次仅一组出/入场景。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "entries/arknights-world.json",
+      "research/arknights-world.md"
+    ]
+  },
+  {
+    "id": "directional-sticky-navigation",
+    "title": "向上找回、向下让位的导览条",
+    "category": "滚动叙事",
+    "summary": "按浏览方向决定持久导览可见性。",
+    "mechanism": "跨过指定内容区后导览固定，向上滚动显现、向下收起；语言目录在离开时合拢。",
+    "trigger": "阈值后上下滚动",
+    "effect": "用户回找时能导航，继续读时减少遮挡。",
+    "useCases": [
+      "较长活动与内容门户"
+    ],
+    "avoid": [
+      "微小滚动噪声让导航不停抖动"
+    ],
+    "constraints": [
+      "设置合理方向阈值，焦点或打开目录时保持可见。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责用户回找时能导航，继续读时减少遮挡，职责限定在当前区域。组合时设置合理方向阈值，焦点或打开目录时保持可见。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "native-document-reading",
+        "mountain-scaled-menu"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「向上找回、向下让位的导览条」。跨过指定内容区后导览固定，向上滚动显现、向下收起；语言目录在离开时合拢。触发：阈值后上下滚动。可见结果：用户回找时能导航，继续读时减少遮挡。适用任务：较长活动与内容门户。设置合理方向阈值，焦点或打开目录时保持可见。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户回找时能导航，继续读时减少遮挡，职责限定在当前区域。组合时设置合理方向阈值，焦点或打开目录时保持可见。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#interaction/3",
+        "observation": "超过Pickup后向上／向下滚动：导览条固定后按方向显隐；语言菜单400ms展开并在离开时收起。 长页浏览随时找回实用入口，同时减少遮挡。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "entries/fuji-rock.json",
+      "research/fuji-rock.md"
+    ]
+  },
+  {
+    "id": "discovery-progress-journal",
+    "title": "探索进度与可重置手账",
+    "category": "导航与状态",
+    "summary": "把访问过的地点变成可回看的进度。",
+    "mechanism": "访问地点时记录发现集合，同步地点按钮、进度文本与旅行手账，并允许清除后重新探索。",
+    "trigger": "首次抵达地点或重置",
+    "effect": "探索行为有持续反馈与回看线索。",
+    "useCases": [
+      "教学地图与小型任务旅程"
+    ],
+    "avoid": [
+      "使用不可撤销的发现锁定"
+    ],
+    "constraints": [
+      "本地存储限定此页专用键，重置只影响该手账。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责探索行为有持续反馈与回看线索，职责限定在当前区域。组合时本地存储限定此页专用键，重置只影响该手账。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "spatial-navigation-map",
+        "checklist-progress"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「探索进度与可重置手账」。访问地点时记录发现集合，同步地点按钮、进度文本与旅行手账，并允许清除后重新探索。触发：首次抵达地点或重置。可见结果：探索行为有持续反馈与回看线索。适用任务：教学地图与小型任务旅程。本地存储限定此页专用键，重置只影响该手账。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责探索行为有持续反馈与回看线索，职责限定在当前区域。组合时本地存储限定此页专用键，重置只影响该手账。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "pixel-world",
+        "locator": "entries/pixel-world.json#interaction/2",
+        "observation": "靠近地点会记录发现进度，按钮状态不只通过颜色表达。",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "pixel-world",
+        "locator": "entries/pixel-world.json#interaction/3",
+        "observation": "手账仅保存当前浏览器，支持清除并重新探索。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/pixel-world/index.html",
+      "entries/pixel-world.json",
+      "research/pixel-world.md"
+    ]
+  },
+  {
+    "id": "edge-action-world-composition",
+    "title": "中心世界与边缘行动分工",
+    "category": "视觉构成",
+    "summary": "让世界视觉保持主角，下载入口仍直接可找。",
+    "mechanism": "背景建立空间，中心Logo识别产品，竖排标语补充主题；下载与漫画等行动分布边缘，避免覆盖主视觉焦点。",
+    "trigger": "进入世界首页",
+    "effect": "情绪、身份和行动各有位置。",
+    "useCases": [
+      "单屏游戏世界入口"
+    ],
+    "avoid": [
+      "把下载、资料和新闻都塞进中心卡墙"
+    ],
+    "constraints": [
+      "手机重排要保留触达，竖排装饰不得取代可读正文。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责情绪、身份和行动各有位置，职责限定在当前区域。组合时手机重排要保留触达，竖排装饰不得取代可读正文。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "independent-character-page"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「中心世界与边缘行动分工」。背景建立空间，中心Logo识别产品，竖排标语补充主题；下载与漫画等行动分布边缘，避免覆盖主视觉焦点。触发：进入世界首页。可见结果：情绪、身份和行动各有位置。适用任务：单屏游戏世界入口。手机重排要保留触达，竖排装饰不得取代可读正文。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责情绪、身份和行动各有位置，职责限定在当前区域。组合时手机重排要保留触达，竖排装饰不得取代可读正文。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "blue-archive",
+        "locator": "entries/blue-archive.json#composition/hierarchy",
+        "observation": "背景建立世界、Logo确认产品、竖排标语补充主题；下载与漫画入口形成左右分工。",
+        "evidence": "observed",
+        "referenceUrl": "https://bluearchive.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/blue-archive/app.js",
+      "demos/blue-archive/character.html",
+      "demos/blue-archive/fidelity.md",
+      "demos/blue-archive/index.html",
+      "demos/blue-archive/style.css",
+      "entries/blue-archive.json",
+      "research/blue-archive.md"
+    ]
+  },
+  {
+    "id": "editorial-alignment-grid",
+    "title": "共享对齐线的编辑网格",
+    "category": "视觉构成",
+    "summary": "用共同基线连接标题、日期和行动。",
+    "mechanism": "先按内容角色建立列网格，再让标题、日期、类别和行动反复对齐；非对称留白仍服从共同线。",
+    "trigger": "阅读首屏及列表",
+    "effect": "不同密度的信息保持可扫描关系。",
+    "useCases": [
+      "日程、展览与课程索引"
+    ],
+    "avoid": [
+      "为保持海报外形裁切正文"
+    ],
+    "constraints": [
+      "手机从跨栏折为单列，保留完整日期和行动。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责不同密度的信息保持可扫描关系，职责限定在当前区域。组合时手机从跨栏折为单列，保留完整日期和行动。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "restrained-signal-color",
+        "aligned-metadata-rows"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [
+      {
+        "name": "本地网格",
+        "value": "12 栏 / 32px 间距",
+        "note": "原创示范选择，非历史固定规范"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「共享对齐线的编辑网格」。先按内容角色建立列网格，再让标题、日期、类别和行动反复对齐；非对称留白仍服从共同线。触发：阅读首屏及列表。可见结果：不同密度的信息保持可扫描关系。适用任务：日程、展览与课程索引。手机从跨栏折为单列，保留完整日期和行动。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责不同密度的信息保持可扫描关系，职责限定在当前区域。组合时手机从跨栏折为单列，保留完整日期和行动。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "swiss-grid",
+        "locator": "entries/swiss-grid.json#composition/layout",
+        "observation": "12 栏、32px 基础间距、横向日程列表；手机为单列",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/swiss-grid/index.html",
+      "entries/swiss-grid.json",
+      "research/swiss-grid.md"
+    ]
+  },
+  {
+    "id": "exploded-layer-view",
+    "title": "展开图层解释组成",
+    "category": "交互反馈",
+    "summary": "将整体拆成基础、建筑和植物层。",
+    "mechanism": "保持空间投影和图层顺序，用受控偏移将各组分离；再次选择整体恢复完整场景。",
+    "trigger": "选择展开/整体",
+    "effect": "对象之间的组成关系显露。",
+    "useCases": [
+      "复杂系统与产品结构介绍"
+    ],
+    "avoid": [
+      "图层任意飞散失去原始关系"
+    ],
+    "constraints": [
+      "同步文字说明，减少动态即时改变位置。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责对象之间的组成关系显露，职责限定在当前区域。组合时同步文字说明，减少动态即时改变位置。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "parallel-isometric-projection",
+        "layer-focus-dimming"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「展开图层解释组成」。保持空间投影和图层顺序，用受控偏移将各组分离；再次选择整体恢复完整场景。触发：选择展开/整体。可见结果：对象之间的组成关系显露。适用任务：复杂系统与产品结构介绍。同步文字说明，减少动态即时改变位置。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责对象之间的组成关系显露，职责限定在当前区域。组合时同步文字说明，减少动态即时改变位置。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "isometric-3d",
+        "locator": "entries/isometric-3d.json#interaction/1",
+        "observation": "展开按钮将基础、建筑、植物分层",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/isometric-3d/index.html",
+      "demos/isometric-3d/script.js",
+      "demos/isometric-3d/style.css",
+      "entries/isometric-3d.json",
+      "research/isometric-3d.md"
+    ]
+  },
+  {
+    "id": "film-overlay",
+    "title": "主动观看的独立影片层",
+    "category": "加载与媒体",
+    "summary": "将有声观看与普通读页分别组织。",
+    "mechanism": "用户激活播放入口后打开独立影片层，提供原生进度、暂停和音量；关闭即暂停，背景媒体让出。",
+    "trigger": "主动观看/关闭影片",
+    "effect": "观看变成明确选择的专注状态。",
+    "useCases": [
+      "产品或游戏宣传片"
+    ],
+    "avoid": [
+      "用首屏重播冒充完整影片"
+    ],
+    "constraints": [
+      "是否有音轨按实际文件确认；Uma Musume影片无声，MV1当次源播放未通过。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "只在主动观看时占据独立层，打开后暂停背景媒体，关闭停止前景影片并恢复触发焦点。静音首屏演示、BGM与完整影片分别标明职责及音轨。",
+      "pairsWellWith": [
+        "product-entrance-film",
+        "sound-opt-in"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "dialog提供关闭按钮、Escape及焦点恢复，原生媒体控件可操作。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「主动观看的独立影片层」。用户激活播放入口后打开独立影片层，提供原生进度、暂停和音量；关闭即暂停，背景媒体让出。触发：主动观看/关闭影片。可见结果：观看变成明确选择的专注状态。适用任务：产品或游戏宣传片。是否有音轨按实际文件确认；Uma Musume影片无声，MV1当次源播放未通过。键盘：dialog提供关闭按钮、Escape及焦点恢复，原生媒体控件可操作。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只在主动观看时占据独立层，打开后暂停背景媒体，关闭停止前景影片并恢复触发焦点。静音首屏演示、BGM与完整影片分别标明职责及音轨。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/5",
+        "observation": "Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "monument-valley-game",
+        "locator": "entries/monument-valley-game.json#interaction/4",
+        "observation": "前景预告：主动Play播放同一67.988秒官方MP4及原声轨；原生进度/暂停和实际声音开关有效，播放时暂停背景。",
+        "evidence": "inferred",
+        "referenceUrl": "https://www.monumentvalleygame.com/mv1",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#interaction/3",
+        "observation": "点击 About 原缩略图，站内 dialog 播放原始 top_about.mp4；该文件只有视频轨道，没有音轨，关闭/后台暂停。",
+        "evidence": "adapted",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "demos/monument-valley-game/app.js",
+      "demos/monument-valley-game/fidelity.md",
+      "demos/monument-valley-game/index.html",
+      "demos/monument-valley-game/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/apple-product.json",
+      "entries/monument-valley-game.json",
+      "entries/uma-musume.json",
+      "research/apple-product.md",
+      "research/monument-valley-game.md",
+      "research/uma-musume.md"
+    ]
+  },
+  {
+    "id": "filter-count-feedback",
+    "title": "筛选与结果计数同步",
+    "category": "交互反馈",
+    "summary": "筛选动作立即给出结果数量。",
+    "mechanism": "改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。",
+    "trigger": "激活分类按钮",
+    "effect": "用户知道条件是否生效及还剩多少内容。",
+    "useCases": [
+      "活动与新闻目录"
+    ],
+    "avoid": [
+      "把筛选效果仅藏在卡片消失中"
+    ],
+    "constraints": [
+      "结果区域用温和的状态宣布，焦点留在触发按钮。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户知道条件是否生效及还剩多少内容，职责限定在当前区域。组合时结果区域用温和的状态宣布，焦点留在触发按钮。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "aligned-metadata-rows"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "原生按钮带aria-pressed，Tab可达；结果计数使用role=status或aria-live=polite。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「筛选与结果计数同步」。改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。触发：激活分类按钮。可见结果：用户知道条件是否生效及还剩多少内容。适用任务：活动与新闻目录。结果区域用温和的状态宣布，焦点留在触发按钮。键盘：原生按钮带aria-pressed，Tab可达；结果计数使用role=status或aria-live=polite。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户知道条件是否生效及还剩多少内容，职责限定在当前区域。组合时结果区域用温和的状态宣布，焦点留在触发按钮。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "swiss-grid",
+        "locator": "entries/swiss-grid.json#interaction/0",
+        "observation": "分类按钮筛选日程并宣布结果数。",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "mori-art-museum",
+        "locator": "entries/mori-art-museum.json#constraints/5",
+        "observation": "本地只还原首页几个区域并加教学新闻筛选；不复制多馆门户、购票账户与追踪脚本。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.mori.art.museum/jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/mori-art-museum/app.js",
+      "demos/mori-art-museum/fidelity.md",
+      "demos/mori-art-museum/index.html",
+      "demos/mori-art-museum/style.css",
+      "demos/swiss-grid/index.html",
+      "entries/mori-art-museum.json",
+      "entries/swiss-grid.json",
+      "research/mori-art-museum.md",
+      "research/swiss-grid.md"
+    ]
+  },
+  {
+    "id": "fixed-star-glow-layer",
+    "title": "固定星光的明暗呼吸层",
+    "category": "视觉构成",
+    "summary": "少量光点为群像提供节奏。",
+    "mechanism": "固定位置的星图使用低密度明暗周期与错峰延迟，保持正文和人物轮廓稳定。",
+    "trigger": "观看首屏",
+    "effect": "主图有轻微光感而不更换主体。",
+    "useCases": [
+      "已有星光视觉语汇的IP首屏"
+    ],
+    "avoid": [
+      "把固定星层说成鼠标视差"
+    ],
+    "constraints": [
+      "本地Canvas2D为PIXI算法迁移，随机抽样与混合非逐帧相同。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责主图有轻微光感而不更换主体，职责限定在当前区域。组合时本地Canvas2D为PIXI算法迁移，随机抽样与混合非逐帧相同。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "scroll-differential-stars"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "显示静止光点或停在固定明度，保留主图和全部文字。"
+    },
+    "parameters": [
+      {
+        "name": "来源KV",
+        "value": "5颗固定星 / 3秒周期",
+        "note": "不等于背景15颗随机星"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「固定星光的明暗呼吸层」。固定位置的星图使用低密度明暗周期与错峰延迟，保持正文和人物轮廓稳定。触发：观看首屏。可见结果：主图有轻微光感而不更换主体。适用任务：已有星光视觉语汇的IP首屏。本地Canvas2D为PIXI算法迁移，随机抽样与混合非逐帧相同。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：显示静止光点或停在固定明度，保留主图和全部文字。组合边界：该原子负责主图有轻微光感而不更换主体，职责限定在当前区域。组合时本地Canvas2D为PIXI算法迁移，随机抽样与混合非逐帧相同。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#interaction/0",
+        "observation": "原站 desktop kv-canvas 只有5颗固定位置星光；本地使用相同六种图像和3秒明暗周期，用Canvas2D重建，未运行PIXI业务包。",
+        "evidence": "adapted",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "entries/persona-kinetic.json",
+      "research/persona-kinetic.md"
+    ]
+  },
+  {
+    "id": "fixed-task-timeline",
+    "title": "固定任务按阶段揭示交付",
+    "category": "交互反馈",
+    "summary": "让工具过程和交付文件先后可见。",
+    "mechanism": "用预设时间线展开会话阶段，输入/发送进入明确固定演示，文件开关显示关联旁栏，新任务可复位。",
+    "trigger": "启动固定示例或查看交付文件",
+    "effect": "用户理解工具到交付的工作顺序。",
+    "useCases": [
+      "智能体与工具平台介绍"
+    ],
+    "avoid": [
+      "将演示输入说成真实模型或文件操作"
+    ],
+    "constraints": [
+      "源端发送状态未验证，此原子只抽象已验证的本地固定演示。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户理解工具到交付的工作顺序，职责限定在当前区域。组合时源端发送状态未验证，此原子只抽象已验证的本地固定演示。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「固定任务按阶段揭示交付」。用预设时间线展开会话阶段，输入/发送进入明确固定演示，文件开关显示关联旁栏，新任务可复位。触发：启动固定示例或查看交付文件。可见结果：用户理解工具到交付的工作顺序。适用任务：智能体与工具平台介绍。源端发送状态未验证，此原子只抽象已验证的本地固定演示。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户理解工具到交付的工作顺序，职责限定在当前区域。组合时源端发送状态未验证，此原子只抽象已验证的本地固定演示。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "qoder-platform",
+        "locator": "entries/qoder-platform.json#interaction/0",
+        "observation": "工作台使用公开固定任务示例，点击本地“新任务”可返回输入；本地输入/Enter/发送进入固定会话而非调用模型，九个阶段按 180/480/760/1000/1200/1400/1600/1900/2250ms 展开；交付文件开关显示旁栏。",
+        "evidence": "adapted",
+        "referenceUrl": "https://qoder.cn/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/qoder-platform/fidelity.md",
+      "demos/qoder-platform/index.html",
+      "demos/qoder-platform/journey.js",
+      "demos/qoder-platform/script.js",
+      "demos/qoder-platform/style.css",
+      "entries/qoder-platform.json",
+      "research/qoder-platform.md"
+    ]
+  },
+  {
+    "id": "fixed-topology-morph",
+    "title": "同拓扑碎片形态转换",
+    "category": "交互反馈",
+    "summary": "同一组几何片保持身份连续。",
+    "mechanism": "每种状态保留相同片数和顶点次序，在同一拓扑上插值位置；形态同步解释不同内容语义。",
+    "trigger": "选择形态按钮",
+    "effect": "图形改变表达，用户仍辨认同一身份。",
+    "useCases": [
+      "动态品牌与概念教学"
+    ],
+    "avoid": [
+      "关键文本或按钮持续变形"
+    ],
+    "constraints": [
+      "图形变化不能改变正文布局，形态与真实内容语义对应。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责图形改变表达，用户仍辨认同一身份，职责限定在当前区域。组合时图形变化不能改变正文布局，形态与真实内容语义对应。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "interruptible-morph",
+        "live-parameter-readout"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "原创单元",
+        "value": "24 个三角片",
+        "note": "不同于原作30片，非原作坐标"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「同拓扑碎片形态转换」。每种状态保留相同片数和顶点次序，在同一拓扑上插值位置；形态同步解释不同内容语义。触发：选择形态按钮。可见结果：图形改变表达，用户仍辨认同一身份。适用任务：动态品牌与概念教学。图形变化不能改变正文布局，形态与真实内容语义对应。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责图形改变表达，用户仍辨认同一身份，职责限定在当前区域。组合时图形变化不能改变正文布局，形态与真实内容语义对应。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "shape-morph",
+        "locator": "entries/shape-morph.json#interaction/0",
+        "observation": "三种形态按钮切换 24 个三角片的位置",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/shape-morph/index.html",
+      "demos/shape-morph/script.js",
+      "demos/shape-morph/style.css",
+      "entries/shape-morph.json",
+      "research/shape-morph.md"
+    ]
+  },
+  {
+    "id": "folded-wave-hero",
+    "title": "折叠波带与文字共同构成首屏",
+    "category": "视觉构成",
+    "summary": "品牌波带提供流动舞台，标题保持可读。",
+    "mechanism": "独立WebGL网格与shader产生折叠彩带，主张位于稳定文本区；GPU失败使用同源静帧。",
+    "trigger": "进入首屏",
+    "effect": "品牌流动感与金融主张并存。",
+    "useCases": [
+      "有明确品牌形态的产品首屏"
+    ],
+    "avoid": [
+      "所有产品都套相同渐变blob"
+    ],
+    "constraints": [
+      "波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责品牌流动感与金融主张并存，职责限定在当前区域。组合时波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle",
+        "capability-bento-hierarchy"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「折叠波带与文字共同构成首屏」。独立WebGL网格与shader产生折叠彩带，主张位于稳定文本区；GPU失败使用同源静帧。触发：进入首屏。可见结果：品牌流动感与金融主张并存。适用任务：有明确品牌形态的产品首屏。波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责品牌流动感与金融主张并存，职责限定在当前区域。组合时波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/0",
+        "observation": "进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。",
+        "evidence": "adapted",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/stripe-platform.json",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "footer-aware-back-to-top",
+    "title": "回顶入口避让页脚",
+    "category": "导航与状态",
+    "summary": "长页回程入口不遮挡末端内容。",
+    "mechanism": "达到阅读深度后显示回顶按钮，接近页脚由fixed转为footer内部定位；返回页首后消失。",
+    "trigger": "深入页面、接近页脚或回顶",
+    "effect": "回程入口始终可找，页脚信息仍完整。",
+    "useCases": [
+      "文化档案与长说明页"
+    ],
+    "avoid": [
+      "固定悬浮按钮压住版权或末端行动"
+    ],
+    "constraints": [
+      "对桌面/手机分别设置出现阈值，减少动态直接定位。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责回程入口始终可找，页脚信息仍完整，职责限定在当前区域。组合时对桌面/手机分别设置出现阈值，减少动态直接定位。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "compact-scroll-header",
+        "native-document-reading"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「回顶入口避让页脚」。达到阅读深度后显示回顶按钮，接近页脚由fixed转为footer内部定位；返回页首后消失。触发：深入页面、接近页脚或回顶。可见结果：回程入口始终可找，页脚信息仍完整。适用任务：文化档案与长说明页。对桌面/手机分别设置出现阈值，减少动态直接定位。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责回程入口始终可找，页脚信息仍完整，职责限定在当前区域。组合时对桌面/手机分别设置出现阈值，减少动态直接定位。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "mori-art-museum",
+        "locator": "entries/mori-art-museum.json#interaction/3",
+        "observation": "滚动到页面深处／页尾：回顶150ms显隐，接近页尾从fixed转为footer内定位。 回程入口可找且不挡页尾信息。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.mori.art.museum/jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/mori-art-museum/app.js",
+      "demos/mori-art-museum/fidelity.md",
+      "demos/mori-art-museum/index.html",
+      "demos/mori-art-museum/style.css",
+      "entries/mori-art-museum.json",
+      "research/mori-art-museum.md"
+    ]
+  },
+  {
+    "id": "full-bleed-photography-brand",
+    "title": "全幅摄影与巨大完整字标",
+    "category": "视觉构成",
+    "summary": "图像建立情境，字标建立身份。",
+    "mechanism": "摄影铺满约一个视口，完整品牌字标叠于图上，简短专题文字与行动定位边缘；普通滚动更换专题。",
+    "trigger": "首次观看或滚到下一专题",
+    "effect": "作品世界成为首要感受。",
+    "useCases": [
+      "强摄影艺术馆与作品集"
+    ],
+    "avoid": [
+      "把全幅摄影裁成通用小圆角卡"
+    ],
+    "constraints": [
+      "手机使用稳定视口单位和正确图像版本，字标保持原比例，行动有足够对比。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责作品世界成为首要感受，职责限定在当前区域。组合时手机使用稳定视口单位和正确图像版本，字标保持原比例，行动有足够对比。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "photo-edge-text-contrast",
+        "fullscreen-photography-menu",
+        "native-document-reading"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「全幅摄影与巨大完整字标」。摄影铺满约一个视口，完整品牌字标叠于图上，简短专题文字与行动定位边缘；普通滚动更换专题。触发：首次观看或滚到下一专题。可见结果：作品世界成为首要感受。适用任务：强摄影艺术馆与作品集。手机使用稳定视口单位和正确图像版本，字标保持原比例，行动有足够对比。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责作品世界成为首要感受，职责限定在当前区域。组合时手机使用稳定视口单位和正确图像版本，字标保持原比例，行动有足够对比。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "rijksmuseum-art",
+        "locator": "entries/rijksmuseum-art.json#interaction/0",
+        "observation": "进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.rijksmuseum.nl/en",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/rijksmuseum-art/fidelity.md",
+      "demos/rijksmuseum-art/index.html",
+      "demos/rijksmuseum-art/script.js",
+      "demos/rijksmuseum-art/style.css",
+      "entries/rijksmuseum-art.json",
+      "research/rijksmuseum-art.md"
+    ]
+  },
+  {
+    "id": "fullscreen-photography-menu",
+    "title": "摄影与分列链接组成全屏目录",
+    "category": "导航与状态",
+    "summary": "导航拥有自己的品牌场景。",
+    "mechanism": "打开菜单时全屏摄影和目的地链接成组淡入，关闭淡出并返回原阅读位置；目录层和主页面层职责分开。",
+    "trigger": "打开或关闭菜单",
+    "effect": "长目录仍属于艺术馆的视觉世界。",
+    "useCases": [
+      "摄影品牌的全屏导航"
+    ],
+    "avoid": [
+      "摄影遮住链接或关闭后仍可Tab进入"
+    ],
+    "constraints": [
+      "全屏层焦点限制、Escape和关闭恢复完整，减少动态直接切换。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责长目录仍属于艺术馆的视觉世界，职责限定在当前区域。组合时全屏层焦点限制、Escape和关闭恢复完整，减少动态直接切换。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "full-bleed-photography-brand"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源菜单",
+        "value": "500ms linear",
+        "note": "当前CSS淡入/淡出"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「摄影与分列链接组成全屏目录」。打开菜单时全屏摄影和目的地链接成组淡入，关闭淡出并返回原阅读位置；目录层和主页面层职责分开。触发：打开或关闭菜单。可见结果：长目录仍属于艺术馆的视觉世界。适用任务：摄影品牌的全屏导航。全屏层焦点限制、Escape和关闭恢复完整，减少动态直接切换。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责长目录仍属于艺术馆的视觉世界，职责限定在当前区域。组合时全屏层焦点限制、Escape和关闭恢复完整，减少动态直接切换。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "rijksmuseum-art",
+        "locator": "entries/rijksmuseum-art.json#interaction/1",
+        "observation": "打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.rijksmuseum.nl/en",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/rijksmuseum-art/fidelity.md",
+      "demos/rijksmuseum-art/index.html",
+      "demos/rijksmuseum-art/script.js",
+      "demos/rijksmuseum-art/style.css",
+      "entries/rijksmuseum-art.json",
+      "research/rijksmuseum-art.md"
+    ]
+  },
+  {
+    "id": "geometric-balance-presets",
+    "title": "几何关系预设实验",
+    "category": "交互反馈",
+    "summary": "改变位置关系来比较平衡、节奏和张力。",
+    "mechanism": "保持同一组圆、三角与矩形，让不同预设改变比例和位置；图形之外保留稳定操作区。",
+    "trigger": "选择构成预设",
+    "effect": "用户可并列理解同一组元素的不同关系。",
+    "useCases": [
+      "构成教学与品牌探索"
+    ],
+    "avoid": [
+      "把红黄蓝对应解释为普遍心理定律"
+    ],
+    "constraints": [
+      "图形为原创，不能遮住正文或焦点。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户可并列理解同一组元素的不同关系，职责限定在当前区域。组合时图形为原创，不能遮住正文或焦点。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "live-parameter-readout",
+        "current-state-svg-export"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「几何关系预设实验」。保持同一组圆、三角与矩形，让不同预设改变比例和位置；图形之外保留稳定操作区。触发：选择构成预设。可见结果：用户可并列理解同一组元素的不同关系。适用任务：构成教学与品牌探索。图形为原创，不能遮住正文或焦点。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户可并列理解同一组元素的不同关系，职责限定在当前区域。组合时图形为原创，不能遮住正文或焦点。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "bauhaus-geometry",
+        "locator": "entries/bauhaus-geometry.json#interaction/0",
+        "observation": "三个构成预设改变圆、三角和矩形之间的真实位置关系。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/bauhaus-geometry/index.html",
+      "entries/bauhaus-geometry.json",
+      "research/bauhaus-geometry.md"
+    ]
+  },
+  {
+    "id": "header-below-mobile-navigation",
+    "title": "顶栏下展开并恢复阅读位置",
+    "category": "导航与状态",
+    "summary": "菜单与长档案在手机上暂时分离。",
+    "mechanism": "菜单从固定顶栏下方直接显示，汉堡图标单独形变；锁住背景并在关闭时恢复原滚动位置。",
+    "trigger": "手机打开/关闭菜单",
+    "effect": "机构入口可用，返回继续原内容。",
+    "useCases": [
+      "浅层机构档案导航"
+    ],
+    "avoid": [
+      "关闭后把读者送回页首"
+    ],
+    "constraints": [
+      "源手机结构由公开响应式代码确认，非当次源手机现场操作。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责机构入口可用，返回继续原内容，职责限定在当前区域。组合时源手机结构由公开响应式代码确认，非当次源手机现场操作。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "mixed-ratio-archive-columns"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "菜单限制焦点，Escape可关，关闭恢复触发焦点与原浏览位置。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源顶栏/图标",
+        "value": "64px / 350ms",
+        "note": "内容直接显示，汉堡形变"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「顶栏下展开并恢复阅读位置」。菜单从固定顶栏下方直接显示，汉堡图标单独形变；锁住背景并在关闭时恢复原滚动位置。触发：手机打开/关闭菜单。可见结果：机构入口可用，返回继续原内容。适用任务：浅层机构档案导航。源手机结构由公开响应式代码确认，非当次源手机现场操作。键盘：菜单限制焦点，Escape可关，关闭恢复触发焦点与原浏览位置。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责机构入口可用，返回继续原内容，职责限定在当前区域。组合时源手机结构由公开响应式代码确认，非当次源手机现场操作。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#interaction/2",
+        "observation": "手机打开菜单／关闭：64px栏下的白色导航立即显示，hamburger350ms形变；固定页面并恢复原浏览位置。 小屏将机构入口与长档案分开，关闭后继续阅读。",
+        "evidence": "inferred",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/design-sight/app.js",
+      "demos/design-sight/fidelity.md",
+      "demos/design-sight/index.html",
+      "demos/design-sight/style.css",
+      "entries/design-sight.json",
+      "research/design-sight.md"
+    ]
+  },
+  {
+    "id": "heatmap-focus-tooltip",
+    "title": "热图指针与焦点提示",
+    "category": "交互反馈",
+    "summary": "让微小格子具有可读事实。",
+    "mechanism": "格子悬停或获得焦点后短延迟显示日期/对话提示，离开或失焦关闭；文字提示不只依赖格子色深。",
+    "trigger": "pointer enter/focus或leave/blur",
+    "effect": "微小可视化可以逐项读取。",
+    "useCases": [
+      "活跃度与日期数据图"
+    ],
+    "avoid": [
+      "只有颜色深浅没有数值入口"
+    ],
+    "constraints": [
+      "格子可聚焦并有可读名称，提示不覆盖当前目标。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责微小可视化可以逐项读取，职责限定在当前区域。组合时格子可聚焦并有可读名称，提示不覆盖当前目标。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "格子可通过键盘聚焦，焦点触发等同指针，关联日期/数值说明。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源延迟",
+        "value": "120ms显示 / 80ms关闭",
+        "note": "公开热图模块时间"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「热图指针与焦点提示」。格子悬停或获得焦点后短延迟显示日期/对话提示，离开或失焦关闭；文字提示不只依赖格子色深。触发：pointer enter/focus或leave/blur。可见结果：微小可视化可以逐项读取。适用任务：活跃度与日期数据图。格子可聚焦并有可读名称，提示不覆盖当前目标。键盘：格子可通过键盘聚焦，焦点触发等同指针，关联日期/数值说明。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责微小可视化可以逐项读取，职责限定在当前区域。组合时格子可聚焦并有可读名称，提示不覆盖当前目标。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "qoder-platform",
+        "locator": "entries/qoder-platform.json#interaction/1",
+        "observation": "活跃热图 pointer enter/focus 120ms 显示日期/对话提示，leave/blur 80ms 关闭 → 很小的元素也有可读状态。",
+        "evidence": "observed",
+        "referenceUrl": "https://qoder.cn/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/qoder-platform/fidelity.md",
+      "demos/qoder-platform/index.html",
+      "demos/qoder-platform/journey.js",
+      "demos/qoder-platform/script.js",
+      "demos/qoder-platform/style.css",
+      "entries/qoder-platform.json",
+      "research/qoder-platform.md"
+    ]
+  },
+  {
+    "id": "highlight-progress-gallery",
+    "title": "逐项亮点与可暂停进度",
+    "category": "加载与媒体",
+    "summary": "把产品重点分成可直接选择的摄影章节。",
+    "mechanism": "每个亮点有独立图像、标题与进度，进入视口后推进；用户可以跳选、暂停，结束后重播。",
+    "trigger": "进入亮点区域或选择条目",
+    "effect": "当前重点、剩余时间与结束状态清楚。",
+    "useCases": [
+      "少量顺序产品亮点"
+    ],
+    "avoid": [
+      "末尾无提示继续循环"
+    ],
+    "constraints": [
+      "手动选择停止自动推进，进度有文本/选择状态，避免只靠细条。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责当前重点、剩余时间与结束状态清楚，职责限定在当前区域。组合时手动选择停止自动推进，进度有文本/选择状态，避免只靠细条。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "本地周期",
+        "value": "每项5秒",
+        "note": "拟合的学习演示数值"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「逐项亮点与可暂停进度」。每个亮点有独立图像、标题与进度，进入视口后推进；用户可以跳选、暂停，结束后重播。触发：进入亮点区域或选择条目。可见结果：当前重点、剩余时间与结束状态清楚。适用任务：少量顺序产品亮点。手动选择停止自动推进，进度有文本/选择状态，避免只靠细条。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责当前重点、剩余时间与结束状态清楚，职责限定在当前区域。组合时手动选择停止自动推进，进度有文本/选择状态，避免只靠细条。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/1",
+        "observation": "Highlights 进入视口 → 圆角摄影和进度控件带入，五项图库自动推进；手动选择/暂停/最后重播 → 按相机、续航、颜色、性能、Siri 依次建立产品重点。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "entries/apple-product.json",
+      "research/apple-product.md"
+    ]
+  },
+  {
+    "id": "hover-focus-mode-selection",
+    "title": "标题悬停与聚焦选择模式",
+    "category": "交互反馈",
+    "summary": "标题本身成为多能力选择入口。",
+    "mechanism": "把主标题中的能力词做成可操作控制，悬停、键盘聚焦与点击选择同一模式，离开后保留最后选择。",
+    "trigger": "悬停/聚焦/点击能力词",
+    "effect": "用户直接用主张探索产品用途。",
+    "useCases": [
+      "多能力产品首屏"
+    ],
+    "avoid": [
+      "只有鼠标悬停且无法固定状态"
+    ],
+    "constraints": [
+      "手动选择不被自动周期立刻覆盖，首屏模式与后段说明状态分别管理。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "只决定首屏当前能力；可以驱动字色、中央窗口与拼贴图层。后段说明rail另有状态，避免滚动把用户刚选择的首屏模式反复覆盖。",
+      "pairsWellWith": [
+        "mode-character-accent",
+        "vertical-card-swap",
+        "mode-specific-collage"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "能力词用原生button，focus与hover同等响应，aria-pressed标明当前模式。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「标题悬停与聚焦选择模式」。把主标题中的能力词做成可操作控制，悬停、键盘聚焦与点击选择同一模式，离开后保留最后选择。触发：悬停/聚焦/点击能力词。可见结果：用户直接用主张探索产品用途。适用任务：多能力产品首屏。手动选择不被自动周期立刻覆盖，首屏模式与后段说明状态分别管理。键盘：能力词用原生button，focus与hover同等响应，aria-pressed标明当前模式。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只决定首屏当前能力；可以驱动字色、中央窗口与拼贴图层。后段说明rail另有状态，避免滚动把用户刚选择的首屏模式反复覆盖。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/0",
+        "observation": "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "research/chatgpt-platform.md"
+    ]
+  },
+  {
+    "id": "idle-interface-retreat",
+    "title": "闲置时控件退隐、操作时恢复",
+    "category": "导航与状态",
+    "summary": "在观看状态让界面暂时让出画面。",
+    "mechanism": "指针移动或触摸唤醒控件，闲置短时间后模糊淡出；焦点仍在操作区时保持可见。",
+    "trigger": "闲置、指针移动、触摸或聚焦",
+    "effect": "纯观看与可操作状态有可逆切换。",
+    "useCases": [
+      "沉浸影片舞台"
+    ],
+    "avoid": [
+      "键盘焦点已存在却把控件隐藏"
+    ],
+    "constraints": [
+      "聚焦不隐藏为本地可达性补充，触摸至少能唤醒再操作。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责纯观看与可操作状态有可逆切换，职责限定在当前区域。组合时聚焦不隐藏为本地可达性补充，触摸至少能唤醒再操作。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "blurred-layered-video-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "焦点在控件时不退隐，Tab立即唤醒并保持明显焦点。",
+      "reducedMotion": "控件保持可见，不使用模糊退隐。"
+    },
+    "parameters": [
+      {
+        "name": "来源闲置",
+        "value": "3s等待 / 0.8s退隐",
+        "note": "控制层时间"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「闲置时控件退隐、操作时恢复」。指针移动或触摸唤醒控件，闲置短时间后模糊淡出；焦点仍在操作区时保持可见。触发：闲置、指针移动、触摸或聚焦。可见结果：纯观看与可操作状态有可逆切换。适用任务：沉浸影片舞台。聚焦不隐藏为本地可达性补充，触摸至少能唤醒再操作。键盘：焦点在控件时不退隐，Tab立即唤醒并保持明显焦点。减少动态：控件保持可见，不使用模糊退隐。组合边界：该原子负责纯观看与可操作状态有可逆切换，职责限定在当前区域。组合时聚焦不隐藏为本地可达性补充，触摸至少能唤醒再操作。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#interaction/3",
+        "observation": "鼠标移动或触摸唤醒界面，3秒闲置后0.8秒模糊淡出；键盘焦点保留控件为本地补充。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/zelda-world.json",
+      "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "inclined-motion-bands",
+    "title": "斜切条带延续运动方向",
+    "category": "视觉构成",
+    "summary": "通过有限倾斜建立运动或海报节奏。",
+    "mechanism": "标题带、说明板与箭头重复同一倾斜方向，正文水平可读，下载徽章保留自己的标准轮廓。",
+    "trigger": "阅读章节分隔与行动入口",
+    "effect": "方向感贯穿不同内容区域。",
+    "useCases": [
+      "运动游戏与强海报主题"
+    ],
+    "avoid": [
+      "全部长文倾斜或任意方向拼贴"
+    ],
+    "constraints": [
+      "倾斜仅用于短标题与装饰，文字和触控边界不被裁掉。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责方向感贯穿不同内容区域，职责限定在当前区域。组合时倾斜仅用于短标题与装饰，文字和触控边界不被裁掉。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "section-color-rhythm"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「斜切条带延续运动方向」。标题带、说明板与箭头重复同一倾斜方向，正文水平可读，下载徽章保留自己的标准轮廓。触发：阅读章节分隔与行动入口。可见结果：方向感贯穿不同内容区域。适用任务：运动游戏与强海报主题。倾斜仅用于短标题与装饰，文字和触控边界不被裁掉。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责方向感贯穿不同内容区域，职责限定在当前区域。组合时倾斜仅用于短标题与装饰，文字和触控边界不被裁掉。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#composition/shape",
+        "observation": "向前倾斜的标题带、说明板与箭头复用斜切语言，平台下载徽章保持自己的标准轮廓。",
+        "evidence": "observed",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#composition/shape",
+        "observation": "斜切拼贴、金色边框、网点与剪贴字保持同一张海报的秩序。",
+        "evidence": "observed",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/persona-kinetic.json",
+      "entries/uma-musume.json",
+      "research/persona-kinetic.md",
+      "research/uma-musume.md"
+    ]
+  },
+  {
+    "id": "independent-character-page",
+    "title": "首页世界与人物档案分别成页",
+    "category": "内容组织",
+    "summary": "按用户任务保留不同页面职责。",
+    "mechanism": "首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。",
+    "trigger": "选择角色导航或返回HOME",
+    "effect": "世界观看与资料查阅各有明确入口。",
+    "useCases": [
+      "单屏世界首页加多角色档案"
+    ],
+    "avoid": [
+      "所有内容硬塞同一滚动首页"
+    ],
+    "constraints": [
+      "保留正常链接和页面标题，不添加无来源路由淡化。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责世界观看与资料查阅各有明确入口，职责限定在当前区域。组合时保留正常链接和页面标题，不添加无来源路由淡化。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "edge-action-world-composition",
+        "character-stage-coordination"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「首页世界与人物档案分别成页」。首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。触发：选择角色导航或返回HOME。可见结果：世界观看与资料查阅各有明确入口。适用任务：单屏世界首页加多角色档案。保留正常链接和页面标题，不添加无来源路由淡化。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责世界观看与资料查阅各有明确入口，职责限定在当前区域。组合时保留正常链接和页面标题，不添加无来源路由淡化。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "blue-archive",
+        "locator": "entries/blue-archive.json#interaction/3",
+        "observation": "首页导航 CHARACTER 打开本地独立 character.html；HOME 返回首页，首页仅 KV→footer，保留源站页面职责分离。",
+        "evidence": "adapted",
+        "referenceUrl": "https://bluearchive.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/blue-archive/app.js",
+      "demos/blue-archive/character.html",
+      "demos/blue-archive/fidelity.md",
+      "demos/blue-archive/index.html",
+      "demos/blue-archive/style.css",
+      "entries/blue-archive.json",
+      "research/blue-archive.md"
+    ]
+  },
+  {
+    "id": "independent-outfit-state",
+    "title": "人物与服装分别管理",
+    "category": "交互反馈",
+    "summary": "一个人物可有多个身份表现。",
+    "mechanism": "人物选择与学校/怪盗服装使用独立状态，换装只切换对应立绘与入场，不误改当前人物。",
+    "trigger": "切换人物或服装",
+    "effect": "人物连续性与不同形态都可见。",
+    "useCases": [
+      "角色双形态与职业展示"
+    ],
+    "avoid": [
+      "把服装状态混入人物索引造成跳人"
+    ],
+    "constraints": [
+      "各人物缺少某形态时给明确可用状态，不制造不存在资产。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责人物连续性与不同形态都可见，职责限定在当前区域。组合时各人物缺少某形态时给明确可用状态，不制造不存在资产。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "character-stage-coordination",
+        "bounded-panel-track"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「人物与服装分别管理」。人物选择与学校/怪盗服装使用独立状态，换装只切换对应立绘与入场，不误改当前人物。触发：切换人物或服装。可见结果：人物连续性与不同形态都可见。适用任务：角色双形态与职业展示。各人物缺少某形态时给明确可用状态，不制造不存在资产。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责人物连续性与不同形态都可见，职责限定在当前区域。组合时各人物缺少某形态时给明确可用状态，不制造不存在资产。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#interaction/2",
+        "observation": "三位角色横移500ms并在两端停止；学校/怪盗服装300ms换装入场。本地角色内容缩减为三位。",
+        "evidence": "adapted",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "entries/persona-kinetic.json",
+      "research/persona-kinetic.md"
+    ]
+  },
+  {
+    "id": "inline-detail-disclosure",
+    "title": "原位展开次级信息",
+    "category": "内容组织",
+    "summary": "让时间、价格或课程内容按需展开。",
+    "mechanism": "将概览保持在文档流，较长事实放在原位展开区域；手机先显示核心条目，再允许读取全部。",
+    "trigger": "展开时间/价格/课程或更多内容",
+    "effect": "用户保留当前上下文并控制阅读密度。",
+    "useCases": [
+      "活动详情与长档案"
+    ],
+    "avoid": [
+      "把关键行动藏在默认关闭区域"
+    ],
+    "constraints": [
+      "标题能独立说明内容，展开后焦点和滚动位置可预期。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责用户保留当前上下文并控制阅读密度，职责限定在当前区域。组合时标题能独立说明内容，展开后焦点和滚动位置可预期。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sticky-action-sidebar"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "优先原生details/summary，或按钮配aria-expanded/aria-controls；键盘可展开收回。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「原位展开次级信息」。将概览保持在文档流，较长事实放在原位展开区域；手机先显示核心条目，再允许读取全部。触发：展开时间/价格/课程或更多内容。可见结果：用户保留当前上下文并控制阅读密度。适用任务：活动详情与长档案。标题能独立说明内容，展开后焦点和滚动位置可预期。键盘：优先原生details/summary，或按钮配aria-expanded/aria-controls；键盘可展开收回。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责用户保留当前上下文并控制阅读密度，职责限定在当前区域。组合时标题能独立说明内容，展开后焦点和滚动位置可预期。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "bauhaus-geometry",
+        "locator": "entries/bauhaus-geometry.json#interaction/3",
+        "observation": "材料课程使用原生details展开具体学习内容。",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "philharmonie-music",
+        "locator": "entries/philharmonie-music.json#interaction/3",
+        "observation": "展开Horaires／Tarifs／Programme：信息即时展开，声乐／乐器阵容以文字分段。 不离开当前详情即可完成到访和节目判断。",
+        "evidence": "observed",
+        "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#interaction/3",
+        "observation": "手机展开栏目／页面回顶：四列分别先显示1／2／1／1项，“更多”即时展开；回顶按钮超过100px以200ms出现。 缩短首屏密度，档案仍可按需读全。",
+        "evidence": "inferred",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/bauhaus-geometry/index.html",
+      "demos/design-sight/app.js",
+      "demos/design-sight/fidelity.md",
+      "demos/design-sight/index.html",
+      "demos/design-sight/style.css",
+      "demos/philharmonie-music/fidelity.md",
+      "demos/philharmonie-music/index.html",
+      "demos/philharmonie-music/script.js",
+      "demos/philharmonie-music/style.css",
+      "entries/bauhaus-geometry.json",
+      "entries/design-sight.json",
+      "entries/philharmonie-music.json",
+      "research/bauhaus-geometry.md",
+      "research/design-sight.md",
+      "research/philharmonie-music.md"
+    ]
+  },
+  {
+    "id": "inline-product-detail-viewer",
+    "title": "胶囊原位展开产品说明",
+    "category": "交互反馈",
+    "summary": "让细节解释与对应摄影处于同一舞台。",
+    "mechanism": "选择胶囊后原位出现说明卡，其他胶囊让位下移，右侧图像更新；卡内前后与关闭能恢复原态。",
+    "trigger": "选择细节胶囊",
+    "effect": "不离开产品舞台即可逐项探索。",
+    "useCases": [
+      "硬件特性与设计细节"
+    ],
+    "avoid": [
+      "每次都跳入全屏弹窗丢掉对象"
+    ],
+    "constraints": [
+      "展开前后焦点可预期，关闭返回触发项，静帧不冒称实时3D。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责不离开产品舞台即可逐项探索，职责限定在当前区域。组合时展开前后焦点可预期，关闭返回触发项，静帧不冒称实时3D。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "photography-option-selector"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「胶囊原位展开产品说明」。选择胶囊后原位出现说明卡，其他胶囊让位下移，右侧图像更新；卡内前后与关闭能恢复原态。触发：选择细节胶囊。可见结果：不离开产品舞台即可逐项探索。适用任务：硬件特性与设计细节。展开前后焦点可预期，关闭返回触发项，静帧不冒称实时3D。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责不离开产品舞台即可逐项探索，职责限定在当前区域。组合时展开前后焦点可预期，关闭返回触发项，静帧不冒称实时3D。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/2",
+        "observation": "Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "entries/apple-product.json",
+      "research/apple-product.md"
+    ]
+  },
+  {
+    "id": "instant-open-menu-category-switch",
+    "title": "已打开菜单分类即时切换",
+    "category": "导航与状态",
+    "summary": "首次入场之后分类浏览不重复等待。",
+    "mechanism": "菜单首次带入，容器打开期间切换分类直接换内容；退出有短延迟且旧关闭计时在新打开时失效。",
+    "trigger": "首次打开、改分类或离开",
+    "effect": "频繁探索目录保持快速连贯。",
+    "useCases": [
+      "浅层产品与资源导航"
+    ],
+    "avoid": [
+      "每换一类都完整重播开场"
+    ],
+    "constraints": [
+      "关闭后hidden/inert与aria同步，键盘路径同样可选择类别。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责频繁探索目录保持快速连贯，职责限定在当前区域。组合时关闭后hidden/inert与aria同步，键盘路径同样可选择类别。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "last-request-transition"
+      ],
+      "conflicts": [
+        "natural-height-mega-menu"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源时序",
+        "value": "250ms 首入 / 150ms+50ms 退出",
+        "note": "已打开分类为instantSwitch"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「已打开菜单分类即时切换」。菜单首次带入，容器打开期间切换分类直接换内容；退出有短延迟且旧关闭计时在新打开时失效。触发：首次打开、改分类或离开。可见结果：频繁探索目录保持快速连贯。适用任务：浅层产品与资源导航。关闭后hidden/inert与aria同步，键盘路径同样可选择类别。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责频繁探索目录保持快速连贯，职责限定在当前区域。组合时关闭后hidden/inert与aria同步，键盘路径同样可选择类别。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "notion-editorial",
+        "locator": "entries/notion-editorial.json#interaction/3",
+        "observation": "桌面 Product/Resources 指针进入与点击 → 首次 opacity/translateY(-16px) 250ms ease-out，退出 150ms ease-in、延迟 50ms；已打开分类按源 instantSwitch 直接切换，快速反转取消旧退出，减少动态直接完成；手机打开全屏菜单 → Product/AI/Resources 原地单开，切换收起前组，再点同组收起；其他分类变灰，底部 Download app/Log in 固定。源 CSS 子展开 300ms、入口 350ms，内容/底部延迟 200/250ms；关闭/Escape 恢复滚动和焦点，维持层级与行动位置。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.notion.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/notion-editorial/fidelity.md",
+      "demos/notion-editorial/index.html",
+      "demos/notion-editorial/journey.js",
+      "demos/notion-editorial/script.js",
+      "demos/notion-editorial/style.css",
+      "entries/notion-editorial.json",
+      "research/notion-editorial.md"
+    ]
+  },
+  {
+    "id": "institution-overlap-logo",
+    "title": "方形机构锚点跨主图边界",
+    "category": "视觉构成",
+    "summary": "在艺术海报之外持续确认机构身份。",
+    "mechanism": "方形机构标志叠在海报边界上，尺寸和上浮位置按断点变化；艺术图保持自身色彩与比例。",
+    "trigger": "进入展览主图",
+    "effect": "机构身份与作品主题同时存在。",
+    "useCases": [
+      "展览机构的品牌首屏"
+    ],
+    "avoid": [
+      "用巨大标志遮掉作品标题"
+    ],
+    "constraints": [
+      "手机使用专图和合适标志尺寸，重叠区域不侵入作品关键内容。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责机构身份与作品主题同时存在，职责限定在当前区域。组合时手机使用专图和合适标志尺寸，重叠区域不侵入作品关键内容。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "responsive-art-direction",
+        "compact-scroll-header",
+        "restrained-signal-color"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「方形机构锚点跨主图边界」。方形机构标志叠在海报边界上，尺寸和上浮位置按断点变化；艺术图保持自身色彩与比例。触发：进入展览主图。可见结果：机构身份与作品主题同时存在。适用任务：展览机构的品牌首屏。手机使用专图和合适标志尺寸，重叠区域不侵入作品关键内容。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责机构身份与作品主题同时存在，职责限定在当前区域。组合时手机使用专图和合适标志尺寸，重叠区域不侵入作品关键内容。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "mori-art-museum",
+        "locator": "entries/mori-art-museum.json#composition/layout",
+        "observation": "桌面左叠加240px方形馆标（x30/y130），宽2.5:1海报自y160开始；手机160px馆标与官方方图，后续四列展览、三列推荐、四列新闻。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.mori.art.museum/jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/mori-art-museum/app.js",
+      "demos/mori-art-museum/fidelity.md",
+      "demos/mori-art-museum/index.html",
+      "demos/mori-art-museum/style.css",
+      "entries/mori-art-museum.json",
+      "research/mori-art-museum.md"
+    ]
+  },
+  {
+    "id": "integer-pixel-canvas",
+    "title": "整数像素与有限色板",
+    "category": "视觉构成",
+    "summary": "从绘制尺度建立像素世界的统一性。",
+    "mechanism": "在小画布内用整数坐标与有限色板绘制轮廓，放大保持pixelated边缘；正文单独用可读字体。",
+    "trigger": "查看与缩放场景",
+    "effect": "像素边缘与地图物件保持清楚。",
+    "useCases": [
+      "微型世界与游戏风格导览"
+    ],
+    "avoid": [
+      "对高分辨率照片套滤镜冒充像素"
+    ],
+    "constraints": [
+      "窄屏以完整地图优先，不将中文长文压为像素小字。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责像素边缘与地图物件保持清楚，职责限定在当前区域。组合时窄屏以完整地图优先，不将中文长文压为像素小字。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "spatial-navigation-map"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [
+      {
+        "name": "原创画布",
+        "value": "128×128 / 16 色",
+        "note": "参考PICO-8的明确约束，非全部像素艺术定义"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「整数像素与有限色板」。在小画布内用整数坐标与有限色板绘制轮廓，放大保持pixelated边缘；正文单独用可读字体。触发：查看与缩放场景。可见结果：像素边缘与地图物件保持清楚。适用任务：微型世界与游戏风格导览。窄屏以完整地图优先，不将中文长文压为像素小字。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责像素边缘与地图物件保持清楚，职责限定在当前区域。组合时窄屏以完整地图优先，不将中文长文压为像素小字。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "pixel-world",
+        "locator": "entries/pixel-world.json#composition/imagery",
+        "observation": "128×128原生Canvas与原创像素地点构成可探索世界。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/pixel-world/index.html",
+      "entries/pixel-world.json",
+      "research/pixel-world.md"
+    ]
+  },
+  {
+    "id": "interruptible-morph",
+    "title": "从当前中间态继续变形",
+    "category": "导航与状态",
+    "summary": "快速选择、暂停和恢复不产生闪回。",
+    "mechanism": "新目标从当前顶点坐标出发；暂停保存插值位置，恢复校正计时，重置恢复初始参数。",
+    "trigger": "中途改选、暂停或恢复",
+    "effect": "动作连续且可以检查中间态。",
+    "useCases": [
+      "几何实验与可中断品牌动效"
+    ],
+    "avoid": [
+      "重新触发时强制闪回起点"
+    ],
+    "constraints": [
+      "时长参数说明何时生效，一次只有一个帧调度负责状态。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责动作连续且可以检查中间态，职责限定在当前区域。组合时时长参数说明何时生效，一次只有一个帧调度负责状态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "fixed-topology-morph",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「从当前中间态继续变形」。新目标从当前顶点坐标出发；暂停保存插值位置，恢复校正计时，重置恢复初始参数。触发：中途改选、暂停或恢复。可见结果：动作连续且可以检查中间态。适用任务：几何实验与可中断品牌动效。时长参数说明何时生效，一次只有一个帧调度负责状态。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责动作连续且可以检查中间态，职责限定在当前区域。组合时时长参数说明何时生效，一次只有一个帧调度负责状态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "shape-morph",
+        "locator": "entries/shape-morph.json#constraints/2",
+        "observation": "每次触发从当前中间状态继续，避免突然闪回",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "shape-morph",
+        "locator": "entries/shape-morph.json#interaction/3",
+        "observation": "变形可暂停与恢复，重置恢复初始参数",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/shape-morph/index.html",
+      "demos/shape-morph/script.js",
+      "demos/shape-morph/style.css",
+      "entries/shape-morph.json",
+      "research/shape-morph.md"
+    ]
+  },
+  {
+    "id": "keyboard-playable-notes",
+    "title": "可聚焦音键与物理键演奏",
+    "category": "交互反馈",
+    "summary": "让屏幕琴键与键盘演奏保持同一状态。",
+    "mechanism": "屏幕按键包含音名，按下或指定物理键启动音符，释放、失焦或关闭声音停止声音。",
+    "trigger": "按住屏幕或键盘音键",
+    "effect": "动作、激活态与声音形成直接反馈。",
+    "useCases": [
+      "乐器学习与声音试玩"
+    ],
+    "avoid": [
+      "输入框聚焦时仍截获打字"
+    ],
+    "constraints": [
+      "只在声音启用且不干扰表单时处理物理键，后台立即停止。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责动作、激活态与声音形成直接反馈，职责限定在当前区域。组合时只在声音启用且不干扰表单时处理物理键，后台立即停止。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "audio-signal-panel",
+        "sound-opt-in"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "音键为原生button，提供可读音名；物理键映射有文字提示并避开输入控件。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「可聚焦音键与物理键演奏」。屏幕按键包含音名，按下或指定物理键启动音符，释放、失焦或关闭声音停止声音。触发：按住屏幕或键盘音键。可见结果：动作、激活态与声音形成直接反馈。适用任务：乐器学习与声音试玩。只在声音启用且不干扰表单时处理物理键，后台立即停止。键盘：音键为原生button，提供可读音名；物理键映射有文字提示并避开输入控件。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责动作、激活态与声音形成直接反馈，职责限定在当前区域。组合时只在声音启用且不干扰表单时处理物理键，后台立即停止。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "retro-80s",
+        "locator": "entries/retro-80s.json#interaction/3",
+        "observation": "屏幕琴键为可聚焦按钮；A S D F G H J K 可演奏白键，切出页面时停止声音。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/retro-80s/index.html",
+      "entries/retro-80s.json",
+      "research/retro-80s.md"
+    ]
+  },
+  {
+    "id": "last-request-transition",
+    "title": "快速切换保留最后目标",
+    "category": "导航与状态",
+    "summary": "中途反向或改选仍收束到最后意图。",
+    "mechanism": "单一状态控制器记录最新目标，取消旧退出回调并限制同时交互层；交接结束继续最后请求。",
+    "trigger": "转场期间再次选择或反向",
+    "effect": "不堆积离场层，也不会被旧回调覆盖。",
+    "useCases": [
+      "多场景与多模式切换"
+    ],
+    "avoid": [
+      "每个按钮各自创建无限动画层"
+    ],
+    "constraints": [
+      "方向与目标分别记录，减少动态直接落到最新稳定状态。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责不堆积离场层，也不会被旧回调覆盖，职责限定在当前区域。组合时方向与目标分别记录，减少动态直接落到最新稳定状态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "vertical-card-swap",
+        "directional-section-wipe",
+        "interruptible-morph"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「快速切换保留最后目标」。单一状态控制器记录最新目标，取消旧退出回调并限制同时交互层；交接结束继续最后请求。触发：转场期间再次选择或反向。可见结果：不堆积离场层，也不会被旧回调覆盖。适用任务：多场景与多模式切换。方向与目标分别记录，减少动态直接落到最新稳定状态。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责不堆积离场层，也不会被旧回调覆盖，职责限定在当前区域。组合时方向与目标分别记录，减少动态直接落到最新稳定状态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/1",
+        "observation": "场景横向遮罩裁切：桌面1000ms、竖屏600ms；同方向重复轮输入锁定，快速反向和导航使用最后目标队列，单次仅一组出/入场景。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#interaction/1",
+        "observation": "点击章节 → 300ms输入锁；前片1秒模糊退场，后片1.6秒、延迟0.6秒进入；标题1.6秒、延迟1秒进入。快速选择保留最后请求。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "qoder-platform",
+        "locator": "entries/qoder-platform.json#interaction/2",
+        "observation": "五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。",
+        "evidence": "adapted",
+        "referenceUrl": "https://qoder.cn/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/1",
+        "observation": "选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。",
+        "evidence": "adapted",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "demos/qoder-platform/fidelity.md",
+      "demos/qoder-platform/index.html",
+      "demos/qoder-platform/journey.js",
+      "demos/qoder-platform/script.js",
+      "demos/qoder-platform/style.css",
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/arknights-world.json",
+      "entries/chatgpt-platform.json",
+      "entries/qoder-platform.json",
+      "entries/zelda-world.json",
+      "research/arknights-world.md",
+      "research/chatgpt-platform.md",
+      "research/qoder-platform.md",
+      "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "layer-focus-dimming",
+    "title": "聚焦一层并减弱其余层",
+    "category": "交互反馈",
+    "summary": "在完整系统中强调一个子系统。",
+    "mechanism": "选定图层保持清晰，其余图层降低透明度但仍留在原位，文字说明与选中按钮同步。",
+    "trigger": "选择花园/建筑/整体",
+    "effect": "用户理解局部及其整体位置。",
+    "useCases": [
+      "空间与技术系统介绍"
+    ],
+    "avoid": [
+      "将非当前层完全删除导致关系丢失"
+    ],
+    "constraints": [
+      "透明度只作用于图形，正文始终保持对比。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户理解局部及其整体位置，职责限定在当前区域。组合时透明度只作用于图形，正文始终保持对比。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "parallel-isometric-projection",
+        "exploded-layer-view"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「聚焦一层并减弱其余层」。选定图层保持清晰，其余图层降低透明度但仍留在原位，文字说明与选中按钮同步。触发：选择花园/建筑/整体。可见结果：用户理解局部及其整体位置。适用任务：空间与技术系统介绍。透明度只作用于图形，正文始终保持对比。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户理解局部及其整体位置，职责限定在当前区域。组合时透明度只作用于图形，正文始终保持对比。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "isometric-3d",
+        "locator": "entries/isometric-3d.json#interaction/0",
+        "observation": "整岛、花园、建筑三种焦点切换",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/isometric-3d/index.html",
+      "demos/isometric-3d/script.js",
+      "demos/isometric-3d/style.css",
+      "entries/isometric-3d.json",
+      "research/isometric-3d.md"
+    ]
+  },
+  {
+    "id": "layered-navigation-drawer",
+    "title": "导航容器先行、内容后入",
+    "category": "导航与状态",
+    "summary": "在同一抽屉中分清容器与次级层级。",
+    "mechanism": "先让侧向导航容器进入，再延迟显示二级内容；返回保留相同空间位置，关闭恢复触发焦点。",
+    "trigger": "进入目录或二级主题",
+    "effect": "用户看懂层级变化发生在哪里。",
+    "useCases": [
+      "文档目录与组件学习站"
+    ],
+    "avoid": [
+      "容器与多层文字同时乱飞"
+    ],
+    "constraints": [
+      "二级内容出现前不允许焦点进入隐藏层，降低动态即时完成。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责用户看懂层级变化发生在哪里，职责限定在当前区域。组合时二级内容出现前不允许焦点进入隐藏层，降低动态即时完成。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "mobile-drilldown-menu"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源时序",
+        "value": "抽屉300ms；内容延后200ms再200ms淡入",
+        "note": "固定页面公开样式参数"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「导航容器先行、内容后入」。先让侧向导航容器进入，再延迟显示二级内容；返回保留相同空间位置，关闭恢复触发焦点。触发：进入目录或二级主题。可见结果：用户看懂层级变化发生在哪里。适用任务：文档目录与组件学习站。二级内容出现前不允许焦点进入隐藏层，降低动态即时完成。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户看懂层级变化发生在哪里，职责限定在当前区域。组合时二级内容出现前不允许焦点进入隐藏层，降低动态即时完成。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "google-material",
+        "locator": "entries/google-material.json#interaction/2",
+        "observation": "进入目录或二级主题：300ms侧向抽屉；二级内容200ms延后再200ms淡入。 导航容器保持连续，内容层级在同一位置变化。",
+        "evidence": "observed",
+        "referenceUrl": "https://m3.material.io/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/google-material/app.js",
+      "demos/google-material/fidelity.md",
+      "demos/google-material/index.html",
+      "demos/google-material/style.css",
+      "entries/google-material.json",
+      "research/google-material.md"
+    ]
+  },
+  {
+    "id": "live-parameter-readout",
+    "title": "滑块与带单位读数联动",
+    "category": "交互反馈",
+    "summary": "用数值说明参数如何改变真实对象。",
+    "mechanism": "原生范围输入直接更新目标属性和相邻读数；明确单位、范围以及参数立即生效还是影响下一次变化。",
+    "trigger": "拖动或键盘调整滑块",
+    "effect": "参数变化与可见/可听结果一一对应。",
+    "useCases": [
+      "设计实验与工具演示"
+    ],
+    "avoid": [
+      "只改变读数却不改变目标"
+    ],
+    "constraints": [
+      "读数有文本单位，范围控件不截获正常方向键。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责参数变化与可见/可听结果一一对应，职责限定在当前区域。组合时读数有文本单位，范围控件不截获正常方向键。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "geometric-balance-presets",
+        "audio-signal-panel",
+        "interruptible-morph"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "使用有label的原生range，方向键/Home/End可操作；读数与控件关联。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「滑块与带单位读数联动」。原生范围输入直接更新目标属性和相邻读数；明确单位、范围以及参数立即生效还是影响下一次变化。触发：拖动或键盘调整滑块。可见结果：参数变化与可见/可听结果一一对应。适用任务：设计实验与工具演示。读数有文本单位，范围控件不截获正常方向键。键盘：使用有label的原生range，方向键/Home/End可操作；读数与控件关联。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责参数变化与可见/可听结果一一对应，职责限定在当前区域。组合时读数有文本单位，范围控件不截获正常方向键。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "bauhaus-geometry",
+        "locator": "entries/bauhaus-geometry.json#interaction/1",
+        "observation": "原生范围控件可用键盘旋转三角形并即时显示角度。",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "retro-80s",
+        "locator": "entries/retro-80s.json#interaction/2",
+        "observation": "原生范围输入即时改变Cutoff、Attack、Output并更新读数。",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "shape-morph",
+        "locator": "entries/shape-morph.json#interaction/1",
+        "observation": "间距滑块将单元从连续图案分离为碎片",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/bauhaus-geometry/index.html",
+      "demos/retro-80s/index.html",
+      "demos/shape-morph/index.html",
+      "demos/shape-morph/script.js",
+      "demos/shape-morph/style.css",
+      "entries/bauhaus-geometry.json",
+      "entries/retro-80s.json",
+      "entries/shape-morph.json",
+      "research/bauhaus-geometry.md",
+      "research/retro-80s.md",
+      "research/shape-morph.md"
+    ]
+  },
+  {
+    "id": "load-completion-brand-marker",
+    "title": "资源完成后品牌标记退场",
+    "category": "加载与媒体",
+    "summary": "等待真实图片就绪，不编造长进度。",
+    "mechanism": "关键图片加载期间显示轻量品牌旋转标记，load完成后载入层与主图淡化交接；失败可继续读页。",
+    "trigger": "首屏资源完成",
+    "effect": "品牌识别贯穿短暂等待。",
+    "useCases": [
+      "海报与现场照片首屏"
+    ],
+    "avoid": [
+      "以长假百分比制造仪式"
+    ],
+    "constraints": [
+      "仅等待当前首图，旋转标记不是实际数值进度，避免再叠一套通用欢迎。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责品牌识别贯穿短暂等待，职责限定在当前区域。组合时仅等待当前首图，旋转标记不是实际数值进度，避免再叠一套通用欢迎。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "photo-crossfade-cycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "加载说明可读，失败时继续/重试按钮可聚焦，不困住焦点。",
+      "reducedMotion": "旋转改为静止标识，就绪后即时显示主图。"
+    },
+    "parameters": [
+      {
+        "name": "DESIGN SIGHT来源",
+        "value": "50px蓝标 / 300ms退场",
+        "note": "public common.js/CSS依据"
+      },
+      {
+        "name": "Fuji Rock来源",
+        "value": "32px橙标 / 1200ms淡化",
+        "note": "load完成交接"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「资源完成后品牌标记退场」。关键图片加载期间显示轻量品牌旋转标记，load完成后载入层与主图淡化交接；失败可继续读页。触发：首屏资源完成。可见结果：品牌识别贯穿短暂等待。适用任务：海报与现场照片首屏。仅等待当前首图，旋转标记不是实际数值进度，避免再叠一套通用欢迎。键盘：加载说明可读，失败时继续/重试按钮可聚焦，不困住焦点。减少动态：旋转改为静止标识，就绪后即时显示主图。组合边界：该原子负责品牌识别贯穿短暂等待，职责限定在当前区域。组合时仅等待当前首图，旋转标记不是实际数值进度，避免再叠一套通用欢迎。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#interaction/0",
+        "observation": "首次加载完成：全屏白色与蓝色50px旋转标记，300ms退场。 在海报加载期间保持机构识别。",
+        "evidence": "inferred",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#interaction/0",
+        "observation": "素材载入完成：32px橙色旋转标记退出，遮层与主图1200ms线性淡化。 让真实现场图准备完毕后平稳进入。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/design-sight/app.js",
+      "demos/design-sight/fidelity.md",
+      "demos/design-sight/index.html",
+      "demos/design-sight/style.css",
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "entries/design-sight.json",
+      "entries/fuji-rock.json",
+      "research/design-sight.md",
+      "research/fuji-rock.md"
+    ]
+  },
+  {
+    "id": "local-code-theme-preview",
+    "title": "代码主题只改变局部预览",
+    "category": "交互反馈",
+    "summary": "把代码外观探索限定在代码区域。",
+    "mechanism": "编辑代码更新行数与语法内容，主题选择更新局部token颜色；营销页面全局配色保持自己的语义。",
+    "trigger": "编辑或选择语法主题",
+    "effect": "用户可比较真实代码预览状态。",
+    "useCases": [
+      "开发工具介绍与主题展示"
+    ],
+    "avoid": [
+      "把局部代码配色说成全站主题"
+    ],
+    "constraints": [
+      "代码示范不执行，颜色之外保留语法文本及主题名称。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户可比较真实代码预览状态，职责限定在当前区域。组合时代码示范不执行，颜色之外保留语法文本及主题名称。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "live-parameter-readout"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「代码主题只改变局部预览」。编辑代码更新行数与语法内容，主题选择更新局部token颜色；营销页面全局配色保持自己的语义。触发：编辑或选择语法主题。可见结果：用户可比较真实代码预览状态。适用任务：开发工具介绍与主题展示。代码示范不执行，颜色之外保留语法文本及主题名称。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户可比较真实代码预览状态，职责限定在当前区域。组合时代码示范不执行，颜色之外保留语法文本及主题名称。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "linear-workflow",
+        "locator": "entries/linear-workflow.json#interaction/4",
+        "observation": "Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。",
+        "evidence": "observed",
+        "referenceUrl": "https://linear.app/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/linear-workflow/fidelity.md",
+      "demos/linear-workflow/index.html",
+      "demos/linear-workflow/journey.js",
+      "demos/linear-workflow/script.js",
+      "demos/linear-workflow/style.css",
+      "entries/linear-workflow.json",
+      "research/linear-workflow.md"
+    ]
+  },
+  {
+    "id": "local-save-toggle",
+    "title": "可取消的本地收藏",
+    "category": "交互反馈",
+    "summary": "明确保存在当前浏览器的收藏状态。",
+    "mechanism": "每条内容使用可反复切换的收藏按钮，记录条目ID并恢复当前浏览器的状态。",
+    "trigger": "收藏或取消收藏",
+    "effect": "列表中的选择可在回访时继续使用。",
+    "useCases": [
+      "轻量资料收藏与学习清单"
+    ],
+    "avoid": [
+      "把本地状态说成跨设备账户同步"
+    ],
+    "constraints": [
+      "隔离存储键，失败时仍能操作，按钮文字明确显示收藏或取消。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责列表中的选择可在回访时继续使用，职责限定在当前区域。组合时隔离存储键，失败时仍能操作，按钮文字明确显示收藏或取消。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "收藏按钮提供完整内容名称与aria-pressed；键盘激活等同点击。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「可取消的本地收藏」。每条内容使用可反复切换的收藏按钮，记录条目ID并恢复当前浏览器的状态。触发：收藏或取消收藏。可见结果：列表中的选择可在回访时继续使用。适用任务：轻量资料收藏与学习清单。隔离存储键，失败时仍能操作，按钮文字明确显示收藏或取消。键盘：收藏按钮提供完整内容名称与aria-pressed；键盘激活等同点击。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责列表中的选择可在回访时继续使用，职责限定在当前区域。组合时隔离存储键，失败时仍能操作，按钮文字明确显示收藏或取消。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "swiss-grid",
+        "locator": "entries/swiss-grid.json#interaction/1",
+        "observation": "收藏按钮将展览编号存到当前浏览器，状态可再次取消。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/swiss-grid/index.html",
+      "entries/swiss-grid.json",
+      "research/swiss-grid.md"
+    ]
+  },
+  {
+    "id": "masked-transaction-rotation",
+    "title": "裁切文字与交易预览同步",
+    "category": "交互反馈",
+    "summary": "把一条交易变化同时映射到文字与界面。",
+    "mechanism": "商户文本在mask内纵向交接，结账示例同时更新对应商户和金额；关联字段统一由一个状态驱动。",
+    "trigger": "交易演示轮换",
+    "effect": "复杂业务通过具体小场景可见。",
+    "useCases": [
+      "支付与流程产品说明"
+    ],
+    "avoid": [
+      "文字与金额各自轮换造成错配"
+    ],
+    "constraints": [
+      "明确是固定示例，不能呈现真实付款成功。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责复杂业务通过具体小场景可见，职责限定在当前区域。组合时明确是固定示例，不能呈现真实付款成功。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「裁切文字与交易预览同步」。商户文本在mask内纵向交接，结账示例同时更新对应商户和金额；关联字段统一由一个状态驱动。触发：交易演示轮换。可见结果：复杂业务通过具体小场景可见。适用任务：支付与流程产品说明。明确是固定示例，不能呈现真实付款成功。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责复杂业务通过具体小场景可见，职责限定在当前区域。组合时明确是固定示例，不能呈现真实付款成功。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/1",
+        "observation": "Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。",
+        "evidence": "observed",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/stripe-platform.json",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "measured-width-action-pill",
+    "title": "测量文字宽度的动作胶囊",
+    "category": "交互反馈",
+    "summary": "换词时只让容器宽度平稳变化。",
+    "mechanism": "动作词直接替换，再测量内容宽度并过渡胶囊inline-size；颜色与圆点随语义同步，不给字加额外飞入。",
+    "trigger": "固定词轮换周期",
+    "effect": "主张保持一行连续，词长变化可读。",
+    "useCases": [
+      "多个等价动作的产品主张"
+    ],
+    "avoid": [
+      "所有文字同时滚动造成阅读跳失"
+    ],
+    "constraints": [
+      "保留完整静态句子供读屏，减少动态固定一个可读词。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责主张保持一行连续，词长变化可读，职责限定在当前区域。组合时保留完整静态句子供读屏，减少动态固定一个可读词。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "avatar-pile-personality"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源周期/宽度",
+        "value": "2500ms / 300ms",
+        "note": "文字直接替换，仅宽度过渡"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「测量文字宽度的动作胶囊」。动作词直接替换，再测量内容宽度并过渡胶囊inline-size；颜色与圆点随语义同步，不给字加额外飞入。触发：固定词轮换周期。可见结果：主张保持一行连续，词长变化可读。适用任务：多个等价动作的产品主张。保留完整静态句子供读屏，减少动态固定一个可读词。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责主张保持一行连续，词长变化可读，职责限定在当前区域。组合时保留完整静态句子供读屏，减少动态固定一个可读词。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "notion-editorial",
+        "locator": "entries/notion-editorial.json#interaction/0",
+        "observation": "2500ms 自动 Think/Ship/Create/Build/Jam/Scale → 词直接替换，测量 scrollWidth 后宽度以 300ms cubic-bezier(.86,0,.07,1) 变化，底色/圆点对应变化；这是源机制，没有给文字加不存在的飞入飞出。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.notion.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/notion-editorial/fidelity.md",
+      "demos/notion-editorial/index.html",
+      "demos/notion-editorial/journey.js",
+      "demos/notion-editorial/script.js",
+      "demos/notion-editorial/style.css",
+      "entries/notion-editorial.json",
+      "research/notion-editorial.md"
+    ]
+  },
+  {
+    "id": "message-to-board-demonstration",
+    "title": "消息到任务板的可重播演示",
+    "category": "交互反馈",
+    "summary": "把自然语言请求的结果变成可见工作项。",
+    "mechanism": "按请求、回复、卡片插入和状态移动分阶段展示同一任务；Replay恢复初态，消息与任务数量同步。",
+    "trigger": "发送示例请求或重播",
+    "effect": "用户能看到请求如何转为Todo/In progress。",
+    "useCases": [
+      "自动化与团队工具说明"
+    ],
+    "avoid": [
+      "把固定演示说成真正执行模型任务"
+    ],
+    "constraints": [
+      "固定示例与真正后端能力明确区分，减少动态保留完整终态。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户能看到请求如何转为Todo/In progress，职责限定在当前区域。组合时固定示例与真正后端能力明确区分，减少动态保留完整终态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「消息到任务板的可重播演示」。按请求、回复、卡片插入和状态移动分阶段展示同一任务；Replay恢复初态，消息与任务数量同步。触发：发送示例请求或重播。可见结果：用户能看到请求如何转为Todo/In progress。适用任务：自动化与团队工具说明。固定示例与真正后端能力明确区分，减少动态保留完整终态。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户能看到请求如何转为Todo/In progress，职责限定在当前区域。组合时固定示例与真正后端能力明确区分，减少动态保留完整终态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "linear-workflow",
+        "locator": "entries/linear-workflow.json#interaction/2",
+        "observation": "Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。",
+        "evidence": "observed",
+        "referenceUrl": "https://linear.app/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/linear-workflow/fidelity.md",
+      "demos/linear-workflow/index.html",
+      "demos/linear-workflow/journey.js",
+      "demos/linear-workflow/script.js",
+      "demos/linear-workflow/style.css",
+      "entries/linear-workflow.json",
+      "research/linear-workflow.md"
+    ]
+  },
+  {
+    "id": "metric-explanation-selector",
+    "title": "指标选择与解释联动",
+    "category": "交互反馈",
+    "summary": "让数字、进度与说明成为同一条事实。",
+    "mechanism": "选择统计项强调当前数字并更新细线进度及基础设施解释，自动周期与指针暂停共享当前索引。",
+    "trigger": "选择指标或自动推进",
+    "effect": "用户知道数字所解释的能力。",
+    "useCases": [
+      "基础设施与数据产品"
+    ],
+    "avoid": [
+      "没有依据的数字动画证明性能"
+    ],
+    "constraints": [
+      "数字需要真实出处，示范缩短说明不能冒充完整测量。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户知道数字所解释的能力，职责限定在当前区域。组合时数字需要真实出处，示范缩短说明不能冒充完整测量。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「指标选择与解释联动」。选择统计项强调当前数字并更新细线进度及基础设施解释，自动周期与指针暂停共享当前索引。触发：选择指标或自动推进。可见结果：用户知道数字所解释的能力。适用任务：基础设施与数据产品。数字需要真实出处，示范缩短说明不能冒充完整测量。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户知道数字所解释的能力，职责限定在当前区域。组合时数字需要真实出处，示范缩短说明不能冒充完整测量。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/3",
+        "observation": "Global 四统计选择 → 当前数字强调、底部细线进度和基础设施说明对应变化；自动推进与指针停留暂停。",
+        "evidence": "observed",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/stripe-platform.json",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "mixed-ratio-archive-columns",
+    "title": "等宽栏目保留不同图像比例",
+    "category": "内容组织",
+    "summary": "统一栏目线索，不强行统一作品高度。",
+    "mechanism": "栏目有共同宽度与标题规则，内部竖海报、横摄影按各自比例排列；不同内容长度产生不同列高，手机逐列阅读。",
+    "trigger": "浏览机构档案",
+    "effect": "分类稳定而作品保持完整。",
+    "useCases": [
+      "多类型文化资料库"
+    ],
+    "avoid": [
+      "把所有图片剪成相同方形高度"
+    ],
+    "constraints": [
+      "阅读顺序按DOM栏目组织，手机避免视觉顺序与语义顺序不同。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责分类稳定而作品保持完整，职责限定在当前区域。组合时阅读顺序按DOM栏目组织，手机避免视觉顺序与语义顺序不同。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "artwork-caption-separation",
+        "inline-detail-disclosure"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「等宽栏目保留不同图像比例」。栏目有共同宽度与标题规则，内部竖海报、横摄影按各自比例排列；不同内容长度产生不同列高，手机逐列阅读。触发：浏览机构档案。可见结果：分类稳定而作品保持完整。适用任务：多类型文化资料库。阅读顺序按DOM栏目组织，手机避免视觉顺序与语义顺序不同。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责分类稳定而作品保持完整，职责限定在当前区域。组合时阅读顺序按DOM栏目组织，手机避免视觉顺序与语义顺序不同。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#composition/layout",
+        "observation": "129px header、全幅16:9海报、4个等宽但内容不等高的竖列；手机单列。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#constraints/2",
+        "observation": "档案图片包含竖海报与横照片，保留各自比例，不强行统一卡片高度。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/design-sight/app.js",
+      "demos/design-sight/fidelity.md",
+      "demos/design-sight/index.html",
+      "demos/design-sight/style.css",
+      "entries/design-sight.json",
+      "research/design-sight.md"
+    ]
+  },
+  {
+    "id": "mobile-drilldown-menu",
+    "title": "手机菜单逐层进入与返回",
+    "category": "导航与状态",
+    "summary": "长目录以层级页面保留方向。",
+    "mechanism": "全屏菜单先显示顶层分类，选择分类让二级页侧向进入；Back返回顶层，核心行动固定在底部。",
+    "trigger": "手机打开分类或返回",
+    "effect": "层级与行动位置始终可定位。",
+    "useCases": [
+      "多层产品导航"
+    ],
+    "avoid": [
+      "把全部链接挤在一屏且没有返回"
+    ],
+    "constraints": [
+      "关闭恢复阅读位置与焦点，长列表只在菜单内滚动。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责层级与行动位置始终可定位，职责限定在当前区域。组合时关闭恢复阅读位置与焦点，长列表只在菜单内滚动。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "natural-height-mega-menu",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「手机菜单逐层进入与返回」。全屏菜单先显示顶层分类，选择分类让二级页侧向进入；Back返回顶层，核心行动固定在底部。触发：手机打开分类或返回。可见结果：层级与行动位置始终可定位。适用任务：多层产品导航。关闭恢复阅读位置与焦点，长列表只在菜单内滚动。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责层级与行动位置始终可定位，职责限定在当前区域。组合时关闭恢复阅读位置与焦点，长列表只在菜单内滚动。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/6",
+        "observation": "手机汉堡菜单 → 全屏顶层 Products/Solutions/Developers/Resources；选择分类后二级页以源 CSS 500ms 侧向进入、250ms 透明度衔接，Back 返回顶层。Start now/Contact sales 固定底部；关闭/Escape 恢复滚动和焦点，让长目录保持方向与核心行动。",
+        "evidence": "adapted",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/stripe-platform.json",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "mobile-media-prioritization",
+    "title": "按手机信息任务裁减复杂演示",
+    "category": "内容组织",
+    "summary": "复杂媒体变体与正文分别管理。",
+    "mechanism": "窄屏保留主张、操作和说明，按来源变体隐藏重型演示或仅保留消息线程，避免把桌面全部缩到不可读。",
+    "trigger": "进入窄屏布局",
+    "effect": "核心信息无需理解极小界面也可读。",
+    "useCases": [
+      "密集工具产品的移动营销页"
+    ],
+    "avoid": [
+      "隐藏整节内容或把不同来源规则混用"
+    ],
+    "constraints": [
+      "Notion手机隐藏hero媒体，Linear保留首屏应用裁切；具体变体须按任务决定。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责核心信息无需理解极小界面也可读，职责限定在当前区域。组合时Notion手机隐藏hero媒体，Linear保留首屏应用裁切；具体变体须按任务决定。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "capability-bento-hierarchy"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「按手机信息任务裁减复杂演示」。窄屏保留主张、操作和说明，按来源变体隐藏重型演示或仅保留消息线程，避免把桌面全部缩到不可读。触发：进入窄屏布局。可见结果：核心信息无需理解极小界面也可读。适用任务：密集工具产品的移动营销页。Notion手机隐藏hero媒体，Linear保留首屏应用裁切；具体变体须按任务决定。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责核心信息无需理解极小界面也可读，职责限定在当前区域。组合时Notion手机隐藏hero媒体，Linear保留首屏应用裁切；具体变体须按任务决定。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "notion-editorial",
+        "locator": "entries/notion-editorial.json#interaction/1",
+        "observation": "桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.notion.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "linear-workflow",
+        "locator": "entries/linear-workflow.json#interaction/5",
+        "observation": "手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。",
+        "evidence": "observed",
+        "referenceUrl": "https://linear.app/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/linear-workflow/fidelity.md",
+      "demos/linear-workflow/index.html",
+      "demos/linear-workflow/journey.js",
+      "demos/linear-workflow/script.js",
+      "demos/linear-workflow/style.css",
+      "demos/notion-editorial/fidelity.md",
+      "demos/notion-editorial/index.html",
+      "demos/notion-editorial/journey.js",
+      "demos/notion-editorial/script.js",
+      "demos/notion-editorial/style.css",
+      "entries/linear-workflow.json",
+      "entries/notion-editorial.json",
+      "research/linear-workflow.md",
+      "research/notion-editorial.md"
+    ]
+  },
+  {
+    "id": "mobile-native-mode-cards",
+    "title": "手机以原生模式卡替代桌面长舞台",
+    "category": "导航与状态",
+    "summary": "按设备任务重排交互，保持能力可浏览。",
+    "mechanism": "窄屏把桌面sticky模式舞台转换为三张原生水平卡；标题选择将对应卡定位到视口。",
+    "trigger": "手机横滑或选择能力词",
+    "effect": "手指可直接浏览同样三种能力。",
+    "useCases": [
+      "多模式产品的移动版"
+    ],
+    "avoid": [
+      "强塞桌面长距离sticky交接"
+    ],
+    "constraints": [
+      "保留模式标签和完整说明，页面纵向滚动不被卡片劫持。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责手指可直接浏览同样三种能力，职责限定在当前区域。组合时保留模式标签和完整说明，页面纵向滚动不被卡片劫持。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "hover-focus-mode-selection"
+      ],
+      "conflicts": [
+        "scroll-synchronized-rail"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「手机以原生模式卡替代桌面长舞台」。窄屏把桌面sticky模式舞台转换为三张原生水平卡；标题选择将对应卡定位到视口。触发：手机横滑或选择能力词。可见结果：手指可直接浏览同样三种能力。适用任务：多模式产品的移动版。保留模式标签和完整说明，页面纵向滚动不被卡片劫持。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责手指可直接浏览同样三种能力，职责限定在当前区域。组合时保留模式标签和完整说明，页面纵向滚动不被卡片劫持。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/4",
+        "observation": "手机使用三卡原生横向滚动，标题选择定位相应卡片；桌面 sticky rail 不出现在手机。导航保持桌面即时开关和手机全屏分层列表。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "research/chatgpt-platform.md"
+    ]
+  },
+  {
+    "id": "mobile-single-open-navigation",
+    "title": "手机菜单原位单开分类",
+    "category": "导航与状态",
+    "summary": "展开一组同时收起上一组。",
+    "mechanism": "在全屏导航中原位展开当前分类，其他分类降低强调，同一分类再点收起，下载与登录入口固定底部。",
+    "trigger": "手机选择导航分类",
+    "effect": "全部顶层结构仍可看见，当前子目录清楚。",
+    "useCases": [
+      "分类不深的移动导航"
+    ],
+    "avoid": [
+      "展开所有长列表造成迷失"
+    ],
+    "constraints": [
+      "焦点限制在菜单，关闭恢复原位置，底部行动不遮住子链接。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责全部顶层结构仍可看见，当前子目录清楚，职责限定在当前区域。组合时焦点限制在菜单，关闭恢复原位置，底部行动不遮住子链接。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "instant-open-menu-category-switch"
+      ],
+      "conflicts": [
+        "mobile-drilldown-menu"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「手机菜单原位单开分类」。在全屏导航中原位展开当前分类，其他分类降低强调，同一分类再点收起，下载与登录入口固定底部。触发：手机选择导航分类。可见结果：全部顶层结构仍可看见，当前子目录清楚。适用任务：分类不深的移动导航。焦点限制在菜单，关闭恢复原位置，底部行动不遮住子链接。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责全部顶层结构仍可看见，当前子目录清楚，职责限定在当前区域。组合时焦点限制在菜单，关闭恢复原位置，底部行动不遮住子链接。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "notion-editorial",
+        "locator": "entries/notion-editorial.json#interaction/3",
+        "observation": "桌面 Product/Resources 指针进入与点击 → 首次 opacity/translateY(-16px) 250ms ease-out，退出 150ms ease-in、延迟 50ms；已打开分类按源 instantSwitch 直接切换，快速反转取消旧退出，减少动态直接完成；手机打开全屏菜单 → Product/AI/Resources 原地单开，切换收起前组，再点同组收起；其他分类变灰，底部 Download app/Log in 固定。源 CSS 子展开 300ms、入口 350ms，内容/底部延迟 200/250ms；关闭/Escape 恢复滚动和焦点，维持层级与行动位置。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.notion.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/notion-editorial/fidelity.md",
+      "demos/notion-editorial/index.html",
+      "demos/notion-editorial/journey.js",
+      "demos/notion-editorial/script.js",
+      "demos/notion-editorial/style.css",
+      "entries/notion-editorial.json",
+      "research/notion-editorial.md"
+    ]
+  },
+  {
+    "id": "mode-character-accent",
+    "title": "当前能力词逐字强调色",
+    "category": "交互反馈",
+    "summary": "通过字色让当前能力选择可见。",
+    "mechanism": "将能力词分成保持阅读顺序的字符层，选中模式更新该词的逐字强调色，其余标题维持稳定。",
+    "trigger": "能力模式改变",
+    "effect": "用户能在巨字标题中识别当前用途。",
+    "useCases": [
+      "可选择的多模式中文主张"
+    ],
+    "avoid": [
+      "所有字同时闪烁或仅靠色彩传达选择"
+    ],
+    "constraints": [
+      "保留一个完整可读词名及选择状态，字层不改变语义顺序。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "负责选择反馈，能力词button负责语义和焦点，中央窗口负责内容证明。字色只是一个提示；保留aria-pressed与完整词名，避免让读屏逐字碎读。",
+      "pairsWellWith": [
+        "hover-focus-mode-selection",
+        "vertical-card-swap"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "词整体为可聚焦button，字符装饰对读屏隐藏，aria-pressed与文字状态同步。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「当前能力词逐字强调色」。将能力词分成保持阅读顺序的字符层，选中模式更新该词的逐字强调色，其余标题维持稳定。触发：能力模式改变。可见结果：用户能在巨字标题中识别当前用途。适用任务：可选择的多模式中文主张。保留一个完整可读词名及选择状态，字层不改变语义顺序。键盘：词整体为可聚焦button，字符装饰对读屏隐藏，aria-pressed与文字状态同步。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责选择反馈，能力词button负责语义和焦点，中央窗口负责内容证明。字色只是一个提示；保留aria-pressed与完整词名，避免让读屏逐字碎读。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/0",
+        "observation": "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "research/chatgpt-platform.md"
+    ]
+  },
+  {
+    "id": "mode-specific-collage",
+    "title": "按模式组织独立拼贴层",
+    "category": "视觉构成",
+    "summary": "一组周边素材共同解释一种用途。",
+    "mechanism": "每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。",
+    "trigger": "选择不同能力模式",
+    "effect": "主窗口周边形成具有语义的场景。",
+    "useCases": [
+      "需要多类型成果证明的产品"
+    ],
+    "avoid": [
+      "为所有模式复用同一组装饰"
+    ],
+    "constraints": [
+      "素材必须解释对应能力，不能盖住标题与控制。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "负责模式对应的成果场景，中央产品窗口负责产品身份，巨字负责选择。图层坐标按素材重设；不能将多来源拼贴叠成遮挡标题的无限装饰。",
+      "pairsWellWith": [
+        "hover-focus-mode-selection",
+        "sticky-stage-handoff",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「按模式组织独立拼贴层」。每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。触发：选择不同能力模式。可见结果：主窗口周边形成具有语义的场景。适用任务：需要多类型成果证明的产品。素材必须解释对应能力，不能盖住标题与控制。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：负责模式对应的成果场景，中央产品窗口负责产品身份，巨字负责选择。图层坐标按素材重设；不能将多来源拼贴叠成遮挡标题的无限装饰。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/1",
+        "observation": "选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "research/chatgpt-platform.md"
+    ]
+  },
+  {
+    "id": "mountain-scaled-menu",
+    "title": "菜单缩放倾转与背景降强调",
+    "category": "导航与状态",
+    "summary": "品牌形状打开一层可专注的导览。",
+    "mechanism": "山形菜单控制打开目录，菜单由缩小/倾转状态进入，背景缓慢降低透明度；反向关闭从当前变换继续。",
+    "trigger": "打开、关闭或快速反向菜单",
+    "effect": "导航成为前景，现场照片仍可感知。",
+    "useCases": [
+      "有具体品牌形态的活动导航"
+    ],
+    "avoid": [
+      "菜单装饰抢过链接内容"
+    ],
+    "constraints": [
+      "焦点与滚动锁只在菜单开启时有效，减少动态直接显示目录。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责导航成为前景，现场照片仍可感知，职责限定在当前区域。组合时焦点与滚动锁只在菜单开启时有效，减少动态直接显示目录。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源变换",
+        "value": "400ms / scale(.88) / rotate3d(.5,0,0,1rad)",
+        "note": "背景1s淡到0.25"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「菜单缩放倾转与背景降强调」。山形菜单控制打开目录，菜单由缩小/倾转状态进入，背景缓慢降低透明度；反向关闭从当前变换继续。触发：打开、关闭或快速反向菜单。可见结果：导航成为前景，现场照片仍可感知。适用任务：有具体品牌形态的活动导航。焦点与滚动锁只在菜单开启时有效，减少动态直接显示目录。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责导航成为前景，现场照片仍可感知，职责限定在当前区域。组合时焦点与滚动锁只在菜单开启时有效，减少动态直接显示目录。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#interaction/1",
+        "observation": "打开／关闭山形菜单：菜单400ms scale(.88)+rotate3d(.5,0,0,1rad)进出，页面背景1秒淡到.25。 放大导览层级，同时保留现场的空间背景。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "entries/fuji-rock.json",
+      "research/fuji-rock.md"
+    ]
+  },
+  {
+    "id": "moving-tab-selection-bed",
+    "title": "选中底板与套餐组联动",
+    "category": "交互反馈",
+    "summary": "让套餐受众切换保持明确选中位置。",
+    "mechanism": "一个选中底板沿tabs位置移动，同时替换当前受众对应的套餐卡；不同卡数仍由内容区域自然布局。",
+    "trigger": "选择个人或团队受众",
+    "effect": "选择位置与可见方案一致。",
+    "useCases": [
+      "受众分组的套餐与能力介绍"
+    ],
+    "avoid": [
+      "添加来源不存在的月/年账期"
+    ],
+    "constraints": [
+      "按真实受众组织方案，未验证的源动态标明公共模块依据。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责选择位置与可见方案一致，职责限定在当前区域。组合时按真实受众组织方案，未验证的源动态标明公共模块依据。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "single-open-accordion"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「选中底板与套餐组联动」。一个选中底板沿tabs位置移动，同时替换当前受众对应的套餐卡；不同卡数仍由内容区域自然布局。触发：选择个人或团队受众。可见结果：选择位置与可见方案一致。适用任务：受众分组的套餐与能力介绍。按真实受众组织方案，未验证的源动态标明公共模块依据。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责选择位置与可见方案一致，职责限定在当前区域。组合时按真实受众组织方案，未验证的源动态标明公共模块依据。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "claude-platform",
+        "locator": "entries/claude-platform.json#interaction/2",
+        "observation": "Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。",
+        "evidence": "inferred",
+        "referenceUrl": "https://claude.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/claude-platform/fidelity.md",
+      "demos/claude-platform/index.html",
+      "demos/claude-platform/journey.js",
+      "demos/claude-platform/script.js",
+      "demos/claude-platform/style.css",
+      "entries/claude-platform.json",
+      "research/claude-platform.md"
+    ]
+  },
+  {
+    "id": "native-document-reading",
+    "title": "原生长页与正常回程",
+    "category": "滚动叙事",
+    "summary": "按内容顺序浏览，不额外劫持滚轮。",
+    "mechanism": "章节处于普通文档流，浏览器处理上下滚动和锚点；局部轨道、sticky或菜单各自管理状态。",
+    "trigger": "自然滚动、反向返回或页内链接",
+    "effect": "长正文及页脚保持连续可读。",
+    "useCases": [
+      "文化、产品与活动长页"
+    ],
+    "avoid": [
+      "无来源的整页锁滚和切幕"
+    ],
+    "constraints": [
+      "局部交互不得阻断主页面，移动与减少动态仍能走完整路径。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责长正文及页脚保持连续可读，职责限定在当前区域。组合时局部交互不得阻断主页面，移动与减少动态仍能走完整路径。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "native-horizontal-shelf",
+        "scroll-differential-stars",
+        "sticky-action-sidebar"
+      ],
+      "conflicts": [
+        "vertical-fullscreen-stage",
+        "directional-section-wipe"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「原生长页与正常回程」。章节处于普通文档流，浏览器处理上下滚动和锚点；局部轨道、sticky或菜单各自管理状态。触发：自然滚动、反向返回或页内链接。可见结果：长正文及页脚保持连续可读。适用任务：文化、产品与活动长页。局部交互不得阻断主页面，移动与减少动态仍能走完整路径。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责长正文及页脚保持连续可读，职责限定在当前区域。组合时局部交互不得阻断主页面，移动与减少动态仍能走完整路径。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#interaction/1",
+        "observation": "上下浏览：欢迎与到访信息、展览横轨、馆藏和会员按原生阅读节奏组织；不新增全屏转场。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "rijksmuseum-art",
+        "locator": "entries/rijksmuseum-art.json#interaction/0",
+        "observation": "进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.rijksmuseum.nl/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#interaction/0",
+        "observation": "正常纵向浏览连接群像、新闻、About、Gameplay 和 footer，斜切条带延续赛道方向。",
+        "evidence": "observed",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#interaction/3",
+        "observation": "超过Pickup后向上／向下滚动：导览条固定后按方向显隐；语言菜单400ms展开并在离开时收起。 长页浏览随时找回实用入口，同时减少遮挡。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "demos/rijksmuseum-art/fidelity.md",
+      "demos/rijksmuseum-art/index.html",
+      "demos/rijksmuseum-art/script.js",
+      "demos/rijksmuseum-art/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/fuji-rock.json",
+      "entries/met-museum.json",
+      "entries/rijksmuseum-art.json",
+      "entries/uma-musume.json",
+      "research/fuji-rock.md",
+      "research/met-museum.md",
+      "research/rijksmuseum-art.md",
+      "research/uma-musume.md"
+    ]
+  },
+  {
+    "id": "native-horizontal-shelf",
+    "title": "原生横向内容架子",
+    "category": "导航与状态",
+    "summary": "保留触摸横滑与显式前后入口。",
+    "mechanism": "内容只在局部容器水平overflow，保留浏览器原生滚动，前后按钮提供同等入口；主页面继续自然纵向阅读。",
+    "trigger": "横滑或点击前后按钮",
+    "effect": "在有限空间浏览多个并列内容。",
+    "useCases": [
+      "用途、摄影与展览索引"
+    ],
+    "avoid": [
+      "让整页横向溢出或截获全页滚轮"
+    ],
+    "constraints": [
+      "按钮与触摸可共存，来源Met轨道不使用scroll-snap，迁移时明确吸附选择。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责在有限空间浏览多个并列内容，职责限定在当前区域。组合时按钮与触摸可共存，来源Met轨道不使用scroll-snap，迁移时明确吸附选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "artwork-caption-separation"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "可聚焦条目和前后button均可达，焦点进入时保持条目可见。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「原生横向内容架子」。内容只在局部容器水平overflow，保留浏览器原生滚动，前后按钮提供同等入口；主页面继续自然纵向阅读。触发：横滑或点击前后按钮。可见结果：在有限空间浏览多个并列内容。适用任务：用途、摄影与展览索引。按钮与触摸可共存，来源Met轨道不使用scroll-snap，迁移时明确吸附选择。键盘：可聚焦条目和前后button均可达，焦点进入时保持条目可见。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责在有限空间浏览多个并列内容，职责限定在当前区域。组合时按钮与触摸可共存，来源Met轨道不使用scroll-snap，迁移时明确吸附选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/5",
+        "observation": "用途架子保留原生横滑及左右按钮；后续价格、安全、结束行动与页尾为普通滚动。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#interaction/2",
+        "observation": "横向浏览展览：原生水平溢出，scroll-snap:none，前后按钮与触摸可操作。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/4",
+        "observation": "景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/5",
+        "observation": "后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。",
+        "evidence": "observed",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/apple-product.json",
+      "entries/chatgpt-platform.json",
+      "entries/met-museum.json",
+      "entries/stripe-platform.json",
+      "research/apple-product.md",
+      "research/chatgpt-platform.md",
+      "research/met-museum.md",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "natural-height-mega-menu",
+    "title": "自然高度连续衔接的目录",
+    "category": "导航与状态",
+    "summary": "分类切换保持同一个目录容器。",
+    "mechanism": "桌面目录随分类真实内容改变高度，位移、透明度与裁切同步，快速反向取消旧动画；关闭后hidden/inert与aria一致。",
+    "trigger": "指针进入、点击分类或关闭",
+    "effect": "长短目录之间保持空间连续。",
+    "useCases": [
+      "复杂产品与资源导航"
+    ],
+    "avoid": [
+      "固定高度裁掉长目录"
+    ],
+    "constraints": [
+      "Escape和外部点击可关，减少动态直接完成终态。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责长短目录之间保持空间连续，职责限定在当前区域。组合时Escape和外部点击可关，减少动态直接完成终态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源时序",
+        "value": "300ms / 200ms",
+        "note": "容器运动/裁切，cubic-bezier(.45,.05,.55,.95)"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「自然高度连续衔接的目录」。桌面目录随分类真实内容改变高度，位移、透明度与裁切同步，快速反向取消旧动画；关闭后hidden/inert与aria一致。触发：指针进入、点击分类或关闭。可见结果：长短目录之间保持空间连续。适用任务：复杂产品与资源导航。Escape和外部点击可关，减少动态直接完成终态。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责长短目录之间保持空间连续，职责限定在当前区域。组合时Escape和外部点击可关，减少动态直接完成终态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/7",
+        "observation": "桌面指针进入/点击分类 → popup 高度/位移/透明度 300ms、clip/max-height 200ms，均采用源 cubic-bezier(.45,.05,.55,.95)；分类按自然高度衔接。快速反转取消旧动画，离开/外部点击/Escape 后 hidden/inert/aria 一致；减少动态直接完成，维持目录的空间关系。",
+        "evidence": "adapted",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/stripe-platform.json",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "offsite-playlist-extension",
+    "title": "以官方播放列表延伸主题",
+    "category": "加载与媒体",
+    "summary": "用户主动离开读页进入听觉回看。",
+    "mechanism": "明确的Playlist或官方影片入口链接真实外部平台，不加载无授权播放器或自动音乐；说明目标与声音来源。",
+    "trigger": "激活播放列表或官方影片链接",
+    "effect": "展览/演出主题可在读页之后继续体验。",
+    "useCases": [
+      "音乐展览与活动回顾"
+    ],
+    "avoid": [
+      "把站外声音说成本站背景音乐"
+    ],
+    "constraints": [
+      "链接可读且标明目标，图片轮播不当作音频播放。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责展览/演出主题可在读页之后继续体验，职责限定在当前区域。组合时链接可读且标明目标，图片轮播不当作音频播放。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sound-opt-in"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "使用有明确目标名称的原生a，外部平台可按正常浏览器行为打开。",
+      "reducedMotion": "此机制只提供入口，页面内不需要动态；外部播放由用户选择。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「以官方播放列表延伸主题」。明确的Playlist或官方影片入口链接真实外部平台，不加载无授权播放器或自动音乐；说明目标与声音来源。触发：激活播放列表或官方影片链接。可见结果：展览/演出主题可在读页之后继续体验。适用任务：音乐展览与活动回顾。链接可读且标明目标，图片轮播不当作音频播放。键盘：使用有明确目标名称的原生a，外部平台可按正常浏览器行为打开。减少动态：此机制只提供入口，页面内不需要动态；外部播放由用户选择。组合边界：该原子负责展览/演出主题可在读页之后继续体验，职责限定在当前区域。组合时链接可读且标明目标，图片轮播不当作音频播放。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "philharmonie-music",
+        "locator": "entries/philharmonie-music.json#interaction/4",
+        "observation": "打开Playlist：转到官方fanlink，选择个人音乐平台。 音乐是展览主题的延伸与回看媒介。",
+        "evidence": "observed",
+        "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#soundBehavior/control",
+        "observation": "Aftermovie链接到官方YouTube；没有独立BGM开关。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#soundBehavior/control",
+        "observation": "WATCH THE OFFICIAL TRAILER 点击打开原始YouTube宣传片。",
+        "evidence": "observed",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "demos/philharmonie-music/fidelity.md",
+      "demos/philharmonie-music/index.html",
+      "demos/philharmonie-music/script.js",
+      "demos/philharmonie-music/style.css",
+      "entries/fuji-rock.json",
+      "entries/persona-kinetic.json",
+      "entries/philharmonie-music.json",
+      "research/fuji-rock.md",
+      "research/persona-kinetic.md",
+      "research/philharmonie-music.md"
+    ]
+  },
+  {
+    "id": "paper-material-collage",
+    "title": "纸页与贴纸的任务隐喻",
+    "category": "视觉构成",
+    "summary": "用纸页、胶带与贴纸解释记录活动。",
+    "mechanism": "原创记录页和植物线稿与记录任务并置，材料只做小角度倾斜；装饰开关不会改变主要文字布局。",
+    "trigger": "阅读纸页示范或切换贴纸",
+    "effect": "视觉材料支持亲手记录的产品主题。",
+    "useCases": [
+      "手账与轻量复盘工具"
+    ],
+    "avoid": [
+      "与任务无关的纸纹堆砌"
+    ],
+    "constraints": [
+      "手机纸页完整缩放，贴纸不遮住核心信息。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责视觉材料支持亲手记录的产品主题，职责限定在当前区域。组合时手机纸页完整缩放，贴纸不遮住核心信息。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "controlled-rough-outlines",
+        "checklist-progress"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「纸页与贴纸的任务隐喻」。原创记录页和植物线稿与记录任务并置，材料只做小角度倾斜；装饰开关不会改变主要文字布局。触发：阅读纸页示范或切换贴纸。可见结果：视觉材料支持亲手记录的产品主题。适用任务：手账与轻量复盘工具。手机纸页完整缩放，贴纸不遮住核心信息。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责视觉材料支持亲手记录的产品主题，职责限定在当前区域。组合时手机纸页完整缩放，贴纸不遮住核心信息。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "hand-drawn",
+        "locator": "entries/hand-drawn.json#composition/imagery",
+        "observation": "自绘植物、笔记页与贴纸解释记录生活的场景。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/hand-drawn/index.html",
+      "demos/hand-drawn/script.js",
+      "demos/hand-drawn/style.css",
+      "entries/hand-drawn.json",
+      "research/hand-drawn.md"
+    ]
+  },
+  {
+    "id": "parallel-isometric-projection",
+    "title": "统一等轴投影与三面明度",
+    "category": "视觉构成",
+    "summary": "用一个坐标规则构成整个微型世界。",
+    "mechanism": "全部体块共享30°平行轴与比例，顶/左/右使用统一明度方向，路径与植物提供尺度。",
+    "trigger": "查看系统场景",
+    "effect": "多个对象属于同一可理解空间。",
+    "useCases": [
+      "基础设施与园区系统示意"
+    ],
+    "avoid": [
+      "混入透视消失点或声称实时3D"
+    ],
+    "constraints": [
+      "固定二维SVG不能代替可旋转3D或工程验收图。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责多个对象属于同一可理解空间，职责限定在当前区域。组合时固定二维SVG不能代替可旋转3D或工程验收图。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "exploded-layer-view",
+        "layer-focus-dimming"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「统一等轴投影与三面明度」。全部体块共享30°平行轴与比例，顶/左/右使用统一明度方向，路径与植物提供尺度。触发：查看系统场景。可见结果：多个对象属于同一可理解空间。适用任务：基础设施与园区系统示意。固定二维SVG不能代替可旋转3D或工程验收图。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责多个对象属于同一可理解空间，职责限定在当前区域。组合时固定二维SVG不能代替可旋转3D或工程验收图。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "isometric-3d",
+        "locator": "entries/isometric-3d.json#composition/shape",
+        "observation": "平行边、统一30°方向和几何积木建立一致空间规则。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/isometric-3d/index.html",
+      "demos/isometric-3d/script.js",
+      "demos/isometric-3d/style.css",
+      "entries/isometric-3d.json",
+      "research/isometric-3d.md"
+    ]
+  },
+  {
+    "id": "particle-model-reformation",
+    "title": "术语选择重组同一粒子池",
+    "category": "交互反馈",
+    "summary": "选中概念以一个新形状得到解释。",
+    "mechanism": "术语目录进入详情后，同一粒子池重组为对应模型，箭头、索引和返回共享模型状态及设定文字。",
+    "trigger": "选择术语、箭头或返回",
+    "effect": "词义、形状和当前位置成为一条信息。",
+    "useCases": [
+      "少量世界术语与概念教学"
+    ],
+    "avoid": [
+      "以虚构粒子形状冒充来源模型"
+    ],
+    "constraints": [
+      "手机可直接进入首个详情并采用图上文下，模型数与正文对应。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "负责术语与图形的一一对应；指针排斥只改变局部位置，模型目标仍由术语选择管理。语义导航优先于装饰动画，手机图上文下即可保留这条关系。",
+      "pairsWellWith": [
+        "pointer-repulsion-particles",
+        "pointer-image-shader-preview"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "术语按钮和前后/返回可键盘操作，当前索引有文本与aria状态。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「术语选择重组同一粒子池」。术语目录进入详情后，同一粒子池重组为对应模型，箭头、索引和返回共享模型状态及设定文字。触发：选择术语、箭头或返回。可见结果：词义、形状和当前位置成为一条信息。适用任务：少量世界术语与概念教学。手机可直接进入首个详情并采用图上文下，模型数与正文对应。键盘：术语按钮和前后/返回可键盘操作，当前索引有文本与aria状态。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责术语与图形的一一对应；指针排斥只改变局部位置，模型目标仍由术语选择管理。语义导航优先于装饰动画，手机图上文下即可保留这条关系。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/3",
+        "observation": "桌面WORLD先显示六术语目录与罗德岛点阵；悬停术语的原图预览跟随指针并使用同源形变/RGB偏移shader。点击进入详情，箭头/六段索引换模型，返回恢复目录。",
+        "evidence": "observed",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/4",
+        "observation": "WORLD使用官网Three导出、七组原始点位、粒子贴图和排斥公式；10,000粒子池中当前模型使用1785–5652点。竖屏直接打开源石详情，粒子在上/文字在下。",
+        "evidence": "observed",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "entries/arknights-world.json",
+      "research/arknights-world.md"
+    ]
+  },
+  {
+    "id": "permanent-event-metadata",
+    "title": "常驻日期与边缘票据入口",
+    "category": "内容组织",
+    "summary": "场景摄影变化时实用信息仍有位置。",
+    "mechanism": "日期、地点与导览保持稳定位置，边缘票据入口独立于照片；Featured与新闻各承担不同后续任务。",
+    "trigger": "照片更替和长页浏览",
+    "effect": "用户不必反复寻找活动事实。",
+    "useCases": [
+      "节日与活动首页"
+    ],
+    "avoid": [
+      "把已结束归档活动标成当前可购买"
+    ],
+    "constraints": [
+      "快照日期与活动状态明确，实际票务链接不能伪造成功。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责用户不必反复寻找活动事实，职责限定在当前区域。组合时快照日期与活动状态明确，实际票务链接不能伪造成功。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "photo-crossfade-cycle",
+        "directional-sticky-navigation"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「常驻日期与边缘票据入口」。日期、地点与导览保持稳定位置，边缘票据入口独立于照片；Featured与新闻各承担不同后续任务。触发：照片更替和长页浏览。可见结果：用户不必反复寻找活动事实。适用任务：节日与活动首页。快照日期与活动状态明确，实际票务链接不能伪造成功。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责用户不必反复寻找活动事实，职责限定在当前区域。组合时快照日期与活动状态明确，实际票务链接不能伪造成功。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#composition/hierarchy",
+        "observation": "日期地点保持常驻，照片先传递场景，实用入口其次，Featured与按日期排列新闻承担浏览与回看。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "entries/fuji-rock.json",
+      "research/fuji-rock.md"
+    ]
+  },
+  {
+    "id": "photo-crossfade-cycle",
+    "title": "给摄影留阅读时间的淡化轮换",
+    "category": "加载与媒体",
+    "summary": "先完整展示一张，再以透明度交接。",
+    "mechanism": "静态摄影在明确停留间隔后交叉淡化，图像保持比例；手动选择更新索引与题注。",
+    "trigger": "轮换周期或手动索引",
+    "effect": "不同主视觉共享同一稳定舞台。",
+    "useCases": [
+      "展览海报与现场照片"
+    ],
+    "avoid": [
+      "不停闪图或对原图添加无关变形"
+    ],
+    "constraints": [
+      "暂停、离屏与后台停止为本地可用性增强；来源DESIGN SIGHT悬停本身不暂停。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责同一摄影舞台的慢节奏换图；caption与链接同步当前图。不要与另一套自动模式周期争夺同一个src，用户暂停应优先于重入视口。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源DESIGN SIGHT",
+        "value": "6000ms / 1000ms",
+        "note": "停留/淡化"
+      },
+      {
+        "name": "来源Fuji Rock",
+        "value": "3600ms / 800ms",
+        "note": "停留/淡化"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「给摄影留阅读时间的淡化轮换」。静态摄影在明确停留间隔后交叉淡化，图像保持比例；手动选择更新索引与题注。触发：轮换周期或手动索引。可见结果：不同主视觉共享同一稳定舞台。适用任务：展览海报与现场照片。暂停、离屏与后台停止为本地可用性增强；来源DESIGN SIGHT悬停本身不暂停。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责同一摄影舞台的慢节奏换图；caption与链接同步当前图。不要与另一套自动模式周期争夺同一个src，用户暂停应优先于重入视口。",
+    "sources": [
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#interaction/1",
+        "observation": "海报自动切换：6000ms间隔与1000ms淡化，指针经过不暂停。 保留展览视觉的完整阅读时间。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#interaction/2",
+        "observation": "照片或Featured自动／手动切换：照片3600ms间隔、800ms淡化；Featured600ms中心循环，3600ms自动，手机露出两侧邻项。 照片传递现场氛围，中心轨道突出活动主题且提示还有内容。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/design-sight/app.js",
+      "demos/design-sight/fidelity.md",
+      "demos/design-sight/index.html",
+      "demos/design-sight/style.css",
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "entries/design-sight.json",
+      "entries/fuji-rock.json",
+      "research/design-sight.md",
+      "research/fuji-rock.md"
+    ]
+  },
+  {
+    "id": "photo-edge-text-contrast",
+    "title": "仅在照片文字边缘增强对比",
+    "category": "视觉构成",
+    "summary": "局部文字能读，整张照片保持原色。",
+    "mechanism": "在底缘文字所在区域加有限黑色渐变，白字、橙色行动与摄影形成稳定角色，其他图像区域不整体滤镜化。",
+    "trigger": "查看照片底部标题和行动",
+    "effect": "文字清楚但作品未被全图调色。",
+    "useCases": [
+      "全幅摄影和主视觉"
+    ],
+    "avoid": [
+      "用巨大黑罩掩盖艺术作品"
+    ],
+    "constraints": [
+      "针对每张照片测试对比，必要时给动作独立表面。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责文字清楚但作品未被全图调色，职责限定在当前区域。组合时针对每张照片测试对比，必要时给动作独立表面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "full-bleed-photography-brand",
+        "restrained-signal-color"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「仅在照片文字边缘增强对比」。在底缘文字所在区域加有限黑色渐变，白字、橙色行动与摄影形成稳定角色，其他图像区域不整体滤镜化。触发：查看照片底部标题和行动。可见结果：文字清楚但作品未被全图调色。适用任务：全幅摄影和主视觉。针对每张照片测试对比，必要时给动作独立表面。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责文字清楚但作品未被全图调色，职责限定在当前区域。组合时针对每张照片测试对比，必要时给动作独立表面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "rijksmuseum-art",
+        "locator": "entries/rijksmuseum-art.json#constraints/3",
+        "observation": "照片底部加局部黑色渐变支撑文字对比；不对整张照片做滤镜风格化。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.rijksmuseum.nl/en",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/rijksmuseum-art/fidelity.md",
+      "demos/rijksmuseum-art/index.html",
+      "demos/rijksmuseum-art/script.js",
+      "demos/rijksmuseum-art/style.css",
+      "entries/rijksmuseum-art.json",
+      "research/rijksmuseum-art.md"
+    ]
+  },
+  {
+    "id": "photography-option-selector",
+    "title": "选项与真实摄影对应",
+    "category": "交互反馈",
+    "summary": "用图片直接比较颜色或参数结果。",
+    "mechanism": "离散色点或参数选项对应一张真实摄影，选择状态与图像同步，图片比例及观察角度尽量稳定。",
+    "trigger": "选择颜色或景深值",
+    "effect": "差异通过真实画面可见。",
+    "useCases": [
+      "材质、配色与摄影参数比较"
+    ],
+    "avoid": [
+      "随便调CSS滤镜冒充真实产品"
+    ],
+    "constraints": [
+      "每个选项有可读名称与参数，不能只用色点。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责差异通过真实画面可见，职责限定在当前区域。组合时每个选项有可读名称与参数，不能只用色点。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "inline-product-detail-viewer"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "使用带aria-label与aria-pressed的原生button，读屏可得颜色或参数名。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「选项与真实摄影对应」。离散色点或参数选项对应一张真实摄影，选择状态与图像同步，图片比例及观察角度尽量稳定。触发：选择颜色或景深值。可见结果：差异通过真实画面可见。适用任务：材质、配色与摄影参数比较。每个选项有可读名称与参数，不能只用色点。键盘：使用带aria-label与aria-pressed的原生button，读屏可得颜色或参数名。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责差异通过真实画面可见，职责限定在当前区域。组合时每个选项有可读名称与参数，不能只用色点。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/2",
+        "observation": "Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/4",
+        "observation": "景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "entries/apple-product.json",
+      "research/apple-product.md"
+    ]
+  },
+  {
+    "id": "pointer-image-shader-preview",
+    "title": "术语图像随指针形变预览",
+    "category": "交互反馈",
+    "summary": "在目录层先给设定一个视觉线索。",
+    "mechanism": "悬停术语时让对应原图随指针定位，并以同源形变和RGB偏移shader反馈移动；点击再进入完整详情。",
+    "trigger": "悬停与移动术语",
+    "effect": "目录可探索而不用立刻离开。",
+    "useCases": [
+      "概念目录与图像作品索引"
+    ],
+    "avoid": [
+      "只靠悬停才有关键内容"
+    ],
+    "constraints": [
+      "焦点或点击提供同等图像与文字入口，小屏直接使用详情。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责目录可探索而不用立刻离开，职责限定在当前区域。组合时焦点或点击提供同等图像与文字入口，小屏直接使用详情。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "particle-model-reformation"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "文本术语可聚焦，键盘激活直接进入对应详情，不要求模拟鼠标轨迹。",
+      "reducedMotion": "使用固定图像预览，停用形变和RGB偏移；详情继续可读。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「术语图像随指针形变预览」。悬停术语时让对应原图随指针定位，并以同源形变和RGB偏移shader反馈移动；点击再进入完整详情。触发：悬停与移动术语。可见结果：目录可探索而不用立刻离开。适用任务：概念目录与图像作品索引。焦点或点击提供同等图像与文字入口，小屏直接使用详情。键盘：文本术语可聚焦，键盘激活直接进入对应详情，不要求模拟鼠标轨迹。减少动态：使用固定图像预览，停用形变和RGB偏移；详情继续可读。组合边界：该原子负责目录可探索而不用立刻离开，职责限定在当前区域。组合时焦点或点击提供同等图像与文字入口，小屏直接使用详情。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/3",
+        "observation": "桌面WORLD先显示六术语目录与罗德岛点阵；悬停术语的原图预览跟随指针并使用同源形变/RGB偏移shader。点击进入详情，箭头/六段索引换模型，返回恢复目录。",
+        "evidence": "observed",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "entries/arknights-world.json",
+      "research/arknights-world.md"
+    ]
+  },
+  {
+    "id": "pointer-repulsion-particles",
+    "title": "指针排斥与回聚点阵",
+    "category": "交互反馈",
+    "summary": "静态标识因指针接近而获得可触感。",
+    "mechanism": "WebGL点阵以目标点位维持形状，指针附近点按距离受排斥，移开后回归原模型；文字位于独立稳定层。",
+    "trigger": "指针进入、移动或离开粒子区域",
+    "effect": "工业标识有局部反馈而保持整体身份。",
+    "useCases": [
+      "世界观与品牌形状探索"
+    ],
+    "avoid": [
+      "随机粒子全屏飘散遮住正文"
+    ],
+    "constraints": [
+      "点位、shader与排斥方程有来源依据，额外firefly层未迁移；提供静态同源模型回退。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "作为一个图形区域的装饰反馈，正文与术语导航独立保持稳定。可与模型重组结合；需要正文密集阅读时缩小该舞台，不把粒子扩展到所有控件。",
+      "pairsWellWith": [
+        "particle-model-reformation",
+        "resource-bound-fullscreen-loading"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "粒子仅是装饰反馈，模型选择另有可聚焦文本按钮，所有设定说明可直接读取。",
+      "reducedMotion": "停止帧调度与指针排斥，保留同源静止点阵及完整文字。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「指针排斥与回聚点阵」。WebGL点阵以目标点位维持形状，指针附近点按距离受排斥，移开后回归原模型；文字位于独立稳定层。触发：指针进入、移动或离开粒子区域。可见结果：工业标识有局部反馈而保持整体身份。适用任务：世界观与品牌形状探索。点位、shader与排斥方程有来源依据，额外firefly层未迁移；提供静态同源模型回退。键盘：粒子仅是装饰反馈，模型选择另有可聚焦文本按钮，所有设定说明可直接读取。减少动态：停止帧调度与指针排斥，保留同源静止点阵及完整文字。组合边界：作为一个图形区域的装饰反馈，正文与术语导航独立保持稳定。可与模型重组结合；需要正文密集阅读时缩小该舞台，不把粒子扩展到所有控件。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/4",
+        "observation": "WORLD使用官网Three导出、七组原始点位、粒子贴图和排斥公式；10,000粒子池中当前模型使用1785–5652点。竖屏直接打开源石详情，粒子在上/文字在下。",
+        "evidence": "observed",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#principles/2",
+        "observation": "WORLD指针进入点阵 → 原始排斥公式推开附近点、移走后回聚 → 让静态工业标识可被触摸；选择术语会把点阵重组成对应原站形状。",
+        "evidence": "observed",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "entries/arknights-world.json",
+      "research/arknights-world.md"
+    ]
+  },
+  {
+    "id": "product-entrance-film",
+    "title": "真实产品影片建立首屏主角",
+    "category": "加载与媒体",
+    "summary": "用真实材质与镜头让产品先出现。",
+    "mechanism": "静音产品影片置于全宽舞台，主标题与行动不等待影片结束；重播只重放这一段。",
+    "trigger": "首次进入或选择重播",
+    "effect": "用户先感知产品实体与细节。",
+    "useCases": [
+      "有授权摄影/影片的硬件介绍"
+    ],
+    "avoid": [
+      "用通用几何动画代替真实产品"
+    ],
+    "constraints": [
+      "减少动态使用完整静帧；影片失败时主内容与行动仍可用。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责用户先感知产品实体与细节，职责限定在当前区域。组合时减少动态使用完整静帧；影片失败时主内容与行动仍可用。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "highlight-progress-gallery",
+        "film-overlay"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「真实产品影片建立首屏主角」。静音产品影片置于全宽舞台，主标题与行动不等待影片结束；重播只重放这一段。触发：首次进入或选择重播。可见结果：用户先感知产品实体与细节。适用任务：有授权摄影/影片的硬件介绍。减少动态使用完整静帧；影片失败时主内容与行动仍可用。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户先感知产品实体与细节，职责限定在当前区域。组合时减少动态使用完整静帧；影片失败时主内容与行动仍可用。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/0",
+        "observation": "进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "entries/apple-product.json",
+      "research/apple-product.md"
+    ]
+  },
+  {
+    "id": "resource-bound-fullscreen-loading",
+    "title": "真实资源驱动的全屏载入",
+    "category": "加载与媒体",
+    "summary": "在关键场景就绪前以品牌载入页承接等待。",
+    "mechanism": "居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。",
+    "trigger": "首次进入或缓存重载",
+    "effect": "未就绪场景被遮住，等待属于世界观入口。",
+    "useCases": [
+      "资源较重的游戏档案与展览"
+    ],
+    "avoid": [
+      "定时伪造百分比或等待全站素材"
+    ],
+    "constraints": [
+      "失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "只负责首屏必要资源就绪前的入口交接。可接章切与点阵静帧；同一入口避免再叠另一套欢迎开场，不能等待未启用BGM或全站素材。",
+      "pairsWellWith": [
+        "directional-section-wipe",
+        "synchronized-rolling-index"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "载入状态提供可读进度与重试/继续按钮；就绪后焦点进入当前章节。",
+      "reducedMotion": "载入进度保持文本和静止品牌图，取消装饰运动，资源就绪后即时进入。"
+    },
+    "parameters": [
+      {
+        "name": "本地资源集",
+        "value": "5份图片 / 保底1300ms",
+        "note": "本地适配，非官网完整载入策略"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「真实资源驱动的全屏载入」。居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。触发：首次进入或缓存重载。可见结果：未就绪场景被遮住，等待属于世界观入口。适用任务：资源较重的游戏档案与展览。失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。键盘：载入状态提供可读进度与重试/继续按钮；就绪后焦点进入当前章节。减少动态：载入进度保持文本和静止品牌图，取消装饰运动，资源就绪后即时进入。组合边界：只负责首屏必要资源就绪前的入口交接。可接章切与点阵静帧；同一入口避免再叠另一套欢迎开场，不能等待未启用BGM或全站素材。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/0",
+        "observation": "首次/缓存重载均先显示全屏LOADING；本地按五份实际图片完成数显示进度，再开放初始hash所指章节。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "entries/arknights-world.json",
+      "research/arknights-world.md"
+    ]
+  },
+  {
+    "id": "responsive-art-direction",
+    "title": "桌面与手机使用专门主图",
+    "category": "视觉构成",
+    "summary": "按画面意图替换素材，而非盲目裁切。",
+    "mechanism": "通过picture或响应式资源选择桌面宽图与手机专图，保留主体位置及图内文字，正文与控件按设备重新排。",
+    "trigger": "视口进入手机断点",
+    "effect": "人物和海报在窄屏仍保持完整表达。",
+    "useCases": [
+      "有官方横竖图的展览与游戏"
+    ],
+    "avoid": [
+      "把桌面海报硬裁到丢标题和人物"
+    ],
+    "constraints": [
+      "不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责人物和海报在窄屏仍保持完整表达，职责限定在当前区域。组合时不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "full-bleed-photography-brand",
+        "edge-action-world-composition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「桌面与手机使用专门主图」。通过picture或响应式资源选择桌面宽图与手机专图，保留主体位置及图内文字，正文与控件按设备重新排。触发：视口进入手机断点。可见结果：人物和海报在窄屏仍保持完整表达。适用任务：有官方横竖图的展览与游戏。不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责人物和海报在窄屏仍保持完整表达，职责限定在当前区域。组合时不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "mori-art-museum",
+        "locator": "entries/mori-art-museum.json#constraints/1",
+        "observation": "大屏主图1600×640，小屏使用450×450官方专用图，不直接裁剪桌面海报。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.mori.art.museum/jp/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "fuji-rock",
+        "locator": "entries/fuji-rock.json#constraints/2",
+        "observation": "手机使用官方1200×1200图片，不单纯裁切1400×700桌面照片。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.fujirockfestival.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#constraints/4",
+        "observation": "手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。",
+        "evidence": "adapted",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/fuji-rock/app.js",
+      "demos/fuji-rock/fidelity.md",
+      "demos/fuji-rock/index.html",
+      "demos/fuji-rock/style.css",
+      "demos/mori-art-museum/app.js",
+      "demos/mori-art-museum/fidelity.md",
+      "demos/mori-art-museum/index.html",
+      "demos/mori-art-museum/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/fuji-rock.json",
+      "entries/mori-art-museum.json",
+      "entries/uma-musume.json",
+      "research/fuji-rock.md",
+      "research/mori-art-museum.md",
+      "research/uma-musume.md"
+    ]
+  },
+  {
+    "id": "restrained-signal-color",
+    "title": "单一信号色集中强调",
+    "category": "视觉构成",
+    "summary": "用少量品牌色建立可识别的操作角色。",
+    "mechanism": "正文采用稳定中性色，强调色只分配给行动、选中态或机构锚点；作品图像保持自己的原色。",
+    "trigger": "查看行动和状态",
+    "effect": "行动入口与艺术内容各有明确职责。",
+    "useCases": [
+      "编辑页面与文化机构"
+    ],
+    "avoid": [
+      "全部正文都使用强调色"
+    ],
+    "constraints": [
+      "同时提供文字、边界或图标状态，不能只靠颜色。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责行动入口与艺术内容各有明确职责，职责限定在当前区域。组合时同时提供文字、边界或图标状态，不能只靠颜色。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "editorial-alignment-grid",
+        "artwork-caption-separation"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「单一信号色集中强调」。正文采用稳定中性色，强调色只分配给行动、选中态或机构锚点；作品图像保持自己的原色。触发：查看行动和状态。可见结果：行动入口与艺术内容各有明确职责。适用任务：编辑页面与文化机构。同时提供文字、边界或图标状态，不能只靠颜色。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责行动入口与艺术内容各有明确职责，职责限定在当前区域。组合时同时提供文字、边界或图标状态，不能只靠颜色。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "swiss-grid",
+        "locator": "entries/swiss-grid.json#composition/color",
+        "observation": "暖白纸面、黑色信息与少量红色海报形成清晰层级。",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#composition/color",
+        "observation": "白底黑灰字和红色操作层，图像保持展览自己的颜色。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "mori-art-museum",
+        "locator": "entries/mori-art-museum.json#composition/color",
+        "observation": "#bf0d3e机构红贯穿Logo、展期、栏目、标签；粉色公告、白色底和艺术海报虹彩承担不同角色。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.mori.art.museum/jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "demos/mori-art-museum/app.js",
+      "demos/mori-art-museum/fidelity.md",
+      "demos/mori-art-museum/index.html",
+      "demos/mori-art-museum/style.css",
+      "demos/swiss-grid/index.html",
+      "entries/met-museum.json",
+      "entries/mori-art-museum.json",
+      "entries/swiss-grid.json",
+      "research/met-museum.md",
+      "research/mori-art-museum.md",
+      "research/swiss-grid.md"
+    ]
+  },
+  {
+    "id": "reversible-center-reveal",
+    "title": "穿越章节中心的双向显现",
+    "category": "滚动叙事",
+    "summary": "返回章节时同样遵循显现规则。",
+    "mechanism": "章节中心进入视口时以短位移/透明度显示事实，中心离开恢复；手机额外事实用可收回展开替代密集首屏。",
+    "trigger": "正向或反向穿越章节中心",
+    "effect": "奖项在阅读位置出现，回程行为一致。",
+    "useCases": [
+      "少量奖项与事实陈列"
+    ],
+    "avoid": [
+      "只有正向可见而反向丢失内容"
+    ],
+    "constraints": [
+      "减少动态始终显示全部事实，不能让隐藏状态阻挡语义阅读。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责奖项在阅读位置出现，回程行为一致，职责限定在当前区域。组合时减少动态始终显示全部事实，不能让隐藏状态阻挡语义阅读。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "center-aligned-section-index",
+        "inline-detail-disclosure"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源运动",
+        "value": "350ms / 20px",
+        "note": "奖项进入与离开均生效"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「穿越章节中心的双向显现」。章节中心进入视口时以短位移/透明度显示事实，中心离开恢复；手机额外事实用可收回展开替代密集首屏。触发：正向或反向穿越章节中心。可见结果：奖项在阅读位置出现，回程行为一致。适用任务：少量奖项与事实陈列。减少动态始终显示全部事实，不能让隐藏状态阻挡语义阅读。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责奖项在阅读位置出现，回程行为一致，职责限定在当前区域。组合时减少动态始终显示全部事实，不能让隐藏状态阻挡语义阅读。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "monument-valley-game",
+        "locator": "entries/monument-valley-game.json#interaction/2",
+        "observation": "奖项：视口中心进入/离开时，350ms opacity 0↔1、translateY 20px↔0，双向有效；手机Show All/Hide通过350ms高度变化展开/收回六项。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.monumentvalleygame.com/mv1",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/monument-valley-game/app.js",
+      "demos/monument-valley-game/fidelity.md",
+      "demos/monument-valley-game/index.html",
+      "demos/monument-valley-game/style.css",
+      "entries/monument-valley-game.json",
+      "research/monument-valley-game.md"
+    ]
+  },
+  {
+    "id": "scroll-differential-stars",
+    "title": "滚动差值驱动背景不同速光点",
+    "category": "滚动叙事",
+    "summary": "背景运动来自滚动而非指针。",
+    "mechanism": "背景星按前后滚动位置差值除以不同系数移动，越界重置；主图仍沿自然文档滚动。",
+    "trigger": "向下或向上自然滚动",
+    "effect": "背景层有不同速度的纵向深度。",
+    "useCases": [
+      "有明确来源运动层的IP长页"
+    ],
+    "avoid": [
+      "凭空增加鼠标视差"
+    ],
+    "constraints": [
+      "背景装饰不承担正文位置，减少动态停止背景位移。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责背景层有不同速度的纵向深度，职责限定在当前区域。组合时背景装饰不承担正文位置，减少动态停止背景位移。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "fixed-star-glow-layer",
+        "native-document-reading"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源背景层",
+        "value": "15颗星 / 除数1–3",
+        "note": "随机延迟与系数属于来源算法"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「滚动差值驱动背景不同速光点」。背景星按前后滚动位置差值除以不同系数移动，越界重置；主图仍沿自然文档滚动。触发：向下或向上自然滚动。可见结果：背景层有不同速度的纵向深度。适用任务：有明确来源运动层的IP长页。背景装饰不承担正文位置，减少动态停止背景位移。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责背景层有不同速度的纵向深度，职责限定在当前区域。组合时背景装饰不承担正文位置，减少动态停止背景位移。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "persona-kinetic",
+        "locator": "entries/persona-kinetic.json#interaction/1",
+        "observation": "背景15颗星光 → 原生滚动差值 / 1–3随机系数位移，超出边界重置；没有查到原站鼠标视差，本地不补造。",
+        "evidence": "adapted",
+        "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/persona-kinetic/fidelity.md",
+      "demos/persona-kinetic/index.html",
+      "demos/persona-kinetic/script.js",
+      "demos/persona-kinetic/style.css",
+      "entries/persona-kinetic.json",
+      "research/persona-kinetic.md"
+    ]
+  },
+  {
+    "id": "scroll-logo-contraction",
+    "title": "滚动后品牌标识收回导航",
+    "category": "滚动叙事",
+    "summary": "首屏大标识与长页导航共享身份。",
+    "mechanism": "首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。",
+    "trigger": "跨越滚动阈值或返回",
+    "effect": "主视觉先建立品牌，后续减少导航遮挡。",
+    "useCases": [
+      "长游戏与节日页面"
+    ],
+    "avoid": [
+      "滚动时Logo覆盖正文或抖动换态"
+    ],
+    "constraints": [
+      "阈值按画布宽度计算，转换期间点击区域保持可达。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "只转换机构标识的规模，固定导航与主文档保持自身布局。不要与另一套紧凑导航阈值同时叠在相同位置；回首恢复大标识的规则需统一。",
+      "pairsWellWith": [
+        "inclined-motion-bands"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源桌面",
+        "value": "2.8倍→1倍 / 宽度7%",
+        "note": "300ms cubic-bezier(.19,1,.22,1)"
+      },
+      {
+        "name": "来源手机",
+        "value": "1.72倍→1倍",
+        "note": "对应竖屏标识"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「滚动后品牌标识收回导航」。首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。触发：跨越滚动阈值或返回。可见结果：主视觉先建立品牌，后续减少导航遮挡。适用任务：长游戏与节日页面。阈值按画布宽度计算，转换期间点击区域保持可达。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只转换机构标识的规模，固定导航与主文档保持自身布局。不要与另一套紧凑导航阈值同时叠在相同位置；回首恢复大标识的规则需统一。",
+    "sources": [
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#interaction/1",
+        "observation": "滚过画布宽度 7% 后 Logo 从 2.8 倍缩回导航，反向回首恢复；300ms cubic-bezier(.19,1,.22,1)。手机 1.72 倍与菜单切换，Play Now 打开下载层。",
+        "evidence": "observed",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/uma-musume.json",
+      "research/uma-musume.md"
+    ]
+  },
+  {
+    "id": "scroll-synchronized-rail",
+    "title": "说明索引与窗口进度同步",
+    "category": "滚动叙事",
+    "summary": "文字、窗口模式和进度共同指示当前段落。",
+    "mechanism": "长段内用多个内容哨兵更新侧栏展开、标题尺度、产品窗口与进度；点击或方向键定位同一状态。",
+    "trigger": "滚动或选择说明索引",
+    "effect": "当前说明与界面演示对应。",
+    "useCases": [
+      "多步骤能力说明"
+    ],
+    "avoid": [
+      "顶层模式与下段索引共用状态互相覆盖"
+    ],
+    "constraints": [
+      "首屏选择和说明rail独立管理；手机用原生横向卡片。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责当前说明与界面演示对应，职责限定在当前区域。组合时首屏选择和说明rail独立管理；手机用原生横向卡片。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sticky-stage-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "rail按钮支持方向键及Home/End，展开与当前状态文字同步。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「说明索引与窗口进度同步」。长段内用多个内容哨兵更新侧栏展开、标题尺度、产品窗口与进度；点击或方向键定位同一状态。触发：滚动或选择说明索引。可见结果：当前说明与界面演示对应。适用任务：多步骤能力说明。首屏选择和说明rail独立管理；手机用原生横向卡片。键盘：rail按钮支持方向键及Home/End，展开与当前状态文字同步。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责当前说明与界面演示对应，职责限定在当前区域。组合时首屏选择和说明rail独立管理；手机用原生横向卡片。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/3",
+        "observation": "桌面左侧 rail 出现后，滚动三段哨兵或点击/方向键 → 说明高度、标题缩放、窗口模式及进度对应更新；顶部标题模式和下段模式彼此独立。",
+        "evidence": "adapted",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "research/chatgpt-platform.md"
+    ]
+  },
+  {
+    "id": "scroll-video-scrub",
+    "title": "滚动进度驱动视频帧",
+    "category": "滚动叙事",
+    "summary": "让镜头细节与读页进度对应。",
+    "mechanism": "暂停短片并把sticky段滚动进度映射到currentTime，标题在交接区让出画面；反向滚动可以回看。",
+    "trigger": "上下滚动镜头段",
+    "effect": "用户以阅读速度控制产品展示。",
+    "useCases": [
+      "有稳定短片的镜头或结构介绍"
+    ],
+    "avoid": [
+      "把公开组件存在说成源浏览器增强分支已验证"
+    ],
+    "constraints": [
+      "来源Apple增强滚动分支当次未现场通过；此处为公共代码依据的迁移，静帧作为降低动态与失败回退。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责用户以阅读速度控制产品展示，职责限定在当前区域。组合时来源Apple增强滚动分支当次未现场通过；此处为公共代码依据的迁移，静帧作为降低动态与失败回退。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sticky-stage-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "取消滚动seek及大幅位移，静帧与完整镜头说明按文档顺序可读。"
+    },
+    "parameters": [
+      {
+        "name": "本地媒体/舞台",
+        "value": "4.984秒 / 220vh",
+        "note": "来源视频与本地拟合滚动段"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「滚动进度驱动视频帧」。暂停短片并把sticky段滚动进度映射到currentTime，标题在交接区让出画面；反向滚动可以回看。触发：上下滚动镜头段。可见结果：用户以阅读速度控制产品展示。适用任务：有稳定短片的镜头或结构介绍。来源Apple增强滚动分支当次未现场通过；此处为公共代码依据的迁移，静帧作为降低动态与失败回退。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：取消滚动seek及大幅位移，静帧与完整镜头说明按文档顺序可读。组合边界：该原子负责用户以阅读速度控制产品展示，职责限定在当前区域。组合时来源Apple增强滚动分支当次未现场通过；此处为公共代码依据的迁移，静帧作为降低动态与失败回退。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/3",
+        "observation": "镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。",
+        "evidence": "inferred",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "entries/apple-product.json",
+      "research/apple-product.md"
+    ]
+  },
+  {
+    "id": "scrubbable-animation-progress",
+    "title": "可拖动回看的动画进度",
+    "category": "交互反馈",
+    "summary": "让用户中断动画并观察任意中间态。",
+    "mechanism": "进度滑块直接控制绘制完成度，手动输入取消当前自动帧调度，重播则重新开始。",
+    "trigger": "拖动进度或选择重播",
+    "effect": "动态过程可检查而不是只能等待。",
+    "useCases": [
+      "教学演示与结构分析"
+    ],
+    "avoid": [
+      "手动拖动后自动动画继续抢夺状态"
+    ],
+    "constraints": [
+      "中断后以当前进度为准，减少动态直接显示完成内容。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责动态过程可检查而不是只能等待，职责限定在当前区域。组合时中断后以当前进度为准，减少动态直接显示完成内容。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sequential-stroke-reveal",
+        "interruptible-morph"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "原生range带进度标签，按钮可重播；完成状态有文字。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「可拖动回看的动画进度」。进度滑块直接控制绘制完成度，手动输入取消当前自动帧调度，重播则重新开始。触发：拖动进度或选择重播。可见结果：动态过程可检查而不是只能等待。适用任务：教学演示与结构分析。中断后以当前进度为准，减少动态直接显示完成内容。键盘：原生range带进度标签，按钮可重播；完成状态有文字。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责动态过程可检查而不是只能等待，职责限定在当前区域。组合时中断后以当前进度为准，减少动态直接显示完成内容。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "line-art",
+        "locator": "entries/line-art.json#interaction/1",
+        "observation": "进度滑块允许主动描绘或回看",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "line-art",
+        "locator": "entries/line-art.json#interaction/2",
+        "observation": "绘制过程中可拖动滑块中止动画",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/line-art/index.html",
+      "demos/line-art/script.js",
+      "demos/line-art/style.css",
+      "entries/line-art.json",
+      "research/line-art.md"
+    ]
+  },
+  {
+    "id": "section-color-rhythm",
+    "title": "整节配色形成阅读节奏",
+    "category": "视觉构成",
+    "summary": "通过章节背景切换划分不同内容任务。",
+    "mechanism": "产品摄影、技术说明或行动区域各用明确的整节色带；文字与表面在每节成对定义，图像不反色。",
+    "trigger": "依次阅读不同章节",
+    "effect": "章节职责变化可被感知。",
+    "useCases": [
+      "长产品页与作品介绍"
+    ],
+    "avoid": [
+      "把章节配色变化说成全局主题功能"
+    ],
+    "constraints": [
+      "每节单独验证对比和焦点，主题模式与章节配色分别描述。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责章节职责变化可被感知，职责限定在当前区域。组合时每节单独验证对比和焦点，主题模式与章节配色分别描述。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "sticky-stage-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「整节配色形成阅读节奏」。产品摄影、技术说明或行动区域各用明确的整节色带；文字与表面在每节成对定义，图像不反色。触发：依次阅读不同章节。可见结果：章节职责变化可被感知。适用任务：长产品页与作品介绍。每节单独验证对比和焦点，主题模式与章节配色分别描述。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责章节职责变化可被感知，职责限定在当前区域。组合时每节单独验证对比和焦点，主题模式与章节配色分别描述。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#themeBehavior/control",
+        "observation": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#themeBehavior/control",
+        "observation": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
+        "evidence": "observed",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "monument-valley-game",
+        "locator": "entries/monument-valley-game.json#composition/color",
+        "observation": "固定白导航、#221f20影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区与紫页尾，以整幅色带改变观看节奏。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.monumentvalleygame.com/mv1",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "demos/monument-valley-game/app.js",
+      "demos/monument-valley-game/fidelity.md",
+      "demos/monument-valley-game/index.html",
+      "demos/monument-valley-game/style.css",
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/apple-product.json",
+      "entries/monument-valley-game.json",
+      "entries/stripe-platform.json",
+      "research/apple-product.md",
+      "research/monument-valley-game.md",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "semantic-theme-roles",
+    "title": "语义颜色角色整体切换",
+    "category": "视觉构成",
+    "summary": "背景、文字、表面和行动成对适应主题。",
+    "mechanism": "按surface/on-surface、primary/on-primary等角色一起切换，保存手动值并明确系统变化时的优先规则，媒体保持原色。",
+    "trigger": "手动选择或系统主题改变",
+    "effect": "深浅环境中阅读与品牌层级都保持一致。",
+    "useCases": [
+      "有双主题设计的系统与产品"
+    ],
+    "avoid": [
+      "仅对全页反色或保留错误文字对比"
+    ],
+    "constraints": [
+      "本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责深浅环境中阅读与品牌层级都保持一致，职责限定在当前区域。组合时本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "state-shape-feedback",
+        "system-theme-without-toggle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "主题开关可聚焦、有当前名称/状态；系统策略同时以文字说明。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「语义颜色角色整体切换」。按surface/on-surface、primary/on-primary等角色一起切换，保存手动值并明确系统变化时的优先规则，媒体保持原色。触发：手动选择或系统主题改变。可见结果：深浅环境中阅读与品牌层级都保持一致。适用任务：有双主题设计的系统与产品。本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。键盘：主题开关可聚焦、有当前名称/状态；系统策略同时以文字说明。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责深浅环境中阅读与品牌层级都保持一致，职责限定在当前区域。组合时本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "google-material",
+        "locator": "entries/google-material.json#interaction/3",
+        "observation": "切换主题／系统主题变化：深浅语义角色切换；手动值保存，OS变化清除保存值。 让可读性适应环境，同时保持品牌图像与层级。",
+        "evidence": "observed",
+        "referenceUrl": "https://m3.material.io/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/google-material/app.js",
+      "demos/google-material/fidelity.md",
+      "demos/google-material/index.html",
+      "demos/google-material/style.css",
+      "entries/google-material.json",
+      "research/google-material.md"
+    ]
+  },
+  {
+    "id": "sequential-stroke-reveal",
+    "title": "按构造顺序描绘线稿",
+    "category": "交互反馈",
+    "summary": "从基础到细节显示结构关系。",
+    "mechanism": "主体路径以stroke表示，用归一化pathLength将进度映射到dashoffset；按组成逻辑依次描绘。",
+    "trigger": "用户主动重播",
+    "effect": "线条出现顺序解释对象如何组成。",
+    "useCases": [
+      "建筑、机械与工艺介绍"
+    ],
+    "avoid": [
+      "让正文等动画结束才能出现"
+    ],
+    "constraints": [
+      "默认完整终态，填色不冒充可描绘的路径。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责线条出现顺序解释对象如何组成，职责限定在当前区域。组合时默认完整终态，填色不冒充可描绘的路径。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "scrubbable-animation-progress"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "本地路径/时长",
+        "value": "pathLength=100 / 3200ms",
+        "note": "原创结构示范参数"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「按构造顺序描绘线稿」。主体路径以stroke表示，用归一化pathLength将进度映射到dashoffset；按组成逻辑依次描绘。触发：用户主动重播。可见结果：线条出现顺序解释对象如何组成。适用任务：建筑、机械与工艺介绍。默认完整终态，填色不冒充可描绘的路径。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责线条出现顺序解释对象如何组成，职责限定在当前区域。组合时默认完整终态，填色不冒充可描绘的路径。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "line-art",
+        "locator": "entries/line-art.json#interaction/0",
+        "observation": "重播按钮由基础到细节绘制线稿",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/line-art/index.html",
+      "demos/line-art/script.js",
+      "demos/line-art/style.css",
+      "entries/line-art.json",
+      "research/line-art.md"
+    ]
+  },
+  {
+    "id": "single-open-accordion",
+    "title": "单开内容与图像联动",
+    "category": "内容组织",
+    "summary": "同一时刻集中阅读一个展开项。",
+    "mechanism": "激活一项收起前项并展开当前正文；内容高度与图标同步，案例故事还可同时替换旁侧摄影。",
+    "trigger": "展开FAQ或故事行",
+    "effect": "长文本按需阅读，当前焦点明确。",
+    "useCases": [
+      "问答与客户故事"
+    ],
+    "avoid": [
+      "正文多项无约束展开造成突跳"
+    ],
+    "constraints": [
+      "按实际内容计算高度，关闭区域不可保留可聚焦控件。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责长文本按需阅读，当前焦点明确，职责限定在当前区域。组合时按实际内容计算高度，关闭区域不可保留可聚焦控件。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "editorial-alignment-grid"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "按钮带aria-expanded/aria-controls，折叠内容hidden或inert；焦点保留在标题。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「单开内容与图像联动」。激活一项收起前项并展开当前正文；内容高度与图标同步，案例故事还可同时替换旁侧摄影。触发：展开FAQ或故事行。可见结果：长文本按需阅读，当前焦点明确。适用任务：问答与客户故事。按实际内容计算高度，关闭区域不可保留可聚焦控件。键盘：按钮带aria-expanded/aria-controls，折叠内容hidden或inert；焦点保留在标题。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责长文本按需阅读，当前焦点明确，职责限定在当前区域。组合时按实际内容计算高度，关闭区域不可保留可聚焦控件。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "claude-platform",
+        "locator": "entries/claude-platform.json#interaction/3",
+        "observation": "FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。",
+        "evidence": "inferred",
+        "referenceUrl": "https://claude.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/4",
+        "observation": "Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。",
+        "evidence": "observed",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "qoder-platform",
+        "locator": "entries/qoder-platform.json#interaction/3",
+        "observation": "后续 SDK 代码和 Cloud 任务列表 → Wake 场景选择/指针强调 → 企业 → 两侧连续证言条带 → 单开 FAQ → 页尾；所有章节使用正常滚动。",
+        "evidence": "observed",
+        "referenceUrl": "https://qoder.cn/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/claude-platform/fidelity.md",
+      "demos/claude-platform/index.html",
+      "demos/claude-platform/journey.js",
+      "demos/claude-platform/script.js",
+      "demos/claude-platform/style.css",
+      "demos/qoder-platform/fidelity.md",
+      "demos/qoder-platform/index.html",
+      "demos/qoder-platform/journey.js",
+      "demos/qoder-platform/script.js",
+      "demos/qoder-platform/style.css",
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/claude-platform.json",
+      "entries/qoder-platform.json",
+      "entries/stripe-platform.json",
+      "research/claude-platform.md",
+      "research/qoder-platform.md",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "sound-choice-emblem-opening",
+    "title": "声音选择与纹章开场同步",
+    "category": "加载与媒体",
+    "summary": "视觉打开世界与声音启用属于同一次选择。",
+    "mechanism": "入口先提供ON/OFF，选择后显示纹章并向外发光扩散；开场SE对应显现，移交影片时BGM接续。",
+    "trigger": "选择声音ON或OFF",
+    "effect": "用户掌握声音且开场动作有一致节奏。",
+    "useCases": [
+      "具象世界观与仪式性入口"
+    ],
+    "avoid": [
+      "把开场音效、影片轨与BGM混称一种声音"
+    ],
+    "constraints": [
+      "保留无声完整路径，不能为内容增加不可跳过的漫长开场。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "入口先决定声音，再交接纹章与影片；资源载入若同时需要，可共用一个开场状态机，避免双重阻塞。OFF路径仍有完整视觉内容。",
+      "pairsWellWith": [
+        "sound-opt-in",
+        "continuous-bgm-bridge",
+        "blurred-layered-video-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "保留ON/OFF，纹章静态或直接移交可读影片静帧，主动声音选择仍有效。"
+    },
+    "parameters": [
+      {
+        "name": "来源开场",
+        "value": "2s扩散 / 3.6s交接",
+        "note": "纹章开场时点"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「声音选择与纹章开场同步」。入口先提供ON/OFF，选择后显示纹章并向外发光扩散；开场SE对应显现，移交影片时BGM接续。触发：选择声音ON或OFF。可见结果：用户掌握声音且开场动作有一致节奏。适用任务：具象世界观与仪式性入口。保留无声完整路径，不能为内容增加不可跳过的漫长开场。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：保留ON/OFF，纹章静态或直接移交可读影片静帧，主动声音选择仍有效。组合边界：入口先决定声音，再交接纹章与影片；资源载入若同时需要，可共用一个开场状态机，避免双重阻塞。OFF路径仍有完整视觉内容。",
+    "sources": [
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#interaction/0",
+        "observation": "首次 ON/OFF → 原始纹章出现；2秒后向外发光扩散，3.6秒移交影片舞台。ON触发原开场 SE，随后原BGM接续。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/zelda-world.json",
+      "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "sound-opt-in",
+    "title": "声音主动启用与随时停止",
+    "category": "加载与媒体",
+    "summary": "先征求声音选择，再进入听觉体验。",
+    "mechanism": "声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。",
+    "trigger": "开启/关闭声音",
+    "effect": "用户掌握听觉环境，浏览正文不被自动出声打断。",
+    "useCases": [
+      "互动乐器、游戏世界与品牌影片"
+    ],
+    "avoid": [
+      "进入页面自动播放有声内容"
+    ],
+    "constraints": [
+      "声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责用户掌握听觉环境，浏览正文不被自动出声打断，职责限定在当前区域。组合时声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "continuous-bgm-bridge",
+        "character-voice-ownership"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "开启、静音与停止均用有可见文字的按钮，aria-pressed与实际声音状态一致。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「声音主动启用与随时停止」。声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。触发：开启/关闭声音。可见结果：用户掌握听觉环境，浏览正文不被自动出声打断。适用任务：互动乐器、游戏世界与品牌影片。声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。键盘：开启、静音与停止均用有可见文字的按钮，aria-pressed与实际声音状态一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户掌握听觉环境，浏览正文不被自动出声打断，职责限定在当前区域。组合时声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "retro-80s",
+        "locator": "entries/retro-80s.json#interaction/0",
+        "observation": "只有主动开启声音后才初始化Web Audio；可随时关闭。",
+        "evidence": "adapted"
+      },
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#soundBehavior/control",
+        "observation": "真实原站BGM独立开关，默认静音；600ms渐入/300ms渐出。三人官方日语配音由干员按钮单独播放；页面进入后台暂停音频。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#soundBehavior/control",
+        "observation": "入口 ON/OFF 与顶栏 SOUND；默认静音，选择 ON 后播放原始 se.mp3 与 bgm.mp3。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "demos/retro-80s/index.html",
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/arknights-world.json",
+      "entries/retro-80s.json",
+      "entries/zelda-world.json",
+      "research/arknights-world.md",
+      "research/retro-80s.md",
+      "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "spatial-navigation-map",
+    "title": "场景地标作为导航",
+    "category": "导航与状态",
+    "summary": "让角色位置、地点信息与目录同时变化。",
+    "mechanism": "地标选择移动角色并更新对应文本，地图上的空间状态与DOM地点索引保持一致。",
+    "trigger": "选择地标或移动到地点",
+    "effect": "场景成为可操作的信息入口。",
+    "useCases": [
+      "地点导览与互动教育"
+    ],
+    "avoid": [
+      "只有Canvas热点而无文字入口"
+    ],
+    "constraints": [
+      "提供地图外的可聚焦地标与说明，不依赖图形辨认。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责场景成为可操作的信息入口，职责限定在当前区域。组合时提供地图外的可聚焦地标与说明，不依赖图形辨认。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "integer-pixel-canvas",
+        "discovery-progress-journal"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "地图获得焦点后支持方向键/WASD；提供DOM地标按钮及手机方向按钮。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「场景地标作为导航」。地标选择移动角色并更新对应文本，地图上的空间状态与DOM地点索引保持一致。触发：选择地标或移动到地点。可见结果：场景成为可操作的信息入口。适用任务：地点导览与互动教育。提供地图外的可聚焦地标与说明，不依赖图形辨认。键盘：地图获得焦点后支持方向键/WASD；提供DOM地标按钮及手机方向按钮。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责场景成为可操作的信息入口，职责限定在当前区域。组合时提供地图外的可聚焦地标与说明，不依赖图形辨认。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "pixel-world",
+        "locator": "entries/pixel-world.json#interaction/0",
+        "observation": "地点按钮移动角色并更新当前地点介绍。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/pixel-world/index.html",
+      "entries/pixel-world.json",
+      "research/pixel-world.md"
+    ]
+  },
+  {
+    "id": "staged-product-ui-entrance",
+    "title": "延迟产品界面与扫光入场",
+    "category": "加载与媒体",
+    "summary": "让主张先出现，再揭示工作系统。",
+    "mechanism": "稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。",
+    "trigger": "进入页面及继续下滚",
+    "effect": "界面密度逐步出现而不遮住主张。",
+    "useCases": [
+      "工作系统营销首屏"
+    ],
+    "avoid": [
+      "用加载遮层强制等待产品UI"
+    ],
+    "constraints": [
+      "动作不阻止阅读与操作，减少动态直接显示终态界面。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责界面密度逐步出现而不遮住主张，职责限定在当前区域。组合时动作不阻止阅读与操作，减少动态直接显示终态界面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "mobile-media-prioritization"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源延迟/带入",
+        "value": "1.3s / 1.5s",
+        "note": "Linear当前归档公开模块参数"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「延迟产品界面与扫光入场」。稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。触发：进入页面及继续下滚。可见结果：界面密度逐步出现而不遮住主张。适用任务：工作系统营销首屏。动作不阻止阅读与操作，减少动态直接显示终态界面。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责界面密度逐步出现而不遮住主张，职责限定在当前区域。组合时动作不阻止阅读与操作，减少动态直接显示终态界面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "linear-workflow",
+        "locator": "entries/linear-workflow.json#interaction/0",
+        "observation": "进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。",
+        "evidence": "observed",
+        "referenceUrl": "https://linear.app/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/linear-workflow/fidelity.md",
+      "demos/linear-workflow/index.html",
+      "demos/linear-workflow/journey.js",
+      "demos/linear-workflow/script.js",
+      "demos/linear-workflow/style.css",
+      "entries/linear-workflow.json",
+      "research/linear-workflow.md"
+    ]
+  },
+  {
+    "id": "staggered-agent-columns",
+    "title": "交错代理状态展示",
+    "category": "交互反馈",
+    "summary": "多列代理不同时抢占注意。",
+    "mechanism": "代理列按交错时序显示思考与回答，进入视口启动，离开或后台停止，暂停保持已出现结果。",
+    "trigger": "AI章节进入视口",
+    "effect": "并行工作过程逐步可读。",
+    "useCases": [
+      "多代理产品说明"
+    ],
+    "avoid": [
+      "装饰性无限思考却不显示结果"
+    ],
+    "constraints": [
+      "演示必须给具体结果，状态不能误导为实际远程任务。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责并行工作过程逐步可读，职责限定在当前区域。组合时演示必须给具体结果，状态不能误导为实际远程任务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「交错代理状态展示」。代理列按交错时序显示思考与回答，进入视口启动，离开或后台停止，暂停保持已出现结果。触发：AI章节进入视口。可见结果：并行工作过程逐步可读。适用任务：多代理产品说明。演示必须给具体结果，状态不能误导为实际远程任务。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责并行工作过程逐步可读，职责限定在当前区域。组合时演示必须给具体结果，状态不能误导为实际远程任务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "linear-workflow",
+        "locator": "entries/linear-workflow.json#interaction/3",
+        "observation": "AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
+        "evidence": "adapted",
+        "referenceUrl": "https://linear.app/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/linear-workflow/fidelity.md",
+      "demos/linear-workflow/index.html",
+      "demos/linear-workflow/journey.js",
+      "demos/linear-workflow/script.js",
+      "demos/linear-workflow/style.css",
+      "entries/linear-workflow.json",
+      "research/linear-workflow.md"
+    ]
+  },
+  {
+    "id": "state-shape-feedback",
+    "title": "按压与聚焦改变容器形状",
+    "category": "交互反馈",
+    "summary": "圆角变化为当前动作提供反馈。",
+    "mechanism": "控件按压/键盘激活时按角色改变圆角，状态层同时改变；反馈留在稳定布局与触控边界内。",
+    "trigger": "激活按钮或资源卡",
+    "effect": "操作有可辨识的形态反馈。",
+    "useCases": [
+      "设计系统与表现力组件"
+    ],
+    "avoid": [
+      "组件随意弹跳或缩小触控面积"
+    ],
+    "constraints": [
+      "原首页为具体时间曲线，不能以物理弹簧理论冒充页面证据。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责操作有可辨识的形态反馈，职责限定在当前区域。组合时原首页为具体时间曲线，不能以物理弹簧理论冒充页面证据。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "semantic-theme-roles"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源圆角",
+        "value": "CTA 48→16px；资源卡24→48px",
+        "note": "200/300ms cubic-bezier(.2,0,0,1)"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「按压与聚焦改变容器形状」。控件按压/键盘激活时按角色改变圆角，状态层同时改变；反馈留在稳定布局与触控边界内。触发：激活按钮或资源卡。可见结果：操作有可辨识的形态反馈。适用任务：设计系统与表现力组件。原首页为具体时间曲线，不能以物理弹簧理论冒充页面证据。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责操作有可辨识的形态反馈，职责限定在当前区域。组合时原首页为具体时间曲线，不能以物理弹簧理论冒充页面证据。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "google-material",
+        "locator": "entries/google-material.json#interaction/1",
+        "observation": "点击或键盘激活按钮／卡片：CTA圆角48→16px，资源卡24→48px；200/300ms cubic-bezier(.2,0,0,1)。 形状与状态层共同表达当前动作，界面表现力来自一致的反馈。",
+        "evidence": "observed",
+        "referenceUrl": "https://m3.material.io/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/google-material/app.js",
+      "demos/google-material/fidelity.md",
+      "demos/google-material/index.html",
+      "demos/google-material/style.css",
+      "entries/google-material.json",
+      "research/google-material.md"
+    ]
+  },
+  {
+    "id": "sticky-action-sidebar",
+    "title": "桌面粘性行动栏、手机回文档流",
+    "category": "内容组织",
+    "summary": "内容阅读和到访决定并行。",
+    "mechanism": "桌面正文旁的票务/行动面板保持sticky，时间与价格在面板内展开；窄屏把面板置回内容流前部。",
+    "trigger": "阅读长详情",
+    "effect": "用户无需找回行动，小屏正文不被遮挡。",
+    "useCases": [
+      "活动详情与可行动长文"
+    ],
+    "avoid": [
+      "手机固定大面板盖住正文"
+    ],
+    "constraints": [
+      "粘性区域不超过可用视口，行动连接真实服务，归档信息标注观察日。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责用户无需找回行动，小屏正文不被遮挡，职责限定在当前区域。组合时粘性区域不超过可用视口，行动连接真实服务，归档信息标注观察日。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "inline-detail-disclosure",
+        "visit-facts-grid"
+      ],
+      "conflicts": [
+        "vertical-fullscreen-stage",
+        "directional-section-wipe"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「桌面粘性行动栏、手机回文档流」。桌面正文旁的票务/行动面板保持sticky，时间与价格在面板内展开；窄屏把面板置回内容流前部。触发：阅读长详情。可见结果：用户无需找回行动，小屏正文不被遮挡。适用任务：活动详情与可行动长文。粘性区域不超过可用视口，行动连接真实服务，归档信息标注观察日。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责用户无需找回行动，小屏正文不被遮挡，职责限定在当前区域。组合时粘性区域不超过可用视口，行动连接真实服务，归档信息标注观察日。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "philharmonie-music",
+        "locator": "entries/philharmonie-music.json#interaction/0",
+        "observation": "浏览展览／音乐会详情：原生长页与桌面sticky票务，小屏票务回文档流。 活动内容与来访决定并行，小屏避免固定面板遮挡正文。",
+        "evidence": "observed",
+        "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/philharmonie-music/fidelity.md",
+      "demos/philharmonie-music/index.html",
+      "demos/philharmonie-music/script.js",
+      "demos/philharmonie-music/style.css",
+      "entries/philharmonie-music.json",
+      "research/philharmonie-music.md"
+    ]
+  },
+  {
+    "id": "sticky-stage-handoff",
+    "title": "同一媒体从主舞台交给说明",
+    "category": "滚动叙事",
+    "summary": "滚动时让同一对象继续承担叙事。",
+    "mechanism": "媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。",
+    "trigger": "上下穿越交接段",
+    "effect": "注意力从看产品转向理解产品。",
+    "useCases": [
+      "产品长页与功能解释"
+    ],
+    "avoid": [
+      "复制第二张无关联图冒充连续交接"
+    ],
+    "constraints": [
+      "不劫持自然滚动，移动端可替换为顺序内容，完整说明始终可达。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责同一媒体从吸引到解释的连续关系；说明rail可以同步其阶段。使用自然滚动为主时更适合，整页全屏章切需另设计段内滚动，不能直接叠加两个控制器。",
+      "pairsWellWith": [
+        "scroll-synchronized-rail",
+        "mode-specific-collage"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「同一媒体从主舞台交给说明」。媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。触发：上下穿越交接段。可见结果：注意力从看产品转向理解产品。适用任务：产品长页与功能解释。不劫持自然滚动，移动端可替换为顺序内容，完整说明始终可达。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责同一媒体从吸引到解释的连续关系；说明rail可以同步其阶段。使用自然滚动为主时更适合，整页全屏章切需另设计段内滚动，不能直接叠加两个控制器。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/2",
+        "observation": "向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/3",
+        "observation": "镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "entries/apple-product.json",
+      "entries/chatgpt-platform.json",
+      "research/apple-product.md",
+      "research/chatgpt-platform.md"
+    ]
+  },
+  {
+    "id": "synchronized-rolling-index",
+    "title": "编号、计数与章名分组滚动",
+    "category": "交互反馈",
+    "summary": "标题之外持续标示当前位置。",
+    "mechanism": "将编号、总数与章名放入独立裁切框，按换章方向滚出、换值、滚入，组间使用小时间差。",
+    "trigger": "当前章节改变",
+    "effect": "用户从方向与编号同时识别阅读位置。",
+    "useCases": [
+      "全屏章切与档案系统"
+    ],
+    "avoid": [
+      "场景已变而计数仍停在旧值"
+    ],
+    "constraints": [
+      "计数语义与视觉值共用当前章，减少动态直接换成稳定值。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "该原子负责用户从方向与编号同时识别阅读位置，职责限定在当前区域。组合时计数语义与视觉值共用当前章，减少动态直接换成稳定值。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "directional-section-wipe"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源序列",
+        "value": "300ms离开 / 300ms进入 / 100ms错列",
+        "note": "各索引组的归档时序"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「编号、计数与章名分组滚动」。将编号、总数与章名放入独立裁切框，按换章方向滚出、换值、滚入，组间使用小时间差。触发：当前章节改变。可见结果：用户从方向与编号同时识别阅读位置。适用任务：全屏章切与档案系统。计数语义与视觉值共用当前章，减少动态直接换成稳定值。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户从方向与编号同时识别阅读位置，职责限定在当前区域。组合时计数语义与视觉值共用当前章，减少动态直接换成稳定值。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "arknights-world",
+        "locator": "entries/arknights-world.json#interaction/2",
+        "observation": "右索引数字、计数和章节名分组滚出/换值/滚入，与换章方向联动；Home/End、PageUp/PageDown及上下方向键可走完六章与页脚。",
+        "evidence": "adapted",
+        "referenceUrl": "https://ak.hypergryph.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/arknights-world/fidelity.md",
+      "demos/arknights-world/index.html",
+      "demos/arknights-world/particles.js",
+      "demos/arknights-world/script.js",
+      "demos/arknights-world/style.css",
+      "entries/arknights-world.json",
+      "research/arknights-world.md"
+    ]
+  },
+  {
+    "id": "system-theme-without-toggle",
+    "title": "跟随系统的媒体与文字主题",
+    "category": "视觉构成",
+    "summary": "按系统偏好换配色，不虚构手动按钮。",
+    "mechanism": "根据prefers-color-scheme选用对应的表面、文字与产品截图；主题范围明确到实际有变体的区域。",
+    "trigger": "系统深浅偏好改变",
+    "effect": "界面适应环境且图像保持合理配色。",
+    "useCases": [
+      "已有双版本资产的营销页"
+    ],
+    "avoid": [
+      "给来源没提供的页面宣称手动主题"
+    ],
+    "constraints": [
+      "ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责界面适应环境且图像保持合理配色，职责限定在当前区域。组合时ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "semantic-theme-roles"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「跟随系统的媒体与文字主题」。根据prefers-color-scheme选用对应的表面、文字与产品截图；主题范围明确到实际有变体的区域。触发：系统深浅偏好改变。可见结果：界面适应环境且图像保持合理配色。适用任务：已有双版本资产的营销页。ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责界面适应环境且图像保持合理配色，职责限定在当前区域。组合时ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#themeBehavior/control",
+        "observation": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "claude-platform",
+        "locator": "entries/claude-platform.json#themeBehavior/control",
+        "observation": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
+        "evidence": "inferred",
+        "referenceUrl": "https://claude.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "demos/claude-platform/fidelity.md",
+      "demos/claude-platform/index.html",
+      "demos/claude-platform/journey.js",
+      "demos/claude-platform/script.js",
+      "demos/claude-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "entries/claude-platform.json",
+      "research/chatgpt-platform.md",
+      "research/claude-platform.md"
+    ]
+  },
+  {
+    "id": "timed-platform-carousel",
+    "title": "可暂停的平台场景轮换",
+    "category": "导航与状态",
+    "summary": "平台tabs、点控和场景保持同一索引。",
+    "mechanism": "选择平台让场景水平交接，自动周期可由悬停或手动暂停，后台停止，快速选择只留下一个场景。",
+    "trigger": "选择平台、手势或自动周期",
+    "effect": "同一产品在不同平台的形态可比较。",
+    "useCases": [
+      "跨平台软件介绍"
+    ],
+    "avoid": [
+      "自动轮换覆盖用户刚选的平台"
+    ],
+    "constraints": [
+      "平台名称与当前选中状态可读，降低动态保留手动即时选择。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责平台间场景切换，热图和固定任务可以留在各自场景内。手动选择后停止或重置自动周期需明确，快速切换由一个最新目标状态收束。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源时间",
+        "value": "400ms / 20s",
+        "note": "场景水平交接/自动周期"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「可暂停的平台场景轮换」。选择平台让场景水平交接，自动周期可由悬停或手动暂停，后台停止，快速选择只留下一个场景。触发：选择平台、手势或自动周期。可见结果：同一产品在不同平台的形态可比较。适用任务：跨平台软件介绍。平台名称与当前选中状态可读，降低动态保留手动即时选择。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责平台间场景切换，热图和固定任务可以留在各自场景内。手动选择后停止或重置自动周期需明确，快速切换由一个最新目标状态收束。",
+    "sources": [
+      {
+        "caseId": "qoder-platform",
+        "locator": "entries/qoder-platform.json#interaction/2",
+        "observation": "五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。",
+        "evidence": "observed",
+        "referenceUrl": "https://qoder.cn/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/qoder-platform/fidelity.md",
+      "demos/qoder-platform/index.html",
+      "demos/qoder-platform/journey.js",
+      "demos/qoder-platform/script.js",
+      "demos/qoder-platform/style.css",
+      "entries/qoder-platform.json",
+      "research/qoder-platform.md"
+    ]
+  },
+  {
+    "id": "top-down-clipped-menu",
+    "title": "从上向下裁切的全屏菜单",
+    "category": "导航与状态",
+    "summary": "用一个进入方向组织菜单项目。",
+    "mechanism": "全屏面板从顶部向下clip进入，项目按次序交错；关闭反向收束，背景阅读状态随关闭恢复。",
+    "trigger": "手机打开/关闭菜单",
+    "effect": "菜单作为有明确边界的导航场景。",
+    "useCases": [
+      "精简全屏品牌导航"
+    ],
+    "avoid": [
+      "在关闭面板上仍留下可聚焦链接"
+    ],
+    "constraints": [
+      "时长为来源公共模块，源端手机实时未验证，实施时检查快速反向。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责菜单作为有明确边界的导航场景，职责限定在当前区域。组合时时长为来源公共模块，源端手机实时未验证，实施时检查快速反向。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源裁切",
+        "value": "800ms入 / 400ms退",
+        "note": "公共Navbar依据"
+      },
+      {
+        "name": "来源项目",
+        "value": "320ms起、每项80ms",
+        "note": "交错项目时间"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「从上向下裁切的全屏菜单」。全屏面板从顶部向下clip进入，项目按次序交错；关闭反向收束，背景阅读状态随关闭恢复。触发：手机打开/关闭菜单。可见结果：菜单作为有明确边界的导航场景。适用任务：精简全屏品牌导航。时长为来源公共模块，源端手机实时未验证，实施时检查快速反向。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责菜单作为有明确边界的导航场景，职责限定在当前区域。组合时时长为来源公共模块，源端手机实时未验证，实施时检查快速反向。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "claude-platform",
+        "locator": "entries/claude-platform.json#interaction/1",
+        "observation": "桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。",
+        "evidence": "inferred",
+        "referenceUrl": "https://claude.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/claude-platform/fidelity.md",
+      "demos/claude-platform/index.html",
+      "demos/claude-platform/journey.js",
+      "demos/claude-platform/script.js",
+      "demos/claude-platform/style.css",
+      "entries/claude-platform.json",
+      "research/claude-platform.md"
+    ]
+  },
+  {
+    "id": "vertical-card-swap",
+    "title": "中央窗口垂直退出与进入",
+    "category": "交互反馈",
+    "summary": "同一窗口舞台用垂直方向交接模式。",
+    "mechanism": "旧产品图沿垂直方向离开，新图从对应方向进入；统一裁切舞台与层级，快速切换清理旧离场层。",
+    "trigger": "选择产品模式",
+    "effect": "模式更替有连续的空间方向。",
+    "useCases": [
+      "多用途软件界面介绍"
+    ],
+    "avoid": [
+      "仅换src而丢掉定义性交接"
+    ],
+    "constraints": [
+      "产品图保持比例，减少动态即时替换可读静帧。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "只交接中央产品截图；周边拼贴可有自己的出入轨迹，但共享当前模式与清理策略。减少动态直接换图，不能让旧图退出的回调覆盖最新选择。",
+      "pairsWellWith": [
+        "hover-focus-mode-selection",
+        "last-request-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "本地拟合",
+        "value": "720ms 主窗口",
+        "note": "该示范节奏并非其他产品通用常数"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「中央窗口垂直退出与进入」。旧产品图沿垂直方向离开，新图从对应方向进入；统一裁切舞台与层级，快速切换清理旧离场层。触发：选择产品模式。可见结果：模式更替有连续的空间方向。适用任务：多用途软件界面介绍。产品图保持比例，减少动态即时替换可读静帧。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只交接中央产品截图；周边拼贴可有自己的出入轨迹，但共享当前模式与清理策略。减少动态直接换图，不能让旧图退出的回调覆盖最新选择。",
+    "sources": [
+      {
+        "caseId": "chatgpt-platform",
+        "locator": "entries/chatgpt-platform.json#interaction/0",
+        "observation": "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。",
+        "evidence": "observed",
+        "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/chatgpt-platform/fidelity.md",
+      "demos/chatgpt-platform/fonts.css",
+      "demos/chatgpt-platform/index.html",
+      "demos/chatgpt-platform/motion-data.js",
+      "demos/chatgpt-platform/script.js",
+      "demos/chatgpt-platform/style.css",
+      "entries/chatgpt-platform.json",
+      "research/chatgpt-platform.md"
+    ]
+  },
+  {
+    "id": "vertical-fullscreen-stage",
+    "title": "有限章节的垂直整屏舞台",
+    "category": "滚动叙事",
+    "summary": "用可逆整屏空间组织版本与角色。",
+    "mechanism": "多个场景由同一垂直translate3d舞台控制，滚轮/手势前后切换，最后以有限位移露出页脚。",
+    "trigger": "向前或反向输入",
+    "effect": "当前章节和末端边界清楚。",
+    "useCases": [
+      "少量主视觉强的版本介绍"
+    ],
+    "avoid": [
+      "用普通长页scroll-snap冒充独立舞台"
+    ],
+    "constraints": [
+      "完整正文及操作可达，精确时长按来源与本地拟合分开。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责有限章节的主浏览模型。人物舞台与语音可以作为章内状态；长段sticky或大量正文需在独立文档区提供，避免同时争夺主滚动输入。",
+      "pairsWellWith": [
+        "last-request-transition",
+        "character-stage-coordination"
+      ],
+      "conflicts": [
+        "native-document-reading"
+      ]
+    },
+    "accessibility": {
+      "keyboard": "章节导航和方向键可走完整路径，当前章同步aria状态，末端能回程。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「有限章节的垂直整屏舞台」。多个场景由同一垂直translate3d舞台控制，滚轮/手势前后切换，最后以有限位移露出页脚。触发：向前或反向输入。可见结果：当前章节和末端边界清楚。适用任务：少量主视觉强的版本介绍。完整正文及操作可达，精确时长按来源与本地拟合分开。键盘：章节导航和方向键可走完整路径，当前章同步aria状态，末端能回程。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责有限章节的主浏览模型。人物舞台与语音可以作为章内状态；长段sticky或大量正文需在独立文档区提供，避免同时争夺主滚动输入。",
+    "sources": [
+      {
+        "caseId": "genshin-world",
+        "locator": "entries/genshin-world.json#interaction/0",
+        "observation": "滚轮或竖向手势推进整屏舞台，反向返回；末尾以有限位移露出 footer，避免把正常长页当作源站 Swiper。",
+        "evidence": "observed",
+        "referenceUrl": "https://genshin.hoyoverse.com/en/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/genshin-world/fidelity.md",
+      "demos/genshin-world/index.html",
+      "demos/genshin-world/script.js",
+      "demos/genshin-world/style.css",
+      "entries/genshin-world.json",
+      "research/genshin-world.md"
+    ]
+  },
+  {
+    "id": "viewport-animation-lifecycle",
+    "title": "视口与前台驱动的动态生命周期",
+    "category": "导航与状态",
+    "summary": "只在能被观看时推进演示。",
+    "mechanism": "用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。",
+    "trigger": "进入/离开视口、切后台或用户暂停",
+    "effect": "观看控制清楚，离屏不会继续夺取状态。",
+    "useCases": [
+      "自动产品演示与动态主视觉"
+    ],
+    "avoid": [
+      "用户已暂停却因重入视口自动重启"
+    ],
+    "constraints": [
+      "恢复策略按任务明确，自动计时不能覆盖手动状态。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
+      "pairsWellWith": [
+        "photo-crossfade-cycle",
+        "centered-loop-gallery"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
+    "sources": [
+      {
+        "caseId": "linear-workflow",
+        "locator": "entries/linear-workflow.json#interaction/3",
+        "observation": "AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
+        "evidence": "adapted",
+        "referenceUrl": "https://linear.app/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/0",
+        "observation": "进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。",
+        "evidence": "adapted",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "qoder-platform",
+        "locator": "entries/qoder-platform.json#interaction/2",
+        "observation": "五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。",
+        "evidence": "adapted",
+        "referenceUrl": "https://qoder.cn/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/linear-workflow/fidelity.md",
+      "demos/linear-workflow/index.html",
+      "demos/linear-workflow/journey.js",
+      "demos/linear-workflow/script.js",
+      "demos/linear-workflow/style.css",
+      "demos/qoder-platform/fidelity.md",
+      "demos/qoder-platform/index.html",
+      "demos/qoder-platform/journey.js",
+      "demos/qoder-platform/script.js",
+      "demos/qoder-platform/style.css",
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/linear-workflow.json",
+      "entries/qoder-platform.json",
+      "entries/stripe-platform.json",
+      "research/linear-workflow.md",
+      "research/qoder-platform.md",
+      "research/stripe-platform.md"
+    ]
+  },
+  {
+    "id": "visit-facts-grid",
+    "title": "到访事实在行动旁成组呈现",
+    "category": "内容组织",
+    "summary": "实体机构介绍后直接给到访依据。",
+    "mechanism": "建筑或展览视觉确认机构后，欢迎区用稳定小列组织日期、开放、地点和行动；手机按事实顺序堆叠。",
+    "trigger": "从首图继续阅读",
+    "effect": "访客无需穿越宣传段落就能找到实用信息。",
+    "useCases": [
+      "博物馆与活动入口"
+    ],
+    "avoid": [
+      "把未核验开放状态按当前日期生成"
+    ],
+    "constraints": [
+      "归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责访客无需穿越宣传段落就能找到实用信息，职责限定在当前区域。组合时归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "artwork-caption-separation",
+        "sticky-action-sidebar"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「到访事实在行动旁成组呈现」。建筑或展览视觉确认机构后，欢迎区用稳定小列组织日期、开放、地点和行动；手机按事实顺序堆叠。触发：从首图继续阅读。可见结果：访客无需穿越宣传段落就能找到实用信息。适用任务：博物馆与活动入口。归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责访客无需穿越宣传段落就能找到实用信息，职责限定在当前区域。组合时归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#composition/hierarchy",
+        "observation": "建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "entries/met-museum.json",
+      "research/met-museum.md"
+    ]
+  },
+  {
+    "id": "word-opacity-stagger",
+    "title": "单词透明度的低幅交错",
+    "category": "加载与媒体",
+    "summary": "通过少量时间差支持标题阅读顺序。",
+    "mechanism": "单词只过渡透明度并以短总跨度交错，正文组用小位移带入；标题文字保持原排版。",
+    "trigger": "标题或正文组进入阈值",
+    "effect": "信息依次可见，移动幅度克制。",
+    "useCases": [
+      "文字主导产品页"
+    ],
+    "avoid": [
+      "无依据的飞字、旋转或缩放"
+    ],
+    "constraints": [
+      "来源依据公开模块，未完成源浏览器逐节实访；不能升级为现场观察事实。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "该原子负责信息依次可见，移动幅度克制，职责限定在当前区域。组合时来源依据公开模块，未完成源浏览器逐节实访；不能升级为现场观察事实。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "system-theme-without-toggle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [
+      {
+        "name": "来源标题",
+        "value": "1s opacity / 总交错0.2s",
+        "note": "公共AnimatedHeading依据"
+      },
+      {
+        "name": "来源内容组",
+        "value": "750ms / 10px / 100ms",
+        "note": "公共AnimatedReveal依据"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「单词透明度的低幅交错」。单词只过渡透明度并以短总跨度交错，正文组用小位移带入；标题文字保持原排版。触发：标题或正文组进入阈值。可见结果：信息依次可见，移动幅度克制。适用任务：文字主导产品页。来源依据公开模块，未完成源浏览器逐节实访；不能升级为现场观察事实。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责信息依次可见，移动幅度克制，职责限定在当前区域。组合时来源依据公开模块，未完成源浏览器逐节实访；不能升级为现场观察事实。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "claude-platform",
+        "locator": "entries/claude-platform.json#interaction/0",
+        "observation": "标题按单词 1s opacity 过渡，总交错跨度 .2s；内容组 750ms、10px、100ms 交错，在视口底部 −20% 触发 → 以较小运动保留阅读节奏。",
+        "evidence": "inferred",
+        "referenceUrl": "https://claude.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/claude-platform/fidelity.md",
+      "demos/claude-platform/index.html",
+      "demos/claude-platform/journey.js",
+      "demos/claude-platform/script.js",
+      "demos/claude-platform/style.css",
+      "entries/claude-platform.json",
+      "research/claude-platform.md"
+    ]
+  },
+  {
+    "id": "world-shaped-thumbnail-frame",
+    "title": "目录边框延续世界语汇",
+    "category": "视觉构成",
+    "summary": "让缩略目录属于同一个故事世界。",
+    "mechanism": "缩略入口使用来源角纹与削角轮廓，hover/current增加内框，真实内容图与选中状态保持稳定。",
+    "trigger": "浏览、聚焦或选择缩略图",
+    "effect": "操作控件与主视觉共享身份。",
+    "useCases": [
+      "有明确图形语汇的游戏或展览"
+    ],
+    "avoid": [
+      "给所有站点叠加无意义纹样"
+    ],
+    "constraints": [
+      "可点击面积和可读标签保持规则，装饰不替代选择状态。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责操作控件与主视觉共享身份，职责限定在当前区域。组合时可点击面积和可读标签保持规则，装饰不替代选择状态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "blurred-layered-video-handoff"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「目录边框延续世界语汇」。缩略入口使用来源角纹与削角轮廓，hover/current增加内框，真实内容图与选中状态保持稳定。触发：浏览、聚焦或选择缩略图。可见结果：操作控件与主视觉共享身份。适用任务：有明确图形语汇的游戏或展览。可点击面积和可读标签保持规则，装饰不替代选择状态。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责操作控件与主视觉共享身份，职责限定在当前区域。组合时可点击面积和可读标签保持规则，装饰不替代选择状态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "zelda-world",
+        "locator": "entries/zelda-world.json#composition/shape",
+        "observation": "原始 frame_thumbnail 古代角纹 + 8点削角白线；当前与 hover 加内框，避免普通矩形卡片。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/zelda-world/fidelity.md",
+      "demos/zelda-world/index.html",
+      "demos/zelda-world/script.js",
+      "demos/zelda-world/style.css",
+      "entries/zelda-world.json",
+      "research/zelda-world.md"
+    ]
+  }
+];

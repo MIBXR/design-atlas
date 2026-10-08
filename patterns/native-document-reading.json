@@ -1,0 +1,98 @@
+{
+  "id": "native-document-reading",
+  "title": "原生长页与正常回程",
+  "category": "滚动叙事",
+  "summary": "按内容顺序浏览，不额外劫持滚轮。",
+  "mechanism": "章节处于普通文档流，浏览器处理上下滚动和锚点；局部轨道、sticky或菜单各自管理状态。",
+  "trigger": "自然滚动、反向返回或页内链接",
+  "effect": "长正文及页脚保持连续可读。",
+  "useCases": [
+    "文化、产品与活动长页"
+  ],
+  "avoid": [
+    "无来源的整页锁滚和切幕"
+  ],
+  "constraints": [
+    "局部交互不得阻断主页面，移动与减少动态仍能走完整路径。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "该原子负责长正文及页脚保持连续可读，职责限定在当前区域。组合时局部交互不得阻断主页面，移动与减少动态仍能走完整路径。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "native-horizontal-shelf",
+      "scroll-differential-stars",
+      "sticky-action-sidebar"
+    ],
+    "conflicts": [
+      "vertical-fullscreen-stage",
+      "directional-section-wipe"
+    ]
+  },
+  "accessibility": {
+    "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「原生长页与正常回程」。章节处于普通文档流，浏览器处理上下滚动和锚点；局部轨道、sticky或菜单各自管理状态。触发：自然滚动、反向返回或页内链接。可见结果：长正文及页脚保持连续可读。适用任务：文化、产品与活动长页。局部交互不得阻断主页面，移动与减少动态仍能走完整路径。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责长正文及页脚保持连续可读，职责限定在当前区域。组合时局部交互不得阻断主页面，移动与减少动态仍能走完整路径。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "met-museum",
+      "locator": "entries/met-museum.json#interaction/1",
+      "observation": "上下浏览：欢迎与到访信息、展览横轨、馆藏和会员按原生阅读节奏组织；不新增全屏转场。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.metmuseum.org/en",
+      "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "rijksmuseum-art",
+      "locator": "entries/rijksmuseum-art.json#interaction/0",
+      "observation": "进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.rijksmuseum.nl/en",
+      "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "uma-musume",
+      "locator": "entries/uma-musume.json#interaction/0",
+      "observation": "正常纵向浏览连接群像、新闻、About、Gameplay 和 footer，斜切条带延续赛道方向。",
+      "evidence": "observed",
+      "referenceUrl": "https://umamusume.com/",
+      "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "fuji-rock",
+      "locator": "entries/fuji-rock.json#interaction/3",
+      "observation": "超过Pickup后向上／向下滚动：导览条固定后按方向显隐；语言菜单400ms展开并在离开时收起。 长页浏览随时找回实用入口，同时减少遮挡。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.fujirockfestival.com/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/fuji-rock/app.js",
+    "demos/fuji-rock/fidelity.md",
+    "demos/fuji-rock/index.html",
+    "demos/fuji-rock/style.css",
+    "demos/met-museum/fidelity.md",
+    "demos/met-museum/index.html",
+    "demos/met-museum/script.js",
+    "demos/met-museum/style.css",
+    "demos/rijksmuseum-art/fidelity.md",
+    "demos/rijksmuseum-art/index.html",
+    "demos/rijksmuseum-art/script.js",
+    "demos/rijksmuseum-art/style.css",
+    "demos/uma-musume/app.js",
+    "demos/uma-musume/fidelity.md",
+    "demos/uma-musume/index.html",
+    "demos/uma-musume/style.css",
+    "entries/fuji-rock.json",
+    "entries/met-museum.json",
+    "entries/rijksmuseum-art.json",
+    "entries/uma-musume.json",
+    "research/fuji-rock.md",
+    "research/met-museum.md",
+    "research/rijksmuseum-art.md",
+    "research/uma-musume.md"
+  ]
+}

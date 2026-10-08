@@ -1,0 +1,82 @@
+{
+  "id": "character-voice-ownership",
+  "title": "声线主动播放并归属于当前人物",
+  "category": "加载与媒体",
+  "summary": "切换人物时不会叠加上一人的声音。",
+  "mechanism": "麦克风主动播放当前人物对应音轨，再次点击暂停；换人、离开角色区域或后台停止旧声音。",
+  "trigger": "点击人物VOICE或换人",
+  "effect": "台词为人物身份补充听觉线索。",
+  "useCases": [
+    "有真实授权语音的角色档案"
+  ],
+  "avoid": [
+    "把台词说成BGM或给错误人物播放音轨"
+  ],
+  "constraints": [
+    "语音对应关系按素材核验，播放状态由真实音频事件更新。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "该原子负责台词为人物身份补充听觉线索，职责限定在当前区域。组合时语音对应关系按素材核验，播放状态由真实音频事件更新。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "character-stage-coordination",
+      "sound-opt-in"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "麦克风用有角色名的button，aria-pressed与实际播放/暂停一致。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「声线主动播放并归属于当前人物」。麦克风主动播放当前人物对应音轨，再次点击暂停；换人、离开角色区域或后台停止旧声音。触发：点击人物VOICE或换人。可见结果：台词为人物身份补充听觉线索。适用任务：有真实授权语音的角色档案。语音对应关系按素材核验，播放状态由真实音频事件更新。键盘：麦克风用有角色名的button，aria-pressed与实际播放/暂停一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责台词为人物身份补充听觉线索，职责限定在当前区域。组合时语音对应关系按素材核验，播放状态由真实音频事件更新。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "genshin-world",
+      "locator": "entries/genshin-world.json#interaction/2",
+      "observation": "点击麦克风随机播放对应角色 3 条官方语音之一，再点暂停；换角色、离开角色章节与后台时停止，防止声线叠加。",
+      "evidence": "adapted",
+      "referenceUrl": "https://genshin.hoyoverse.com/en/",
+      "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "blue-archive",
+      "locator": "entries/blue-archive.json#interaction/2",
+      "observation": "角色 VOICE 麦克风播放该学生对应官方 WAV，再点暂停；换人或后台停止，声线归属明确。",
+      "evidence": "adapted",
+      "referenceUrl": "https://bluearchive.jp/",
+      "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "arknights-world",
+      "locator": "entries/arknights-world.json#interaction/5",
+      "observation": "真实BGM默认关闭，单独开关并使用官网600/300ms音量渐变；三人日语语音独立按需播放，换人物或离开干员章暂停旧语音。",
+      "evidence": "adapted",
+      "referenceUrl": "https://ak.hypergryph.com/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/arknights-world/fidelity.md",
+    "demos/arknights-world/index.html",
+    "demos/arknights-world/particles.js",
+    "demos/arknights-world/script.js",
+    "demos/arknights-world/style.css",
+    "demos/blue-archive/app.js",
+    "demos/blue-archive/character.html",
+    "demos/blue-archive/fidelity.md",
+    "demos/blue-archive/index.html",
+    "demos/blue-archive/style.css",
+    "demos/genshin-world/fidelity.md",
+    "demos/genshin-world/index.html",
+    "demos/genshin-world/script.js",
+    "demos/genshin-world/style.css",
+    "entries/arknights-world.json",
+    "entries/blue-archive.json",
+    "entries/genshin-world.json",
+    "research/arknights-world.md",
+    "research/blue-archive.md",
+    "research/genshin-world.md"
+  ]
+}

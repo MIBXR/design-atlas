@@ -1,0 +1,58 @@
+{
+  "id": "scroll-differential-stars",
+  "title": "滚动差值驱动背景不同速光点",
+  "category": "滚动叙事",
+  "summary": "背景运动来自滚动而非指针。",
+  "mechanism": "背景星按前后滚动位置差值除以不同系数移动，越界重置；主图仍沿自然文档滚动。",
+  "trigger": "向下或向上自然滚动",
+  "effect": "背景层有不同速度的纵向深度。",
+  "useCases": [
+    "有明确来源运动层的IP长页"
+  ],
+  "avoid": [
+    "凭空增加鼠标视差"
+  ],
+  "constraints": [
+    "背景装饰不承担正文位置，减少动态停止背景位移。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "该原子负责背景层有不同速度的纵向深度，职责限定在当前区域。组合时背景装饰不承担正文位置，减少动态停止背景位移。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "fixed-star-glow-layer",
+      "native-document-reading"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [
+    {
+      "name": "来源背景层",
+      "value": "15颗星 / 除数1–3",
+      "note": "随机延迟与系数属于来源算法"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「滚动差值驱动背景不同速光点」。背景星按前后滚动位置差值除以不同系数移动，越界重置；主图仍沿自然文档滚动。触发：向下或向上自然滚动。可见结果：背景层有不同速度的纵向深度。适用任务：有明确来源运动层的IP长页。背景装饰不承担正文位置，减少动态停止背景位移。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责背景层有不同速度的纵向深度，职责限定在当前区域。组合时背景装饰不承担正文位置，减少动态停止背景位移。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "persona-kinetic",
+      "locator": "entries/persona-kinetic.json#interaction/1",
+      "observation": "背景15颗星光 → 原生滚动差值 / 1–3随机系数位移，超出边界重置；没有查到原站鼠标视差，本地不补造。",
+      "evidence": "adapted",
+      "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/persona-kinetic/fidelity.md",
+    "demos/persona-kinetic/index.html",
+    "demos/persona-kinetic/script.js",
+    "demos/persona-kinetic/style.css",
+    "entries/persona-kinetic.json",
+    "research/persona-kinetic.md"
+  ]
+}

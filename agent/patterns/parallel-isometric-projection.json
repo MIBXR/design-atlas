@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "parallel-isometric-projection",
+  "pattern": {
+    "id": "parallel-isometric-projection",
+    "title": "统一等轴投影与三面明度",
+    "category": "视觉构成",
+    "summary": "用一个坐标规则构成整个微型世界。",
+    "mechanism": "全部体块共享30°平行轴与比例，顶/左/右使用统一明度方向，路径与植物提供尺度。",
+    "trigger": "查看系统场景",
+    "effect": "多个对象属于同一可理解空间。",
+    "useCases": [
+      "基础设施与园区系统示意"
+    ],
+    "avoid": [
+      "混入透视消失点或声称实时3D"
+    ],
+    "constraints": [
+      "固定二维SVG不能代替可旋转3D或工程验收图。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责多个对象属于同一可理解空间，职责限定在当前区域。组合时固定二维SVG不能代替可旋转3D或工程验收图。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "exploded-layer-view",
+        "layer-focus-dimming"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「统一等轴投影与三面明度」。全部体块共享30°平行轴与比例，顶/左/右使用统一明度方向，路径与植物提供尺度。触发：查看系统场景。可见结果：多个对象属于同一可理解空间。适用任务：基础设施与园区系统示意。固定二维SVG不能代替可旋转3D或工程验收图。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责多个对象属于同一可理解空间，职责限定在当前区域。组合时固定二维SVG不能代替可旋转3D或工程验收图。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "isometric-3d",
+        "locator": "entries/isometric-3d.json#composition/shape",
+        "observation": "平行边、统一30°方向和几何积木建立一致空间规则。",
+        "evidence": "adapted"
+      }
+    ],
+    "sourceFiles": [
+      "demos/isometric-3d/index.html",
+      "demos/isometric-3d/script.js",
+      "demos/isometric-3d/style.css",
+      "entries/isometric-3d.json",
+      "research/isometric-3d.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "isometric-3d",
+      "title": "等轴 3D：让空间讲述系统",
+      "paths": {
+        "bundle": "agent/cases/isometric-3d.json",
+        "demo": "demos/isometric-3d/index.html"
+      },
+      "bundleSha256": "fcaf35cef02f92fb568221128b08bf1e4fa966cec5098cca2c7e834b3caf3393"
+    }
+  ]
+}

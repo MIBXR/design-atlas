@@ -1,0 +1,52 @@
+{
+  "id": "inline-product-detail-viewer",
+  "title": "胶囊原位展开产品说明",
+  "category": "交互反馈",
+  "summary": "让细节解释与对应摄影处于同一舞台。",
+  "mechanism": "选择胶囊后原位出现说明卡，其他胶囊让位下移，右侧图像更新；卡内前后与关闭能恢复原态。",
+  "trigger": "选择细节胶囊",
+  "effect": "不离开产品舞台即可逐项探索。",
+  "useCases": [
+    "硬件特性与设计细节"
+  ],
+  "avoid": [
+    "每次都跳入全屏弹窗丢掉对象"
+  ],
+  "constraints": [
+    "展开前后焦点可预期，关闭返回触发项，静帧不冒称实时3D。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "accent",
+    "notes": "该原子负责不离开产品舞台即可逐项探索，职责限定在当前区域。组合时展开前后焦点可预期，关闭返回触发项，静帧不冒称实时3D。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "photography-option-selector"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「胶囊原位展开产品说明」。选择胶囊后原位出现说明卡，其他胶囊让位下移，右侧图像更新；卡内前后与关闭能恢复原态。触发：选择细节胶囊。可见结果：不离开产品舞台即可逐项探索。适用任务：硬件特性与设计细节。展开前后焦点可预期，关闭返回触发项，静帧不冒称实时3D。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责不离开产品舞台即可逐项探索，职责限定在当前区域。组合时展开前后焦点可预期，关闭返回触发项，静帧不冒称实时3D。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "apple-product",
+      "locator": "entries/apple-product.json#interaction/2",
+      "observation": "Design 点击七项胶囊 → 同一舞台内展开左侧说明卡，当前胶囊被卡替换、其他胶囊下移、右侧摄影变化；卡内前后与关闭可逆；Colors 的四个色点联动真实摄影。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/apple-product/fidelity.md",
+    "demos/apple-product/index.html",
+    "demos/apple-product/journey.js",
+    "demos/apple-product/script.js",
+    "demos/apple-product/style.css",
+    "entries/apple-product.json",
+    "research/apple-product.md"
+  ]
+}

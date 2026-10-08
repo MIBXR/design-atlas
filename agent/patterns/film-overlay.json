@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "film-overlay",
+  "pattern": {
+    "id": "film-overlay",
+    "title": "主动观看的独立影片层",
+    "category": "加载与媒体",
+    "summary": "将有声观看与普通读页分别组织。",
+    "mechanism": "用户激活播放入口后打开独立影片层，提供原生进度、暂停和音量；关闭即暂停，背景媒体让出。",
+    "trigger": "主动观看/关闭影片",
+    "effect": "观看变成明确选择的专注状态。",
+    "useCases": [
+      "产品或游戏宣传片"
+    ],
+    "avoid": [
+      "用首屏重播冒充完整影片"
+    ],
+    "constraints": [
+      "是否有音轨按实际文件确认；Uma Musume影片无声，MV1当次源播放未通过。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "只在主动观看时占据独立层，打开后暂停背景媒体，关闭停止前景影片并恢复触发焦点。静音首屏演示、BGM与完整影片分别标明职责及音轨。",
+      "pairsWellWith": [
+        "product-entrance-film",
+        "sound-opt-in"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "dialog提供关闭按钮、Escape及焦点恢复，原生媒体控件可操作。",
+      "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「主动观看的独立影片层」。用户激活播放入口后打开独立影片层，提供原生进度、暂停和音量；关闭即暂停，背景媒体让出。触发：主动观看/关闭影片。可见结果：观看变成明确选择的专注状态。适用任务：产品或游戏宣传片。是否有音轨按实际文件确认；Uma Musume影片无声，MV1当次源播放未通过。键盘：dialog提供关闭按钮、Escape及焦点恢复，原生媒体控件可操作。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只在主动观看时占据独立层，打开后暂停背景媒体，关闭停止前景影片并恢复触发焦点。静音首屏演示、BGM与完整影片分别标明职责及音轨。",
+    "sources": [
+      {
+        "caseId": "apple-product",
+        "locator": "entries/apple-product.json#interaction/5",
+        "observation": "Watch the film → 黑色全屏影片层与原片有声控件；Explore 导航、亮点暂停与手机重排支持正常滚动/键盘。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.apple.com/iphone-18-pro/",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "monument-valley-game",
+        "locator": "entries/monument-valley-game.json#interaction/4",
+        "observation": "前景预告：主动Play播放同一67.988秒官方MP4及原声轨；原生进度/暂停和实际声音开关有效，播放时暂停背景。",
+        "evidence": "inferred",
+        "referenceUrl": "https://www.monumentvalleygame.com/mv1",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "uma-musume",
+        "locator": "entries/uma-musume.json#interaction/3",
+        "observation": "点击 About 原缩略图，站内 dialog 播放原始 top_about.mp4；该文件只有视频轨道，没有音轨，关闭/后台暂停。",
+        "evidence": "adapted",
+        "referenceUrl": "https://umamusume.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/apple-product/fidelity.md",
+      "demos/apple-product/index.html",
+      "demos/apple-product/journey.js",
+      "demos/apple-product/script.js",
+      "demos/apple-product/style.css",
+      "demos/monument-valley-game/app.js",
+      "demos/monument-valley-game/fidelity.md",
+      "demos/monument-valley-game/index.html",
+      "demos/monument-valley-game/style.css",
+      "demos/uma-musume/app.js",
+      "demos/uma-musume/fidelity.md",
+      "demos/uma-musume/index.html",
+      "demos/uma-musume/style.css",
+      "entries/apple-product.json",
+      "entries/monument-valley-game.json",
+      "entries/uma-musume.json",
+      "research/apple-product.md",
+      "research/monument-valley-game.md",
+      "research/uma-musume.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "apple-product",
+      "title": "Apple · 滚动产品舞台",
+      "paths": {
+        "bundle": "agent/cases/apple-product.json",
+        "demo": "demos/apple-product/index.html"
+      },
+      "bundleSha256": "14de63b0d25ac26a4a2fb2f1aac3c4d78077b538e240d329c56a45115680310a"
+    },
+    {
+      "id": "monument-valley-game",
+      "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
+      "paths": {
+        "bundle": "agent/cases/monument-valley-game.json",
+        "demo": "demos/monument-valley-game/index.html"
+      },
+      "bundleSha256": "9676b7b9763d631f35235da9120427dd274843960695d1a74a11ba44462c86a3"
+    },
+    {
+      "id": "uma-musume",
+      "title": "赛马娘：群像赛道与斜切叙事",
+      "paths": {
+        "bundle": "agent/cases/uma-musume.json",
+        "demo": "demos/uma-musume/index.html"
+      },
+      "bundleSha256": "e7ccf2772f21464d11d9c12b6d534dc60d4242e955b4bb4ba6010fa3a526b356"
+    }
+  ]
+}

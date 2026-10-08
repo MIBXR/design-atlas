@@ -1,0 +1,63 @@
+{
+  "id": "top-down-clipped-menu",
+  "title": "从上向下裁切的全屏菜单",
+  "category": "导航与状态",
+  "summary": "用一个进入方向组织菜单项目。",
+  "mechanism": "全屏面板从顶部向下clip进入，项目按次序交错；关闭反向收束，背景阅读状态随关闭恢复。",
+  "trigger": "手机打开/关闭菜单",
+  "effect": "菜单作为有明确边界的导航场景。",
+  "useCases": [
+    "精简全屏品牌导航"
+  ],
+  "avoid": [
+    "在关闭面板上仍留下可聚焦链接"
+  ],
+  "constraints": [
+    "时长为来源公共模块，源端手机实时未验证，实施时检查快速反向。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "该原子负责菜单作为有明确边界的导航场景，职责限定在当前区域。组合时时长为来源公共模块，源端手机实时未验证，实施时检查快速反向。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "last-request-transition"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [
+    {
+      "name": "来源裁切",
+      "value": "800ms入 / 400ms退",
+      "note": "公共Navbar依据"
+    },
+    {
+      "name": "来源项目",
+      "value": "320ms起、每项80ms",
+      "note": "交错项目时间"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「从上向下裁切的全屏菜单」。全屏面板从顶部向下clip进入，项目按次序交错；关闭反向收束，背景阅读状态随关闭恢复。触发：手机打开/关闭菜单。可见结果：菜单作为有明确边界的导航场景。适用任务：精简全屏品牌导航。时长为来源公共模块，源端手机实时未验证，实施时检查快速反向。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责菜单作为有明确边界的导航场景，职责限定在当前区域。组合时时长为来源公共模块，源端手机实时未验证，实施时检查快速反向。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "claude-platform",
+      "locator": "entries/claude-platform.json#interaction/1",
+      "observation": "桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。",
+      "evidence": "inferred",
+      "referenceUrl": "https://claude.com/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/claude-platform/fidelity.md",
+    "demos/claude-platform/index.html",
+    "demos/claude-platform/journey.js",
+    "demos/claude-platform/script.js",
+    "demos/claude-platform/style.css",
+    "entries/claude-platform.json",
+    "research/claude-platform.md"
+  ]
+}

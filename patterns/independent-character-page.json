@@ -1,0 +1,53 @@
+{
+  "id": "independent-character-page",
+  "title": "首页世界与人物档案分别成页",
+  "category": "内容组织",
+  "summary": "按用户任务保留不同页面职责。",
+  "mechanism": "首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。",
+  "trigger": "选择角色导航或返回HOME",
+  "effect": "世界观看与资料查阅各有明确入口。",
+  "useCases": [
+    "单屏世界首页加多角色档案"
+  ],
+  "avoid": [
+    "所有内容硬塞同一滚动首页"
+  ],
+  "constraints": [
+    "保留正常链接和页面标题，不添加无来源路由淡化。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "该原子负责世界观看与资料查阅各有明确入口，职责限定在当前区域。组合时保留正常链接和页面标题，不添加无来源路由淡化。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "pairsWellWith": [
+      "edge-action-world-composition",
+      "character-stage-coordination"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+    "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+  },
+  "parameters": [],
+  "prompt": "为【目标页面/组件】实现「首页世界与人物档案分别成页」。首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。触发：选择角色导航或返回HOME。可见结果：世界观看与资料查阅各有明确入口。适用任务：单屏世界首页加多角色档案。保留正常链接和页面标题，不添加无来源路由淡化。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责世界观看与资料查阅各有明确入口，职责限定在当前区域。组合时保留正常链接和页面标题，不添加无来源路由淡化。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+  "sources": [
+    {
+      "caseId": "blue-archive",
+      "locator": "entries/blue-archive.json#interaction/3",
+      "observation": "首页导航 CHARACTER 打开本地独立 character.html；HOME 返回首页，首页仅 KV→footer，保留源站页面职责分离。",
+      "evidence": "adapted",
+      "referenceUrl": "https://bluearchive.jp/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/blue-archive/app.js",
+    "demos/blue-archive/character.html",
+    "demos/blue-archive/fidelity.md",
+    "demos/blue-archive/index.html",
+    "demos/blue-archive/style.css",
+    "entries/blue-archive.json",
+    "research/blue-archive.md"
+  ]
+}

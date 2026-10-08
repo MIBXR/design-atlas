@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "folded-wave-hero",
+  "pattern": {
+    "id": "folded-wave-hero",
+    "title": "折叠波带与文字共同构成首屏",
+    "category": "视觉构成",
+    "summary": "品牌波带提供流动舞台，标题保持可读。",
+    "mechanism": "独立WebGL网格与shader产生折叠彩带，主张位于稳定文本区；GPU失败使用同源静帧。",
+    "trigger": "进入首屏",
+    "effect": "品牌流动感与金融主张并存。",
+    "useCases": [
+      "有明确品牌形态的产品首屏"
+    ],
+    "avoid": [
+      "所有产品都套相同渐变blob"
+    ],
+    "constraints": [
+      "波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责品牌流动感与金融主张并存，职责限定在当前区域。组合时波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle",
+        "capability-bento-hierarchy"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「折叠波带与文字共同构成首屏」。独立WebGL网格与shader产生折叠彩带，主张位于稳定文本区；GPU失败使用同源静帧。触发：进入首屏。可见结果：品牌流动感与金融主张并存。适用任务：有明确品牌形态的产品首屏。波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责品牌流动感与金融主张并存，职责限定在当前区域。组合时波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "stripe-platform",
+        "locator": "entries/stripe-platform.json#interaction/0",
+        "observation": "进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。",
+        "evidence": "adapted",
+        "referenceUrl": "https://stripe.com/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/stripe-platform/fidelity.md",
+      "demos/stripe-platform/index.html",
+      "demos/stripe-platform/journey.js",
+      "demos/stripe-platform/script.js",
+      "demos/stripe-platform/style.css",
+      "demos/stripe-platform/wave.js",
+      "entries/stripe-platform.json",
+      "research/stripe-platform.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "stripe-platform",
+      "title": "Stripe — 彩带与金融产品矩阵",
+      "paths": {
+        "bundle": "agent/cases/stripe-platform.json",
+        "demo": "demos/stripe-platform/index.html"
+      },
+      "bundleSha256": "be613c18db63adac6884a6a1e0f371f0f03119e8ab8a6c079e0fb9709bfce391"
+    }
+  ]
+}

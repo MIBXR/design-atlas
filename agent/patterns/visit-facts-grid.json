@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "visit-facts-grid",
+  "pattern": {
+    "id": "visit-facts-grid",
+    "title": "到访事实在行动旁成组呈现",
+    "category": "内容组织",
+    "summary": "实体机构介绍后直接给到访依据。",
+    "mechanism": "建筑或展览视觉确认机构后，欢迎区用稳定小列组织日期、开放、地点和行动；手机按事实顺序堆叠。",
+    "trigger": "从首图继续阅读",
+    "effect": "访客无需穿越宣传段落就能找到实用信息。",
+    "useCases": [
+      "博物馆与活动入口"
+    ],
+    "avoid": [
+      "把未核验开放状态按当前日期生成"
+    ],
+    "constraints": [
+      "归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责访客无需穿越宣传段落就能找到实用信息，职责限定在当前区域。组合时归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "artwork-caption-separation",
+        "sticky-action-sidebar"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「到访事实在行动旁成组呈现」。建筑或展览视觉确认机构后，欢迎区用稳定小列组织日期、开放、地点和行动；手机按事实顺序堆叠。触发：从首图继续阅读。可见结果：访客无需穿越宣传段落就能找到实用信息。适用任务：博物馆与活动入口。归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责访客无需穿越宣传段落就能找到实用信息，职责限定在当前区域。组合时归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#composition/hierarchy",
+        "observation": "建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "entries/met-museum.json",
+      "research/met-museum.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "met-museum",
+      "title": "The Met · 编辑式展览与馆藏陈列",
+      "paths": {
+        "bundle": "agent/cases/met-museum.json",
+        "demo": "demos/met-museum/index.html"
+      },
+      "bundleSha256": "0790424b4a7e903fa3bb3ec1eb7e3f7affeac445bca5466d33acc6937b4d3bd7"
+    }
+  ]
+}

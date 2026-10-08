@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "artwork-caption-separation",
+  "pattern": {
+    "id": "artwork-caption-separation",
+    "title": "作品原图与图下题注分工",
+    "category": "内容组织",
+    "summary": "让作品保持自己的视觉，说明放在图外。",
+    "mechanism": "海报、馆藏或艺术摄影保留原色及比例，名称、日期与来源放在图下正文，不在原图上重复绘制标题。",
+    "trigger": "浏览作品与展览目录",
+    "effect": "作品表达与机构信息都可辨认。",
+    "useCases": [
+      "艺术作品与文化档案"
+    ],
+    "avoid": [
+      "大渐变和重复文字盖住原作品"
+    ],
+    "constraints": [
+      "许可范围按具体素材确认，替代文字与署名随图保留。",
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "该原子负责作品表达与机构信息都可辨认，职责限定在当前区域。组合时许可范围按具体素材确认，替代文字与署名随图保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "pairsWellWith": [
+        "native-horizontal-shelf",
+        "restrained-signal-color",
+        "mixed-ratio-archive-columns"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。",
+      "reducedMotion": "布局与内容保持可读；不为静态构成增加自动运动。"
+    },
+    "parameters": [],
+    "prompt": "为【目标页面/组件】实现「作品原图与图下题注分工」。海报、馆藏或艺术摄影保留原色及比例，名称、日期与来源放在图下正文，不在原图上重复绘制标题。触发：浏览作品与展览目录。可见结果：作品表达与机构信息都可辨认。适用任务：艺术作品与文化档案。许可范围按具体素材确认，替代文字与署名随图保留。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责作品表达与机构信息都可辨认，职责限定在当前区域。组合时许可范围按具体素材确认，替代文字与署名随图保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "sources": [
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#composition/imagery",
+        "observation": "官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "met-museum",
+        "locator": "entries/met-museum.json#constraints/2",
+        "observation": "展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.metmuseum.org/en",
+        "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "design-sight",
+        "locator": "entries/design-sight.json#composition/imagery",
+        "observation": "真实方丈记与TYPE-XVII海报、建筑照片、访问地图、研究照片本地化，保留原比例。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.2121designsight.jp/",
+        "capturedAt": "2026-10-07"
+      }
+    ],
+    "sourceFiles": [
+      "demos/design-sight/app.js",
+      "demos/design-sight/fidelity.md",
+      "demos/design-sight/index.html",
+      "demos/design-sight/style.css",
+      "demos/met-museum/fidelity.md",
+      "demos/met-museum/index.html",
+      "demos/met-museum/script.js",
+      "demos/met-museum/style.css",
+      "entries/design-sight.json",
+      "entries/met-museum.json",
+      "research/design-sight.md",
+      "research/met-museum.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "design-sight",
+      "title": "21_21 DESIGN SIGHT：海报与四列档案",
+      "paths": {
+        "bundle": "agent/cases/design-sight.json",
+        "demo": "demos/design-sight/index.html"
+      },
+      "bundleSha256": "c44d0a56ac4f27edee9a10953950c95488725c331588ecc7e2199f15b4b3d4bc"
+    },
+    {
+      "id": "met-museum",
+      "title": "The Met · 编辑式展览与馆藏陈列",
+      "paths": {
+        "bundle": "agent/cases/met-museum.json",
+        "demo": "demos/met-museum/index.html"
+      },
+      "bundleSha256": "0790424b4a7e903fa3bb3ec1eb7e3f7affeac445bca5466d33acc6937b4d3bd7"
+    }
+  ]
+}

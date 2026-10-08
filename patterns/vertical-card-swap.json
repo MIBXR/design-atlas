@@ -1,0 +1,60 @@
+{
+  "id": "vertical-card-swap",
+  "title": "中央窗口垂直退出与进入",
+  "category": "交互反馈",
+  "summary": "同一窗口舞台用垂直方向交接模式。",
+  "mechanism": "旧产品图沿垂直方向离开，新图从对应方向进入；统一裁切舞台与层级，快速切换清理旧离场层。",
+  "trigger": "选择产品模式",
+  "effect": "模式更替有连续的空间方向。",
+  "useCases": [
+    "多用途软件界面介绍"
+  ],
+  "avoid": [
+    "仅换src而丢掉定义性交接"
+  ],
+  "constraints": [
+    "产品图保持比例，减少动态即时替换可读静帧。",
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+  ],
+  "composition": {
+    "role": "accent",
+    "notes": "只交接中央产品截图；周边拼贴可有自己的出入轨迹，但共享当前模式与清理策略。减少动态直接换图，不能让旧图退出的回调覆盖最新选择。",
+    "pairsWellWith": [
+      "hover-focus-mode-selection",
+      "last-request-transition"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。",
+    "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
+  },
+  "parameters": [
+    {
+      "name": "本地拟合",
+      "value": "720ms 主窗口",
+      "note": "该示范节奏并非其他产品通用常数"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「中央窗口垂直退出与进入」。旧产品图沿垂直方向离开，新图从对应方向进入；统一裁切舞台与层级，快速切换清理旧离场层。触发：选择产品模式。可见结果：模式更替有连续的空间方向。适用任务：多用途软件界面介绍。产品图保持比例，减少动态即时替换可读静帧。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只交接中央产品截图；周边拼贴可有自己的出入轨迹，但共享当前模式与清理策略。减少动态直接换图，不能让旧图退出的回调覆盖最新选择。",
+  "sources": [
+    {
+      "caseId": "chatgpt-platform",
+      "locator": "entries/chatgpt-platform.json#interaction/0",
+      "observation": "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。",
+      "evidence": "observed",
+      "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
+      "capturedAt": "2026-10-07"
+    }
+  ],
+  "sourceFiles": [
+    "demos/chatgpt-platform/fidelity.md",
+    "demos/chatgpt-platform/fonts.css",
+    "demos/chatgpt-platform/index.html",
+    "demos/chatgpt-platform/motion-data.js",
+    "demos/chatgpt-platform/script.js",
+    "demos/chatgpt-platform/style.css",
+    "entries/chatgpt-platform.json",
+    "research/chatgpt-platform.md"
+  ]
+}
