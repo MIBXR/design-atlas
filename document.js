@@ -74,7 +74,7 @@ async function readDocument() {
     download.download = file.split('/').pop();
     download.hidden = false;
     const caseId = file.match(/^demos\/([A-Za-z0-9_-]+)\//)?.[1];
-    if (caseId) document.querySelector('#back').href = `index.html#style/${caseId}`;
+    if (caseId) document.querySelector('#back').href = `cases.html#style/${caseId}`;
   } catch (error) {
     content.textContent = error.message;
     content.setAttribute('role', 'alert');

@@ -24,4 +24,4 @@
 
 先用主题开关比较角色配对，再暂停全局动效并用键盘聚焦资源卡，观察没有运动时状态是否仍清楚；若换品牌色，只改一组primary／container会怎样影响正文与按钮的协调？
 
-[查看 Demo](../demos/google-material/index.html) · [返回参考库](../index.html#style/google-material)
+[查看 Demo](../demos/google-material/index.html) · [返回参考库](../cases.html#style/google-material)

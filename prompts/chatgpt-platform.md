@@ -21,4 +21,4 @@
 
 以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。
 
-[查看 Demo](../demos/chatgpt-platform/index.html) · [返回参考库](../index.html#style/chatgpt-platform)
+[查看 Demo](../demos/chatgpt-platform/index.html) · [返回参考库](../cases.html#style/chatgpt-platform)

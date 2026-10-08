@@ -127,8 +127,8 @@
     {
       "path": "prompts/met-museum.md",
       "role": "prompt",
-      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回参考库](../index.html#style/met-museum)\n",
-      "sha256": "4bc7f8e36f69c9a3e49497f19e1cb98abbfce95a622a3b9e57441eb9b79ec153",
+      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回参考库](../cases.html#style/met-museum)\n",
+      "sha256": "2a850f99c3149293c5f7d2e3ab5a65287060beff1aa26d7928ad115c8f7fdebb",
       "bytes": 2058
     },
     {
@@ -282,13 +282,13 @@
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "9e3dd6b269aa54c53eb7c6477c1a7011d5552c62a1d683150974aabb9b556046",
+      "sha256": "57fa2420b57e4b13342cb71e2cd9f156f512f1874ce74d1623994e152ef56eda",
       "bytes": 5139
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "sha256": "f11b76b4cc987f15767ea427aebe114edeb3c169dd7702eaf24901d6ea561eac",
       "bytes": 3789
     },
     {
@@ -318,7 +318,7 @@
     {
       "path": "prompts/met-museum.md",
       "role": "context",
-      "sha256": "4bc7f8e36f69c9a3e49497f19e1cb98abbfce95a622a3b9e57441eb9b79ec153",
+      "sha256": "2a850f99c3149293c5f7d2e3ab5a65287060beff1aa26d7928ad115c8f7fdebb",
       "bytes": 2058
     },
     {

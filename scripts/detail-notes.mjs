@@ -18,7 +18,7 @@ export function renderDetailNotes({ entries, id, rendererSource }) {
     nodes.set(selector, element);
     return element;
   }
-  const location = new URL(`http://atlas.local/index.html#style/${id}`);
+  const location = new URL(`http://atlas.local/cases.html#style/${id}`);
   const document = { querySelector: node, querySelectorAll: () => [], createElement: tag => node(`created:${tag}`), body: node('body'), activeElement: { tagName: 'BODY' }, addEventListener() {} };
   const window = { DESIGN_ATLAS: entries, addEventListener() {}, scrollTo() {} };
   const sandbox = { window, document, location, URL, console, localStorage: { getItem: () => null, setItem() {} }, history: { replaceState() {}, pushState() {} }, navigator: { clipboard: { writeText: async () => {} } }, ResizeObserver: class { observe() {} disconnect() {} }, setTimeout: () => 0, clearTimeout() {}, Blob };

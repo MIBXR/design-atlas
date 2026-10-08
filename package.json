@@ -10,6 +10,6 @@
     "build:local": "node scripts/build.mjs && node scripts/build-static.mjs --assets=local",
     "check": "node scripts/check.mjs --require-previews && node scripts/check-assets.mjs && node scripts/check-agent.mjs && node scripts/check-detail-alignment.mjs",
     "atlas": "node scripts/atlas.mjs",
-    "test:agent": "node --test scripts/agent-data.test.mjs scripts/atlas.test.mjs"
+    "test:agent": "node --test scripts/agent-data.test.mjs scripts/atlas.test.mjs scripts/legacy-links.test.mjs"
   }
 }

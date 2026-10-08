@@ -144,8 +144,8 @@
     {
       "path": "prompts/uma-musume.md",
       "role": "prompt",
-      "content": "# 赛马娘：群像赛道与斜切叙事 · 复用 Prompt\n\n由 [结构化案例](../entries/uma-musume.json) 自动生成。参考观察与具体边界见 [调研](../research/uma-musume.md)。\n\n## 正向 Prompt\n\n以一个明确 URL 和采集日期归档【竞技/养成游戏】。参考 Umamusume 国际页：官方赛道群像满宽铺开，独立竖版 KV 用于手机；下载徽章避开人物脸部。正常长页依次接入新闻条目、居中轻微倾斜的 About 缩略图和 Gameplay，不改成通用整屏 Swiper。草地绿、荧绿斜切标题带、粗重斜体标题与白底新闻形成运动方向和阅读节奏。点击 About 在站内原生 dialog 播放官方 top_about.mp4，文件无音轨，保留播放/暂停/进度与关闭或后台暂停；用比赛画面和剪辑建立节奏，不把未静音属性称为原声。官网 PV 外链的声音未在本地核实，不额外添加未核验 BGM。三组 Gameplay 必须将人物立绘、两张竖屏游戏图与文案板整块移动，400ms cubic-bezier(.25,1,.5,1)，首尾箭头禁用，不自动、不循环；按钮、编号、左右键与手势更新同一状态。保留来源证实的造型，不把所有图加统一圆角或玻璃卡片。明确内容缩减、手机适配与本地键盘/菜单补充，提供减少动态、可见焦点、原图 manifest 和真实桌面/390px 预览。 导航须保留真实 Logo 与蓝色纹理，滚过 min(viewportWidth,2000) 的7%阈值时2.8倍Logo缩回基准，300ms cubic-bezier(.19,1,.22,1)，反向恢复；手机1.72倍、马蹄图标菜单，Play Now打开原图下载层。\n\n## 负向约束\n\n不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。\n\n## 制作约束\n\n- 只归档 https://umamusume.com/ 在 2026-10-07 的国际英文页，不混入日本门户布局或追随后续改版。\n- 群像、新闻、About 和 Gameplay 使用官方本地素材；新闻数量和后半部角色/媒体内容有缩减。\n- About 原始 top_about.mp4 无音轨，播放器未静音不代表有原声；官网其他 PV 外链的声音未在本地核实，未发现独立 BGM，不给滚动章节配通用音乐。\n- Gameplay 不自动推进、不循环；400ms cubic-bezier(.25,1,.5,1) 与首尾边界有源样式依据。\n- 手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。\n- 官方品牌、群像、美术和 PV 权利归相应权利方，manifest 留存 URL/尺寸/哈希；不复制运营服务。\n\n## 检查方法\n\n保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。\n\n[查看 Demo](../demos/uma-musume/index.html) · [返回参考库](../index.html#style/uma-musume)\n",
-      "sha256": "7c9eb66bfed589a9758921b19c55af399346361721aa8032fef4602c8afe1c00",
+      "content": "# 赛马娘：群像赛道与斜切叙事 · 复用 Prompt\n\n由 [结构化案例](../entries/uma-musume.json) 自动生成。参考观察与具体边界见 [调研](../research/uma-musume.md)。\n\n## 正向 Prompt\n\n以一个明确 URL 和采集日期归档【竞技/养成游戏】。参考 Umamusume 国际页：官方赛道群像满宽铺开，独立竖版 KV 用于手机；下载徽章避开人物脸部。正常长页依次接入新闻条目、居中轻微倾斜的 About 缩略图和 Gameplay，不改成通用整屏 Swiper。草地绿、荧绿斜切标题带、粗重斜体标题与白底新闻形成运动方向和阅读节奏。点击 About 在站内原生 dialog 播放官方 top_about.mp4，文件无音轨，保留播放/暂停/进度与关闭或后台暂停；用比赛画面和剪辑建立节奏，不把未静音属性称为原声。官网 PV 外链的声音未在本地核实，不额外添加未核验 BGM。三组 Gameplay 必须将人物立绘、两张竖屏游戏图与文案板整块移动，400ms cubic-bezier(.25,1,.5,1)，首尾箭头禁用，不自动、不循环；按钮、编号、左右键与手势更新同一状态。保留来源证实的造型，不把所有图加统一圆角或玻璃卡片。明确内容缩减、手机适配与本地键盘/菜单补充，提供减少动态、可见焦点、原图 manifest 和真实桌面/390px 预览。 导航须保留真实 Logo 与蓝色纹理，滚过 min(viewportWidth,2000) 的7%阈值时2.8倍Logo缩回基准，300ms cubic-bezier(.19,1,.22,1)，反向恢复；手机1.72倍、马蹄图标菜单，Play Now打开原图下载层。\n\n## 负向约束\n\n不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。\n\n## 制作约束\n\n- 只归档 https://umamusume.com/ 在 2026-10-07 的国际英文页，不混入日本门户布局或追随后续改版。\n- 群像、新闻、About 和 Gameplay 使用官方本地素材；新闻数量和后半部角色/媒体内容有缩减。\n- About 原始 top_about.mp4 无音轨，播放器未静音不代表有原声；官网其他 PV 外链的声音未在本地核实，未发现独立 BGM，不给滚动章节配通用音乐。\n- Gameplay 不自动推进、不循环；400ms cubic-bezier(.25,1,.5,1) 与首尾边界有源样式依据。\n- 手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。\n- 官方品牌、群像、美术和 PV 权利归相应权利方，manifest 留存 URL/尺寸/哈希；不复制运营服务。\n\n## 检查方法\n\n保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。\n\n[查看 Demo](../demos/uma-musume/index.html) · [返回参考库](../cases.html#style/uma-musume)\n",
+      "sha256": "c103b6dbc0a86bcf8c8ed7d42c0680d34b6b124cf976afad66a56ad0c48dc062",
       "bytes": 2932
     },
     {
@@ -389,13 +389,13 @@
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "9e3dd6b269aa54c53eb7c6477c1a7011d5552c62a1d683150974aabb9b556046",
+      "sha256": "57fa2420b57e4b13342cb71e2cd9f156f512f1874ce74d1623994e152ef56eda",
       "bytes": 5139
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "sha256": "f11b76b4cc987f15767ea427aebe114edeb3c169dd7702eaf24901d6ea561eac",
       "bytes": 3789
     },
     {
@@ -425,7 +425,7 @@
     {
       "path": "prompts/uma-musume.md",
       "role": "context",
-      "sha256": "7c9eb66bfed589a9758921b19c55af399346361721aa8032fef4602c8afe1c00",
+      "sha256": "c103b6dbc0a86bcf8c8ed7d42c0680d34b6b124cf976afad66a56ad0c48dc062",
       "bytes": 2932
     },
     {

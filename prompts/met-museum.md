@@ -23,4 +23,4 @@
 
 用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。
 
-[查看 Demo](../demos/met-museum/index.html) · [返回参考库](../index.html#style/met-museum)
+[查看 Demo](../demos/met-museum/index.html) · [返回参考库](../cases.html#style/met-museum)

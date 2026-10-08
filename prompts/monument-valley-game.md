@@ -23,4 +23,4 @@
 
 比较桌面中心三图与手机一图加20%侧图；切至第十四张再下一张，快速反向选择并暂停自动播放，检查当前索引、轨道和可聚焦元素始终一致。再上下穿越奖项中心，观察350ms双向进入与手机Show All高度变化。
 
-[查看 Demo](../demos/monument-valley-game/index.html) · [返回参考库](../index.html#style/monument-valley-game)
+[查看 Demo](../demos/monument-valley-game/index.html) · [返回参考库](../cases.html#style/monument-valley-game)

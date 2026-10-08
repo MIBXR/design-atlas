@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="theme.js"></script><meta name="description" content="直接检索 Design Atlas，取得完整设计上下文与源码，让 Agent 根据真实需求构建网站。"><title>Agent 工作流 · Design Atlas</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="atlas.css"><link rel="stylesheet" href="agent.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="theme.js"></script><meta name="description" content="直接检索 Design Atlas，取得完整设计上下文与源码，让 Agent 根据真实需求构建网站。"><title>Agent 工作流 · Design Atlas</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="atlas.css"><link rel="stylesheet" href="agent.css"><link rel="stylesheet" href="site-nav.css"></head>
 <body class="agent-page">
 <a class="skip" href="#main">跳到内容</a>
-<header class="agent-nav"><a class="agent-brand" href="index.html">DESIGN ATLAS<span>个人网页设计参考库</span></a><nav aria-label="主导航"><a href="index.html">浏览案例 ↗</a><a href="fundamentals.html">设计元素实验室 ↗</a><label class="atlas-theme-control">主题<select data-atlas-theme-choice aria-label="参考库显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></nav></header>
+<header class="atlas-site-header"><a class="atlas-site-brand" href="index.html">Design Atlas<span>个人网页设计参考库</span></a><nav class="atlas-site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="cases.html">浏览案例</a><a href="fundamentals.html">设计实验室</a><a href="agent.html" aria-current="page">Agent 工作流</a></nav><label class="atlas-theme-control atlas-site-theme">显示主题<select data-atlas-theme-choice aria-label="参考库显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></header>
 <main id="main" class="agent-main" tabindex="-1">
   <section class="agent-hero"><p class="eyebrow">OBSERVE. RETRIEVE. ADAPT.</p><h1>把设计依据，<br>直接交给 Agent<span>.</span></h1><p class="agent-lead">先按真实需求找案例，再取得 Prompt、设计机制、研究、复现边界和源码。<br>人可以继续看与比较，Agent 可以直接读与构建。</p><div class="agent-stats"><span><b id="agent-count">—</b> 个案例</span><span>完整上下文 · 按需源码</span><span>固定版本 · SHA256 校验</span></div></section>
   <section class="agent-start" aria-labelledby="start-heading"><div><p class="eyebrow">01 / SKILL</p><h2 id="start-heading">先探索，再围绕需求选方向</h2><p>skill 提供选型工作流与获取脚本，完整案例留在 Design Atlas。新任务读取最新目录，讨论和取材使用同一版本。你可以从“有哪些案例”开始。</p><a class="copy-button" href="https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas" target="_blank" rel="noopener noreferrer">查看 skill 与获取脚本 ↗</a></div><div class="agent-command"><p>安装 skill 后，可以这样开始</p><pre><code id="skill-example">$design-atlas 我还没决定网站的设计方向，先介绍有哪些案例。
@@ -15,6 +15,6 @@ node scripts/atlas.mjs show linear-workflow
 node scripts/atlas.mjs show linear-workflow --source
 node scripts/atlas.mjs export linear-workflow --out ../linear-reference</code></pre><button class="copy-button" data-copy="cli-example">复制命令</button></div></section>
   <section class="agent-context"><p class="eyebrow">DESIGN WITH CONTEXT</p><h2>带着依据适配你的场景</h2><div><p><b>保留设计机制</b><br>读取布局、视觉层级、状态和触发关系，选择能解释当前产品的表达。</p><p><b>替换真实内容</b><br>用自己的品牌、文案和有使用权的素材，依据真实功能调整交互。</p><p><b>验证当前成果</b><br>检查桌面与手机、键盘、减少动态和资源加载，保留来源中近似与未验证的标记。</p></div></section>
-  <footer class="agent-footer"><a href="index.html">← 回到人工预览与比较</a><span id="agent-version">SOURCE-BACKED / SCHEMA 1</span></footer>
+  <footer class="agent-footer"><a href="cases.html">← 回到人工预览与比较</a><span id="agent-version">SOURCE-BACKED / SCHEMA 1</span></footer>
 </main><div class="toast" id="toast" role="status"></div><script src="agent.js"></script>
 </body></html>

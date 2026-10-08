@@ -1,38 +1,66 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="theme.js"></script><title>Design Atlas — 个人风格参考库</title><meta name="description" content="从真实网页、设计理论到可复用 Prompt 与交互 Demo 的个人设计参考库。"><link rel="stylesheet" href="atlas.css"><link rel="icon" href="favicon.svg" type="image/svg+xml"></head>
-<body>
-<a class="skip" href="#main">跳到内容</a>
-<aside class="rail">
-  <a href="#" class="brand" aria-label="Design Atlas 首页"><span class="brand-mark" aria-hidden="true">✳</span><span>DESIGN<br>ATLAS<span class="brand-small">个人风格参考库</span></span></a>
-  <a class="nav-item lab-link" href="fundamentals.html"><span>设计要素实验室</span><b>LAB ↗</b></a><span class="rail-label">COLLECTION / 01</span>
-  <nav aria-label="参考库分类">
-    <button class="nav-item active" data-filter="all"><span>全部风格</span><b id="all-count">14</b></button>
-    <button class="nav-item" data-filter="产品"><span>产品与平台</span><b data-category-count="产品">00</b></button>
-    <button class="nav-item" data-filter="游戏/IP"><span>游戏与 IP</span><b data-category-count="游戏/IP">00</b></button>
-    <button class="nav-item" data-filter="经典风格"><span>经典设计语言</span><b data-category-count="经典风格">08</b></button>
-    <button class="nav-item" data-filter="艺术/文化"><span>艺术与文化</span><b data-category-count="艺术/文化">00</b></button>
-    <button class="nav-item" data-filter="favorites"><span>我的收藏</span><b id="fav-count">00</b></button>
-  </nav>
-  <div class="rail-rule"></div><button class="rail-link text-button" id="favorite-manage">收藏备份与说明 ↗</button>
-  <a class="rail-link" href="document.html?file=README.md" target="_blank">使用与维护指南 ↗</a>
-  <a class="rail-link" href="agent.html">Agent 工作流 ↗</a>
-  <a class="rail-link" href="document.html?file=research%2FOVERVIEW.md" target="_blank">调研方法与风格地图 ↗</a>
-  <div class="rail-bottom"><span class="status-dot"></span> LOCAL / SOURCE-BACKED<br><span>核验日期 · 2026.10.07</span></div>
-</aside>
-<main id="main" tabindex="-1">
-  <header class="topbar"><span>你的设计灵感，有据可循。</span><div><label class="atlas-theme-control">显示主题<select data-atlas-theme-choice aria-label="参考库显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label><span class="edition">VOL. 02</span><button id="compare-open" class="text-button">比较 <span id="compare-count">0</span>/3 ↗</button></div></header>
-  <section id="collection">
-    <div class="hero"><div><p class="eyebrow">OBSERVE. UNDERSTAND. MAKE.</p><h1>从看见风格，<br>到掌握它的语言<span class="period">.</span></h1><p class="hero-desc"><span id="hero-count">29</span> 个案例与设计方向。真实案例、设计约束、可复用 Prompt，<br class="desktop">与可以亲手操作的本地代码 demo。</p></div><div class="hero-art" aria-hidden="true"><span class="a-grid"></span><span class="a-disc"></span><span class="a-square"></span><span class="a-triangle"></span><small>A STUDY OF FORM<br>AND FUNCTION / 2026</small></div></div>
-    <div class="collection-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索风格、案例、交互或约束…" aria-label="搜索风格、案例、交互或约束"><kbd>/</kbd></label><label class="sort">国家 / 地区<select id="country" aria-label="按国家或地区筛选"><option value="all">全部地区</option></select></label><label class="sort">排序<select id="sort" aria-label="排序方式"><option value="curated">策展顺序</option><option value="title">名称顺序</option></select></label></div>
-    <div class="list-caption"><span id="results-label" role="status">全部风格 / 29 个条目</span><span>每一种风格，都有来处</span></div>
-    <div id="cards" class="cards"></div><div id="empty" class="empty" hidden><h2>没有找到对应条目</h2><p>试试“网格”“角色”“手绘”或某个真实案例名称。</p><button id="reset-search">清除筛选</button></div>
-    <footer class="collection-footer"><span>以设计机制为线索，持续积累。</span><span id="footer-count">SOURCE STUDIES · 8 CLASSIC STYLES · GIT ARCHIVE</span></footer>
-  </section>
-  <section id="detail" hidden></section>
-  <section id="comparison" hidden></section>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<script src="legacy-links.js"></script><script src="theme.js"></script>
+<title>Design Atlas — 从案例到实践</title>
+<meta name="description" content="浏览真实网页案例与设计理念，动手调配设计元素，让 Agent 带着完整设计参考去实现。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="landing.css"><link rel="stylesheet" href="site-nav.css">
+</head>
+<body class="landing-page">
+<a class="landing-skip" href="#main">跳到内容</a>
+<header class="atlas-site-header">
+<a class="atlas-site-brand" href="index.html" aria-label="Design Atlas 首页"><span class="landing-brand-mark" aria-hidden="true">✳</span><span>DESIGN ATLAS<small>从案例到实践</small></span></a>
+<nav class="atlas-site-nav" aria-label="主导航"><a href="index.html" aria-current="page">首页</a><a href="cases.html">浏览案例</a><a href="fundamentals.html">设计实验室</a><a href="agent.html">Agent 工作流</a></nav>
+<label class="atlas-site-theme">主题<select data-atlas-theme-choice aria-label="参考库显示主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label>
+</header>
+<main class="landing-main" id="main" tabindex="-1">
+<section class="landing-hero" aria-labelledby="hero-title">
+<p class="landing-kicker">OBSERVE. UNDERSTAND. MAKE.</p>
+<h1 id="hero-title">看见设计。理解设计。<br>做出<span>你的设计。</span></h1>
+<p class="landing-lead">从真实网页中寻找灵感，亲手观察元素如何搭配，<br class="landing-desktop">再让 Agent 带着完整参考，走进你的项目。</p>
+<div class="landing-actions" aria-label="选择你的使用方式"><a class="landing-button landing-button--primary" href="cases.html">浏览案例 <span aria-hidden="true">↗</span></a><a class="landing-button" href="fundamentals.html">进入实验室 <span aria-hidden="true">↗</span></a><a class="landing-button" href="agent.html">探索 Agent 工作流 <span aria-hidden="true">↗</span></a></div>
+<p class="landing-hero-note"><span data-home-count="all">29</span> 个案例与设计方向 <span aria-hidden="true">·</span> 真实内容 <span aria-hidden="true">·</span> 可运行 Demo <span aria-hidden="true">·</span> 完整取材</p>
+</section>
+<section class="landing-features" id="features" aria-labelledby="features-title">
+<div class="landing-section-heading"><p class="landing-kicker">THREE WAYS TO START</p><h2 id="features-title">灵感，有了下一步。</h2><p>找到方向，动手试一试，或带着依据开始构建。</p></div>
+<div class="landing-modules">
+<article class="landing-module landing-module--cases">
+<div class="landing-module-copy"><p class="landing-module-tag">01 / 浏览案例</p><h3>先看见。<br>再看懂。</h3><p class="landing-description">从真实品牌页面到经典设计语言，查看实际 Demo，理解布局、视觉与交互背后的选择。</p><a class="landing-module-link" href="cases.html">寻找你的设计方向 <span aria-hidden="true">↗</span></a></div>
+<div class="landing-case-grid" aria-label="案例库中的真实 Demo 预览">
+<a class="landing-case landing-case--main" href="cases.html#style/stripe-platform"><img src="previews/stripe-platform.jpg" width="1425" height="990" loading="lazy" alt="Stripe 案例 Demo，展示彩带与平台主张"><span>Stripe <small>平台与产品</small><b aria-hidden="true">↗</b></span></a>
+<a class="landing-case" href="cases.html#style/swiss-grid"><img src="previews/swiss-grid.jpg" width="1425" height="990" loading="lazy" alt="瑞士编辑网格练习，展示非对称标题与信息对齐"><span>编辑网格 <small>经典设计语言</small></span></a>
+<a class="landing-case" href="cases.html#style/met-museum"><img src="previews/met-museum.jpg" width="1425" height="990" loading="lazy" alt="大都会艺术博物馆案例 Demo，展示建筑摄影与展览介绍"><span>The Met <small>艺术与文化</small></span></a>
+</div><p class="landing-caption">每个案例都有设计说明、Prompt、来源与复现范围。</p>
+</article>
+<article class="landing-module landing-module--lab">
+<div class="landing-module-copy"><p class="landing-module-tag">02 / 设计实验室</p><h3>同样的内容，<br>不同的表达。</h3><p class="landing-description">调配配色、字体、布局、形状与留白，观察它们如何共同工作，再带走当前配置与 Prompt。</p><a class="landing-module-link" href="fundamentals.html#lab">动手调配设计元素 <span aria-hidden="true">↗</span></a></div>
+<div class="landing-lab-preview">
+<div class="landing-lab-options" role="group" aria-label="查看实验室现有方案的截图"><button type="button" data-home-scheme="paper" aria-pressed="true">纸页<span>安静 · 阅读</span></button><button type="button" data-home-scheme="friendly" aria-pressed="false">亲和<span>轻松 · 上手</span></button><button type="button" data-home-scheme="tool" aria-pressed="false">工具<span>直接 · 扫描</span></button></div>
+<img id="home-lab-image" src="previews/landing/lab-paper.jpg" width="1425" height="990" loading="lazy" alt="现有实验室纸页方案，拾光笔记的暖色阅读界面">
+<p class="landing-lab-status" id="home-lab-status" role="status">纸页：暖纸底、衬线字与疏朗留白。</p>
+</div><p class="landing-caption">上方是现有实验室的方案截图；进入实验室可以自由调整。</p>
+</article>
+<article class="landing-module landing-module--agent">
+<div class="landing-module-copy"><p class="landing-module-tag">03 / AGENT 工作流</p><h3>把参考，<br>变成构建的上下文。</h3><p class="landing-description">和 Agent 围绕需求选方向。确认后取得设计说明、研究、Prompt 与源码，把设计机制用到自己的项目。</p><a class="landing-module-link" href="agent.html">进入 Agent 工作流 <span aria-hidden="true">↗</span></a></div>
+<div class="landing-agent-preview">
+<div class="landing-command"><div class="landing-command-heading"><label for="home-agent-prompt">安装 skill 后，用这段话开始</label><button type="button" id="home-copy-prompt">复制示例 <span aria-hidden="true">↗</span></button></div>
+<textarea id="home-agent-prompt" readonly aria-label="Agent skill 调用示例" spellcheck="false">$design-atlas 为我的产品网站比较几个设计方向。
+先和我确认候选，再读取完整说明、Prompt 与源码，
+把选中的设计机制应用到我的实际内容和功能。</textarea>
+<p id="home-copy-status" role="status">从讨论方向开始，资料取材保持同一版本。</p></div>
+<div class="landing-materials"><p>一份完整案例，包含这些依据</p><dl><div><dt>设计机制与 Prompt</dt><dd>entry</dd></div><div><dt>网页中的实际说明</dt><dd>webNotes</dd></div><div><dt>研究与复现边界</dt><dd>documents</dd></div><div><dt>源码、媒体与校验清单</dt><dd>files</dd></div></dl></div>
+</div>
+</article>
+</div>
+</section>
+<section class="landing-paths" aria-labelledby="paths-title">
+<div class="landing-section-heading"><p class="landing-kicker">DESIGN WITH CONTEXT</p><h2 id="paths-title">看过之后，继续往前。</h2><p>三种入口可以独立使用，也可以接成你的设计过程。</p></div>
+<ol><li><span>01</span><h3>观察一个案例</h3><p>看画面与 Demo，找出对你的场景有用的机制。</p><a href="cases.html">从案例开始 ↗</a></li><li><span>02</span><h3>试一组搭配</h3><p>在相同内容上调整元素，观察气质与阅读关系。</p><a href="fundamentals.html">去实验室观察 ↗</a></li><li><span>03</span><h3>带着依据实现</h3><p>让 Agent 取得完整参考，适配你自己的内容和功能。</p><a href="agent.html">查看取材工作流 ↗</a></li></ol>
+</section>
+<section class="landing-ending" aria-labelledby="ending-title"><p class="landing-kicker">YOUR NEXT DESIGN</p><h2 id="ending-title">下一次灵感，<br>从这里开始。</h2><div class="landing-actions"><a class="landing-button landing-button--primary" href="cases.html">浏览案例 ↗</a><a class="landing-button" href="fundamentals.html">进入实验室 ↗</a><a class="landing-button" href="agent.html">探索 Agent 工作流 ↗</a></div><p><span data-home-count="studies">21</span> 个真实品牌／文化页面 · <span data-home-count="classics">8</span> 种经典设计语言</p></section>
 </main>
-<div id="compare-tray" class="compare-tray" hidden><span id="tray-text"></span><button id="compare-go">并排比较 ↗</button><button id="compare-clear" class="text-button">清空</button></div>
-<dialog id="favorite-dialog"><form method="dialog"><button class="dialog-close" aria-label="关闭收藏管理">×</button></form><h2>收藏在你的浏览器中</h2><p>收藏保存为本网站的 localStorage 数据，只包含案例 ID。刷新仍在；浏览器、地址或端口不同会产生独立收藏。清理网站数据会删除收藏，Git 不会自动保存它。</p><button id="favorite-export" class="primary-button">导出收藏 JSON ↓</button><p>导出时，下方也会显示 JSON，方便复制或自行放进 Git 留存。粘贴备份后导入，会合并有效案例 ID：</p><textarea id="favorite-json" aria-label="收藏备份 JSON" placeholder="粘贴导出的 JSON…"></textarea><button id="favorite-import" class="primary-button">导入并合并</button><p id="favorite-status" role="status"></p></dialog><div id="toast" role="status" class="toast"></div>
-<script src="asset-sources.js"></script><script src="asset-runtime.js"></script><script src="asset-cache.js"></script><script src="catalog.js"></script><script src="atlas.js"></script>
-</body></html>
+<footer class="landing-footer"><div><strong>✳ DESIGN ATLAS</strong><p>个人网页设计参考库 · 以设计机制为线索，持续积累。</p><small>案例按采集快照归档，标明来源、近似与未验证范围。品牌与素材归原作者所有。</small></div><nav aria-label="资料与来源"><a href="document.html?file=README.md">使用与维护</a><a href="document.html?file=research%2FOVERVIEW.md">调研方法</a><a href="https://github.com/MIBXR/design-atlas" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></footer>
+<script src="catalog.js"></script><script src="home.js"></script>
+</body>
+</html>

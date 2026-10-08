@@ -26,4 +26,4 @@
 
 将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。
 
-[查看 Demo](../demos/swiss-grid/index.html) · [返回参考库](../index.html#style/swiss-grid)
+[查看 Demo](../demos/swiss-grid/index.html) · [返回参考库](../cases.html#style/swiss-grid)

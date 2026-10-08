@@ -1,0 +1,177 @@
+/* Shared navigation is scoped to the site shell, outside each module's controls. */
+.atlas-site-header{
+  box-sizing:border-box;
+  width:100%;
+  max-width:1280px;
+  margin:0 auto;
+  padding:20px 40px;
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  gap:28px;
+  border-bottom:1px solid var(--line,#dcded4);
+  color:var(--ink,#242721);
+  background:var(--paper,var(--page,#f5f4ef));
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+}
+.atlas-site-header .atlas-site-brand{
+  display:block;
+  flex-shrink:0;
+  min-height:44px;
+  color:inherit;
+  font-size:19px;
+  font-weight:750;
+  letter-spacing:-.6px;
+  line-height:1.3;
+  text-decoration:none;
+}
+.atlas-site-header .atlas-site-brand>span{
+  display:block;
+  color:var(--muted,#75796f);
+  font-size:9px;
+  font-weight:400;
+  letter-spacing:.6px;
+  line-height:1.5;
+  margin-top:5px;
+}
+.atlas-site-header .atlas-site-nav,
+.atlas-site-topbar .atlas-site-nav{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+  margin:0;
+  padding:0;
+  min-width:0;
+  font-size:12px;
+  line-height:1.5;
+}
+.atlas-site-header .atlas-site-nav{margin-left:auto}
+.atlas-site-header .atlas-site-nav>a,
+.atlas-site-topbar .atlas-site-nav>a{
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:10px 12px;
+  border:1px solid transparent;
+  border-radius:7px;
+  color:var(--ink,#242721);
+  font:inherit;
+  white-space:nowrap;
+  text-decoration:none;
+  touch-action:manipulation;
+  transition:color 150ms ease,background-color 150ms ease,border-color 150ms ease;
+}
+.atlas-site-header .atlas-site-nav>a:hover,
+.atlas-site-topbar .atlas-site-nav>a:hover{
+  color:var(--ink,#242721);
+  background:var(--surface,#eaece2);
+}
+.atlas-site-header .atlas-site-nav>a[aria-current=page],
+.atlas-site-topbar .atlas-site-nav>a[aria-current=page]{
+  background:var(--lime,#d4ef76);
+  color:#242721;
+  font-weight:650;
+}
+.atlas-site-header .atlas-site-theme,
+.atlas-site-topbar .atlas-theme-control{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  flex-shrink:0;
+  color:var(--ink,#242721);
+  font-size:10px;
+  white-space:nowrap;
+}
+.atlas-site-header .atlas-site-theme select,
+.atlas-site-topbar .atlas-theme-control select{
+  box-sizing:border-box;
+  appearance:none;
+  min-height:44px;
+  max-width:110px;
+  padding:8px 26px 8px 10px;
+  border:1px solid var(--line,#dcded4);
+  border-radius:7px;
+  background-color:var(--field,#fafbf5);
+  background-image:linear-gradient(45deg,transparent 50%,var(--ink,#242721) 50%),linear-gradient(135deg,var(--ink,#242721) 50%,transparent 50%);
+  background-position:right 13px center,right 8px center;
+  background-size:5px 5px;
+  background-repeat:no-repeat;
+  color:var(--ink,#242721);
+  font:inherit;
+  line-height:1.5;
+  cursor:pointer;
+}
+.atlas-site-header .atlas-site-theme option,
+.atlas-site-topbar .atlas-theme-control option{
+  background:var(--field,#fafbf5);
+  color:var(--ink,#242721);
+}
+.atlas-site-topbar{
+  height:auto;
+  min-height:84px;
+  gap:12px 22px;
+  flex-wrap:wrap;
+  padding:14px 0;
+}
+.atlas-site-topbar>div{gap:16px;flex-wrap:wrap}
+.atlas-site-topbar #compare-open{min-height:44px}
+.atlas-site-header a:focus-visible,
+.atlas-site-header select:focus-visible,
+.atlas-site-topbar .atlas-site-nav>a:focus-visible,
+.atlas-site-topbar select:focus-visible{
+  outline:3px solid var(--select-accent,#708930);
+  outline-offset:3px;
+}
+@media(max-width:1050px){
+  .atlas-site-header{gap:16px;padding-right:30px;padding-left:30px}
+  .atlas-site-header .atlas-site-nav>a{padding-right:9px;padding-left:9px;font-size:11px}
+  .atlas-site-header .atlas-site-brand{font-size:17px}
+  .atlas-site-topbar>div{gap:12px}
+}
+@media(max-width:800px){
+  .atlas-site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 16px;padding:18px 24px}
+  .atlas-site-header .atlas-site-brand{grid-column:1;grid-row:1}
+  .atlas-site-header .atlas-site-theme{grid-column:2;grid-row:1}
+  .atlas-site-header .atlas-site-nav{grid-column:1/-1;grid-row:2;margin-left:0;justify-content:space-between}
+  .atlas-site-header .atlas-site-nav>a{flex:1}
+  .atlas-site-topbar .atlas-site-nav{flex-basis:100%}
+  .atlas-site-topbar .atlas-site-nav>a{flex:1;padding-right:8px;padding-left:8px;font-size:11px}
+  .atlas-site-topbar>div{margin-left:auto;justify-content:flex-end}
+}
+@media(max-width:650px){
+  .atlas-site-header{padding:16px 20px;gap:12px 10px}
+  .atlas-site-header .atlas-site-brand{font-size:17px}
+  .atlas-site-header .atlas-site-brand>span{font-size:8px}
+  .atlas-site-header .atlas-site-theme{font-size:9px;gap:5px}
+  .atlas-site-header .atlas-site-theme select{max-width:94px;padding-left:7px}
+  .atlas-site-header .atlas-site-nav{gap:3px}
+  .atlas-site-header .atlas-site-nav>a{padding:9px 6px;font-size:11px}
+  .atlas-site-topbar{min-height:0;padding:12px 0;gap:8px}
+  .atlas-site-topbar .atlas-site-nav{gap:3px}
+  .atlas-site-topbar .atlas-site-nav>a{padding:9px 5px;font-size:10px}
+  .atlas-site-topbar>div{width:100%;gap:12px;justify-content:space-between}
+}
+@media(max-width:360px){
+  .atlas-site-header{padding:16px;gap:10px}
+  .atlas-site-header .atlas-site-brand{font-size:15px}
+  .atlas-site-header .atlas-site-brand>span{font-size:8px;letter-spacing:.2px}
+  .atlas-site-header .atlas-site-theme{gap:4px;font-size:8px}
+  .atlas-site-header .atlas-site-theme select{max-width:86px;font-size:9px}
+  .atlas-site-header .atlas-site-nav,
+  .atlas-site-topbar .atlas-site-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .atlas-site-header .atlas-site-nav>a,
+  .atlas-site-topbar .atlas-site-nav>a{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .atlas-site-header .atlas-site-nav>a,
+  .atlas-site-topbar .atlas-site-nav>a{transition:none}
+}
+@media(forced-colors:active){
+  .atlas-site-header .atlas-site-nav>a[aria-current=page],
+  .atlas-site-topbar .atlas-site-nav>a[aria-current=page]{border-color:Highlight;color:Highlight}
+  .atlas-site-header .atlas-site-theme select,
+  .atlas-site-topbar .atlas-theme-control select{appearance:auto;background-image:none}
+}

@@ -22,4 +22,4 @@
 
 将三个真实场景换成另一部已授权游戏的世界章节，保持视频、标题、目录的层级并记录保真差异。
 
-[查看 Demo](../demos/zelda-world/index.html) · [返回参考库](../index.html#style/zelda-world)
+[查看 Demo](../demos/zelda-world/index.html) · [返回参考库](../cases.html#style/zelda-world)
