@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "0b68ce1ea544f5a19def49346a62a4bd07dc1ae7d82b893c1ceb7fab0bb944d0",
+  "contentVersion": "d3fce91be628607e609e7aabb0240eda5c762a1bde4d3ce4f816a277fb55a78b",
   "entryCount": 29,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
@@ -77,7 +77,7 @@
         "demo": "demos/apple-product/index.html",
         "entry": "entries/apple-product.json"
       },
-      "bundleSha256": "290d11e677a6888edb036c06abcaa8390c1588bac57521499ce5c90da9c9050a"
+      "bundleSha256": "92cd3b9cb5481c5491306f64288151997d28e6d4b4fca210994527bd1baf3759"
     },
     {
       "id": "stripe-platform",
@@ -154,7 +154,7 @@
         "demo": "demos/stripe-platform/index.html",
         "entry": "entries/stripe-platform.json"
       },
-      "bundleSha256": "b77de811d1cf4ad1326918a227d1d549a79af8d39e5dc7d30b4c8c3a2ef7855b"
+      "bundleSha256": "7c0134b8462e7b45293723d4b1afcd515016d1616451a01977c8b693a6faf7e9"
     },
     {
       "id": "linear-workflow",
@@ -230,7 +230,7 @@
         "demo": "demos/linear-workflow/index.html",
         "entry": "entries/linear-workflow.json"
       },
-      "bundleSha256": "6f8f0adf26ea5035b2275f16776487ecff54d7d1975bbc5048a20d949492a322"
+      "bundleSha256": "115d1c6373a2b8e1bf368021eb7025500f466791b6150d6f15db16881a23f7f0"
     },
     {
       "id": "notion-editorial",
@@ -305,7 +305,7 @@
         "demo": "demos/notion-editorial/index.html",
         "entry": "entries/notion-editorial.json"
       },
-      "bundleSha256": "68181b3ba4a606ef325cb23621ec95c8d7bb373496fb9b2ca179c82147abfa15"
+      "bundleSha256": "24e9c2042ea1d4a81296d9d8b7f1e8b029fafda3b8ac384bff1eb005a3f76545"
     },
     {
       "id": "zelda-world",
@@ -377,7 +377,7 @@
         "demo": "demos/zelda-world/index.html",
         "entry": "entries/zelda-world.json"
       },
-      "bundleSha256": "2b5d2c984ceea22c1689a63bd40cfefe9af9dde7a704950c55ecfd335136c7fd"
+      "bundleSha256": "6b6e8913efb17a79201d86c55238d9d915044cf18c07544b848b838a6c778c61"
     },
     {
       "id": "persona-kinetic",
@@ -449,7 +449,7 @@
         "demo": "demos/persona-kinetic/index.html",
         "entry": "entries/persona-kinetic.json"
       },
-      "bundleSha256": "4e33600a4709808263fed9a84bbc25ced3d7892674910f2388814f1b31bc087e"
+      "bundleSha256": "1079f9191c4378c566fba1d9b580a6e909b9b8ed66924cde9ec3b05b88b7f77d"
     },
     {
       "id": "hand-drawn",
@@ -522,7 +522,7 @@
         "demo": "demos/hand-drawn/index.html",
         "entry": "entries/hand-drawn.json"
       },
-      "bundleSha256": "3ad964972cfdeacd082e51d80a3a72194c8f6a3472d852cb0d3594b1f1126803"
+      "bundleSha256": "0897dcf350bab24d3e6f7c72c8dd294db658ffd316b916f8b3a2fe06f3bf8cab"
     },
     {
       "id": "isometric-3d",
@@ -596,7 +596,7 @@
         "demo": "demos/isometric-3d/index.html",
         "entry": "entries/isometric-3d.json"
       },
-      "bundleSha256": "d842f6e375fea653c0e4700bb1ae36ebac2de486b03ba2e3ae758f16d9ff82c6"
+      "bundleSha256": "9d09279b59c0e66a4287f1c1df5cbbf2f45f995f4431ad9aae1118db82cf26e2"
     },
     {
       "id": "line-art",
@@ -668,7 +668,7 @@
         "demo": "demos/line-art/index.html",
         "entry": "entries/line-art.json"
       },
-      "bundleSha256": "4208f6acabcc41863c6442d3fa9c5693576ef9aaa973a57771d01ff68cbb0a0d"
+      "bundleSha256": "0d2a8d2837aed25c7dc4acf2e308ee1a0b6612c060c5add36eb377ac9f724bb5"
     },
     {
       "id": "shape-morph",
@@ -742,7 +742,7 @@
         "demo": "demos/shape-morph/index.html",
         "entry": "entries/shape-morph.json"
       },
-      "bundleSha256": "026ddcc50cb8da847317c84a054e24a55611512ffa38ecfabc3f74f804085604"
+      "bundleSha256": "7ba2e68e14321e54e42591de79c372ebf6d25346607c56d6a43ae56274331199"
     },
     {
       "id": "swiss-grid",
@@ -812,7 +812,7 @@
         "demo": "demos/swiss-grid/index.html",
         "entry": "entries/swiss-grid.json"
       },
-      "bundleSha256": "e1e87646ac5489b56dab94103f42afff09965457c8b0d7127e849dc3d68fa9e4"
+      "bundleSha256": "8746942617715a42fd2cb7ecbfab6c67ae51729bce08f9be2d2d85695c2e1460"
     },
     {
       "id": "bauhaus-geometry",
@@ -885,7 +885,7 @@
         "demo": "demos/bauhaus-geometry/index.html",
         "entry": "entries/bauhaus-geometry.json"
       },
-      "bundleSha256": "16fe714b565bdad2ff914e6f5f64326dbba65e5bf237913fafd2e0bdded1f36b"
+      "bundleSha256": "de9d8be00278714f39cc4cfb1c362323079f0a5f44c57fe784c30dfa9dcd1783"
     },
     {
       "id": "retro-80s",
@@ -959,7 +959,7 @@
         "demo": "demos/retro-80s/index.html",
         "entry": "entries/retro-80s.json"
       },
-      "bundleSha256": "bb68d8dc1fb14d701d933be35572995eb7fdd8e448e295e0a16766f025571d45"
+      "bundleSha256": "2a45c2aebc04da157ec62a2d905d7737af33e720779d01ff17c8c8dc5ff76cb3"
     },
     {
       "id": "pixel-world",
@@ -1035,7 +1035,7 @@
         "demo": "demos/pixel-world/index.html",
         "entry": "entries/pixel-world.json"
       },
-      "bundleSha256": "6c88af2b8abfaf3a807888e82be8a284b6f281d7774850cf875492cee9c54092"
+      "bundleSha256": "5a13902e26035b37e0471928fb0335767baaeeb1d9e0ec2d3675b4c807bb3d55"
     },
     {
       "id": "chatgpt-platform",
@@ -1114,7 +1114,7 @@
         "demo": "demos/chatgpt-platform/index.html",
         "entry": "entries/chatgpt-platform.json"
       },
-      "bundleSha256": "69ef063fd3de77c093575f66368d1154e01ed4ba9b4cd8fae332e4d58f8cde93"
+      "bundleSha256": "1ca5d05e3f737199a00996fbe2cf21830a42a78a32dce8840769882ba41e50a6"
     },
     {
       "id": "claude-platform",
@@ -1189,7 +1189,7 @@
         "demo": "demos/claude-platform/index.html",
         "entry": "entries/claude-platform.json"
       },
-      "bundleSha256": "ec07cd9a88448d0ebedd1fe636e0e1f89266499b7d79d2deb76dcbface120ead"
+      "bundleSha256": "1a5c86f0d9ca6b96ba758b8edf55bfd4e859ee8e3dd983cf55b973509b678b2c"
     },
     {
       "id": "qoder-platform",
@@ -1264,7 +1264,7 @@
         "demo": "demos/qoder-platform/index.html",
         "entry": "entries/qoder-platform.json"
       },
-      "bundleSha256": "4336de0dd7a59d89a89dff4164d94c4e1ee3a5e7ea5929f57f9b0a5a84ee7f1d"
+      "bundleSha256": "75104fcb37506d4e722d4e1b457061221031dc3e40f4562825da307f66dea6e6"
     },
     {
       "id": "genshin-world",
@@ -1337,7 +1337,7 @@
         "demo": "demos/genshin-world/index.html",
         "entry": "entries/genshin-world.json"
       },
-      "bundleSha256": "7f8fd52c4fc686151dd053d37783de68cdb0b81531ba35df3f1cd75ab0da6059"
+      "bundleSha256": "038912e3cf8c9ea7da03b26dc266f2ec90b322bf2905ea84cc6a970d5b308f26"
     },
     {
       "id": "arknights-world",
@@ -1411,7 +1411,7 @@
         "demo": "demos/arknights-world/index.html",
         "entry": "entries/arknights-world.json"
       },
-      "bundleSha256": "ace402a1efc8fcb49f0cced42c07efe24a7922d463f90d8aa9aa190dec09048f"
+      "bundleSha256": "f0ef50987294a107d87e569104ab411a9130aad04530c899428c729ea0408266"
     },
     {
       "id": "uma-musume",
@@ -1487,7 +1487,7 @@
         "demo": "demos/uma-musume/index.html",
         "entry": "entries/uma-musume.json"
       },
-      "bundleSha256": "ccafe13013523f92f4a0d2388ab35a87043bdb8cfa2a1cabb054e21204424bfc"
+      "bundleSha256": "6cb500f9d3cbacf695d39432f0c5edc812031fa380c391bca30a203b509edd4c"
     },
     {
       "id": "blue-archive",
@@ -1562,7 +1562,7 @@
         "demo": "demos/blue-archive/index.html",
         "entry": "entries/blue-archive.json"
       },
-      "bundleSha256": "b4a5a3eb962fa53d64f5c9e40f5c0b43d624a879b571d389db2d96c73f00e8e9"
+      "bundleSha256": "8ac037da95655de8fc74b96c9e9ccf11459c9156a2ab3496615e35a98ffc1160"
     },
     {
       "id": "monument-valley-game",
@@ -1641,7 +1641,7 @@
         "demo": "demos/monument-valley-game/index.html",
         "entry": "entries/monument-valley-game.json"
       },
-      "bundleSha256": "3302f95eb1fe44ede854ab368ceae8fd8b2e4d9e429d50a82c93babebc01f878"
+      "bundleSha256": "9d4b52b9612d310addf700e5cc7dfd4668ad841232cac3dec4b07d12b3674bf2"
     },
     {
       "id": "design-sight",
@@ -1716,7 +1716,7 @@
         "demo": "demos/design-sight/index.html",
         "entry": "entries/design-sight.json"
       },
-      "bundleSha256": "30ebfc39fea1392e82195e80e16a7f46c6d3dfda697306307f57d4e6d0e681b1"
+      "bundleSha256": "0cbac1d45bad97ec16556f20e0b683645e7b66c21de7a4ab4cf3165e3eda0848"
     },
     {
       "id": "mori-art-museum",
@@ -1790,7 +1790,7 @@
         "demo": "demos/mori-art-museum/index.html",
         "entry": "entries/mori-art-museum.json"
       },
-      "bundleSha256": "da0c8ee9770f3b8301f038e92b9dbc999d92802750c69720dc3f41aaba5f17d3"
+      "bundleSha256": "4778a03c9ead1b70e679aee1295b09eae83a2a1c831ce3294030668a9823d566"
     },
     {
       "id": "fuji-rock",
@@ -1865,7 +1865,7 @@
         "demo": "demos/fuji-rock/index.html",
         "entry": "entries/fuji-rock.json"
       },
-      "bundleSha256": "7530a72d9ea3f2cad8653da908f0ce020a6605a076b97f683e9b625a44839b43"
+      "bundleSha256": "da4f6afc6726482b4437b4fc0463d9129ec2056d3596890baf562fcc2aba0c03"
     },
     {
       "id": "rijksmuseum-art",
@@ -1934,7 +1934,7 @@
         "demo": "demos/rijksmuseum-art/index.html",
         "entry": "entries/rijksmuseum-art.json"
       },
-      "bundleSha256": "038853fbc71231015a2911af86c8d6043f00874643950633a77630eaad97a453"
+      "bundleSha256": "01132a67a1552741ad72d25e408a4124dc211be17f52100aed725f609a2bfd8e"
     },
     {
       "id": "met-museum",
@@ -2005,7 +2005,7 @@
         "demo": "demos/met-museum/index.html",
         "entry": "entries/met-museum.json"
       },
-      "bundleSha256": "481b2c7088c95bfce4e37600336993d11600dd09190840da9877b06e6d56801c"
+      "bundleSha256": "c560ddb4c6726b626d0bafe17e73ae44bb9c46b0e60063aa9d0136d44a8e621b"
     },
     {
       "id": "philharmonie-music",
@@ -2078,7 +2078,7 @@
         "demo": "demos/philharmonie-music/index.html",
         "entry": "entries/philharmonie-music.json"
       },
-      "bundleSha256": "c02e3e46134e29e518e3a360d156382288f6bfea6d3dc0d4e6442af0d9fbdd3e"
+      "bundleSha256": "228a9c23a6902f953cd8c3235c7164eb5716f8905c6824f34e8df055548002a6"
     },
     {
       "id": "google-material",
@@ -2162,7 +2162,7 @@
         "demo": "demos/google-material/index.html",
         "entry": "entries/google-material.json"
       },
-      "bundleSha256": "86713364eebfbfc6816020ee2d1cd230642d6a85473141853a7f30247c2bcb94"
+      "bundleSha256": "8fb67407a7f0768d3edf7fbe136860c4e62ed32dbcc33f2a83fb268105fdbb36"
     }
   ]
 }
