@@ -425,8 +425,8 @@
     {
       "path": "demos/blue-archive/character.html",
       "role": "source",
-      "sha256": "35be8d1518b2d78abded6b9748f804d37e852036e288cb9c47022d1f88a22e11",
-      "bytes": 4404
+      "sha256": "f95d2e05ca54c4f67270895de8128a3f8a46a7b0e2a2514a11627be198414ecc",
+      "bytes": 4452
     },
     {
       "path": "demos/blue-archive/fidelity.md",
@@ -437,14 +437,26 @@
     {
       "path": "demos/blue-archive/index.html",
       "role": "source",
-      "sha256": "11e623eb85db0e238143b9b962ec7a74d892e1a51be20f9fbbc7a0da9e5ba49c",
-      "bytes": 4776
+      "sha256": "dbbfc5b3353833b44cc69c05422c5dde174bf6fd2623eb50649b3cd87db0eff2",
+      "bytes": 4824
     },
     {
       "path": "demos/blue-archive/style.css",
       "role": "source",
       "sha256": "074f88af757e338453243427149e24c34a29d3bb0d076f533c45f3320f4ccf34",
       "bytes": 13453
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
     },
     {
       "path": "entries/blue-archive.json",

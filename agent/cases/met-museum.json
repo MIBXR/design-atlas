@@ -280,6 +280,18 @@
       "bytes": 8464
     },
     {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
+    },
+    {
       "path": "entries/met-museum.json",
       "role": "context",
       "sha256": "711d755661304cd15d6ed4a613570cf97a0b3b90f71a4235c1598c8550e823e6",

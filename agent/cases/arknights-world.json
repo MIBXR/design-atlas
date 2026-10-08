@@ -514,8 +514,8 @@
     {
       "path": "demos/arknights-world/index.html",
       "role": "source",
-      "sha256": "8de3d25c2f5907ec7763126947ddaed98bf585737c5d1ed28968a3a3de7eb721",
-      "bytes": 12683
+      "sha256": "48f53a206d2ae574d128c28ca9b6678d8892e6462c8f21cfe5131b26838a2ff3",
+      "bytes": 12734
     },
     {
       "path": "demos/arknights-world/particles.js",
@@ -534,6 +534,18 @@
       "role": "source",
       "sha256": "4b59e1a3c82e5c240ead0ac5d4377dabbb4eeb1bdb162e44e680b67ceb20c65f",
       "bytes": 22776
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
     },
     {
       "path": "entries/arknights-world.json",
