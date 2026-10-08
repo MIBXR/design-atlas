@@ -291,6 +291,18 @@
       "bytes": 7060
     },
     {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
+    },
+    {
       "path": "entries/rijksmuseum-art.json",
       "role": "context",
       "sha256": "bc1e810ba155acc1eeac1cbbab3291ce7a748c7aaa0fbdf43468da4d92742109",

@@ -453,6 +453,18 @@
       "bytes": 19037
     },
     {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
+    },
+    {
       "path": "entries/chatgpt-platform.json",
       "role": "context",
       "sha256": "e2b4e4e8dd6db1cf2935a7b7a6b768c20ef0882d5b4483885d511a5979a3cc05",

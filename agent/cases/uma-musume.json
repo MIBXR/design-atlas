@@ -377,14 +377,26 @@
     {
       "path": "demos/uma-musume/index.html",
       "role": "source",
-      "sha256": "a14ca36bc1ceae00f9b3e6e743c328e56b929ff95c4623bcf93818b1e4073a67",
-      "bytes": 8415
+      "sha256": "0fdf15428e757a1b293708421bbaeb79095c7a3ad79dd6ce78906892489a75d3",
+      "bytes": 8461
     },
     {
       "path": "demos/uma-musume/style.css",
       "role": "source",
       "sha256": "95c92cabb1f3f76b6dc3f8cfaf2fdbc1d11d65c457430cf61e671c8e0e548c4e",
       "bytes": 14745
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
     },
     {
       "path": "entries/uma-musume.json",

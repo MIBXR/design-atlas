@@ -364,8 +364,8 @@
     {
       "path": "demos/zelda-world/index.html",
       "role": "source",
-      "sha256": "f8977eae205a1c265f8d39747c3ce00e96ac62f4d19fe7831c8b2154b17f42fc",
-      "bytes": 4666
+      "sha256": "97d70e1236fc913c8934f71988e1c6123b65fa1fccc26c2afe5f3f46901fd7b7",
+      "bytes": 4713
     },
     {
       "path": "demos/zelda-world/script.js",
@@ -378,6 +378,18 @@
       "role": "source",
       "sha256": "cb66ed69866d4c0b69cc6ea166b64599abd193ef47b92fd3eaa4a565bb34a9e4",
       "bytes": 11957
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
     },
     {
       "path": "entries/zelda-world.json",

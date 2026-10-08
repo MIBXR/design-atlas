@@ -359,14 +359,26 @@
     {
       "path": "demos/fuji-rock/index.html",
       "role": "source",
-      "sha256": "e995f52c5fd8c87c78ba830130e17c3d42f1d406f3cb78888cc3371d4b615f9d",
-      "bytes": 8688
+      "sha256": "6717a81ec229d16a02cf68e390ab32bb6fbbeb34cdda037246488df5d306bef2",
+      "bytes": 8733
     },
     {
       "path": "demos/fuji-rock/style.css",
       "role": "source",
       "sha256": "d3207450694962cfd0214be5bc7c121c6a82664fde411c252c16cc51d469170c",
       "bytes": 11256
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
     },
     {
       "path": "entries/fuji-rock.json",

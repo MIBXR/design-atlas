@@ -406,8 +406,8 @@
     {
       "path": "demos/persona-kinetic/index.html",
       "role": "source",
-      "sha256": "48fdffa7267c9851e71606dd5f2ebd85a6c2f57797cedf9c77254803ab60fbeb",
-      "bytes": 5130
+      "sha256": "a5d5b23091d593f055b15fca08bca5f801eff118ae8c0789874a1f4c8b65e785",
+      "bytes": 5181
     },
     {
       "path": "demos/persona-kinetic/script.js",
@@ -420,6 +420,18 @@
       "role": "source",
       "sha256": "738acbddbc03a23cf2e054eecbec726627faf150dcb44577400e382ed0c6e14f",
       "bytes": 12170
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
     },
     {
       "path": "entries/persona-kinetic.json",

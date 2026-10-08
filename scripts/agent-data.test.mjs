@@ -39,7 +39,7 @@ function fixture() {
   write(entry.preview, Buffer.from([255, 216, 255, 217]));
   write('previews/mobile/fixture-case.jpg', Buffer.from([255, 216, 255, 217]));
   write('atlas.js', fs.readFileSync(path.join(defaultRoot, 'atlas.js')));
-  for (const name of ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.css', 'case-loading.js', 'theme.js', 'favicon.svg', 'vendor/LICENSES.txt']) write(name, '// fixture\n');
+  for (const name of ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.css', 'case-loading.js', 'theme.js', 'favicon.svg', 'document.html', 'document.js', 'vendor/LICENSES.txt']) write(name, '// fixture\n');
   return { root, entry, write, cleanup() {
     const relative = path.relative(testWork, root);
     assert.ok(relative && !relative.startsWith('..') && !path.isAbsolute(relative), 'Fixture cleanup must stay inside the test workspace');

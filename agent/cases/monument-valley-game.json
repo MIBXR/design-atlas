@@ -398,14 +398,26 @@
     {
       "path": "demos/monument-valley-game/index.html",
       "role": "source",
-      "sha256": "385962e69c935944e748f063aeab2802686cd8e0f4da620872fb9d8a232c9a44",
-      "bytes": 9118
+      "sha256": "d5de482b6d8a7eb1e7be0e5741dace71f79fa66613a4b08479775a90e8c113b8",
+      "bytes": 9174
     },
     {
       "path": "demos/monument-valley-game/style.css",
       "role": "source",
       "sha256": "98a956f84c6b25fd0259ebc0b47e5062e70fba9a77abf7042f5d3067ae6dd3e3",
       "bytes": 11515
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "6c1e66b5a735e4506227568cf721f3c363ae7976cc419f4096797347071af26b",
+      "bytes": 3718
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "80f28c06c15c3bc073b5239119ae35a9e86e9a0af9d586cf6cec45a8c1a8d9fd",
+      "bytes": 3789
     },
     {
       "path": "entries/monument-valley-game.json",
