@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { validateEntryPreviews } from './preview-validation.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const files=fs.readdirSync(path.join(root,'entries')).filter(x=>x.endsWith('.json'));
 const entries=files.map(file=>JSON.parse(fs.readFileSync(path.join(root,'entries',file),'utf8')));
@@ -21,12 +22,14 @@ for(const e of entries){
   if(!['fixed','system','manual','system-and-manual'].includes(e.themeBehavior?.mode)||!['light','dark','system'].includes(e.themeBehavior?.default)||!e.themeBehavior?.control||!e.themeBehavior?.designReason)fail(`${e.id}: invalid theme behavior`);
   if(!['none','background','video','external','interactive'].includes(e.soundBehavior?.kind)||!e.soundBehavior?.control||!e.soundBehavior?.interactionRole)fail(`${e.id}: invalid sound behavior`);
   if(!['产品','游戏/IP','经典风格','艺术/文化'].includes(e.category))fail(`${e.id}: invalid category`);
+  if(e.studyScope!==undefined&&(e.studyScope!=='visual-adaptation'||e.implementation!=='reference-study'))fail(`${e.id}: invalid study scope`);
   if(typeof e.prompt!=='string'||e.prompt.length<200)fail(`${e.id}: prompt too short`);
   if(!e.sources.some(x=>x.type==='实例'))fail(`${e.id}: no real example`);
   if(!e.sources.some(x=>['理论','规范'].includes(x.type)))fail(`${e.id}: no theory or standard`);
   sourceCount+=e.sources.length;
   for(const s of e.sources)if(!/^https:\/\//.test(s.url)||!s.note)fail(`${e.id}: invalid source`);
-  for(const key of ['demo','research',...(process.argv.includes('--require-previews')?['preview']:[])])if(!fs.existsSync(path.join(root,e[key])))fail(`${e.id}: missing ${e[key]}`);
+  for(const key of ['demo','research'])if(!fs.existsSync(path.join(root,e[key])))fail(`${e.id}: missing ${e[key]}`);
+  if(process.argv.includes('--require-previews'))try{validateEntryPreviews(root,e);}catch(error){fail(`${e.id}: ${error.message}`);}
   const demoPath=path.join(root,e.demo); if(!fs.existsSync(demoPath))continue;
   const html=fs.readFileSync(demoPath,'utf8');
   if(!/<meta[^>]+name=["']viewport["']/.test(html))fail(`${e.id}: missing viewport`);

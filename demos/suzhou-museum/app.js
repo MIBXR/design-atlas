@@ -1,0 +1,3 @@
+const reading=document.getElementById('reading');document.getElementById('open-reading').addEventListener('click',()=>reading.showModal());document.getElementById('close-reading').addEventListener('click',()=>reading.close());
+const sections=[...document.querySelectorAll('.chapter')];const links=[...document.querySelectorAll('.chapter-index a')];
+const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;links.forEach(link=>link.setAttribute('aria-current',String(link.hash==='#'+entry.target.id))) }},{threshold:.5});sections.forEach(section=>observer.observe(section));

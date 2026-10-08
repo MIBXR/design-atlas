@@ -65,7 +65,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "de272c57924dfe4c1617e5dfa43275a3de4f6e98b8e14916d08c488562da9c95"
+      "bundleSha256": "0483dd1f6f814b2674d487edd7e1cd7ce9e805cf99aec928881b725b1fd58d6a"
     }
   ]
 }

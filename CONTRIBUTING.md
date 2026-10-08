@@ -15,13 +15,15 @@
 
 ## 数据与文件
 
-终态文件包括 `entries/<id>.json`、`research/<id>.md`、`demos/<id>/`、`previews/<id>.jpg` 和 `previews/mobile/<id>.jpg`。标准预览来自实际浏览器，扩展名须匹配图片格式；素材清单包含本地字体、图像、音视频及必要的独立运行模块。
+终态文件包括 `entries/<id>.json`、`research/<id>.md`、`demos/<id>/`、`previews/<id>.jpg` 和 `previews/mobile/<id>.jpg`。标准预览来自实际浏览器：桌面为横向、手机为纵向，扩展名须匹配真实图片编码；检查两份预览的存在、尺寸与结构完整性，不强制精确像素宽度。素材清单包含本地字体、图像、音视频及必要的独立运行模块。
 
 条目的基础字段以 `scripts/check.mjs` 为准。`composition` 包含 color、typography、layout、imagery、shape、hierarchy、motion、coherence。`sources` 至少含真实实例与理论／规范，注明每条来源所支持的结论。
 
 `themeBehavior` 包含 `mode`（fixed / system / manual / system-and-manual）、`default`（light / dark / system）、`control` 和 `designReason`。`soundBehavior` 包含 `kind`（none / background / video / external / interactive）、`control` 和 `interactionRole`。这两项用于案例说明、比较及实验室配置；参考库显示主题与独立品牌Demo的主题分别管理。
 
 原站案例还需要 `implementation: "reference-study"`、`country`、`referenceUrl`、`capturedAt`（YYYY-MM-DD）、`fidelity`、`assetManifest`，可增加采集页面的语言／年度标签与原站标准预览。国别指具体机构或创作来源，不把经典理论强归为某国当前风格。
+
+以官方影像、宣传视觉等资料研究网页构成时，另标记 `studyScope: "visual-adaptation"`。标题、摘要、研究和复现范围需明确这是网页转译；来源中的视觉观察与本地新设计的点击／切换分别记录，不能把影像里的运动表述为官网交互。网页与生成索引会保留这个标记，详情与类型标签显示“官方影像网页转译”。这类内容仍按实际用途进入现有分类。
 
 经典风格练习的 `theoryVerifiedAt`（YYYY-MM-DD）记录归档时核验理论来源的日期；它保留已有页面显示的核验记录，不表示此后重新核验。未记录日期时明确显示“理论来源核验日期未记录”，不能用当前日期或固定默认日期补填。
 
@@ -49,7 +51,7 @@ Prompt应写结构、尺度、素材、关键状态及交接、音乐和主题�
 
 ## 验收与提交
 
-新增案例的同步链路是：完整资料写入 `entries/`、研究、Demo 与预览 → 拆巧思并复核共享机制 → `npm run build` → `npm run check` 与 `npm run test:agent` → 在功能分支提交、推送并提出PR → 以已验证提交运行 `npm run build:site` 与站点发布。构建扫描全部条目与巧思，同步人类目录、Prompt、Agent案例／巧思索引及完整包；检查会拒绝缺失提取、旧观察、旧索引和资料／文件哈希不一致。
+新增案例的同步链路是：完整资料写入 `entries/`、研究、Demo 与预览 → 拆巧思并复核共享机制 → 同步 README 画廊卡片、分类数字及相关比较研究 → `npm run build` → `npm run check` 与 `npm run test:agent` → 在功能分支提交、推送并提出PR → 以已验证提交运行 `npm run build:site` 与站点发布。构建扫描全部条目与巧思，同步人类目录、Prompt、Agent案例／巧思索引及完整包；检查会拒绝缺失提取、旧观察、旧索引和资料／文件哈希不一致。README 总数由构建生成，画廊介绍保持人工策展；检查要求每个案例在正确分类中恰有一张卡片，并有桌面预览、手机预览、研究、Prompt 与 Demo 链接。
 
 轻量 skill 新会话自动发现上游默认分支最新 SHA，随后固定该会话的资料版本。新增案例／巧思无需改动 skill 仓库；持续讨论中发现新内容需显式刷新。功能分支PR保持未合并时，也可以将该分支已推送的完整SHA发布到Site并用 skill 的 `--ref <同一完整SHA>` 验证；是否合入主干遵循用户授权。默认分支合入之后，skill 新会话才会自动发现该版本。数据 schema 或获取协议变化时同步更新 skill。
 

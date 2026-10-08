@@ -76,7 +76,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "e4adb9daf2e7200f1ba6260c7127a1d9bcbf56179c3a5b68bb0de514d0f461e8"
+      "bundleSha256": "6c9897970e623b7ae8032e65fd1d2430a615a8f5a3485e206a337dc7d97505fc"
     },
     {
       "id": "notion-editorial",
@@ -85,7 +85,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "0f0a2dd370ba64318000be73190a2291350e285f1a46955ddda3bc55fe7473f3"
+      "bundleSha256": "a6f17a3ae0f9c8e4ced0f7bc9bb38ebfaac275a3077b54ecc27c604b241ba25b"
     }
   ]
 }

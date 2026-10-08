@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "id": "palace-museum",
+  "entry": {
+    "category": "艺术/文化",
+    "country": "中国",
+    "implementation": "reference-study",
+    "capturedAt": "2026-10-09",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+      "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+      "interactionRole": "阅读、图像和目录操作承担信息引导。"
+    },
+    "id": "palace-museum",
+    "order": 30,
+    "title": "故宫 · 朱红建筑锚点与纸签目录",
+    "subtitle": "Architectural fragments and paper labels as cultural navigation",
+    "tags": [
+      "中国",
+      "故宫",
+      "古建筑",
+      "文物",
+      "朱红",
+      "文化专题",
+      "纸签",
+      "建筑目录"
+    ],
+    "summary": "探索页用朱红整面托起屋脊摄影与建筑名录，专题入口把器物和书画图像与半幅纸签并置。",
+    "accent": "#8c2927",
+    "background": "#ffffff",
+    "referenceUrl": "https://www.dpm.org.cn/Explore.html",
+    "edition": "2026-10-09；中文探索页；建筑、藏品与文化专题局部",
+    "principles": [
+      "从真实建筑局部建立文化识别，再让名称目录承担检索；不依赖无差别传统纹样。",
+      "专题图像负责感知，半幅浅纸签负责分类名称，避免文字直接压住复杂纹样。",
+      "金色只承担屋脊、少量题饰和边界，朱红大面与白色阅读区相互制约。"
+    ],
+    "productFocus": "让读者在建筑、藏品与文化专题间选择下一步，真实资料与服务仍由故宫官网提供。",
+    "interaction": [
+      "进入与连续浏览：探索页的建筑、藏品、典籍、历史、文物医院和文化专题按原生长页展开；本地缩减为建筑、藏品、专题三段。",
+      "浏览建筑区域：朱红底承托右下角屋脊摄影，建筑名称作为可点击目录，本地保留此构成并链接对应官方建筑。",
+      "选择文化专题：图像左半与右半浅纸签的竖排分类并置，点击进入器物、书画、文化等专题；本地保留三类入口。",
+      "本地藏品观察按钮打开原生dialog，关闭或Escape返回触发按钮；此辅助观察窗为原创教学补充。"
+    ],
+    "theme": "白色文档、朱红建筑面板、金色屋脊与浅纸签；标题采用本机中文衬线回退，操作采用无衬线。",
+    "constraints": [
+      "以2026-10-09中文探索页为单一快照，不把首页轮播或全景故宫的独立交互混为本页行为。",
+      "本地仅3段，不还原完整馆藏检索、全景、预约或账户。",
+      "实际屋脊PNG与专题缩略图保留原始字节及比例；图像权利归原机构/作者，不将古代文物的年代视为摄影开放许可。",
+      "源站专题有5类，本地选择3类；标题字号、布局尺度、字体回退为本地拟合。",
+      "手机建筑文字与屋脊分区，纸签保有文字名称；不得仅以背景图或颜色传达分类。"
+    ],
+    "useCases": [
+      "文化遗产机构门户",
+      "古建筑目录",
+      "文物专题与展览导航"
+    ],
+    "avoid": [
+      "不具备真实物件和内容的装饰式中国风落地页",
+      "需要持续监测实时预约状态的业务界面"
+    ],
+    "tokens": {
+      "palette": [
+        "#ffffff",
+        "#8c2927",
+        "#c1a56b",
+        "#efebde",
+        "#393830"
+      ],
+      "type": "本机STSong/SimSun衬线标题；Microsoft YaHei/PingFang SC正文与操作；不宣称原站字体被完整复用。",
+      "layout": "居中白底长文档 → 朱红建筑大面与屋脊局部 → 藏品图文对照 → 半幅纸签的竖向专题目录。",
+      "motion": "原生连续滚动、锚点返回、专题轻微悬停放大；本地观察dialog不制造章节动画。"
+    },
+    "composition": {
+      "color": "源端观察：白底上有朱红建筑大面、金色屋脊和淡纸色专题标签；本地拟合朱红#8c2927。",
+      "typography": "源端观察：中文文化标题与小型说明分层，专题类目为竖排；本地使用系统中文衬线与无衬线回退。",
+      "layout": "源端观察：探索页分段长文档，建筑大面板内左侧说明与名录、右下角裁切屋脊；本地1250px最大内容宽度为拟合。",
+      "imagery": "官方屋脊透明PNG、龙泉窑青釉盘缩略图与三张文化专题图本地化；不替换为虚构文物或无关纹样。",
+      "shape": "源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。",
+      "hierarchy": "建筑形象先建立地点识别，建筑名称与藏品入口承担选择，专题纸签组织文化对象。",
+      "motion": "源端探索页以原生长页与真实链接为主；本地专题缩放和观察窗为明确的教学补充。",
+      "coherence": "朱红/金/纸色分别对应建筑、文化细节与目录标签，装饰与文字入口的职责分开。"
+    },
+    "sources": [
+      {
+        "title": "故宫博物院 · 探索",
+        "url": "https://www.dpm.org.cn/Explore.html",
+        "type": "实例",
+        "note": "2026-10-09浏览器观察中文探索页到页尾及返回：朱红屋脊锚点、建筑目录、藏品区与半幅纸签专题。"
+      },
+      {
+        "title": "故宫博物院 · 相关数字平台",
+        "url": "https://www.dpm.org.cn/bottom/platform.html",
+        "type": "实例",
+        "note": "官方介绍数字文物库、全景故宫和名画记；用于说明各平台独立的业务与交互范围。"
+      },
+      {
+        "title": "W3C WAI · Non-text Content",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+        "type": "规范",
+        "note": "用于图像目的与可点击图像的文字替代；不表示官网已经全面符合规范。"
+      },
+      {
+        "title": "W3C WAI · Modal Dialog",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+        "type": "规范",
+        "note": "本地原创观察窗使用原生dialog、可见关闭、Escape和焦点归还。"
+      }
+    ],
+    "exercise": "替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。",
+    "prompt": "为【文化遗产机构】制作研究型目录，参考2026-10-09故宫中文探索页的建筑、藏品与文化专题局部。保持白底长文档，顶部简单机构导航，朱红大面板内左侧中文衬线标题、短说明与建筑名称索引，右下角用真实透明屋脊摄影锚定文化身份。随后以浅底图文对照介绍一件有明确记录的藏品，最后用矩形作品图像与右半幅纸签并置，纸签竖排分类且作为真实链接。金色限于文化细节和少量边界，系统中文字体回退明确；素材本地化并记录URL、尺寸、字节、hash与权利。正文原生滚动，不引入全屏转场、主题切换或背景音乐。手机让文字和建筑图像分区，标签保留可读名称；减少动态去除悬停缩放和滚动平滑。原生dialog只用于原创观察提示，支持Escape和焦点返回，交易预约及完整档案链接官方。",
+    "negativePrompt": "不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。",
+    "demo": "demos/palace-museum/index.html",
+    "preview": "previews/palace-museum.jpg",
+    "research": "research/palace-museum.md",
+    "fidelity": "demos/palace-museum/fidelity.md",
+    "assetManifest": "demos/palace-museum/assets-manifest.json"
+  },
+  "patternIds": [
+    "architectural-fragment-anchor",
+    "half-paper-category-label"
+  ],
+  "documents": [
+    {
+      "path": "research/palace-museum.md",
+      "role": "research",
+      "content": "# 故宫：从建筑局部到文化对象目录\n\n归档：**2026-10-09**，[中文探索页](https://www.dpm.org.cn/Explore.html)，单一快照。此案例研究建筑、藏品与文化专题三段；首页轮播、全景故宫、数字文物库是独立页面，不并入本地交互范围。\n\n## 可观察事实\n\n浏览器实访探索页并到达页尾、反向返回。白底内容框中的建筑区使用朱红大面，左侧是说明、太和殿等名称链接，右下角是琉璃瓦和脊兽的透明摄影局部。之后依次出现藏品、典籍、历史、文物医院和文化专题。页尾专题使用作品图像与右半幅浅色纸签，器物、书画等名称竖排。它们是可点击的真实目的地。[探索页](https://www.dpm.org.cn/Explore.html)\n\n这里的“中国设计”有具体内容来源：建筑尺度、屋顶细节、文物图像和中文分类共同建立识别，不是任意纹样或配色的集合。官网另将数字文物库、全景故宫、名画记和数字多宝阁列为不同平台，分别提供检索、全景、超清书画或三维物件的能力。[官方数字平台说明](https://www.dpm.org.cn/bottom/platform.html)\n\n## 本库解释与迁移\n\n屋脊只占章节一角，却把大面积朱红与真实建筑对象联系起来；名称目录继续承担精确选择。文化专题中，图像适合感知，纸签适合读字，因此把这两项职责分开。此解释来自对构成的分析，不表示原设计者公开陈述了相同理论。\n\n两项提取是“建筑局部锚定文化章节”和“图像与半幅纸签分类”。原生长页、浅色主题和简单目录链接已经由现有巧思覆盖，不按本品牌重复创建。\n\n## 当前实现与边界\n\n[Demo](../demos/palace-museum/index.html) 缩减为建筑、藏品、专题三段，使用官方公开屋脊 PNG、青釉盘缩略图和三张专题图。保留原始字节、比例和素材来源；字体采用本机中文衬线回退，标题、间距、朱红数值是本地拟合。建筑和专题链接回原站。藏品观察 dialog 是本地原创补充，不冒称官方藏品查看器。\n\n图像链接保留常显文字，装饰图像不进入 Tab 顺序，依据 [W3C 非文本内容说明](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)。本地原生 dialog 提供可见关闭、Escape 和焦点返回，参考 [WAI Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)。这些是迁移约束，不是对官网合规性的结论。\n\n观察范围未发现深浅切换、音频或 BGM 控制；本地固定白色正文与朱红建筑面板，不增加声音。官网手机、触屏行为与全部外链业务未完整实访。手机本地重排和减少动态规则见源码；视觉验收以实际浏览器为准。[复现范围](../demos/palace-museum/fidelity.md) · [素材清单](../demos/palace-museum/assets-manifest.json)\n",
+      "sha256": "d60f8a71d6087ce1ef1aecc433c6e581b5aae04fd2419e61b00906bf85969cf7",
+      "bytes": 2916
+    },
+    {
+      "path": "prompts/palace-museum.md",
+      "role": "prompt",
+      "content": "# 故宫 · 朱红建筑锚点与纸签目录 · 复用 Prompt\n\n由 [结构化案例](../entries/palace-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/palace-museum.md)。\n\n## 正向 Prompt\n\n为【文化遗产机构】制作研究型目录，参考2026-10-09故宫中文探索页的建筑、藏品与文化专题局部。保持白底长文档，顶部简单机构导航，朱红大面板内左侧中文衬线标题、短说明与建筑名称索引，右下角用真实透明屋脊摄影锚定文化身份。随后以浅底图文对照介绍一件有明确记录的藏品，最后用矩形作品图像与右半幅纸签并置，纸签竖排分类且作为真实链接。金色限于文化细节和少量边界，系统中文字体回退明确；素材本地化并记录URL、尺寸、字节、hash与权利。正文原生滚动，不引入全屏转场、主题切换或背景音乐。手机让文字和建筑图像分区，标签保留可读名称；减少动态去除悬停缩放和滚动平滑。原生dialog只用于原创观察提示，支持Escape和焦点返回，交易预约及完整档案链接官方。\n\n## 负向约束\n\n不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。\n\n## 制作约束\n\n- 以2026-10-09中文探索页为单一快照，不把首页轮播或全景故宫的独立交互混为本页行为。\n- 本地仅3段，不还原完整馆藏检索、全景、预约或账户。\n- 实际屋脊PNG与专题缩略图保留原始字节及比例；图像权利归原机构/作者，不将古代文物的年代视为摄影开放许可。\n- 源站专题有5类，本地选择3类；标题字号、布局尺度、字体回退为本地拟合。\n- 手机建筑文字与屋脊分区，纸签保有文字名称；不得仅以背景图或颜色传达分类。\n\n## 检查方法\n\n替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。\n\n[查看 Demo](../demos/palace-museum/index.html) · [返回浏览案例](../cases.html#style/palace-museum)\n",
+      "sha256": "9f40bd7f16fc6b3894a7d9017ac65ace3a14ffad7e4a0b48d91344eff85fd0f0",
+      "bytes": 2171
+    },
+    {
+      "path": "demos/palace-museum/fidelity.md",
+      "role": "fidelity",
+      "content": "# 故宫：当前实现范围\n\n采集：**2026-10-09**，[中文探索页](https://www.dpm.org.cn/Explore.html)。固定快照；本地选建筑、藏品和文化专题三段。\n\n| 触发 | 原站观察 | 本地对应与边界 |\n|---|---|---|\n| 首次进入 | 白底探索目录，朱红建筑面内有名录与右下屋脊摄影。 | 保留构成和实际透明 PNG；标题文案、字号、系统字体与朱红数值为本地拟合。 |\n| 上下与反向浏览 | 建筑、藏品、典籍、历史、文物医院、文化专题为原生长页。 | 缩为三段，原生文档流和章节锚点；不加全屏转场。 |\n| 选择建筑名称 | 真实链接进入建筑记录。 | 三个建筑名称与目录链接回官方，不复制建筑业务。 |\n| 选择文化专题 | 作品图与右半浅纸签、竖排类目并置，可进入五类专题。 | 保留三类与实际公开图像；轻微 hover/focus 缩放是本地补充。 |\n| 观察藏品 | 原站藏品入口可进入正式记录。 | 青釉盘观察 dialog 是教学补充，关闭/Escape 归还焦点，并提供官方完整记录。 |\n| 手机与减少动态 | 原站手机与触屏未完整实访。 | 本地文字与屋脊分区，保留可读纸签；减少动态取消平滑和缩放过渡。 |\n\n固定浅色、朱红建筑区与图像原色；观察范围无独立声音控制，本地不添加声音。官方公开图像保留原字节和尺寸；字体/品牌文字为本机回退，不声称像素级或整站还原。图像归属与 hash 见[素材清单](assets-manifest.json)。\n\n本地在 1440px 桌面和 390px 手机实际浏览器验收：素材可加载、无整页横向溢出，键盘 Enter 可打开观察窗，关闭/Escape 可返回。桌面与手机标准预览均来自实际浏览器。公共素材映射、回退和缓存作为异步依赖接入，不增加阻断式开场。\n\n[研究与来源](../../research/palace-museum.md) · [Demo](index.html)\n",
+      "sha256": "6eb8e30bdd70d5993096bb0333ef8eb16b677457398048dc8931cf1d07cc474c",
+      "bytes": 1942
+    },
+    {
+      "path": "demos/palace-museum/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"palace-museum\",\n  \"sourcePage\": \"https://www.dpm.org.cn/Explore.html\",\n  \"capturedAt\": \"2026-10-09\",\n  \"scope\": \"公开官网少量图像的局部设计研究；原始字节、比例与权利信息保留。无商业授权或开放许可承诺。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/roof-detail.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715141675RCjgbhtjG1.png\",\n      \"width\": 940,\n      \"height\": 549,\n      \"purpose\": \"探索页建筑区域屋脊摄影与透明裁切\",\n      \"format\": \"png\",\n      \"bytes\": 517848,\n      \"sha256\": \"f3b8944e97b0b252eb41fdc53e90ff2318f894e5101697fe33a8cf875a9d1816\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/topic-vessel.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715149431vmHupLTDf1.png\",\n      \"width\": 236,\n      \"height\": 351,\n      \"purpose\": \"文化专题器物图像\",\n      \"format\": \"png\",\n      \"bytes\": 145895,\n      \"sha256\": \"fd0c62870839305bca58bc72620b12cc5c147853981463a7d56113c6eefe92d6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/topic-painting.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591733KtyaXluWQ1.jpg\",\n      \"width\": 280,\n      \"height\": 367,\n      \"purpose\": \"文化专题书画图像\",\n      \"format\": \"jpg\",\n      \"bytes\": 48598,\n      \"sha256\": \"735e075630bb24fa639c42b2676628853f7535d7f5a1bb0be70b1009e983fd56\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/topic-culture.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591734uLENWfrbZ1.jpg\",\n      \"width\": 239,\n      \"height\": 352,\n      \"purpose\": \"文化专题文化图像\",\n      \"format\": \"jpg\",\n      \"bytes\": 41034,\n      \"sha256\": \"73122920b3a676d0f26c3f243370f7255431602ce676737d839acb2d6fe17927\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/collection.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2025/04/22/%E6%8E%A2%E7%B4%A2-%E8%97%8F%E5%93%81%E6%8E%A8%E8%8D%90315x240%E9%BE%99%E6%B3%89%E7%AA%91%E5%8D%B0%E9%BE%99%E7%BA%B9%E9%9D%92%E9%87%89%E7%9B%98-AyeAuFerL313.jpg\",\n      \"purpose\": \"龙泉窑印龙纹青釉盘官网缩略图\",\n      \"width\": 315,\n      \"height\": 240,\n      \"format\": \"jpg\",\n      \"bytes\": 43256,\n      \"sha256\": \"2ec9ada14a99aebca9c153566d650c4c1eeca30e6eb068bec3c79d7fbde4b88a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸，CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人，官网公开缩略图的局部设计研究引用，不作商业授权或开放许可承诺。\"\n    }\n  ],\n  \"sharedDependencies\": [\n    {\n      \"path\": \"asset-sources.js\",\n      \"purpose\": \"公共素材映射，由主库固定提交SHA生成；不是官网代码。\"\n    },\n    {\n      \"path\": \"asset-runtime.js\",\n      \"purpose\": \"公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。\"\n    },\n    {\n      \"path\": \"asset-cache.js\",\n      \"purpose\": \"公共媒体缓存入口，独立异步加载，不阻断静态内容。\"\n    },\n    {\n      \"path\": \"asset-cache-worker.js\",\n      \"purpose\": \"asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。\"\n    }\n  ]\n}\n",
+      "sha256": "105f4367a74560223378bb25c77ef368cc9e548c9fbde555fdbe36d479df19ff",
+      "bytes": 4460
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/palace-museum/app.js",
+      "role": "source",
+      "sha256": "9f4ff3680bb2e6156810ea61ed15d9955f1c8ebe21b2df3f19c74fe952df1c85",
+      "bytes": 248
+    },
+    {
+      "path": "demos/palace-museum/assets-manifest.json",
+      "role": "context",
+      "sha256": "105f4367a74560223378bb25c77ef368cc9e548c9fbde555fdbe36d479df19ff",
+      "bytes": 4460
+    },
+    {
+      "path": "demos/palace-museum/assets/collection.jpg",
+      "role": "asset",
+      "sha256": "2ec9ada14a99aebca9c153566d650c4c1eeca30e6eb068bec3c79d7fbde4b88a",
+      "bytes": 43256
+    },
+    {
+      "path": "demos/palace-museum/assets/roof-detail.png",
+      "role": "asset",
+      "sha256": "f3b8944e97b0b252eb41fdc53e90ff2318f894e5101697fe33a8cf875a9d1816",
+      "bytes": 517848
+    },
+    {
+      "path": "demos/palace-museum/assets/topic-culture.jpg",
+      "role": "asset",
+      "sha256": "73122920b3a676d0f26c3f243370f7255431602ce676737d839acb2d6fe17927",
+      "bytes": 41034
+    },
+    {
+      "path": "demos/palace-museum/assets/topic-painting.jpg",
+      "role": "asset",
+      "sha256": "735e075630bb24fa639c42b2676628853f7535d7f5a1bb0be70b1009e983fd56",
+      "bytes": 48598
+    },
+    {
+      "path": "demos/palace-museum/assets/topic-vessel.png",
+      "role": "asset",
+      "sha256": "fd0c62870839305bca58bc72620b12cc5c147853981463a7d56113c6eefe92d6",
+      "bytes": 145895
+    },
+    {
+      "path": "demos/palace-museum/fidelity.md",
+      "role": "context",
+      "sha256": "6eb8e30bdd70d5993096bb0333ef8eb16b677457398048dc8931cf1d07cc474c",
+      "bytes": 1942
+    },
+    {
+      "path": "demos/palace-museum/index.html",
+      "role": "source",
+      "sha256": "da3ef94419b31597afafb5466c3348255cd4282fe9cee6e5b58e8cd18bf8b600",
+      "bytes": 4452
+    },
+    {
+      "path": "demos/palace-museum/style.css",
+      "role": "source",
+      "sha256": "3f1fad19fbc4160256f905b49c1d0e36e39f77b88218559b47120a7d89298253",
+      "bytes": 4838
+    },
+    {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
+      "bytes": 4329
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
+    },
+    {
+      "path": "entries/palace-museum.json",
+      "role": "context",
+      "sha256": "05bed65848489cbf9321985eecc5d87f8c2571feb3a004eabc26012847eacf78",
+      "bytes": 7740
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "dc26891beb1bbf6fa227594bc248be56cf11971433fcaef7d0ab1a9353dcacbf",
+      "bytes": 256
+    },
+    {
+      "path": "previews/mobile/palace-museum.jpg",
+      "role": "preview",
+      "sha256": "fe1e7a51d8f4ff549f533c616330be10df47f4734afb66a659bf429b4b65fd62",
+      "bytes": 37400
+    },
+    {
+      "path": "previews/palace-museum.jpg",
+      "role": "preview",
+      "sha256": "f5f571ad999072c2b935c5e7ce78bb57dd7aae16607b4972c57bd5c9d1732f17",
+      "bytes": 98624
+    },
+    {
+      "path": "prompts/palace-museum.md",
+      "role": "context",
+      "sha256": "9f40bd7f16fc6b3894a7d9017ac65ace3a14ffad7e4a0b48d91344eff85fd0f0",
+      "bytes": 2171
+    },
+    {
+      "path": "research/palace-museum.md",
+      "role": "context",
+      "sha256": "d60f8a71d6087ce1ef1aecc433c6e581b5aae04fd2419e61b00906bf85969cf7",
+      "bytes": 2916
+    },
+    {
+      "path": "site-footer.css",
+      "role": "source",
+      "sha256": "c02e4d66015d205b9e82b143085aafdeae707b1df4feb734df69a129d8c34840",
+      "bytes": 3146
+    },
+    {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
+      "bytes": 14852
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
+      "bytes": 4447
+    },
+    {
+      "path": "site-typography.css",
+      "role": "source",
+      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
+      "bytes": 15208
+    },
+    {
+      "path": "theme-control.css",
+      "role": "source",
+      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
+      "bytes": 2236
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "a58190fc01230d486eecaa99264bf132ba127d68918131a6f2f4798fb2e2cadf",
+      "bytes": 2716
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=palace-museum\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源端观察：白底上有朱红建筑大面、金色屋脊和淡纸色专题标签；本地拟合朱红#8c2927。</dd></div><div class=\"\"><dt>字体排版</dt><dd>源端观察：中文文化标题与小型说明分层，专题类目为竖排；本地使用系统中文衬线与无衬线回退。</dd></div><div class=\"\"><dt>布局留白</dt><dd>源端观察：探索页分段长文档，建筑大面板内左侧说明与名录、右下角裁切屋脊；本地1250px最大内容宽度为拟合。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方屋脊透明PNG、龙泉窑青釉盘缩略图与三张文化专题图本地化；不替换为虚构文物或无关纹样。</dd></div><div class=\"\"><dt>线条形状</dt><dd>源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。</dd></div><div class=\"\"><dt>信息层级</dt><dd>建筑形象先建立地点识别，建筑名称与藏品入口承担选择，专题纸签组织文化对象。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>源端探索页以原生长页与真实链接为主；本地专题缩放和观察窗为明确的教学补充。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>朱红/金/纸色分别对应建筑、文化细节与目录标签，装饰与文字入口的职责分开。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>从真实建筑局部建立文化识别，再让名称目录承担检索；不依赖无差别传统纹样。</li><li>专题图像负责感知，半幅浅纸签负责分类名称，避免文字直接压住复杂纹样。</li><li>金色只承担屋脊、少量题饰和边界，朱红大面与白色阅读区相互制约。</li></ul><h3>怎样凸显产品重点</h3><p>让读者在建筑、藏品与文化专题间选择下一步，真实资料与服务仍由故宫官网提供。</p><h3>主题与情绪</h3><p>白色文档、朱红建筑面板、金色屋脊与浅纸签；标题采用本机中文衬线回退，操作采用无衬线。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入与连续浏览：探索页的建筑、藏品、典籍、历史、文物医院和文化专题按原生长页展开；本地缩减为建筑、藏品、专题三段。</li><li>浏览建筑区域：朱红底承托右下角屋脊摄影，建筑名称作为可点击目录，本地保留此构成并链接对应官方建筑。</li><li>选择文化专题：图像左半与右半浅纸签的竖排分类并置，点击进入器物、书画、文化等专题；本地保留三类入口。</li><li>本地藏品观察按钮打开原生dialog，关闭或Escape返回触发按钮；此辅助观察窗为原创教学补充。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。</p><p>固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。</p><p>阅读、图像和目录操作承担信息引导。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>以2026-10-09中文探索页为单一快照，不把首页轮播或全景故宫的独立交互混为本页行为。</li><li>本地仅3段，不还原完整馆藏检索、全景、预约或账户。</li><li>实际屋脊PNG与专题缩略图保留原始字节及比例；图像权利归原机构/作者，不将古代文物的年代视为摄影开放许可。</li><li>源站专题有5类，本地选择3类；标题字号、布局尺度、字体回退为本地拟合。</li><li>手机建筑文字与屋脊分区，纸签保有文字名称；不得仅以背景图或颜色传达分类。</li></ul><h3>适合</h3><p>文化遗产机构门户 / 古建筑目录 / 文物专题与展览导航</p><h3>谨慎使用</h3><p>不具备真实物件和内容的装饰式中国风落地页 / 需要持续监测实时预约状态的业务界面</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#8c2927\"></i>#8c2927</span><span class=\"swatch\"><i style=\"background:#c1a56b\"></i>#c1a56b</span><span class=\"swatch\"><i style=\"background:#efebde\"></i>#efebde</span><span class=\"swatch\"><i style=\"background:#393830\"></i>#393830</span></div><p><b>字体</b> · 本机STSong/SimSun衬线标题；Microsoft YaHei/PingFang SC正文与操作；不宣称原站字体被完整复用。<br><b>布局</b> · 居中白底长文档 → 朱红建筑大面与屋脊局部 → 藏品图文对照 → 半幅纸签的竖向专题目录。<br><b>动效</b> · 原生连续滚动、锚点返回、专题轻微悬停放大；本地观察dialog不制造章节动画。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为【文化遗产机构】制作研究型目录，参考2026-10-09故宫中文探索页的建筑、藏品与文化专题局部。保持白底长文档，顶部简单机构导航，朱红大面板内左侧中文衬线标题、短说明与建筑名称索引，右下角用真实透明屋脊摄影锚定文化身份。随后以浅底图文对照介绍一件有明确记录的藏品，最后用矩形作品图像与右半幅纸签并置，纸签竖排分类且作为真实链接。金色限于文化细节和少量边界，系统中文字体回退明确；素材本地化并记录URL、尺寸、字节、hash与权利。正文原生滚动，不引入全屏转场、主题切换或背景音乐。手机让文字和建筑图像分区，标签保留可读名称；减少动态去除悬停缩放和滚动平滑。原生dialog只用于原创观察提示，支持Escape和焦点返回，交易预约及完整档案链接官方。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。</p></details><h3>改造练习</h3><p>替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.dpm.org.cn/Explore.html\" target=\"_blank\" rel=\"noopener noreferrer\">故宫博物院 · 探索 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-09浏览器观察中文探索页到页尾及返回：朱红屋脊锚点、建筑目录、藏品区与半幅纸签专题。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.dpm.org.cn/bottom/platform.html\" target=\"_blank\" rel=\"noopener noreferrer\">故宫博物院 · 相关数字平台 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>官方介绍数字文物库、全景故宫和名画记；用于说明各平台独立的业务与交互范围。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Non-text Content <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>用于图像目的与可点击图像的文字替代；不表示官网已经全面符合规范。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Modal Dialog <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>本地原创观察窗使用原生dialog、可见关闭、Escape和焦点归还。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fpalace-museum.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "fef4b3a34c83aa881b6493482a73e1d69e277b6757c00bec90688f34e52987e9",
+    "bytes": 8739
+  }
+}

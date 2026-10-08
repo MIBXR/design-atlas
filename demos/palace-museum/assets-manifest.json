@@ -1,0 +1,96 @@
+{
+  "brand": "palace-museum",
+  "sourcePage": "https://www.dpm.org.cn/Explore.html",
+  "capturedAt": "2026-10-09",
+  "scope": "公开官网少量图像的局部设计研究；原始字节、比例与权利信息保留。无商业授权或开放许可承诺。",
+  "assets": [
+    {
+      "file": "assets/roof-detail.png",
+      "sourceUrl": "https://img.dpm.org.cn/Uploads/image/2024/05/08/1715141675RCjgbhtjG1.png",
+      "width": 940,
+      "height": 549,
+      "purpose": "探索页建筑区域屋脊摄影与透明裁切",
+      "format": "png",
+      "bytes": 517848,
+      "sha256": "f3b8944e97b0b252eb41fdc53e90ff2318f894e5101697fe33a8cf875a9d1816",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/topic-vessel.png",
+      "sourceUrl": "https://img.dpm.org.cn/Uploads/image/2024/05/08/1715149431vmHupLTDf1.png",
+      "width": 236,
+      "height": 351,
+      "purpose": "文化专题器物图像",
+      "format": "png",
+      "bytes": 145895,
+      "sha256": "fd0c62870839305bca58bc72620b12cc5c147853981463a7d56113c6eefe92d6",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/topic-painting.jpg",
+      "sourceUrl": "https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591733KtyaXluWQ1.jpg",
+      "width": 280,
+      "height": 367,
+      "purpose": "文化专题书画图像",
+      "format": "jpg",
+      "bytes": 48598,
+      "sha256": "735e075630bb24fa639c42b2676628853f7535d7f5a1bb0be70b1009e983fd56",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/topic-culture.jpg",
+      "sourceUrl": "https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591734uLENWfrbZ1.jpg",
+      "width": 239,
+      "height": 352,
+      "purpose": "文化专题文化图像",
+      "format": "jpg",
+      "bytes": 41034,
+      "sha256": "73122920b3a676d0f26c3f243370f7255431602ce676737d839acb2d6fe17927",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/collection.jpg",
+      "sourceUrl": "https://img.dpm.org.cn/Uploads/image/2025/04/22/%E6%8E%A2%E7%B4%A2-%E8%97%8F%E5%93%81%E6%8E%A8%E8%8D%90315x240%E9%BE%99%E6%B3%89%E7%AA%91%E5%8D%B0%E9%BE%99%E7%BA%B9%E9%9D%92%E9%87%89%E7%9B%98-AyeAuFerL313.jpg",
+      "purpose": "龙泉窑印龙纹青釉盘官网缩略图",
+      "width": 315,
+      "height": 240,
+      "format": "jpg",
+      "bytes": 43256,
+      "sha256": "2ec9ada14a99aebca9c153566d650c4c1eeca30e6eb068bec3c79d7fbde4b88a",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸，CSS按比例显示。",
+      "copyright": "故宫博物院及原图权利人，官网公开缩略图的局部设计研究引用，不作商业授权或开放许可承诺。"
+    }
+  ],
+  "sharedDependencies": [
+    {
+      "path": "asset-sources.js",
+      "purpose": "公共素材映射，由主库固定提交SHA生成；不是官网代码。"
+    },
+    {
+      "path": "asset-runtime.js",
+      "purpose": "公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。"
+    },
+    {
+      "path": "asset-cache.js",
+      "purpose": "公共媒体缓存入口，独立异步加载，不阻断静态内容。"
+    },
+    {
+      "path": "asset-cache-worker.js",
+      "purpose": "asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。"
+    }
+  ]
+}

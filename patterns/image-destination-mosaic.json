@@ -1,0 +1,66 @@
+{
+  "id": "image-destination-mosaic",
+  "title": "多尺度图像目的地目录",
+  "category": "内容组织",
+  "summary": "让每张图像直接成为进入一类内容的窗口。",
+  "mechanism": "横竖比例不同的图像用窄间隙组成矩阵，常显类别名称；每张图像连到一个明确目的地，不再依赖重复的卡片说明和CTA。",
+  "trigger": "浏览、聚焦或选择机构目的地",
+  "effect": "图像保持文化内容的辨识度，选择目标在观看时即可明确。",
+  "useCases": [
+    "馆藏、展览、课堂并行的文化门户",
+    "目的地数量有限的城市机构目录"
+  ],
+  "avoid": [
+    "没有对应目的地的装饰图片墙",
+    "类别名仅在悬停时出现"
+  ],
+  "constraints": [
+    "尺寸来自图像比例和内容关系，不能仅按面积暗示用户没有被告知的业务权重。",
+    "手机重排仍遵循逻辑DOM顺序，名称常显且整张入口可聚焦。",
+    "原站9个目的地缩为本地6项；实际素材与裁切范围在案例中说明。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "此条的职责是目的地导航，产品Bento的能力面积层级可以另行组合。两套目录并置时避免一个图片链接同时承担多个不明确目标。",
+    "pairsWellWith": [
+      "mixed-ratio-archive-columns",
+      "photo-edge-text-contrast"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "每张图像使用单一原生链接，常显文本给出名称；图片空alt避免名称重复朗读，聚焦反馈覆盖整个入口。",
+    "reducedMotion": "取消图片悬停缩放，目录几何关系、文字和所有链接保持可用。"
+  },
+  "parameters": [
+    {
+      "name": "本地矩阵",
+      "value": "桌面4列 / 手机2列",
+      "note": "根据官网第3章图像目录拟合，保留局部横竖比例，不是原站源码声明。"
+    },
+    {
+      "name": "本地间隙",
+      "value": "8px",
+      "note": "本地拟合窄白缝；非中国博物馆网站统一规范。"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「多尺度图像目的地目录」。横竖比例不同的图像用窄间隙组成矩阵，常显类别名称；每张图像连到一个明确目的地，不再依赖重复的卡片说明和CTA。 触发：浏览、聚焦或选择机构目的地。可见结果：图像保持文化内容的辨识度，选择目标在观看时即可明确。适用：馆藏、展览、课堂并行的文化门户、目的地数量有限的城市机构目录。尺寸来自图像比例和内容关系，不能仅按面积暗示用户没有被告知的业务权重。 手机重排仍遵循逻辑DOM顺序，名称常显且整张入口可聚焦。 原站9个目的地缩为本地6项；实际素材与裁切范围在案例中说明。 键盘：每张图像使用单一原生链接，常显文本给出名称；图片空alt避免名称重复朗读，聚焦反馈覆盖整个入口。 减少动态：取消图片悬停缩放，目录几何关系、文字和所有链接保持可用。 组合边界：此条的职责是目的地导航，产品Bento的能力面积层级可以另行组合。两套目录并置时避免一个图片链接同时承担多个不明确目标。",
+  "sources": [
+    {
+      "caseId": "suzhou-museum",
+      "locator": "entries/suzhou-museum.json#interaction/1",
+      "observation": "图像瓦片直接进入资讯、云课堂、馆藏、展览、文创和建筑美图，类别名称在图像边缘常显；本地保留六个入口并链接官方目的地。",
+      "evidence": "adapted",
+      "referenceUrl": "https://www.szmuseum.com/Home/Index#page3",
+      "capturedAt": "2026-10-09"
+    }
+  ],
+  "sourceFiles": [
+    "entries/suzhou-museum.json",
+    "research/suzhou-museum.md",
+    "demos/suzhou-museum/fidelity.md",
+    "demos/suzhou-museum/index.html",
+    "demos/suzhou-museum/style.css",
+    "demos/suzhou-museum/app.js"
+  ]
+}

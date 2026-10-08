@@ -1,0 +1,67 @@
+{
+  "id": "vertical-media-spine",
+  "title": "竖向类别书脊与横向媒体",
+  "category": "内容组织",
+  "summary": "让类别像书脊一样固定在媒体边缘，编号和正文完成同一模块。",
+  "mechanism": "把短类别名称沿媒体侧边竖向排布，横向图像占主面积，下方编号与说明共用对齐边界；方向差提供归属线索而不是额外装饰。",
+  "trigger": "呈现某一类别的图像/影片资料模块",
+  "effect": "大图、类别、编号与说明被读作同一资料单元。",
+  "useCases": [
+    "技术知识媒体",
+    "展览/档案图像说明",
+    "多章节作品资料"
+  ],
+  "avoid": [
+    "长句正文旋转90度",
+    "书脊挤压手机媒体宽度"
+  ],
+  "constraints": [
+    "竖向书脊只放简短类别，完整释义在正常方向文字中提供。",
+    "图像维持比例，类别与编号不覆盖关键信息；手机可缩小书脊或移到上方。",
+    "此条抽取构成，播放控制另用实际媒体语义实现。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "书脊标类别，图下注释解释内容；两者可独立学习但共用媒体边界。不可把书脊当全页主导航。",
+    "pairsWellWith": [
+      "artwork-caption-separation",
+      "aligned-metadata-rows"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "纯装饰书脊aria-hidden，类别在可读标题/说明中重复；媒体按钮保留正常名称和键盘控制。",
+    "reducedMotion": "构成本身静态；若播放影片，另提供暂停并保留静态封面。"
+  },
+  "parameters": [
+    {
+      "name": "媒体比例",
+      "value": "1600×900 / 16:9",
+      "note": "本次官方静态图原尺寸；其他任务按真实素材比例重新设计。"
+    },
+    {
+      "name": "本地书脊宽度",
+      "value": "105px桌面 / 44px手机",
+      "note": "源码拟合，非原站测量值。"
+    }
+  ],
+  "prompt": "把一幅横向媒体整理为有类别归属的资料模块：短类别放在左侧竖向书脊，大图保留原比例，图下排列编号、标题和正常方向说明，边界与对齐保持一致。竖向字只承担类别，不放长句；标题中重复类别含义，装饰书脊aria-hidden。手机缩小或移上书脊，保持图像可读宽度。若媒体是影片，播放/暂停另用可键盘操作控件，减少动态可阅读静态封面。颜色和宽度按新任务验证，不把本地拟合冒充源站参数。",
+  "sources": [
+    {
+      "caseId": "endfield-industrial",
+      "locator": "entries/endfield-industrial.json#/principles/1",
+      "observation": "源端集成工业区：竖向AIC类别书脊紧邻横向媒体，编号和说明置于同一模块下方；用文字朝向和共同边界标出媒体所属类别。",
+      "evidence": "observed",
+      "referenceUrl": "https://endfield.hypergryph.com/",
+      "capturedAt": "2026-10-09"
+    }
+  ],
+  "sourceFiles": [
+    "entries/endfield-industrial.json",
+    "research/endfield-industrial.md",
+    "demos/endfield-industrial/fidelity.md",
+    "demos/endfield-industrial/index.html",
+    "demos/endfield-industrial/style.css",
+    "demos/endfield-industrial/app.js"
+  ]
+}

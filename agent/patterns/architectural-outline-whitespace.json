@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "architectural-outline-whitespace",
+  "pattern": {
+    "id": "architectural-outline-whitespace",
+    "title": "黑灰框线与白色空间",
+    "category": "视觉构成",
+    "summary": "从真实建筑边饰中提取结构，让留白继续作为空间。",
+    "mechanism": "用少量黑灰直线界定白色表面，保留大块空白与真实建筑摄影；框线说明结构而不是在每个组件上重复装饰。",
+    "trigger": "阅读建筑说明或相关文化章节",
+    "effect": "深色边饰与浅色空间建立清楚轮廓，地域识别保持与真实建筑的联系。",
+    "useCases": [
+      "建筑文化、现代博物馆与空间介绍",
+      "有明确建筑构成依据的文化页面"
+    ],
+    "avoid": [
+      "只凭国别为任何页面强加黑白几何框",
+      "为复制建筑轮廓遮住文字和图像"
+    ],
+    "constraints": [
+      "先用真实建筑或官方说明支持色彩/结构来源，网页迁移应标为解释。",
+      "框线只在需要说明空间的区域出现，不把所有按钮卡片围成同样粗框。",
+      "本地观察组件为原创；原站没有此框线组件的现场证据。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "框线是对苏博深灰边饰/粉墙关系的局部迁移。与真实摄影组合让来源可辨，不能取代图像目录和机构内容。",
+      "pairsWellWith": [
+        "editorial-alignment-grid",
+        "image-destination-mosaic"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "框线是CSS装饰，不进入Tab；保留语义标题和正常文本阅读，内部操作焦点可见。",
+      "reducedMotion": "静态结构无需动画；不为表现移步换景强制平移正文或自动改动视角。"
+    },
+    "parameters": [
+      {
+        "name": "本地结构框线",
+        "value": "7px / #3d4443",
+        "note": "原创教学选择，非官网组件或建筑材料的测量值。"
+      },
+      {
+        "name": "来源范围",
+        "value": "粉墙、深灰石材边饰、自然光",
+        "note": "来自苏州博物馆官方建筑介绍；网页应用是本库解释。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「黑灰框线与白色空间」。用少量黑灰直线界定白色表面，保留大块空白与真实建筑摄影；框线说明结构而不是在每个组件上重复装饰。 触发：阅读建筑说明或相关文化章节。可见结果：深色边饰与浅色空间建立清楚轮廓，地域识别保持与真实建筑的联系。适用：建筑文化、现代博物馆与空间介绍、有明确建筑构成依据的文化页面。先用真实建筑或官方说明支持色彩/结构来源，网页迁移应标为解释。 框线只在需要说明空间的区域出现，不把所有按钮卡片围成同样粗框。 本地观察组件为原创；原站没有此框线组件的现场证据。 键盘：框线是CSS装饰，不进入Tab；保留语义标题和正常文本阅读，内部操作焦点可见。 减少动态：静态结构无需动画；不为表现移步换景强制平移正文或自动改动视角。 组合边界：框线是对苏博深灰边饰/粉墙关系的局部迁移。与真实摄影组合让来源可辨，不能取代图像目录和机构内容。",
+    "sources": [
+      {
+        "caseId": "suzhou-museum",
+        "locator": "entries/suzhou-museum.json#composition/shape",
+        "observation": "源端建筑说明以粉墙、深灰石材边饰和几何天窗延续江南空间；本地以黑灰框线和白底构成一处教学观察组件。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.szmuseum.com/Home/Index#page3",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/suzhou-museum.json",
+      "research/suzhou-museum.md",
+      "demos/suzhou-museum/fidelity.md",
+      "demos/suzhou-museum/index.html",
+      "demos/suzhou-museum/style.css",
+      "demos/suzhou-museum/app.js"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "suzhou-museum",
+      "title": "苏州博物馆 · 图像目的地与江南留白",
+      "paths": {
+        "bundle": "agent/cases/suzhou-museum.json",
+        "demo": "demos/suzhou-museum/index.html"
+      },
+      "bundleSha256": "b524e61ec8cdf279ae51d4d0ee03f45b1222937b63864c65c00820d4f9d7c136"
+    }
+  ]
+}

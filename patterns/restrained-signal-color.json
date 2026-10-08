@@ -53,9 +53,29 @@
       "evidence": "observed",
       "referenceUrl": "https://www.mori.art.museum/jp/",
       "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "endfield-industrial",
+      "locator": "entries/endfield-industrial.json#composition/color",
+      "observation": "源端干员与工业区为白底、黑色资料标签和很淡的灰网格，亮黄用于行动与局部状态；多色标定条和彩色人物/工业图保留来源颜色。",
+      "evidence": "observed",
+      "referenceUrl": "https://endfield.hypergryph.com/",
+      "capturedAt": "2026-10-09"
+    },
+    {
+      "caseId": "rhine-lab",
+      "locator": "entries/rhine-lab.json#composition/color",
+      "observation": "官方影像可见米白资料底、透明容器、黑色机构字与局部橙色/黄绿色节点；本地暖米白、深绿黑与橙色选择边界为近似网页转译。",
+      "evidence": "adapted",
+      "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "capturedAt": "2026-10-09"
     }
   ],
   "sourceFiles": [
+    "demos/endfield-industrial/app.js",
+    "demos/endfield-industrial/fidelity.md",
+    "demos/endfield-industrial/index.html",
+    "demos/endfield-industrial/style.css",
     "demos/met-museum/fidelity.md",
     "demos/met-museum/index.html",
     "demos/met-museum/script.js",
@@ -64,12 +84,20 @@
     "demos/mori-art-museum/fidelity.md",
     "demos/mori-art-museum/index.html",
     "demos/mori-art-museum/style.css",
+    "demos/rhine-lab/app.js",
+    "demos/rhine-lab/fidelity.md",
+    "demos/rhine-lab/index.html",
+    "demos/rhine-lab/style.css",
     "demos/swiss-grid/index.html",
+    "entries/endfield-industrial.json",
     "entries/met-museum.json",
     "entries/mori-art-museum.json",
+    "entries/rhine-lab.json",
     "entries/swiss-grid.json",
+    "research/endfield-industrial.md",
     "research/met-museum.md",
     "research/mori-art-museum.md",
+    "research/rhine-lab.md",
     "research/swiss-grid.md"
   ]
 }

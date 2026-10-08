@@ -1,0 +1,46 @@
+{
+  "sourceDate": "2026-10-09",
+  "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+  "edition": "官方特别映像（2022）及官方四周年孤星活动专题（2023）",
+  "scope": "公开官方素材的少量本地化；网页交互为本库独立实现，见fidelity.md",
+  "assets": [
+    {
+      "file": "assets/pv-cover.jpg",
+      "sourceUrl": "https://i1.hdslb.com/bfs/archive/5fe6dae6358e0540d253847199ff215aca36be33.jpg@1200w_630h",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "官方特别映像封面，作为来源入口",
+      "bytes": 114745,
+      "sha256": "76ed510d77ac6038ff88de0c71150614fb52c9b6f7ae8d9aca14eb29f21dfd22",
+      "width": 1008,
+      "height": 630,
+      "dimensions": [
+        1008,
+        630
+      ],
+      "format": "jpeg",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/jpeg",
+      "transform": "保留下载原字节与尺寸；页面使用CSS按比例展示",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    },
+    {
+      "file": "assets/lone-trail.jpg",
+      "sourceUrl": "https://web.hycdn.cn/arknights/special/4th-anniversary/assets/img/event-bg.701c96.jpg",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "官方四周年孤星活动场景，补充来源入口",
+      "bytes": 553285,
+      "sha256": "f53ee12bc12cb278ee75ca0c19f4731440a9dda66c101be454457ea2c370f3c0",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "jpeg",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/jpeg",
+      "transform": "保留下载原字节与尺寸；页面使用CSS按比例展示",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    }
+  ]
+}

@@ -62,7 +62,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "e4adb9daf2e7200f1ba6260c7127a1d9bcbf56179c3a5b68bb0de514d0f461e8"
+      "bundleSha256": "6c9897970e623b7ae8032e65fd1d2430a615a8f5a3485e206a337dc7d97505fc"
     }
   ]
 }

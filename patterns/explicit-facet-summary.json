@@ -1,0 +1,65 @@
+{
+  "id": "explicit-facet-summary",
+  "title": "分面条件在列表前显式呈现",
+  "category": "导航与状态",
+  "summary": "先说明筛选依据，再展示剩下的资料。",
+  "mechanism": "把时代、形制等不同维度分组，列表前常显当前条件；本地为条件摘要增加单项删除和清除全部，条件变化与列表保持一致。",
+  "trigger": "选择条件、提交关键词或移除单项",
+  "effect": "用户能解释当前候选范围，并逐步放宽条件找回资料。",
+  "useCases": [
+    "文物、文献和研究资料库",
+    "具有真实多维元数据的目录"
+  ],
+  "avoid": [
+    "给没有元数据的图片强加风格分面"
+  ],
+  "constraints": [
+    "不同维度的组合关系明确，本地示范时代与关键词使用AND。",
+    "源站现场确认的是时代北魏与已选中摘要；删除标签与关键词组合是本地教学扩充。",
+    "零结果保留条件摘要与清除入口，不能把空白页面当反馈。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "此条解释筛选依据，与结果计数反馈职责不同。两者可组合，但列表、已选摘要和数字应由同一状态计算。",
+    "pairsWellWith": [
+      "filter-count-feedback",
+      "aligned-metadata-rows"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "原生条件按钮用aria-pressed；移除按钮有包含条件值的名称，删除后把焦点送回稳定清除入口，结果温和宣布。",
+    "reducedMotion": "条件和结果即时更新，不通过卡片飞出或强制滚动表现筛选。"
+  },
+  "parameters": [
+    {
+      "name": "本地维度",
+      "value": "时代 × 关键词（AND）",
+      "note": "教学缩减；原站目录还包含遗址、形制。"
+    },
+    {
+      "name": "源端实测条件",
+      "value": "北魏",
+      "note": "2026-10-09点击后URL、已选中摘要与洞窟列表同步。"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「分面条件在列表前显式呈现」。把时代、形制等不同维度分组，列表前常显当前条件；本地为条件摘要增加单项删除和清除全部，条件变化与列表保持一致。 触发：选择条件、提交关键词或移除单项。可见结果：用户能解释当前候选范围，并逐步放宽条件找回资料。适用：文物、文献和研究资料库、具有真实多维元数据的目录。不同维度的组合关系明确，本地示范时代与关键词使用AND。 源站现场确认的是时代北魏与已选中摘要；删除标签与关键词组合是本地教学扩充。 零结果保留条件摘要与清除入口，不能把空白页面当反馈。 键盘：原生条件按钮用aria-pressed；移除按钮有包含条件值的名称，删除后把焦点送回稳定清除入口，结果温和宣布。 减少动态：条件和结果即时更新，不通过卡片飞出或强制滚动表现筛选。 组合边界：此条解释筛选依据，与结果计数反馈职责不同。两者可组合，但列表、已选摘要和数字应由同一状态计算。",
+  "sources": [
+    {
+      "caseId": "digital-dunhuang",
+      "locator": "entries/digital-dunhuang.json#interaction/1",
+      "observation": "选择目录时代：原站点击北魏后URL写入Dynasty条件，已选中区域显示北魏，列表只展示对应洞窟；本地时代与关键词叠加并用条件标签解释范围。",
+      "evidence": "adapted",
+      "referenceUrl": "https://www.e-dunhuang.com/index.htm",
+      "capturedAt": "2026-10-09"
+    }
+  ],
+  "sourceFiles": [
+    "entries/digital-dunhuang.json",
+    "research/digital-dunhuang.md",
+    "demos/digital-dunhuang/fidelity.md",
+    "demos/digital-dunhuang/index.html",
+    "demos/digital-dunhuang/style.css",
+    "demos/digital-dunhuang/app.js"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "brand": "suzhou-museum",
+  "sourcePage": "https://www.szmuseum.com/Home/Index#page3",
+  "capturedAt": "2026-10-09",
+  "scope": "公开官网少量图像的局部设计研究；原始字节、比例与权利信息保留。无商业授权或开放许可承诺。",
+  "assets": [
+    {
+      "file": "assets/architecture.jpg",
+      "sourceUrl": "https://www.szmuseum.com/StaticFile/Images/index/zx.jpg",
+      "width": 455,
+      "height": 436,
+      "purpose": "资讯目的地瓦片中的建筑摄影",
+      "format": "jpg",
+      "bytes": 58524,
+      "sha256": "f4ec16e9aca7ba2684e5d80b7585ef42f09e18382af21a2e676804245d261802",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/classroom.jpg",
+      "sourceUrl": "https://www.szmuseum.com/StaticFile/Images/index/ykt.jpg",
+      "width": 450,
+      "height": 371,
+      "purpose": "云课堂目的地瓦片",
+      "format": "jpg",
+      "bytes": 78534,
+      "sha256": "b49206330592638a9f652291a3460c90cf62c3923001e6f4edebe8244253ee08",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/collection.jpg",
+      "sourceUrl": "https://www.szmuseum.com/StaticFile/Images/index/gc.jpg",
+      "width": 462,
+      "height": 556,
+      "purpose": "馆藏目的地瓦片",
+      "format": "jpg",
+      "bytes": 39985,
+      "sha256": "caf8364fa37e8fabf32906da5521be063f2100ce4e284129457b0d3e7bfb748d",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/exhibition.jpg",
+      "sourceUrl": "https://www.szmuseum.com/StaticFile/Images/index/zl.jpg",
+      "width": 455,
+      "height": 450,
+      "purpose": "展览目的地瓦片",
+      "format": "jpg",
+      "bytes": 120736,
+      "sha256": "34839b073d0316547aa79f365c6ba840f04539f7c03db394f02fa83581485b21",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/creative.jpg",
+      "sourceUrl": "https://www.szmuseum.com/StaticFile/Images/index/wc.jpg",
+      "width": 800,
+      "height": 533,
+      "purpose": "文创目的地瓦片",
+      "format": "jpg",
+      "bytes": 69711,
+      "sha256": "99de2fa08ce8de616f5f7721ee45f22931449d2dd3cc49ab69607cc6d748e2ef",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/building.jpg",
+      "sourceUrl": "https://www.szmuseum.com/StaticFile/Images/index/jzmt.jpg",
+      "width": 460,
+      "height": 205,
+      "purpose": "建筑美图目的地瓦片",
+      "format": "jpg",
+      "bytes": 29981,
+      "sha256": "94b7cac21e2356b15eab5962fbaa329627146e193a4409ffec53af9ee218a7a0",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/visit.jpg",
+      "sourceUrl": "https://www.szmuseum.com/StaticFile/Images/index/section4_leftbg.jpg",
+      "width": 946,
+      "height": 871,
+      "purpose": "参观章节左侧建筑图像",
+      "format": "jpg",
+      "bytes": 83393,
+      "sha256": "6545ba5a0653f3c20d7957f27971b9cbbcdd40a3c4b1c4224c544bbc03735561",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。"
+    }
+  ],
+  "sharedDependencies": [
+    {
+      "path": "asset-sources.js",
+      "purpose": "公共素材映射，由主库固定提交SHA生成；不是官网代码。"
+    },
+    {
+      "path": "asset-runtime.js",
+      "purpose": "公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。"
+    },
+    {
+      "path": "asset-cache.js",
+      "purpose": "公共媒体缓存入口，独立异步加载，不阻断静态内容。"
+    },
+    {
+      "path": "asset-cache-worker.js",
+      "purpose": "asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。"
+    }
+  ]
+}

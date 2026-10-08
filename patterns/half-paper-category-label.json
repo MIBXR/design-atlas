@@ -1,0 +1,66 @@
+{
+  "id": "half-paper-category-label",
+  "title": "图像与半幅纸签分类",
+  "category": "视觉构成",
+  "summary": "作品负责观看，半幅浅纸签负责读清类别。",
+  "mechanism": "同一矩形入口保留作品图像，右半放半透明浅纸色表面，竖排中文类别由真实文本构成；整个入口作为链接。",
+  "trigger": "浏览或聚焦文化专题目录",
+  "effect": "图像风格和类别名称同时可辨认，文字不依赖复杂纹样的局部对比。",
+  "useCases": [
+    "器物/书画/人物等文化专题",
+    "能解释图像与分类关系的展览导航"
+  ],
+  "avoid": [
+    "对大量长标题强行竖排",
+    "把分类名称烧入图片无法重排"
+  ],
+  "constraints": [
+    "图像内容要与分类对应；浅表面保护文字对比，不把整幅作品统一染色。",
+    "竖排适合短中文类目；长题名及多语言改为正常阅读方向。",
+    "小屏保留可见名称和足够的点击区域，不只保留图片缩略图。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "此条是图像/纸签职责的构成规则，独立于纸页贴纸的产品隐喻。可与图像题注分工组合，但同一入口避免叠加两套重复标签。",
+    "pairsWellWith": [
+      "artwork-caption-separation",
+      "restrained-signal-color"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "类别名称为可读DOM文字，原生链接名称包含类别；纯装饰图像使用空alt，不重复朗读标签。",
+    "reducedMotion": "停止图像悬停缩放与平滑定位，纸签和链接名称保持完整。"
+  },
+  "parameters": [
+    {
+      "name": "本地纸签宽度",
+      "value": "入口的50%",
+      "note": "依据原站右半浅纸签视觉关系拟合，非官网源码参数。"
+    },
+    {
+      "name": "本地类别数量",
+      "value": "3类",
+      "note": "本地缩减；原站采集有器物、书画、文化、人物、展览5类。"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「图像与半幅纸签分类」。同一矩形入口保留作品图像，右半放半透明浅纸色表面，竖排中文类别由真实文本构成；整个入口作为链接。 触发：浏览或聚焦文化专题目录。可见结果：图像风格和类别名称同时可辨认，文字不依赖复杂纹样的局部对比。适用：器物/书画/人物等文化专题、能解释图像与分类关系的展览导航。图像内容要与分类对应；浅表面保护文字对比，不把整幅作品统一染色。 竖排适合短中文类目；长题名及多语言改为正常阅读方向。 小屏保留可见名称和足够的点击区域，不只保留图片缩略图。 键盘：类别名称为可读DOM文字，原生链接名称包含类别；纯装饰图像使用空alt，不重复朗读标签。 减少动态：停止图像悬停缩放与平滑定位，纸签和链接名称保持完整。 组合边界：此条是图像/纸签职责的构成规则，独立于纸页贴纸的产品隐喻。可与图像题注分工组合，但同一入口避免叠加两套重复标签。",
+  "sources": [
+    {
+      "caseId": "palace-museum",
+      "locator": "entries/palace-museum.json#composition/shape",
+      "observation": "源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.dpm.org.cn/Explore.html",
+      "capturedAt": "2026-10-09"
+    }
+  ],
+  "sourceFiles": [
+    "entries/palace-museum.json",
+    "research/palace-museum.md",
+    "demos/palace-museum/fidelity.md",
+    "demos/palace-museum/index.html",
+    "demos/palace-museum/style.css",
+    "demos/palace-museum/app.js"
+  ]
+}

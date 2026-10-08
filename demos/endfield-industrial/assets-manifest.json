@@ -1,0 +1,122 @@
+{
+  "sourceDate": "2026-10-09",
+  "referenceUrl": "https://endfield.hypergryph.com/",
+  "edition": "中国大陆简体中文官网",
+  "scope": "公开官方素材的少量本地化；网页交互为本库独立实现，见fidelity.md",
+  "assets": [
+    {
+      "file": "assets/si.png",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/jsspsi.409b46fa.png",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "祀的官方完整立绘原件，仅归档；页面使用同源WebP显示副本",
+      "bytes": 19539177,
+      "sha256": "b4b64796e94633d9d572d34be91645478f335d5adcaee066a3521ee08f5614a4",
+      "width": 2227,
+      "height": 2190,
+      "dimensions": [
+        2227,
+        2190
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "保留下载原字节与原始2227×2190尺寸；不修改此PNG",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    },
+    {
+      "file": "assets/endministrator.png",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/endministrator2.f0bbf4fa.png",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "管理员官方肖像，选择轨道",
+      "bytes": 12490,
+      "sha256": "95dcbf90567ba0cfc7fe256dfda7c0e3a541c1b72364ac886e4cae680212e86b",
+      "width": 119,
+      "height": 120,
+      "dimensions": [
+        119,
+        120
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "保留下载原字节与尺寸；页面使用CSS按比例展示",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    },
+    {
+      "file": "assets/perlica.png",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/perlica.871dcf57.png",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "佩丽卡官方肖像，选择轨道",
+      "bytes": 13097,
+      "sha256": "36b12d6a5984c860201b8cf1b6fb37a280bfb6b22ca6009bce7c83697a6045d6",
+      "width": 120,
+      "height": 120,
+      "dimensions": [
+        120,
+        120
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "保留下载原字节与尺寸；页面使用CSS按比例展示",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    },
+    {
+      "file": "assets/block-bg.svg",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/block-bg.f05eda37.svg",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "官方浅色档案背景网格",
+      "bytes": 163,
+      "sha256": "16d0d6dcb24d1cdb2765a23d4db864dd7a5599a27d9b9f2ed34c72474b0f8675",
+      "width": 217,
+      "height": 217,
+      "dimensions": [
+        217,
+        217
+      ],
+      "format": "svg",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/svg+xml",
+      "transform": "保留下载原字节与尺寸；页面使用CSS按比例展示",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    },
+    {
+      "file": "assets/aic.png",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/01.aae95e75.png",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "官网集成工业模块图像",
+      "bytes": 690429,
+      "sha256": "b5471e709c1592deaffa543830f1c2468fc9f7937bfed2b35fdba38c927b1938",
+      "width": 1600,
+      "height": 900,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "保留下载原字节与尺寸；页面使用CSS按比例展示",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    },
+    {
+      "file": "assets/si-display.webp",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/jsspsi.409b46fa.png",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "祀立绘的首屏显示副本；原始PNG同时保存",
+      "bytes": 569554,
+      "sha256": "74670101097f7e2265fb4cab96b4d5e2fd0f45c714f72ada7fd2ee68bba105db",
+      "width": 1500,
+      "height": 1475,
+      "dimensions": [
+        1500,
+        1475
+      ],
+      "format": "webp",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/webp",
+      "transform": "由保留的assets/si.png使用sharp.resize({width:1500}).webp({quality:85})生成，保持透明度与比例；原件不变",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    }
+  ]
+}

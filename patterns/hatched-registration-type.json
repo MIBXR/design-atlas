@@ -1,0 +1,66 @@
+{
+  "id": "hatched-registration-type",
+  "title": "斜线注册大字与前景记录",
+  "category": "视觉构成",
+  "summary": "让巨大背景字承担技术身份，让实心前景文字承担阅读。",
+  "mechanism": "用低对比斜线纹理填充巨大背景字，并以小编号、十字标定点和淡网格定位；前景姓名与资料保持实心、清楚边界和独立留白。",
+  "trigger": "呈现角色或技术档案首屏",
+  "effect": "背景建立机构身份和尺度，前景仍可快速阅读。",
+  "useCases": [
+    "工业/科研档案首屏",
+    "角色或设备图像舞台"
+  ],
+  "avoid": [
+    "用粗黑网格穿过正文",
+    "让大字与主体同强度争夺焦点"
+  ],
+  "constraints": [
+    "只抽取文字层级与标定规则；新任务换为有使用权的名称与素材。",
+    "前景正文与控制不依赖背景文字识别，背景设置aria-hidden。",
+    "原站观察未提供字号和透明度数值，本地数值需在实际图像与断点重验。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "可与亮黄等局部状态色和官方图像协作；编号提供记录感，背景字不承担点击状态，也不改变文档滚动。",
+    "pairsWellWith": [
+      "restrained-signal-color",
+      "editorial-alignment-grid"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "背景装饰不可聚焦；前景链接/按钮保持独立可见焦点与文字名称。",
+    "reducedMotion": "保持静态标定构成，不为巨大背景字添加循环移动或闪烁。"
+  },
+  "parameters": [
+    {
+      "name": "背景网格",
+      "value": "原始217×217 SVG，CSS白层约95%",
+      "note": "原始素材尺寸来自官网；白层为本地拟合，用于接近现场淡网格。"
+    },
+    {
+      "name": "背景字纹理",
+      "value": "斜线CSS填充",
+      "note": "构成来自现场画面，纹理周期与字号为本地近似。"
+    }
+  ],
+  "prompt": "为角色或技术档案建立「斜线注册大字与前景记录」。在主体后方放置低对比的大号斜线纹理品牌/类别字，配合小编号、十字标定点和很淡网格。正文姓名与标签用实心字及独立留白，不让斜线穿过可读文字。背景全部aria-hidden且保持静态；真实按钮、链接和当前状态处于前景。手机以图上文下重排，检查图像、姓名和操作不重叠。用有使用权的图像与名称，来源观察和本地透明度/尺寸拟合分开记录。",
+  "sources": [
+    {
+      "caseId": "endfield-industrial",
+      "locator": "entries/endfield-industrial.json#/composition/shape",
+      "observation": "源端巨大ENDFIELD斜线背景字、十字标定点、REC小编号和淡网格，与前景实心姓名、黑色资料标签形成层次。",
+      "evidence": "observed",
+      "referenceUrl": "https://endfield.hypergryph.com/",
+      "capturedAt": "2026-10-09"
+    }
+  ],
+  "sourceFiles": [
+    "entries/endfield-industrial.json",
+    "research/endfield-industrial.md",
+    "demos/endfield-industrial/fidelity.md",
+    "demos/endfield-industrial/index.html",
+    "demos/endfield-industrial/style.css",
+    "demos/endfield-industrial/app.js"
+  ]
+}

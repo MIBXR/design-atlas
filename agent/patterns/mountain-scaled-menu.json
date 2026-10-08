@@ -66,7 +66,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "4cc8884539fbb47e1566b647f9f9fdda913859822bb01901bf8997152e395728"
+      "bundleSha256": "43822211c33fde8c277195d59585ea204d903f6ac1bc499c0e2aa0a4fcf88c1a"
     }
   ]
 }

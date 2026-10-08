@@ -66,7 +66,7 @@
         "bundle": "agent/cases/monument-valley-game.json",
         "demo": "demos/monument-valley-game/index.html"
       },
-      "bundleSha256": "72a11c8b38cef921ed910241fb614f5ed9494da8f9955cd30a0b53d5a2978392"
+      "bundleSha256": "97dae9f58b1032166466930a0c2d8c908670a97ddd4cf1a907676a919013fcbf"
     }
   ]
 }

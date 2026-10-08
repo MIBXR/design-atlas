@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "id": "endfield-industrial",
+  "entry": {
+    "id": "endfield-industrial",
+    "order": 33,
+    "title": "终末地 · 白底工业档案",
+    "subtitle": "ENDFIELD / BRIGHT INDUSTRIAL RECORDS",
+    "category": "游戏/IP",
+    "country": "中国",
+    "tags": [
+      "明日方舟终末地",
+      "鹰角网络",
+      "白底工业",
+      "亮黄状态",
+      "官方立绘",
+      "标定网格",
+      "斜线大字",
+      "竖向媒体书脊",
+      "角色档案",
+      "自然滚动"
+    ],
+    "summary": "从终末地中文官网的干员与集成工业分区，观察白底、亮黄行动标记、斜线大字及竖向媒体书脊；本地保留单角色和单幅工业图，按自然滚动组织两种档案模块。",
+    "accent": "#eafa00",
+    "background": "#ffffff",
+    "principles": [
+      "源端干员区：白色资料面、黑色标签与很淡的网格承载文字，亮黄行动标记和多色标定条与彩色官方立绘并列；这不是原版明日方舟官网的暗灰青色方案。",
+      "源端集成工业区：竖向AIC类别书脊紧邻横向媒体，编号和说明置于同一模块下方；用文字朝向和共同边界标出媒体所属类别。",
+      "源端干员区：巨大ENDFIELD字样采用斜线纹理，配合REC记录、小编号和十字标定点；背景大字保持淡色，前景姓名与资料保留实心文字。",
+      "本地新增全图/细节和构成说明按钮；按钮使用文字与aria-pressed共同表达状态，减少动态时取消缩放过渡，仍可完成选择。"
+    ],
+    "productFocus": "2026-10-09中国大陆官网公开快照中的干员档案与集成工业分区：祀的单角色档案、两枚官方肖像外链与一幅官方工业画面；当前首页雪凇幽梦活动、完整角色目录、声音、视频和账户未纳入本地研究范围。",
+    "interaction": [
+      "源端页面自然滚动连接干员、游戏介绍、集成工业与页尾；本地保留自然滚动，用三个锚点和可回程页脚连接缩减后的档案、工业与来源区。",
+      "本地首屏按祀立绘实际解码完成显示0%或100%，失败可重试或继续浏览；这是针对单幅必要图像的资源门控，未复制官网完整Updating动画或伪造连续下载进度。",
+      "本地新增全图/细节按钮：切换同一立绘的完整视图与局部放大，aria-pressed同步；两枚相关肖像明确链接原站，不冒充完整可切换角色目录。",
+      "本地新增书脊/大字/状态说明切换：选中按钮更新构成说明，文字区域aria-live提示变化；没有在源端观察到这一教学操作。",
+      "源端集成工业区以横向媒体、竖向AIC书脊和下方编号说明构成同一资料模块；本地使用一幅官方静态画面，未搬运原站视频播放。",
+      "本地固定白色主题且无音轨；原站有声音控制与媒体入口，本次仅观察其存在，未采样或核验各音轨播放。减少动态保留选择、锚点和内容，关闭平滑滚动与缩放过渡。"
+    ],
+    "theme": "白色资料面和淡灰结构允许官方彩色立绘居于首位；黑色实心姓名、标签与细线给出档案秩序，亮黄只在行动和选中位置形成信号。",
+    "constraints": [
+      "研究固定为2026-10-09中国大陆官网公开页面快照。这里只研究干员与集成工业模块，不代表整站复刻，也不追随活动首页后续变化。",
+      "祀、管理员、佩丽卡及工业画面均取自官网公开素材；原始字节、尺寸与SHA256保留在assets-manifest.json。祀原始PNG完整保存，首屏另用1500px WebP显示副本，转码参数在清单记录。",
+      "斜线大字与标定元素是源端观察；本地字号、边距、淡网格强度和断点为适配拟合，未声称取得原站排版数值。",
+      "完整35人目录、首页活动、视频、音轨、账户与交易未复制；相关肖像和主来源可跳回官网。全图/细节及构成说明为本库新增教学操作。",
+      "来源的桌面分区现场可见；原站390px、慢网、反向高频输入与声音链路未完成逐项实测。本地手机采用上图下文和横向肖像行，不把这个响应式策略说成原站实现。",
+      "字体使用系统中文与系统无衬线/等宽，不复制官方字体包；名称和官方素材的权利归对应权利人。"
+    ],
+    "useCases": [
+      "明亮工业科幻宣传",
+      "角色与技术资料并列",
+      "图像主导的设备/实验档案"
+    ],
+    "avoid": [
+      "将亮黄大面积当正文底色",
+      "密集交易与账户后台",
+      "仅换配色来重复原版方舟案例"
+    ],
+    "tokens": {
+      "palette": [
+        "#ffffff",
+        "#161719",
+        "#eafa00",
+        "#dedfe0"
+      ],
+      "type": "系统中文黑体与无衬线用于正文，等宽字体用于REC和编号；姓名为实心大字，ENDFIELD为淡色斜线背景字。",
+      "layout": "自然滚动的角色档案和工业媒体模块；本地左侧锚点轨道，桌面图文叠合，手机上图下文；AIC竖向书脊与横向图像共用模块边界。",
+      "motion": "本地立绘细节600ms缩放、加载解码后退出、锚点平滑滚动；均为本地拟合，减少动态关闭过渡并保持状态。"
+    },
+    "sources": [
+      {
+        "title": "Hypergryph · 明日方舟终末地中国大陆官方网站",
+        "url": "https://endfield.hypergryph.com/",
+        "type": "实例",
+        "note": "2026-10-09桌面实际访问，观察首次Updating、当前雪凇幽梦首页、干员资料、集成工业与页尾。网页DOM公开图片地址支持本地化；白底黄标、斜线大字、AIC书脊来自现场画面，未核验完整声音/视频链路。"
+      },
+      {
+        "title": "Hypergryph · 明日方舟中文官方网站",
+        "url": "https://ak.hypergryph.com/",
+        "type": "实例",
+        "note": "2026-10-09现场比较暗灰、青色和全屏档案语言；本库已有arknights-world，新增条目只提取终末地明亮分区的不同构成。"
+      },
+      {
+        "title": "W3C · Use of Color",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+        "type": "规范",
+        "note": "支持本地用按钮文字、边界和aria状态同时表达选中，不能只靠亮黄变化。"
+      },
+      {
+        "title": "W3C · Animation from Interactions",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+        "type": "规范",
+        "note": "WCAG 2.3.3为AAA；用于本地减少非必要缩放和滚动动态的设计依据，不表示源站已经符合该条。"
+      }
+    ],
+    "prompt": "制作一个取材于终末地中国大陆官网干员与集成工业分区的教学参考页面，首先声明2026-10-09快照和缩减范围。采用白色资料面、黑色实心姓名与标签、很淡的官方网格、亮黄行动标记和一小段多色标定条；官方祀立绘保持原比例与原色，原始PNG保存，显示副本的尺寸和转码写入清单。角色区要同时有淡色巨大斜线ENDFIELD背景字、REC小编号和十字标定点，背景不能穿透正文造成阅读干扰。两枚相关肖像只作为明确原站外链，不虚构完整角色切换。工业区把竖向AIC类别书脊、横向官方工厂图、下方编号与说明组合成一个模块。整页自然滚动，本地左锚点导航可正反返回；不要使用原版方舟的整屏横向wipe替代源端分区。首次仅等待必要立绘实际解码，提供重试和继续；本地全图/细节按钮切换同一图的完整与局部视图，构成说明按钮同步文字、aria-pressed和aria-live，并明确它们是新增教学操作。固定白色主题，不增设音轨或伪造音效；原站视频、声音、账户由来源链接承接。390px使用上图下文，不让图像遮住姓名、资料与操作；prefers-reduced-motion关闭缩放/平滑滚动，保留内容和即时选择。记录源端观察、本地拟合与未验证边界，不包装为完整官网复刻。",
+    "negativePrompt": "不要把当前活动首页误写为白黄；不要混同原版方舟暗灰青色、终末地白黄和莱茵影像米白橙色；不要用粗黑网格压过人物与正文；不要把本地放大、教学说明、导航或加载拟合冒充原站操作；不要搬入账号、追踪、自动音轨或完整35人目录的假内容。",
+    "demo": "demos/endfield-industrial/index.html",
+    "preview": "previews/endfield-industrial.jpg",
+    "research": "research/endfield-industrial.md",
+    "exercise": "替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。",
+    "composition": {
+      "color": "源端干员与工业区为白底、黑色资料标签和很淡的灰网格，亮黄用于行动与局部状态；多色标定条和彩色人物/工业图保留来源颜色。",
+      "typography": "源端巨大淡色ENDFIELD背景字与实心姓名、小号REC编号构成尺度差；本地用系统字体近似，斜线纹理由CSS构造。",
+      "layout": "源端自然滚动与图文模块；本地缩成角色、工业、来源三段，另加左锚点轨道；工业区AIC类别书脊紧贴横向媒体和下方编号说明。",
+      "imagery": "一张官方祀完整立绘、两枚官方角色肖像和一张官方集成工业画面；祀显示副本为WebP，原始PNG保留，未复制首页宣传视频。",
+      "shape": "源端巨大ENDFIELD斜线背景字、十字标定点、REC小编号和淡网格，与前景实心姓名、黑色资料标签形成层次。",
+      "hierarchy": "单角色图像与姓名 → 阵营/种族资料 → 本地视图选择 → 工业图像与书脊/编号 → 构成说明 → 来源和研究边界。",
+      "motion": "源端滚动浏览分区；本地全图/细节缩放和构成说明切换为新增教学操作，减少动态使切换即时完成。",
+      "coherence": "白色资料面让彩色IP素材成为主体；登记大字、编号、标定条和AIC书脊共享技术档案语汇，但不依赖强制整屏转场。"
+    },
+    "referenceUrl": "https://endfield.hypergryph.com/",
+    "implementation": "reference-study",
+    "fidelity": "demos/endfield-industrial/fidelity.md",
+    "assetManifest": "demos/endfield-industrial/assets-manifest.json",
+    "capturedAt": "2026-10-09",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "本地研究固定白色主题；源端所访分区未观察到深浅色切换，不能据此断言整站不存在其他主题。",
+      "designReason": "白色资料面与黑色记录骨架承接明亮工业档案，亮黄保持局部行动信号，官方图像保留原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "本地无内嵌音轨；原站有声音控制与媒体入口，本次未核验音轨播放，来源链接可访问原作。",
+      "interactionRole": "本地以视觉标签、选中边界和文字反馈完成教学操作；不推断原站BGM、操作音或人物语音的具体行为。"
+    }
+  },
+  "patternIds": [
+    "hatched-registration-type",
+    "restrained-signal-color",
+    "vertical-media-spine"
+  ],
+  "documents": [
+    {
+      "path": "research/endfield-industrial.md",
+      "role": "research",
+      "content": "# 终末地：白底工业档案\n\n归档日期：2026-10-09。对象：[明日方舟终末地中国大陆官网](https://endfield.hypergryph.com/)，当日中文公开版本。研究范围是干员与集成工业两个模块；首页当时是“雪凇幽梦”的雪景活动视觉，不能把整站概括为白黄页面。\n\n## 源端观察\n\n实际浏览首次进入的黑底亮黄 Updating、首页、干员、游戏介绍、集成工业与页尾，滚动前后返回。干员模块使用白色资料面、很淡的标定网格、黑色姓名/标签、亮黄标记和小段品红/青/黄标定条。巨大 ENDFIELD 大字带斜线纹理，REC、小编号和十字定位细节建立资料记录感；人物美术保持彩色。当前可见祀立绘的绿色与背景信号黄是不同颜色角色，不把人物自身颜色当作全站强调色。\n\n集成工业模块由横向画面、竖向 AIC 类别书脊、编号和说明组成。其分区连接采用自然滚动，不是本库 [arknights-world](../entries/arknights-world.json) 保存的固定全屏横向章节切换。网页公开 DOM 图片地址支持官方素材本地化；这只证明素材来源，不证明我们取得了原站 CSS 参数。\n\n这是“明日方舟风格”内一种明确的来源差异。[原版中文官网](https://ak.hypergryph.com/) 的黑灰、青色、全屏档案与点阵另有完整案例；终末地的这两个模块更明亮，形状、排版和资料归属比单纯配色更有辨识度。[莱茵生命条目](rhine-lab.md) 的米白透明档案来自官方影像，媒介及证据也不同。\n\n## 本地适配\n\n保留祀单角色、两枚官方肖像与一幅工业图。肖像链接原站，不伪造完整角色切换。原始祀 PNG 为 2227×2190、19,539,177 字节，完整保存；首屏使用同源 1500×1475 WebP 显示副本，转换与哈希见 [素材清单](../demos/endfield-industrial/assets-manifest.json)。官方网格原始 SVG 也保留；本地用白色覆盖层降低强度，避免黑线穿字。背景字纹理、字号、侧栏、间距和断点是本地拟合。\n\n全图/细节、书脊/大字/状态说明切换及左锚点轨道为新增教学操作。首屏只等待必要立绘实际解码，显示 0% 或 100%；失败提供重试与继续，不用模拟平滑下载条充当资源事实。页面保持自然滚动，本地手机上图下文；这些操作和响应式未被写成源端实测。\n\n[W3C Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) 支持让亮黄状态同时有文字、边界与程序状态。按照 [Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) 的 AAA 设计建议，本地减少动态时取消非必要缩放和平滑滚动；这不是对源站符合性作判断。\n\n## 可独立提取\n\n- [斜线注册大字与前景记录](../patterns/hatched-registration-type.json)：源端构成观察；大字、标定点和编号提供背景身份，实心前景承担阅读。\n- [竖向类别书脊与横向媒体](../patterns/vertical-media-spine.json)：源端构成观察；方向与共同边界表达归属。\n- [单一信号色集中强调](../patterns/restrained-signal-color.json)：复用已有机制，增加该来源；无需按品牌再建“黄绿工业风”巧思。\n\n## 采集与实现边界\n\n原站桌面分区现场可見；原站完整35人目录、手机、慢网、声音音轨、影片启停与账户流程未完整验证。只观察到声音控制与媒体入口，不推断 BGM/语音的具体行为。本地不内嵌音轨，不复制视频、账户或追踪；来源链接保留原作入口。系统字体为近似，没有搬入原站字体包。\n\n本地 1440px/390px 与减少动态分支由主负责人独立浏览器验收：无横向溢出，图像加载正常，视图和说明可鼠标/键盘操作。禁用缓存并阻断首屏图时能显示失败、重试与继续，继续后正文可读；解除阻断重载能恢复。完整触发和限制见 [fidelity.md](../demos/endfield-industrial/fidelity.md)。\n",
+      "sha256": "21fbb2d53c651c27de2f3e0b49768edf8a0244bdeeb043e1373e020298497b67",
+      "bytes": 4075
+    },
+    {
+      "path": "prompts/endfield-industrial.md",
+      "role": "prompt",
+      "content": "# 终末地 · 白底工业档案 · 复用 Prompt\n\n由 [结构化案例](../entries/endfield-industrial.json) 自动生成。参考观察与具体边界见 [调研](../research/endfield-industrial.md)。\n\n## 正向 Prompt\n\n制作一个取材于终末地中国大陆官网干员与集成工业分区的教学参考页面，首先声明2026-10-09快照和缩减范围。采用白色资料面、黑色实心姓名与标签、很淡的官方网格、亮黄行动标记和一小段多色标定条；官方祀立绘保持原比例与原色，原始PNG保存，显示副本的尺寸和转码写入清单。角色区要同时有淡色巨大斜线ENDFIELD背景字、REC小编号和十字标定点，背景不能穿透正文造成阅读干扰。两枚相关肖像只作为明确原站外链，不虚构完整角色切换。工业区把竖向AIC类别书脊、横向官方工厂图、下方编号与说明组合成一个模块。整页自然滚动，本地左锚点导航可正反返回；不要使用原版方舟的整屏横向wipe替代源端分区。首次仅等待必要立绘实际解码，提供重试和继续；本地全图/细节按钮切换同一图的完整与局部视图，构成说明按钮同步文字、aria-pressed和aria-live，并明确它们是新增教学操作。固定白色主题，不增设音轨或伪造音效；原站视频、声音、账户由来源链接承接。390px使用上图下文，不让图像遮住姓名、资料与操作；prefers-reduced-motion关闭缩放/平滑滚动，保留内容和即时选择。记录源端观察、本地拟合与未验证边界，不包装为完整官网复刻。\n\n## 负向约束\n\n不要把当前活动首页误写为白黄；不要混同原版方舟暗灰青色、终末地白黄和莱茵影像米白橙色；不要用粗黑网格压过人物与正文；不要把本地放大、教学说明、导航或加载拟合冒充原站操作；不要搬入账号、追踪、自动音轨或完整35人目录的假内容。\n\n## 制作约束\n\n- 研究固定为2026-10-09中国大陆官网公开页面快照。这里只研究干员与集成工业模块，不代表整站复刻，也不追随活动首页后续变化。\n- 祀、管理员、佩丽卡及工业画面均取自官网公开素材；原始字节、尺寸与SHA256保留在assets-manifest.json。祀原始PNG完整保存，首屏另用1500px WebP显示副本，转码参数在清单记录。\n- 斜线大字与标定元素是源端观察；本地字号、边距、淡网格强度和断点为适配拟合，未声称取得原站排版数值。\n- 完整35人目录、首页活动、视频、音轨、账户与交易未复制；相关肖像和主来源可跳回官网。全图/细节及构成说明为本库新增教学操作。\n- 来源的桌面分区现场可见；原站390px、慢网、反向高频输入与声音链路未完成逐项实测。本地手机采用上图下文和横向肖像行，不把这个响应式策略说成原站实现。\n- 字体使用系统中文与系统无衬线/等宽，不复制官方字体包；名称和官方素材的权利归对应权利人。\n\n## 检查方法\n\n替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。\n\n[查看 Demo](../demos/endfield-industrial/index.html) · [返回浏览案例](../cases.html#style/endfield-industrial)\n",
+      "sha256": "fcd6cdb4dce558d2b56dfdb6a66429a210b686cc1bc22247d72e2bc4a312567a",
+      "bytes": 3379
+    },
+    {
+      "path": "demos/endfield-industrial/fidelity.md",
+      "role": "fidelity",
+      "content": "# 当前复现范围：终末地白底工业档案\n\n来源：[中国大陆终末地官网](https://endfield.hypergryph.com/)，归档 2026-10-09。`reference-study` 是两个公开模块的限定教学研究，不代表完整官网复刻。当日活动首页是雪凇幽梦；白底工业语言来自干员与集成工业区。\n\n| 触发／构成 | 源端观察 | 本地对应与作用 | 边界 |\n| --- | --- | --- | --- |\n| 首次进入 | 黑底亮黄 Updating 后开放首页 | 黑底单幅必要立绘解码门控；真实解码前0%，就绪100%，失败可重试/继续 | 本地进度与控制为适配；不是源端完整加载动画或网络字节百分比 |\n| 干员资料呈现 | 白底淡网格、巨大斜线ENDFIELD、REC/小编号/十字、实心姓名与黑色资料标签，彩色立绘为主体 | 单角色祀、淡网格、登记大字、资料、两枚肖像外链 | 字号/间距/纹理/CSS透明度拟合；背景不能压住正文 |\n| 全图／细节选择 | 本次没有观察到对应源端操作 | 新增同图完整/局部缩放按钮，aria-pressed同步 | adapted，不归为官网交互；600ms为本地CSS值 |\n| 相关人物入口 | 原站有完整干员目录 | 两枚官方肖像明确外链原站 | 不是本地角色切换；完整35人目录不在范围内 |\n| 自然滚动与回程 | 分区由自然滚动连接，访问到页尾并返回 | 档案、工业、来源三段，新增左锚点轨道与返回链接 | 本地导航及三段缩减为适配；不改成原版方舟的全屏wipe |\n| 工业媒体呈现 | AIC竖向书脊与横向媒体、编号/说明成为一个模块 | 官网1600×900静态工厂图，竖向书脊与正常方向图注 | 静态构成保留，完整视频与模块目录未移植 |\n| 构成说明选择 | 没有观察到源端教学说明按钮 | 书脊/大字/状态按钮同步选中和aria-live文字 | adapted，不包装为原站功能 |\n| 主题／声音 | 所访模块为白底，原站有声音控制和媒体入口 | 固定白色，本地无音轨，链接原作 | 未逐项核验源端主题及音轨，不能断言源站无音乐 |\n| 手机／减少动态 | 原站手机和系统减少动态未完整实测 | 390px上图下文、肖像行；减少动态取消缩放和平滑滚动，保留按钮与内容 | 本地适配有实际验收；不归为源端实现 |\n\n## 素材\n\n官方原始 PNG/SVG 均保留，归属、原URL、SHA256、字节与尺寸见 [assets-manifest.json](assets-manifest.json)。`si.png` 保持2227×2190、19,539,177字节，显示用`si-display.webp`由原图以sharp宽1500、质量85转码，原件未修改。页面仅显示副本；官方人物/工厂图不改色。系统字体代替官方字体，未复制声音、影片、账户或统计。\n\n## 当前验证\n\n主负责人通过真实浏览器独立验证 1440px 桌面与 390px 手机：加载成功，无横向溢出；全图/细节、构成说明可用鼠标及键盘操作，手机人物不遮住姓名/资料，减少动态分支关闭过渡并保留状态。另禁用缓存并阻断`si-display.webp`，解码失败后显示重试与继续；继续关闭加载层并可读正文。解除阻断重载后立绘恢复、加载结束，网络设置已恢复。\n\n本次未做完整原站声音/影片、原站390px、真实慢网下载及所有外链登录路径的验证。原始事实、本地适配与未验证项均保留在当前说明；不把源码参数或适配策略写成源端浏览器实测。\n",
+      "sha256": "2d2b9757f8b736fbe213a4cae0235327fa2b11ed14e1c1fd4a9da6224c6570c9",
+      "bytes": 3460
+    },
+    {
+      "path": "demos/endfield-industrial/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourceDate\": \"2026-10-09\",\n  \"referenceUrl\": \"https://endfield.hypergryph.com/\",\n  \"edition\": \"中国大陆简体中文官网\",\n  \"scope\": \"公开官方素材的少量本地化；网页交互为本库独立实现，见fidelity.md\",\n  \"assets\": [\n    {\n      \"file\": \"assets/si.png\",\n      \"sourceUrl\": \"https://web.hycdn.cn/endfield/official-v4/_next/static/media/jsspsi.409b46fa.png\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"use\": \"祀的官方完整立绘原件，仅归档；页面使用同源WebP显示副本\",\n      \"bytes\": 19539177,\n      \"sha256\": \"b4b64796e94633d9d572d34be91645478f335d5adcaee066a3521ee08f5614a4\",\n      \"width\": 2227,\n      \"height\": 2190,\n      \"dimensions\": [\n        2227,\n        2190\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"保留下载原字节与原始2227×2190尺寸；不修改此PNG\",\n      \"license\": \"官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权\"\n    },\n    {\n      \"file\": \"assets/endministrator.png\",\n      \"sourceUrl\": \"https://web.hycdn.cn/endfield/official-v4/_next/static/media/endministrator2.f0bbf4fa.png\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"use\": \"管理员官方肖像，选择轨道\",\n      \"bytes\": 12490,\n      \"sha256\": \"95dcbf90567ba0cfc7fe256dfda7c0e3a541c1b72364ac886e4cae680212e86b\",\n      \"width\": 119,\n      \"height\": 120,\n      \"dimensions\": [\n        119,\n        120\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"保留下载原字节与尺寸；页面使用CSS按比例展示\",\n      \"license\": \"官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权\"\n    },\n    {\n      \"file\": \"assets/perlica.png\",\n      \"sourceUrl\": \"https://web.hycdn.cn/endfield/official-v4/_next/static/media/perlica.871dcf57.png\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"use\": \"佩丽卡官方肖像，选择轨道\",\n      \"bytes\": 13097,\n      \"sha256\": \"36b12d6a5984c860201b8cf1b6fb37a280bfb6b22ca6009bce7c83697a6045d6\",\n      \"width\": 120,\n      \"height\": 120,\n      \"dimensions\": [\n        120,\n        120\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"保留下载原字节与尺寸；页面使用CSS按比例展示\",\n      \"license\": \"官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权\"\n    },\n    {\n      \"file\": \"assets/block-bg.svg\",\n      \"sourceUrl\": \"https://web.hycdn.cn/endfield/official-v4/_next/static/media/block-bg.f05eda37.svg\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"use\": \"官方浅色档案背景网格\",\n      \"bytes\": 163,\n      \"sha256\": \"16d0d6dcb24d1cdb2765a23d4db864dd7a5599a27d9b9f2ed34c72474b0f8675\",\n      \"width\": 217,\n      \"height\": 217,\n      \"dimensions\": [\n        217,\n        217\n      ],\n      \"format\": \"svg\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/svg+xml\",\n      \"transform\": \"保留下载原字节与尺寸；页面使用CSS按比例展示\",\n      \"license\": \"官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权\"\n    },\n    {\n      \"file\": \"assets/aic.png\",\n      \"sourceUrl\": \"https://web.hycdn.cn/endfield/official-v4/_next/static/media/01.aae95e75.png\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"use\": \"官网集成工业模块图像\",\n      \"bytes\": 690429,\n      \"sha256\": \"b5471e709c1592deaffa543830f1c2468fc9f7937bfed2b35fdba38c927b1938\",\n      \"width\": 1600,\n      \"height\": 900,\n      \"dimensions\": [\n        1600,\n        900\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"保留下载原字节与尺寸；页面使用CSS按比例展示\",\n      \"license\": \"官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权\"\n    },\n    {\n      \"file\": \"assets/si-display.webp\",\n      \"sourceUrl\": \"https://web.hycdn.cn/endfield/official-v4/_next/static/media/jsspsi.409b46fa.png\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"use\": \"祀立绘的首屏显示副本；原始PNG同时保存\",\n      \"bytes\": 569554,\n      \"sha256\": \"74670101097f7e2265fb4cab96b4d5e2fd0f45c714f72ada7fd2ee68bba105db\",\n      \"width\": 1500,\n      \"height\": 1475,\n      \"dimensions\": [\n        1500,\n        1475\n      ],\n      \"format\": \"webp\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/webp\",\n      \"transform\": \"由保留的assets/si.png使用sharp.resize({width:1500}).webp({quality:85})生成，保持透明度与比例；原件不变\",\n      \"license\": \"官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权\"\n    }\n  ]\n}\n",
+      "sha256": "d272e26b314b066d51f29fdceb593750be645d6ea3b0146799859974f0e48ad8",
+      "bytes": 4873
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/endfield-industrial/app.js",
+      "role": "source",
+      "sha256": "92caa45fd2452bd64b67fb1e4272e4f489f6e423cffc0600ab0d15b48d803dc1",
+      "bytes": 2817
+    },
+    {
+      "path": "demos/endfield-industrial/assets-manifest.json",
+      "role": "context",
+      "sha256": "d272e26b314b066d51f29fdceb593750be645d6ea3b0146799859974f0e48ad8",
+      "bytes": 4873
+    },
+    {
+      "path": "demos/endfield-industrial/assets/aic.png",
+      "role": "asset",
+      "sha256": "b5471e709c1592deaffa543830f1c2468fc9f7937bfed2b35fdba38c927b1938",
+      "bytes": 690429
+    },
+    {
+      "path": "demos/endfield-industrial/assets/block-bg.svg",
+      "role": "asset",
+      "sha256": "16d0d6dcb24d1cdb2765a23d4db864dd7a5599a27d9b9f2ed34c72474b0f8675",
+      "bytes": 163
+    },
+    {
+      "path": "demos/endfield-industrial/assets/endministrator.png",
+      "role": "asset",
+      "sha256": "95dcbf90567ba0cfc7fe256dfda7c0e3a541c1b72364ac886e4cae680212e86b",
+      "bytes": 12490
+    },
+    {
+      "path": "demos/endfield-industrial/assets/perlica.png",
+      "role": "asset",
+      "sha256": "36b12d6a5984c860201b8cf1b6fb37a280bfb6b22ca6009bce7c83697a6045d6",
+      "bytes": 13097
+    },
+    {
+      "path": "demos/endfield-industrial/assets/si-display.webp",
+      "role": "asset",
+      "sha256": "74670101097f7e2265fb4cab96b4d5e2fd0f45c714f72ada7fd2ee68bba105db",
+      "bytes": 569554
+    },
+    {
+      "path": "demos/endfield-industrial/assets/si.png",
+      "role": "asset",
+      "sha256": "b4b64796e94633d9d572d34be91645478f335d5adcaee066a3521ee08f5614a4",
+      "bytes": 19539177
+    },
+    {
+      "path": "demos/endfield-industrial/fidelity.md",
+      "role": "context",
+      "sha256": "2d2b9757f8b736fbe213a4cae0235327fa2b11ed14e1c1fd4a9da6224c6570c9",
+      "bytes": 3460
+    },
+    {
+      "path": "demos/endfield-industrial/index.html",
+      "role": "source",
+      "sha256": "baf5540cb2e09466383147c80e9bee5a76a2200188aeff081d4a441f3f6bb9bc",
+      "bytes": 5279
+    },
+    {
+      "path": "demos/endfield-industrial/style.css",
+      "role": "source",
+      "sha256": "d85b0f4a6569b5d3fa62a63ed527b55f744beb8f064e1e2ba0b804e08c1397ca",
+      "bytes": 8924
+    },
+    {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
+      "bytes": 4329
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
+    },
+    {
+      "path": "entries/endfield-industrial.json",
+      "role": "context",
+      "sha256": "bb8ca82edd32ac06e3ab179b52d68c560ac95fa8d9f79ac9dc9bf3698e041f4d",
+      "bytes": 10988
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "dc26891beb1bbf6fa227594bc248be56cf11971433fcaef7d0ab1a9353dcacbf",
+      "bytes": 256
+    },
+    {
+      "path": "previews/endfield-industrial.jpg",
+      "role": "preview",
+      "sha256": "41b1938633c8cb9218beb8ca7e025287f3c699fd4d739a67392bef70722abde2",
+      "bytes": 199719
+    },
+    {
+      "path": "previews/mobile/endfield-industrial.jpg",
+      "role": "preview",
+      "sha256": "67ee81a57c8c30c437007fa5ed723309c51c19aa354695a3eb98fa25ba9cf90f",
+      "bytes": 54434
+    },
+    {
+      "path": "prompts/endfield-industrial.md",
+      "role": "context",
+      "sha256": "fcd6cdb4dce558d2b56dfdb6a66429a210b686cc1bc22247d72e2bc4a312567a",
+      "bytes": 3379
+    },
+    {
+      "path": "research/endfield-industrial.md",
+      "role": "context",
+      "sha256": "21fbb2d53c651c27de2f3e0b49768edf8a0244bdeeb043e1373e020298497b67",
+      "bytes": 4075
+    },
+    {
+      "path": "site-footer.css",
+      "role": "source",
+      "sha256": "c02e4d66015d205b9e82b143085aafdeae707b1df4feb734df69a129d8c34840",
+      "bytes": 3146
+    },
+    {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
+      "bytes": 14852
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
+      "bytes": 4447
+    },
+    {
+      "path": "site-typography.css",
+      "role": "source",
+      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
+      "bytes": 15208
+    },
+    {
+      "path": "theme-control.css",
+      "role": "source",
+      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
+      "bytes": 2236
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "a58190fc01230d486eecaa99264bf132ba127d68918131a6f2f4798fb2e2cadf",
+      "bytes": 2716
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=endfield-industrial\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源端干员与工业区为白底、黑色资料标签和很淡的灰网格，亮黄用于行动与局部状态；多色标定条和彩色人物/工业图保留来源颜色。</dd></div><div class=\"\"><dt>字体排版</dt><dd>源端巨大淡色ENDFIELD背景字与实心姓名、小号REC编号构成尺度差；本地用系统字体近似，斜线纹理由CSS构造。</dd></div><div class=\"\"><dt>布局留白</dt><dd>源端自然滚动与图文模块；本地缩成角色、工业、来源三段，另加左锚点轨道；工业区AIC类别书脊紧贴横向媒体和下方编号说明。</dd></div><div class=\"\"><dt>图像图标</dt><dd>一张官方祀完整立绘、两枚官方角色肖像和一张官方集成工业画面；祀显示副本为WebP，原始PNG保留，未复制首页宣传视频。</dd></div><div class=\"\"><dt>线条形状</dt><dd>源端巨大ENDFIELD斜线背景字、十字标定点、REC小编号和淡网格，与前景实心姓名、黑色资料标签形成层次。</dd></div><div class=\"\"><dt>信息层级</dt><dd>单角色图像与姓名 → 阵营/种族资料 → 本地视图选择 → 工业图像与书脊/编号 → 构成说明 → 来源和研究边界。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>源端滚动浏览分区；本地全图/细节缩放和构成说明切换为新增教学操作，减少动态使切换即时完成。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>白色资料面让彩色IP素材成为主体；登记大字、编号、标定条和AIC书脊共享技术档案语汇，但不依赖强制整屏转场。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>源端干员区：白色资料面、黑色标签与很淡的网格承载文字，亮黄行动标记和多色标定条与彩色官方立绘并列；这不是原版明日方舟官网的暗灰青色方案。</li><li>源端集成工业区：竖向AIC类别书脊紧邻横向媒体，编号和说明置于同一模块下方；用文字朝向和共同边界标出媒体所属类别。</li><li>源端干员区：巨大ENDFIELD字样采用斜线纹理，配合REC记录、小编号和十字标定点；背景大字保持淡色，前景姓名与资料保留实心文字。</li><li>本地新增全图/细节和构成说明按钮；按钮使用文字与aria-pressed共同表达状态，减少动态时取消缩放过渡，仍可完成选择。</li></ul><h3>怎样凸显产品重点</h3><p>2026-10-09中国大陆官网公开快照中的干员档案与集成工业分区：祀的单角色档案、两枚官方肖像外链与一幅官方工业画面；当前首页雪凇幽梦活动、完整角色目录、声音、视频和账户未纳入本地研究范围。</p><h3>主题与情绪</h3><p>白色资料面和淡灰结构允许官方彩色立绘居于首位；黑色实心姓名、标签与细线给出档案秩序，亮黄只在行动和选中位置形成信号。</p></section><section><h2>02 / 交互巧思</h2><ul><li>源端页面自然滚动连接干员、游戏介绍、集成工业与页尾；本地保留自然滚动，用三个锚点和可回程页脚连接缩减后的档案、工业与来源区。</li><li>本地首屏按祀立绘实际解码完成显示0%或100%，失败可重试或继续浏览；这是针对单幅必要图像的资源门控，未复制官网完整Updating动画或伪造连续下载进度。</li><li>本地新增全图/细节按钮：切换同一立绘的完整视图与局部放大，aria-pressed同步；两枚相关肖像明确链接原站，不冒充完整可切换角色目录。</li><li>本地新增书脊/大字/状态说明切换：选中按钮更新构成说明，文字区域aria-live提示变化；没有在源端观察到这一教学操作。</li><li>源端集成工业区以横向媒体、竖向AIC书脊和下方编号说明构成同一资料模块；本地使用一幅官方静态画面，未搬运原站视频播放。</li><li>本地固定白色主题且无音轨；原站有声音控制与媒体入口，本次仅观察其存在，未采样或核验各音轨播放。减少动态保留选择、锚点和内容，关闭平滑滚动与缩放过渡。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>本地研究固定白色主题；源端所访分区未观察到深浅色切换，不能据此断言整站不存在其他主题。</p><p>白色资料面与黑色记录骨架承接明亮工业档案，亮黄保持局部行动信号，官方图像保留原色。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>本地无内嵌音轨；原站有声音控制与媒体入口，本次未核验音轨播放，来源链接可访问原作。</p><p>本地以视觉标签、选中边界和文字反馈完成教学操作；不推断原站BGM、操作音或人物语音的具体行为。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>研究固定为2026-10-09中国大陆官网公开页面快照。这里只研究干员与集成工业模块，不代表整站复刻，也不追随活动首页后续变化。</li><li>祀、管理员、佩丽卡及工业画面均取自官网公开素材；原始字节、尺寸与SHA256保留在assets-manifest.json。祀原始PNG完整保存，首屏另用1500px WebP显示副本，转码参数在清单记录。</li><li>斜线大字与标定元素是源端观察；本地字号、边距、淡网格强度和断点为适配拟合，未声称取得原站排版数值。</li><li>完整35人目录、首页活动、视频、音轨、账户与交易未复制；相关肖像和主来源可跳回官网。全图/细节及构成说明为本库新增教学操作。</li><li>来源的桌面分区现场可见；原站390px、慢网、反向高频输入与声音链路未完成逐项实测。本地手机采用上图下文和横向肖像行，不把这个响应式策略说成原站实现。</li><li>字体使用系统中文与系统无衬线/等宽，不复制官方字体包；名称和官方素材的权利归对应权利人。</li></ul><h3>适合</h3><p>明亮工业科幻宣传 / 角色与技术资料并列 / 图像主导的设备/实验档案</p><h3>谨慎使用</h3><p>将亮黄大面积当正文底色 / 密集交易与账户后台 / 仅换配色来重复原版方舟案例</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#161719\"></i>#161719</span><span class=\"swatch\"><i style=\"background:#eafa00\"></i>#eafa00</span><span class=\"swatch\"><i style=\"background:#dedfe0\"></i>#dedfe0</span></div><p><b>字体</b> · 系统中文黑体与无衬线用于正文，等宽字体用于REC和编号；姓名为实心大字，ENDFIELD为淡色斜线背景字。<br><b>布局</b> · 自然滚动的角色档案和工业媒体模块；本地左侧锚点轨道，桌面图文叠合，手机上图下文；AIC竖向书脊与横向图像共用模块边界。<br><b>动效</b> · 本地立绘细节600ms缩放、加载解码后退出、锚点平滑滚动；均为本地拟合，减少动态关闭过渡并保持状态。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>制作一个取材于终末地中国大陆官网干员与集成工业分区的教学参考页面，首先声明2026-10-09快照和缩减范围。采用白色资料面、黑色实心姓名与标签、很淡的官方网格、亮黄行动标记和一小段多色标定条；官方祀立绘保持原比例与原色，原始PNG保存，显示副本的尺寸和转码写入清单。角色区要同时有淡色巨大斜线ENDFIELD背景字、REC小编号和十字标定点，背景不能穿透正文造成阅读干扰。两枚相关肖像只作为明确原站外链，不虚构完整角色切换。工业区把竖向AIC类别书脊、横向官方工厂图、下方编号与说明组合成一个模块。整页自然滚动，本地左锚点导航可正反返回；不要使用原版方舟的整屏横向wipe替代源端分区。首次仅等待必要立绘实际解码，提供重试和继续；本地全图/细节按钮切换同一图的完整与局部视图，构成说明按钮同步文字、aria-pressed和aria-live，并明确它们是新增教学操作。固定白色主题，不增设音轨或伪造音效；原站视频、声音、账户由来源链接承接。390px使用上图下文，不让图像遮住姓名、资料与操作；prefers-reduced-motion关闭缩放/平滑滚动，保留内容和即时选择。记录源端观察、本地拟合与未验证边界，不包装为完整官网复刻。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把当前活动首页误写为白黄；不要混同原版方舟暗灰青色、终末地白黄和莱茵影像米白橙色；不要用粗黑网格压过人物与正文；不要把本地放大、教学说明、导航或加载拟合冒充原站操作；不要搬入账号、追踪、自动音轨或完整35人目录的假内容。</p></details><h3>改造练习</h3><p>替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://endfield.hypergryph.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Hypergryph · 明日方舟终末地中国大陆官方网站 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-09桌面实际访问，观察首次Updating、当前雪凇幽梦首页、干员资料、集成工业与页尾。网页DOM公开图片地址支持本地化；白底黄标、斜线大字、AIC书脊来自现场画面，未核验完整声音/视频链路。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://ak.hypergryph.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Hypergryph · 明日方舟中文官方网站 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-09现场比较暗灰、青色和全屏档案语言；本库已有arknights-world，新增条目只提取终末地明亮分区的不同构成。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Use of Color <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>支持本地用按钮文字、边界和aria状态同时表达选中，不能只靠亮黄变化。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Animation from Interactions <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>WCAG 2.3.3为AAA；用于本地减少非必要缩放和滚动动态的设计依据，不表示源站已经符合该条。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fendfield-industrial.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "e64166101e5830dcb3a8359bb1c77d7f3360d45909edc68ea239cd564a21b8c5",
+    "bytes": 11859
+  }
+}

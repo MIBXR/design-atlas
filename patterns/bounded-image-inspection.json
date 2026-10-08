@@ -1,0 +1,66 @@
+{
+  "id": "bounded-image-inspection",
+  "title": "有限尺度的图像细察",
+  "category": "交互反馈",
+  "summary": "让图像从全貌到局部，再明确回到总览。",
+  "mechanism": "在独立图像视域内用加减按钮改变比例，保留当前百分比、边界和适合窗口；放大后的二维移动限于图像视域。",
+  "trigger": "主动放大、缩小、滚动图像或复位",
+  "effect": "用户能控制观察尺度，知道当前位置与返回全貌的方法。",
+  "useCases": [
+    "艺术图像、地图和文化遗产细读",
+    "有明确像素精度的工程图检查"
+  ],
+  "avoid": [
+    "低分辨率预览却宣称无限高清",
+    "用图像缩放拦截整个页面的正常滚动"
+  ],
+  "constraints": [
+    "比例有上下限，边界按钮禁用；复位把比例和视域滚动位置一起恢复。",
+    "公开预览的像素精度不随CSS放大提升，必须说明分辨率并给出原站高清入口。",
+    "原站加减缩放已观察；本地百分比、dialog、限制范围和复位是教学实现。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "只管理当前图像观察尺度；模态关闭和正文滚动另有清楚职责。可与图像下方出处/精度题注组合。",
+    "pairsWellWith": [
+      "artwork-caption-separation",
+      "inline-detail-disclosure"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "加减和复位是有名称的按钮；图像视域可聚焦，用方向键或滚动条移动；dialog支持Escape、可见关闭和焦点返回。",
+    "reducedMotion": "缩放即时完成，不添加弹簧或自动巡游，全部手动状态与复位可用。"
+  },
+  "parameters": [
+    {
+      "name": "本地比例范围",
+      "value": "100%—300%，每次50%",
+      "note": "教学选择，非原站高清查看器的固定规范。"
+    },
+    {
+      "name": "本地壁画预览",
+      "value": "562×253 px",
+      "note": "官网首页公开预览原尺寸；没有复制高清分块数据。"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「有限尺度的图像细察」。在独立图像视域内用加减按钮改变比例，保留当前百分比、边界和适合窗口；放大后的二维移动限于图像视域。 触发：主动放大、缩小、滚动图像或复位。可见结果：用户能控制观察尺度，知道当前位置与返回全貌的方法。适用：艺术图像、地图和文化遗产细读、有明确像素精度的工程图检查。比例有上下限，边界按钮禁用；复位把比例和视域滚动位置一起恢复。 公开预览的像素精度不随CSS放大提升，必须说明分辨率并给出原站高清入口。 原站加减缩放已观察；本地百分比、dialog、限制范围和复位是教学实现。 键盘：加减和复位是有名称的按钮；图像视域可聚焦，用方向键或滚动条移动；dialog支持Escape、可见关闭和焦点返回。 减少动态：缩放即时完成，不添加弹簧或自动巡游，全部手动状态与复位可用。 组合边界：只管理当前图像观察尺度；模态关闭和正文滚动另有清楚职责。可与图像下方出处/精度题注组合。",
+  "sources": [
+    {
+      "caseId": "digital-dunhuang",
+      "locator": "entries/digital-dunhuang.json#interaction/3",
+      "observation": "本地只放大562×253公开预览，比例限制100%至300%，支持滚动条/方向键、适合窗口与关闭；不是原站高清分块图像引擎。",
+      "evidence": "adapted",
+      "referenceUrl": "https://www.e-dunhuang.com/index.htm",
+      "capturedAt": "2026-10-09"
+    }
+  ],
+  "sourceFiles": [
+    "entries/digital-dunhuang.json",
+    "research/digital-dunhuang.md",
+    "demos/digital-dunhuang/fidelity.md",
+    "demos/digital-dunhuang/index.html",
+    "demos/digital-dunhuang/style.css",
+    "demos/digital-dunhuang/app.js"
+  ]
+}

@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "id": "suzhou-museum",
+  "entry": {
+    "category": "艺术/文化",
+    "country": "中国",
+    "implementation": "reference-study",
+    "capturedAt": "2026-10-09",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+      "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+      "interactionRole": "阅读、图像和目录操作承担信息引导。"
+    },
+    "id": "suzhou-museum",
+    "order": 32,
+    "title": "苏州博物馆 · 图像目的地与江南留白",
+    "subtitle": "A museum portal built from image destinations and architectural space",
+    "tags": [
+      "中国",
+      "苏州博物馆",
+      "江南建筑",
+      "贝聿铭",
+      "粉墙黛瓦",
+      "图像导航",
+      "留白",
+      "博物馆"
+    ],
+    "summary": "白底多尺度图像瓦片直接连接资讯、馆藏、云课堂和展览；黑灰建筑轮廓与庭院摄影把江南空间引入机构识别。",
+    "accent": "#aa4d35",
+    "background": "#ffffff",
+    "referenceUrl": "https://www.szmuseum.com/Home/Index#page3",
+    "edition": "2026-10-09；中文官网第3章图像目录、第4章到访及建筑介绍",
+    "principles": [
+      "图像直接承担目的地入口，每个区域保留清晰的文字名称，而非把所有图像压成统一比例卡片。",
+      "粉墙黛色与自然光来自建筑本身；网页借助白色留白、方形边界和真实摄影承接这种识别。",
+      "目录选择与参观服务分别成章，图片的观看节奏和到访任务不互相覆盖。"
+    ],
+    "productFocus": "从机构门户进入馆藏、展览、学习和建筑内容，并把预约及实时到访信息交给官方服务。",
+    "interaction": [
+      "官网中文首页在桌面以四个整屏章节推进；第3章为图像目的地目录，第4章为开放时间和参观预约；本地只保留这两个章节。",
+      "图像瓦片直接进入资讯、云课堂、馆藏、展览、文创和建筑美图，类别名称在图像边缘常显；本地保留六个入口并链接官方目的地。",
+      "本地桌面两章以原生scroll-snap:proximity和侧边章节入口衔接，手机恢复原生长页；官网fullPage受控滚轮的时序未完整复制。",
+      "本地建筑观察dialog总结粉墙黛色、移步换景与自然光的迁移方法；它是教学补充，官方建筑解说通过外链可查。"
+    ],
+    "theme": "固定白底、黑灰结构、少量陶红机构强调与保持原色的馆藏/建筑摄影；图像瓦片为方角。",
+    "constraints": [
+      "固定2026-10-09快照，原站开场和第2章展览轮播不在本地范围，不能把图像目录误称为完整首页。",
+      "本地六个图像入口，原站第3章另有活动、数字苏博与游戏等内容；不复制账户预约、商城或学校课堂业务。",
+      "公开官网低中分辨率摄影保持原字节、比例与归属；图像瓦片可按原目录观看范围裁切，不等同于完整馆藏数字文件。",
+      "粉墙黛色与借光来自官方建筑介绍；本地深色边框组件是原创网页迁移，不宣称原站拥有该组件。",
+      "本地手机重排、dialog和减少动态策略已实现；原站手机和触屏章节逻辑未完整实访。"
+    ],
+    "useCases": [
+      "有多个清晰内容目的地的文化机构门户",
+      "建筑与城市文化展示",
+      "馆藏、学习与参观并行的博物馆主页"
+    ],
+    "avoid": [
+      "图片缺少语义、只靠悬停才显示入口名称的门户",
+      "把所有文化机构都改成同一张水墨背景的主题页"
+    ],
+    "tokens": {
+      "palette": [
+        "#ffffff",
+        "#303a3b",
+        "#aa4d35",
+        "#827f75",
+        "#e5e5de"
+      ],
+      "type": "系统中文衬线机构标题/章节题名与小号无衬线操作；字体尺度为本地拟合。",
+      "layout": "白底简洁导航 → 多尺度方角图像目的地矩阵 → 建筑摄影/说明与官方到访入口；手机两列矩阵后单列说明。",
+      "motion": "局部两章原生滚动定位与方向返回；图像轻微缩放、本地dialog观察；减少动态取消平滑滚动与snap。"
+    },
+    "composition": {
+      "color": "源端观察：白色界面、黑灰文字、少量红色机构标识，资讯瓦片用粉墙与深灰边饰的建筑摄影。",
+      "typography": "源端机构书写字标与小型无衬线导航、图像边缘中文类目分工；本地采用系统中文衬线回退，不复刻字标笔迹。",
+      "layout": "源端观察：第3章多尺度图像瓦片直接作为目的地，图像间仅窄白缝；本地六项矩阵保留横/竖比例并用手机两列缩减。",
+      "imagery": "苏博官网公开的资讯、云课堂、馆藏、展览、文创、建筑美图与参观摄影本地化；原图是机构身份的主要载体。",
+      "shape": "源端建筑说明以粉墙、深灰石材边饰和几何天窗延续江南空间；本地以黑灰框线和白底构成一处教学观察组件。",
+      "hierarchy": "图像与常显类目共同说明入口，白缝隔开目的地；下一章才展开建筑说明和官方到访行动。",
+      "motion": "原站四屏章节结构已观察；本地两屏用原生滚动近似，省略原站首页和展览自动轮播，保留反向返回。",
+      "coherence": "真实建筑和馆藏摄影与白色空间相互支撑，陶红只标记少量入口/焦点；官网业务明确外链。"
+    },
+    "sources": [
+      {
+        "title": "苏州博物馆 · 中文官网图像目录",
+        "url": "https://www.szmuseum.com/Home/Index#page3",
+        "type": "实例",
+        "note": "2026-10-09浏览器核验四屏结构、第3章瓦片目的地、第4章参观服务及反向定位。"
+      },
+      {
+        "title": "苏州博物馆 · 贝聿铭与苏博",
+        "url": "https://www.szmuseum.com/Other/MuseumIntro",
+        "type": "实例",
+        "note": "官方建筑说明支持粉墙黛色、深灰石材边饰、自然光与江南园林的地域识别；网页迁移是本库解释。"
+      },
+      {
+        "title": "W3C WAI · Non-text Content",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+        "type": "规范",
+        "note": "图像目的地用常显名称给链接命名，避免全部信息仅置于背景影像。"
+      },
+      {
+        "title": "W3C WAI · Reflow",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "type": "规范",
+        "note": "本地矩阵窄屏重排并保留逻辑DOM顺序；规范是迁移约束，不表示官网合规审计。"
+      }
+    ],
+    "exercise": "把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。",
+    "prompt": "为【文化机构门户】制作图像目的地目录，参考2026-10-09苏州博物馆中文官网第3章和第4章。保持白色界面、方角图像和窄白缝；以真实资讯建筑、课堂、馆藏、展览、文创和建筑摄影组成不同横竖比例的六个目的地，不把作品全部剪成同样方形。每张图像本身就是完整链接，类目名称常显于边缘并有可访问名称，局部渐变只保护文字对比。目录后用一章建筑摄影/说明与官方到访行动，粉墙、黑灰边饰与自然光来自真实空间，本地可用深色框线和白底迁移结构。桌面两章原生定位和小型章节入口，保留反向返回；手机矩阵两列重排后自然长页，避免整个页面横向溢出。固定浅色、照片原色、系统中文字体，禁止自动声音。减少动态取消平滑和吸附，信息仍完整。素材保留原字节/宽高并记录hash、来源与权利；观察dialog明确本地补充，预约和实时信息链接官方。",
+    "negativePrompt": "不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。",
+    "demo": "demos/suzhou-museum/index.html",
+    "preview": "previews/suzhou-museum.jpg",
+    "research": "research/suzhou-museum.md",
+    "fidelity": "demos/suzhou-museum/fidelity.md",
+    "assetManifest": "demos/suzhou-museum/assets-manifest.json"
+  },
+  "patternIds": [
+    "architectural-outline-whitespace",
+    "image-destination-mosaic"
+  ],
+  "documents": [
+    {
+      "path": "research/suzhou-museum.md",
+      "role": "research",
+      "content": "# 苏州博物馆：图像目的地与建筑识别\n\n归档：**2026-10-09**，[中文官网第3章图像目录](https://www.szmuseum.com/Home/Index#page3)、第4章参观区域和[贝聿铭与苏博](https://www.szmuseum.com/Other/MuseumIntro)。单一快照。完整首页还有品牌开场和展览轮播，本地仅研究后两章。\n\n## 可观察事实\n\n桌面官网包含四个整屏章节；章节目录与滚轮可推进，反向可回到前章。第3章在白底上用横竖比例不同的图像连接资讯、云课堂、馆藏、展览、文创、数字苏博、游戏与建筑美图，标签常显在图像边缘，瓦片间是窄白缝。第4章单独提供开放时间和参观预约。[中文官网](https://www.szmuseum.com/Home/Index#page3)\n\n建筑说明介绍“中而新，苏而新”的理念，粉墙和深灰石材边饰，以及玻璃、几何天窗引入自然光。官网把建筑作为文化内容和机构图像的一部分。[官方建筑介绍](https://www.szmuseum.com/Other/MuseumIntro)\n\n## 本库解释与迁移\n\n图像矩阵是目的地目录：选择哪张图，决定进入哪类内容；它不同于一张通用主视觉加重复卡片。白缝组织多个观看窗口，文化对象仍保留自己的颜色和比例。\n\n粉墙黛色的识别来自真实建筑照片，不必额外铺水墨背景。把黑灰边饰、白色空间和几何框线迁移到网页是本库解释；官方建筑文章不等于它直接规定了网页组件。“多尺度图像目的地目录”与“黑灰框线与白色空间”分别抽取导航骨架和建筑语汇，面积权重的产品 Bento 巧思继续复用，不重复创建。\n\n## 当前实现与边界\n\n[Demo](../demos/suzhou-museum/index.html) 取六个目的地和一个建筑/到访章节，采用七张官方公开图像，保留字节、尺寸、归属。六个链接常显类别名称，真实业务直接回官方。字体是系统中文回退，不复制官方字标笔迹。\n\n桌面本地以原生 `scroll-snap: proximity` 和章节入口近似两章定位，保留回程；它没有复制原站 fullPage 滚轮接管的全部时序。手机改为两列矩阵加自然长文档，减少动态取消吸附和平滑。建筑观察 dialog 与深色框线组件是本地原创补充，不是原站实测交互。\n\n图像目的地用可读文字命名，依据 [W3C 非文本内容说明](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)。窄屏矩阵保留逻辑顺序与文本完整，参考 [W3C Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)。这些规范用于本地迁移，没有进行官网合规审计。\n\n观察范围固定浅色，未发现独立音频控制；本地不增 BGM。原站手机、触屏与全部外链业务未完整实访；当前预约及开放时间通过官方链接获取，不在 Demo 冒称实时。[复现范围](../demos/suzhou-museum/fidelity.md) · [素材清单](../demos/suzhou-museum/assets-manifest.json)\n",
+      "sha256": "23b160ec5099d3e76d3b8a60619815e78e9d0dd30c4d3bfdacee92757efb1258",
+      "bytes": 2967
+    },
+    {
+      "path": "prompts/suzhou-museum.md",
+      "role": "prompt",
+      "content": "# 苏州博物馆 · 图像目的地与江南留白 · 复用 Prompt\n\n由 [结构化案例](../entries/suzhou-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/suzhou-museum.md)。\n\n## 正向 Prompt\n\n为【文化机构门户】制作图像目的地目录，参考2026-10-09苏州博物馆中文官网第3章和第4章。保持白色界面、方角图像和窄白缝；以真实资讯建筑、课堂、馆藏、展览、文创和建筑摄影组成不同横竖比例的六个目的地，不把作品全部剪成同样方形。每张图像本身就是完整链接，类目名称常显于边缘并有可访问名称，局部渐变只保护文字对比。目录后用一章建筑摄影/说明与官方到访行动，粉墙、黑灰边饰与自然光来自真实空间，本地可用深色框线和白底迁移结构。桌面两章原生定位和小型章节入口，保留反向返回；手机矩阵两列重排后自然长页，避免整个页面横向溢出。固定浅色、照片原色、系统中文字体，禁止自动声音。减少动态取消平滑和吸附，信息仍完整。素材保留原字节/宽高并记录hash、来源与权利；观察dialog明确本地补充，预约和实时信息链接官方。\n\n## 负向约束\n\n不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。\n\n## 制作约束\n\n- 固定2026-10-09快照，原站开场和第2章展览轮播不在本地范围，不能把图像目录误称为完整首页。\n- 本地六个图像入口，原站第3章另有活动、数字苏博与游戏等内容；不复制账户预约、商城或学校课堂业务。\n- 公开官网低中分辨率摄影保持原字节、比例与归属；图像瓦片可按原目录观看范围裁切，不等同于完整馆藏数字文件。\n- 粉墙黛色与借光来自官方建筑介绍；本地深色边框组件是原创网页迁移，不宣称原站拥有该组件。\n- 本地手机重排、dialog和减少动态策略已实现；原站手机和触屏章节逻辑未完整实访。\n\n## 检查方法\n\n把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。\n\n[查看 Demo](../demos/suzhou-museum/index.html) · [返回浏览案例](../cases.html#style/suzhou-museum)\n",
+      "sha256": "46a98d5ca76ea198e8bb8b529b1e3081022378ded3c1fd9df0d746011381af5d",
+      "bytes": 2411
+    },
+    {
+      "path": "demos/suzhou-museum/fidelity.md",
+      "role": "fidelity",
+      "content": "# 苏州博物馆：当前实现范围\n\n采集：**2026-10-09**，[中文官网第3章](https://www.szmuseum.com/Home/Index#page3) 与第4章，以及[建筑介绍](https://www.szmuseum.com/Other/MuseumIntro)。固定快照。完整首页四章；本地只取图像目录和建筑/到访两章。\n\n| 触发 | 原站观察 | 本地对应与边界 |\n|---|---|---|\n| 进入图像目录 | 白色界面，多尺度图像与常显类别构成目的地入口。 | 六项方角瓦片、窄白缝、实际官方图像；不复制首页和展览自动轮播。 |\n| 选择目的地 | 资讯、课堂、馆藏、展览、文创、建筑等进入不同页面。 | 五项外链官方、建筑入口进入第二章；未复制账户、商城、课堂业务。 |\n| 正反章节定位 | 桌面 fullPage 四个整屏推进，章节入口可达。 | 两章原生 scroll-snap:proximity 与章节入口近似，不宣称复现滚轮接管时序。 |\n| 建筑与到访 | 第4章展示开放时间和预约；建筑介绍说明粉墙黛色、边饰与自然光。 | 建筑摄影/说明及官方到访链接；不把观察日信息冒称当前实时开放状态。 |\n| 建筑观察 | 官方内容在独立建筑文章中。 | 深色框线组件和观察 dialog 是原创迁移，关闭/Escape 返回原按钮。 |\n| 手机与减少动态 | 原站手机/触屏未完整实访。 | 本地两列图像矩阵后自然长页；取消吸附和滚动平滑，入口名与内容保留。 |\n\n浅色主题、原色摄影、方形框架和少量陶红信号固定；观察范围未发现独立音频控制，本地无 BGM。系统中文字体不复刻字标笔迹。公开图像的原字节、尺寸、归属和 hash 见[素材清单](assets-manifest.json)。\n\n本地在 1440px 桌面和 390px 手机实际浏览器验收：素材可加载、无整页横向溢出，键盘 Enter 可打开建筑观察窗，关闭/Escape 可返回。桌面与手机标准预览来自实际浏览器。公共素材映射、回退和缓存异步接入，不叠加品牌载入动画。\n\n[研究与来源](../../research/suzhou-museum.md) · [Demo](index.html)\n",
+      "sha256": "385ef49c4725ce64d9dfc73b14a4240adcea78dc5244b3f5ce93820f7642b120",
+      "bytes": 2104
+    },
+    {
+      "path": "demos/suzhou-museum/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"suzhou-museum\",\n  \"sourcePage\": \"https://www.szmuseum.com/Home/Index#page3\",\n  \"capturedAt\": \"2026-10-09\",\n  \"scope\": \"公开官网少量图像的局部设计研究；原始字节、比例与权利信息保留。无商业授权或开放许可承诺。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/architecture.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/zx.jpg\",\n      \"width\": 455,\n      \"height\": 436,\n      \"purpose\": \"资讯目的地瓦片中的建筑摄影\",\n      \"format\": \"jpg\",\n      \"bytes\": 58524,\n      \"sha256\": \"f4ec16e9aca7ba2684e5d80b7585ef42f09e18382af21a2e676804245d261802\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/classroom.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/ykt.jpg\",\n      \"width\": 450,\n      \"height\": 371,\n      \"purpose\": \"云课堂目的地瓦片\",\n      \"format\": \"jpg\",\n      \"bytes\": 78534,\n      \"sha256\": \"b49206330592638a9f652291a3460c90cf62c3923001e6f4edebe8244253ee08\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/collection.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/gc.jpg\",\n      \"width\": 462,\n      \"height\": 556,\n      \"purpose\": \"馆藏目的地瓦片\",\n      \"format\": \"jpg\",\n      \"bytes\": 39985,\n      \"sha256\": \"caf8364fa37e8fabf32906da5521be063f2100ce4e284129457b0d3e7bfb748d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/exhibition.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/zl.jpg\",\n      \"width\": 455,\n      \"height\": 450,\n      \"purpose\": \"展览目的地瓦片\",\n      \"format\": \"jpg\",\n      \"bytes\": 120736,\n      \"sha256\": \"34839b073d0316547aa79f365c6ba840f04539f7c03db394f02fa83581485b21\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/creative.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/wc.jpg\",\n      \"width\": 800,\n      \"height\": 533,\n      \"purpose\": \"文创目的地瓦片\",\n      \"format\": \"jpg\",\n      \"bytes\": 69711,\n      \"sha256\": \"99de2fa08ce8de616f5f7721ee45f22931449d2dd3cc49ab69607cc6d748e2ef\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/building.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/jzmt.jpg\",\n      \"width\": 460,\n      \"height\": 205,\n      \"purpose\": \"建筑美图目的地瓦片\",\n      \"format\": \"jpg\",\n      \"bytes\": 29981,\n      \"sha256\": \"94b7cac21e2356b15eab5962fbaa329627146e193a4409ffec53af9ee218a7a0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/visit.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/section4_leftbg.jpg\",\n      \"width\": 946,\n      \"height\": 871,\n      \"purpose\": \"参观章节左侧建筑图像\",\n      \"format\": \"jpg\",\n      \"bytes\": 83393,\n      \"sha256\": \"6545ba5a0653f3c20d7957f27971b9cbbcdd40a3c4b1c4224c544bbc03735561\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"苏州博物馆及原摄影权利人；官网公开导航缩略图的设计研究局部引用，不作商业授权或开放许可承诺。\"\n    }\n  ],\n  \"sharedDependencies\": [\n    {\n      \"path\": \"asset-sources.js\",\n      \"purpose\": \"公共素材映射，由主库固定提交SHA生成；不是官网代码。\"\n    },\n    {\n      \"path\": \"asset-runtime.js\",\n      \"purpose\": \"公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。\"\n    },\n    {\n      \"path\": \"asset-cache.js\",\n      \"purpose\": \"公共媒体缓存入口，独立异步加载，不阻断静态内容。\"\n    },\n    {\n      \"path\": \"asset-cache-worker.js\",\n      \"purpose\": \"asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。\"\n    }\n  ]\n}\n",
+      "sha256": "a5bd89ac40ca1560c3aba6c24286d8a896a03a2072f9f55aa07e126bb9db9b6b",
+      "bytes": 5637
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/suzhou-museum/app.js",
+      "role": "source",
+      "sha256": "86ddb7760ce00025fdb2f3c877307befecb7cf4a7bc3144b5ae291c8bc364ef4",
+      "bytes": 629
+    },
+    {
+      "path": "demos/suzhou-museum/assets-manifest.json",
+      "role": "context",
+      "sha256": "a5bd89ac40ca1560c3aba6c24286d8a896a03a2072f9f55aa07e126bb9db9b6b",
+      "bytes": 5637
+    },
+    {
+      "path": "demos/suzhou-museum/assets/architecture.jpg",
+      "role": "asset",
+      "sha256": "f4ec16e9aca7ba2684e5d80b7585ef42f09e18382af21a2e676804245d261802",
+      "bytes": 58524
+    },
+    {
+      "path": "demos/suzhou-museum/assets/building.jpg",
+      "role": "asset",
+      "sha256": "94b7cac21e2356b15eab5962fbaa329627146e193a4409ffec53af9ee218a7a0",
+      "bytes": 29981
+    },
+    {
+      "path": "demos/suzhou-museum/assets/classroom.jpg",
+      "role": "asset",
+      "sha256": "b49206330592638a9f652291a3460c90cf62c3923001e6f4edebe8244253ee08",
+      "bytes": 78534
+    },
+    {
+      "path": "demos/suzhou-museum/assets/collection.jpg",
+      "role": "asset",
+      "sha256": "caf8364fa37e8fabf32906da5521be063f2100ce4e284129457b0d3e7bfb748d",
+      "bytes": 39985
+    },
+    {
+      "path": "demos/suzhou-museum/assets/creative.jpg",
+      "role": "asset",
+      "sha256": "99de2fa08ce8de616f5f7721ee45f22931449d2dd3cc49ab69607cc6d748e2ef",
+      "bytes": 69711
+    },
+    {
+      "path": "demos/suzhou-museum/assets/exhibition.jpg",
+      "role": "asset",
+      "sha256": "34839b073d0316547aa79f365c6ba840f04539f7c03db394f02fa83581485b21",
+      "bytes": 120736
+    },
+    {
+      "path": "demos/suzhou-museum/assets/visit.jpg",
+      "role": "asset",
+      "sha256": "6545ba5a0653f3c20d7957f27971b9cbbcdd40a3c4b1c4224c544bbc03735561",
+      "bytes": 83393
+    },
+    {
+      "path": "demos/suzhou-museum/fidelity.md",
+      "role": "context",
+      "sha256": "385ef49c4725ce64d9dfc73b14a4240adcea78dc5244b3f5ce93820f7642b120",
+      "bytes": 2104
+    },
+    {
+      "path": "demos/suzhou-museum/index.html",
+      "role": "source",
+      "sha256": "1d527c7a9da586206d32067f7af0b0864c789c85c14d7cb983a9d5f5e36d5ca0",
+      "bytes": 4775
+    },
+    {
+      "path": "demos/suzhou-museum/style.css",
+      "role": "source",
+      "sha256": "422653f8d0bda98eb3a64d548e6ea503b31e24f80c0f7c06b48ea51eca803d08",
+      "bytes": 5917
+    },
+    {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
+      "bytes": 4329
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
+    },
+    {
+      "path": "entries/suzhou-museum.json",
+      "role": "context",
+      "sha256": "ed1aac6351bbcf9386282656d9a3aa5bae9e62dfdb91e9e45c0ef83e1637e4ba",
+      "bytes": 8400
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "dc26891beb1bbf6fa227594bc248be56cf11971433fcaef7d0ab1a9353dcacbf",
+      "bytes": 256
+    },
+    {
+      "path": "previews/mobile/suzhou-museum.jpg",
+      "role": "preview",
+      "sha256": "eead83f3a7883eff1ece85d51377fe072cfee5bcd379370067517a34a1f94751",
+      "bytes": 49206
+    },
+    {
+      "path": "previews/suzhou-museum.jpg",
+      "role": "preview",
+      "sha256": "a6790706650a16a9af0f587ac9f63ffefdc2cf46efed3c3baa313a83a7d22349",
+      "bytes": 151472
+    },
+    {
+      "path": "prompts/suzhou-museum.md",
+      "role": "context",
+      "sha256": "46a98d5ca76ea198e8bb8b529b1e3081022378ded3c1fd9df0d746011381af5d",
+      "bytes": 2411
+    },
+    {
+      "path": "research/suzhou-museum.md",
+      "role": "context",
+      "sha256": "23b160ec5099d3e76d3b8a60619815e78e9d0dd30c4d3bfdacee92757efb1258",
+      "bytes": 2967
+    },
+    {
+      "path": "site-footer.css",
+      "role": "source",
+      "sha256": "c02e4d66015d205b9e82b143085aafdeae707b1df4feb734df69a129d8c34840",
+      "bytes": 3146
+    },
+    {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
+      "bytes": 14852
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
+      "bytes": 4447
+    },
+    {
+      "path": "site-typography.css",
+      "role": "source",
+      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
+      "bytes": 15208
+    },
+    {
+      "path": "theme-control.css",
+      "role": "source",
+      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
+      "bytes": 2236
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "a58190fc01230d486eecaa99264bf132ba127d68918131a6f2f4798fb2e2cadf",
+      "bytes": 2716
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=suzhou-museum\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源端观察：白色界面、黑灰文字、少量红色机构标识，资讯瓦片用粉墙与深灰边饰的建筑摄影。</dd></div><div class=\"\"><dt>字体排版</dt><dd>源端机构书写字标与小型无衬线导航、图像边缘中文类目分工；本地采用系统中文衬线回退，不复刻字标笔迹。</dd></div><div class=\"\"><dt>布局留白</dt><dd>源端观察：第3章多尺度图像瓦片直接作为目的地，图像间仅窄白缝；本地六项矩阵保留横/竖比例并用手机两列缩减。</dd></div><div class=\"\"><dt>图像图标</dt><dd>苏博官网公开的资讯、云课堂、馆藏、展览、文创、建筑美图与参观摄影本地化；原图是机构身份的主要载体。</dd></div><div class=\"\"><dt>线条形状</dt><dd>源端建筑说明以粉墙、深灰石材边饰和几何天窗延续江南空间；本地以黑灰框线和白底构成一处教学观察组件。</dd></div><div class=\"\"><dt>信息层级</dt><dd>图像与常显类目共同说明入口，白缝隔开目的地；下一章才展开建筑说明和官方到访行动。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>原站四屏章节结构已观察；本地两屏用原生滚动近似，省略原站首页和展览自动轮播，保留反向返回。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>真实建筑和馆藏摄影与白色空间相互支撑，陶红只标记少量入口/焦点；官网业务明确外链。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>图像直接承担目的地入口，每个区域保留清晰的文字名称，而非把所有图像压成统一比例卡片。</li><li>粉墙黛色与自然光来自建筑本身；网页借助白色留白、方形边界和真实摄影承接这种识别。</li><li>目录选择与参观服务分别成章，图片的观看节奏和到访任务不互相覆盖。</li></ul><h3>怎样凸显产品重点</h3><p>从机构门户进入馆藏、展览、学习和建筑内容，并把预约及实时到访信息交给官方服务。</p><h3>主题与情绪</h3><p>固定白底、黑灰结构、少量陶红机构强调与保持原色的馆藏/建筑摄影；图像瓦片为方角。</p></section><section><h2>02 / 交互巧思</h2><ul><li>官网中文首页在桌面以四个整屏章节推进；第3章为图像目的地目录，第4章为开放时间和参观预约；本地只保留这两个章节。</li><li>图像瓦片直接进入资讯、云课堂、馆藏、展览、文创和建筑美图，类别名称在图像边缘常显；本地保留六个入口并链接官方目的地。</li><li>本地桌面两章以原生scroll-snap:proximity和侧边章节入口衔接，手机恢复原生长页；官网fullPage受控滚轮的时序未完整复制。</li><li>本地建筑观察dialog总结粉墙黛色、移步换景与自然光的迁移方法；它是教学补充，官方建筑解说通过外链可查。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。</p><p>固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。</p><p>阅读、图像和目录操作承担信息引导。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>固定2026-10-09快照，原站开场和第2章展览轮播不在本地范围，不能把图像目录误称为完整首页。</li><li>本地六个图像入口，原站第3章另有活动、数字苏博与游戏等内容；不复制账户预约、商城或学校课堂业务。</li><li>公开官网低中分辨率摄影保持原字节、比例与归属；图像瓦片可按原目录观看范围裁切，不等同于完整馆藏数字文件。</li><li>粉墙黛色与借光来自官方建筑介绍；本地深色边框组件是原创网页迁移，不宣称原站拥有该组件。</li><li>本地手机重排、dialog和减少动态策略已实现；原站手机和触屏章节逻辑未完整实访。</li></ul><h3>适合</h3><p>有多个清晰内容目的地的文化机构门户 / 建筑与城市文化展示 / 馆藏、学习与参观并行的博物馆主页</p><h3>谨慎使用</h3><p>图片缺少语义、只靠悬停才显示入口名称的门户 / 把所有文化机构都改成同一张水墨背景的主题页</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#303a3b\"></i>#303a3b</span><span class=\"swatch\"><i style=\"background:#aa4d35\"></i>#aa4d35</span><span class=\"swatch\"><i style=\"background:#827f75\"></i>#827f75</span><span class=\"swatch\"><i style=\"background:#e5e5de\"></i>#e5e5de</span></div><p><b>字体</b> · 系统中文衬线机构标题/章节题名与小号无衬线操作；字体尺度为本地拟合。<br><b>布局</b> · 白底简洁导航 → 多尺度方角图像目的地矩阵 → 建筑摄影/说明与官方到访入口；手机两列矩阵后单列说明。<br><b>动效</b> · 局部两章原生滚动定位与方向返回；图像轻微缩放、本地dialog观察；减少动态取消平滑滚动与snap。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为【文化机构门户】制作图像目的地目录，参考2026-10-09苏州博物馆中文官网第3章和第4章。保持白色界面、方角图像和窄白缝；以真实资讯建筑、课堂、馆藏、展览、文创和建筑摄影组成不同横竖比例的六个目的地，不把作品全部剪成同样方形。每张图像本身就是完整链接，类目名称常显于边缘并有可访问名称，局部渐变只保护文字对比。目录后用一章建筑摄影/说明与官方到访行动，粉墙、黑灰边饰与自然光来自真实空间，本地可用深色框线和白底迁移结构。桌面两章原生定位和小型章节入口，保留反向返回；手机矩阵两列重排后自然长页，避免整个页面横向溢出。固定浅色、照片原色、系统中文字体，禁止自动声音。减少动态取消平滑和吸附，信息仍完整。素材保留原字节/宽高并记录hash、来源与权利；观察dialog明确本地补充，预约和实时信息链接官方。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。</p></details><h3>改造练习</h3><p>把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.szmuseum.com/Home/Index#page3\" target=\"_blank\" rel=\"noopener noreferrer\">苏州博物馆 · 中文官网图像目录 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-09浏览器核验四屏结构、第3章瓦片目的地、第4章参观服务及反向定位。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.szmuseum.com/Other/MuseumIntro\" target=\"_blank\" rel=\"noopener noreferrer\">苏州博物馆 · 贝聿铭与苏博 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>官方建筑说明支持粉墙黛色、深灰石材边饰、自然光与江南园林的地域识别；网页迁移是本库解释。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Non-text Content <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>图像目的地用常显名称给链接命名，避免全部信息仅置于背景影像。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/reflow.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Reflow <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>本地矩阵窄屏重排并保留逻辑DOM顺序；规范是迁移约束，不表示官网合规审计。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fsuzhou-museum.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "5097ed96666f0e1071e1405addfd0682c76e8d586c2d72e173c8c067e54f5bfd",
+    "bytes": 9328
+  }
+}

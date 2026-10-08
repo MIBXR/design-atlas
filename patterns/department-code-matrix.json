@@ -1,0 +1,68 @@
+{
+  "id": "department-code-matrix",
+  "title": "机构缩写的中心矩阵",
+  "category": "视觉构成",
+  "summary": "用中心代码与外围缩写共同呈现机构结构，大字识别、小字解释。",
+  "mechanism": "把中心模块的缩写按两行压缩为强识别块，外围模块共享大写短代码和小号完整解释；统一线框与留白，局部小节点形成状态焦点。",
+  "trigger": "呈现机构/系统模块目录",
+  "effect": "中心与外围的关系和每个模块名称在同一视野中可读。",
+  "useCases": [
+    "机构部门目录",
+    "系统能力模块地图",
+    "少量研究/技术单元"
+  ],
+  "avoid": [
+    "缩写无完整解释",
+    "用中心大小暗示未经证实的组织权级",
+    "把装饰节点当唯一选中提示"
+  ],
+  "constraints": [
+    "本条来源是影片画面文字构成；点击说明须另外标adapted。",
+    "代码之外提供完整名称和实际内容，不把影片设定延伸成真实组织关系。",
+    "手机保持正常阅读顺序，可重排而不强制缩小全部文字。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "中心块负责识别与关系，外围代码负责分类；局部状态色仅提供辅助信号。若组合档案选择，矩阵与档案应使用不同区域和状态源。",
+    "pairsWellWith": [
+      "restrained-signal-color",
+      "aligned-metadata-rows"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "静态目录保持语义列表；有点击说明时使用原生按钮、可见焦点和aria-pressed，同时显示完整名称。",
+    "reducedMotion": "矩阵默认静态；点选说明即时更新，禁止持续闪烁节点。"
+  },
+  "parameters": [
+    {
+      "name": "中心代码",
+      "value": "CMPT / CTRL双行",
+      "note": "本次官方影像可见代码；新任务改成真实机构名称。"
+    },
+    {
+      "name": "本地模块数",
+      "value": "中心1 + 外围4",
+      "note": "教学摘取五个模块，不等于影片完整组织结构。"
+    }
+  ],
+  "prompt": "用机构缩写构成中心矩阵：中心代码可按两行组成较大识别块，外围四至六个模块共享大写短代码、小号完整名称与正常方向说明。边界和留白使用同一规则，局部小状态节点不能替代文字选中。按真实内容解释中心关系，不以块的大小臆造权级；手机可重排成正常阅读顺序，保持正文大小。静态目录用语义列表，有点选说明时用按钮、可见焦点和aria-pressed，当前说明即时同步。矩阵不自动闪烁，减少动态保留静态阅读。若来源为影像，区分画面观察与新增网页交互。",
+  "sources": [
+    {
+      "caseId": "rhine-lab",
+      "locator": "entries/rhine-lab.json#/composition/typography",
+      "observation": "官方影像的CMPT CTRL、ENG、ECO、STRU、DEF等大写缩写构成中心/外围矩阵，大代码与小号机构说明分工；本地采用系统字体近似。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "capturedAt": "2026-10-09"
+    }
+  ],
+  "sourceFiles": [
+    "entries/rhine-lab.json",
+    "research/rhine-lab.md",
+    "demos/rhine-lab/fidelity.md",
+    "demos/rhine-lab/index.html",
+    "demos/rhine-lab/style.css",
+    "demos/rhine-lab/app.js"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "brand": "digital-dunhuang",
+  "sourcePage": "https://www.e-dunhuang.com/index.htm",
+  "capturedAt": "2026-10-09",
+  "scope": "公开官网少量图像的局部设计研究；原始字节、比例与权利信息保留。无商业授权或开放许可承诺。",
+  "assets": [
+    {
+      "file": "assets/cliff.jpg",
+      "sourceUrl": "https://cdn.e-dunhuang.com/images/aa.jpg",
+      "width": 1280,
+      "height": 859,
+      "purpose": "首页石窟环境主视觉",
+      "format": "jpg",
+      "bytes": 84555,
+      "sha256": "19e15f8a9c3710b5c84bce1b27e37022786188de24bf8450c4560774abbfa822",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/cave-254.jpg",
+      "sourceUrl": "https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0254/05/1/1.jpg",
+      "width": 700,
+      "height": 541,
+      "purpose": "莫高窟第254窟公开目录缩略图",
+      "format": "jpg",
+      "bytes": 82035,
+      "sha256": "da0bd5c2d61d87f07a7fc3a0d344961306f86b65fc33b70eb0596f83aea9f3b3",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/cave-285.jpg",
+      "sourceUrl": "https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0285/05/1/1.jpg",
+      "width": 700,
+      "height": 542,
+      "purpose": "莫高窟第285窟公开目录缩略图",
+      "format": "jpg",
+      "bytes": 93084,
+      "sha256": "3a048e04f193a44a60027f829a4063c9949cd929557d69724002d5ab4aecf701",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/cave-420.jpg",
+      "sourceUrl": "https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0420/05/1/1.jpg",
+      "width": 700,
+      "height": 541,
+      "purpose": "莫高窟第420窟公开目录缩略图",
+      "format": "jpg",
+      "bytes": 112616,
+      "sha256": "83fdc68b7772c528126e1c3dd649427361bccef078e88fecd1d8053e41237e49",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。"
+    },
+    {
+      "file": "assets/mural-257.jpg",
+      "sourceUrl": "https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0257.0001.0003.01.1.jpg",
+      "width": 562,
+      "height": 253,
+      "purpose": "第257窟九色鹿本生故事首页低分辨率预览",
+      "format": "jpg",
+      "bytes": 250670,
+      "sha256": "c9e1edbbad9a63cb0393f18df875f6d90edccf12fefaf20c23ce07efc3cd55c0",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "processing": "保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。",
+      "copyright": "敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。"
+    }
+  ],
+  "sharedDependencies": [
+    {
+      "path": "asset-sources.js",
+      "purpose": "公共素材映射，由主库固定提交SHA生成；不是官网代码。"
+    },
+    {
+      "path": "asset-runtime.js",
+      "purpose": "公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。"
+    },
+    {
+      "path": "asset-cache.js",
+      "purpose": "公共媒体缓存入口，独立异步加载，不阻断静态内容。"
+    },
+    {
+      "path": "asset-cache-worker.js",
+      "purpose": "asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。"
+    }
+  ]
+}

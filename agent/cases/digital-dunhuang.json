@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 1,
+  "id": "digital-dunhuang",
+  "entry": {
+    "category": "艺术/文化",
+    "country": "中国",
+    "implementation": "reference-study",
+    "capturedAt": "2026-10-09",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+      "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+      "interactionRole": "阅读、图像和目录操作承担信息引导。"
+    },
+    "id": "digital-dunhuang",
+    "order": 31,
+    "title": "数字敦煌 · 影像检索与壁画细察",
+    "subtitle": "A search-first heritage archive with image inspection",
+    "tags": [
+      "中国",
+      "敦煌",
+      "壁画",
+      "石窟",
+      "文物数字化",
+      "检索",
+      "分面筛选",
+      "图像查看器"
+    ],
+    "summary": "石窟全幅影像承托检索入口，洞窟目录按遗址、形制与时代筛选，壁画独立查看器可放大与回看。",
+    "accent": "#b34037",
+    "background": "#f1f0ec",
+    "referenceUrl": "https://www.e-dunhuang.com/index.htm",
+    "edition": "2026-10-09；中文首页、洞窟目录、第257窟壁画公开查看器",
+    "principles": [
+      "让文物影像成为主角，界面色彩服务搜索和目录状态。",
+      "遗址、形制和时代拆为明确的条件维度，以已选摘要解释当前范围。",
+      "从洞窟全貌进入壁画细节，查看尺度与图像真实分辨率分开说明。"
+    ],
+    "productFocus": "从公开影像进入数字文化遗产资料，按编号或时代寻找洞窟，再到官方平台查看完整解说与高清影像。",
+    "interaction": [
+      "进入首页：全幅石窟环境影像、居中的关键词搜索与洞窟入口可见；本地以一张静图保留检索优先级，未复现原站多图轮播。",
+      "选择目录时代：原站点击北魏后URL写入Dynasty条件，已选中区域显示北魏，列表只展示对应洞窟；本地时代与关键词叠加并用条件标签解释范围。",
+      "打开第257窟壁画：独立深色查看器有Zoom in/Zoom out按钮；现场点击放大后图像细节扩大，缩小可以回看全貌。",
+      "本地只放大562×253公开预览，比例限制100%至300%，支持滚动条/方向键、适合窗口与关闭；不是原站高清分块图像引擎。"
+    ],
+    "theme": "浅灰目录、深色图像查看区和赭红操作；石窟与壁画原色不被界面统一染色。",
+    "constraints": [
+      "快照固定于2026-10-09；首页、目录与查看器分别记录，不把数字藏经洞云游戏的渲染功能归于本案例。",
+      "本地目录只3个公开洞窟，演示时代与关键词；不复制完整数据库、登录、订阅或全文检索服务。",
+      "壁画素材为562×253官方公开低分辨率预览，保留原水印；放大不提升真实精度，高清访问链接原站。",
+      "原站查看器支持图像放缩已现场核验；触屏手势、键盘行为与内部瓦片协议未全面核验。",
+      "本地搜索结果数、删除条件与dialog关闭是明确的教学实现；不能声称这些源站全部同样工作。"
+    ],
+    "useCases": [
+      "数字文化遗产资料库",
+      "需要图像细读的艺术档案",
+      "有时代/形制元数据的研究目录"
+    ],
+    "avoid": [
+      "图像精度不足却宣称可研究级放大的展示",
+      "没有元数据只用抽象风格标签的图库"
+    ],
+    "tokens": {
+      "palette": [
+        "#f1f0ec",
+        "#282c2b",
+        "#b34037",
+        "#947650",
+        "#ede8da"
+      ],
+      "type": "系统中文衬线标题与无衬线搜索、筛选、元数据；数值与状态采用小号常规字。",
+      "layout": "全幅影像/居中搜索 → 明确条件与已选摘要 → 洞窟图像目录 → 深色壁画细察与原站高清入口。",
+      "motion": "本地静态首图、原生滚动、即时筛选、有限尺度手动缩放；无自动运动和声音。"
+    },
+    "composition": {
+      "color": "源端观察：深色顶栏、石窟原色主图与红色导航/检索操作，浅灰白目录；本地赭红#b34037为拟合。",
+      "typography": "源端以中文短标题、洞窟编号、时代和说明建立层级；本地较大衬线标题与可扫描无衬线元数据。",
+      "layout": "源端观察：首页中心搜索；目录按遗址、洞窟形制、时代分组，已选中区域在目录之前；本地3列/手机单列为教学缩减。",
+      "imagery": "1280×859官方首页影像、3张700px洞窟预览和562×253壁画预览按原始字节本地化；高清分块数据未复制。",
+      "shape": "目录有矩形影像与下方文字，查看器把图像放入深色独立视域；本地条件采用小型可删除标签。",
+      "hierarchy": "环境影像建立地点，检索缩小候选，时代和编号解释对象，壁画查看器让用户主动改变观察尺度。",
+      "motion": "源端Zoom in/Zoom out使图像放缩已现场核验；本地以100%至300%缩放公开预览，保留滚动条和复位。",
+      "coherence": "文化图像负责氛围与证据，搜索/条件/编号负责发现过程，查看器清楚区分总览、局部和实际精度。"
+    },
+    "sources": [
+      {
+        "title": "敦煌研究院 · 数字敦煌",
+        "url": "https://www.e-dunhuang.com/index.htm",
+        "type": "实例",
+        "note": "2026-10-09观察中文首页的中心检索、洞窟和壁画目录；官方平台简介说明数字化资源共享目标。"
+      },
+      {
+        "title": "数字敦煌 · 洞窟列表",
+        "url": "https://www.e-dunhuang.com/section.htm",
+        "type": "实例",
+        "note": "实测时代北魏筛选，URL和已选中摘要同步；按遗址、形制、时代建立分面。"
+      },
+      {
+        "title": "数字敦煌 · 第257窟主室西壁",
+        "url": "https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01",
+        "type": "实例",
+        "note": "现场点击Zoom in与Zoom out，核验独立深色影像视域与可逆放缩。"
+      },
+      {
+        "title": "W3C WAI · Modal Dialog",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+        "type": "规范",
+        "note": "本地查看器使用原生dialog、可见关闭、Escape和焦点归还。"
+      },
+      {
+        "title": "W3C WAI · Reflow",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "type": "规范",
+        "note": "目录在窄屏重排；图像细察区域保留自身二维滚动，防止整页横向溢出。"
+      }
+    ],
+    "exercise": "用有使用权的高清图与真实时代数据替换三项目录，分别验证条件摘要、零结果、删除单项和总览复位。",
+    "prompt": "为【数字文化遗产资料库】实现检索优先的影像目录，参考2026-10-09数字敦煌首页、洞窟目录和第257窟壁画查看器。用一张真实环境影像覆盖宽幅首屏，深色简洁顶栏，居中短标题、带可访问标签的搜索输入和赭红搜索按钮。目录用独立时代条件、已选标签、清除全部与结果计数；不同维度按AND组合，零结果有可恢复提示，焦点留在操作位置。每件洞窟影像下放编号、时代与完整原站链接，浅灰白阅读空间保留作品原色。壁画在原生dialog的深色区域手动放缩并可回到全貌，限制比例、保留滚动条与方向键，支持Escape与焦点返回；明确公开预览放大不增加精度，不冒充原站分块高清引擎。素材本地化、记录来源尺寸hash水印与权利。手机目录单列，二维图像滚动限于查看器。固定浅色正文、深色图像视域，无BGM；减少动态仍可筛选、查看与复位。",
+    "negativePrompt": "不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。",
+    "demo": "demos/digital-dunhuang/index.html",
+    "preview": "previews/digital-dunhuang.jpg",
+    "research": "research/digital-dunhuang.md",
+    "fidelity": "demos/digital-dunhuang/fidelity.md",
+    "assetManifest": "demos/digital-dunhuang/assets-manifest.json"
+  },
+  "patternIds": [
+    "bounded-image-inspection",
+    "explicit-facet-summary"
+  ],
+  "documents": [
+    {
+      "path": "research/digital-dunhuang.md",
+      "role": "research",
+      "content": "# 数字敦煌：先发现，再改变观察尺度\n\n归档：**2026-10-09**，[中文首页](https://www.e-dunhuang.com/index.htm)、[洞窟目录](https://www.e-dunhuang.com/section.htm) 与[第257窟主室西壁查看器](https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01)。这是固定快照，不把数字藏经洞云游戏等独立项目的能力混入此案例。\n\n## 可观察事实\n\n首页把真实石窟环境照片铺满首屏，中心是短标题与关键词检索。深色顶栏、红色导航和搜索操作与作品原色分工；后续以洞窟和壁画目录继续发现内容。平台简介说明项目将石窟图像、视频、三维和文献数据汇集为数字化资源。[首页与平台简介](https://www.e-dunhuang.com/index.htm)\n\n目录按遗址名称、洞窟形制和时代组织条件。现场点击“北魏”后，URL 出现 Dynasty 条件，“已选中”显示北魏，列表收缩为对应洞窟。此处现场确认的是时代条件和范围反馈；没有把所有分面组合及异常行为都判定为已通过。[洞窟目录](https://www.e-dunhuang.com/section.htm)\n\n第257窟壁画进入独立深色查看器，有 Zoom in/Zoom out。点击加号后细节扩大，减号可回看全貌；界面让用户主动改变观察尺度。[官方壁画查看器](https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01)\n\n## 本库解释与迁移\n\n这类中国文化网页的核心是资料与影像，而非从壁画抽几种颜色做装饰。环境影像帮助定位，时代/形制帮助筛选，编号连接地点，查看器连接全貌与细部。\n\n“分面条件在列表前显式呈现”记录筛选依据；本地再补可删除标签、搜索叠加和零结果恢复。“有限尺度的图像细察”保留总览、局部、复位的闭环。结果计数已有独立巧思，本例不重复造条目。\n\n## 当前实现与边界\n\n[Demo](../demos/digital-dunhuang/index.html) 用官方静态主图、三张洞窟缩略图与九色鹿本生故事公开预览，构成搜索、时代目录和查看器。素材是少量公开影像，原始字节与水印保留，归属见清单。没有复制完整数据库、账户、订阅和高清分块数据。\n\n本地壁画仅 **562×253** 公开预览，放缩范围 100% 至 300%；放大不能增加精度。深色 dialog 支持关闭、Escape、缩放复位和视域内滚动，原站高清查看器通过链接可达。参照 [WAI Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) 保持模态焦点语义；目录窄屏重排、图像二维滚动限于自身视域，参考 [W3C Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)。规范是本地实现约束，不能作为官网整体合规证据。\n\n原站首页有多图轮换；本地选静图并明确缩减。观察范围未发现主题与独立音频控制，本地无声音。原站触屏/键盘放缩、全部筛选组合与内部影像协议未完整验证。[复现范围](../demos/digital-dunhuang/fidelity.md) · [素材清单](../demos/digital-dunhuang/assets-manifest.json)\n",
+      "sha256": "bc2f71eb4a065b386bf3c5f5e9be40dc9e3d0706c422103177c1aa3a7355a779",
+      "bytes": 3111
+    },
+    {
+      "path": "prompts/digital-dunhuang.md",
+      "role": "prompt",
+      "content": "# 数字敦煌 · 影像检索与壁画细察 · 复用 Prompt\n\n由 [结构化案例](../entries/digital-dunhuang.json) 自动生成。参考观察与具体边界见 [调研](../research/digital-dunhuang.md)。\n\n## 正向 Prompt\n\n为【数字文化遗产资料库】实现检索优先的影像目录，参考2026-10-09数字敦煌首页、洞窟目录和第257窟壁画查看器。用一张真实环境影像覆盖宽幅首屏，深色简洁顶栏，居中短标题、带可访问标签的搜索输入和赭红搜索按钮。目录用独立时代条件、已选标签、清除全部与结果计数；不同维度按AND组合，零结果有可恢复提示，焦点留在操作位置。每件洞窟影像下放编号、时代与完整原站链接，浅灰白阅读空间保留作品原色。壁画在原生dialog的深色区域手动放缩并可回到全貌，限制比例、保留滚动条与方向键，支持Escape与焦点返回；明确公开预览放大不增加精度，不冒充原站分块高清引擎。素材本地化、记录来源尺寸hash水印与权利。手机目录单列，二维图像滚动限于查看器。固定浅色正文、深色图像视域，无BGM；减少动态仍可筛选、查看与复位。\n\n## 负向约束\n\n不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。\n\n## 制作约束\n\n- 快照固定于2026-10-09；首页、目录与查看器分别记录，不把数字藏经洞云游戏的渲染功能归于本案例。\n- 本地目录只3个公开洞窟，演示时代与关键词；不复制完整数据库、登录、订阅或全文检索服务。\n- 壁画素材为562×253官方公开低分辨率预览，保留原水印；放大不提升真实精度，高清访问链接原站。\n- 原站查看器支持图像放缩已现场核验；触屏手势、键盘行为与内部瓦片协议未全面核验。\n- 本地搜索结果数、删除条件与dialog关闭是明确的教学实现；不能声称这些源站全部同样工作。\n\n## 检查方法\n\n用有使用权的高清图与真实时代数据替换三项目录，分别验证条件摘要、零结果、删除单项和总览复位。\n\n[查看 Demo](../demos/digital-dunhuang/index.html) · [返回浏览案例](../cases.html#style/digital-dunhuang)\n",
+      "sha256": "2c1b4fc828ed1e6ca855b4146f04590efb7a2a648cf2048c7b6b5836e51a6ec7",
+      "bytes": 2328
+    },
+    {
+      "path": "demos/digital-dunhuang/fidelity.md",
+      "role": "fidelity",
+      "content": "# 数字敦煌：当前实现范围\n\n采集：**2026-10-09**，[首页](https://www.e-dunhuang.com/index.htm)、[洞窟目录](https://www.e-dunhuang.com/section.htm) 与[第257窟壁画查看器](https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01)。固定快照，独立云游戏不在范围内。\n\n| 触发 | 原站观察 | 本地对应与边界 |\n|---|---|---|\n| 首次进入 | 全幅石窟影像、中心检索、多图轮换。 | 一张官方静图/中心搜索；轮播明确省略，不增加另一套欢迎或加载机制。 |\n| 条件选择 | 目录按遗址、形制、时代分面；实测北魏，URL/已选范围/目录同步。 | 三个洞窟的时代和关键词 AND 筛选；可删除标签、结果计数和零结果恢复是本地教学扩充。 |\n| 查看壁画 | 深色独立查看器；Zoom in 与 Zoom out 放缩已实测。 | 原生 dialog、100%—300%有限缩放、复位和视域滚动；不用鼠标拖拽冒充原站完整引擎。 |\n| 放大/回看 | 源端高清图像可以进入局部和返回全貌。 | 仅 **562×253** 官方公开预览。放大不增加实际精度，保留水印并链接原站高清。 |\n| 关闭 | 原站查看器是独立页面。 | 本地关闭/Escape 返回触发按钮，为局部教学选择。 |\n| 手机与减少动态 | 原站触屏、键盘与全部分面组合未完整核验。 | 本地目录单列，二维滚动仅在图像視域；手动状态保留，无自动运动。 |\n\n浅色目录和深色影像区域固定，未加独立声音。字型、间距、操作色为本地拟合；高清分块服务、账户、订阅与完整数据库不复制。原始公开图像的字节、尺寸、来源、水印、权利和 hash 见[素材清单](assets-manifest.json)。\n\n本地在 1440px 桌面和 390px 手机实际浏览器验收：素材可加载、无整页横向溢出；组合条件的空状态、清除复位、查看器缩放、Escape 与焦点归还通过。桌面与手机标准预览来自实际浏览器。公共素材映射、回退和缓存不阻断静态首图。\n\n[研究与来源](../../research/digital-dunhuang.md) · [Demo](index.html)\n",
+      "sha256": "01f6b1e1ec62c5b2ce278ca901b4e1370ad0b7db46ddf30c91c0d9a8a077691c",
+      "bytes": 2144
+    },
+    {
+      "path": "demos/digital-dunhuang/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"digital-dunhuang\",\n  \"sourcePage\": \"https://www.e-dunhuang.com/index.htm\",\n  \"capturedAt\": \"2026-10-09\",\n  \"scope\": \"公开官网少量图像的局部设计研究；原始字节、比例与权利信息保留。无商业授权或开放许可承诺。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/cliff.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/aa.jpg\",\n      \"width\": 1280,\n      \"height\": 859,\n      \"purpose\": \"首页石窟环境主视觉\",\n      \"format\": \"jpg\",\n      \"bytes\": 84555,\n      \"sha256\": \"19e15f8a9c3710b5c84bce1b27e37022786188de24bf8450c4560774abbfa822\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/cave-254.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0254/05/1/1.jpg\",\n      \"width\": 700,\n      \"height\": 541,\n      \"purpose\": \"莫高窟第254窟公开目录缩略图\",\n      \"format\": \"jpg\",\n      \"bytes\": 82035,\n      \"sha256\": \"da0bd5c2d61d87f07a7fc3a0d344961306f86b65fc33b70eb0596f83aea9f3b3\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/cave-285.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0285/05/1/1.jpg\",\n      \"width\": 700,\n      \"height\": 542,\n      \"purpose\": \"莫高窟第285窟公开目录缩略图\",\n      \"format\": \"jpg\",\n      \"bytes\": 93084,\n      \"sha256\": \"3a048e04f193a44a60027f829a4063c9949cd929557d69724002d5ab4aecf701\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/cave-420.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0420/05/1/1.jpg\",\n      \"width\": 700,\n      \"height\": 541,\n      \"purpose\": \"莫高窟第420窟公开目录缩略图\",\n      \"format\": \"jpg\",\n      \"bytes\": 112616,\n      \"sha256\": \"83fdc68b7772c528126e1c3dd649427361bccef078e88fecd1d8053e41237e49\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/mural-257.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0257.0001.0003.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"purpose\": \"第257窟九色鹿本生故事首页低分辨率预览\",\n      \"format\": \"jpg\",\n      \"bytes\": 250670,\n      \"sha256\": \"c9e1edbbad9a63cb0393f18df875f6d90edccf12fefaf20c23ce07efc3cd55c0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"敦煌研究院及原图权利人，官网公开低分辨率预览；设计研究局部引用，不作商业授权或开放许可承诺。\"\n    }\n  ],\n  \"sharedDependencies\": [\n    {\n      \"path\": \"asset-sources.js\",\n      \"purpose\": \"公共素材映射，由主库固定提交SHA生成；不是官网代码。\"\n    },\n    {\n      \"path\": \"asset-runtime.js\",\n      \"purpose\": \"公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。\"\n    },\n    {\n      \"path\": \"asset-cache.js\",\n      \"purpose\": \"公共媒体缓存入口，独立异步加载，不阻断静态内容。\"\n    },\n    {\n      \"path\": \"asset-cache-worker.js\",\n      \"purpose\": \"asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。\"\n    }\n  ]\n}\n",
+      "sha256": "222b93d4d25554c99d4d23d6e69dc705012ff03df8731ffabbdbcaf5a9fa6874",
+      "bytes": 4386
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "d56790851036ecb10a3ec4c271d95fae7f40619f7014ecd6c21613c45dbebc69",
+      "bytes": 58267
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/digital-dunhuang/app.js",
+      "role": "source",
+      "sha256": "62c8dd49b0b84f01db56f001827c8828ae8833189176382a7fd0a112e8178144",
+      "bytes": 2546
+    },
+    {
+      "path": "demos/digital-dunhuang/assets-manifest.json",
+      "role": "context",
+      "sha256": "222b93d4d25554c99d4d23d6e69dc705012ff03df8731ffabbdbcaf5a9fa6874",
+      "bytes": 4386
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/cave-254.jpg",
+      "role": "asset",
+      "sha256": "da0bd5c2d61d87f07a7fc3a0d344961306f86b65fc33b70eb0596f83aea9f3b3",
+      "bytes": 82035
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/cave-285.jpg",
+      "role": "asset",
+      "sha256": "3a048e04f193a44a60027f829a4063c9949cd929557d69724002d5ab4aecf701",
+      "bytes": 93084
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/cave-420.jpg",
+      "role": "asset",
+      "sha256": "83fdc68b7772c528126e1c3dd649427361bccef078e88fecd1d8053e41237e49",
+      "bytes": 112616
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/cliff.jpg",
+      "role": "asset",
+      "sha256": "19e15f8a9c3710b5c84bce1b27e37022786188de24bf8450c4560774abbfa822",
+      "bytes": 84555
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/mural-257.jpg",
+      "role": "asset",
+      "sha256": "c9e1edbbad9a63cb0393f18df875f6d90edccf12fefaf20c23ce07efc3cd55c0",
+      "bytes": 250670
+    },
+    {
+      "path": "demos/digital-dunhuang/fidelity.md",
+      "role": "context",
+      "sha256": "01f6b1e1ec62c5b2ce278ca901b4e1370ad0b7db46ddf30c91c0d9a8a077691c",
+      "bytes": 2144
+    },
+    {
+      "path": "demos/digital-dunhuang/index.html",
+      "role": "source",
+      "sha256": "6e34322dc4fa5a7c83a5cbbd0b8756d7e1582904e9f5139ce83f7d898eb67e53",
+      "bytes": 5408
+    },
+    {
+      "path": "demos/digital-dunhuang/style.css",
+      "role": "source",
+      "sha256": "67d0c813955b964bf63eae8273b5185c5c7865b4f9c23ad1a605c7ac93c7c839",
+      "bytes": 5805
+    },
+    {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
+      "bytes": 4329
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
+    },
+    {
+      "path": "entries/digital-dunhuang.json",
+      "role": "context",
+      "sha256": "363efb609ea7168f826303dfdfdc909b2806a5e9e955c90a7376af3785eb367b",
+      "bytes": 8262
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "dc26891beb1bbf6fa227594bc248be56cf11971433fcaef7d0ab1a9353dcacbf",
+      "bytes": 256
+    },
+    {
+      "path": "previews/digital-dunhuang.jpg",
+      "role": "preview",
+      "sha256": "9acfca79d060d884259c3d3810b12395687be3482a412e4fa7a985ff8f0dad78",
+      "bytes": 71563
+    },
+    {
+      "path": "previews/mobile/digital-dunhuang.jpg",
+      "role": "preview",
+      "sha256": "66480960bf776e8320b2ca875c8e20aafbec857701595e2db34dbe051c07cd35",
+      "bytes": 25383
+    },
+    {
+      "path": "prompts/digital-dunhuang.md",
+      "role": "context",
+      "sha256": "2c1b4fc828ed1e6ca855b4146f04590efb7a2a648cf2048c7b6b5836e51a6ec7",
+      "bytes": 2328
+    },
+    {
+      "path": "research/digital-dunhuang.md",
+      "role": "context",
+      "sha256": "bc2f71eb4a065b386bf3c5f5e9be40dc9e3d0706c422103177c1aa3a7355a779",
+      "bytes": 3111
+    },
+    {
+      "path": "site-footer.css",
+      "role": "source",
+      "sha256": "c02e4d66015d205b9e82b143085aafdeae707b1df4feb734df69a129d8c34840",
+      "bytes": 3146
+    },
+    {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
+      "bytes": 14852
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
+      "bytes": 4447
+    },
+    {
+      "path": "site-typography.css",
+      "role": "source",
+      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
+      "bytes": 15208
+    },
+    {
+      "path": "theme-control.css",
+      "role": "source",
+      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
+      "bytes": 2236
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "a58190fc01230d486eecaa99264bf132ba127d68918131a6f2f4798fb2e2cadf",
+      "bytes": 2716
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=digital-dunhuang\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源端观察：深色顶栏、石窟原色主图与红色导航/检索操作，浅灰白目录；本地赭红#b34037为拟合。</dd></div><div class=\"\"><dt>字体排版</dt><dd>源端以中文短标题、洞窟编号、时代和说明建立层级；本地较大衬线标题与可扫描无衬线元数据。</dd></div><div class=\"\"><dt>布局留白</dt><dd>源端观察：首页中心搜索；目录按遗址、洞窟形制、时代分组，已选中区域在目录之前；本地3列/手机单列为教学缩减。</dd></div><div class=\"\"><dt>图像图标</dt><dd>1280×859官方首页影像、3张700px洞窟预览和562×253壁画预览按原始字节本地化；高清分块数据未复制。</dd></div><div class=\"\"><dt>线条形状</dt><dd>目录有矩形影像与下方文字，查看器把图像放入深色独立视域；本地条件采用小型可删除标签。</dd></div><div class=\"\"><dt>信息层级</dt><dd>环境影像建立地点，检索缩小候选，时代和编号解释对象，壁画查看器让用户主动改变观察尺度。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>源端Zoom in/Zoom out使图像放缩已现场核验；本地以100%至300%缩放公开预览，保留滚动条和复位。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>文化图像负责氛围与证据，搜索/条件/编号负责发现过程，查看器清楚区分总览、局部和实际精度。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>让文物影像成为主角，界面色彩服务搜索和目录状态。</li><li>遗址、形制和时代拆为明确的条件维度，以已选摘要解释当前范围。</li><li>从洞窟全貌进入壁画细节，查看尺度与图像真实分辨率分开说明。</li></ul><h3>怎样凸显产品重点</h3><p>从公开影像进入数字文化遗产资料，按编号或时代寻找洞窟，再到官方平台查看完整解说与高清影像。</p><h3>主题与情绪</h3><p>浅灰目录、深色图像查看区和赭红操作；石窟与壁画原色不被界面统一染色。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入首页：全幅石窟环境影像、居中的关键词搜索与洞窟入口可见；本地以一张静图保留检索优先级，未复现原站多图轮播。</li><li>选择目录时代：原站点击北魏后URL写入Dynasty条件，已选中区域显示北魏，列表只展示对应洞窟；本地时代与关键词叠加并用条件标签解释范围。</li><li>打开第257窟壁画：独立深色查看器有Zoom in/Zoom out按钮；现场点击放大后图像细节扩大，缩小可以回看全貌。</li><li>本地只放大562×253公开预览，比例限制100%至300%，支持滚动条/方向键、适合窗口与关闭；不是原站高清分块图像引擎。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。</p><p>固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。</p><p>阅读、图像和目录操作承担信息引导。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>快照固定于2026-10-09；首页、目录与查看器分别记录，不把数字藏经洞云游戏的渲染功能归于本案例。</li><li>本地目录只3个公开洞窟，演示时代与关键词；不复制完整数据库、登录、订阅或全文检索服务。</li><li>壁画素材为562×253官方公开低分辨率预览，保留原水印；放大不提升真实精度，高清访问链接原站。</li><li>原站查看器支持图像放缩已现场核验；触屏手势、键盘行为与内部瓦片协议未全面核验。</li><li>本地搜索结果数、删除条件与dialog关闭是明确的教学实现；不能声称这些源站全部同样工作。</li></ul><h3>适合</h3><p>数字文化遗产资料库 / 需要图像细读的艺术档案 / 有时代/形制元数据的研究目录</p><h3>谨慎使用</h3><p>图像精度不足却宣称可研究级放大的展示 / 没有元数据只用抽象风格标签的图库</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#f1f0ec\"></i>#f1f0ec</span><span class=\"swatch\"><i style=\"background:#282c2b\"></i>#282c2b</span><span class=\"swatch\"><i style=\"background:#b34037\"></i>#b34037</span><span class=\"swatch\"><i style=\"background:#947650\"></i>#947650</span><span class=\"swatch\"><i style=\"background:#ede8da\"></i>#ede8da</span></div><p><b>字体</b> · 系统中文衬线标题与无衬线搜索、筛选、元数据；数值与状态采用小号常规字。<br><b>布局</b> · 全幅影像/居中搜索 → 明确条件与已选摘要 → 洞窟图像目录 → 深色壁画细察与原站高清入口。<br><b>动效</b> · 本地静态首图、原生滚动、即时筛选、有限尺度手动缩放；无自动运动和声音。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为【数字文化遗产资料库】实现检索优先的影像目录，参考2026-10-09数字敦煌首页、洞窟目录和第257窟壁画查看器。用一张真实环境影像覆盖宽幅首屏，深色简洁顶栏，居中短标题、带可访问标签的搜索输入和赭红搜索按钮。目录用独立时代条件、已选标签、清除全部与结果计数；不同维度按AND组合，零结果有可恢复提示，焦点留在操作位置。每件洞窟影像下放编号、时代与完整原站链接，浅灰白阅读空间保留作品原色。壁画在原生dialog的深色区域手动放缩并可回到全貌，限制比例、保留滚动条与方向键，支持Escape与焦点返回；明确公开预览放大不增加精度，不冒充原站分块高清引擎。素材本地化、记录来源尺寸hash水印与权利。手机目录单列，二维图像滚动限于查看器。固定浅色正文、深色图像视域，无BGM；减少动态仍可筛选、查看与复位。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。</p></details><h3>改造练习</h3><p>用有使用权的高清图与真实时代数据替换三项目录，分别验证条件摘要、零结果、删除单项和总览复位。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.e-dunhuang.com/index.htm\" target=\"_blank\" rel=\"noopener noreferrer\">敦煌研究院 · 数字敦煌 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-09观察中文首页的中心检索、洞窟和壁画目录；官方平台简介说明数字化资源共享目标。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.e-dunhuang.com/section.htm\" target=\"_blank\" rel=\"noopener noreferrer\">数字敦煌 · 洞窟列表 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>实测时代北魏筛选，URL和已选中摘要同步；按遗址、形制、时代建立分面。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01\" target=\"_blank\" rel=\"noopener noreferrer\">数字敦煌 · 第257窟主室西壁 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>现场点击Zoom in与Zoom out，核验独立深色影像视域与可逆放缩。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Modal Dialog <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>本地查看器使用原生dialog、可见关闭、Escape和焦点归还。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/reflow.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Reflow <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>目录在窄屏重排；图像细察区域保留自身二维滚动，防止整页横向溢出。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fdigital-dunhuang.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "72656863ceb9b90c7a82346de4254d762ddf7145992aca6b356726da778f54f7",
+    "bytes": 9354
+  }
+}
