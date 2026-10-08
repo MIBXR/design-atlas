@@ -7,7 +7,7 @@ const source = fs.readFileSync(new URL('../home.js', import.meta.url), 'utf8');
 
 // Run the actual controller against a controllable browser boundary. Persistent
 // content rejects replacement so a handoff cannot discard the live Lab draft.
-function fixture({ desktop = true, reduced = false } = {}) {
+function fixture({ desktop = true, tallEnough = true, reduced = false } = {}) {
   let document;
   let now = 0;
   let nextFrame = 0;
@@ -108,11 +108,13 @@ function fixture({ desktop = true, reduced = false } = {}) {
   window.requestAnimationFrame = callback => { const id = ++nextFrame; frames.set(id, callback); return id; };
   window.cancelAnimationFrame = id => frames.delete(id);
   window.scrollTo = options => scrolls.push(options);
-  const media = { desktop: node(), reduced: node() };
+  const media = { desktop: node(), tallEnough: node(), reduced: node() };
   media.desktop.matches = desktop;
+  media.tallEnough.matches = tallEnough;
   media.reduced.matches = reduced;
   window.matchMedia = query => {
     if (query === '(min-width:1100px)') return media.desktop;
+    if (query === '(min-height:740px)') return media.tallEnough;
     if (query === '(prefers-reduced-motion:reduce)') return media.reduced;
     throw new Error(`Unexpected media query: ${query}`);
   };
@@ -141,7 +143,7 @@ function fixture({ desktop = true, reduced = false } = {}) {
   return {
     document, stage, rail, panels, descriptions, descriptionLinks, panelLinks, controls, buttons, introActions, introButtons,
     nextButton, iframe, childDocument, input, pathsTitle, outside, window, scrolls, frames,
-    scroll, settle, flush, changeMedia, target: index => stageTop - inset + 550 + index * 500,
+    scroll, settle, flush, changeMedia, target: index => stageTop - inset + 750 + index * 500,
     advance: milliseconds => { now += milliseconds; },
     blur: () => { document.activeElement = outside; stage.dispatch('focusout'); flush(); },
   };
@@ -302,7 +304,7 @@ test('continue after the final scene focuses the next section and scrolls beyond
   assert.equal(page.scrolls.at(-1).top, page.stage.getBoundingClientRect().bottom + page.window.scrollY - 104);
 });
 
-test('mobile and reduced motion expose every scene without the enhanced pinning state', () => {
+test('mobile, short screens and reduced motion expose every scene without the enhanced pinning state', () => {
   const assertSequential = page => {
     assert.equal(page.stage.classList.contains('home-story--enhanced'), false);
     assert.equal(page.stage.dataset.phase, 'sequential');
@@ -314,7 +316,7 @@ test('mobile and reduced motion expose every scene without the enhanced pinning 
     assert.deepEqual(page.descriptions.map(description => description.hidden), [false, false, false]);
     assert.deepEqual(page.buttons.map(button => button.attributes['aria-expanded']), ['true', 'true', 'true']);
   };
-  for (const options of [{ desktop: false }, { reduced: true }]) {
+  for (const options of [{ desktop: false }, { tallEnough: false }, { reduced: true }]) {
     const page = fixture(options);
     page.scroll(9000);
     assertSequential(page);
@@ -335,4 +337,47 @@ test('mobile and reduced motion expose every scene without the enhanced pinning 
   assert.equal(page.stage.classList.contains('home-story--enhanced'), true);
   page.changeMedia('reduced', true);
   assertSequential(page);
+});
+
+test('content that outgrows its viewport changes to outer-page flow without losing the experiment', () => {
+  const page = fixture();
+  page.scroll(1000);
+  page.iframe.focus();
+  page.window.dispatch('message', {origin:'https://atlas.test', source:page.iframe.contentWindow, data:{type:'design-atlas:lab-height', height:640}});
+  page.panels[1].clientHeight = 480;
+  page.panels[1].scrollHeight = 660;
+  page.advance(901);
+  page.scroll(1000);
+  for (let frame = 0; frame < 6; frame++) page.flush();
+  assert.equal(page.stage.classList.contains('home-story--enhanced'), false);
+  assert.equal(page.stage.dataset.phase, 'sequential');
+  assert.deepEqual(page.panels.map(panel => panel.hidden || panel.inert), [false, false, false]);
+  assert.equal(page.iframe.draft, 'unfinished experiment');
+  assert.strictEqual(page.document.activeElement, page.iframe);
+  page.panels[1].scrollHeight = 460;
+  page.window.dispatch('resize');
+  page.flush();
+  assert.equal(page.stage.classList.contains('home-story--enhanced'), true);
+});
+
+test('a newly shown Lab waits for the current frame width before deciding that content is too tall', () => {
+  const page = fixture();
+  page.scroll(1000);
+  page.iframe.clientWidth = 822;
+  page.panels[1].clientHeight = 480;
+  page.panels[1].scrollHeight = 660;
+  page.advance(1000);
+  page.scroll(1000);
+  for (let frame = 0; frame < 8; frame++) page.flush();
+  assert.equal(page.stage.classList.contains('home-story--enhanced'), true, 'the lazy iframe has not measured its content yet');
+  const report = width => page.window.dispatch('message', {
+    origin:'https://atlas.test', source:page.iframe.contentWindow,
+    data:{type:'design-atlas:lab-height', height:640, width},
+  });
+  report(1034);
+  for (let frame = 0; frame < 8; frame++) page.flush();
+  assert.equal(page.stage.classList.contains('home-story--enhanced'), true, 'a report from the wider intro frame is stale');
+  report(822);
+  for (let frame = 0; frame < 8; frame++) page.flush();
+  assert.equal(page.stage.classList.contains('home-story--enhanced'), false, 'growing content at the current width uses natural outer flow');
 });

@@ -4,6 +4,9 @@
   --atlas-font-body:16px;
   --atlas-font-support:14px;
   --atlas-font-caption:12px;
+  --atlas-font-mono:"Cascadia Code",Consolas,"Microsoft YaHei","PingFang SC",monospace;
+  --atlas-control-height:36px;
+  --atlas-control-radius:8px;
 }
 body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page){
   font-family:var(--atlas-font-sans);
@@ -13,7 +16,7 @@ body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page){
 /* Preserve the lab's selected typeface and its explanatory type specimens. */
 body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
   :is(.atlas-site-header,.landing-main,.case-layout,.agent-main,.document-main,.lab-layout,.toast,.compare-tray,[id=favorite-dialog])
-  :is(h1,h2,h3,h4,h5,h6,p,div,span,a,button,input,select,textarea,label,small,strong,b,summary,dt,dd,li,fieldset,legend,output,kbd):not(.sample,.sample *,.art-type,.art-type *,.type-mini,.type-mini *){
+  :is(h1,h2,h3,h4,h5,h6,p,div,span,a,button,input,select,label,small,strong,b,summary,dt,dd,li,fieldset,legend,output):not(.sample,.sample *,.art-type,.art-type *,.type-mini,.type-mini *){
   font-family:var(--atlas-font-sans);
 }
 body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
@@ -44,28 +47,58 @@ body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
   align-items:center;
   justify-content:center;
   gap:8px;
-  min-height:44px;
-  padding:10px 14px;
+  min-height:var(--atlas-control-height);
+  padding:5px 12px;
   border-width:1px;
   border-style:solid;
-  border-radius:var(--atlas-ui-radius,7px);
+  border-radius:var(--atlas-control-radius);
   font-family:var(--atlas-font-sans);
   font-size:14px;
   line-height:1.5;
   text-decoration:none;
 }
 body:is(.cases-page,.agent-page) .primary-button{border-color:transparent}
-body.cases-page .detail-top>div{flex-wrap:wrap}
+body.cases-page .detail-top>div{flex-wrap:wrap;gap:8px}
 body.cases-page .detail-top :is(.copy-button,.primary-button),
-body.cases-page .compare-column>:is(.copy-button,.primary-button){height:44px;white-space:nowrap}
+body.cases-page .compare-column>:is(.copy-button,.primary-button){height:var(--atlas-control-height);white-space:nowrap}
 body.cases-page .compare-column>:is(.copy-button,.primary-button){margin:4px 4px 0 0}
 body.cases-page .demo-toolbar,
 body.cases-page .demo-toolbar>div{flex-wrap:wrap}
 body.cases-page .demo-toolbar button,
 body.cases-page .empty button,
-body.cases-page #compare-go{min-height:44px;padding:10px 12px;font-size:14px;line-height:1.5}
-body.cases-page .favorite{width:44px;min-width:44px;height:44px;min-height:44px}
-body.cases-page .dialog-close{width:44px;height:44px}
+body.cases-page #compare-go{min-height:var(--atlas-control-height);height:var(--atlas-control-height);padding:5px 12px;border-radius:var(--atlas-control-radius);font-size:14px;line-height:1.5}
+body.cases-page .favorite{width:var(--atlas-control-height);min-width:var(--atlas-control-height);height:var(--atlas-control-height);min-height:var(--atlas-control-height);border-radius:var(--atlas-control-radius)}
+body.cases-page .dialog-close{width:var(--atlas-control-height);height:var(--atlas-control-height)}
+
+/* Main content controls are compact. The header, directories and footer keep 44px targets. */
+body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
+  :is(.landing-main,.case-layout main,.agent-main,.document-main,.lab-layout main)
+  :where(button,select,.landing-button,.copy-button,.primary-button,.atlas-ui-button,.plain-btn,.text-button):not(.sample,.sample *,.home-story-rail button){
+  box-sizing:border-box;
+  min-height:var(--atlas-control-height);
+  height:var(--atlas-control-height);
+  padding-top:5px;
+  padding-bottom:5px;
+  border-radius:var(--atlas-control-radius);
+  line-height:1.5;
+}
+body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
+  :is(.landing-main,.case-layout main,.agent-main,.document-main,.lab-layout main) .scheme-btn{
+  height:auto;
+  min-height:var(--atlas-control-height);
+}
+body:is(.cases-page,.agent-page) .search{height:var(--atlas-control-height);min-height:var(--atlas-control-height);padding:0 12px;border-radius:var(--atlas-control-radius)}
+body:is(.cases-page,.agent-page) .search input{height:100%;padding:0;line-height:1.5}
+body.cases-page .case-layout main .favorite,
+body.cases-page .dialog-close{display:inline-flex;align-items:center;justify-content:center;padding:0;line-height:1}
+body.landing-page :is(.landing-module-link,.landing-paths li>a),
+body.cases-page .card-bottom :is(a,label){min-height:var(--atlas-control-height)}
+body.landing-page .landing-feature-tabs button{padding-inline:12px}
+
+/* Prompts, JSON and copyable code use a real mono stack with readable Chinese fallback. */
+body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
+  :is(.landing-main,.case-layout main,.agent-main,.document-main,.lab-layout main)
+  :is(textarea,pre,code,kbd):not(.sample,.sample *){font-family:var(--atlas-font-mono)}
 
 /* Promotional home: readable descriptions, concise supporting labels. */
 body.landing-page :is(.landing-lead,.landing-description,.landing-paths li>p){font-size:16px}
@@ -78,7 +111,7 @@ body.landing-page .landing-case small{font-size:12px}
 body.landing-page .landing-command-heading{flex-wrap:wrap}
 body.landing-page .landing-command-heading label{font-size:14px;max-width:none;flex:1;min-width:120px}
 body.landing-page .landing-command-heading button{font-size:14px}
-body.landing-page .landing-command textarea{font-family:var(--atlas-font-sans);font-size:16px;height:180px;min-height:180px}
+body.landing-page .landing-command textarea{font-family:var(--atlas-font-mono);font-size:16px;height:180px;min-height:180px}
 body.landing-page .landing-command>p{font-size:14px}
 body.landing-page .landing-materials>p{font-size:14px}
 body.landing-page .landing-materials :is(dt,dd){font-size:14px}
@@ -92,11 +125,11 @@ body.cases-page .rail :is(.nav-item b,.rail-link b){font-family:var(--atlas-font
 body.cases-page :is(.case-toolbar,.edition,.list-caption,.sort,.back,.demo-toolbar,.demo-caption,.notes details,.swatch,.evidence-links,.source-comparison,.compare-tray>span,.toast,.compare-tip){font-size:14px}
 body.cases-page .search input{font-size:16px}
 body.cases-page .search kbd{font-size:14px}
-body.cases-page .sort select{font-size:14px;min-height:44px}
+body.cases-page .sort select{font-size:14px;min-height:var(--atlas-control-height)}
 body.cases-page .card-title h2{font-size:18px}
 body.cases-page :is(.card-bottom,.card-bottom a,.compare-label){font-size:14px}
 body.cases-page .card-bottom{align-items:center;flex-wrap:wrap;gap:8px}
-body.cases-page .card-bottom :is(a,label){min-height:44px;display:flex;align-items:center}
+body.cases-page .card-bottom :is(a,label){min-height:var(--atlas-control-height);display:flex;align-items:center}
 body.cases-page .notes h2{font-size:18px}
 body.cases-page .notes h3{font-size:16px}
 body.cases-page .element-map div{font-size:14px;grid-template-columns:72px minmax(0,1fr)}
@@ -104,9 +137,9 @@ body.cases-page .element-lab-link{font-size:14px;min-height:44px}
 body.cases-page .source-item>a{font-size:16px}
 body.cases-page .source-item small{font-size:14px}
 body.cases-page .compare-column h3{font-size:16px}
-body.cases-page .prompt-box{font-family:var(--atlas-font-sans);font-size:16px}
+body.cases-page .prompt-box{font-family:var(--atlas-font-mono);font-size:16px}
 body.cases-page #favorite-dialog p{font-size:16px}
-body.cases-page #favorite-dialog textarea{font-family:var(--atlas-font-sans);font-size:16px}
+body.cases-page #favorite-dialog textarea{font-family:var(--atlas-font-mono);font-size:16px}
 body.cases-page .cache-controls #cache-status{font-size:14px}
 
 /* Agent instructions are prose; source snippets keep semantic code typography. */
@@ -114,7 +147,7 @@ body.agent-page :is(.agent-lead,.agent-start p,.agent-local p,.agent-search-sect
 body.agent-page :is(.eyebrow,.agent-case small){font-size:12px}
 body.agent-page :is(.agent-stats,.agent-command p,#agent-status,.agent-case code,.agent-command pre){font-size:14px}
 body.agent-page .agent-search input{font-size:16px}
-body.agent-page .agent-case-actions .copy-button{font-size:14px;min-height:44px;padding:10px 14px}
+body.agent-page .agent-case-actions .copy-button{font-size:14px;min-height:var(--atlas-control-height);padding:5px 12px}
 
 /* Document content retains its tables, image proportions and code semantics. */
 body.document-page .document-main #path{font-size:14px}
@@ -133,11 +166,11 @@ body.lab-page .scheme-btn>span{font-size:14px}
 body.lab-page .scheme-btn small{font-size:12px}
 body.lab-page .lab-workspace .element-controls :is(label,legend,select,small){font-size:14px}
 body.lab-page .lab-workspace .element-controls :is(output,.color-note,.theme-control p){font-size:12px}
-body.lab-page .lab-workspace .element-controls select{min-height:44px}
+body.lab-page .lab-workspace .element-controls select{min-height:var(--atlas-control-height)}
 body.lab-page .demo-label{font-size:14px;flex-wrap:wrap}
 body.lab-page .observation,
 body.lab-page .observation p:last-child{font-size:14px}
-body.lab-page :is(.prompt-text,.configuration-tools textarea){font-family:var(--atlas-font-sans);font-size:16px}
+body.lab-page :is(.prompt-text,.configuration-tools textarea){font-family:var(--atlas-font-mono);font-size:16px}
 body.lab-page .lab-rail .atlas-section-nav>a{font-family:var(--atlas-font-sans);font-size:14px}
 body.lab-page .lab-rail .atlas-section-nav>:is(label,span){font-size:12px}
 body.lab-page .sample :is(.sample-meta,.sample-kicker,.sample-footnote,.note-preview-top,.note-preview p,.note-tag,.sample-features p,.sample-feedback p,.sample-compose>div p){font-size:12px}
@@ -160,11 +193,14 @@ html[data-lab-embed=home] body.lab-page .sample :is(.sample-copy>p,.sample-compo
 }
 @media(max-width:800px){
   body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+  body.landing-page .landing-feature-tabs button{padding-inline:6px}
 }
+@media(max-width:800px),(any-pointer:coarse){:root{--atlas-control-height:40px}}
+@media(max-width:400px){body.landing-page .landing-main .landing-feature-tabs button{font-size:12px;padding-inline:4px;white-space:nowrap}}
 @media(max-width:600px){
   body.landing-page .landing-command textarea{height:230px;min-height:230px}
   body.cases-page .demo-toolbar>div{gap:6px}
-  body.cases-page .demo-toolbar button{font-size:12px;padding:10px 9px}
+  body.cases-page .demo-toolbar button{font-size:12px;padding:5px 9px}
 }
 @media(max-width:360px){
   body .atlas-site-header .atlas-site-wordmark strong{font-size:12px}

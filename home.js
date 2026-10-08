@@ -11,11 +11,16 @@
 
   let refreshStory = () => {};
   const labFrame = document.querySelector('.landing-lab-frame');
+  let labHeightReceived = false;
+  let labMeasuredWidth = 0;
   if (labFrame) {
     window.addEventListener('message', event => {
       if (event.origin !== location.origin || event.source !== labFrame.contentWindow || event.data?.type !== 'design-atlas:lab-height') return;
       const height = event.data.height;
       if (typeof height !== 'number' || !Number.isFinite(height) || height <= 0) return;
+      if (event.data.width !== undefined && (typeof event.data.width !== 'number' || !Number.isFinite(event.data.width) || event.data.width <= 0)) return;
+      labHeightReceived = true;
+      labMeasuredWidth = typeof event.data.width === 'number' ? event.data.width : labFrame.clientWidth || 0;
       labFrame.style.height = `${Math.max(300, Math.min(2000, Math.ceil(height)))}px`;
       refreshStory();
     });
@@ -38,6 +43,7 @@
     const introButtons = [...stage.querySelectorAll('[data-home-intro]')];
     if (buttons.length === 3 && panels.every(Boolean) && descriptions.every(Boolean) && sticky && controls && nextButton && status && windowTitle && position) {
       const desktop = window.matchMedia('(min-width:1100px)');
+      const tallEnough = window.matchMedia('(min-height:740px)');
       const reduced = window.matchMedia('(prefers-reduced-motion:reduce)');
       const labels = ['浏览案例', '设计实验室', 'Agent 工作流'];
       const clamp = value => Math.max(0, Math.min(1, value));
@@ -50,6 +56,9 @@
       let navigationTarget = null;
       let raf = 0;
       let boundLabDocument = null;
+      let contentOverflow = false;
+      let overflowFrames = 0;
+      let layoutSettlesAt = Date.now() + 900;
       function setStatus(text) { if (status.textContent !== text) status.textContent = text; }
       function focusedContent() {
         const focus = document.activeElement;
@@ -58,8 +67,8 @@
       function paused() { return manualHold || focusedContent() || (active === 1 && pointerInLab); }
       function updateControls(isPaused) {
         stage.dataset.paused = String(isPaused);
-        setStatus(isPaused ? (active === 1 ? '安心调配，画面会留在这里。完成后，继续探索下一步。' : '先完成这里的操作，再继续探索下一步。') : '向下滚动，依次探索三种方式。');
-        nextButton.textContent = active === 0 ? '继续了解实验室 ↓' : active === 1 ? '继续了解 Agent ↓' : '继续往下看 ↓';
+        setStatus(isPaused ? '画面已停留。完成操作后，继续下一步。' : '滚动探索，也可选择左侧入口。');
+        nextButton.textContent = active === 0 ? '继续调配元素 ↓' : active === 1 ? '继续参考构建 ↓' : '继续往下了解 ↓';
       }
       function renderSelection() {
         stage.dataset.mode = buttons[active].dataset.homeMode;
@@ -81,6 +90,7 @@
         const direction = index > active ? 1 : -1;
         panels.forEach(panel => panel.getAnimations?.().forEach(animation => animation.cancel()));
         active = index;
+        layoutSettlesAt = Date.now() + 900;
         renderSelection();
         if (enhanced && animate) {
           panels[index].animate?.([{opacity:0, transform:`translateY(${direction * 20}px)`}, {opacity:1, transform:'none'}], {duration:360, easing:'cubic-bezier(.22,1,.36,1)'});
@@ -103,6 +113,19 @@
         rail.inert = stage.dataset.phase !== 'story';
         if (introActions) introActions.inert = stage.dataset.phase === 'story';
         if (target !== active && !held) select(target);
+        // Growing Lab notes or larger browser text must remain fully readable.
+        // Wait for the child frame's resize message before choosing outer-page flow.
+        const pane = panels[active];
+        const labIsMeasured = active !== 1 || labHeightReceived && (!labMeasuredWidth || Math.abs(labMeasuredWidth - labFrame.clientWidth) < 2);
+        if (labIsMeasured && pane.clientHeight > 0 && pane.scrollHeight > pane.clientHeight + 2) {
+          if (Date.now() < layoutSettlesAt) { requestUpdate(); return; }
+          if (++overflowFrames >= 6) {
+            contentOverflow = true;
+            adapt();
+            return;
+          }
+          requestUpdate();
+        } else overflowFrames = 0;
         if (!held) progress.forEach((line, index) => { line.style.transform = `scaleX(${clamp((delta - 500 - index * 500) / 500)})`; });
         updateControls(held);
       }
@@ -118,7 +141,7 @@
           if (introActions) introActions.inert = true;
           buttons[index].focus({preventScroll:true});
           select(index);
-          const top = stage.getBoundingClientRect().top + window.scrollY - inset() + 550 + index * 500;
+          const top = stage.getBoundingClientRect().top + window.scrollY - inset() + 750 + index * 500;
           navigationTarget = {index, top, expires:Date.now() + 1400};
           window.scrollTo({top, behavior:'smooth'});
         } else {
@@ -179,7 +202,8 @@
       function adapt() {
         const focused = panels.findIndex(panel => panel.contains(document.activeElement));
         if (focused >= 0) active = focused;
-        enhanced = desktop.matches && !reduced.matches;
+        enhanced = desktop.matches && tallEnough.matches && !reduced.matches && !contentOverflow;
+        layoutSettlesAt = Date.now() + 900;
         manualHold = enhanced && focused === 1;
         navigationTarget = null;
         stage.classList.toggle('home-story--enhanced', enhanced);
@@ -192,9 +216,10 @@
         requestUpdate();
       }
       desktop.addEventListener('change', adapt);
+      tallEnough.addEventListener('change', adapt);
       reduced.addEventListener('change', adapt);
       window.addEventListener('scroll', requestUpdate, {passive:true});
-      window.addEventListener('resize', requestUpdate);
+      window.addEventListener('resize', () => { contentOverflow = false; overflowFrames = 0; adapt(); });
       window.addEventListener('pageshow', requestUpdate);
       window.addEventListener('pagehide', () => { if (raf) window.cancelAnimationFrame(raf); raf = 0; });
       document.fonts?.ready.then(requestUpdate);

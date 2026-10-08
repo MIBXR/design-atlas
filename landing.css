@@ -48,8 +48,9 @@
 .landing-hero h1 span{background:linear-gradient(transparent 66%,var(--lime) 66%,var(--lime) 91%,transparent 91%);color:var(--ink)}
 :root[data-atlas-theme=dark] .landing-hero h1 span{background:linear-gradient(transparent 66%,#526438 66%,#526438 91%,transparent 91%)}
 .landing-lead{font-size:16px;line-height:1.9;color:var(--muted);margin:24px auto 0;max-width:670px}
-.landing-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:27px}
-.landing-button{display:inline-flex;align-items:center;justify-content:center;gap:17px;min-height:48px;border:1px solid var(--line);border-radius:8px;background:var(--field);color:var(--ink);padding:11px 19px;font-size:13px;font-weight:600;line-height:1.5;transition:background-color 150ms ease,border-color 150ms ease,box-shadow 150ms ease}
+.landing-actions{display:grid;grid-template-columns:repeat(3,minmax(0,196px));align-items:center;justify-content:center;gap:10px;margin-top:27px}
+.landing-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:36px;border:1px solid var(--line);border-radius:8px;background:var(--field);color:var(--ink);padding:6px 12px;font-size:14px;font-weight:600;line-height:1.5;transition:background-color 150ms ease,border-color 150ms ease,box-shadow 150ms ease}
+.landing-actions>.landing-button{width:100%;min-width:0;min-height:36px;padding:6px 12px;white-space:nowrap}
 .landing-button:hover{background:var(--surface);border-color:var(--select-accent)}
 .landing-button--primary{background:var(--lime);border-color:var(--lime)}
 .landing-page a.landing-button--primary,.landing-page a.landing-skip{color:#252822}
@@ -173,7 +174,9 @@
   .landing-lead{font-size:13px;line-height:1.9;max-width:440px;margin-top:20px}
   .landing-desktop{display:none}
   .landing-actions{gap:8px;margin-top:23px}
-  .landing-button{min-height:46px;padding:10px 12px;gap:10px;font-size:12px}
+.landing-button{min-height:40px;padding:8px 12px;gap:10px;font-size:14px}
+.landing-actions{grid-template-columns:minmax(0,240px)}
+.landing-actions>.landing-button{min-height:40px;padding:8px 12px}
   .landing-button>span{font-size:14px}
   .landing-hero-note{font-size:9px;max-width:300px;margin:17px auto 0}
   .landing-hero-note>span[aria-hidden]{padding:0 3px}

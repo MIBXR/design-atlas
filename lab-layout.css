@@ -11,22 +11,31 @@
 .lab-page .lab-rail .atlas-section-nav>a:hover{background:#353a2e}
 .lab-page .lab-rail a:focus-visible,.lab-page .lab-rail summary:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
 
-/* Until the preview has enough room, controls occupy a row above it. */
+/* A narrow workspace stacks controls; desktop gives the experiment its own column. */
 html:not([data-lab-embed=home]) .lab-page .lab-workspace{display:block}
 html:not([data-lab-embed=home]) .lab-page .lab-workspace .element-controls{grid-template-columns:repeat(2,minmax(0,1fr));margin:0 0 24px}
+html:not([data-lab-embed=home]) .lab-page .lab-workspace .space-control input{box-sizing:border-box;min-width:0;max-width:100%;margin:0}
 html:not([data-lab-embed=home]) .lab-page .lab-workspace .experiment{position:static;top:auto;min-width:0;container:atlas-lab-sample / inline-size}
-@media(min-width:1160px) and (max-width:1439px){
-  html:not([data-lab-embed=home]) .lab-page .lab-workspace .element-controls{grid-template-columns:repeat(4,minmax(0,1fr))}
-}
-@media(min-width:1440px){
-  html:not([data-lab-embed=home]) .lab-page .lab-workspace{display:grid;grid-template-columns:340px minmax(0,1fr);gap:24px;align-items:start}
+@media(min-width:1100px){
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace{display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;align-items:start}
   html:not([data-lab-embed=home]) .lab-page .lab-workspace .element-controls{margin-bottom:0}
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .reference-control{display:block}
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .reference-control>label{display:block;margin-bottom:8px}
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .color-controls{grid-template-columns:repeat(3,minmax(0,1fr))}
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .color-controls label{display:block}
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .color-controls input{display:block;margin-bottom:6px}
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .color-note{grid-column:1/-1}
   html:not([data-lab-embed=home]) .lab-page .lab-workspace .experiment{position:sticky;top:calc(var(--atlas-header-height,88px) + 20px)}
 }
-@container atlas-lab-sample (max-width:640px){
+@media(min-width:1440px){html:not([data-lab-embed=home]) .lab-page .lab-workspace{grid-template-columns:300px minmax(0,1fr)}}
+@container atlas-lab-sample (max-width:560px){
   .lab-page .sample-hero,.lab-page .sample[data-layout=editorial] .sample-hero{grid-template-columns:minmax(0,1fr)}
   .lab-page .sample[data-layout=editorial] .sample-copy{padding-left:0}
   .lab-page .sample-features{grid-template-columns:minmax(0,1fr)}
+}
+@container atlas-lab-sample (min-width:561px){
+  .lab-page .sample-hero,.lab-page .sample[data-layout=editorial] .sample-hero{grid-template-columns:repeat(2,minmax(0,1fr));align-items:center}
+  .lab-page .sample-copy,.lab-page .note-preview{align-self:center}
 }
 @media(min-width:801px) and (max-width:1159px){
   .lab-page{--lab-gutter:24px;--lab-rail-width:196px;--lab-column-gap:24px}

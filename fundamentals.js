@@ -29,18 +29,19 @@
   const labels = { palette:'配色', type:'字体', shape:'形状', space:'留白' };
   const fontNames = { serif:'衬线', sans:'无衬线', mono:'等宽' };
   const layoutNames = { split:'左文右图', center:'居中纵向', editorial:'左图右文' };
-  const shapeNames = { sharp:'直角 / 0px', soft:'小圆角 / 10px', round:'大圆角 / 24px' };
+  const shapeNames = { sharp:'直角 / 0px', soft:'小圆角 / 8px', round:'大圆角 / 24px' };
   const schemes = {
-    paper:{ name:'纸页', palette:{bg:'#f4eee2',ink:'#272b27',accent:'#844c35'},type:'serif',layout:'split',shape:'soft',space:40,graphic:'line',hierarchy:'clear',texture:'grain',motion:true, description:'暖纸底、墨色正文与陶土强调，配合衬线标题、细框和疏朗间距，表达安静阅读。' },
-    friendly:{ name:'亲和',palette:{bg:'#e8f0df',ink:'#183b2b',accent:'#713a4f'},type:'sans',layout:'split',shape:'round',space:32,graphic:'geometry',hierarchy:'clear',texture:'lift',motion:true,description:'浅绿色、深绿文字与莓色强调，配合无衬线字、大圆角和适中留白，表达轻松上手。' },
-    tool:{name:'工具',palette:{bg:'#17272b',ink:'#eef4ec',accent:'#86c9b0'},type:'mono',layout:'editorial',shape:'sharp',space:20,graphic:'product',hierarchy:'clear',texture:'flat',motion:false,description:'深色底、亮文字与青色强调，配合等宽字、直角和紧凑间距，表达直接的工具信息。'}
+    // Snapshot references: Notion's neutral workspace, Material's tonal purple, Swiss's paper/ink/red.
+    paper:{ name:'纸页', palette:{bg:'#f7f7f5',ink:'#101010',accent:'#373737'},type:'sans',layout:'split',shape:'soft',space:32,graphic:'line',hierarchy:'clear',texture:'flat',motion:true, description:'中性纸面、墨色信息与少量深灰强调，配合清楚的无衬线层级、细框和留白，表达安静阅读。' },
+    friendly:{ name:'亲和',palette:{bg:'#fefbff',ink:'#1c1b1d',accent:'#6442d6'},type:'sans',layout:'split',shape:'round',space:28,graphic:'geometry',hierarchy:'clear',texture:'flat',motion:true,description:'柔白表面、深色正文与紫色行动，配合柔和图形和适中留白，让信息清楚、操作亲和。' },
+    tool:{name:'工具',palette:{bg:'#f2efe6',ink:'#171717',accent:'#e3402e'},type:'sans',layout:'editorial',shape:'sharp',space:24,graphic:'product',hierarchy:'clear',texture:'flat',motion:false,description:'纸白、炭黑与信号红，配合严格对齐、直线边界与紧凑间距，突出可扫描的工具信息。'}
   };
   const fontRules = {
     serif:{title:'Georgia,"SimSun",serif',body:'Arial,"Microsoft YaHei",sans-serif',weight:'500',track:'-1px'},
-    sans:{title:'Arial,"Microsoft YaHei",sans-serif',body:'Arial,"Microsoft YaHei",sans-serif',weight:'700',track:'-.8px'},
+    sans:{title:'"Microsoft YaHei","微软雅黑","Segoe UI",Arial,sans-serif',body:'"Microsoft YaHei","微软雅黑","Segoe UI",Arial,sans-serif',weight:'650',track:'-.5px'},
     mono:{title:'"Courier New","Microsoft YaHei",monospace',body:'"Courier New","Microsoft YaHei",monospace',weight:'700',track:'-.8px'}
   };
-  const shapeRules = {sharp:{radius:0,stroke:1.5,cap:'butt',shadow:'none'},soft:{radius:10,stroke:1,cap:'round',shadow:'none'},round:{radius:24,stroke:1.5,cap:'round',shadow:'0 6px 18px #0000000d'}};
+  const shapeRules = {sharp:{radius:0,stroke:1,cap:'butt',shadow:'none'},soft:{radius:8,stroke:1,cap:'round',shadow:'none'},round:{radius:24,stroke:1,cap:'round',shadow:'none'}};
   let state;
   let groupOrigins;
   let referenceEntry = null;
@@ -72,7 +73,7 @@
       sound:referenceEntry?.soundBehavior||{kind:'none',control:'教学示例不添加BGM',interactionRole:'反馈由文字和微动效表达'},
       typography:{choice:state.type,titleFont:fontRules[state.type].title,bodyFont:fontRules[state.type].body},
       layout:{choice:state.layout,meaning:layoutNames[state.layout]},
-      shape:{choice:state.shape,radiusPx:shapeRules[state.shape].radius,strokePx:shapeRules[state.shape].stroke},
+      shape:{choice:state.shape,radiusPx:shapeRules[state.shape].radius,strokePx:shapeRules[state.shape].stroke,buttonRadiusPx:8},
       spacing:{basePx:state.space,note:'手机外边距上限28px，组间距离继续按所选尺度变化'},
       graphic:{choice:state.graphic,meaning:graphicNames[state.graphic],asset:'本地原创SVG，无外部素材'},
       hierarchy:state.hierarchy,
@@ -157,7 +158,7 @@
   }));
   el('type-choice').addEventListener('change',event=>{state.type=event.target.value;changed('type','调整字体','标题与正文切换为“'+fontNames[state.type]+'”关系，产品文字保持不变。','观察：字形、字重和换行是否改变阅读气质？与现有线条、形状的关系是否清晰？')});
   el('layout-choice').addEventListener('change',event=>{state.layout=event.target.value;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 布局调整';message('调整布局','切换为“'+layoutNames[state.layout]+'”。手机会重排为纵向，但图文顺序仍体现这个选择。','观察：先看到的是文案还是示例笔记？布局是否将产品重点带到了更明确的位置？')});
-  el('shape-choice').addEventListener('change',event=>{state.shape=event.target.value;changed('shape','调整形状与圆角','采用“'+shapeNames[state.shape]+'”，按钮、笔记和边线处理一起更新。','观察：多个元素重复同一种形状规则后，是否更容易被理解为一个整体？')});
+  el('shape-choice').addEventListener('change',event=>{state.shape=event.target.value;changed('shape','调整形状与圆角','采用“'+shapeNames[state.shape]+'”，笔记卡片与边线处理一起更新，行动按钮保留统一圆角。','观察：多个元素重复同一种形状规则后，是否更容易被理解为一个整体？')});
   el('space-choice').addEventListener('input',event=>{state.space=Number(event.target.value);changed('space','调整留白','基准间距改为'+state.space+'px；外边距、组间距与内距按同一尺度变化。手机外边距有28px上限。','观察：哪些内容成了一组？重点周围是否有空间？密集与疏朗会如何改变阅读速度？')});
   el('graphic-choice').addEventListener('change',event=>{state.graphic=event.target.value;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 图形调整';message('调整图形素材','换成“'+graphicNames[state.graphic]+'”呈现方式；三幅SVG沿用当前配色与线条规则，文字卖点保持相同。','观察：线描、抽象构成与具体产品图分别强调了什么？哪一种更适合解释当前卖点？')});
   el('hierarchy-choice').addEventListener('change',event=>{state.hierarchy=event.target.value;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 层级调整';message('调整信息层级',state.hierarchy==='clear'?'恢复明显的标题尺度与字重差。':'把标题尺度和字重拉近正文，观察视觉更趋平级时的阅读变化。','观察：第一眼先看到什么？标题和主要行动还容易找到吗？语义标题没有改变，只改变视觉关系。')});
@@ -199,7 +200,9 @@
     const source=referenceEntry?'\n参考方向：'+referenceEntry.title+'；来源：'+referenceEntry.sources.map(s=>s.url).join('，')+'。这是元素教学迁移，请结合原条目研究其完整布局与交互。':'';
     const text=el('prompt-text').value+source+'\n\n当前元素配置（可据项目内容调整，不作为审美评分）：\n'+JSON.stringify(config(),null,2);copy(text,el('config-copy-status'));
   });
-  el('sample-action').addEventListener('click',()=>{const compose=el('sample-compose');compose.hidden=!compose.hidden;el('sample-action').setAttribute('aria-expanded',String(!compose.hidden));if(!compose.hidden)el('sample-note').focus()});
+  function showComposer(open){el('sample-compose').hidden=!open;el('sample-action').setAttribute('aria-expanded',String(open));if(open)el('sample-note').focus();}
+  el('sample-action').addEventListener('click',()=>showComposer(el('sample-compose').hidden));
+  el('sample-cancel').addEventListener('click',()=>{showComposer(false);el('sample-action').focus({preventScroll:true});});
   el('sample-compose').addEventListener('submit',event=>{event.preventDefault();const text=el('sample-note').value.trim();if(!text){el('sample-message').textContent='先写一句发现，再保存。';el('sample-note').focus();return}document.querySelector('.note-preview h4').textContent=text;el('sample-message').textContent='已在本次页面保存。示例笔记已更新；刷新后不会保留。'});
   setScheme('paper');
   const requested=new URLSearchParams(location.search).get('style');
@@ -207,11 +210,13 @@
   if(document.documentElement.dataset.labEmbed==='home' && window.parent!==window){
     const experiment=el('lab');
     let reportedHeight=0;
+    let reportedWidth=0;
     const reportHeight=()=>{
       const height=Math.ceil(experiment.getBoundingClientRect().height);
-      if(!Number.isFinite(height)||height<=0||height===reportedHeight)return;
-      reportedHeight=height;
-      window.parent.postMessage({type:'design-atlas:lab-height',height},location.origin);
+      const width=Math.round(window.innerWidth);
+      if(!Number.isFinite(height)||height<=0||!Number.isFinite(width)||width<=0||(height===reportedHeight&&width===reportedWidth))return;
+      reportedHeight=height;reportedWidth=width;
+      window.parent.postMessage({type:'design-atlas:lab-height',height,width},location.origin);
     };
     new ResizeObserver(reportHeight).observe(experiment);
     reportHeight();
