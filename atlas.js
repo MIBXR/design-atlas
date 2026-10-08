@@ -22,6 +22,9 @@ let favorites=[]; try { favorites=JSON.parse(localStorage.getItem('atlas-favorit
 favorites=[...new Set(favorites.filter(id=>entries.some(e=>e.id===id)))];
 let previewObserver;
 let country='all'; let selected=[]; let filter='all'; let query=''; let sort='curated';
+let filteredResults=[];
+let inspirationId='google-material';
+let quicklookId='', quicklookIds=[], snapshotMode='desktop', quicklookOpener;
 let renderedLocation='';
 const categoryFilters={products:'产品',games:'游戏/IP',classics:'经典风格',culture:'艺术/文化',favorites:'favorites'};
 function readCollectionState(){
@@ -58,15 +61,170 @@ const behaviors=e=>`<div class="behavior-block"><span class="behavior-label">显
 const labels = {all:'全部风格',产品:'产品与平台','游戏/IP':'游戏与 IP',经典风格:'经典设计语言','艺术/文化':'艺术与文化',favorites:'我的收藏'};
 const list = values => `<ul>${values.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
 const swatches = e => `<div class="swatches">${e.tokens.palette.map(x=>`<span class="swatch"><i style="background:${esc(x)}"></i>${esc(x)}</span>`).join('')}</div>`;
-function toast(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').classList.remove('visible'),2300);}
-function saveFavorites(){try{localStorage.setItem('atlas-favorites',JSON.stringify(favorites));}catch{toast('此浏览器未允许本地存储，收藏仅保留到关闭页面。');}$('#fav-count').textContent=String(favorites.length).padStart(2,'0');}
-function toggleFavorite(id){favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];saveFavorites();document.querySelectorAll(`[data-fav="${id}"]`).forEach(x=>{x.classList.toggle('selected',favorites.includes(id));x.setAttribute('aria-pressed',String(favorites.includes(id)));x.textContent=favorites.includes(id)?'★':'☆';});if(filter==='favorites' && !$('#collection').hidden)renderCards();}
-function favoriteButton(e){return `<button class="favorite ${favorites.includes(e.id)?'selected':''}" data-fav="${e.id}" aria-label="收藏${esc(e.title)}" aria-pressed="${favorites.includes(e.id)}">${favorites.includes(e.id)?'★':'☆'}</button>`;}
-function updateTray(){const count=selected.length;document.body.classList.toggle('has-tray',count>0);$('#compare-count').textContent=count;$('#compare-tray').hidden=!count;$('#tray-text').textContent=`已选择 ${count} 项：${selected.map(id=>entries.find(e=>e.id===id)?.title).join(' · ')}`;$('#compare-go').disabled=count<2;}
-function selectCompare(id,checked){if(checked && !selected.includes(id)){if(selected.length===3){toast('一次最多比较 3 项，请先取消一个条目。');renderCards();return;}selected.push(id);}else if(!checked){selected=selected.filter(x=>x!==id);}updateTray();}
-function renderCards(){let results=entries.filter(e=>(filter==='all'||filter==='favorites'&&favorites.includes(e.id)||e.category===filter)).filter(e=>country==='all'||e.country===country);if(query){results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));}if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));$('#cards').innerHTML=results.map(e=>`<article class="card" style="--bg:${esc(e.background)}"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy"><span class="card-number">${String(e.order).padStart(2,'0')} / ${esc(e.category)}</span></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><a href="#style/${e.id}">拆解 & demo ↗</a></div></div></article>`).join('');$('#results-label').textContent=`${labels[filter]} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;$('#empty').hidden=!!results.length;}
+function toast(message){$('#toast').textContent=message;if($('#quicklook').open)$('#quicklook-feedback').textContent=message;$('#toast').classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').classList.remove('visible'),2300);}
+function saveFavorites(){let persisted=true;try{localStorage.setItem('atlas-favorites',JSON.stringify(favorites));}catch{persisted=false;toast('此浏览器未允许本地存储，收藏仅保留到关闭页面。');}$('#fav-count').textContent=String(favorites.length).padStart(2,'0');return persisted;}
+function toggleFavorite(id){
+  const added=!favorites.includes(id), entry=entries.find(e=>e.id===id);
+  favorites=added?[...favorites,id]:favorites.filter(x=>x!==id);
+  const persisted=saveFavorites();
+  document.querySelectorAll(`[data-fav="${id}"]`).forEach(button=>{
+    button.classList.toggle('selected',added);
+    button.setAttribute('aria-pressed',String(added));
+    button.setAttribute('aria-label',`${added?'取消收藏':'收藏'}${entry.title}`);
+    button.textContent=added?'★':'☆';
+  });
+  toast(`${added?'已收藏':'已取消收藏'}${persisted?'':'（仅本次会话）'} · ${entry.title}`);
+  if(filter==='favorites' && !$('#collection').hidden){
+    renderCards();
+    if(!added && $('#quicklook').open)$('#quicklook').close();
+    if(!$('#quicklook').open)$('#search').focus();
+  }
+  syncQuicklookActions();
+}
+function favoriteButton(e){return `<button class="favorite ${favorites.includes(e.id)?'selected':''}" data-fav="${e.id}" aria-label="${favorites.includes(e.id)?'取消收藏':'收藏'}${esc(e.title)}" aria-pressed="${favorites.includes(e.id)}">${favorites.includes(e.id)?'★':'☆'}</button>`;}
+function updateTray(){
+  const count=selected.length;
+  document.body.classList.toggle('has-tray',count>0);
+  $('#compare-count').textContent=count;
+  $('#compare-tray').hidden=!count;
+  $('#tray-text').textContent=`比较候选 · ${count}/3`;
+  $('#tray-hint').textContent=count<2?'再选一例，看看不同表达':'从画面到机制，逐项对照';
+  $('#tray-items').innerHTML=selected.map(id=>{
+    const e=entries.find(entry=>entry.id===id);
+    return `<div class="tray-item"><img src="${esc(e.preview)}" alt=""><span>${esc(e.title)}</span><button data-remove-compare="${id}" aria-label="移除比较${esc(e.title)}">×</button></div>`;
+  }).join('')+Array.from({length:3-count},()=>'<span class="tray-slot" aria-hidden="true">+ 添加案例</span>').join('');
+  $('#compare-go').disabled=count<2;
+  document.querySelectorAll('[data-compare]').forEach(input=>{
+    input.checked=selected.includes(input.dataset.compare);
+    input.closest('.card')?.classList.toggle('selected',input.checked);
+  });
+  syncQuicklookActions();
+}
+function selectCompare(id,checked){
+  if(checked && !selected.includes(id)){
+    if(selected.length===3){toast('一次最多比较 3 项，请先移除一个候选。');updateTray();return;}
+    selected.push(id);
+  }else if(!checked){selected=selected.filter(x=>x!==id);}
+  updateTray();
+}
+function renderCards(){
+  let results=entries.filter(e=>(filter==='all'||filter==='favorites'&&favorites.includes(e.id)||e.category===filter)).filter(e=>country==='all'||e.country===country);
+  if(query)results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));
+  if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));
+  filteredResults=results;
+  $('#cards').innerHTML=results.map(e=>`<article class="card ${selected.includes(e.id)?'selected':''}" style="--bg:${esc(e.background)}"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy" decoding="async"><span class="card-number">${String(e.order).padStart(2,'0')} / ${esc(e.category)}</span></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><button class="quicklook-trigger" data-quicklook="${e.id}" aria-label="快速预览${esc(e.title)}">快速看图</button><a href="#style/${e.id}">拆解 & demo ↗</a></div></div></article>`).join('');
+  $('#results-label').textContent=`${labels[filter]} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;
+  $('#empty').hidden=!!results.length;
+  document.querySelectorAll('[data-explore]').forEach(button=>button.setAttribute('aria-pressed',String(query===button.dataset.explore)));
+  renderInspiration();
+}
+function renderInspiration(){
+  const e=filteredResults.find(entry=>entry.id===inspirationId)||filteredResults[0];
+  $('#inspiration-open').disabled=!e;
+  $('#inspiration-shuffle').disabled=filteredResults.length<2;
+  if(!e){$('#inspiration-title').textContent='换个线索，继续探索';$('#inspiration-image').hidden=true;$('#inspiration-category').textContent='没有匹配的案例';return;}
+  inspirationId=e.id;
+  $('#inspiration-image').hidden=false;
+  $('#inspiration-image').src=e.preview;
+  $('#inspiration-image').alt=`${e.title}代码 Demo 的真实截图`;
+  $('#inspiration-category').textContent=e.category;
+  $('#inspiration-title').textContent=e.title;
+  $('#inspiration-hint').textContent=e.interaction[0];
+  $('#inspiration-open').setAttribute('aria-label',`快速预览${e.title}`);
+}
+function syncQuicklookActions(){
+  if(!quicklookId)return;
+  const favorite=favorites.includes(quicklookId), compared=selected.includes(quicklookId);
+  $('#quicklook-favorite').textContent=favorite?'★ 已收藏':'☆ 收藏这一例';
+  $('#quicklook-favorite').setAttribute('aria-pressed',String(favorite));
+  $('#quicklook-compare').textContent=compared?'✓ 已加入比较':selected.length===3?'比较已满 · 3/3':'+ 加入比较';
+  $('#quicklook-compare').setAttribute('aria-pressed',String(compared));
+}
+function setSnapshot(mode){
+  snapshotMode=mode;
+  const e=entries.find(entry=>entry.id===quicklookId);
+  if(!e)return;
+  $('#quicklook-image-wrap').classList.toggle('mobile',mode==='mobile');
+  $('#quicklook-image-status').textContent='正在准备截图…';
+  $('#quicklook-image-retry').hidden=true;
+  $('#quicklook-image').src=mode==='mobile'?`previews/mobile/${e.id}.jpg`:e.preview;
+  $('#quicklook-image').alt=`${e.title} · ${mode==='mobile'?'手机':'桌面'} Demo 的实际截图`;
+  document.querySelectorAll('[data-snapshot]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.snapshot===mode)));
+}
+function renderQuicklook(){
+  const e=entries.find(entry=>entry.id===quicklookId), index=quicklookIds.indexOf(e.id);
+  $('#quicklook-feedback').textContent='';
+  $('#quicklook-title').textContent=e.title;
+  $('#quicklook-position').textContent=`${e.category} · ${index+1} / ${quicklookIds.length}`;
+  $('#quicklook-summary').textContent=e.summary;
+  $('#quicklook-mechanisms').innerHTML=e.interaction.slice(0,2).map(value=>`<li>${esc(value)}</li>`).join('');
+  $('#quicklook-palette').innerHTML=swatches(e);
+  $('#quicklook-detail').href=`#style/${e.id}`;
+  $('#quicklook-prev').disabled=index===0;
+  $('#quicklook-next').disabled=index===quicklookIds.length-1;
+  setSnapshot(snapshotMode);
+  syncQuicklookActions();
+}
+function openQuicklook(id,opener){
+  quicklookOpener=opener;
+  quicklookIds=filteredResults.map(entry=>entry.id);
+  if(!quicklookIds.includes(id))quicklookIds=[id];
+  quicklookId=id;snapshotMode='desktop';
+  renderQuicklook();$('#quicklook').showModal();
+}
+function stepQuicklook(direction){
+  const index=quicklookIds.indexOf(quicklookId)+direction;
+  if(index<0||index>=quicklookIds.length)return;
+  quicklookId=quicklookIds[index];renderQuicklook();
+}
+$('#inspiration-shuffle').addEventListener('click',()=>{
+  const candidates=filteredResults.filter(e=>e.id!==inspirationId);
+  if(!candidates.length)return;
+  inspirationId=candidates[Math.floor(Math.random()*candidates.length)].id;renderInspiration();
+});
+$('#inspiration-open').addEventListener('click',event=>openQuicklook(inspirationId,event.currentTarget));
+document.querySelectorAll('[data-explore]').forEach(button=>button.addEventListener('click',()=>{
+  query=query===button.dataset.explore?'':button.dataset.explore;
+  filter='all';country='all';writeCollectionState({showCollection:true});
+}));
+$('#quicklook-close').addEventListener('click',()=>$('#quicklook').close());
+$('#quicklook').addEventListener('close',()=>{
+  if($('#quicklook').open)return;
+  $('#quicklook-image').removeAttribute('src');
+  if(!$('#collection').hidden){
+    if(quicklookOpener?.isConnected)quicklookOpener.focus();
+    else $('#search').focus();
+  }
+});
+$('#quicklook').addEventListener('keydown',event=>{
+  if(event.key==='Tab'){
+    const controls=[...$('#quicklook').querySelectorAll('button:not(:disabled),a[href]')].filter(control=>control.getClientRects().length);
+    const first=controls[0],last=controls[controls.length-1];
+    if(event.shiftKey && event.target===first){event.preventDefault();last.focus();}
+    else if(!event.shiftKey && event.target===last){event.preventDefault();first.focus();}
+    return;
+  }
+  if(['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName))return;
+  if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();stepQuicklook(event.key==='ArrowLeft'?-1:1);}
+});
+document.querySelectorAll('[data-snapshot]').forEach(button=>button.addEventListener('click',()=>setSnapshot(button.dataset.snapshot)));
+$('#quicklook-prev').addEventListener('click',()=>stepQuicklook(-1));
+$('#quicklook-next').addEventListener('click',()=>stepQuicklook(1));
+$('#quicklook-favorite').addEventListener('click',()=>toggleFavorite(quicklookId));
+$('#quicklook-compare').addEventListener('click',()=>selectCompare(quicklookId,!selected.includes(quicklookId)));
+$('#quicklook-detail').addEventListener('click',()=>$('#quicklook').close());
+$('#quicklook-image').addEventListener('load',()=>{if($('#quicklook').open)$('#quicklook-image-status').textContent='';});
+$('#quicklook-image').addEventListener('error',()=>{
+  if(!$('#quicklook').open)return;
+  $('#quicklook-image-status').textContent='截图暂未加载。可以重试，或进入完整拆解继续阅读。';
+  $('#quicklook-image-retry').hidden=false;
+});
+$('#quicklook-image-retry').addEventListener('click',()=>setSnapshot(snapshotMode));
 function route(){
   previewObserver?.disconnect();
+  if($('#quicklook').open)$('#quicklook').close();
+  // Removing the old frame also stops media when returning to the collection.
+  $('#detail').innerHTML='';
   readCollectionState();
   let hash;
   try{hash=decodeURIComponent(location.hash);}catch{hash='';}
@@ -79,6 +237,12 @@ function route(){
   else{$('#collection').hidden=false;renderCards();}
   renderedLocation=location.href;
   window.scrollTo({top:0,behavior:'instant'});updateTray();
+  const heading=!$('#detail').hidden?$('#detail h1'):!$('#comparison').hidden?$('#comparison h1'):null;
+  if(heading){
+    heading.setAttribute('tabindex','-1');
+    const destination=location.href;
+    setTimeout(()=>{if(location.href===destination && heading.isConnected)heading.focus({preventScroll:true});},0);
+  }
 }
 function renderDetail(e){const i=entries.findIndex(x=>x.id===e.id);$('#detail').innerHTML=`<div class="detail-top"><a class="back" href="#">← 返回参考库</a><div>${favoriteButton(e)}${e.referenceUrl?`<a class="copy-button" href="${esc(e.referenceUrl)}" target="_blank" rel="noopener noreferrer">对照原站 ↗</a>`:''}<a class="copy-button" href="${esc(docHref(e.research))}" target="_blank">调研原文 ↗</a><a class="copy-button" href="agent.html#${encodeURIComponent(e.id)}">Agent 取材 ↗</a><a class="copy-button" href="agent/cases/${encodeURIComponent(e.id)}.json" download="${esc(e.id)}-context.json">完整案例包 ↓</a><a class="primary-button" href="${esc(e.demo)}" target="_blank">独立打开 demo ↗</a></div></div><div class="detail-title"><div><p class="eyebrow">${String(e.order).padStart(2,'0')} / ${esc(e.category)} / ${esc(e.subtitle)}</p><h1>${esc(e.title)}</h1><p>${esc(e.summary)}</p></div><div class="tags">${e.tags.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div></div><div class="detail-layout"><div class="demo-panel"><div class="demo-toolbar"><span>LIVE DEMO / ${e.implementation==='reference-study'?'原站局部复现':'经典风格练习'}</span><div><button data-viewport="desktop" class="active" aria-pressed="true">适应面板</button><button data-viewport="wide" aria-pressed="false">桌面 1440px</button><button data-viewport="mobile" aria-pressed="false">手机 ≤390px</button><button id="reload-demo">重播 ↻</button></div></div><div class="frame-wrap"><iframe class="demo-frame" title="${esc(e.title)}交互 demo" src="${esc(e.demo)}"></iframe></div><p class="demo-caption">可在画面内滚动、点击与切换。${e.implementation==='reference-study'?'原站局部复现，具体差异见下方对照说明。':'经典风格组合练习。'}桌面 1440px 保留完整桌面布局与动效；独立打开可查看原始尺寸。</p><a class="copy-button" href="${esc(e.demo)}" download="${e.id}-index.html">入口源码 ↓</a> <a class="copy-button" href="${esc(e.preview)}" target="_blank">实际截图 ↗</a><p class="demo-caption">完整代码与真实素材位于 demos/${e.id}/；请从完整项目运行，复用单例时也保留根目录公共资源与加载模块。</p>${e.fidelity?`<div class="evidence-links"><a href="${esc(docHref(e.fidelity))}" target="_blank">复现范围与差异 ↗</a><a href="${esc(e.assetManifest)}" target="_blank">素材来源清单 ↗</a></div>`:''}${e.referencePreview?`<details class="source-comparison"><summary>展开原站与本地画面对照</summary><div><figure><img src="${esc(e.referencePreview)}" alt="${esc(e.title)}原站实访截图"><figcaption>原站 · 实访快照${e.referencePreviewNote?" · "+esc(e.referencePreviewNote):""}</figcaption></figure><figure><img src="${esc(e.preview)}" alt="${esc(e.title)}本地截图"><figcaption>本地 · 局部复现</figcaption></figure></div></details>`:''}</div><aside class="notes"><section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，原站局部复现保留其自身设计。</p><a class="element-lab-link" href="fundamentals.html?style=${e.id}">调配这个风格的设计要素 ↗</a>${composition(e)}</section><section><h2>01 / 设计机制</h2>${list(e.principles)}<h3>怎样凸显产品重点</h3><p>${esc(e.productFocus)}</p><h3>主题与情绪</h3><p>${esc(e.theme)}</p></section><section><h2>02 / 交互巧思</h2>${list(e.interaction)}${behaviors(e)}</section><section><h2>03 / 约束与适用场景</h2>${list(e.constraints)}<h3>适合</h3><p>${e.useCases.map(esc).join(' / ')}</p><h3>谨慎使用</h3><p>${e.avoid.map(esc).join(' / ')}</p></section><section><h2>04 / 设计 Tokens</h2>${swatches(e)}<p><b>字体</b> · ${esc(e.tokens.type)}<br><b>布局</b> · ${esc(e.tokens.layout)}<br><b>动效</b> · ${esc(e.tokens.motion)}</p></section><section><div class="prompt-head"><h2>05 / 可复用 Prompt</h2><button class="copy-button" id="copy-prompt">复制 Prompt</button></div><textarea class="prompt-box" aria-label="可复用 Prompt" readonly>${esc(e.prompt)}</textarea><details><summary>负面约束 / Negative Prompt</summary><p>${esc(e.negativePrompt)}</p></details><h3>改造练习</h3><p>${esc(e.exercise)}</p></section><section><h2>06 / 来源与证据</h2>${e.sources.map(s=>`<div class="source-item"><span class="source-badge">${esc(s.type)}</span><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><small>${esc(s.note)}</small></div>`).join('')}<p>${e.referenceUrl?`参考站采集：${esc(e.capturedAt||"2026-10-07")}。本案例归档这次采集的页面与交互。`:(e.theoryVerifiedAt?`理论来源核验：${esc(e.theoryVerifiedAt)}。`:"理论来源核验日期未记录。")}详细观察、推断与限制见<a href="${esc(docHref(e.research))}" target="_blank">调研记录</a>。</p></section></aside></div><div class="detail-footer">${i?`<a href="#style/${entries[i-1].id}">← ${esc(entries[i-1].title)}</a>`:'<span></span>'}${i<entries.length-1?`<a href="#style/${entries[i+1].id}">${esc(entries[i+1].title)} →</a>`:'<a href="#">回到参考库 →</a>'}</div>`;$('#copy-prompt').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(e.prompt+'\n\n负面约束：'+e.negativePrompt);toast('Prompt 与负面约束已复制。');}catch{const area=$('.prompt-box');area.focus();area.select();toast('已选中 Prompt，请按 Ctrl+C 复制。');}});$('#reload-demo').addEventListener('click',()=>{$('.demo-frame').src=e.demo;});initPreview(e.id==='chatgpt-platform'?'wide':'desktop');}
 function initPreview(initialMode){
@@ -108,7 +272,16 @@ function initPreview(initialMode){
 }
 
 function renderComparison(){const chosen=selected.map(id=>entries.find(e=>e.id===id)).filter(Boolean);$('#comparison').innerHTML=`<div class="detail-top"><a href="#" class="back">← 返回参考库</a><button id="return-select" class="copy-button">调整选择</button></div><h1 style="font-size:36px">看见风格之间的差异。</h1><p class="compare-tip">比较信息层级、交互目的与设计约束，再选择适合项目的设计语言。</p>${chosen.length<2?'<p class="compare-empty">请先在参考库选择 2–3 个条目。</p>':`<div class="compare-grid ${chosen.length===2?'two':''}">${chosen.map(e=>`<article class="compare-column"><a href="#style/${e.id}"><img src="${esc(e.preview)}" alt="${esc(e.title)} demo"><h2>${esc(e.title)} ↗</h2></a><p>${esc(e.summary)}</p><section><h3>信息焦点</h3><p>${esc(e.productFocus)}</p></section><section><h3>设计机制</h3>${list(e.principles)}</section><section><h3>交互巧思</h3>${list(e.interaction)}${behaviors(e)}</section><section><h3>主题</h3><p>${esc(e.theme)}</p>${swatches(e)}</section><section><h3>要素协调</h3><p>${esc(e.composition?.coherence||'')}</p></section><section><h3>硬约束</h3>${list(e.constraints)}</section><section><h3>适用 / 不适用</h3><p>${e.useCases.map(esc).join(' / ')}<br>谨慎：${e.avoid.map(esc).join(' / ')}</p></section><a class="copy-button" href="agent.html#${encodeURIComponent(e.id)}">Agent 取材 ↗</a><a class="copy-button" href="agent/cases/${encodeURIComponent(e.id)}.json" download="${esc(e.id)}-context.json">完整案例包 ↓</a><a class="primary-button" href="${esc(e.demo)}" target="_blank">操作 demo ↗</a></article>`).join('')}</div>`}`;$('#return-select').onclick=()=>{location.hash='';};}
-document.addEventListener('click',event=>{const button=event.target.closest('[data-fav]');if(button)toggleFavorite(button.dataset.fav);});
+document.addEventListener('click',event=>{
+  const button=event.target.closest('[data-fav]');if(button)toggleFavorite(button.dataset.fav);
+  const preview=event.target.closest('[data-quicklook]');if(preview)openQuicklook(preview.dataset.quicklook,preview);
+  const removal=event.target.closest('[data-remove-compare]');
+  if(removal){
+    selectCompare(removal.dataset.removeCompare,false);
+    if(location.hash==='#compare')renderComparison();
+    (selected.length?$('#compare-clear'):$('#compare-open')).focus();
+  }
+});
 document.addEventListener('change',event=>{const item=event.target.closest('[data-compare]');if(item)selectCompare(item.dataset.compare,item.checked);});
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
   filter=button.dataset.filter;
@@ -121,8 +294,9 @@ $('#reset-search').onclick=()=>{
   writeCollectionState({showCollection:true});
 };
 $('#compare-open').onclick=$('#compare-go').onclick=()=>{if(selected.length<2){toast('先勾选 2–3 个条目的“加入比较”。');return;}location.hash='#compare';};
-$('#compare-clear').onclick=()=>{selected=[];updateTray();if(location.hash==='#compare')renderComparison();else if(!$('#collection').hidden)renderCards();};
+$('#compare-clear').onclick=()=>{selected=[];updateTray();if(location.hash==='#compare')renderComparison();else if(!$('#collection').hidden)renderCards();$('#compare-open').focus();};
 document.addEventListener('keydown',event=>{
+  if($('#quicklook').open||$('#favorite-dialog').open)return;
   if(event.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){
     event.preventDefault();
     if($('#collection').hidden)writeCollectionState({showCollection:true});
