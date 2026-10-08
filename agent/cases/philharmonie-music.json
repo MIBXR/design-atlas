@@ -280,8 +280,8 @@
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "87cdca7744eaaaad4569bcb88283b9a06d0977615cf778b53bdc9ab7c0dd52b0",
-      "bytes": 5089
+      "sha256": "9e3dd6b269aa54c53eb7c6477c1a7011d5552c62a1d683150974aabb9b556046",
+      "bytes": 5139
     },
     {
       "path": "document.js",
