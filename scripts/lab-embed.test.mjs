@@ -9,7 +9,7 @@ function home() {
   const frame = { contentWindow: {}, style: {} };
   const listeners = new Map();
   const document = {
-    querySelector: () => frame,
+    querySelector: selector => selector === '.landing-lab-frame' ? frame : null,
     querySelectorAll: () => [],
     getElementById: () => ({ addEventListener() {} }),
   };

@@ -5,7 +5,7 @@ function motionReduced(){return motionOverride||matchMedia('(prefers-reduced-mot
 const menuButton=document.querySelector('#menu-toggle'),mobileNav=document.querySelector('#mobile-nav');let menuToken=0,menuAnim=null;
 function setMenu(open){
   const token=++menuToken,from=menuAnim?{transform:getComputedStyle(mobileNav).transform}:null;menuAnim?.cancel();
-  menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');menuButton.textContent=open?'×':'☰';document.body.classList.toggle('menu-open',open);
+  menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');menuButton.textContent=open?'×':'☰︎';document.body.classList.toggle('menu-open',open);
   document.querySelector('main').inert=open;document.querySelector('footer').inert=open;
   if(open)mobileNav.hidden=false;
   if(motionReduced()){mobileNav.hidden=!open;return;}

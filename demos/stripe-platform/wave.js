@@ -18,7 +18,7 @@
     // already paused would clear its saved timestamp and jump on resume.
     if(wave.paused!==paused)wave.paused=paused;
     canvas.dataset.motionStatus=paused?'paused':'running';
-    button.textContent=userPaused?'▶':'Ⅱ';
+    button.textContent=userPaused?'▶︎':'Ⅱ';
     button.setAttribute('aria-label',userPaused?'Play background animation':'Pause background animation');
     button.setAttribute('aria-pressed',String(userPaused));
   }

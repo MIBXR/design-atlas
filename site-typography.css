@@ -1,0 +1,174 @@
+/* Shared website typography. Original case demos keep their own stylesheets. */
+:root{
+  --atlas-font-sans:"Microsoft YaHei","微软雅黑","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Segoe UI",Arial,sans-serif;
+  --atlas-font-body:16px;
+  --atlas-font-support:14px;
+  --atlas-font-caption:12px;
+}
+body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page){
+  font-family:var(--atlas-font-sans);
+  font-size:var(--atlas-font-body);
+  line-height:1.7;
+}
+/* Preserve the lab's selected typeface and its explanatory type specimens. */
+body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
+  :is(.atlas-site-header,.landing-main,.case-layout,.agent-main,.document-main,.lab-layout,.toast,.compare-tray,[id=favorite-dialog])
+  :is(h1,h2,h3,h4,h5,h6,p,div,span,a,button,input,select,textarea,label,small,strong,b,summary,dt,dd,li,fieldset,legend,output,kbd):not(.sample,.sample *,.art-type,.art-type *,.type-mini,.type-mini *){
+  font-family:var(--atlas-font-sans);
+}
+body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
+  :where(.atlas-site-header,.landing-main,.case-layout,.agent-main,.document-main,.lab-layout,[id=favorite-dialog]) small:not(.sample *){
+  font-size:var(--atlas-font-caption);
+}
+
+/* Identical header text and button geometry across all five website pages. */
+body .atlas-site-header{font-family:var(--atlas-font-sans);font-size:var(--atlas-font-support)}
+body .atlas-site-header .atlas-site-brand{font-family:var(--atlas-font-sans)}
+body .atlas-site-header .atlas-site-wordmark strong{font-family:var(--atlas-font-sans);font-size:16px}
+body .atlas-site-header .atlas-site-wordmark small{font-family:var(--atlas-font-sans);font-size:12px;margin-top:4px;letter-spacing:0}
+body .atlas-site-header .atlas-site-nav{grid-template-columns:60px 100px 122px 146px;font-family:var(--atlas-font-sans)}
+body .atlas-site-header .atlas-site-nav>a{font-family:var(--atlas-font-sans);font-size:14px}
+body .atlas-site-header .atlas-site-theme,
+body .atlas-site-header .atlas-site-theme select{font-family:var(--atlas-font-sans);font-size:12px}
+body .atlas-page-menu>summary,
+body .atlas-section-nav,
+body .atlas-section-nav>a{font-family:var(--atlas-font-sans);font-size:14px}
+body .atlas-section-nav>span,
+body .atlas-section-nav>label{font-size:12px}
+
+/* Site actions share type, padding and height; primary actions retain their color. */
+body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
+  :is(.copy-button,.primary-button,.atlas-ui-button,.plain-btn,.text-button){
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:44px;
+  padding:10px 14px;
+  border-width:1px;
+  border-style:solid;
+  border-radius:var(--atlas-ui-radius,7px);
+  font-family:var(--atlas-font-sans);
+  font-size:14px;
+  line-height:1.5;
+  text-decoration:none;
+}
+body:is(.cases-page,.agent-page) .primary-button{border-color:transparent}
+body.cases-page .detail-top>div{flex-wrap:wrap}
+body.cases-page .detail-top :is(.copy-button,.primary-button),
+body.cases-page .compare-column>:is(.copy-button,.primary-button){height:44px;white-space:nowrap}
+body.cases-page .compare-column>:is(.copy-button,.primary-button){margin:4px 4px 0 0}
+body.cases-page .demo-toolbar,
+body.cases-page .demo-toolbar>div{flex-wrap:wrap}
+body.cases-page .demo-toolbar button,
+body.cases-page .empty button,
+body.cases-page #compare-go{min-height:44px;padding:10px 12px;font-size:14px;line-height:1.5}
+body.cases-page .favorite{width:44px;min-width:44px;height:44px;min-height:44px}
+body.cases-page .dialog-close{width:44px;height:44px}
+
+/* Promotional home: readable descriptions, concise supporting labels. */
+body.landing-page :is(.landing-lead,.landing-description,.landing-paths li>p){font-size:16px}
+body.landing-page .landing-section-heading>p:last-child{font-size:16px}
+body.landing-page :is(.landing-button,.landing-module-link,.landing-paths li>a){font-size:14px}
+body.landing-page :is(.landing-kicker,.landing-module-tag,.landing-paths li>span){font-size:12px;letter-spacing:.8px}
+body.landing-page :is(.landing-hero-note,.landing-caption,.landing-ending>p:last-child){font-size:14px}
+body.landing-page .landing-case>span{font-size:14px}
+body.landing-page .landing-case small{font-size:12px}
+body.landing-page .landing-command-heading{flex-wrap:wrap}
+body.landing-page .landing-command-heading label{font-size:14px;max-width:none;flex:1;min-width:120px}
+body.landing-page .landing-command-heading button{font-size:14px}
+body.landing-page .landing-command textarea{font-family:var(--atlas-font-sans);font-size:16px;height:180px;min-height:180px}
+body.landing-page .landing-command>p{font-size:14px}
+body.landing-page .landing-materials>p{font-size:14px}
+body.landing-page .landing-materials :is(dt,dd){font-size:14px}
+
+/* Catalog, detail notes and comparison views belong to the website shell. */
+body.cases-page :is(.hero-desc,.card-summary,.detail-title p,.notes p,.notes li,.compare-column p,.compare-column li){font-size:16px}
+body.cases-page :is(.eyebrow,.detail-title .eyebrow,.hero-art small,.card-number,.subtitle,.tag,.source-badge,.behavior-label){font-size:12px}
+body.cases-page .rail :is(.rail-label,.rail-bottom,.rail-bottom>span:last-child){font-family:var(--atlas-font-sans);font-size:12px;letter-spacing:.5px}
+body.cases-page .rail :is(.nav-item,.rail-link){font-family:var(--atlas-font-sans);font-size:14px}
+body.cases-page .rail :is(.nav-item b,.rail-link b){font-family:var(--atlas-font-sans);font-size:12px}
+body.cases-page :is(.case-toolbar,.edition,.list-caption,.sort,.back,.demo-toolbar,.demo-caption,.notes details,.swatch,.evidence-links,.source-comparison,.compare-tray>span,.toast,.compare-tip){font-size:14px}
+body.cases-page .search input{font-size:16px}
+body.cases-page .search kbd{font-size:14px}
+body.cases-page .sort select{font-size:14px;min-height:44px}
+body.cases-page .card-title h2{font-size:18px}
+body.cases-page :is(.card-bottom,.card-bottom a,.compare-label){font-size:14px}
+body.cases-page .card-bottom{align-items:center;flex-wrap:wrap;gap:8px}
+body.cases-page .card-bottom :is(a,label){min-height:44px;display:flex;align-items:center}
+body.cases-page .notes h2{font-size:18px}
+body.cases-page .notes h3{font-size:16px}
+body.cases-page .element-map div{font-size:14px;grid-template-columns:72px minmax(0,1fr)}
+body.cases-page .element-lab-link{font-size:14px;min-height:44px}
+body.cases-page .source-item>a{font-size:16px}
+body.cases-page .source-item small{font-size:14px}
+body.cases-page .compare-column h3{font-size:16px}
+body.cases-page .prompt-box{font-family:var(--atlas-font-sans);font-size:16px}
+body.cases-page #favorite-dialog p{font-size:16px}
+body.cases-page #favorite-dialog textarea{font-family:var(--atlas-font-sans);font-size:16px}
+body.cases-page .cache-controls #cache-status{font-size:14px}
+
+/* Agent instructions are prose; source snippets keep semantic code typography. */
+body.agent-page :is(.agent-lead,.agent-start p,.agent-local p,.agent-search-section>p,.agent-case p,.agent-context p){font-size:16px}
+body.agent-page :is(.eyebrow,.agent-case small){font-size:12px}
+body.agent-page :is(.agent-stats,.agent-command p,#agent-status,.agent-case code,.agent-command pre){font-size:14px}
+body.agent-page .agent-search input{font-size:16px}
+body.agent-page .agent-case-actions .copy-button{font-size:14px;min-height:44px;padding:10px 14px}
+
+/* Document content retains its tables, image proportions and code semantics. */
+body.document-page .document-main #path{font-size:14px}
+body.document-page .markdown-body{font-size:16px}
+body.document-page .markdown-body h4{font-size:18px}
+body.document-page .markdown-body h5{font-size:16px}
+body.document-page .markdown-body h6{font-size:14px}
+body.document-page .markdown-body :is(code,table){font-size:14px}
+body.document-page .markdown-body :is(small,sub,sup){font-size:12px}
+
+/* Lab controls stay sans; the experiment keeps --font-body and --font-title. */
+body.lab-page :is(.lead,.section-copy,.layer p,.element p,.principle-list p,.workflow p,.reading-note){font-size:16px}
+body.lab-page :is(.eyebrow,.art-caption,.section-label>span,.layer-no,.principle-list>article>span){font-size:12px}
+body.lab-page :is(.layer-question,.annotation,.single-control,.single-control select,.reference-control>label,.reference-control>select,.lab-workspace .reference-control>p,.lab-workspace .reference-control>div,.element small,.token-summary>div,.configuration-tools>p,.configuration-tools details,.prompt-tools,.copy-status,.source-list>a,.source-list>a>strong,.source-list>a>span){font-size:14px}
+body.lab-page .scheme-btn>span{font-size:14px}
+body.lab-page .scheme-btn small{font-size:12px}
+body.lab-page .lab-workspace .element-controls :is(label,legend,select,small){font-size:14px}
+body.lab-page .lab-workspace .element-controls :is(output,.color-note,.theme-control p){font-size:12px}
+body.lab-page .lab-workspace .element-controls select{min-height:44px}
+body.lab-page .demo-label{font-size:14px;flex-wrap:wrap}
+body.lab-page .observation,
+body.lab-page .observation p:last-child{font-size:14px}
+body.lab-page :is(.prompt-text,.configuration-tools textarea){font-family:var(--atlas-font-sans);font-size:16px}
+body.lab-page .lab-rail .atlas-section-nav>a{font-family:var(--atlas-font-sans);font-size:14px}
+body.lab-page .lab-rail .atlas-section-nav>:is(label,span){font-size:12px}
+body.lab-page .sample :is(.sample-meta,.sample-kicker,.sample-footnote,.note-preview-top,.note-preview p,.note-tag,.sample-features p,.sample-feedback p,.sample-compose>div p){font-size:12px}
+body.lab-page .sample :is(.sample-primary,.sample-actions>a,.sample-compose>label){font-size:14px}
+body.lab-page .sample :is(.sample-copy>p,.sample-compose textarea){font-size:16px}
+body.lab-page .sample-meta{max-width:150px;letter-spacing:.3px}
+
+/* The compact home iframe has the same minimum, without fixing its auto height. */
+html[data-lab-embed=home] body.lab-page .scheme-btn>span{font-size:12px}
+html[data-lab-embed=home] body.lab-page .scheme-btn small{font-size:12px;line-height:1.5}
+html[data-lab-embed=home] body.lab-page .lab-workspace .element-controls :is(label,legend,select,output){font-size:12px}
+html[data-lab-embed=home] body.lab-page :is(.demo-label,.observation){font-size:12px}
+html[data-lab-embed=home] body.lab-page .sample :is(.sample-kicker,.sample-primary,.note-preview-top,.note-preview p,.note-tag,.sample-feedback p,.sample-compose>label,.sample-compose>div p){font-size:12px}
+html[data-lab-embed=home] body.lab-page .sample :is(.sample-copy>p,.sample-compose textarea){font-size:14px}
+
+@media(max-width:1050px){
+  body .atlas-site-header .atlas-site-wordmark strong{font-size:13px}
+  body .atlas-site-header .atlas-site-nav{grid-template-columns:50px 85px 105px 126px}
+  body .atlas-site-header .atlas-site-nav>a{font-size:12px}
+}
+@media(max-width:800px){
+  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  body.landing-page .landing-command textarea{height:230px;min-height:230px}
+  body.cases-page .demo-toolbar>div{gap:6px}
+  body.cases-page .demo-toolbar button{font-size:12px;padding:10px 9px}
+}
+@media(max-width:360px){
+  body .atlas-site-header .atlas-site-wordmark strong{font-size:12px}
+  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.cases-page .detail-top :is(.copy-button,.primary-button){padding-right:10px;padding-left:10px}
+  html[data-lab-embed=home] body.lab-page .scheme-btn{flex-direction:column;align-items:flex-start;gap:5px}
+}

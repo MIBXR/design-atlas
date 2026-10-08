@@ -1,0 +1,50 @@
+/* Page navigation stays beside the full experiment without sharing its design tokens. */
+.lab-page{--lab-gutter:32px;--lab-rail-width:228px;--lab-column-gap:32px}
+.lab-page .lab-layout{box-sizing:border-box;display:grid;grid-template-columns:var(--lab-rail-width) minmax(0,1fr);gap:var(--lab-column-gap);width:100%;max-width:none;margin:0;padding:0 var(--lab-gutter);align-items:start}
+.lab-page .lab-layout>.page{width:100%;max-width:none;margin:0;padding:0;min-width:0}
+.lab-page .lab-rail{box-sizing:border-box;position:sticky;top:calc(var(--atlas-header-height,88px) + 24px);width:100%;max-height:calc(100svh - var(--atlas-header-height,88px) - 48px);margin:24px 0;padding:16px;overflow-y:auto;border-radius:12px;background:#242721;color:#f5f4ed}
+.lab-page .lab-rail .atlas-lab-menu{width:100%;max-width:none;margin:0;padding:0}
+.lab-page .lab-rail .atlas-lab-menu>summary{display:flex;background:#30362a;color:#f5f4ed;border-color:#4b5442}
+.lab-page .lab-rail .atlas-lab-menu>summary:after{color:#d4ef76}
+.lab-page .lab-rail .atlas-section-nav{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;margin:0;padding:10px 0 0}
+.lab-page .lab-rail .atlas-section-nav>a{display:flex;justify-content:flex-start;width:100%;min-height:44px;margin:0;padding:12px;border:0;border-radius:7px;background:none;color:#d5dacb;font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;text-align:left;white-space:normal}
+.lab-page .lab-rail .atlas-section-nav>a:hover{background:#353a2e}
+.lab-page .lab-rail a:focus-visible,.lab-page .lab-rail summary:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
+
+/* Until the preview has enough room, controls occupy a row above it. */
+html:not([data-lab-embed=home]) .lab-page .lab-workspace{display:block}
+html:not([data-lab-embed=home]) .lab-page .lab-workspace .element-controls{grid-template-columns:repeat(2,minmax(0,1fr));margin:0 0 24px}
+html:not([data-lab-embed=home]) .lab-page .lab-workspace .experiment{position:static;top:auto;min-width:0;container:atlas-lab-sample / inline-size}
+@media(min-width:1160px) and (max-width:1439px){
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .element-controls{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(min-width:1440px){
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace{display:grid;grid-template-columns:340px minmax(0,1fr);gap:24px;align-items:start}
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .element-controls{margin-bottom:0}
+  html:not([data-lab-embed=home]) .lab-page .lab-workspace .experiment{position:sticky;top:calc(var(--atlas-header-height,88px) + 20px)}
+}
+@container atlas-lab-sample (max-width:640px){
+  .lab-page .sample-hero,.lab-page .sample[data-layout=editorial] .sample-hero{grid-template-columns:minmax(0,1fr)}
+  .lab-page .sample[data-layout=editorial] .sample-copy{padding-left:0}
+  .lab-page .sample-features{grid-template-columns:minmax(0,1fr)}
+}
+@media(min-width:801px) and (max-width:1159px){
+  .lab-page{--lab-gutter:24px;--lab-rail-width:196px;--lab-column-gap:24px}
+  .lab-page .lab-rail{padding:12px}
+}
+@media(max-width:800px){
+  .lab-page{--lab-gutter:20px;--lab-rail-width:0px;--lab-column-gap:0px}
+  .lab-page .lab-layout{display:block}
+  .lab-page .lab-rail{position:static;max-height:none;margin:20px 0 0;padding:8px 12px}
+  .lab-page .lab-rail .atlas-section-nav{grid-template-columns:repeat(2,minmax(0,1fr));padding-top:4px}
+}
+@media(max-width:360px){.lab-page{--lab-gutter:16px}}
+@media(forced-colors:active){
+  .lab-page .lab-rail{border:1px solid CanvasText;background:Canvas;color:CanvasText}
+  .lab-page .lab-rail .atlas-lab-menu>summary,.lab-page .lab-rail .atlas-section-nav>a{background:Canvas;color:CanvasText;border-color:ButtonText}
+  .lab-page .lab-rail a:focus-visible,.lab-page .lab-rail summary:focus-visible{outline-color:Highlight}
+}
+
+/* The home iframe keeps its compact engine and never receives the outer directory. */
+html[data-lab-embed=home] .lab-page .lab-layout{display:block;width:100%;max-width:none;margin:0;padding:0}
+html[data-lab-embed=home] .lab-page .lab-rail{display:none}

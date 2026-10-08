@@ -117,6 +117,8 @@
 .landing-ending>p:last-child{font-size:11px;color:var(--muted);margin:21px 0 0}
 .landing-footer{max-width:1280px;margin:0 auto;padding:31px 40px 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:start;gap:30px}
 .landing-footer strong{font-size:13px;font-weight:700;letter-spacing:.6px}
+.landing-footer-brand{display:inline-flex;align-items:center;gap:9px}
+.landing-footer-mark{display:block;width:28px;height:28px;flex-shrink:0;color:var(--select-accent)}
 .landing-footer p{font-size:11px;color:var(--muted);line-height:1.8;margin:10px 0 8px}
 .landing-footer small{display:block;max-width:640px;font-size:10px;color:var(--muted);line-height:1.9}
 .landing-footer nav{display:flex;align-items:center;flex-wrap:wrap;gap:19px;flex-shrink:0;font-size:11px}

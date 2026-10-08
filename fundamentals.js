@@ -17,7 +17,7 @@
   document.querySelector('.note-preview-top').after(graphic);
   const feedback = document.createElement('div');
   feedback.className='sample-feedback';
-  feedback.innerHTML='<button id="feedback-demo" class="sample-primary" type="button">体验操作反馈 ↗</button><p id="feedback-message" role="status" aria-live="polite">点击后查看文字与视觉反馈。</p>';
+  feedback.innerHTML='<button id="feedback-demo" class="sample-primary" type="button">体验操作反馈 ↗︎</button><p id="feedback-message" role="status" aria-live="polite">点击后查看文字与视觉反馈。</p>';
   el('sample-features').after(feedback);
   const graphicNames={line:'线描',geometry:'几何',product:'产品'};
   const graphics={
@@ -165,7 +165,7 @@
   el('sample-theme').addEventListener('change',event=>{state.themeChoice=event.target.value;clearSchemeButtons();render();message('切换显示主题','比较同一内容在浅深色中的背景、表面、文字、按钮与分组边界。不是把所有颜色直接反转。','观察：主行动是否仍突出？文字、边框、图形是否仍可读？强主题原站是否值得提供切换？');});
   systemTheme.addEventListener('change',()=>{if(state?.themeChoice==='system')render();});
   el('motion-choice').addEventListener('change',event=>{state.motion=event.target.checked;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 动效调整';message('调整微动效',state.motion?'已允许短暂反馈动效；系统减少动态偏好仍优先。':'已关闭非必要动效，点击反馈按钮仍会显示结果文字。','用示例下方按钮体验：动效可以帮助确认操作，但不能成为反馈的唯一方式。')});
-  el('feedback-demo').addEventListener('click',()=>{const button=el('feedback-demo');button.classList.remove('feedback-pulse');if(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches)requestAnimationFrame(()=>button.classList.add('feedback-pulse'));el('feedback-message').textContent='✓ 操作已完成。'+(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches?'同时提供短暂视觉反馈。':'当前使用静态文字反馈。')});
+  el('feedback-demo').addEventListener('click',()=>{const button=el('feedback-demo');button.classList.remove('feedback-pulse');if(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches)requestAnimationFrame(()=>button.classList.add('feedback-pulse'));el('feedback-message').textContent='✓︎ 操作已完成。'+(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches?'同时提供短暂视觉反馈。':'当前使用静态文字反馈。')});
   const catalog=Array.isArray(window.DESIGN_ATLAS)?window.DESIGN_ATLAS:[];
   for(const entry of catalog){const option=document.createElement('option');option.value=entry.id;option.textContent=String(entry.order).padStart(2,'0')+' / '+entry.title;el('reference-style').append(option)}
   function applyReference(entry){
@@ -184,7 +184,7 @@
     referenceEntry=entry;groupOrigins={palette:'条目色板',type:'教学映射',shape:'教学映射',space:'教学映射'};clearSchemeButtons();syncInputs();render();
     el('reference-style').value=entry.id;el('current-plan').textContent='当前：'+entry.title+' / 教学迁移';
     el('style-context').textContent='“'+entry.title+'”已带入：色板来自本地条目；字体、布局、形状与间距按条目ID/类别归纳为可比较的教学配置。不是官网或原demo的像素复刻。';
-    const links=el('style-source-links');links.replaceChildren();for(const source of entry.sources.slice(0,2)){const a=document.createElement('a');a.href=source.url;a.textContent=source.title+' ↗';a.target='_blank';a.rel='noreferrer';links.append(a)}
+    const links=el('style-source-links');links.replaceChildren();for(const source of entry.sources.slice(0,2)){const a=document.createElement('a');a.href=source.url;a.textContent=source.title+' ↗︎';a.target='_blank';a.rel='noreferrer';links.append(a)}
     message('从风格库迁移','保持“拾光笔记”的同一产品内容，借用“'+entry.title+'”的元素特征。若要学习其完整信息架构与核心交互，请回到该条目的独立demo。','观察：同一内容借用不同风格后，气质、视觉重点与阅读密度有什么变化？再单独改一项，检验它与其他元素的关系。');
   }
   el('reference-style').addEventListener('change',event=>{const entry=catalog.find(item=>item.id===event.target.value);if(entry)applyReference(entry);else setScheme('paper');try{const url=new URL(location.href);if(entry)url.searchParams.set('style',entry.id);else url.searchParams.delete('style');history.replaceState(null,'',url)}catch{}});
