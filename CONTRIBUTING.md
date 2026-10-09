@@ -84,3 +84,5 @@ Prompt应写结构、尺度、素材、关键状态及交接、音乐和主题�
 提交和发布前获取最新主干，处理真实冲突并保留用户的清理结果。使用功能分支提出Pull Request，不直接提交主干；发布的Site版本应对应已验证的明确commit。README、研究与复现范围始终描述当前可用内容，不累积修复日志。
 
 Agent 文件清单的 SHA256 指向原始仓库字节；部署中的播放 HTML／CSS 与编码标记可能不同。先完成源码构建与检查、提交并推送，再运行静态部署打包；打包要求工作树干净，并把当前提交的 GitHub Raw 基址写入部署索引的 `source`。生成案例包不含 Git SHA 自引用，原始案例包的哈希在站点与 Git 中保持一致。
+
+若托管方的源 Git 上传限制无法接收完整媒体历史，使用独立的发布 checkout：先用 Sites 官方 source helper 打开同一 Site 的最新源版本，再在完整案例仓库运行 `node scripts/export-site.mjs --checkout <发布checkout绝对路径>`。它只复制已验证的 `dist/`，保存 GitHub 精确源码 SHA、内容版本、素材提交和逐文件 SHA256 到 `site-provenance.json`；原始媒体仍在完整案例仓库和固定 GitHub 提交中。发布 checkout 不重新运行旧源码的构建命令。为发布目录添加 `dist/** -text` 的 Git 属性，显式 `git add --force -- dist site-provenance.json`，由官方 helper 正常追加提交、推送和打包。保存版本使用 helper 返回的原生源提交，Agent 的 `catalog.source` 保持案例仓库的 GitHub 提交；两者不能互换。导出后运行 `--verify`，核对已提交文件及归档字节（托管方生成的 hosting sidecar 单独核验），发布后再核对在线内容版本与关键交互。这个出口不改 PR 历史、不合并主干、不删减原始案例素材。

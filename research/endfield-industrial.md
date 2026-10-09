@@ -12,7 +12,7 @@
 
 ## 实现与可提取机制
 
-[本地八章](../demos/endfield-industrial/index.html#operator)恢复原CSS/字体、35目录与真透明视频、六点云、10影像、日历、4玩法/5AIC与公告。人物长篇叙事没有全篇重印，改用原身份/CV事实摘要并明确差异；正式业务仍进入官方。原[明日方舟案例](../entries/arknights-world.json)的暗灰青色全屏档案与[莱茵影像](rhine-lab.md)的米白橙色有不同媒介与状态证据，不能混为一句“方舟风”。
+[本地八章](../demos/endfield-industrial/index.html#operator)恢复原CSS/字体、35目录与真透明视频、六点云、10影像、日历、4玩法/5AIC与公告。35位人物完整中文介绍从当前简中文本映射提取，逐key及原值哈希核对；正式业务仍进入官方。原[明日方舟案例](../entries/arknights-world.json)的暗灰青色全屏档案与[莱茵影像](rhine-lab.md)的米白橙色有不同媒介与状态证据，不能混为一句“方舟风”。
 
 [斜线注册大字与前景记录](../patterns/hatched-registration-type.json)抽取装饰尺度/记录层级，原源shallow背景opacity .05、纹理 .75rem及mask可回读；[竖向类别书脊与横向媒体](../patterns/vertical-media-spine.json)抽取类别与媒体的共同边界。既有[单一信号色](../patterns/restrained-signal-color.json)继续复用，不按品牌重复建“黄绿工业”分类。
 

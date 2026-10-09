@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "9e8c2f861979bbd7f5c7fff82b585a3551db4ff846277a2fa7f55c6ece1b16f2",
+  "contentVersion": "a8efd0d30e8b299bd5d700c474eff708f315b8af9e4d26815672fd7514d4a7ae",
   "entryCount": 34,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
@@ -2412,7 +2412,7 @@
         "二进制点云",
         "自然滚动"
       ],
-      "summary": "以同日官方DOM、CSS、内容映射与渲染算法恢复八章门户：35干员真实目录与透明enter/idle视频、六项点云世界观、10影像、版本日历、4玩法、5集成工业和公告；人物长篇叙事明确改用事实摘要。",
+      "summary": "以同日官方DOM、CSS、内容映射与渲染算法恢复八章门户：35干员真实目录与透明enter/idle视频、六项点云世界观、10影像、版本日历、4玩法、5集成工业和公告；35位干员完整中文介绍按当前简中文本映射保留。",
       "useCases": [
         "明亮工业科幻宣传",
         "角色与技术资料并列",
@@ -2474,7 +2474,7 @@
         "demo": "demos/endfield-industrial/index.html",
         "entry": "entries/endfield-industrial.json"
       },
-      "bundleSha256": "2fef78d7709abb9c096110f301d764cb662d1520bfdda79e0b1c6218e1083b7b"
+      "bundleSha256": "ee220ef48f822a510eac179897cb0e4efba6a33354b757b0d92cdf8a03781228"
     },
     {
       "id": "rhine-lab",
@@ -2559,9 +2559,9 @@
   ],
   "patterns": {
     "path": "agent/patterns.json",
-    "sha256": "1d4a63f6a9f0d0c7c7f9aefddc533d546c1ae0926498b01461a7adbb5e3f56e6",
+    "sha256": "4c00f2c80b9c95826a226c9e31eaf4c04d80b2062d8c1eb24038450524738997",
     "bytes": 506267,
     "patternCount": 129,
-    "contentVersion": "ef48d250455323ed9b144bcd27def6462cb31dab8ec8b5f40fdfc844947cba57"
+    "contentVersion": "0b19997304d522f9620e89a131f374b4c1eb39a83c0ab5dab077fd1cee6faf53"
   }
 }

@@ -20,7 +20,7 @@
       "二进制点云",
       "自然滚动"
     ],
-    "summary": "以同日官方DOM、CSS、内容映射与渲染算法恢复八章门户：35干员真实目录与透明enter/idle视频、六项点云世界观、10影像、版本日历、4玩法、5集成工业和公告；人物长篇叙事明确改用事实摘要。",
+    "summary": "以同日官方DOM、CSS、内容映射与渲染算法恢复八章门户：35干员真实目录与透明enter/idle视频、六项点云世界观、10影像、版本日历、4玩法、5集成工业和公告；35位干员完整中文介绍按当前简中文本映射保留。",
     "accent": "#fffa00",
     "background": "#ffffff",
     "principles": [
@@ -30,7 +30,7 @@
       "世界观六项是真实Float32 xyz二进制点云，与人物透明视频属于不同机制；切换、扫描/旋转、拖动和媒体资源边界分别记录。",
       "AIC书脊与媒体共同组织类别；4玩法/5AIC采用源三层黑→黄→媒体的方向揭示，不用单静态工厂图替代整个相册。"
     ],
-    "productFocus": "2026-10-09中国大陆公开官网八章快照：home、operator、lore、information、calendar、gameplay、aic、notice；35人目录、六世界模型、10影像、4玩法/5AIC、10公告。人物正式长篇简介采用基于公开姓名/代号/阵营/种族/职业/属性/CV的摘要；账号、支付、下载/云游戏服务仍官方。",
+    "productFocus": "2026-10-09中国大陆公开官网八章快照：home、operator、lore、information、calendar、gameplay、aic、notice；35人目录、六世界模型、10影像、4玩法/5AIC、10公告。人物完整简介来自当前简中文本映射，逐角色核对原值与SHA256；账号、支付、下载/云游戏服务仍官方。",
     "interaction": [
       "载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。",
       "干员：35项头像真实映射，箭头每次翻四个头像而不切角色，点击头像才更新名字/代号/阵营/种族/职业/属性/CV与星级；全部干员页按职业/属性AND筛选，返回正式档案。",
@@ -44,7 +44,7 @@
     "theme": "完整门户保留首页活动原色、白色干员/工业资料面、深色世界观点云和影像场；亮黄作为局部信号，字体与多色标定沿来源。",
     "constraints": [
       "固定2026-10-09大陆官网快照；完整八章的视觉/内容机制不表示账号、交易、实时更新与全站所有详情已复刻。",
-      "姓名/代号/阵营/种族/职业/属性/CV、目录和媒体映射来自当前35人模块；源码内另26人旧数组不能混作当前总量。长篇官方人物叙事不逐字重印，本地只显示事实摘要，不能称原文案原样。",
+      "姓名/代号/阵营/种族/职业/属性/CV、目录和媒体映射来自当前35人模块；源码内另26人旧数组不能混作当前总量。完整人物介绍来自当前简中文本映射，保留段落、空格与标点并逐角色核验。",
       "人物3D是透明视频而非可拖转三维角色；世界观才使用六真实bin点云，格式/归一化/参数与源码可回读，渲染效果仍需逐状态浏览器核验。",
       "70角色视频、公开静图、字体、六点云、影像预览和BGM保留来源/字节/尺寸/hash；完整长片仍依赖官方URL，不承诺离线全片。",
       "桌面CSS使用源设计坐标与实际宽高比例，手机沿源portrait规则；需要验证手机、减弱动态、资源失败、快速反向输入以及视频/点云生命周期，未完成项以fidelity明确pending。",
@@ -97,8 +97,8 @@
         "note": "WCAG 2.3.3为AAA；用于本地减少非必要缩放和滚动动态的设计依据，不表示源站已经符合该条。"
       }
     ],
-    "prompt": "完整对照2026-10-09终末地中国大陆公开官网的八章，不把干员与AIC缩成两张静图。先检查原DOM/CSS/手机规则、数据模块/影片/二进制及运行状态，保留活动首页、35人真实元数据与头像窗口/全部目录，翻页箭头只翻四头像，点击才切角色。保留2D与原RGB/alpha透明enter→idle视频，0.3/0.59/0.11合成原透明边缘；别将它替代成可旋转人物模型。世界观六项使用原Float32 xyz bin、Y跨度1900规范化及各模型参数，核对扫描/旋转/拖动/切换和离屏暂停。10影像、日历、4玩法/5AIC与公告保留原媒体、文字、编号和返回，黑黄媒体三层400ms delay0/250/500及500/500ms文案。采用原CSS与字体，亮黄只作信号，白色工业区、深色世界观和当前活动各保持身份。人物长篇叙事改成明确的事实摘要，不声称逐字原文；音轨由用户打开，账号/支付/全文与长片保留官方边界。每页逐状态用真实浏览器检验并记录尺寸/时序/资源失败/反向/键盘/减少动态，来源观察、源码配置、实现覆盖和验证pending分开，严禁凭截图概括或伪造全面pass。",
-    "negativePrompt": "不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要逐字复制全部人物长篇叙事、伪造实时业务或自动播放BGM。",
+    "prompt": "完整对照2026-10-09终末地中国大陆公开官网的八章，不把干员与AIC缩成两张静图。先检查原DOM/CSS/手机规则、数据模块/影片/二进制及运行状态，保留活动首页、35人真实元数据与头像窗口/全部目录，翻页箭头只翻四头像，点击才切角色。保留2D与原RGB/alpha透明enter→idle视频，0.3/0.59/0.11合成原透明边缘；别将它替代成可旋转人物模型。世界观六项使用原Float32 xyz bin、Y跨度1900规范化及各模型参数，核对扫描/旋转/拖动/切换和离屏暂停。10影像、日历、4玩法/5AIC与公告保留原媒体、文字、编号和返回，黑黄媒体三层400ms delay0/250/500及500/500ms文案。采用原CSS与字体，亮黄只作信号，白色工业区、深色世界观和当前活动各保持身份。人物完整中文介绍从当前语言映射静态解码，按35个当前角色key核对，避免混入旧26人数据；音轨由用户打开，账号/支付/公告详情与长片保留官方边界。每页逐状态用真实浏览器检验并记录尺寸/时序/资源失败/反向/键盘/减少动态，来源观察、源码配置、实现覆盖和验证pending分开，严禁凭截图概括或伪造全面pass。",
+    "negativePrompt": "不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要混入旧版本人物介绍、伪造实时业务或自动播放BGM。",
     "demo": "demos/endfield-industrial/index.html",
     "preview": "previews/endfield-industrial.jpg",
     "research": "research/endfield-industrial.md",
@@ -144,23 +144,23 @@
     {
       "path": "research/endfield-industrial.md",
       "role": "research",
-      "content": "# 终末地：从完整门户理解明亮工业语言\n\n归档 **2026-10-09**，[中国大陆官网](https://endfield.hypergryph.com/)。研究覆盖当日八章公开门户。干员/玩法/AIC的白底亮黄是其中一种分区语言；活动首页是雪凇幽梦，世界观是深色点云，不能把整站概括为同一黄绿卡片。\n\n## 一手观察与源码证据\n\n主负责人实际浏览黑/黄Updating、活动首页、干员与2D→3D、世界观和其他分区，并通过浏览器开发工具采集原DOM/CSS、portrait规则、公开Next数据与资源。静态抽取只解析JSON/literal与模块引用，不执行原bundle；模块原URL/hash及偏移可回读。当前干员模块18039是35项，中文layout另有26项旧数组，不可混用。35项各有头像/立绘/肖像/enter/idle，共175资源，元数据与中文flat文本映射完整。\n\n源“3D”不是人物网格。实际祀影片3840×1080左右RGB/alpha合成1920×1080透明canvas；源码alpha=R*.3+G*.59+B*.11，enter ended换idle循环。世界观另有六个原Float32 xyz点云：帝江号、锚点、集成工业系统、天师桩、天使、裂地者，无header，按Y跨度1900规范化后应用各模型offset/pivot/scale/laser参数。静态算法与资源存在不自动证明扫描、拖动、转场和边缘与原站一致。\n\n影像有10项真实标题/日期/分类和预览，玩法四项为视频、AIC五项为图片。原相册黑→黄→媒体400ms各delay0/250/500，文字500/500ms。原公告采用左clip500ms与Y30%组件600ms入场，延迟300ms后卡片300ms横移。原CSS字体、斜线大字、网格/mask、媒体书脊与自然滚动构成比仅配色更有辨识度。\n\n## 实现与可提取机制\n\n[本地八章](../demos/endfield-industrial/index.html#operator)恢复原CSS/字体、35目录与真透明视频、六点云、10影像、日历、4玩法/5AIC与公告。人物长篇叙事没有全篇重印，改用原身份/CV事实摘要并明确差异；正式业务仍进入官方。原[明日方舟案例](../entries/arknights-world.json)的暗灰青色全屏档案与[莱茵影像](rhine-lab.md)的米白橙色有不同媒介与状态证据，不能混为一句“方舟风”。\n\n[斜线注册大字与前景记录](../patterns/hatched-registration-type.json)抽取装饰尺度/记录层级，原源shallow背景opacity .05、纹理 .75rem及mask可回读；[竖向类别书脊与横向媒体](../patterns/vertical-media-spine.json)抽取类别与媒体的共同边界。既有[单一信号色](../patterns/restrained-signal-color.json)继续复用，不按品牌重复建“黄绿工业”分类。\n\n按[W3C Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)让选中状态同时有名称/边界/程序状态；[交互动画](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)为减少动态的设计依据，不给官网作合规认证。当前源码与实现覆盖已核对，最终浏览器1440/390/键盘/减弱动态/失败/反向状态仍由主负责人补证；[状态矩阵](../demos/endfield-industrial/state-matrix.md)明确pending，不能提前全面pass。\n\n首版把页面主动缩成单人/单工业图并新增教学放大和说明，遗漏真实目录、影片、点云与大部分章节；本轮删除这些替代。完整来源/hash/资源变换见[清单](../demos/endfield-industrial/assets-manifest.json)与[范围说明](../demos/endfield-industrial/fidelity.md)。\n",
-      "sha256": "f011a15fb4afc49e59798ec9014cdfff2d4b24fc73a219438c8728c0cd272495",
-      "bytes": 3474
+      "content": "# 终末地：从完整门户理解明亮工业语言\n\n归档 **2026-10-09**，[中国大陆官网](https://endfield.hypergryph.com/)。研究覆盖当日八章公开门户。干员/玩法/AIC的白底亮黄是其中一种分区语言；活动首页是雪凇幽梦，世界观是深色点云，不能把整站概括为同一黄绿卡片。\n\n## 一手观察与源码证据\n\n主负责人实际浏览黑/黄Updating、活动首页、干员与2D→3D、世界观和其他分区，并通过浏览器开发工具采集原DOM/CSS、portrait规则、公开Next数据与资源。静态抽取只解析JSON/literal与模块引用，不执行原bundle；模块原URL/hash及偏移可回读。当前干员模块18039是35项，中文layout另有26项旧数组，不可混用。35项各有头像/立绘/肖像/enter/idle，共175资源，元数据与中文flat文本映射完整。\n\n源“3D”不是人物网格。实际祀影片3840×1080左右RGB/alpha合成1920×1080透明canvas；源码alpha=R*.3+G*.59+B*.11，enter ended换idle循环。世界观另有六个原Float32 xyz点云：帝江号、锚点、集成工业系统、天师桩、天使、裂地者，无header，按Y跨度1900规范化后应用各模型offset/pivot/scale/laser参数。静态算法与资源存在不自动证明扫描、拖动、转场和边缘与原站一致。\n\n影像有10项真实标题/日期/分类和预览，玩法四项为视频、AIC五项为图片。原相册黑→黄→媒体400ms各delay0/250/500，文字500/500ms。原公告采用左clip500ms与Y30%组件600ms入场，延迟300ms后卡片300ms横移。原CSS字体、斜线大字、网格/mask、媒体书脊与自然滚动构成比仅配色更有辨识度。\n\n## 实现与可提取机制\n\n[本地八章](../demos/endfield-industrial/index.html#operator)恢复原CSS/字体、35目录与真透明视频、六点云、10影像、日历、4玩法/5AIC与公告。35位人物完整中文介绍从当前简中文本映射提取，逐key及原值哈希核对；正式业务仍进入官方。原[明日方舟案例](../entries/arknights-world.json)的暗灰青色全屏档案与[莱茵影像](rhine-lab.md)的米白橙色有不同媒介与状态证据，不能混为一句“方舟风”。\n\n[斜线注册大字与前景记录](../patterns/hatched-registration-type.json)抽取装饰尺度/记录层级，原源shallow背景opacity .05、纹理 .75rem及mask可回读；[竖向类别书脊与横向媒体](../patterns/vertical-media-spine.json)抽取类别与媒体的共同边界。既有[单一信号色](../patterns/restrained-signal-color.json)继续复用，不按品牌重复建“黄绿工业”分类。\n\n按[W3C Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)让选中状态同时有名称/边界/程序状态；[交互动画](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)为减少动态的设计依据，不给官网作合规认证。当前源码与实现覆盖已核对，最终浏览器1440/390/键盘/减弱动态/失败/反向状态仍由主负责人补证；[状态矩阵](../demos/endfield-industrial/state-matrix.md)明确pending，不能提前全面pass。\n\n首版把页面主动缩成单人/单工业图并新增教学放大和说明，遗漏真实目录、影片、点云与大部分章节；本轮删除这些替代。完整来源/hash/资源变换见[清单](../demos/endfield-industrial/assets-manifest.json)与[范围说明](../demos/endfield-industrial/fidelity.md)。\n",
+      "sha256": "915cb8158835c6397a1da3713a74b5f8b626eb40a945a3256a2610b14d17128b",
+      "bytes": 3482
     },
     {
       "path": "prompts/endfield-industrial.md",
       "role": "prompt",
-      "content": "# 终末地 · 完整工业科幻门户 · 复用 Prompt\n\n由 [结构化案例](../entries/endfield-industrial.json) 自动生成。参考观察与具体边界见 [调研](../research/endfield-industrial.md)。\n\n## 正向 Prompt\n\n完整对照2026-10-09终末地中国大陆公开官网的八章，不把干员与AIC缩成两张静图。先检查原DOM/CSS/手机规则、数据模块/影片/二进制及运行状态，保留活动首页、35人真实元数据与头像窗口/全部目录，翻页箭头只翻四头像，点击才切角色。保留2D与原RGB/alpha透明enter→idle视频，0.3/0.59/0.11合成原透明边缘；别将它替代成可旋转人物模型。世界观六项使用原Float32 xyz bin、Y跨度1900规范化及各模型参数，核对扫描/旋转/拖动/切换和离屏暂停。10影像、日历、4玩法/5AIC与公告保留原媒体、文字、编号和返回，黑黄媒体三层400ms delay0/250/500及500/500ms文案。采用原CSS与字体，亮黄只作信号，白色工业区、深色世界观和当前活动各保持身份。人物长篇叙事改成明确的事实摘要，不声称逐字原文；音轨由用户打开，账号/支付/全文与长片保留官方边界。每页逐状态用真实浏览器检验并记录尺寸/时序/资源失败/反向/键盘/减少动态，来源观察、源码配置、实现覆盖和验证pending分开，严禁凭截图概括或伪造全面pass。\n\n## 负向约束\n\n不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要逐字复制全部人物长篇叙事、伪造实时业务或自动播放BGM。\n\n## 制作约束\n\n- 固定2026-10-09大陆官网快照；完整八章的视觉/内容机制不表示账号、交易、实时更新与全站所有详情已复刻。\n- 姓名/代号/阵营/种族/职业/属性/CV、目录和媒体映射来自当前35人模块；源码内另26人旧数组不能混作当前总量。长篇官方人物叙事不逐字重印，本地只显示事实摘要，不能称原文案原样。\n- 人物3D是透明视频而非可拖转三维角色；世界观才使用六真实bin点云，格式/归一化/参数与源码可回读，渲染效果仍需逐状态浏览器核验。\n- 70角色视频、公开静图、字体、六点云、影像预览和BGM保留来源/字节/尺寸/hash；完整长片仍依赖官方URL，不承诺离线全片。\n- 桌面CSS使用源设计坐标与实际宽高比例，手机沿源portrait规则；需要验证手机、减弱动态、资源失败、快速反向输入以及视频/点云生命周期，未完成项以fidelity明确pending。\n- 本轮已取源CSS/字体与运行DOM，不再使用首版单角色/单工厂图、600ms教学放大或构成说明按钮。源品牌与素材归相应权利人，不附商业再分发承诺。\n\n## 检查方法\n\n替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。\n\n[查看 Demo](../demos/endfield-industrial/index.html) · [返回浏览案例](../cases.html#style/endfield-industrial)\n",
-      "sha256": "c7064237283037190f6d905c56cb702d5c1507768854e5649e094c908afbd49a",
-      "bytes": 3195
+      "content": "# 终末地 · 完整工业科幻门户 · 复用 Prompt\n\n由 [结构化案例](../entries/endfield-industrial.json) 自动生成。参考观察与具体边界见 [调研](../research/endfield-industrial.md)。\n\n## 正向 Prompt\n\n完整对照2026-10-09终末地中国大陆公开官网的八章，不把干员与AIC缩成两张静图。先检查原DOM/CSS/手机规则、数据模块/影片/二进制及运行状态，保留活动首页、35人真实元数据与头像窗口/全部目录，翻页箭头只翻四头像，点击才切角色。保留2D与原RGB/alpha透明enter→idle视频，0.3/0.59/0.11合成原透明边缘；别将它替代成可旋转人物模型。世界观六项使用原Float32 xyz bin、Y跨度1900规范化及各模型参数，核对扫描/旋转/拖动/切换和离屏暂停。10影像、日历、4玩法/5AIC与公告保留原媒体、文字、编号和返回，黑黄媒体三层400ms delay0/250/500及500/500ms文案。采用原CSS与字体，亮黄只作信号，白色工业区、深色世界观和当前活动各保持身份。人物完整中文介绍从当前语言映射静态解码，按35个当前角色key核对，避免混入旧26人数据；音轨由用户打开，账号/支付/公告详情与长片保留官方边界。每页逐状态用真实浏览器检验并记录尺寸/时序/资源失败/反向/键盘/减少动态，来源观察、源码配置、实现覆盖和验证pending分开，严禁凭截图概括或伪造全面pass。\n\n## 负向约束\n\n不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要混入旧版本人物介绍、伪造实时业务或自动播放BGM。\n\n## 制作约束\n\n- 固定2026-10-09大陆官网快照；完整八章的视觉/内容机制不表示账号、交易、实时更新与全站所有详情已复刻。\n- 姓名/代号/阵营/种族/职业/属性/CV、目录和媒体映射来自当前35人模块；源码内另26人旧数组不能混作当前总量。完整人物介绍来自当前简中文本映射，保留段落、空格与标点并逐角色核验。\n- 人物3D是透明视频而非可拖转三维角色；世界观才使用六真实bin点云，格式/归一化/参数与源码可回读，渲染效果仍需逐状态浏览器核验。\n- 70角色视频、公开静图、字体、六点云、影像预览和BGM保留来源/字节/尺寸/hash；完整长片仍依赖官方URL，不承诺离线全片。\n- 桌面CSS使用源设计坐标与实际宽高比例，手机沿源portrait规则；需要验证手机、减弱动态、资源失败、快速反向输入以及视频/点云生命周期，未完成项以fidelity明确pending。\n- 本轮已取源CSS/字体与运行DOM，不再使用首版单角色/单工厂图、600ms教学放大或构成说明按钮。源品牌与素材归相应权利人，不附商业再分发承诺。\n\n## 检查方法\n\n替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。\n\n[查看 Demo](../demos/endfield-industrial/index.html) · [返回浏览案例](../cases.html#style/endfield-industrial)\n",
+      "sha256": "2191a75f10cdf1eefbf11e3b707e12532bf418595c68693f22a83fa377dceeb7",
+      "bytes": 3244
     },
     {
       "path": "demos/endfield-industrial/fidelity.md",
       "role": "fidelity",
-      "content": "# 终末地：当前复现范围与证据\n\n固定采集 **2026-10-09**，[中国大陆官网](https://endfield.hypergryph.com/)。公开门户的八章——首页、干员、世界观、影像、版本日历、玩法、集成工业、公告——已恢复原CSS/字体、数据、媒体与定义性渲染机制。浏览器验收覆盖范围见[状态矩阵](state-matrix.md)；本地实测与源站对照分开，未实测项不预写通过。账号、交易、云游戏、全文详情与实时更新仍进入官方。\n\n35项当前干员保留名称、代号、阵营、种族、职业、属性、星级、CV以及头像/立绘/肖像/enter/idle资源映射。**官方人物长篇叙事没有逐字复制**，本地使用基于公开身份与CV的事实摘要；名字、数据、字体与模块结构保留，正文存在明确差异。\n\n人物“3D”采用原左右RGB/alpha影片，以R×.3+G×.59+B×.11合成透明canvas并在enter结束换idle，不能声称可旋转人物网格。最终默认设置2040×939本地Si自然enter15.2s→idle2.9s及循环实测通过；手机艾尔黛拉enter→idle和3840×1080→1920×1080输出也已实测。**本轮原站自然enter→idle事件链未完整观察到，全部35视频也未逐一运行**；原模块的事件机制、已归档70影片与本地有限实测不混作同一结论。\n\n世界观使用六个原Float32 xyz bin，沿Y跨度1900规范化与原配置渲染真实WebGL点云。源/本地六模型名称和可见形态、6→1→6、切换锁、双向拖动与手机真实触摸通过；四段shader逐字符串相同。扫描/旋转tick参数与实际采样一致，射线活动数有随机差异，不承诺像素逐帧相等。PC日历normal/fixed/bottom三态及最终heading矩形与源站同值；手机保留真实横滚。\n\n10影像、4玩法视频、5AIC图、日历与10公告保留原映射。相册为黑层400ms/delay0、黄层delay250、媒体delay500，文字退出/进入各500ms；公告为左clip500ms、Y30%组件600ms、delay300后卡片横移300ms。四玩法实际播放、反向清理，AIC五项内容/编号/图片加载、5→1→5首末循环与三层中态已测。影像首末双向循环与预览终态、公告五页正反及端点class/aria/tabIndex/pointer已实际测试；不推广为全部影像/长片或源同帧转场通过。完整长片仍通过官方URL播放。\n\n加载器以真实必要资源完成任务推进，慢冷载、图像失败保持error/ready pending、解除阻断后重试恢复均实测；黄wipe scale0→0.0251998→0.302011→1及淡出opacity0.625881有采帧证据。比例不是网络字节百分比；独立失败状态点“继续浏览”后loader隐藏、正文可操作并到达#operator通过，错误信息随加载层隐藏，不存在正文持续提示。失败处置为本地补充。PC/手机35目录、艾尔黛拉资料和drawer、菜单选择后关闭有局部证据。本地筛选近卫8、近卫∩电磁1、近卫∩灼热0、清除35，以及真实AX选项、方向/Home/End/Return、Escape焦点回程已实测；本轮源端目录未可靠打开，这些组合和键盘不写成源/本地配对通过。完整35切换与全部筛选组合未逐项验证。\n\n关键图像使用高请求优先级；隐藏目录的35肖像以数据属性保存，打开后在滚动视口附近才赋背景，避免公共素材runtime提前预取。头像只为当前窗口赋图像key，完整人物身份不变；后续图像使用lazy，影片仅在可见章节启动，六点云等待入口关键资源完成后预取。25秒阈值只给“仍在加载”的选择提示，不将未完成资源判错；实际完成后继续黄色退出交接。真实失败与主动继续保留独立路径。\n\n390×844无整页横溢出和缺图，最终减少动态人物静态idle0.033333/paused=true且可见；模块动态偏好、快速视频替换与离屏恢复实测留矩阵。父监听真实切后台8.025秒时，Lore帧、角度与BGM播放时间冻结，返回后恢复，关闭音乐后不再播放；并排除旧人物视频在2D状态被恢复。减少动态下手动BGM同样后台8.339秒冻结、返回恢复、关闭停止实测通过。BGM默认关闭，仅用户打开后播放。这些是本地有限实测，不推广至原站、全部媒体组合或全部语音。\n\n临时人物影片停滞后，禁缓存/绕SW的多路径与最终默认设置均恢复正常；完整字节和解码已核验，**未孤立归因SW或HTTP缓存**。手机drawer旧左偏也在新载及独立390复查后解决，旧诊断截图不当最终预览。\n\n[素材清单](assets-manifest.json)核对实际350文件的字节、尺寸、SHA-256、来源与变换。选中环来自官方公开DOM完整SVG，只去class并把currentColor改#cccccc；Three.js许可在vendor/THREE-LICENSE.txt。材料归原权利人，本归档不承诺商业许可。PC采用来源设计坐标，手机沿portrait规则；本地焦点语义、失败处理与减少动态补充不等于原站整体合规认证。\n\n旧单角色/单工厂图、600ms教学放大与构成说明按钮已删除。原始浏览器/源码过程证据在仓库外work/fidelity/endfield、work/fidelity/independent-audit和rhine-audit；[状态矩阵](state-matrix.md)给出具体路径和未核验项。正式预览来自最终实际浏览器。[研究](../../research/endfield-industrial.md) · [Demo](index.html#operator)。\n",
-      "sha256": "3b1b3241048defd16ddbd85affc4bd88b9cf8c79dfa42b534d028b30051b03cd",
-      "bytes": 5406
+      "content": "# 终末地：当前复现范围与证据\n\n固定采集 **2026-10-09**，[中国大陆官网](https://endfield.hypergryph.com/)。公开门户的八章——首页、干员、世界观、影像、版本日历、玩法、集成工业、公告——已恢复原CSS/字体、数据、媒体与定义性渲染机制。浏览器验收覆盖范围见[状态矩阵](state-matrix.md)；本地实测与源站对照分开，未实测项不预写通过。账号、交易、云游戏、全文详情与实时更新仍进入官方。\n\n35项当前干员保留名称、代号、阵营、种族、职业、属性、星级、CV以及头像/立绘/肖像/enter/idle资源映射。完整中文人物介绍来自同日当前简中flat文本映射，按35个角色key逐一静态解码，保留原段落、空格、标点与换行；来源偏移与原值SHA256记入source-provenance.json，不混用旧26人数组。\n\n人物“3D”采用原左右RGB/alpha影片，以R×.3+G×.59+B×.11合成透明canvas并在enter结束换idle，不能声称可旋转人物网格。最终默认设置2040×939本地Si自然enter15.2s→idle2.9s及循环实测通过；手机艾尔黛拉enter→idle和3840×1080→1920×1080输出也已实测。**本轮原站自然enter→idle事件链未完整观察到，全部35视频也未逐一运行**；原模块的事件机制、已归档70影片与本地有限实测不混作同一结论。\n\n世界观使用六个原Float32 xyz bin，沿Y跨度1900规范化与原配置渲染真实WebGL点云。源/本地六模型名称和可见形态、6→1→6、切换锁、双向拖动与手机真实触摸通过；四段shader逐字符串相同。扫描/旋转tick参数与实际采样一致，射线活动数有随机差异，不承诺像素逐帧相等。PC日历normal/fixed/bottom三态及最终heading矩形与源站同值；手机保留真实横滚。\n\n10影像、4玩法视频、5AIC图、日历与10公告保留原映射。相册为黑层400ms/delay0、黄层delay250、媒体delay500，文字退出/进入各500ms；公告为左clip500ms、Y30%组件600ms、delay300后卡片横移300ms。四玩法实际播放、反向清理，AIC五项内容/编号/图片加载、5→1→5首末循环与三层中态已测。影像首末双向循环与预览终态、公告五页正反及端点class/aria/tabIndex/pointer已实际测试；不推广为全部影像/长片或源同帧转场通过。完整长片仍通过官方URL播放。\n\n加载器以真实必要资源完成任务推进，慢冷载、图像失败保持error/ready pending、解除阻断后重试恢复均实测；黄wipe scale0→0.0251998→0.302011→1及淡出opacity0.625881有采帧证据。比例不是网络字节百分比；独立失败状态点“继续浏览”后loader隐藏、正文可操作并到达#operator通过，错误信息随加载层隐藏，不存在正文持续提示。失败处置为本地补充。PC/手机35目录、艾尔黛拉资料和drawer、菜单选择后关闭有局部证据。本地筛选近卫8、近卫∩电磁1、近卫∩灼热0、清除35，以及真实AX选项、方向/Home/End/Return、Escape焦点回程已实测；本轮源端目录未可靠打开，这些组合和键盘不写成源/本地配对通过。完整35切换与全部筛选组合未逐项验证。\n\n关键图像使用高请求优先级；隐藏目录的35肖像以数据属性保存，打开后在滚动视口附近才赋背景，避免公共素材runtime提前预取。头像只为当前窗口赋图像key，完整人物身份不变；后续图像使用lazy，影片仅在可见章节启动，六点云等待入口关键资源完成后预取。25秒阈值只给“仍在加载”的选择提示，不将未完成资源判错；实际完成后继续黄色退出交接。真实失败与主动继续保留独立路径。\n\n390×844无整页横溢出和缺图，最终减少动态人物静态idle0.033333/paused=true且可见；模块动态偏好、快速视频替换与离屏恢复实测留矩阵。父监听真实切后台8.025秒时，Lore帧、角度与BGM播放时间冻结，返回后恢复，关闭音乐后不再播放；并排除旧人物视频在2D状态被恢复。减少动态下手动BGM同样后台8.339秒冻结、返回恢复、关闭停止实测通过。BGM默认关闭，仅用户打开后播放。这些是本地有限实测，不推广至原站、全部媒体组合或全部语音。\n\n临时人物影片停滞后，禁缓存/绕SW的多路径与最终默认设置均恢复正常；完整字节和解码已核验，**未孤立归因SW或HTTP缓存**。手机drawer旧左偏也在新载及独立390复查后解决，旧诊断截图不当最终预览。\n\n[素材清单](assets-manifest.json)核对实际350文件的字节、尺寸、SHA-256、来源与变换。选中环来自官方公开DOM完整SVG，只去class并把currentColor改#cccccc；Three.js许可在vendor/THREE-LICENSE.txt。材料归原权利人，本归档不承诺商业许可。PC采用来源设计坐标，手机沿portrait规则；本地焦点语义、失败处理与减少动态补充不等于原站整体合规认证。\n\n旧单角色/单工厂图、600ms教学放大与构成说明按钮已删除。原始浏览器/源码过程证据在仓库外work/fidelity/endfield、work/fidelity/independent-audit和rhine-audit；[状态矩阵](state-matrix.md)给出具体路径和未核验项。正式预览来自最终实际浏览器。[研究](../../research/endfield-industrial.md) · [Demo](index.html#operator)。\n",
+      "sha256": "00d68a4bc02f115e97f6db1a83e17f48879903b297a0d2f9a3700115023eaa1b",
+      "bytes": 5463
     },
     {
       "path": "demos/endfield-industrial/assets-manifest.json",
@@ -2322,14 +2322,14 @@
     {
       "path": "demos/endfield-industrial/data.js",
       "role": "source",
-      "sha256": "b936f50899b84c715d7bdb81bc64cbfdabe046af991e1c22db8e2f8236abd009",
-      "bytes": 37103
+      "sha256": "95c4e6cd91f2e55dc5ee6b117120477f5ba3abd08162a158ea0cfe6482ba2ca3",
+      "bytes": 59916
     },
     {
       "path": "demos/endfield-industrial/fidelity.md",
       "role": "context",
-      "sha256": "3b1b3241048defd16ddbd85affc4bd88b9cf8c79dfa42b534d028b30051b03cd",
-      "bytes": 5406
+      "sha256": "00d68a4bc02f115e97f6db1a83e17f48879903b297a0d2f9a3700115023eaa1b",
+      "bytes": 5463
     },
     {
       "path": "demos/endfield-industrial/index.html",
@@ -2358,14 +2358,14 @@
     {
       "path": "demos/endfield-industrial/source-provenance.json",
       "role": "context",
-      "sha256": "25d2080fb65af617574c05dd878c085e1936a304dc21318b1efb0ac6fb3a1d84",
-      "bytes": 2759
+      "sha256": "824fb5ab05a648cbc5790d25da0c145e96d2c94bd9a641608deeef3076f3f561",
+      "bytes": 25833
     },
     {
       "path": "demos/endfield-industrial/state-matrix.md",
       "role": "context",
-      "sha256": "5f8d121aa6e299f0e90cb42dcd0b5193482507d2c31f47c2a7b81b37f13d426a",
-      "bytes": 9695
+      "sha256": "d2e38712d77034422eac9a54bd4c023752bf6f3dda3fdc07a9a10e05bd66c23a",
+      "bytes": 10120
     },
     {
       "path": "demos/endfield-industrial/state.css",
@@ -2418,8 +2418,8 @@
     {
       "path": "entries/endfield-industrial.json",
       "role": "context",
-      "sha256": "31999553d973e6b40d9b27509a9ef29f91bf0138cbd4a9b720d6e8ad75926dc2",
-      "bytes": 11839
+      "sha256": "84d767764f48437674fbe6a2af9239cef7b793b36538240c740f6dbb8c171975",
+      "bytes": 11894
     },
     {
       "path": "favicon.svg",
@@ -2430,26 +2430,26 @@
     {
       "path": "previews/endfield-industrial.jpg",
       "role": "preview",
-      "sha256": "f2691df7f95df689ed8ce75a6d3c28d0f6383d54eec113d5221d675c5d5c4952",
-      "bytes": 387077
+      "sha256": "3ed1f85485f7d472c618da78070e7417d85d9e5917bfc1c6d191fe3621ea0dd9",
+      "bytes": 441859
     },
     {
       "path": "previews/mobile/endfield-industrial.jpg",
       "role": "preview",
-      "sha256": "2f29f6e23d57a8f0d1279aa39a967275c36ea1d148952efab4fe8a71243ddaa2",
-      "bytes": 123304
+      "sha256": "83a969f3bab7adee00f5317b9762b2e26a681614637502fc4d0cb0d6894b2949",
+      "bytes": 124589
     },
     {
       "path": "prompts/endfield-industrial.md",
       "role": "context",
-      "sha256": "c7064237283037190f6d905c56cb702d5c1507768854e5649e094c908afbd49a",
-      "bytes": 3195
+      "sha256": "2191a75f10cdf1eefbf11e3b707e12532bf418595c68693f22a83fa377dceeb7",
+      "bytes": 3244
     },
     {
       "path": "research/endfield-industrial.md",
       "role": "context",
-      "sha256": "f011a15fb4afc49e59798ec9014cdfff2d4b24fc73a219438c8728c0cd272495",
-      "bytes": 3474
+      "sha256": "915cb8158835c6397a1da3713a74b5f8b626eb40a945a3256a2610b14d17128b",
+      "bytes": 3482
     },
     {
       "path": "site-footer.css",
@@ -2509,8 +2509,8 @@
   "webNotes": {
     "format": "text/html",
     "renderer": "atlas.js",
-    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=endfield-industrial\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。</dd></div><div class=\"\"><dt>字体排版</dt><dd>原字体、字号、字距、巨大斜线ENDFIELD与实心姓名/小编号；原素材纹理和mask沿源CSS，不再系统字体加粗拟合。</dd></div><div class=\"\"><dt>布局留白</dt><dd>原八章自然滚动、固定侧栏和portrait布局；35人头像窗口及目录，六项世界观，全媒体/相册/公告结构。</dd></div><div class=\"\"><dt>图像图标</dt><dd>35组头像/立绘/肖像和70透明角色视频、六bin点云、10媒体封面/预览、版本日历、4玩法视频/5AIC图及官方字体；完整影片走原URL。</dd></div><div class=\"\"><dt>线条形状</dt><dd>巨大斜线背景字、十字标定、REC、小编号、淡网格与实心资料；AIC竖书脊保留在媒体边界，黑黄三层作为切换状态。</dd></div><div class=\"\"><dt>信息层级</dt><dd>活动入口→完整干员→世界观→影像→日历→玩法→工业→公告；每章保留原用途、目录/控制与真实业务入口。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>原CSS与算法提供时序依据；透明视频enter→idle、点云真实数据与源参数、相册方向层及公告展开；浏览器实测与pending见fidelity。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>档案身份建立在真实素材、数据/标签、字体与状态机制上；不同章节无需统一成白黄卡片，相同编号/标定/导航贯穿门户。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>明亮工业语言来自干员、玩法与集成工业分区；同日首页为雪凇幽梦活动，世界观为深色点云，不能把全站等同于白黄配色。</li><li>淡网格、巨大斜线ENDFIELD、REC编号、实心姓名和多色标定条形成记录层级；采用来源CSS与字体，装饰不能取代资料内容。</li><li>35干员同时提供头像窗口与完整职业/属性目录；3D入口是RGB/alpha透明视频的enter→idle，不能伪称可自由旋转的人物网格模型。</li><li>世界观六项是真实Float32 xyz二进制点云，与人物透明视频属于不同机制；切换、扫描/旋转、拖动和媒体资源边界分别记录。</li><li>AIC书脊与媒体共同组织类别；4玩法/5AIC采用源三层黑→黄→媒体的方向揭示，不用单静态工厂图替代整个相册。</li></ul><h3>怎样凸显产品重点</h3><p>2026-10-09中国大陆公开官网八章快照：home、operator、lore、information、calendar、gameplay、aic、notice；35人目录、六世界模型、10影像、4玩法/5AIC、10公告。人物正式长篇简介采用基于公开姓名/代号/阵营/种族/职业/属性/CV的摘要；账号、支付、下载/云游戏服务仍官方。</p><h3>主题与情绪</h3><p>完整门户保留首页活动原色、白色干员/工业资料面、深色世界观点云和影像场；亮黄作为局部信号，字体与多色标定沿来源。</p></section><section><h2>02 / 交互巧思</h2><ul><li>载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。</li><li>干员：35项头像真实映射，箭头每次翻四个头像而不切角色，点击头像才更新名字/代号/阵营/种族/职业/属性/CV与星级；全部干员页按职业/属性AND筛选，返回正式档案。</li><li>2D/3D：同35项立绘和70个原enter/idle视频。祀源影片3840×1080左右RGB/alpha，经原亮度权重0.3/0.59/0.11合成1920×1080透明canvas，enter结束切idle循环；不制造实时人物模型。</li><li>世界观：帝江号/锚点/集成工业系统/天师桩/天使/裂地者六个原bin及模型参数，Float32 xyz、按Y跨度1900规范化；实际WebGL点云、扫描、转动、拖动、分页/标题与六指标同步。最终状态实测见fidelity，不因源码抽取而自动判通过。</li><li>影像：10项真实标题/日期/分类/封面及预览，横向相邻卡与循环窗口、上一/下一、选卡和完整影片dialog；完整长片使用官方媒体URL，关闭停止播放。</li><li>玩法/AIC：4段原玩法视频和5张原工业图；400ms三层方向揭示，黑层delay0/黄250/实际媒体500，总900ms；文字500ms退出/500ms进入，内容/编号/分页共同变化。</li><li>日历与公告：原版本日历影像；10公告的原标题/日期/封面及官方详情入口，桌面卡片与手机两条分页。源公告展开500ms左向clip与600ms部件Y30%入场、300ms延迟卡片300ms横移由本地状态实现。</li><li>声音和业务：原BGM仅在用户打开声音后播放，离开标签/隐藏页面停止相关媒体；登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>所访公开官网无独立主题切换，本地固定保留各章节原浅/深场景；不把整站统一为白色。</p><p>各章原色与资料角色共存，亮黄只作状态与工业信号，不改变IP人物和活动图像。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>背景音乐</h3><p>原BGM归档；本地默认关闭，只有用户打开声音后尝试播放，状态与aria-pressed同步，隐藏页面暂停。媒体预览与角色视频静音，完整影片有自己的播放控制。</p><p>保留可主动选择的官网声音入口与媒体反馈；不声称采样/重建全部人物语音或网站操作音。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>固定2026-10-09大陆官网快照；完整八章的视觉/内容机制不表示账号、交易、实时更新与全站所有详情已复刻。</li><li>姓名/代号/阵营/种族/职业/属性/CV、目录和媒体映射来自当前35人模块；源码内另26人旧数组不能混作当前总量。长篇官方人物叙事不逐字重印，本地只显示事实摘要，不能称原文案原样。</li><li>人物3D是透明视频而非可拖转三维角色；世界观才使用六真实bin点云，格式/归一化/参数与源码可回读，渲染效果仍需逐状态浏览器核验。</li><li>70角色视频、公开静图、字体、六点云、影像预览和BGM保留来源/字节/尺寸/hash；完整长片仍依赖官方URL，不承诺离线全片。</li><li>桌面CSS使用源设计坐标与实际宽高比例，手机沿源portrait规则；需要验证手机、减弱动态、资源失败、快速反向输入以及视频/点云生命周期，未完成项以fidelity明确pending。</li><li>本轮已取源CSS/字体与运行DOM，不再使用首版单角色/单工厂图、600ms教学放大或构成说明按钮。源品牌与素材归相应权利人，不附商业再分发承诺。</li></ul><h3>适合</h3><p>明亮工业科幻宣传 / 角色与技术资料并列 / 图像主导的设备/实验档案</p><h3>谨慎使用</h3><p>将亮黄大面积当正文底色 / 密集交易与账户后台 / 仅换配色来重复原版方舟案例</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#131315\"></i>#131315</span><span class=\"swatch\"><i style=\"background:#fffa00\"></i>#fffa00</span><span class=\"swatch\"><i style=\"background:#dedfe0\"></i>#dedfe0</span></div><p><b>字体</b> · 来源HarmonyOS Sans SC/SansRegular/SansMedium、Gilroy、Novecentosanswide等字体包与源字号/字距；档案实心前景及斜线背景字分工。<br><b>布局</b> · 自然滚动八章，桌面源160×90设计坐标，portrait宽67.5rem；原侧栏/35头像窗口/完整目录/世界观canvas/媒体与相册。<br><b>动效</b> · 300ms侧栏，源透明enter→idle、点云扫描/切换；相册400ms三层0/250/500ms，文字500/500ms；公告clip500ms与600ms入场。减少动态保留手动状态。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>完整对照2026-10-09终末地中国大陆公开官网的八章，不把干员与AIC缩成两张静图。先检查原DOM/CSS/手机规则、数据模块/影片/二进制及运行状态，保留活动首页、35人真实元数据与头像窗口/全部目录，翻页箭头只翻四头像，点击才切角色。保留2D与原RGB/alpha透明enter→idle视频，0.3/0.59/0.11合成原透明边缘；别将它替代成可旋转人物模型。世界观六项使用原Float32 xyz bin、Y跨度1900规范化及各模型参数，核对扫描/旋转/拖动/切换和离屏暂停。10影像、日历、4玩法/5AIC与公告保留原媒体、文字、编号和返回，黑黄媒体三层400ms delay0/250/500及500/500ms文案。采用原CSS与字体，亮黄只作信号，白色工业区、深色世界观和当前活动各保持身份。人物长篇叙事改成明确的事实摘要，不声称逐字原文；音轨由用户打开，账号/支付/全文与长片保留官方边界。每页逐状态用真实浏览器检验并记录尺寸/时序/资源失败/反向/键盘/减少动态，来源观察、源码配置、实现覆盖和验证pending分开，严禁凭截图概括或伪造全面pass。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要逐字复制全部人物长篇叙事、伪造实时业务或自动播放BGM。</p></details><h3>改造练习</h3><p>替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://endfield.hypergryph.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Hypergryph · 明日方舟终末地中国大陆官方网站 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>同日原DOM/CSS、portrait布局、Next公开数据与模块资源映射、运行视频/点云算法均已采集；静态源码覆盖与浏览器实测分层，最终通过状态见fidelity。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://ak.hypergryph.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Hypergryph · 明日方舟中文官方网站 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-09现场比较暗灰、青色和全屏档案语言；本库已有arknights-world，新增条目只提取终末地明亮分区的不同构成。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Use of Color <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>支持本地用按钮文字、边界和aria状态同时表达选中，不能只靠亮黄变化。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Animation from Interactions <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>WCAG 2.3.3为AAA；用于本地减少非必要缩放和滚动动态的设计依据，不表示源站已经符合该条。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fendfield-industrial.md\" target=\"_blank\">调研记录</a>。</p></section>",
-    "sha256": "b5a58b2205ec38392c9650e4c9370108f0d6d0a5adb3f68b9b1a8a0ee80bfc50",
-    "bytes": 12626
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=endfield-industrial\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。</dd></div><div class=\"\"><dt>字体排版</dt><dd>原字体、字号、字距、巨大斜线ENDFIELD与实心姓名/小编号；原素材纹理和mask沿源CSS，不再系统字体加粗拟合。</dd></div><div class=\"\"><dt>布局留白</dt><dd>原八章自然滚动、固定侧栏和portrait布局；35人头像窗口及目录，六项世界观，全媒体/相册/公告结构。</dd></div><div class=\"\"><dt>图像图标</dt><dd>35组头像/立绘/肖像和70透明角色视频、六bin点云、10媒体封面/预览、版本日历、4玩法视频/5AIC图及官方字体；完整影片走原URL。</dd></div><div class=\"\"><dt>线条形状</dt><dd>巨大斜线背景字、十字标定、REC、小编号、淡网格与实心资料；AIC竖书脊保留在媒体边界，黑黄三层作为切换状态。</dd></div><div class=\"\"><dt>信息层级</dt><dd>活动入口→完整干员→世界观→影像→日历→玩法→工业→公告；每章保留原用途、目录/控制与真实业务入口。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>原CSS与算法提供时序依据；透明视频enter→idle、点云真实数据与源参数、相册方向层及公告展开；浏览器实测与pending见fidelity。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>档案身份建立在真实素材、数据/标签、字体与状态机制上；不同章节无需统一成白黄卡片，相同编号/标定/导航贯穿门户。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>明亮工业语言来自干员、玩法与集成工业分区；同日首页为雪凇幽梦活动，世界观为深色点云，不能把全站等同于白黄配色。</li><li>淡网格、巨大斜线ENDFIELD、REC编号、实心姓名和多色标定条形成记录层级；采用来源CSS与字体，装饰不能取代资料内容。</li><li>35干员同时提供头像窗口与完整职业/属性目录；3D入口是RGB/alpha透明视频的enter→idle，不能伪称可自由旋转的人物网格模型。</li><li>世界观六项是真实Float32 xyz二进制点云，与人物透明视频属于不同机制；切换、扫描/旋转、拖动和媒体资源边界分别记录。</li><li>AIC书脊与媒体共同组织类别；4玩法/5AIC采用源三层黑→黄→媒体的方向揭示，不用单静态工厂图替代整个相册。</li></ul><h3>怎样凸显产品重点</h3><p>2026-10-09中国大陆公开官网八章快照：home、operator、lore、information、calendar、gameplay、aic、notice；35人目录、六世界模型、10影像、4玩法/5AIC、10公告。人物完整简介来自当前简中文本映射，逐角色核对原值与SHA256；账号、支付、下载/云游戏服务仍官方。</p><h3>主题与情绪</h3><p>完整门户保留首页活动原色、白色干员/工业资料面、深色世界观点云和影像场；亮黄作为局部信号，字体与多色标定沿来源。</p></section><section><h2>02 / 交互巧思</h2><ul><li>载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。</li><li>干员：35项头像真实映射，箭头每次翻四个头像而不切角色，点击头像才更新名字/代号/阵营/种族/职业/属性/CV与星级；全部干员页按职业/属性AND筛选，返回正式档案。</li><li>2D/3D：同35项立绘和70个原enter/idle视频。祀源影片3840×1080左右RGB/alpha，经原亮度权重0.3/0.59/0.11合成1920×1080透明canvas，enter结束切idle循环；不制造实时人物模型。</li><li>世界观：帝江号/锚点/集成工业系统/天师桩/天使/裂地者六个原bin及模型参数，Float32 xyz、按Y跨度1900规范化；实际WebGL点云、扫描、转动、拖动、分页/标题与六指标同步。最终状态实测见fidelity，不因源码抽取而自动判通过。</li><li>影像：10项真实标题/日期/分类/封面及预览，横向相邻卡与循环窗口、上一/下一、选卡和完整影片dialog；完整长片使用官方媒体URL，关闭停止播放。</li><li>玩法/AIC：4段原玩法视频和5张原工业图；400ms三层方向揭示，黑层delay0/黄250/实际媒体500，总900ms；文字500ms退出/500ms进入，内容/编号/分页共同变化。</li><li>日历与公告：原版本日历影像；10公告的原标题/日期/封面及官方详情入口，桌面卡片与手机两条分页。源公告展开500ms左向clip与600ms部件Y30%入场、300ms延迟卡片300ms横移由本地状态实现。</li><li>声音和业务：原BGM仅在用户打开声音后播放，离开标签/隐藏页面停止相关媒体；登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>所访公开官网无独立主题切换，本地固定保留各章节原浅/深场景；不把整站统一为白色。</p><p>各章原色与资料角色共存，亮黄只作状态与工业信号，不改变IP人物和活动图像。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>背景音乐</h3><p>原BGM归档；本地默认关闭，只有用户打开声音后尝试播放，状态与aria-pressed同步，隐藏页面暂停。媒体预览与角色视频静音，完整影片有自己的播放控制。</p><p>保留可主动选择的官网声音入口与媒体反馈；不声称采样/重建全部人物语音或网站操作音。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>固定2026-10-09大陆官网快照；完整八章的视觉/内容机制不表示账号、交易、实时更新与全站所有详情已复刻。</li><li>姓名/代号/阵营/种族/职业/属性/CV、目录和媒体映射来自当前35人模块；源码内另26人旧数组不能混作当前总量。完整人物介绍来自当前简中文本映射，保留段落、空格与标点并逐角色核验。</li><li>人物3D是透明视频而非可拖转三维角色；世界观才使用六真实bin点云，格式/归一化/参数与源码可回读，渲染效果仍需逐状态浏览器核验。</li><li>70角色视频、公开静图、字体、六点云、影像预览和BGM保留来源/字节/尺寸/hash；完整长片仍依赖官方URL，不承诺离线全片。</li><li>桌面CSS使用源设计坐标与实际宽高比例，手机沿源portrait规则；需要验证手机、减弱动态、资源失败、快速反向输入以及视频/点云生命周期，未完成项以fidelity明确pending。</li><li>本轮已取源CSS/字体与运行DOM，不再使用首版单角色/单工厂图、600ms教学放大或构成说明按钮。源品牌与素材归相应权利人，不附商业再分发承诺。</li></ul><h3>适合</h3><p>明亮工业科幻宣传 / 角色与技术资料并列 / 图像主导的设备/实验档案</p><h3>谨慎使用</h3><p>将亮黄大面积当正文底色 / 密集交易与账户后台 / 仅换配色来重复原版方舟案例</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#131315\"></i>#131315</span><span class=\"swatch\"><i style=\"background:#fffa00\"></i>#fffa00</span><span class=\"swatch\"><i style=\"background:#dedfe0\"></i>#dedfe0</span></div><p><b>字体</b> · 来源HarmonyOS Sans SC/SansRegular/SansMedium、Gilroy、Novecentosanswide等字体包与源字号/字距；档案实心前景及斜线背景字分工。<br><b>布局</b> · 自然滚动八章，桌面源160×90设计坐标，portrait宽67.5rem；原侧栏/35头像窗口/完整目录/世界观canvas/媒体与相册。<br><b>动效</b> · 300ms侧栏，源透明enter→idle、点云扫描/切换；相册400ms三层0/250/500ms，文字500/500ms；公告clip500ms与600ms入场。减少动态保留手动状态。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>完整对照2026-10-09终末地中国大陆公开官网的八章，不把干员与AIC缩成两张静图。先检查原DOM/CSS/手机规则、数据模块/影片/二进制及运行状态，保留活动首页、35人真实元数据与头像窗口/全部目录，翻页箭头只翻四头像，点击才切角色。保留2D与原RGB/alpha透明enter→idle视频，0.3/0.59/0.11合成原透明边缘；别将它替代成可旋转人物模型。世界观六项使用原Float32 xyz bin、Y跨度1900规范化及各模型参数，核对扫描/旋转/拖动/切换和离屏暂停。10影像、日历、4玩法/5AIC与公告保留原媒体、文字、编号和返回，黑黄媒体三层400ms delay0/250/500及500/500ms文案。采用原CSS与字体，亮黄只作信号，白色工业区、深色世界观和当前活动各保持身份。人物完整中文介绍从当前语言映射静态解码，按35个当前角色key核对，避免混入旧26人数据；音轨由用户打开，账号/支付/公告详情与长片保留官方边界。每页逐状态用真实浏览器检验并记录尺寸/时序/资源失败/反向/键盘/减少动态，来源观察、源码配置、实现覆盖和验证pending分开，严禁凭截图概括或伪造全面pass。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要混入旧版本人物介绍、伪造实时业务或自动播放BGM。</p></details><h3>改造练习</h3><p>替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://endfield.hypergryph.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Hypergryph · 明日方舟终末地中国大陆官方网站 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>同日原DOM/CSS、portrait布局、Next公开数据与模块资源映射、运行视频/点云算法均已采集；静态源码覆盖与浏览器实测分层，最终通过状态见fidelity。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://ak.hypergryph.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Hypergryph · 明日方舟中文官方网站 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-09现场比较暗灰、青色和全屏档案语言；本库已有arknights-world，新增条目只提取终末地明亮分区的不同构成。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Use of Color <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>支持本地用按钮文字、边界和aria状态同时表达选中，不能只靠亮黄变化。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Animation from Interactions <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>WCAG 2.3.3为AAA；用于本地减少非必要缩放和滚动动态的设计依据，不表示源站已经符合该条。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fendfield-industrial.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "c7cfa7c16d3e0ff94bb2430bcbd5e61d68df8950e4286cd5f99a6fede7d7604e",
+    "bytes": 12661
   }
 }

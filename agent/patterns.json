@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "ef48d250455323ed9b144bcd27def6462cb31dab8ec8b5f40fdfc844947cba57",
+  "contentVersion": "0b19997304d522f9620e89a131f374b4c1eb39a83c0ab5dab077fd1cee6faf53",
   "patternCount": 129,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -2817,7 +2817,7 @@
       "paths": {
         "bundle": "agent/patterns/hatched-registration-type.json"
       },
-      "bundleSha256": "b9372eafa0b588d69df21f1dda28d9883e45da6eabb4f1293aba713fd124c3a0"
+      "bundleSha256": "7f0456531f2a9e9aaf18268b76f882293e26b69e8cb2463beb61a4355cc5a67e"
     },
     {
       "id": "header-below-mobile-navigation",
@@ -4040,7 +4040,7 @@
       "paths": {
         "bundle": "agent/patterns/layered-directional-media-reveal.json"
       },
-      "bundleSha256": "5be8ff0dfc47982deea32b7130a930528958d61c22384204c090f9cc86bf088e"
+      "bundleSha256": "9e524b5d17a49999d962083d34b9aede47919197bbfe283d25170d018567fa19"
     },
     {
       "id": "layered-navigation-drawer",
@@ -6181,7 +6181,7 @@
       "paths": {
         "bundle": "agent/patterns/resource-bound-fullscreen-loading.json"
       },
-      "bundleSha256": "1473479cf9103bf364fde250476ad08dfb5eedfe579fc3bf958ac7feb9bb0971"
+      "bundleSha256": "b0472f8e74a5855c06cb1c77c184c9d9640296d680dd9ab840ae9032c4c8b80a"
     },
     {
       "id": "responsive-art-direction",
@@ -6374,7 +6374,7 @@
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
       },
-      "bundleSha256": "e1de98eab9615c2465909b0a4ef811b9e80debc2bb86af7e033f8e58d4ed9dfc"
+      "bundleSha256": "14d0c0ec25d3573c60f5baa3cea6173e39fa487115ca112fe4decf79d8cf0b1c"
     },
     {
       "id": "reversible-center-reveal",
@@ -6528,7 +6528,7 @@
       "paths": {
         "bundle": "agent/patterns/scanline-point-cloud-transition.json"
       },
-      "bundleSha256": "52abf97ad5d8e92248fa39956e722d8d4f403487d5e61b2d376fe732c526f485"
+      "bundleSha256": "338c29c56a8a2bb3bed6c82551e44de85b152ef3baca32a24213a05f6412b295"
     },
     {
       "id": "scroll-differential-stars",
@@ -8060,7 +8060,7 @@
       "paths": {
         "bundle": "agent/patterns/transparent-video-mode-stage.json"
       },
-      "bundleSha256": "d74b4c0aa74fed7a4d22b67d526187ffa58f9500ea8e0f05a61f88234ac641b8"
+      "bundleSha256": "7bf311c6ad86c32dc474c8f13a15269bb717e5f23b25fcef050d0d006bbc9f5f"
     },
     {
       "id": "vertical-card-swap",
@@ -8254,7 +8254,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-media-spine.json"
       },
-      "bundleSha256": "3d3c58ace9b64ef1fca6f643588e76e30ce58cc82c5ac4e23ec330edfd90e241"
+      "bundleSha256": "a78837104c0f8144a873db57c91160c359b4cf3561d5bd6b73d4a1a3d0ba3013"
     },
     {
       "id": "viewport-animation-lifecycle",
@@ -8372,7 +8372,7 @@
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
       },
-      "bundleSha256": "50f0c76513a7353fd3144d9ab81f149621d91b3373813cb55a6c983c26036d8e"
+      "bundleSha256": "cfe5f25db8e00ed96d21c3c7db4a0b7d31f296d58d83ef4d43b1c29dd398ff87"
     },
     {
       "id": "visit-facts-grid",
