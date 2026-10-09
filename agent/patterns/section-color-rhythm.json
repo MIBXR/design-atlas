@@ -91,7 +91,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "49b423c4d1094622dcdb07fbfc40ab7bcdf3a8e5ac4c966947f2ea1b74ebf104"
+      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
     },
     {
       "id": "monument-valley-game",
@@ -100,7 +100,7 @@
         "bundle": "agent/cases/monument-valley-game.json",
         "demo": "demos/monument-valley-game/index.html"
       },
-      "bundleSha256": "72a11c8b38cef921ed910241fb614f5ed9494da8f9955cd30a0b53d5a2978392"
+      "bundleSha256": "bb8320dbd68b71e84efe641cc42b33d1a35c3cf4e354d6c07d089d5f1a76cb7a"
     },
     {
       "id": "stripe-platform",
@@ -109,7 +109,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "1dac15555775ebda8f12565586f08b4e1df86b4c110ee1508487f0d81bd87700"
+      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
     }
   ]
 }

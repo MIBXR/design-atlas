@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "7506e76e6ce7368f57a699bae81da0473b5a9d37cebacdfa970a190ea0787aad",
-  "entryCount": 29,
+  "contentVersion": "5c16d9c518d481fb2871f1a528ea1e7d480c539159060f03f7ced03b8cc1acc9",
+  "entryCount": 34,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
     {
@@ -77,7 +77,7 @@
         "demo": "demos/apple-product/index.html",
         "entry": "entries/apple-product.json"
       },
-      "bundleSha256": "49b423c4d1094622dcdb07fbfc40ab7bcdf3a8e5ac4c966947f2ea1b74ebf104"
+      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
     },
     {
       "id": "stripe-platform",
@@ -154,7 +154,7 @@
         "demo": "demos/stripe-platform/index.html",
         "entry": "entries/stripe-platform.json"
       },
-      "bundleSha256": "1dac15555775ebda8f12565586f08b4e1df86b4c110ee1508487f0d81bd87700"
+      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
     },
     {
       "id": "linear-workflow",
@@ -230,7 +230,7 @@
         "demo": "demos/linear-workflow/index.html",
         "entry": "entries/linear-workflow.json"
       },
-      "bundleSha256": "e4adb9daf2e7200f1ba6260c7127a1d9bcbf56179c3a5b68bb0de514d0f461e8"
+      "bundleSha256": "a245270c6e4b7e4d2243595955d14964747bf5506d7fce9093b0fee572a589ce"
     },
     {
       "id": "notion-editorial",
@@ -305,7 +305,7 @@
         "demo": "demos/notion-editorial/index.html",
         "entry": "entries/notion-editorial.json"
       },
-      "bundleSha256": "0f0a2dd370ba64318000be73190a2291350e285f1a46955ddda3bc55fe7473f3"
+      "bundleSha256": "6c18ed29f48b83d111afd43f2989556c8ee01864c29073161d232fbad4d7db48"
     },
     {
       "id": "zelda-world",
@@ -377,7 +377,7 @@
         "demo": "demos/zelda-world/index.html",
         "entry": "entries/zelda-world.json"
       },
-      "bundleSha256": "26e2c8b7c90adb3b296e8eec6383bbf41eae639a9a22977584fa323b6c7de0e4"
+      "bundleSha256": "7a42a497ab8ed65b066ed9a9302c5538ed747fd11b03143bcd74b45aeb89811d"
     },
     {
       "id": "persona-kinetic",
@@ -449,7 +449,7 @@
         "demo": "demos/persona-kinetic/index.html",
         "entry": "entries/persona-kinetic.json"
       },
-      "bundleSha256": "ae0fd5cc090a0cabe7385171c384a7071c8edf3ef60816236353f31cb3a2e036"
+      "bundleSha256": "8cd2f928c61afb00bf28cb215b0c4c89f92a34be6de4e3a0b4ecf417d104c3f6"
     },
     {
       "id": "hand-drawn",
@@ -522,7 +522,7 @@
         "demo": "demos/hand-drawn/index.html",
         "entry": "entries/hand-drawn.json"
       },
-      "bundleSha256": "825c99b500c5107c5b4cdf59e43f37c168c90698eee64dcd1e734dbd10cc00d4"
+      "bundleSha256": "e9329817b7a7ed91da7694e8f8181df9280d41c89723796fdd1781a4ff0e68bc"
     },
     {
       "id": "isometric-3d",
@@ -596,7 +596,7 @@
         "demo": "demos/isometric-3d/index.html",
         "entry": "entries/isometric-3d.json"
       },
-      "bundleSha256": "5f71e6547b3fa3a33070d1e14ad7e3cfc037b5c77dddf0bbf12e81f923b378e9"
+      "bundleSha256": "3c64530f38ba045a95893773c8007f6bce4dab33079b84cb3589e033cca6d1c5"
     },
     {
       "id": "line-art",
@@ -668,7 +668,7 @@
         "demo": "demos/line-art/index.html",
         "entry": "entries/line-art.json"
       },
-      "bundleSha256": "ac78c6f5f5945bba7a25f40e6a7a5856bb7281f6928721f372039de881b7b70d"
+      "bundleSha256": "11a5cff97d06d10874da7e3a5aa5d68e65539746c5fee10c817a15ae617f9211"
     },
     {
       "id": "shape-morph",
@@ -742,7 +742,7 @@
         "demo": "demos/shape-morph/index.html",
         "entry": "entries/shape-morph.json"
       },
-      "bundleSha256": "c3887ea76b5689d5ce817d07b896d0f548e8985da98c08537963fca1204f60c4"
+      "bundleSha256": "5315106c44178661c8c83b0307688ed394e511a88129d968c8a0b193acc7a0ec"
     },
     {
       "id": "swiss-grid",
@@ -812,7 +812,7 @@
         "demo": "demos/swiss-grid/index.html",
         "entry": "entries/swiss-grid.json"
       },
-      "bundleSha256": "68d0de061919b75852e4a78eb6620d5e64e59142cc2bc9502944199176ada7b8"
+      "bundleSha256": "33ca09e6273c85201d099990aba207daad7c83267db1ff3292be4c1f2eb0a758"
     },
     {
       "id": "bauhaus-geometry",
@@ -885,7 +885,7 @@
         "demo": "demos/bauhaus-geometry/index.html",
         "entry": "entries/bauhaus-geometry.json"
       },
-      "bundleSha256": "4433309301148aab875ee175941fd1c1f7ed7a5af6697fcb1738df2e0a96fd52"
+      "bundleSha256": "44c85b762c571039bcf6d0a9c45072f714d31f717f33d32ae5051c3689f45101"
     },
     {
       "id": "retro-80s",
@@ -959,7 +959,7 @@
         "demo": "demos/retro-80s/index.html",
         "entry": "entries/retro-80s.json"
       },
-      "bundleSha256": "1d49b76f365e8bd151e88ec3ccb52b36e16dcb97e3491ea62e09fc7fa19778a0"
+      "bundleSha256": "d3e8936655a4c9cbf7d9afbf49618e9b11632748dd123d01782c433ae8a98f74"
     },
     {
       "id": "pixel-world",
@@ -1035,7 +1035,7 @@
         "demo": "demos/pixel-world/index.html",
         "entry": "entries/pixel-world.json"
       },
-      "bundleSha256": "5371bc6a770ccb81855cd7986ed1afe96358fcded494b05ccee249199ef3ff6e"
+      "bundleSha256": "9936e5592ca689afa4b8eabfd3e72f79382981b8566a2bedd2266f5d02c755d8"
     },
     {
       "id": "chatgpt-platform",
@@ -1114,7 +1114,7 @@
         "demo": "demos/chatgpt-platform/index.html",
         "entry": "entries/chatgpt-platform.json"
       },
-      "bundleSha256": "08a1149c9414dc97363228923ec2c3876384557491ec1e3137335427e0017674"
+      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
     },
     {
       "id": "claude-platform",
@@ -1189,7 +1189,7 @@
         "demo": "demos/claude-platform/index.html",
         "entry": "entries/claude-platform.json"
       },
-      "bundleSha256": "187874b244c6e475f140921657bd2fddc3c23100b21d4347391775a0d3900eb2"
+      "bundleSha256": "1b678763f4f2b8b4debad77707d3cf3418ba3612c77ab651e81058683af4abf9"
     },
     {
       "id": "qoder-platform",
@@ -1264,7 +1264,7 @@
         "demo": "demos/qoder-platform/index.html",
         "entry": "entries/qoder-platform.json"
       },
-      "bundleSha256": "de272c57924dfe4c1617e5dfa43275a3de4f6e98b8e14916d08c488562da9c95"
+      "bundleSha256": "278865bae3c8d4f55e19502f6addc55eb37f48678d7292034273dbfe53ac73b2"
     },
     {
       "id": "genshin-world",
@@ -1337,7 +1337,7 @@
         "demo": "demos/genshin-world/index.html",
         "entry": "entries/genshin-world.json"
       },
-      "bundleSha256": "3f1c58237518671b9f806dc7c27ea969f322c55c7c80cc613fa03a7fd8878352"
+      "bundleSha256": "dc1e08e472f6d8443a09fa6c6dda3205b2ab7a67ed5fb13f6fd14114d1dfc0a6"
     },
     {
       "id": "arknights-world",
@@ -1349,7 +1349,11 @@
         "全屏章切",
         "滚动编号",
         "WebGL点阵",
-        "原站BGM"
+        "原站BGM",
+        "工业风",
+        "黑白灰",
+        "罗德岛",
+        "战术档案"
       ],
       "summary": "全屏资源载入、侧向章切与滚动编号，将六章组织成工业系统；WORLD用真实WebGL点阵响应指针，把标识、设定和输入连成同一舞台。",
       "useCases": [
@@ -1411,7 +1415,7 @@
         "demo": "demos/arknights-world/index.html",
         "entry": "entries/arknights-world.json"
       },
-      "bundleSha256": "8d36767d350fd65881ac35e5b98c32ebedd5358e4e5261204a0100c94e3e5818"
+      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
     },
     {
       "id": "uma-musume",
@@ -1487,7 +1491,7 @@
         "demo": "demos/uma-musume/index.html",
         "entry": "entries/uma-musume.json"
       },
-      "bundleSha256": "d7a6cf239a4c4e48e34e4b0bf3962d8ee0db751d348480acdc844775bfab45d2"
+      "bundleSha256": "d0c663e7d14e579c0895bd536990572b6bb9e5c5eb33863d3aa1b31b73550bfc"
     },
     {
       "id": "blue-archive",
@@ -1562,7 +1566,7 @@
         "demo": "demos/blue-archive/index.html",
         "entry": "entries/blue-archive.json"
       },
-      "bundleSha256": "ea22577ec1dca28dfe0a5a33391bcd6a81e10fe9ace1165e10d00c7556b5f231"
+      "bundleSha256": "6810a34427dd80e190f72b2afc843d1483ce72f34861bdcc01ab0265d72c0c4e"
     },
     {
       "id": "monument-valley-game",
@@ -1641,7 +1645,7 @@
         "demo": "demos/monument-valley-game/index.html",
         "entry": "entries/monument-valley-game.json"
       },
-      "bundleSha256": "72a11c8b38cef921ed910241fb614f5ed9494da8f9955cd30a0b53d5a2978392"
+      "bundleSha256": "bb8320dbd68b71e84efe641cc42b33d1a35c3cf4e354d6c07d089d5f1a76cb7a"
     },
     {
       "id": "design-sight",
@@ -1716,7 +1720,7 @@
         "demo": "demos/design-sight/index.html",
         "entry": "entries/design-sight.json"
       },
-      "bundleSha256": "3b56b2f2d5e20dc454b48166658c71718fe5f2e69a035aed3ec73ee6588d03a0"
+      "bundleSha256": "49cea30096e1454044bb301b68cfff03272367dcb37f606d652b93e18a8a0ccd"
     },
     {
       "id": "mori-art-museum",
@@ -1790,7 +1794,7 @@
         "demo": "demos/mori-art-museum/index.html",
         "entry": "entries/mori-art-museum.json"
       },
-      "bundleSha256": "192d766eb6a67d9ddc32710e2a9bf18bb49e75315851320e93478f7a8e330ff6"
+      "bundleSha256": "1ba31f1dbfdf52cd8d0473a7d0776eaf1ecdd145f95b0411d05a4abe0aa66a46"
     },
     {
       "id": "fuji-rock",
@@ -1865,7 +1869,7 @@
         "demo": "demos/fuji-rock/index.html",
         "entry": "entries/fuji-rock.json"
       },
-      "bundleSha256": "4cc8884539fbb47e1566b647f9f9fdda913859822bb01901bf8997152e395728"
+      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
     },
     {
       "id": "rijksmuseum-art",
@@ -1934,7 +1938,7 @@
         "demo": "demos/rijksmuseum-art/index.html",
         "entry": "entries/rijksmuseum-art.json"
       },
-      "bundleSha256": "2883e989193639a4ed355828f31057a30a4ce8e8d094255338d752daa06925a4"
+      "bundleSha256": "45bacbc97ac544e74afc9046a72489a71ab882851819b2e28817840643fdd59d"
     },
     {
       "id": "met-museum",
@@ -2005,7 +2009,7 @@
         "demo": "demos/met-museum/index.html",
         "entry": "entries/met-museum.json"
       },
-      "bundleSha256": "ed2eccbfb3db672b51570fd4ceb8335c050334a52ae8cbb021bedac6aadb24a5"
+      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
     },
     {
       "id": "philharmonie-music",
@@ -2078,7 +2082,7 @@
         "demo": "demos/philharmonie-music/index.html",
         "entry": "entries/philharmonie-music.json"
       },
-      "bundleSha256": "a331ddfa353b71a504285c51aeda68dd3b85ee236caaa101711a75e93123ff86"
+      "bundleSha256": "0280f9cb8a02c32998ad187257d5857a9f4948ecca4948f63e792df2d82a25d0"
     },
     {
       "id": "google-material",
@@ -2162,14 +2166,402 @@
         "demo": "demos/google-material/index.html",
         "entry": "entries/google-material.json"
       },
-      "bundleSha256": "22760b5e3092ed6ddb601a60e71db4dd381ec07bb52fa723612289255bde0fb3"
+      "bundleSha256": "1f66cc3428be4b9b8394e9bd38b6b50984b8985e4eb8f65ebf62e20d1c05592a"
+    },
+    {
+      "id": "palace-museum",
+      "title": "故宫 · 六章探索与宫廷视觉目录",
+      "category": "艺术/文化",
+      "tags": [
+        "中国",
+        "故宫",
+        "古建筑",
+        "文物",
+        "朱红",
+        "文化专题",
+        "纸签",
+        "建筑目录"
+      ],
+      "summary": "朱红纹理、真实屋脊与圆形题饰建立建筑识别，藏品拼图、八枚典籍条、历史入口、文物医院轮播和五类纸签专题构成六章长页。",
+      "useCases": [
+        "文化遗产机构门户",
+        "古建筑目录",
+        "文物专题与展览导航"
+      ],
+      "avoid": [
+        "不具备真实物件和内容的装饰式中国风落地页",
+        "需要持续监测实时预约状态的业务界面"
+      ],
+      "country": "中国",
+      "implementation": "reference-study",
+      "capturedAt": "2026-10-09",
+      "tokens": {
+        "palette": [
+          "#ffffff",
+          "#8c2927",
+          "#c1a56b",
+          "#efebde",
+          "#393830"
+        ],
+        "type": "Microsoft Yahei / PingFang SC / Arial；源站字体栈与26px章节题名。",
+        "layout": "1258px居中内容，六章原生长页；朱红建筑→藏品拼图→八条典籍→历史→文物医院→五类专题。",
+        "motion": "源站500ms藏品叠层、1s/0.3s典籍序列、5000ms/500ms医院轮播与可反向滚动。"
+      },
+      "composition": {
+        "color": "源白色正文、建筑重复朱红纹理和金色屋脊、专题浅纸色标签；采用实际源CSS与图像，不再使用首版拟合朱红。",
+        "typography": "沿用源CSS Microsoft Yahei/PingFang SC/Arial字体栈；章节26px/32px，正文14px/1.5，官网手机rem断点。",
+        "layout": "源站完整六章、1258px主内容和原始章节间距；修复了首版缺失的典籍、历史及文物医院。",
+        "imagery": "官网透明屋脊、建筑/藏品/典籍/历史/医院题饰、全部章节摄影、纹理、五类专题桌面/手机图与伪元素资产均检查本地化。",
+        "shape": "源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。",
+        "hierarchy": "建筑形象先建立地点识别，建筑名称与藏品入口承担选择，专题纸签组织文化对象。",
+        "motion": "源码与实测支持500ms叠层、1s与0.3s错开典籍、5000ms/500ms医院轨道，保留hover暂停和反向状态。",
+        "coherence": "朱红/金/纸色分别对应建筑、文化细节与目录标签，装饰与文字入口的职责分开。"
+      },
+      "interaction": [
+        "进入与滚动：完整保留建筑、藏品、典籍、历史、文物医院和文化专题六章；桌面1258px内容宽、原站响应样式与素材尺寸经DOM/计算样式对照。",
+        "建筑目录：朱红实物纹理与透明屋脊、独立圆形“建筑”题饰并置，八个建筑名称及更多建筑/地图均保留官方目的地。",
+        "藏品与典籍：异形拼图的两张藏品照片悬停500ms显出黑色半透明文字层；八枚典籍条进入视域后自上方30%位移与1s淡入，依次延迟0.3s，离开后可反向恢复。",
+        "文物医院：两张真实修复场景图片沿水平轨道500ms切换、5000ms自动播放，悬停/焦点暂停，两个原站圆点可直接选择。",
+        "导航与页尾：桌面导航悬停展开、200ms离开隐藏；全站菜单打开/关闭、手机栏目展开、搜索空词提示及官方检索跳转、页尾六个社交二维码和浏览建议均保留。",
+        "五类文化专题与历史五入口为真实链接；无障碍语音/读屏工具作为官网第三方服务明确跳回官方，账户、预约和完整详情不复制。"
+      ],
+      "themeBehavior": {
+        "mode": "fixed",
+        "default": "light",
+        "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+        "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+      },
+      "soundBehavior": {
+        "kind": "none",
+        "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+        "interactionRole": "阅读、图像和目录操作承担信息引导。"
+      },
+      "paths": {
+        "bundle": "agent/cases/palace-museum.json",
+        "preview": "previews/palace-museum.jpg",
+        "demo": "demos/palace-museum/index.html",
+        "entry": "entries/palace-museum.json"
+      },
+      "bundleSha256": "973ae4ab8c4e5312f168a1d98bcc447c9b50f820570300669ce18c02ad193557"
+    },
+    {
+      "id": "digital-dunhuang",
+      "title": "数字敦煌 · 全幅影像与真实瓦片细察",
+      "category": "艺术/文化",
+      "tags": [
+        "中国",
+        "敦煌",
+        "壁画",
+        "石窟",
+        "文物数字化",
+        "检索",
+        "分面筛选",
+        "图像查看器"
+      ],
+      "summary": "四张石窟大图、中心检索和计数引导读者进入六个经典洞窟与十幅壁画；目录按真实三维分面筛选，独立Leaflet查看器按匿名公开边界加载瓦片。",
+      "useCases": [
+        "数字文化遗产资料库",
+        "需要图像细读的艺术档案",
+        "有时代/形制元数据的研究目录"
+      ],
+      "avoid": [
+        "图像精度不足却宣称可研究级放大的展示",
+        "没有元数据只用抽象风格标签的图库"
+      ],
+      "country": "中国",
+      "implementation": "reference-study",
+      "capturedAt": "2026-10-09",
+      "tokens": {
+        "palette": [
+          "#f1f0ec",
+          "#282c2b",
+          "#b34037",
+          "#947650",
+          "#ede8da"
+        ],
+        "type": "源CSS Microsoft Yahei与Bootstrap字体栈；图标字体本地化。",
+        "layout": "完整首页序列→两列洞窟列表/三维条件→独立全视口瓦片画布，手机沿官方首页样式及列表单列适配。",
+        "motion": "3000ms/500ms首页轮播、1500ms/100ms计数、1000ms导航/条件、1500ms介绍；真实地图拖动与缩放。"
+      },
+      "composition": {
+        "color": "深色顶栏、石窟原色主图、源CSS红色导航/检索操作、浅灰白目录及#080900查看器画布；不再采用首版拟合色。",
+        "typography": "源Microsoft Yahei与Bootstrap字体栈、原标题/字号/洞窟编号/时代层级，图标字体保留；不添加首版大衬线标题。",
+        "layout": "源HTML完整首页、32项目录与两列masonry；独立查看器铺满视口，去掉首版的虚构模态缩放。",
+        "imagery": "四张主图、六个洞窟、十幅壁画预览、运行时DLC内嵌PNG及9张公开瓦片本地化并保留水印。",
+        "shape": "矩形图像、条件标签、两列洞窟卡片与全视口深色图像场；加减控件沿用原Leaflet样式。",
+        "hierarchy": "环境影像建立地点，检索缩小候选，时代和编号解释对象，壁画查看器让用户主动改变观察尺度。",
+        "motion": "从原站源码配置及真实点击读取轮播、计数、折叠/介绍时长；查看器使用同一Leaflet/DeepZoom逻辑及匿名边界。",
+        "coherence": "文化图像负责氛围与证据，搜索/条件/编号负责发现过程，查看器清楚区分总览、局部和实际精度。"
+      },
+      "interaction": [
+        "首页：四幅真实石窟主图每3000ms水平切换500ms，原生箭头、中心检索与1500ms四项计数；六个经典洞窟、十幅壁画、寻境及运行时注入DLC横幅完整保留。",
+        "目录：32项源站洞窟与三维条件——遗址4项、形制4项、时代11项；19个单条件服务端响应分别取得成员集与HTML hash，本地按这些集进行AND组合并同步URL。",
+        "条件反馈：点击原条件可移除，已选条件行显示并可取消，折叠筛选耗时1000ms；北魏实测254、257、麦积127三项，叠加榆林窟为零项，浏览器返回恢复。",
+        "壁画：莫高窟257窟主室西壁采用源站Leaflet 1.7.1与DeepZoom 2.0.0，21515×15796逻辑像素、1024瓦片，匿名minZoom9.75/maxZoom12，公开level10–12共9瓦片实际取得。",
+        "细察：原生加减、滚轮、拖动和键盘平移，惯性参数与真实图像边界保留；高于11出现官方登录提醒，更高清业务回官方，不绕过匿名上限。",
+        "阅读：洞窟/壁画导航与返回顶部1000ms，数字敦煌介绍1500ms展开；版权/Cookie/平台介绍可打开关闭，语言、登录及订阅服务仍走官方。"
+      ],
+      "themeBehavior": {
+        "mode": "fixed",
+        "default": "light",
+        "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+        "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+      },
+      "soundBehavior": {
+        "kind": "none",
+        "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+        "interactionRole": "阅读、图像和目录操作承担信息引导。"
+      },
+      "paths": {
+        "bundle": "agent/cases/digital-dunhuang.json",
+        "preview": "previews/digital-dunhuang.jpg",
+        "demo": "demos/digital-dunhuang/index.html",
+        "entry": "entries/digital-dunhuang.json"
+      },
+      "bundleSha256": "61efed34f9d77580baa4be9387d18864f4f777898193ccfc82e448581f894952"
+    },
+    {
+      "id": "suzhou-museum",
+      "title": "苏州博物馆 · 四屏门户与图像目的地",
+      "category": "艺术/文化",
+      "tags": [
+        "中国",
+        "苏州博物馆",
+        "江南建筑",
+        "贝聿铭",
+        "粉墙黛瓦",
+        "图像导航",
+        "留白",
+        "博物馆"
+      ],
+      "summary": "50px白色外缘框住建筑轮播、展览叙事、九个不等尺度图像入口和参观信息，右侧四条导航与方角摄影延续机构门户的清楚节奏。",
+      "useCases": [
+        "有多个清晰内容目的地的文化机构门户",
+        "建筑与城市文化展示",
+        "馆藏、学习与参观并行的博物馆主页"
+      ],
+      "avoid": [
+        "图片缺少语义、只靠悬停才显示入口名称的门户",
+        "把所有文化机构都改成同一张水墨背景的主题页"
+      ],
+      "country": "中国",
+      "implementation": "reference-study",
+      "capturedAt": "2026-10-09",
+      "tokens": {
+        "palette": [
+          "#ffffff",
+          "#303a3b",
+          "#aa4d35",
+          "#827f75",
+          "#e5e5de"
+        ],
+        "type": "Microsoft Yahei/微软雅黑；原机构PNG字标，源CSS导航和类目字号。",
+        "layout": "50px外缘、4个整屏；2张建筑图→7项展览→75/25九入口矩阵→双访问面板；390px同内容长页适配。",
+        "motion": "fullPage700ms/easeInQuart、首屏5000ms/800ms fade、展览5000ms/500ms、矩阵双重1.1倍hover及500ms网站地图。"
+      },
+      "composition": {
+        "color": "源端观察：白色界面、黑灰文字、少量红色机构标识，资讯瓦片用粉墙与深灰边饰的建筑摄影。",
+        "typography": "原机构PNG书写字标和Microsoft Yahei导航/标签；类目1.5em、字距5px，非系统衬线重写品牌。",
+        "layout": "四屏完整结构；50px左右外缘，1440×900时主画面1340×755；第三屏按原九项/75%与25%两区组织。",
+        "imagery": "原站当前两张首页图、七项展览摄影、九项目的地、两张访问背景、字标和图饰本地化。",
+        "shape": "源网页大白边界、方角画面、窄白缝和四条灰色章节导航；建筑轮廓在真实摄影内，删除首版额外黑灰框线教学组件。",
+        "hierarchy": "四屏分别解决机构进入、展览浏览、内容目的地、到访；网站地图在底栏展开，语义入口不依赖图库猜测。",
+        "motion": "原站fullPage、Owl、lrtk真实源码配置与交互验证；保留反向、循环、hover和触摸，减少动态禁用自动与位移。",
+        "coherence": "真实建筑和馆藏摄影与白色空间相互支撑，陶红只标记少量入口/焦点；官网业务明确外链。"
+      },
+      "interaction": [
+        "首页完整四屏：建筑双图轮播、七项展览、九目的地图像矩阵及开放时间/预约；用原站fullPage1.5.3、jQuery UI缓动和同一锚点/700ms受控滚动，第四屏向下循环回第一屏。",
+        "轮播：首屏Owl单图5000ms自动、800ms切换、fade效果、hover暂停；展览lrtk七项5000ms、500ms淡入，箭头/七条指示条及横向触摸，所有正式展览链接回官方。",
+        "图像目的地：资讯、云课堂、馆藏、活动、文创、数字苏博、展览、游戏、建筑美图九项原图/常显类目均保留，左右75%/25%及每块尺寸按源CSS。",
+        "悬停：原站CSS scale1.1/500ms与脚本图宽增加1.1倍/300ms共同作用；数字苏博单独增高，保留真实实现而非泛化轻微缩放。",
+        "访问与页尾：两张真实访问背景、70%半透明白板、原开放信息及预约链接，完整底栏网站地图展开500ms、浏览建议悬停；不添加建筑解说dialog。",
+        "原站初载被第三方统计阻塞jQuery.ready，四屏交互取自明确记录的受控启动及原源码；移动UA路由/Wap/Home/Index本次连接失败，本地手机为同内容长页适配。"
+      ],
+      "themeBehavior": {
+        "mode": "fixed",
+        "default": "light",
+        "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+        "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+      },
+      "soundBehavior": {
+        "kind": "none",
+        "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+        "interactionRole": "阅读、图像和目录操作承担信息引导。"
+      },
+      "paths": {
+        "bundle": "agent/cases/suzhou-museum.json",
+        "preview": "previews/suzhou-museum.jpg",
+        "demo": "demos/suzhou-museum/index.html",
+        "entry": "entries/suzhou-museum.json"
+      },
+      "bundleSha256": "fd3cc2742b2dd0192f5e699ed6c17b8259f47da70e3a416f9dbd3b0d5ad88344"
+    },
+    {
+      "id": "endfield-industrial",
+      "title": "终末地 · 完整工业科幻门户",
+      "category": "游戏/IP",
+      "tags": [
+        "明日方舟终末地",
+        "鹰角网络",
+        "白底工业",
+        "亮黄信号",
+        "斜线大字",
+        "竖向媒体书脊",
+        "35干员",
+        "透明视频",
+        "二进制点云",
+        "自然滚动"
+      ],
+      "summary": "以同日官方DOM、CSS、内容映射与渲染算法恢复八章门户：35干员真实目录与透明enter/idle视频、六项点云世界观、10影像、版本日历、4玩法、5集成工业和公告；35位干员完整中文介绍按当前简中文本映射保留。",
+      "useCases": [
+        "明亮工业科幻宣传",
+        "角色与技术资料并列",
+        "图像主导的设备/实验档案"
+      ],
+      "avoid": [
+        "将亮黄大面积当正文底色",
+        "密集交易与账户后台",
+        "仅换配色来重复原版方舟案例"
+      ],
+      "country": "中国",
+      "implementation": "reference-study",
+      "capturedAt": "2026-10-09",
+      "tokens": {
+        "palette": [
+          "#ffffff",
+          "#131315",
+          "#fffa00",
+          "#dedfe0"
+        ],
+        "type": "来源HarmonyOS Sans SC/SansRegular/SansMedium、Gilroy、Novecentosanswide等字体包与源字号/字距；档案实心前景及斜线背景字分工。",
+        "layout": "自然滚动八章，桌面源160×90设计坐标，portrait宽67.5rem；原侧栏/35头像窗口/完整目录/世界观canvas/媒体与相册。",
+        "motion": "300ms侧栏，源透明enter→idle、点云扫描/切换；相册400ms三层0/250/500ms，文字500/500ms；公告clip500ms与600ms入场。减少动态保留手动状态。"
+      },
+      "composition": {
+        "color": "源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。",
+        "typography": "原字体、字号、字距、巨大斜线ENDFIELD与实心姓名/小编号；原素材纹理和mask沿源CSS，不再系统字体加粗拟合。",
+        "layout": "原八章自然滚动、固定侧栏和portrait布局；35人头像窗口及目录，六项世界观，全媒体/相册/公告结构。",
+        "imagery": "35组头像/立绘/肖像和70透明角色视频、六bin点云、10媒体封面/预览、版本日历、4玩法视频/5AIC图及官方字体；完整影片走原URL。",
+        "shape": "巨大斜线背景字、十字标定、REC、小编号、淡网格与实心资料；AIC竖书脊保留在媒体边界，黑黄三层作为切换状态。",
+        "hierarchy": "活动入口→完整干员→世界观→影像→日历→玩法→工业→公告；每章保留原用途、目录/控制与真实业务入口。",
+        "motion": "原CSS与算法提供时序依据；透明视频enter→idle、点云真实数据与源参数、相册方向层及公告展开；浏览器实测与pending见fidelity。",
+        "coherence": "档案身份建立在真实素材、数据/标签、字体与状态机制上；不同章节无需统一成白黄卡片，相同编号/标定/导航贯穿门户。"
+      },
+      "interaction": [
+        "载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。",
+        "干员：35项头像真实映射，箭头每次翻四个头像而不切角色，点击头像才更新名字/代号/阵营/种族/职业/属性/CV与星级；全部干员页按职业/属性AND筛选，返回正式档案。",
+        "2D/3D：同35项立绘和70个原enter/idle视频。祀源影片3840×1080左右RGB/alpha，经原亮度权重0.3/0.59/0.11合成1920×1080透明canvas，enter结束切idle循环；不制造实时人物模型。",
+        "世界观：帝江号/锚点/集成工业系统/天师桩/天使/裂地者六个原bin及模型参数，Float32 xyz、按Y跨度1900规范化；实际WebGL点云、扫描、转动、拖动、分页/标题与六指标同步。最终状态实测见fidelity，不因源码抽取而自动判通过。",
+        "影像：10项真实标题/日期/分类/封面及预览，横向相邻卡与循环窗口、上一/下一、选卡和完整影片dialog；完整长片使用官方媒体URL，关闭停止播放。",
+        "玩法/AIC：4段原玩法视频和5张原工业图；400ms三层方向揭示，黑层delay0/黄250/实际媒体500，总900ms；文字500ms退出/500ms进入，内容/编号/分页共同变化。",
+        "日历与公告：原版本日历影像；10公告的原标题/日期/封面及官方详情入口，桌面卡片与手机两条分页。源公告展开500ms左向clip与600ms部件Y30%入场、300ms延迟卡片300ms横移由本地状态实现。",
+        "声音和业务：原BGM及四种原始操作音由桌面/手机共用声音开关启用，默认关闭；选干员与2D/3D切换播放机械短音，头像翻页和档案展开/收起分别反馈。10槽音频池保留快速重复操作的叠响；关闭声音或隐藏页面立即停止，返回不重放短效。登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。"
+      ],
+      "themeBehavior": {
+        "mode": "fixed",
+        "default": "light",
+        "control": "所访公开官网无独立主题切换，本地固定保留各章节原浅/深场景；不把整站统一为白色。",
+        "designReason": "各章原色与资料角色共存，亮黄只作状态与工业信号，不改变IP人物和活动图像。"
+      },
+      "soundBehavior": {
+        "kind": "interactive",
+        "control": "桌面声音工具与手机喇叭共用状态，默认关闭、aria-pressed同步；用户开启后播放原BGM及选干员/2D↔3D、头像翻页、档案展开/收起四种原音。关闭或后台立即停止，返回只恢复已开启BGM；预览和角色影片静音，完整影像独立控制。",
+        "interactionRole": "机械短音与点击同刻触发，反馈选择、模式切换、翻页和档案开合；原音量1与10槽叠响依据公开源码及部分现场播放事件。目录选卡沿用角色选择反馈为本地迁移；不宣称其源目录或全部网站操作音已验证。"
+      },
+      "paths": {
+        "bundle": "agent/cases/endfield-industrial.json",
+        "preview": "previews/endfield-industrial.jpg",
+        "demo": "demos/endfield-industrial/index.html",
+        "entry": "entries/endfield-industrial.json"
+      },
+      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+    },
+    {
+      "id": "rhine-lab",
+      "title": "莱茵生命 · 影像终端的网页转译",
+      "category": "游戏/IP",
+      "tags": [
+        "莱茵生命",
+        "明日方舟",
+        "官方影像网页转译",
+        "原片段时序",
+        "教学改编",
+        "立体档案阵列",
+        "双环光学",
+        "环形连字",
+        "科室矩阵",
+        "橙色节点",
+        "原比例"
+      ],
+      "summary": "以官方影片的多排透明档案、双环光学、细射线与完整科室字标保留原作细节；四个原比例无声场景配合本地章选、档案显隐和矩阵点选，明确属于影像的网页转译。",
+      "useCases": [
+        "机构影像转译为可操作资料",
+        "光学/工业素材的场景式展示",
+        "保留特殊字标的机构矩阵目录"
+      ],
+      "avoid": [
+        "用泛化卡片替代立体阵列",
+        "用普通字体抹平环形连字",
+        "把媒体编排包装成3D源码复刻"
+      ],
+      "country": "中国",
+      "implementation": "reference-study",
+      "studyScope": "visual-adaptation",
+      "capturedAt": "2026-10-09",
+      "tokens": {
+        "palette": [
+          "#edeae5",
+          "#111310",
+          "#eb7900",
+          "#c3c1ba"
+        ],
+        "type": "原帧保留RHINE LAB/ANALYSIS OS及十组特殊环形连字的真实像素；外围语义控件用系统中文/Arial及等宽时间码，不臆造官方字体。",
+        "layout": "16:9原比例场景，保留大量立体阵列、完整中心/九外围矩阵及源端射线；外围四章控制、时间范围条与自然阅读。手机保留全幅场景，正常字号的目录/说明另行重排。",
+        "motion": "原作片段分别4.2/12.2/12.32/13.8秒，25fps、1倍速度；原片内部镜头不重定时。本地板220ms微移、节点180ms移动为adapted，减少动态关闭并保留原帧/选择；播放由用户主动启用。"
+      },
+      "composition": {
+        "color": "源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。",
+        "typography": "官方68秒原帧保留CMPT CTRL中心，以及DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九外围的环形连字、英文全称、黑白表面、透视倾斜及尺度差；网页控件使用系统字体，不替代原作字标。",
+        "layout": "源片大量平行立体档案覆盖视野并抽出单件，机构采用一中心加九外围的非等宽矩阵与细射线；本地以16:9全幅场景保留构图，四章控件和说明在原画面外围自然阅读。",
+        "imagery": "四个官方无声H264片段与22/35/48/68秒原尺寸解码帧保存透明阵列、双环材质及真实字标；橙色节点裁自68秒帧。本地没有重写原片3D渲染器；封面和孤星背景仅作来源卡。",
+        "shape": "源片黑白弧环/橙色节点、档案四角标定/细射线、大小双环的灰色透明厚度与橙色内缘、中心矩阵及特殊环形字标；本地档案显隐遮罩按35秒抬出板的四角轮廓定位。",
+        "hierarchy": "原比例档案抽出画面 → 四个原作场景与媒体状态 → 本地观察目录/展开阅读 → 十模块语义科室入口与解释 → 官方影片及辅助网页来源。",
+        "motion": "许可环线、立体阵列抽出/镜头靠近、双环旋转和机构模块入场沿官方片段25fps/1倍速度；本地章选即时换原帧，点击板/节点位移及四段连续编排为adapted。",
+        "coherence": "原作米白材质、环形连字、橙色内缘/节点、射线和编号在四个场景中连贯；语义按钮、同步时间码与阅读状态环绕原画面，媒体与网页改编各自可审阅。"
+      },
+      "interaction": [
+        "本地教学改编：在原作多排立体档案的35秒原帧上提供五个观察热点及前后选择，同一状态同步观察编号、标题、正文并收起旧展开；阵列显隐仅隐藏背景阵列，保留按源端四角轮廓裁切的抬出板。五个热点不是原片中的五个可点击档案。",
+        "本地教学改编：原生展开按钮同步aria-expanded和正文；档案热点支持左右方向键，当前项与焦点同步。五份观察是本库的构成解释，不虚构机密档案内容或认证。",
+        "本地教学改编：四个章选即时呈现各自原帧；播放、暂停、从头重播和0.04秒步长的范围条控制对应官方无声片段，源时间码与位置同步，最新请求取消旧解码回调。可选择连续播放四段，片内时序保留，段间连接为网页编排。",
+        "本地教学改编：机构原帧上的十个DOM热点与可读目录按钮同步选择、全称、解释及同源橙色空心节点位置；原片只提供完整字标和矩阵运动，没有网页点击证据。手机保留16:9全幅画面，不裁成竖构图；用下方正常字号按钮提供等价科室入口。",
+        "本地教学改编：默认静态原帧且无自动声音；减少动态保持章选、原帧、档案/矩阵与阅读，关闭本地220/180ms位移并停用连续自动推进，仍允许用户主动逐段播放和暂停。片段加载失败可重试或回到静态原帧。",
+        "官方四周年专题的孤星活动背景只保留在比较来源卡；本地不把它当作莱茵档案矩阵的网页版本，完整原片、声音及专题在第一方入口打开。"
+      ],
+      "themeBehavior": {
+        "mode": "fixed",
+        "default": "light",
+        "control": "固定米白主题，原片中的黑色字标/材质不等于网页深浅色切换。",
+        "designReason": "保持源片材料、光学渐变和字标的原色，外围控件沿同一研究终端中性色。"
+      },
+      "soundBehavior": {
+        "kind": "external",
+        "control": "本地四个片段均无音轨；完整原片声音由官方Bilibili播放器控制，页面不自动出声。",
+        "interactionRole": "媒体保留源端视觉时序，网页状态靠按钮、节点、文字与时间码反馈；不臆造原片独立BGM或操作音。"
+      },
+      "paths": {
+        "bundle": "agent/cases/rhine-lab.json",
+        "preview": "previews/rhine-lab.jpg",
+        "demo": "demos/rhine-lab/index.html",
+        "entry": "entries/rhine-lab.json"
+      },
+      "bundleSha256": "d683b358e71a275f3b755b06595744262c91b09219c9985b913a5bd55a84233d"
     }
   ],
   "patterns": {
     "path": "agent/patterns.json",
-    "sha256": "ad7d62702972fa5c065a0435f055651c0155414c5599f233a6ff10f2ec37c3de",
-    "bytes": 441032,
-    "patternCount": 116,
-    "contentVersion": "d660960d17515f43634955becacf6a578acd60177d8c43817d5951fe9f2f0423"
+    "sha256": "1ff2b87775c5a2d26dff0e6e026c06a5724dfd465559f55c18a86b3070982c75",
+    "bytes": 507774,
+    "patternCount": 129,
+    "contentVersion": "c8003cbf2835bf3f330e180bd00aa19b21496b218f86564579e632ad84d080a8"
   }
 }

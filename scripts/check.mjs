@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { validateEntryPreviews } from './preview-validation.mjs';
+import { validateScript } from './script-validation.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const files=fs.readdirSync(path.join(root,'entries')).filter(x=>x.endsWith('.json'));
 const entries=files.map(file=>JSON.parse(fs.readFileSync(path.join(root,'entries',file),'utf8')));
@@ -21,12 +23,14 @@ for(const e of entries){
   if(!['fixed','system','manual','system-and-manual'].includes(e.themeBehavior?.mode)||!['light','dark','system'].includes(e.themeBehavior?.default)||!e.themeBehavior?.control||!e.themeBehavior?.designReason)fail(`${e.id}: invalid theme behavior`);
   if(!['none','background','video','external','interactive'].includes(e.soundBehavior?.kind)||!e.soundBehavior?.control||!e.soundBehavior?.interactionRole)fail(`${e.id}: invalid sound behavior`);
   if(!['产品','游戏/IP','经典风格','艺术/文化'].includes(e.category))fail(`${e.id}: invalid category`);
+  if(e.studyScope!==undefined&&(e.studyScope!=='visual-adaptation'||e.implementation!=='reference-study'))fail(`${e.id}: invalid study scope`);
   if(typeof e.prompt!=='string'||e.prompt.length<200)fail(`${e.id}: prompt too short`);
   if(!e.sources.some(x=>x.type==='实例'))fail(`${e.id}: no real example`);
   if(!e.sources.some(x=>['理论','规范'].includes(x.type)))fail(`${e.id}: no theory or standard`);
   sourceCount+=e.sources.length;
   for(const s of e.sources)if(!/^https:\/\//.test(s.url)||!s.note)fail(`${e.id}: invalid source`);
-  for(const key of ['demo','research',...(process.argv.includes('--require-previews')?['preview']:[])])if(!fs.existsSync(path.join(root,e[key])))fail(`${e.id}: missing ${e[key]}`);
+  for(const key of ['demo','research'])if(!fs.existsSync(path.join(root,e[key])))fail(`${e.id}: missing ${e[key]}`);
+  if(process.argv.includes('--require-previews'))try{validateEntryPreviews(root,e);}catch(error){fail(`${e.id}: ${error.message}`);}
   const demoPath=path.join(root,e.demo); if(!fs.existsSync(demoPath))continue;
   const html=fs.readFileSync(demoPath,'utf8');
   if(!/<meta[^>]+name=["']viewport["']/.test(html))fail(`${e.id}: missing viewport`);
@@ -49,7 +53,8 @@ for(const e of entries){
     for(const key of ['fidelity','assetManifest',...(e.referencePreview?['referencePreview']:[])])if(e[key]&&!fs.existsSync(path.join(root,e[key])))fail(`${e.id}: missing evidence ${e[key]}`);
   }
   for(const match of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)){if(!match[1].trim())continue;try{new vm.Script(match[1]);scripts++;}catch(err){fail(`${e.id}: inline JS ${err.message}`);}}
-  for(const file of fs.readdirSync(path.dirname(demoPath)).filter(x=>x.endsWith('.js'))){try{new vm.Script(fs.readFileSync(path.join(path.dirname(demoPath),file),'utf8'));scripts++;}catch(err){fail(`${e.id}: ${file} ${err.message}`);}}
+  const seenScripts=new Set();
+  for(const file of fs.readdirSync(path.dirname(demoPath)).filter(x=>x.endsWith('.js'))){try{const target=path.join(path.dirname(demoPath),file),source=fs.readFileSync(target,'utf8');const module=/<script\b[^>]*type=["']module["'][^>]*src=["']/.test(html)&&/\b(?:import|export)\s/.test(source);scripts+=validateScript(target,{module,seen:seenScripts});}catch(err){fail(`${e.id}: ${file} ${err.message}`);}}
 }
 for(const file of ['home.js','legacy-links.js','site-shell.js','atlas.js','agent.js','catalog.js','fundamentals.js','document.js','theme.js','asset-sources.js','asset-runtime.js','asset-cache.js','asset-cache-worker.js','case-loading.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
 for(const file of ['index.html','cases.html','agent.html','fundamentals.html','document.html']){

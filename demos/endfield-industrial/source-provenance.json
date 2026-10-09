@@ -1,0 +1,913 @@
+{
+  "capturedAt": "2026-10-09",
+  "referenceUrl": "https://endfield.hypergryph.com/",
+  "sourceManifest": [
+    {
+      "file": "source/226-a3c1ec0fe1472086.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+      "sha256": "fb3c1c091019f4a08e48a98fc95ccd4aa486c71b5d7ebd1dd48ec7d09fb48cc2",
+      "utf8Bytes": 161391,
+      "decodedCodePoints": 161207
+    },
+    {
+      "file": "source/8039-7b52e98a88c93d09.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8039-7b52e98a88c93d09.js",
+      "sha256": "43bb386a3892ffb0fa174f8f8cbe2bc7cd536b344e3dc5c6162677610be85c32",
+      "utf8Bytes": 31097,
+      "decodedCodePoints": 31052
+    },
+    {
+      "file": "source/8498-2c5f8c0351c886c2.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8498-2c5f8c0351c886c2.js",
+      "sha256": "22649403ad2af7064671749dc34ba639917d8e9d1c9dcbcb28ad5df1505d3c89",
+      "utf8Bytes": 18373,
+      "decodedCodePoints": 18373
+    },
+    {
+      "file": "source/8858-4aae27eec09dc3ad.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+      "sha256": "323cbcc29ffd57e54225c68adaa1cd7124617ab725638a15581f3bf221211bdf",
+      "utf8Bytes": 107331,
+      "decodedCodePoints": 107315
+    },
+    {
+      "file": "source/layout-f37c8a443b871dbe.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/app/%5Blang%5D/(main)/layout-f37c8a443b871dbe.js",
+      "sha256": "ba18dd4d8a6e6bc68cfb269ac6c58c84ca9566420f975e3806e58a954e48426c",
+      "utf8Bytes": 1615044,
+      "decodedCodePoints": 1243752
+    },
+    {
+      "file": "source/webpack-9efdd6c8a8fa9948.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/webpack-9efdd6c8a8fa9948.js",
+      "sha256": "5a7fe7b4a26423ea1f1cdfc684f19671e24562dac1c5d54e8bc3a5b5e15b9a82",
+      "utf8Bytes": 3769,
+      "decodedCodePoints": 3769
+    },
+    {
+      "file": "source/4231-53da7c4de7468a06.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/4231-53da7c4de7468a06.js",
+      "sha256": "33d21303f6149ba5a3be3ffab657bf9bb3530435b31f63041ca6bde5224bf7f6",
+      "utf8Bytes": 134368,
+      "decodedCodePoints": 134368
+    }
+  ],
+  "coverage": {
+    "operators": 35,
+    "operatorAssetMappings": 175,
+    "transparentVideos": 70,
+    "worldModels": 6,
+    "media": 10,
+    "gameplay": 4,
+    "aic": 5,
+    "bulletins": 10,
+    "operatorProfiles": 35
+  },
+  "evidenceBoundary": "数据和模块静态抽取覆盖；不把它当所有浏览器状态通过。35名当前干员的中文介绍直接来自同日简中flat文本，按原站换行拆分，保留全部解码文本、空格和标点；未使用旧26条数组。",
+  "moduleLocations": {
+    "operator": "8039 / 18039 JSON.parse @2750",
+    "transparentVideo": "8858 / 40489 and 8498 / 25221",
+    "worldModels": "226 / 83597",
+    "gameplay": "8858 / 26915",
+    "aic": "8858 / 89622"
+  },
+  "sourceSections": [
+    "home",
+    "operator",
+    "lore",
+    "information",
+    "calendar",
+    "gameplay",
+    "aic",
+    "notice"
+  ],
+  "operatorProfiles": {
+    "language": "zh-cn",
+    "sourceFile": "source/layout-f37c8a443b871dbe.js",
+    "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/app/%5Blang%5D/(main)/layout-f37c8a443b871dbe.js",
+    "sourceSha256": "ba18dd4d8a6e6bc68cfb269ac6c58c84ca9566420f975e3806e58a954e48426c",
+    "sourceJsonExpression": {
+      "sourceFile": "source/layout-f37c8a443b871dbe.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/app/%5Blang%5D/(main)/layout-f37c8a443b871dbe.js",
+      "characterOffset": 905678,
+      "characterEndExclusive": 926810,
+      "utf8ByteOffset": 1198289,
+      "utf8ByteEndExclusive": 1242705,
+      "sourceExpression": "JSON.parse(single-quoted literal)"
+    },
+    "currentDirectory": {
+      "sourceFile": "source/8039-7b52e98a88c93d09.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8039-7b52e98a88c93d09.js",
+      "characterOffset": 2750,
+      "characterEndExclusive": 6319,
+      "utf8ByteOffset": 2750,
+      "utf8ByteEndExclusive": 6319
+    },
+    "legacyArrayExcluded": {
+      "count": 26,
+      "reason": "Current directory module resolves all 35 keys from flat operator.content.<key>.intro values."
+    },
+    "transformation": "Restricted static JS string decoding, then JSON.parse; profile=intro.split(\"\\n\"); no trimming, filtering, whitespace normalization, rewriting, or summaries. profile.join(\"\\n\") UTF-8 bytes match the decoded source intro.",
+    "sourceRenderer": {
+      "file": "source/226-a3c1ec0fe1472086.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+      "sha256": "fb3c1c091019f4a08e48a98fc95ccd4aa486c71b5d7ebd1dd48ec7d09fb48cc2",
+      "expression": "P.intro.split(\"\\n\").map",
+      "desktopAndH5Locations": [
+        {
+          "characterOffset": 18096,
+          "characterEndExclusive": 18119,
+          "utf8ByteOffset": 18096,
+          "utf8ByteEndExclusive": 18119
+        },
+        {
+          "characterOffset": 20574,
+          "characterEndExclusive": 20597,
+          "utf8ByteOffset": 20574,
+          "utf8ByteEndExclusive": 20597
+        }
+      ]
+    },
+    "missingKeys": [],
+    "mappings": [
+      {
+        "index": 0,
+        "key": "jsspsi",
+        "textKey": "operator.content.jsspsi.intro",
+        "name": "祀",
+        "characterOffset": 923206,
+        "characterEndExclusive": 923472,
+        "utf8ByteOffset": 1237607,
+        "utf8ByteEndExclusive": 1238381,
+        "sourceValueLiteralSha256": "47881b9f682541676a541bc16d16a007481667262b9b0f4f878f3059f496f14d",
+        "decodedUtf8Sha256": "5529ba5a3238c426773b8e6241693eb84f76aff6f26d490eb3ee44ebe68ea322",
+        "decodedUtf8Bytes": 766,
+        "decodedCodePoints": 258,
+        "profileItems": 4
+      },
+      {
+        "index": 1,
+        "key": "minghe",
+        "textKey": "operator.content.minghe.intro",
+        "name": "明河",
+        "characterOffset": 923541,
+        "characterEndExclusive": 923815,
+        "utf8ByteOffset": 1238454,
+        "utf8ByteEndExclusive": 1239248,
+        "sourceValueLiteralSha256": "141e9da59e6c928d3d3261c4104275e6bffceb5fe5297e9fd074047f235eafc4",
+        "decodedUtf8Sha256": "864c7ea4f68b867babe3d71f101f0ee71fa8ca20bba2588db28c92832930e504",
+        "decodedUtf8Bytes": 784,
+        "decodedCodePoints": 264,
+        "profileItems": 5
+      },
+      {
+        "index": 2,
+        "key": "endministrator2",
+        "textKey": "operator.content.endministrator2.intro",
+        "name": "管理员",
+        "characterOffset": 913598,
+        "characterEndExclusive": 913806,
+        "utf8ByteOffset": 1215047,
+        "utf8ByteEndExclusive": 1215659,
+        "sourceValueLiteralSha256": "65e07a4e948025cab44f8571b7916e232a84c4fdba51df9d935dadbcdf7db390",
+        "decodedUtf8Sha256": "33cf2c5eb4cd96dff726c77e7c95a54361be00460ed7557ad069d6e460a80a05",
+        "decodedUtf8Bytes": 610,
+        "decodedCodePoints": 206,
+        "profileItems": 1
+      },
+      {
+        "index": 3,
+        "key": "endministrator1",
+        "textKey": "operator.content.endministrator1.intro",
+        "name": "管理员",
+        "characterOffset": 913302,
+        "characterEndExclusive": 913510,
+        "utf8ByteOffset": 1214341,
+        "utf8ByteEndExclusive": 1214953,
+        "sourceValueLiteralSha256": "65e07a4e948025cab44f8571b7916e232a84c4fdba51df9d935dadbcdf7db390",
+        "decodedUtf8Sha256": "33cf2c5eb4cd96dff726c77e7c95a54361be00460ed7557ad069d6e460a80a05",
+        "decodedUtf8Bytes": 610,
+        "decodedCodePoints": 206,
+        "profileItems": 1
+      },
+      {
+        "index": 4,
+        "key": "perlica",
+        "textKey": "operator.content.perlica.intro",
+        "name": "佩丽卡",
+        "characterOffset": 916110,
+        "characterEndExclusive": 916418,
+        "utf8ByteOffset": 1221449,
+        "utf8ByteEndExclusive": 1222353,
+        "sourceValueLiteralSha256": "5f4846cca784b7963c18e6e7bf1bb076abbca170f31c514b8c1175a642f68d6f",
+        "decodedUtf8Sha256": "d3675ef1eaea049258d915479d8401aff7b79604c7a5db975d9e09a01614c55f",
+        "decodedUtf8Bytes": 900,
+        "decodedCodePoints": 304,
+        "profileItems": 2
+      },
+      {
+        "index": 5,
+        "key": "chen",
+        "textKey": "operator.content.chen.intro",
+        "name": "陈千语",
+        "characterOffset": 912269,
+        "characterEndExclusive": 912545,
+        "utf8ByteOffset": 1211708,
+        "utf8ByteEndExclusive": 1212516,
+        "sourceValueLiteralSha256": "f3531cc00008af8951717e12243fd6b45bac502e7576a58a70e258f715c2f519",
+        "decodedUtf8Sha256": "50d6194db2300c88944011c31a15b8675b8eaba1611883c71e9523751d1f6169",
+        "decodedUtf8Bytes": 804,
+        "decodedCodePoints": 272,
+        "profileItems": 2
+      },
+      {
+        "index": 6,
+        "key": "typhoea",
+        "textKey": "operator.content.typhoea.intro",
+        "name": "提弗洛斯",
+        "characterOffset": 922492,
+        "characterEndExclusive": 922766,
+        "utf8ByteOffset": 1235799,
+        "utf8ByteEndExclusive": 1236581,
+        "sourceValueLiteralSha256": "16c2709af5a9f0ce87abd36b6614b813c048995c10716cefaeb7e3957c1f8066",
+        "decodedUtf8Sha256": "35fc512c91efb45779a672d547a07d02f12a2074268fd071ca654d7e105974ac",
+        "decodedUtf8Bytes": 768,
+        "decodedCodePoints": 260,
+        "profileItems": 7
+      },
+      {
+        "index": 7,
+        "key": "purrche",
+        "textKey": "operator.content.purrche.intro",
+        "name": "噗切娜",
+        "characterOffset": 922838,
+        "characterEndExclusive": 923138,
+        "utf8ByteOffset": 1236659,
+        "utf8ByteEndExclusive": 1237537,
+        "sourceValueLiteralSha256": "6028248f4422532bf30b01bd0acb502986689c52c6fb0dbdb7eaaa809a1c5d47",
+        "decodedUtf8Sha256": "3dd1839fe457e27a233beda9b17b892582334fac1872c4d0d15520b07f48430d",
+        "decodedUtf8Bytes": 870,
+        "decodedCodePoints": 292,
+        "profileItems": 4
+      },
+      {
+        "index": 8,
+        "key": "lizhiyan",
+        "textKey": "operator.content.lizhiyan.intro",
+        "name": "诀",
+        "characterOffset": 921716,
+        "characterEndExclusive": 922024,
+        "utf8ByteOffset": 1233831,
+        "utf8ByteEndExclusive": 1234721,
+        "sourceValueLiteralSha256": "efd4c593c0777468a592ffa5f3c3ed69f5e2507641d2c341fdbe122541db41ec",
+        "decodedUtf8Sha256": "abfb3ea102dc069c2dede8ee67e943ef66e01841d6b2a0fa73df6d1845277b23",
+        "decodedUtf8Bytes": 878,
+        "decodedCodePoints": 296,
+        "profileItems": 6
+      },
+      {
+        "index": 9,
+        "key": "liino",
+        "textKey": "operator.content.liino.intro",
+        "name": "梨诺",
+        "characterOffset": 922091,
+        "characterEndExclusive": 922419,
+        "utf8ByteOffset": 1234792,
+        "utf8ByteEndExclusive": 1235718,
+        "sourceValueLiteralSha256": "57f79b5b6241c3114f3dd380b4f8746ef72ad04ce68bcecf4ef8de9df066419a",
+        "decodedUtf8Sha256": "25ac88f0400d308fb522a34fb48413b538f46ff8316ade57c6f52856d7964810",
+        "decodedUtf8Bytes": 916,
+        "decodedCodePoints": 318,
+        "profileItems": 5
+      },
+      {
+        "index": 10,
+        "key": "mifu",
+        "textKey": "operator.content.mifu.intro",
+        "name": "弭弗",
+        "characterOffset": 921284,
+        "characterEndExclusive": 921594,
+        "utf8ByteOffset": 1232789,
+        "utf8ByteEndExclusive": 1233691,
+        "sourceValueLiteralSha256": "0f65ab3a45f19376fe9e05b7fe5da9bfcaf931682a8f4c2b2d4f8ac75482ac02",
+        "decodedUtf8Sha256": "d689612519a0eb4b39949a9e97bd2ed47637fe1d195e73f98f838a07c7169ac4",
+        "decodedUtf8Bytes": 892,
+        "decodedCodePoints": 300,
+        "profileItems": 5
+      },
+      {
+        "index": 11,
+        "key": "camille",
+        "textKey": "operator.content.camille.intro",
+        "name": "卡缪",
+        "characterOffset": 920919,
+        "characterEndExclusive": 921219,
+        "utf8ByteOffset": 1231856,
+        "utf8ByteEndExclusive": 1232720,
+        "sourceValueLiteralSha256": "7d668a93e2bd35f4f3b24c141ff3ee765a89c1ff32fd369fcfe1358b49aa5fd6",
+        "decodedUtf8Sha256": "8bfbb8651d26c0770d46eeeb29b0a813c6cc375df9f446b05910ea7bece3ddb4",
+        "decodedUtf8Bytes": 852,
+        "decodedCodePoints": 287,
+        "profileItems": 5
+      },
+      {
+        "index": 12,
+        "key": "zhuangfy",
+        "textKey": "operator.content.zhuangfy.intro",
+        "name": "庄方宜",
+        "characterOffset": 920552,
+        "characterEndExclusive": 920848,
+        "utf8ByteOffset": 1230921,
+        "utf8ByteEndExclusive": 1231781,
+        "sourceValueLiteralSha256": "4c5c222e6f4369ddfe37daa5b6ba4dd0ac3cc483396648bc95f7f6f990cf28c6",
+        "decodedUtf8Sha256": "09be23c1e6cd8bbdbb8a1d58db4c093c160fbf3bad0190c5380b8086bf5f85a4",
+        "decodedUtf8Bytes": 850,
+        "decodedCodePoints": 286,
+        "profileItems": 5
+      },
+      {
+        "index": 13,
+        "key": "tangtang",
+        "textKey": "operator.content.tangtang.intro",
+        "name": "汤汤",
+        "characterOffset": 917599,
+        "characterEndExclusive": 917891,
+        "utf8ByteOffset": 1225252,
+        "utf8ByteEndExclusive": 1226114,
+        "sourceValueLiteralSha256": "c96bdea347e8c77028c93612c82a04e0e3df9edd61e6519e3b7c54671f394f98",
+        "decodedUtf8Sha256": "289c59d803f3c199ba7a6a66257faee6b7361c006b66c21a6f4c34e521690648",
+        "decodedUtf8Bytes": 860,
+        "decodedCodePoints": 290,
+        "profileItems": 1
+      },
+      {
+        "index": 14,
+        "key": "rossi",
+        "textKey": "operator.content.rossi.intro",
+        "name": "洛茜",
+        "characterOffset": 916853,
+        "characterEndExclusive": 917153,
+        "utf8ByteOffset": 1223346,
+        "utf8ByteEndExclusive": 1224218,
+        "sourceValueLiteralSha256": "a1e945ecce5664e07c1dfee7627b00165c09d37ce77fa0be2a14424eae26026c",
+        "decodedUtf8Sha256": "88c38765756e25a3d5512fefc3c8d53b2d28452fd3eb31009a390502cec4cf01",
+        "decodedUtf8Bytes": 866,
+        "decodedCodePoints": 292,
+        "profileItems": 1
+      },
+      {
+        "index": 15,
+        "key": "laevatain",
+        "textKey": "operator.content.laevatain.intro",
+        "name": "莱万汀",
+        "characterOffset": 915007,
+        "characterEndExclusive": 915322,
+        "utf8ByteOffset": 1218616,
+        "utf8ByteEndExclusive": 1219539,
+        "sourceValueLiteralSha256": "763cb21c1de4c1c43dfa9ac1297276ffcb864402fe3b5f4f42604170d234b6b5",
+        "decodedUtf8Sha256": "74d67a8b091e9ad0f82f0521734fd4c06b72cfd5793bc7c458d5e2b831cdf78e",
+        "decodedUtf8Bytes": 919,
+        "decodedCodePoints": 311,
+        "profileItems": 2
+      },
+      {
+        "index": 16,
+        "key": "yvonne",
+        "textKey": "operator.content.yvonne.intro",
+        "name": "伊冯",
+        "characterOffset": 918729,
+        "characterEndExclusive": 919039,
+        "utf8ByteOffset": 1228166,
+        "utf8ByteEndExclusive": 1229074,
+        "sourceValueLiteralSha256": "127f557793d76f31cc8bd4c7472c2570aca300b9b5b3f3dcdd1e9c0054d7bda7",
+        "decodedUtf8Sha256": "4434c5254ffe866e63f03be16a23b314b86816c9ae732ed673c70388468102f3",
+        "decodedUtf8Bytes": 904,
+        "decodedCodePoints": 306,
+        "profileItems": 2
+      },
+      {
+        "index": 17,
+        "key": "gilberta",
+        "textKey": "operator.content.gilberta.intro",
+        "name": "洁尔佩塔",
+        "characterOffset": 914622,
+        "characterEndExclusive": 914931,
+        "utf8ByteOffset": 1217625,
+        "utf8ByteEndExclusive": 1218532,
+        "sourceValueLiteralSha256": "4c9165a65a020b5f6e250f6137024fb95f296265f0146e6e9dd4779f7893e6cc",
+        "decodedUtf8Sha256": "7982718d46b2efad477f4260962e4a4d4a779a5cc754a92aa887f0a8adf0378e",
+        "decodedUtf8Bytes": 903,
+        "decodedCodePoints": 305,
+        "profileItems": 2
+      },
+      {
+        "index": 18,
+        "key": "ardelia",
+        "textKey": "operator.content.ardelia.intro",
+        "name": "艾尔黛拉",
+        "characterOffset": 911141,
+        "characterEndExclusive": 911452,
+        "utf8ByteOffset": 1208796,
+        "utf8ByteEndExclusive": 1209707,
+        "sourceValueLiteralSha256": "4fa5457a2167bc5aae95f3643d594ac042348e81e2cf95bb25a4eaf20031f279",
+        "decodedUtf8Sha256": "99cf460bf7371984f26a298892b82927102df859fd264d5259a433dfec2ff1c1",
+        "decodedUtf8Bytes": 907,
+        "decodedCodePoints": 307,
+        "profileItems": 2
+      },
+      {
+        "index": 19,
+        "key": "ember",
+        "textKey": "operator.content.ember.intro",
+        "name": "余烬",
+        "characterOffset": 912989,
+        "characterEndExclusive": 913225,
+        "utf8ByteOffset": 1213570,
+        "utf8ByteEndExclusive": 1214260,
+        "sourceValueLiteralSha256": "f5dfb5a4330b7e320746e0d40cfc323e6d9f6b131fc3b34a635bcc6c494d326a",
+        "decodedUtf8Sha256": "fb65912ee028a019eeb2c5f7f5e214555bac5474da2a8d99c6e275c0c9ee1d8e",
+        "decodedUtf8Bytes": 686,
+        "decodedCodePoints": 232,
+        "profileItems": 2
+      },
+      {
+        "index": 20,
+        "key": "lastrite",
+        "textKey": "operator.content.lastrite.intro",
+        "name": "别礼",
+        "characterOffset": 915397,
+        "characterEndExclusive": 915701,
+        "utf8ByteOffset": 1219620,
+        "utf8ByteEndExclusive": 1220514,
+        "sourceValueLiteralSha256": "53258e39405aade7cb5a7a1c49168b888c083cb0117aa147ae73c451872d6858",
+        "decodedUtf8Sha256": "1e556dcf8467f6c8aa6769c281e5a3e6903db2c2f50e4d542408fa427f631754",
+        "decodedUtf8Bytes": 890,
+        "decodedCodePoints": 300,
+        "profileItems": 2
+      },
+      {
+        "index": 21,
+        "key": "lifeng",
+        "textKey": "operator.content.lifeng.intro",
+        "name": "黎风",
+        "characterOffset": 915772,
+        "characterEndExclusive": 916040,
+        "utf8ByteOffset": 1220589,
+        "utf8ByteEndExclusive": 1221375,
+        "sourceValueLiteralSha256": "3e2bfd1817efe275550173d381c8b7ae061ecd12d938a42a401dde199a19fcd3",
+        "decodedUtf8Sha256": "4dff6e7b3db5a08359fb2038007514dc9d7c711ce671f044323bd378e46fa6ed",
+        "decodedUtf8Bytes": 782,
+        "decodedCodePoints": 264,
+        "profileItems": 2
+      },
+      {
+        "index": 22,
+        "key": "pogranichnik",
+        "textKey": "operator.content.pogranichnik.intro",
+        "name": "骏卫",
+        "characterOffset": 916495,
+        "characterEndExclusive": 916779,
+        "utf8ByteOffset": 1222436,
+        "utf8ByteEndExclusive": 1223268,
+        "sourceValueLiteralSha256": "d3d2a5ce83d3b6ce9c04f8992508f51cef770a3711a4a0cf0d5a7881b9d43c81",
+        "decodedUtf8Sha256": "29a66b68228d5d1cfb67f9e2a9a6b38af7718c65759ab3535e243f93dccb4a1d",
+        "decodedUtf8Bytes": 828,
+        "decodedCodePoints": 280,
+        "profileItems": 2
+      },
+      {
+        "index": 23,
+        "key": "alesh",
+        "textKey": "operator.content.alesh.intro",
+        "name": "阿列什",
+        "characterOffset": 910041,
+        "characterEndExclusive": 910336,
+        "utf8ByteOffset": 1205962,
+        "utf8ByteEndExclusive": 1206827,
+        "sourceValueLiteralSha256": "ebe82c0ffca0af6db1d2f29e0898d965b5fcece8314c6a7f1deefebb7f97bc5f",
+        "decodedUtf8Sha256": "e738269cb9cfd29f60842f9efc37fa61db7ecfab62958d047f580ac1588ef122",
+        "decodedUtf8Bytes": 861,
+        "decodedCodePoints": 291,
+        "profileItems": 2
+      },
+      {
+        "index": 24,
+        "key": "arclight",
+        "textKey": "operator.content.arclight.intro",
+        "name": "弧光",
+        "characterOffset": 910763,
+        "characterEndExclusive": 911069,
+        "utf8ByteOffset": 1207820,
+        "utf8ByteEndExclusive": 1208720,
+        "sourceValueLiteralSha256": "ceaa88a50030071850c7ec2f4607488a08ad26e6e6dca930ab9ecb2fca79e339",
+        "decodedUtf8Sha256": "7edc3d0de8678dd3036852519077d9f4b57e7d6312eccf2100296849b624967b",
+        "decodedUtf8Bytes": 898,
+        "decodedCodePoints": 304,
+        "profileItems": 1
+      },
+      {
+        "index": 25,
+        "key": "avywenna",
+        "textKey": "operator.content.avywenna.intro",
+        "name": "艾维文娜",
+        "characterOffset": 911526,
+        "characterEndExclusive": 911825,
+        "utf8ByteOffset": 1209789,
+        "utf8ByteEndExclusive": 1210670,
+        "sourceValueLiteralSha256": "1422a540c6ed5395259ae5870b0cb56749fc44fb1f44f256d0764a83517c10f2",
+        "decodedUtf8Sha256": "ce50d387613d70ffad83984174db194228347ad6f72cbb9c9e871041d484d5ac",
+        "decodedUtf8Bytes": 879,
+        "decodedCodePoints": 297,
+        "profileItems": 1
+      },
+      {
+        "index": 26,
+        "key": "dapan",
+        "textKey": "operator.content.dapan.intro",
+        "name": "大潘",
+        "characterOffset": 912612,
+        "characterEndExclusive": 912922,
+        "utf8ByteOffset": 1212589,
+        "utf8ByteEndExclusive": 1213499,
+        "sourceValueLiteralSha256": "ede226503d5d940ba6d38511417be44e6d43a643f49702b99e5a7d7a5c4a782d",
+        "decodedUtf8Sha256": "f19e6def276681f09ac5f65d6d8c66ac7e52e3c8b6033852ec2746605af1b30f",
+        "decodedUtf8Bytes": 906,
+        "decodedCodePoints": 306,
+        "profileItems": 2
+      },
+      {
+        "index": 27,
+        "key": "snowshine",
+        "textKey": "operator.content.snowshine.intro",
+        "name": "昼雪",
+        "characterOffset": 917224,
+        "characterEndExclusive": 917525,
+        "utf8ByteOffset": 1224293,
+        "utf8ByteEndExclusive": 1225174,
+        "sourceValueLiteralSha256": "65a7561fbbdf1b82c3e3615379c0c7894d9c330dfe84ba853b1b7ce2e10a7e94",
+        "decodedUtf8Sha256": "d9ba57c84fbfe24bc817abaefc1b9b0bc3efd6e6baa2e8cd3e8abd4f983e8fe8",
+        "decodedUtf8Bytes": 877,
+        "decodedCodePoints": 297,
+        "profileItems": 2
+      },
+      {
+        "index": 28,
+        "key": "wulfgard",
+        "textKey": "operator.content.wulfgard.intro",
+        "name": "狼卫",
+        "characterOffset": 917964,
+        "characterEndExclusive": 918281,
+        "utf8ByteOffset": 1226191,
+        "utf8ByteEndExclusive": 1227106,
+        "sourceValueLiteralSha256": "19352c0e033dcffca145926e1bbc5921126a85eece46e65a2bbe743d72bd3112",
+        "decodedUtf8Sha256": "88cb4dad1de22d3425d1bdbf9864a2a5af7b1d24f5cbe01e59288c61a42ee185",
+        "decodedUtf8Bytes": 907,
+        "decodedCodePoints": 307,
+        "profileItems": 2
+      },
+      {
+        "index": 29,
+        "key": "xaihi",
+        "textKey": "operator.content.xaihi.intro",
+        "name": "赛希",
+        "characterOffset": 918351,
+        "characterEndExclusive": 918661,
+        "utf8ByteOffset": 1227180,
+        "utf8ByteEndExclusive": 1228094,
+        "sourceValueLiteralSha256": "6f63b7091abc1d6d37804d8a387ccc8647a4dcd65f62e33fae643e157226ecb9",
+        "decodedUtf8Sha256": "e730bda2c75080dab4d2cb821de7cbdf5561605c06e5868b95b4be4ad8ec0cad",
+        "decodedUtf8Bytes": 912,
+        "decodedCodePoints": 308,
+        "profileItems": 1
+      },
+      {
+        "index": 30,
+        "key": "akekuri",
+        "textKey": "operator.content.akekuri.intro",
+        "name": "秋栗",
+        "characterOffset": 909661,
+        "characterEndExclusive": 909972,
+        "utf8ByteOffset": 1204988,
+        "utf8ByteEndExclusive": 1205889,
+        "sourceValueLiteralSha256": "6062e90ac682de7146bd03b619a8ca2944c5b50ea235f6fb1b856a88b723f058",
+        "decodedUtf8Sha256": "5eb666525204a36af03c5d3db62ab74b5e6ba352fd1715181a410fa0d064a4aa",
+        "decodedUtf8Bytes": 897,
+        "decodedCodePoints": 307,
+        "profileItems": 2
+      },
+      {
+        "index": 31,
+        "key": "antal",
+        "textKey": "operator.content.antal.intro",
+        "name": "安塔尔",
+        "characterOffset": 910404,
+        "characterEndExclusive": 910692,
+        "utf8ByteOffset": 1206901,
+        "utf8ByteEndExclusive": 1207743,
+        "sourceValueLiteralSha256": "fb97f9b0598d669e2f8503ab08f8df6724f63ab4f48b6671d6784d74ebca8546",
+        "decodedUtf8Sha256": "107d85be049fbac1a28cc4d92b01bb98c177f8c95a153eea3b67c2d482c3e954",
+        "decodedUtf8Bytes": 838,
+        "decodedCodePoints": 284,
+        "profileItems": 2
+      },
+      {
+        "index": 32,
+        "key": "catcher",
+        "textKey": "operator.content.catcher.intro",
+        "name": "卡契尔",
+        "characterOffset": 911899,
+        "characterEndExclusive": 912200,
+        "utf8ByteOffset": 1210752,
+        "utf8ByteEndExclusive": 1211633,
+        "sourceValueLiteralSha256": "d0fad8fbe3e3b464509ded970cea6c484b88444475f392632409669d43184c83",
+        "decodedUtf8Sha256": "e793b1a1d7022f97caa4380a6031ec3c118c0aeae843942eb894a2eced90c26f",
+        "decodedUtf8Bytes": 877,
+        "decodedCodePoints": 297,
+        "profileItems": 2
+      },
+      {
+        "index": 33,
+        "key": "estella",
+        "textKey": "operator.content.estella.intro",
+        "name": "埃特拉",
+        "characterOffset": 913886,
+        "characterEndExclusive": 914198,
+        "utf8ByteOffset": 1215745,
+        "utf8ByteEndExclusive": 1216657,
+        "sourceValueLiteralSha256": "33f1047147629d27b214a4f1ad3afde2511cc51b7a57bb7e5f175867dd3e0b8e",
+        "decodedUtf8Sha256": "dfa3a23d9fa6d59b0871b7a4eeabebdfd24c13a78e80f1f355624100ab68c8e9",
+        "decodedUtf8Bytes": 908,
+        "decodedCodePoints": 308,
+        "profileItems": 2
+      },
+      {
+        "index": 34,
+        "key": "fluorite",
+        "textKey": "operator.content.fluorite.intro",
+        "name": "萤石",
+        "characterOffset": 914271,
+        "characterEndExclusive": 914549,
+        "utf8ByteOffset": 1216736,
+        "utf8ByteEndExclusive": 1217548,
+        "sourceValueLiteralSha256": "b0152ab6cdefa75e2ae40523112b72298a57d2bb72f9a066e8a09cef65d6dff3",
+        "decodedUtf8Sha256": "d1067b2dca3dc055f421cf4b6a3165f60d922163ce9f20e62ccee4f60f757b51",
+        "decodedUtf8Bytes": 808,
+        "decodedCodePoints": 274,
+        "profileItems": 2
+      }
+    ]
+  },
+  "interactionAudio": {
+    "effectManager": {
+      "module": 26097,
+      "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+      "characterOffset": 43850,
+      "characterEndExclusive": 43856,
+      "utf8ByteOffset": 43866,
+      "utf8ByteEndExclusive": 43872,
+      "sourceSha256": "323cbcc29ffd57e54225c68adaa1cd7124617ab725638a15581f3bf221211bdf",
+      "gate": {
+        "expression": "if(!L.E.getState().enabled)return this;",
+        "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+        "characterOffset": 44893,
+        "characterEndExclusive": 44932,
+        "utf8ByteOffset": 44909,
+        "utf8ByteEndExclusive": 44948
+      },
+      "poolSize": 10,
+      "poolEvidence": {
+        "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+        "characterOffset": 44862,
+        "characterEndExclusive": 44871,
+        "utf8ByteOffset": 44878,
+        "utf8ByteEndExclusive": 44887
+      },
+      "volume": 1,
+      "volumeEvidence": {
+        "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+        "characterOffset": 44975,
+        "characterEndExclusive": 44985,
+        "utf8ByteOffset": 44991,
+        "utf8ByteEndExclusive": 45001
+      },
+      "overlap": "Every accepted play obtains a free HTMLAudioElement; same URL can overlap. An empty pool drops the new request. ended returns the element. No same-URL cancellation or de-duplication.",
+      "mute": "The enabled gate blocks future effect plays; the source manager does not stop effects already playing."
+    },
+    "clips": [
+      {
+        "key": "char_click",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/char_click.beff5b.mp3",
+        "declaration": {
+          "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+          "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+          "characterOffset": 43989,
+          "characterEndExclusive": 44031,
+          "utf8ByteOffset": 44005,
+          "utf8ByteEndExclusive": 44047
+        },
+        "sourceTriggers": [
+          "avatar selection, including the already-selected avatar",
+          "desktop/H5 2D/3D toggle"
+        ],
+        "browserDurationSeconds": 0.624979,
+        "browserVolume": 1
+      },
+      {
+        "key": "arrow_click",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/arrow_click.a72c10.mp3",
+        "declaration": {
+          "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+          "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+          "characterOffset": 43939,
+          "characterEndExclusive": 43982,
+          "utf8ByteOffset": 43955,
+          "utf8ByteEndExclusive": 43998
+        },
+        "sourceTriggers": [
+          "operator roster top/bottom arrows"
+        ],
+        "browserDurationSeconds": 0.216979,
+        "browserVolume": 1
+      },
+      {
+        "key": "char_detail_enter",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/char_detail_enter.babc4e.mp3",
+        "declaration": {
+          "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+          "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+          "characterOffset": 44038,
+          "characterEndExclusive": 44087,
+          "utf8ByteOffset": 44054,
+          "utf8ByteEndExclusive": 44103
+        },
+        "sourceTriggers": [
+          "H5 character dossier open"
+        ],
+        "browserDurationSeconds": 1.4672,
+        "browserVolume": 1
+      },
+      {
+        "key": "close_click",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/close_click.fe1dc4.mp3",
+        "declaration": {
+          "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+          "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+          "characterOffset": 44148,
+          "characterEndExclusive": 44191,
+          "utf8ByteOffset": 44164,
+          "utf8ByteEndExclusive": 44207
+        },
+        "sourceTriggers": [
+          "H5 character dossier close"
+        ],
+        "browserDurationSeconds": 0.4352,
+        "browserVolume": 1
+      }
+    ],
+    "triggers": {
+      "avatar": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 6003,
+        "characterEndExclusive": 6046,
+        "utf8ByteOffset": 6003,
+        "utf8ByteEndExclusive": 6046
+      },
+      "rosterPrevious": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 6281,
+        "characterEndExclusive": 6324,
+        "utf8ByteOffset": 6281,
+        "utf8ByteEndExclusive": 6324
+      },
+      "rosterNext": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 6471,
+        "characterEndExclusive": 6514,
+        "utf8ByteOffset": 6471,
+        "utf8ByteEndExclusive": 6514
+      },
+      "desktop2D3D": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 18405,
+        "characterEndExclusive": 18449,
+        "utf8ByteOffset": 18405,
+        "utf8ByteEndExclusive": 18449
+      },
+      "h5Dossier": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 20706,
+        "characterEndExclusive": 20775,
+        "utf8ByteOffset": 20706,
+        "utf8ByteEndExclusive": 20775
+      },
+      "h5Dossier2D3D": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 21009,
+        "characterEndExclusive": 21053,
+        "utf8ByteOffset": 21009,
+        "utf8ByteEndExclusive": 21053
+      },
+      "sameSelectedAvatar": "The avatar handler invokes play on every click without a same-selection sound guard.",
+      "hover": "No sound handler on avatar/2D3D hover; a visible avatar hover produced no additional play call.",
+      "officialDirectory": "The homepage all-operators button opens /operator without an effect call. The independent directory selection effect was not verified; char_list_enter has a declaration but no call in the captured homepage chunks."
+    },
+    "globalControl": {
+      "storeModule": 2285,
+      "persistenceKey": "ef-official-sound-control",
+      "stateProperty": "enabled",
+      "store": {
+        "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+        "characterOffset": 3689,
+        "characterEndExclusive": 3694,
+        "utf8ByteOffset": 3689,
+        "utf8ByteEndExclusive": 3694
+      },
+      "header": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 73443,
+        "characterEndExclusive": 73533,
+        "utf8ByteOffset": 73459,
+        "utf8ByteEndExclusive": 73549
+      },
+      "h5ExistingIcon": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 76342,
+        "characterEndExclusive": 76492,
+        "utf8ByteOffset": 76358,
+        "utf8ByteEndExclusive": 76508
+      },
+      "h5On": {
+        "viewBox": "0 0 20 28",
+        "observedColor": "#7c7c7c"
+      },
+      "h5Off": {
+        "viewBox": "0 0 32 28",
+        "observedColor": "#cccccc"
+      },
+      "scope": "PC and H5 use the same Header state to enable/disable the BGM instance and effect-store gate."
+    },
+    "bgm": {
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/bgm.3ce37f.mp3",
+      "configuration": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 21909,
+        "characterEndExclusive": 22053,
+        "utf8ByteOffset": 21909,
+        "utf8ByteEndExclusive": 22053
+      },
+      "playerModule": 58572,
+      "playerSource": {
+        "sourceFile": "source/4231-53da7c4de7468a06.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/4231-53da7c4de7468a06.js",
+        "characterOffset": 29268,
+        "characterEndExclusive": 29274,
+        "utf8ByteOffset": 29268,
+        "utf8ByteEndExclusive": 29274
+      },
+      "playerSourceSha256": "33d21303f6149ba5a3be3ffab657bf9bb3530435b31f63041ca6bde5224bf7f6",
+      "desktopVolume": 1,
+      "mobileUaVolume": 0.1,
+      "mobileUaPattern": "Mobi|Android|iPhone|Huawei",
+      "fadeDurationDefaultMs": 1000,
+      "visibility": "The independent BGM player suspends when hidden and resumes if it had been playing; its state is separate from the effect pool."
+    },
+    "localAdaptation": {
+      "directorySelection": "Local directory cards share avatar feedback; this is not an observed official directory interaction.",
+      "muteAndBackground": "Local sound-off/background handling stops active effects immediately. The source effect manager only gates future play calls."
+    },
+    "browserEvidence": {
+      "capturedAt": "2026-10-09",
+      "referenceUrl": "https://endfield.hypergryph.com/#operator",
+      "desktopViewport": [
+        2040,
+        986
+      ],
+      "h5Viewport": [
+        390,
+        844
+      ],
+      "observed": [
+        "All four effect URLs reached playing with readyState=4 and volume=1.",
+        "Double-clicking already-selected minghe started two distinct char_click audio elements 35.1ms apart; both lasted 0.624979s.",
+        "With global enabled=false, purrche selection did not add an audio play call.",
+        "Visible desktop avatar hover did not add an audio play call.",
+        "The existing H5 sound icon changed the same persisted enabled state and displayed the corresponding on/off SVG."
+      ],
+      "scope": "Audio-only verification. MP4/model requests were blocked only in the owned source tab; no 3D playback result is claimed."
+    }
+  }
+}

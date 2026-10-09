@@ -56,9 +56,31 @@
         "evidence": "observed",
         "referenceUrl": "https://www.mori.art.museum/jp/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#composition/color",
+        "observation": "源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      },
+      {
+        "caseId": "rhine-lab",
+        "locator": "entries/rhine-lab.json#composition/color",
+        "observation": "源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/data.js",
       "demos/met-museum/fidelity.md",
       "demos/met-museum/index.html",
       "demos/met-museum/script.js",
@@ -67,16 +89,33 @@
       "demos/mori-art-museum/fidelity.md",
       "demos/mori-art-museum/index.html",
       "demos/mori-art-museum/style.css",
+      "demos/rhine-lab/app.js",
+      "demos/rhine-lab/fidelity.md",
+      "demos/rhine-lab/index.html",
+      "demos/rhine-lab/style.css",
       "demos/swiss-grid/index.html",
+      "entries/endfield-industrial.json",
       "entries/met-museum.json",
       "entries/mori-art-museum.json",
+      "entries/rhine-lab.json",
       "entries/swiss-grid.json",
+      "research/endfield-industrial.md",
       "research/met-museum.md",
       "research/mori-art-museum.md",
+      "research/rhine-lab.md",
       "research/swiss-grid.md"
     ]
   },
   "sourceCases": [
+    {
+      "id": "endfield-industrial",
+      "title": "终末地 · 完整工业科幻门户",
+      "paths": {
+        "bundle": "agent/cases/endfield-industrial.json",
+        "demo": "demos/endfield-industrial/index.html"
+      },
+      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+    },
     {
       "id": "met-museum",
       "title": "The Met · 编辑式展览与馆藏陈列",
@@ -84,7 +123,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "ed2eccbfb3db672b51570fd4ceb8335c050334a52ae8cbb021bedac6aadb24a5"
+      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
     },
     {
       "id": "mori-art-museum",
@@ -93,7 +132,16 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "192d766eb6a67d9ddc32710e2a9bf18bb49e75315851320e93478f7a8e330ff6"
+      "bundleSha256": "1ba31f1dbfdf52cd8d0473a7d0776eaf1ecdd145f95b0411d05a4abe0aa66a46"
+    },
+    {
+      "id": "rhine-lab",
+      "title": "莱茵生命 · 影像终端的网页转译",
+      "paths": {
+        "bundle": "agent/cases/rhine-lab.json",
+        "demo": "demos/rhine-lab/index.html"
+      },
+      "bundleSha256": "d683b358e71a275f3b755b06595744262c91b09219c9985b913a5bd55a84233d"
     },
     {
       "id": "swiss-grid",
@@ -102,7 +150,7 @@
         "bundle": "agent/cases/swiss-grid.json",
         "demo": "demos/swiss-grid/index.html"
       },
-      "bundleSha256": "68d0de061919b75852e4a78eb6620d5e64e59142cc2bc9502944199176ada7b8"
+      "bundleSha256": "33ca09e6273c85201d099990aba207daad7c83267db1ff3292be4c1f2eb0a758"
     }
   ]
 }

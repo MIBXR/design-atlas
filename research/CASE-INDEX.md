@@ -1,6 +1,6 @@
 # 案例与代码索引
 
-由 entries/ 自动生成，共 29 项。真实网站案例按原始网址与采集日期固定归档，不跟随官网后续变化。国家/地区按具体机构、创作来源收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。
+由 entries/ 自动生成，共 34 项。真实网站案例按原始网址与采集日期固定归档，不跟随官网后续变化。国家/地区按具体机构、创作来源收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。
 
 | 顺序 | 案例 | 分类 | 国家/地区 | 类型 | 采集日期 | 可查询资料 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -33,3 +33,8 @@
 | 27 | [The Met · 编辑式展览与馆藏陈列](../cases.html#style/met-museum) | 艺术/文化 | 美国 | 原站局部复现 | 2026-10-07 | [原始案例](https://www.metmuseum.org/en) · [研究](met-museum.md) · [Prompt数据](../entries/met-museum.json) · [Demo](../demos/met-museum/index.html) |
 | 28 | [巴黎爱乐厅 · 音乐展与音乐会详情](../cases.html#style/philharmonie-music) | 艺术/文化 | 法国 | 原站局部复现 | 2026-10-07 | [原始案例](https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music) · [研究](philharmonie-music.md) · [Prompt数据](../entries/philharmonie-music.json) · [Demo](../demos/philharmonie-music/index.html) |
 | 29 | [Google Material：表现力与组件秩序](../cases.html#style/google-material) | 产品 | 美国 | 原站局部复现 | 2026-10-07 | [原始案例](https://m3.material.io/) · [研究](google-material.md) · [Prompt数据](../entries/google-material.json) · [Demo](../demos/google-material/index.html) |
+| 30 | [故宫 · 六章探索与宫廷视觉目录](../cases.html#style/palace-museum) | 艺术/文化 | 中国 | 原站局部复现 | 2026-10-09 | [原始案例](https://www.dpm.org.cn/Explore.html) · [研究](palace-museum.md) · [Prompt数据](../entries/palace-museum.json) · [Demo](../demos/palace-museum/index.html) |
+| 31 | [数字敦煌 · 全幅影像与真实瓦片细察](../cases.html#style/digital-dunhuang) | 艺术/文化 | 中国 | 原站局部复现 | 2026-10-09 | [原始案例](https://www.e-dunhuang.com/index.htm) · [研究](digital-dunhuang.md) · [Prompt数据](../entries/digital-dunhuang.json) · [Demo](../demos/digital-dunhuang/index.html) |
+| 32 | [苏州博物馆 · 四屏门户与图像目的地](../cases.html#style/suzhou-museum) | 艺术/文化 | 中国 | 原站局部复现 | 2026-10-09 | [原始案例](https://www.szmuseum.com/Home/Index) · [研究](suzhou-museum.md) · [Prompt数据](../entries/suzhou-museum.json) · [Demo](../demos/suzhou-museum/index.html) |
+| 33 | [终末地 · 完整工业科幻门户](../cases.html#style/endfield-industrial) | 游戏/IP | 中国 | 原站局部复现 | 2026-10-09 | [原始案例](https://endfield.hypergryph.com/) · [研究](endfield-industrial.md) · [Prompt数据](../entries/endfield-industrial.json) · [Demo](../demos/endfield-industrial/index.html) |
+| 34 | [莱茵生命 · 影像终端的网页转译](../cases.html#style/rhine-lab) | 游戏/IP | 中国 | 官方影像网页转译 | 2026-10-09 | [原始案例](https://www.bilibili.com/video/BV1rr4y1b7sz/) · [研究](rhine-lab.md) · [Prompt数据](../entries/rhine-lab.json) · [Demo](../demos/rhine-lab/index.html) |

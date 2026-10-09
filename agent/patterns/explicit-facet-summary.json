@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "explicit-facet-summary",
+  "pattern": {
+    "id": "explicit-facet-summary",
+    "title": "分面条件在列表前显式呈现",
+    "category": "导航与状态",
+    "summary": "先说明筛选依据，再展示剩下的资料。",
+    "mechanism": "遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。",
+    "trigger": "选择条件、提交关键词或移除单项",
+    "effect": "用户能解释当前候选范围，并逐步放宽条件找回资料。",
+    "useCases": [
+      "文物、文献和研究资料库",
+      "具有真实多维元数据的目录"
+    ],
+    "avoid": [
+      "给没有元数据的图片强加风格分面"
+    ],
+    "constraints": [
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
+      "pairsWellWith": [
+        "filter-count-feedback",
+        "aligned-metadata-rows"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
+    },
+    "parameters": [
+      {
+        "name": "源分面维度",
+        "value": "遗址4/形制4/时代11，共19项",
+        "note": "每个单条件均取得源HTML/hash与成员集，见filter-evidence.json。"
+      },
+      {
+        "name": "固定档案集",
+        "value": "32项；北魏254/257/麦积127",
+        "note": "保留源目录与首页固定30统计的差异。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「分面条件在列表前显式呈现」。遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。 源分面维度：遗址4/形制4/时代11，共19项。每个单条件均取得源HTML/hash与成员集，见filter-evidence.json。 固定档案集：32项；北魏254/257/麦积127。保留源目录与首页固定30统计的差异。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
+    "sources": [
+      {
+        "caseId": "digital-dunhuang",
+        "locator": "entries/digital-dunhuang.json#interaction/2",
+        "observation": "条件反馈：点击原条件可移除，已选条件行显示并可取消，折叠筛选耗时1000ms；北魏实测254、257、麦积127三项，叠加榆林窟为零项，浏览器返回恢复。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.e-dunhuang.com/section.htm",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/digital-dunhuang.json",
+      "research/digital-dunhuang.md",
+      "demos/digital-dunhuang/fidelity.md",
+      "demos/digital-dunhuang/index.html",
+      "demos/digital-dunhuang/style.css",
+      "demos/digital-dunhuang/app.js",
+      "demos/digital-dunhuang/state-matrix.md",
+      "demos/digital-dunhuang/section.html",
+      "demos/digital-dunhuang/catalogue.js",
+      "demos/digital-dunhuang/filter-evidence.json"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "digital-dunhuang",
+      "title": "数字敦煌 · 全幅影像与真实瓦片细察",
+      "paths": {
+        "bundle": "agent/cases/digital-dunhuang.json",
+        "demo": "demos/digital-dunhuang/index.html"
+      },
+      "bundleSha256": "61efed34f9d77580baa4be9387d18864f4f777898193ccfc82e448581f894952"
+    }
+  ]
+}

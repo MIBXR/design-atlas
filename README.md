@@ -7,7 +7,7 @@
 从真实网站学习设计，让配色、排版、图像、形状和动效共同工作。
 
 <!-- atlas-counts:start -->
-**29 个案例**　·　**21 个真实品牌／文化页面**　·　**8 种经典设计语言**
+**34 个案例**　·　**26 个品牌／文化研究**　·　**8 种经典设计语言**
 <!-- atlas-counts:end -->
 
 [打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计巧思](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#patterns) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
@@ -66,11 +66,11 @@ node scripts/atlas.mjs show linear-workflow --source
 node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 ```
 
-命令只需 Node.js，无需安装依赖。完整导出保留运行所需相对路径和原始素材；`--code-only` 会明确列出尚未导出的媒体。数据契约与真实任务适配方法见 [AGENT.md](AGENT.md)。独立 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas) 保存获取脚本与固定上游提交，完整案例仍在本仓库，支持无需克隆整个库的远程读取。
+命令只需 Node.js，无需安装依赖。完整导出保留运行所需相对路径和原始素材；`--code-only` 会明确列出尚未导出的媒体。数据契约与真实任务适配方法见 [AGENT.md](AGENT.md)。独立 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas) 保存获取脚本与会话版本指针，新会话发现上游默认分支最新提交后固定版本，持续讨论可显式刷新。完整案例仍在本仓库，新增案例无需更新 Skill；未合并 PR 可用 `--ref <已推送的完整SHA>` 读取，支持无需克隆整个库的远程取材。
 
 ## 案例画廊
 
-图片进入对应在线案例，文字链接可直接阅读 Prompt、研究与代码。品牌页面是注明范围的局部学习还原，经典语言是有真实参考与理论依据的构成练习。
+图片进入对应在线案例，文字链接可直接阅读 Prompt、研究与代码。品牌页面是注明范围的局部学习还原，官方影像条目明确标记网页转译，经典语言是有真实参考与理论依据的构成练习。
 
 ### 产品与平台 · 8
 
@@ -94,7 +94,7 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 </tr>
 </table>
 
-### 游戏与 IP · 7
+### 游戏与 IP · 9
 
 角色、世界、音乐与切换节奏共同塑造品牌体验。
 
@@ -111,14 +111,14 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 </tr>
 <tr>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/monument-valley-game"><img src="previews/monument-valley-game.jpg" alt="纪念碑谷：电影首入、奖项进入与中心画廊 实际代码预览" width="100%"></a><br><strong>纪念碑谷：电影首入、奖项进入与中心画廊</strong><br><sub>一秒加载、奖项双向进出、手机展开与十四图居中循环。</sub><br><br><a href="prompts/monument-valley-game.md">Prompt</a> · <a href="research/monument-valley-game.md">研究</a> · <a href="demos/monument-valley-game">代码</a> · <a href="previews/mobile/monument-valley-game.jpg">手机预览</a></td>
-<td></td>
-<td></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/endfield-industrial"><img src="previews/endfield-industrial.jpg" alt="终末地 · 白底工业档案 实际代码预览" width="100%"></a><br><strong>终末地 · 白底工业档案</strong><br><sub>八章官网研究：真实透明视频、点云射线与分层切换。</sub><br><br><a href="prompts/endfield-industrial.md">Prompt</a> · <a href="research/endfield-industrial.md">研究</a> · <a href="demos/endfield-industrial">代码</a> · <a href="previews/mobile/endfield-industrial.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/rhine-lab"><img src="previews/rhine-lab.jpg" alt="莱茵生命 · 官方影像的网页转译 实际代码预览" width="100%"></a><br><strong>莱茵生命 · 官方影像的网页转译</strong><br><sub>官方影像网页转译：米白透明档案、科室缩写与橙色信号。</sub><br><br><a href="prompts/rhine-lab.md">Prompt</a> · <a href="research/rhine-lab.md">研究</a> · <a href="demos/rhine-lab">代码</a> · <a href="previews/mobile/rhine-lab.jpg">手机预览</a></td>
 </tr>
 </table>
 
-### 艺术与文化 · 6
+### 艺术与文化 · 9
 
-作品、海报、摄影与活动信息决定画面的主次关系。
+作品、海报、摄影与活动信息决定画面的主次关系；宫殿建筑、石窟壁画与江南空间也从具体文化内容中建立识别。
 
 <table>
 <tr>
@@ -130,6 +130,11 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/rijksmuseum-art"><img src="previews/rijksmuseum-art.jpg" alt="Rijksmuseum · 全幅摄影与巨大字标 实际代码预览" width="100%"></a><br><strong>Rijksmuseum · 全幅摄影与巨大字标</strong><br><sub>摄影原生浏览、巨大字标与全屏菜单淡化。</sub><br><br><a href="prompts/rijksmuseum-art.md">Prompt</a> · <a href="research/rijksmuseum-art.md">研究</a> · <a href="demos/rijksmuseum-art">代码</a> · <a href="previews/mobile/rijksmuseum-art.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/met-museum"><img src="previews/met-museum.jpg" alt="The Met · 编辑式展览与馆藏陈列 实际代码预览" width="100%"></a><br><strong>The Met · 编辑式展览与馆藏陈列</strong><br><sub>官方建筑摄影、编辑标题、原生展览横架与原地展开菜单。</sub><br><br><a href="prompts/met-museum.md">Prompt</a> · <a href="research/met-museum.md">研究</a> · <a href="demos/met-museum">代码</a> · <a href="previews/mobile/met-museum.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/philharmonie-music"><img src="previews/philharmonie-music.jpg" alt="巴黎爱乐厅 · 音乐展与音乐会详情 实际代码预览" width="100%"></a><br><strong>巴黎爱乐厅 · 音乐展与音乐会详情</strong><br><sub>桌面固定票务、音乐会循环摄影与官方歌单。</sub><br><br><a href="prompts/philharmonie-music.md">Prompt</a> · <a href="research/philharmonie-music.md">研究</a> · <a href="demos/philharmonie-music">代码</a> · <a href="previews/mobile/philharmonie-music.jpg">手机预览</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/palace-museum"><img src="previews/palace-museum.jpg" alt="故宫 · 朱红建筑锚点与纸签目录 实际代码预览" width="100%"></a><br><strong>故宫 · 朱红建筑锚点与纸签目录</strong><br><sub>真实屋脊锚定朱红章节，图像与半幅纸签分工。</sub><br><br><a href="prompts/palace-museum.md">Prompt</a> · <a href="research/palace-museum.md">研究</a> · <a href="demos/palace-museum">代码</a> · <a href="previews/mobile/palace-museum.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/digital-dunhuang"><img src="previews/digital-dunhuang.jpg" alt="数字敦煌 · 影像检索与壁画细察 实际代码预览" width="100%"></a><br><strong>数字敦煌 · 影像检索与壁画细察</strong><br><sub>原站发现、条件目录与公开壁画 Deep Zoom 三页流程。</sub><br><br><a href="prompts/digital-dunhuang.md">Prompt</a> · <a href="research/digital-dunhuang.md">研究</a> · <a href="demos/digital-dunhuang">代码</a> · <a href="previews/mobile/digital-dunhuang.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/suzhou-museum"><img src="previews/suzhou-museum.jpg" alt="苏州博物馆 · 图像目的地与江南留白 实际代码预览" width="100%"></a><br><strong>苏州博物馆 · 图像目的地与江南留白</strong><br><sub>多尺度图像目的地，粉墙黛色与建筑到访章节。</sub><br><br><a href="prompts/suzhou-museum.md">Prompt</a> · <a href="research/suzhou-museum.md">研究</a> · <a href="demos/suzhou-museum">代码</a> · <a href="previews/mobile/suzhou-museum.jpg">手机预览</a></td>
 </tr>
 </table>
 

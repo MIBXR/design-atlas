@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 1,
+  "id": "rhine-lab",
+  "entry": {
+    "id": "rhine-lab",
+    "order": 34,
+    "title": "莱茵生命 · 影像终端的网页转译",
+    "subtitle": "RHINE LAB / SOURCE FILM + INTERACTIVE WEB STUDY",
+    "category": "游戏/IP",
+    "country": "中国",
+    "studyScope": "visual-adaptation",
+    "tags": [
+      "莱茵生命",
+      "明日方舟",
+      "官方影像网页转译",
+      "原片段时序",
+      "教学改编",
+      "立体档案阵列",
+      "双环光学",
+      "环形连字",
+      "科室矩阵",
+      "橙色节点",
+      "原比例"
+    ],
+    "summary": "以官方影片的多排透明档案、双环光学、细射线与完整科室字标保留原作细节；四个原比例无声场景配合本地章选、档案显隐和矩阵点选，明确属于影像的网页转译。",
+    "accent": "#eb7900",
+    "background": "#edeae5",
+    "principles": [
+      "官方影片27–39.2秒：大量平行立体档案覆盖视野，一件X-001被抬出，镜头靠近透明板，随后出现细射线、标定点和机密文字；不是少量平面卡片行。",
+      "官方影片59.6–73.4秒：CMPT CTRL为中心，DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九个外围科室形成非等宽矩阵；环形连字、黑白表面、倾斜、射线和橙色空心节点共同编码机构。",
+      "官方影片19.2–23.4秒的黑白细弧环和橙色节点形成许可处理过程；39.2–51.52秒双环的厚度、灰色透明渐变、橙色内缘与镜头旋转属于光学材质，不能用一个CSS圆框替代。",
+      "本地使用四个1920×1080、25fps、1倍速度的官方无声片段与原尺寸解码帧保留光学和字标；章选、暂停重播、进度、档案选择/显隐和科室节点为可独立学习的网页状态代码。"
+    ],
+    "productFocus": "官方影像的网页转译／教学改编：固定2026-10-09采集的2022《莱茵生命：访问》，选取许可环线、档案阵列、双环光学和机构矩阵四个场景。保留原作媒体构成与片内时序，本地五份观察目录及十模块点选是adapted；不是官方品牌网站或原作3D源码移植。",
+    "interaction": [
+      "本地教学改编：在原作多排立体档案的35秒原帧上提供五个观察热点及前后选择，同一状态同步观察编号、标题、正文并收起旧展开；阵列显隐仅隐藏背景阵列，保留按源端四角轮廓裁切的抬出板。五个热点不是原片中的五个可点击档案。",
+      "本地教学改编：原生展开按钮同步aria-expanded和正文；档案热点支持左右方向键，当前项与焦点同步。五份观察是本库的构成解释，不虚构机密档案内容或认证。",
+      "本地教学改编：四个章选即时呈现各自原帧；播放、暂停、从头重播和0.04秒步长的范围条控制对应官方无声片段，源时间码与位置同步，最新请求取消旧解码回调。可选择连续播放四段，片内时序保留，段间连接为网页编排。",
+      "本地教学改编：机构原帧上的十个DOM热点与可读目录按钮同步选择、全称、解释及同源橙色空心节点位置；原片只提供完整字标和矩阵运动，没有网页点击证据。手机保留16:9全幅画面，不裁成竖构图；用下方正常字号按钮提供等价科室入口。",
+      "本地教学改编：默认静态原帧且无自动声音；减少动态保持章选、原帧、档案/矩阵与阅读，关闭本地220/180ms位移并停用连续自动推进，仍允许用户主动逐段播放和暂停。片段加载失败可重试或回到静态原帧。",
+      "官方四周年专题的孤星活动背景只保留在比较来源卡；本地不把它当作莱茵档案矩阵的网页版本，完整原片、声音及专题在第一方入口打开。"
+    ],
+    "theme": "原作米白透明档案、黑白机构字标、橙色光学内缘与小面积状态节点形成研究终端；本地保持原色与16:9比例，外围控制使用相同中性色，不额外添加深绿卡片或整页主题切换。",
+    "constraints": [
+      "studyScope为visual-adaptation。标题、首屏和来源区均声明影像的网页转译；原作没有可核验的对应网页按钮。媒体保留与本地状态代码分别说明，不能称为官方品牌站复刻。",
+      "2026-10-09实际观看官方Bilibili账号UID161775300发布的PV，通过video解码原尺寸帧与实际媒体轨道核验。原轨道HEVC、1920×1080、25fps、318.8秒，原文件hash/来源在清单，完整原轨道归档于仓库外。",
+      "仓库保存四个必要无声H264片段，截取19.20–23.40、27.00–39.20、39.20–51.52、59.60–73.40秒；保持1倍速度、原尺寸及25fps，CRF18转码会有压缩差异，不能声称视频字节与原轨道一致。 双环片段请求12.30秒，实际25fps输出308帧/12.32秒，范围按实际末端51.52秒记录。",
+      "22、35、48、68秒原尺寸解码帧未缩放/改色；机构字标和透明材质由原作媒体保留，没有重写影片的3D渲染器或臆造字体名称。点选、档案遮罩、节点移动、范围条与连续章编排均为本地代码。",
+      "原片只检索并抬出X-001，本地五个观察样本属于教学目录；选中板的小位移与阵列显隐为adapted，不能说成原片悬停或档案数量。科室目录保留一中心加九外围，不扩写权限和完整游戏设定。",
+      "官方字体/标志细节在原帧中保留；外围网页文字用系统字体，未单独复制字体包。官方封面与孤星背景仅作来源卡。片段无音轨，完整声音留在官方播放器。",
+      "原画面使用等比例全幅展示，手机16:9构图仍保持完整，下方语义目录承担可读操作；这属于网页适配，不冒称原作有手机布局。"
+    ],
+    "useCases": [
+      "机构影像转译为可操作资料",
+      "光学/工业素材的场景式展示",
+      "保留特殊字标的机构矩阵目录"
+    ],
+    "avoid": [
+      "用泛化卡片替代立体阵列",
+      "用普通字体抹平环形连字",
+      "把媒体编排包装成3D源码复刻"
+    ],
+    "tokens": {
+      "palette": [
+        "#edeae5",
+        "#111310",
+        "#eb7900",
+        "#c3c1ba"
+      ],
+      "type": "原帧保留RHINE LAB/ANALYSIS OS及十组特殊环形连字的真实像素；外围语义控件用系统中文/Arial及等宽时间码，不臆造官方字体。",
+      "layout": "16:9原比例场景，保留大量立体阵列、完整中心/九外围矩阵及源端射线；外围四章控制、时间范围条与自然阅读。手机保留全幅场景，正常字号的目录/说明另行重排。",
+      "motion": "原作片段分别4.2/12.2/12.32/13.8秒，25fps、1倍速度；原片内部镜头不重定时。本地板220ms微移、节点180ms移动为adapted，减少动态关闭并保留原帧/选择；播放由用户主动启用。"
+    },
+    "sources": [
+      {
+        "title": "明日方舟官方 · 特别映像「莱茵生命：访问」",
+        "url": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+        "type": "实例",
+        "note": "官方UID161775300于2022-04-26发布。2026-10-09实际播放器观看并保存原尺寸关键帧/媒体轨道，核验1920×1080、25fps与四段许可/档案/光学/矩阵时序；网页点选是adapted。直接检索曾返回412，浏览器与公开媒体资源采集成功。"
+      },
+      {
+        "title": "Hypergryph · 明日方舟四周年官方专题",
+        "url": "https://ak.hypergryph.com/special/4th-anniversary/index.html",
+        "type": "实例",
+        "note": "官方2023专题，只作为孤星机械空间主图及真实宣传网页的比较来源；不支持莱茵档案点击或矩阵网页交互。"
+      },
+      {
+        "title": "W3C · Disclosure Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+        "type": "规范",
+        "note": "支持本地原生展开按钮、aria-expanded与正文关联，属于网页转译的实现依据。"
+      },
+      {
+        "title": "W3C · Use of Color",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+        "type": "规范",
+        "note": "支持选中项同时以边界、编号、文字和aria状态区分；橙色不能独自承担状态含义。"
+      },
+      {
+        "title": "W3C · Animation from Interactions",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+        "type": "规范",
+        "note": "WCAG2.3.3为AAA；指导本地取消非必要档案位移和平滑滚动，不声称原片或专题满足该条。"
+      },
+      {
+        "title": "W3C · Pause, Stop, Hide",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+        "type": "规范",
+        "note": "本地连续片段播放提供明确暂停，后台暂停；减少动态默认静态，用户可主动逐段观看。"
+      }
+    ],
+    "prompt": "制作一个明确标注“官方影像的网页转译／教学改编”的莱茵研究终端，使用已授权来源的原尺寸媒体保持真实构成，不以泛化五卡片或普通字体替代原作。四个场景分别为19.20–23.40许可弧环、27.00–39.20多排立体档案与单件X-001抬出/射线、39.20–51.52透明双环光学、59.60–73.40完整机构矩阵。必要官方片段保留1920×1080、25fps、1倍速度且无音轨，默认呈现35秒原帧；22/35/48/68秒原帧不缩放改色，记录原轨道hash、时间范围、转码参数与权利。影片负责难以精确重绘的光学材质与特殊字标，本地代码实现四章选中、播放/暂停/从头重播、0.04秒步长进度及源时间码，最新请求取消旧解码回调，失败能重试或保留原帧。档案区在真实多排阵列上提供五个本地观察热点、前后选择与可展开正文，同一个状态同步编号/标题/解释并收起旧正文；阵列显隐隐藏背景，选中板保留按官方四角轮廓裁切的同源像素。明确五热点是教学目录，原片只检索X-001。矩阵保留CMPT CTRL中心及DEF/HRI/BSN/ENG/STRU/SCIEN/ORIG/NRG/ECO九外围，环形连字、黑白表面、倾斜与射线仍可见；DOM热点与下方可读按钮同步同源橙色节点及解释，不能扩写组织权限。手机全幅16:9不裁切，正文和等价科室目录保持正常字号；固定米白主题，完整声音在官方外部播放器。减少动态保持静态原帧与全部状态，关闭板/节点位移和连续自动推进，仍可由用户逐段主动播放并暂停。源端影像时序、媒体保留、本地适配与未复现的完整影片/3D源码分别记录。",
+    "negativePrompt": "不要把官方影像叫官方莱茵品牌网站；不要把大量立体档案改成五张通用平面卡；不要用CSS圆框替代厚度/灰色渐变/橙色内缘，不用Arial重排原作特殊连字；不要把影片抽出说成网页点击，不伪造权限/机密正文；不要声称H264转码字节等同原轨道，不自动出声、裁掉手机画面或复制整片3D源码的虚假边界。",
+    "demo": "demos/rhine-lab/index.html",
+    "preview": "previews/rhine-lab.jpg",
+    "research": "research/rhine-lab.md",
+    "exercise": "将拥有使用权的机构影片拆为四个有明确时间范围的场景，保留原尺寸与片内时序；用语义按钮与数据状态实现章选和目录，分别审阅媒体准确度与交互可复用性。",
+    "composition": {
+      "color": "源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。",
+      "typography": "官方68秒原帧保留CMPT CTRL中心，以及DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九外围的环形连字、英文全称、黑白表面、透视倾斜及尺度差；网页控件使用系统字体，不替代原作字标。",
+      "layout": "源片大量平行立体档案覆盖视野并抽出单件，机构采用一中心加九外围的非等宽矩阵与细射线；本地以16:9全幅场景保留构图，四章控件和说明在原画面外围自然阅读。",
+      "imagery": "四个官方无声H264片段与22/35/48/68秒原尺寸解码帧保存透明阵列、双环材质及真实字标；橙色节点裁自68秒帧。本地没有重写原片3D渲染器；封面和孤星背景仅作来源卡。",
+      "shape": "源片黑白弧环/橙色节点、档案四角标定/细射线、大小双环的灰色透明厚度与橙色内缘、中心矩阵及特殊环形字标；本地档案显隐遮罩按35秒抬出板的四角轮廓定位。",
+      "hierarchy": "原比例档案抽出画面 → 四个原作场景与媒体状态 → 本地观察目录/展开阅读 → 十模块语义科室入口与解释 → 官方影片及辅助网页来源。",
+      "motion": "许可环线、立体阵列抽出/镜头靠近、双环旋转和机构模块入场沿官方片段25fps/1倍速度；本地章选即时换原帧，点击板/节点位移及四段连续编排为adapted。",
+      "coherence": "原作米白材质、环形连字、橙色内缘/节点、射线和编号在四个场景中连贯；语义按钮、同步时间码与阅读状态环绕原画面，媒体与网页改编各自可审阅。"
+    },
+    "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+    "implementation": "reference-study",
+    "fidelity": "demos/rhine-lab/fidelity.md",
+    "assetManifest": "demos/rhine-lab/assets-manifest.json",
+    "capturedAt": "2026-10-09",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "固定米白主题，原片中的黑色字标/材质不等于网页深浅色切换。",
+      "designReason": "保持源片材料、光学渐变和字标的原色，外围控件沿同一研究终端中性色。"
+    },
+    "soundBehavior": {
+      "kind": "external",
+      "control": "本地四个片段均无音轨；完整原片声音由官方Bilibili播放器控制，页面不自动出声。",
+      "interactionRole": "媒体保留源端视觉时序，网页状态靠按钮、节点、文字与时间码反馈；不臆造原片独立BGM或操作音。"
+    }
+  },
+  "patternIds": [
+    "department-code-matrix",
+    "restrained-signal-color",
+    "specimen-pullout-selection"
+  ],
+  "documents": [
+    {
+      "path": "research/rhine-lab.md",
+      "role": "research",
+      "content": "# 莱茵生命：官方影像的网页转译\n\n采集／复核日期2026-10-09。主源为 [官方特别映像《莱茵生命：访问》](https://www.bilibili.com/video/BV1rr4y1b7sz/)，明日方舟官方UID161775300于2022-04-26发布。辅助源为 [2023四周年官方专题](https://ak.hypergryph.com/special/4th-anniversary/index.html) 的孤星活动章节。作品日期与访问日期分别记录。\n\n本案例为 **官方影像的网页转译／教学改编**，`studyScope: visual-adaptation`。本轮未确认可直接逐点击对照的官方莱茵品牌网站，不把二创站当官方。画面／片内运动归observed；网页章选、热点、显隐、阅读和响应式归adapted，不把影片身份提示做成真实认证。\n\n## 方法与精确观察\n\n浏览器实际观看，并按47个时间位置采集1920×1080解码帧，核验播放器已观测的公开视频轨道：HEVC Main、25fps、318.8秒、25,735,789字节。完整原轨道和比较截图存仓库外；本库保存四必要片段、四原帧及节点裁切。原hash、来源路径与媒体变换见 [素材清单](../demos/rhine-lab/assets-manifest.json)，带签名／查询参数的临时地址不进仓库。直接检索曾412；视觉以实际播放和解码帧为依据。以下是选段边界，不把采样解释为全部镜头切点的逐帧测量。\n\n| 原作区间 | observed构成与运动 | 保存 |\n| --- | --- | --- |\n| 19.20–23.40秒 | 巨大黑白弧环收束为细环，橙色小节点／中心圆盘／处理文字 | 4.20秒片段，22秒帧 |\n| 27.00–39.20秒 | 多排平行米白透明立体档案覆盖视野；单件X-001抬出并靠近镜头；35–38秒四角标定、细斜射线／机密文字 | 12.20秒片段，35秒帧 |\n| 39.20–51.52秒 | 大小双环有厚度、透明灰色渐变／反射／橙色内缘；背景网格随镜头旋转形成参照 | 12.32秒片段，48秒帧 |\n| 59.60–73.40秒 | 十机构字标形成中心／外围；不同表面／倾斜／尺寸，环形符号嵌入字母；细射线／BSN附近橙色空心构件 | 13.80秒片段，68秒帧 |\n\n68秒机构画面不是五块等宽卡片，可逐项核对：\n\n| 代码 | 可见英文全称 | 位置关系 |\n| --- | --- | --- |\n| CMPT CTRL | COMPONENTS CONTROL SECTION | 中心双行黑底白字 |\n| DEF | DEFENSE SECTION | 左上外围 |\n| HRI | HUMAN RESOURCES INVESTIGATION SECTION | 左侧外围 |\n| BSN | BUSINESS SECTION | 左中外围，原橙色焦点附近 |\n| ENG | ENGINEERING SECTION | 左下倾斜黑色表面 |\n| STRU | STRUCTURAL SECTION | 右上斜置黑白分带 |\n| SCIEN | SCIENTIFIC INVESTIGATION SECTION | 右侧较长字标 |\n| ORIG | ORIGINIUM ART SECTION | 右中横向字标 |\n| NRG | ENERGY SECTION | 右下外围 |\n| ECO | ECOLOGICAL SECTION | 右下深色模块 |\n\n仅记录可见代码／全称／构图，不据尺寸推断权级，不臆造中文官方译名。真实连字与材质由媒体像素保留，未确认字体名称或取得3D工程。\n\n四周年孤星活动网页另可见机械空间背景、两预告入口、LONE TRAIL／孤星标题、公告和多色横线。它只用于宣传网页／影像比较，不证明莱茵档案存在对应网页点击，本地背景仅用于来源卡。本次莱茵主要是米白透明阵列、黑白机构连字、灰色光学与橙色内缘／节点；[终末地](endfield-industrial.md) 的白底亮黄记录模块和 [原版方舟](arknights-world.md) 的黑灰青档案各有真实网页结构，不用统一标签抹去差异。\n\n## 媒体与可复用状态代码\n\n四个H264无声片段保留1920×1080、25fps、1倍速度与片内镜头；22／35／48／68秒PNG是原尺寸canvas导出，未缩放／裁切／改色。双环请求12.30秒，按25fps输出308整帧／12.32秒，实际末端51.52秒已同步控件和清单。CRF18转码存在压缩差异：源32秒对本地档案第5秒同尺寸比较PSNR41.39dB、平均绝对通道差1.46；只衡量这一帧，不是无损声明。\n\n媒体负责不能用普通CSS圆框准确替代的光学／透视／连字／镜头；本地实现以下adapted代码：\n\n- 四章选中、主动播放暂停／重播、0.04秒范围条／源时间码／四段连续推进；请求令牌防旧解码回调覆盖新选择，失败可重试或保留原帧。\n- 五教学观察热点／前后循环／焦点方向键／展开共用状态，同步编号／标题／正文／aria-pressed；新选择收起旧正文。五热点不是原片五个点击档案。\n- 阵列显隐以35秒原帧的四角多边形保留焦点板，220ms微移是本地适配，不声称重建立体系统。\n- 十热点与下方可读目录共用科室选择，同步两组状态、全称、说明／同源橙色构件；180ms节点迁移与原节点小范围背景遮盖是adapted，“仅显示原作画面”隐藏全部覆盖层供核验。\n- 手机保留完整16:9／自然纵向阅读，正常字号目录提供等价入口；默认静态无音轨，减少动态停用位移／连续，仍可主动逐段播放暂停。\n\n[W3C Disclosure](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/) 支持展开按钮状态／正文关联；[Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) 支持文字、边界与程序状态同时表达选择。[Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) 为AAA依据，指导取消非必要位移；[Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) 支持运动内容的显式控制。本地默认不自动播放，不据此声称影片／专题符合网页无障碍标准。\n\n## 巧思与限制\n\n- [样本阵列的抽出选择](../patterns/specimen-pullout-selection.json)：adapted；保留真实阵列／焦点板，网页单一状态同步观察阅读，显隐是新增机制。\n- [机构缩写的中心矩阵](../patterns/department-code-matrix.json)：observed构成；十组特殊连字／尺度／表面／中心关系保留，热点／节点迁移另归adapted。\n- [单一信号色集中强调](../patterns/restrained-signal-color.json)：复用已有机制；橙色焦点来自影像，本地同时有文字／程序状态，不按品牌再建重复巧思。\n\n真实浏览器已验证媒体加载／播放暂停／重播、时间码／范围条、快速章切换、显隐、五项循环、方向键焦点／展开。十热点／十目录项齐全，ECO／NRG同步全称与节点。390×844无横向溢出；减少动态初始静态并停用连续。独立自然连续播放四段后，矩阵片段13.8秒结束并暂停／关闭连续；网络阻断后有失败提示／静态退路，解除阻断恢复正常。\n\n未复现完整影片／声音／3D工程／渲染器／真实登录／周年完整流程；未完整核验周年手机／播放器。触发、精确选段、覆盖层近似与未复现范围见 [fidelity.md](../demos/rhine-lab/fidelity.md)。\n",
+      "sha256": "1cc4b1701519c64094188913788f78e2acc4d034f24d41bc0c2ba4f2f2459a36",
+      "bytes": 6930
+    },
+    {
+      "path": "prompts/rhine-lab.md",
+      "role": "prompt",
+      "content": "# 莱茵生命 · 影像终端的网页转译 · 复用 Prompt\n\n由 [结构化案例](../entries/rhine-lab.json) 自动生成。参考观察与具体边界见 [调研](../research/rhine-lab.md)。\n\n## 正向 Prompt\n\n制作一个明确标注“官方影像的网页转译／教学改编”的莱茵研究终端，使用已授权来源的原尺寸媒体保持真实构成，不以泛化五卡片或普通字体替代原作。四个场景分别为19.20–23.40许可弧环、27.00–39.20多排立体档案与单件X-001抬出/射线、39.20–51.52透明双环光学、59.60–73.40完整机构矩阵。必要官方片段保留1920×1080、25fps、1倍速度且无音轨，默认呈现35秒原帧；22/35/48/68秒原帧不缩放改色，记录原轨道hash、时间范围、转码参数与权利。影片负责难以精确重绘的光学材质与特殊字标，本地代码实现四章选中、播放/暂停/从头重播、0.04秒步长进度及源时间码，最新请求取消旧解码回调，失败能重试或保留原帧。档案区在真实多排阵列上提供五个本地观察热点、前后选择与可展开正文，同一个状态同步编号/标题/解释并收起旧正文；阵列显隐隐藏背景，选中板保留按官方四角轮廓裁切的同源像素。明确五热点是教学目录，原片只检索X-001。矩阵保留CMPT CTRL中心及DEF/HRI/BSN/ENG/STRU/SCIEN/ORIG/NRG/ECO九外围，环形连字、黑白表面、倾斜与射线仍可见；DOM热点与下方可读按钮同步同源橙色节点及解释，不能扩写组织权限。手机全幅16:9不裁切，正文和等价科室目录保持正常字号；固定米白主题，完整声音在官方外部播放器。减少动态保持静态原帧与全部状态，关闭板/节点位移和连续自动推进，仍可由用户逐段主动播放并暂停。源端影像时序、媒体保留、本地适配与未复现的完整影片/3D源码分别记录。\n\n## 负向约束\n\n不要把官方影像叫官方莱茵品牌网站；不要把大量立体档案改成五张通用平面卡；不要用CSS圆框替代厚度/灰色渐变/橙色内缘，不用Arial重排原作特殊连字；不要把影片抽出说成网页点击，不伪造权限/机密正文；不要声称H264转码字节等同原轨道，不自动出声、裁掉手机画面或复制整片3D源码的虚假边界。\n\n## 制作约束\n\n- studyScope为visual-adaptation。标题、首屏和来源区均声明影像的网页转译；原作没有可核验的对应网页按钮。媒体保留与本地状态代码分别说明，不能称为官方品牌站复刻。\n- 2026-10-09实际观看官方Bilibili账号UID161775300发布的PV，通过video解码原尺寸帧与实际媒体轨道核验。原轨道HEVC、1920×1080、25fps、318.8秒，原文件hash/来源在清单，完整原轨道归档于仓库外。\n- 仓库保存四个必要无声H264片段，截取19.20–23.40、27.00–39.20、39.20–51.52、59.60–73.40秒；保持1倍速度、原尺寸及25fps，CRF18转码会有压缩差异，不能声称视频字节与原轨道一致。 双环片段请求12.30秒，实际25fps输出308帧/12.32秒，范围按实际末端51.52秒记录。\n- 22、35、48、68秒原尺寸解码帧未缩放/改色；机构字标和透明材质由原作媒体保留，没有重写影片的3D渲染器或臆造字体名称。点选、档案遮罩、节点移动、范围条与连续章编排均为本地代码。\n- 原片只检索并抬出X-001，本地五个观察样本属于教学目录；选中板的小位移与阵列显隐为adapted，不能说成原片悬停或档案数量。科室目录保留一中心加九外围，不扩写权限和完整游戏设定。\n- 官方字体/标志细节在原帧中保留；外围网页文字用系统字体，未单独复制字体包。官方封面与孤星背景仅作来源卡。片段无音轨，完整声音留在官方播放器。\n- 原画面使用等比例全幅展示，手机16:9构图仍保持完整，下方语义目录承担可读操作；这属于网页适配，不冒称原作有手机布局。\n\n## 检查方法\n\n将拥有使用权的机构影片拆为四个有明确时间范围的场景，保留原尺寸与片内时序；用语义按钮与数据状态实现章选和目录，分别审阅媒体准确度与交互可复用性。\n\n[查看 Demo](../demos/rhine-lab/index.html) · [返回浏览案例](../cases.html#style/rhine-lab)\n",
+      "sha256": "a47744d3af0db89a167bfa649bb88dbd5148fa83736f62582aad0e878251f0f3",
+      "bytes": 4409
+    },
+    {
+      "path": "demos/rhine-lab/fidelity.md",
+      "role": "fidelity",
+      "content": "# 当前复现范围：官方影像的网页转译／教学改编\n\n`implementation: reference-study`，`studyScope: visual-adaptation`。主来源为 [官方特别映像《莱茵生命：访问》](https://www.bilibili.com/video/BV1rr4y1b7sz/)，明日方舟官方账号 UID 161775300 于 2022-04-26 发布。本轮于 2026-10-09 实际观看、采集并复核。补充 [2023 四周年官网](https://ak.hypergryph.com/special/4th-anniversary/index.html) 的孤星活动章节只作为来源比较。\n\n本轮未确认可直接逐点击对照的官方莱茵品牌网站。这里保留官方影像构成和片内运动，网页按钮、阅读、显隐和节点位置切换属于本地教学改编。标题、首屏、条目与来源区均标明这一边界。不把二创站、影片身份确认或本地目录包装为官方网页功能。\n\n## 源端媒体与本地场景\n\n原播放器实际使用的公开视频轨道为 HEVC Main、1920×1080、25fps、318.8 秒，25,735,789 字节。完整原轨道归档于仓库外；原始 SHA256、去除签名／查询参数的资源路径见 [assets-manifest.json](assets-manifest.json)。它是无音频的视频轨道；完整声音留在官方播放器。\n\n以下为本库选段边界，不声称恰等于原作镜头切点。片内不加速、重定时或改色；H264 CRF18 转码保留原尺寸、帧率和 1 倍速度，但不等于保留原视频字节。\n\n| 场景 | 原作区间／时长 | 原帧 | 源端可观测细节 | 本地保留与边界 |\n| --- | --- | --- | --- | --- |\n| 许可环线 | 19.20–23.40 秒／4.20 秒 | 22.00 秒 | 黑白大弧环收束、细环、小橙色节点、中心圆盘及小号处理文字 | 原片段／帧保留弧环和速度；章选不是认证 |\n| 档案阵列 | 27.00–39.20 秒／12.20 秒 | 35.00 秒 | 多排平行米白透明立体档案；单件 X-001 抬出、镜头靠近；四角标定、金属边缘、两条细射线和机密文字 | 原片保留透视、材质与字形，没有换成五张泛化卡片 |\n| 双环光学 | 39.20–51.52 秒／12.32 秒 | 48.00 秒 | 大小双环、灰色透明表面、厚度与反射、橙色内缘、网格和镜头旋转 | 原片保留光学；没有声称 CSS 重写 3D 渲染器 |\n| 机构矩阵 | 59.60–73.40 秒／13.80 秒 | 68.00 秒 | CMPT CTRL 中心加九外围；环形连字、不同黑白表面、尺度和倾斜、细射线、BSN 附近橙色空心构件 | 全十模块与完整字标由媒体保留；DOM 赋予操作语义 |\n\n四个 PNG 是官方播放器已解码 video 的原尺寸 canvas 导出，未缩放、裁切或改色。四片段合计 16,884,974 字节，采用 ffmpeg 7.1、libx264、CRF18、yuv420p、faststart 转码，参数逐项入清单。双环请求截取12.30秒，按25fps输出308整帧／12.32秒，上表、范围条与时间码按实际51.52秒末端记录。源 32.00 秒帧与本地档案片段 5.00 秒帧以相同 1920×1080 解码比较：PSNR 41.39dB、平均绝对通道差 1.46；仅衡量单帧压缩差异，不代表全片无损。\n\n## 触发与状态对应\n\n| 触发 | 源端事实 | 本地实现／时序 | 归属 |\n| --- | --- | --- | --- |\n| 首次进入／章选 | 连续影片没有网页默认状态或章选 | 默认 35 秒原帧，无自动播放；四章即时换原帧、暂停旧片、同步 aria-pressed／时间码／进度范围 | adapted |\n| 播放／暂停／重播／范围条 | 原作抽出、旋转和模块入场可观看 | 选段原速运动；暂停保留位置，重播回起点；0.04 秒步长对应 25fps，拖动后暂停 | 运动 observed，媒体控制 adapted |\n| 连续场景 | 完整影片还含选段间其他镜头 | ended 顺序推进四段；略去 23.40–27.00 和 51.52–59.60 等区间，尾段关闭连续 | adapted，不是完整影片无缝还原 |\n| 五观察热点／前后／方向键 | 原片只检索并抬出 X-001，没有五个点击档案 | 教学观察同步编号／标题／说明／aria-pressed；方向键按焦点索引选择；新项收起旧正文；板微移 220ms | adapted，不虚构官方机密内容 |\n| 阵列显隐 | 可见阵列、抬出板和四角轮廓 | 以35秒同源帧按四角多边形保留焦点板，只隐藏背景阵列；另补本地终端文字 | 轮廓 observed，遮罩／显隐 adapted，非重建全部3D档案 |\n| 展开观察 | 无源端网页正文流程 | 原生按钮控制 aria-expanded／aria-controls 与正文 hidden；新选择收起 | adapted |\n| 科室热点／目录 | 有十字标、英文全称和焦点构件，无网页点击 | 两组按钮共用状态，同步全称／说明／aria-pressed／节点位置；节点移动 180ms | 图形 observed，选择／迁移 adapted |\n| 仅显示原作画面 | 原作没有本地热点 | 隐藏热点／节点补丁等覆盖层，保留全幅16:9媒体供像素检查 | adapted 审阅开关 |\n| 单段故障／快速切换 | 浏览器访问成功；直接检索曾412 | 失败或15秒未就绪提供重试／静态原帧；最新请求令牌拒绝旧解码回调 | adapted |\n| 系统减少动态／后台 | 无源端网页偏好策略证据 | 默认静态；关闭220/180ms位移与连续，仍允许主动逐段播放暂停；系统偏好变化即时更新；后台暂停且不自动恢复 | adapted |\n\n矩阵互动层为了把原作橙色构件移至当前科室，会遮盖 BSN 附近原节点的小范围背景，该覆盖并非材质完全重建；“仅显示原作画面”同时隐藏补丁／移动节点，显示完整源帧。节点 PNG 是68秒帧的62×63原比例裁切，坐标见清单。原字标保留在媒体中，下方系统字体目录承担语义，未取得官方字体包。\n\n## 响应式、声音与未复现范围\n\n桌面在首屏保留原比例画面与外围控制，手机全幅16:9，不竖裁原片。小屏字标随画面缩小，下方正常字号科室按钮／全称／解释提供等价阅读；不是影片的官方响应式网页。页面自然纵向滚动，没有横向档案架或整页滚轮锁定。\n\n固定暖米白。四片段无音轨，完整声音／叙事在官方链接。未复现全部318.8秒、音频、3D工程／渲染器、真实权限认证及周年网站完整流程，未完整核验周年播放器／手机行为。孤星背景仅用于辅助来源卡，不是档案／矩阵交互证据。\n\n## 本轮验证\n\n真实浏览器确认媒体1920×1080、readyState4；播放暂停、章选、重播、时间码／范围条、快速切换、阵列显隐、方向键与展开正常。五项5→1循环可用；矩阵十热点／十目录项齐全，ECO／NRG同步全称、两组状态与节点。\n\n390×844保留全幅构图且无横向溢出；减少动态初始静态，连续停用。独立浏览器从许可起始实际自然播放四段，最终matrix currentTime13.8／ended=true／paused=true／continuous=false；未用脚本seek或直接播放。单段网络阻断产生失败提示，静态退路仍显示1920px原帧与五项入口；解除阻断／恢复缓存并刷新后正常播放。原作／本地同尺寸解码比较另归档于仓库外，页面预览需随本次实现重新生成。\n",
+      "sha256": "1ea9569a411007ec9d47589041832d42a5fc2e76c45bf944750399b318d77823",
+      "bytes": 7103
+    },
+    {
+      "path": "demos/rhine-lab/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"sourceDate\": \"2026-10-09\",\n  \"referenceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n  \"edition\": \"官方特别映像（2022）及官方四周年孤星活动专题（2023）\",\n  \"scope\": \"官方影片片段及解码帧的网页转译；原始光学材质/字标由媒体保留，章选与点击为本地教学实现。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/pv-cover.jpg\",\n      \"sourceUrl\": \"https://i1.hdslb.com/bfs/archive/5fe6dae6358e0540d253847199ff215aca36be33.jpg@1200w_630h\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"use\": \"官方特别映像封面，作为来源入口\",\n      \"bytes\": 114745,\n      \"sha256\": \"76ed510d77ac6038ff88de0c71150614fb52c9b6f7ae8d9aca14eb29f21dfd22\",\n      \"width\": 1008,\n      \"height\": 630,\n      \"dimensions\": [\n        1008,\n        630\n      ],\n      \"format\": \"jpeg\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/jpeg\",\n      \"transform\": \"保留下载原字节与尺寸；页面使用CSS按比例展示\",\n      \"license\": \"官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权\"\n    },\n    {\n      \"file\": \"assets/lone-trail.jpg\",\n      \"sourceUrl\": \"https://web.hycdn.cn/arknights/special/4th-anniversary/assets/img/event-bg.701c96.jpg\",\n      \"owner\": \"Hypergryph / 鹰角网络\",\n      \"use\": \"官方四周年孤星活动场景，补充来源入口\",\n      \"bytes\": 553285,\n      \"sha256\": \"f53ee12bc12cb278ee75ca0c19f4731440a9dda66c101be454457ea2c370f3c0\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"jpeg\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/jpeg\",\n      \"transform\": \"保留下载原字节与尺寸；页面使用CSS按比例展示\",\n      \"license\": \"官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权\"\n    },\n    {\n      \"file\": \"assets/permission-frame.png\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"sourceResource\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"许可环形线与橙色节点\",\n      \"bytes\": 473648,\n      \"sha256\": \"c82d8b38d159b213e43ff1a0c281a098720b14a4c1643305d26461597bc8bf28\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"官方播放器已解码video在22.00秒处通过canvas原尺寸导出，未缩放/裁切/改色；对应原视频SHA见originalMedia\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\",\n      \"sourceTime\": 22\n    },\n    {\n      \"file\": \"assets/permission.mp4\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"sourceResource\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"许可环形线与橙色节点\",\n      \"bytes\": 802129,\n      \"sha256\": \"9234caf2994668671b932a5be283e1c3433a90da3523a1a94af8ec86569a4d95\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"mp4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"video/mp4\",\n      \"transform\": \"从originalMedia记录的HEVC原轨道截取19.20–23.40秒；ffmpeg7.1 -ss 19.2 -t 4.2 -an -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -movflags +faststart；保留1920×1080、25fps和1倍速度。\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\",\n      \"duration\": 4.2,\n      \"sourceStart\": 19.2,\n      \"sourceEnd\": 23.4,\n      \"fps\": 25\n    },\n    {\n      \"file\": \"assets/archive-frame.png\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"sourceResource\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"多排立体档案、单件抽出、射线及机密文字\",\n      \"bytes\": 1291027,\n      \"sha256\": \"b59d75ce0c1eef3fc24678d450eb9c0d4d1d72bd060d5b1b3a1e2a9427b014a6\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"官方播放器已解码video在35.00秒处通过canvas原尺寸导出，未缩放/裁切/改色；对应原视频SHA见originalMedia\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\",\n      \"sourceTime\": 35\n    },\n    {\n      \"file\": \"assets/archive.mp4\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"sourceResource\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"多排立体档案、单件抽出、射线及机密文字\",\n      \"bytes\": 5101228,\n      \"sha256\": \"df9e0bc55bb68277211875f066bd326878a44f2e4023fa27be1f35551b946b13\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"mp4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"video/mp4\",\n      \"transform\": \"从originalMedia记录的HEVC原轨道截取27.00–39.20秒；ffmpeg7.1 -ss 27 -t 12.2 -an -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -movflags +faststart；保留1920×1080、25fps和1倍速度。\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\",\n      \"duration\": 12.2,\n      \"sourceStart\": 27,\n      \"sourceEnd\": 39.2,\n      \"fps\": 25\n    },\n    {\n      \"file\": \"assets/optics-frame.png\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"sourceResource\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"透明双环与橙色光学材质\",\n      \"bytes\": 3060866,\n      \"sha256\": \"1b2f1c040f0c7111d7ac222c30188a9009ff92f6d52114436792a6c9f79760a7\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"官方播放器已解码video在48.00秒处通过canvas原尺寸导出，未缩放/裁切/改色；对应原视频SHA见originalMedia\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\",\n      \"sourceTime\": 48\n    },\n    {\n      \"file\": \"assets/optics.mp4\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"sourceResource\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"透明双环与橙色光学材质\",\n      \"bytes\": 7771333,\n      \"sha256\": \"09bfec642df1919b623b9fcaeaf1b87147dfc78a665aa98058b30e0104f2d5e2\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"mp4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"video/mp4\",\n      \"transform\": \"从originalMedia记录的HEVC原轨道截取39.20–51.50秒；ffmpeg7.1 -ss 39.2 -t 12.3 -an -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -movflags +faststart；保留1920×1080、25fps和1倍速度。 实际输出308帧、12.32秒，按25fps向完整帧对齐，对应源时间末端51.52秒。\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\",\n      \"duration\": 12.32,\n      \"sourceStart\": 39.2,\n      \"sourceEnd\": 51.52,\n      \"fps\": 25,\n      \"requestedSourceEnd\": 51.5,\n      \"frameCount\": 308\n    },\n    {\n      \"file\": \"assets/matrix-frame.png\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"sourceResource\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"机构矩阵字标、实际构图及播放片段\",\n      \"bytes\": 1080730,\n      \"sha256\": \"01bd688ea19e75d174374dd566b5cc9d4a2f71ac49c3d78e59eef6fadffc6b25\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"官方播放器已解码video在68.00秒处通过canvas原尺寸导出，未缩放/裁切/改色；对应原视频SHA见originalMedia\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\",\n      \"sourceTime\": 68\n    },\n    {\n      \"file\": \"assets/matrix.mp4\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"sourceResource\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"机构矩阵字标、实际构图及播放片段\",\n      \"bytes\": 3210284,\n      \"sha256\": \"966214036e6ada6cc0f14bb099d7786915e4b08f267fe8351bc974d4cdd6f20c\",\n      \"width\": 1920,\n      \"height\": 1080,\n      \"dimensions\": [\n        1920,\n        1080\n      ],\n      \"format\": \"mp4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"video/mp4\",\n      \"transform\": \"从originalMedia记录的HEVC原轨道截取59.60–73.40秒；ffmpeg7.1 -ss 59.6 -t 13.8 -an -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -movflags +faststart；保留1920×1080、25fps和1倍速度。\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\",\n      \"duration\": 13.8,\n      \"sourceStart\": 59.6,\n      \"sourceEnd\": 73.4,\n      \"fps\": 25\n    },\n    {\n      \"file\": \"assets/focus-node.png\",\n      \"sourceUrl\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n      \"owner\": \"Hypergryph / 鹰角网络 · 明日方舟官方\",\n      \"use\": \"DOM科室选择节点，保留官方橙色空心构件的精确像素\",\n      \"bytes\": 6511,\n      \"sha256\": \"35f0f163d554d417ef383a4bac345f1c41d64cb5025b122c6d29eb4a6fe96e88\",\n      \"width\": 62,\n      \"height\": 63,\n      \"dimensions\": [\n        62,\n        63\n      ],\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"contentType\": \"image/png\",\n      \"transform\": \"从原尺寸68秒解码帧裁切x637/y498/w62/h63，不缩放或改色；在网页中按原比例定位，移动触发是adapted。\",\n      \"license\": \"官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权\"\n    }\n  ],\n  \"originalMedia\": {\n    \"sourcePage\": \"https://www.bilibili.com/video/BV1rr4y1b7sz/\",\n    \"resourcePath\": \"https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s\",\n    \"bytes\": 25735789,\n    \"sha256\": \"a33feaff1c10637ec43b36c0ad44f42eb6e2c676878a1b9e20902631245617bf\",\n    \"retrievedAt\": \"2026-10-09\",\n    \"container\": \"DASH/ISO BMFF\",\n    \"codec\": \"HEVC Main\",\n    \"width\": 1920,\n    \"height\": 1080,\n    \"fps\": 25,\n    \"duration\": 318.8,\n    \"audio\": \"视频轨道无音频；本地不采集或内嵌原音轨\",\n    \"archive\": \"原始轨道归档于仓库外；仓库只保存必要片段与原尺寸解码帧。\"\n  }\n}\n",
+      "sha256": "17a6218fd5477dd80ca548ad3fab50a1c5e605f2a41c64abaa9ece41ded5423c",
+      "bytes": 11849
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
+      "bytes": 132498
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/rhine-lab/app.js",
+      "role": "source",
+      "sha256": "e6563970b886295656ddab1fe09e78c0405e71b155620d12a92de240f3ff11ae",
+      "bytes": 13508
+    },
+    {
+      "path": "demos/rhine-lab/assets-manifest.json",
+      "role": "context",
+      "sha256": "17a6218fd5477dd80ca548ad3fab50a1c5e605f2a41c64abaa9ece41ded5423c",
+      "bytes": 11849
+    },
+    {
+      "path": "demos/rhine-lab/assets/archive-frame.png",
+      "role": "asset",
+      "sha256": "b59d75ce0c1eef3fc24678d450eb9c0d4d1d72bd060d5b1b3a1e2a9427b014a6",
+      "bytes": 1291027
+    },
+    {
+      "path": "demos/rhine-lab/assets/archive.mp4",
+      "role": "asset",
+      "sha256": "df9e0bc55bb68277211875f066bd326878a44f2e4023fa27be1f35551b946b13",
+      "bytes": 5101228
+    },
+    {
+      "path": "demos/rhine-lab/assets/focus-node.png",
+      "role": "asset",
+      "sha256": "35f0f163d554d417ef383a4bac345f1c41d64cb5025b122c6d29eb4a6fe96e88",
+      "bytes": 6511
+    },
+    {
+      "path": "demos/rhine-lab/assets/lone-trail.jpg",
+      "role": "asset",
+      "sha256": "f53ee12bc12cb278ee75ca0c19f4731440a9dda66c101be454457ea2c370f3c0",
+      "bytes": 553285
+    },
+    {
+      "path": "demos/rhine-lab/assets/matrix-frame.png",
+      "role": "asset",
+      "sha256": "01bd688ea19e75d174374dd566b5cc9d4a2f71ac49c3d78e59eef6fadffc6b25",
+      "bytes": 1080730
+    },
+    {
+      "path": "demos/rhine-lab/assets/matrix.mp4",
+      "role": "asset",
+      "sha256": "966214036e6ada6cc0f14bb099d7786915e4b08f267fe8351bc974d4cdd6f20c",
+      "bytes": 3210284
+    },
+    {
+      "path": "demos/rhine-lab/assets/optics-frame.png",
+      "role": "asset",
+      "sha256": "1b2f1c040f0c7111d7ac222c30188a9009ff92f6d52114436792a6c9f79760a7",
+      "bytes": 3060866
+    },
+    {
+      "path": "demos/rhine-lab/assets/optics.mp4",
+      "role": "asset",
+      "sha256": "09bfec642df1919b623b9fcaeaf1b87147dfc78a665aa98058b30e0104f2d5e2",
+      "bytes": 7771333
+    },
+    {
+      "path": "demos/rhine-lab/assets/permission-frame.png",
+      "role": "asset",
+      "sha256": "c82d8b38d159b213e43ff1a0c281a098720b14a4c1643305d26461597bc8bf28",
+      "bytes": 473648
+    },
+    {
+      "path": "demos/rhine-lab/assets/permission.mp4",
+      "role": "asset",
+      "sha256": "9234caf2994668671b932a5be283e1c3433a90da3523a1a94af8ec86569a4d95",
+      "bytes": 802129
+    },
+    {
+      "path": "demos/rhine-lab/assets/pv-cover.jpg",
+      "role": "asset",
+      "sha256": "76ed510d77ac6038ff88de0c71150614fb52c9b6f7ae8d9aca14eb29f21dfd22",
+      "bytes": 114745
+    },
+    {
+      "path": "demos/rhine-lab/fidelity.md",
+      "role": "context",
+      "sha256": "1ea9569a411007ec9d47589041832d42a5fc2e76c45bf944750399b318d77823",
+      "bytes": 7103
+    },
+    {
+      "path": "demos/rhine-lab/index.html",
+      "role": "source",
+      "sha256": "746db57cc8a4166ef89282fd45bd4c87697faa812aaeffc6295d581f157e7f1d",
+      "bytes": 7732
+    },
+    {
+      "path": "demos/rhine-lab/style.css",
+      "role": "source",
+      "sha256": "8e41335090739b0f7f0a22001fc1026b0fd17d1c0800a42c6233a88769e54aa1",
+      "bytes": 11054
+    },
+    {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
+      "bytes": 4329
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
+    },
+    {
+      "path": "entries/rhine-lab.json",
+      "role": "context",
+      "sha256": "2ee0757b8e08e6dd9a3a79771814ede08b7f3b48bd845767812385e75717710b",
+      "bytes": 14042
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "dc26891beb1bbf6fa227594bc248be56cf11971433fcaef7d0ab1a9353dcacbf",
+      "bytes": 256
+    },
+    {
+      "path": "previews/mobile/rhine-lab.jpg",
+      "role": "preview",
+      "sha256": "8455ee52aef169ac13a908478583f99a064fb2292becb33c9075813cf315d6a4",
+      "bytes": 53883
+    },
+    {
+      "path": "previews/rhine-lab.jpg",
+      "role": "preview",
+      "sha256": "a5030851312456515a5f5f2f85235ef66774919a47755cc18bf446ae5e7878ca",
+      "bytes": 115413
+    },
+    {
+      "path": "prompts/rhine-lab.md",
+      "role": "context",
+      "sha256": "a47744d3af0db89a167bfa649bb88dbd5148fa83736f62582aad0e878251f0f3",
+      "bytes": 4409
+    },
+    {
+      "path": "research/rhine-lab.md",
+      "role": "context",
+      "sha256": "1cc4b1701519c64094188913788f78e2acc4d034f24d41bc0c2ba4f2f2459a36",
+      "bytes": 6930
+    },
+    {
+      "path": "site-footer.css",
+      "role": "source",
+      "sha256": "c02e4d66015d205b9e82b143085aafdeae707b1df4feb734df69a129d8c34840",
+      "bytes": 3146
+    },
+    {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
+      "bytes": 14852
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
+      "bytes": 4447
+    },
+    {
+      "path": "site-typography.css",
+      "role": "source",
+      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
+      "bytes": 15208
+    },
+    {
+      "path": "theme-control.css",
+      "role": "source",
+      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
+      "bytes": 2236
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "a58190fc01230d486eecaa99264bf132ba127d68918131a6f2f4798fb2e2cadf",
+      "bytes": 2716
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=rhine-lab\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。</dd></div><div class=\"\"><dt>字体排版</dt><dd>官方68秒原帧保留CMPT CTRL中心，以及DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九外围的环形连字、英文全称、黑白表面、透视倾斜及尺度差；网页控件使用系统字体，不替代原作字标。</dd></div><div class=\"\"><dt>布局留白</dt><dd>源片大量平行立体档案覆盖视野并抽出单件，机构采用一中心加九外围的非等宽矩阵与细射线；本地以16:9全幅场景保留构图，四章控件和说明在原画面外围自然阅读。</dd></div><div class=\"\"><dt>图像图标</dt><dd>四个官方无声H264片段与22/35/48/68秒原尺寸解码帧保存透明阵列、双环材质及真实字标；橙色节点裁自68秒帧。本地没有重写原片3D渲染器；封面和孤星背景仅作来源卡。</dd></div><div class=\"\"><dt>线条形状</dt><dd>源片黑白弧环/橙色节点、档案四角标定/细射线、大小双环的灰色透明厚度与橙色内缘、中心矩阵及特殊环形字标；本地档案显隐遮罩按35秒抬出板的四角轮廓定位。</dd></div><div class=\"\"><dt>信息层级</dt><dd>原比例档案抽出画面 → 四个原作场景与媒体状态 → 本地观察目录/展开阅读 → 十模块语义科室入口与解释 → 官方影片及辅助网页来源。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>许可环线、立体阵列抽出/镜头靠近、双环旋转和机构模块入场沿官方片段25fps/1倍速度；本地章选即时换原帧，点击板/节点位移及四段连续编排为adapted。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>原作米白材质、环形连字、橙色内缘/节点、射线和编号在四个场景中连贯；语义按钮、同步时间码与阅读状态环绕原画面，媒体与网页改编各自可审阅。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>官方影片27–39.2秒：大量平行立体档案覆盖视野，一件X-001被抬出，镜头靠近透明板，随后出现细射线、标定点和机密文字；不是少量平面卡片行。</li><li>官方影片59.6–73.4秒：CMPT CTRL为中心，DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九个外围科室形成非等宽矩阵；环形连字、黑白表面、倾斜、射线和橙色空心节点共同编码机构。</li><li>官方影片19.2–23.4秒的黑白细弧环和橙色节点形成许可处理过程；39.2–51.52秒双环的厚度、灰色透明渐变、橙色内缘与镜头旋转属于光学材质，不能用一个CSS圆框替代。</li><li>本地使用四个1920×1080、25fps、1倍速度的官方无声片段与原尺寸解码帧保留光学和字标；章选、暂停重播、进度、档案选择/显隐和科室节点为可独立学习的网页状态代码。</li></ul><h3>怎样凸显产品重点</h3><p>官方影像的网页转译／教学改编：固定2026-10-09采集的2022《莱茵生命：访问》，选取许可环线、档案阵列、双环光学和机构矩阵四个场景。保留原作媒体构成与片内时序，本地五份观察目录及十模块点选是adapted；不是官方品牌网站或原作3D源码移植。</p><h3>主题与情绪</h3><p>原作米白透明档案、黑白机构字标、橙色光学内缘与小面积状态节点形成研究终端；本地保持原色与16:9比例，外围控制使用相同中性色，不额外添加深绿卡片或整页主题切换。</p></section><section><h2>02 / 交互巧思</h2><ul><li>本地教学改编：在原作多排立体档案的35秒原帧上提供五个观察热点及前后选择，同一状态同步观察编号、标题、正文并收起旧展开；阵列显隐仅隐藏背景阵列，保留按源端四角轮廓裁切的抬出板。五个热点不是原片中的五个可点击档案。</li><li>本地教学改编：原生展开按钮同步aria-expanded和正文；档案热点支持左右方向键，当前项与焦点同步。五份观察是本库的构成解释，不虚构机密档案内容或认证。</li><li>本地教学改编：四个章选即时呈现各自原帧；播放、暂停、从头重播和0.04秒步长的范围条控制对应官方无声片段，源时间码与位置同步，最新请求取消旧解码回调。可选择连续播放四段，片内时序保留，段间连接为网页编排。</li><li>本地教学改编：机构原帧上的十个DOM热点与可读目录按钮同步选择、全称、解释及同源橙色空心节点位置；原片只提供完整字标和矩阵运动，没有网页点击证据。手机保留16:9全幅画面，不裁成竖构图；用下方正常字号按钮提供等价科室入口。</li><li>本地教学改编：默认静态原帧且无自动声音；减少动态保持章选、原帧、档案/矩阵与阅读，关闭本地220/180ms位移并停用连续自动推进，仍允许用户主动逐段播放和暂停。片段加载失败可重试或回到静态原帧。</li><li>官方四周年专题的孤星活动背景只保留在比较来源卡；本地不把它当作莱茵档案矩阵的网页版本，完整原片、声音及专题在第一方入口打开。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>固定米白主题，原片中的黑色字标/材质不等于网页深浅色切换。</p><p>保持源片材料、光学渐变和字标的原色，外围控件沿同一研究终端中性色。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>外部音乐入口</h3><p>本地四个片段均无音轨；完整原片声音由官方Bilibili播放器控制，页面不自动出声。</p><p>媒体保留源端视觉时序，网页状态靠按钮、节点、文字与时间码反馈；不臆造原片独立BGM或操作音。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>studyScope为visual-adaptation。标题、首屏和来源区均声明影像的网页转译；原作没有可核验的对应网页按钮。媒体保留与本地状态代码分别说明，不能称为官方品牌站复刻。</li><li>2026-10-09实际观看官方Bilibili账号UID161775300发布的PV，通过video解码原尺寸帧与实际媒体轨道核验。原轨道HEVC、1920×1080、25fps、318.8秒，原文件hash/来源在清单，完整原轨道归档于仓库外。</li><li>仓库保存四个必要无声H264片段，截取19.20–23.40、27.00–39.20、39.20–51.52、59.60–73.40秒；保持1倍速度、原尺寸及25fps，CRF18转码会有压缩差异，不能声称视频字节与原轨道一致。 双环片段请求12.30秒，实际25fps输出308帧/12.32秒，范围按实际末端51.52秒记录。</li><li>22、35、48、68秒原尺寸解码帧未缩放/改色；机构字标和透明材质由原作媒体保留，没有重写影片的3D渲染器或臆造字体名称。点选、档案遮罩、节点移动、范围条与连续章编排均为本地代码。</li><li>原片只检索并抬出X-001，本地五个观察样本属于教学目录；选中板的小位移与阵列显隐为adapted，不能说成原片悬停或档案数量。科室目录保留一中心加九外围，不扩写权限和完整游戏设定。</li><li>官方字体/标志细节在原帧中保留；外围网页文字用系统字体，未单独复制字体包。官方封面与孤星背景仅作来源卡。片段无音轨，完整声音留在官方播放器。</li><li>原画面使用等比例全幅展示，手机16:9构图仍保持完整，下方语义目录承担可读操作；这属于网页适配，不冒称原作有手机布局。</li></ul><h3>适合</h3><p>机构影像转译为可操作资料 / 光学/工业素材的场景式展示 / 保留特殊字标的机构矩阵目录</p><h3>谨慎使用</h3><p>用泛化卡片替代立体阵列 / 用普通字体抹平环形连字 / 把媒体编排包装成3D源码复刻</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#edeae5\"></i>#edeae5</span><span class=\"swatch\"><i style=\"background:#111310\"></i>#111310</span><span class=\"swatch\"><i style=\"background:#eb7900\"></i>#eb7900</span><span class=\"swatch\"><i style=\"background:#c3c1ba\"></i>#c3c1ba</span></div><p><b>字体</b> · 原帧保留RHINE LAB/ANALYSIS OS及十组特殊环形连字的真实像素；外围语义控件用系统中文/Arial及等宽时间码，不臆造官方字体。<br><b>布局</b> · 16:9原比例场景，保留大量立体阵列、完整中心/九外围矩阵及源端射线；外围四章控制、时间范围条与自然阅读。手机保留全幅场景，正常字号的目录/说明另行重排。<br><b>动效</b> · 原作片段分别4.2/12.2/12.32/13.8秒，25fps、1倍速度；原片内部镜头不重定时。本地板220ms微移、节点180ms移动为adapted，减少动态关闭并保留原帧/选择；播放由用户主动启用。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>制作一个明确标注“官方影像的网页转译／教学改编”的莱茵研究终端，使用已授权来源的原尺寸媒体保持真实构成，不以泛化五卡片或普通字体替代原作。四个场景分别为19.20–23.40许可弧环、27.00–39.20多排立体档案与单件X-001抬出/射线、39.20–51.52透明双环光学、59.60–73.40完整机构矩阵。必要官方片段保留1920×1080、25fps、1倍速度且无音轨，默认呈现35秒原帧；22/35/48/68秒原帧不缩放改色，记录原轨道hash、时间范围、转码参数与权利。影片负责难以精确重绘的光学材质与特殊字标，本地代码实现四章选中、播放/暂停/从头重播、0.04秒步长进度及源时间码，最新请求取消旧解码回调，失败能重试或保留原帧。档案区在真实多排阵列上提供五个本地观察热点、前后选择与可展开正文，同一个状态同步编号/标题/解释并收起旧正文；阵列显隐隐藏背景，选中板保留按官方四角轮廓裁切的同源像素。明确五热点是教学目录，原片只检索X-001。矩阵保留CMPT CTRL中心及DEF/HRI/BSN/ENG/STRU/SCIEN/ORIG/NRG/ECO九外围，环形连字、黑白表面、倾斜与射线仍可见；DOM热点与下方可读按钮同步同源橙色节点及解释，不能扩写组织权限。手机全幅16:9不裁切，正文和等价科室目录保持正常字号；固定米白主题，完整声音在官方外部播放器。减少动态保持静态原帧与全部状态，关闭板/节点位移和连续自动推进，仍可由用户逐段主动播放并暂停。源端影像时序、媒体保留、本地适配与未复现的完整影片/3D源码分别记录。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把官方影像叫官方莱茵品牌网站；不要把大量立体档案改成五张通用平面卡；不要用CSS圆框替代厚度/灰色渐变/橙色内缘，不用Arial重排原作特殊连字；不要把影片抽出说成网页点击，不伪造权限/机密正文；不要声称H264转码字节等同原轨道，不自动出声、裁掉手机画面或复制整片3D源码的虚假边界。</p></details><h3>改造练习</h3><p>将拥有使用权的机构影片拆为四个有明确时间范围的场景，保留原尺寸与片内时序；用语义按钮与数据状态实现章选和目录，分别审阅媒体准确度与交互可复用性。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.bilibili.com/video/BV1rr4y1b7sz/\" target=\"_blank\" rel=\"noopener noreferrer\">明日方舟官方 · 特别映像「莱茵生命：访问」 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>官方UID161775300于2022-04-26发布。2026-10-09实际播放器观看并保存原尺寸关键帧/媒体轨道，核验1920×1080、25fps与四段许可/档案/光学/矩阵时序；网页点选是adapted。直接检索曾返回412，浏览器与公开媒体资源采集成功。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://ak.hypergryph.com/special/4th-anniversary/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">Hypergryph · 明日方舟四周年官方专题 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>官方2023专题，只作为孤星机械空间主图及真实宣传网页的比较来源；不支持莱茵档案点击或矩阵网页交互。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Disclosure Pattern <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>支持本地原生展开按钮、aria-expanded与正文关联，属于网页转译的实现依据。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Use of Color <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>支持选中项同时以边界、编号、文字和aria状态区分；橙色不能独自承担状态含义。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Animation from Interactions <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>WCAG2.3.3为AAA；指导本地取消非必要档案位移和平滑滚动，不声称原片或专题满足该条。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C · Pause, Stop, Hide <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>本地连续片段播放提供明确暂停，后台暂停；减少动态默认静态，用户可主动逐段观看。</small></div><p>官方资料采集：2026-10-09。本案例将影像构成转译为教学网页，不代表存在对应官方网站。详细观察、推断与限制见<a href=\"document.html?file=research%2Frhine-lab.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "a87259daba3900449fe87167a136eb8ee631fcfdf941413fb29fb7247926f055",
+    "bytes": 15131
+  }
+}

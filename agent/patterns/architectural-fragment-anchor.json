@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "architectural-fragment-anchor",
+  "pattern": {
+    "id": "architectural-fragment-anchor",
+    "title": "建筑局部与名称目录锚点",
+    "category": "视觉构成",
+    "summary": "用真实建筑的一角让大色面具有地点身份。",
+    "mechanism": "朱红实物纹理内以真实透明屋脊和独立圆形题饰定位建筑身份，左侧说明与八项名称目录承担检索；图像不替代文字入口。",
+    "trigger": "进入建筑或文化章节",
+    "effect": "色面获得具体文化对象，文字入口仍然可扫描。",
+    "useCases": [
+      "古建筑与文化遗产机构",
+      "有真实构件素材的城市展览"
+    ],
+    "avoid": [
+      "用任意龙凤或屋顶剪影装饰不相关内容"
+    ],
+    "constraints": [
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
+      "pairsWellWith": [
+        "section-color-rhythm",
+        "direct-purpose-navigation"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
+    },
+    "parameters": [
+      {
+        "name": "源建筑容器",
+        "value": "1258px主内容，min-height590px，padding100px 0",
+        "note": "来自探索页适用CSS与DOM。"
+      },
+      {
+        "name": "源屋脊/题饰",
+        "value": "屋脊宽74.721%；圆形题饰13.276%",
+        "note": "源CSS布局比例；手机有独立断点。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「建筑局部与名称目录锚点」。朱红实物纹理内以真实透明屋脊和独立圆形题饰定位建筑身份，左侧说明与八项名称目录承担检索；图像不替代文字入口。 源建筑容器：1258px主内容，min-height590px，padding100px 0。来自探索页适用CSS与DOM。 源屋脊/题饰：屋脊宽74.721%；圆形题饰13.276%。源CSS布局比例；手机有独立断点。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
+    "sources": [
+      {
+        "caseId": "palace-museum",
+        "locator": "entries/palace-museum.json#interaction/1",
+        "observation": "建筑目录：朱红实物纹理与透明屋脊、独立圆形“建筑”题饰并置，八个建筑名称及更多建筑/地图均保留官方目的地。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.dpm.org.cn/Explore.html",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/palace-museum.json",
+      "research/palace-museum.md",
+      "demos/palace-museum/fidelity.md",
+      "demos/palace-museum/index.html",
+      "demos/palace-museum/style.css",
+      "demos/palace-museum/app.js",
+      "demos/palace-museum/state-matrix.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "palace-museum",
+      "title": "故宫 · 六章探索与宫廷视觉目录",
+      "paths": {
+        "bundle": "agent/cases/palace-museum.json",
+        "demo": "demos/palace-museum/index.html"
+      },
+      "bundleSha256": "973ae4ab8c4e5312f168a1d98bcc447c9b50f820570300669ce18c02ad193557"
+    }
+  ]
+}

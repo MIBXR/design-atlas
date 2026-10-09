@@ -1,0 +1,638 @@
+{
+  "schemaVersion": 1,
+  "id": "suzhou-museum",
+  "entry": {
+    "category": "艺术/文化",
+    "country": "中国",
+    "implementation": "reference-study",
+    "capturedAt": "2026-10-09",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+      "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+      "interactionRole": "阅读、图像和目录操作承担信息引导。"
+    },
+    "id": "suzhou-museum",
+    "order": 32,
+    "title": "苏州博物馆 · 四屏门户与图像目的地",
+    "subtitle": "Four full-page chapters, live exhibition visuals and nine image destinations",
+    "tags": [
+      "中国",
+      "苏州博物馆",
+      "江南建筑",
+      "贝聿铭",
+      "粉墙黛瓦",
+      "图像导航",
+      "留白",
+      "博物馆"
+    ],
+    "summary": "50px白色外缘框住建筑轮播、展览叙事、九个不等尺度图像入口和参观信息，右侧四条导航与方角摄影延续机构门户的清楚节奏。",
+    "accent": "#aa4d35",
+    "background": "#ffffff",
+    "referenceUrl": "https://www.szmuseum.com/Home/Index",
+    "edition": "2026-10-09；中文桌面首页四屏完整快照；手机同内容适配，WAP入口未取得",
+    "principles": [
+      "图像直接承担目的地入口，每个区域保留清晰的文字名称，而非把所有图像压成统一比例卡片。",
+      "粉墙黛色与自然光来自建筑本身；网页借助白色留白、方形边界和真实摄影承接这种识别。",
+      "目录选择与参观服务分别成章，图片的观看节奏和到访任务不互相覆盖。"
+    ],
+    "productFocus": "从机构门户进入馆藏、展览、学习和建筑内容，并把预约及实时到访信息交给官方服务。",
+    "interaction": [
+      "首页完整四屏：建筑双图轮播、七项展览、九目的地图像矩阵及开放时间/预约；用原站fullPage1.5.3、jQuery UI缓动和同一锚点/700ms受控滚动，第四屏向下循环回第一屏。",
+      "轮播：首屏Owl单图5000ms自动、800ms切换、fade效果、hover暂停；展览lrtk七项5000ms、500ms淡入，箭头/七条指示条及横向触摸，所有正式展览链接回官方。",
+      "图像目的地：资讯、云课堂、馆藏、活动、文创、数字苏博、展览、游戏、建筑美图九项原图/常显类目均保留，左右75%/25%及每块尺寸按源CSS。",
+      "悬停：原站CSS scale1.1/500ms与脚本图宽增加1.1倍/300ms共同作用；数字苏博单独增高，保留真实实现而非泛化轻微缩放。",
+      "访问与页尾：两张真实访问背景、70%半透明白板、原开放信息及预约链接，完整底栏网站地图展开500ms、浏览建议悬停；不添加建筑解说dialog。",
+      "原站初载被第三方统计阻塞jQuery.ready，四屏交互取自明确记录的受控启动及原源码；移动UA路由/Wap/Home/Index本次连接失败，本地手机为同内容长页适配。"
+    ],
+    "theme": "原站白色外缘、黑灰机构文字、建筑及藏品原色、少量红色开放信息与方角画面。",
+    "constraints": [
+      "固定同日四屏、当前七项展览及九个图像入口，不声称预约、留言、商店、课堂或账户业务复制。",
+      "公开摄影、机构字标、两类轮播和全部页面纹理/图饰检查本地化；保持原字节及水印。",
+      "原站初载第三方阻塞与受控jQuery.ready验证分开记录，正常访客加载效果不能由受控状态推断。",
+      "源PC最小1366px、移动UA跳到独立WAP；未取得WAP内容，因此手机响应适配明确不作为原站移动端像素复刻。",
+      "部分源CSS的未用背景或隐藏箭头URL返回HTML，记录失败，不用猜测图片替代可见主要素材。"
+    ],
+    "useCases": [
+      "有多个清晰内容目的地的文化机构门户",
+      "建筑与城市文化展示",
+      "馆藏、学习与参观并行的博物馆主页"
+    ],
+    "avoid": [
+      "图片缺少语义、只靠悬停才显示入口名称的门户",
+      "把所有文化机构都改成同一张水墨背景的主题页"
+    ],
+    "tokens": {
+      "palette": [
+        "#ffffff",
+        "#303a3b",
+        "#aa4d35",
+        "#827f75",
+        "#e5e5de"
+      ],
+      "type": "Microsoft Yahei/微软雅黑；原机构PNG字标，源CSS导航和类目字号。",
+      "layout": "50px外缘、4个整屏；2张建筑图→7项展览→75/25九入口矩阵→双访问面板；390px同内容长页适配。",
+      "motion": "fullPage700ms/easeInQuart、首屏5000ms/800ms fade、展览5000ms/500ms、矩阵双重1.1倍hover及500ms网站地图。"
+    },
+    "composition": {
+      "color": "源端观察：白色界面、黑灰文字、少量红色机构标识，资讯瓦片用粉墙与深灰边饰的建筑摄影。",
+      "typography": "原机构PNG书写字标和Microsoft Yahei导航/标签；类目1.5em、字距5px，非系统衬线重写品牌。",
+      "layout": "四屏完整结构；50px左右外缘，1440×900时主画面1340×755；第三屏按原九项/75%与25%两区组织。",
+      "imagery": "原站当前两张首页图、七项展览摄影、九项目的地、两张访问背景、字标和图饰本地化。",
+      "shape": "源网页大白边界、方角画面、窄白缝和四条灰色章节导航；建筑轮廓在真实摄影内，删除首版额外黑灰框线教学组件。",
+      "hierarchy": "四屏分别解决机构进入、展览浏览、内容目的地、到访；网站地图在底栏展开，语义入口不依赖图库猜测。",
+      "motion": "原站fullPage、Owl、lrtk真实源码配置与交互验证；保留反向、循环、hover和触摸，减少动态禁用自动与位移。",
+      "coherence": "真实建筑和馆藏摄影与白色空间相互支撑，陶红只标记少量入口/焦点；官网业务明确外链。"
+    },
+    "sources": [
+      {
+        "title": "苏州博物馆 · 中文官网图像目录",
+        "url": "https://www.szmuseum.com/Home/Index",
+        "type": "实例",
+        "note": "重新读取原DOM、homeindex/reset/innerfooter/fullPage/Owl/lrtk样式及运行库；冷加载被统计阻塞后明确jQuery.ready受控启动，对照四屏与真实导航/hover/轮播；详见state-matrix.md。"
+      },
+      {
+        "title": "苏州博物馆 · 贝聿铭与苏博",
+        "url": "https://www.szmuseum.com/Other/MuseumIntro",
+        "type": "实例",
+        "note": "官方建筑说明支持粉墙黛色、深灰石材边饰、自然光与江南园林的地域识别；网页迁移是本库解释。"
+      },
+      {
+        "title": "W3C WAI · Non-text Content",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+        "type": "规范",
+        "note": "图像目的地用常显名称给链接命名，避免全部信息仅置于背景影像。"
+      },
+      {
+        "title": "W3C WAI · Reflow",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "type": "规范",
+        "note": "本地矩阵窄屏重排并保留逻辑DOM顺序；规范是迁移约束，不表示官网合规审计。"
+      }
+    ],
+    "exercise": "把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。",
+    "prompt": "完整复现2026-10-09苏州博物馆中文PC首页的四屏，不只截第3/4屏。采用源字标、摄影、50px白色外缘、四条章节导航和fullPage700ms受控滚动/第四屏循环；首屏2图5000ms/800ms fade及hover暂停，展览7项5000ms/500ms淡入/7指示条，九目的地按75/25和原多尺度几何排列，标签常显，复用源CSS与脚本双重hover；第四屏保留两张背景及70%半透明开放/预约白板，底栏含500ms网站地图及浏览建议。所有源可见素材和jQuery UI缓动依赖本地化。第三方统计阻塞及受控启动写清证据，WAP未取到时将手机同内容适配明确标出，不能宣称原移动端复刻。官方服务保持真实外链，减少动态关闭自动轮播，别添加不在源站的建筑dialog或框线卡片。",
+    "negativePrompt": "不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。",
+    "demo": "demos/suzhou-museum/index.html",
+    "preview": "previews/suzhou-museum.jpg",
+    "research": "research/suzhou-museum.md",
+    "fidelity": "demos/suzhou-museum/fidelity.md",
+    "assetManifest": "demos/suzhou-museum/assets-manifest.json"
+  },
+  "patternIds": [
+    "architectural-outline-whitespace",
+    "image-destination-mosaic"
+  ],
+  "documents": [
+    {
+      "path": "research/suzhou-museum.md",
+      "role": "research",
+      "content": "# 苏州博物馆：四屏门户、图像目的地与机构外缘\n\n归档 **2026-10-09**，[中文首页](https://www.szmuseum.com/Home/Index)，单一固定快照。研究首页主图、展览、目的地和参观四屏及顶部/页尾；[建筑介绍](https://www.szmuseum.com/Other/MuseumIntro)用于内容背景，不把建筑理念直接冒称网页组件规范。\n\n## 一手观察与受控启动\n\n源站本次冷加载受末尾同步第三方统计资源阻塞：document仍loading、jQuery未ready、四屏高度0。停止加载后，明确调用页面原jQuery.ready()，启动已注册的原始初始化；测量为受控实验，不隐去冷加载失败，也没有替换源DOM/CSS/插件。读取homeindex.css?d=20190521及依赖、原fullPage/Owl/lrtk、jQueryUI，实际点击章节、悬停、查看轮播与页尾。[中文首页](https://www.szmuseum.com/Home/Index)\n\n桌面min-width1366、左右50px白缘、四屏同高；原fullPage700ms/easeInQuart、4锚点、loopBottom。首页两张摄影配字标和题饰，Owl每5000ms/fade；展览七项各有真实图/日期/标题，lrtk每5000ms/淡入500ms。第3屏是75%/25%不等尺度结构中的九个目的地：资讯、云课堂、馆藏、活动、文创、数字苏博、展览、游戏、建筑美图。图片既有CSS1.1倍/500ms也有脚本尺寸1.1倍/300ms，数字苏博另增高，不能只以通用卡片hover代替。第4屏两张摄影叠70%面积白色半透明访问板。底部完整网站地图500ms展开。\n\n官方建筑文说明粉墙、深灰石材边饰与自然采光，以及“中而新，苏而新”的理念。[建筑介绍](https://www.szmuseum.com/Other/MuseumIntro) 这些属于实体建筑背景；本页实际白色外缘有源CSS尺寸证据，不借文章虚构7px深灰组件。\n\n## 提取与复用\n\n“多尺度图像目的地目录”抽取九入口的选择结构；“机构摄影的白色外缘”抽取50px留白包围全幅机构影像的关系。它们是可观察结构的本库分析，不宣称原作者公开提出同理论。面积权重、图像缩放和章节导航复用既有条目，不按苏博品牌新开类别。\n\n## 复现与边界\n\n[本地四屏](../demos/suzhou-museum/index.html#page3)恢复原图、完整七展览、九入口、两参观板和原轮播/全屏插件依赖，去掉旧六入口/两屏scroll-snap与自创建筑dialog。独立1440×900第3屏对照：四屏、九卡片和九图片所有几何差值小于0.001px。此测量明确来自受控原站初始化，不能据此推广所有冷加载与外链业务通过。\n\n源手机UA跳/Wap/Home/Index，本次未取得其可用响应；本地390为同内容长页适配，不能称WAP复刻。键盘命名、focus和减少动态为本地补充，参照[W3C非文本内容](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)、[Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)，不是官网合规审计。素材/字型/库署名与hash见[清单](../demos/suzhou-museum/assets-manifest.json)，完整状态及首版遗漏原因见[矩阵](../demos/suzhou-museum/state-matrix.md)。预约、商城、账户与调查仍明确进入官方，固定快照不冒称实时开放或库存。\n",
+      "sha256": "3519e4169559c91c28d51fcb9c15d84b168df0c8029c88b29483e7fac2b0b6de",
+      "bytes": 3215
+    },
+    {
+      "path": "prompts/suzhou-museum.md",
+      "role": "prompt",
+      "content": "# 苏州博物馆 · 四屏门户与图像目的地 · 复用 Prompt\n\n由 [结构化案例](../entries/suzhou-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/suzhou-museum.md)。\n\n## 正向 Prompt\n\n完整复现2026-10-09苏州博物馆中文PC首页的四屏，不只截第3/4屏。采用源字标、摄影、50px白色外缘、四条章节导航和fullPage700ms受控滚动/第四屏循环；首屏2图5000ms/800ms fade及hover暂停，展览7项5000ms/500ms淡入/7指示条，九目的地按75/25和原多尺度几何排列，标签常显，复用源CSS与脚本双重hover；第四屏保留两张背景及70%半透明开放/预约白板，底栏含500ms网站地图及浏览建议。所有源可见素材和jQuery UI缓动依赖本地化。第三方统计阻塞及受控启动写清证据，WAP未取到时将手机同内容适配明确标出，不能宣称原移动端复刻。官方服务保持真实外链，减少动态关闭自动轮播，别添加不在源站的建筑dialog或框线卡片。\n\n## 负向约束\n\n不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。\n\n## 制作约束\n\n- 固定同日四屏、当前七项展览及九个图像入口，不声称预约、留言、商店、课堂或账户业务复制。\n- 公开摄影、机构字标、两类轮播和全部页面纹理/图饰检查本地化；保持原字节及水印。\n- 原站初载第三方阻塞与受控jQuery.ready验证分开记录，正常访客加载效果不能由受控状态推断。\n- 源PC最小1366px、移动UA跳到独立WAP；未取得WAP内容，因此手机响应适配明确不作为原站移动端像素复刻。\n- 部分源CSS的未用背景或隐藏箭头URL返回HTML，记录失败，不用猜测图片替代可见主要素材。\n\n## 检查方法\n\n把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。\n\n[查看 Demo](../demos/suzhou-museum/index.html) · [返回浏览案例](../cases.html#style/suzhou-museum)\n",
+      "sha256": "938e539c1a58c62c2e2050cb7d4a855a3a4476aa4656b3e566167463f0041b5f",
+      "bytes": 2159
+    },
+    {
+      "path": "demos/suzhou-museum/fidelity.md",
+      "role": "fidelity",
+      "content": "# 苏州博物馆：复现范围与证据\n\n固定采集日 **2026-10-09**，来源[中文首页](https://www.szmuseum.com/Home/Index)。本地保留**首页主图、展览、图像目的地、参观四屏**、机构顶部与展开页尾。桌面建议从 [第3屏](index.html#page3) 看九个目的地，再前后回看。\n\n源站本次冷加载被末尾同步第三方统计资源阻塞，document.readyState=loading、jQuery.isReady=false、四屏高度0。停止请求后，我们明确调用原 jQuery.ready()，启动页面已注册初始化；**运行态测量来自这一受控实验**，没有替换原 DOM、CSS 或插件，不能推断普通访客冷加载必然成功。原研究标签不属于用户的 Site 页面。\n\n| 机制 | 本地实现与核验 |\n|---|---|\n| 桌面外框/四屏 | 原左右50px白缘、顶部与页尾；原 fullPage1.5.3、jQueryUI缓动，4锚点、700ms/easeInQuart、loopBottom；不再用两章 scroll-snap 替代。 |\n| 首屏 | 两张原建筑摄影、原字标/题饰、Owl5000ms轮换、800ms/fade、悬停暂停与两点。 |\n| 展览 | 当日七项原图、日期、标题与链接；原 lrtk5000ms/500ms淡入、七指标和横向触摸。 |\n| 九入口 | 原75%/25%主侧结构、不等尺度图片与窄白缝；资讯/云课堂/馆藏/活动/文创/数字苏博/展览/游戏/建筑美图完整保留。 |\n| 图像放大 | 原CSS1.1倍/500ms与原脚本宽度1.1倍/300ms两层机制；数字苏博另增高。补键盘focus可达。 |\n| 参观/页尾 | 原两张背景、70%白色半透明板、开放时间与预约；完整网站地图500ms展开、同按钮关闭及浏览建议；本地補Escape/焦点归还。业务目的地仍官方。 |\n\n独立代理对照 **1440×900第3屏**：四段与九个卡片所有 x/y/width/height/offsetTop/offsetLeft，以及九张图片边界，差值均小于 **0.001px**。运行态源码参数、轮播、章节与 hover 单独记录；相同几何不等于所有动态瞬间或外链业务全面通过。原图、字型与库来源、字节、尺寸、SHA-256 见[素材清单](assets-manifest.json)。\n\n手机原站明确跳转 /Wap/Home/Index，本次该目的地未取得可用响应。**本地390px是同内容适配，不能称官网WAP复刻**：九入口、七展览和两参观板自然堆叠，无整页横溢出。减少动态关闭自动轮播和转场，保持手动入口与内容。固定原浅色/摄影，不新增音频。\n\n已知边界：不加载第三方统计；源隐藏左右箭头 URL 返回 HTML，不凭此虚构可见操作；源脚本里的动态侧栏目标不在该页 DOM，不凭字符串新增组件；预约、账户、商城、课堂和调查仍官方。源码库保留原作者署名，无商业授权承诺。\n\n原站/本地同尺寸第三屏截图在仓库外 heritage-audit/suzhou-source-controlled-page3.jpg 与 suzhou-local-page3.jpg；完整几何JSON在 work/fidelity/independent-audit/suzhou-{source,local}-geometry.json。正式预览由实际浏览器生成。完整状态矩阵及之前遗漏原因见[状态矩阵](state-matrix.md)：首版误缩成两章和六入口，还增加源站没有的建筑dialog/深灰框组件，现已移除。\n\n[研究](../../research/suzhou-museum.md) · [Demo](index.html)\n\n手机适配另做真实截图复查：修正原PC绝对定位的优先级，标志、辅助链接、主导航各一行。390×843测量logo y15..63.1、辅助73.1..94.0、导航104.0..160.6，无重叠，素材broken0、页面overflow0。截图在仓库外heritage-audit/suzhou-local-mobile-final.jpg；这是同内容适配，仍不等同原WAP。\n",
+      "sha256": "25afd2191c37c24862279f502ea9b9be7b9d6ef0d94477e347bf933699c8e56a",
+      "bytes": 3599
+    },
+    {
+      "path": "demos/suzhou-museum/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"suzhou-museum\",\n  \"sourcePage\": \"https://www.szmuseum.com/Home/Index\",\n  \"capturedAt\": \"2026-10-09\",\n  \"scope\": \"对指定公开页面的结构、纹理、原图比例及可观察交互作本地学习复现；正式业务跳转官方，去除统计追踪。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/4862cfe9d6b97a47.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/logo-big.png\",\n      \"width\": 366,\n      \"height\": 80,\n      \"format\": \"png\",\n      \"bytes\": 22932,\n      \"sha256\": \"99eb90eecf7fdd14c4fe242db927bccdce387e191d885a73957c5a1431202d65\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/a64f306e51e9706d.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/img1center.png\",\n      \"width\": 1500,\n      \"height\": 1499,\n      \"format\": \"png\",\n      \"bytes\": 29679,\n      \"sha256\": \"ae415a565314ffaf56c8de1461579bd0ef3041c96b8f60aa8c191cc334a33618\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/0fc79f9e29e800b9.jpg\",\n      \"sourceUrl\": \"https://file.szmuseum.com/WaterMark/%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86%E7%BC%A9%E7%95%A5%E5%9B%BE/20260930153222YNMIY7.jpg\",\n      \"width\": 1897,\n      \"height\": 1522,\n      \"format\": \"jpg\",\n      \"bytes\": 1530023,\n      \"sha256\": \"86166ee5b2236c8baebaa5c8700618a7d5e8d2273a023b2ac04fa53d5c9a9365\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/3379fe1fdb1853d2.jpg\",\n      \"sourceUrl\": \"https://file.szmuseum.com/WaterMark/%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86%E7%BC%A9%E7%95%A5%E5%9B%BE/20260728084550xgE80h.jpg\",\n      \"width\": 1897,\n      \"height\": 1522,\n      \"format\": \"jpg\",\n      \"bytes\": 2599554,\n      \"sha256\": \"a5b38a1b3fb41a7bf358987f3c3058ff6b9beaa38c3664ae7230cb9462d93835\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/e375cfd2f05986af.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/zx.jpg\",\n      \"width\": 455,\n      \"height\": 436,\n      \"format\": \"jpg\",\n      \"bytes\": 58524,\n      \"sha256\": \"f4ec16e9aca7ba2684e5d80b7585ef42f09e18382af21a2e676804245d261802\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/bc92965fe106d3fd.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/ykt.jpg\",\n      \"width\": 450,\n      \"height\": 371,\n      \"format\": \"jpg\",\n      \"bytes\": 78534,\n      \"sha256\": \"b49206330592638a9f652291a3460c90cf62c3923001e6f4edebe8244253ee08\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/7a7f8f1e54235cfb.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/gc.jpg\",\n      \"width\": 462,\n      \"height\": 556,\n      \"format\": \"jpg\",\n      \"bytes\": 39985,\n      \"sha256\": \"caf8364fa37e8fabf32906da5521be063f2100ce4e284129457b0d3e7bfb748d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/d2f395ebc4b011b3.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/hd.jpg\",\n      \"width\": 445,\n      \"height\": 405,\n      \"format\": \"jpg\",\n      \"bytes\": 37867,\n      \"sha256\": \"a5c77a620ec64c570377b7c23ec699e5e5809d30fc02120d67e56923e35f6903\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/f325da10590fdefb.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/wc.jpg\",\n      \"width\": 800,\n      \"height\": 533,\n      \"format\": \"jpg\",\n      \"bytes\": 69711,\n      \"sha256\": \"99de2fa08ce8de616f5f7721ee45f22931449d2dd3cc49ab69607cc6d748e2ef\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/4e51d01a5e0c269b.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/szsb.jpg\",\n      \"width\": 368,\n      \"height\": 718,\n      \"format\": \"jpg\",\n      \"bytes\": 198363,\n      \"sha256\": \"116f805b77977e66a005983116235b211683e94bfd7a9201e2ffb0090316b858\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/b29073789c48535f.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/zl.jpg\",\n      \"width\": 455,\n      \"height\": 450,\n      \"format\": \"jpg\",\n      \"bytes\": 120736,\n      \"sha256\": \"34839b073d0316547aa79f365c6ba840f04539f7c03db394f02fa83581485b21\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/0e5b616d48a82d29.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/yx.jpg\",\n      \"width\": 455,\n      \"height\": 205,\n      \"format\": \"jpg\",\n      \"bytes\": 121126,\n      \"sha256\": \"4d63be0b0120b5e295d0ddab0db4531efd368d0475f2d30c8e12031f7941e31a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/6440784e6a2d5fd9.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/jzmt.jpg\",\n      \"width\": 460,\n      \"height\": 205,\n      \"format\": \"jpg\",\n      \"bytes\": 29981,\n      \"sha256\": \"94b7cac21e2356b15eab5962fbaa329627146e193a4409ffec53af9ee218a7a0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/bf8c2ccda9a545cd.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/section4_rightbg.jpg\",\n      \"width\": 945,\n      \"height\": 873,\n      \"format\": \"jpg\",\n      \"bytes\": 99130,\n      \"sha256\": \"372be7eede078a5f5ba598f06f4e5b05acc37eed039e4c89c367a7ba539e77c1\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/a612568ea26c6b8b.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/section4_leftbg.jpg\",\n      \"width\": 946,\n      \"height\": 871,\n      \"format\": \"jpg\",\n      \"bytes\": 83393,\n      \"sha256\": \"6545ba5a0653f3c20d7957f27971b9cbbcdd40a3c4b1c4224c544bbc03735561\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5179e88fe8318d74.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/zzykt.png\",\n      \"width\": 130,\n      \"height\": 56,\n      \"format\": \"png\",\n      \"bytes\": 4640,\n      \"sha256\": \"a77666cd786dcbaa79b9ae8366e23e01ea24571d14fbd4c45ae433b0d98edc0a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5edc24c75fe5bb34.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/whitebg.png\",\n      \"width\": 1,\n      \"height\": 1,\n      \"format\": \"png\",\n      \"bytes\": 924,\n      \"sha256\": \"397a083b68daf60a955d62b9d57a005559df67e7fce377d99238452ae941196b\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/438bdec25e4fbd7f.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/link-up.png\",\n      \"width\": 30,\n      \"height\": 14,\n      \"format\": \"png\",\n      \"bytes\": 1308,\n      \"sha256\": \"93573968c2f8de01e5e9fe478e9e7a12258c362f89ed819a93e2d9cbde1b8ba2\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/faeccabc704b2e9f.gif\",\n      \"sourceUrl\": \"https://icon.cnzz.com/img/pic.gif\",\n      \"width\": 50,\n      \"height\": 12,\n      \"format\": \"gif\",\n      \"bytes\": 719,\n      \"sha256\": \"98a4ab97e12555ab969012d151a578dae7a3b8699d202485fcf8116e55497735\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/96d238af6b026b00.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/indexbottom.png\",\n      \"width\": 96,\n      \"height\": 27,\n      \"format\": \"png\",\n      \"bytes\": 1793,\n      \"sha256\": \"d97d9d481b48f1cd2f93b23d3069c2378a246244cd951ddef15364e8a4323e34\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/3909d8d6f7de1a5d.jpg\",\n      \"sourceUrl\": \"https://file.szmuseum.com/WaterMark/%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86%E7%BC%A9%E7%95%A5%E5%9B%BE/202607281022191QKtGd.jpg\",\n      \"width\": 10000,\n      \"height\": 8022,\n      \"format\": \"jpg\",\n      \"bytes\": 3819528,\n      \"sha256\": \"22d27577a5995a54186d5abd47b969f6531e669e857284412ae210e52919a1b2\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5ac82559d5a8f599.png\",\n      \"sourceUrl\": \"https://file.szmuseum.com/WaterMark/%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86%E7%BC%A9%E7%95%A5%E5%9B%BE/20260715132422ycgScI.png\",\n      \"width\": 2425,\n      \"height\": 1945,\n      \"format\": \"png\",\n      \"bytes\": 1997016,\n      \"sha256\": \"858ad967aaf33380e78e20909a3221de2b271c8081b37337a6c1de986144b2ef\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/2d0cdd2b2f235b70.jpg\",\n      \"sourceUrl\": \"https://file.szmuseum.com/WaterMark/%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86%E7%BC%A9%E7%95%A5%E5%9B%BE/20260708093630aBGjKW.jpg\",\n      \"width\": 1897,\n      \"height\": 1522,\n      \"format\": \"jpg\",\n      \"bytes\": 3188780,\n      \"sha256\": \"62ef4a28014c0892cf1e7c345fbc438a15d600c30db855c2ff27fb9af982a123\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/b45f1532a1cfaf8a.jpg\",\n      \"sourceUrl\": \"https://file.szmuseum.com/WaterMark/%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86%E7%BC%A9%E7%95%A5%E5%9B%BE/20260710154316zHtdgc.jpg\",\n      \"width\": 3640,\n      \"height\": 2920,\n      \"format\": \"jpg\",\n      \"bytes\": 3911758,\n      \"sha256\": \"7b75196af437facec5bf073d73c999f90b73ffe13c32aed7f6a1bef7acfd4ea9\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5d906cecb72b5bde.jpg\",\n      \"sourceUrl\": \"https://file.szmuseum.com/WaterMark/%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86%E7%BC%A9%E7%95%A5%E5%9B%BE/20261008094919KM7C6b.jpg\",\n      \"width\": 5375,\n      \"height\": 4312,\n      \"format\": \"jpg\",\n      \"bytes\": 1924012,\n      \"sha256\": \"c3aa1b2fed4127ef6e69ab83d744b199a9dfdad8d55387ce269bce2dfb4a0838\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/912d1002fe6bade0.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/beian.png\",\n      \"width\": 62,\n      \"height\": 67,\n      \"format\": \"png\",\n      \"bytes\": 11143,\n      \"sha256\": \"6189a29f86e1756d1970f4446b9f836642c283c373d312dbddeb42411f1608e6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5fecbb906b367a3d.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/black85.png\",\n      \"width\": 1,\n      \"height\": 1,\n      \"format\": \"png\",\n      \"bytes\": 927,\n      \"sha256\": \"aaeb61813ea34325a0d9a51ee4eb3d3601b8927b5bd4cca097e8b0e7dacdf838\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/b4cd86f380a92ee6.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/szbwgzb.jpg\",\n      \"width\": 1820,\n      \"height\": 838,\n      \"format\": \"jpg\",\n      \"bytes\": 410312,\n      \"sha256\": \"29a622e7cd20f0cb6b50849dbe2968469b3dd1bc3c8095e586ea0db1eebec443\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/06e3090c47f4d8ec.jpg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/img1.jpg\",\n      \"width\": 1820,\n      \"height\": 838,\n      \"format\": \"jpg\",\n      \"bytes\": 140890,\n      \"sha256\": \"ac4fcca4a62283e58a500508c0a799b9841e0696aab3d754959d9d845c23b773\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"苏州博物馆及原摄影/设计权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/427421150c11c66f.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/sprit.png\",\n      \"width\": 500,\n      \"height\": 150,\n      \"format\": \"png\",\n      \"bytes\": 10219,\n      \"sha256\": \"6a0c81bbb590b31239209972356a87cdf6a1434e298b0e6c5cd8e3e422cecaec\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/cb6df0eebcc6fc6d.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/images/reg.png\",\n      \"width\": 20,\n      \"height\": 20,\n      \"format\": \"png\",\n      \"bytes\": 1213,\n      \"sha256\": \"dd14ec54801a54d9e048e1b50a5337571a2ce6f5c54eb1f7ee2b9070b30b21fd\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/96126fdaf8684fdf.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/images/sprit.png\",\n      \"width\": 200,\n      \"height\": 200,\n      \"format\": \"png\",\n      \"bytes\": 12367,\n      \"sha256\": \"b6bdcb9113f0e6806cac6dedbb18f8b0670fbc5c32c8449266301839602e6193\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/f5a5a300cea045df.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/link-down.png\",\n      \"width\": 30,\n      \"height\": 14,\n      \"format\": \"png\",\n      \"bytes\": 14857,\n      \"sha256\": \"2ec2a025c5cfd23e3cf4cce2a136c7018dfc1a297946f095109d6404cabde022\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/39d197d7bea119a6.gif\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/min.gif\",\n      \"width\": 21,\n      \"height\": 40,\n      \"format\": \"gif\",\n      \"bytes\": 451,\n      \"sha256\": \"b897f061cac0f9091d995dd9abd4dac4d5558d60a2351836e64a8e131521b379\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/cc4eb8a7295852e5.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/tzgg.png\",\n      \"width\": 26,\n      \"height\": 26,\n      \"format\": \"png\",\n      \"bytes\": 1260,\n      \"sha256\": \"e92bad6472cbf9be4e8420cae250b77463635afed6fb249d5b2ad56b9f1973e6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/858474d4071ac635.gif\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/max.gif\",\n      \"width\": 21,\n      \"height\": 40,\n      \"format\": \"gif\",\n      \"bytes\": 488,\n      \"sha256\": \"7a754b02e2d035e5e7bc29c4c4a91e2456a88bf96faf18e9e9e786a948fae93e\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/5cb42ce17da8a1ce.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/images/loginbg.png\",\n      \"width\": 358,\n      \"height\": 244,\n      \"format\": \"png\",\n      \"bytes\": 31600,\n      \"sha256\": \"50f81d69500a07e356b4584164efbae4a5c9a0b40bddf2b57a0f3191d7c62d2d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/8086d7c12e806cb1.png\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/closeinfo.png\",\n      \"width\": 34,\n      \"height\": 34,\n      \"format\": \"png\",\n      \"bytes\": 1994,\n      \"sha256\": \"1631240c9d39c183ed2042757a9723d94e9aa0145ca7e84b9525aea12a454ee9\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/55d0b17a7a72e481.gif\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/close.gif\",\n      \"width\": 21,\n      \"height\": 40,\n      \"format\": \"gif\",\n      \"bytes\": 506,\n      \"sha256\": \"750e7d4ebb55ab88f3b379e9e2b9444468b35ffe5d0e44db679ce323c3cc5f74\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/jquery-3.5.1.min.js\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Scripts/jquery-3.5.1.min.js\",\n      \"bytes\": 89476,\n      \"sha256\": \"f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站轮播/分页运行库，保留原文件头署名；不含统计和账户脚本。\",\n      \"copyright\": \"原库作者，见源文件头；原站页面研究。\"\n    },\n    {\n      \"file\": \"assets/jquery-ui.min.js\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Scripts/fullpage/js/jquery-ui.min.js\",\n      \"bytes\": 252957,\n      \"sha256\": \"0254e2768f39b973e54b2c9a64db23257782b34ede4afdebe3793209573c0a12\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站轮播/分页运行库，保留原文件头署名；不含统计和账户脚本。\",\n      \"copyright\": \"原库作者，见源文件头；原站页面研究。\"\n    },\n    {\n      \"file\": \"assets/jquery.fullPage.min.js\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Scripts/fullpage/js/jquery.fullPage.min.js\",\n      \"bytes\": 13732,\n      \"sha256\": \"103296b0f78cbc33b6e16b478d4543ce8895597e5d652f75adc1e39ffd8e5c62\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站轮播/分页运行库，保留原文件头署名；不含统计和账户脚本。\",\n      \"copyright\": \"原库作者，见源文件头；原站页面研究。\"\n    },\n    {\n      \"file\": \"assets/owl.carousel.min.js\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Scripts/owl.carousel/owl.carousel.min.js\",\n      \"bytes\": 24209,\n      \"sha256\": \"db783bcdd9eacda7f1b78dc956e7c1ec8b63211db0eca989caea1371125b3a98\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站轮播/分页运行库，保留原文件头署名；不含统计和账户脚本。\",\n      \"copyright\": \"原库作者，见源文件头；原站页面研究。\"\n    },\n    {\n      \"file\": \"assets/lrtk.js\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Scripts/slideshow/js/lrtk.js\",\n      \"bytes\": 9986,\n      \"sha256\": \"0893dba0aa7423ee7051a511a67c39509706f7349ea3a0b3cc3d088a86644c94\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站轮播/分页运行库，保留原文件头署名；不含统计和账户脚本。\",\n      \"copyright\": \"原库作者，见源文件头；原站页面研究。\"\n    },\n    {\n      \"file\": \"assets/unavailable.svg\",\n      \"sourceUrl\": \"https://www.szmuseum.com/StaticFile/Images/index/r-btn.png\",\n      \"bytes\": 272,\n      \"sha256\": \"de2000603d83eecf42b4e235922b57361aba2df79c1a26d23ade266cfa8a1faa\",\n      \"format\": \"svg\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"original-fallback\",\n      \"purpose\": \"源端隐藏箭头URL返回HTML，本地不可见控制使用原创占位SVG；不替代任何主要摄影或可见入口。\",\n      \"transform\": \"本地占位绘制，不声称来源下载图像。\",\n      \"copyright\": \"Design Atlas原创占位；来源URL只记录未取得的目标。\"\n    }\n  ],\n  \"sharedDependencies\": [\n    {\n      \"path\": \"asset-sources.js\",\n      \"purpose\": \"公共素材映射，由主库固定提交SHA生成；不是官网代码。\"\n    },\n    {\n      \"path\": \"asset-runtime.js\",\n      \"purpose\": \"公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。\"\n    },\n    {\n      \"path\": \"asset-cache.js\",\n      \"purpose\": \"公共媒体缓存入口，独立异步加载，不阻断静态内容。\"\n    },\n    {\n      \"path\": \"asset-cache-worker.js\",\n      \"purpose\": \"asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。\"\n    }\n  ],\n  \"unavailable\": [\n    {\n      \"url\": \"https://www.szmuseum.com/StaticFile/Images/index/l-btn.png\",\n      \"error\": \"TimeoutError: The operation was aborted due to timeout\",\n      \"scope\": \"源端隐藏箭头图；非可见导航\"\n    },\n    {\n      \"url\": \"https://www.szmuseum.com/StaticFile/Images/index/r-btn.png\",\n      \"error\": \"Error: 200 text/html\",\n      \"scope\": \"源端隐藏箭头图；非可见导航\"\n    },\n    {\n      \"url\": \"https://www.szmuseum.com/StaticFile/Styles/images/max.gif\",\n      \"error\": \"Error: 200 text/html\",\n      \"scope\": \"未使用或非定义性CSS声明，不表示主要摄影缺失\"\n    },\n    {\n      \"url\": \"https://www.szmuseum.com/StaticFile/Styles/modal-gloss.png\",\n      \"error\": \"Error: 200 text/html\",\n      \"scope\": \"未使用或非定义性CSS声明，不表示主要摄影缺失\"\n    },\n    {\n      \"url\": \"https://www.szmuseum.com/StaticFile/Images/index/title_bg.gif\",\n      \"error\": \"Error: 200 text/html\",\n      \"scope\": \"未使用或非定义性CSS声明，不表示主要摄影缺失\"\n    },\n    {\n      \"url\": \"https://www.szmuseum.com/StaticFile/Scripts/owl.carousel/grabbing.png\",\n      \"error\": \"Error: 200 text/html\",\n      \"scope\": \"未使用或非定义性CSS声明，不表示主要摄影缺失\"\n    }\n  ],\n  \"mobileScope\": \"官网按移动UA跳转/Wap/Home/Index；本次该入口连接未成功，手机使用明确的同内容响应适配，不声称官网WAP像素复刻。\"\n}\n",
+      "sha256": "90fc77897b8aee9bc8f9558886555847aa95f1595f98256e76fefd2bad24e9d9",
+      "bytes": 34137
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
+      "bytes": 132498
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/suzhou-museum/LICENSE-jQuery-UI.txt",
+      "role": "context",
+      "sha256": "f649025cf65c8dcd8588b0937883ba7a52bdb6d35129464a36a1602eb00250f1",
+      "bytes": 1818
+    },
+    {
+      "path": "demos/suzhou-museum/LICENSE-jQuery.txt",
+      "role": "context",
+      "sha256": "d4db9ebe6f29f5168eac45ad713f055623ac5d0dcd5ba92da23d650ae012020d",
+      "bytes": 1097
+    },
+    {
+      "path": "demos/suzhou-museum/THIRD-PARTY-NOTICES.md",
+      "role": "context",
+      "sha256": "357c8456597955b8d6975c30541df7a89ffc318670fe0e086dea2a6eb09c9b13",
+      "bytes": 926
+    },
+    {
+      "path": "demos/suzhou-museum/app.js",
+      "role": "source",
+      "sha256": "fe087a68c0aebb6f556dc26d0ad7d8e8aa9c3734185c9538075fe672dd42e2e6",
+      "bytes": 2535
+    },
+    {
+      "path": "demos/suzhou-museum/assets-manifest.json",
+      "role": "context",
+      "sha256": "90fc77897b8aee9bc8f9558886555847aa95f1595f98256e76fefd2bad24e9d9",
+      "bytes": 34137
+    },
+    {
+      "path": "demos/suzhou-museum/assets/06e3090c47f4d8ec.jpg",
+      "role": "asset",
+      "sha256": "ac4fcca4a62283e58a500508c0a799b9841e0696aab3d754959d9d845c23b773",
+      "bytes": 140890
+    },
+    {
+      "path": "demos/suzhou-museum/assets/0e5b616d48a82d29.jpg",
+      "role": "asset",
+      "sha256": "4d63be0b0120b5e295d0ddab0db4531efd368d0475f2d30c8e12031f7941e31a",
+      "bytes": 121126
+    },
+    {
+      "path": "demos/suzhou-museum/assets/0fc79f9e29e800b9.jpg",
+      "role": "asset",
+      "sha256": "86166ee5b2236c8baebaa5c8700618a7d5e8d2273a023b2ac04fa53d5c9a9365",
+      "bytes": 1530023
+    },
+    {
+      "path": "demos/suzhou-museum/assets/2d0cdd2b2f235b70.jpg",
+      "role": "asset",
+      "sha256": "62ef4a28014c0892cf1e7c345fbc438a15d600c30db855c2ff27fb9af982a123",
+      "bytes": 3188780
+    },
+    {
+      "path": "demos/suzhou-museum/assets/3379fe1fdb1853d2.jpg",
+      "role": "asset",
+      "sha256": "a5b38a1b3fb41a7bf358987f3c3058ff6b9beaa38c3664ae7230cb9462d93835",
+      "bytes": 2599554
+    },
+    {
+      "path": "demos/suzhou-museum/assets/3909d8d6f7de1a5d.jpg",
+      "role": "asset",
+      "sha256": "22d27577a5995a54186d5abd47b969f6531e669e857284412ae210e52919a1b2",
+      "bytes": 3819528
+    },
+    {
+      "path": "demos/suzhou-museum/assets/39d197d7bea119a6.gif",
+      "role": "asset",
+      "sha256": "b897f061cac0f9091d995dd9abd4dac4d5558d60a2351836e64a8e131521b379",
+      "bytes": 451
+    },
+    {
+      "path": "demos/suzhou-museum/assets/427421150c11c66f.png",
+      "role": "asset",
+      "sha256": "6a0c81bbb590b31239209972356a87cdf6a1434e298b0e6c5cd8e3e422cecaec",
+      "bytes": 10219
+    },
+    {
+      "path": "demos/suzhou-museum/assets/438bdec25e4fbd7f.png",
+      "role": "asset",
+      "sha256": "93573968c2f8de01e5e9fe478e9e7a12258c362f89ed819a93e2d9cbde1b8ba2",
+      "bytes": 1308
+    },
+    {
+      "path": "demos/suzhou-museum/assets/4862cfe9d6b97a47.png",
+      "role": "asset",
+      "sha256": "99eb90eecf7fdd14c4fe242db927bccdce387e191d885a73957c5a1431202d65",
+      "bytes": 22932
+    },
+    {
+      "path": "demos/suzhou-museum/assets/4e51d01a5e0c269b.jpg",
+      "role": "asset",
+      "sha256": "116f805b77977e66a005983116235b211683e94bfd7a9201e2ffb0090316b858",
+      "bytes": 198363
+    },
+    {
+      "path": "demos/suzhou-museum/assets/5179e88fe8318d74.png",
+      "role": "asset",
+      "sha256": "a77666cd786dcbaa79b9ae8366e23e01ea24571d14fbd4c45ae433b0d98edc0a",
+      "bytes": 4640
+    },
+    {
+      "path": "demos/suzhou-museum/assets/55d0b17a7a72e481.gif",
+      "role": "asset",
+      "sha256": "750e7d4ebb55ab88f3b379e9e2b9444468b35ffe5d0e44db679ce323c3cc5f74",
+      "bytes": 506
+    },
+    {
+      "path": "demos/suzhou-museum/assets/5ac82559d5a8f599.png",
+      "role": "asset",
+      "sha256": "858ad967aaf33380e78e20909a3221de2b271c8081b37337a6c1de986144b2ef",
+      "bytes": 1997016
+    },
+    {
+      "path": "demos/suzhou-museum/assets/5cb42ce17da8a1ce.png",
+      "role": "asset",
+      "sha256": "50f81d69500a07e356b4584164efbae4a5c9a0b40bddf2b57a0f3191d7c62d2d",
+      "bytes": 31600
+    },
+    {
+      "path": "demos/suzhou-museum/assets/5d906cecb72b5bde.jpg",
+      "role": "asset",
+      "sha256": "c3aa1b2fed4127ef6e69ab83d744b199a9dfdad8d55387ce269bce2dfb4a0838",
+      "bytes": 1924012
+    },
+    {
+      "path": "demos/suzhou-museum/assets/5edc24c75fe5bb34.png",
+      "role": "asset",
+      "sha256": "397a083b68daf60a955d62b9d57a005559df67e7fce377d99238452ae941196b",
+      "bytes": 924
+    },
+    {
+      "path": "demos/suzhou-museum/assets/5fecbb906b367a3d.png",
+      "role": "asset",
+      "sha256": "aaeb61813ea34325a0d9a51ee4eb3d3601b8927b5bd4cca097e8b0e7dacdf838",
+      "bytes": 927
+    },
+    {
+      "path": "demos/suzhou-museum/assets/6440784e6a2d5fd9.jpg",
+      "role": "asset",
+      "sha256": "94b7cac21e2356b15eab5962fbaa329627146e193a4409ffec53af9ee218a7a0",
+      "bytes": 29981
+    },
+    {
+      "path": "demos/suzhou-museum/assets/7a7f8f1e54235cfb.jpg",
+      "role": "asset",
+      "sha256": "caf8364fa37e8fabf32906da5521be063f2100ce4e284129457b0d3e7bfb748d",
+      "bytes": 39985
+    },
+    {
+      "path": "demos/suzhou-museum/assets/8086d7c12e806cb1.png",
+      "role": "asset",
+      "sha256": "1631240c9d39c183ed2042757a9723d94e9aa0145ca7e84b9525aea12a454ee9",
+      "bytes": 1994
+    },
+    {
+      "path": "demos/suzhou-museum/assets/858474d4071ac635.gif",
+      "role": "asset",
+      "sha256": "7a754b02e2d035e5e7bc29c4c4a91e2456a88bf96faf18e9e9e786a948fae93e",
+      "bytes": 488
+    },
+    {
+      "path": "demos/suzhou-museum/assets/912d1002fe6bade0.png",
+      "role": "asset",
+      "sha256": "6189a29f86e1756d1970f4446b9f836642c283c373d312dbddeb42411f1608e6",
+      "bytes": 11143
+    },
+    {
+      "path": "demos/suzhou-museum/assets/96126fdaf8684fdf.png",
+      "role": "asset",
+      "sha256": "b6bdcb9113f0e6806cac6dedbb18f8b0670fbc5c32c8449266301839602e6193",
+      "bytes": 12367
+    },
+    {
+      "path": "demos/suzhou-museum/assets/96d238af6b026b00.png",
+      "role": "asset",
+      "sha256": "d97d9d481b48f1cd2f93b23d3069c2378a246244cd951ddef15364e8a4323e34",
+      "bytes": 1793
+    },
+    {
+      "path": "demos/suzhou-museum/assets/a612568ea26c6b8b.jpg",
+      "role": "asset",
+      "sha256": "6545ba5a0653f3c20d7957f27971b9cbbcdd40a3c4b1c4224c544bbc03735561",
+      "bytes": 83393
+    },
+    {
+      "path": "demos/suzhou-museum/assets/a64f306e51e9706d.png",
+      "role": "asset",
+      "sha256": "ae415a565314ffaf56c8de1461579bd0ef3041c96b8f60aa8c191cc334a33618",
+      "bytes": 29679
+    },
+    {
+      "path": "demos/suzhou-museum/assets/b29073789c48535f.jpg",
+      "role": "asset",
+      "sha256": "34839b073d0316547aa79f365c6ba840f04539f7c03db394f02fa83581485b21",
+      "bytes": 120736
+    },
+    {
+      "path": "demos/suzhou-museum/assets/b45f1532a1cfaf8a.jpg",
+      "role": "asset",
+      "sha256": "7b75196af437facec5bf073d73c999f90b73ffe13c32aed7f6a1bef7acfd4ea9",
+      "bytes": 3911758
+    },
+    {
+      "path": "demos/suzhou-museum/assets/b4cd86f380a92ee6.jpg",
+      "role": "asset",
+      "sha256": "29a622e7cd20f0cb6b50849dbe2968469b3dd1bc3c8095e586ea0db1eebec443",
+      "bytes": 410312
+    },
+    {
+      "path": "demos/suzhou-museum/assets/bc92965fe106d3fd.jpg",
+      "role": "asset",
+      "sha256": "b49206330592638a9f652291a3460c90cf62c3923001e6f4edebe8244253ee08",
+      "bytes": 78534
+    },
+    {
+      "path": "demos/suzhou-museum/assets/bf8c2ccda9a545cd.jpg",
+      "role": "asset",
+      "sha256": "372be7eede078a5f5ba598f06f4e5b05acc37eed039e4c89c367a7ba539e77c1",
+      "bytes": 99130
+    },
+    {
+      "path": "demos/suzhou-museum/assets/cb6df0eebcc6fc6d.png",
+      "role": "asset",
+      "sha256": "dd14ec54801a54d9e048e1b50a5337571a2ce6f5c54eb1f7ee2b9070b30b21fd",
+      "bytes": 1213
+    },
+    {
+      "path": "demos/suzhou-museum/assets/cc4eb8a7295852e5.png",
+      "role": "asset",
+      "sha256": "e92bad6472cbf9be4e8420cae250b77463635afed6fb249d5b2ad56b9f1973e6",
+      "bytes": 1260
+    },
+    {
+      "path": "demos/suzhou-museum/assets/d2f395ebc4b011b3.jpg",
+      "role": "asset",
+      "sha256": "a5c77a620ec64c570377b7c23ec699e5e5809d30fc02120d67e56923e35f6903",
+      "bytes": 37867
+    },
+    {
+      "path": "demos/suzhou-museum/assets/e375cfd2f05986af.jpg",
+      "role": "asset",
+      "sha256": "f4ec16e9aca7ba2684e5d80b7585ef42f09e18382af21a2e676804245d261802",
+      "bytes": 58524
+    },
+    {
+      "path": "demos/suzhou-museum/assets/f325da10590fdefb.jpg",
+      "role": "asset",
+      "sha256": "99de2fa08ce8de616f5f7721ee45f22931449d2dd3cc49ab69607cc6d748e2ef",
+      "bytes": 69711
+    },
+    {
+      "path": "demos/suzhou-museum/assets/f5a5a300cea045df.png",
+      "role": "asset",
+      "sha256": "2ec2a025c5cfd23e3cf4cce2a136c7018dfc1a297946f095109d6404cabde022",
+      "bytes": 14857
+    },
+    {
+      "path": "demos/suzhou-museum/assets/faeccabc704b2e9f.gif",
+      "role": "asset",
+      "sha256": "98a4ab97e12555ab969012d151a578dae7a3b8699d202485fcf8116e55497735",
+      "bytes": 719
+    },
+    {
+      "path": "demos/suzhou-museum/assets/jquery-3.5.1.min.js",
+      "role": "asset",
+      "sha256": "f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d",
+      "bytes": 89476
+    },
+    {
+      "path": "demos/suzhou-museum/assets/jquery-ui.min.js",
+      "role": "asset",
+      "sha256": "0254e2768f39b973e54b2c9a64db23257782b34ede4afdebe3793209573c0a12",
+      "bytes": 252957
+    },
+    {
+      "path": "demos/suzhou-museum/assets/jquery.fullPage.min.js",
+      "role": "asset",
+      "sha256": "103296b0f78cbc33b6e16b478d4543ce8895597e5d652f75adc1e39ffd8e5c62",
+      "bytes": 13732
+    },
+    {
+      "path": "demos/suzhou-museum/assets/lrtk.js",
+      "role": "asset",
+      "sha256": "0893dba0aa7423ee7051a511a67c39509706f7349ea3a0b3cc3d088a86644c94",
+      "bytes": 9986
+    },
+    {
+      "path": "demos/suzhou-museum/assets/owl.carousel.min.js",
+      "role": "asset",
+      "sha256": "db783bcdd9eacda7f1b78dc956e7c1ec8b63211db0eca989caea1371125b3a98",
+      "bytes": 24209
+    },
+    {
+      "path": "demos/suzhou-museum/assets/unavailable.svg",
+      "role": "asset",
+      "sha256": "de2000603d83eecf42b4e235922b57361aba2df79c1a26d23ade266cfa8a1faa",
+      "bytes": 272
+    },
+    {
+      "path": "demos/suzhou-museum/fidelity.md",
+      "role": "context",
+      "sha256": "25afd2191c37c24862279f502ea9b9be7b9d6ef0d94477e347bf933699c8e56a",
+      "bytes": 3599
+    },
+    {
+      "path": "demos/suzhou-museum/index.html",
+      "role": "source",
+      "sha256": "ba1d6606f3a34a6810f2207dc80d246d6940b00a80d7d817ee5ef6d50b8bb2b3",
+      "bytes": 30760
+    },
+    {
+      "path": "demos/suzhou-museum/state-matrix.md",
+      "role": "context",
+      "sha256": "72591c1a89bdbbee53a66a75d5f4ca408c7d2fd193b3952e064bca6508e63acc",
+      "bytes": 4609
+    },
+    {
+      "path": "demos/suzhou-museum/style.css",
+      "role": "source",
+      "sha256": "ab8a2afa42fb5754f5bc16600758dc6ce9557c62e159c169bf0039b284feccdb",
+      "bytes": 36860
+    },
+    {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
+      "bytes": 4329
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
+    },
+    {
+      "path": "entries/suzhou-museum.json",
+      "role": "context",
+      "sha256": "4683fc1a9a3d7e7db2a7e2f92840ac39dea1b1114913d88a1d7b52775d7a0044",
+      "bytes": 8692
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "dc26891beb1bbf6fa227594bc248be56cf11971433fcaef7d0ab1a9353dcacbf",
+      "bytes": 256
+    },
+    {
+      "path": "previews/mobile/suzhou-museum.jpg",
+      "role": "preview",
+      "sha256": "6c8022107830ff37b298acf2b282406600d193261bae2cc150de15845b9aef05",
+      "bytes": 65586
+    },
+    {
+      "path": "previews/suzhou-museum.jpg",
+      "role": "preview",
+      "sha256": "7380a3aa9130ec2482946ccb5ddbbe9d14f428b8c0ffc8ef4432d676c8cbbae3",
+      "bytes": 297532
+    },
+    {
+      "path": "prompts/suzhou-museum.md",
+      "role": "context",
+      "sha256": "938e539c1a58c62c2e2050cb7d4a855a3a4476aa4656b3e566167463f0041b5f",
+      "bytes": 2159
+    },
+    {
+      "path": "research/suzhou-museum.md",
+      "role": "context",
+      "sha256": "3519e4169559c91c28d51fcb9c15d84b168df0c8029c88b29483e7fac2b0b6de",
+      "bytes": 3215
+    },
+    {
+      "path": "site-footer.css",
+      "role": "source",
+      "sha256": "c02e4d66015d205b9e82b143085aafdeae707b1df4feb734df69a129d8c34840",
+      "bytes": 3146
+    },
+    {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
+      "bytes": 14852
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
+      "bytes": 4447
+    },
+    {
+      "path": "site-typography.css",
+      "role": "source",
+      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
+      "bytes": 15208
+    },
+    {
+      "path": "theme-control.css",
+      "role": "source",
+      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
+      "bytes": 2236
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "a58190fc01230d486eecaa99264bf132ba127d68918131a6f2f4798fb2e2cadf",
+      "bytes": 2716
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=suzhou-museum\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源端观察：白色界面、黑灰文字、少量红色机构标识，资讯瓦片用粉墙与深灰边饰的建筑摄影。</dd></div><div class=\"\"><dt>字体排版</dt><dd>原机构PNG书写字标和Microsoft Yahei导航/标签；类目1.5em、字距5px，非系统衬线重写品牌。</dd></div><div class=\"\"><dt>布局留白</dt><dd>四屏完整结构；50px左右外缘，1440×900时主画面1340×755；第三屏按原九项/75%与25%两区组织。</dd></div><div class=\"\"><dt>图像图标</dt><dd>原站当前两张首页图、七项展览摄影、九项目的地、两张访问背景、字标和图饰本地化。</dd></div><div class=\"\"><dt>线条形状</dt><dd>源网页大白边界、方角画面、窄白缝和四条灰色章节导航；建筑轮廓在真实摄影内，删除首版额外黑灰框线教学组件。</dd></div><div class=\"\"><dt>信息层级</dt><dd>四屏分别解决机构进入、展览浏览、内容目的地、到访；网站地图在底栏展开，语义入口不依赖图库猜测。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>原站fullPage、Owl、lrtk真实源码配置与交互验证；保留反向、循环、hover和触摸，减少动态禁用自动与位移。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>真实建筑和馆藏摄影与白色空间相互支撑，陶红只标记少量入口/焦点；官网业务明确外链。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>图像直接承担目的地入口，每个区域保留清晰的文字名称，而非把所有图像压成统一比例卡片。</li><li>粉墙黛色与自然光来自建筑本身；网页借助白色留白、方形边界和真实摄影承接这种识别。</li><li>目录选择与参观服务分别成章，图片的观看节奏和到访任务不互相覆盖。</li></ul><h3>怎样凸显产品重点</h3><p>从机构门户进入馆藏、展览、学习和建筑内容，并把预约及实时到访信息交给官方服务。</p><h3>主题与情绪</h3><p>原站白色外缘、黑灰机构文字、建筑及藏品原色、少量红色开放信息与方角画面。</p></section><section><h2>02 / 交互巧思</h2><ul><li>首页完整四屏：建筑双图轮播、七项展览、九目的地图像矩阵及开放时间/预约；用原站fullPage1.5.3、jQuery UI缓动和同一锚点/700ms受控滚动，第四屏向下循环回第一屏。</li><li>轮播：首屏Owl单图5000ms自动、800ms切换、fade效果、hover暂停；展览lrtk七项5000ms、500ms淡入，箭头/七条指示条及横向触摸，所有正式展览链接回官方。</li><li>图像目的地：资讯、云课堂、馆藏、活动、文创、数字苏博、展览、游戏、建筑美图九项原图/常显类目均保留，左右75%/25%及每块尺寸按源CSS。</li><li>悬停：原站CSS scale1.1/500ms与脚本图宽增加1.1倍/300ms共同作用；数字苏博单独增高，保留真实实现而非泛化轻微缩放。</li><li>访问与页尾：两张真实访问背景、70%半透明白板、原开放信息及预约链接，完整底栏网站地图展开500ms、浏览建议悬停；不添加建筑解说dialog。</li><li>原站初载被第三方统计阻塞jQuery.ready，四屏交互取自明确记录的受控启动及原源码；移动UA路由/Wap/Home/Index本次连接失败，本地手机为同内容长页适配。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。</p><p>固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。</p><p>阅读、图像和目录操作承担信息引导。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>固定同日四屏、当前七项展览及九个图像入口，不声称预约、留言、商店、课堂或账户业务复制。</li><li>公开摄影、机构字标、两类轮播和全部页面纹理/图饰检查本地化；保持原字节及水印。</li><li>原站初载第三方阻塞与受控jQuery.ready验证分开记录，正常访客加载效果不能由受控状态推断。</li><li>源PC最小1366px、移动UA跳到独立WAP；未取得WAP内容，因此手机响应适配明确不作为原站移动端像素复刻。</li><li>部分源CSS的未用背景或隐藏箭头URL返回HTML，记录失败，不用猜测图片替代可见主要素材。</li></ul><h3>适合</h3><p>有多个清晰内容目的地的文化机构门户 / 建筑与城市文化展示 / 馆藏、学习与参观并行的博物馆主页</p><h3>谨慎使用</h3><p>图片缺少语义、只靠悬停才显示入口名称的门户 / 把所有文化机构都改成同一张水墨背景的主题页</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#303a3b\"></i>#303a3b</span><span class=\"swatch\"><i style=\"background:#aa4d35\"></i>#aa4d35</span><span class=\"swatch\"><i style=\"background:#827f75\"></i>#827f75</span><span class=\"swatch\"><i style=\"background:#e5e5de\"></i>#e5e5de</span></div><p><b>字体</b> · Microsoft Yahei/微软雅黑；原机构PNG字标，源CSS导航和类目字号。<br><b>布局</b> · 50px外缘、4个整屏；2张建筑图→7项展览→75/25九入口矩阵→双访问面板；390px同内容长页适配。<br><b>动效</b> · fullPage700ms/easeInQuart、首屏5000ms/800ms fade、展览5000ms/500ms、矩阵双重1.1倍hover及500ms网站地图。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>完整复现2026-10-09苏州博物馆中文PC首页的四屏，不只截第3/4屏。采用源字标、摄影、50px白色外缘、四条章节导航和fullPage700ms受控滚动/第四屏循环；首屏2图5000ms/800ms fade及hover暂停，展览7项5000ms/500ms淡入/7指示条，九目的地按75/25和原多尺度几何排列，标签常显，复用源CSS与脚本双重hover；第四屏保留两张背景及70%半透明开放/预约白板，底栏含500ms网站地图及浏览建议。所有源可见素材和jQuery UI缓动依赖本地化。第三方统计阻塞及受控启动写清证据，WAP未取到时将手机同内容适配明确标出，不能宣称原移动端复刻。官方服务保持真实外链，减少动态关闭自动轮播，别添加不在源站的建筑dialog或框线卡片。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。</p></details><h3>改造练习</h3><p>把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.szmuseum.com/Home/Index\" target=\"_blank\" rel=\"noopener noreferrer\">苏州博物馆 · 中文官网图像目录 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>重新读取原DOM、homeindex/reset/innerfooter/fullPage/Owl/lrtk样式及运行库；冷加载被统计阻塞后明确jQuery.ready受控启动，对照四屏与真实导航/hover/轮播；详见state-matrix.md。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.szmuseum.com/Other/MuseumIntro\" target=\"_blank\" rel=\"noopener noreferrer\">苏州博物馆 · 贝聿铭与苏博 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>官方建筑说明支持粉墙黛色、深灰石材边饰、自然光与江南园林的地域识别；网页迁移是本库解释。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Non-text Content <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>图像目的地用常显名称给链接命名，避免全部信息仅置于背景影像。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/reflow.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Reflow <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>本地矩阵窄屏重排并保留逻辑DOM顺序；规范是迁移约束，不表示官网合规审计。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fsuzhou-museum.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "6334db0dd2f36342544eb914392f15bd6aa6d09ea499e655c55b60e33bafdd3d",
+    "bytes": 9580
+  }
+}

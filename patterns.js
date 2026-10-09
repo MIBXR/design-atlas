@@ -99,6 +99,139 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "architectural-fragment-anchor",
+    "title": "建筑局部与名称目录锚点",
+    "category": "视觉构成",
+    "summary": "用真实建筑的一角让大色面具有地点身份。",
+    "mechanism": "朱红实物纹理内以真实透明屋脊和独立圆形题饰定位建筑身份，左侧说明与八项名称目录承担检索；图像不替代文字入口。",
+    "trigger": "进入建筑或文化章节",
+    "effect": "色面获得具体文化对象，文字入口仍然可扫描。",
+    "useCases": [
+      "古建筑与文化遗产机构",
+      "有真实构件素材的城市展览"
+    ],
+    "avoid": [
+      "用任意龙凤或屋顶剪影装饰不相关内容"
+    ],
+    "constraints": [
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
+      "pairsWellWith": [
+        "section-color-rhythm",
+        "direct-purpose-navigation"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
+    },
+    "parameters": [
+      {
+        "name": "源建筑容器",
+        "value": "1258px主内容，min-height590px，padding100px 0",
+        "note": "来自探索页适用CSS与DOM。"
+      },
+      {
+        "name": "源屋脊/题饰",
+        "value": "屋脊宽74.721%；圆形题饰13.276%",
+        "note": "源CSS布局比例；手机有独立断点。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「建筑局部与名称目录锚点」。朱红实物纹理内以真实透明屋脊和独立圆形题饰定位建筑身份，左侧说明与八项名称目录承担检索；图像不替代文字入口。 源建筑容器：1258px主内容，min-height590px，padding100px 0。来自探索页适用CSS与DOM。 源屋脊/题饰：屋脊宽74.721%；圆形题饰13.276%。源CSS布局比例；手机有独立断点。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
+    "sources": [
+      {
+        "caseId": "palace-museum",
+        "locator": "entries/palace-museum.json#interaction/1",
+        "observation": "建筑目录：朱红实物纹理与透明屋脊、独立圆形“建筑”题饰并置，八个建筑名称及更多建筑/地图均保留官方目的地。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.dpm.org.cn/Explore.html",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/palace-museum.json",
+      "research/palace-museum.md",
+      "demos/palace-museum/fidelity.md",
+      "demos/palace-museum/index.html",
+      "demos/palace-museum/style.css",
+      "demos/palace-museum/app.js",
+      "demos/palace-museum/state-matrix.md"
+    ]
+  },
+  {
+    "id": "architectural-outline-whitespace",
+    "title": "机构摄影的白色外缘",
+    "category": "视觉构成",
+    "summary": "以白色外缘、窄缝和访问白板组织真实机构摄影。",
+    "mechanism": "用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。",
+    "trigger": "阅读建筑说明或相关文化章节",
+    "effect": "深色边饰与浅色空间建立清楚轮廓，地域识别保持与真实建筑的联系。",
+    "useCases": [
+      "建筑文化、现代博物馆与空间介绍",
+      "有明确建筑构成依据的文化页面"
+    ],
+    "avoid": [
+      "只凭国别为任何页面强加黑白几何框",
+      "为复制建筑轮廓遮住文字和图像"
+    ],
+    "constraints": [
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
+      "pairsWellWith": [
+        "editorial-alignment-grid",
+        "image-destination-mosaic"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
+    },
+    "parameters": [
+      {
+        "name": "源桌面外缘",
+        "value": "left/right50px；top9px，bottom30px",
+        "note": "1440×900时主内容1340×755，来自源计算样式。"
+      },
+      {
+        "name": "白色层级",
+        "value": "页面外缘/入口白缝/访问70%半透明白板",
+        "note": "源主页三种实际空间关系；不再使用首版7px黑框组件。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「机构摄影的白色外缘」。用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。 源桌面外缘：left/right50px；top9px，bottom30px。1440×900时主内容1340×755，来自源计算样式。 白色层级：页面外缘/入口白缝/访问70%半透明白板。源主页三种实际空间关系；不再使用首版7px黑框组件。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
+    "sources": [
+      {
+        "caseId": "suzhou-museum",
+        "locator": "entries/suzhou-museum.json#composition/layout",
+        "observation": "四屏完整结构；50px左右外缘，1440×900时主画面1340×755；第三屏按原九项/75%与25%两区组织。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.szmuseum.com/Home/Index",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/suzhou-museum.json",
+      "research/suzhou-museum.md",
+      "demos/suzhou-museum/fidelity.md",
+      "demos/suzhou-museum/index.html",
+      "demos/suzhou-museum/style.css",
+      "demos/suzhou-museum/app.js",
+      "demos/suzhou-museum/state-matrix.md"
+    ]
+  },
+  {
     "id": "artwork-caption-separation",
     "title": "作品原图与图下题注分工",
     "category": "内容组织",
@@ -333,6 +466,76 @@ window.DESIGN_PATTERNS = [
       "demos/zelda-world/style.css",
       "entries/zelda-world.json",
       "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "bounded-image-inspection",
+    "title": "公开边界内的瓦片细察",
+    "category": "交互反馈",
+    "summary": "让图像从全貌到局部，再明确回到总览。",
+    "mechanism": "独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。",
+    "trigger": "主动加减、滚轮缩放、拖动或键盘平移",
+    "effect": "用户按真实公开瓦片精度细察，并知道匿名浏览的缩放边界与更高清的官方入口。",
+    "useCases": [
+      "艺术图像、地图和文化遗产细读",
+      "有明确像素精度的工程图检查"
+    ],
+    "avoid": [
+      "低分辨率预览却宣称无限高清",
+      "用图像缩放拦截整个页面的正常滚动"
+    ],
+    "constraints": [
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
+      "pairsWellWith": [
+        "artwork-caption-separation",
+        "inline-detail-disclosure"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "Leaflet加减按钮有名称，画布可聚焦并用方向键平移；边界禁用状态保留，登录服务走官方。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
+    },
+    "parameters": [
+      {
+        "name": "源匿名地图范围",
+        "value": "minZoom9.75 / maxZoom12",
+        "note": "源maxNativeZoom15的65%/80%；不访问更高匿名未授权级别。"
+      },
+      {
+        "name": "源瓦片/逻辑尺寸",
+        "value": "1024px；21515×15796逻辑像素",
+        "note": "仅实取公开level10/11/12的9瓦片，不能据此声称完整原分辨率已归档。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「公开边界内的瓦片细察」。独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。 源匿名地图范围：minZoom9.75 / maxZoom12。源maxNativeZoom15的65%/80%；不访问更高匿名未授权级别。 源瓦片/逻辑尺寸：1024px；21515×15796逻辑像素。仅实取公开level10/11/12的9瓦片，不能据此声称完整原分辨率已归档。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
+    "sources": [
+      {
+        "caseId": "digital-dunhuang",
+        "locator": "entries/digital-dunhuang.json#interaction/3",
+        "observation": "壁画：莫高窟257窟主室西壁采用源站Leaflet 1.7.1与DeepZoom 2.0.0，21515×15796逻辑像素、1024瓦片，匿名minZoom9.75/maxZoom12，公开level10–12共9瓦片实际取得。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/digital-dunhuang.json",
+      "research/digital-dunhuang.md",
+      "demos/digital-dunhuang/fidelity.md",
+      "demos/digital-dunhuang/index.html",
+      "demos/digital-dunhuang/style.css",
+      "demos/digital-dunhuang/app.js",
+      "demos/digital-dunhuang/state-matrix.md",
+      "demos/digital-dunhuang/viewer.html",
+      "demos/digital-dunhuang/viewer.css",
+      "demos/digital-dunhuang/viewer.js"
     ]
   },
   {
@@ -1202,6 +1405,81 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "department-code-matrix",
+    "title": "机构缩写的中心矩阵",
+    "category": "视觉构成",
+    "summary": "保留特殊字标和非等宽的中心/外围关系，让代码同时表达机构身份和归属。",
+    "mechanism": "中心双行代码和九个外围短代码共享环形连字，黑白表面、倾斜与尺度差共同组织关系；细射线与小面积橙色节点连接焦点。完整名称与等价语义目录承担阅读，不将原字标重排成普通字体卡片。",
+    "trigger": "呈现机构代码目录",
+    "effect": "中心关系、不同科室的身份字标及当前焦点在同一视野中保留。",
+    "useCases": [
+      "有专用字标的机构目录",
+      "系统模块的关系图",
+      "影片图形的网页转译"
+    ],
+    "avoid": [
+      "把所有字标抹平成Arial缩写",
+      "只留五科室并误称完整矩阵",
+      "用节点颜色代替完整名称和选择语义"
+    ],
+    "constraints": [
+      "原作构成是一中心加九外围，代码与全称须逐项核对；新任务按真实组织替换，不能推断权限。",
+      "有使用权的SVG/图片或原帧可保留专用字形，不臆造字体名或声称3D源码移植。",
+      "热点点选、节点移动和说明属于网页adapted；视觉来源与触发分别记录。",
+      "手机保留原比例构图并提供正常字号目录，不以强制缩小全文代替可读入口。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "原画面保留字标与空间，DOM热点和可读目录共享一个选择状态；节点移动是适配，不伪造原片点击。矩阵与档案选择使用独立区域及状态。",
+      "pairsWellWith": [
+        "restrained-signal-color",
+        "aligned-metadata-rows"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "热点与等价目录均用语义按钮、可见焦点和aria-pressed，全称始终可读；手机可直接用正常字号目录。",
+      "reducedMotion": "原帧和矩阵静态保留；取消180ms节点移动，当前说明即时同步；片段由用户主动播放并可暂停。"
+    },
+    "parameters": [
+      {
+        "name": "本次源端模块",
+        "value": "CMPT CTRL + DEF/HRI/BSN/ENG/STRU/SCIEN/ORIG/NRG/ECO",
+        "note": "官方68秒原帧，中心1加外围9，非本地虚构机构。"
+      },
+      {
+        "name": "字标采集",
+        "value": "1920×1080 / 68.00秒原帧",
+        "note": "保留实际环形连字/表面/倾斜，未取得字体或3D工程。"
+      },
+      {
+        "name": "本地节点移动",
+        "value": "180ms",
+        "note": "CSS适配，减少动态关闭，非原片入场时长。"
+      }
+    ],
+    "prompt": "把机构代码整理为中心与外围的关系矩阵，保留有使用权的专用字标、环形连字、黑白表面、倾斜和尺度差，不能全部替换成普通字体等宽卡片。中心代码与九个外围模块通过细射线和小状态节点建立关系；每个代码提供完整名称和真实内容，不依据画面大小推断权限。网页热点与正常字号目录共用一个选择状态，同步节点、aria-pressed和说明；源端图形构成与新增点击/节点移动分别归档。手机完整保留原比例图形，等价目录承担可读操作。减少动态取消节点位移，保留静态当前项，影片片段主动播放并可暂停。",
+    "sources": [
+      {
+        "caseId": "rhine-lab",
+        "locator": "entries/rhine-lab.json#composition/typography",
+        "observation": "官方68秒原帧保留CMPT CTRL中心，以及DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九外围的环形连字、英文全称、黑白表面、透视倾斜及尺度差；网页控件使用系统字体，不替代原作字标。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "demos/rhine-lab/index.html",
+      "demos/rhine-lab/app.js",
+      "demos/rhine-lab/style.css",
+      "demos/rhine-lab/fidelity.md",
+      "demos/rhine-lab/assets-manifest.json",
+      "entries/rhine-lab.json",
+      "research/rhine-lab.md"
+    ]
+  },
+  {
     "id": "direct-purpose-navigation",
     "title": "机构目的地即时展开",
     "category": "导航与状态",
@@ -1538,6 +1816,75 @@ window.DESIGN_PATTERNS = [
       "demos/swiss-grid/index.html",
       "entries/swiss-grid.json",
       "research/swiss-grid.md"
+    ]
+  },
+  {
+    "id": "explicit-facet-summary",
+    "title": "分面条件在列表前显式呈现",
+    "category": "导航与状态",
+    "summary": "先说明筛选依据，再展示剩下的资料。",
+    "mechanism": "遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。",
+    "trigger": "选择条件、提交关键词或移除单项",
+    "effect": "用户能解释当前候选范围，并逐步放宽条件找回资料。",
+    "useCases": [
+      "文物、文献和研究资料库",
+      "具有真实多维元数据的目录"
+    ],
+    "avoid": [
+      "给没有元数据的图片强加风格分面"
+    ],
+    "constraints": [
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
+      "pairsWellWith": [
+        "filter-count-feedback",
+        "aligned-metadata-rows"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
+    },
+    "parameters": [
+      {
+        "name": "源分面维度",
+        "value": "遗址4/形制4/时代11，共19项",
+        "note": "每个单条件均取得源HTML/hash与成员集，见filter-evidence.json。"
+      },
+      {
+        "name": "固定档案集",
+        "value": "32项；北魏254/257/麦积127",
+        "note": "保留源目录与首页固定30统计的差异。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「分面条件在列表前显式呈现」。遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。 源分面维度：遗址4/形制4/时代11，共19项。每个单条件均取得源HTML/hash与成员集，见filter-evidence.json。 固定档案集：32项；北魏254/257/麦积127。保留源目录与首页固定30统计的差异。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
+    "sources": [
+      {
+        "caseId": "digital-dunhuang",
+        "locator": "entries/digital-dunhuang.json#interaction/2",
+        "observation": "条件反馈：点击原条件可移除，已选条件行显示并可取消，折叠筛选耗时1000ms；北魏实测254、257、麦积127三项，叠加榆林窟为零项，浏览器返回恢复。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.e-dunhuang.com/section.htm",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/digital-dunhuang.json",
+      "research/digital-dunhuang.md",
+      "demos/digital-dunhuang/fidelity.md",
+      "demos/digital-dunhuang/index.html",
+      "demos/digital-dunhuang/style.css",
+      "demos/digital-dunhuang/app.js",
+      "demos/digital-dunhuang/state-matrix.md",
+      "demos/digital-dunhuang/section.html",
+      "demos/digital-dunhuang/catalogue.js",
+      "demos/digital-dunhuang/filter-evidence.json"
     ]
   },
   {
@@ -2159,6 +2506,143 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "half-paper-category-label",
+    "title": "图像与半幅纸签分类",
+    "category": "视觉构成",
+    "summary": "作品负责观看，半幅浅纸签负责读清类别。",
+    "mechanism": "完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。",
+    "trigger": "浏览或聚焦文化专题目录",
+    "effect": "图像风格和类别名称同时可辨认，文字不依赖复杂纹样的局部对比。",
+    "useCases": [
+      "器物/书画/人物等文化专题",
+      "能解释图像与分类关系的展览导航"
+    ],
+    "avoid": [
+      "对大量长标题强行竖排",
+      "把分类名称烧入图片无法重排"
+    ],
+    "constraints": [
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
+      "pairsWellWith": [
+        "artwork-caption-separation",
+        "restrained-signal-color"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
+    },
+    "parameters": [
+      {
+        "name": "源专题类别",
+        "value": "器物、书画、文化、人物、展览",
+        "note": "准确类目以本页可读文字为准；五类全部保留。"
+      },
+      {
+        "name": "标签范围",
+        "value": "右半纸签，文字竖排",
+        "note": "源CSS与实际桌面/手机图片。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「图像与半幅纸签分类」。完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。 源专题类别：陶瓷、书画、文化、青铜器、工艺。准确类目以本页可读文字为准；五类全部保留。 标签范围：右半纸签，文字竖排。源CSS与实际桌面/手机图片。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
+    "sources": [
+      {
+        "caseId": "palace-museum",
+        "locator": "entries/palace-museum.json#composition/shape",
+        "observation": "源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.dpm.org.cn/Explore.html",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/palace-museum.json",
+      "research/palace-museum.md",
+      "demos/palace-museum/fidelity.md",
+      "demos/palace-museum/index.html",
+      "demos/palace-museum/style.css",
+      "demos/palace-museum/app.js",
+      "demos/palace-museum/state-matrix.md"
+    ]
+  },
+  {
+    "id": "hatched-registration-type",
+    "title": "斜线注册大字与前景记录",
+    "category": "视觉构成",
+    "summary": "让巨大背景字承担技术身份，让实心前景文字承担阅读。",
+    "mechanism": "用低对比斜线纹理填充巨大背景字，并以小编号、十字标定点和淡网格定位；前景姓名与资料保持实心、清楚边界和独立留白。",
+    "trigger": "呈现角色或技术档案首屏",
+    "effect": "背景建立机构身份和尺度，前景仍可快速阅读。",
+    "useCases": [
+      "工业/科研档案首屏",
+      "角色或设备图像舞台"
+    ],
+    "avoid": [
+      "用粗黑网格穿过正文",
+      "让大字与主体同强度争夺焦点"
+    ],
+    "constraints": [
+      "只抽取文字层级与标定规则；新任务换为有使用权的名称与素材。",
+      "前景正文与控制不依赖背景文字识别，背景设置aria-hidden。",
+      "源CSS/字型/装饰资产已取得；新任务按自己的合法图像、字体与断点重新验证，不把源数值无条件当作通用设计标准。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "可与亮黄等局部状态色和官方图像协作；编号提供记录感，背景字不承担点击状态，也不改变文档滚动。",
+      "pairsWellWith": [
+        "restrained-signal-color",
+        "editorial-alignment-grid"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "背景装饰不可聚焦；前景链接/按钮保持独立可见焦点与文字名称。",
+      "reducedMotion": "保持静态标定构成，不为巨大背景字添加循环移动或闪烁。"
+    },
+    "parameters": [
+      {
+        "name": "源浅纹背景",
+        "value": "opacity .05；纹理周期 .75rem",
+        "note": "来自原operator-shallow-bg计算规则，另以mask渐变衰减。"
+      },
+      {
+        "name": "尺度系统",
+        "value": "PC160×90设计坐标；portrait宽67.5rem",
+        "note": "源rem排版与字体结构，不再首版95%白层拟合。"
+      }
+    ],
+    "prompt": "实现低对比斜线大字、REC/小编号、十字标定与淡网格的背景记录层，保留实心姓名/资料标签的前景。借鉴源浅纹opacity .05、.75rem周期及mask衰减；用真实字体/素材和自己的断点重验，不把源ENDFIELD品牌直接移作他人机构标志。装饰无焦点，状态按钮/内容可键盘操作，巨大字不增加无依据循环闪烁。",
+    "sources": [
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#composition/shape",
+        "observation": "巨大斜线背景字、十字标定、REC、小编号、淡网格与实心资料；AIC竖书脊保留在媒体边界，黑黄三层作为切换状态。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/data.js",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json"
+    ]
+  },
+  {
     "id": "header-below-mobile-navigation",
     "title": "顶栏下展开并恢复阅读位置",
     "category": "导航与状态",
@@ -2439,6 +2923,73 @@ window.DESIGN_PATTERNS = [
       "demos/zelda-world/style.css",
       "entries/zelda-world.json",
       "research/zelda-world.md"
+    ]
+  },
+  {
+    "id": "image-destination-mosaic",
+    "title": "多尺度图像目的地目录",
+    "category": "内容组织",
+    "summary": "让每张图像直接成为进入一类内容的窗口。",
+    "mechanism": "九个图像区域按75%主区和25%侧区组织不同宽高比，以窄白缝分隔真实目的地；类别文字常显，源CSS与脚本共同产生悬停扩张。",
+    "trigger": "浏览、聚焦或选择机构目的地",
+    "effect": "图像保持文化内容的辨识度，选择目标在观看时即可明确。",
+    "useCases": [
+      "馆藏、展览、课堂并行的文化门户",
+      "目的地数量有限的城市机构目录"
+    ],
+    "avoid": [
+      "没有对应目的地的装饰图片墙",
+      "类别名仅在悬停时出现"
+    ],
+    "constraints": [
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
+      "pairsWellWith": [
+        "mixed-ratio-archive-columns",
+        "photo-edge-text-contrast"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
+    },
+    "parameters": [
+      {
+        "name": "源主区/侧区",
+        "value": "75% / 25%，共九项",
+        "note": "资讯/云课堂/馆藏/活动/文创/数字苏博、展览/游戏/建筑美图。"
+      },
+      {
+        "name": "源hover",
+        "value": "CSS scale1.1/500ms + 图宽1.1/300ms",
+        "note": "保留两层独立动作；数字苏博同时调整高度。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「多尺度图像目的地目录」。九个图像区域按75%主区和25%侧区组织不同宽高比，以窄白缝分隔真实目的地；类别文字常显，源CSS与脚本共同产生悬停扩张。 源主区/侧区：75% / 25%，共九项。资讯/云课堂/馆藏/活动/文创/数字苏博、展览/游戏/建筑美图。 源hover：CSS scale1.1/500ms + 图宽1.1/300ms。保留两层独立动作；数字苏博同时调整高度。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
+    "sources": [
+      {
+        "caseId": "suzhou-museum",
+        "locator": "entries/suzhou-museum.json#interaction/2",
+        "observation": "图像目的地：资讯、云课堂、馆藏、活动、文创、数字苏博、展览、游戏、建筑美图九项原图/常显类目均保留，左右75%/25%及每块尺寸按源CSS。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.szmuseum.com/Home/Index",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/suzhou-museum.json",
+      "research/suzhou-museum.md",
+      "demos/suzhou-museum/fidelity.md",
+      "demos/suzhou-museum/index.html",
+      "demos/suzhou-museum/style.css",
+      "demos/suzhou-museum/app.js",
+      "demos/suzhou-museum/state-matrix.md"
     ]
   },
   {
@@ -3150,6 +3701,92 @@ window.DESIGN_PATTERNS = [
       "demos/isometric-3d/style.css",
       "entries/isometric-3d.json",
       "research/isometric-3d.md"
+    ]
+  },
+  {
+    "id": "layered-directional-media-reveal",
+    "title": "黑层、信号层与媒体的方向揭示",
+    "category": "交互反馈",
+    "summary": "黑色遮层、强调色与实际图像依次揭示，让局部相册切换有明确方向和节奏。",
+    "mechanism": "组件内将黑层、信号色层、实际图像或影片叠为同方向裁切/slide-in，错峰推进；说明文字先退后入，选中索引、页码和媒体共同交接，旧媒体完成后暂停并清理。",
+    "trigger": "点击局部相册的前后或编号，选择新的图像/影片",
+    "effect": "先看到交接边界，再看到当前内容，媒体与编号/说明保持同一归属。",
+    "useCases": [
+      "多项技术演示相册",
+      "图像与影片混合的功能模块",
+      "有固定说明位置的案例轮播"
+    ],
+    "avoid": [
+      "把局部换图改成整页滚轮劫持",
+      "仅将图片scaleY伪装成三层揭示",
+      "叠加无上限离场层或继续播放旧视频",
+      "用信号色遮住稳定正文"
+    ],
+    "constraints": [
+      "黑层、强调色层和媒体是真实独立层，沿同一方向交接；媒体是实际图像/视频，不能用同一张图反复染色冒充三层。",
+      "此原子只负责组件内选择交接，区别于directional-section-wipe的整屏章节切换；竖向类别书脊由vertical-media-spine承担，可单独使用。",
+      "索引、页码、说明和素材用同一目标状态，正反与端点一致，旧视频暂停/离场层移除；快速输入采用明确锁或最新请求策略并单独测试。",
+      "来源参数400ms及delay0/250/500、文字500/500ms已由源码采集；本地四玩法视频与4→3、AIC五项图/正文/页码及5→1→5双向、有限中态实测，源同帧时序与快输入未全面验证。",
+      "减少动态即时切至目标媒体与可读说明；来源品牌黄可换为目标任务信号色，状态同时用文字、编号与按钮语义表达。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "方向层负责局部媒体交接，书脊负责类别归属，两者解耦。可接共享选择状态与生命周期，文字保持稳定阅读区域；不接管整页滚动，也不同时运行两套章切控制器。",
+      "pairsWellWith": [
+        "vertical-media-spine",
+        "last-request-transition",
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "前后/编号按钮有名称和可见焦点，端点disabled与aria同步；目标说明和页码在正常DOM中更新，稳定后只有当前媒体可操作，焦点不随视觉层漂移。",
+      "reducedMotion": "跳过三层位移与文字离场，立即显示目标媒体/编号/说明；视频另有暂停和静态封面，换项仍停止旧片。"
+    },
+    "parameters": [
+      {
+        "name": "三层顺序",
+        "value": "black → signal → media；每层400ms",
+        "note": "来源相册slide-in，黑层为交接边界，信号层不是稳定阅读底色。"
+      },
+      {
+        "name": "错峰与总跨度",
+        "value": "delay0/250/500ms；总900ms",
+        "note": "对应黑/黄/实际媒体三层，不是让加载器定时伪造进度。"
+      },
+      {
+        "name": "说明交接",
+        "value": "退出500ms / 进入500ms",
+        "note": "素材、页码与正文由一个选择状态关联；主页面保持自然滚动。"
+      },
+      {
+        "name": "本地已观察中态",
+        "value": "黑clip0；黄4.41%；媒体top100%",
+        "note": "AIC1→2一次浏览器采样及最终2/5、02图/outgoing0；不表示源/本地所有帧逐项相同。"
+      }
+    ],
+    "prompt": "为【图像/影片相册】实现组件内黑层→信号层→媒体的同方向揭示。保留三个独立层，以来源400ms、delay0/250/500总900ms作可调基线，说明500ms退出/500ms进入；不要只用scaleY缩放一张图。一个目标选择同步素材、编号、页码和正文，旧视频暂停、旧离场层清理；前后/端点/快速输入的锁或最新请求策略明确。局部换项不接管整页滚轮，竖向类别书脊保持独立静态构成。按钮可键盘操作、有名称与焦点，稳定后只有当前层可交互；减少动态直接给目标媒体与可读说明，视频保持主动暂停。用目标任务信号色替代源品牌黄，核验真实中态和终态，区分源码时序、本地局部实测与尚未逐项的源同帧对照。",
+    "sources": [
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/5",
+        "observation": "玩法/AIC：4段原玩法视频和5张原工业图；400ms三层方向揭示，黑层delay0/黄250/实际媒体500，总900ms；文字500ms退出/500ms进入，内容/编号/分页共同变化。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/data.js"
     ]
   },
   {
@@ -5077,10 +5714,10 @@ window.DESIGN_PATTERNS = [
     "id": "resource-bound-fullscreen-loading",
     "title": "真实资源驱动的全屏载入",
     "category": "加载与媒体",
-    "summary": "在关键场景就绪前以品牌载入页承接等待。",
-    "mechanism": "居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。",
+    "summary": "只等待入口关键资源，以真实完成数推进，再移交可用场景。",
+    "mechanism": "入口关键图片和必要字体完成数驱动全屏加载状态；全部任务结束不等于全部成功，失败保持明确重试/继续，成功后以短品牌遮层或wipe移交目标场景。",
     "trigger": "首次进入或缓存重载",
-    "effect": "未就绪场景被遮住，等待属于世界观入口。",
+    "effect": "用户看懂资源准备与失败状态，入口交接有边界，正文不会被全站素材长期阻塞。",
     "useCases": [
       "资源较重的游戏档案与展览"
     ],
@@ -5089,7 +5726,9 @@ window.DESIGN_PATTERNS = [
     ],
     "constraints": [
       "失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。",
-      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。",
+      "终末地的公开Updating图形与黄wipe沿源CSS；本地关键首页/干员图及字体集、任务比例、重试/继续属于适配，不声称复用了官网完整资源枚举或网络字节进度。",
+      "任务完成与成功分开：关键图失败即使显示100%也保持error/ready pending，直到重试成功或用户明确继续；目前失败重试已有实测，“继续”未单独验收。"
     ],
     "composition": {
       "role": "support",
@@ -5106,12 +5745,22 @@ window.DESIGN_PATTERNS = [
     },
     "parameters": [
       {
-        "name": "本地资源集",
+        "name": "明日方舟本地资源集",
         "value": "5份图片 / 保底1300ms",
         "note": "本地适配，非官网完整载入策略"
+      },
+      {
+        "name": "终末地本地关键任务",
+        "value": "首页背景/标题、初始干员图、档案背景与3项字体任务",
+        "note": "取自本地prepare；不等待70人物影片、六bin或未启用BGM。"
+      },
+      {
+        "name": "终末地入口退出",
+        "value": "黄wipe scale0→1；正文1500ms序列/退出2400ms",
+        "note": "源外观与本地状态时序；本地冷载43→100、86→100，scale0/.0251998/.302011/1及opacity.625881已采帧，不冒称源同帧相等。"
       }
     ],
-    "prompt": "为【目标页面/组件】实现「真实资源驱动的全屏载入」。居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。触发：首次进入或缓存重载。可见结果：未就绪场景被遮住，等待属于世界观入口。适用任务：资源较重的游戏档案与展览。失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。键盘：载入状态提供可读进度与重试/继续按钮；就绪后焦点进入当前章节。减少动态：载入进度保持文本和静止品牌图，取消装饰运动，资源就绪后即时进入。组合边界：只负责首屏必要资源就绪前的入口交接。可接章切与点阵静帧；同一入口避免再叠另一套欢迎开场，不能等待未启用BGM或全站素材。",
+    "prompt": "为【资源较重的入口】实现真实资源驱动的全屏载入。列出当前入口必需图片/字体，按完成任务显示进度，不按时间伪造百分比或等待全站影片/BGM；完成比例与成功条件分开。关键任务失败即使100%也显示可读错误和重试/继续，只有成功或用户明确继续才移交场景。可用静态品牌/短wipe承接退出，正文和目标章节可达；同一入口不叠第二套欢迎。明日方舟五图与终末地本地关键任务只是各自适配基线，不代表官网完整资源枚举、网络bytes或通用等待阈值。键盘可操作失败路径，加载状态用文本可读；减少动态保留真实进度并即时移交终态。分别验证冷/暖载、失败/重试和入口退出时序，源码外观、本地任务集和实测范围明确区分。",
     "sources": [
       {
         "caseId": "arknights-world",
@@ -5120,6 +5769,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/0",
+        "observation": "载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。",
+        "evidence": "adapted",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
@@ -5129,7 +5786,16 @@ window.DESIGN_PATTERNS = [
       "demos/arknights-world/script.js",
       "demos/arknights-world/style.css",
       "entries/arknights-world.json",
-      "research/arknights-world.md"
+      "research/arknights-world.md",
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js"
     ]
   },
   {
@@ -5267,9 +5933,31 @@ window.DESIGN_PATTERNS = [
         "evidence": "observed",
         "referenceUrl": "https://www.mori.art.museum/jp/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#composition/color",
+        "observation": "源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      },
+      {
+        "caseId": "rhine-lab",
+        "locator": "entries/rhine-lab.json#composition/color",
+        "observation": "源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/data.js",
       "demos/met-museum/fidelity.md",
       "demos/met-museum/index.html",
       "demos/met-museum/script.js",
@@ -5278,12 +5966,20 @@ window.DESIGN_PATTERNS = [
       "demos/mori-art-museum/fidelity.md",
       "demos/mori-art-museum/index.html",
       "demos/mori-art-museum/style.css",
+      "demos/rhine-lab/app.js",
+      "demos/rhine-lab/fidelity.md",
+      "demos/rhine-lab/index.html",
+      "demos/rhine-lab/style.css",
       "demos/swiss-grid/index.html",
+      "entries/endfield-industrial.json",
       "entries/met-museum.json",
       "entries/mori-art-museum.json",
+      "entries/rhine-lab.json",
       "entries/swiss-grid.json",
+      "research/endfield-industrial.md",
       "research/met-museum.md",
       "research/mori-art-museum.md",
+      "research/rhine-lab.md",
       "research/swiss-grid.md"
     ]
   },
@@ -5343,6 +6039,94 @@ window.DESIGN_PATTERNS = [
       "demos/monument-valley-game/style.css",
       "entries/monument-valley-game.json",
       "research/monument-valley-game.md"
+    ]
+  },
+  {
+    "id": "scanline-point-cloud-transition",
+    "title": "扫描线与射线驱动的点云交接",
+    "category": "交互反馈",
+    "summary": "真实xyz点云在扫描带中显现与退场，射线和短暂旋转共同提示模型交接。",
+    "mechanism": "读取Float32 xyz二进制点位，规范化后为旧、新模型分别建立点云actor；多条扫描线改变点的可见与扰动，射线指向扫描附近点，旋转短暂加速后恢复，模型选择与标题/编号同步，交接期间限制再入。",
+    "trigger": "选择世界观模型、前后按钮或六段索引；拖动改变观察方向",
+    "effect": "模型有可辨认的构形过程，资料状态与真实三维形态共同变化。",
+    "useCases": [
+      "技术设备与世界观模型目录",
+      "有真实点位数据的科学可视化",
+      "少量独立模型的档案舞台"
+    ],
+    "avoid": [
+      "用静态png或CSS放大代替真实点云",
+      "把扫描交接混作同一粒子池位置插值",
+      "为正文叠加持续强闪烁或无边界射线",
+      "给随机粒子承诺逐帧像素一致"
+    ],
+    "constraints": [
+      "使用有来源的xyz点位与模型配置，先校验Float32数量可被3整除、有限值及实际边界；归一化、offset/pivot/scale与摄像机共同决定原形，不能只下载bin便声称还原。",
+      "本来源为两actor扫描入/出和清理，区别于particle-model-reformation的同池目标插值；旧模型完成退出后释放geometry/material及噪声纹理，不能无限叠加。",
+      "扫描、射线、旋转与转场锁属于同一交接状态；随机射线保留上限，循环索引和标题同步；手机水平触摸观察须保留纵向页面滚动。",
+      "六模型可见形态、索引循环、交接锁、双向拖动和真实手机触摸已有源/本地实测；四段shader字符串对应。射线活动峰源105/本地144为随机输出，不是像素差异结论。",
+      "减少动态保留终态模型与DOM说明，停自动旋转、扫描和射线；WebGL或数据失败提供可读说明/合法静帧，不能阻塞整份档案。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "只负责模型构形与观察反馈，正常DOM目录和说明负责语义。可配合自然文档阅读和前台生命周期；与透明人物视频共存时分开资源、控件与拖动区域。扫描是有限交接，不把长篇正文交给canvas，也不需要改变整页滚轮浏览。",
+      "pairsWellWith": [
+        "native-document-reading",
+        "viewport-animation-lifecycle",
+        "aligned-metadata-rows"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "前后和模型索引用可命名按钮，当前标题/编号/pressed同步；焦点在画布时左右键调整角度并有等价文字，不让装饰射线进入Tab。手机拖动区域保留pan-y纵向阅读。",
+      "reducedMotion": "直接显示选中模型的终态点云，停止扫描射线、自动旋转与glitch，保留手动选择和说明；偏好动态变化时清除旧脉冲与计时。"
+    },
+    "parameters": [
+      {
+        "name": "点位格式与尺度",
+        "value": "Float32 xyz / Y跨度1900",
+        "note": "来源六bin无header；按数据边界归一化，再应用各模型独立offset/pivot/scale。"
+      },
+      {
+        "name": "扫描时间",
+        "value": "入场三线3000/(i+1)ms、delay2000×ln(i+1)；退场2000ms",
+        "note": "源算法与本地tick对应；三线完成后的交接锁约3197.225ms，不当通用UX等待规范。"
+      },
+      {
+        "name": "扫描位置",
+        "value": "入场−1350→1150；退场−1150→1150",
+        "note": "实采退出0/500/1000/2000ms为−1150/−862.5/0/1150；少量采样不代表所有帧像素相同。"
+      },
+      {
+        "name": "射线容量与旋转",
+        "value": "最多2000实例；旋转400/800/800ms后回基速",
+        "note": "按扫描附近点生成随机射线，源/本地活动数有随机差异；停止/离屏需清理调度。"
+      }
+    ],
+    "prompt": "为【真实模型档案】实现扫描线与射线驱动的点云交接。用有使用权的Float32 xyz点位，验证格式和边界，再以来源Y跨度1900及各模型offset/pivot/scale作研究基线。旧、新模型各自actor在多线扫描中退出/显现，射线只指向扫描附近点并设容量上限；有限旋转加速后回基速，完成后释放旧GPU资源。目录、前后、编号与DOM说明由同一模型选择驱动，转场再入策略明确，不把该机制错写成同池顶点morph。支持水平拖动与聚焦方向键，手机保留pan-y纵滚。减少动态直接给可见终态、停止自动旋转/射线/glitch；后台暂停与资源失败回退分别处理。保留有限源码/运行证据，随机射线不能声称像素逐帧相等。",
+    "sources": [
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/3",
+        "observation": "世界观：帝江号/锚点/集成工业系统/天师桩/天使/裂地者六个原bin及模型参数，Float32 xyz、按Y跨度1900规范化；实际WebGL点云、扫描、转动、拖动、分页/标题与六指标同步。最终状态实测见fidelity，不因源码抽取而自动判通过。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/data.js",
+      "demos/endfield-industrial/lore.js",
+      "demos/endfield-industrial/shaders.js"
     ]
   },
   {
@@ -5977,6 +6761,7 @@ window.DESIGN_PATTERNS = [
     ],
     "constraints": [
       "声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。",
+      "操作短音绑定实际点击/键盘选择，悬停与聚焦不额外发声；关闭或后台停止短效，返回不续播过期反馈。",
       "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
     ],
     "composition": {
@@ -5989,11 +6774,11 @@ window.DESIGN_PATTERNS = [
       "conflicts": []
     },
     "accessibility": {
-      "keyboard": "开启、静音与停止均用有可见文字的按钮，aria-pressed与实际声音状态一致。",
+      "keyboard": "开启、静音与停止均用有明确可访问名称的按钮，图标按钮提供aria-label，aria-pressed与实际声音状态一致。",
       "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
     },
     "parameters": [],
-    "prompt": "为【目标页面/组件】实现「声音主动启用与随时停止」。声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。触发：开启/关闭声音。可见结果：用户掌握听觉环境，浏览正文不被自动出声打断。适用任务：互动乐器、游戏世界与品牌影片。声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。键盘：开启、静音与停止均用有可见文字的按钮，aria-pressed与实际声音状态一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户掌握听觉环境，浏览正文不被自动出声打断，职责限定在当前区域。组合时声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "prompt": "为【目标页面/组件】实现「声音主动启用与随时停止」。声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。触发：开启/关闭声音。可见结果：用户掌握听觉环境，浏览正文不被自动出声打断。适用任务：互动乐器、游戏世界与品牌影片。声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。键盘：开启、静音与停止均用有明确可访问名称的按钮，图标按钮提供aria-label，aria-pressed与实际声音状态一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户掌握听觉环境，浏览正文不被自动出声打断，职责限定在当前区域。组合时声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。 操作短音在实际选择或切换时立即触发，跟随同一声音开关；返回前台不重放过期短效。",
     "sources": [
       {
         "caseId": "retro-80s",
@@ -6016,6 +6801,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "observed",
         "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#soundBehavior/control",
+        "observation": "桌面声音工具与手机喇叭共用状态，默认关闭、aria-pressed同步；用户开启后播放原BGM及选干员/2D↔3D、头像翻页、档案展开/收起四种原音。关闭或后台立即停止，返回只恢复已开启BGM；预览和角色影片静音，完整影像独立控制。",
+        "evidence": "adapted",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
@@ -6034,7 +6827,14 @@ window.DESIGN_PATTERNS = [
       "entries/zelda-world.json",
       "research/arknights-world.md",
       "research/retro-80s.md",
-      "research/zelda-world.md"
+      "research/zelda-world.md",
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/assets-manifest.json",
+      "demos/endfield-industrial/source-provenance.json"
     ]
   },
   {
@@ -6082,6 +6882,81 @@ window.DESIGN_PATTERNS = [
       "demos/pixel-world/index.html",
       "entries/pixel-world.json",
       "research/pixel-world.md"
+    ]
+  },
+  {
+    "id": "specimen-pullout-selection",
+    "title": "样本阵列的抽出选择",
+    "category": "交互反馈",
+    "summary": "在真实立体阵列中保留单件抽出，用独立网页状态同步观察与阅读。",
+    "mechanism": "大量平行立体档案与被抬出的焦点板保留来源透视/材质；本地以同一选择状态同步热点、观察编号、标题和正文，背景阵列可隐藏而焦点板保留。影片抽出运动与网页点击分别归档。",
+    "trigger": "点选本地观察热点、前后按钮或阵列显隐",
+    "effect": "当前观察与焦点状态同时更新，显隐后焦点板和正文仍可阅读。",
+    "useCases": [
+      "机构影片转译的档案目录",
+      "有空间材质的样本展示",
+      "影像与可读说明并列"
+    ],
+    "avoid": [
+      "把影片抽出说成官网点击",
+      "用五张泛化卡替代大量立体阵列",
+      "用虚构权限阻挡正文"
+    ],
+    "constraints": [
+      "源端为影片；必须标注网页转译并区分原片运动与本地选择。",
+      "保留来源阵列深度、焦点板四角及光学材质，可采用有使用权的影片/原帧，不臆造其3D源码。",
+      "所有点击由单一选择状态同步编号/正文/aria，快速操作取消旧媒体回调。",
+      "小屏不裁掉源构图；等价语义按钮和正文保证内容可读。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "来源媒体保存空间；选择与展开分开管理，切换观察先收起旧正文。背景显隐属于网页改编，不与原片许可流程混合。",
+      "pairsWellWith": [
+        "inline-detail-disclosure",
+        "scrubbable-animation-progress"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "原生热点/前后按钮可键盘操作，左右方向键移动选择并保持焦点，aria-pressed与观察文字同步；展开按钮使用aria-expanded。",
+      "reducedMotion": "保留静态原帧、焦点板、选中和阅读；关闭220ms本地微移，影片默认静止，主动观看有暂停。"
+    },
+    "parameters": [
+      {
+        "name": "原片档案片段",
+        "value": "27.00–39.20秒 / 1920×1080 / 25fps",
+        "note": "原轨道与逐帧核验；本地剪段1倍速度，不表示网页点击时长。"
+      },
+      {
+        "name": "本地观察目录",
+        "value": "5项",
+        "note": "本库教学内容，原片只检索X-001。"
+      },
+      {
+        "name": "本地微移",
+        "value": "220ms",
+        "note": "网页适配，减少动态关闭；媒体内的抽出保持原时序。"
+      }
+    ],
+    "prompt": "为有使用权的机构影片建立立体档案观察目录，保留大量平行阵列与单件抽出的透视、材质、四角标定和细射线，不能换成泛化平面卡行。影片或原帧负责真实空间，本地单一状态负责热点/前后选择、编号、标题与正常方向正文。背景阵列可显隐，焦点板保持同源轮廓和可读说明。选择新项先收起旧正文；快速操作取消旧媒体回调。明确影像抽出是源端观察，点击、显隐与阅读是网页转译。按钮可Tab/左右方向键操作，aria-pressed/aria-expanded同步。手机完整展示源画面，正文另行重排。减少动态保留静态选中和阅读，影片由用户主动播放并可暂停。",
+    "sources": [
+      {
+        "caseId": "rhine-lab",
+        "locator": "entries/rhine-lab.json#interaction/0",
+        "observation": "本地教学改编：在原作多排立体档案的35秒原帧上提供五个观察热点及前后选择，同一状态同步观察编号、标题、正文并收起旧展开；阵列显隐仅隐藏背景阵列，保留按源端四角轮廓裁切的抬出板。五个热点不是原片中的五个可点击档案。",
+        "evidence": "adapted",
+        "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "demos/rhine-lab/index.html",
+      "demos/rhine-lab/app.js",
+      "demos/rhine-lab/style.css",
+      "demos/rhine-lab/fidelity.md",
+      "demos/rhine-lab/assets-manifest.json",
+      "entries/rhine-lab.json",
+      "research/rhine-lab.md"
     ]
   },
   {
@@ -6624,6 +7499,93 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "transparent-video-mode-stage",
+    "title": "透明视频的静态与动态模式舞台",
+    "category": "加载与媒体",
+    "summary": "静态立绘与RGB/alpha透明视频共享人物位置，进入短片结束后接续idle循环。",
+    "mechanism": "同一影片左半保存RGB颜色、右半保存亮度alpha遮罩，经WebGL合成为半宽透明canvas；2D立绘与3D影片模式独立于人物选择，enter完成后接idle，换人或退出时取消旧资源回调和帧调度。",
+    "trigger": "用户选择静态/动态模式，或在动态模式中切换人物",
+    "effect": "人物运动融入档案背景，姓名与资料位置稳定，动态资源始终属于当前人物。",
+    "useCases": [
+      "有授权透明影片的角色档案",
+      "静态图片与动态演示并列的品牌舞台",
+      "预录设备运动的背景合成"
+    ],
+    "avoid": [
+      "把预录透明视频说成可拖转人物网格",
+      "将遮罩半幅作为黑白背景一起显示",
+      "选中变化后继续播放旧人物",
+      "为所有角色影片制造阻断加载"
+    ],
+    "constraints": [
+      "源人物3D为RGB/alpha透明影片，不是实时人物网格；需要已有双幅编码素材，普通MP4不能凭空取得真实alpha。",
+      "enter与idle对应同一人物，显示状态与资源generation同步；loadeddata、ended及帧回调必须检查当前身份，退出暂停并释放旧调度。",
+      "源祀影片3840×1080输出1920×1080，alpha亮度权重0.3/0.59/0.11；迁移时检查尺寸、边缘、色彩与素材许可，不把此编码当所有透明影片的标准。",
+      "源公开模块说明enter结束换idle；最终默认设置仅本地Si自然循环和手机艾尔黛拉链路有实测，原站本轮自然事件链未完整观察，不宣称全部35影片通过。",
+      "保留静态立绘、失败回退和手动模式入口；减少动态选择可见静帧并停止连续解码，不因暂停首帧透明而显示空白人物。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "此原子负责透明媒体解码和静态/动态模式的交接；人物身份、姓名、目录和资料同步由人物舞台原子承担。与世界观点云是两个独立渲染器，不争夺拖动语义；页面可见性统一提供暂停信号，用户选择仍独立保存。",
+      "pairsWellWith": [
+        "character-stage-coordination",
+        "viewport-animation-lifecycle",
+        "hatched-registration-type"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "静态/动态模式用有名称的按钮，aria-pressed跟随实际模式，切换不移动资料焦点；失败提供静态回退。人物名称和等价说明位于正常DOM，不只保存在canvas。",
+      "reducedMotion": "保留当前人物静态立绘或idle有效静帧，停止影片与GPU连续帧；本地实测idle 1/30秒静帧可见。恢复动态尊重当前模式、前台和用户暂停状态。"
+    },
+    "parameters": [
+      {
+        "name": "双幅透明编码",
+        "value": "RGB-left / luma-alpha-right；3840×1080 → 1920×1080",
+        "note": "祀来源影片尺寸与公开模块采样；不是任意视频的透明转换。"
+      },
+      {
+        "name": "Alpha合成",
+        "value": "0.3R + 0.59G + 0.11B",
+        "note": "采样遮罩右半；源码算法已核对，源/本地透明边缘同帧未全面验收。"
+      },
+      {
+        "name": "状态交接",
+        "value": "2D / enter → idle(loop)",
+        "note": "最终默认本地Si enter15.2秒→idle2.9秒实际通过；不同角色时长由各自影片决定。"
+      },
+      {
+        "name": "减少动态静帧",
+        "value": "本地idle t=0.033333秒 / paused=true",
+        "note": "390×844最终静态分支实测；用于避免首帧透明，不强制所有影片使用同一seek值。"
+      }
+    ],
+    "prompt": "为【人物或设备档案】实现静态立绘与RGB/alpha透明视频模式舞台。采用有使用权的双幅影片，左RGB、右亮度alpha经WebGL合成为半宽透明canvas，保留背景和正常DOM姓名/说明。用独立人物选择与2D/动态模式状态，enter自然结束后切同人物idle循环；加载、ended、requestVideoFrameCallback与快速换人都检查资源generation，离开模式或后台暂停，失败回退立绘。不要把预录影片写成可自由旋转的网格模型。参数以来源0.3/0.59/0.11和3840×1080→1920×1080作参考，按新影片实际尺寸验证透明边缘与颜色。键盘按钮名称、pressed及焦点保持一致；减少动态展示有效静帧，不留透明空白。分别记录源码机制、有限角色自然链路和原站实测范围，不泛化全部视频通过。",
+    "sources": [
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/2",
+        "observation": "2D/3D：同35项立绘和70个原enter/idle视频。祀源影片3840×1080左右RGB/alpha，经原亮度权重0.3/0.59/0.11合成1920×1080透明canvas，enter结束切idle循环；不制造实时人物模型。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/data.js",
+      "demos/endfield-industrial/transparent-video.js"
+    ]
+  },
+  {
     "id": "vertical-card-swap",
     "title": "中央窗口垂直退出与进入",
     "category": "交互反馈",
@@ -6738,6 +7700,74 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "vertical-media-spine",
+    "title": "竖向类别书脊与横向媒体",
+    "category": "内容组织",
+    "summary": "让类别像书脊一样固定在媒体边缘，编号和正文完成同一模块。",
+    "mechanism": "把短类别名称沿媒体侧边竖向排布，横向图像占主面积，下方编号与说明共用对齐边界；方向差提供归属线索而不是额外装饰。",
+    "trigger": "呈现某一类别的图像/影片资料模块",
+    "effect": "大图、类别、编号与说明被读作同一资料单元。",
+    "useCases": [
+      "技术知识媒体",
+      "展览/档案图像说明",
+      "多章节作品资料"
+    ],
+    "avoid": [
+      "长句正文旋转90度",
+      "书脊挤压手机媒体宽度"
+    ],
+    "constraints": [
+      "竖向书脊只放简短类别，完整释义在正常方向文字中提供。",
+      "图像维持比例，类别与编号不覆盖关键信息；手机可缩小书脊或移到上方。",
+      "此条抽取构成，播放控制另用实际媒体语义实现。",
+      "来源字段同时包含相册切换；本原子仅抽取类别朝向、媒体边界和对齐，不把三层wipe当书脊成立的前提。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "书脊标类别，图下注释解释内容，共用媒体边界；静态图或影片均可使用，不能把书脊当全页主导航。换项方向层由layered-directional-media-reveal独立承担。",
+      "pairsWellWith": [
+        "artwork-caption-separation",
+        "aligned-metadata-rows",
+        "layered-directional-media-reveal"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "纯装饰书脊aria-hidden，类别在可读标题/说明中重复；媒体按钮保留正常名称和键盘控制。",
+      "reducedMotion": "构成本身静态；若播放影片，另提供暂停并保留静态封面。"
+    },
+    "parameters": [
+      {
+        "name": "类别与媒体边界",
+        "value": "简短竖向类别 / 横向媒体 / 正常方向编号与说明",
+        "note": "来自AIC真实模块，类别固定标归属；三层换图时序独立归layered-directional-media-reveal。"
+      }
+    ],
+    "prompt": "将简短类别作为媒体边界的竖向书脊，横向真实图像/影片与正常方向编号、标题、说明保持共同对齐。类别朝向表达归属，正文不旋转，portrait沿真实媒体布局重排，避免书脊挤压内容。书脊本身静态，不以动画成立，也不当整站导航；换项的三层方向揭示独立配合layered-directional-media-reveal。类别在正常方向可读标题中重复，装饰aria-hidden；播放控制、键盘、暂停与减少动态由真实媒体语义承担。",
+    "sources": [
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#principles/4",
+        "observation": "AIC书脊与媒体共同组织类别；4玩法/5AIC采用源三层黑→黄→媒体的方向揭示，不用单静态工厂图替代整个相册。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/data.js",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json"
+    ]
+  },
+  {
     "id": "viewport-animation-lifecycle",
     "title": "视口与前台驱动的动态生命周期",
     "category": "导航与状态",
@@ -6753,14 +7783,19 @@ window.DESIGN_PATTERNS = [
     ],
     "constraints": [
       "恢复策略按任务明确，自动计时不能覆盖手动状态。",
-      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。",
+      "终末地新增来源是本地适配与真实后台/返回实测，evidence=adapted；不将本地visibility监听、BGM恢复或减少动态策略写成完整源站已观察行为。",
+      "恢复只针对先前有运行意图的媒体；用户关闭声音、切为2D或选择减少动态后，后台返回不能自动推翻其选择。"
     ],
     "composition": {
       "role": "support",
       "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
       "pairsWellWith": [
         "photo-crossfade-cycle",
-        "centered-loop-gallery"
+        "centered-loop-gallery",
+        "transparent-video-mode-stage",
+        "scanline-point-cloud-transition",
+        "layered-directional-media-reveal"
       ],
       "conflicts": []
     },
@@ -6768,8 +7803,14 @@ window.DESIGN_PATTERNS = [
       "keyboard": "暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。",
       "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
     },
-    "parameters": [],
-    "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
+    "parameters": [
+      {
+        "name": "终末地本地真实后台检查",
+        "value": "hidden 8.025秒：Lore frame542/angle.5491946559、BGM t8.031918保持；返回frame557/angle.6241946、BGM t8.605204",
+        "note": "2040×939真实切后台/返回，非派发模拟事件；仅本地当前模块，不推广为源站或全部35人物链路通过。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。 终末地作为本地适配补充：同时控制点云GPU帧与已主动开启的BGM，真实切后台期间时间/角度冻结，返回按先前意图恢复。此证据只证明当前本地模块，未完整观察源站相同visibility自然行为，也未逐项验收全部媒体组合；不要将适配标为原站observed。",
     "sources": [
       {
         "caseId": "linear-workflow",
@@ -6794,6 +7835,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "adapted",
         "referenceUrl": "https://qoder.cn/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/7",
+        "observation": "声音和业务：原BGM及四种原始操作音由桌面/手机共用声音开关启用，默认关闭；选干员与2D/3D切换播放机械短音，头像翻页和档案展开/收起分别反馈。10槽音频池保留快速重复操作的叠响；关闭声音或隐藏页面立即停止，返回不重放短效。登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
+        "evidence": "adapted",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
@@ -6818,7 +7867,18 @@ window.DESIGN_PATTERNS = [
       "entries/stripe-platform.json",
       "research/linear-workflow.md",
       "research/qoder-platform.md",
-      "research/stripe-platform.md"
+      "research/stripe-platform.md",
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/lore.js",
+      "demos/endfield-industrial/transparent-video.js"
     ]
   },
   {

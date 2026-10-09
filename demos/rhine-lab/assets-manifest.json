@@ -1,0 +1,262 @@
+{
+  "sourceDate": "2026-10-09",
+  "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+  "edition": "官方特别映像（2022）及官方四周年孤星活动专题（2023）",
+  "scope": "官方影片片段及解码帧的网页转译；原始光学材质/字标由媒体保留，章选与点击为本地教学实现。",
+  "assets": [
+    {
+      "file": "assets/pv-cover.jpg",
+      "sourceUrl": "https://i1.hdslb.com/bfs/archive/5fe6dae6358e0540d253847199ff215aca36be33.jpg@1200w_630h",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "官方特别映像封面，作为来源入口",
+      "bytes": 114745,
+      "sha256": "76ed510d77ac6038ff88de0c71150614fb52c9b6f7ae8d9aca14eb29f21dfd22",
+      "width": 1008,
+      "height": 630,
+      "dimensions": [
+        1008,
+        630
+      ],
+      "format": "jpeg",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/jpeg",
+      "transform": "保留下载原字节与尺寸；页面使用CSS按比例展示",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    },
+    {
+      "file": "assets/lone-trail.jpg",
+      "sourceUrl": "https://web.hycdn.cn/arknights/special/4th-anniversary/assets/img/event-bg.701c96.jpg",
+      "owner": "Hypergryph / 鹰角网络",
+      "use": "官方四周年孤星活动场景，补充来源入口",
+      "bytes": 553285,
+      "sha256": "f53ee12bc12cb278ee75ca0c19f4731440a9dda66c101be454457ea2c370f3c0",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "jpeg",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/jpeg",
+      "transform": "保留下载原字节与尺寸；页面使用CSS按比例展示",
+      "license": "官方媒体与名称权利归相应权利人；用于设计研究，未获得额外商业授权"
+    },
+    {
+      "file": "assets/permission-frame.png",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "sourceResource": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "许可环形线与橙色节点",
+      "bytes": 473648,
+      "sha256": "c82d8b38d159b213e43ff1a0c281a098720b14a4c1643305d26461597bc8bf28",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "官方播放器已解码video在22.00秒处通过canvas原尺寸导出，未缩放/裁切/改色；对应原视频SHA见originalMedia",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权",
+      "sourceTime": 22
+    },
+    {
+      "file": "assets/permission.mp4",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "sourceResource": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "许可环形线与橙色节点",
+      "bytes": 802129,
+      "sha256": "9234caf2994668671b932a5be283e1c3433a90da3523a1a94af8ec86569a4d95",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "mp4",
+      "retrievedAt": "2026-10-09",
+      "contentType": "video/mp4",
+      "transform": "从originalMedia记录的HEVC原轨道截取19.20–23.40秒；ffmpeg7.1 -ss 19.2 -t 4.2 -an -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -movflags +faststart；保留1920×1080、25fps和1倍速度。",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权",
+      "duration": 4.2,
+      "sourceStart": 19.2,
+      "sourceEnd": 23.4,
+      "fps": 25
+    },
+    {
+      "file": "assets/archive-frame.png",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "sourceResource": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "多排立体档案、单件抽出、射线及机密文字",
+      "bytes": 1291027,
+      "sha256": "b59d75ce0c1eef3fc24678d450eb9c0d4d1d72bd060d5b1b3a1e2a9427b014a6",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "官方播放器已解码video在35.00秒处通过canvas原尺寸导出，未缩放/裁切/改色；对应原视频SHA见originalMedia",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权",
+      "sourceTime": 35
+    },
+    {
+      "file": "assets/archive.mp4",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "sourceResource": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "多排立体档案、单件抽出、射线及机密文字",
+      "bytes": 5101228,
+      "sha256": "df9e0bc55bb68277211875f066bd326878a44f2e4023fa27be1f35551b946b13",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "mp4",
+      "retrievedAt": "2026-10-09",
+      "contentType": "video/mp4",
+      "transform": "从originalMedia记录的HEVC原轨道截取27.00–39.20秒；ffmpeg7.1 -ss 27 -t 12.2 -an -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -movflags +faststart；保留1920×1080、25fps和1倍速度。",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权",
+      "duration": 12.2,
+      "sourceStart": 27,
+      "sourceEnd": 39.2,
+      "fps": 25
+    },
+    {
+      "file": "assets/optics-frame.png",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "sourceResource": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "透明双环与橙色光学材质",
+      "bytes": 3060866,
+      "sha256": "1b2f1c040f0c7111d7ac222c30188a9009ff92f6d52114436792a6c9f79760a7",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "官方播放器已解码video在48.00秒处通过canvas原尺寸导出，未缩放/裁切/改色；对应原视频SHA见originalMedia",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权",
+      "sourceTime": 48
+    },
+    {
+      "file": "assets/optics.mp4",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "sourceResource": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "透明双环与橙色光学材质",
+      "bytes": 7771333,
+      "sha256": "09bfec642df1919b623b9fcaeaf1b87147dfc78a665aa98058b30e0104f2d5e2",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "mp4",
+      "retrievedAt": "2026-10-09",
+      "contentType": "video/mp4",
+      "transform": "从originalMedia记录的HEVC原轨道截取39.20–51.50秒；ffmpeg7.1 -ss 39.2 -t 12.3 -an -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -movflags +faststart；保留1920×1080、25fps和1倍速度。 实际输出308帧、12.32秒，按25fps向完整帧对齐，对应源时间末端51.52秒。",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权",
+      "duration": 12.32,
+      "sourceStart": 39.2,
+      "sourceEnd": 51.52,
+      "fps": 25,
+      "requestedSourceEnd": 51.5,
+      "frameCount": 308
+    },
+    {
+      "file": "assets/matrix-frame.png",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "sourceResource": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "机构矩阵字标、实际构图及播放片段",
+      "bytes": 1080730,
+      "sha256": "01bd688ea19e75d174374dd566b5cc9d4a2f71ac49c3d78e59eef6fadffc6b25",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "官方播放器已解码video在68.00秒处通过canvas原尺寸导出，未缩放/裁切/改色；对应原视频SHA见originalMedia",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权",
+      "sourceTime": 68
+    },
+    {
+      "file": "assets/matrix.mp4",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "sourceResource": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "机构矩阵字标、实际构图及播放片段",
+      "bytes": 3210284,
+      "sha256": "966214036e6ada6cc0f14bb099d7786915e4b08f267fe8351bc974d4cdd6f20c",
+      "width": 1920,
+      "height": 1080,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "mp4",
+      "retrievedAt": "2026-10-09",
+      "contentType": "video/mp4",
+      "transform": "从originalMedia记录的HEVC原轨道截取59.60–73.40秒；ffmpeg7.1 -ss 59.6 -t 13.8 -an -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -movflags +faststart；保留1920×1080、25fps和1倍速度。",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权",
+      "duration": 13.8,
+      "sourceStart": 59.6,
+      "sourceEnd": 73.4,
+      "fps": 25
+    },
+    {
+      "file": "assets/focus-node.png",
+      "sourceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+      "owner": "Hypergryph / 鹰角网络 · 明日方舟官方",
+      "use": "DOM科室选择节点，保留官方橙色空心构件的精确像素",
+      "bytes": 6511,
+      "sha256": "35f0f163d554d417ef383a4bac345f1c41d64cb5025b122c6d29eb4a6fe96e88",
+      "width": 62,
+      "height": 63,
+      "dimensions": [
+        62,
+        63
+      ],
+      "format": "png",
+      "retrievedAt": "2026-10-09",
+      "contentType": "image/png",
+      "transform": "从原尺寸68秒解码帧裁切x637/y498/w62/h63，不缩放或改色；在网页中按原比例定位，移动触发是adapted。",
+      "license": "官方影像及名称归原权利人；用于研究观察与网页转译，未获得额外商业授权"
+    }
+  ],
+  "originalMedia": {
+    "sourcePage": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
+    "resourcePath": "https://upos-hz-mirrorakam.akamaized.net/upgcxcode/20/70/768017020/768017020_x1-1-30102.m4s",
+    "bytes": 25735789,
+    "sha256": "a33feaff1c10637ec43b36c0ad44f42eb6e2c676878a1b9e20902631245617bf",
+    "retrievedAt": "2026-10-09",
+    "container": "DASH/ISO BMFF",
+    "codec": "HEVC Main",
+    "width": 1920,
+    "height": 1080,
+    "fps": 25,
+    "duration": 318.8,
+    "audio": "视频轨道无音频；本地不采集或内嵌原音轨",
+    "archive": "原始轨道归档于仓库外；仓库只保存必要片段与原尺寸解码帧。"
+  }
+}

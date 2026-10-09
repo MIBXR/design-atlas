@@ -14,14 +14,19 @@
   ],
   "constraints": [
     "恢复策略按任务明确，自动计时不能覆盖手动状态。",
-    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+    "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。",
+    "终末地新增来源是本地适配与真实后台/返回实测，evidence=adapted；不将本地visibility监听、BGM恢复或减少动态策略写成完整源站已观察行为。",
+    "恢复只针对先前有运行意图的媒体；用户关闭声音、切为2D或选择减少动态后，后台返回不能自动推翻其选择。"
   ],
   "composition": {
     "role": "support",
     "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
     "pairsWellWith": [
       "photo-crossfade-cycle",
-      "centered-loop-gallery"
+      "centered-loop-gallery",
+      "transparent-video-mode-stage",
+      "scanline-point-cloud-transition",
+      "layered-directional-media-reveal"
     ],
     "conflicts": []
   },
@@ -29,8 +34,14 @@
     "keyboard": "暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。",
     "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
   },
-  "parameters": [],
-  "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
+  "parameters": [
+    {
+      "name": "终末地本地真实后台检查",
+      "value": "hidden 8.025秒：Lore frame542/angle.5491946559、BGM t8.031918保持；返回frame557/angle.6241946、BGM t8.605204",
+      "note": "2040×939真实切后台/返回，非派发模拟事件；仅本地当前模块，不推广为源站或全部35人物链路通过。"
+    }
+  ],
+  "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。 终末地作为本地适配补充：同时控制点云GPU帧与已主动开启的BGM，真实切后台期间时间/角度冻结，返回按先前意图恢复。此证据只证明当前本地模块，未完整观察源站相同visibility自然行为，也未逐项验收全部媒体组合；不要将适配标为原站observed。",
   "sources": [
     {
       "caseId": "linear-workflow",
@@ -55,6 +66,14 @@
       "evidence": "adapted",
       "referenceUrl": "https://qoder.cn/",
       "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "endfield-industrial",
+      "locator": "entries/endfield-industrial.json#interaction/7",
+      "observation": "声音和业务：原BGM及四种原始操作音由桌面/手机共用声音开关启用，默认关闭；选干员与2D/3D切换播放机械短音，头像翻页和档案展开/收起分别反馈。10槽音频池保留快速重复操作的叠响；关闭声音或隐藏页面立即停止，返回不重放短效。登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
+      "evidence": "adapted",
+      "referenceUrl": "https://endfield.hypergryph.com/",
+      "capturedAt": "2026-10-09"
     }
   ],
   "sourceFiles": [
@@ -79,6 +98,17 @@
     "entries/stripe-platform.json",
     "research/linear-workflow.md",
     "research/qoder-platform.md",
-    "research/stripe-platform.md"
+    "research/stripe-platform.md",
+    "entries/endfield-industrial.json",
+    "research/endfield-industrial.md",
+    "demos/endfield-industrial/fidelity.md",
+    "demos/endfield-industrial/state-matrix.md",
+    "demos/endfield-industrial/source-provenance.json",
+    "demos/endfield-industrial/index.html",
+    "demos/endfield-industrial/reference.css",
+    "demos/endfield-industrial/state.css",
+    "demos/endfield-industrial/app.js",
+    "demos/endfield-industrial/lore.js",
+    "demos/endfield-industrial/transparent-video.js"
   ]
 }

@@ -57,7 +57,7 @@
         "bundle": "agent/cases/hand-drawn.json",
         "demo": "demos/hand-drawn/index.html"
       },
-      "bundleSha256": "825c99b500c5107c5b4cdf59e43f37c168c90698eee64dcd1e734dbd10cc00d4"
+      "bundleSha256": "e9329817b7a7ed91da7694e8f8181df9280d41c89723796fdd1781a4ff0e68bc"
     }
   ]
 }

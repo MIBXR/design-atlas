@@ -1,0 +1,269 @@
+[
+  {
+    "key": "ddhs/Core/Core/Core/Metedata/Title",
+    "value": "榆林窟",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FMetedata%2FTitle=%E6%A6%86%E6%9E%97%E7%AA%9F",
+    "ids": [
+      "0001.0002.0003",
+      "0001.0002.0025"
+    ],
+    "htmlSha256": "7de181685f4d5f8a51b2be5ca3f007c09917063ce520df8cde3c59af6e291cc1",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Metedata/Title",
+    "value": "西千佛洞",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FMetedata%2FTitle=%E8%A5%BF%E5%8D%83%E4%BD%9B%E6%B4%9E",
+    "ids": [
+      "0001.0003.0009"
+    ],
+    "htmlSha256": "bdca1a60dd8fe45cdf1ed7c02917b11a67b5779d3dc6e3d2582fe9b4aae1745a",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Metedata/Title",
+    "value": "莫高窟",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FMetedata%2FTitle=%E8%8E%AB%E9%AB%98%E7%AA%9F",
+    "ids": [
+      "0001.0001.0003",
+      "0001.0001.0012",
+      "0001.0001.0017",
+      "0001.0001.0023",
+      "0001.0001.0057",
+      "0001.0001.0061",
+      "0001.0001.0066",
+      "0001.0001.0103",
+      "0001.0001.0107",
+      "0001.0001.0112",
+      "0001.0001.0172",
+      "0001.0001.0194",
+      "0001.0001.0217",
+      "0001.0001.0220",
+      "0001.0001.0249",
+      "0001.0001.0254",
+      "0001.0001.0257",
+      "0001.0001.0285",
+      "0001.0001.0301",
+      "0001.0001.0302",
+      "0001.0001.0303",
+      "0001.0001.0320",
+      "0001.0001.0321",
+      "0001.0001.0322",
+      "0001.0001.0323",
+      "0001.0001.0329",
+      "0001.0001.0390",
+      "0001.0001.0420"
+    ],
+    "htmlSha256": "f204c301aa9ddab69ef6d06b914c816044df6c38bbc9d9e39ebc16dc11208423",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/ShapeandStructure",
+    "value": "穹顶",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FShapeandStructure=%E7%A9%B9%E9%A1%B6",
+    "ids": [
+      "0001.0002.0003"
+    ],
+    "htmlSha256": "0e2a7ec922c995f5d8d78b70891ad7202fbd93824e54166426b8f40fd663156d",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Metedata/Title",
+    "value": "麦积山石窟",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FMetedata%2FTitle=%E9%BA%A6%E7%A7%AF%E5%B1%B1%E7%9F%B3%E7%AA%9F",
+    "ids": [
+      "0001.0004.0127"
+    ],
+    "htmlSha256": "375403e158ae1d02db35fdecfd38a8c47db05ce0f566d1a852a3966523b915ed",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/ShapeandStructure",
+    "value": "中心塔柱式",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FShapeandStructure=%E4%B8%AD%E5%BF%83%E5%A1%94%E6%9F%B1%E5%BC%8F",
+    "ids": [
+      "0001.0001.0254",
+      "0001.0001.0257",
+      "0001.0001.0302",
+      "0001.0001.0303",
+      "0001.0003.0009"
+    ],
+    "htmlSha256": "a8d8f28e3ed3991f97eb17b895b4a7086bab052fb0beac8afcddb7cd3eafa9a9",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/ShapeandStructure",
+    "value": "覆斗型",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FShapeandStructure=%E8%A6%86%E6%96%97%E5%9E%8B",
+    "ids": [
+      "0001.0001.0003",
+      "0001.0001.0217",
+      "0001.0004.0127"
+    ],
+    "htmlSha256": "ec5f27f8184ba858ee3dcfd19f541d2b70a5db3a86c86e0c695d1885381acea5",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "中唐",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E4%B8%AD%E5%94%90",
+    "ids": [
+      "0001.0001.0112"
+    ],
+    "htmlSha256": "67bc3cfeb1a62677f085ade7ca9b7160383545829e47abfdefd962a1bdf75492",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/ShapeandStructure",
+    "value": "覆斗顶型",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FShapeandStructure=%E8%A6%86%E6%96%97%E9%A1%B6%E5%9E%8B",
+    "ids": [
+      "0001.0001.0012",
+      "0001.0001.0017",
+      "0001.0001.0023",
+      "0001.0001.0057",
+      "0001.0001.0061",
+      "0001.0001.0066",
+      "0001.0001.0103",
+      "0001.0001.0107",
+      "0001.0001.0112",
+      "0001.0001.0172",
+      "0001.0001.0194",
+      "0001.0001.0220",
+      "0001.0001.0249",
+      "0001.0001.0285",
+      "0001.0001.0301",
+      "0001.0001.0320",
+      "0001.0001.0321",
+      "0001.0001.0322",
+      "0001.0001.0323",
+      "0001.0001.0329",
+      "0001.0001.0390",
+      "0001.0001.0420",
+      "0001.0002.0025"
+    ],
+    "htmlSha256": "a8bd40160fbb019198b8c993e5a18486a37146c5c54299c8414b9460e129548f",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "元代",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E5%85%83%E4%BB%A3",
+    "ids": [
+      "0001.0001.0003"
+    ],
+    "htmlSha256": "bb986ee6182082405d38dc5d78bcb7f4a41154a99a224d75b70223ac0b1ab6c8",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "五代",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E4%BA%94%E4%BB%A3",
+    "ids": [
+      "0001.0001.0061"
+    ],
+    "htmlSha256": "b6d28d8b21d1d3c96e7e1fce9df1eefbd315ce360e9ef7f3eae869296eaab6ef",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "初唐",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E5%88%9D%E5%94%90",
+    "ids": [
+      "0001.0001.0057",
+      "0001.0001.0220",
+      "0001.0001.0321",
+      "0001.0001.0322",
+      "0001.0001.0323",
+      "0001.0001.0329"
+    ],
+    "htmlSha256": "92ca8bf6ca771a54b678e3eac3870005fffe3df8025001e267963d1c9a4fcbcb",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "北魏",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E5%8C%97%E9%AD%8F",
+    "ids": [
+      "0001.0001.0254",
+      "0001.0001.0257",
+      "0001.0004.0127"
+    ],
+    "htmlSha256": "21b3fe1d32db53d3de3ad57060022f8601a9f4d0cc6f3368e05dfcc2eb9145f9",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "北周",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E5%8C%97%E5%91%A8",
+    "ids": [
+      "0001.0001.0301"
+    ],
+    "htmlSha256": "85f5fc0798adfc69f00d62a79f32eecb57642696207ad9ac00feff911855624f",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "晚唐",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E6%99%9A%E5%94%90",
+    "ids": [
+      "0001.0001.0012",
+      "0001.0001.0017",
+      "0001.0001.0107"
+    ],
+    "htmlSha256": "0b85e5340f1f1750d576d60d6ec059603662507b3c9b32041aaa909f4f2dfb0d",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "西夏",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E8%A5%BF%E5%A4%8F",
+    "ids": [
+      "0001.0002.0003"
+    ],
+    "htmlSha256": "937735e273798173792e1791888581ef442285f0b5308e39fa46805bb961abc5",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "盛唐",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E7%9B%9B%E5%94%90",
+    "ids": [
+      "0001.0001.0023",
+      "0001.0001.0066",
+      "0001.0001.0103",
+      "0001.0001.0172",
+      "0001.0001.0194",
+      "0001.0001.0217",
+      "0001.0001.0320",
+      "0001.0002.0025"
+    ],
+    "htmlSha256": "550510fbfa54dca94ba87033703c792e3814934428d9aa68c22a590469f0d953",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "西魏",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E8%A5%BF%E9%AD%8F",
+    "ids": [
+      "0001.0001.0249",
+      "0001.0001.0285",
+      "0001.0003.0009"
+    ],
+    "htmlSha256": "46770b27764f1e73d1cb9c161bf105de838ec3c04e9f1a1da5e565985256690d",
+    "status": "verified-server-html"
+  },
+  {
+    "key": "ddhs/Core/Core/Core/Core/Metedata/Dynasty",
+    "value": "隋朝",
+    "sourceUrl": "https://www.e-dunhuang.com/section.htm?ddhs%2FCore%2FCore%2FCore%2FCore%2FMetedata%2FDynasty=%E9%9A%8B%E6%9C%9D",
+    "ids": [
+      "0001.0001.0302",
+      "0001.0001.0303",
+      "0001.0001.0390",
+      "0001.0001.0420"
+    ],
+    "htmlSha256": "0d3d3150a0f6ca26e1408a0af0afb9882a67ae0f43954bd3c69600afb7e848ed",
+    "status": "verified-server-html"
+  }
+]

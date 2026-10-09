@@ -1,0 +1,123 @@
+{
+  "category": "艺术/文化",
+  "country": "中国",
+  "implementation": "reference-study",
+  "capturedAt": "2026-10-09",
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "light",
+    "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+    "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+  },
+  "soundBehavior": {
+    "kind": "none",
+    "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+    "interactionRole": "阅读、图像和目录操作承担信息引导。"
+  },
+  "id": "suzhou-museum",
+  "order": 32,
+  "title": "苏州博物馆 · 四屏门户与图像目的地",
+  "subtitle": "Four full-page chapters, live exhibition visuals and nine image destinations",
+  "tags": [
+    "中国",
+    "苏州博物馆",
+    "江南建筑",
+    "贝聿铭",
+    "粉墙黛瓦",
+    "图像导航",
+    "留白",
+    "博物馆"
+  ],
+  "summary": "50px白色外缘框住建筑轮播、展览叙事、九个不等尺度图像入口和参观信息，右侧四条导航与方角摄影延续机构门户的清楚节奏。",
+  "accent": "#aa4d35",
+  "background": "#ffffff",
+  "referenceUrl": "https://www.szmuseum.com/Home/Index",
+  "edition": "2026-10-09；中文桌面首页四屏完整快照；手机同内容适配，WAP入口未取得",
+  "principles": [
+    "图像直接承担目的地入口，每个区域保留清晰的文字名称，而非把所有图像压成统一比例卡片。",
+    "粉墙黛色与自然光来自建筑本身；网页借助白色留白、方形边界和真实摄影承接这种识别。",
+    "目录选择与参观服务分别成章，图片的观看节奏和到访任务不互相覆盖。"
+  ],
+  "productFocus": "从机构门户进入馆藏、展览、学习和建筑内容，并把预约及实时到访信息交给官方服务。",
+  "interaction": [
+    "首页完整四屏：建筑双图轮播、七项展览、九目的地图像矩阵及开放时间/预约；用原站fullPage1.5.3、jQuery UI缓动和同一锚点/700ms受控滚动，第四屏向下循环回第一屏。",
+    "轮播：首屏Owl单图5000ms自动、800ms切换、fade效果、hover暂停；展览lrtk七项5000ms、500ms淡入，箭头/七条指示条及横向触摸，所有正式展览链接回官方。",
+    "图像目的地：资讯、云课堂、馆藏、活动、文创、数字苏博、展览、游戏、建筑美图九项原图/常显类目均保留，左右75%/25%及每块尺寸按源CSS。",
+    "悬停：原站CSS scale1.1/500ms与脚本图宽增加1.1倍/300ms共同作用；数字苏博单独增高，保留真实实现而非泛化轻微缩放。",
+    "访问与页尾：两张真实访问背景、70%半透明白板、原开放信息及预约链接，完整底栏网站地图展开500ms、浏览建议悬停；不添加建筑解说dialog。",
+    "原站初载被第三方统计阻塞jQuery.ready，四屏交互取自明确记录的受控启动及原源码；移动UA路由/Wap/Home/Index本次连接失败，本地手机为同内容长页适配。"
+  ],
+  "theme": "原站白色外缘、黑灰机构文字、建筑及藏品原色、少量红色开放信息与方角画面。",
+  "constraints": [
+    "固定同日四屏、当前七项展览及九个图像入口，不声称预约、留言、商店、课堂或账户业务复制。",
+    "公开摄影、机构字标、两类轮播和全部页面纹理/图饰检查本地化；保持原字节及水印。",
+    "原站初载第三方阻塞与受控jQuery.ready验证分开记录，正常访客加载效果不能由受控状态推断。",
+    "源PC最小1366px、移动UA跳到独立WAP；未取得WAP内容，因此手机响应适配明确不作为原站移动端像素复刻。",
+    "部分源CSS的未用背景或隐藏箭头URL返回HTML，记录失败，不用猜测图片替代可见主要素材。"
+  ],
+  "useCases": [
+    "有多个清晰内容目的地的文化机构门户",
+    "建筑与城市文化展示",
+    "馆藏、学习与参观并行的博物馆主页"
+  ],
+  "avoid": [
+    "图片缺少语义、只靠悬停才显示入口名称的门户",
+    "把所有文化机构都改成同一张水墨背景的主题页"
+  ],
+  "tokens": {
+    "palette": [
+      "#ffffff",
+      "#303a3b",
+      "#aa4d35",
+      "#827f75",
+      "#e5e5de"
+    ],
+    "type": "Microsoft Yahei/微软雅黑；原机构PNG字标，源CSS导航和类目字号。",
+    "layout": "50px外缘、4个整屏；2张建筑图→7项展览→75/25九入口矩阵→双访问面板；390px同内容长页适配。",
+    "motion": "fullPage700ms/easeInQuart、首屏5000ms/800ms fade、展览5000ms/500ms、矩阵双重1.1倍hover及500ms网站地图。"
+  },
+  "composition": {
+    "color": "源端观察：白色界面、黑灰文字、少量红色机构标识，资讯瓦片用粉墙与深灰边饰的建筑摄影。",
+    "typography": "原机构PNG书写字标和Microsoft Yahei导航/标签；类目1.5em、字距5px，非系统衬线重写品牌。",
+    "layout": "四屏完整结构；50px左右外缘，1440×900时主画面1340×755；第三屏按原九项/75%与25%两区组织。",
+    "imagery": "原站当前两张首页图、七项展览摄影、九项目的地、两张访问背景、字标和图饰本地化。",
+    "shape": "源网页大白边界、方角画面、窄白缝和四条灰色章节导航；建筑轮廓在真实摄影内，删除首版额外黑灰框线教学组件。",
+    "hierarchy": "四屏分别解决机构进入、展览浏览、内容目的地、到访；网站地图在底栏展开，语义入口不依赖图库猜测。",
+    "motion": "原站fullPage、Owl、lrtk真实源码配置与交互验证；保留反向、循环、hover和触摸，减少动态禁用自动与位移。",
+    "coherence": "真实建筑和馆藏摄影与白色空间相互支撑，陶红只标记少量入口/焦点；官网业务明确外链。"
+  },
+  "sources": [
+    {
+      "title": "苏州博物馆 · 中文官网图像目录",
+      "url": "https://www.szmuseum.com/Home/Index",
+      "type": "实例",
+      "note": "重新读取原DOM、homeindex/reset/innerfooter/fullPage/Owl/lrtk样式及运行库；冷加载被统计阻塞后明确jQuery.ready受控启动，对照四屏与真实导航/hover/轮播；详见state-matrix.md。"
+    },
+    {
+      "title": "苏州博物馆 · 贝聿铭与苏博",
+      "url": "https://www.szmuseum.com/Other/MuseumIntro",
+      "type": "实例",
+      "note": "官方建筑说明支持粉墙黛色、深灰石材边饰、自然光与江南园林的地域识别；网页迁移是本库解释。"
+    },
+    {
+      "title": "W3C WAI · Non-text Content",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+      "type": "规范",
+      "note": "图像目的地用常显名称给链接命名，避免全部信息仅置于背景影像。"
+    },
+    {
+      "title": "W3C WAI · Reflow",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "type": "规范",
+      "note": "本地矩阵窄屏重排并保留逻辑DOM顺序；规范是迁移约束，不表示官网合规审计。"
+    }
+  ],
+  "exercise": "把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。",
+  "prompt": "完整复现2026-10-09苏州博物馆中文PC首页的四屏，不只截第3/4屏。采用源字标、摄影、50px白色外缘、四条章节导航和fullPage700ms受控滚动/第四屏循环；首屏2图5000ms/800ms fade及hover暂停，展览7项5000ms/500ms淡入/7指示条，九目的地按75/25和原多尺度几何排列，标签常显，复用源CSS与脚本双重hover；第四屏保留两张背景及70%半透明开放/预约白板，底栏含500ms网站地图及浏览建议。所有源可见素材和jQuery UI缓动依赖本地化。第三方统计阻塞及受控启动写清证据，WAP未取到时将手机同内容适配明确标出，不能宣称原移动端复刻。官方服务保持真实外链，减少动态关闭自动轮播，别添加不在源站的建筑dialog或框线卡片。",
+  "negativePrompt": "不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。",
+  "demo": "demos/suzhou-museum/index.html",
+  "preview": "previews/suzhou-museum.jpg",
+  "research": "research/suzhou-museum.md",
+  "fidelity": "demos/suzhou-museum/fidelity.md",
+  "assetManifest": "demos/suzhou-museum/assets-manifest.json"
+}

@@ -1,0 +1,86 @@
+{
+  "id": "layered-directional-media-reveal",
+  "title": "黑层、信号层与媒体的方向揭示",
+  "category": "交互反馈",
+  "summary": "黑色遮层、强调色与实际图像依次揭示，让局部相册切换有明确方向和节奏。",
+  "mechanism": "组件内将黑层、信号色层、实际图像或影片叠为同方向裁切/slide-in，错峰推进；说明文字先退后入，选中索引、页码和媒体共同交接，旧媒体完成后暂停并清理。",
+  "trigger": "点击局部相册的前后或编号，选择新的图像/影片",
+  "effect": "先看到交接边界，再看到当前内容，媒体与编号/说明保持同一归属。",
+  "useCases": [
+    "多项技术演示相册",
+    "图像与影片混合的功能模块",
+    "有固定说明位置的案例轮播"
+  ],
+  "avoid": [
+    "把局部换图改成整页滚轮劫持",
+    "仅将图片scaleY伪装成三层揭示",
+    "叠加无上限离场层或继续播放旧视频",
+    "用信号色遮住稳定正文"
+  ],
+  "constraints": [
+    "黑层、强调色层和媒体是真实独立层，沿同一方向交接；媒体是实际图像/视频，不能用同一张图反复染色冒充三层。",
+    "此原子只负责组件内选择交接，区别于directional-section-wipe的整屏章节切换；竖向类别书脊由vertical-media-spine承担，可单独使用。",
+    "索引、页码、说明和素材用同一目标状态，正反与端点一致，旧视频暂停/离场层移除；快速输入采用明确锁或最新请求策略并单独测试。",
+    "来源参数400ms及delay0/250/500、文字500/500ms已由源码采集；本地四玩法视频与4→3、AIC五项图/正文/页码及5→1→5双向、有限中态实测，源同帧时序与快输入未全面验证。",
+    "减少动态即时切至目标媒体与可读说明；来源品牌黄可换为目标任务信号色，状态同时用文字、编号与按钮语义表达。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "方向层负责局部媒体交接，书脊负责类别归属，两者解耦。可接共享选择状态与生命周期，文字保持稳定阅读区域；不接管整页滚动，也不同时运行两套章切控制器。",
+    "pairsWellWith": [
+      "vertical-media-spine",
+      "last-request-transition",
+      "viewport-animation-lifecycle"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "前后/编号按钮有名称和可见焦点，端点disabled与aria同步；目标说明和页码在正常DOM中更新，稳定后只有当前媒体可操作，焦点不随视觉层漂移。",
+    "reducedMotion": "跳过三层位移与文字离场，立即显示目标媒体/编号/说明；视频另有暂停和静态封面，换项仍停止旧片。"
+  },
+  "parameters": [
+    {
+      "name": "三层顺序",
+      "value": "black → signal → media；每层400ms",
+      "note": "来源相册slide-in，黑层为交接边界，信号层不是稳定阅读底色。"
+    },
+    {
+      "name": "错峰与总跨度",
+      "value": "delay0/250/500ms；总900ms",
+      "note": "对应黑/黄/实际媒体三层，不是让加载器定时伪造进度。"
+    },
+    {
+      "name": "说明交接",
+      "value": "退出500ms / 进入500ms",
+      "note": "素材、页码与正文由一个选择状态关联；主页面保持自然滚动。"
+    },
+    {
+      "name": "本地已观察中态",
+      "value": "黑clip0；黄4.41%；媒体top100%",
+      "note": "AIC1→2一次浏览器采样及最终2/5、02图/outgoing0；不表示源/本地所有帧逐项相同。"
+    }
+  ],
+  "prompt": "为【图像/影片相册】实现组件内黑层→信号层→媒体的同方向揭示。保留三个独立层，以来源400ms、delay0/250/500总900ms作可调基线，说明500ms退出/500ms进入；不要只用scaleY缩放一张图。一个目标选择同步素材、编号、页码和正文，旧视频暂停、旧离场层清理；前后/端点/快速输入的锁或最新请求策略明确。局部换项不接管整页滚轮，竖向类别书脊保持独立静态构成。按钮可键盘操作、有名称与焦点，稳定后只有当前层可交互；减少动态直接给目标媒体与可读说明，视频保持主动暂停。用目标任务信号色替代源品牌黄，核验真实中态和终态，区分源码时序、本地局部实测与尚未逐项的源同帧对照。",
+  "sources": [
+    {
+      "caseId": "endfield-industrial",
+      "locator": "entries/endfield-industrial.json#interaction/5",
+      "observation": "玩法/AIC：4段原玩法视频和5张原工业图；400ms三层方向揭示，黑层delay0/黄250/实际媒体500，总900ms；文字500ms退出/500ms进入，内容/编号/分页共同变化。",
+      "evidence": "observed",
+      "referenceUrl": "https://endfield.hypergryph.com/",
+      "capturedAt": "2026-10-09"
+    }
+  ],
+  "sourceFiles": [
+    "entries/endfield-industrial.json",
+    "research/endfield-industrial.md",
+    "demos/endfield-industrial/fidelity.md",
+    "demos/endfield-industrial/state-matrix.md",
+    "demos/endfield-industrial/source-provenance.json",
+    "demos/endfield-industrial/index.html",
+    "demos/endfield-industrial/reference.css",
+    "demos/endfield-industrial/state.css",
+    "demos/endfield-industrial/app.js",
+    "demos/endfield-industrial/data.js"
+  ]
+}

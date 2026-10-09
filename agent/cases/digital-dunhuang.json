@@ -1,0 +1,944 @@
+{
+  "schemaVersion": 1,
+  "id": "digital-dunhuang",
+  "entry": {
+    "category": "艺术/文化",
+    "country": "中国",
+    "implementation": "reference-study",
+    "capturedAt": "2026-10-09",
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。",
+      "designReason": "固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。",
+      "interactionRole": "阅读、图像和目录操作承担信息引导。"
+    },
+    "id": "digital-dunhuang",
+    "order": 31,
+    "title": "数字敦煌 · 全幅影像与真实瓦片细察",
+    "subtitle": "Four-image entrance, evidence-backed facets and public DeepZoom tiles",
+    "tags": [
+      "中国",
+      "敦煌",
+      "壁画",
+      "石窟",
+      "文物数字化",
+      "检索",
+      "分面筛选",
+      "图像查看器"
+    ],
+    "summary": "四张石窟大图、中心检索和计数引导读者进入六个经典洞窟与十幅壁画；目录按真实三维分面筛选，独立Leaflet查看器按匿名公开边界加载瓦片。",
+    "accent": "#b34037",
+    "background": "#f1f0ec",
+    "referenceUrl": "https://www.e-dunhuang.com/index.htm",
+    "edition": "2026-10-09；首页完整序列、32项洞窟列表与莫高窟257窟主室西壁公开查看器",
+    "principles": [
+      "让文物影像成为主角，界面色彩服务搜索和目录状态。",
+      "遗址、形制和时代拆为明确的条件维度，以已选摘要解释当前范围。",
+      "从洞窟全貌进入壁画细节，查看尺度与图像真实分辨率分开说明。"
+    ],
+    "productFocus": "从公开影像进入数字文化遗产资料，按编号或时代寻找洞窟，再到官方平台查看完整解说与高清影像。",
+    "interaction": [
+      "首页：四幅真实石窟主图每3000ms水平切换500ms，原生箭头、中心检索与1500ms四项计数；六个经典洞窟、十幅壁画、寻境及运行时注入DLC横幅完整保留。",
+      "目录：32项源站洞窟与三维条件——遗址4项、形制4项、时代11项；19个单条件服务端响应分别取得成员集与HTML hash，本地按这些集进行AND组合并同步URL。",
+      "条件反馈：点击原条件可移除，已选条件行显示并可取消，折叠筛选耗时1000ms；北魏实测254、257、麦积127三项，叠加榆林窟为零项，浏览器返回恢复。",
+      "壁画：莫高窟257窟主室西壁采用源站Leaflet 1.7.1与DeepZoom 2.0.0，21515×15796逻辑像素、1024瓦片，匿名minZoom9.75/maxZoom12，公开level10–12共9瓦片实际取得。",
+      "细察：原生加减、滚轮、拖动和键盘平移，惯性参数与真实图像边界保留；高于11出现官方登录提醒，更高清业务回官方，不绕过匿名上限。",
+      "阅读：洞窟/壁画导航与返回顶部1000ms，数字敦煌介绍1500ms展开；版权/Cookie/平台介绍可打开关闭，语言、登录及订阅服务仍走官方。"
+    ],
+    "theme": "浅色目录、深色全幅石窟与#080900壁画画布；原字体/字号/红色导航样式沿用源CSS。",
+    "constraints": [
+      "固定同日主页、洞窟目录与一幅壁画查看器；32目录结果与首页固定30统计同时保留，不能自行将来源不一致改成同一数字。",
+      "19个单条件响应已验证，组合用公开成员集交集；没有声称枚举所有服务端组合、账户和实时数据库。",
+      "真实匿名瓦片浏览只覆盖莫高窟257西壁；其他洞窟详页、另九幅查看器、登录后更高分辨率、云游戏与订阅不复制。",
+      "原图保留水印与原字节；逻辑21515×15796不表示本地已下载此完整高清图，最高实际归档级别12。",
+      "减少动态暂停自动轮播和计数过程，保持导航、筛选与查看器手动操作；加载旋转反馈使用原 Control.Loading 库。"
+    ],
+    "useCases": [
+      "数字文化遗产资料库",
+      "需要图像细读的艺术档案",
+      "有时代/形制元数据的研究目录"
+    ],
+    "avoid": [
+      "图像精度不足却宣称可研究级放大的展示",
+      "没有元数据只用抽象风格标签的图库"
+    ],
+    "tokens": {
+      "palette": [
+        "#f1f0ec",
+        "#282c2b",
+        "#b34037",
+        "#947650",
+        "#ede8da"
+      ],
+      "type": "源CSS Microsoft Yahei与Bootstrap字体栈；图标字体本地化。",
+      "layout": "完整首页序列→两列洞窟列表/三维条件→独立全视口瓦片画布，手机沿官方首页样式及列表单列适配。",
+      "motion": "3000ms/500ms首页轮播、1500ms/100ms计数、1000ms导航/条件、1500ms介绍；真实地图拖动与缩放。"
+    },
+    "composition": {
+      "color": "深色顶栏、石窟原色主图、源CSS红色导航/检索操作、浅灰白目录及#080900查看器画布；不再采用首版拟合色。",
+      "typography": "源Microsoft Yahei与Bootstrap字体栈、原标题/字号/洞窟编号/时代层级，图标字体保留；不添加首版大衬线标题。",
+      "layout": "源HTML完整首页、32项目录与两列masonry；独立查看器铺满视口，去掉首版的虚构模态缩放。",
+      "imagery": "四张主图、六个洞窟、十幅壁画预览、运行时DLC内嵌PNG及9张公开瓦片本地化并保留水印。",
+      "shape": "矩形图像、条件标签、两列洞窟卡片与全视口深色图像场；加减控件沿用原Leaflet样式。",
+      "hierarchy": "环境影像建立地点，检索缩小候选，时代和编号解释对象，壁画查看器让用户主动改变观察尺度。",
+      "motion": "从原站源码配置及真实点击读取轮播、计数、折叠/介绍时长；查看器使用同一Leaflet/DeepZoom逻辑及匿名边界。",
+      "coherence": "文化图像负责氛围与证据，搜索/条件/编号负责发现过程，查看器清楚区分总览、局部和实际精度。"
+    },
+    "sources": [
+      {
+        "title": "敦煌研究院 · 数字敦煌",
+        "url": "https://www.e-dunhuang.com/index.htm",
+        "type": "实例",
+        "note": "DOM/CSS/真实轮播与检索交互；另读取运行时pop.js注入的750×100 PNG，恢复四计数和完整内容序列。"
+      },
+      {
+        "title": "数字敦煌 · 洞窟列表",
+        "url": "https://www.e-dunhuang.com/section.htm",
+        "type": "实例",
+        "note": "实测时代北魏筛选，URL和已选中摘要同步；按遗址、形制、时代建立分面。"
+      },
+      {
+        "title": "数字敦煌 · 第257窟主室西壁",
+        "url": "https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01",
+        "type": "实例",
+        "note": "现场点击Zoom in与Zoom out，核验独立深色影像视域与可逆放缩。"
+      },
+      {
+        "title": "W3C WAI · Modal Dialog",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+        "type": "规范",
+        "note": "首页版权/Cookie/平台介绍说明窗口提供明确关闭、Escape和焦点归还；壁画查看器为独立页面，不能使用此规范冒称它是dialog。"
+      },
+      {
+        "title": "W3C WAI · Reflow",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "type": "规范",
+        "note": "目录窄屏重排；图像二维平移限于独立画布，避免整页横向溢出。"
+      },
+      {
+        "title": "数字敦煌 · 257窟西壁公开查看器",
+        "url": "https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01",
+        "type": "实例",
+        "note": "实际加减、拖动，读取原Leaflet/DeepZoom脚本、地图缩放和公开Network瓦片，不读取登录后级别。"
+      }
+    ],
+    "exercise": "用有使用权的真实瓦片图像和完整元数据替换档案；逐条件验证成员集、组合空态、URL返回以及查看器真实精度、平移和缩放边界。",
+    "prompt": "逐页对照数字敦煌同日首页、洞窟列表与257西壁查看器，完整保留四图3000ms/500ms轮播、中央检索、1500ms计数、六洞窟/十壁画/寻境/DLC横幅序列，严禁只用单张图替代。用源站19个真实单facet响应成员集建立遗址/形制/时代筛选及可回退URL，保留32项档案和已选条件。查看器使用真正Leaflet/DeepZoom、本地公开1024瓦片、21515×15796逻辑尺寸、min9.75/max12和官方登录边界，完整测试加减/拖动/滚轮/键盘。来源图像、CSS和运行库应记录hash/版权和许可；云游戏、账户与更高清服务仍回官方，不用CSS放大低清图冒充瓦片引擎。",
+    "negativePrompt": "不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。",
+    "demo": "demos/digital-dunhuang/index.html",
+    "preview": "previews/digital-dunhuang.jpg",
+    "research": "research/digital-dunhuang.md",
+    "fidelity": "demos/digital-dunhuang/fidelity.md",
+    "assetManifest": "demos/digital-dunhuang/assets-manifest.json"
+  },
+  "patternIds": [
+    "bounded-image-inspection",
+    "explicit-facet-summary"
+  ],
+  "documents": [
+    {
+      "path": "research/digital-dunhuang.md",
+      "role": "research",
+      "content": "# 数字敦煌：完整发现路径与真实观察尺度\n\n归档 **2026-10-09**，[首页](https://www.e-dunhuang.com/index.htm)、[洞窟目录](https://www.e-dunhuang.com/section.htm)、[257西壁查看器](https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01)。单一快照，不并入独立云游戏或账号后台。\n\n## 一手观察\n\n浏览器读取 DOM、计算样式、cbpFWSlider/计数/Leaflet/DeepZoom配置和 Network 图块，实际轮换、滚动、选择时代/遗址、返回、缩放及拖动。首页四张原石窟影像每3000ms轮换、500ms切换；中心检索与导航后接寻境、六经典洞窟、十经典壁画、运行时DLC横幅、平台介绍与页尾。四项统计以1500ms/100ms到30/10/4430/300。横幅由pop.js注入750×100内嵌PNG，这种运行模块只看原始HTML会漏掉。[首页](https://www.e-dunhuang.com/index.htm)\n\n目录实际32项，按遗址4/形制4/时代11切换条件。19个单条件服务端响应取得成员集与hash，不依据介绍文字猜形制。实点北魏得到254、257与麦积山127三条，再叠榆林零条；URL、已选范围和返回同步。首页固定统计30与目录32分别保留源值，未擅自消除源数据差异。[目录](https://www.e-dunhuang.com/section.htm)\n\n查看器是独立Leaflet1.7.1+DeepZoom2.0.0页面。CRS.Simple、1024瓦片、逻辑21515×15796；匿名min9.75/max12，1440×900初fit10.927709695。Network实见level10一张、11两张、12六张，达到上限加号禁用，超过11出现4000ms登录提醒。真实平移/惯性与加载旋转反馈不同于对小图作CSS百分比缩放。[查看器](https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01)\n\n## 提取与复用\n\n“分面条件在列表前显式呈现”记录当前范围；“公开边界内的瓦片细察”连接全貌、真实图块、平移和匿名精度边界。组合取已取得单条件成员集交集是本地离线实现，不宣称枚举全部服务端组合。两项机制与既有计数、摄影主视觉、目录导航复用，文化身份由真实资料与对象组织建立。\n\n## 复现与边界\n\n[首页](../demos/digital-dunhuang/index.html)、[32项目录](../demos/digital-dunhuang/section.html)、[真实瓦片查看器](../demos/digital-dunhuang/viewer.html)使用原摄影、原插件与同公共缩放配置；本地9图块保留水印与尺寸，不请求登录后更高精度。21515×15796仅为逻辑坐标，不能声称本地归档完整此尺寸高清图。旧单首图/三条虚拟筛选/562×253预览/dialog方案已删除。\n\n独立桌面对照首页前三区几何相同；计数终值、DLC及footer通过，北魏/零结果/返回与第12级六图块和禁用状态实测一致。手机按原首页响应CSS、目录单列与同画布；减少动态关闭自动运动、惯性和中间计数。二维影像视域参照[W3C Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)，真实地图键盘能力可对照[Leaflet键盘选项](https://leafletjs.com/reference-1.7.1.html#map-keyboard)，不把这些本地约束当官网合规结论。完整状态与遗漏原因见[矩阵](../demos/digital-dunhuang/state-matrix.md)，19响应见[筛选证据](../demos/digital-dunhuang/filter-evidence.json)，素材/hash见[清单](../demos/digital-dunhuang/assets-manifest.json)。\n",
+      "sha256": "fca55feb0fabf810ded9740d034cb679ff32880a835891276dc8929813efe814",
+      "bytes": 3354
+    },
+    {
+      "path": "prompts/digital-dunhuang.md",
+      "role": "prompt",
+      "content": "# 数字敦煌 · 全幅影像与真实瓦片细察 · 复用 Prompt\n\n由 [结构化案例](../entries/digital-dunhuang.json) 自动生成。参考观察与具体边界见 [调研](../research/digital-dunhuang.md)。\n\n## 正向 Prompt\n\n逐页对照数字敦煌同日首页、洞窟列表与257西壁查看器，完整保留四图3000ms/500ms轮播、中央检索、1500ms计数、六洞窟/十壁画/寻境/DLC横幅序列，严禁只用单张图替代。用源站19个真实单facet响应成员集建立遗址/形制/时代筛选及可回退URL，保留32项档案和已选条件。查看器使用真正Leaflet/DeepZoom、本地公开1024瓦片、21515×15796逻辑尺寸、min9.75/max12和官方登录边界，完整测试加减/拖动/滚轮/键盘。来源图像、CSS和运行库应记录hash/版权和许可；云游戏、账户与更高清服务仍回官方，不用CSS放大低清图冒充瓦片引擎。\n\n## 负向约束\n\n不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。\n\n## 制作约束\n\n- 固定同日主页、洞窟目录与一幅壁画查看器；32目录结果与首页固定30统计同时保留，不能自行将来源不一致改成同一数字。\n- 19个单条件响应已验证，组合用公开成员集交集；没有声称枚举所有服务端组合、账户和实时数据库。\n- 真实匿名瓦片浏览只覆盖莫高窟257西壁；其他洞窟详页、另九幅查看器、登录后更高分辨率、云游戏与订阅不复制。\n- 原图保留水印与原字节；逻辑21515×15796不表示本地已下载此完整高清图，最高实际归档级别12。\n- 减少动态暂停自动轮播和计数过程，保持导航、筛选与查看器手动操作；加载旋转反馈使用原 Control.Loading 库。\n\n## 检查方法\n\n用有使用权的真实瓦片图像和完整元数据替换档案；逐条件验证成员集、组合空态、URL返回以及查看器真实精度、平移和缩放边界。\n\n[查看 Demo](../demos/digital-dunhuang/index.html) · [返回浏览案例](../cases.html#style/digital-dunhuang)\n",
+      "sha256": "328934d5a4eee9ab40dfab0c108cb875b771a7bab3e56a039d00114f5e9805f4",
+      "bytes": 2144
+    },
+    {
+      "path": "demos/digital-dunhuang/fidelity.md",
+      "role": "fidelity",
+      "content": "# 数字敦煌：复现范围与证据\n\n固定采集日 **2026-10-09**，来源[首页](https://www.e-dunhuang.com/index.htm)、[洞窟列表](https://www.e-dunhuang.com/section.htm) 和[第257窟西壁查看器](https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01)。本地是三个独立页面：[首页](index.html)、[完整列表](section.html)、[查看器](viewer.html)。不包含账户、订阅后台、其他壁画查看器和数字藏经洞云游戏。\n\n本轮通过浏览器读取 DOM/CSS、原插件、运行时插入元素及 Network 瓦片，实际操作轮播、导航、条件、浏览器返回、缩放、拖动及边界。素材保留水印、字节与归属，完整出处、尺寸与 SHA-256 见[清单](assets-manifest.json)。\n\n| 页面/机制 | 本地实现与核验 |\n|---|---|\n| 首页 | 四张原图、原 cbpFWSlider，3000ms 自动/500ms 切换；寻境、六经典洞窟、十经典壁画、DLC、介绍、页尾全部保留。 |\n| 运行态 | 30/10/4430/300 四项计数按1500ms/100ms更新；原 pop.js 内嵌750×100横幅无损解码，1150×153.325显示与213.325区高通过独立复查。 |\n| 条件列表 | 原32项与两列30px缝，遗址4/形制4/时代11。19个单条件官方响应的成员集和HTML hash保存在[筛选证据](filter-evidence.json)，本地组合取交集。 |\n| 范围反馈 | 条件互斥/取消、已选项、1000ms折叠、URL与返回恢复；北魏实际254/257/麦积山127三条，叠榆林零条，返回恢复已核验。 |\n| 壁画引擎 | 原 Leaflet 1.7.1、DeepZoom 2.0.0、CRS.Simple、1024瓦片，真实平移/惯性/加减/键盘；原 Control.Loading 与 CSS 加载旋转反馈。 |\n| 匿名边界 | minZoom9.75/maxZoom12，1440×900初fit10.927709695；本地只归档匿名实测level10一张、11两张、12六张原瓦片，最高级加号禁用。超过11显示4000ms官方登录提示。 |\n\n源码逻辑尺寸 **21515×15796** 是坐标系统；本地最高归档级别12，不能称拥有该尺寸的完整高清壁画。没有请求登录后的更高精度。查看器是独立真实瓦片页面，已删除旧562×253预览、100%—300% CSS缩放和原创 dialog。首页说明窗口保留原内容，关闭/Escape、背景关闭及焦点返回属于本地语义补充。\n\n独立 **1440×1000** 复查首页前三区 top/height 相同；计数终值、DLC、footer位置和全部可见图像加载通过。源/本地第12级六瓦片、图片矩形与缩放禁用状态一致。手机使用原首页响应规则、目录单列和同全屏画布；减少动态关闭自动轮播、计数中间态、惯性与过渡。无需账户与外网影像依赖即可查看本地归档视域，外链业务仍到官方。\n\n证据边界：组合采用19个已取得单条件成员集的交集，没有枚举全部服务端组合；固定首页“30”与当日列表“32”都按源快照保留；源未使用的 CSS 背景 banner.jpg 返回 HTML，未猜造素材。原始截图/日志在仓库外 heritage-audit/ 与 work/fidelity/independent-audit/，正式预览由实际浏览器生成。完整机制、之前省略原因见[状态矩阵](state-matrix.md)。\n\n[研究](../../research/digital-dunhuang.md) · [Demo](index.html)\n\n补充独立手机证据：390×844源/本地七标题与六区全部x/y/width/height差值小于0.002px，无整页横溢出；导航展开终态top58、height334.3625、width360.4与原600ms规则一致。几何JSON保留在仓库外work/fidelity/independent-audit/dunhuang-{source,local}-mobile-geometry.json。版权年份按固定快照保留2015–2026，三个说明窗唯一标题ID对应实际标题；菜单aria-expanded为本地语义补充。\n",
+      "sha256": "9903939e807a78767ef2467c31334ecebab2d7ac860f024ffcce9faf38fc9694",
+      "bytes": 3691
+    },
+    {
+      "path": "demos/digital-dunhuang/assets-manifest.json",
+      "role": "asset-manifest",
+      "content": "{\n  \"brand\": \"digital-dunhuang\",\n  \"sourcePage\": \"https://www.e-dunhuang.com/index.htm\",\n  \"capturedAt\": \"2026-10-09\",\n  \"scope\": \"对指定公开页面的结构、纹理、原图比例及可观察交互作本地学习复现；正式业务跳转官方，去除统计追踪。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/21d4203c1b96e531.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/logo.png\",\n      \"width\": 196,\n      \"height\": 59,\n      \"format\": \"png\",\n      \"bytes\": 13494,\n      \"sha256\": \"dcc514d3790fbab1c7bd139b67981dcd22eb2812a8cc199056c09da4a3188431\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/1dd71824bad575ef.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/aa.jpg\",\n      \"width\": 1280,\n      \"height\": 859,\n      \"format\": \"jpg\",\n      \"bytes\": 84555,\n      \"sha256\": \"19e15f8a9c3710b5c84bce1b27e37022786188de24bf8450c4560774abbfa822\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/6a60c3d209566ee7.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/111.jpg\",\n      \"width\": 1280,\n      \"height\": 859,\n      \"format\": \"jpg\",\n      \"bytes\": 201454,\n      \"sha256\": \"5e4c14ae0226f7872dfc35ff0471814680697e2798c9d58f67d5940d30fcfdcb\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/6c17ecbb72270427.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/11.jpg\",\n      \"width\": 1280,\n      \"height\": 859,\n      \"format\": \"jpg\",\n      \"bytes\": 227890,\n      \"sha256\": \"d7a3fd2de5eb4aca89692aae0b4fcec8798ddbc330532848043829738a90430d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/835bacca6163d588.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/aa1.jpg\",\n      \"width\": 1280,\n      \"height\": 859,\n      \"format\": \"jpg\",\n      \"bytes\": 215567,\n      \"sha256\": \"6ca5e556b13368cc399113cc55cca16d3fad032128a74536b1a865819f3b7138\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/1584e2c0ddd0bea1.webp\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/1_1_1.webp\",\n      \"width\": null,\n      \"height\": null,\n      \"format\": \"webp\",\n      \"bytes\": 87792,\n      \"sha256\": \"de512dbed618f17c9fdc163b7c51e4b12000ae677dfbe3045b8a0c8b3d88e6ae\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/c139bf673072b0f7.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0254/05/1/1.jpg\",\n      \"width\": 700,\n      \"height\": 541,\n      \"format\": \"jpg\",\n      \"bytes\": 82090,\n      \"sha256\": \"ae40f230e17d0c98fcb14fc2d6ff975e077dc988df10211dd1fecd5e5fd6ca06\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/ea768498dfc29c5f.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/read.png\",\n      \"width\": 34,\n      \"height\": 26,\n      \"format\": \"png\",\n      \"bytes\": 3353,\n      \"sha256\": \"595a421272b853e7441244b9a43630af851d2c9fb5627ce5d0a70c135acd307b\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/da857bbec920f6c8.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0285/05/1/1.jpg\",\n      \"width\": 700,\n      \"height\": 542,\n      \"format\": \"jpg\",\n      \"bytes\": 93099,\n      \"sha256\": \"7ee37e97ede84e40842cf698b1842f6c2a9b2fe7217f901290ad9eb9a44eeff0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/9745bf431d5109a0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0420/05/1/1.jpg\",\n      \"width\": 700,\n      \"height\": 541,\n      \"format\": \"jpg\",\n      \"bytes\": 112588,\n      \"sha256\": \"2899555069a3f1eb4ff3969e500d8f72c7e12d66760d29c996e6cf1b1d93e67f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/29963352bb326975.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0061/05/1/1.jpg\",\n      \"width\": 1024,\n      \"height\": 792,\n      \"format\": \"jpg\",\n      \"bytes\": 116505,\n      \"sha256\": \"a35394fee49b5b39823b7487f0faa387fab8da3e34974667590c6f834fba3f54\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/ee923dfdfe3ad6d4.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0002/0003/05/1/1.jpg\",\n      \"width\": 700,\n      \"height\": 541,\n      \"format\": \"jpg\",\n      \"bytes\": 50600,\n      \"sha256\": \"27fa8adce118804b987d966ad8509b560d24a5613a60cec5a709d4b517d30f44\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/f6de7bbed375d65c.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0322/05/1/1.jpg\",\n      \"width\": 700,\n      \"height\": 541,\n      \"format\": \"jpg\",\n      \"bytes\": 95736,\n      \"sha256\": \"8fbda953736b0cec69d5a428bbb103cece732d260e04f9b4e21304284609f130\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/9e4cfc1d6f05d3e9.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0023.0001.0004.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 337252,\n      \"sha256\": \"c6c92a563af45b50e9044cb7e8fad94a1f8db19d8500927ae72de8c2e31facdf\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/b97a08f3742c30ec.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0323.0001.0004.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 329335,\n      \"sha256\": \"156950c494d9b16676446bfc19d9229dc0ba254ed5d813daa9db09f997239a9d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/c842bb25903ee05f.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0057.0001.0002.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 363590,\n      \"sha256\": \"f722b3b175bd38242cec68bc486f5f41c270aa43241b46bb967401e92acd3116\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/f281ce84e71d04c2.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0112.0001.0002.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 448299,\n      \"sha256\": \"a269863cb152b9e48250a17a1fe8b89d4ca62208b1fe42b56073d10e321aa50a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/09e964a852248e0e.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0217.0001.0004.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 449082,\n      \"sha256\": \"df83270b8c013cb67da31f220d59928f9ac0b85fe0cb483c7d30e0b20dc1b7ed\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/e4a6fa7ba7ba99b8.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0249.0001.0008.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 353818,\n      \"sha256\": \"2792342f898d2909b4557288f260d0f0313efa583d098f927caad168b76912f3\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/eb5f03ee1c6eace8.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0257.0001.0003.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 250670,\n      \"sha256\": \"c9e1edbbad9a63cb0393f18df875f6d90edccf12fefaf20c23ce07efc3cd55c0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/67ea55c7c8abb4e6.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0320.0001.0002.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 440522,\n      \"sha256\": \"80eefc0560d24df9645d1babb2b45b617055d66a0a036b6eb153b7b28dc5d9f8\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/1520e50f15fec876.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0001.0329.0003.0006.0004.01.1.jpg\",\n      \"width\": 561,\n      \"height\": 252,\n      \"format\": \"jpg\",\n      \"bytes\": 299997,\n      \"sha256\": \"216cf99ba987193c3e2cce1b0c899e20c698927e3a2585093cee5875369fb12d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/c8203072dda1960f.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/mural/10.0001.0001.0002.0025.0001.0004.01.1.jpg\",\n      \"width\": 562,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 328631,\n      \"sha256\": \"8ffa4e68fece4723e9348af08fb2e9c20c79e688bc66b705a0a31027780a2664\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/ef755d2198800b58.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/up.png\",\n      \"width\": 40,\n      \"height\": 34,\n      \"format\": \"png\",\n      \"bytes\": 485,\n      \"sha256\": \"c415cedd551ee4d4b5c59bb34e6c0b727645e368f8de0217c2660f38f7eb806d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/05413ed9665cc731.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/digital.png\",\n      \"width\": 400,\n      \"height\": 318,\n      \"format\": \"png\",\n      \"bytes\": 242267,\n      \"sha256\": \"0208f4d8272deabb16e5b88616c44f83970912a8a88d91680f03c427601f2b45\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/6f0c93ea1974121d.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/t.jpg\",\n      \"width\": 220,\n      \"height\": 220,\n      \"format\": \"jpg\",\n      \"bytes\": 18399,\n      \"sha256\": \"d8e035d790f6dab9292e254ea008e53228b81da3916005061d1449f04b15ed6a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/193244d1acfe0a55.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0003/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 791,\n      \"format\": \"jpg\",\n      \"bytes\": 77968,\n      \"sha256\": \"0f8353febae35385e4ed9d6e1225f4104a892e4fec7b0ba5d55b0fff3fa3cb63\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/05eb55d38b9d4962.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0012/05/1/1.jpg\",\n      \"width\": 562,\n      \"height\": 845,\n      \"format\": \"jpg\",\n      \"bytes\": 118370,\n      \"sha256\": \"61d5aa03989f68dc8b08b190f1800b0c7ec6e24ab213dd67c4b454b196e4cd3d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/dc155320cb86c32e.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0017/05/1/1.jpg\",\n      \"width\": 425,\n      \"height\": 526,\n      \"format\": \"jpg\",\n      \"bytes\": 27426,\n      \"sha256\": \"223fa0c6793fe2a584574a613bba86c051adb71ea8a021da633a2141adb47cef\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/16ba5ce9739847f3.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/bian.jpg\",\n      \"width\": 18,\n      \"height\": 18,\n      \"format\": \"jpg\",\n      \"bytes\": 21204,\n      \"sha256\": \"be018e0f1678ab6b04e18f279e6314b0c9574e3530d8dcfc1b8327d6b8a310d9\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/e35c2fc2bfddcb16.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0023/05/1/1.jpg\",\n      \"width\": 562,\n      \"height\": 374,\n      \"format\": \"jpg\",\n      \"bytes\": 50114,\n      \"sha256\": \"29f27c769781fb1152b4da0e447c1cdd8a82eaccc56ea378d4db07fac2bbbe22\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/ea84e3a775aca5de.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0057/05/1/1.jpg\",\n      \"width\": 450,\n      \"height\": 674,\n      \"format\": \"jpg\",\n      \"bytes\": 63880,\n      \"sha256\": \"79db2743f294237d384fc6274c67ac62f6ac0e072eed86412a4252f5a814691c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/60402cdfd6dc24d3.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0066/05/1/1.jpg\",\n      \"width\": 504,\n      \"height\": 703,\n      \"format\": \"jpg\",\n      \"bytes\": 78266,\n      \"sha256\": \"3c3d3caf22b5d93fc40173c0c9a2314ea77da28b52ed8959c2d9cc84860c5441\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/08c5200cd8c21d90.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0103/05/1/1.jpg\",\n      \"width\": 356,\n      \"height\": 526,\n      \"format\": \"jpg\",\n      \"bytes\": 39910,\n      \"sha256\": \"555588001e3dc9aa8048f82ec2f93fc35491cf17d458bd1fbb372e6fbfb543ea\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/db426c9f05a90d97.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0107/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 362,\n      \"format\": \"jpg\",\n      \"bytes\": 39986,\n      \"sha256\": \"616ca2b3596b1bdf1ac968520d510d9126010fc30b98f64fc9118b549ba2e5c9\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/c8fb4c2e329529f5.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0112/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 34989,\n      \"sha256\": \"b3190f4fc412e2f6993a016ff7837130fd546e6f14922508041ead3f8691e698\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/8c9034dc2cf12913.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0172/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 262,\n      \"format\": \"jpg\",\n      \"bytes\": 33270,\n      \"sha256\": \"cad2a71dd12b1e5a9f84535b93a2014d08fa1cae8df5fe4350880486b7e05569\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/a030b0f41ed710c0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0194/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 29229,\n      \"sha256\": \"80783178c5cf132fce10afd9b8aeec0f2597cd1d61a62f4d8b07126e08c35dae\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/4dc19aaf1cf4a1a0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0217/05/1/1.jpg\",\n      \"width\": 350,\n      \"height\": 526,\n      \"format\": \"jpg\",\n      \"bytes\": 49848,\n      \"sha256\": \"57263af5bbcafa1c2bc9945ea0f6203613df6c58cd082b43b521f450e4193b85\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/839e8beefd5e43db.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0220/05/1/1.jpg\",\n      \"width\": 562,\n      \"height\": 279,\n      \"format\": \"jpg\",\n      \"bytes\": 30848,\n      \"sha256\": \"0c2c155972ba06ca60a655edf72f286829d46cd578c0be845de3efaa7b28f4a7\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/5374786f122016c8.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0249/05/1/1.jpg\",\n      \"width\": 412,\n      \"height\": 526,\n      \"format\": \"jpg\",\n      \"bytes\": 60529,\n      \"sha256\": \"e87b772e67b1e382ccb280895fab24db5d63b40ca80808f607748c51f01d5558\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/aa16926065b9300f.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0257/05/1/1.jpg\",\n      \"width\": 253,\n      \"height\": 317,\n      \"format\": \"jpg\",\n      \"bytes\": 16957,\n      \"sha256\": \"098fecfce2456d4f62cf05ac5189983677b0b4500c410008f82c331e7802a065\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/a6af0a15a922808f.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0301/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 42502,\n      \"sha256\": \"74f8ef69debb4f6e682769ad5c38641d40fe8beb6b62d7f325c40402f99884d0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/55bba6f9e788959c.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0302/05/1/1.jpg\",\n      \"width\": 356,\n      \"height\": 526,\n      \"format\": \"jpg\",\n      \"bytes\": 38309,\n      \"sha256\": \"e6b9b42bf6337a781d96fb4a3173ff385ccf9cc7af63088972c082c879c9039d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/e0348e1a4de7b534.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0303/05/1/1.jpg\",\n      \"width\": 406,\n      \"height\": 526,\n      \"format\": \"jpg\",\n      \"bytes\": 49297,\n      \"sha256\": \"2f789741c2272ee9dfd6b36b0cbe06af34cf9ed2cdac6ffbe5fdc0e7ba00036e\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/0ee525ab61c4496f.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0320/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 51022,\n      \"sha256\": \"96a7d3c1b81fb710a5a993b305ab23ae1246d085a0a62b1f164dd6bb4648fa9c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/b2aa95e9b997506a.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0321/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 37353,\n      \"sha256\": \"7620025739d8029ee5e0cb6d65ef0730c28ef28b357330a1e7b0b8c81768b1cb\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/77d1394b2d677771.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0323/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 39781,\n      \"sha256\": \"8410b6055cfecd34d08b53ad9c3e6cd4777d1e75cd79568c98cc5f40f13dfca6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/be2a59f2278e85e8.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0329/05/1/1.jpg\",\n      \"width\": 169,\n      \"height\": 253,\n      \"format\": \"jpg\",\n      \"bytes\": 13921,\n      \"sha256\": \"c8c363f5670ebbcd70a524fd28d93dc36d79eb27e641772ff2f9a276449573ce\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/dfbbfe63e5e800a8.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0001/0390/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 40227,\n      \"sha256\": \"85fd470856a8fcfd25128b919d824ee59fad62c4016031ec199d20012278a074\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/ef05f3da4a9118b1.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0002/0025/05/1/1.jpg\",\n      \"width\": 526,\n      \"height\": 359,\n      \"format\": \"jpg\",\n      \"bytes\": 37034,\n      \"sha256\": \"761f278108457f74038868503bfa22a35823f469bc803a6cb2d1c7cea8bd58f1\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/98880162ef8a635a.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0003/0009/05/1/1.jpg\",\n      \"width\": 490,\n      \"height\": 327,\n      \"format\": \"jpg\",\n      \"bytes\": 32022,\n      \"sha256\": \"fccb94733e110339f22ed80fa16821817defbcccb8c2c851775c3e297f3b95ab\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/b5db4deb22aa2b69.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/10.0001/0001/0004/0127/05/1/1.jpg\",\n      \"width\": 2000,\n      \"height\": 1333,\n      \"format\": \"jpg\",\n      \"bytes\": 281025,\n      \"sha256\": \"527a035605bd77a20ac99f4973caeac5412afa00503df25b75617510e64a3aec\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/11/0_0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/11/0_0.jpg\",\n      \"width\": 1024,\n      \"height\": 988,\n      \"format\": \"jpg\",\n      \"bytes\": 164715,\n      \"sha256\": \"b35f65aae7bd49b5e708b7b1c3240f6f0b7f79c81306d4d602fe9fb8231e683c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/11/1_0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/11/1_0.jpg\",\n      \"width\": 321,\n      \"height\": 988,\n      \"format\": \"jpg\",\n      \"bytes\": 54115,\n      \"sha256\": \"c87b343eb36ccc34e8c1c8f7c1af5a27e2687ed938461453e92b9061feae3ffd\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/12/1_0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/12/1_0.jpg\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"format\": \"jpg\",\n      \"bytes\": 160818,\n      \"sha256\": \"b30217d353f394bc10fc687b30323b8626a0fb4726f7b36c87dfbf408535507b\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/12/1_1.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/12/1_1.jpg\",\n      \"width\": 1024,\n      \"height\": 951,\n      \"format\": \"jpg\",\n      \"bytes\": 138588,\n      \"sha256\": \"601ba7a00afd2a9d15d4504ee9353fc0d55b6607c23b9dd8a75f1faa76c994ec\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/12/0_0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/12/0_0.jpg\",\n      \"width\": 1024,\n      \"height\": 1024,\n      \"format\": \"jpg\",\n      \"bytes\": 160313,\n      \"sha256\": \"87c0e33b0866e8a2a93e5af1de93d7c6bccece12c0bf1e3aaaba0d1403c77466\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/12/2_0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/12/2_0.jpg\",\n      \"width\": 642,\n      \"height\": 1024,\n      \"format\": \"jpg\",\n      \"bytes\": 105689,\n      \"sha256\": \"18271c464b3ec7272949c0dc5530427248c691b9d3bf23861ce06b5cb2c52e0f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/12/0_1.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/12/0_1.jpg\",\n      \"width\": 1024,\n      \"height\": 951,\n      \"format\": \"jpg\",\n      \"bytes\": 133068,\n      \"sha256\": \"c3441520bc6693df6b61bb6884c294cf5320fd3aafbf62af1723757ac1d17dd1\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/12/2_1.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/12/2_1.jpg\",\n      \"width\": 642,\n      \"height\": 951,\n      \"format\": \"jpg\",\n      \"bytes\": 81879,\n      \"sha256\": \"ad7c22a43da3517526d2f9df1c00900d0816a4805d87ef7d21b58e68b85a1dfe\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/tiles/10/0_0.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/SOURCES/resources/10.0001/0001/0001/0257/0001/0003/01/9/index_files/10/0_0.jpg\",\n      \"width\": 673,\n      \"height\": 494,\n      \"format\": \"jpg\",\n      \"bytes\": 61578,\n      \"sha256\": \"dab68389925d5b9b2b787d6806ab8176457cc1727dc28da424d74bf62007aef1\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"敦煌研究院及原权利人；公开图像仅作个人设计研究，保留水印，不承诺开放或商业授权。\"\n    },\n    {\n      \"file\": \"assets/dlc-banner.png\",\n      \"sourceUrl\": \"https://login.e-dunhuang.com/static/js/pop/pop.js\",\n      \"bytes\": 146199,\n      \"sha256\": \"5604d17865d6bd5bb0823a6e20a9a06a9c1a751945c849a8e7a8d5bc71d7c87c\",\n      \"width\": 750,\n      \"height\": 100,\n      \"format\": \"png\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站pop.js运行时以data URI注入的DLC横幅。\",\n      \"processing\": \"base64无损解码，保留原像素和链接。\",\n      \"copyright\": \"敦煌研究院及原素材权利人。\"\n    },\n    {\n      \"file\": \"assets/33f8f1b905fe3944.woff2\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/fonts/glyphicons-halflings-regular.woff2\",\n      \"width\": null,\n      \"height\": null,\n      \"format\": \"woff2\",\n      \"bytes\": 18028,\n      \"sha256\": \"fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/54d4168dc70f3b79.woff\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/fonts/glyphicons-halflings-regular.woff\",\n      \"width\": null,\n      \"height\": null,\n      \"format\": \"woff\",\n      \"bytes\": 23424,\n      \"sha256\": \"a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/d9bdfc32315cd4e1.eot\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/fonts/glyphicons-halflings-regular.eot?#iefix\",\n      \"width\": null,\n      \"height\": null,\n      \"format\": \"eot\",\n      \"bytes\": 20127,\n      \"sha256\": \"13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/796e7f01cfb95cc4.eot\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/fonts/glyphicons-halflings-regular.eot\",\n      \"width\": null,\n      \"height\": null,\n      \"format\": \"eot\",\n      \"bytes\": 20127,\n      \"sha256\": \"13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/952673c3d9ba7470.ttf\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/fonts/glyphicons-halflings-regular.ttf\",\n      \"width\": null,\n      \"height\": null,\n      \"format\": \"ttf\",\n      \"bytes\": 45404,\n      \"sha256\": \"e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/3030b567050830b9.svg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular\",\n      \"width\": null,\n      \"height\": null,\n      \"format\": \"svg\",\n      \"bytes\": 108738,\n      \"sha256\": \"42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/c1527c2bdac473da.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/menu-icon.png\",\n      \"width\": 35,\n      \"height\": 35,\n      \"format\": \"png\",\n      \"bytes\": 3401,\n      \"sha256\": \"8949948236b91ca0ff970416256dacff402db85da8b4c83956108cf1fa99e2b1\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/978a261a4178f707.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/img_spt.png\",\n      \"width\": 377,\n      \"height\": 160,\n      \"format\": \"png\",\n      \"bytes\": 10053,\n      \"sha256\": \"1d29e848954b506c073dd4464da2d4d9cb0d776fbd291a9c44341a0f80c6706c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/f2e5ea04953cae04.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/banner-two.jpg\",\n      \"width\": 1680,\n      \"height\": 250,\n      \"format\": \"jpg\",\n      \"bytes\": 55651,\n      \"sha256\": \"e6122073717c67b1212d2c6a0eec131d285b301f2f75d80549ac709d21c69a86\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/4fcc26eb1a6d6181.jpg\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/banner-two_en.jpg\",\n      \"width\": 1680,\n      \"height\": 250,\n      \"format\": \"jpg\",\n      \"bytes\": 98644,\n      \"sha256\": \"925898fcb02c0b665643e930ed427fb456bb9be17acec8af9f4551def848ee6f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/de1669f8b1998998.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/arrow.png\",\n      \"width\": 9,\n      \"height\": 12,\n      \"format\": \"png\",\n      \"bytes\": 2872,\n      \"sha256\": \"1c728d79384dbc6613e58fbf717c1364910b37050b6697f15124922e305b2c41\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/1ffc6cfced96667f.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/move-top.png\",\n      \"width\": 38,\n      \"height\": 25,\n      \"format\": \"png\",\n      \"bytes\": 3237,\n      \"sha256\": \"b0ce4c1ccc6e051c36d5914d18015c76c19b9ecabf9294b010ab101fb6689b7f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/792ce77a9ad8dfe8.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/nav-sprites.png\",\n      \"width\": 100,\n      \"height\": 150,\n      \"format\": \"png\",\n      \"bytes\": 4580,\n      \"sha256\": \"a5742ef62c5f6b130f558b6ab36b4da8236ea19bc2cc8c0508f896ef2a5c418f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/16e8f3ba6cfceefc.png\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/images/arrows.png\",\n      \"width\": 76,\n      \"height\": 53,\n      \"format\": \"png\",\n      \"bytes\": 3180,\n      \"sha256\": \"179b32821bb5ce5211414e4486811184b391b5f2f2e8a435512112118345f296\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/jquery.min.js\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/js/jquery.min.js\",\n      \"bytes\": 95962,\n      \"sha256\": \"20e11ce61890c08c0529911822233c9023ebc367df6c1050dec105e2b9628104\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站可观察交互使用的运行库；保留原作者文件头。\",\n      \"copyright\": \"各库作者；见文件头及第三方声明。\"\n    },\n    {\n      \"file\": \"assets/wow.min.js\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/js/wow.min.js\",\n      \"bytes\": 4776,\n      \"sha256\": \"bf5756b42791ad1d693196b5b2e57e93a387d45dee7ba02322a001c451b8df05\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站可观察交互使用的运行库；保留原作者文件头。\",\n      \"copyright\": \"各库作者；见文件头及第三方声明。\"\n    },\n    {\n      \"file\": \"assets/modernizr.custom.js\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/js/modernizr.custom.js\",\n      \"bytes\": 9201,\n      \"sha256\": \"0a67d19524d694fcd71d9aa8c6020f914e4f5084328daf4a43afa6cb1f0992bc\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站可观察交互使用的运行库；保留原作者文件头。\",\n      \"copyright\": \"各库作者；见文件头及第三方声明。\"\n    },\n    {\n      \"file\": \"assets/jquery.cbpFWSlider.min.js\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/js/jquery.cbpFWSlider.min.js\",\n      \"bytes\": 3832,\n      \"sha256\": \"a4a94303e556844893b07df143c920c577a0de25220e445aff20ab9459622326\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站可观察交互使用的运行库；保留原作者文件头。\",\n      \"copyright\": \"各库作者；见文件头及第三方声明。\"\n    },\n    {\n      \"file\": \"assets/leaflet.js\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/lib/leaflet/js/leaflet.js\",\n      \"bytes\": 141856,\n      \"sha256\": \"d5828a2b607ec50e80a668213aedc716675b7f3356f824037f07dba67e83bbf3\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站可观察交互使用的运行库；保留原作者文件头。\",\n      \"copyright\": \"各库作者；见文件头及第三方声明。\"\n    },\n    {\n      \"file\": \"assets/leaflet-deepzoom.js\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/lib/leaflet/js/leaflet-deepzoom.js\",\n      \"bytes\": 2823,\n      \"sha256\": \"af2145f6b394e63f3c93cb3165ec0d80b72314bf84c3f234e2b5a686a14d157b\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站可观察交互使用的运行库；保留原作者文件头。\",\n      \"copyright\": \"各库作者；见文件头及第三方声明。\"\n    },\n    {\n      \"file\": \"assets/leaflet.css\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/lib/leaflet/css/leaflet.css\",\n      \"bytes\": 14272,\n      \"sha256\": \"04f7caf4ce6fdf87365cfea9d1cc55cf599440bb2dd204cb9349a573b92ea1d0\",\n      \"format\": \"css\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原站可观察交互使用的运行库；保留原作者文件头。\",\n      \"copyright\": \"各库作者；见文件头及第三方声明。\"\n    },\n    {\n      \"file\": \"assets/Control.Loading.js\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/lib/leaflet/js/Control.Loading.js\",\n      \"bytes\": 14134,\n      \"sha256\": \"36ba8861a885f6da0540b9fa897bba6f51e69468afa4ebed5998cde7b1ad6ab8\",\n      \"format\": \"js\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"源站真实瓦片加载旋转反馈控件。\",\n      \"copyright\": \"Leaflet.Control.Loading原作者，保留原文件头；原站使用版本。\"\n    },\n    {\n      \"file\": \"assets/Control.Loading.css\",\n      \"sourceUrl\": \"https://cdn.e-dunhuang.com/lib/leaflet/css/Control.Loading.css\",\n      \"bytes\": 3252,\n      \"sha256\": \"a03cb949f329fc4c35287d89d9abcc2097b36dc0182ffcb3ac802814be535749\",\n      \"format\": \"css\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"源站真实瓦片加载旋转反馈控件。\",\n      \"copyright\": \"Leaflet.Control.Loading原作者，保留原文件头；原站使用版本。\"\n    }\n  ],\n  \"sharedDependencies\": [\n    {\n      \"path\": \"asset-sources.js\",\n      \"purpose\": \"公共素材映射，由主库固定提交SHA生成；不是官网代码。\"\n    },\n    {\n      \"path\": \"asset-runtime.js\",\n      \"purpose\": \"公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。\"\n    },\n    {\n      \"path\": \"asset-cache.js\",\n      \"purpose\": \"公共媒体缓存入口，独立异步加载，不阻断静态内容。\"\n    },\n    {\n      \"path\": \"asset-cache-worker.js\",\n      \"purpose\": \"asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。\"\n    }\n  ],\n  \"unavailable\": [\n    {\n      \"url\": \"https://cdn.e-dunhuang.com/images/banner.jpg\",\n      \"error\": \"Error: 200 text/html; charset=utf-8\"\n    }\n  ],\n  \"viewerScope\": \"莫高窟257主室西壁；保留匿名浏览minZoom9.75/maxZoom12，不获取需要登录的更高分辨率；仅归档观察到的公开9瓦片。\"\n}\n",
+      "sha256": "f3de29dc64b170b37433e5be926a48a46c773fc64426655952a00702e696d242",
+      "bytes": 62300
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source",
+      "sha256": "c79b75fd0c3486fe276d043966ef012001d6083e608a09e85bc27eec0190be57",
+      "bytes": 6544
+    },
+    {
+      "path": "asset-cache.js",
+      "role": "source",
+      "sha256": "358aaa03a948a0e062a3600f867651f55b55c8f20268ed7d34855a5261148b48",
+      "bytes": 2235
+    },
+    {
+      "path": "asset-runtime.js",
+      "role": "source",
+      "sha256": "759866d959626c747239cfc1b845fa2f0c27b5efe058427b213a593fe1155ff6",
+      "bytes": 14866
+    },
+    {
+      "path": "asset-sources.js",
+      "role": "source",
+      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
+      "bytes": 132498
+    },
+    {
+      "path": "case-loading.css",
+      "role": "source",
+      "sha256": "690e6b4af8e65328c08e33f079dbd1241a407ed6a10d8f99302532e0fd7c63c7",
+      "bytes": 3384
+    },
+    {
+      "path": "case-loading.js",
+      "role": "source",
+      "sha256": "25c59ce598b13ccd0cb5bea7e7c99d198c30197454ac2f3ca6db4f30bd72059d",
+      "bytes": 18878
+    },
+    {
+      "path": "demos/digital-dunhuang/LICENSE-Control-Loading.txt",
+      "role": "context",
+      "sha256": "84983fb0caf4385d211e9ca6be595df7b2640840c09bafb68135d25aa71c482b",
+      "bytes": 1058
+    },
+    {
+      "path": "demos/digital-dunhuang/LICENSE-Leaflet-DeepZoom.txt",
+      "role": "context",
+      "sha256": "205e2edc75213a102aecacb30113385aa069fd44b45fd374dc063ac114ebdfdf",
+      "bytes": 1060
+    },
+    {
+      "path": "demos/digital-dunhuang/LICENSE-Leaflet.txt",
+      "role": "context",
+      "sha256": "4172e5d9d709cf78cd9b18bce59a2905cb4a072fb72d5fa0331805520019e320",
+      "bytes": 1361
+    },
+    {
+      "path": "demos/digital-dunhuang/LICENSE-jQuery.txt",
+      "role": "context",
+      "sha256": "d4db9ebe6f29f5168eac45ad713f055623ac5d0dcd5ba92da23d650ae012020d",
+      "bytes": 1097
+    },
+    {
+      "path": "demos/digital-dunhuang/THIRD-PARTY-NOTICES.md",
+      "role": "context",
+      "sha256": "638bdfd7a09caad8dc2386cf77c2af3faaed962cca6a66754fb8d3dff0545051",
+      "bytes": 1295
+    },
+    {
+      "path": "demos/digital-dunhuang/app.js",
+      "role": "source",
+      "sha256": "a007be314bef9ea12415dad8b74287ab9591f913155fb5e1d8742048164f1e0c",
+      "bytes": 3688
+    },
+    {
+      "path": "demos/digital-dunhuang/assets-manifest.json",
+      "role": "context",
+      "sha256": "f3de29dc64b170b37433e5be926a48a46c773fc64426655952a00702e696d242",
+      "bytes": 62300
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/05413ed9665cc731.png",
+      "role": "asset",
+      "sha256": "0208f4d8272deabb16e5b88616c44f83970912a8a88d91680f03c427601f2b45",
+      "bytes": 242267
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/05eb55d38b9d4962.jpg",
+      "role": "asset",
+      "sha256": "61d5aa03989f68dc8b08b190f1800b0c7ec6e24ab213dd67c4b454b196e4cd3d",
+      "bytes": 118370
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/08c5200cd8c21d90.jpg",
+      "role": "asset",
+      "sha256": "555588001e3dc9aa8048f82ec2f93fc35491cf17d458bd1fbb372e6fbfb543ea",
+      "bytes": 39910
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/09e964a852248e0e.jpg",
+      "role": "asset",
+      "sha256": "df83270b8c013cb67da31f220d59928f9ac0b85fe0cb483c7d30e0b20dc1b7ed",
+      "bytes": 449082
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/0ee525ab61c4496f.jpg",
+      "role": "asset",
+      "sha256": "96a7d3c1b81fb710a5a993b305ab23ae1246d085a0a62b1f164dd6bb4648fa9c",
+      "bytes": 51022
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/1520e50f15fec876.jpg",
+      "role": "asset",
+      "sha256": "216cf99ba987193c3e2cce1b0c899e20c698927e3a2585093cee5875369fb12d",
+      "bytes": 299997
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/1584e2c0ddd0bea1.webp",
+      "role": "asset",
+      "sha256": "de512dbed618f17c9fdc163b7c51e4b12000ae677dfbe3045b8a0c8b3d88e6ae",
+      "bytes": 87792
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/16ba5ce9739847f3.jpg",
+      "role": "asset",
+      "sha256": "be018e0f1678ab6b04e18f279e6314b0c9574e3530d8dcfc1b8327d6b8a310d9",
+      "bytes": 21204
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/16e8f3ba6cfceefc.png",
+      "role": "asset",
+      "sha256": "179b32821bb5ce5211414e4486811184b391b5f2f2e8a435512112118345f296",
+      "bytes": 3180
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/193244d1acfe0a55.jpg",
+      "role": "asset",
+      "sha256": "0f8353febae35385e4ed9d6e1225f4104a892e4fec7b0ba5d55b0fff3fa3cb63",
+      "bytes": 77968
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/1dd71824bad575ef.jpg",
+      "role": "asset",
+      "sha256": "19e15f8a9c3710b5c84bce1b27e37022786188de24bf8450c4560774abbfa822",
+      "bytes": 84555
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/1ffc6cfced96667f.png",
+      "role": "asset",
+      "sha256": "b0ce4c1ccc6e051c36d5914d18015c76c19b9ecabf9294b010ab101fb6689b7f",
+      "bytes": 3237
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/21d4203c1b96e531.png",
+      "role": "asset",
+      "sha256": "dcc514d3790fbab1c7bd139b67981dcd22eb2812a8cc199056c09da4a3188431",
+      "bytes": 13494
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/29963352bb326975.jpg",
+      "role": "asset",
+      "sha256": "a35394fee49b5b39823b7487f0faa387fab8da3e34974667590c6f834fba3f54",
+      "bytes": 116505
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/3030b567050830b9.svg",
+      "role": "asset",
+      "sha256": "42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5",
+      "bytes": 108738
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/33f8f1b905fe3944.woff2",
+      "role": "asset",
+      "sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c",
+      "bytes": 18028
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/4dc19aaf1cf4a1a0.jpg",
+      "role": "asset",
+      "sha256": "57263af5bbcafa1c2bc9945ea0f6203613df6c58cd082b43b521f450e4193b85",
+      "bytes": 49848
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/4fcc26eb1a6d6181.jpg",
+      "role": "asset",
+      "sha256": "925898fcb02c0b665643e930ed427fb456bb9be17acec8af9f4551def848ee6f",
+      "bytes": 98644
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/5374786f122016c8.jpg",
+      "role": "asset",
+      "sha256": "e87b772e67b1e382ccb280895fab24db5d63b40ca80808f607748c51f01d5558",
+      "bytes": 60529
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/54d4168dc70f3b79.woff",
+      "role": "asset",
+      "sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742",
+      "bytes": 23424
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/55bba6f9e788959c.jpg",
+      "role": "asset",
+      "sha256": "e6b9b42bf6337a781d96fb4a3173ff385ccf9cc7af63088972c082c879c9039d",
+      "bytes": 38309
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/60402cdfd6dc24d3.jpg",
+      "role": "asset",
+      "sha256": "3c3d3caf22b5d93fc40173c0c9a2314ea77da28b52ed8959c2d9cc84860c5441",
+      "bytes": 78266
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/67ea55c7c8abb4e6.jpg",
+      "role": "asset",
+      "sha256": "80eefc0560d24df9645d1babb2b45b617055d66a0a036b6eb153b7b28dc5d9f8",
+      "bytes": 440522
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/6a60c3d209566ee7.jpg",
+      "role": "asset",
+      "sha256": "5e4c14ae0226f7872dfc35ff0471814680697e2798c9d58f67d5940d30fcfdcb",
+      "bytes": 201454
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/6c17ecbb72270427.jpg",
+      "role": "asset",
+      "sha256": "d7a3fd2de5eb4aca89692aae0b4fcec8798ddbc330532848043829738a90430d",
+      "bytes": 227890
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/6f0c93ea1974121d.jpg",
+      "role": "asset",
+      "sha256": "d8e035d790f6dab9292e254ea008e53228b81da3916005061d1449f04b15ed6a",
+      "bytes": 18399
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/77d1394b2d677771.jpg",
+      "role": "asset",
+      "sha256": "8410b6055cfecd34d08b53ad9c3e6cd4777d1e75cd79568c98cc5f40f13dfca6",
+      "bytes": 39781
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/792ce77a9ad8dfe8.png",
+      "role": "asset",
+      "sha256": "a5742ef62c5f6b130f558b6ab36b4da8236ea19bc2cc8c0508f896ef2a5c418f",
+      "bytes": 4580
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/796e7f01cfb95cc4.eot",
+      "role": "asset",
+      "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407",
+      "bytes": 20127
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/835bacca6163d588.jpg",
+      "role": "asset",
+      "sha256": "6ca5e556b13368cc399113cc55cca16d3fad032128a74536b1a865819f3b7138",
+      "bytes": 215567
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/839e8beefd5e43db.jpg",
+      "role": "asset",
+      "sha256": "0c2c155972ba06ca60a655edf72f286829d46cd578c0be845de3efaa7b28f4a7",
+      "bytes": 30848
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/8c9034dc2cf12913.jpg",
+      "role": "asset",
+      "sha256": "cad2a71dd12b1e5a9f84535b93a2014d08fa1cae8df5fe4350880486b7e05569",
+      "bytes": 33270
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/952673c3d9ba7470.ttf",
+      "role": "asset",
+      "sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456",
+      "bytes": 45404
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/9745bf431d5109a0.jpg",
+      "role": "asset",
+      "sha256": "2899555069a3f1eb4ff3969e500d8f72c7e12d66760d29c996e6cf1b1d93e67f",
+      "bytes": 112588
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/978a261a4178f707.png",
+      "role": "asset",
+      "sha256": "1d29e848954b506c073dd4464da2d4d9cb0d776fbd291a9c44341a0f80c6706c",
+      "bytes": 10053
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/98880162ef8a635a.jpg",
+      "role": "asset",
+      "sha256": "fccb94733e110339f22ed80fa16821817defbcccb8c2c851775c3e297f3b95ab",
+      "bytes": 32022
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/9e4cfc1d6f05d3e9.jpg",
+      "role": "asset",
+      "sha256": "c6c92a563af45b50e9044cb7e8fad94a1f8db19d8500927ae72de8c2e31facdf",
+      "bytes": 337252
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/Control.Loading.css",
+      "role": "asset",
+      "sha256": "a03cb949f329fc4c35287d89d9abcc2097b36dc0182ffcb3ac802814be535749",
+      "bytes": 3252
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/Control.Loading.js",
+      "role": "asset",
+      "sha256": "36ba8861a885f6da0540b9fa897bba6f51e69468afa4ebed5998cde7b1ad6ab8",
+      "bytes": 14134
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/a030b0f41ed710c0.jpg",
+      "role": "asset",
+      "sha256": "80783178c5cf132fce10afd9b8aeec0f2597cd1d61a62f4d8b07126e08c35dae",
+      "bytes": 29229
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/a6af0a15a922808f.jpg",
+      "role": "asset",
+      "sha256": "74f8ef69debb4f6e682769ad5c38641d40fe8beb6b62d7f325c40402f99884d0",
+      "bytes": 42502
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/aa16926065b9300f.jpg",
+      "role": "asset",
+      "sha256": "098fecfce2456d4f62cf05ac5189983677b0b4500c410008f82c331e7802a065",
+      "bytes": 16957
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/b2aa95e9b997506a.jpg",
+      "role": "asset",
+      "sha256": "7620025739d8029ee5e0cb6d65ef0730c28ef28b357330a1e7b0b8c81768b1cb",
+      "bytes": 37353
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/b5db4deb22aa2b69.jpg",
+      "role": "asset",
+      "sha256": "527a035605bd77a20ac99f4973caeac5412afa00503df25b75617510e64a3aec",
+      "bytes": 281025
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/b97a08f3742c30ec.jpg",
+      "role": "asset",
+      "sha256": "156950c494d9b16676446bfc19d9229dc0ba254ed5d813daa9db09f997239a9d",
+      "bytes": 329335
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/be2a59f2278e85e8.jpg",
+      "role": "asset",
+      "sha256": "c8c363f5670ebbcd70a524fd28d93dc36d79eb27e641772ff2f9a276449573ce",
+      "bytes": 13921
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/c139bf673072b0f7.jpg",
+      "role": "asset",
+      "sha256": "ae40f230e17d0c98fcb14fc2d6ff975e077dc988df10211dd1fecd5e5fd6ca06",
+      "bytes": 82090
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/c1527c2bdac473da.png",
+      "role": "asset",
+      "sha256": "8949948236b91ca0ff970416256dacff402db85da8b4c83956108cf1fa99e2b1",
+      "bytes": 3401
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/c8203072dda1960f.jpg",
+      "role": "asset",
+      "sha256": "8ffa4e68fece4723e9348af08fb2e9c20c79e688bc66b705a0a31027780a2664",
+      "bytes": 328631
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/c842bb25903ee05f.jpg",
+      "role": "asset",
+      "sha256": "f722b3b175bd38242cec68bc486f5f41c270aa43241b46bb967401e92acd3116",
+      "bytes": 363590
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/c8fb4c2e329529f5.jpg",
+      "role": "asset",
+      "sha256": "b3190f4fc412e2f6993a016ff7837130fd546e6f14922508041ead3f8691e698",
+      "bytes": 34989
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/d9bdfc32315cd4e1.eot",
+      "role": "asset",
+      "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407",
+      "bytes": 20127
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/da857bbec920f6c8.jpg",
+      "role": "asset",
+      "sha256": "7ee37e97ede84e40842cf698b1842f6c2a9b2fe7217f901290ad9eb9a44eeff0",
+      "bytes": 93099
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/db426c9f05a90d97.jpg",
+      "role": "asset",
+      "sha256": "616ca2b3596b1bdf1ac968520d510d9126010fc30b98f64fc9118b549ba2e5c9",
+      "bytes": 39986
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/dc155320cb86c32e.jpg",
+      "role": "asset",
+      "sha256": "223fa0c6793fe2a584574a613bba86c051adb71ea8a021da633a2141adb47cef",
+      "bytes": 27426
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/de1669f8b1998998.png",
+      "role": "asset",
+      "sha256": "1c728d79384dbc6613e58fbf717c1364910b37050b6697f15124922e305b2c41",
+      "bytes": 2872
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/dfbbfe63e5e800a8.jpg",
+      "role": "asset",
+      "sha256": "85fd470856a8fcfd25128b919d824ee59fad62c4016031ec199d20012278a074",
+      "bytes": 40227
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/dlc-banner.png",
+      "role": "asset",
+      "sha256": "5604d17865d6bd5bb0823a6e20a9a06a9c1a751945c849a8e7a8d5bc71d7c87c",
+      "bytes": 146199
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/e0348e1a4de7b534.jpg",
+      "role": "asset",
+      "sha256": "2f789741c2272ee9dfd6b36b0cbe06af34cf9ed2cdac6ffbe5fdc0e7ba00036e",
+      "bytes": 49297
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/e35c2fc2bfddcb16.jpg",
+      "role": "asset",
+      "sha256": "29f27c769781fb1152b4da0e447c1cdd8a82eaccc56ea378d4db07fac2bbbe22",
+      "bytes": 50114
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/e4a6fa7ba7ba99b8.jpg",
+      "role": "asset",
+      "sha256": "2792342f898d2909b4557288f260d0f0313efa583d098f927caad168b76912f3",
+      "bytes": 353818
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/ea768498dfc29c5f.png",
+      "role": "asset",
+      "sha256": "595a421272b853e7441244b9a43630af851d2c9fb5627ce5d0a70c135acd307b",
+      "bytes": 3353
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/ea84e3a775aca5de.jpg",
+      "role": "asset",
+      "sha256": "79db2743f294237d384fc6274c67ac62f6ac0e072eed86412a4252f5a814691c",
+      "bytes": 63880
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/eb5f03ee1c6eace8.jpg",
+      "role": "asset",
+      "sha256": "c9e1edbbad9a63cb0393f18df875f6d90edccf12fefaf20c23ce07efc3cd55c0",
+      "bytes": 250670
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/ee923dfdfe3ad6d4.jpg",
+      "role": "asset",
+      "sha256": "27fa8adce118804b987d966ad8509b560d24a5613a60cec5a709d4b517d30f44",
+      "bytes": 50600
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/ef05f3da4a9118b1.jpg",
+      "role": "asset",
+      "sha256": "761f278108457f74038868503bfa22a35823f469bc803a6cb2d1c7cea8bd58f1",
+      "bytes": 37034
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/ef755d2198800b58.png",
+      "role": "asset",
+      "sha256": "c415cedd551ee4d4b5c59bb34e6c0b727645e368f8de0217c2660f38f7eb806d",
+      "bytes": 485
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/f281ce84e71d04c2.jpg",
+      "role": "asset",
+      "sha256": "a269863cb152b9e48250a17a1fe8b89d4ca62208b1fe42b56073d10e321aa50a",
+      "bytes": 448299
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/f2e5ea04953cae04.jpg",
+      "role": "asset",
+      "sha256": "e6122073717c67b1212d2c6a0eec131d285b301f2f75d80549ac709d21c69a86",
+      "bytes": 55651
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/f6de7bbed375d65c.jpg",
+      "role": "asset",
+      "sha256": "8fbda953736b0cec69d5a428bbb103cece732d260e04f9b4e21304284609f130",
+      "bytes": 95736
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/jquery.cbpFWSlider.min.js",
+      "role": "asset",
+      "sha256": "a4a94303e556844893b07df143c920c577a0de25220e445aff20ab9459622326",
+      "bytes": 3832
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/jquery.min.js",
+      "role": "asset",
+      "sha256": "20e11ce61890c08c0529911822233c9023ebc367df6c1050dec105e2b9628104",
+      "bytes": 95962
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/leaflet-deepzoom.js",
+      "role": "asset",
+      "sha256": "af2145f6b394e63f3c93cb3165ec0d80b72314bf84c3f234e2b5a686a14d157b",
+      "bytes": 2823
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/leaflet.css",
+      "role": "asset",
+      "sha256": "04f7caf4ce6fdf87365cfea9d1cc55cf599440bb2dd204cb9349a573b92ea1d0",
+      "bytes": 14272
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/leaflet.js",
+      "role": "asset",
+      "sha256": "d5828a2b607ec50e80a668213aedc716675b7f3356f824037f07dba67e83bbf3",
+      "bytes": 141856
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/modernizr.custom.js",
+      "role": "asset",
+      "sha256": "0a67d19524d694fcd71d9aa8c6020f914e4f5084328daf4a43afa6cb1f0992bc",
+      "bytes": 9201
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/10/0_0.jpg",
+      "role": "asset",
+      "sha256": "dab68389925d5b9b2b787d6806ab8176457cc1727dc28da424d74bf62007aef1",
+      "bytes": 61578
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/11/0_0.jpg",
+      "role": "asset",
+      "sha256": "b35f65aae7bd49b5e708b7b1c3240f6f0b7f79c81306d4d602fe9fb8231e683c",
+      "bytes": 164715
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/11/1_0.jpg",
+      "role": "asset",
+      "sha256": "c87b343eb36ccc34e8c1c8f7c1af5a27e2687ed938461453e92b9061feae3ffd",
+      "bytes": 54115
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/12/0_0.jpg",
+      "role": "asset",
+      "sha256": "87c0e33b0866e8a2a93e5af1de93d7c6bccece12c0bf1e3aaaba0d1403c77466",
+      "bytes": 160313
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/12/0_1.jpg",
+      "role": "asset",
+      "sha256": "c3441520bc6693df6b61bb6884c294cf5320fd3aafbf62af1723757ac1d17dd1",
+      "bytes": 133068
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/12/1_0.jpg",
+      "role": "asset",
+      "sha256": "b30217d353f394bc10fc687b30323b8626a0fb4726f7b36c87dfbf408535507b",
+      "bytes": 160818
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/12/1_1.jpg",
+      "role": "asset",
+      "sha256": "601ba7a00afd2a9d15d4504ee9353fc0d55b6607c23b9dd8a75f1faa76c994ec",
+      "bytes": 138588
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/12/2_0.jpg",
+      "role": "asset",
+      "sha256": "18271c464b3ec7272949c0dc5530427248c691b9d3bf23861ce06b5cb2c52e0f",
+      "bytes": 105689
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/tiles/12/2_1.jpg",
+      "role": "asset",
+      "sha256": "ad7c22a43da3517526d2f9df1c00900d0816a4805d87ef7d21b58e68b85a1dfe",
+      "bytes": 81879
+    },
+    {
+      "path": "demos/digital-dunhuang/assets/wow.min.js",
+      "role": "asset",
+      "sha256": "bf5756b42791ad1d693196b5b2e57e93a387d45dee7ba02322a001c451b8df05",
+      "bytes": 4776
+    },
+    {
+      "path": "demos/digital-dunhuang/catalogue.js",
+      "role": "source",
+      "sha256": "78bb6a9cf44f8fa259df3500ff8407b3cdba355df73ba3f2c4e408a98fbd1a92",
+      "bytes": 1963
+    },
+    {
+      "path": "demos/digital-dunhuang/fidelity.md",
+      "role": "context",
+      "sha256": "9903939e807a78767ef2467c31334ecebab2d7ac860f024ffcce9faf38fc9694",
+      "bytes": 3691
+    },
+    {
+      "path": "demos/digital-dunhuang/filter-evidence.json",
+      "role": "context",
+      "sha256": "9fb4deaac19cd88481db60520b3a1b9df35b55fd76e6dfd6fe62210976fd7b3c",
+      "bytes": 9357
+    },
+    {
+      "path": "demos/digital-dunhuang/index.html",
+      "role": "source",
+      "sha256": "c5a497c04303377b3cc050f373ead0c8e16fa0d80b820650cf4a78651faa5203",
+      "bytes": 45247
+    },
+    {
+      "path": "demos/digital-dunhuang/section.html",
+      "role": "source",
+      "sha256": "4e6124f0272293d3b99a2d456725a144e1cf502d63551fcc1ceb011b6773fb35",
+      "bytes": 116442
+    },
+    {
+      "path": "demos/digital-dunhuang/state-matrix.md",
+      "role": "context",
+      "sha256": "cc3ee6a24a41ab5a089abd9a5c87b7e08105343e5478ed6a99d4660e90639105",
+      "bytes": 5297
+    },
+    {
+      "path": "demos/digital-dunhuang/style.css",
+      "role": "source",
+      "sha256": "0f3c18e94de9d0d6cbe28d9d26ceb2cf921ad9a629b4dcf10ff164523f10df6e",
+      "bytes": 254062
+    },
+    {
+      "path": "demos/digital-dunhuang/viewer.css",
+      "role": "source",
+      "sha256": "f3749ce38644354a7160ecd390d13fbe4065c2cd90813eaaedab900f36ca3442",
+      "bytes": 761
+    },
+    {
+      "path": "demos/digital-dunhuang/viewer.html",
+      "role": "source",
+      "sha256": "882e71be18e1296f74f8e3c34d4735e3c24dd1d6d0bb03e76c9373648effe7be",
+      "bytes": 1264
+    },
+    {
+      "path": "demos/digital-dunhuang/viewer.js",
+      "role": "source",
+      "sha256": "0445aed0b54ecceca661c04f892cf3e280a86542bbc73405124f4ab8af253eab",
+      "bytes": 1293
+    },
+    {
+      "path": "document.css",
+      "role": "source",
+      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
+      "bytes": 3700
+    },
+    {
+      "path": "document.html",
+      "role": "source",
+      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
+      "bytes": 4329
+    },
+    {
+      "path": "document.js",
+      "role": "source",
+      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
+      "bytes": 3933
+    },
+    {
+      "path": "entries/digital-dunhuang.json",
+      "role": "context",
+      "sha256": "04cefb277fcde4a8761db7c38c88bf585fda9e7c50d70b5c2ff30927f9fe4db9",
+      "bytes": 9071
+    },
+    {
+      "path": "favicon.svg",
+      "role": "asset",
+      "sha256": "dc26891beb1bbf6fa227594bc248be56cf11971433fcaef7d0ab1a9353dcacbf",
+      "bytes": 256
+    },
+    {
+      "path": "previews/digital-dunhuang.jpg",
+      "role": "preview",
+      "sha256": "820015e769482f387837d5818325b9954527df4b2db51248589660c5e520d40b",
+      "bytes": 251659
+    },
+    {
+      "path": "previews/mobile/digital-dunhuang.jpg",
+      "role": "preview",
+      "sha256": "38baba243050f1451685220aaa146611741ae80ce64763db9c6adaf8b4ba1ba2",
+      "bytes": 75088
+    },
+    {
+      "path": "prompts/digital-dunhuang.md",
+      "role": "context",
+      "sha256": "328934d5a4eee9ab40dfab0c108cb875b771a7bab3e56a039d00114f5e9805f4",
+      "bytes": 2144
+    },
+    {
+      "path": "research/digital-dunhuang.md",
+      "role": "context",
+      "sha256": "fca55feb0fabf810ded9740d034cb679ff32880a835891276dc8929813efe814",
+      "bytes": 3354
+    },
+    {
+      "path": "site-footer.css",
+      "role": "source",
+      "sha256": "c02e4d66015d205b9e82b143085aafdeae707b1df4feb734df69a129d8c34840",
+      "bytes": 3146
+    },
+    {
+      "path": "site-nav.css",
+      "role": "source",
+      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
+      "bytes": 14852
+    },
+    {
+      "path": "site-shell.js",
+      "role": "source",
+      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
+      "bytes": 4447
+    },
+    {
+      "path": "site-typography.css",
+      "role": "source",
+      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
+      "bytes": 15208
+    },
+    {
+      "path": "theme-control.css",
+      "role": "source",
+      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
+      "bytes": 2236
+    },
+    {
+      "path": "theme.js",
+      "role": "source",
+      "sha256": "a58190fc01230d486eecaa99264bf132ba127d68918131a6f2f4798fb2e2cadf",
+      "bytes": 2716
+    },
+    {
+      "path": "vendor/LICENSES.txt",
+      "role": "context",
+      "sha256": "686180cffa7070689812fcab65030d3471b662d2746f21c49370d1929b0d4533",
+      "bytes": 14681
+    },
+    {
+      "path": "vendor/marked.umd.js",
+      "role": "source",
+      "sha256": "f424dcb508fdf93e0137a970cfce8f3207ea2e3f37eca5f7556a52875683632a",
+      "bytes": 47225
+    },
+    {
+      "path": "vendor/purify.min.js",
+      "role": "source",
+      "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2",
+      "bytes": 28885
+    }
+  ],
+  "webNotes": {
+    "format": "text/html",
+    "renderer": "atlas.js",
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=digital-dunhuang\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>深色顶栏、石窟原色主图、源CSS红色导航/检索操作、浅灰白目录及#080900查看器画布；不再采用首版拟合色。</dd></div><div class=\"\"><dt>字体排版</dt><dd>源Microsoft Yahei与Bootstrap字体栈、原标题/字号/洞窟编号/时代层级，图标字体保留；不添加首版大衬线标题。</dd></div><div class=\"\"><dt>布局留白</dt><dd>源HTML完整首页、32项目录与两列masonry；独立查看器铺满视口，去掉首版的虚构模态缩放。</dd></div><div class=\"\"><dt>图像图标</dt><dd>四张主图、六个洞窟、十幅壁画预览、运行时DLC内嵌PNG及9张公开瓦片本地化并保留水印。</dd></div><div class=\"\"><dt>线条形状</dt><dd>矩形图像、条件标签、两列洞窟卡片与全视口深色图像场；加减控件沿用原Leaflet样式。</dd></div><div class=\"\"><dt>信息层级</dt><dd>环境影像建立地点，检索缩小候选，时代和编号解释对象，壁画查看器让用户主动改变观察尺度。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>从原站源码配置及真实点击读取轮播、计数、折叠/介绍时长；查看器使用同一Leaflet/DeepZoom逻辑及匿名边界。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>文化图像负责氛围与证据，搜索/条件/编号负责发现过程，查看器清楚区分总览、局部和实际精度。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>让文物影像成为主角，界面色彩服务搜索和目录状态。</li><li>遗址、形制和时代拆为明确的条件维度，以已选摘要解释当前范围。</li><li>从洞窟全貌进入壁画细节，查看尺度与图像真实分辨率分开说明。</li></ul><h3>怎样凸显产品重点</h3><p>从公开影像进入数字文化遗产资料，按编号或时代寻找洞窟，再到官方平台查看完整解说与高清影像。</p><h3>主题与情绪</h3><p>浅色目录、深色全幅石窟与#080900壁画画布；原字体/字号/红色导航样式沿用源CSS。</p></section><section><h2>02 / 交互巧思</h2><ul><li>首页：四幅真实石窟主图每3000ms水平切换500ms，原生箭头、中心检索与1500ms四项计数；六个经典洞窟、十幅壁画、寻境及运行时注入DLC横幅完整保留。</li><li>目录：32项源站洞窟与三维条件——遗址4项、形制4项、时代11项；19个单条件服务端响应分别取得成员集与HTML hash，本地按这些集进行AND组合并同步URL。</li><li>条件反馈：点击原条件可移除，已选条件行显示并可取消，折叠筛选耗时1000ms；北魏实测254、257、麦积127三项，叠加榆林窟为零项，浏览器返回恢复。</li><li>壁画：莫高窟257窟主室西壁采用源站Leaflet 1.7.1与DeepZoom 2.0.0，21515×15796逻辑像素、1024瓦片，匿名minZoom9.75/maxZoom12，公开level10–12共9瓦片实际取得。</li><li>细察：原生加减、滚轮、拖动和键盘平移，惯性参数与真实图像边界保留；高于11出现官方登录提醒，更高清业务回官方，不绕过匿名上限。</li><li>阅读：洞窟/壁画导航与返回顶部1000ms，数字敦煌介绍1500ms展开；版权/Cookie/平台介绍可打开关闭，语言、登录及订阅服务仍走官方。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。</p><p>固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。</p><p>阅读、图像和目录操作承担信息引导。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>固定同日主页、洞窟目录与一幅壁画查看器；32目录结果与首页固定30统计同时保留，不能自行将来源不一致改成同一数字。</li><li>19个单条件响应已验证，组合用公开成员集交集；没有声称枚举所有服务端组合、账户和实时数据库。</li><li>真实匿名瓦片浏览只覆盖莫高窟257西壁；其他洞窟详页、另九幅查看器、登录后更高分辨率、云游戏与订阅不复制。</li><li>原图保留水印与原字节；逻辑21515×15796不表示本地已下载此完整高清图，最高实际归档级别12。</li><li>减少动态暂停自动轮播和计数过程，保持导航、筛选与查看器手动操作；加载旋转反馈使用原 Control.Loading 库。</li></ul><h3>适合</h3><p>数字文化遗产资料库 / 需要图像细读的艺术档案 / 有时代/形制元数据的研究目录</p><h3>谨慎使用</h3><p>图像精度不足却宣称可研究级放大的展示 / 没有元数据只用抽象风格标签的图库</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#f1f0ec\"></i>#f1f0ec</span><span class=\"swatch\"><i style=\"background:#282c2b\"></i>#282c2b</span><span class=\"swatch\"><i style=\"background:#b34037\"></i>#b34037</span><span class=\"swatch\"><i style=\"background:#947650\"></i>#947650</span><span class=\"swatch\"><i style=\"background:#ede8da\"></i>#ede8da</span></div><p><b>字体</b> · 源CSS Microsoft Yahei与Bootstrap字体栈；图标字体本地化。<br><b>布局</b> · 完整首页序列→两列洞窟列表/三维条件→独立全视口瓦片画布，手机沿官方首页样式及列表单列适配。<br><b>动效</b> · 3000ms/500ms首页轮播、1500ms/100ms计数、1000ms导航/条件、1500ms介绍；真实地图拖动与缩放。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>逐页对照数字敦煌同日首页、洞窟列表与257西壁查看器，完整保留四图3000ms/500ms轮播、中央检索、1500ms计数、六洞窟/十壁画/寻境/DLC横幅序列，严禁只用单张图替代。用源站19个真实单facet响应成员集建立遗址/形制/时代筛选及可回退URL，保留32项档案和已选条件。查看器使用真正Leaflet/DeepZoom、本地公开1024瓦片、21515×15796逻辑尺寸、min9.75/max12和官方登录边界，完整测试加减/拖动/滚轮/键盘。来源图像、CSS和运行库应记录hash/版权和许可；云游戏、账户与更高清服务仍回官方，不用CSS放大低清图冒充瓦片引擎。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。</p></details><h3>改造练习</h3><p>用有使用权的真实瓦片图像和完整元数据替换档案；逐条件验证成员集、组合空态、URL返回以及查看器真实精度、平移和缩放边界。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.e-dunhuang.com/index.htm\" target=\"_blank\" rel=\"noopener noreferrer\">敦煌研究院 · 数字敦煌 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>DOM/CSS/真实轮播与检索交互；另读取运行时pop.js注入的750×100 PNG，恢复四计数和完整内容序列。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.e-dunhuang.com/section.htm\" target=\"_blank\" rel=\"noopener noreferrer\">数字敦煌 · 洞窟列表 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>实测时代北魏筛选，URL和已选中摘要同步；按遗址、形制、时代建立分面。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01\" target=\"_blank\" rel=\"noopener noreferrer\">数字敦煌 · 第257窟主室西壁 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>现场点击Zoom in与Zoom out，核验独立深色影像视域与可逆放缩。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Modal Dialog <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>首页版权/Cookie/平台介绍说明窗口提供明确关闭、Escape和焦点归还；壁画查看器为独立页面，不能使用此规范冒称它是dialog。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/reflow.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Reflow <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>目录窄屏重排；图像二维平移限于独立画布，避免整页横向溢出。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01\" target=\"_blank\" rel=\"noopener noreferrer\">数字敦煌 · 257窟西壁公开查看器 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>实际加减、拖动，读取原Leaflet/DeepZoom脚本、地图缩放和公开Network瓦片，不读取登录后级别。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fdigital-dunhuang.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "51cd1be5924abaf094b6fe571a80fbf67e03aa91f62c005afc6f8121de53456e",
+    "bytes": 10179
+  }
+}
