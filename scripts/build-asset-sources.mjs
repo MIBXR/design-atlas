@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 export const ASSET_COMMIT = '08fc27160defd7c6e2b01638a26bcb5b7b3e9ae1';
 export const ASSET_THRESHOLD = 128 * 1024;
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const mediaExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif', '.svg', '.mp4', '.webm', '.mp3', '.wav', '.ogg', '.m4a', '.aac', '.flac', '.woff', '.woff2', '.otf', '.ttf']);
+const mediaExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif', '.svg', '.mp4', '.webm', '.mp3', '.wav', '.ogg', '.m4a', '.aac', '.flac', '.woff', '.woff2', '.otf', '.ttf', '.bin']);
 const assetFolders = ['demos', 'previews', 'research', 'docs', 'vendor'];
 
 // These URLs identify immutable, byte-preserved media. Executable JS/CSS stays

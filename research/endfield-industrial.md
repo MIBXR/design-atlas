@@ -1,31 +1,21 @@
-# 终末地：白底工业档案
+# 终末地：从完整门户理解明亮工业语言
 
-归档日期：2026-10-09。对象：[明日方舟终末地中国大陆官网](https://endfield.hypergryph.com/)，当日中文公开版本。研究范围是干员与集成工业两个模块；首页当时是“雪凇幽梦”的雪景活动视觉，不能把整站概括为白黄页面。
+归档 **2026-10-09**，[中国大陆官网](https://endfield.hypergryph.com/)。研究覆盖当日八章公开门户。干员/玩法/AIC的白底亮黄是其中一种分区语言；活动首页是雪凇幽梦，世界观是深色点云，不能把整站概括为同一黄绿卡片。
 
-## 源端观察
+## 一手观察与源码证据
 
-实际浏览首次进入的黑底亮黄 Updating、首页、干员、游戏介绍、集成工业与页尾，滚动前后返回。干员模块使用白色资料面、很淡的标定网格、黑色姓名/标签、亮黄标记和小段品红/青/黄标定条。巨大 ENDFIELD 大字带斜线纹理，REC、小编号和十字定位细节建立资料记录感；人物美术保持彩色。当前可见祀立绘的绿色与背景信号黄是不同颜色角色，不把人物自身颜色当作全站强调色。
+主负责人实际浏览黑/黄Updating、活动首页、干员与2D→3D、世界观和其他分区，并通过浏览器开发工具采集原DOM/CSS、portrait规则、公开Next数据与资源。静态抽取只解析JSON/literal与模块引用，不执行原bundle；模块原URL/hash及偏移可回读。当前干员模块18039是35项，中文layout另有26项旧数组，不可混用。35项各有头像/立绘/肖像/enter/idle，共175资源，元数据与中文flat文本映射完整。
 
-集成工业模块由横向画面、竖向 AIC 类别书脊、编号和说明组成。其分区连接采用自然滚动，不是本库 [arknights-world](../entries/arknights-world.json) 保存的固定全屏横向章节切换。网页公开 DOM 图片地址支持官方素材本地化；这只证明素材来源，不证明我们取得了原站 CSS 参数。
+源“3D”不是人物网格。实际祀影片3840×1080左右RGB/alpha合成1920×1080透明canvas；源码alpha=R*.3+G*.59+B*.11，enter ended换idle循环。世界观另有六个原Float32 xyz点云：帝江号、锚点、集成工业系统、天师桩、天使、裂地者，无header，按Y跨度1900规范化后应用各模型offset/pivot/scale/laser参数。静态算法与资源存在不自动证明扫描、拖动、转场和边缘与原站一致。
 
-这是“明日方舟风格”内一种明确的来源差异。[原版中文官网](https://ak.hypergryph.com/) 的黑灰、青色、全屏档案与点阵另有完整案例；终末地的这两个模块更明亮，形状、排版和资料归属比单纯配色更有辨识度。[莱茵生命条目](rhine-lab.md) 的米白透明档案来自官方影像，媒介及证据也不同。
+影像有10项真实标题/日期/分类和预览，玩法四项为视频、AIC五项为图片。原相册黑→黄→媒体400ms各delay0/250/500，文字500/500ms。原公告采用左clip500ms与Y30%组件600ms入场，延迟300ms后卡片300ms横移。原CSS字体、斜线大字、网格/mask、媒体书脊与自然滚动构成比仅配色更有辨识度。
 
-## 本地适配
+## 实现与可提取机制
 
-保留祀单角色、两枚官方肖像与一幅工业图。肖像链接原站，不伪造完整角色切换。原始祀 PNG 为 2227×2190、19,539,177 字节，完整保存；首屏使用同源 1500×1475 WebP 显示副本，转换与哈希见 [素材清单](../demos/endfield-industrial/assets-manifest.json)。官方网格原始 SVG 也保留；本地用白色覆盖层降低强度，避免黑线穿字。背景字纹理、字号、侧栏、间距和断点是本地拟合。
+[本地八章](../demos/endfield-industrial/index.html#operator)恢复原CSS/字体、35目录与真透明视频、六点云、10影像、日历、4玩法/5AIC与公告。人物长篇叙事没有全篇重印，改用原身份/CV事实摘要并明确差异；正式业务仍进入官方。原[明日方舟案例](../entries/arknights-world.json)的暗灰青色全屏档案与[莱茵影像](rhine-lab.md)的米白橙色有不同媒介与状态证据，不能混为一句“方舟风”。
 
-全图/细节、书脊/大字/状态说明切换及左锚点轨道为新增教学操作。首屏只等待必要立绘实际解码，显示 0% 或 100%；失败提供重试与继续，不用模拟平滑下载条充当资源事实。页面保持自然滚动，本地手机上图下文；这些操作和响应式未被写成源端实测。
+[斜线注册大字与前景记录](../patterns/hatched-registration-type.json)抽取装饰尺度/记录层级，原源shallow背景opacity .05、纹理 .75rem及mask可回读；[竖向类别书脊与横向媒体](../patterns/vertical-media-spine.json)抽取类别与媒体的共同边界。既有[单一信号色](../patterns/restrained-signal-color.json)继续复用，不按品牌重复建“黄绿工业”分类。
 
-[W3C Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) 支持让亮黄状态同时有文字、边界与程序状态。按照 [Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) 的 AAA 设计建议，本地减少动态时取消非必要缩放和平滑滚动；这不是对源站符合性作判断。
+按[W3C Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)让选中状态同时有名称/边界/程序状态；[交互动画](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)为减少动态的设计依据，不给官网作合规认证。当前源码与实现覆盖已核对，最终浏览器1440/390/键盘/减弱动态/失败/反向状态仍由主负责人补证；[状态矩阵](../demos/endfield-industrial/state-matrix.md)明确pending，不能提前全面pass。
 
-## 可独立提取
-
-- [斜线注册大字与前景记录](../patterns/hatched-registration-type.json)：源端构成观察；大字、标定点和编号提供背景身份，实心前景承担阅读。
-- [竖向类别书脊与横向媒体](../patterns/vertical-media-spine.json)：源端构成观察；方向与共同边界表达归属。
-- [单一信号色集中强调](../patterns/restrained-signal-color.json)：复用已有机制，增加该来源；无需按品牌再建“黄绿工业风”巧思。
-
-## 采集与实现边界
-
-原站桌面分区现场可見；原站完整35人目录、手机、慢网、声音音轨、影片启停与账户流程未完整验证。只观察到声音控制与媒体入口，不推断 BGM/语音的具体行为。本地不内嵌音轨，不复制视频、账户或追踪；来源链接保留原作入口。系统字体为近似，没有搬入原站字体包。
-
-本地 1440px/390px 与减少动态分支由主负责人独立浏览器验收：无横向溢出，图像加载正常，视图和说明可鼠标/键盘操作。禁用缓存并阻断首屏图时能显示失败、重试与继续，继续后正文可读；解除阻断重载能恢复。完整触发和限制见 [fidelity.md](../demos/endfield-industrial/fidelity.md)。
+首版把页面主动缩成单人/单工业图并新增教学放大和说明，遗漏真实目录、影片、点云与大部分章节；本轮删除这些替代。完整来源/hash/资源变换见[清单](../demos/endfield-industrial/assets-manifest.json)与[范围说明](../demos/endfield-industrial/fidelity.md)。

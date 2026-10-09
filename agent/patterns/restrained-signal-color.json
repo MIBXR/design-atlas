@@ -60,7 +60,7 @@
       {
         "caseId": "endfield-industrial",
         "locator": "entries/endfield-industrial.json#composition/color",
-        "observation": "源端干员与工业区为白底、黑色资料标签和很淡的灰网格，亮黄用于行动与局部状态；多色标定条和彩色人物/工业图保留来源颜色。",
+        "observation": "源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。",
         "evidence": "observed",
         "referenceUrl": "https://endfield.hypergryph.com/",
         "capturedAt": "2026-10-09"
@@ -68,7 +68,7 @@
       {
         "caseId": "rhine-lab",
         "locator": "entries/rhine-lab.json#composition/color",
-        "observation": "官方影像可见米白资料底、透明容器、黑色机构字与局部橙色/黄绿色节点；本地暖米白、深绿黑与橙色选择边界为近似网页转译。",
+        "observation": "源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。",
         "evidence": "adapted",
         "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
         "capturedAt": "2026-10-09"
@@ -78,7 +78,9 @@
       "demos/endfield-industrial/app.js",
       "demos/endfield-industrial/fidelity.md",
       "demos/endfield-industrial/index.html",
-      "demos/endfield-industrial/style.css",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/data.js",
       "demos/met-museum/fidelity.md",
       "demos/met-museum/index.html",
       "demos/met-museum/script.js",
@@ -107,12 +109,12 @@
   "sourceCases": [
     {
       "id": "endfield-industrial",
-      "title": "终末地 · 白底工业档案",
+      "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "cb59b38a11fcb673d85adca96a58d938a0fdbe20b0b40f554a1a1b52cc50db4f"
+      "bundleSha256": "c5709f2c589bc66bddde2c1d438d543ec9553cc72df7c3a9392736147d64c8cf"
     },
     {
       "id": "met-museum",
@@ -134,12 +136,12 @@
     },
     {
       "id": "rhine-lab",
-      "title": "莱茵生命 · 官方影像的网页转译",
+      "title": "莱茵生命 · 影像终端的网页转译",
       "paths": {
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/rhine-lab/index.html"
       },
-      "bundleSha256": "085e2556a84d326c44abf3b3b282d9afe9ab1e6d0fed0d63d62a3f464cca68c3"
+      "bundleSha256": "29cc11f845105f552ead8f01ea6620979a51b34718d0fe4684476c3918d628c3"
     },
     {
       "id": "swiss-grid",

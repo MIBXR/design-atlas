@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "a3a060064f333e8f5b57cd882cfd019d67bdd1f67a9f434b9aeeb27daca9f23b",
+  "contentVersion": "349f4d81dde9dd053a45301457fd6a21d68b5032c335abe24a4657403b641be7",
   "patternCount": 126,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -113,10 +113,10 @@
     },
     {
       "id": "architectural-fragment-anchor",
-      "title": "建筑局部锚定文化章节",
+      "title": "建筑局部与名称目录锚点",
       "category": "视觉构成",
       "summary": "用真实建筑的一角让大色面具有地点身份。",
-      "mechanism": "将屋脊、门窗或构件的真实摄影放在章节边缘，保留其完整辨识轮廓；同一区域用建筑名称目录承接精确选择。",
+      "mechanism": "朱红实物纹理内以真实透明屋脊和独立圆形题饰定位建筑身份，左侧说明与八项名称目录承担检索；图像不替代文字入口。",
       "trigger": "进入建筑或文化章节",
       "effect": "色面获得具体文化对象，文字入口仍然可扫描。",
       "useCases": [
@@ -127,13 +127,13 @@
         "用任意龙凤或屋顶剪影装饰不相关内容"
       ],
       "constraints": [
-        "摄影局部必须能识别具体对象，并保留归属与原比例。",
-        "正文和名称目录有独立语义；手机把主要文字与构件分区，避免图像遮挡行动。",
-        "本地尺寸和色值是拟合，不能宣称中国建筑或中国网页必须采用相同色板。"
+        "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+        "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+        "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
       ],
       "composition": {
         "role": "foundation",
-        "notes": "构件摄影负责文化识别，名称目录负责导航；可以配合整节色彩节奏，但不能把装饰层当作唯一入口。",
+        "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
         "pairsWellWith": [
           "section-color-rhythm",
           "direct-purpose-navigation"
@@ -141,28 +141,28 @@
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "构件是装饰时用明确上下文或空替代文字；所有名称入口为原生链接，Tab可达且焦点可见。",
-        "reducedMotion": "静态图像保持可见，不为文化识别添加自动摇摆或大幅视差。"
+        "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+        "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
       },
       "parameters": [
         {
-          "name": "本地建筑章节",
-          "value": "桌面620px / 手机510px 最小高",
-          "note": "本地响应式拟合；原站参数未从源码核验。"
+          "name": "源建筑容器",
+          "value": "1258px主内容，min-height590px，padding100px 0",
+          "note": "来自探索页适用CSS与DOM。"
         },
         {
-          "name": "官方屋脊素材",
-          "value": "940×549 PNG",
-          "note": "浏览器DOM观察与素材原尺寸，透明摄影本地保留原始字节。"
+          "name": "源屋脊/题饰",
+          "value": "屋脊宽74.721%；圆形题饰13.276%",
+          "note": "源CSS布局比例；手机有独立断点。"
         }
       ],
-      "prompt": "为【目标页面/组件】实现「建筑局部锚定文化章节」。将屋脊、门窗或构件的真实摄影放在章节边缘，保留其完整辨识轮廓；同一区域用建筑名称目录承接精确选择。 触发：进入建筑或文化章节。可见结果：色面获得具体文化对象，文字入口仍然可扫描。适用：古建筑与文化遗产机构、有真实构件素材的城市展览。摄影局部必须能识别具体对象，并保留归属与原比例。 正文和名称目录有独立语义；手机把主要文字与构件分区，避免图像遮挡行动。 本地尺寸和色值是拟合，不能宣称中国建筑或中国网页必须采用相同色板。 键盘：构件是装饰时用明确上下文或空替代文字；所有名称入口为原生链接，Tab可达且焦点可见。 减少动态：静态图像保持可见，不为文化识别添加自动摇摆或大幅视差。 组合边界：构件摄影负责文化识别，名称目录负责导航；可以配合整节色彩节奏，但不能把装饰层当作唯一入口。",
+      "prompt": "为【目标页面/组件】实现「建筑局部与名称目录锚点」。朱红实物纹理内以真实透明屋脊和独立圆形题饰定位建筑身份，左侧说明与八项名称目录承担检索；图像不替代文字入口。 源建筑容器：1258px主内容，min-height590px，padding100px 0。来自探索页适用CSS与DOM。 源屋脊/题饰：屋脊宽74.721%；圆形题饰13.276%。源CSS布局比例；手机有独立断点。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
       "sources": [
         {
           "caseId": "palace-museum",
           "locator": "entries/palace-museum.json#interaction/1",
-          "observation": "浏览建筑区域：朱红底承托右下角屋脊摄影，建筑名称作为可点击目录，本地保留此构成并链接对应官方建筑。",
-          "evidence": "adapted",
+          "observation": "建筑目录：朱红实物纹理与透明屋脊、独立圆形“建筑”题饰并置，八个建筑名称及更多建筑/地图均保留官方目的地。",
+          "evidence": "observed",
           "referenceUrl": "https://www.dpm.org.cn/Explore.html",
           "capturedAt": "2026-10-09"
         }
@@ -173,19 +173,20 @@
         "demos/palace-museum/fidelity.md",
         "demos/palace-museum/index.html",
         "demos/palace-museum/style.css",
-        "demos/palace-museum/app.js"
+        "demos/palace-museum/app.js",
+        "demos/palace-museum/state-matrix.md"
       ],
       "paths": {
         "bundle": "agent/patterns/architectural-fragment-anchor.json"
       },
-      "bundleSha256": "57a9c6ad1c4cc37c68d9a559079ddbe73c033eb522fc792e8368c9a9a773bcdc"
+      "bundleSha256": "94dc0c619b567e8e85bc628cfb0259f86e0b708207817222305024859e6180ed"
     },
     {
       "id": "architectural-outline-whitespace",
-      "title": "黑灰框线与白色空间",
+      "title": "机构摄影的白色外缘",
       "category": "视觉构成",
-      "summary": "从真实建筑边饰中提取结构，让留白继续作为空间。",
-      "mechanism": "用少量黑灰直线界定白色表面，保留大块空白与真实建筑摄影；框线说明结构而不是在每个组件上重复装饰。",
+      "summary": "以白色外缘、窄缝和访问白板组织真实机构摄影。",
+      "mechanism": "用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。",
       "trigger": "阅读建筑说明或相关文化章节",
       "effect": "深色边饰与浅色空间建立清楚轮廓，地域识别保持与真实建筑的联系。",
       "useCases": [
@@ -197,13 +198,13 @@
         "为复制建筑轮廓遮住文字和图像"
       ],
       "constraints": [
-        "先用真实建筑或官方说明支持色彩/结构来源，网页迁移应标为解释。",
-        "框线只在需要说明空间的区域出现，不把所有按钮卡片围成同样粗框。",
-        "本地观察组件为原创；原站没有此框线组件的现场证据。"
+        "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+        "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+        "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
       ],
       "composition": {
         "role": "support",
-        "notes": "框线是对苏博深灰边饰/粉墙关系的局部迁移。与真实摄影组合让来源可辨，不能取代图像目录和机构内容。",
+        "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
         "pairsWellWith": [
           "editorial-alignment-grid",
           "image-destination-mosaic"
@@ -211,29 +212,29 @@
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "框线是CSS装饰，不进入Tab；保留语义标题和正常文本阅读，内部操作焦点可见。",
-        "reducedMotion": "静态结构无需动画；不为表现移步换景强制平移正文或自动改动视角。"
+        "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+        "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
       },
       "parameters": [
         {
-          "name": "本地结构框线",
-          "value": "7px / #3d4443",
-          "note": "原创教学选择，非官网组件或建筑材料的测量值。"
+          "name": "源桌面外缘",
+          "value": "left/right50px；top9px，bottom30px",
+          "note": "1440×900时主内容1340×755，来自源计算样式。"
         },
         {
-          "name": "来源范围",
-          "value": "粉墙、深灰石材边饰、自然光",
-          "note": "来自苏州博物馆官方建筑介绍；网页应用是本库解释。"
+          "name": "白色层级",
+          "value": "页面外缘/入口白缝/访问70%半透明白板",
+          "note": "源主页三种实际空间关系；不再使用首版7px黑框组件。"
         }
       ],
-      "prompt": "为【目标页面/组件】实现「黑灰框线与白色空间」。用少量黑灰直线界定白色表面，保留大块空白与真实建筑摄影；框线说明结构而不是在每个组件上重复装饰。 触发：阅读建筑说明或相关文化章节。可见结果：深色边饰与浅色空间建立清楚轮廓，地域识别保持与真实建筑的联系。适用：建筑文化、现代博物馆与空间介绍、有明确建筑构成依据的文化页面。先用真实建筑或官方说明支持色彩/结构来源，网页迁移应标为解释。 框线只在需要说明空间的区域出现，不把所有按钮卡片围成同样粗框。 本地观察组件为原创；原站没有此框线组件的现场证据。 键盘：框线是CSS装饰，不进入Tab；保留语义标题和正常文本阅读，内部操作焦点可见。 减少动态：静态结构无需动画；不为表现移步换景强制平移正文或自动改动视角。 组合边界：框线是对苏博深灰边饰/粉墙关系的局部迁移。与真实摄影组合让来源可辨，不能取代图像目录和机构内容。",
+      "prompt": "为【目标页面/组件】实现「机构摄影的白色外缘」。用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。 源桌面外缘：left/right50px；top9px，bottom30px。1440×900时主内容1340×755，来自源计算样式。 白色层级：页面外缘/入口白缝/访问70%半透明白板。源主页三种实际空间关系；不再使用首版7px黑框组件。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
       "sources": [
         {
           "caseId": "suzhou-museum",
-          "locator": "entries/suzhou-museum.json#composition/shape",
-          "observation": "源端建筑说明以粉墙、深灰石材边饰和几何天窗延续江南空间；本地以黑灰框线和白底构成一处教学观察组件。",
-          "evidence": "adapted",
-          "referenceUrl": "https://www.szmuseum.com/Home/Index#page3",
+          "locator": "entries/suzhou-museum.json#composition/layout",
+          "observation": "四屏完整结构；50px左右外缘，1440×900时主画面1340×755；第三屏按原九项/75%与25%两区组织。",
+          "evidence": "observed",
+          "referenceUrl": "https://www.szmuseum.com/Home/Index",
           "capturedAt": "2026-10-09"
         }
       ],
@@ -243,12 +244,13 @@
         "demos/suzhou-museum/fidelity.md",
         "demos/suzhou-museum/index.html",
         "demos/suzhou-museum/style.css",
-        "demos/suzhou-museum/app.js"
+        "demos/suzhou-museum/app.js",
+        "demos/suzhou-museum/state-matrix.md"
       ],
       "paths": {
         "bundle": "agent/patterns/architectural-outline-whitespace.json"
       },
-      "bundleSha256": "e17449d2e55f3993a2b3079b99ef1a059acbc23fbe7a898d5f4cfb9a96fd6e52"
+      "bundleSha256": "ab544e417a0d6c911f694c20b7230e2c980eb1df13642153a7d8e83a74bb7fa4"
     },
     {
       "id": "artwork-caption-separation",
@@ -505,12 +507,12 @@
     },
     {
       "id": "bounded-image-inspection",
-      "title": "有限尺度的图像细察",
+      "title": "公开边界内的瓦片细察",
       "category": "交互反馈",
       "summary": "让图像从全貌到局部，再明确回到总览。",
-      "mechanism": "在独立图像视域内用加减按钮改变比例，保留当前百分比、边界和适合窗口；放大后的二维移动限于图像视域。",
-      "trigger": "主动放大、缩小、滚动图像或复位",
-      "effect": "用户能控制观察尺度，知道当前位置与返回全貌的方法。",
+      "mechanism": "独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。",
+      "trigger": "主动加减、滚轮缩放、拖动或键盘平移",
+      "effect": "用户按真实公开瓦片精度细察，并知道匿名浏览的缩放边界与更高清的官方入口。",
       "useCases": [
         "艺术图像、地图和文化遗产细读",
         "有明确像素精度的工程图检查"
@@ -520,13 +522,13 @@
         "用图像缩放拦截整个页面的正常滚动"
       ],
       "constraints": [
-        "比例有上下限，边界按钮禁用；复位把比例和视域滚动位置一起恢复。",
-        "公开预览的像素精度不随CSS放大提升，必须说明分辨率并给出原站高清入口。",
-        "原站加减缩放已观察；本地百分比、dialog、限制范围和复位是教学实现。"
+        "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+        "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+        "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
       ],
       "composition": {
         "role": "support",
-        "notes": "只管理当前图像观察尺度；模态关闭和正文滚动另有清楚职责。可与图像下方出处/精度题注组合。",
+        "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
         "pairsWellWith": [
           "artwork-caption-separation",
           "inline-detail-disclosure"
@@ -534,29 +536,29 @@
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "加减和复位是有名称的按钮；图像视域可聚焦，用方向键或滚动条移动；dialog支持Escape、可见关闭和焦点返回。",
-        "reducedMotion": "缩放即时完成，不添加弹簧或自动巡游，全部手动状态与复位可用。"
+        "keyboard": "Leaflet加减按钮有名称，画布可聚焦并用方向键平移；边界禁用状态保留，登录服务走官方。",
+        "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
       },
       "parameters": [
         {
-          "name": "本地比例范围",
-          "value": "100%—300%，每次50%",
-          "note": "教学选择，非原站高清查看器的固定规范。"
+          "name": "源匿名地图范围",
+          "value": "minZoom9.75 / maxZoom12",
+          "note": "源maxNativeZoom15的65%/80%；不访问更高匿名未授权级别。"
         },
         {
-          "name": "本地壁画预览",
-          "value": "562×253 px",
-          "note": "官网首页公开预览原尺寸；没有复制高清分块数据。"
+          "name": "源瓦片/逻辑尺寸",
+          "value": "1024px；21515×15796逻辑像素",
+          "note": "仅实取公开level10/11/12的9瓦片，不能据此声称完整原分辨率已归档。"
         }
       ],
-      "prompt": "为【目标页面/组件】实现「有限尺度的图像细察」。在独立图像视域内用加减按钮改变比例，保留当前百分比、边界和适合窗口；放大后的二维移动限于图像视域。 触发：主动放大、缩小、滚动图像或复位。可见结果：用户能控制观察尺度，知道当前位置与返回全貌的方法。适用：艺术图像、地图和文化遗产细读、有明确像素精度的工程图检查。比例有上下限，边界按钮禁用；复位把比例和视域滚动位置一起恢复。 公开预览的像素精度不随CSS放大提升，必须说明分辨率并给出原站高清入口。 原站加减缩放已观察；本地百分比、dialog、限制范围和复位是教学实现。 键盘：加减和复位是有名称的按钮；图像视域可聚焦，用方向键或滚动条移动；dialog支持Escape、可见关闭和焦点返回。 减少动态：缩放即时完成，不添加弹簧或自动巡游，全部手动状态与复位可用。 组合边界：只管理当前图像观察尺度；模态关闭和正文滚动另有清楚职责。可与图像下方出处/精度题注组合。",
+      "prompt": "为【目标页面/组件】实现「公开边界内的瓦片细察」。独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。 源匿名地图范围：minZoom9.75 / maxZoom12。源maxNativeZoom15的65%/80%；不访问更高匿名未授权级别。 源瓦片/逻辑尺寸：1024px；21515×15796逻辑像素。仅实取公开level10/11/12的9瓦片，不能据此声称完整原分辨率已归档。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
       "sources": [
         {
           "caseId": "digital-dunhuang",
           "locator": "entries/digital-dunhuang.json#interaction/3",
-          "observation": "本地只放大562×253公开预览，比例限制100%至300%，支持滚动条/方向键、适合窗口与关闭；不是原站高清分块图像引擎。",
-          "evidence": "adapted",
-          "referenceUrl": "https://www.e-dunhuang.com/index.htm",
+          "observation": "壁画：莫高窟257窟主室西壁采用源站Leaflet 1.7.1与DeepZoom 2.0.0，21515×15796逻辑像素、1024瓦片，匿名minZoom9.75/maxZoom12，公开level10–12共9瓦片实际取得。",
+          "evidence": "observed",
+          "referenceUrl": "https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01",
           "capturedAt": "2026-10-09"
         }
       ],
@@ -566,12 +568,16 @@
         "demos/digital-dunhuang/fidelity.md",
         "demos/digital-dunhuang/index.html",
         "demos/digital-dunhuang/style.css",
-        "demos/digital-dunhuang/app.js"
+        "demos/digital-dunhuang/app.js",
+        "demos/digital-dunhuang/state-matrix.md",
+        "demos/digital-dunhuang/viewer.html",
+        "demos/digital-dunhuang/viewer.css",
+        "demos/digital-dunhuang/viewer.js"
       ],
       "paths": {
         "bundle": "agent/patterns/bounded-image-inspection.json"
       },
-      "bundleSha256": "4a6f272e6272d6c93d5c856bd138eb0362369963add4ce4069b1d5a24b003920"
+      "bundleSha256": "447609cc304a042c2550b7caec71a673b035c578e4dd8932eef82b3fb2825677"
     },
     {
       "id": "bounded-panel-track",
@@ -1495,28 +1501,29 @@
       "id": "department-code-matrix",
       "title": "机构缩写的中心矩阵",
       "category": "视觉构成",
-      "summary": "用中心代码与外围缩写共同呈现机构结构，大字识别、小字解释。",
-      "mechanism": "把中心模块的缩写按两行压缩为强识别块，外围模块共享大写短代码和小号完整解释；统一线框与留白，局部小节点形成状态焦点。",
-      "trigger": "呈现机构/系统模块目录",
-      "effect": "中心与外围的关系和每个模块名称在同一视野中可读。",
+      "summary": "保留特殊字标和非等宽的中心/外围关系，让代码同时表达机构身份和归属。",
+      "mechanism": "中心双行代码和九个外围短代码共享环形连字，黑白表面、倾斜与尺度差共同组织关系；细射线与小面积橙色节点连接焦点。完整名称与等价语义目录承担阅读，不将原字标重排成普通字体卡片。",
+      "trigger": "呈现机构代码目录",
+      "effect": "中心关系、不同科室的身份字标及当前焦点在同一视野中保留。",
       "useCases": [
-        "机构部门目录",
-        "系统能力模块地图",
-        "少量研究/技术单元"
+        "有专用字标的机构目录",
+        "系统模块的关系图",
+        "影片图形的网页转译"
       ],
       "avoid": [
-        "缩写无完整解释",
-        "用中心大小暗示未经证实的组织权级",
-        "把装饰节点当唯一选中提示"
+        "把所有字标抹平成Arial缩写",
+        "只留五科室并误称完整矩阵",
+        "用节点颜色代替完整名称和选择语义"
       ],
       "constraints": [
-        "本条来源是影片画面文字构成；点击说明须另外标adapted。",
-        "代码之外提供完整名称和实际内容，不把影片设定延伸成真实组织关系。",
-        "手机保持正常阅读顺序，可重排而不强制缩小全部文字。"
+        "原作构成是一中心加九外围，代码与全称须逐项核对；新任务按真实组织替换，不能推断权限。",
+        "有使用权的SVG/图片或原帧可保留专用字形，不臆造字体名或声称3D源码移植。",
+        "热点点选、节点移动和说明属于网页adapted；视觉来源与触发分别记录。",
+        "手机保留原比例构图并提供正常字号目录，不以强制缩小全文代替可读入口。"
       ],
       "composition": {
         "role": "foundation",
-        "notes": "中心块负责识别与关系，外围代码负责分类；局部状态色仅提供辅助信号。若组合档案选择，矩阵与档案应使用不同区域和状态源。",
+        "notes": "原画面保留字标与空间，DOM热点和可读目录共享一个选择状态；节点移动是适配，不伪造原片点击。矩阵与档案选择使用独立区域及状态。",
         "pairsWellWith": [
           "restrained-signal-color",
           "aligned-metadata-rows"
@@ -1524,44 +1531,50 @@
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "静态目录保持语义列表；有点击说明时使用原生按钮、可见焦点和aria-pressed，同时显示完整名称。",
-        "reducedMotion": "矩阵默认静态；点选说明即时更新，禁止持续闪烁节点。"
+        "keyboard": "热点与等价目录均用语义按钮、可见焦点和aria-pressed，全称始终可读；手机可直接用正常字号目录。",
+        "reducedMotion": "原帧和矩阵静态保留；取消180ms节点移动，当前说明即时同步；片段由用户主动播放并可暂停。"
       },
       "parameters": [
         {
-          "name": "中心代码",
-          "value": "CMPT / CTRL双行",
-          "note": "本次官方影像可见代码；新任务改成真实机构名称。"
+          "name": "本次源端模块",
+          "value": "CMPT CTRL + DEF/HRI/BSN/ENG/STRU/SCIEN/ORIG/NRG/ECO",
+          "note": "官方68秒原帧，中心1加外围9，非本地虚构机构。"
         },
         {
-          "name": "本地模块数",
-          "value": "中心1 + 外围4",
-          "note": "教学摘取五个模块，不等于影片完整组织结构。"
+          "name": "字标采集",
+          "value": "1920×1080 / 68.00秒原帧",
+          "note": "保留实际环形连字/表面/倾斜，未取得字体或3D工程。"
+        },
+        {
+          "name": "本地节点移动",
+          "value": "180ms",
+          "note": "CSS适配，减少动态关闭，非原片入场时长。"
         }
       ],
-      "prompt": "用机构缩写构成中心矩阵：中心代码可按两行组成较大识别块，外围四至六个模块共享大写短代码、小号完整名称与正常方向说明。边界和留白使用同一规则，局部小状态节点不能替代文字选中。按真实内容解释中心关系，不以块的大小臆造权级；手机可重排成正常阅读顺序，保持正文大小。静态目录用语义列表，有点选说明时用按钮、可见焦点和aria-pressed，当前说明即时同步。矩阵不自动闪烁，减少动态保留静态阅读。若来源为影像，区分画面观察与新增网页交互。",
+      "prompt": "把机构代码整理为中心与外围的关系矩阵，保留有使用权的专用字标、环形连字、黑白表面、倾斜和尺度差，不能全部替换成普通字体等宽卡片。中心代码与九个外围模块通过细射线和小状态节点建立关系；每个代码提供完整名称和真实内容，不依据画面大小推断权限。网页热点与正常字号目录共用一个选择状态，同步节点、aria-pressed和说明；源端图形构成与新增点击/节点移动分别归档。手机完整保留原比例图形，等价目录承担可读操作。减少动态取消节点位移，保留静态当前项，影片片段主动播放并可暂停。",
       "sources": [
         {
           "caseId": "rhine-lab",
-          "locator": "entries/rhine-lab.json#/composition/typography",
-          "observation": "官方影像的CMPT CTRL、ENG、ECO、STRU、DEF等大写缩写构成中心/外围矩阵，大代码与小号机构说明分工；本地采用系统字体近似。",
+          "locator": "entries/rhine-lab.json#composition/typography",
+          "observation": "官方68秒原帧保留CMPT CTRL中心，以及DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九外围的环形连字、英文全称、黑白表面、透视倾斜及尺度差；网页控件使用系统字体，不替代原作字标。",
           "evidence": "observed",
           "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
           "capturedAt": "2026-10-09"
         }
       ],
       "sourceFiles": [
-        "entries/rhine-lab.json",
-        "research/rhine-lab.md",
-        "demos/rhine-lab/fidelity.md",
         "demos/rhine-lab/index.html",
+        "demos/rhine-lab/app.js",
         "demos/rhine-lab/style.css",
-        "demos/rhine-lab/app.js"
+        "demos/rhine-lab/fidelity.md",
+        "demos/rhine-lab/assets-manifest.json",
+        "entries/rhine-lab.json",
+        "research/rhine-lab.md"
       ],
       "paths": {
         "bundle": "agent/patterns/department-code-matrix.json"
       },
-      "bundleSha256": "78a0dfe6170fb95fdf48b4a084a37b4b7bd5ad08dd9a6b504b031ce20d22b269"
+      "bundleSha256": "454709ffe2480ab6d548cf6ecf2858f3e72ea6a0def59c4eba504ef736e98da8"
     },
     {
       "id": "direct-purpose-navigation",
@@ -1931,7 +1944,7 @@
       "title": "分面条件在列表前显式呈现",
       "category": "导航与状态",
       "summary": "先说明筛选依据，再展示剩下的资料。",
-      "mechanism": "把时代、形制等不同维度分组，列表前常显当前条件；本地为条件摘要增加单项删除和清除全部，条件变化与列表保持一致。",
+      "mechanism": "遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。",
       "trigger": "选择条件、提交关键词或移除单项",
       "effect": "用户能解释当前候选范围，并逐步放宽条件找回资料。",
       "useCases": [
@@ -1942,13 +1955,13 @@
         "给没有元数据的图片强加风格分面"
       ],
       "constraints": [
-        "不同维度的组合关系明确，本地示范时代与关键词使用AND。",
-        "源站现场确认的是时代北魏与已选中摘要；删除标签与关键词组合是本地教学扩充。",
-        "零结果保留条件摘要与清除入口，不能把空白页面当反馈。"
+        "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+        "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+        "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
       ],
       "composition": {
         "role": "support",
-        "notes": "此条解释筛选依据，与结果计数反馈职责不同。两者可组合，但列表、已选摘要和数字应由同一状态计算。",
+        "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
         "pairsWellWith": [
           "filter-count-feedback",
           "aligned-metadata-rows"
@@ -1956,29 +1969,29 @@
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "原生条件按钮用aria-pressed；移除按钮有包含条件值的名称，删除后把焦点送回稳定清除入口，结果温和宣布。",
-        "reducedMotion": "条件和结果即时更新，不通过卡片飞出或强制滚动表现筛选。"
+        "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+        "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
       },
       "parameters": [
         {
-          "name": "本地维度",
-          "value": "时代 × 关键词（AND）",
-          "note": "教学缩减；原站目录还包含遗址、形制。"
+          "name": "源分面维度",
+          "value": "遗址4/形制4/时代11，共19项",
+          "note": "每个单条件均取得源HTML/hash与成员集，见filter-evidence.json。"
         },
         {
-          "name": "源端实测条件",
-          "value": "北魏",
-          "note": "2026-10-09点击后URL、已选中摘要与洞窟列表同步。"
+          "name": "固定档案集",
+          "value": "32项；北魏254/257/麦积127",
+          "note": "保留源目录与首页固定30统计的差异。"
         }
       ],
-      "prompt": "为【目标页面/组件】实现「分面条件在列表前显式呈现」。把时代、形制等不同维度分组，列表前常显当前条件；本地为条件摘要增加单项删除和清除全部，条件变化与列表保持一致。 触发：选择条件、提交关键词或移除单项。可见结果：用户能解释当前候选范围，并逐步放宽条件找回资料。适用：文物、文献和研究资料库、具有真实多维元数据的目录。不同维度的组合关系明确，本地示范时代与关键词使用AND。 源站现场确认的是时代北魏与已选中摘要；删除标签与关键词组合是本地教学扩充。 零结果保留条件摘要与清除入口，不能把空白页面当反馈。 键盘：原生条件按钮用aria-pressed；移除按钮有包含条件值的名称，删除后把焦点送回稳定清除入口，结果温和宣布。 减少动态：条件和结果即时更新，不通过卡片飞出或强制滚动表现筛选。 组合边界：此条解释筛选依据，与结果计数反馈职责不同。两者可组合，但列表、已选摘要和数字应由同一状态计算。",
+      "prompt": "为【目标页面/组件】实现「分面条件在列表前显式呈现」。遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。 源分面维度：遗址4/形制4/时代11，共19项。每个单条件均取得源HTML/hash与成员集，见filter-evidence.json。 固定档案集：32项；北魏254/257/麦积127。保留源目录与首页固定30统计的差异。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
       "sources": [
         {
           "caseId": "digital-dunhuang",
-          "locator": "entries/digital-dunhuang.json#interaction/1",
-          "observation": "选择目录时代：原站点击北魏后URL写入Dynasty条件，已选中区域显示北魏，列表只展示对应洞窟；本地时代与关键词叠加并用条件标签解释范围。",
+          "locator": "entries/digital-dunhuang.json#interaction/2",
+          "observation": "条件反馈：点击原条件可移除，已选条件行显示并可取消，折叠筛选耗时1000ms；北魏实测254、257、麦积127三项，叠加榆林窟为零项，浏览器返回恢复。",
           "evidence": "adapted",
-          "referenceUrl": "https://www.e-dunhuang.com/index.htm",
+          "referenceUrl": "https://www.e-dunhuang.com/section.htm",
           "capturedAt": "2026-10-09"
         }
       ],
@@ -1988,12 +2001,16 @@
         "demos/digital-dunhuang/fidelity.md",
         "demos/digital-dunhuang/index.html",
         "demos/digital-dunhuang/style.css",
-        "demos/digital-dunhuang/app.js"
+        "demos/digital-dunhuang/app.js",
+        "demos/digital-dunhuang/state-matrix.md",
+        "demos/digital-dunhuang/section.html",
+        "demos/digital-dunhuang/catalogue.js",
+        "demos/digital-dunhuang/filter-evidence.json"
       ],
       "paths": {
         "bundle": "agent/patterns/explicit-facet-summary.json"
       },
-      "bundleSha256": "c84ffcbaba536f9632e0f6ea35325bad9bad638bcf0556dba1734c8a09e0c75c"
+      "bundleSha256": "34c287c89527c5782897c86d2935450d0b071039e00027a270221874beff2c2d"
     },
     {
       "id": "exploded-layer-view",
@@ -2662,7 +2679,7 @@
       "title": "图像与半幅纸签分类",
       "category": "视觉构成",
       "summary": "作品负责观看，半幅浅纸签负责读清类别。",
-      "mechanism": "同一矩形入口保留作品图像，右半放半透明浅纸色表面，竖排中文类别由真实文本构成；整个入口作为链接。",
+      "mechanism": "完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。",
       "trigger": "浏览或聚焦文化专题目录",
       "effect": "图像风格和类别名称同时可辨认，文字不依赖复杂纹样的局部对比。",
       "useCases": [
@@ -2674,13 +2691,13 @@
         "把分类名称烧入图片无法重排"
       ],
       "constraints": [
-        "图像内容要与分类对应；浅表面保护文字对比，不把整幅作品统一染色。",
-        "竖排适合短中文类目；长题名及多语言改为正常阅读方向。",
-        "小屏保留可见名称和足够的点击区域，不只保留图片缩略图。"
+        "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+        "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+        "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
       ],
       "composition": {
         "role": "support",
-        "notes": "此条是图像/纸签职责的构成规则，独立于纸页贴纸的产品隐喻。可与图像题注分工组合，但同一入口避免叠加两套重复标签。",
+        "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
         "pairsWellWith": [
           "artwork-caption-separation",
           "restrained-signal-color"
@@ -2688,22 +2705,22 @@
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "类别名称为可读DOM文字，原生链接名称包含类别；纯装饰图像使用空alt，不重复朗读标签。",
-        "reducedMotion": "停止图像悬停缩放与平滑定位，纸签和链接名称保持完整。"
+        "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+        "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
       },
       "parameters": [
         {
-          "name": "本地纸签宽度",
-          "value": "入口的50%",
-          "note": "依据原站右半浅纸签视觉关系拟合，非官网源码参数。"
+          "name": "源专题类别",
+          "value": "器物、书画、文化、人物、展览",
+          "note": "准确类目以本页可读文字为准；五类全部保留。"
         },
         {
-          "name": "本地类别数量",
-          "value": "3类",
-          "note": "本地缩减；原站采集有器物、书画、文化、人物、展览5类。"
+          "name": "标签范围",
+          "value": "右半纸签，文字竖排",
+          "note": "源CSS与实际桌面/手机图片。"
         }
       ],
-      "prompt": "为【目标页面/组件】实现「图像与半幅纸签分类」。同一矩形入口保留作品图像，右半放半透明浅纸色表面，竖排中文类别由真实文本构成；整个入口作为链接。 触发：浏览或聚焦文化专题目录。可见结果：图像风格和类别名称同时可辨认，文字不依赖复杂纹样的局部对比。适用：器物/书画/人物等文化专题、能解释图像与分类关系的展览导航。图像内容要与分类对应；浅表面保护文字对比，不把整幅作品统一染色。 竖排适合短中文类目；长题名及多语言改为正常阅读方向。 小屏保留可见名称和足够的点击区域，不只保留图片缩略图。 键盘：类别名称为可读DOM文字，原生链接名称包含类别；纯装饰图像使用空alt，不重复朗读标签。 减少动态：停止图像悬停缩放与平滑定位，纸签和链接名称保持完整。 组合边界：此条是图像/纸签职责的构成规则，独立于纸页贴纸的产品隐喻。可与图像题注分工组合，但同一入口避免叠加两套重复标签。",
+      "prompt": "为【目标页面/组件】实现「图像与半幅纸签分类」。完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。 源专题类别：陶瓷、书画、文化、青铜器、工艺。准确类目以本页可读文字为准；五类全部保留。 标签范围：右半纸签，文字竖排。源CSS与实际桌面/手机图片。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
       "sources": [
         {
           "caseId": "palace-museum",
@@ -2720,12 +2737,13 @@
         "demos/palace-museum/fidelity.md",
         "demos/palace-museum/index.html",
         "demos/palace-museum/style.css",
-        "demos/palace-museum/app.js"
+        "demos/palace-museum/app.js",
+        "demos/palace-museum/state-matrix.md"
       ],
       "paths": {
         "bundle": "agent/patterns/half-paper-category-label.json"
       },
-      "bundleSha256": "a646b0d36687651a43e15bf1eb5c9239aa0e1d33d79b1b695f6582eb94f32531"
+      "bundleSha256": "c1052232bba770039295848b7c3c6a58ac6c06c89fea1ef5717df3355831027d"
     },
     {
       "id": "hatched-registration-type",
@@ -2746,7 +2764,7 @@
       "constraints": [
         "只抽取文字层级与标定规则；新任务换为有使用权的名称与素材。",
         "前景正文与控制不依赖背景文字识别，背景设置aria-hidden。",
-        "原站观察未提供字号和透明度数值，本地数值需在实际图像与断点重验。"
+        "源CSS/字型/装饰资产已取得；新任务按自己的合法图像、字体与断点重新验证，不把源数值无条件当作通用设计标准。"
       ],
       "composition": {
         "role": "support",
@@ -2763,22 +2781,22 @@
       },
       "parameters": [
         {
-          "name": "背景网格",
-          "value": "原始217×217 SVG，CSS白层约95%",
-          "note": "原始素材尺寸来自官网；白层为本地拟合，用于接近现场淡网格。"
+          "name": "源浅纹背景",
+          "value": "opacity .05；纹理周期 .75rem",
+          "note": "来自原operator-shallow-bg计算规则，另以mask渐变衰减。"
         },
         {
-          "name": "背景字纹理",
-          "value": "斜线CSS填充",
-          "note": "构成来自现场画面，纹理周期与字号为本地近似。"
+          "name": "尺度系统",
+          "value": "PC160×90设计坐标；portrait宽67.5rem",
+          "note": "源rem排版与字体结构，不再首版95%白层拟合。"
         }
       ],
-      "prompt": "为角色或技术档案建立「斜线注册大字与前景记录」。在主体后方放置低对比的大号斜线纹理品牌/类别字，配合小编号、十字标定点和很淡网格。正文姓名与标签用实心字及独立留白，不让斜线穿过可读文字。背景全部aria-hidden且保持静态；真实按钮、链接和当前状态处于前景。手机以图上文下重排，检查图像、姓名和操作不重叠。用有使用权的图像与名称，来源观察和本地透明度/尺寸拟合分开记录。",
+      "prompt": "实现低对比斜线大字、REC/小编号、十字标定与淡网格的背景记录层，保留实心姓名/资料标签的前景。借鉴源浅纹opacity .05、.75rem周期及mask衰减；用真实字体/素材和自己的断点重验，不把源ENDFIELD品牌直接移作他人机构标志。装饰无焦点，状态按钮/内容可键盘操作，巨大字不增加无依据循环闪烁。",
       "sources": [
         {
           "caseId": "endfield-industrial",
-          "locator": "entries/endfield-industrial.json#/composition/shape",
-          "observation": "源端巨大ENDFIELD斜线背景字、十字标定点、REC小编号和淡网格，与前景实心姓名、黑色资料标签形成层次。",
+          "locator": "entries/endfield-industrial.json#composition/shape",
+          "observation": "巨大斜线背景字、十字标定、REC、小编号、淡网格与实心资料；AIC竖书脊保留在媒体边界，黑黄三层作为切换状态。",
           "evidence": "observed",
           "referenceUrl": "https://endfield.hypergryph.com/",
           "capturedAt": "2026-10-09"
@@ -2789,13 +2807,17 @@
         "research/endfield-industrial.md",
         "demos/endfield-industrial/fidelity.md",
         "demos/endfield-industrial/index.html",
-        "demos/endfield-industrial/style.css",
-        "demos/endfield-industrial/app.js"
+        "demos/endfield-industrial/reference.css",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/data.js",
+        "demos/endfield-industrial/app.js",
+        "demos/endfield-industrial/state-matrix.md",
+        "demos/endfield-industrial/source-provenance.json"
       ],
       "paths": {
         "bundle": "agent/patterns/hatched-registration-type.json"
       },
-      "bundleSha256": "9233d86aa23edf3aaa33c93c218e20d005cd01fe3619fa480aa1aabf3fbdbb13"
+      "bundleSha256": "238cfe904223e290bbdeebea3a8a123ddfaac2f7a3a8fa7c1a54ec3cd6affeb4"
     },
     {
       "id": "header-below-mobile-navigation",
@@ -3105,7 +3127,7 @@
       "title": "多尺度图像目的地目录",
       "category": "内容组织",
       "summary": "让每张图像直接成为进入一类内容的窗口。",
-      "mechanism": "横竖比例不同的图像用窄间隙组成矩阵，常显类别名称；每张图像连到一个明确目的地，不再依赖重复的卡片说明和CTA。",
+      "mechanism": "九个图像区域按75%主区和25%侧区组织不同宽高比，以窄白缝分隔真实目的地；类别文字常显，源CSS与脚本共同产生悬停扩张。",
       "trigger": "浏览、聚焦或选择机构目的地",
       "effect": "图像保持文化内容的辨识度，选择目标在观看时即可明确。",
       "useCases": [
@@ -3117,13 +3139,13 @@
         "类别名仅在悬停时出现"
       ],
       "constraints": [
-        "尺寸来自图像比例和内容关系，不能仅按面积暗示用户没有被告知的业务权重。",
-        "手机重排仍遵循逻辑DOM顺序，名称常显且整张入口可聚焦。",
-        "原站9个目的地缩为本地6项；实际素材与裁切范围在案例中说明。"
+        "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+        "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+        "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
       ],
       "composition": {
         "role": "foundation",
-        "notes": "此条的职责是目的地导航，产品Bento的能力面积层级可以另行组合。两套目录并置时避免一个图片链接同时承担多个不明确目标。",
+        "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
         "pairsWellWith": [
           "mixed-ratio-archive-columns",
           "photo-edge-text-contrast"
@@ -3131,29 +3153,29 @@
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "每张图像使用单一原生链接，常显文本给出名称；图片空alt避免名称重复朗读，聚焦反馈覆盖整个入口。",
-        "reducedMotion": "取消图片悬停缩放，目录几何关系、文字和所有链接保持可用。"
+        "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+        "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
       },
       "parameters": [
         {
-          "name": "本地矩阵",
-          "value": "桌面4列 / 手机2列",
-          "note": "根据官网第3章图像目录拟合，保留局部横竖比例，不是原站源码声明。"
+          "name": "源主区/侧区",
+          "value": "75% / 25%，共九项",
+          "note": "资讯/云课堂/馆藏/活动/文创/数字苏博、展览/游戏/建筑美图。"
         },
         {
-          "name": "本地间隙",
-          "value": "8px",
-          "note": "本地拟合窄白缝；非中国博物馆网站统一规范。"
+          "name": "源hover",
+          "value": "CSS scale1.1/500ms + 图宽1.1/300ms",
+          "note": "保留两层独立动作；数字苏博同时调整高度。"
         }
       ],
-      "prompt": "为【目标页面/组件】实现「多尺度图像目的地目录」。横竖比例不同的图像用窄间隙组成矩阵，常显类别名称；每张图像连到一个明确目的地，不再依赖重复的卡片说明和CTA。 触发：浏览、聚焦或选择机构目的地。可见结果：图像保持文化内容的辨识度，选择目标在观看时即可明确。适用：馆藏、展览、课堂并行的文化门户、目的地数量有限的城市机构目录。尺寸来自图像比例和内容关系，不能仅按面积暗示用户没有被告知的业务权重。 手机重排仍遵循逻辑DOM顺序，名称常显且整张入口可聚焦。 原站9个目的地缩为本地6项；实际素材与裁切范围在案例中说明。 键盘：每张图像使用单一原生链接，常显文本给出名称；图片空alt避免名称重复朗读，聚焦反馈覆盖整个入口。 减少动态：取消图片悬停缩放，目录几何关系、文字和所有链接保持可用。 组合边界：此条的职责是目的地导航，产品Bento的能力面积层级可以另行组合。两套目录并置时避免一个图片链接同时承担多个不明确目标。",
+      "prompt": "为【目标页面/组件】实现「多尺度图像目的地目录」。九个图像区域按75%主区和25%侧区组织不同宽高比，以窄白缝分隔真实目的地；类别文字常显，源CSS与脚本共同产生悬停扩张。 源主区/侧区：75% / 25%，共九项。资讯/云课堂/馆藏/活动/文创/数字苏博、展览/游戏/建筑美图。 源hover：CSS scale1.1/500ms + 图宽1.1/300ms。保留两层独立动作；数字苏博同时调整高度。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
       "sources": [
         {
           "caseId": "suzhou-museum",
-          "locator": "entries/suzhou-museum.json#interaction/1",
-          "observation": "图像瓦片直接进入资讯、云课堂、馆藏、展览、文创和建筑美图，类别名称在图像边缘常显；本地保留六个入口并链接官方目的地。",
-          "evidence": "adapted",
-          "referenceUrl": "https://www.szmuseum.com/Home/Index#page3",
+          "locator": "entries/suzhou-museum.json#interaction/2",
+          "observation": "图像目的地：资讯、云课堂、馆藏、活动、文创、数字苏博、展览、游戏、建筑美图九项原图/常显类目均保留，左右75%/25%及每块尺寸按源CSS。",
+          "evidence": "observed",
+          "referenceUrl": "https://www.szmuseum.com/Home/Index",
           "capturedAt": "2026-10-09"
         }
       ],
@@ -3163,12 +3185,13 @@
         "demos/suzhou-museum/fidelity.md",
         "demos/suzhou-museum/index.html",
         "demos/suzhou-museum/style.css",
-        "demos/suzhou-museum/app.js"
+        "demos/suzhou-museum/app.js",
+        "demos/suzhou-museum/state-matrix.md"
       ],
       "paths": {
         "bundle": "agent/patterns/image-destination-mosaic.json"
       },
-      "bundleSha256": "2648d3ce29da51149200dfa6b21c2e70c8025931eb91320e238226a90a79cbc3"
+      "bundleSha256": "8fd3049e3a664bf4400f44d0c5c4158dfe8d193357c98a6048f16ab6f5350d83"
     },
     {
       "id": "inclined-motion-bands",
@@ -6184,7 +6207,7 @@
         {
           "caseId": "endfield-industrial",
           "locator": "entries/endfield-industrial.json#composition/color",
-          "observation": "源端干员与工业区为白底、黑色资料标签和很淡的灰网格，亮黄用于行动与局部状态；多色标定条和彩色人物/工业图保留来源颜色。",
+          "observation": "源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。",
           "evidence": "observed",
           "referenceUrl": "https://endfield.hypergryph.com/",
           "capturedAt": "2026-10-09"
@@ -6192,7 +6215,7 @@
         {
           "caseId": "rhine-lab",
           "locator": "entries/rhine-lab.json#composition/color",
-          "observation": "官方影像可见米白资料底、透明容器、黑色机构字与局部橙色/黄绿色节点；本地暖米白、深绿黑与橙色选择边界为近似网页转译。",
+          "observation": "源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。",
           "evidence": "adapted",
           "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
           "capturedAt": "2026-10-09"
@@ -6202,7 +6225,9 @@
         "demos/endfield-industrial/app.js",
         "demos/endfield-industrial/fidelity.md",
         "demos/endfield-industrial/index.html",
-        "demos/endfield-industrial/style.css",
+        "demos/endfield-industrial/reference.css",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/data.js",
         "demos/met-museum/fidelity.md",
         "demos/met-museum/index.html",
         "demos/met-museum/script.js",
@@ -6230,7 +6255,7 @@
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
       },
-      "bundleSha256": "7dba4c93f65e3f13a1a00d1e2725422ca0713c7013ee275ef422fae6d9125668"
+      "bundleSha256": "2dc8151be0942f0deeb5af96e5987a0342a94c4bfe05b88405fb1d5e19f4ca60"
     },
     {
       "id": "reversible-center-reveal",
@@ -7085,73 +7110,80 @@
       "id": "specimen-pullout-selection",
       "title": "样本阵列的抽出选择",
       "category": "交互反馈",
-      "summary": "把重复容器中的当前项抽出，并同步可阅读的记录。",
-      "mechanism": "同一基线上的重复容器共享尺寸，选中项轻微前移/上移、显出边界；编号、标题和正文由同一选择状态更新，方向按钮复用同一入口。",
-      "trigger": "点击档案或上一份/下一份",
-      "effect": "当前容器和文字记录同时切换，减少动态仍有静态选中。",
+      "summary": "在真实立体阵列中保留单件抽出，用独立网页状态同步观察与阅读。",
+      "mechanism": "大量平行立体档案与被抬出的焦点板保留来源透视/材质；本地以同一选择状态同步热点、观察编号、标题和正文，背景阵列可隐藏而焦点板保留。影片抽出运动与网页点击分别归档。",
+      "trigger": "点选本地观察热点、前后按钮或阵列显隐",
+      "effect": "当前观察与焦点状态同时更新，显隐后焦点板和正文仍可阅读。",
       "useCases": [
-        "样本/作品目录",
-        "小规模研究档案",
-        "有明确当前项的资源选择"
+        "机构影片转译的档案目录",
+        "有空间材质的样本展示",
+        "影像与可读说明并列"
       ],
       "avoid": [
-        "把影像运动说成原站网页点击",
-        "密集正文塞进半透明容器",
-        "多个状态互相失步"
+        "把影片抽出说成官网点击",
+        "用五张泛化卡替代大量立体阵列",
+        "用虚构权限阻挡正文"
       ],
       "constraints": [
-        "来源是官方影像的阵列/抽出画面；网页点击及同步状态为教学转译，需显眼声明。",
-        "原生按钮支持直接选择；正文在独立可读区，不随容器旋转。",
-        "只保持一个current状态驱动编号/正文/按钮；快速操作不排队播放旧动画。"
+        "源端为影片；必须标注网页转译并区分原片运动与本地选择。",
+        "保留来源阵列深度、焦点板四角及光学材质，可采用有使用权的影片/原帧，不臆造其3D源码。",
+        "所有点击由单一选择状态同步编号/正文/aria，快速操作取消旧媒体回调。",
+        "小屏不裁掉源构图；等价语义按钮和正文保证内容可读。"
       ],
       "composition": {
         "role": "accent",
-        "notes": "抽出表现当前项，展开正文管理阅读长度；选中和展开是两个不同状态，不让容器运动遮住正文。手机可组合原生横向滚动，但不夺取页面纵向滚轮。",
+        "notes": "来源媒体保存空间；选择与展开分开管理，切换观察先收起旧正文。背景显隐属于网页改编，不与原片许可流程混合。",
         "pairsWellWith": [
           "inline-detail-disclosure",
-          "native-horizontal-shelf"
+          "scrubbable-animation-progress"
         ],
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "按钮可Tab进入，左右方向键选择并保持焦点；aria-pressed同步，当前记录文字提供aria-live反馈。",
-        "reducedMotion": "关闭抽出位移/平滑滚动；保留边框、编号、标题和aria-pressed，选择即时完成。"
+        "keyboard": "原生热点/前后按钮可键盘操作，左右方向键移动选择并保持焦点，aria-pressed与观察文字同步；展开按钮使用aria-expanded。",
+        "reducedMotion": "保留静态原帧、焦点板、选中和阅读；关闭220ms本地微移，影片默认静止，主动观看有暂停。"
       },
       "parameters": [
         {
-          "name": "教学档案数量",
-          "value": "5",
-          "note": "本地原创内容数量，不表示官方影像完整档案数量。"
+          "name": "原片档案片段",
+          "value": "27.00–39.20秒 / 1920×1080 / 25fps",
+          "note": "原轨道与逐帧核验；本地剪段1倍速度，不表示网页点击时长。"
         },
         {
-          "name": "本地抽出过渡",
-          "value": "550ms",
-          "note": "CSS拟合；不是影片时间或官网实测。"
+          "name": "本地观察目录",
+          "value": "5项",
+          "note": "本库教学内容，原片只检索X-001。"
+        },
+        {
+          "name": "本地微移",
+          "value": "220ms",
+          "note": "网页适配，减少动态关闭；媒体内的抽出保持原时序。"
         }
       ],
-      "prompt": "为五至七项以内的资料目录实现样本阵列抽出选择。容器共享基线和尺寸，当前项以轻微抽出、边界和文字共同标记。一个选择状态立即同步编号、标题、原创正文及aria-pressed，上一份/下一份调用相同逻辑，快速点击只显示最新项。正文放在正常方向的独立阅读区，可用原生展开按钮控制长度。按钮可Tab访问并支持左右方向键，焦点不要随动画消失；手机采用原生横向滚动而非劫持整页滚轮。减少动态关闭抽出和平滑滚动，以静态边界和文字保留状态。若取材于影片，标注网页转译，不把点击机制归于原作。",
+      "prompt": "为有使用权的机构影片建立立体档案观察目录，保留大量平行阵列与单件抽出的透视、材质、四角标定和细射线，不能换成泛化平面卡行。影片或原帧负责真实空间，本地单一状态负责热点/前后选择、编号、标题与正常方向正文。背景阵列可显隐，焦点板保持同源轮廓和可读说明。选择新项先收起旧正文；快速操作取消旧媒体回调。明确影像抽出是源端观察，点击、显隐与阅读是网页转译。按钮可Tab/左右方向键操作，aria-pressed/aria-expanded同步。手机完整展示源画面，正文另行重排。减少动态保留静态选中和阅读，影片由用户主动播放并可暂停。",
       "sources": [
         {
           "caseId": "rhine-lab",
-          "locator": "entries/rhine-lab.json#/interaction/0",
-          "observation": "本地教学改编：点击五个半透明档案或上一份/下一份，当前档案向前抽出，编号、标题和原创教学内容同步；影像中只观察到阵列与抽出运动，没有观察到网页点击。",
+          "locator": "entries/rhine-lab.json#interaction/0",
+          "observation": "本地教学改编：在原作多排立体档案的35秒原帧上提供五个观察热点及前后选择，同一状态同步观察编号、标题、正文并收起旧展开；阵列显隐仅隐藏背景阵列，保留按源端四角轮廓裁切的抬出板。五个热点不是原片中的五个可点击档案。",
           "evidence": "adapted",
           "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
           "capturedAt": "2026-10-09"
         }
       ],
       "sourceFiles": [
-        "entries/rhine-lab.json",
-        "research/rhine-lab.md",
-        "demos/rhine-lab/fidelity.md",
         "demos/rhine-lab/index.html",
+        "demos/rhine-lab/app.js",
         "demos/rhine-lab/style.css",
-        "demos/rhine-lab/app.js"
+        "demos/rhine-lab/fidelity.md",
+        "demos/rhine-lab/assets-manifest.json",
+        "entries/rhine-lab.json",
+        "research/rhine-lab.md"
       ],
       "paths": {
         "bundle": "agent/patterns/specimen-pullout-selection.json"
       },
-      "bundleSha256": "5f5ba0258f32b795c4b2d4c8f2a0325603f8690f302408dd1be320074ff206b4"
+      "bundleSha256": "3642d32391df689e477730a18e6b87ff8b9064f6b12231cfc7edb0495a2709a0"
     },
     {
       "id": "staged-product-ui-entrance",
@@ -7887,22 +7919,22 @@
       },
       "parameters": [
         {
-          "name": "媒体比例",
-          "value": "1600×900 / 16:9",
-          "note": "本次官方静态图原尺寸；其他任务按真实素材比例重新设计。"
+          "name": "源媒体与类别",
+          "value": "4玩法视频 / 5AIC图片",
+          "note": "真实相册媒体与类别共同组织，非首版单1600×900图/105px书脊。"
         },
         {
-          "name": "本地书脊宽度",
-          "value": "105px桌面 / 44px手机",
-          "note": "源码拟合，非原站测量值。"
+          "name": "方向层级",
+          "value": "400ms；black0/yellow250/media500ms",
+          "note": "原相册三层方向揭示，文字500ms退出/500ms进入；视觉书脊本身静态。"
         }
       ],
-      "prompt": "把一幅横向媒体整理为有类别归属的资料模块：短类别放在左侧竖向书脊，大图保留原比例，图下排列编号、标题和正常方向说明，边界与对齐保持一致。竖向字只承担类别，不放长句；标题中重复类别含义，装饰书脊aria-hidden。手机缩小或移上书脊，保持图像可读宽度。若媒体是影片，播放/暂停另用可键盘操作控件，减少动态可阅读静态封面。颜色和宽度按新任务验证，不把本地拟合冒充源站参数。",
+      "prompt": "将简短类别作为媒体边界的竖向书脊，横向真实图像/影片与正常方向编号/标题/说明保持共同对齐。文字朝向表达归属，不旋转长篇正文；portrait沿真实布局重排，避免书脊挤压内容。多项切换可借鉴400ms黑/黄/媒体分层delay0/250/500及500/500ms说明，使用新任务信号色，不把竖书脊当作整站导航。播放/暂停、键盘与减少动态需要实际媒体语义，源参数和最终浏览器实测分别记录。",
       "sources": [
         {
           "caseId": "endfield-industrial",
-          "locator": "entries/endfield-industrial.json#/principles/1",
-          "observation": "源端集成工业区：竖向AIC类别书脊紧邻横向媒体，编号和说明置于同一模块下方；用文字朝向和共同边界标出媒体所属类别。",
+          "locator": "entries/endfield-industrial.json#principles/4",
+          "observation": "AIC书脊与媒体共同组织类别；4玩法/5AIC采用源三层黑→黄→媒体的方向揭示，不用单静态工厂图替代整个相册。",
           "evidence": "observed",
           "referenceUrl": "https://endfield.hypergryph.com/",
           "capturedAt": "2026-10-09"
@@ -7913,13 +7945,17 @@
         "research/endfield-industrial.md",
         "demos/endfield-industrial/fidelity.md",
         "demos/endfield-industrial/index.html",
-        "demos/endfield-industrial/style.css",
-        "demos/endfield-industrial/app.js"
+        "demos/endfield-industrial/reference.css",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/data.js",
+        "demos/endfield-industrial/app.js",
+        "demos/endfield-industrial/state-matrix.md",
+        "demos/endfield-industrial/source-provenance.json"
       ],
       "paths": {
         "bundle": "agent/patterns/vertical-media-spine.json"
       },
-      "bundleSha256": "1eb9d7fc97f5cd28165e4602b35846d996c56d7ddf3267d5f8f9df6cda7b1751"
+      "bundleSha256": "d5001f113da46b33ab5149a5f8b7256a7eca16fb713e3ee1d085183a471b1493"
     },
     {
       "id": "viewport-animation-lifecycle",

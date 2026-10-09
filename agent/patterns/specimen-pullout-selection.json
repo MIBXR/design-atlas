@@ -5,79 +5,86 @@
     "id": "specimen-pullout-selection",
     "title": "样本阵列的抽出选择",
     "category": "交互反馈",
-    "summary": "把重复容器中的当前项抽出，并同步可阅读的记录。",
-    "mechanism": "同一基线上的重复容器共享尺寸，选中项轻微前移/上移、显出边界；编号、标题和正文由同一选择状态更新，方向按钮复用同一入口。",
-    "trigger": "点击档案或上一份/下一份",
-    "effect": "当前容器和文字记录同时切换，减少动态仍有静态选中。",
+    "summary": "在真实立体阵列中保留单件抽出，用独立网页状态同步观察与阅读。",
+    "mechanism": "大量平行立体档案与被抬出的焦点板保留来源透视/材质；本地以同一选择状态同步热点、观察编号、标题和正文，背景阵列可隐藏而焦点板保留。影片抽出运动与网页点击分别归档。",
+    "trigger": "点选本地观察热点、前后按钮或阵列显隐",
+    "effect": "当前观察与焦点状态同时更新，显隐后焦点板和正文仍可阅读。",
     "useCases": [
-      "样本/作品目录",
-      "小规模研究档案",
-      "有明确当前项的资源选择"
+      "机构影片转译的档案目录",
+      "有空间材质的样本展示",
+      "影像与可读说明并列"
     ],
     "avoid": [
-      "把影像运动说成原站网页点击",
-      "密集正文塞进半透明容器",
-      "多个状态互相失步"
+      "把影片抽出说成官网点击",
+      "用五张泛化卡替代大量立体阵列",
+      "用虚构权限阻挡正文"
     ],
     "constraints": [
-      "来源是官方影像的阵列/抽出画面；网页点击及同步状态为教学转译，需显眼声明。",
-      "原生按钮支持直接选择；正文在独立可读区，不随容器旋转。",
-      "只保持一个current状态驱动编号/正文/按钮；快速操作不排队播放旧动画。"
+      "源端为影片；必须标注网页转译并区分原片运动与本地选择。",
+      "保留来源阵列深度、焦点板四角及光学材质，可采用有使用权的影片/原帧，不臆造其3D源码。",
+      "所有点击由单一选择状态同步编号/正文/aria，快速操作取消旧媒体回调。",
+      "小屏不裁掉源构图；等价语义按钮和正文保证内容可读。"
     ],
     "composition": {
       "role": "accent",
-      "notes": "抽出表现当前项，展开正文管理阅读长度；选中和展开是两个不同状态，不让容器运动遮住正文。手机可组合原生横向滚动，但不夺取页面纵向滚轮。",
+      "notes": "来源媒体保存空间；选择与展开分开管理，切换观察先收起旧正文。背景显隐属于网页改编，不与原片许可流程混合。",
       "pairsWellWith": [
         "inline-detail-disclosure",
-        "native-horizontal-shelf"
+        "scrubbable-animation-progress"
       ],
       "conflicts": []
     },
     "accessibility": {
-      "keyboard": "按钮可Tab进入，左右方向键选择并保持焦点；aria-pressed同步，当前记录文字提供aria-live反馈。",
-      "reducedMotion": "关闭抽出位移/平滑滚动；保留边框、编号、标题和aria-pressed，选择即时完成。"
+      "keyboard": "原生热点/前后按钮可键盘操作，左右方向键移动选择并保持焦点，aria-pressed与观察文字同步；展开按钮使用aria-expanded。",
+      "reducedMotion": "保留静态原帧、焦点板、选中和阅读；关闭220ms本地微移，影片默认静止，主动观看有暂停。"
     },
     "parameters": [
       {
-        "name": "教学档案数量",
-        "value": "5",
-        "note": "本地原创内容数量，不表示官方影像完整档案数量。"
+        "name": "原片档案片段",
+        "value": "27.00–39.20秒 / 1920×1080 / 25fps",
+        "note": "原轨道与逐帧核验；本地剪段1倍速度，不表示网页点击时长。"
       },
       {
-        "name": "本地抽出过渡",
-        "value": "550ms",
-        "note": "CSS拟合；不是影片时间或官网实测。"
+        "name": "本地观察目录",
+        "value": "5项",
+        "note": "本库教学内容，原片只检索X-001。"
+      },
+      {
+        "name": "本地微移",
+        "value": "220ms",
+        "note": "网页适配，减少动态关闭；媒体内的抽出保持原时序。"
       }
     ],
-    "prompt": "为五至七项以内的资料目录实现样本阵列抽出选择。容器共享基线和尺寸，当前项以轻微抽出、边界和文字共同标记。一个选择状态立即同步编号、标题、原创正文及aria-pressed，上一份/下一份调用相同逻辑，快速点击只显示最新项。正文放在正常方向的独立阅读区，可用原生展开按钮控制长度。按钮可Tab访问并支持左右方向键，焦点不要随动画消失；手机采用原生横向滚动而非劫持整页滚轮。减少动态关闭抽出和平滑滚动，以静态边界和文字保留状态。若取材于影片，标注网页转译，不把点击机制归于原作。",
+    "prompt": "为有使用权的机构影片建立立体档案观察目录，保留大量平行阵列与单件抽出的透视、材质、四角标定和细射线，不能换成泛化平面卡行。影片或原帧负责真实空间，本地单一状态负责热点/前后选择、编号、标题与正常方向正文。背景阵列可显隐，焦点板保持同源轮廓和可读说明。选择新项先收起旧正文；快速操作取消旧媒体回调。明确影像抽出是源端观察，点击、显隐与阅读是网页转译。按钮可Tab/左右方向键操作，aria-pressed/aria-expanded同步。手机完整展示源画面，正文另行重排。减少动态保留静态选中和阅读，影片由用户主动播放并可暂停。",
     "sources": [
       {
         "caseId": "rhine-lab",
-        "locator": "entries/rhine-lab.json#/interaction/0",
-        "observation": "本地教学改编：点击五个半透明档案或上一份/下一份，当前档案向前抽出，编号、标题和原创教学内容同步；影像中只观察到阵列与抽出运动，没有观察到网页点击。",
+        "locator": "entries/rhine-lab.json#interaction/0",
+        "observation": "本地教学改编：在原作多排立体档案的35秒原帧上提供五个观察热点及前后选择，同一状态同步观察编号、标题、正文并收起旧展开；阵列显隐仅隐藏背景阵列，保留按源端四角轮廓裁切的抬出板。五个热点不是原片中的五个可点击档案。",
         "evidence": "adapted",
         "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
         "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
-      "entries/rhine-lab.json",
-      "research/rhine-lab.md",
-      "demos/rhine-lab/fidelity.md",
       "demos/rhine-lab/index.html",
+      "demos/rhine-lab/app.js",
       "demos/rhine-lab/style.css",
-      "demos/rhine-lab/app.js"
+      "demos/rhine-lab/fidelity.md",
+      "demos/rhine-lab/assets-manifest.json",
+      "entries/rhine-lab.json",
+      "research/rhine-lab.md"
     ]
   },
   "sourceCases": [
     {
       "id": "rhine-lab",
-      "title": "莱茵生命 · 官方影像的网页转译",
+      "title": "莱茵生命 · 影像终端的网页转译",
       "paths": {
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/rhine-lab/index.html"
       },
-      "bundleSha256": "085e2556a84d326c44abf3b3b282d9afe9ab1e6d0fed0d63d62a3f464cca68c3"
+      "bundleSha256": "29cc11f845105f552ead8f01ea6620979a51b34718d0fe4684476c3918d628c3"
     }
   ]
 }

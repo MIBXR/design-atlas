@@ -1,0 +1,76 @@
+{
+  "capturedAt": "2026-10-09",
+  "referenceUrl": "https://endfield.hypergryph.com/",
+  "sourceManifest": [
+    {
+      "file": "source/226-a3c1ec0fe1472086.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+      "sha256": "fb3c1c091019f4a08e48a98fc95ccd4aa486c71b5d7ebd1dd48ec7d09fb48cc2",
+      "utf8Bytes": 161391,
+      "decodedCodePoints": 161207
+    },
+    {
+      "file": "source/8039-7b52e98a88c93d09.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8039-7b52e98a88c93d09.js",
+      "sha256": "43bb386a3892ffb0fa174f8f8cbe2bc7cd536b344e3dc5c6162677610be85c32",
+      "utf8Bytes": 31097,
+      "decodedCodePoints": 31052
+    },
+    {
+      "file": "source/8498-2c5f8c0351c886c2.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8498-2c5f8c0351c886c2.js",
+      "sha256": "22649403ad2af7064671749dc34ba639917d8e9d1c9dcbcb28ad5df1505d3c89",
+      "utf8Bytes": 18373,
+      "decodedCodePoints": 18373
+    },
+    {
+      "file": "source/8858-4aae27eec09dc3ad.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+      "sha256": "323cbcc29ffd57e54225c68adaa1cd7124617ab725638a15581f3bf221211bdf",
+      "utf8Bytes": 107331,
+      "decodedCodePoints": 107315
+    },
+    {
+      "file": "source/layout-f37c8a443b871dbe.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/app/%5Blang%5D/(main)/layout-f37c8a443b871dbe.js",
+      "sha256": "ba18dd4d8a6e6bc68cfb269ac6c58c84ca9566420f975e3806e58a954e48426c",
+      "utf8Bytes": 1615044,
+      "decodedCodePoints": 1243752
+    },
+    {
+      "file": "source/webpack-9efdd6c8a8fa9948.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/webpack-9efdd6c8a8fa9948.js",
+      "sha256": "5a7fe7b4a26423ea1f1cdfc684f19671e24562dac1c5d54e8bc3a5b5e15b9a82",
+      "utf8Bytes": 3769,
+      "decodedCodePoints": 3769
+    }
+  ],
+  "coverage": {
+    "operators": 35,
+    "operatorAssetMappings": 175,
+    "transparentVideos": 70,
+    "worldModels": 6,
+    "media": 10,
+    "gameplay": 4,
+    "aic": 5,
+    "bulletins": 10
+  },
+  "evidenceBoundary": "数据和模块静态抽取覆盖；不把它当所有浏览器状态通过。人物长篇叙事仅事实摘要，原全文不入Git。",
+  "moduleLocations": {
+    "operator": "8039 / 18039 JSON.parse @2750",
+    "transparentVideo": "8858 / 40489 and 8498 / 25221",
+    "worldModels": "226 / 83597",
+    "gameplay": "8858 / 26915",
+    "aic": "8858 / 89622"
+  },
+  "sourceSections": [
+    "home",
+    "operator",
+    "lore",
+    "information",
+    "calendar",
+    "gameplay",
+    "aic",
+    "notice"
+  ]
+}

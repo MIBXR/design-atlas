@@ -1,9 +1,9 @@
 {
   "id": "architectural-outline-whitespace",
-  "title": "黑灰框线与白色空间",
+  "title": "机构摄影的白色外缘",
   "category": "视觉构成",
-  "summary": "从真实建筑边饰中提取结构，让留白继续作为空间。",
-  "mechanism": "用少量黑灰直线界定白色表面，保留大块空白与真实建筑摄影；框线说明结构而不是在每个组件上重复装饰。",
+  "summary": "以白色外缘、窄缝和访问白板组织真实机构摄影。",
+  "mechanism": "用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。",
   "trigger": "阅读建筑说明或相关文化章节",
   "effect": "深色边饰与浅色空间建立清楚轮廓，地域识别保持与真实建筑的联系。",
   "useCases": [
@@ -15,13 +15,13 @@
     "为复制建筑轮廓遮住文字和图像"
   ],
   "constraints": [
-    "先用真实建筑或官方说明支持色彩/结构来源，网页迁移应标为解释。",
-    "框线只在需要说明空间的区域出现，不把所有按钮卡片围成同样粗框。",
-    "本地观察组件为原创；原站没有此框线组件的现场证据。"
+    "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+    "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+    "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
   ],
   "composition": {
     "role": "support",
-    "notes": "框线是对苏博深灰边饰/粉墙关系的局部迁移。与真实摄影组合让来源可辨，不能取代图像目录和机构内容。",
+    "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
     "pairsWellWith": [
       "editorial-alignment-grid",
       "image-destination-mosaic"
@@ -29,29 +29,29 @@
     "conflicts": []
   },
   "accessibility": {
-    "keyboard": "框线是CSS装饰，不进入Tab；保留语义标题和正常文本阅读，内部操作焦点可见。",
-    "reducedMotion": "静态结构无需动画；不为表现移步换景强制平移正文或自动改动视角。"
+    "keyboard": "入口与条件可键盘进入，焦点可见；本地菜单/披露支持Escape或明确关闭，真实业务链接有名称。",
+    "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
   },
   "parameters": [
     {
-      "name": "本地结构框线",
-      "value": "7px / #3d4443",
-      "note": "原创教学选择，非官网组件或建筑材料的测量值。"
+      "name": "源桌面外缘",
+      "value": "left/right50px；top9px，bottom30px",
+      "note": "1440×900时主内容1340×755，来自源计算样式。"
     },
     {
-      "name": "来源范围",
-      "value": "粉墙、深灰石材边饰、自然光",
-      "note": "来自苏州博物馆官方建筑介绍；网页应用是本库解释。"
+      "name": "白色层级",
+      "value": "页面外缘/入口白缝/访问70%半透明白板",
+      "note": "源主页三种实际空间关系；不再使用首版7px黑框组件。"
     }
   ],
-  "prompt": "为【目标页面/组件】实现「黑灰框线与白色空间」。用少量黑灰直线界定白色表面，保留大块空白与真实建筑摄影；框线说明结构而不是在每个组件上重复装饰。 触发：阅读建筑说明或相关文化章节。可见结果：深色边饰与浅色空间建立清楚轮廓，地域识别保持与真实建筑的联系。适用：建筑文化、现代博物馆与空间介绍、有明确建筑构成依据的文化页面。先用真实建筑或官方说明支持色彩/结构来源，网页迁移应标为解释。 框线只在需要说明空间的区域出现，不把所有按钮卡片围成同样粗框。 本地观察组件为原创；原站没有此框线组件的现场证据。 键盘：框线是CSS装饰，不进入Tab；保留语义标题和正常文本阅读，内部操作焦点可见。 减少动态：静态结构无需动画；不为表现移步换景强制平移正文或自动改动视角。 组合边界：框线是对苏博深灰边饰/粉墙关系的局部迁移。与真实摄影组合让来源可辨，不能取代图像目录和机构内容。",
+  "prompt": "为【目标页面/组件】实现「机构摄影的白色外缘」。用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。 源桌面外缘：left/right50px；top9px，bottom30px。1440×900时主内容1340×755，来自源计算样式。 白色层级：页面外缘/入口白缝/访问70%半透明白板。源主页三种实际空间关系；不再使用首版7px黑框组件。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
   "sources": [
     {
       "caseId": "suzhou-museum",
-      "locator": "entries/suzhou-museum.json#composition/shape",
-      "observation": "源端建筑说明以粉墙、深灰石材边饰和几何天窗延续江南空间；本地以黑灰框线和白底构成一处教学观察组件。",
-      "evidence": "adapted",
-      "referenceUrl": "https://www.szmuseum.com/Home/Index#page3",
+      "locator": "entries/suzhou-museum.json#composition/layout",
+      "observation": "四屏完整结构；50px左右外缘，1440×900时主画面1340×755；第三屏按原九项/75%与25%两区组织。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.szmuseum.com/Home/Index",
       "capturedAt": "2026-10-09"
     }
   ],
@@ -61,6 +61,7 @@
     "demos/suzhou-museum/fidelity.md",
     "demos/suzhou-museum/index.html",
     "demos/suzhou-museum/style.css",
-    "demos/suzhou-museum/app.js"
+    "demos/suzhou-museum/app.js",
+    "demos/suzhou-museum/state-matrix.md"
   ]
 }

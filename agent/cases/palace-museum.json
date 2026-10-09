@@ -19,8 +19,8 @@
     },
     "id": "palace-museum",
     "order": 30,
-    "title": "故宫 · 朱红建筑锚点与纸签目录",
-    "subtitle": "Architectural fragments and paper labels as cultural navigation",
+    "title": "故宫 · 六章探索与宫廷视觉目录",
+    "subtitle": "Six chapters of architecture, collections, books and cultural destinations",
     "tags": [
       "中国",
       "故宫",
@@ -31,11 +31,11 @@
       "纸签",
       "建筑目录"
     ],
-    "summary": "探索页用朱红整面托起屋脊摄影与建筑名录，专题入口把器物和书画图像与半幅纸签并置。",
+    "summary": "朱红纹理、真实屋脊与圆形题饰建立建筑识别，藏品拼图、八枚典籍条、历史入口、文物医院轮播和五类纸签专题构成六章长页。",
     "accent": "#8c2927",
     "background": "#ffffff",
     "referenceUrl": "https://www.dpm.org.cn/Explore.html",
-    "edition": "2026-10-09；中文探索页；建筑、藏品与文化专题局部",
+    "edition": "2026-10-09；中文探索页完整六章、桌面及官网响应断点",
     "principles": [
       "从真实建筑局部建立文化识别，再让名称目录承担检索；不依赖无差别传统纹样。",
       "专题图像负责感知，半幅浅纸签负责分类名称，避免文字直接压住复杂纹样。",
@@ -43,18 +43,20 @@
     ],
     "productFocus": "让读者在建筑、藏品与文化专题间选择下一步，真实资料与服务仍由故宫官网提供。",
     "interaction": [
-      "进入与连续浏览：探索页的建筑、藏品、典籍、历史、文物医院和文化专题按原生长页展开；本地缩减为建筑、藏品、专题三段。",
-      "浏览建筑区域：朱红底承托右下角屋脊摄影，建筑名称作为可点击目录，本地保留此构成并链接对应官方建筑。",
-      "选择文化专题：图像左半与右半浅纸签的竖排分类并置，点击进入器物、书画、文化等专题；本地保留三类入口。",
-      "本地藏品观察按钮打开原生dialog，关闭或Escape返回触发按钮；此辅助观察窗为原创教学补充。"
+      "进入与滚动：完整保留建筑、藏品、典籍、历史、文物医院和文化专题六章；桌面1258px内容宽、原站响应样式与素材尺寸经DOM/计算样式对照。",
+      "建筑目录：朱红实物纹理与透明屋脊、独立圆形“建筑”题饰并置，八个建筑名称及更多建筑/地图均保留官方目的地。",
+      "藏品与典籍：异形拼图的两张藏品照片悬停500ms显出黑色半透明文字层；八枚典籍条进入视域后自上方30%位移与1s淡入，依次延迟0.3s，离开后可反向恢复。",
+      "文物医院：两张真实修复场景图片沿水平轨道500ms切换、5000ms自动播放，悬停/焦点暂停，两个原站圆点可直接选择。",
+      "导航与页尾：桌面导航悬停展开、200ms离开隐藏；全站菜单打开/关闭、手机栏目展开、搜索空词提示及官方检索跳转、页尾六个社交二维码和浏览建议均保留。",
+      "五类文化专题与历史五入口为真实链接；无障碍语音/读屏工具作为官网第三方服务明确跳回官方，账户、预约和完整详情不复制。"
     ],
-    "theme": "白色文档、朱红建筑面板、金色屋脊与浅纸签；标题采用本机中文衬线回退，操作采用无衬线。",
+    "theme": "官方白底与真实朱红纹理、金色屋脊、圆形题饰、淡纸色标签；Microsoft Yahei/PingFang SC/Arial字体栈沿用源CSS。",
     "constraints": [
-      "以2026-10-09中文探索页为单一快照，不把首页轮播或全景故宫的独立交互混为本页行为。",
-      "本地仅3段，不还原完整馆藏检索、全景、预约或账户。",
-      "实际屋脊PNG与专题缩略图保留原始字节及比例；图像权利归原机构/作者，不将古代文物的年代视为摄影开放许可。",
-      "源站专题有5类，本地选择3类；标题字号、布局尺度、字体回退为本地拟合。",
-      "手机建筑文字与屋脊分区，纸签保有文字名称；不得仅以背景图或颜色传达分类。"
+      "固定中文探索页六章快照，不合并官网首页轮播、全景故宫或数字文物库的独立服务。",
+      "完整检查并本地化本页适用图像、背景纹理与伪元素题饰；保留原字节、宽高和水印，权利归原机构/作者。",
+      "原站业务链接回官方；第三方无障碍工具实际观察到15项入口，但语音/读屏服务未在本地克隆。",
+      "桌面六章盒模型与原站同值；390px手机前四章同值、医院高度约0.5px差；不声称全站业务或所有浏览器像素一致。",
+      "减少动态时保持内容可见、手动轮播可用，取消自动播放和位移。"
     ],
     "useCases": [
       "文化遗产机构门户",
@@ -73,18 +75,18 @@
         "#efebde",
         "#393830"
       ],
-      "type": "本机STSong/SimSun衬线标题；Microsoft YaHei/PingFang SC正文与操作；不宣称原站字体被完整复用。",
-      "layout": "居中白底长文档 → 朱红建筑大面与屋脊局部 → 藏品图文对照 → 半幅纸签的竖向专题目录。",
-      "motion": "原生连续滚动、锚点返回、专题轻微悬停放大；本地观察dialog不制造章节动画。"
+      "type": "Microsoft Yahei / PingFang SC / Arial；源站字体栈与26px章节题名。",
+      "layout": "1258px居中内容，六章原生长页；朱红建筑→藏品拼图→八条典籍→历史→文物医院→五类专题。",
+      "motion": "源站500ms藏品叠层、1s/0.3s典籍序列、5000ms/500ms医院轮播与可反向滚动。"
     },
     "composition": {
-      "color": "源端观察：白底上有朱红建筑大面、金色屋脊和淡纸色专题标签；本地拟合朱红#8c2927。",
-      "typography": "源端观察：中文文化标题与小型说明分层，专题类目为竖排；本地使用系统中文衬线与无衬线回退。",
-      "layout": "源端观察：探索页分段长文档，建筑大面板内左侧说明与名录、右下角裁切屋脊；本地1250px最大内容宽度为拟合。",
-      "imagery": "官方屋脊透明PNG、龙泉窑青釉盘缩略图与三张文化专题图本地化；不替换为虚构文物或无关纹样。",
+      "color": "源白色正文、建筑重复朱红纹理和金色屋脊、专题浅纸色标签；采用实际源CSS与图像，不再使用首版拟合朱红。",
+      "typography": "沿用源CSS Microsoft Yahei/PingFang SC/Arial字体栈；章节26px/32px，正文14px/1.5，官网手机rem断点。",
+      "layout": "源站完整六章、1258px主内容和原始章节间距；修复了首版缺失的典籍、历史及文物医院。",
+      "imagery": "官网透明屋脊、建筑/藏品/典籍/历史/医院题饰、全部章节摄影、纹理、五类专题桌面/手机图与伪元素资产均检查本地化。",
       "shape": "源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。",
       "hierarchy": "建筑形象先建立地点识别，建筑名称与藏品入口承担选择，专题纸签组织文化对象。",
-      "motion": "源端探索页以原生长页与真实链接为主；本地专题缩放和观察窗为明确的教学补充。",
+      "motion": "源码与实测支持500ms叠层、1s与0.3s错开典籍、5000ms/500ms医院轨道，保留hover暂停和反向状态。",
       "coherence": "朱红/金/纸色分别对应建筑、文化细节与目录标签，装饰与文字入口的职责分开。"
     },
     "sources": [
@@ -92,7 +94,7 @@
         "title": "故宫博物院 · 探索",
         "url": "https://www.dpm.org.cn/Explore.html",
         "type": "实例",
-        "note": "2026-10-09浏览器观察中文探索页到页尾及返回：朱红屋脊锚点、建筑目录、藏品区与半幅纸签专题。"
+        "note": "同日重新以CDP读取原DOM、完整main.css/main.js/vendor.js，核实全部六章、桌面/手机盒模型、悬停与轮播真实状态；state-matrix.md记录详细证据。"
       },
       {
         "title": "故宫博物院 · 相关数字平台",
@@ -105,16 +107,10 @@
         "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
         "type": "规范",
         "note": "用于图像目的与可点击图像的文字替代；不表示官网已经全面符合规范。"
-      },
-      {
-        "title": "W3C WAI · Modal Dialog",
-        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
-        "type": "规范",
-        "note": "本地原创观察窗使用原生dialog、可见关闭、Escape和焦点归还。"
       }
     ],
     "exercise": "替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。",
-    "prompt": "为【文化遗产机构】制作研究型目录，参考2026-10-09故宫中文探索页的建筑、藏品与文化专题局部。保持白底长文档，顶部简单机构导航，朱红大面板内左侧中文衬线标题、短说明与建筑名称索引，右下角用真实透明屋脊摄影锚定文化身份。随后以浅底图文对照介绍一件有明确记录的藏品，最后用矩形作品图像与右半幅纸签并置，纸签竖排分类且作为真实链接。金色限于文化细节和少量边界，系统中文字体回退明确；素材本地化并记录URL、尺寸、字节、hash与权利。正文原生滚动，不引入全屏转场、主题切换或背景音乐。手机让文字和建筑图像分区，标签保留可读名称；减少动态去除悬停缩放和滚动平滑。原生dialog只用于原创观察提示，支持Escape和焦点返回，交易预约及完整档案链接官方。",
+    "prompt": "按2026-10-09故宫中文探索页六章快照复现文化门户。先逐模块对照DOM和计算样式，保留1258px内容宽、源字体栈、章节间距、全部圆形题饰和真实本地化图像；建筑朱红纹理托起左侧说明/八项名称索引及右下屋脊，藏品保留异形图像拼图、500ms文字叠层，典籍保留八条1s/0.3s序列及反向恢复，历史五类入口，文物医院35/65分栏、两图5000ms自动/500ms水平切换和hover暂停，最后保留全部五类纸签专题及官方手机图。导航要含悬停子菜单、全站菜单、搜索空词提示、二维码与浏览建议。记录原站/本地状态矩阵、素材来源/尺寸/hash和未复刻服务；业务及第三方语音读屏走官方，减少动态关闭自动位移而保留手动操作。",
     "negativePrompt": "不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。",
     "demo": "demos/palace-museum/index.html",
     "preview": "previews/palace-museum.jpg",
@@ -130,30 +126,30 @@
     {
       "path": "research/palace-museum.md",
       "role": "research",
-      "content": "# 故宫：从建筑局部到文化对象目录\n\n归档：**2026-10-09**，[中文探索页](https://www.dpm.org.cn/Explore.html)，单一快照。此案例研究建筑、藏品与文化专题三段；首页轮播、全景故宫、数字文物库是独立页面，不并入本地交互范围。\n\n## 可观察事实\n\n浏览器实访探索页并到达页尾、反向返回。白底内容框中的建筑区使用朱红大面，左侧是说明、太和殿等名称链接，右下角是琉璃瓦和脊兽的透明摄影局部。之后依次出现藏品、典籍、历史、文物医院和文化专题。页尾专题使用作品图像与右半幅浅色纸签，器物、书画等名称竖排。它们是可点击的真实目的地。[探索页](https://www.dpm.org.cn/Explore.html)\n\n这里的“中国设计”有具体内容来源：建筑尺度、屋顶细节、文物图像和中文分类共同建立识别，不是任意纹样或配色的集合。官网另将数字文物库、全景故宫、名画记和数字多宝阁列为不同平台，分别提供检索、全景、超清书画或三维物件的能力。[官方数字平台说明](https://www.dpm.org.cn/bottom/platform.html)\n\n## 本库解释与迁移\n\n屋脊只占章节一角，却把大面积朱红与真实建筑对象联系起来；名称目录继续承担精确选择。文化专题中，图像适合感知，纸签适合读字，因此把这两项职责分开。此解释来自对构成的分析，不表示原设计者公开陈述了相同理论。\n\n两项提取是“建筑局部锚定文化章节”和“图像与半幅纸签分类”。原生长页、浅色主题和简单目录链接已经由现有巧思覆盖，不按本品牌重复创建。\n\n## 当前实现与边界\n\n[Demo](../demos/palace-museum/index.html) 缩减为建筑、藏品、专题三段，使用官方公开屋脊 PNG、青釉盘缩略图和三张专题图。保留原始字节、比例和素材来源；字体采用本机中文衬线回退，标题、间距、朱红数值是本地拟合。建筑和专题链接回原站。藏品观察 dialog 是本地原创补充，不冒称官方藏品查看器。\n\n图像链接保留常显文字，装饰图像不进入 Tab 顺序，依据 [W3C 非文本内容说明](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)。本地原生 dialog 提供可见关闭、Escape 和焦点返回，参考 [WAI Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)。这些是迁移约束，不是对官网合规性的结论。\n\n观察范围未发现深浅切换、音频或 BGM 控制；本地固定白色正文与朱红建筑面板，不增加声音。官网手机、触屏行为与全部外链业务未完整实访。手机本地重排和减少动态规则见源码；视觉验收以实际浏览器为准。[复现范围](../demos/palace-museum/fidelity.md) · [素材清单](../demos/palace-museum/assets-manifest.json)\n",
-      "sha256": "d60f8a71d6087ce1ef1aecc433c6e581b5aae04fd2419e61b00906bf85969cf7",
-      "bytes": 2916
+      "content": "# 故宫：建筑局部与完整文化目录\n\n归档 **2026-10-09**，[中文探索页](https://www.dpm.org.cn/Explore.html)，单一固定快照。研究范围是本页六章及其导航/页尾；首页轮播、全景故宫、数字文物库、账户与预约是独立服务。\n\n## 一手观察\n\n本轮逐章读取运行 DOM、main.css?v=763、mScroll 与 xRoll 配置，实际浏览、悬停、打开/关闭菜单、搜索、选择医院第2图、键盘及390px手机回看。建筑区不是只改配色：朱红重复纹理、74.721%宽的屋脊透明摄影、13.276%圆形图饰、中文目录与八个建筑名称共同组织对象。后续藏品叠层、八典籍条、五历史圆图、两张医院摄影、五文化专题采用不同结构。[源页面](https://www.dpm.org.cn/Explore.html)\n\n医院原参数500ms切换、5000ms循环并悬停停止；典籍1s位移/透明度、0.3s序列，反向可恢复；文化专题以原图和半幅浅纸签、竖排器物/书画/文化/人物/展览连接真实目的地。源藏品叠层有内部滚动，不能误当作新增模态查看器。源hoverGif函数在本页没有data-gif目标，不凭函数名称声称本页有GIF交互。\n\n官网的数字文物库、全景故宫、名画记与数字多宝阁分别承担检索、全景、书画细察和三维对象能力。[数字平台说明](https://www.dpm.org.cn/bottom/platform.html) 不能把这些外部能力混为探索页已经实现的同一状态。\n\n## 提取与复用\n\n“建筑局部锚定文化章节”和“图像与半幅纸签分类”分别记录真实对象如何锚定大色面，以及观看/读字的并置。它们是本库对可观察构成的分析，没有替原作者宣称设计意图。长页、目录链接与叠层阅读复用库中既有机制，不因机构品牌新增分类。\n\n## 复现与边界\n\n[本地六章](../demos/palace-museum/index.html) 使用原摄影、图饰、纹理、CSS字体栈与布局规则，恢复完整内容及运行状态；不再保留首版三章缩减和原创藏品dialog。源内部滚动插件改为原生滚动，典籍以观察器组织相同动作参数；第三方蓝色认证图未取得可分发响应，保留认证文字链接。官方无障碍入口实际展开第三方15项工具，但其语音/读屏能力仍进入官方，不模拟下载或完整工具业务。\n\n独立1440×1000六章几何同值；390×844首四章同值、医院差约0.49px，全部主要影像可加载且无整页横溢出。可见标签与键盘focus属于本地语义补充，参照[W3C非文本内容](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)与[减少交互动画](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)；这些规范不构成官网合规认证。完整状态和旧遗漏原因见[矩阵](../demos/palace-museum/state-matrix.md)，素材出处/hash见[清单](../demos/palace-museum/assets-manifest.json)。\n",
+      "sha256": "0cce0a6488dbee0534a527efd8b16cf5133ab906435fb035a2f0c65c6e0569bf",
+      "bytes": 2938
     },
     {
       "path": "prompts/palace-museum.md",
       "role": "prompt",
-      "content": "# 故宫 · 朱红建筑锚点与纸签目录 · 复用 Prompt\n\n由 [结构化案例](../entries/palace-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/palace-museum.md)。\n\n## 正向 Prompt\n\n为【文化遗产机构】制作研究型目录，参考2026-10-09故宫中文探索页的建筑、藏品与文化专题局部。保持白底长文档，顶部简单机构导航，朱红大面板内左侧中文衬线标题、短说明与建筑名称索引，右下角用真实透明屋脊摄影锚定文化身份。随后以浅底图文对照介绍一件有明确记录的藏品，最后用矩形作品图像与右半幅纸签并置，纸签竖排分类且作为真实链接。金色限于文化细节和少量边界，系统中文字体回退明确；素材本地化并记录URL、尺寸、字节、hash与权利。正文原生滚动，不引入全屏转场、主题切换或背景音乐。手机让文字和建筑图像分区，标签保留可读名称；减少动态去除悬停缩放和滚动平滑。原生dialog只用于原创观察提示，支持Escape和焦点返回，交易预约及完整档案链接官方。\n\n## 负向约束\n\n不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。\n\n## 制作约束\n\n- 以2026-10-09中文探索页为单一快照，不把首页轮播或全景故宫的独立交互混为本页行为。\n- 本地仅3段，不还原完整馆藏检索、全景、预约或账户。\n- 实际屋脊PNG与专题缩略图保留原始字节及比例；图像权利归原机构/作者，不将古代文物的年代视为摄影开放许可。\n- 源站专题有5类，本地选择3类；标题字号、布局尺度、字体回退为本地拟合。\n- 手机建筑文字与屋脊分区，纸签保有文字名称；不得仅以背景图或颜色传达分类。\n\n## 检查方法\n\n替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。\n\n[查看 Demo](../demos/palace-museum/index.html) · [返回浏览案例](../cases.html#style/palace-museum)\n",
-      "sha256": "9f40bd7f16fc6b3894a7d9017ac65ace3a14ffad7e4a0b48d91344eff85fd0f0",
-      "bytes": 2171
+      "content": "# 故宫 · 六章探索与宫廷视觉目录 · 复用 Prompt\n\n由 [结构化案例](../entries/palace-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/palace-museum.md)。\n\n## 正向 Prompt\n\n按2026-10-09故宫中文探索页六章快照复现文化门户。先逐模块对照DOM和计算样式，保留1258px内容宽、源字体栈、章节间距、全部圆形题饰和真实本地化图像；建筑朱红纹理托起左侧说明/八项名称索引及右下屋脊，藏品保留异形图像拼图、500ms文字叠层，典籍保留八条1s/0.3s序列及反向恢复，历史五类入口，文物医院35/65分栏、两图5000ms自动/500ms水平切换和hover暂停，最后保留全部五类纸签专题及官方手机图。导航要含悬停子菜单、全站菜单、搜索空词提示、二维码与浏览建议。记录原站/本地状态矩阵、素材来源/尺寸/hash和未复刻服务；业务及第三方语音读屏走官方，减少动态关闭自动位移而保留手动操作。\n\n## 负向约束\n\n不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。\n\n## 制作约束\n\n- 固定中文探索页六章快照，不合并官网首页轮播、全景故宫或数字文物库的独立服务。\n- 完整检查并本地化本页适用图像、背景纹理与伪元素题饰；保留原字节、宽高和水印，权利归原机构/作者。\n- 原站业务链接回官方；第三方无障碍工具实际观察到15项入口，但语音/读屏服务未在本地克隆。\n- 桌面六章盒模型与原站同值；390px手机前四章同值、医院高度约0.5px差；不声称全站业务或所有浏览器像素一致。\n- 减少动态时保持内容可见、手动轮播可用，取消自动播放和位移。\n\n## 检查方法\n\n替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。\n\n[查看 Demo](../demos/palace-museum/index.html) · [返回浏览案例](../cases.html#style/palace-museum)\n",
+      "sha256": "83316416523dc4273a3e450cdc65934ad97cda36a256cbc83d455f5385886744",
+      "bytes": 2125
     },
     {
       "path": "demos/palace-museum/fidelity.md",
       "role": "fidelity",
-      "content": "# 故宫：当前实现范围\n\n采集：**2026-10-09**，[中文探索页](https://www.dpm.org.cn/Explore.html)。固定快照；本地选建筑、藏品和文化专题三段。\n\n| 触发 | 原站观察 | 本地对应与边界 |\n|---|---|---|\n| 首次进入 | 白底探索目录，朱红建筑面内有名录与右下屋脊摄影。 | 保留构成和实际透明 PNG；标题文案、字号、系统字体与朱红数值为本地拟合。 |\n| 上下与反向浏览 | 建筑、藏品、典籍、历史、文物医院、文化专题为原生长页。 | 缩为三段，原生文档流和章节锚点；不加全屏转场。 |\n| 选择建筑名称 | 真实链接进入建筑记录。 | 三个建筑名称与目录链接回官方，不复制建筑业务。 |\n| 选择文化专题 | 作品图与右半浅纸签、竖排类目并置，可进入五类专题。 | 保留三类与实际公开图像；轻微 hover/focus 缩放是本地补充。 |\n| 观察藏品 | 原站藏品入口可进入正式记录。 | 青釉盘观察 dialog 是教学补充，关闭/Escape 归还焦点，并提供官方完整记录。 |\n| 手机与减少动态 | 原站手机与触屏未完整实访。 | 本地文字与屋脊分区，保留可读纸签；减少动态取消平滑和缩放过渡。 |\n\n固定浅色、朱红建筑区与图像原色；观察范围无独立声音控制，本地不添加声音。官方公开图像保留原字节和尺寸；字体/品牌文字为本机回退，不声称像素级或整站还原。图像归属与 hash 见[素材清单](assets-manifest.json)。\n\n本地在 1440px 桌面和 390px 手机实际浏览器验收：素材可加载、无整页横向溢出，键盘 Enter 可打开观察窗，关闭/Escape 可返回。桌面与手机标准预览均来自实际浏览器。公共素材映射、回退和缓存作为异步依赖接入，不增加阻断式开场。\n\n[研究与来源](../../research/palace-museum.md) · [Demo](index.html)\n",
-      "sha256": "6eb8e30bdd70d5993096bb0333ef8eb16b677457398048dc8931cf1d07cc474c",
-      "bytes": 1942
+      "content": "# 故宫探索页：复现范围与证据\n\n固定采集日 **2026-10-09**，来源[中文探索页](https://www.dpm.org.cn/Explore.html)。本地复现这一页的**建筑、藏品、典籍、历史、文物医院、文化专题六章**，以及顶部导航、菜单、搜索入口和页尾；不把账户、预约、独立馆藏平台或外链详情称为已复制。\n\n本轮读取运行 DOM、计算样式、原 CSS 与 mScroll/xRoll 配置，并实际操作菜单、悬停、滚动、轮播点、键盘与手机布局。原图饰、两套文化专题图、真实藏品、历史与医院摄影均本地化，字节、尺寸、出处与 SHA-256 见[素材清单](assets-manifest.json)。朱红纹理、屋脊比例、1258px 内容框、中文字体栈、标题饰纹、六章间距采用源规则。\n\n| 机制 | 本地实现与核验 |\n|---|---|\n| 导航与菜单 | 桌面对应子导航、200ms 离开收起；手机栏目开关；正文锁定、关闭/Escape 与焦点归还实际通过。 |\n| 藏品叠层 | 原两张摄影、50% 黑色叠层与 500ms 淡入，文字可在内部滚动；滚动条采用原生实现。 |\n| 典籍 | 原八条、1s 位移/透明度、0.3s 序列，回看越过触发线可复位；采用本地观察器组织源动作。 |\n| 文物医院 | 原两张图与两点，500ms 水平切换、5000ms 自动循环、悬停/焦点暂停；点、图与 pressed 状态同步。 |\n| 文化专题 | 器物、书画、文化、人物、展览五项，桌面半幅纸签与独立手机图完整保留。 |\n| 搜索与外部能力 | 非空搜索去官方检索；无障碍入口明确进入官方工具，不复制第三方语音/读屏服务。 |\n\n独立浏览器在 **1440×1000** 对照确认六章 top/height/width 相同；**390×844** 首四章相同，医院高度相差约 **0.49px**，专题高度相同，无整页横向溢出。轮播第2图真实轨道变换、菜单关闭与返回顶部已核验。测量是这些状态的证据，不能推广为每个浏览器、字体或所有外部页面逐像素相同。原站/本地截图与几何 JSON 在仓库外 work/fidelity/independent-audit/；正式预览由实际浏览器生成。\n\n已知差异：第三方页尾蓝色认证图本次未取得可分发响应，保留文字认证链接；原站内部滚动插件替换为原生滚动；典籍用本地观察器实现相同动作参数；新增键盘可达性与减少动态规则。固定浅色和原色影像，无额外声音。完整状态、来源和此前遗漏原因见[状态矩阵](state-matrix.md)。\n\n此前首版主动缩成三章并加了原站不存在的藏品观察 dialog，错误地把网站复现当作可任意简化的教学表达；本轮删除该替代并恢复六章。\n\n[研究](../../research/palace-museum.md) · [Demo](index.html)\n",
+      "sha256": "822d1085172c429c668712818c62b16bbd65116be863d33b77acdfbfe12cfeea",
+      "bytes": 2790
     },
     {
       "path": "demos/palace-museum/assets-manifest.json",
       "role": "asset-manifest",
-      "content": "{\n  \"brand\": \"palace-museum\",\n  \"sourcePage\": \"https://www.dpm.org.cn/Explore.html\",\n  \"capturedAt\": \"2026-10-09\",\n  \"scope\": \"公开官网少量图像的局部设计研究；原始字节、比例与权利信息保留。无商业授权或开放许可承诺。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/roof-detail.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715141675RCjgbhtjG1.png\",\n      \"width\": 940,\n      \"height\": 549,\n      \"purpose\": \"探索页建筑区域屋脊摄影与透明裁切\",\n      \"format\": \"png\",\n      \"bytes\": 517848,\n      \"sha256\": \"f3b8944e97b0b252eb41fdc53e90ff2318f894e5101697fe33a8cf875a9d1816\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/topic-vessel.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715149431vmHupLTDf1.png\",\n      \"width\": 236,\n      \"height\": 351,\n      \"purpose\": \"文化专题器物图像\",\n      \"format\": \"png\",\n      \"bytes\": 145895,\n      \"sha256\": \"fd0c62870839305bca58bc72620b12cc5c147853981463a7d56113c6eefe92d6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/topic-painting.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591733KtyaXluWQ1.jpg\",\n      \"width\": 280,\n      \"height\": 367,\n      \"purpose\": \"文化专题书画图像\",\n      \"format\": \"jpg\",\n      \"bytes\": 48598,\n      \"sha256\": \"735e075630bb24fa639c42b2676628853f7535d7f5a1bb0be70b1009e983fd56\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/topic-culture.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591734uLENWfrbZ1.jpg\",\n      \"width\": 239,\n      \"height\": 352,\n      \"purpose\": \"文化专题文化图像\",\n      \"format\": \"jpg\",\n      \"bytes\": 41034,\n      \"sha256\": \"73122920b3a676d0f26c3f243370f7255431602ce676737d839acb2d6fe17927\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸与水印，页面仅以CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人；官网公开设计图像的局部研究引用，不作商业授权或开放许可承诺。\"\n    },\n    {\n      \"file\": \"assets/collection.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2025/04/22/%E6%8E%A2%E7%B4%A2-%E8%97%8F%E5%93%81%E6%8E%A8%E8%8D%90315x240%E9%BE%99%E6%B3%89%E7%AA%91%E5%8D%B0%E9%BE%99%E7%BA%B9%E9%9D%92%E9%87%89%E7%9B%98-AyeAuFerL313.jpg\",\n      \"purpose\": \"龙泉窑印龙纹青釉盘官网缩略图\",\n      \"width\": 315,\n      \"height\": 240,\n      \"format\": \"jpg\",\n      \"bytes\": 43256,\n      \"sha256\": \"2ec9ada14a99aebca9c153566d650c4c1eeca30e6eb068bec3c79d7fbde4b88a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"processing\": \"保留公开原始字节、尺寸，CSS按比例显示。\",\n      \"copyright\": \"故宫博物院及原图权利人，官网公开缩略图的局部设计研究引用，不作商业授权或开放许可承诺。\"\n    }\n  ],\n  \"sharedDependencies\": [\n    {\n      \"path\": \"asset-sources.js\",\n      \"purpose\": \"公共素材映射，由主库固定提交SHA生成；不是官网代码。\"\n    },\n    {\n      \"path\": \"asset-runtime.js\",\n      \"purpose\": \"公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。\"\n    },\n    {\n      \"path\": \"asset-cache.js\",\n      \"purpose\": \"公共媒体缓存入口，独立异步加载，不阻断静态内容。\"\n    },\n    {\n      \"path\": \"asset-cache-worker.js\",\n      \"purpose\": \"asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。\"\n    }\n  ]\n}\n",
-      "sha256": "105f4367a74560223378bb25c77ef368cc9e548c9fbde555fdbe36d479df19ff",
-      "bytes": 4460
+      "content": "{\n  \"brand\": \"palace-museum\",\n  \"sourcePage\": \"https://www.dpm.org.cn/Explore.html\",\n  \"capturedAt\": \"2026-10-09\",\n  \"scope\": \"对指定公开页面的结构、纹理、原图比例及可观察交互作本地学习复现；正式业务跳转官方，去除统计追踪。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/1e907eda0095f899.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/icon_mess.png\",\n      \"width\": 134,\n      \"height\": 112,\n      \"format\": \"png\",\n      \"bytes\": 18347,\n      \"sha256\": \"8a71fbc3f683071f1cb63f67f2da8b988abf3629f11695398e13b92e661346fe\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/a1e392e1b4b775ab.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/icon_mess2.png\",\n      \"width\": 134,\n      \"height\": 112,\n      \"format\": \"png\",\n      \"bytes\": 4180,\n      \"sha256\": \"6d06e3819344759cad7ff63be413ab219f4b61ca8341427322c96f082a07893e\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/cdf20286450e87f8.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/30/1714450493JdsBlxksO1.png\",\n      \"width\": 667,\n      \"height\": 200,\n      \"format\": \"png\",\n      \"bytes\": 33242,\n      \"sha256\": \"b6206f486d94f1f6968afc62c6452bf7553bf01e1527aa66d256a4eb11090edc\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/3a609428bb4e52f2.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/30/1714450493mKvocjUTZ1.png\",\n      \"width\": 667,\n      \"height\": 200,\n      \"format\": \"png\",\n      \"bytes\": 30432,\n      \"sha256\": \"ded4708501a8b6b31cfd4788ff2465ad09aa0600dc109a809a291b91264fa756\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/428a3a8dc70f1166.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/30/1714450493oMLPHAkOn1.png\",\n      \"width\": 86,\n      \"height\": 104,\n      \"format\": \"png\",\n      \"bytes\": 16689,\n      \"sha256\": \"39b47362f5999ca83a81a1521c74f11ee2e8315740f22bb170264ff442bc8e23\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/e64deb65760adf43.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715141675RCjgbhtjG1.png\",\n      \"width\": 940,\n      \"height\": 549,\n      \"format\": \"png\",\n      \"bytes\": 517848,\n      \"sha256\": \"f3b8944e97b0b252eb41fdc53e90ff2318f894e5101697fe33a8cf875a9d1816\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/6d72f5330098175c.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715141699HNhOwXtBy1.png\",\n      \"width\": 167,\n      \"height\": 185,\n      \"format\": \"png\",\n      \"bytes\": 7378,\n      \"sha256\": \"7560b3991fe857a54e8cf8cea0e7f635ecb768dc3a25ada9b5db6e5bd074a820\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/7309c3363fb67e9c.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715141758rmbgVOFpH1.png\",\n      \"width\": 107,\n      \"height\": 105,\n      \"format\": \"png\",\n      \"bytes\": 13641,\n      \"sha256\": \"7de7e709bf685bd9322538b9256e988c43c87f0bcb33f783ea83c390de25f075\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/0014756208d3dec1.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715142304yMWoRwIVx1.png\",\n      \"width\": 167,\n      \"height\": 187,\n      \"format\": \"png\",\n      \"bytes\": 7531,\n      \"sha256\": \"56df7d637fc2061bdfca2357b709f29ca59005c5723dcbfb0e2885c0b7a65d82\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/c2670b66934cc485.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715142661bWdabCjsx1.png\",\n      \"width\": 415,\n      \"height\": 475,\n      \"format\": \"png\",\n      \"bytes\": 266776,\n      \"sha256\": \"07dce279b258dfc70c54ce0851f2f8d76716161be321190f2e40c9cd2819c4d4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/9fda7a70c3515eef.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/img7.png\",\n      \"width\": 6,\n      \"height\": 30,\n      \"format\": \"png\",\n      \"bytes\": 3093,\n      \"sha256\": \"a074d2c7cc31eb366cb236b9c4cbc3fba78da7e8da98e0c5150ccd0a61e06caa\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/a907d3402f665d80.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715142390YGSIfysbk1.jpg\",\n      \"width\": 629,\n      \"height\": 240,\n      \"format\": \"jpg\",\n      \"bytes\": 95814,\n      \"sha256\": \"80700fcf0ed487d2e611acc0b32e1c7ca44cec8c4d442220c5155e0780bd9136\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/38991c56dd7d6e71.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715146565qOVuySdKC1.jpg\",\n      \"width\": 1000,\n      \"height\": 381,\n      \"format\": \"jpg\",\n      \"bytes\": 291731,\n      \"sha256\": \"8359ffe30a67427de4c66e5bb6ced73354156e681705b86e914ff63c1609f51f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/32df528319c46698.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2025/04/22/%E6%8E%A2%E7%B4%A2-%E8%97%8F%E5%93%81%E6%8E%A8%E8%8D%90315x240%E9%BE%99%E6%B3%89%E7%AA%91%E5%8D%B0%E9%BE%99%E7%BA%B9%E9%9D%92%E9%87%89%E7%9B%98-AyeAuFerL313.jpg\",\n      \"width\": 315,\n      \"height\": 240,\n      \"format\": \"jpg\",\n      \"bytes\": 43256,\n      \"sha256\": \"2ec9ada14a99aebca9c153566d650c4c1eeca30e6eb068bec3c79d7fbde4b88a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/d4702a732e01684f.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2025/04/22/%E6%8E%A2%E7%B4%A2-%E8%97%8F%E5%93%81%E6%8E%A8%E8%8D%90315x240%E9%BE%99%E6%B3%89%E7%AA%91%E9%9D%92%E9%87%89%E5%87%B8%E8%8A%B1%E7%BC%A0%E6%9E%9D%E8%8E%B2%E7%BA%B9%E5%B0%8A-jikXnOLvr313.jpg\",\n      \"width\": 315,\n      \"height\": 240,\n      \"format\": \"jpg\",\n      \"bytes\": 43380,\n      \"sha256\": \"26f8f4b6bf46cb11cc0d844168c4dbdf1b13692a94bd2ade3ffbe114bb56b11e\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/3b20e85094290d76.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/10/1715346392JysKeGqmW1.png\",\n      \"width\": 1258,\n      \"height\": 445,\n      \"format\": \"png\",\n      \"bytes\": 102728,\n      \"sha256\": \"0ca88477640adfe7032c36ba9d50ed2963e2c653344391514c187d4d5f1e185a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/29eadc0be50c1068.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/06/19/1718778532yzEEIOKkg1.png\",\n      \"width\": 167,\n      \"height\": 187,\n      \"format\": \"png\",\n      \"bytes\": 11003,\n      \"sha256\": \"83f2f40f00e9ddd739e26cd83511b44d9bbe017338fcc90792502b90119ef6b0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/12739fedb003a5fc.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/06/19/1718778532jxPjOcDhg1.png\",\n      \"width\": 167,\n      \"height\": 179,\n      \"format\": \"png\",\n      \"bytes\": 6772,\n      \"sha256\": \"eb1ce8725bda1c61dd965e5756dc767ea681363a75c731da39a136045166ece5\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/936348176721585e.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715148237whINupefs1.png\",\n      \"width\": 177,\n      \"height\": 176,\n      \"format\": \"png\",\n      \"bytes\": 45043,\n      \"sha256\": \"ec9806ecab248d5a5c5573ca57bf6dc874f7a8f67fa3e86bcde25892ae584179\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/c9e0bbd0a3ae9713.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713590303MGjgAVidq1.png\",\n      \"width\": 177,\n      \"height\": 176,\n      \"format\": \"png\",\n      \"bytes\": 46227,\n      \"sha256\": \"087ac448968c634ad1c43e344b2913a350336a27f2fef3cbdf42c58ebec0f77f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/255c275c40abfd74.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713590294oqDxkMpLg1.png\",\n      \"width\": 177,\n      \"height\": 176,\n      \"format\": \"png\",\n      \"bytes\": 47412,\n      \"sha256\": \"adfd27b2f564520d9ad9bf773ed8e79c5ba3036b0acb02d9537c20eb9d1235ee\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5dfa51426c9b3a23.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713590288WoCbgzUPC1.png\",\n      \"width\": 177,\n      \"height\": 176,\n      \"format\": \"png\",\n      \"bytes\": 43760,\n      \"sha256\": \"32f1b43e049e045f62c85dbab936947f27015f64cab412b60138ce50259b44fd\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/9ca5eb221b7d578a.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713590280FGraQGHcW1.png\",\n      \"width\": 176,\n      \"height\": 176,\n      \"format\": \"png\",\n      \"bytes\": 46925,\n      \"sha256\": \"1180e47c1e7ab9bc6b9023b12f4990cc0b93c7c7976e7184ecbbe32b47e3fc36\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5af2bb8a3cb796c8.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715148567yHliOwhsj1.png\",\n      \"width\": 334,\n      \"height\": 359,\n      \"format\": \"png\",\n      \"bytes\": 15733,\n      \"sha256\": \"1c4bad13076145ba75391a1deaa4b1e722962a248a8ecbaa30c637256a04a002\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/442ba2e9df8432a9.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/08/20/1713591216voMROVHeL1-DErvybDJC6.jpg\",\n      \"width\": 820,\n      \"height\": 492,\n      \"format\": \"jpg\",\n      \"bytes\": 175210,\n      \"sha256\": \"d529469264fc6a65a1e1595b5df29049d3dac4cf75102f8efab9b26684071d1c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/8990e669a03c391b.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/08/20/1713591206mkuGfCivD1-zhkhsgRAr6.jpg\",\n      \"width\": 820,\n      \"height\": 492,\n      \"format\": \"jpg\",\n      \"bytes\": 174717,\n      \"sha256\": \"6d7cc20755b799e6c8555d83680551ef8a7dd001efb7c91f2039379c853036b6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/2fa54b98ca253df1.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715149431vmHupLTDf1.png\",\n      \"width\": 236,\n      \"height\": 351,\n      \"format\": \"png\",\n      \"bytes\": 145895,\n      \"sha256\": \"fd0c62870839305bca58bc72620b12cc5c147853981463a7d56113c6eefe92d6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/7e2fbd7d21d2ccde.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/08/1715149431jCTlvqnmu1.jpg\",\n      \"width\": 120,\n      \"height\": 350,\n      \"format\": \"jpg\",\n      \"bytes\": 45249,\n      \"sha256\": \"32857fa7b08d3a41662396d1f0963e9713d576e116562dc44dcdc7fd2d15ca86\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/dc981412bfc1ee4a.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591733KtyaXluWQ1.jpg\",\n      \"width\": 280,\n      \"height\": 367,\n      \"format\": \"jpg\",\n      \"bytes\": 48598,\n      \"sha256\": \"735e075630bb24fa639c42b2676628853f7535d7f5a1bb0be70b1009e983fd56\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/39bd57fcbce3a1be.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591734JjSWrULlR1.jpg\",\n      \"width\": 120,\n      \"height\": 350,\n      \"format\": \"jpg\",\n      \"bytes\": 70140,\n      \"sha256\": \"e54581da1621db6ab9a5f3dddb297288273123dd453061aa0ccc3ef7807e123b\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/1fa02a54347b160d.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591734uLENWfrbZ1.jpg\",\n      \"width\": 239,\n      \"height\": 352,\n      \"format\": \"jpg\",\n      \"bytes\": 41034,\n      \"sha256\": \"73122920b3a676d0f26c3f243370f7255431602ce676737d839acb2d6fe17927\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/93d4f7f0ef24e1d7.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591734TGwZGLOQi1.jpg\",\n      \"width\": 119,\n      \"height\": 350,\n      \"format\": \"jpg\",\n      \"bytes\": 40833,\n      \"sha256\": \"10cbbdaba83383400c9a9c0ec0e40433606e1419ad58feaadb7e2191721a0a52\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/32a4d643fe9b1a4b.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591733vhoUJvbDH1.jpg\",\n      \"width\": 236,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 34359,\n      \"sha256\": \"bf072002e54bc3b20b8dae87aaac5c304608c9a21675843a4ba1f78a2462b694\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/0cc8881417eab618.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591734uIjcLPyfb1.jpg\",\n      \"width\": 120,\n      \"height\": 350,\n      \"format\": \"jpg\",\n      \"bytes\": 34315,\n      \"sha256\": \"134c522a24f78b377b504db571542f8d62ff05fcf619b616bb0197c74852376b\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/850eb6ab4d25f302.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591733BIEYMQrtB1.jpg\",\n      \"width\": 236,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 26666,\n      \"sha256\": \"f5689d8e077240d38d18170559e2d66e3d86cb8989aeee90d9012f72c525e3b5\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5210c40a2ee0c7c7.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/20/1713591734sPqGzxurZ1.jpg\",\n      \"width\": 120,\n      \"height\": 351,\n      \"format\": \"jpg\",\n      \"bytes\": 45829,\n      \"sha256\": \"48c30c87c6ebc5bea5a90e57fde646944127202f98041b710be345bfd488ede7\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/27a6fde74dacda7b.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/06/19/1718777318GXykGfXVu1.png\",\n      \"width\": 126,\n      \"height\": 126,\n      \"format\": \"png\",\n      \"bytes\": 2922,\n      \"sha256\": \"49a5b6b3c1e1e55d9af605d4d943a2f2135ab27bef1bdb061f8cd3ebb2c79f80\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/1a27e4cf2c71b045.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/10/30/%E5%BE%AE%E5%8D%9A-rAnSDAriV260.jpg\",\n      \"width\": 266,\n      \"height\": 266,\n      \"format\": \"jpg\",\n      \"bytes\": 73013,\n      \"sha256\": \"7d940e301430de14a86a42ee04e3ce940b97c38f2906444e59171346f93eef0d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/1f81dd788afda17b.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/06/13/1718252091PCWUaAJGl1.png\",\n      \"width\": 126,\n      \"height\": 126,\n      \"format\": \"png\",\n      \"bytes\": 2406,\n      \"sha256\": \"40bd8e0ecaf52ae7b6751dfb5007150d5b56af0d0fe3c32cafbecd7cf1097ea5\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/2e05711a3f126c79.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/10/30/%E5%BE%AE%E4%BF%A1-PKgMtrmlY260.jpg\",\n      \"width\": 266,\n      \"height\": 266,\n      \"format\": \"jpg\",\n      \"bytes\": 72295,\n      \"sha256\": \"67717e6279a544d4e4a61c6ccbf07a6986c8e22ad724801ed640ab0f5c593d2c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/400e47681d31c493.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/10/1712732694TjffWygwM1.png\",\n      \"width\": 63,\n      \"height\": 63,\n      \"format\": \"png\",\n      \"bytes\": 1635,\n      \"sha256\": \"9f537b7211e597630c07ef0e4f926511eb31d58f9803c25403192375d763d17c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5c2b6dfb3b733d2e.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/10/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F-bsJzckSpJ260.jpg\",\n      \"width\": 264,\n      \"height\": 266,\n      \"format\": \"jpg\",\n      \"bytes\": 44474,\n      \"sha256\": \"e3f966f8a30a37b8a2221be46ca8b4e2f2885475095d358a7a8dd345da008005\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/566a46154dcc52d7.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/10/1712732694TutGSjrcR1.png\",\n      \"width\": 63,\n      \"height\": 63,\n      \"format\": \"png\",\n      \"bytes\": 3159,\n      \"sha256\": \"e44acd7dd2184f7638fe92e8a032b9c616638c2a71d1b70009d513b511befca6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/117460d0aeaa9cfb.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/10/30/%E5%AD%A6%E4%B9%A0%E5%BC%BA%E5%9B%BD%E5%8F%B7-XMhbQaYmz260.jpg\",\n      \"width\": 266,\n      \"height\": 325,\n      \"format\": \"jpg\",\n      \"bytes\": 71070,\n      \"sha256\": \"df676715fe02db9b85f0d8506b21f73640bb21ed4e37409829a16a113a89b0b4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/ec836c8fd1a5c0fd.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/04/10/1712732694guXTmRlCJ1.png\",\n      \"width\": 63,\n      \"height\": 63,\n      \"format\": \"png\",\n      \"bytes\": 2293,\n      \"sha256\": \"c5365758466bf1756ca79798443d76e18028cd3f29a34dd24928b60cd44fb9d0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/dbafb461966da6c3.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/10/30/%E8%A7%86%E9%A2%91%E5%8F%B7-GLHkqBniy260.jpg\",\n      \"width\": 266,\n      \"height\": 266,\n      \"format\": \"jpg\",\n      \"bytes\": 51002,\n      \"sha256\": \"7aae8f88f4cce83075f554963844d836c0c00b22e3a3a2e8a8fdfffeb105302c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/dad85cefcb5bbc74.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/06/13/1718252091iedZOgVid1.png\",\n      \"width\": 126,\n      \"height\": 126,\n      \"format\": \"png\",\n      \"bytes\": 4643,\n      \"sha256\": \"3798566a912af8a3c0c220d8bddafa27e428af63ac8a800426e333491c74788d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/8ab8e7f6dbb94ff3.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/10/30/%E6%8A%96%E9%9F%B3%E5%8F%B7-EdLLogkez260.jpg\",\n      \"width\": 264,\n      \"height\": 266,\n      \"format\": \"jpg\",\n      \"bytes\": 81627,\n      \"sha256\": \"314b14455e6cfb3186b2b0dc810f73fd4dd6a9e2bc2baa85bd193c853efd4106\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5087004eea121f72.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/ico.png\",\n      \"width\": 20,\n      \"height\": 20,\n      \"format\": \"png\",\n      \"bytes\": 19256,\n      \"sha256\": \"a20583c81805fe64f7fa210851ce29754af9d25fd6aa5a3225a9557529602513\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/54a303c21979ee50.png\",\n      \"sourceUrl\": \"https://www.dpm.org.cn/Uploads/image/2024/05/31/1717145587toUwECqtl1.png\",\n      \"width\": 39,\n      \"height\": 36,\n      \"format\": \"png\",\n      \"bytes\": 4360,\n      \"sha256\": \"4be92b1774da90dfce17ee5da829749c5f017ea2e05dc09ca69800e16222c9c4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/9a4cf01dcde166ca.jpeg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/31/1717147255ShevIbajt1.jpeg\",\n      \"width\": 1258,\n      \"height\": 562,\n      \"format\": \"jpeg\",\n      \"bytes\": 44854,\n      \"sha256\": \"570c149f5fc5edc8d89076c1c80cf93e8be89e02b8e6eb30bb3251cd850bea36\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/ecadede2af5c0f88.png\",\n      \"sourceUrl\": \"https://www.dpm.org.cn/Uploads/image/2024/08/20/s583523240b9a0-NwWbnEpPr6.png\",\n      \"width\": 52,\n      \"height\": 46,\n      \"format\": \"png\",\n      \"bytes\": 5286,\n      \"sha256\": \"579082d83354758cbc2a42d0bfb2f6e29f623c9d7b413fd25f239a0dee6f077d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/b58acd418731dd48.png\",\n      \"sourceUrl\": \"https://www.dpm.org.cn/static/api/img/share/icons_0_16.png?v=ba7acbd3.png\",\n      \"width\": 16,\n      \"height\": 3200,\n      \"format\": \"png\",\n      \"bytes\": 15587,\n      \"sha256\": \"70b7372eea2e87354fb529a0c54e39971873a50ed2029778b0ef61ca74d688c2\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5d5672d6fc5bec2c.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/close1.png\",\n      \"width\": 51,\n      \"height\": 51,\n      \"format\": \"png\",\n      \"bytes\": 3183,\n      \"sha256\": \"0559b117ba5d7d8aae3f11a6880f8bee3aad4ecf989cbcbda23ba109b10becf4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/505ffb65db185793.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/img1.png\",\n      \"width\": 40,\n      \"height\": 40,\n      \"format\": \"png\",\n      \"bytes\": 4381,\n      \"sha256\": \"5ee7cda0a11c0fe9d8ffd8acb199891a99c601b2b84c6e93182e20d7c9412357\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/7f1afa53e17a32d3.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/img2.png\",\n      \"width\": 40,\n      \"height\": 40,\n      \"format\": \"png\",\n      \"bytes\": 4423,\n      \"sha256\": \"24eda38ef03a49367bd76e84cd5bcbe7ef70d8092ac9216be144a9e71f769161\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/c39ff11bd3a2d8f5.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/img3.png\",\n      \"width\": 34,\n      \"height\": 32,\n      \"format\": \"png\",\n      \"bytes\": 1142,\n      \"sha256\": \"a78dc8c587dee1f820a8ebaff90c40a488fb8065c2cb90c67644ff5f3b08261b\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/0a80f7fcc46e2ebc.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/img8-1.png\",\n      \"width\": 269,\n      \"height\": 72,\n      \"format\": \"png\",\n      \"bytes\": 7268,\n      \"sha256\": \"9014b4cd4565018095ee96578482e1492f1861130ab034240c883b6f8d6dbe35\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/489da39c10fe638e.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/img29.png\",\n      \"width\": 6,\n      \"height\": 16,\n      \"format\": \"png\",\n      \"bytes\": 2962,\n      \"sha256\": \"e054b1934af23281ca694c82ebede538b886bd101ee83a56350e0e6770125d5c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/759fad661dde7ee9.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/lyc/explore1-pic3.png\",\n      \"width\": 14,\n      \"height\": 24,\n      \"format\": \"png\",\n      \"bytes\": 1320,\n      \"sha256\": \"e14e5ad0e15472b5165762fe75f3894acdc10d1ad5667fc986a0f727917b2c02\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/5958a5dc91380653.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/lyc/explore1-pic4.png\",\n      \"width\": 10,\n      \"height\": 17,\n      \"format\": \"png\",\n      \"bytes\": 1186,\n      \"sha256\": \"31007dd7bba36179fb60c81b6683d129a7703d8489fa81e94155b327cef827f6\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/53e49d500e7fc57e.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/bg32.png\",\n      \"width\": 61,\n      \"height\": 49,\n      \"format\": \"png\",\n      \"bytes\": 5756,\n      \"sha256\": \"ca3339db4093feec8bb73229654bfc85d651a042cb5ef801e28b550fe20fb567\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/fa1954142d828fc2.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/jian.png\",\n      \"width\": 64,\n      \"height\": 61,\n      \"format\": \"png\",\n      \"bytes\": 3132,\n      \"sha256\": \"e19557c95c98951f46aa39bacc4fc9168e45fbfe12acb661587574af90217765\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/e57deb780eebbfae.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/bg28.png\",\n      \"width\": 260,\n      \"height\": 47,\n      \"format\": \"png\",\n      \"bytes\": 3163,\n      \"sha256\": \"4eb90bcb84322a92723b16851a15cd0c22bff4217149cb63ed09e3bf8e4ef30f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/68f2fca0cb85babb.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/btn8.png\",\n      \"width\": 211,\n      \"height\": 57,\n      \"format\": \"png\",\n      \"bytes\": 3030,\n      \"sha256\": \"b34d456d06049147301d170152bef540895d2bf3236142fca38dea4f9ee439e5\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/b4eab2204b5099ba.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/Uploads/image/2024/05/31/1717147255gRGaHQYLl1.png\",\n      \"width\": 602,\n      \"height\": 515,\n      \"format\": \"png\",\n      \"bytes\": 320502,\n      \"sha256\": \"03a5a29b369ec89a7fbbb231f8a9f757c80100317fefd7d9e074f841c3a785c3\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/042268f9c8de2349.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/img27.png\",\n      \"width\": 6,\n      \"height\": 16,\n      \"format\": \"png\",\n      \"bytes\": 2982,\n      \"sha256\": \"3f99350542c57f73c75ac2245d924ffa2a8d7187c09934254e352aecc591f629\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/353aba4366472279.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/btn13.png\",\n      \"width\": 210,\n      \"height\": 57,\n      \"format\": \"png\",\n      \"bytes\": 3140,\n      \"sha256\": \"75ee7d9a9a06410d6de110776751b27c9261ad6054f199745fb2c1ebf4eb96bd\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/3538a02707590206.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/btn14.png\",\n      \"width\": 302,\n      \"height\": 57,\n      \"format\": \"png\",\n      \"bytes\": 3012,\n      \"sha256\": \"9e4e82b8ce1c97c9dc8a6cd508eb034aecdec2758ede9686d824b854f1f8bec5\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/9e615d581e160dc7.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/lyc/explore6-pic1.png\",\n      \"width\": 99,\n      \"height\": 99,\n      \"format\": \"png\",\n      \"bytes\": 18125,\n      \"sha256\": \"12251ebb466d42383076fe7a16f616652a5a65498b3a8786478f18d3380ed11a\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"经DOM、计算样式及Network核实的原页面图像或字型；文件名为素材清单标识。\",\n      \"processing\": \"保留来源文件原字节、比例及水印，CSS控制原站显示尺寸。\",\n      \"copyright\": \"故宫博物院及原权利人；仅用于个人设计研究，无开放或商业使用许可承诺。\"\n    },\n    {\n      \"file\": \"assets/6e3963de3f0dfc25.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/public-icon1.png\",\n      \"width\": 44,\n      \"height\": 66,\n      \"format\": \"png\",\n      \"bytes\": 2464,\n      \"sha256\": \"aee4ec58f4102c042f878de6abb4e28152f78f08e1a11a5efbd762578b95836d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/866ce9673e7b8629.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/lyc/more1.png\",\n      \"width\": 48,\n      \"height\": 48,\n      \"format\": \"png\",\n      \"bytes\": 1667,\n      \"sha256\": \"94f99f768e1237d8fa39925f5bd155282f5c63ab41c588a42d6b78db42d1cb88\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/d8b8f27af0ae9966.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/public-icon2.png\",\n      \"width\": 44,\n      \"height\": 66,\n      \"format\": \"png\",\n      \"bytes\": 2435,\n      \"sha256\": \"f35de8f309361c803148e1b5def47aa04dc525ad3c645d8005f8557cf3b35fb9\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/e57e599248777077.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/arrow1.png\",\n      \"width\": 16,\n      \"height\": 34,\n      \"format\": \"png\",\n      \"bytes\": 2974,\n      \"sha256\": \"d18cf35884a363dbf65374ae2937b4c62d367b7e0d27dac502bd30c11402ca7b\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/9c34c252062beaad.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/ico_tools_esdTli.png\",\n      \"width\": 35,\n      \"height\": 90,\n      \"format\": \"png\",\n      \"bytes\": 5945,\n      \"sha256\": \"6e064dd238d209a0e3c5fb7ec2c2e2866918cebfd9a7ac06ddc6ac5fce4781fd\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/35b3f119e41593e3.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/ico_search1.png\",\n      \"width\": 30,\n      \"height\": 70,\n      \"format\": \"png\",\n      \"bytes\": 1614,\n      \"sha256\": \"46d65e6594c817eda2ccba83ccc4d93c4edb05371acb183fcaf3e7027bcf2c1d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/dbb9f915c6a79c73.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/ico_user1.png\",\n      \"width\": 34,\n      \"height\": 80,\n      \"format\": \"png\",\n      \"bytes\": 2512,\n      \"sha256\": \"4f6a6c6c69e3d2ffc368dac0b8c9c7a7d7103a9c77f8495cb9a74259505613b0\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/1deeff13ea5773ae.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/ico_tools_msg2.png\",\n      \"width\": 35,\n      \"height\": 90,\n      \"format\": \"png\",\n      \"bytes\": 1686,\n      \"sha256\": \"c8203f3e564af2b57783b9d3ff999701aae2a38e69418e4df18c0795394648d7\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/e993770c3131d821.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/ico_search.png\",\n      \"width\": 35,\n      \"height\": 35,\n      \"format\": \"png\",\n      \"bytes\": 1822,\n      \"sha256\": \"2b7cc8eac00181eb9f227ecf289f8ae21c4302310f2fde6d951d75d6ae422ba4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/0db82b64b6ebfe58.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/close11.png\",\n      \"width\": 39,\n      \"height\": 38,\n      \"format\": \"png\",\n      \"bytes\": 2070,\n      \"sha256\": \"61d4373253b314241f5247d12765edfe818665f8ef4b19201524b5ba6d4f22a9\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/6761ad2852fdbcdd.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/ico_close.png\",\n      \"width\": 50,\n      \"height\": 50,\n      \"format\": \"png\",\n      \"bytes\": 2407,\n      \"sha256\": \"db23c0cf82aa67eb3ba2eb19695af8dd6ac603566ee274a0f3d2f19fe3f402ad\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/30711a68e5940d23.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/nav_liststyle.png\",\n      \"width\": 18,\n      \"height\": 11,\n      \"format\": \"png\",\n      \"bytes\": 1222,\n      \"sha256\": \"a6feb47446bef0cf7690e654261b2a423128a5ec55304b517c1f028c0b3f5137\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/1081ff8b03e127e9.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/img4.png\",\n      \"width\": 40,\n      \"height\": 40,\n      \"format\": \"png\",\n      \"bytes\": 4609,\n      \"sha256\": \"b0c61bb684d1e06ceae02fb6e3d49c33e5efdd8e8f52039300266e3e4464617f\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/1a91429d21275b92.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/ico_tools_msg10.png\",\n      \"width\": 40,\n      \"height\": 40,\n      \"format\": \"png\",\n      \"bytes\": 4307,\n      \"sha256\": \"62c3e683b773a40a8ce5dbad009d45a5f9361e070eb356161187196c10bec117\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/51b540d575da63f3.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/header/ico_menu1.png\",\n      \"width\": 96,\n      \"height\": 192,\n      \"format\": \"png\",\n      \"bytes\": 17622,\n      \"sha256\": \"d6d458912b8c1593b3d19e03037b88753f1f8018521c9c30f4cf26b3be3f062c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/29aa58f535f9d886.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/nav_bg.jpg\",\n      \"width\": 1660,\n      \"height\": 934,\n      \"format\": \"jpg\",\n      \"bytes\": 117485,\n      \"sha256\": \"584a79d6f92601fea08f068a4f18e327708322974f81f7a4310b27a59c0e60d8\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/64302ac3b783845c.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/lyc/explore1-icon3.png\",\n      \"width\": 4,\n      \"height\": 17,\n      \"format\": \"png\",\n      \"bytes\": 982,\n      \"sha256\": \"0e76beb4f8961ecc99206ba26de1a8b6d09dfaab2bb823ddadb841adfbf31365\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/931bcfc0ce858904.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/btn2.png\",\n      \"width\": 202,\n      \"height\": 39,\n      \"format\": \"png\",\n      \"bytes\": 4140,\n      \"sha256\": \"ed342b966dd305e1f9e711a57c9babe858be48479ae1faeb7b39cfb75e76a231\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/7a5e9194f79952f5.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/bg7.png\",\n      \"width\": 39,\n      \"height\": 36,\n      \"format\": \"png\",\n      \"bytes\": 4360,\n      \"sha256\": \"4be92b1774da90dfce17ee5da829749c5f017ea2e05dc09ca69800e16222c9c4\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/2e29a19e50798a00.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/bg6.png\",\n      \"width\": 41,\n      \"height\": 47,\n      \"format\": \"png\",\n      \"bytes\": 4823,\n      \"sha256\": \"41e1768a4a92a6037c8ce1714cadaeaef760e7c3d3df00c8904c028b3592ea3e\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/0bb8b65a314fe62d.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/jian1.png\",\n      \"width\": 44,\n      \"height\": 42,\n      \"format\": \"png\",\n      \"bytes\": 5851,\n      \"sha256\": \"df51aec66dacf4ab5d1cd0132e260b347b6ac66f828c67983aa7712f57c0e12d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/dd7e52fc2937174a.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/img6.png\",\n      \"width\": 6,\n      \"height\": 16,\n      \"format\": \"png\",\n      \"bytes\": 2962,\n      \"sha256\": \"e054b1934af23281ca694c82ebede538b886bd101ee83a56350e0e6770125d5c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/8f170fabc2f35a20.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/black50.png\",\n      \"width\": 49,\n      \"height\": 49,\n      \"format\": \"png\",\n      \"bytes\": 144,\n      \"sha256\": \"34ed23d3c3fba723e1eca313434467064e77d2d9bb1861c5f95d2a468fa4d6d2\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/3d3bbd056c8b1d06.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/lyc/txtbg1.png\",\n      \"width\": 16,\n      \"height\": 20,\n      \"format\": \"png\",\n      \"bytes\": 1177,\n      \"sha256\": \"af9d29efe0a3ab2b3048e6f826185e4383697e7ca222ff7319a31a3c28a5116c\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/bee58ac90efdd0c9.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/img8.png\",\n      \"width\": 6,\n      \"height\": 16,\n      \"format\": \"png\",\n      \"bytes\": 2982,\n      \"sha256\": \"3f99350542c57f73c75ac2245d924ffa2a8d7187c09934254e352aecc591f629\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/c944df0e2d0bd0a7.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/bg1.png\",\n      \"width\": 52,\n      \"height\": 46,\n      \"format\": \"png\",\n      \"bytes\": 5286,\n      \"sha256\": \"579082d83354758cbc2a42d0bfb2f6e29f623c9d7b413fd25f239a0dee6f077d\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/51323714420ce764.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/dian2.png\",\n      \"width\": 54,\n      \"height\": 24,\n      \"format\": \"png\",\n      \"bytes\": 19583,\n      \"sha256\": \"30947ad2fdab19a74203a3eb4fe7c5fc0b7a0d1f0edb7ba1f0eb77bd87678069\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/d6ed34dc3ed70ca8.jpg\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/bo/pic10.jpg\",\n      \"width\": 1258,\n      \"height\": 562,\n      \"format\": \"jpg\",\n      \"bytes\": 44854,\n      \"sha256\": \"570c149f5fc5edc8d89076c1c80cf93e8be89e02b8e6eb30bb3251cd850bea36\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/3c7ef2f8fb27aef3.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/lyc/bg8.png\",\n      \"width\": 90,\n      \"height\": 72,\n      \"format\": \"png\",\n      \"bytes\": 1952,\n      \"sha256\": \"e4ef7a92f6d50da5da98df3422baa398ce2551c9d46a6a97ee628b06e5a114f1\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/cc5f3ca63e674f74.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/lyc/mask90.png\",\n      \"width\": 56,\n      \"height\": 52,\n      \"format\": \"png\",\n      \"bytes\": 3634,\n      \"sha256\": \"cf6a25416fd4e4c1f104b80d9d24e8306b2ce6148ae33f9965fc34cd49078ecd\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/1cbe1818399a4575.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/ld/a1.png\",\n      \"width\": 99,\n      \"height\": 99,\n      \"format\": \"png\",\n      \"bytes\": 35409,\n      \"sha256\": \"14de492cc803cc0bec7f87fad386020fa0d1b1992af5b0c3435304ac57a06361\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/a700c0229f35745a.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/bg2.png\",\n      \"width\": 26,\n      \"height\": 28,\n      \"format\": \"png\",\n      \"bytes\": 3722,\n      \"sha256\": \"86a92963bfe341cfd9748c3329bf0fca841d105fdc8276176e0ff21a4d1440d7\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/eebf36ebd2657afd.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/btn5.png\",\n      \"width\": 260,\n      \"height\": 57,\n      \"format\": \"png\",\n      \"bytes\": 3153,\n      \"sha256\": \"7d89d3210558417aafd7757e036b996ddd355765ba70cb15e9c80b99d1caa455\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/e569925833b66b28.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/themes_wap/image/bg23.png\",\n      \"width\": 602,\n      \"height\": 515,\n      \"format\": \"png\",\n      \"bytes\": 320502,\n      \"sha256\": \"03a5a29b369ec89a7fbbb231f8a9f757c80100317fefd7d9e074f841c3a785c3\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/03930640796200f9.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/public-icon3.png\",\n      \"width\": 44,\n      \"height\": 66,\n      \"format\": \"png\",\n      \"bytes\": 2650,\n      \"sha256\": \"28ba52a8b6b21d17e28c8b54fddb45f3d591f865bd276653d131abd84fbc09cb\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    },\n    {\n      \"file\": \"assets/b52cdc8a29eeb79d.png\",\n      \"sourceUrl\": \"https://img.dpm.org.cn/static/themes/image/public-icon4.png\",\n      \"width\": 44,\n      \"height\": 66,\n      \"format\": \"png\",\n      \"bytes\": 2667,\n      \"sha256\": \"21b1641a4fb3c0392c4449fa5361af91784331dfd9de7d177143c0449a1579f9\",\n      \"retrievedAt\": \"2026-10-09\",\n      \"status\": \"downloaded\",\n      \"purpose\": \"原页面适用CSS中的背景、伪元素图饰或字型依赖；来源经源码逐条核验。\",\n      \"processing\": \"保留源文件原字节，由CSS按原站尺寸显示。\",\n      \"copyright\": \"原机构及原素材权利人；个人设计学习，无开放或商业授权承诺。\"\n    }\n  ],\n  \"sharedDependencies\": [\n    {\n      \"path\": \"asset-sources.js\",\n      \"purpose\": \"公共素材映射，由主库固定提交SHA生成；不是官网代码。\"\n    },\n    {\n      \"path\": \"asset-runtime.js\",\n      \"purpose\": \"公共本地优先/固定GitHub素材回退，保留图像元素与原有状态。\"\n    },\n    {\n      \"path\": \"asset-cache.js\",\n      \"purpose\": \"公共媒体缓存入口，独立异步加载，不阻断静态内容。\"\n    },\n    {\n      \"path\": \"asset-cache-worker.js\",\n      \"purpose\": \"asset-cache.js运行时加载的公共缓存worker，完整文件由案例包清单提供。\"\n    }\n  ]\n}\n",
+      "sha256": "dd480e2a20b1c09eab2ea432a78437c9dd59c2d3f8dd2f27a95aeb124163583e",
+      "bytes": 77003
     }
   ],
   "files": [
@@ -196,62 +192,674 @@
     {
       "path": "demos/palace-museum/app.js",
       "role": "source",
-      "sha256": "9f4ff3680bb2e6156810ea61ed15d9955f1c8ebe21b2df3f19c74fe952df1c85",
-      "bytes": 248
+      "sha256": "fac78fdae53145723e9a3ad7c57d9700fb204771305254b8ee618be436eb7a1f",
+      "bytes": 4975
     },
     {
       "path": "demos/palace-museum/assets-manifest.json",
       "role": "context",
-      "sha256": "105f4367a74560223378bb25c77ef368cc9e548c9fbde555fdbe36d479df19ff",
-      "bytes": 4460
+      "sha256": "dd480e2a20b1c09eab2ea432a78437c9dd59c2d3f8dd2f27a95aeb124163583e",
+      "bytes": 77003
     },
     {
-      "path": "demos/palace-museum/assets/collection.jpg",
+      "path": "demos/palace-museum/assets/0014756208d3dec1.png",
       "role": "asset",
-      "sha256": "2ec9ada14a99aebca9c153566d650c4c1eeca30e6eb068bec3c79d7fbde4b88a",
-      "bytes": 43256
+      "sha256": "56df7d637fc2061bdfca2357b709f29ca59005c5723dcbfb0e2885c0b7a65d82",
+      "bytes": 7531
     },
     {
-      "path": "demos/palace-museum/assets/roof-detail.png",
+      "path": "demos/palace-museum/assets/03930640796200f9.png",
       "role": "asset",
-      "sha256": "f3b8944e97b0b252eb41fdc53e90ff2318f894e5101697fe33a8cf875a9d1816",
-      "bytes": 517848
+      "sha256": "28ba52a8b6b21d17e28c8b54fddb45f3d591f865bd276653d131abd84fbc09cb",
+      "bytes": 2650
     },
     {
-      "path": "demos/palace-museum/assets/topic-culture.jpg",
+      "path": "demos/palace-museum/assets/042268f9c8de2349.png",
+      "role": "asset",
+      "sha256": "3f99350542c57f73c75ac2245d924ffa2a8d7187c09934254e352aecc591f629",
+      "bytes": 2982
+    },
+    {
+      "path": "demos/palace-museum/assets/0a80f7fcc46e2ebc.png",
+      "role": "asset",
+      "sha256": "9014b4cd4565018095ee96578482e1492f1861130ab034240c883b6f8d6dbe35",
+      "bytes": 7268
+    },
+    {
+      "path": "demos/palace-museum/assets/0bb8b65a314fe62d.png",
+      "role": "asset",
+      "sha256": "df51aec66dacf4ab5d1cd0132e260b347b6ac66f828c67983aa7712f57c0e12d",
+      "bytes": 5851
+    },
+    {
+      "path": "demos/palace-museum/assets/0cc8881417eab618.jpg",
+      "role": "asset",
+      "sha256": "134c522a24f78b377b504db571542f8d62ff05fcf619b616bb0197c74852376b",
+      "bytes": 34315
+    },
+    {
+      "path": "demos/palace-museum/assets/0db82b64b6ebfe58.png",
+      "role": "asset",
+      "sha256": "61d4373253b314241f5247d12765edfe818665f8ef4b19201524b5ba6d4f22a9",
+      "bytes": 2070
+    },
+    {
+      "path": "demos/palace-museum/assets/1081ff8b03e127e9.png",
+      "role": "asset",
+      "sha256": "b0c61bb684d1e06ceae02fb6e3d49c33e5efdd8e8f52039300266e3e4464617f",
+      "bytes": 4609
+    },
+    {
+      "path": "demos/palace-museum/assets/117460d0aeaa9cfb.jpg",
+      "role": "asset",
+      "sha256": "df676715fe02db9b85f0d8506b21f73640bb21ed4e37409829a16a113a89b0b4",
+      "bytes": 71070
+    },
+    {
+      "path": "demos/palace-museum/assets/12739fedb003a5fc.png",
+      "role": "asset",
+      "sha256": "eb1ce8725bda1c61dd965e5756dc767ea681363a75c731da39a136045166ece5",
+      "bytes": 6772
+    },
+    {
+      "path": "demos/palace-museum/assets/1a27e4cf2c71b045.jpg",
+      "role": "asset",
+      "sha256": "7d940e301430de14a86a42ee04e3ce940b97c38f2906444e59171346f93eef0d",
+      "bytes": 73013
+    },
+    {
+      "path": "demos/palace-museum/assets/1a91429d21275b92.png",
+      "role": "asset",
+      "sha256": "62c3e683b773a40a8ce5dbad009d45a5f9361e070eb356161187196c10bec117",
+      "bytes": 4307
+    },
+    {
+      "path": "demos/palace-museum/assets/1cbe1818399a4575.png",
+      "role": "asset",
+      "sha256": "14de492cc803cc0bec7f87fad386020fa0d1b1992af5b0c3435304ac57a06361",
+      "bytes": 35409
+    },
+    {
+      "path": "demos/palace-museum/assets/1deeff13ea5773ae.png",
+      "role": "asset",
+      "sha256": "c8203f3e564af2b57783b9d3ff999701aae2a38e69418e4df18c0795394648d7",
+      "bytes": 1686
+    },
+    {
+      "path": "demos/palace-museum/assets/1e907eda0095f899.png",
+      "role": "asset",
+      "sha256": "8a71fbc3f683071f1cb63f67f2da8b988abf3629f11695398e13b92e661346fe",
+      "bytes": 18347
+    },
+    {
+      "path": "demos/palace-museum/assets/1f81dd788afda17b.png",
+      "role": "asset",
+      "sha256": "40bd8e0ecaf52ae7b6751dfb5007150d5b56af0d0fe3c32cafbecd7cf1097ea5",
+      "bytes": 2406
+    },
+    {
+      "path": "demos/palace-museum/assets/1fa02a54347b160d.jpg",
       "role": "asset",
       "sha256": "73122920b3a676d0f26c3f243370f7255431602ce676737d839acb2d6fe17927",
       "bytes": 41034
     },
     {
-      "path": "demos/palace-museum/assets/topic-painting.jpg",
+      "path": "demos/palace-museum/assets/255c275c40abfd74.png",
       "role": "asset",
-      "sha256": "735e075630bb24fa639c42b2676628853f7535d7f5a1bb0be70b1009e983fd56",
-      "bytes": 48598
+      "sha256": "adfd27b2f564520d9ad9bf773ed8e79c5ba3036b0acb02d9537c20eb9d1235ee",
+      "bytes": 47412
     },
     {
-      "path": "demos/palace-museum/assets/topic-vessel.png",
+      "path": "demos/palace-museum/assets/27a6fde74dacda7b.png",
+      "role": "asset",
+      "sha256": "49a5b6b3c1e1e55d9af605d4d943a2f2135ab27bef1bdb061f8cd3ebb2c79f80",
+      "bytes": 2922
+    },
+    {
+      "path": "demos/palace-museum/assets/29aa58f535f9d886.jpg",
+      "role": "asset",
+      "sha256": "584a79d6f92601fea08f068a4f18e327708322974f81f7a4310b27a59c0e60d8",
+      "bytes": 117485
+    },
+    {
+      "path": "demos/palace-museum/assets/29eadc0be50c1068.png",
+      "role": "asset",
+      "sha256": "83f2f40f00e9ddd739e26cd83511b44d9bbe017338fcc90792502b90119ef6b0",
+      "bytes": 11003
+    },
+    {
+      "path": "demos/palace-museum/assets/2e05711a3f126c79.jpg",
+      "role": "asset",
+      "sha256": "67717e6279a544d4e4a61c6ccbf07a6986c8e22ad724801ed640ab0f5c593d2c",
+      "bytes": 72295
+    },
+    {
+      "path": "demos/palace-museum/assets/2e29a19e50798a00.png",
+      "role": "asset",
+      "sha256": "41e1768a4a92a6037c8ce1714cadaeaef760e7c3d3df00c8904c028b3592ea3e",
+      "bytes": 4823
+    },
+    {
+      "path": "demos/palace-museum/assets/2fa54b98ca253df1.png",
       "role": "asset",
       "sha256": "fd0c62870839305bca58bc72620b12cc5c147853981463a7d56113c6eefe92d6",
       "bytes": 145895
     },
     {
+      "path": "demos/palace-museum/assets/30711a68e5940d23.png",
+      "role": "asset",
+      "sha256": "a6feb47446bef0cf7690e654261b2a423128a5ec55304b517c1f028c0b3f5137",
+      "bytes": 1222
+    },
+    {
+      "path": "demos/palace-museum/assets/32a4d643fe9b1a4b.jpg",
+      "role": "asset",
+      "sha256": "bf072002e54bc3b20b8dae87aaac5c304608c9a21675843a4ba1f78a2462b694",
+      "bytes": 34359
+    },
+    {
+      "path": "demos/palace-museum/assets/32df528319c46698.jpg",
+      "role": "asset",
+      "sha256": "2ec9ada14a99aebca9c153566d650c4c1eeca30e6eb068bec3c79d7fbde4b88a",
+      "bytes": 43256
+    },
+    {
+      "path": "demos/palace-museum/assets/3538a02707590206.png",
+      "role": "asset",
+      "sha256": "9e4e82b8ce1c97c9dc8a6cd508eb034aecdec2758ede9686d824b854f1f8bec5",
+      "bytes": 3012
+    },
+    {
+      "path": "demos/palace-museum/assets/353aba4366472279.png",
+      "role": "asset",
+      "sha256": "75ee7d9a9a06410d6de110776751b27c9261ad6054f199745fb2c1ebf4eb96bd",
+      "bytes": 3140
+    },
+    {
+      "path": "demos/palace-museum/assets/35b3f119e41593e3.png",
+      "role": "asset",
+      "sha256": "46d65e6594c817eda2ccba83ccc4d93c4edb05371acb183fcaf3e7027bcf2c1d",
+      "bytes": 1614
+    },
+    {
+      "path": "demos/palace-museum/assets/38991c56dd7d6e71.jpg",
+      "role": "asset",
+      "sha256": "8359ffe30a67427de4c66e5bb6ced73354156e681705b86e914ff63c1609f51f",
+      "bytes": 291731
+    },
+    {
+      "path": "demos/palace-museum/assets/39bd57fcbce3a1be.jpg",
+      "role": "asset",
+      "sha256": "e54581da1621db6ab9a5f3dddb297288273123dd453061aa0ccc3ef7807e123b",
+      "bytes": 70140
+    },
+    {
+      "path": "demos/palace-museum/assets/3a609428bb4e52f2.png",
+      "role": "asset",
+      "sha256": "ded4708501a8b6b31cfd4788ff2465ad09aa0600dc109a809a291b91264fa756",
+      "bytes": 30432
+    },
+    {
+      "path": "demos/palace-museum/assets/3b20e85094290d76.png",
+      "role": "asset",
+      "sha256": "0ca88477640adfe7032c36ba9d50ed2963e2c653344391514c187d4d5f1e185a",
+      "bytes": 102728
+    },
+    {
+      "path": "demos/palace-museum/assets/3c7ef2f8fb27aef3.png",
+      "role": "asset",
+      "sha256": "e4ef7a92f6d50da5da98df3422baa398ce2551c9d46a6a97ee628b06e5a114f1",
+      "bytes": 1952
+    },
+    {
+      "path": "demos/palace-museum/assets/3d3bbd056c8b1d06.png",
+      "role": "asset",
+      "sha256": "af9d29efe0a3ab2b3048e6f826185e4383697e7ca222ff7319a31a3c28a5116c",
+      "bytes": 1177
+    },
+    {
+      "path": "demos/palace-museum/assets/400e47681d31c493.png",
+      "role": "asset",
+      "sha256": "9f537b7211e597630c07ef0e4f926511eb31d58f9803c25403192375d763d17c",
+      "bytes": 1635
+    },
+    {
+      "path": "demos/palace-museum/assets/428a3a8dc70f1166.png",
+      "role": "asset",
+      "sha256": "39b47362f5999ca83a81a1521c74f11ee2e8315740f22bb170264ff442bc8e23",
+      "bytes": 16689
+    },
+    {
+      "path": "demos/palace-museum/assets/442ba2e9df8432a9.jpg",
+      "role": "asset",
+      "sha256": "d529469264fc6a65a1e1595b5df29049d3dac4cf75102f8efab9b26684071d1c",
+      "bytes": 175210
+    },
+    {
+      "path": "demos/palace-museum/assets/489da39c10fe638e.png",
+      "role": "asset",
+      "sha256": "e054b1934af23281ca694c82ebede538b886bd101ee83a56350e0e6770125d5c",
+      "bytes": 2962
+    },
+    {
+      "path": "demos/palace-museum/assets/505ffb65db185793.png",
+      "role": "asset",
+      "sha256": "5ee7cda0a11c0fe9d8ffd8acb199891a99c601b2b84c6e93182e20d7c9412357",
+      "bytes": 4381
+    },
+    {
+      "path": "demos/palace-museum/assets/5087004eea121f72.png",
+      "role": "asset",
+      "sha256": "a20583c81805fe64f7fa210851ce29754af9d25fd6aa5a3225a9557529602513",
+      "bytes": 19256
+    },
+    {
+      "path": "demos/palace-museum/assets/51323714420ce764.png",
+      "role": "asset",
+      "sha256": "30947ad2fdab19a74203a3eb4fe7c5fc0b7a0d1f0edb7ba1f0eb77bd87678069",
+      "bytes": 19583
+    },
+    {
+      "path": "demos/palace-museum/assets/51b540d575da63f3.png",
+      "role": "asset",
+      "sha256": "d6d458912b8c1593b3d19e03037b88753f1f8018521c9c30f4cf26b3be3f062c",
+      "bytes": 17622
+    },
+    {
+      "path": "demos/palace-museum/assets/5210c40a2ee0c7c7.jpg",
+      "role": "asset",
+      "sha256": "48c30c87c6ebc5bea5a90e57fde646944127202f98041b710be345bfd488ede7",
+      "bytes": 45829
+    },
+    {
+      "path": "demos/palace-museum/assets/53e49d500e7fc57e.png",
+      "role": "asset",
+      "sha256": "ca3339db4093feec8bb73229654bfc85d651a042cb5ef801e28b550fe20fb567",
+      "bytes": 5756
+    },
+    {
+      "path": "demos/palace-museum/assets/54a303c21979ee50.png",
+      "role": "asset",
+      "sha256": "4be92b1774da90dfce17ee5da829749c5f017ea2e05dc09ca69800e16222c9c4",
+      "bytes": 4360
+    },
+    {
+      "path": "demos/palace-museum/assets/566a46154dcc52d7.png",
+      "role": "asset",
+      "sha256": "e44acd7dd2184f7638fe92e8a032b9c616638c2a71d1b70009d513b511befca6",
+      "bytes": 3159
+    },
+    {
+      "path": "demos/palace-museum/assets/5958a5dc91380653.png",
+      "role": "asset",
+      "sha256": "31007dd7bba36179fb60c81b6683d129a7703d8489fa81e94155b327cef827f6",
+      "bytes": 1186
+    },
+    {
+      "path": "demos/palace-museum/assets/5af2bb8a3cb796c8.png",
+      "role": "asset",
+      "sha256": "1c4bad13076145ba75391a1deaa4b1e722962a248a8ecbaa30c637256a04a002",
+      "bytes": 15733
+    },
+    {
+      "path": "demos/palace-museum/assets/5c2b6dfb3b733d2e.jpg",
+      "role": "asset",
+      "sha256": "e3f966f8a30a37b8a2221be46ca8b4e2f2885475095d358a7a8dd345da008005",
+      "bytes": 44474
+    },
+    {
+      "path": "demos/palace-museum/assets/5d5672d6fc5bec2c.png",
+      "role": "asset",
+      "sha256": "0559b117ba5d7d8aae3f11a6880f8bee3aad4ecf989cbcbda23ba109b10becf4",
+      "bytes": 3183
+    },
+    {
+      "path": "demos/palace-museum/assets/5dfa51426c9b3a23.png",
+      "role": "asset",
+      "sha256": "32f1b43e049e045f62c85dbab936947f27015f64cab412b60138ce50259b44fd",
+      "bytes": 43760
+    },
+    {
+      "path": "demos/palace-museum/assets/64302ac3b783845c.png",
+      "role": "asset",
+      "sha256": "0e76beb4f8961ecc99206ba26de1a8b6d09dfaab2bb823ddadb841adfbf31365",
+      "bytes": 982
+    },
+    {
+      "path": "demos/palace-museum/assets/6761ad2852fdbcdd.png",
+      "role": "asset",
+      "sha256": "db23c0cf82aa67eb3ba2eb19695af8dd6ac603566ee274a0f3d2f19fe3f402ad",
+      "bytes": 2407
+    },
+    {
+      "path": "demos/palace-museum/assets/68f2fca0cb85babb.png",
+      "role": "asset",
+      "sha256": "b34d456d06049147301d170152bef540895d2bf3236142fca38dea4f9ee439e5",
+      "bytes": 3030
+    },
+    {
+      "path": "demos/palace-museum/assets/6d72f5330098175c.png",
+      "role": "asset",
+      "sha256": "7560b3991fe857a54e8cf8cea0e7f635ecb768dc3a25ada9b5db6e5bd074a820",
+      "bytes": 7378
+    },
+    {
+      "path": "demos/palace-museum/assets/6e3963de3f0dfc25.png",
+      "role": "asset",
+      "sha256": "aee4ec58f4102c042f878de6abb4e28152f78f08e1a11a5efbd762578b95836d",
+      "bytes": 2464
+    },
+    {
+      "path": "demos/palace-museum/assets/7309c3363fb67e9c.png",
+      "role": "asset",
+      "sha256": "7de7e709bf685bd9322538b9256e988c43c87f0bcb33f783ea83c390de25f075",
+      "bytes": 13641
+    },
+    {
+      "path": "demos/palace-museum/assets/759fad661dde7ee9.png",
+      "role": "asset",
+      "sha256": "e14e5ad0e15472b5165762fe75f3894acdc10d1ad5667fc986a0f727917b2c02",
+      "bytes": 1320
+    },
+    {
+      "path": "demos/palace-museum/assets/7a5e9194f79952f5.png",
+      "role": "asset",
+      "sha256": "4be92b1774da90dfce17ee5da829749c5f017ea2e05dc09ca69800e16222c9c4",
+      "bytes": 4360
+    },
+    {
+      "path": "demos/palace-museum/assets/7e2fbd7d21d2ccde.jpg",
+      "role": "asset",
+      "sha256": "32857fa7b08d3a41662396d1f0963e9713d576e116562dc44dcdc7fd2d15ca86",
+      "bytes": 45249
+    },
+    {
+      "path": "demos/palace-museum/assets/7f1afa53e17a32d3.png",
+      "role": "asset",
+      "sha256": "24eda38ef03a49367bd76e84cd5bcbe7ef70d8092ac9216be144a9e71f769161",
+      "bytes": 4423
+    },
+    {
+      "path": "demos/palace-museum/assets/850eb6ab4d25f302.jpg",
+      "role": "asset",
+      "sha256": "f5689d8e077240d38d18170559e2d66e3d86cb8989aeee90d9012f72c525e3b5",
+      "bytes": 26666
+    },
+    {
+      "path": "demos/palace-museum/assets/866ce9673e7b8629.png",
+      "role": "asset",
+      "sha256": "94f99f768e1237d8fa39925f5bd155282f5c63ab41c588a42d6b78db42d1cb88",
+      "bytes": 1667
+    },
+    {
+      "path": "demos/palace-museum/assets/8990e669a03c391b.jpg",
+      "role": "asset",
+      "sha256": "6d7cc20755b799e6c8555d83680551ef8a7dd001efb7c91f2039379c853036b6",
+      "bytes": 174717
+    },
+    {
+      "path": "demos/palace-museum/assets/8ab8e7f6dbb94ff3.jpg",
+      "role": "asset",
+      "sha256": "314b14455e6cfb3186b2b0dc810f73fd4dd6a9e2bc2baa85bd193c853efd4106",
+      "bytes": 81627
+    },
+    {
+      "path": "demos/palace-museum/assets/8f170fabc2f35a20.png",
+      "role": "asset",
+      "sha256": "34ed23d3c3fba723e1eca313434467064e77d2d9bb1861c5f95d2a468fa4d6d2",
+      "bytes": 144
+    },
+    {
+      "path": "demos/palace-museum/assets/931bcfc0ce858904.png",
+      "role": "asset",
+      "sha256": "ed342b966dd305e1f9e711a57c9babe858be48479ae1faeb7b39cfb75e76a231",
+      "bytes": 4140
+    },
+    {
+      "path": "demos/palace-museum/assets/936348176721585e.png",
+      "role": "asset",
+      "sha256": "ec9806ecab248d5a5c5573ca57bf6dc874f7a8f67fa3e86bcde25892ae584179",
+      "bytes": 45043
+    },
+    {
+      "path": "demos/palace-museum/assets/93d4f7f0ef24e1d7.jpg",
+      "role": "asset",
+      "sha256": "10cbbdaba83383400c9a9c0ec0e40433606e1419ad58feaadb7e2191721a0a52",
+      "bytes": 40833
+    },
+    {
+      "path": "demos/palace-museum/assets/9a4cf01dcde166ca.jpeg",
+      "role": "asset",
+      "sha256": "570c149f5fc5edc8d89076c1c80cf93e8be89e02b8e6eb30bb3251cd850bea36",
+      "bytes": 44854
+    },
+    {
+      "path": "demos/palace-museum/assets/9c34c252062beaad.png",
+      "role": "asset",
+      "sha256": "6e064dd238d209a0e3c5fb7ec2c2e2866918cebfd9a7ac06ddc6ac5fce4781fd",
+      "bytes": 5945
+    },
+    {
+      "path": "demos/palace-museum/assets/9ca5eb221b7d578a.png",
+      "role": "asset",
+      "sha256": "1180e47c1e7ab9bc6b9023b12f4990cc0b93c7c7976e7184ecbbe32b47e3fc36",
+      "bytes": 46925
+    },
+    {
+      "path": "demos/palace-museum/assets/9e615d581e160dc7.png",
+      "role": "asset",
+      "sha256": "12251ebb466d42383076fe7a16f616652a5a65498b3a8786478f18d3380ed11a",
+      "bytes": 18125
+    },
+    {
+      "path": "demos/palace-museum/assets/9fda7a70c3515eef.png",
+      "role": "asset",
+      "sha256": "a074d2c7cc31eb366cb236b9c4cbc3fba78da7e8da98e0c5150ccd0a61e06caa",
+      "bytes": 3093
+    },
+    {
+      "path": "demos/palace-museum/assets/a1e392e1b4b775ab.png",
+      "role": "asset",
+      "sha256": "6d06e3819344759cad7ff63be413ab219f4b61ca8341427322c96f082a07893e",
+      "bytes": 4180
+    },
+    {
+      "path": "demos/palace-museum/assets/a700c0229f35745a.png",
+      "role": "asset",
+      "sha256": "86a92963bfe341cfd9748c3329bf0fca841d105fdc8276176e0ff21a4d1440d7",
+      "bytes": 3722
+    },
+    {
+      "path": "demos/palace-museum/assets/a907d3402f665d80.jpg",
+      "role": "asset",
+      "sha256": "80700fcf0ed487d2e611acc0b32e1c7ca44cec8c4d442220c5155e0780bd9136",
+      "bytes": 95814
+    },
+    {
+      "path": "demos/palace-museum/assets/b4eab2204b5099ba.png",
+      "role": "asset",
+      "sha256": "03a5a29b369ec89a7fbbb231f8a9f757c80100317fefd7d9e074f841c3a785c3",
+      "bytes": 320502
+    },
+    {
+      "path": "demos/palace-museum/assets/b52cdc8a29eeb79d.png",
+      "role": "asset",
+      "sha256": "21b1641a4fb3c0392c4449fa5361af91784331dfd9de7d177143c0449a1579f9",
+      "bytes": 2667
+    },
+    {
+      "path": "demos/palace-museum/assets/b58acd418731dd48.png",
+      "role": "asset",
+      "sha256": "70b7372eea2e87354fb529a0c54e39971873a50ed2029778b0ef61ca74d688c2",
+      "bytes": 15587
+    },
+    {
+      "path": "demos/palace-museum/assets/bee58ac90efdd0c9.png",
+      "role": "asset",
+      "sha256": "3f99350542c57f73c75ac2245d924ffa2a8d7187c09934254e352aecc591f629",
+      "bytes": 2982
+    },
+    {
+      "path": "demos/palace-museum/assets/c2670b66934cc485.png",
+      "role": "asset",
+      "sha256": "07dce279b258dfc70c54ce0851f2f8d76716161be321190f2e40c9cd2819c4d4",
+      "bytes": 266776
+    },
+    {
+      "path": "demos/palace-museum/assets/c39ff11bd3a2d8f5.png",
+      "role": "asset",
+      "sha256": "a78dc8c587dee1f820a8ebaff90c40a488fb8065c2cb90c67644ff5f3b08261b",
+      "bytes": 1142
+    },
+    {
+      "path": "demos/palace-museum/assets/c944df0e2d0bd0a7.png",
+      "role": "asset",
+      "sha256": "579082d83354758cbc2a42d0bfb2f6e29f623c9d7b413fd25f239a0dee6f077d",
+      "bytes": 5286
+    },
+    {
+      "path": "demos/palace-museum/assets/c9e0bbd0a3ae9713.png",
+      "role": "asset",
+      "sha256": "087ac448968c634ad1c43e344b2913a350336a27f2fef3cbdf42c58ebec0f77f",
+      "bytes": 46227
+    },
+    {
+      "path": "demos/palace-museum/assets/cc5f3ca63e674f74.png",
+      "role": "asset",
+      "sha256": "cf6a25416fd4e4c1f104b80d9d24e8306b2ce6148ae33f9965fc34cd49078ecd",
+      "bytes": 3634
+    },
+    {
+      "path": "demos/palace-museum/assets/cdf20286450e87f8.png",
+      "role": "asset",
+      "sha256": "b6206f486d94f1f6968afc62c6452bf7553bf01e1527aa66d256a4eb11090edc",
+      "bytes": 33242
+    },
+    {
+      "path": "demos/palace-museum/assets/d4702a732e01684f.jpg",
+      "role": "asset",
+      "sha256": "26f8f4b6bf46cb11cc0d844168c4dbdf1b13692a94bd2ade3ffbe114bb56b11e",
+      "bytes": 43380
+    },
+    {
+      "path": "demos/palace-museum/assets/d6ed34dc3ed70ca8.jpg",
+      "role": "asset",
+      "sha256": "570c149f5fc5edc8d89076c1c80cf93e8be89e02b8e6eb30bb3251cd850bea36",
+      "bytes": 44854
+    },
+    {
+      "path": "demos/palace-museum/assets/d8b8f27af0ae9966.png",
+      "role": "asset",
+      "sha256": "f35de8f309361c803148e1b5def47aa04dc525ad3c645d8005f8557cf3b35fb9",
+      "bytes": 2435
+    },
+    {
+      "path": "demos/palace-museum/assets/dad85cefcb5bbc74.png",
+      "role": "asset",
+      "sha256": "3798566a912af8a3c0c220d8bddafa27e428af63ac8a800426e333491c74788d",
+      "bytes": 4643
+    },
+    {
+      "path": "demos/palace-museum/assets/dbafb461966da6c3.jpg",
+      "role": "asset",
+      "sha256": "7aae8f88f4cce83075f554963844d836c0c00b22e3a3a2e8a8fdfffeb105302c",
+      "bytes": 51002
+    },
+    {
+      "path": "demos/palace-museum/assets/dbb9f915c6a79c73.png",
+      "role": "asset",
+      "sha256": "4f6a6c6c69e3d2ffc368dac0b8c9c7a7d7103a9c77f8495cb9a74259505613b0",
+      "bytes": 2512
+    },
+    {
+      "path": "demos/palace-museum/assets/dc981412bfc1ee4a.jpg",
+      "role": "asset",
+      "sha256": "735e075630bb24fa639c42b2676628853f7535d7f5a1bb0be70b1009e983fd56",
+      "bytes": 48598
+    },
+    {
+      "path": "demos/palace-museum/assets/dd7e52fc2937174a.png",
+      "role": "asset",
+      "sha256": "e054b1934af23281ca694c82ebede538b886bd101ee83a56350e0e6770125d5c",
+      "bytes": 2962
+    },
+    {
+      "path": "demos/palace-museum/assets/e569925833b66b28.png",
+      "role": "asset",
+      "sha256": "03a5a29b369ec89a7fbbb231f8a9f757c80100317fefd7d9e074f841c3a785c3",
+      "bytes": 320502
+    },
+    {
+      "path": "demos/palace-museum/assets/e57deb780eebbfae.png",
+      "role": "asset",
+      "sha256": "4eb90bcb84322a92723b16851a15cd0c22bff4217149cb63ed09e3bf8e4ef30f",
+      "bytes": 3163
+    },
+    {
+      "path": "demos/palace-museum/assets/e57e599248777077.png",
+      "role": "asset",
+      "sha256": "d18cf35884a363dbf65374ae2937b4c62d367b7e0d27dac502bd30c11402ca7b",
+      "bytes": 2974
+    },
+    {
+      "path": "demos/palace-museum/assets/e64deb65760adf43.png",
+      "role": "asset",
+      "sha256": "f3b8944e97b0b252eb41fdc53e90ff2318f894e5101697fe33a8cf875a9d1816",
+      "bytes": 517848
+    },
+    {
+      "path": "demos/palace-museum/assets/e993770c3131d821.png",
+      "role": "asset",
+      "sha256": "2b7cc8eac00181eb9f227ecf289f8ae21c4302310f2fde6d951d75d6ae422ba4",
+      "bytes": 1822
+    },
+    {
+      "path": "demos/palace-museum/assets/ec836c8fd1a5c0fd.png",
+      "role": "asset",
+      "sha256": "c5365758466bf1756ca79798443d76e18028cd3f29a34dd24928b60cd44fb9d0",
+      "bytes": 2293
+    },
+    {
+      "path": "demos/palace-museum/assets/ecadede2af5c0f88.png",
+      "role": "asset",
+      "sha256": "579082d83354758cbc2a42d0bfb2f6e29f623c9d7b413fd25f239a0dee6f077d",
+      "bytes": 5286
+    },
+    {
+      "path": "demos/palace-museum/assets/eebf36ebd2657afd.png",
+      "role": "asset",
+      "sha256": "7d89d3210558417aafd7757e036b996ddd355765ba70cb15e9c80b99d1caa455",
+      "bytes": 3153
+    },
+    {
+      "path": "demos/palace-museum/assets/fa1954142d828fc2.png",
+      "role": "asset",
+      "sha256": "e19557c95c98951f46aa39bacc4fc9168e45fbfe12acb661587574af90217765",
+      "bytes": 3132
+    },
+    {
       "path": "demos/palace-museum/fidelity.md",
       "role": "context",
-      "sha256": "6eb8e30bdd70d5993096bb0333ef8eb16b677457398048dc8931cf1d07cc474c",
-      "bytes": 1942
+      "sha256": "822d1085172c429c668712818c62b16bbd65116be863d33b77acdfbfe12cfeea",
+      "bytes": 2790
     },
     {
       "path": "demos/palace-museum/index.html",
       "role": "source",
-      "sha256": "da3ef94419b31597afafb5466c3348255cd4282fe9cee6e5b58e8cd18bf8b600",
-      "bytes": 4452
+      "sha256": "9721a4da125b3b4d41d4dfcf54a9fc1ab443e8bc616a1c5fe2d10601ac293d08",
+      "bytes": 44339
+    },
+    {
+      "path": "demos/palace-museum/state-matrix.md",
+      "role": "context",
+      "sha256": "6bec023eb3f271ce22adf4a0d188c5787b7ad9d911335f409361d21847bb7300",
+      "bytes": 4736
     },
     {
       "path": "demos/palace-museum/style.css",
       "role": "source",
-      "sha256": "3f1fad19fbc4160256f905b49c1d0e36e39f77b88218559b47120a7d89298253",
-      "bytes": 4838
+      "sha256": "d5c14d7357605b846f41043bc3805e11f46ae8a69c701c11cbe21203d227b3c6",
+      "bytes": 69844
     },
     {
       "path": "document.css",
@@ -274,8 +882,8 @@
     {
       "path": "entries/palace-museum.json",
       "role": "context",
-      "sha256": "05bed65848489cbf9321985eecc5d87f8c2571feb3a004eabc26012847eacf78",
-      "bytes": 7740
+      "sha256": "debde1f0d09a32505a2acb2269d21548d9cc9ce118acb07f077cfec680926e73",
+      "bytes": 8059
     },
     {
       "path": "favicon.svg",
@@ -286,26 +894,26 @@
     {
       "path": "previews/mobile/palace-museum.jpg",
       "role": "preview",
-      "sha256": "fe1e7a51d8f4ff549f533c616330be10df47f4734afb66a659bf429b4b65fd62",
-      "bytes": 37400
+      "sha256": "b5068f3dff1e5cfea48f3aa24e60ff89722c5eef42ecaca1ff6b6ec075aeeb58",
+      "bytes": 78685
     },
     {
       "path": "previews/palace-museum.jpg",
       "role": "preview",
-      "sha256": "f5f571ad999072c2b935c5e7ce78bb57dd7aae16607b4972c57bd5c9d1732f17",
-      "bytes": 98624
+      "sha256": "a91eeb90d150f27fe606736f9a2f1958c35e472e43835a3ad1409436b62cc751",
+      "bytes": 274834
     },
     {
       "path": "prompts/palace-museum.md",
       "role": "context",
-      "sha256": "9f40bd7f16fc6b3894a7d9017ac65ace3a14ffad7e4a0b48d91344eff85fd0f0",
-      "bytes": 2171
+      "sha256": "83316416523dc4273a3e450cdc65934ad97cda36a256cbc83d455f5385886744",
+      "bytes": 2125
     },
     {
       "path": "research/palace-museum.md",
       "role": "context",
-      "sha256": "d60f8a71d6087ce1ef1aecc433c6e581b5aae04fd2419e61b00906bf85969cf7",
-      "bytes": 2916
+      "sha256": "0cce0a6488dbee0534a527efd8b16cf5133ab906435fb035a2f0c65c6e0569bf",
+      "bytes": 2938
     },
     {
       "path": "site-footer.css",
@@ -365,8 +973,8 @@
   "webNotes": {
     "format": "text/html",
     "renderer": "atlas.js",
-    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=palace-museum\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源端观察：白底上有朱红建筑大面、金色屋脊和淡纸色专题标签；本地拟合朱红#8c2927。</dd></div><div class=\"\"><dt>字体排版</dt><dd>源端观察：中文文化标题与小型说明分层，专题类目为竖排；本地使用系统中文衬线与无衬线回退。</dd></div><div class=\"\"><dt>布局留白</dt><dd>源端观察：探索页分段长文档，建筑大面板内左侧说明与名录、右下角裁切屋脊；本地1250px最大内容宽度为拟合。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官方屋脊透明PNG、龙泉窑青釉盘缩略图与三张文化专题图本地化；不替换为虚构文物或无关纹样。</dd></div><div class=\"\"><dt>线条形状</dt><dd>源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。</dd></div><div class=\"\"><dt>信息层级</dt><dd>建筑形象先建立地点识别，建筑名称与藏品入口承担选择，专题纸签组织文化对象。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>源端探索页以原生长页与真实链接为主；本地专题缩放和观察窗为明确的教学补充。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>朱红/金/纸色分别对应建筑、文化细节与目录标签，装饰与文字入口的职责分开。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>从真实建筑局部建立文化识别，再让名称目录承担检索；不依赖无差别传统纹样。</li><li>专题图像负责感知，半幅浅纸签负责分类名称，避免文字直接压住复杂纹样。</li><li>金色只承担屋脊、少量题饰和边界，朱红大面与白色阅读区相互制约。</li></ul><h3>怎样凸显产品重点</h3><p>让读者在建筑、藏品与文化专题间选择下一步，真实资料与服务仍由故宫官网提供。</p><h3>主题与情绪</h3><p>白色文档、朱红建筑面板、金色屋脊与浅纸签；标题采用本机中文衬线回退，操作采用无衬线。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入与连续浏览：探索页的建筑、藏品、典籍、历史、文物医院和文化专题按原生长页展开；本地缩减为建筑、藏品、专题三段。</li><li>浏览建筑区域：朱红底承托右下角屋脊摄影，建筑名称作为可点击目录，本地保留此构成并链接对应官方建筑。</li><li>选择文化专题：图像左半与右半浅纸签的竖排分类并置，点击进入器物、书画、文化等专题；本地保留三类入口。</li><li>本地藏品观察按钮打开原生dialog，关闭或Escape返回触发按钮；此辅助观察窗为原创教学补充。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。</p><p>固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。</p><p>阅读、图像和目录操作承担信息引导。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>以2026-10-09中文探索页为单一快照，不把首页轮播或全景故宫的独立交互混为本页行为。</li><li>本地仅3段，不还原完整馆藏检索、全景、预约或账户。</li><li>实际屋脊PNG与专题缩略图保留原始字节及比例；图像权利归原机构/作者，不将古代文物的年代视为摄影开放许可。</li><li>源站专题有5类，本地选择3类；标题字号、布局尺度、字体回退为本地拟合。</li><li>手机建筑文字与屋脊分区，纸签保有文字名称；不得仅以背景图或颜色传达分类。</li></ul><h3>适合</h3><p>文化遗产机构门户 / 古建筑目录 / 文物专题与展览导航</p><h3>谨慎使用</h3><p>不具备真实物件和内容的装饰式中国风落地页 / 需要持续监测实时预约状态的业务界面</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#8c2927\"></i>#8c2927</span><span class=\"swatch\"><i style=\"background:#c1a56b\"></i>#c1a56b</span><span class=\"swatch\"><i style=\"background:#efebde\"></i>#efebde</span><span class=\"swatch\"><i style=\"background:#393830\"></i>#393830</span></div><p><b>字体</b> · 本机STSong/SimSun衬线标题；Microsoft YaHei/PingFang SC正文与操作；不宣称原站字体被完整复用。<br><b>布局</b> · 居中白底长文档 → 朱红建筑大面与屋脊局部 → 藏品图文对照 → 半幅纸签的竖向专题目录。<br><b>动效</b> · 原生连续滚动、锚点返回、专题轻微悬停放大；本地观察dialog不制造章节动画。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>为【文化遗产机构】制作研究型目录，参考2026-10-09故宫中文探索页的建筑、藏品与文化专题局部。保持白底长文档，顶部简单机构导航，朱红大面板内左侧中文衬线标题、短说明与建筑名称索引，右下角用真实透明屋脊摄影锚定文化身份。随后以浅底图文对照介绍一件有明确记录的藏品，最后用矩形作品图像与右半幅纸签并置，纸签竖排分类且作为真实链接。金色限于文化细节和少量边界，系统中文字体回退明确；素材本地化并记录URL、尺寸、字节、hash与权利。正文原生滚动，不引入全屏转场、主题切换或背景音乐。手机让文字和建筑图像分区，标签保留可读名称；减少动态去除悬停缩放和滚动平滑。原生dialog只用于原创观察提示，支持Escape和焦点返回，交易预约及完整档案链接官方。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。</p></details><h3>改造练习</h3><p>替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.dpm.org.cn/Explore.html\" target=\"_blank\" rel=\"noopener noreferrer\">故宫博物院 · 探索 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>2026-10-09浏览器观察中文探索页到页尾及返回：朱红屋脊锚点、建筑目录、藏品区与半幅纸签专题。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.dpm.org.cn/bottom/platform.html\" target=\"_blank\" rel=\"noopener noreferrer\">故宫博物院 · 相关数字平台 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>官方介绍数字文物库、全景故宫和名画记；用于说明各平台独立的业务与交互范围。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Non-text Content <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>用于图像目的与可点击图像的文字替代；不表示官网已经全面符合规范。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Modal Dialog <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>本地原创观察窗使用原生dialog、可见关闭、Escape和焦点归还。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fpalace-museum.md\" target=\"_blank\">调研记录</a>。</p></section>",
-    "sha256": "fef4b3a34c83aa881b6493482a73e1d69e277b6757c00bec90688f34e52987e9",
-    "bytes": 8739
+    "content": "<section><h2>从要素看风格</h2><p>下方映射展示各个元素如何共同表达主题。实验室可交互调配，案例Demo保留自己的构成与交互。</p><a class=\"element-lab-link\" href=\"fundamentals.html?style=palace-museum\">调配这个风格的设计要素</a><dl class=\"element-map\"><div class=\"\"><dt>配色角色</dt><dd>源白色正文、建筑重复朱红纹理和金色屋脊、专题浅纸色标签；采用实际源CSS与图像，不再使用首版拟合朱红。</dd></div><div class=\"\"><dt>字体排版</dt><dd>沿用源CSS Microsoft Yahei/PingFang SC/Arial字体栈；章节26px/32px，正文14px/1.5，官网手机rem断点。</dd></div><div class=\"\"><dt>布局留白</dt><dd>源站完整六章、1258px主内容和原始章节间距；修复了首版缺失的典籍、历史及文物医院。</dd></div><div class=\"\"><dt>图像图标</dt><dd>官网透明屋脊、建筑/藏品/典籍/历史/医院题饰、全部章节摄影、纹理、五类专题桌面/手机图与伪元素资产均检查本地化。</dd></div><div class=\"\"><dt>线条形状</dt><dd>源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。</dd></div><div class=\"\"><dt>信息层级</dt><dd>建筑形象先建立地点识别，建筑名称与藏品入口承担选择，专题纸签组织文化对象。</dd></div><div class=\"\"><dt>动效反馈</dt><dd>源码与实测支持500ms叠层、1s与0.3s错开典籍、5000ms/500ms医院轨道，保留hover暂停和反向状态。</dd></div><div class=\"coherence\"><dt>协调逻辑</dt><dd>朱红/金/纸色分别对应建筑、文化细节与目录标签，装饰与文字入口的职责分开。</dd></div></dl></section><section><h2>01 / 设计机制</h2><ul><li>从真实建筑局部建立文化识别，再让名称目录承担检索；不依赖无差别传统纹样。</li><li>专题图像负责感知，半幅浅纸签负责分类名称，避免文字直接压住复杂纹样。</li><li>金色只承担屋脊、少量题饰和边界，朱红大面与白色阅读区相互制约。</li></ul><h3>怎样凸显产品重点</h3><p>让读者在建筑、藏品与文化专题间选择下一步，真实资料与服务仍由故宫官网提供。</p><h3>主题与情绪</h3><p>官方白底与真实朱红纹理、金色屋脊、圆形题饰、淡纸色标签；Microsoft Yahei/PingFang SC/Arial字体栈沿用源CSS。</p></section><section><h2>02 / 交互巧思</h2><ul><li>进入与滚动：完整保留建筑、藏品、典籍、历史、文物医院和文化专题六章；桌面1258px内容宽、原站响应样式与素材尺寸经DOM/计算样式对照。</li><li>建筑目录：朱红实物纹理与透明屋脊、独立圆形“建筑”题饰并置，八个建筑名称及更多建筑/地图均保留官方目的地。</li><li>藏品与典籍：异形拼图的两张藏品照片悬停500ms显出黑色半透明文字层；八枚典籍条进入视域后自上方30%位移与1s淡入，依次延迟0.3s，离开后可反向恢复。</li><li>文物医院：两张真实修复场景图片沿水平轨道500ms切换、5000ms自动播放，悬停/焦点暂停，两个原站圆点可直接选择。</li><li>导航与页尾：桌面导航悬停展开、200ms离开隐藏；全站菜单打开/关闭、手机栏目展开、搜索空词提示及官方检索跳转、页尾六个社交二维码和浏览建议均保留。</li><li>五类文化专题与历史五入口为真实链接；无障碍语音/读屏工具作为官网第三方服务明确跳回官方，账户、预约和完整详情不复制。</li></ul><div class=\"behavior-block\"><span class=\"behavior-label\">显示主题</span><h3>固定主题</h3><p>观察范围未提供深浅主题开关；本地固定浅色正文并保留图像原色。</p><p>固定文化机构的色彩与图像关系，避免主题切换改变壁画、釉色和建筑摄影的判断。</p></div><div class=\"behavior-block\"><span class=\"behavior-label\">声音与交互</span><h3>无网站配乐</h3><p>此次观察的公开页面未发现独立BGM或音频控制；本地不增加声音。</p><p>阅读、图像和目录操作承担信息引导。</p></div></section><section><h2>03 / 约束与适用场景</h2><ul><li>固定中文探索页六章快照，不合并官网首页轮播、全景故宫或数字文物库的独立服务。</li><li>完整检查并本地化本页适用图像、背景纹理与伪元素题饰；保留原字节、宽高和水印，权利归原机构/作者。</li><li>原站业务链接回官方；第三方无障碍工具实际观察到15项入口，但语音/读屏服务未在本地克隆。</li><li>桌面六章盒模型与原站同值；390px手机前四章同值、医院高度约0.5px差；不声称全站业务或所有浏览器像素一致。</li><li>减少动态时保持内容可见、手动轮播可用，取消自动播放和位移。</li></ul><h3>适合</h3><p>文化遗产机构门户 / 古建筑目录 / 文物专题与展览导航</p><h3>谨慎使用</h3><p>不具备真实物件和内容的装饰式中国风落地页 / 需要持续监测实时预约状态的业务界面</p></section><section><h2>04 / 设计 Tokens</h2><div class=\"swatches\"><span class=\"swatch\"><i style=\"background:#ffffff\"></i>#ffffff</span><span class=\"swatch\"><i style=\"background:#8c2927\"></i>#8c2927</span><span class=\"swatch\"><i style=\"background:#c1a56b\"></i>#c1a56b</span><span class=\"swatch\"><i style=\"background:#efebde\"></i>#efebde</span><span class=\"swatch\"><i style=\"background:#393830\"></i>#393830</span></div><p><b>字体</b> · Microsoft Yahei / PingFang SC / Arial；源站字体栈与26px章节题名。<br><b>布局</b> · 1258px居中内容，六章原生长页；朱红建筑→藏品拼图→八条典籍→历史→文物医院→五类专题。<br><b>动效</b> · 源站500ms藏品叠层、1s/0.3s典籍序列、5000ms/500ms医院轮播与可反向滚动。</p></section><section><div class=\"prompt-head\"><h2>05 / 可复用 Prompt</h2><button class=\"copy-button\" id=\"copy-prompt\">复制 Prompt</button></div><textarea class=\"prompt-box\" aria-label=\"可复用 Prompt\" readonly>按2026-10-09故宫中文探索页六章快照复现文化门户。先逐模块对照DOM和计算样式，保留1258px内容宽、源字体栈、章节间距、全部圆形题饰和真实本地化图像；建筑朱红纹理托起左侧说明/八项名称索引及右下屋脊，藏品保留异形图像拼图、500ms文字叠层，典籍保留八条1s/0.3s序列及反向恢复，历史五类入口，文物医院35/65分栏、两图5000ms自动/500ms水平切换和hover暂停，最后保留全部五类纸签专题及官方手机图。导航要含悬停子菜单、全站菜单、搜索空词提示、二维码与浏览建议。记录原站/本地状态矩阵、素材来源/尺寸/hash和未复刻服务；业务及第三方语音读屏走官方，减少动态关闭自动位移而保留手动操作。</textarea><details><summary>负面约束 / Negative Prompt</summary><p>不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。</p></details><h3>改造练习</h3><p>替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。</p></section><section><h2>06 / 来源与证据</h2><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.dpm.org.cn/Explore.html\" target=\"_blank\" rel=\"noopener noreferrer\">故宫博物院 · 探索 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>同日重新以CDP读取原DOM、完整main.css/main.js/vendor.js，核实全部六章、桌面/手机盒模型、悬停与轮播真实状态；state-matrix.md记录详细证据。</small></div><div class=\"source-item\"><span class=\"source-badge\">实例</span><a href=\"https://www.dpm.org.cn/bottom/platform.html\" target=\"_blank\" rel=\"noopener noreferrer\">故宫博物院 · 相关数字平台 <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>官方介绍数字文物库、全景故宫和名画记；用于说明各平台独立的业务与交互范围。</small></div><div class=\"source-item\"><span class=\"source-badge\">规范</span><a href=\"https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html\" target=\"_blank\" rel=\"noopener noreferrer\">W3C WAI · Non-text Content <span class=\"atlas-external-icon\" aria-hidden=\"true\">↗︎</span></a><small>用于图像目的与可点击图像的文字替代；不表示官网已经全面符合规范。</small></div><p>参考站采集：2026-10-09。本案例归档这次采集的页面与交互。详细观察、推断与限制见<a href=\"document.html?file=research%2Fpalace-museum.md\" target=\"_blank\">调研记录</a>。</p></section>",
+    "sha256": "f469a76a922d098ef6528d60abf68ea571e3bfb7b829e784c209893ac0384e9e",
+    "bytes": 8875
   }
 }

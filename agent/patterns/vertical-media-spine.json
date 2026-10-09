@@ -38,22 +38,22 @@
     },
     "parameters": [
       {
-        "name": "媒体比例",
-        "value": "1600×900 / 16:9",
-        "note": "本次官方静态图原尺寸；其他任务按真实素材比例重新设计。"
+        "name": "源媒体与类别",
+        "value": "4玩法视频 / 5AIC图片",
+        "note": "真实相册媒体与类别共同组织，非首版单1600×900图/105px书脊。"
       },
       {
-        "name": "本地书脊宽度",
-        "value": "105px桌面 / 44px手机",
-        "note": "源码拟合，非原站测量值。"
+        "name": "方向层级",
+        "value": "400ms；black0/yellow250/media500ms",
+        "note": "原相册三层方向揭示，文字500ms退出/500ms进入；视觉书脊本身静态。"
       }
     ],
-    "prompt": "把一幅横向媒体整理为有类别归属的资料模块：短类别放在左侧竖向书脊，大图保留原比例，图下排列编号、标题和正常方向说明，边界与对齐保持一致。竖向字只承担类别，不放长句；标题中重复类别含义，装饰书脊aria-hidden。手机缩小或移上书脊，保持图像可读宽度。若媒体是影片，播放/暂停另用可键盘操作控件，减少动态可阅读静态封面。颜色和宽度按新任务验证，不把本地拟合冒充源站参数。",
+    "prompt": "将简短类别作为媒体边界的竖向书脊，横向真实图像/影片与正常方向编号/标题/说明保持共同对齐。文字朝向表达归属，不旋转长篇正文；portrait沿真实布局重排，避免书脊挤压内容。多项切换可借鉴400ms黑/黄/媒体分层delay0/250/500及500/500ms说明，使用新任务信号色，不把竖书脊当作整站导航。播放/暂停、键盘与减少动态需要实际媒体语义，源参数和最终浏览器实测分别记录。",
     "sources": [
       {
         "caseId": "endfield-industrial",
-        "locator": "entries/endfield-industrial.json#/principles/1",
-        "observation": "源端集成工业区：竖向AIC类别书脊紧邻横向媒体，编号和说明置于同一模块下方；用文字朝向和共同边界标出媒体所属类别。",
+        "locator": "entries/endfield-industrial.json#principles/4",
+        "observation": "AIC书脊与媒体共同组织类别；4玩法/5AIC采用源三层黑→黄→媒体的方向揭示，不用单静态工厂图替代整个相册。",
         "evidence": "observed",
         "referenceUrl": "https://endfield.hypergryph.com/",
         "capturedAt": "2026-10-09"
@@ -64,19 +64,23 @@
       "research/endfield-industrial.md",
       "demos/endfield-industrial/fidelity.md",
       "demos/endfield-industrial/index.html",
-      "demos/endfield-industrial/style.css",
-      "demos/endfield-industrial/app.js"
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/data.js",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json"
     ]
   },
   "sourceCases": [
     {
       "id": "endfield-industrial",
-      "title": "终末地 · 白底工业档案",
+      "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "cb59b38a11fcb673d85adca96a58d938a0fdbe20b0b40f554a1a1b52cc50db4f"
+      "bundleSha256": "c5709f2c589bc66bddde2c1d438d543ec9553cc72df7c3a9392736147d64c8cf"
     }
   ]
 }

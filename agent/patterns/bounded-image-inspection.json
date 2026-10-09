@@ -3,12 +3,12 @@
   "id": "bounded-image-inspection",
   "pattern": {
     "id": "bounded-image-inspection",
-    "title": "有限尺度的图像细察",
+    "title": "公开边界内的瓦片细察",
     "category": "交互反馈",
     "summary": "让图像从全貌到局部，再明确回到总览。",
-    "mechanism": "在独立图像视域内用加减按钮改变比例，保留当前百分比、边界和适合窗口；放大后的二维移动限于图像视域。",
-    "trigger": "主动放大、缩小、滚动图像或复位",
-    "effect": "用户能控制观察尺度，知道当前位置与返回全貌的方法。",
+    "mechanism": "独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。",
+    "trigger": "主动加减、滚轮缩放、拖动或键盘平移",
+    "effect": "用户按真实公开瓦片精度细察，并知道匿名浏览的缩放边界与更高清的官方入口。",
     "useCases": [
       "艺术图像、地图和文化遗产细读",
       "有明确像素精度的工程图检查"
@@ -18,13 +18,13 @@
       "用图像缩放拦截整个页面的正常滚动"
     ],
     "constraints": [
-      "比例有上下限，边界按钮禁用；复位把比例和视域滚动位置一起恢复。",
-      "公开预览的像素精度不随CSS放大提升，必须说明分辨率并给出原站高清入口。",
-      "原站加减缩放已观察；本地百分比、dialog、限制范围和复位是教学实现。"
+      "以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。",
+      "保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。",
+      "正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。"
     ],
     "composition": {
       "role": "support",
-      "notes": "只管理当前图像观察尺度；模态关闭和正文滚动另有清楚职责。可与图像下方出处/精度题注组合。",
+      "notes": "此机制对照指定页面的源HTML/CSS与真实交互；仅管理所描述的局部，不替代整个机构门户或后台服务。",
       "pairsWellWith": [
         "artwork-caption-separation",
         "inline-detail-disclosure"
@@ -32,29 +32,29 @@
       "conflicts": []
     },
     "accessibility": {
-      "keyboard": "加减和复位是有名称的按钮；图像视域可聚焦，用方向键或滚动条移动；dialog支持Escape、可见关闭和焦点返回。",
-      "reducedMotion": "缩放即时完成，不添加弹簧或自动巡游，全部手动状态与复位可用。"
+      "keyboard": "Leaflet加减按钮有名称，画布可聚焦并用方向键平移；边界禁用状态保留，登录服务走官方。",
+      "reducedMotion": "取消自动轮换、计数过程和位移过渡；全部内容与手动选择保留。"
     },
     "parameters": [
       {
-        "name": "本地比例范围",
-        "value": "100%—300%，每次50%",
-        "note": "教学选择，非原站高清查看器的固定规范。"
+        "name": "源匿名地图范围",
+        "value": "minZoom9.75 / maxZoom12",
+        "note": "源maxNativeZoom15的65%/80%；不访问更高匿名未授权级别。"
       },
       {
-        "name": "本地壁画预览",
-        "value": "562×253 px",
-        "note": "官网首页公开预览原尺寸；没有复制高清分块数据。"
+        "name": "源瓦片/逻辑尺寸",
+        "value": "1024px；21515×15796逻辑像素",
+        "note": "仅实取公开level10/11/12的9瓦片，不能据此声称完整原分辨率已归档。"
       }
     ],
-    "prompt": "为【目标页面/组件】实现「有限尺度的图像细察」。在独立图像视域内用加减按钮改变比例，保留当前百分比、边界和适合窗口；放大后的二维移动限于图像视域。 触发：主动放大、缩小、滚动图像或复位。可见结果：用户能控制观察尺度，知道当前位置与返回全貌的方法。适用：艺术图像、地图和文化遗产细读、有明确像素精度的工程图检查。比例有上下限，边界按钮禁用；复位把比例和视域滚动位置一起恢复。 公开预览的像素精度不随CSS放大提升，必须说明分辨率并给出原站高清入口。 原站加减缩放已观察；本地百分比、dialog、限制范围和复位是教学实现。 键盘：加减和复位是有名称的按钮；图像视域可聚焦，用方向键或滚动条移动；dialog支持Escape、可见关闭和焦点返回。 减少动态：缩放即时完成，不添加弹簧或自动巡游，全部手动状态与复位可用。 组合边界：只管理当前图像观察尺度；模态关闭和正文滚动另有清楚职责。可与图像下方出处/精度题注组合。",
+    "prompt": "为【目标页面/组件】实现「公开边界内的瓦片细察」。独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。 源匿名地图范围：minZoom9.75 / maxZoom12。源maxNativeZoom15的65%/80%；不访问更高匿名未授权级别。 源瓦片/逻辑尺寸：1024px；21515×15796逻辑像素。仅实取公开level10/11/12的9瓦片，不能据此声称完整原分辨率已归档。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。",
     "sources": [
       {
         "caseId": "digital-dunhuang",
         "locator": "entries/digital-dunhuang.json#interaction/3",
-        "observation": "本地只放大562×253公开预览，比例限制100%至300%，支持滚动条/方向键、适合窗口与关闭；不是原站高清分块图像引擎。",
-        "evidence": "adapted",
-        "referenceUrl": "https://www.e-dunhuang.com/index.htm",
+        "observation": "壁画：莫高窟257窟主室西壁采用源站Leaflet 1.7.1与DeepZoom 2.0.0，21515×15796逻辑像素、1024瓦片，匿名minZoom9.75/maxZoom12，公开level10–12共9瓦片实际取得。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01",
         "capturedAt": "2026-10-09"
       }
     ],
@@ -64,18 +64,22 @@
       "demos/digital-dunhuang/fidelity.md",
       "demos/digital-dunhuang/index.html",
       "demos/digital-dunhuang/style.css",
-      "demos/digital-dunhuang/app.js"
+      "demos/digital-dunhuang/app.js",
+      "demos/digital-dunhuang/state-matrix.md",
+      "demos/digital-dunhuang/viewer.html",
+      "demos/digital-dunhuang/viewer.css",
+      "demos/digital-dunhuang/viewer.js"
     ]
   },
   "sourceCases": [
     {
       "id": "digital-dunhuang",
-      "title": "数字敦煌 · 影像检索与壁画细察",
+      "title": "数字敦煌 · 全幅影像与真实瓦片细察",
       "paths": {
         "bundle": "agent/cases/digital-dunhuang.json",
         "demo": "demos/digital-dunhuang/index.html"
       },
-      "bundleSha256": "c26457940732c83b7f064c06d83d0bf1324933c5b3c0f6f37a26d921eb88b1e7"
+      "bundleSha256": "496112374381c8dd63a193d136b0f57816e038973b21b50b945dd72e5b17922b"
     }
   ]
 }

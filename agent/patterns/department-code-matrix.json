@@ -5,28 +5,29 @@
     "id": "department-code-matrix",
     "title": "机构缩写的中心矩阵",
     "category": "视觉构成",
-    "summary": "用中心代码与外围缩写共同呈现机构结构，大字识别、小字解释。",
-    "mechanism": "把中心模块的缩写按两行压缩为强识别块，外围模块共享大写短代码和小号完整解释；统一线框与留白，局部小节点形成状态焦点。",
-    "trigger": "呈现机构/系统模块目录",
-    "effect": "中心与外围的关系和每个模块名称在同一视野中可读。",
+    "summary": "保留特殊字标和非等宽的中心/外围关系，让代码同时表达机构身份和归属。",
+    "mechanism": "中心双行代码和九个外围短代码共享环形连字，黑白表面、倾斜与尺度差共同组织关系；细射线与小面积橙色节点连接焦点。完整名称与等价语义目录承担阅读，不将原字标重排成普通字体卡片。",
+    "trigger": "呈现机构代码目录",
+    "effect": "中心关系、不同科室的身份字标及当前焦点在同一视野中保留。",
     "useCases": [
-      "机构部门目录",
-      "系统能力模块地图",
-      "少量研究/技术单元"
+      "有专用字标的机构目录",
+      "系统模块的关系图",
+      "影片图形的网页转译"
     ],
     "avoid": [
-      "缩写无完整解释",
-      "用中心大小暗示未经证实的组织权级",
-      "把装饰节点当唯一选中提示"
+      "把所有字标抹平成Arial缩写",
+      "只留五科室并误称完整矩阵",
+      "用节点颜色代替完整名称和选择语义"
     ],
     "constraints": [
-      "本条来源是影片画面文字构成；点击说明须另外标adapted。",
-      "代码之外提供完整名称和实际内容，不把影片设定延伸成真实组织关系。",
-      "手机保持正常阅读顺序，可重排而不强制缩小全部文字。"
+      "原作构成是一中心加九外围，代码与全称须逐项核对；新任务按真实组织替换，不能推断权限。",
+      "有使用权的SVG/图片或原帧可保留专用字形，不臆造字体名或声称3D源码移植。",
+      "热点点选、节点移动和说明属于网页adapted；视觉来源与触发分别记录。",
+      "手机保留原比例构图并提供正常字号目录，不以强制缩小全文代替可读入口。"
     ],
     "composition": {
       "role": "foundation",
-      "notes": "中心块负责识别与关系，外围代码负责分类；局部状态色仅提供辅助信号。若组合档案选择，矩阵与档案应使用不同区域和状态源。",
+      "notes": "原画面保留字标与空间，DOM热点和可读目录共享一个选择状态；节点移动是适配，不伪造原片点击。矩阵与档案选择使用独立区域及状态。",
       "pairsWellWith": [
         "restrained-signal-color",
         "aligned-metadata-rows"
@@ -34,50 +35,56 @@
       "conflicts": []
     },
     "accessibility": {
-      "keyboard": "静态目录保持语义列表；有点击说明时使用原生按钮、可见焦点和aria-pressed，同时显示完整名称。",
-      "reducedMotion": "矩阵默认静态；点选说明即时更新，禁止持续闪烁节点。"
+      "keyboard": "热点与等价目录均用语义按钮、可见焦点和aria-pressed，全称始终可读；手机可直接用正常字号目录。",
+      "reducedMotion": "原帧和矩阵静态保留；取消180ms节点移动，当前说明即时同步；片段由用户主动播放并可暂停。"
     },
     "parameters": [
       {
-        "name": "中心代码",
-        "value": "CMPT / CTRL双行",
-        "note": "本次官方影像可见代码；新任务改成真实机构名称。"
+        "name": "本次源端模块",
+        "value": "CMPT CTRL + DEF/HRI/BSN/ENG/STRU/SCIEN/ORIG/NRG/ECO",
+        "note": "官方68秒原帧，中心1加外围9，非本地虚构机构。"
       },
       {
-        "name": "本地模块数",
-        "value": "中心1 + 外围4",
-        "note": "教学摘取五个模块，不等于影片完整组织结构。"
+        "name": "字标采集",
+        "value": "1920×1080 / 68.00秒原帧",
+        "note": "保留实际环形连字/表面/倾斜，未取得字体或3D工程。"
+      },
+      {
+        "name": "本地节点移动",
+        "value": "180ms",
+        "note": "CSS适配，减少动态关闭，非原片入场时长。"
       }
     ],
-    "prompt": "用机构缩写构成中心矩阵：中心代码可按两行组成较大识别块，外围四至六个模块共享大写短代码、小号完整名称与正常方向说明。边界和留白使用同一规则，局部小状态节点不能替代文字选中。按真实内容解释中心关系，不以块的大小臆造权级；手机可重排成正常阅读顺序，保持正文大小。静态目录用语义列表，有点选说明时用按钮、可见焦点和aria-pressed，当前说明即时同步。矩阵不自动闪烁，减少动态保留静态阅读。若来源为影像，区分画面观察与新增网页交互。",
+    "prompt": "把机构代码整理为中心与外围的关系矩阵，保留有使用权的专用字标、环形连字、黑白表面、倾斜和尺度差，不能全部替换成普通字体等宽卡片。中心代码与九个外围模块通过细射线和小状态节点建立关系；每个代码提供完整名称和真实内容，不依据画面大小推断权限。网页热点与正常字号目录共用一个选择状态，同步节点、aria-pressed和说明；源端图形构成与新增点击/节点移动分别归档。手机完整保留原比例图形，等价目录承担可读操作。减少动态取消节点位移，保留静态当前项，影片片段主动播放并可暂停。",
     "sources": [
       {
         "caseId": "rhine-lab",
-        "locator": "entries/rhine-lab.json#/composition/typography",
-        "observation": "官方影像的CMPT CTRL、ENG、ECO、STRU、DEF等大写缩写构成中心/外围矩阵，大代码与小号机构说明分工；本地采用系统字体近似。",
+        "locator": "entries/rhine-lab.json#composition/typography",
+        "observation": "官方68秒原帧保留CMPT CTRL中心，以及DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九外围的环形连字、英文全称、黑白表面、透视倾斜及尺度差；网页控件使用系统字体，不替代原作字标。",
         "evidence": "observed",
         "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
         "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
-      "entries/rhine-lab.json",
-      "research/rhine-lab.md",
-      "demos/rhine-lab/fidelity.md",
       "demos/rhine-lab/index.html",
+      "demos/rhine-lab/app.js",
       "demos/rhine-lab/style.css",
-      "demos/rhine-lab/app.js"
+      "demos/rhine-lab/fidelity.md",
+      "demos/rhine-lab/assets-manifest.json",
+      "entries/rhine-lab.json",
+      "research/rhine-lab.md"
     ]
   },
   "sourceCases": [
     {
       "id": "rhine-lab",
-      "title": "莱茵生命 · 官方影像的网页转译",
+      "title": "莱茵生命 · 影像终端的网页转译",
       "paths": {
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/rhine-lab/index.html"
       },
-      "bundleSha256": "085e2556a84d326c44abf3b3b282d9afe9ab1e6d0fed0d63d62a3f464cca68c3"
+      "bundleSha256": "29cc11f845105f552ead8f01ea6620979a51b34718d0fe4684476c3918d628c3"
     }
   ]
 }

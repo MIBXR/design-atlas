@@ -20,7 +20,7 @@
     "constraints": [
       "只抽取文字层级与标定规则；新任务换为有使用权的名称与素材。",
       "前景正文与控制不依赖背景文字识别，背景设置aria-hidden。",
-      "原站观察未提供字号和透明度数值，本地数值需在实际图像与断点重验。"
+      "源CSS/字型/装饰资产已取得；新任务按自己的合法图像、字体与断点重新验证，不把源数值无条件当作通用设计标准。"
     ],
     "composition": {
       "role": "support",
@@ -37,22 +37,22 @@
     },
     "parameters": [
       {
-        "name": "背景网格",
-        "value": "原始217×217 SVG，CSS白层约95%",
-        "note": "原始素材尺寸来自官网；白层为本地拟合，用于接近现场淡网格。"
+        "name": "源浅纹背景",
+        "value": "opacity .05；纹理周期 .75rem",
+        "note": "来自原operator-shallow-bg计算规则，另以mask渐变衰减。"
       },
       {
-        "name": "背景字纹理",
-        "value": "斜线CSS填充",
-        "note": "构成来自现场画面，纹理周期与字号为本地近似。"
+        "name": "尺度系统",
+        "value": "PC160×90设计坐标；portrait宽67.5rem",
+        "note": "源rem排版与字体结构，不再首版95%白层拟合。"
       }
     ],
-    "prompt": "为角色或技术档案建立「斜线注册大字与前景记录」。在主体后方放置低对比的大号斜线纹理品牌/类别字，配合小编号、十字标定点和很淡网格。正文姓名与标签用实心字及独立留白，不让斜线穿过可读文字。背景全部aria-hidden且保持静态；真实按钮、链接和当前状态处于前景。手机以图上文下重排，检查图像、姓名和操作不重叠。用有使用权的图像与名称，来源观察和本地透明度/尺寸拟合分开记录。",
+    "prompt": "实现低对比斜线大字、REC/小编号、十字标定与淡网格的背景记录层，保留实心姓名/资料标签的前景。借鉴源浅纹opacity .05、.75rem周期及mask衰减；用真实字体/素材和自己的断点重验，不把源ENDFIELD品牌直接移作他人机构标志。装饰无焦点，状态按钮/内容可键盘操作，巨大字不增加无依据循环闪烁。",
     "sources": [
       {
         "caseId": "endfield-industrial",
-        "locator": "entries/endfield-industrial.json#/composition/shape",
-        "observation": "源端巨大ENDFIELD斜线背景字、十字标定点、REC小编号和淡网格，与前景实心姓名、黑色资料标签形成层次。",
+        "locator": "entries/endfield-industrial.json#composition/shape",
+        "observation": "巨大斜线背景字、十字标定、REC、小编号、淡网格与实心资料；AIC竖书脊保留在媒体边界，黑黄三层作为切换状态。",
         "evidence": "observed",
         "referenceUrl": "https://endfield.hypergryph.com/",
         "capturedAt": "2026-10-09"
@@ -63,19 +63,23 @@
       "research/endfield-industrial.md",
       "demos/endfield-industrial/fidelity.md",
       "demos/endfield-industrial/index.html",
-      "demos/endfield-industrial/style.css",
-      "demos/endfield-industrial/app.js"
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/data.js",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json"
     ]
   },
   "sourceCases": [
     {
       "id": "endfield-industrial",
-      "title": "终末地 · 白底工业档案",
+      "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "cb59b38a11fcb673d85adca96a58d938a0fdbe20b0b40f554a1a1b52cc50db4f"
+      "bundleSha256": "c5709f2c589bc66bddde2c1d438d543ec9553cc72df7c3a9392736147d64c8cf"
     }
   ]
 }
