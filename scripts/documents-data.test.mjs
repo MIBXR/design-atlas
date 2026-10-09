@@ -12,7 +12,7 @@ test('public Markdown additions and removals update the document catalog and rej
   assert.equal(path.dirname(root), path.resolve(os.tmpdir()));
   try {
     fs.mkdirSync(path.join(root, 'scripts'));
-    for (const file of ['build-documents.mjs', 'build-static.mjs', 'build-asset-sources.mjs']) {
+    for (const file of ['build-documents.mjs', 'build-static.mjs', 'build-asset-sources.mjs', 'check-line-endings.mjs']) {
       fs.copyFileSync(new URL(file, import.meta.url), path.join(root, 'scripts', file));
     }
     for (const folder of folders) fs.mkdirSync(path.join(root, folder), {recursive:true});

@@ -412,8 +412,8 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
-      "bytes": 17891
+      "sha256": "ac79c4d21fa5e0f238b707c59ab845280497ad415037e2cbf91010bb332e3b4e",
+      "bytes": 17574
     },
     {
       "path": "site-shell.js",

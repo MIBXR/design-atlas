@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import { buildAgent, defaultRoot, resolveRepositoryPath, sha256 } from './build-agent.mjs';
 import { verifyAgent } from './check-agent.mjs';
 
@@ -71,6 +72,28 @@ test('bundles preserve original fields, document bytes and binary asset hashes d
     const changed = buildAgent({ root: f.root });
     assert.notEqual(changed.catalog.contentVersion, first.catalog.contentVersion);
     verifyAgent({ root: f.root });
+  } finally { f.cleanup(); }
+});
+
+test('Git LF text rejects checkout drift while original assets keep their bytes', () => {
+  const f = fixture();
+  try {
+    f.write('.gitattributes', '* text=auto eol=lf\ndemos/**/assets/** -text\nvendor/** -text\n');
+    f.write(f.entry.research, '\uFEFF研究原文\nsecond line\n');
+    f.write('vendor/LICENSES.txt', 'Original license\r\n');
+    execFileSync('git', ['init', '--quiet', f.root]);
+    execFileSync('git', ['add', '.gitattributes', 'site-nav.css'], { cwd: f.root });
+    const original = fs.readFileSync(path.join(f.root, 'demos/fixture-case/assets/original.bin'));
+    buildAgent({ root: f.root });
+    assert.deepEqual(fs.readFileSync(path.join(f.root, 'demos/fixture-case/assets/original.bin')), original);
+    assert.equal(fs.readFileSync(path.join(f.root, 'vendor/LICENSES.txt'), 'utf8'), 'Original license\r\n');
+    for (const content of ['first\r\nsecond\r\n', 'first\nsecond\r\n']) {
+      f.write('site-nav.css', content);
+      assert.throws(() => buildAgent({ root: f.root }), /LF.*site-nav\.css/s);
+    }
+    f.write('site-nav.css', '// fixture\n');
+    f.write('untracked.js', '// source\r\n');
+    assert.throws(() => buildAgent({ root: f.root }), /LF.*untracked\.js/s);
   } finally { f.cleanup(); }
 });
 
