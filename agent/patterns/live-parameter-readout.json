@@ -80,7 +80,7 @@
         "bundle": "agent/cases/bauhaus-geometry.json",
         "demo": "demos/bauhaus-geometry/index.html"
       },
-      "bundleSha256": "61b105c2fbe5ce724fe0439b5d1893877cfe77d60280a4d29e21dd2f36e4b585"
+      "bundleSha256": "410eedc9feb6e320eeb6953ebc294925d290e8e0d3c65f6290cc3a031fe949d6"
     },
     {
       "id": "retro-80s",
@@ -89,7 +89,7 @@
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
       },
-      "bundleSha256": "ed87ae0a60697733d2711b5d8a0f8dc691a9e2363757e67a123c6766a228e128"
+      "bundleSha256": "6a86fe6233d1864bb96fee752925ac7972ab26ed372007800f65764735591cde"
     },
     {
       "id": "shape-morph",
@@ -98,7 +98,7 @@
         "bundle": "agent/cases/shape-morph.json",
         "demo": "demos/shape-morph/index.html"
       },
-      "bundleSha256": "2a3c5bd9cc663a66b943d207e8be80a248341f826e938ba12511dcad68f151a2"
+      "bundleSha256": "76be77e19a7ba9bcdaf06365418ecaefd3f2d055ee08ef9a67986caa8990be87"
     }
   ]
 }

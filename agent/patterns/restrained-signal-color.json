@@ -117,7 +117,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "2ff3db0a6d0c9b119931fd3a19c5aa631e6937766335ada7544dabd2456464d0"
+      "bundleSha256": "57e5c154343dafce05cb186e475796b28082b0503a1cfed3a126ccef61e70f1f"
     },
     {
       "id": "met-museum",
@@ -126,7 +126,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "cfd0415358d2039cc108cd6a2239800b63985ab182becaf8a0ed4b6cdb0d089f"
+      "bundleSha256": "0970147bfee00469744b170b99704a6a655e00527d3c8ebb61e511de246cf20b"
     },
     {
       "id": "mori-art-museum",
@@ -135,7 +135,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "842eb8aaf240410a84b59488561698666343491faae77a11f14288d2cda7b2ff"
+      "bundleSha256": "50259d1eb5f37497dc3b7b8bd7cda7d914fdf774f924eb07ea867b0a0cc58186"
     },
     {
       "id": "rhine-lab",
@@ -144,7 +144,7 @@
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/rhine-lab/index.html"
       },
-      "bundleSha256": "0fe8bbf0b10bc62244cb44b9216c32f0526624842f29ae85ba76bc7657795688"
+      "bundleSha256": "cf1ed69852032bb0cfda702bf10827a8476512a1ba3668b3078700febad61480"
     },
     {
       "id": "swiss-grid",
@@ -153,7 +153,7 @@
         "bundle": "agent/cases/swiss-grid.json",
         "demo": "demos/swiss-grid/index.html"
       },
-      "bundleSha256": "6d09b3cbd8713d0bffcd50a8692c91cfc6941f818c17da6a5fc0647b7a3632c4"
+      "bundleSha256": "67281c4d333a3d0276a42bc313818ade0707bfbc56c39e22a7cec881a70d3cc2"
     }
   ]
 }

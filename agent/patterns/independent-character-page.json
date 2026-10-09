@@ -65,7 +65,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "7ab8f2f2a046ce293822032d70db432bc33491cd78ad62cc046f2ab8a2576a60"
+      "bundleSha256": "845b70a87ab7df799590c6b4d6812ea11945a95b76f2029ea1f9245813cda2cf"
     }
   ]
 }

@@ -4,10 +4,12 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const source = fs.readFileSync(new URL('../site-shell.js', import.meta.url), 'utf8');
-function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = false, hasTools = false, cacheApi } = {}) {
+function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = false, hasTools = false, cacheApi, reducedMotion = false } = {}) {
   const documentListeners = new Map();
+  const windowListeners = new Map();
   const mediaListeners = new Map();
   const navigationCalls = [];
+  const scrollCalls = [];
   const document = { activeElement: { name: 'body' }, documentElement: { dataset: embedded ? { labEmbed: 'home' } : {} }, addEventListener: (name, listener) => documentListeners.set(name, listener) };
   function element(name, { inside = false, href, action = false } = {}) {
     const attributes = new Map(href === undefined ? [] : [['href', href]]);
@@ -35,10 +37,10 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = 
   const cacheStatus = element('cache-status');
   const cacheClear = element('cache-clear');
   const loadedScripts = [];
-  let cacheButton, cacheDialog;
+  let cacheButton, cacheDialog, backToTop;
   const themeControl = element('theme-control');
   themeControl.insertAdjacentElement = (_, button) => { cacheButton = button; };
-  document.body.append = dialog => { cacheDialog = dialog; };
+  document.body.append = node => { if (node.name === 'dialog') cacheDialog = node; else backToTop = node; };
   document.head = { append: script => loadedScripts.push(script) };
   document.createElement = tag => {
     const node = element(tag);
@@ -61,14 +63,21 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = 
   let mediaQueries = 0;
   const window = {
     DesignAtlasAssetCache: cacheApi,
+    innerHeight:800, scrollY:0,
+    addEventListener: (name, listener) => windowListeners.set(name, listener),
+    scrollTo(options) { scrollCalls.push(options); window.scrollY = options.top; windowListeners.get('scroll')?.(); },
     location: { href: 'https://atlas.test/fundamentals.html', replace: value => navigationCalls.push(value) },
     history: { pushState: (...values) => navigationCalls.push(values), replaceState: (...values) => navigationCalls.push(values) },
-    matchMedia(query) { assert.equal(query, '(max-width: 800px)'); mediaQueries++; return media; },
+    matchMedia(query) {
+      if (query === '(prefers-reduced-motion: reduce)') return {matches:reducedMotion};
+      assert.equal(query, '(max-width: 800px)'); mediaQueries++; return media;
+    },
   };
   vm.runInNewContext(source, { document, window, URL }, { timeout: 1000, filename: 'site-shell.js' });
   return {
-    document, window, menus, media, directory, toggle, closeButton, filter, main, favoriteDialog, sections, documentListeners, navigationCalls, element, cacheButton, cacheDialog, cacheStatus, cacheClear, loadedScripts,
+    document, window, menus, media, directory, toggle, closeButton, filter, main, favoriteDialog, sections, documentListeners, navigationCalls, element, cacheButton, cacheDialog, cacheStatus, cacheClear, loadedScripts, backToTop, scrollCalls,
     mediaQueries: () => mediaQueries,
+    scroll(top) { window.scrollY = top; windowListeners.get('scroll')?.(); },
     resize(isCompact) { media.matches = isCompact; mediaListeners.get('change')?.(); },
     click(target) {
       let prevented = false;
@@ -236,12 +245,31 @@ test('desktop keeps the original sidebar and breakpoint changes never leave focu
   assert.equal(fixture.document.activeElement, outside);
 });
 
-test('embedded home lab and pages without directories install no shell listeners', () => {
+test('embedded home lab skips shared controls and pages without directories skip directory listeners', () => {
   for (const options of [{ hasDirectory: false }, { embedded: true }]) {
     const fixture = page(options);
     assert.equal(fixture.mediaQueries(), 0);
     assert.equal(fixture.documentListeners.size, 0);
     assert.deepEqual(fixture.navigationCalls, []);
+    assert.equal(!!fixture.backToTop, !options.embedded);
+  }
+});
+
+test('outer pages show back to top after one viewport and respect motion preferences', () => {
+  for (const reducedMotion of [false, true]) {
+    const fixture = page({hasDirectory:false, reducedMotion});
+    assert.equal(fixture.backToTop.hidden, true);
+    assert.equal(fixture.backToTop.textContent, '回到顶部');
+    fixture.scroll(800);
+    assert.equal(fixture.backToTop.hidden, true);
+    fixture.scroll(801);
+    assert.equal(fixture.backToTop.hidden, false);
+    fixture.document.activeElement = fixture.backToTop;
+    fixture.click(fixture.backToTop);
+    assert.equal(fixture.scrollCalls[0].top, 0);
+    assert.equal(fixture.scrollCalls[0].behavior, reducedMotion ? 'instant' : 'smooth');
+    assert.equal(fixture.backToTop.hidden, true);
+    assert.equal(fixture.document.activeElement, fixture.main);
   }
 });
 

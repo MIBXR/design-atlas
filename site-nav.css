@@ -249,6 +249,11 @@ a.atlas-ui-button,button.atlas-ui-button{
   touch-action:manipulation;
 }
 a.atlas-ui-button:hover,button.atlas-ui-button:hover{border-color:var(--atlas-shell-focus);background:var(--atlas-shell-surface)}
+.atlas-back-to-top{position:fixed;right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));z-index:65;box-shadow:0 4px 16px #0002}
+body button.atlas-ui-button.atlas-back-to-top{min-height:44px}
+.atlas-back-to-top[hidden]{display:none!important}
+.has-tray .atlas-back-to-top{bottom:calc(100px + env(safe-area-inset-bottom))}
+@media(max-width:800px){.document-page .atlas-back-to-top{bottom:calc(72px + env(safe-area-inset-bottom))}}
 @media(max-width:1050px){
   .atlas-site-header-inner{grid-template-columns:170px minmax(0,1fr) 148px;gap:12px}
   .atlas-site-header .atlas-site-brand{gap:8px}

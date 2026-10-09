@@ -1,18 +1,23 @@
 const content = document.querySelector('#content');
-const file = new URLSearchParams(location.search).get('file') || 'README.md';
+let file = new URLSearchParams(location.search).get('file') || 'README.md';
 const documents = window.DESIGN_ATLAS_DOCUMENTS || [];
 const documentPaths = new Set(documents.map(item => item.path));
 const libraryURL = new URL('.', document.baseURI);
+let activeRequest;
+let cleanupOutline = () => {};
+let currentHeadings = [];
 function isAllowedDocument(value) {
-  return /^(?:README\.md|CONTRIBUTING\.md|AGENT\.md|(?:demos|research|prompts|docs|agent)\/[A-Za-z0-9_./-]+\.md)$/.test(value)
-    && !value.split('/').some(part => !part || part.startsWith('.')) && documentPaths.has(value);
+  return documentPaths.has(value) && !value.includes('\\') && !value.split('/').some(part => !part || part.startsWith('.'));
 }
 function renderDirectory() {
   const navigation = document.querySelector('#document-navigation');
   document.querySelector('#document-count').textContent = String(documents.length);
   for (const group of new Set(documents.map(item => item.group))) {
-    const section = document.createElement('section');
-    const title = document.createElement('h2');
+    const section = document.createElement('details');
+    section.className = 'document-group';
+    section.setAttribute('data-document-group', group);
+    section.open = documents.some(item => item.group === group && item.path === file);
+    const title = document.createElement('summary');
     title.textContent = group;
     section.append(title);
     const links = document.createElement('ul');
@@ -22,6 +27,7 @@ function renderDirectory() {
       link.href = 'document.html?file=' + encodeURIComponent(item.path);
       link.textContent = item.title;
       link.title = item.path;
+      link.setAttribute('data-document-file', item.path);
       if (item.path === file) link.setAttribute('aria-current', 'page');
       row.append(link);
       links.append(row);
@@ -30,6 +36,14 @@ function renderDirectory() {
     navigation.append(section);
   }
   navigation.querySelector('[aria-current="page"]')?.scrollIntoView({block:'nearest'});
+}
+function syncDirectory() {
+  for (const link of document.querySelector('#document-navigation').querySelectorAll('[data-document-file]')) {
+    if (link.getAttribute('data-document-file') === file) {
+      link.setAttribute('aria-current', 'page');
+      link.closest('.document-group').open = true;
+    } else link.removeAttribute('aria-current');
+  }
 }
 function localPath(url) {
   if (url.origin !== libraryURL.origin || !url.pathname.startsWith(libraryURL.pathname)) return null;
@@ -65,6 +79,12 @@ function renderOutline(headings) {
   const navigation = document.querySelector('#document-outline-navigation');
   const toggle = document.querySelector('#document-outline-toggle');
   const closeButton = document.querySelector('#document-outline-close');
+  navigation.replaceChildren();
+  const listeners = [];
+  function listen(target, type, callback, options) {
+    target.addEventListener(type, callback, options);
+    listeners.push(() => target.removeEventListener(type, callback, options));
+  }
   const reserved = new Set([...document.querySelectorAll('[id]')].filter(node => !headings.includes(node)).map(node => node.id));
   const links = headings.map(heading => {
     const base = heading.id || heading.textContent.trim().toLowerCase().replace(/[^\p{L}\p{N}_\s-]/gu, '').replace(/[\s-]+/g, '-') || 'section';
@@ -106,9 +126,9 @@ function renderOutline(headings) {
     else if (!compact.matches && !wide.matches && (controlFocused || inside)) summary.focus({preventScroll:true});
   };
   syncLayout();
-  wide.addEventListener('change', syncLayout);
-  compact.addEventListener('change', syncLayout);
-  toggle.addEventListener('click', () => {
+  listen(wide, 'change', syncLayout);
+  listen(compact, 'change', syncLayout);
+  listen(toggle, 'click', () => {
     setOpen(!menu.open);
     if (menu.open) {
       const current = navigation.querySelector('[aria-current="location"]');
@@ -116,13 +136,13 @@ function renderOutline(headings) {
       current?.scrollIntoView({block:'nearest'});
     }
   });
-  closeButton.addEventListener('click', () => setOpen(false, {restoreFocus:true}));
-  document.addEventListener('keydown', event => {
+  listen(closeButton, 'click', () => setOpen(false, {restoreFocus:true}));
+  listen(document, 'keydown', event => {
     if (!compact.matches || !menu.open || event.key !== 'Escape') return;
     event.preventDefault();
     setOpen(false, {restoreFocus:true});
   });
-  document.addEventListener('click', event => {
+  listen(document, 'click', event => {
     if (!compact.matches || !menu.open || outline.contains(event.target)) return;
     setOpen(false, {restoreFocus:menu.contains(document.activeElement)});
   });
@@ -135,15 +155,16 @@ function renderOutline(headings) {
     links.forEach((link, index) => index === current ? link.setAttribute('aria-current', 'location') : link.removeAttribute('aria-current'));
   }
   let pending = false;
-  window.addEventListener('scroll', () => {
+  listen(window, 'scroll', () => {
     if (pending) return;
     pending = true;
     requestAnimationFrame(() => { pending = false; updateCurrent(); });
   }, {passive:true});
-  window.addEventListener('resize', updateCurrent);
+  listen(window, 'resize', updateCurrent);
   const target = headings.find(heading => location.hash === '#' + encodeURIComponent(heading.id));
   target?.scrollIntoView({block:'start'});
   updateCurrent();
+  return () => listeners.forEach(remove => remove());
 }
 function renderMarkdown(text, sourceURL) {
   if (!window.marked || !window.DOMPurify) throw new Error('文档渲染器加载失败，请刷新后重试。');
@@ -170,20 +191,41 @@ function renderMarkdown(text, sourceURL) {
   content.replaceChildren(fragment);
   return {title, headings:headings.map(node => node === heading ? document.querySelector('#title') : node)};
 }
-async function readDocument() {
+function focusDocument() {
+  const target = currentHeadings.find(heading => location.hash === '#' + encodeURIComponent(heading.id));
+  (target || document.querySelector('#main')).scrollIntoView({block:'start'});
+  (target || document.querySelector('#title')).focus({preventScroll:true});
+}
+async function readDocument({focus = false} = {}) {
+  activeRequest?.abort();
+  const request = activeRequest = new AbortController();
+  file = new URLSearchParams(location.search).get('file') || 'README.md';
+  cleanupOutline();
+  currentHeadings = [];
+  syncDirectory();
+  content.textContent = '正在读取文档…';
+  content.removeAttribute('role');
+  content.setAttribute('aria-busy', 'true');
+  document.querySelector('#document-outline').hidden = true;
+  document.querySelector('#download').hidden = true;
+  const back = document.querySelector('#back');
+  back.href = 'cases.html';
+  back.textContent = '返回案例库';
   try {
     if (!documents.length) throw new Error('文档目录加载失败，请刷新后重试。');
     if (!isAllowedDocument(file)) throw new Error('请选择本站已公开的 Markdown 文档。');
     const sourceURL = new URL(file, libraryURL);
-    const response = await fetch(sourceURL);
+    const response = await fetch(sourceURL, {signal:request.signal});
     if (!response.ok) throw new Error(`文档读取失败（${response.status}）。`);
     // Decode the actual bytes explicitly; never let a browser guess a legacy charset.
     const text = new TextDecoder('utf-8', {fatal:true}).decode(await response.arrayBuffer());
+    if (activeRequest !== request) return;
     const {title, headings} = renderMarkdown(text, sourceURL);
+    currentHeadings = headings;
     document.querySelector('#title').textContent = title;
     document.querySelector('#path').textContent = file;
     document.title = `${title} · Design Atlas`;
-    renderOutline(headings);
+    cleanupOutline = renderOutline(headings);
     const download = document.querySelector('#download');
     download.href = file;
     download.download = file.split('/').pop();
@@ -191,16 +233,34 @@ async function readDocument() {
     download.hidden = false;
     const caseId = file.match(/^demos\/([A-Za-z0-9_-]+)\//)?.[1];
     if (caseId) {
-      const back = document.querySelector('#back');
       back.href = `cases.html#style/${caseId}`;
       back.textContent = '返回案例详情';
     }
+    if (focus) focusDocument();
   } catch (error) {
+    if (activeRequest !== request) return;
     content.textContent = error.message;
     content.setAttribute('role', 'alert');
   } finally {
-    content.setAttribute('aria-busy', 'false');
+    if (activeRequest === request) content.setAttribute('aria-busy', 'false');
   }
 }
+document.addEventListener('click', event => {
+  if (event.defaultPrevented || event.button > 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const link = event.target.closest('a[href]');
+  if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
+  const url = new URL(link.href, document.baseURI);
+  if (url.origin !== libraryURL.origin || url.pathname !== new URL('document.html', libraryURL).pathname) return;
+  const nextFile = url.searchParams.get('file') || 'README.md';
+  if (!isAllowedDocument(nextFile)) return;
+  if (nextFile === file && url.hash) return;
+  event.preventDefault();
+  history.pushState(null, '', url);
+  readDocument({focus:true});
+});
+window.addEventListener('popstate', () => {
+  if ((new URLSearchParams(location.search).get('file') || 'README.md') !== file) readDocument({focus:true});
+  else focusDocument();
+});
 renderDirectory();
 readDocument();

@@ -44,6 +44,20 @@
     });
     cacheDialog.querySelector('#cache-clear').addEventListener('click', () => showCacheStatus(true));
   }
+  const backToTop = document.createElement('button');
+  backToTop.type = 'button';
+  backToTop.className = 'atlas-ui-button atlas-back-to-top';
+  backToTop.textContent = '回到顶部';
+  backToTop.hidden = true;
+  document.body.append(backToTop);
+  const syncBackToTop = () => { backToTop.hidden = window.scrollY <= window.innerHeight; };
+  window.addEventListener('scroll', syncBackToTop, {passive:true});
+  window.addEventListener('resize', syncBackToTop);
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({top:0, behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    document.querySelector('main')?.focus({preventScroll:true});
+  });
+  syncBackToTop();
   const directory = document.querySelector('[data-page-directory]');
   const toggle = document.querySelector('[data-directory-toggle]');
   if (!directory || !toggle) return;
