@@ -86,7 +86,7 @@
         "bundle": "agent/cases/bauhaus-geometry.json",
         "demo": "demos/bauhaus-geometry/index.html"
       },
-      "bundleSha256": "7b3f3f1a5499e452fe8dacc20f78d0b167c26b044dcd7cfdf010ad3b80162cbc"
+      "bundleSha256": "61b105c2fbe5ce724fe0439b5d1893877cfe77d60280a4d29e21dd2f36e4b585"
     },
     {
       "id": "design-sight",
@@ -95,7 +95,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "39ee0f0a32b6d7f5ca6d0330455c20d313e85eac16b85b77da8c08e0c2610bee"
+      "bundleSha256": "7a447a05ae196213a7a6ff2f103f6359b1aee8be386e9caf45eb88a2db523a78"
     },
     {
       "id": "philharmonie-music",
@@ -104,7 +104,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "4aa66a55b530b135139099b364da01e9d3498db9b0a7d7c5fb3906111d4be7d1"
+      "bundleSha256": "4950359f68552ea8a78576645c7fc5b6148e8771dd61d4309d3499997a3d0c07"
     }
   ]
 }

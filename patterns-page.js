@@ -36,7 +36,7 @@
   openShowcase.addEventListener('click', () => { panel.showModal(); syncShowcase(); });
   panel.addEventListener('close', () => syncShowcase());
   document.addEventListener('keydown', event => {
-    if (panel.open || document.querySelector('#favorite-dialog').open || event.key !== '/' || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
+    if (panel.open || document.querySelector('#favorite-dialog').open || document.querySelector('#asset-cache-dialog')?.open || event.key !== '/' || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
     event.preventDefault(); window.DesignAtlasPatterns.focusSearch();
   });
   window.addEventListener('hashchange', route);

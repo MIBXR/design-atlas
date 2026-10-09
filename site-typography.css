@@ -165,7 +165,6 @@ body.cases-page .compare-column h3{font-size:16px}
 body.cases-page .prompt-box{font-family:var(--atlas-font-mono);font-size:16px}
 body.cases-page #favorite-dialog p{font-size:16px}
 body.cases-page #favorite-dialog textarea{font-family:var(--atlas-font-mono);font-size:16px}
-body.cases-page .cache-controls #cache-status{font-size:14px}
 
 /* Agent instructions are prose; source snippets keep semantic code typography. */
 body.agent-page :is(.agent-lead,.agent-start p,.agent-local p,.agent-search-section>p,.agent-case p,.agent-context p){font-size:16px}

@@ -63,6 +63,8 @@ function renderOutline(headings) {
   const outline = document.querySelector('#document-outline');
   const menu = document.querySelector('#document-outline-menu');
   const navigation = document.querySelector('#document-outline-navigation');
+  const toggle = document.querySelector('#document-outline-toggle');
+  const closeButton = document.querySelector('#document-outline-close');
   const reserved = new Set([...document.querySelectorAll('[id]')].filter(node => !headings.includes(node)).map(node => node.id));
   const links = headings.map(heading => {
     const base = heading.id || heading.textContent.trim().toLowerCase().replace(/[^\p{L}\p{N}_\s-]/gu, '').replace(/[\s-]+/g, '-') || 'section';
@@ -77,16 +79,53 @@ function renderOutline(headings) {
     link.textContent = heading.textContent;
     link.className = 'outline-level-' + heading.tagName.slice(1);
     link.addEventListener('click', () => {
-      if (!wide.matches) menu.open = false;
+      if (!wide.matches) setOpen(false);
       heading.focus({preventScroll:true});
     });
     navigation.append(link);
     return link;
   });
   const wide = window.matchMedia('(min-width:1200px)');
-  const syncLayout = () => { menu.open = wide.matches; };
+  const compact = window.matchMedia('(max-width:800px)');
+  const summary = menu.querySelector('summary');
+  function setOpen(open, {restoreFocus = false} = {}) {
+    menu.open = open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? '收起本文目录' : '打开本文目录');
+    if (restoreFocus) toggle.focus({preventScroll:true});
+  }
+  const syncLayout = () => {
+    const active = document.activeElement;
+    const inside = menu.contains(active);
+    const controlFocused = active === toggle || active === closeButton;
+    setOpen(wide.matches);
+    toggle.hidden = !compact.matches;
+    closeButton.hidden = !compact.matches;
+    if (compact.matches && inside) toggle.focus({preventScroll:true});
+    else if (wide.matches && (controlFocused || active === summary)) (navigation.querySelector('[aria-current="location"]') || links[0])?.focus({preventScroll:true});
+    else if (!compact.matches && !wide.matches && (controlFocused || inside)) summary.focus({preventScroll:true});
+  };
   syncLayout();
   wide.addEventListener('change', syncLayout);
+  compact.addEventListener('change', syncLayout);
+  toggle.addEventListener('click', () => {
+    setOpen(!menu.open);
+    if (menu.open) {
+      const current = navigation.querySelector('[aria-current="location"]');
+      current?.focus({preventScroll:true});
+      current?.scrollIntoView({block:'nearest'});
+    }
+  });
+  closeButton.addEventListener('click', () => setOpen(false, {restoreFocus:true}));
+  document.addEventListener('keydown', event => {
+    if (!compact.matches || !menu.open || event.key !== 'Escape') return;
+    event.preventDefault();
+    setOpen(false, {restoreFocus:true});
+  });
+  document.addEventListener('click', event => {
+    if (!compact.matches || !menu.open || outline.contains(event.target)) return;
+    setOpen(false, {restoreFocus:menu.contains(document.activeElement)});
+  });
   outline.hidden = !headings.length;
   function updateCurrent() {
     const top = document.querySelector('.atlas-site-header').getBoundingClientRect().bottom + 24;

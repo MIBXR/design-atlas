@@ -64,7 +64,7 @@
         "bundle": "agent/cases/rijksmuseum-art.json",
         "demo": "demos/rijksmuseum-art/index.html"
       },
-      "bundleSha256": "5c45b9e98704fd5134d0ba4698a5bed148ea6fc9323b7a3d37b64d2fe3656ad7"
+      "bundleSha256": "eff28acbe4398ff7d2ec49635966147e7169bad7a98811a37d83732f740bf868"
     }
   ]
 }

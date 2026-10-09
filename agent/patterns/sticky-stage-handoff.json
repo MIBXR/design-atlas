@@ -81,7 +81,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "9f0b334f557c51e47f3ad2aed9c6c05ea785e0febb09f1a8fbd1c8fb86b4f877"
+      "bundleSha256": "f6fb6fc68ba95022cde19e2e581afe19824a6657904ce810b601eb827301ef15"
     },
     {
       "id": "chatgpt-platform",
@@ -90,7 +90,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "8636a6eb15768e31c2504da850372c74f47300bd79dcc1d026c0719bba3be267"
+      "bundleSha256": "2bec14aac211952fc44900fc38357bab933891d97292d6681eae33b49afaed28"
     }
   ]
 }

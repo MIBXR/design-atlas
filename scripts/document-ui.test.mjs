@@ -9,11 +9,12 @@ const documents = [
   {path:'research/OVERVIEW.md', title:'调研方法', group:'研究方法与索引'},
 ];
 
-async function page(search = '', {headings, wide = true} = {}) {
+async function page(search = '', {headings, wide = true, compact = false} = {}) {
   const fetched = [];
   const links = [];
   const created = [];
   const events = new Map();
+  const media = new Map();
   let outlineHeadings = [];
   function element(tagName = 'div') {
     const attributes = {};
@@ -25,12 +26,20 @@ async function page(search = '', {headings, wide = true} = {}) {
       setAttribute(name, value) { attributes[name] = value; },
       removeAttribute(name) { delete attributes[name]; },
       remove() { node.removed = true; },
-      querySelector() { return links.find(link => link.attributes['aria-current'] === 'page'); },
+      querySelector(selector) {
+        if (selector === 'summary') return node.summary ||= element('summary');
+        return links.find(link => link.attributes['aria-current'] === (selector.includes('location') ? 'location' : 'page'));
+      },
+      contains(target) {
+        if (node.id === 'document-outline') return target?.id?.startsWith('document-outline') || links.slice(2).includes(target);
+        if (node.id === 'document-outline-menu') return target === node.summary || target?.id === 'document-outline-close' || links.slice(2).includes(target);
+        return children.includes(target);
+      },
       getBoundingClientRect() { return {top:node.position, bottom:88}; },
       scrollIntoView() { node.scrolled = true; node.position = 112; },
       focus() { document.activeElement = node; },
       addEventListener(name, listener) { listeners.set(name, listener); },
-      click() { listeners.get('click')?.(); },
+      click() { document.activeElement = node; listeners.get('click')?.(); },
     };
     created.push(node);
     if (node.tagName === 'A') links.push(node);
@@ -50,9 +59,14 @@ async function page(search = '', {headings, wide = true} = {}) {
       return nodes.get(selector);
     },
     querySelectorAll() { return created.filter(node => node.id && !node.removed); },
+    addEventListener(name, listener) { events.set('document:' + name, listener); },
   };
   const window = {DESIGN_ATLAS_DOCUMENTS:documents, innerHeight:900, scrollY:0,
-    matchMedia:() => ({matches:wide, addEventListener() {}}),
+    matchMedia:query => {
+      const match = {matches:query.includes('max-width') ? compact : wide, addEventListener(name, listener) { match.change = listener; }};
+      media.set(query, match);
+      return match;
+    },
     addEventListener(name, listener) { events.set(name, listener); },
   };
   const scope = {
@@ -74,6 +88,17 @@ async function page(search = '', {headings, wide = true} = {}) {
   }
   await vm.runInNewContext(source, scope);
   return {fetched, links, headings:outlineHeadings, document, window, node:selector => nodes.get(selector),
+    key(key) { events.get('document:keydown')?.({key, preventDefault() {}}); },
+    outside(target) { events.get('document:click')?.({target}); },
+    resize({wide, compact}) {
+      const changed = [];
+      for (const [query, match] of media) {
+        const matches = query.includes('max-width') ? compact : wide;
+        if (match.matches !== matches) changed.push(match);
+        match.matches = matches;
+      }
+      changed.forEach(match => match.change?.());
+    },
     scroll(positions) {
       outlineHeadings.forEach((heading, index) => { heading.position = positions[index]; });
       events.get('scroll')?.();
@@ -132,4 +157,58 @@ test('narrow document outline starts collapsed and restores focus to a selected 
   assert.equal(menu.open, false);
   assert.equal(fixture.document.activeElement, fixture.headings[1]);
   assert.equal(fixture.headings[1].tabIndex, -1);
+});
+
+test('mobile outline opens from its floating control, closes accessibly and yields to the main directory', async () => {
+  const fixture = await page('', {wide:false, compact:true, headings:[['h1','指南'], ['h2','操作']]});
+  const menu = fixture.node('#document-outline-menu');
+  const toggle = fixture.node('#document-outline-toggle');
+  assert.equal(menu.open, false);
+  assert.equal(toggle.hidden, false);
+  toggle.click();
+  assert.equal(menu.open, true);
+  assert.equal(toggle.attributes['aria-expanded'], 'true');
+  assert.equal(fixture.document.activeElement, fixture.links[2]);
+  fixture.key('Escape');
+  assert.equal(menu.open, false);
+  assert.equal(fixture.document.activeElement, toggle);
+  toggle.click();
+  fixture.node('#document-outline-close').click();
+  assert.equal(menu.open, false);
+  assert.equal(fixture.document.activeElement, toggle);
+  toggle.click();
+  fixture.links[3].click();
+  assert.equal(menu.open, false);
+  assert.equal(fixture.document.activeElement, fixture.headings[1]);
+  assert.equal(toggle.attributes['aria-expanded'], 'false');
+  toggle.click();
+  const directory = {id:'page-directory'};
+  fixture.document.activeElement = directory;
+  fixture.outside({id:'header-directory-toggle'});
+  assert.equal(menu.open, false);
+  assert.equal(fixture.document.activeElement, directory);
+});
+
+test('document outline moves focus to a visible control when its responsive layout changes', async () => {
+  const fixture = await page('', {headings:[['h1','指南'], ['h2','操作']]});
+  const menu = fixture.node('#document-outline-menu');
+  const toggle = fixture.node('#document-outline-toggle');
+  const summary = menu.querySelector('summary');
+  fixture.links[3].focus();
+  fixture.resize({wide:false, compact:true});
+  assert.equal(menu.open, false);
+  assert.equal(fixture.document.activeElement, toggle);
+  fixture.resize({wide:true, compact:false});
+  assert.equal(toggle.hidden, true);
+  assert.equal(menu.open, true);
+  assert.equal(fixture.document.activeElement, fixture.links[2]);
+  fixture.resize({wide:false, compact:false});
+  assert.equal(menu.open, false);
+  assert.equal(fixture.document.activeElement, summary);
+  fixture.resize({wide:false, compact:true});
+  assert.equal(fixture.document.activeElement, toggle);
+  fixture.resize({wide:false, compact:false});
+  assert.equal(fixture.document.activeElement, summary);
+  fixture.resize({wide:true, compact:false});
+  assert.equal(fixture.document.activeElement, fixture.links[2]);
 });

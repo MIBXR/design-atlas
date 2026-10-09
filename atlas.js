@@ -5,20 +5,6 @@ const $ = selector => document.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const docHref = file => `document.html?file=${encodeURIComponent(file)}`;
 const externalIcon = href => {try {const url=new URL(href,location.href);return /^https?:$/.test(url.protocol)&&url.origin!==location.origin?'<span class="atlas-external-icon" aria-hidden="true">↗︎</span>':'';}catch{return '';}};
-const cacheControls=document.createElement('section');
-cacheControls.className='cache-controls';
-cacheControls.innerHTML='<h3>已经下载的素材</h3><p>嵌入预览与独立页面共享当前站点的素材缓存。浏览器空间不足时会重新下载。</p><p id="cache-status" role="status">正在检查…</p><button id="cache-clear" class="copy-button" disabled>清除素材缓存</button>';
-$('#favorite-dialog').append(cacheControls);
-async function showCacheStatus(clear=false){
-  const status=$('#cache-status'),button=$('#cache-clear');
-  status.textContent=clear?'正在清除素材缓存…':'正在检查素材缓存…';button.disabled=true;
-  const api=window.DesignAtlasAssetCache;
-  const result=api?await api[clear?'clear':'status']():{available:false};
-  status.textContent=result.available?`${result.files} 项 · ${(result.bytes/1024/1024).toFixed(1)} MiB${clear?' · 下次打开时按需重新下载':''}`:'此浏览器暂不支持持久素材缓存，页面仍可正常加载。';
-  button.disabled=!result.available;
-}
-$('#favorite-manage').addEventListener('click',()=>showCacheStatus());
-$('#cache-clear').addEventListener('click',()=>showCacheStatus(true));
 const favoriteStore=window.DesignAtlasFavorites;
 let favorites=favoriteStore.ids('cases');
 let previewObserver;
@@ -121,7 +107,7 @@ $('#reset-search').onclick=()=>{
 $('#compare-open').onclick=$('#compare-go').onclick=()=>{if(selected.length<2){toast('先勾选 2–3 个条目的“加入比较”。');return;}location.hash='#compare';};
 $('#compare-clear').onclick=()=>{selected=[];updateTray();if(location.hash==='#compare')renderComparison();else if(!$('#collection').hidden)renderCards();};
 document.addEventListener('keydown',event=>{
-  if($('#favorite-dialog').open)return;
+  if($('#favorite-dialog').open||$('#asset-cache-dialog')?.open)return;
   if(event.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){
     event.preventDefault();
     if(window.DesignAtlasPatterns?.focusSearch())return;

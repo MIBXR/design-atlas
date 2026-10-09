@@ -828,20 +828,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "21f837e33a18fcf6017b2206e67bcb88472ce27ed09ea0b8c16548d33aec1005",
-      "bytes": 6333
+      "sha256": "7481544255bcea98c33b6129f2c03959923bbc55621b3fdad7e0992d20a5c8eb",
+      "bytes": 7875
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "45540b169acc624f71047f09540ace58da4ab991e07d98a168e624d0a2095437",
-      "bytes": 5770
+      "sha256": "cacf030432d402b9ad9e61bb00ed75a9299fcab2bd65d30cee153385a860998d",
+      "bytes": 6159
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "048af3620b84f0f994cf8b19bc8bf09594cc8a8c69b271af53d8ae613b099117",
-      "bytes": 7748
+      "sha256": "6374ca44723e99f9aae051e652a486ef3963262c1ec89c1d792e88d282c5e026",
+      "bytes": 9690
     },
     {
       "path": "entries/digital-dunhuang.json",
@@ -888,26 +888,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "fd79ea6a12381a7cd8650067a5f0978d8faef70a278bf5fbc5c8a7874836c343",
-      "bytes": 15644
+      "sha256": "56fbbd504b61c8e63097abddf91bde605bebbbfaaf6ad4427fa5f134b085dd8d",
+      "bytes": 17424
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "1ca3333d4fe9c20b5fe93f74e00cbe009b70de7efc8d9ec7a91aaed8bdd17862",
+      "bytes": 7242
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "c56fcc571ebca1282eac417621023d2b3283cc744a4bf9da81fd1d50955a1799",
-      "bytes": 15216
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

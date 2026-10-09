@@ -96,7 +96,7 @@
     const exampleTypes = { 'restrained-signal-color': 'visual', 'state-shape-feedback': 'micro-motion', 'directional-section-wipe': 'page-motion', 'sound-opt-in': 'sound', 'single-open-accordion': 'structure' };
     const type = exampleTypes[pattern.id];
     const sources = [...new Set(pattern.sources.map(source => source.caseId))];
-    return '<div class="demo-panel"><label class="pattern-live-source">选择来源 Demo<select id="pattern-demo-source" aria-label="选择巧思来源 Demo">' + sources.map(id => '<option value="' + esc(id) + '">' + esc(caseTitle(id)) + '</option>').join('') + '</select></label><div class="demo-toolbar"><span>SOURCE DEMO / 巧思来源实操</span><div><button data-viewport="desktop" aria-pressed="false">适应面板</button><button data-viewport="wide" aria-pressed="false">桌面 1440px</button><button data-viewport="mobile" aria-pressed="false">手机 ≤390px</button><button id="pattern-demo-start">载入 Demo</button><a id="pattern-demo-open" class="copy-button" href="' + esc(entries.find(entry => entry.id === sources[0])?.demo || '') + '" target="_blank" rel="noopener">独立打开 Demo</a></div></div><div id="pattern-live-frame" class="frame-wrap pattern-live-frame"><p>按需载入完整来源 Demo。在其中操作「' + esc(pattern.trigger) + '」，观察「' + esc(pattern.effect) + '」。</p></div><p class="demo-caption">完整来源保留多个机制与采集边界。适应面板按可用宽度响应；桌面 1440px 保留桌面布局与动效，手机 ≤390px 展示手机布局；独立打开可按原尺寸操作。</p>' + (type ? '<section class="pattern-local-example" aria-label="巧思抽象示意"><div data-pattern-playground data-type="' + type + '"></div><p class="demo-caption">本地抽象示意，使用通用内容和拟合参数。原始样式、声音与组合关系请在来源 Demo 中核对。</p></section>' : '');
+    return '<div class="demo-panel"><label class="pattern-live-source">选择来源 Demo<select id="pattern-demo-source" aria-label="选择巧思来源 Demo">' + sources.map(id => '<option value="' + esc(id) + '">' + esc(caseTitle(id)) + '</option>').join('') + '</select></label><div class="demo-toolbar"><span>SOURCE DEMO / 巧思来源实操</span><div><button data-viewport="desktop" aria-pressed="false">适应面板</button><button data-viewport="wide" aria-pressed="false">桌面 1440px</button><button data-viewport="mobile" aria-pressed="false">手机 ≤390px</button><button id="pattern-demo-replay" hidden>重播</button><a id="pattern-demo-open" class="copy-button" href="' + esc(entries.find(entry => entry.id === sources[0])?.demo || '') + '" target="_blank" rel="noopener">独立打开 Demo</a></div></div><div id="pattern-live-frame" class="frame-wrap pattern-live-frame"><div class="pattern-live-placeholder"><button id="pattern-demo-start" class="primary-button">载入 Demo</button><p>按需载入完整来源 Demo。在其中操作「' + esc(pattern.trigger) + '」，观察「' + esc(pattern.effect) + '」。</p></div></div><p class="demo-caption">完整来源保留多个机制与采集边界。适应面板按可用宽度响应；桌面 1440px 保留桌面布局与动效，手机 ≤390px 展示手机布局；独立打开可按原尺寸操作。</p>' + (type ? '<section class="pattern-local-example" aria-label="巧思抽象示意"><div data-pattern-playground data-type="' + type + '"></div><p class="demo-caption">本地抽象示意，使用通用内容和拟合参数。原始样式、声音与组合关系请在来源 Demo 中核对。</p></section>' : '');
   }
   function initPreviewPanel(pattern) {
     previewObserver?.disconnect();
@@ -106,16 +106,21 @@
       if (pattern.id === 'state-shape-feedback') local.querySelector('[data-feedback]').value = local.querySelector('.pg-micro').dataset.feedback = 'shape';
     }
     const frame = $('#pattern-live-frame');
+    const start = $('#pattern-demo-start');
+    const replay = $('#pattern-demo-replay');
     let loaded = false;
     const source = () => entries.find(entry => entry.id === $('#pattern-demo-source').value) || entries.find(entry => entry.id === pattern.sources[0].caseId);
     const controls = document.querySelectorAll('#pattern-detail [data-viewport]');
     previewObserver = window.DesignAtlasPreview.mount(frame, controls, source().id === 'chatgpt-platform' ? 'wide' : 'desktop');
     const load = () => {
       const entry = source();
+      const restoreFocus = document.activeElement === start;
       frame.innerHTML = '<iframe class="demo-frame" title="' + esc(entry.title) + '巧思来源交互 Demo" src="' + esc(entry.demo) + '"></iframe>';
-      loaded = true; $('#pattern-demo-start').textContent = '重播'; previewObserver.refresh();
+      loaded = true; replay.hidden = false; previewObserver.refresh();
+      if (restoreFocus) replay.focus({preventScroll:true});
     };
-    $('#pattern-demo-start').addEventListener('click', load);
+    start.addEventListener('click', load);
+    replay.addEventListener('click', load);
     $('#pattern-demo-source').addEventListener('change', () => {
       $('#pattern-demo-open').href = source().demo;
       if (loaded) load();
