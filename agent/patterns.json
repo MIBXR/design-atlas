@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "349f4d81dde9dd053a45301457fd6a21d68b5032c335abe24a4657403b641be7",
-  "patternCount": 126,
+  "contentVersion": "35fc09ff0b71eb92fe7255296160476973947877eb32559358e31cb15276b203",
+  "patternCount": 129,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
     {
@@ -58,7 +58,7 @@
       "paths": {
         "bundle": "agent/patterns/activity-title-ticket-overlap.json"
       },
-      "bundleSha256": "519c25877a65331aa0f7190db356c45ec5cbd3cd714c6527118258ff98d543b5"
+      "bundleSha256": "ac84d50120d1f899244d237213b2e281f10ef86d64cd94712cf78671bb83fd84"
     },
     {
       "id": "aligned-metadata-rows",
@@ -109,7 +109,7 @@
       "paths": {
         "bundle": "agent/patterns/aligned-metadata-rows.json"
       },
-      "bundleSha256": "fcc129e177fe80459f48dc95bb95828db9588a996ee910122cecf9a6dfdb4a8f"
+      "bundleSha256": "0f8a79cabeabcfb7774a4522d5cc64efe20d16e025dc962c1759044226fdf5f0"
     },
     {
       "id": "architectural-fragment-anchor",
@@ -179,7 +179,7 @@
       "paths": {
         "bundle": "agent/patterns/architectural-fragment-anchor.json"
       },
-      "bundleSha256": "94dc0c619b567e8e85bc628cfb0259f86e0b708207817222305024859e6180ed"
+      "bundleSha256": "ee63cd2b76b3097dd8edda70013f621702e42fa2556a3039690f024ededcf2b6"
     },
     {
       "id": "architectural-outline-whitespace",
@@ -250,7 +250,7 @@
       "paths": {
         "bundle": "agent/patterns/architectural-outline-whitespace.json"
       },
-      "bundleSha256": "ab544e417a0d6c911f694c20b7230e2c980eb1df13642153a7d8e83a74bb7fa4"
+      "bundleSha256": "e45fb16ff16d64cd6b3dfe8d99577ab8f58bd721218693b1003a2791d45eb5af"
     },
     {
       "id": "artwork-caption-separation",
@@ -329,7 +329,7 @@
       "paths": {
         "bundle": "agent/patterns/artwork-caption-separation.json"
       },
-      "bundleSha256": "d88d3219e837118d3190a586009da338a3cd52862f50a67ca36ec2c3526a0f46"
+      "bundleSha256": "2412575314e72943db0afecac255f3fcdb8005abe75ef2d0ef103b47bfe2e6a3"
     },
     {
       "id": "audio-signal-panel",
@@ -380,7 +380,7 @@
       "paths": {
         "bundle": "agent/patterns/audio-signal-panel.json"
       },
-      "bundleSha256": "f263d8af8f08df7373bd537f6cf24bdea1ec3165bbb14498b9c13ce0dd30b3f1"
+      "bundleSha256": "3dc969286eda2f9a4d5cad4a830420c76878b06313cb4b52f7bdea6499eedb57"
     },
     {
       "id": "avatar-pile-personality",
@@ -436,7 +436,7 @@
       "paths": {
         "bundle": "agent/patterns/avatar-pile-personality.json"
       },
-      "bundleSha256": "f0862d0c3bba8b78a954289b7088cd80d32065ca1a2c42b5a3e3915ddd6e8b0b"
+      "bundleSha256": "e7fee8a6843da10477a2b6de1720ac946c49d006782e2ec1ee6d3b8c93963528"
     },
     {
       "id": "blurred-layered-video-handoff",
@@ -503,7 +503,7 @@
       "paths": {
         "bundle": "agent/patterns/blurred-layered-video-handoff.json"
       },
-      "bundleSha256": "67ba705ecd2d0124b8b8c622608a63f1d50dcfd68b8ad5c13d61736201b70418"
+      "bundleSha256": "fe7dac734b3b2663c16ef6707d308f9c1fa6d2a09e4e22ff52fe5ca0a32a18bb"
     },
     {
       "id": "bounded-image-inspection",
@@ -577,7 +577,7 @@
       "paths": {
         "bundle": "agent/patterns/bounded-image-inspection.json"
       },
-      "bundleSha256": "447609cc304a042c2550b7caec71a673b035c578e4dd8932eef82b3fb2825677"
+      "bundleSha256": "bbfdeb6725bfadc16991d7c47545ca2ed7ef6a91a91f5accd5d2868c55bbfe36"
     },
     {
       "id": "bounded-panel-track",
@@ -663,7 +663,7 @@
       "paths": {
         "bundle": "agent/patterns/bounded-panel-track.json"
       },
-      "bundleSha256": "e574f16e681ff2d63b618f796b21216d5fc079c84ee95c6f74144524fc2ed6c1"
+      "bundleSha256": "10d4b365aa24e0ca719227a9cb2bdca8f6bd0c2a20b439ea4233fecaad8f1eaa"
     },
     {
       "id": "capability-bento-hierarchy",
@@ -735,7 +735,7 @@
       "paths": {
         "bundle": "agent/patterns/capability-bento-hierarchy.json"
       },
-      "bundleSha256": "822a6db541dc3b597a6a117edba140e7d3cfbc0198e4586d82c07a49d0ff0438"
+      "bundleSha256": "1c6f1b11970bc92b9ae6f2df66a80f212e33eb34b88d6d3506416348c4862b8d"
     },
     {
       "id": "center-aligned-section-index",
@@ -796,7 +796,7 @@
       "paths": {
         "bundle": "agent/patterns/center-aligned-section-index.json"
       },
-      "bundleSha256": "97476e4dad1b43ecd23a54ed9965989ede1520b8a57bf1440a214d68f2f45a14"
+      "bundleSha256": "9b5f91e144f7c582e4a3d48e4e2db96d918c725ac8dc20f6503299ee05a363df"
     },
     {
       "id": "centered-loop-gallery",
@@ -895,7 +895,7 @@
       "paths": {
         "bundle": "agent/patterns/centered-loop-gallery.json"
       },
-      "bundleSha256": "921a0054bb8e90db7c38f810dc0b38c3caebe9ed6292002a44eb24e44994973a"
+      "bundleSha256": "1b8f7c5d97137ce81f890ad421240dc51627364def3c62611281ea63431cae11"
     },
     {
       "id": "character-stage-coordination",
@@ -981,7 +981,7 @@
       "paths": {
         "bundle": "agent/patterns/character-stage-coordination.json"
       },
-      "bundleSha256": "71433f8cfb0ff1ded63d2e29ae98f87383c72c49b3e6a75464054da2586b3618"
+      "bundleSha256": "c6da952df997ab6e02ba9a59bea836fe6ff8c756ca1eb23b7ac6d14d0a9676af"
     },
     {
       "id": "character-voice-ownership",
@@ -1067,7 +1067,7 @@
       "paths": {
         "bundle": "agent/patterns/character-voice-ownership.json"
       },
-      "bundleSha256": "1d16e4a5783b1bc43c67cba5b0f2b52946d9f45e5e8aef68f6d7ca62be1362b7"
+      "bundleSha256": "2486668598d170d7afd3430cec7e69f77fa31074008f590c2cf4317eb8558f2e"
     },
     {
       "id": "checklist-progress",
@@ -1120,7 +1120,7 @@
       "paths": {
         "bundle": "agent/patterns/checklist-progress.json"
       },
-      "bundleSha256": "6e8ba621ceb44a4547dd513e8c61566109086c1c2934a8f4280b68ba4e9b9f1a"
+      "bundleSha256": "0b92887f42b783ce7904a6380476fcbc626474d9a3d6f73763891244ce8bfe22"
     },
     {
       "id": "client-logo-marquee",
@@ -1192,7 +1192,7 @@
       "paths": {
         "bundle": "agent/patterns/client-logo-marquee.json"
       },
-      "bundleSha256": "03e2eedd366e8b16dd8da47ea05e08d876fa50e6085c9ebd013a3e864effc41f"
+      "bundleSha256": "71c0c9b4613576f39dec3a4752efe1abf58cec03305b3f83c72e4d9664161e4a"
     },
     {
       "id": "clip-tail-advance",
@@ -1254,7 +1254,7 @@
       "paths": {
         "bundle": "agent/patterns/clip-tail-advance.json"
       },
-      "bundleSha256": "7ca70bdeb8dff203cb49f503f7504073d9602773294d3e28c9aa88c6ffb36618"
+      "bundleSha256": "d2892852f01a7cdb7a3c2c777a894477fb187d39008da60e788e041450b701fb"
     },
     {
       "id": "compact-scroll-header",
@@ -1316,7 +1316,7 @@
       "paths": {
         "bundle": "agent/patterns/compact-scroll-header.json"
       },
-      "bundleSha256": "89482058a5d85b825c1838a37fabf3cc86c798a54c9f0c9278a990f2eb0fb2ca"
+      "bundleSha256": "371546aad4bd3b34aae46063de7afd23d349017274acd5081cbb55d7c7766324"
     },
     {
       "id": "continuous-bgm-bridge",
@@ -1393,7 +1393,7 @@
       "paths": {
         "bundle": "agent/patterns/continuous-bgm-bridge.json"
       },
-      "bundleSha256": "fea1a2ea9b2234f641c1284d5b5d19461eed2e63863555032638a18cef41ef47"
+      "bundleSha256": "284a52bea6d7a3c76f542d7fe12253d156575c7c39abedfb4f5bc547ea58d77c"
     },
     {
       "id": "controlled-rough-outlines",
@@ -1445,7 +1445,7 @@
       "paths": {
         "bundle": "agent/patterns/controlled-rough-outlines.json"
       },
-      "bundleSha256": "174a917e08a412c121e79043fe166955156b55f94ffbd09481fdb64a8adaf5d3"
+      "bundleSha256": "d5ab3396d4bf26c5dd697c62a3d40e7ea9bfa17e82a9ee04490b88915a40d800"
     },
     {
       "id": "current-state-svg-export",
@@ -1495,7 +1495,7 @@
       "paths": {
         "bundle": "agent/patterns/current-state-svg-export.json"
       },
-      "bundleSha256": "072acda5a81a7a7045e41f93541bf909ae3bc9db5bb36f9b5329bbce3608c5b4"
+      "bundleSha256": "d184f9c57d07412a52c13aa62bde5686c86c1b85f4fef47838f9c7815b9956ea"
     },
     {
       "id": "department-code-matrix",
@@ -1574,7 +1574,7 @@
       "paths": {
         "bundle": "agent/patterns/department-code-matrix.json"
       },
-      "bundleSha256": "454709ffe2480ab6d548cf6ecf2858f3e72ea6a0def59c4eba504ef736e98da8"
+      "bundleSha256": "ce2747f3cb940a9940d07e87a74af6d10cf0ea761bed09cc23b19624b76d9b35"
     },
     {
       "id": "direct-purpose-navigation",
@@ -1646,7 +1646,7 @@
       "paths": {
         "bundle": "agent/patterns/direct-purpose-navigation.json"
       },
-      "bundleSha256": "79fb38a8107537791c3210d263dbf3c9deecfb1e7e3b9ca4543abd60167fcc0f"
+      "bundleSha256": "f784f5eb578591596f177b07fb65b4b7c4c0b84a328ae896c1f6043844912800"
     },
     {
       "id": "directional-section-wipe",
@@ -1711,7 +1711,7 @@
       "paths": {
         "bundle": "agent/patterns/directional-section-wipe.json"
       },
-      "bundleSha256": "a0a460664f150fbf85d915a7477bb129fa782c7a962ff83f00d03ba60f36144a"
+      "bundleSha256": "50d26ba2a30d65b02e1be502a93509cbf53da5bbd0a73252dd240e3c9cc10598"
     },
     {
       "id": "directional-sticky-navigation",
@@ -1767,7 +1767,7 @@
       "paths": {
         "bundle": "agent/patterns/directional-sticky-navigation.json"
       },
-      "bundleSha256": "ae5de335c9d317509f829477d593d68a64b7a78ae3ffe5d64867a0e397bf6950"
+      "bundleSha256": "f2b0b1baf22a72423e31747eb4853fc5f74f92aaa27b6ea733f1462df1c21648"
     },
     {
       "id": "discovery-progress-journal",
@@ -1824,7 +1824,7 @@
       "paths": {
         "bundle": "agent/patterns/discovery-progress-journal.json"
       },
-      "bundleSha256": "b978fa0eba25bde6d2fa13d943f4e6392023caf8413705ccb4f305931ebb526a"
+      "bundleSha256": "0ef973f31ccf6f3787e06a4ac33491f283b62c7c7bc6bcafec0671c1edd0b4d7"
     },
     {
       "id": "edge-action-world-composition",
@@ -1880,7 +1880,7 @@
       "paths": {
         "bundle": "agent/patterns/edge-action-world-composition.json"
       },
-      "bundleSha256": "ee47209eb88052ef1f42aaaa2c4f9025c02e9c11c1a98719150412f721994894"
+      "bundleSha256": "f7dacd053708a501c3c95ec99f9863b18d29a927d86896a23d54dcc11e52c200"
     },
     {
       "id": "editorial-alignment-grid",
@@ -1937,7 +1937,7 @@
       "paths": {
         "bundle": "agent/patterns/editorial-alignment-grid.json"
       },
-      "bundleSha256": "216212315652a45c94e42f923cbe8b59bd09eec1124f9ffa66de92ea38a0c821"
+      "bundleSha256": "2ccb821fd2c604179d6b3d8dea8ff5dbd3f7b7b9d55093a3a1a705de91c9287a"
     },
     {
       "id": "explicit-facet-summary",
@@ -2010,7 +2010,7 @@
       "paths": {
         "bundle": "agent/patterns/explicit-facet-summary.json"
       },
-      "bundleSha256": "34c287c89527c5782897c86d2935450d0b071039e00027a270221874beff2c2d"
+      "bundleSha256": "1b3c058399c6bbb9ac0147d511e39a0c3bb6ea0200a86048b06c73e91b5adb83"
     },
     {
       "id": "exploded-layer-view",
@@ -2063,7 +2063,7 @@
       "paths": {
         "bundle": "agent/patterns/exploded-layer-view.json"
       },
-      "bundleSha256": "0afefb7edaaa2611b414dca46e0654a4aae63865c244425958f2c0bc88018c0a"
+      "bundleSha256": "1ffaf1ed852f0fb86c735583b5008dc985ea62d361114ab05278a0b81f34e88d"
     },
     {
       "id": "film-overlay",
@@ -2148,7 +2148,7 @@
       "paths": {
         "bundle": "agent/patterns/film-overlay.json"
       },
-      "bundleSha256": "ab4642aac524acb94d3f9866480097dfeec3b952bbb98cf927af5b72a412dce6"
+      "bundleSha256": "5122cc2652de3640983f82e6f521e0892571adf32b0ae41e139d295c5fbd73d3"
     },
     {
       "id": "filter-count-feedback",
@@ -2212,7 +2212,7 @@
       "paths": {
         "bundle": "agent/patterns/filter-count-feedback.json"
       },
-      "bundleSha256": "f832d4abcdd545ff3f203b7082fd84355039052d4eb32cfadb464e43ea2f97f4"
+      "bundleSha256": "bb9922cfd5a266ff5d2aba139f21474b7967439ad9bd98d51347d421ee9e6184"
     },
     {
       "id": "fixed-star-glow-layer",
@@ -2273,7 +2273,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-star-glow-layer.json"
       },
-      "bundleSha256": "6699fba308533796683c669a5b5d8c2c35d62a2d83c23007a9c8030f355d6ed9"
+      "bundleSha256": "e98191c102addf04de625e9e4fd075c38f92a57f464a00938fc6a8eb251ccb05"
     },
     {
       "id": "fixed-task-timeline",
@@ -2330,7 +2330,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-task-timeline.json"
       },
-      "bundleSha256": "2fa0b0a507e4b8713f8abf020d28b59798daa8b49db4a7bcfe1dd00e551f86a3"
+      "bundleSha256": "7d008746cb038e591fd3454eaffdf31350b835421e72f7d58a259bb186436d59"
     },
     {
       "id": "fixed-topology-morph",
@@ -2389,7 +2389,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-topology-morph.json"
       },
-      "bundleSha256": "df2f0a435d01df00144e9e7c4f72a681cad819d4d538ce3cae99731c394c7ab8"
+      "bundleSha256": "60ea26e7de36c862ac7f2fecfaeeeb9bb28db6a67e9f3d0ac213ea1c8241b670"
     },
     {
       "id": "folded-wave-hero",
@@ -2447,7 +2447,7 @@
       "paths": {
         "bundle": "agent/patterns/folded-wave-hero.json"
       },
-      "bundleSha256": "40ddbb45d19304d3a17dd8787497857ae36eac94125f8404958cc1091424b15e"
+      "bundleSha256": "d2115ea7c3b283fe4d7b1d59b54954698710177d9fddbad8d04ba37a12ed1eb9"
     },
     {
       "id": "footer-aware-back-to-top",
@@ -2503,7 +2503,7 @@
       "paths": {
         "bundle": "agent/patterns/footer-aware-back-to-top.json"
       },
-      "bundleSha256": "05d767d37cdebb4051d1965157ae7a2c3b3ce2113130377291ab2b09f110a2cd"
+      "bundleSha256": "3555e58244b2950525adbb21b599d9f57e807112d79cd80dbd9d503c1dadc6d4"
     },
     {
       "id": "full-bleed-photography-brand",
@@ -2560,7 +2560,7 @@
       "paths": {
         "bundle": "agent/patterns/full-bleed-photography-brand.json"
       },
-      "bundleSha256": "d5beeeff5741313baaf0fd6e186e58d4e4aabfaca95e400c012277eff85d5e01"
+      "bundleSha256": "003e2c7945d3f5444af938e3cfa41a8e0198dd694d5904288a585b2f3ab2798e"
     },
     {
       "id": "fullscreen-photography-menu",
@@ -2621,7 +2621,7 @@
       "paths": {
         "bundle": "agent/patterns/fullscreen-photography-menu.json"
       },
-      "bundleSha256": "a22fdbef329d9f020c32fd20afcf49d1b3e9084b18fe63803b4d0af361d64d3d"
+      "bundleSha256": "f9395acbb2bdc2c63690157c753c07ad428e4d59101b506584132b5976bc66b6"
     },
     {
       "id": "geometric-balance-presets",
@@ -2672,7 +2672,7 @@
       "paths": {
         "bundle": "agent/patterns/geometric-balance-presets.json"
       },
-      "bundleSha256": "cb4fde022b364ee9d38c0cea826ce64f23fe884edd2d734460e3dfef18a9ea42"
+      "bundleSha256": "27d5137fa9a585b00be55444afb566e0b0832e0af8d3488d225e1eb1a83f3d49"
     },
     {
       "id": "half-paper-category-label",
@@ -2743,7 +2743,7 @@
       "paths": {
         "bundle": "agent/patterns/half-paper-category-label.json"
       },
-      "bundleSha256": "c1052232bba770039295848b7c3c6a58ac6c06c89fea1ef5717df3355831027d"
+      "bundleSha256": "3ff42a0048226858e3cb2f8938e4adda19c2561ec01173099d65fced4e0f87a2"
     },
     {
       "id": "hatched-registration-type",
@@ -2817,7 +2817,7 @@
       "paths": {
         "bundle": "agent/patterns/hatched-registration-type.json"
       },
-      "bundleSha256": "238cfe904223e290bbdeebea3a8a123ddfaac2f7a3a8fa7c1a54ec3cd6affeb4"
+      "bundleSha256": "3b477502be9d89f16240c1e901c3a1c0ddb057dc8e60e405644751d6e49bee2f"
     },
     {
       "id": "header-below-mobile-navigation",
@@ -2878,7 +2878,7 @@
       "paths": {
         "bundle": "agent/patterns/header-below-mobile-navigation.json"
       },
-      "bundleSha256": "e2e0a89cf7dfc17656efc61957c4cc3f6c4c3694e734b1471e28a86876e1512c"
+      "bundleSha256": "742c9fc8a3ecfaa931979545e282cdf3a7f7a115987f797efee4fd0e23eea4c7"
     },
     {
       "id": "heatmap-focus-tooltip",
@@ -2938,7 +2938,7 @@
       "paths": {
         "bundle": "agent/patterns/heatmap-focus-tooltip.json"
       },
-      "bundleSha256": "92f6812d5e1a5426727f11e049a9ecd7af5392ba81c4a57938c51dd0b0fd2cbf"
+      "bundleSha256": "3c9dc397c1b2dd8776a158736505b32b36cf7b1d73570dcf0aecc22e64843666"
     },
     {
       "id": "highlight-progress-gallery",
@@ -3000,7 +3000,7 @@
       "paths": {
         "bundle": "agent/patterns/highlight-progress-gallery.json"
       },
-      "bundleSha256": "182cba066bd14f326e507948669f9d0bc36f3e5751cb6de3fbbb7ceba939d2d9"
+      "bundleSha256": "ac92fcf7a7804cc11716206baccf6ecb1d0db83a8ce5a429e60ce09a04420d6b"
     },
     {
       "id": "hover-focus-mode-selection",
@@ -3059,7 +3059,7 @@
       "paths": {
         "bundle": "agent/patterns/hover-focus-mode-selection.json"
       },
-      "bundleSha256": "c5e76a5758dfe0b65f90fa1130f5d5b0a22298307e96c275ef2ed4b5f7e5f13a"
+      "bundleSha256": "645996597f1ecdbf96f80ae18bd8d2700cb8a57ebf589f1c577ad2795e07bcf3"
     },
     {
       "id": "idle-interface-retreat",
@@ -3120,7 +3120,7 @@
       "paths": {
         "bundle": "agent/patterns/idle-interface-retreat.json"
       },
-      "bundleSha256": "2325a24b2485e2fa62092d4988d81f70e5315fd4f1ac5223b0bc0be35cb85123"
+      "bundleSha256": "dd350c034e209e97824cd6e912b7b6ee04c9ee4c073b6247ff00f3fbfc97a410"
     },
     {
       "id": "image-destination-mosaic",
@@ -3191,7 +3191,7 @@
       "paths": {
         "bundle": "agent/patterns/image-destination-mosaic.json"
       },
-      "bundleSha256": "8fd3049e3a664bf4400f44d0c5c4158dfe8d193357c98a6048f16ab6f5350d83"
+      "bundleSha256": "359b246f69b69bd7c7d24568ecf480e6ba2682125de7e6bdbdda3aa0f3420c87"
     },
     {
       "id": "inclined-motion-bands",
@@ -3260,7 +3260,7 @@
       "paths": {
         "bundle": "agent/patterns/inclined-motion-bands.json"
       },
-      "bundleSha256": "a46cdade1823e098c27c3e26ec453708759b69be3f9387ffab76ae71240416db"
+      "bundleSha256": "fd96361a2879c605db6858db00e014941081c7cc8514864524c2dd9bce965897"
     },
     {
       "id": "independent-character-page",
@@ -3317,7 +3317,7 @@
       "paths": {
         "bundle": "agent/patterns/independent-character-page.json"
       },
-      "bundleSha256": "ffa985ab2c9b7242409f722c8919ee1b275822237daa08d51315f74693deee8c"
+      "bundleSha256": "fff77077f9c0f8883b46015cde890f44bb31712e2c54127669cf57802fdee97e"
     },
     {
       "id": "independent-outfit-state",
@@ -3373,7 +3373,7 @@
       "paths": {
         "bundle": "agent/patterns/independent-outfit-state.json"
       },
-      "bundleSha256": "227fd216cc10c93af36dc2ebd9e9da848271da36d6272f0f11d57c7b5e1efe25"
+      "bundleSha256": "66103dedfd627a23962e0159270dc1cb780c5b82eac97bfff87a56e0a5ab32e1"
     },
     {
       "id": "inline-detail-disclosure",
@@ -3451,7 +3451,7 @@
       "paths": {
         "bundle": "agent/patterns/inline-detail-disclosure.json"
       },
-      "bundleSha256": "55cd76d96320f05f7d289f184d47575d6e2f2c6ad65a75e4b3f14b6e93393a9f"
+      "bundleSha256": "f5fe37858c3acdacc1a98d9f7dbf5dcdae88b81f8c690f3139a5480849462a76"
     },
     {
       "id": "inline-product-detail-viewer",
@@ -3507,7 +3507,7 @@
       "paths": {
         "bundle": "agent/patterns/inline-product-detail-viewer.json"
       },
-      "bundleSha256": "b06fa5af396e33a67db3072488c5037501b595709cf77a5e72682d123e932911"
+      "bundleSha256": "9677e5ae7b9f364b8aaffa30844160c364a631211140b39c3989cb24596b56fb"
     },
     {
       "id": "instant-open-menu-category-switch",
@@ -3571,7 +3571,7 @@
       "paths": {
         "bundle": "agent/patterns/instant-open-menu-category-switch.json"
       },
-      "bundleSha256": "6048b7845d407921cc11559df598f2744f12da2d30e86b1c64ba1f66ff83afec"
+      "bundleSha256": "06e0724a5ddb702ffe6573d7c61d6997cb45395f7331c3b1bd2cc093e25b2b0c"
     },
     {
       "id": "institution-overlap-logo",
@@ -3628,7 +3628,7 @@
       "paths": {
         "bundle": "agent/patterns/institution-overlap-logo.json"
       },
-      "bundleSha256": "9d0b46bdace576126aa9086962c7266af7dde09a06d1d59d225a2ba2451037fd"
+      "bundleSha256": "fa0d27c9900037bfd7dfef0b3bf2b6f4a70746e56139f8d81112788fa4823c66"
     },
     {
       "id": "integer-pixel-canvas",
@@ -3684,7 +3684,7 @@
       "paths": {
         "bundle": "agent/patterns/integer-pixel-canvas.json"
       },
-      "bundleSha256": "57ebdbb070d1fc6aae430085cacdd07e46a91bec86840e2c83722c1a551512cc"
+      "bundleSha256": "aee53e7aa18fae702485c4edec8e8bcd7a17d0751e89ab0f0b417b0b5892ef86"
     },
     {
       "id": "interruptible-morph",
@@ -3743,7 +3743,7 @@
       "paths": {
         "bundle": "agent/patterns/interruptible-morph.json"
       },
-      "bundleSha256": "4125b26f0ad2b5c535635087b54b6351c355bdcaed362a0d45fe067c4cd3c9ca"
+      "bundleSha256": "71baa19341ea1e8af583dcd6d5b2b3ecc0af53a5253ba579c90d42b86b465503"
     },
     {
       "id": "keyboard-playable-notes",
@@ -3794,7 +3794,7 @@
       "paths": {
         "bundle": "agent/patterns/keyboard-playable-notes.json"
       },
-      "bundleSha256": "0eb360fba6859533ddd5c550699d69adb127f97cf0d58b842bf42bd241a50d82"
+      "bundleSha256": "c08e866c317c0b894c03e15eb52836309e201e4a3d3a5a78e51a3d88cfa57fde"
     },
     {
       "id": "last-request-transition",
@@ -3897,7 +3897,7 @@
       "paths": {
         "bundle": "agent/patterns/last-request-transition.json"
       },
-      "bundleSha256": "1a361d9b17d911a635a109aace65c979c5743fbb1dbec6f797216f1a32875357"
+      "bundleSha256": "0223c3588f093c6f4152cf88a54b85742ddf7fbd3c21c66b799ce20905af2cd3"
     },
     {
       "id": "layer-focus-dimming",
@@ -3950,7 +3950,97 @@
       "paths": {
         "bundle": "agent/patterns/layer-focus-dimming.json"
       },
-      "bundleSha256": "967fd7d02f895dd5a419c8c79d748298c2f0c1f88d85d82d41e2034a3687292d"
+      "bundleSha256": "768487c3f2afa6a009a0cd34ce16bc63e0cc35cb10bb05beadb7776cc1f53afd"
+    },
+    {
+      "id": "layered-directional-media-reveal",
+      "title": "黑层、信号层与媒体的方向揭示",
+      "category": "交互反馈",
+      "summary": "黑色遮层、强调色与实际图像依次揭示，让局部相册切换有明确方向和节奏。",
+      "mechanism": "组件内将黑层、信号色层、实际图像或影片叠为同方向裁切/slide-in，错峰推进；说明文字先退后入，选中索引、页码和媒体共同交接，旧媒体完成后暂停并清理。",
+      "trigger": "点击局部相册的前后或编号，选择新的图像/影片",
+      "effect": "先看到交接边界，再看到当前内容，媒体与编号/说明保持同一归属。",
+      "useCases": [
+        "多项技术演示相册",
+        "图像与影片混合的功能模块",
+        "有固定说明位置的案例轮播"
+      ],
+      "avoid": [
+        "把局部换图改成整页滚轮劫持",
+        "仅将图片scaleY伪装成三层揭示",
+        "叠加无上限离场层或继续播放旧视频",
+        "用信号色遮住稳定正文"
+      ],
+      "constraints": [
+        "黑层、强调色层和媒体是真实独立层，沿同一方向交接；媒体是实际图像/视频，不能用同一张图反复染色冒充三层。",
+        "此原子只负责组件内选择交接，区别于directional-section-wipe的整屏章节切换；竖向类别书脊由vertical-media-spine承担，可单独使用。",
+        "索引、页码、说明和素材用同一目标状态，正反与端点一致，旧视频暂停/离场层移除；快速输入采用明确锁或最新请求策略并单独测试。",
+        "来源参数400ms及delay0/250/500、文字500/500ms已由源码采集；本地四玩法视频与4→3、AIC五项图/正文/页码及5→1→5双向、有限中态实测，源同帧时序与快输入未全面验证。",
+        "减少动态即时切至目标媒体与可读说明；来源品牌黄可换为目标任务信号色，状态同时用文字、编号与按钮语义表达。"
+      ],
+      "composition": {
+        "role": "support",
+        "notes": "方向层负责局部媒体交接，书脊负责类别归属，两者解耦。可接共享选择状态与生命周期，文字保持稳定阅读区域；不接管整页滚动，也不同时运行两套章切控制器。",
+        "pairsWellWith": [
+          "vertical-media-spine",
+          "last-request-transition",
+          "viewport-animation-lifecycle"
+        ],
+        "conflicts": []
+      },
+      "accessibility": {
+        "keyboard": "前后/编号按钮有名称和可见焦点，端点disabled与aria同步；目标说明和页码在正常DOM中更新，稳定后只有当前媒体可操作，焦点不随视觉层漂移。",
+        "reducedMotion": "跳过三层位移与文字离场，立即显示目标媒体/编号/说明；视频另有暂停和静态封面，换项仍停止旧片。"
+      },
+      "parameters": [
+        {
+          "name": "三层顺序",
+          "value": "black → signal → media；每层400ms",
+          "note": "来源相册slide-in，黑层为交接边界，信号层不是稳定阅读底色。"
+        },
+        {
+          "name": "错峰与总跨度",
+          "value": "delay0/250/500ms；总900ms",
+          "note": "对应黑/黄/实际媒体三层，不是让加载器定时伪造进度。"
+        },
+        {
+          "name": "说明交接",
+          "value": "退出500ms / 进入500ms",
+          "note": "素材、页码与正文由一个选择状态关联；主页面保持自然滚动。"
+        },
+        {
+          "name": "本地已观察中态",
+          "value": "黑clip0；黄4.41%；媒体top100%",
+          "note": "AIC1→2一次浏览器采样及最终2/5、02图/outgoing0；不表示源/本地所有帧逐项相同。"
+        }
+      ],
+      "prompt": "为【图像/影片相册】实现组件内黑层→信号层→媒体的同方向揭示。保留三个独立层，以来源400ms、delay0/250/500总900ms作可调基线，说明500ms退出/500ms进入；不要只用scaleY缩放一张图。一个目标选择同步素材、编号、页码和正文，旧视频暂停、旧离场层清理；前后/端点/快速输入的锁或最新请求策略明确。局部换项不接管整页滚轮，竖向类别书脊保持独立静态构成。按钮可键盘操作、有名称与焦点，稳定后只有当前层可交互；减少动态直接给目标媒体与可读说明，视频保持主动暂停。用目标任务信号色替代源品牌黄，核验真实中态和终态，区分源码时序、本地局部实测与尚未逐项的源同帧对照。",
+      "sources": [
+        {
+          "caseId": "endfield-industrial",
+          "locator": "entries/endfield-industrial.json#interaction/5",
+          "observation": "玩法/AIC：4段原玩法视频和5张原工业图；400ms三层方向揭示，黑层delay0/黄250/实际媒体500，总900ms；文字500ms退出/500ms进入，内容/编号/分页共同变化。",
+          "evidence": "observed",
+          "referenceUrl": "https://endfield.hypergryph.com/",
+          "capturedAt": "2026-10-09"
+        }
+      ],
+      "sourceFiles": [
+        "entries/endfield-industrial.json",
+        "research/endfield-industrial.md",
+        "demos/endfield-industrial/fidelity.md",
+        "demos/endfield-industrial/state-matrix.md",
+        "demos/endfield-industrial/source-provenance.json",
+        "demos/endfield-industrial/index.html",
+        "demos/endfield-industrial/reference.css",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/app.js",
+        "demos/endfield-industrial/data.js"
+      ],
+      "paths": {
+        "bundle": "agent/patterns/layered-directional-media-reveal.json"
+      },
+      "bundleSha256": "e4d7ebcf8f0343eca45da0859566433af81a92e629745bd4536a740c65009fac"
     },
     {
       "id": "layered-navigation-drawer",
@@ -4011,7 +4101,7 @@
       "paths": {
         "bundle": "agent/patterns/layered-navigation-drawer.json"
       },
-      "bundleSha256": "329469cb62e72676405a6ab41f36f66aa21e835be8beb4fa3404bedb956b4047"
+      "bundleSha256": "cb55c76af7bb3a6aa1649ca3d59dda59f1285bd7a46f3a5cf9eb2f07e31ec977"
     },
     {
       "id": "live-parameter-readout",
@@ -4083,7 +4173,7 @@
       "paths": {
         "bundle": "agent/patterns/live-parameter-readout.json"
       },
-      "bundleSha256": "af06f83658477c76ad758fa8029f289284b6e9f07e2e7e6fe70e870773b84820"
+      "bundleSha256": "1806ed0df97f88d975266a10202af540fb6cf30ff5183f2eecabb782107dd3e8"
     },
     {
       "id": "load-completion-brand-marker",
@@ -4163,7 +4253,7 @@
       "paths": {
         "bundle": "agent/patterns/load-completion-brand-marker.json"
       },
-      "bundleSha256": "b786603531514502284a10a1dbf64adbd7a52058315136dc5a43c349a8596d8b"
+      "bundleSha256": "4901716fc6665d705864e49138a7e45128e5f40c1f326698889c46a19c39da49"
     },
     {
       "id": "local-code-theme-preview",
@@ -4219,7 +4309,7 @@
       "paths": {
         "bundle": "agent/patterns/local-code-theme-preview.json"
       },
-      "bundleSha256": "c562534199edbe7a105dfcd2880639f5ff830e702b46dfb942ca7dc8151e85f7"
+      "bundleSha256": "2cc452fc4b2f954429b34a5ed1f47c010d1a24addde34e7898c0558cd9b663c4"
     },
     {
       "id": "local-save-toggle",
@@ -4267,7 +4357,7 @@
       "paths": {
         "bundle": "agent/patterns/local-save-toggle.json"
       },
-      "bundleSha256": "d7771eed510efb156d1ea6db1bd5ae0cd8c28c0f9f012226687c3ad80585861b"
+      "bundleSha256": "8527e0f5792bb5602ae554b8388d47d240aaf6f01aca172856f5ae8dd64607d7"
     },
     {
       "id": "masked-transaction-rotation",
@@ -4324,7 +4414,7 @@
       "paths": {
         "bundle": "agent/patterns/masked-transaction-rotation.json"
       },
-      "bundleSha256": "bf59d9408c57731a515ee764f97b4820b21693b550d8d8ff74eea7482b171dea"
+      "bundleSha256": "3a11ebba0a5fd5d58154f4cbfbb190240415f8c19ec62fbcb0efec01978de9c2"
     },
     {
       "id": "measured-width-action-pill",
@@ -4386,7 +4476,7 @@
       "paths": {
         "bundle": "agent/patterns/measured-width-action-pill.json"
       },
-      "bundleSha256": "0b4b67a3ced2a2c8efc153e8999a910e5bc7e94b0f9d33c60a94f87581f8cd68"
+      "bundleSha256": "e90f0c19088e4d502032abf60d23ef2ad6d0e5fc25a0ba7196323a9db965b85f"
     },
     {
       "id": "message-to-board-demonstration",
@@ -4443,7 +4533,7 @@
       "paths": {
         "bundle": "agent/patterns/message-to-board-demonstration.json"
       },
-      "bundleSha256": "37af42e33bfb56917c674099a2b7c7609fc034ced5b6b8c9be0a27c83c86104f"
+      "bundleSha256": "0314dfd7ff81bf15466a8b2730e343d4cb443428486451c11197c08c69ae0fb2"
     },
     {
       "id": "metric-explanation-selector",
@@ -4500,7 +4590,7 @@
       "paths": {
         "bundle": "agent/patterns/metric-explanation-selector.json"
       },
-      "bundleSha256": "9b803e23858f236970793c1f4f8abeb71d8ef5718c9b8be6e660f7a334a737a7"
+      "bundleSha256": "7ddef55e1336b8c9d90e8488d004578704cf11b594de966678851ec8c1ae70a5"
     },
     {
       "id": "mixed-ratio-archive-columns",
@@ -4564,7 +4654,7 @@
       "paths": {
         "bundle": "agent/patterns/mixed-ratio-archive-columns.json"
       },
-      "bundleSha256": "5dd31958e1194fafaa24fe9b36e14a90cb31b39e795ebe82dfae05f5b10037b7"
+      "bundleSha256": "f1f955fc72b1f1712c46eaaae76df30cfd41dcf28ac403efa1578dea678f9777"
     },
     {
       "id": "mobile-drilldown-menu",
@@ -4622,7 +4712,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-drilldown-menu.json"
       },
-      "bundleSha256": "b594c4851f9bd049fd72494eee4f22428e28d8cd6f406de4f4a4a2151fba99a2"
+      "bundleSha256": "c33507cb25440e0351c760f9a079341d30a7003db31566bfabb883535a783351"
     },
     {
       "id": "mobile-media-prioritization",
@@ -4693,7 +4783,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-media-prioritization.json"
       },
-      "bundleSha256": "8032d72c1a6e50c524f7272c11938ffa04ae49bec6ee2fde799805c0cdc9c90e"
+      "bundleSha256": "f01f160c79655483534b81bc57db8ed25e27ff21d16ddfec4a7174753e23b286"
     },
     {
       "id": "mobile-native-mode-cards",
@@ -4752,7 +4842,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-native-mode-cards.json"
       },
-      "bundleSha256": "503d4c874ff80797dc9c8b94d3229575c69c2047eab8f1fd9610346e04e94380"
+      "bundleSha256": "d7d75e7fa0cce8d32d2be24c870c924b0a04793df6991621c2b39a04268557bf"
     },
     {
       "id": "mobile-single-open-navigation",
@@ -4810,7 +4900,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-single-open-navigation.json"
       },
-      "bundleSha256": "e052c3b0dfb5247e8c3bcc3d9214782114a67c4342b8348670ee41727c141ef7"
+      "bundleSha256": "a675f76c861b14b9228d005e3da94fde32e94543b7dc24068d417efde1377b5f"
     },
     {
       "id": "mode-character-accent",
@@ -4868,7 +4958,7 @@
       "paths": {
         "bundle": "agent/patterns/mode-character-accent.json"
       },
-      "bundleSha256": "afa9e61e639c01cedd43a659cbcdb84cb61519725a29da8ae69b541338db540b"
+      "bundleSha256": "d966e84149047ddbd7766da033ca489475dda71fbd1041fb4b16b6bc1d2b081b"
     },
     {
       "id": "mode-specific-collage",
@@ -4927,7 +5017,7 @@
       "paths": {
         "bundle": "agent/patterns/mode-specific-collage.json"
       },
-      "bundleSha256": "20379cc1a15f7c8d657bd7ee49c619384cc5c0688a4bbdf6a72b44671ec3feea"
+      "bundleSha256": "8e666c4f16020a83408806761afd5269c454deb50df5b23c505e086b0ec2b370"
     },
     {
       "id": "mountain-scaled-menu",
@@ -4988,7 +5078,7 @@
       "paths": {
         "bundle": "agent/patterns/mountain-scaled-menu.json"
       },
-      "bundleSha256": "7b5c35ec79b653d4c6b39292fbf184667e4edc043b62568a821301090ea72875"
+      "bundleSha256": "64c363446912d86c6a00c0a6aebafdeed904e721a4b9858a8c84fd1640ef6aee"
     },
     {
       "id": "moving-tab-selection-bed",
@@ -5044,7 +5134,7 @@
       "paths": {
         "bundle": "agent/patterns/moving-tab-selection-bed.json"
       },
-      "bundleSha256": "2f0564dab28259cf06f4d97bf9426d1e5323f62431dde0b53529419dc9e459d9"
+      "bundleSha256": "2b3e23a1f2b2217f63bd5feef6e3e75b488e72b4065c419e419501f06c8da32a"
     },
     {
       "id": "native-document-reading",
@@ -5146,7 +5236,7 @@
       "paths": {
         "bundle": "agent/patterns/native-document-reading.json"
       },
-      "bundleSha256": "7e88773e834372277bc682b16473ceee67c1ae877fb54f61840fc9277a16364b"
+      "bundleSha256": "5217f3b62c86569e37d11e5a0c284cf6ff72c1109424e21827d5719612b86fac"
     },
     {
       "id": "native-horizontal-shelf",
@@ -5248,7 +5338,7 @@
       "paths": {
         "bundle": "agent/patterns/native-horizontal-shelf.json"
       },
-      "bundleSha256": "09a5e81f11429112422ed88af7222cd7375658374fb21dc0763f9b3e29eb6053"
+      "bundleSha256": "a2d8c9985a43fc9c6889e95ab2da6d0eddbba25328193caf408a2c09c5dc9283"
     },
     {
       "id": "natural-height-mega-menu",
@@ -5311,7 +5401,7 @@
       "paths": {
         "bundle": "agent/patterns/natural-height-mega-menu.json"
       },
-      "bundleSha256": "cac370a50c21e87d25fdf6416fc67e3f6d0cd7958972584bf7d77016cdb9f8f2"
+      "bundleSha256": "d3080551899cc43617cbdeabc051bbf4ac088281016905a26538492b3bdc80eb"
     },
     {
       "id": "offsite-playlist-extension",
@@ -5394,7 +5484,7 @@
       "paths": {
         "bundle": "agent/patterns/offsite-playlist-extension.json"
       },
-      "bundleSha256": "48ebeea98bcdd041dd4ee4fe7c63e98af8bbb340a4e687811f173a2b41e27818"
+      "bundleSha256": "73a25f0b0adfdb2b35212a4a185eb419e279550f914906d011a1222e73a27879"
     },
     {
       "id": "paper-material-collage",
@@ -5447,7 +5537,7 @@
       "paths": {
         "bundle": "agent/patterns/paper-material-collage.json"
       },
-      "bundleSha256": "ba5482594923c2814eab6a28a4a375686e589df2fbff8ec661fce20ef3e2c970"
+      "bundleSha256": "78e042321f50f210c626e64f47657ccbb5c46d4a8275e05eb170dd1c23020f71"
     },
     {
       "id": "parallel-isometric-projection",
@@ -5500,7 +5590,7 @@
       "paths": {
         "bundle": "agent/patterns/parallel-isometric-projection.json"
       },
-      "bundleSha256": "f36e1d796883f50b701fd57fda2e38f4289300df7c00205fda97f65b1c67182a"
+      "bundleSha256": "65ba13cc32fbcf79cf3ab0b95f8b0a7860ace03b7157dc6133222f247be316cb"
     },
     {
       "id": "particle-model-reformation",
@@ -5565,7 +5655,7 @@
       "paths": {
         "bundle": "agent/patterns/particle-model-reformation.json"
       },
-      "bundleSha256": "fac8b1ea31292afa9d52c06d1a3557a8d84e4779412b52c6c1cea888e4128f0e"
+      "bundleSha256": "5b2e881964126a0a252de9b1def9158230ee97e8d19179f7eba601de8d70d9bc"
     },
     {
       "id": "permanent-event-metadata",
@@ -5621,7 +5711,7 @@
       "paths": {
         "bundle": "agent/patterns/permanent-event-metadata.json"
       },
-      "bundleSha256": "00f1e48054d6af497a835aa9725ae416724c259763900ec8e5bd4f0ab582736e"
+      "bundleSha256": "e8f9504cc7e7a03efa83354aac7104e43037a65b95b7772a2c761b692aaa9fbf"
     },
     {
       "id": "photo-crossfade-cycle",
@@ -5701,7 +5791,7 @@
       "paths": {
         "bundle": "agent/patterns/photo-crossfade-cycle.json"
       },
-      "bundleSha256": "a43d80f3a0cf9f53199b1e1ff00b44d1fcca1d6a304e6efc63c02978c0b355c7"
+      "bundleSha256": "3c5b5a15a76c8ecab9ccd2d574426d4fe2984249d2fb31d2fc55be76f72e4ee6"
     },
     {
       "id": "photo-edge-text-contrast",
@@ -5757,7 +5847,7 @@
       "paths": {
         "bundle": "agent/patterns/photo-edge-text-contrast.json"
       },
-      "bundleSha256": "518d7763bac8d7cb1aaf7b95f9ec230dceaa5b18cd609c1aa73126aceb039153"
+      "bundleSha256": "50082ff7b6a449051ec06e5492cd86f36aa7f8c7919daf17efd1a490412f85a3"
     },
     {
       "id": "photography-option-selector",
@@ -5821,7 +5911,7 @@
       "paths": {
         "bundle": "agent/patterns/photography-option-selector.json"
       },
-      "bundleSha256": "d5b5bebb22b9b21c6d121d5c9a6959544bac65be4a53341ea8a8ef5526ae710c"
+      "bundleSha256": "677da1fc8f3bb0f59189aafec5c06fcbf5f9a283a9fe7d315ab93aaab7c1fbf1"
     },
     {
       "id": "pointer-image-shader-preview",
@@ -5877,7 +5967,7 @@
       "paths": {
         "bundle": "agent/patterns/pointer-image-shader-preview.json"
       },
-      "bundleSha256": "1c594a839a449c6347ddb112960d5829f0a2e63d27e155523281234d4559e0ea"
+      "bundleSha256": "1faf745093be47d98c8d313a07eed5e9580cdd369f503f65e57f11fa0b961425"
     },
     {
       "id": "pointer-repulsion-particles",
@@ -5942,7 +6032,7 @@
       "paths": {
         "bundle": "agent/patterns/pointer-repulsion-particles.json"
       },
-      "bundleSha256": "4f63d6f3a634152923f0b9d6e9be420781785db0aa05f312423dd09b085c1a58"
+      "bundleSha256": "6e0cea0674e1254e72bc92d1a61b9dcfa830a14769482be75d089a993a9c688c"
     },
     {
       "id": "product-entrance-film",
@@ -5999,16 +6089,16 @@
       "paths": {
         "bundle": "agent/patterns/product-entrance-film.json"
       },
-      "bundleSha256": "e19027889e3190686849b07a9dcf856ecfe3919f756a45d3dd263d7d5a1fe073"
+      "bundleSha256": "4040b471e38910202bdafa38df8274709e894e938c8e8c9eb5d02f61194360ee"
     },
     {
       "id": "resource-bound-fullscreen-loading",
       "title": "真实资源驱动的全屏载入",
       "category": "加载与媒体",
-      "summary": "在关键场景就绪前以品牌载入页承接等待。",
-      "mechanism": "居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。",
+      "summary": "只等待入口关键资源，以真实完成数推进，再移交可用场景。",
+      "mechanism": "入口关键图片和必要字体完成数驱动全屏加载状态；全部任务结束不等于全部成功，失败保持明确重试/继续，成功后以短品牌遮层或wipe移交目标场景。",
       "trigger": "首次进入或缓存重载",
-      "effect": "未就绪场景被遮住，等待属于世界观入口。",
+      "effect": "用户看懂资源准备与失败状态，入口交接有边界，正文不会被全站素材长期阻塞。",
       "useCases": [
         "资源较重的游戏档案与展览"
       ],
@@ -6017,7 +6107,9 @@
       ],
       "constraints": [
         "失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。",
-        "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+        "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。",
+        "终末地的公开Updating图形与黄wipe沿源CSS；本地关键首页/干员图及字体集、任务比例、重试/继续属于适配，不声称复用了官网完整资源枚举或网络字节进度。",
+        "任务完成与成功分开：关键图失败即使显示100%也保持error/ready pending，直到重试成功或用户明确继续；目前失败重试已有实测，“继续”未单独验收。"
       ],
       "composition": {
         "role": "support",
@@ -6034,12 +6126,22 @@
       },
       "parameters": [
         {
-          "name": "本地资源集",
+          "name": "明日方舟本地资源集",
           "value": "5份图片 / 保底1300ms",
           "note": "本地适配，非官网完整载入策略"
+        },
+        {
+          "name": "终末地本地关键任务",
+          "value": "首页背景/标题、初始干员图、档案背景与3项字体任务",
+          "note": "取自本地prepare；不等待70人物影片、六bin或未启用BGM。"
+        },
+        {
+          "name": "终末地入口退出",
+          "value": "黄wipe scale0→1；正文1500ms序列/退出2400ms",
+          "note": "源外观与本地状态时序；本地冷载43→100、86→100，scale0/.0251998/.302011/1及opacity.625881已采帧，不冒称源同帧相等。"
         }
       ],
-      "prompt": "为【目标页面/组件】实现「真实资源驱动的全屏载入」。居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。触发：首次进入或缓存重载。可见结果：未就绪场景被遮住，等待属于世界观入口。适用任务：资源较重的游戏档案与展览。失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。键盘：载入状态提供可读进度与重试/继续按钮；就绪后焦点进入当前章节。减少动态：载入进度保持文本和静止品牌图，取消装饰运动，资源就绪后即时进入。组合边界：只负责首屏必要资源就绪前的入口交接。可接章切与点阵静帧；同一入口避免再叠另一套欢迎开场，不能等待未启用BGM或全站素材。",
+      "prompt": "为【资源较重的入口】实现真实资源驱动的全屏载入。列出当前入口必需图片/字体，按完成任务显示进度，不按时间伪造百分比或等待全站影片/BGM；完成比例与成功条件分开。关键任务失败即使100%也显示可读错误和重试/继续，只有成功或用户明确继续才移交场景。可用静态品牌/短wipe承接退出，正文和目标章节可达；同一入口不叠第二套欢迎。明日方舟五图与终末地本地关键任务只是各自适配基线，不代表官网完整资源枚举、网络bytes或通用等待阈值。键盘可操作失败路径，加载状态用文本可读；减少动态保留真实进度并即时移交终态。分别验证冷/暖载、失败/重试和入口退出时序，源码外观、本地任务集和实测范围明确区分。",
       "sources": [
         {
           "caseId": "arknights-world",
@@ -6048,6 +6150,14 @@
           "evidence": "adapted",
           "referenceUrl": "https://ak.hypergryph.com/",
           "capturedAt": "2026-10-07"
+        },
+        {
+          "caseId": "endfield-industrial",
+          "locator": "entries/endfield-industrial.json#interaction/0",
+          "observation": "载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。",
+          "evidence": "adapted",
+          "referenceUrl": "https://endfield.hypergryph.com/",
+          "capturedAt": "2026-10-09"
         }
       ],
       "sourceFiles": [
@@ -6057,12 +6167,21 @@
         "demos/arknights-world/script.js",
         "demos/arknights-world/style.css",
         "entries/arknights-world.json",
-        "research/arknights-world.md"
+        "research/arknights-world.md",
+        "entries/endfield-industrial.json",
+        "research/endfield-industrial.md",
+        "demos/endfield-industrial/fidelity.md",
+        "demos/endfield-industrial/state-matrix.md",
+        "demos/endfield-industrial/source-provenance.json",
+        "demos/endfield-industrial/index.html",
+        "demos/endfield-industrial/reference.css",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/app.js"
       ],
       "paths": {
         "bundle": "agent/patterns/resource-bound-fullscreen-loading.json"
       },
-      "bundleSha256": "6d19f80365fc4672d1fc4fea7614b14c9456f23b005f62bcab507aefe906dbac"
+      "bundleSha256": "c92500d7d6af32f7ed83ad114c0dfbdbebd1a1d667c020b7b0c2509c9143b65c"
     },
     {
       "id": "responsive-art-direction",
@@ -6146,7 +6265,7 @@
       "paths": {
         "bundle": "agent/patterns/responsive-art-direction.json"
       },
-      "bundleSha256": "03bd6bce519b8bfba98e4afe0333a8ecb9adc6814bf4905b1ecd66c26d96a1e0"
+      "bundleSha256": "f76ead7c6aba53cc254b3b056495d9f8d02ee1e57574cffa18b065029bad7bf8"
     },
     {
       "id": "restrained-signal-color",
@@ -6255,7 +6374,7 @@
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
       },
-      "bundleSha256": "2dc8151be0942f0deeb5af96e5987a0342a94c4bfe05b88405fb1d5e19f4ca60"
+      "bundleSha256": "8277272df4abae4b371c2c139fc7c1a969353e508b18e3858b62d4cc463dce82"
     },
     {
       "id": "reversible-center-reveal",
@@ -6317,7 +6436,99 @@
       "paths": {
         "bundle": "agent/patterns/reversible-center-reveal.json"
       },
-      "bundleSha256": "973b5d8955711151f102bc0986af0cff22ca50fd47a83be8984ef31cd076ccbd"
+      "bundleSha256": "a47ae7f379e841e82e471a218688e9d967007f02e57be9b401ea74d0686e41b2"
+    },
+    {
+      "id": "scanline-point-cloud-transition",
+      "title": "扫描线与射线驱动的点云交接",
+      "category": "交互反馈",
+      "summary": "真实xyz点云在扫描带中显现与退场，射线和短暂旋转共同提示模型交接。",
+      "mechanism": "读取Float32 xyz二进制点位，规范化后为旧、新模型分别建立点云actor；多条扫描线改变点的可见与扰动，射线指向扫描附近点，旋转短暂加速后恢复，模型选择与标题/编号同步，交接期间限制再入。",
+      "trigger": "选择世界观模型、前后按钮或六段索引；拖动改变观察方向",
+      "effect": "模型有可辨认的构形过程，资料状态与真实三维形态共同变化。",
+      "useCases": [
+        "技术设备与世界观模型目录",
+        "有真实点位数据的科学可视化",
+        "少量独立模型的档案舞台"
+      ],
+      "avoid": [
+        "用静态png或CSS放大代替真实点云",
+        "把扫描交接混作同一粒子池位置插值",
+        "为正文叠加持续强闪烁或无边界射线",
+        "给随机粒子承诺逐帧像素一致"
+      ],
+      "constraints": [
+        "使用有来源的xyz点位与模型配置，先校验Float32数量可被3整除、有限值及实际边界；归一化、offset/pivot/scale与摄像机共同决定原形，不能只下载bin便声称还原。",
+        "本来源为两actor扫描入/出和清理，区别于particle-model-reformation的同池目标插值；旧模型完成退出后释放geometry/material及噪声纹理，不能无限叠加。",
+        "扫描、射线、旋转与转场锁属于同一交接状态；随机射线保留上限，循环索引和标题同步；手机水平触摸观察须保留纵向页面滚动。",
+        "六模型可见形态、索引循环、交接锁、双向拖动和真实手机触摸已有源/本地实测；四段shader字符串对应。射线活动峰源105/本地144为随机输出，不是像素差异结论。",
+        "减少动态保留终态模型与DOM说明，停自动旋转、扫描和射线；WebGL或数据失败提供可读说明/合法静帧，不能阻塞整份档案。"
+      ],
+      "composition": {
+        "role": "accent",
+        "notes": "只负责模型构形与观察反馈，正常DOM目录和说明负责语义。可配合自然文档阅读和前台生命周期；与透明人物视频共存时分开资源、控件与拖动区域。扫描是有限交接，不把长篇正文交给canvas，也不需要改变整页滚轮浏览。",
+        "pairsWellWith": [
+          "native-document-reading",
+          "viewport-animation-lifecycle",
+          "aligned-metadata-rows"
+        ],
+        "conflicts": []
+      },
+      "accessibility": {
+        "keyboard": "前后和模型索引用可命名按钮，当前标题/编号/pressed同步；焦点在画布时左右键调整角度并有等价文字，不让装饰射线进入Tab。手机拖动区域保留pan-y纵向阅读。",
+        "reducedMotion": "直接显示选中模型的终态点云，停止扫描射线、自动旋转与glitch，保留手动选择和说明；偏好动态变化时清除旧脉冲与计时。"
+      },
+      "parameters": [
+        {
+          "name": "点位格式与尺度",
+          "value": "Float32 xyz / Y跨度1900",
+          "note": "来源六bin无header；按数据边界归一化，再应用各模型独立offset/pivot/scale。"
+        },
+        {
+          "name": "扫描时间",
+          "value": "入场三线3000/(i+1)ms、delay2000×ln(i+1)；退场2000ms",
+          "note": "源算法与本地tick对应；三线完成后的交接锁约3197.225ms，不当通用UX等待规范。"
+        },
+        {
+          "name": "扫描位置",
+          "value": "入场−1350→1150；退场−1150→1150",
+          "note": "实采退出0/500/1000/2000ms为−1150/−862.5/0/1150；少量采样不代表所有帧像素相同。"
+        },
+        {
+          "name": "射线容量与旋转",
+          "value": "最多2000实例；旋转400/800/800ms后回基速",
+          "note": "按扫描附近点生成随机射线，源/本地活动数有随机差异；停止/离屏需清理调度。"
+        }
+      ],
+      "prompt": "为【真实模型档案】实现扫描线与射线驱动的点云交接。用有使用权的Float32 xyz点位，验证格式和边界，再以来源Y跨度1900及各模型offset/pivot/scale作研究基线。旧、新模型各自actor在多线扫描中退出/显现，射线只指向扫描附近点并设容量上限；有限旋转加速后回基速，完成后释放旧GPU资源。目录、前后、编号与DOM说明由同一模型选择驱动，转场再入策略明确，不把该机制错写成同池顶点morph。支持水平拖动与聚焦方向键，手机保留pan-y纵滚。减少动态直接给可见终态、停止自动旋转/射线/glitch；后台暂停与资源失败回退分别处理。保留有限源码/运行证据，随机射线不能声称像素逐帧相等。",
+      "sources": [
+        {
+          "caseId": "endfield-industrial",
+          "locator": "entries/endfield-industrial.json#interaction/3",
+          "observation": "世界观：帝江号/锚点/集成工业系统/天师桩/天使/裂地者六个原bin及模型参数，Float32 xyz、按Y跨度1900规范化；实际WebGL点云、扫描、转动、拖动、分页/标题与六指标同步。最终状态实测见fidelity，不因源码抽取而自动判通过。",
+          "evidence": "observed",
+          "referenceUrl": "https://endfield.hypergryph.com/",
+          "capturedAt": "2026-10-09"
+        }
+      ],
+      "sourceFiles": [
+        "entries/endfield-industrial.json",
+        "research/endfield-industrial.md",
+        "demos/endfield-industrial/fidelity.md",
+        "demos/endfield-industrial/state-matrix.md",
+        "demos/endfield-industrial/source-provenance.json",
+        "demos/endfield-industrial/index.html",
+        "demos/endfield-industrial/reference.css",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/app.js",
+        "demos/endfield-industrial/data.js",
+        "demos/endfield-industrial/lore.js",
+        "demos/endfield-industrial/shaders.js"
+      ],
+      "paths": {
+        "bundle": "agent/patterns/scanline-point-cloud-transition.json"
+      },
+      "bundleSha256": "c99fec88c5e636e4f025a55d46cbb5b7b4bc134e71b4e4b7ffddb61561862582"
     },
     {
       "id": "scroll-differential-stars",
@@ -6379,7 +6590,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-differential-stars.json"
       },
-      "bundleSha256": "a946646a8875711fbebcbd527d0490de0a498b09c43d10264f4e95c80ef4756d"
+      "bundleSha256": "0faf1f947efc2e10106b4cae4ab979dffb253ce35d185cee7973b67d7ded438b"
     },
     {
       "id": "scroll-logo-contraction",
@@ -6445,7 +6656,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-logo-contraction.json"
       },
-      "bundleSha256": "eae7a486cbeaaec3bff2f857d2d0c189594320a62e4b5bfc22089789617fb5fe"
+      "bundleSha256": "024894425610d0c79c2addeca2f25d16b0423b547a5e0fae775ca7616ae93852"
     },
     {
       "id": "scroll-synchronized-rail",
@@ -6502,7 +6713,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-synchronized-rail.json"
       },
-      "bundleSha256": "5fab8fc5a870e955a685bc7bafd05867d05f5094c1960a9418f5380377df4bae"
+      "bundleSha256": "bb1f8b87a491775a9256b6bb47facfef8c9ed471ef147dffadd7688f01d7fad8"
     },
     {
       "id": "scroll-video-scrub",
@@ -6564,7 +6775,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-video-scrub.json"
       },
-      "bundleSha256": "1c5d875ea5d9b7fa4bf79de18f31c81f5d73186eb4ac4ca17d3a89e0a8ca08ab"
+      "bundleSha256": "0d12487a908da79e8b24eb67fb21968adfb59857f616654964c3b2c4ea30fe96"
     },
     {
       "id": "scrubbable-animation-progress",
@@ -6623,7 +6834,7 @@
       "paths": {
         "bundle": "agent/patterns/scrubbable-animation-progress.json"
       },
-      "bundleSha256": "d9c6dec13a2acadc95029aba1c561a18386e4f9d7c60f896a0a461f1da2397ff"
+      "bundleSha256": "8694f322cd4586ee8f74b82d9901ffa715a8140e42f9e07bf692c7043c6a8b2a"
     },
     {
       "id": "section-color-rhythm",
@@ -6709,7 +6920,7 @@
       "paths": {
         "bundle": "agent/patterns/section-color-rhythm.json"
       },
-      "bundleSha256": "b6a7edb34e1883ecdafb66663c08c6532ac247abcf0f912d255862ff5f0a67b2"
+      "bundleSha256": "9a7678f2152ea71d0cf84bf3af92cdd089df246e97c429826371acb89dd23067"
     },
     {
       "id": "semantic-theme-roles",
@@ -6765,7 +6976,7 @@
       "paths": {
         "bundle": "agent/patterns/semantic-theme-roles.json"
       },
-      "bundleSha256": "3b636e1100a5690e1af781492d069bc957e870cb0c4c9aac597a1070fd4b7412"
+      "bundleSha256": "ca5f9bf1bca929c6740d7c35a2b74479785e6ca5134770f574b983310a8d609a"
     },
     {
       "id": "sequential-stroke-reveal",
@@ -6823,7 +7034,7 @@
       "paths": {
         "bundle": "agent/patterns/sequential-stroke-reveal.json"
       },
-      "bundleSha256": "85183e8c189b07dfa4005b604c2a579d699d3f312ffe9b79e115f662b42b3ff8"
+      "bundleSha256": "9c7c1b2e4fa1a5bc6ec5fb4ca4b9e6332e310da7f4eba560ccb0b903279046ca"
     },
     {
       "id": "single-open-accordion",
@@ -6910,7 +7121,7 @@
       "paths": {
         "bundle": "agent/patterns/single-open-accordion.json"
       },
-      "bundleSha256": "2fa033cea77a4a3f1e16008ac58e8bc3f81150efadb2b8d4f444da55673e0702"
+      "bundleSha256": "99a81a0e7363461e4588d08171b4d3949e55db55ff592c99ac6c63f9b1e12a74"
     },
     {
       "id": "sound-choice-emblem-opening",
@@ -6973,7 +7184,7 @@
       "paths": {
         "bundle": "agent/patterns/sound-choice-emblem-opening.json"
       },
-      "bundleSha256": "eac998e0b7ed581ae5e8d55c2e0cf4f171c303b3c8e6d359c301729cef4bd042"
+      "bundleSha256": "12e4dfad71c18f39c9c7da09ce5712d8b480f12682ebf2a977fff941dbe696cd"
     },
     {
       "id": "sound-opt-in",
@@ -7053,7 +7264,7 @@
       "paths": {
         "bundle": "agent/patterns/sound-opt-in.json"
       },
-      "bundleSha256": "ecdd23cb4c9dd1a8eeabfd51f0ca223d2eaa6dd4642f8e007313d20d6c316074"
+      "bundleSha256": "0132249aa9b142eeb50ac3024cc4ecc0114d85f1bc137628aaed98b8bab68535"
     },
     {
       "id": "spatial-navigation-map",
@@ -7104,7 +7315,7 @@
       "paths": {
         "bundle": "agent/patterns/spatial-navigation-map.json"
       },
-      "bundleSha256": "1952e72fe032ae711f800909a3f24a6c63d23d9315b95286e2d085f85fe04c22"
+      "bundleSha256": "82532aceffa1f92f558954b7bdd314b13a8baeab3def58d31a925dcfd03a80dd"
     },
     {
       "id": "specimen-pullout-selection",
@@ -7183,7 +7394,7 @@
       "paths": {
         "bundle": "agent/patterns/specimen-pullout-selection.json"
       },
-      "bundleSha256": "3642d32391df689e477730a18e6b87ff8b9064f6b12231cfc7edb0495a2709a0"
+      "bundleSha256": "c39d82d0a8e784633caf0b5cee31364e588e7c324e025a21e41ba45884963534"
     },
     {
       "id": "staged-product-ui-entrance",
@@ -7245,7 +7456,7 @@
       "paths": {
         "bundle": "agent/patterns/staged-product-ui-entrance.json"
       },
-      "bundleSha256": "5e64e6f891f9f3707e570c865fb358e4a38cb06f4efb38663aa377e1316c676b"
+      "bundleSha256": "7215f3b1cad9ecf0eece6698e76d730bc7de18981940632e821938787d514990"
     },
     {
       "id": "staggered-agent-columns",
@@ -7301,7 +7512,7 @@
       "paths": {
         "bundle": "agent/patterns/staggered-agent-columns.json"
       },
-      "bundleSha256": "f1a04f908cd1f4f092448add468a96e7a8140ef3745e47cb2383be50ddcc8f14"
+      "bundleSha256": "c197f3a7cdcbfce45021d5a05579cf4b0871fe8a68ac28f6f7dade93807fdb33"
     },
     {
       "id": "state-shape-feedback",
@@ -7362,7 +7573,7 @@
       "paths": {
         "bundle": "agent/patterns/state-shape-feedback.json"
       },
-      "bundleSha256": "234f28402ef8a281760493fdc5094e5273d9ac8ea1c8b29bfa3938324edb2671"
+      "bundleSha256": "9b8e554ec42df4e41b595318a900f6568753a2632b2f100b1357c5d93f49a18e"
     },
     {
       "id": "sticky-action-sidebar",
@@ -7421,7 +7632,7 @@
       "paths": {
         "bundle": "agent/patterns/sticky-action-sidebar.json"
       },
-      "bundleSha256": "63628ece507119f294a22535913bba8f27d3578290e763289de174f9ad2ac31a"
+      "bundleSha256": "821231b2f3640911cea3a931c1b8fb90930250cead47698d0d0fad727214ecf9"
     },
     {
       "id": "sticky-stage-handoff",
@@ -7494,7 +7705,7 @@
       "paths": {
         "bundle": "agent/patterns/sticky-stage-handoff.json"
       },
-      "bundleSha256": "75f06a5fe98ab45f358c1a959d397e8e5c9ccb3874670729a8d9c74fd79ed487"
+      "bundleSha256": "77f1a969c02ca1e08f0a61d2a41c7f54879453e0430a813db8c09ae49a39c135"
     },
     {
       "id": "synchronized-rolling-index",
@@ -7556,7 +7767,7 @@
       "paths": {
         "bundle": "agent/patterns/synchronized-rolling-index.json"
       },
-      "bundleSha256": "6ed937f1d67dbb203911f47a616862736f39ea7034dc7e2f7557dfa3017c0cd1"
+      "bundleSha256": "7ee7cf60a435952e45cb2adc053c8e54477f9292c02b27c5deca0e0619b13140"
     },
     {
       "id": "system-theme-without-toggle",
@@ -7628,7 +7839,7 @@
       "paths": {
         "bundle": "agent/patterns/system-theme-without-toggle.json"
       },
-      "bundleSha256": "88c99d7fa1dda79a4f388cbdcbb89e2dd5bcd6f8fd3d09aa0e5a25832fbb0072"
+      "bundleSha256": "39eb2bc5c750643422f38bf7d06bdfd8fd4095cb5a5801a9fba566cbb83713b6"
     },
     {
       "id": "timed-platform-carousel",
@@ -7691,7 +7902,7 @@
       "paths": {
         "bundle": "agent/patterns/timed-platform-carousel.json"
       },
-      "bundleSha256": "95cc55c265988febde6135859869718423c98b9cc00c3a772c2a7187e702389a"
+      "bundleSha256": "168901e5300b6a8ba78508ad4199798edb54791d3ca5b84b017063af997fb696"
     },
     {
       "id": "top-down-clipped-menu",
@@ -7758,7 +7969,98 @@
       "paths": {
         "bundle": "agent/patterns/top-down-clipped-menu.json"
       },
-      "bundleSha256": "fac3b01660d6f59ad13cfd8ca824eba4246854a63bb9dc981d683f403316faed"
+      "bundleSha256": "6b28e1b3f40b6c027d2bc1470174218597d665a56bc3c4e25d8b838de40ba64a"
+    },
+    {
+      "id": "transparent-video-mode-stage",
+      "title": "透明视频的静态与动态模式舞台",
+      "category": "加载与媒体",
+      "summary": "静态立绘与RGB/alpha透明视频共享人物位置，进入短片结束后接续idle循环。",
+      "mechanism": "同一影片左半保存RGB颜色、右半保存亮度alpha遮罩，经WebGL合成为半宽透明canvas；2D立绘与3D影片模式独立于人物选择，enter完成后接idle，换人或退出时取消旧资源回调和帧调度。",
+      "trigger": "用户选择静态/动态模式，或在动态模式中切换人物",
+      "effect": "人物运动融入档案背景，姓名与资料位置稳定，动态资源始终属于当前人物。",
+      "useCases": [
+        "有授权透明影片的角色档案",
+        "静态图片与动态演示并列的品牌舞台",
+        "预录设备运动的背景合成"
+      ],
+      "avoid": [
+        "把预录透明视频说成可拖转人物网格",
+        "将遮罩半幅作为黑白背景一起显示",
+        "选中变化后继续播放旧人物",
+        "为所有角色影片制造阻断加载"
+      ],
+      "constraints": [
+        "源人物3D为RGB/alpha透明影片，不是实时人物网格；需要已有双幅编码素材，普通MP4不能凭空取得真实alpha。",
+        "enter与idle对应同一人物，显示状态与资源generation同步；loadeddata、ended及帧回调必须检查当前身份，退出暂停并释放旧调度。",
+        "源祀影片3840×1080输出1920×1080，alpha亮度权重0.3/0.59/0.11；迁移时检查尺寸、边缘、色彩与素材许可，不把此编码当所有透明影片的标准。",
+        "源公开模块说明enter结束换idle；最终默认设置仅本地Si自然循环和手机艾尔黛拉链路有实测，原站本轮自然事件链未完整观察，不宣称全部35影片通过。",
+        "保留静态立绘、失败回退和手动模式入口；减少动态选择可见静帧并停止连续解码，不因暂停首帧透明而显示空白人物。"
+      ],
+      "composition": {
+        "role": "support",
+        "notes": "此原子负责透明媒体解码和静态/动态模式的交接；人物身份、姓名、目录和资料同步由人物舞台原子承担。与世界观点云是两个独立渲染器，不争夺拖动语义；页面可见性统一提供暂停信号，用户选择仍独立保存。",
+        "pairsWellWith": [
+          "character-stage-coordination",
+          "viewport-animation-lifecycle",
+          "hatched-registration-type"
+        ],
+        "conflicts": []
+      },
+      "accessibility": {
+        "keyboard": "静态/动态模式用有名称的按钮，aria-pressed跟随实际模式，切换不移动资料焦点；失败提供静态回退。人物名称和等价说明位于正常DOM，不只保存在canvas。",
+        "reducedMotion": "保留当前人物静态立绘或idle有效静帧，停止影片与GPU连续帧；本地实测idle 1/30秒静帧可见。恢复动态尊重当前模式、前台和用户暂停状态。"
+      },
+      "parameters": [
+        {
+          "name": "双幅透明编码",
+          "value": "RGB-left / luma-alpha-right；3840×1080 → 1920×1080",
+          "note": "祀来源影片尺寸与公开模块采样；不是任意视频的透明转换。"
+        },
+        {
+          "name": "Alpha合成",
+          "value": "0.3R + 0.59G + 0.11B",
+          "note": "采样遮罩右半；源码算法已核对，源/本地透明边缘同帧未全面验收。"
+        },
+        {
+          "name": "状态交接",
+          "value": "2D / enter → idle(loop)",
+          "note": "最终默认本地Si enter15.2秒→idle2.9秒实际通过；不同角色时长由各自影片决定。"
+        },
+        {
+          "name": "减少动态静帧",
+          "value": "本地idle t=0.033333秒 / paused=true",
+          "note": "390×844最终静态分支实测；用于避免首帧透明，不强制所有影片使用同一seek值。"
+        }
+      ],
+      "prompt": "为【人物或设备档案】实现静态立绘与RGB/alpha透明视频模式舞台。采用有使用权的双幅影片，左RGB、右亮度alpha经WebGL合成为半宽透明canvas，保留背景和正常DOM姓名/说明。用独立人物选择与2D/动态模式状态，enter自然结束后切同人物idle循环；加载、ended、requestVideoFrameCallback与快速换人都检查资源generation，离开模式或后台暂停，失败回退立绘。不要把预录影片写成可自由旋转的网格模型。参数以来源0.3/0.59/0.11和3840×1080→1920×1080作参考，按新影片实际尺寸验证透明边缘与颜色。键盘按钮名称、pressed及焦点保持一致；减少动态展示有效静帧，不留透明空白。分别记录源码机制、有限角色自然链路和原站实测范围，不泛化全部视频通过。",
+      "sources": [
+        {
+          "caseId": "endfield-industrial",
+          "locator": "entries/endfield-industrial.json#interaction/2",
+          "observation": "2D/3D：同35项立绘和70个原enter/idle视频。祀源影片3840×1080左右RGB/alpha，经原亮度权重0.3/0.59/0.11合成1920×1080透明canvas，enter结束切idle循环；不制造实时人物模型。",
+          "evidence": "observed",
+          "referenceUrl": "https://endfield.hypergryph.com/",
+          "capturedAt": "2026-10-09"
+        }
+      ],
+      "sourceFiles": [
+        "entries/endfield-industrial.json",
+        "research/endfield-industrial.md",
+        "demos/endfield-industrial/fidelity.md",
+        "demos/endfield-industrial/state-matrix.md",
+        "demos/endfield-industrial/source-provenance.json",
+        "demos/endfield-industrial/index.html",
+        "demos/endfield-industrial/reference.css",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/app.js",
+        "demos/endfield-industrial/data.js",
+        "demos/endfield-industrial/transparent-video.js"
+      ],
+      "paths": {
+        "bundle": "agent/patterns/transparent-video-mode-stage.json"
+      },
+      "bundleSha256": "cc4a0bed7f2abc6aeafad687db4e422da43059193dd1ff72ecd4c991fa09ddc7"
     },
     {
       "id": "vertical-card-swap",
@@ -7822,7 +8124,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-card-swap.json"
       },
-      "bundleSha256": "696abd5e492a01ed8c5eb44a940b4a963518dcfc67f965596f49c51a28edbfc2"
+      "bundleSha256": "0e491e19166c4331a09ca4cf84f1de30982b3fdccfa4c29f68c3c62a19d62ad3"
     },
     {
       "id": "vertical-fullscreen-stage",
@@ -7880,7 +8182,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-fullscreen-stage.json"
       },
-      "bundleSha256": "740691a3e3a1074071cda3b3082f7a08ce48b99384a44832e3296a37ae132b24"
+      "bundleSha256": "e4aae37c12860aaf2372366d1da3d91001141711491b593219a5f8c0fc998d1d"
     },
     {
       "id": "vertical-media-spine",
@@ -7902,14 +8204,16 @@
       "constraints": [
         "竖向书脊只放简短类别，完整释义在正常方向文字中提供。",
         "图像维持比例，类别与编号不覆盖关键信息；手机可缩小书脊或移到上方。",
-        "此条抽取构成，播放控制另用实际媒体语义实现。"
+        "此条抽取构成，播放控制另用实际媒体语义实现。",
+        "来源字段同时包含相册切换；本原子仅抽取类别朝向、媒体边界和对齐，不把三层wipe当书脊成立的前提。"
       ],
       "composition": {
         "role": "support",
-        "notes": "书脊标类别，图下注释解释内容；两者可独立学习但共用媒体边界。不可把书脊当全页主导航。",
+        "notes": "书脊标类别，图下注释解释内容，共用媒体边界；静态图或影片均可使用，不能把书脊当全页主导航。换项方向层由layered-directional-media-reveal独立承担。",
         "pairsWellWith": [
           "artwork-caption-separation",
-          "aligned-metadata-rows"
+          "aligned-metadata-rows",
+          "layered-directional-media-reveal"
         ],
         "conflicts": []
       },
@@ -7919,17 +8223,12 @@
       },
       "parameters": [
         {
-          "name": "源媒体与类别",
-          "value": "4玩法视频 / 5AIC图片",
-          "note": "真实相册媒体与类别共同组织，非首版单1600×900图/105px书脊。"
-        },
-        {
-          "name": "方向层级",
-          "value": "400ms；black0/yellow250/media500ms",
-          "note": "原相册三层方向揭示，文字500ms退出/500ms进入；视觉书脊本身静态。"
+          "name": "类别与媒体边界",
+          "value": "简短竖向类别 / 横向媒体 / 正常方向编号与说明",
+          "note": "来自AIC真实模块，类别固定标归属；三层换图时序独立归layered-directional-media-reveal。"
         }
       ],
-      "prompt": "将简短类别作为媒体边界的竖向书脊，横向真实图像/影片与正常方向编号/标题/说明保持共同对齐。文字朝向表达归属，不旋转长篇正文；portrait沿真实布局重排，避免书脊挤压内容。多项切换可借鉴400ms黑/黄/媒体分层delay0/250/500及500/500ms说明，使用新任务信号色，不把竖书脊当作整站导航。播放/暂停、键盘与减少动态需要实际媒体语义，源参数和最终浏览器实测分别记录。",
+      "prompt": "将简短类别作为媒体边界的竖向书脊，横向真实图像/影片与正常方向编号、标题、说明保持共同对齐。类别朝向表达归属，正文不旋转，portrait沿真实媒体布局重排，避免书脊挤压内容。书脊本身静态，不以动画成立，也不当整站导航；换项的三层方向揭示独立配合layered-directional-media-reveal。类别在正常方向可读标题中重复，装饰aria-hidden；播放控制、键盘、暂停与减少动态由真实媒体语义承担。",
       "sources": [
         {
           "caseId": "endfield-industrial",
@@ -7955,7 +8254,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-media-spine.json"
       },
-      "bundleSha256": "d5001f113da46b33ab5149a5f8b7256a7eca16fb713e3ee1d085183a471b1493"
+      "bundleSha256": "bf92940a39fc8c4f9f866b8fe611a51e0af1a37ea607b74317b2eb98e27f10d5"
     },
     {
       "id": "viewport-animation-lifecycle",
@@ -7973,14 +8272,19 @@
       ],
       "constraints": [
         "恢复策略按任务明确，自动计时不能覆盖手动状态。",
-        "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+        "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。",
+        "终末地新增来源是本地适配与真实后台/返回实测，evidence=adapted；不将本地visibility监听、BGM恢复或减少动态策略写成完整源站已观察行为。",
+        "恢复只针对先前有运行意图的媒体；用户关闭声音、切为2D或选择减少动态后，后台返回不能自动推翻其选择。"
       ],
       "composition": {
         "role": "support",
         "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
         "pairsWellWith": [
           "photo-crossfade-cycle",
-          "centered-loop-gallery"
+          "centered-loop-gallery",
+          "transparent-video-mode-stage",
+          "scanline-point-cloud-transition",
+          "layered-directional-media-reveal"
         ],
         "conflicts": []
       },
@@ -7988,8 +8292,14 @@
         "keyboard": "暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。",
         "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
       },
-      "parameters": [],
-      "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
+      "parameters": [
+        {
+          "name": "终末地本地真实后台检查",
+          "value": "hidden 8.025秒：Lore frame542/angle.5491946559、BGM t8.031918保持；返回frame557/angle.6241946、BGM t8.605204",
+          "note": "2040×939真实切后台/返回，非派发模拟事件；仅本地当前模块，不推广为源站或全部35人物链路通过。"
+        }
+      ],
+      "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。 终末地作为本地适配补充：同时控制点云GPU帧与已主动开启的BGM，真实切后台期间时间/角度冻结，返回按先前意图恢复。此证据只证明当前本地模块，未完整观察源站相同visibility自然行为，也未逐项验收全部媒体组合；不要将适配标为原站observed。",
       "sources": [
         {
           "caseId": "linear-workflow",
@@ -8014,6 +8324,14 @@
           "evidence": "adapted",
           "referenceUrl": "https://qoder.cn/",
           "capturedAt": "2026-10-07"
+        },
+        {
+          "caseId": "endfield-industrial",
+          "locator": "entries/endfield-industrial.json#interaction/7",
+          "observation": "声音和业务：原BGM仅在用户打开声音后播放，离开标签/隐藏页面停止相关媒体；登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
+          "evidence": "adapted",
+          "referenceUrl": "https://endfield.hypergryph.com/",
+          "capturedAt": "2026-10-09"
         }
       ],
       "sourceFiles": [
@@ -8038,12 +8356,23 @@
         "entries/stripe-platform.json",
         "research/linear-workflow.md",
         "research/qoder-platform.md",
-        "research/stripe-platform.md"
+        "research/stripe-platform.md",
+        "entries/endfield-industrial.json",
+        "research/endfield-industrial.md",
+        "demos/endfield-industrial/fidelity.md",
+        "demos/endfield-industrial/state-matrix.md",
+        "demos/endfield-industrial/source-provenance.json",
+        "demos/endfield-industrial/index.html",
+        "demos/endfield-industrial/reference.css",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/app.js",
+        "demos/endfield-industrial/lore.js",
+        "demos/endfield-industrial/transparent-video.js"
       ],
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
       },
-      "bundleSha256": "ba7896a02168190c73d6e54e3bb719292f7564cd2a1d7b1207af45d2d457ecb4"
+      "bundleSha256": "49ad752bf1243e29cebd40e91b55d04fdbdb136c676c3739e53a1212eab7897a"
     },
     {
       "id": "visit-facts-grid",
@@ -8099,7 +8428,7 @@
       "paths": {
         "bundle": "agent/patterns/visit-facts-grid.json"
       },
-      "bundleSha256": "d139e0db8de02370f33301901534bcd58b9091ba2b60f5c27af1e82a304af372"
+      "bundleSha256": "7c3748f09d57f6f2c1bab1e8168cd5a6354b05b3af27092c6b2a5f73d6c0b606"
     },
     {
       "id": "word-opacity-stagger",
@@ -8166,7 +8495,7 @@
       "paths": {
         "bundle": "agent/patterns/word-opacity-stagger.json"
       },
-      "bundleSha256": "8ab8b4807824432cd262191d3aa5054c51cbd71f691833b8c5271b5094fb3466"
+      "bundleSha256": "377ace0fa91089605c61be1774026d2ed6c1a744ce173b55cea040c064c29dcd"
     },
     {
       "id": "world-shaped-thumbnail-frame",
@@ -8221,7 +8550,7 @@
       "paths": {
         "bundle": "agent/patterns/world-shaped-thumbnail-frame.json"
       },
-      "bundleSha256": "ea87e8cdd8df17a618eb0b488b72ef5054cfac65a3abecbebc07c56fdfd6613b"
+      "bundleSha256": "f9cfddba693d27c2da36b7607b0456349292846b0709a0736d07279da5ef296b"
     }
   ]
 }

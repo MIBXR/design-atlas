@@ -5,10 +5,10 @@
     "id": "resource-bound-fullscreen-loading",
     "title": "真实资源驱动的全屏载入",
     "category": "加载与媒体",
-    "summary": "在关键场景就绪前以品牌载入页承接等待。",
-    "mechanism": "居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。",
+    "summary": "只等待入口关键资源，以真实完成数推进，再移交可用场景。",
+    "mechanism": "入口关键图片和必要字体完成数驱动全屏加载状态；全部任务结束不等于全部成功，失败保持明确重试/继续，成功后以短品牌遮层或wipe移交目标场景。",
     "trigger": "首次进入或缓存重载",
-    "effect": "未就绪场景被遮住，等待属于世界观入口。",
+    "effect": "用户看懂资源准备与失败状态，入口交接有边界，正文不会被全站素材长期阻塞。",
     "useCases": [
       "资源较重的游戏档案与展览"
     ],
@@ -17,7 +17,9 @@
     ],
     "constraints": [
       "失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。",
-      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。",
+      "终末地的公开Updating图形与黄wipe沿源CSS；本地关键首页/干员图及字体集、任务比例、重试/继续属于适配，不声称复用了官网完整资源枚举或网络字节进度。",
+      "任务完成与成功分开：关键图失败即使显示100%也保持error/ready pending，直到重试成功或用户明确继续；目前失败重试已有实测，“继续”未单独验收。"
     ],
     "composition": {
       "role": "support",
@@ -34,12 +36,22 @@
     },
     "parameters": [
       {
-        "name": "本地资源集",
+        "name": "明日方舟本地资源集",
         "value": "5份图片 / 保底1300ms",
         "note": "本地适配，非官网完整载入策略"
+      },
+      {
+        "name": "终末地本地关键任务",
+        "value": "首页背景/标题、初始干员图、档案背景与3项字体任务",
+        "note": "取自本地prepare；不等待70人物影片、六bin或未启用BGM。"
+      },
+      {
+        "name": "终末地入口退出",
+        "value": "黄wipe scale0→1；正文1500ms序列/退出2400ms",
+        "note": "源外观与本地状态时序；本地冷载43→100、86→100，scale0/.0251998/.302011/1及opacity.625881已采帧，不冒称源同帧相等。"
       }
     ],
-    "prompt": "为【目标页面/组件】实现「真实资源驱动的全屏载入」。居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。触发：首次进入或缓存重载。可见结果：未就绪场景被遮住，等待属于世界观入口。适用任务：资源较重的游戏档案与展览。失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。键盘：载入状态提供可读进度与重试/继续按钮；就绪后焦点进入当前章节。减少动态：载入进度保持文本和静止品牌图，取消装饰运动，资源就绪后即时进入。组合边界：只负责首屏必要资源就绪前的入口交接。可接章切与点阵静帧；同一入口避免再叠另一套欢迎开场，不能等待未启用BGM或全站素材。",
+    "prompt": "为【资源较重的入口】实现真实资源驱动的全屏载入。列出当前入口必需图片/字体，按完成任务显示进度，不按时间伪造百分比或等待全站影片/BGM；完成比例与成功条件分开。关键任务失败即使100%也显示可读错误和重试/继续，只有成功或用户明确继续才移交场景。可用静态品牌/短wipe承接退出，正文和目标章节可达；同一入口不叠第二套欢迎。明日方舟五图与终末地本地关键任务只是各自适配基线，不代表官网完整资源枚举、网络bytes或通用等待阈值。键盘可操作失败路径，加载状态用文本可读；减少动态保留真实进度并即时移交终态。分别验证冷/暖载、失败/重试和入口退出时序，源码外观、本地任务集和实测范围明确区分。",
     "sources": [
       {
         "caseId": "arknights-world",
@@ -48,6 +60,14 @@
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/0",
+        "observation": "载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。",
+        "evidence": "adapted",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
@@ -57,7 +77,16 @@
       "demos/arknights-world/script.js",
       "demos/arknights-world/style.css",
       "entries/arknights-world.json",
-      "research/arknights-world.md"
+      "research/arknights-world.md",
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js"
     ]
   },
   "sourceCases": [
@@ -68,7 +97,16 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "e8cbe5d8e1afbd105817aac1d4852e18cf9c23238f7ec2003c887954894133fa"
+      "bundleSha256": "28c932b824f09e07dfde31851c657d3a3c1b9969db8418305eb9d00d42d0456e"
+    },
+    {
+      "id": "endfield-industrial",
+      "title": "终末地 · 完整工业科幻门户",
+      "paths": {
+        "bundle": "agent/cases/endfield-industrial.json",
+        "demo": "demos/endfield-industrial/index.html"
+      },
+      "bundleSha256": "a3762f0c28bef2239c0e09c7d20f96dfaa4ba0608adf5a2848606007ff1eaae1"
     }
   ]
 }

@@ -91,7 +91,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "518052187b563e4d154f14faa2d9a97e4c7bdd9bcf65786f6ef12efb0ca3ee05"
+      "bundleSha256": "5a83badbc631d0e4941948a0489692da7858bdd80f7cdbd6916765caf0bf569a"
     },
     {
       "id": "persona-kinetic",
@@ -100,7 +100,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "aed77634292125d322c9d4e05f3e3c6af66625cf4ef6d78c0d278584c2ffbfb5"
+      "bundleSha256": "8e70a0331719bfd64e2a594d1cb4a8eb20f62b2b30d05dcded5b1af07858a1d3"
     },
     {
       "id": "uma-musume",
@@ -109,7 +109,7 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "9a305921d2ce7a428ac838c85435918b23fe2b47ec46820c28c77c322db325eb"
+      "bundleSha256": "8ac390184d456ba64d46a627b027cd6eb8ab2a63467cecfeccdcc8c3f21ea9c4"
     }
   ]
 }

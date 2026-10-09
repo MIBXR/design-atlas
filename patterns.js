@@ -3704,6 +3704,92 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "layered-directional-media-reveal",
+    "title": "黑层、信号层与媒体的方向揭示",
+    "category": "交互反馈",
+    "summary": "黑色遮层、强调色与实际图像依次揭示，让局部相册切换有明确方向和节奏。",
+    "mechanism": "组件内将黑层、信号色层、实际图像或影片叠为同方向裁切/slide-in，错峰推进；说明文字先退后入，选中索引、页码和媒体共同交接，旧媒体完成后暂停并清理。",
+    "trigger": "点击局部相册的前后或编号，选择新的图像/影片",
+    "effect": "先看到交接边界，再看到当前内容，媒体与编号/说明保持同一归属。",
+    "useCases": [
+      "多项技术演示相册",
+      "图像与影片混合的功能模块",
+      "有固定说明位置的案例轮播"
+    ],
+    "avoid": [
+      "把局部换图改成整页滚轮劫持",
+      "仅将图片scaleY伪装成三层揭示",
+      "叠加无上限离场层或继续播放旧视频",
+      "用信号色遮住稳定正文"
+    ],
+    "constraints": [
+      "黑层、强调色层和媒体是真实独立层，沿同一方向交接；媒体是实际图像/视频，不能用同一张图反复染色冒充三层。",
+      "此原子只负责组件内选择交接，区别于directional-section-wipe的整屏章节切换；竖向类别书脊由vertical-media-spine承担，可单独使用。",
+      "索引、页码、说明和素材用同一目标状态，正反与端点一致，旧视频暂停/离场层移除；快速输入采用明确锁或最新请求策略并单独测试。",
+      "来源参数400ms及delay0/250/500、文字500/500ms已由源码采集；本地四玩法视频与4→3、AIC五项图/正文/页码及5→1→5双向、有限中态实测，源同帧时序与快输入未全面验证。",
+      "减少动态即时切至目标媒体与可读说明；来源品牌黄可换为目标任务信号色，状态同时用文字、编号与按钮语义表达。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "方向层负责局部媒体交接，书脊负责类别归属，两者解耦。可接共享选择状态与生命周期，文字保持稳定阅读区域；不接管整页滚动，也不同时运行两套章切控制器。",
+      "pairsWellWith": [
+        "vertical-media-spine",
+        "last-request-transition",
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "前后/编号按钮有名称和可见焦点，端点disabled与aria同步；目标说明和页码在正常DOM中更新，稳定后只有当前媒体可操作，焦点不随视觉层漂移。",
+      "reducedMotion": "跳过三层位移与文字离场，立即显示目标媒体/编号/说明；视频另有暂停和静态封面，换项仍停止旧片。"
+    },
+    "parameters": [
+      {
+        "name": "三层顺序",
+        "value": "black → signal → media；每层400ms",
+        "note": "来源相册slide-in，黑层为交接边界，信号层不是稳定阅读底色。"
+      },
+      {
+        "name": "错峰与总跨度",
+        "value": "delay0/250/500ms；总900ms",
+        "note": "对应黑/黄/实际媒体三层，不是让加载器定时伪造进度。"
+      },
+      {
+        "name": "说明交接",
+        "value": "退出500ms / 进入500ms",
+        "note": "素材、页码与正文由一个选择状态关联；主页面保持自然滚动。"
+      },
+      {
+        "name": "本地已观察中态",
+        "value": "黑clip0；黄4.41%；媒体top100%",
+        "note": "AIC1→2一次浏览器采样及最终2/5、02图/outgoing0；不表示源/本地所有帧逐项相同。"
+      }
+    ],
+    "prompt": "为【图像/影片相册】实现组件内黑层→信号层→媒体的同方向揭示。保留三个独立层，以来源400ms、delay0/250/500总900ms作可调基线，说明500ms退出/500ms进入；不要只用scaleY缩放一张图。一个目标选择同步素材、编号、页码和正文，旧视频暂停、旧离场层清理；前后/端点/快速输入的锁或最新请求策略明确。局部换项不接管整页滚轮，竖向类别书脊保持独立静态构成。按钮可键盘操作、有名称与焦点，稳定后只有当前层可交互；减少动态直接给目标媒体与可读说明，视频保持主动暂停。用目标任务信号色替代源品牌黄，核验真实中态和终态，区分源码时序、本地局部实测与尚未逐项的源同帧对照。",
+    "sources": [
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/5",
+        "observation": "玩法/AIC：4段原玩法视频和5张原工业图；400ms三层方向揭示，黑层delay0/黄250/实际媒体500，总900ms；文字500ms退出/500ms进入，内容/编号/分页共同变化。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/data.js"
+    ]
+  },
+  {
     "id": "layered-navigation-drawer",
     "title": "导航容器先行、内容后入",
     "category": "导航与状态",
@@ -5628,10 +5714,10 @@ window.DESIGN_PATTERNS = [
     "id": "resource-bound-fullscreen-loading",
     "title": "真实资源驱动的全屏载入",
     "category": "加载与媒体",
-    "summary": "在关键场景就绪前以品牌载入页承接等待。",
-    "mechanism": "居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。",
+    "summary": "只等待入口关键资源，以真实完成数推进，再移交可用场景。",
+    "mechanism": "入口关键图片和必要字体完成数驱动全屏加载状态；全部任务结束不等于全部成功，失败保持明确重试/继续，成功后以短品牌遮层或wipe移交目标场景。",
     "trigger": "首次进入或缓存重载",
-    "effect": "未就绪场景被遮住，等待属于世界观入口。",
+    "effect": "用户看懂资源准备与失败状态，入口交接有边界，正文不会被全站素材长期阻塞。",
     "useCases": [
       "资源较重的游戏档案与展览"
     ],
@@ -5640,7 +5726,9 @@ window.DESIGN_PATTERNS = [
     ],
     "constraints": [
       "失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。",
-      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。",
+      "终末地的公开Updating图形与黄wipe沿源CSS；本地关键首页/干员图及字体集、任务比例、重试/继续属于适配，不声称复用了官网完整资源枚举或网络字节进度。",
+      "任务完成与成功分开：关键图失败即使显示100%也保持error/ready pending，直到重试成功或用户明确继续；目前失败重试已有实测，“继续”未单独验收。"
     ],
     "composition": {
       "role": "support",
@@ -5657,12 +5745,22 @@ window.DESIGN_PATTERNS = [
     },
     "parameters": [
       {
-        "name": "本地资源集",
+        "name": "明日方舟本地资源集",
         "value": "5份图片 / 保底1300ms",
         "note": "本地适配，非官网完整载入策略"
+      },
+      {
+        "name": "终末地本地关键任务",
+        "value": "首页背景/标题、初始干员图、档案背景与3项字体任务",
+        "note": "取自本地prepare；不等待70人物影片、六bin或未启用BGM。"
+      },
+      {
+        "name": "终末地入口退出",
+        "value": "黄wipe scale0→1；正文1500ms序列/退出2400ms",
+        "note": "源外观与本地状态时序；本地冷载43→100、86→100，scale0/.0251998/.302011/1及opacity.625881已采帧，不冒称源同帧相等。"
       }
     ],
-    "prompt": "为【目标页面/组件】实现「真实资源驱动的全屏载入」。居中品牌与细边界线形成全屏载入状态，进度绑定首屏必要图片的实际完成数，资源就绪后开放目标章节。触发：首次进入或缓存重载。可见结果：未就绪场景被遮住，等待属于世界观入口。适用任务：资源较重的游戏档案与展览。失败提供重试/继续路径，只等待首屏必要资源；来源与本地图片集及保底等待分开标注。键盘：载入状态提供可读进度与重试/继续按钮；就绪后焦点进入当前章节。减少动态：载入进度保持文本和静止品牌图，取消装饰运动，资源就绪后即时进入。组合边界：只负责首屏必要资源就绪前的入口交接。可接章切与点阵静帧；同一入口避免再叠另一套欢迎开场，不能等待未启用BGM或全站素材。",
+    "prompt": "为【资源较重的入口】实现真实资源驱动的全屏载入。列出当前入口必需图片/字体，按完成任务显示进度，不按时间伪造百分比或等待全站影片/BGM；完成比例与成功条件分开。关键任务失败即使100%也显示可读错误和重试/继续，只有成功或用户明确继续才移交场景。可用静态品牌/短wipe承接退出，正文和目标章节可达；同一入口不叠第二套欢迎。明日方舟五图与终末地本地关键任务只是各自适配基线，不代表官网完整资源枚举、网络bytes或通用等待阈值。键盘可操作失败路径，加载状态用文本可读；减少动态保留真实进度并即时移交终态。分别验证冷/暖载、失败/重试和入口退出时序，源码外观、本地任务集和实测范围明确区分。",
     "sources": [
       {
         "caseId": "arknights-world",
@@ -5671,6 +5769,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/0",
+        "observation": "载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。",
+        "evidence": "adapted",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
@@ -5680,7 +5786,16 @@ window.DESIGN_PATTERNS = [
       "demos/arknights-world/script.js",
       "demos/arknights-world/style.css",
       "entries/arknights-world.json",
-      "research/arknights-world.md"
+      "research/arknights-world.md",
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js"
     ]
   },
   {
@@ -5924,6 +6039,94 @@ window.DESIGN_PATTERNS = [
       "demos/monument-valley-game/style.css",
       "entries/monument-valley-game.json",
       "research/monument-valley-game.md"
+    ]
+  },
+  {
+    "id": "scanline-point-cloud-transition",
+    "title": "扫描线与射线驱动的点云交接",
+    "category": "交互反馈",
+    "summary": "真实xyz点云在扫描带中显现与退场，射线和短暂旋转共同提示模型交接。",
+    "mechanism": "读取Float32 xyz二进制点位，规范化后为旧、新模型分别建立点云actor；多条扫描线改变点的可见与扰动，射线指向扫描附近点，旋转短暂加速后恢复，模型选择与标题/编号同步，交接期间限制再入。",
+    "trigger": "选择世界观模型、前后按钮或六段索引；拖动改变观察方向",
+    "effect": "模型有可辨认的构形过程，资料状态与真实三维形态共同变化。",
+    "useCases": [
+      "技术设备与世界观模型目录",
+      "有真实点位数据的科学可视化",
+      "少量独立模型的档案舞台"
+    ],
+    "avoid": [
+      "用静态png或CSS放大代替真实点云",
+      "把扫描交接混作同一粒子池位置插值",
+      "为正文叠加持续强闪烁或无边界射线",
+      "给随机粒子承诺逐帧像素一致"
+    ],
+    "constraints": [
+      "使用有来源的xyz点位与模型配置，先校验Float32数量可被3整除、有限值及实际边界；归一化、offset/pivot/scale与摄像机共同决定原形，不能只下载bin便声称还原。",
+      "本来源为两actor扫描入/出和清理，区别于particle-model-reformation的同池目标插值；旧模型完成退出后释放geometry/material及噪声纹理，不能无限叠加。",
+      "扫描、射线、旋转与转场锁属于同一交接状态；随机射线保留上限，循环索引和标题同步；手机水平触摸观察须保留纵向页面滚动。",
+      "六模型可见形态、索引循环、交接锁、双向拖动和真实手机触摸已有源/本地实测；四段shader字符串对应。射线活动峰源105/本地144为随机输出，不是像素差异结论。",
+      "减少动态保留终态模型与DOM说明，停自动旋转、扫描和射线；WebGL或数据失败提供可读说明/合法静帧，不能阻塞整份档案。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "只负责模型构形与观察反馈，正常DOM目录和说明负责语义。可配合自然文档阅读和前台生命周期；与透明人物视频共存时分开资源、控件与拖动区域。扫描是有限交接，不把长篇正文交给canvas，也不需要改变整页滚轮浏览。",
+      "pairsWellWith": [
+        "native-document-reading",
+        "viewport-animation-lifecycle",
+        "aligned-metadata-rows"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "前后和模型索引用可命名按钮，当前标题/编号/pressed同步；焦点在画布时左右键调整角度并有等价文字，不让装饰射线进入Tab。手机拖动区域保留pan-y纵向阅读。",
+      "reducedMotion": "直接显示选中模型的终态点云，停止扫描射线、自动旋转与glitch，保留手动选择和说明；偏好动态变化时清除旧脉冲与计时。"
+    },
+    "parameters": [
+      {
+        "name": "点位格式与尺度",
+        "value": "Float32 xyz / Y跨度1900",
+        "note": "来源六bin无header；按数据边界归一化，再应用各模型独立offset/pivot/scale。"
+      },
+      {
+        "name": "扫描时间",
+        "value": "入场三线3000/(i+1)ms、delay2000×ln(i+1)；退场2000ms",
+        "note": "源算法与本地tick对应；三线完成后的交接锁约3197.225ms，不当通用UX等待规范。"
+      },
+      {
+        "name": "扫描位置",
+        "value": "入场−1350→1150；退场−1150→1150",
+        "note": "实采退出0/500/1000/2000ms为−1150/−862.5/0/1150；少量采样不代表所有帧像素相同。"
+      },
+      {
+        "name": "射线容量与旋转",
+        "value": "最多2000实例；旋转400/800/800ms后回基速",
+        "note": "按扫描附近点生成随机射线，源/本地活动数有随机差异；停止/离屏需清理调度。"
+      }
+    ],
+    "prompt": "为【真实模型档案】实现扫描线与射线驱动的点云交接。用有使用权的Float32 xyz点位，验证格式和边界，再以来源Y跨度1900及各模型offset/pivot/scale作研究基线。旧、新模型各自actor在多线扫描中退出/显现，射线只指向扫描附近点并设容量上限；有限旋转加速后回基速，完成后释放旧GPU资源。目录、前后、编号与DOM说明由同一模型选择驱动，转场再入策略明确，不把该机制错写成同池顶点morph。支持水平拖动与聚焦方向键，手机保留pan-y纵滚。减少动态直接给可见终态、停止自动旋转/射线/glitch；后台暂停与资源失败回退分别处理。保留有限源码/运行证据，随机射线不能声称像素逐帧相等。",
+    "sources": [
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/3",
+        "observation": "世界观：帝江号/锚点/集成工业系统/天师桩/天使/裂地者六个原bin及模型参数，Float32 xyz、按Y跨度1900规范化；实际WebGL点云、扫描、转动、拖动、分页/标题与六指标同步。最终状态实测见fidelity，不因源码抽取而自动判通过。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/data.js",
+      "demos/endfield-industrial/lore.js",
+      "demos/endfield-industrial/shaders.js"
     ]
   },
   {
@@ -7280,6 +7483,93 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "transparent-video-mode-stage",
+    "title": "透明视频的静态与动态模式舞台",
+    "category": "加载与媒体",
+    "summary": "静态立绘与RGB/alpha透明视频共享人物位置，进入短片结束后接续idle循环。",
+    "mechanism": "同一影片左半保存RGB颜色、右半保存亮度alpha遮罩，经WebGL合成为半宽透明canvas；2D立绘与3D影片模式独立于人物选择，enter完成后接idle，换人或退出时取消旧资源回调和帧调度。",
+    "trigger": "用户选择静态/动态模式，或在动态模式中切换人物",
+    "effect": "人物运动融入档案背景，姓名与资料位置稳定，动态资源始终属于当前人物。",
+    "useCases": [
+      "有授权透明影片的角色档案",
+      "静态图片与动态演示并列的品牌舞台",
+      "预录设备运动的背景合成"
+    ],
+    "avoid": [
+      "把预录透明视频说成可拖转人物网格",
+      "将遮罩半幅作为黑白背景一起显示",
+      "选中变化后继续播放旧人物",
+      "为所有角色影片制造阻断加载"
+    ],
+    "constraints": [
+      "源人物3D为RGB/alpha透明影片，不是实时人物网格；需要已有双幅编码素材，普通MP4不能凭空取得真实alpha。",
+      "enter与idle对应同一人物，显示状态与资源generation同步；loadeddata、ended及帧回调必须检查当前身份，退出暂停并释放旧调度。",
+      "源祀影片3840×1080输出1920×1080，alpha亮度权重0.3/0.59/0.11；迁移时检查尺寸、边缘、色彩与素材许可，不把此编码当所有透明影片的标准。",
+      "源公开模块说明enter结束换idle；最终默认设置仅本地Si自然循环和手机艾尔黛拉链路有实测，原站本轮自然事件链未完整观察，不宣称全部35影片通过。",
+      "保留静态立绘、失败回退和手动模式入口；减少动态选择可见静帧并停止连续解码，不因暂停首帧透明而显示空白人物。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "此原子负责透明媒体解码和静态/动态模式的交接；人物身份、姓名、目录和资料同步由人物舞台原子承担。与世界观点云是两个独立渲染器，不争夺拖动语义；页面可见性统一提供暂停信号，用户选择仍独立保存。",
+      "pairsWellWith": [
+        "character-stage-coordination",
+        "viewport-animation-lifecycle",
+        "hatched-registration-type"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "静态/动态模式用有名称的按钮，aria-pressed跟随实际模式，切换不移动资料焦点；失败提供静态回退。人物名称和等价说明位于正常DOM，不只保存在canvas。",
+      "reducedMotion": "保留当前人物静态立绘或idle有效静帧，停止影片与GPU连续帧；本地实测idle 1/30秒静帧可见。恢复动态尊重当前模式、前台和用户暂停状态。"
+    },
+    "parameters": [
+      {
+        "name": "双幅透明编码",
+        "value": "RGB-left / luma-alpha-right；3840×1080 → 1920×1080",
+        "note": "祀来源影片尺寸与公开模块采样；不是任意视频的透明转换。"
+      },
+      {
+        "name": "Alpha合成",
+        "value": "0.3R + 0.59G + 0.11B",
+        "note": "采样遮罩右半；源码算法已核对，源/本地透明边缘同帧未全面验收。"
+      },
+      {
+        "name": "状态交接",
+        "value": "2D / enter → idle(loop)",
+        "note": "最终默认本地Si enter15.2秒→idle2.9秒实际通过；不同角色时长由各自影片决定。"
+      },
+      {
+        "name": "减少动态静帧",
+        "value": "本地idle t=0.033333秒 / paused=true",
+        "note": "390×844最终静态分支实测；用于避免首帧透明，不强制所有影片使用同一seek值。"
+      }
+    ],
+    "prompt": "为【人物或设备档案】实现静态立绘与RGB/alpha透明视频模式舞台。采用有使用权的双幅影片，左RGB、右亮度alpha经WebGL合成为半宽透明canvas，保留背景和正常DOM姓名/说明。用独立人物选择与2D/动态模式状态，enter自然结束后切同人物idle循环；加载、ended、requestVideoFrameCallback与快速换人都检查资源generation，离开模式或后台暂停，失败回退立绘。不要把预录影片写成可自由旋转的网格模型。参数以来源0.3/0.59/0.11和3840×1080→1920×1080作参考，按新影片实际尺寸验证透明边缘与颜色。键盘按钮名称、pressed及焦点保持一致；减少动态展示有效静帧，不留透明空白。分别记录源码机制、有限角色自然链路和原站实测范围，不泛化全部视频通过。",
+    "sources": [
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/2",
+        "observation": "2D/3D：同35项立绘和70个原enter/idle视频。祀源影片3840×1080左右RGB/alpha，经原亮度权重0.3/0.59/0.11合成1920×1080透明canvas，enter结束切idle循环；不制造实时人物模型。",
+        "evidence": "observed",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
+      }
+    ],
+    "sourceFiles": [
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/data.js",
+      "demos/endfield-industrial/transparent-video.js"
+    ]
+  },
+  {
     "id": "vertical-card-swap",
     "title": "中央窗口垂直退出与进入",
     "category": "交互反馈",
@@ -7413,14 +7703,16 @@ window.DESIGN_PATTERNS = [
     "constraints": [
       "竖向书脊只放简短类别，完整释义在正常方向文字中提供。",
       "图像维持比例，类别与编号不覆盖关键信息；手机可缩小书脊或移到上方。",
-      "此条抽取构成，播放控制另用实际媒体语义实现。"
+      "此条抽取构成，播放控制另用实际媒体语义实现。",
+      "来源字段同时包含相册切换；本原子仅抽取类别朝向、媒体边界和对齐，不把三层wipe当书脊成立的前提。"
     ],
     "composition": {
       "role": "support",
-      "notes": "书脊标类别，图下注释解释内容；两者可独立学习但共用媒体边界。不可把书脊当全页主导航。",
+      "notes": "书脊标类别，图下注释解释内容，共用媒体边界；静态图或影片均可使用，不能把书脊当全页主导航。换项方向层由layered-directional-media-reveal独立承担。",
       "pairsWellWith": [
         "artwork-caption-separation",
-        "aligned-metadata-rows"
+        "aligned-metadata-rows",
+        "layered-directional-media-reveal"
       ],
       "conflicts": []
     },
@@ -7430,17 +7722,12 @@ window.DESIGN_PATTERNS = [
     },
     "parameters": [
       {
-        "name": "源媒体与类别",
-        "value": "4玩法视频 / 5AIC图片",
-        "note": "真实相册媒体与类别共同组织，非首版单1600×900图/105px书脊。"
-      },
-      {
-        "name": "方向层级",
-        "value": "400ms；black0/yellow250/media500ms",
-        "note": "原相册三层方向揭示，文字500ms退出/500ms进入；视觉书脊本身静态。"
+        "name": "类别与媒体边界",
+        "value": "简短竖向类别 / 横向媒体 / 正常方向编号与说明",
+        "note": "来自AIC真实模块，类别固定标归属；三层换图时序独立归layered-directional-media-reveal。"
       }
     ],
-    "prompt": "将简短类别作为媒体边界的竖向书脊，横向真实图像/影片与正常方向编号/标题/说明保持共同对齐。文字朝向表达归属，不旋转长篇正文；portrait沿真实布局重排，避免书脊挤压内容。多项切换可借鉴400ms黑/黄/媒体分层delay0/250/500及500/500ms说明，使用新任务信号色，不把竖书脊当作整站导航。播放/暂停、键盘与减少动态需要实际媒体语义，源参数和最终浏览器实测分别记录。",
+    "prompt": "将简短类别作为媒体边界的竖向书脊，横向真实图像/影片与正常方向编号、标题、说明保持共同对齐。类别朝向表达归属，正文不旋转，portrait沿真实媒体布局重排，避免书脊挤压内容。书脊本身静态，不以动画成立，也不当整站导航；换项的三层方向揭示独立配合layered-directional-media-reveal。类别在正常方向可读标题中重复，装饰aria-hidden；播放控制、键盘、暂停与减少动态由真实媒体语义承担。",
     "sources": [
       {
         "caseId": "endfield-industrial",
@@ -7480,14 +7767,19 @@ window.DESIGN_PATTERNS = [
     ],
     "constraints": [
       "恢复策略按任务明确，自动计时不能覆盖手动状态。",
-      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
+      "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。",
+      "终末地新增来源是本地适配与真实后台/返回实测，evidence=adapted；不将本地visibility监听、BGM恢复或减少动态策略写成完整源站已观察行为。",
+      "恢复只针对先前有运行意图的媒体；用户关闭声音、切为2D或选择减少动态后，后台返回不能自动推翻其选择。"
     ],
     "composition": {
       "role": "support",
       "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
       "pairsWellWith": [
         "photo-crossfade-cycle",
-        "centered-loop-gallery"
+        "centered-loop-gallery",
+        "transparent-video-mode-stage",
+        "scanline-point-cloud-transition",
+        "layered-directional-media-reveal"
       ],
       "conflicts": []
     },
@@ -7495,8 +7787,14 @@ window.DESIGN_PATTERNS = [
       "keyboard": "暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。",
       "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
     },
-    "parameters": [],
-    "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
+    "parameters": [
+      {
+        "name": "终末地本地真实后台检查",
+        "value": "hidden 8.025秒：Lore frame542/angle.5491946559、BGM t8.031918保持；返回frame557/angle.6241946、BGM t8.605204",
+        "note": "2040×939真实切后台/返回，非派发模拟事件；仅本地当前模块，不推广为源站或全部35人物链路通过。"
+      }
+    ],
+    "prompt": "为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。 终末地作为本地适配补充：同时控制点云GPU帧与已主动开启的BGM，真实切后台期间时间/角度冻结，返回按先前意图恢复。此证据只证明当前本地模块，未完整观察源站相同visibility自然行为，也未逐项验收全部媒体组合；不要将适配标为原站observed。",
     "sources": [
       {
         "caseId": "linear-workflow",
@@ -7521,6 +7819,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "adapted",
         "referenceUrl": "https://qoder.cn/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#interaction/7",
+        "observation": "声音和业务：原BGM仅在用户打开声音后播放，离开标签/隐藏页面停止相关媒体；登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
+        "evidence": "adapted",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
@@ -7545,7 +7851,18 @@ window.DESIGN_PATTERNS = [
       "entries/stripe-platform.json",
       "research/linear-workflow.md",
       "research/qoder-platform.md",
-      "research/stripe-platform.md"
+      "research/stripe-platform.md",
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/state-matrix.md",
+      "demos/endfield-industrial/source-provenance.json",
+      "demos/endfield-industrial/index.html",
+      "demos/endfield-industrial/reference.css",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/lore.js",
+      "demos/endfield-industrial/transparent-video.js"
     ]
   },
   {

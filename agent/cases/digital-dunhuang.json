@@ -192,8 +192,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "c773e69efecd400f7229d82dda820fcb5567a6c861ab2bf8ef02818c29dea999",
-      "bytes": 61347
+      "sha256": "4196e6d6cbbfca2d32d5d2dee4618bd5d58877a9334134e36c1c75ce47e4f5cf",
+      "bytes": 132498
     },
     {
       "path": "case-loading.css",
@@ -786,14 +786,14 @@
     {
       "path": "demos/digital-dunhuang/index.html",
       "role": "source",
-      "sha256": "c9741dbf6b55a50f1009558adcfe602f2daed0439791dddb7d319ff9afe3a836",
-      "bytes": 36910
+      "sha256": "c5a497c04303377b3cc050f373ead0c8e16fa0d80b820650cf4a78651faa5203",
+      "bytes": 45247
     },
     {
       "path": "demos/digital-dunhuang/section.html",
       "role": "source",
-      "sha256": "3665230374f1bb22e0eb860781ff15f9bb863957bb085c17e9015adc8b5c6575",
-      "bytes": 100368
+      "sha256": "4e6124f0272293d3b99a2d456725a144e1cf502d63551fcc1ceb011b6773fb35",
+      "bytes": 116442
     },
     {
       "path": "demos/digital-dunhuang/state-matrix.md",
@@ -804,8 +804,8 @@
     {
       "path": "demos/digital-dunhuang/style.css",
       "role": "source",
-      "sha256": "f729d2e1a09704c8a2392958c72dfc5f5883a6e4fb9534b26d69ef93e7099e6e",
-      "bytes": 248971
+      "sha256": "0f3c18e94de9d0d6cbe28d9d26ceb2cf921ad9a629b4dcf10ff164523f10df6e",
+      "bytes": 254062
     },
     {
       "path": "demos/digital-dunhuang/viewer.css",
