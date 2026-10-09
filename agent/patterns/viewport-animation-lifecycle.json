@@ -123,7 +123,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "51c26fe12b13e661132632b3d82a74e863ab535431693ae78a258cd2a4eef5e2"
+      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
     },
     {
       "id": "linear-workflow",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "17d5cc2fb9cba1ec56ec064e286878a400d624b339920d21bdc13a1c031f7813",
+  "contentVersion": "5c16d9c518d481fb2871f1a528ea1e7d480c539159060f03f7ced03b8cc1acc9",
   "entryCount": 34,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
@@ -2474,7 +2474,7 @@
         "demo": "demos/endfield-industrial/index.html",
         "entry": "entries/endfield-industrial.json"
       },
-      "bundleSha256": "51c26fe12b13e661132632b3d82a74e863ab535431693ae78a258cd2a4eef5e2"
+      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
     },
     {
       "id": "rhine-lab",
@@ -2559,9 +2559,9 @@
   ],
   "patterns": {
     "path": "agent/patterns.json",
-    "sha256": "f39b0f61de44638c2c051c9b7f397e7938bf4e553b7d0b855e99580129b7aa7f",
+    "sha256": "1ff2b87775c5a2d26dff0e6e026c06a5724dfd465559f55c18a86b3070982c75",
     "bytes": 507774,
     "patternCount": 129,
-    "contentVersion": "8942aa2f32fc8e596c05b64640e212402e4ed58e11dbca009bf4b8327cefbf3f"
+    "contentVersion": "c8003cbf2835bf3f330e180bd00aa19b21496b218f86564579e632ad84d080a8"
   }
 }
