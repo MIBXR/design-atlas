@@ -5,6 +5,9 @@
     "id": "scroll-synchronized-rail",
     "title": "说明索引与窗口进度同步",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "文字、窗口模式和进度共同指示当前段落。",
     "mechanism": "长段内用多个内容哨兵更新侧栏展开、标题尺度、产品窗口与进度；点击或方向键定位同一状态。",
     "trigger": "滚动或选择说明索引",
@@ -62,7 +65,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
+      "bundleSha256": "1b4e5662c2a08f459f150770cc857308f94d5ac780ef0129f308160fb8c4f450"
     }
   ]
 }

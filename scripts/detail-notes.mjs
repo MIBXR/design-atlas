@@ -1,5 +1,6 @@
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 
 // Run the actual human-facing renderer, with original entries supplied directly
 // rather than a possibly stale generated catalog.js. Browser services unrelated
@@ -20,9 +21,10 @@ export function renderDetailNotes({ entries, id, rendererSource }) {
   }
   const location = new URL(`http://atlas.local/cases.html#style/${id}`);
   const document = { querySelector: node, querySelectorAll: () => [], createElement: tag => node(`created:${tag}`), body: node('body'), activeElement: { tagName: 'BODY' }, addEventListener() {} };
-  const window = { DESIGN_ATLAS: entries, addEventListener() {}, scrollTo() {} };
+  const window = { DESIGN_ATLAS: entries, DesignAtlasPreview: { mount: () => ({ refresh() {}, disconnect() {} }) }, addEventListener() {}, scrollTo() {} };
   const sandbox = { window, document, location, URL, console, localStorage: { getItem: () => null, setItem() {} }, history: { replaceState() {}, pushState() {} }, navigator: { clipboard: { writeText: async () => {} } }, ResizeObserver: class { observe() {} disconnect() {} }, setTimeout: () => 0, clearTimeout() {}, Blob };
   const context = vm.createContext(sandbox);
+  new vm.Script(fs.readFileSync(new URL('../favorites.js', import.meta.url), 'utf8')).runInContext(context, { timeout: 2000 });
   new vm.Script(rendererSource, { filename: 'atlas.js' }).runInContext(context, { timeout: 2000 });
   assert.equal(node('#detail').hidden, false, `${id}: detail route was not rendered`);
   const html = node('#detail').innerHTML;

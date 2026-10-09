@@ -2,6 +2,9 @@
   "id": "institution-overlap-logo",
   "title": "方形机构锚点跨主图边界",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "在艺术海报之外持续确认机构身份。",
   "mechanism": "方形机构标志叠在海报边界上，尺寸和上浮位置按断点变化；艺术图保持自身色彩与比例。",
   "trigger": "进入展览主图",

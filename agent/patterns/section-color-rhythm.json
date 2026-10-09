@@ -5,6 +5,9 @@
     "id": "section-color-rhythm",
     "title": "整节配色形成阅读节奏",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "通过章节背景切换划分不同内容任务。",
     "mechanism": "产品摄影、技术说明或行动区域各用明确的整节色带；文字与表面在每节成对定义，图像不反色。",
     "trigger": "依次阅读不同章节",
@@ -91,7 +94,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
+      "bundleSha256": "c8038c83add331ef0a938bced6dacfd656e133c2fa18455423577d041f58ced2"
     },
     {
       "id": "monument-valley-game",
@@ -100,7 +103,7 @@
         "bundle": "agent/cases/monument-valley-game.json",
         "demo": "demos/monument-valley-game/index.html"
       },
-      "bundleSha256": "bb8320dbd68b71e84efe641cc42b33d1a35c3cf4e354d6c07d089d5f1a76cb7a"
+      "bundleSha256": "d81bd02dc09b1426f4628aeab1408d9b7fba528fe981f5754459bb0052c3996f"
     },
     {
       "id": "stripe-platform",
@@ -109,7 +112,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
+      "bundleSha256": "ed45ebde0617cec606551b1cb6ed55e674dbdcdc8fe2702e83765a3b03b73507"
     }
   ]
 }

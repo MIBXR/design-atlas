@@ -24,4 +24,4 @@
 
 改变背景映像的一个静态画面，保持Logo和下载位置，观察天空、建筑和高光是否遮挡标语，再记录允许控件落点的安全区域。
 
-[查看 Demo](../demos/blue-archive/index.html) · [返回浏览案例](../cases.html#style/blue-archive)
+[查看 Demo](../demos/blue-archive/index.html) · [返回案例库](../cases.html#style/blue-archive)

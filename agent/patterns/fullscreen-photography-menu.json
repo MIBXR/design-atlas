@@ -5,6 +5,10 @@
     "id": "fullscreen-photography-menu",
     "title": "摄影与分列链接组成全屏目录",
     "category": "导航与状态",
+    "experienceTypes": [
+      "visual",
+      "page-motion"
+    ],
     "summary": "导航拥有自己的品牌场景。",
     "mechanism": "打开菜单时全屏摄影和目的地链接成组淡入，关闭淡出并返回原阅读位置；目录层和主页面层职责分开。",
     "trigger": "打开或关闭菜单",
@@ -66,7 +70,7 @@
         "bundle": "agent/cases/rijksmuseum-art.json",
         "demo": "demos/rijksmuseum-art/index.html"
       },
-      "bundleSha256": "45bacbc97ac544e74afc9046a72489a71ab882851819b2e28817840643fdd59d"
+      "bundleSha256": "850a40e065e8422b03cb2e8428fd98c21d7cd28e71040311c395e0dc9f161cdf"
     }
   ]
 }

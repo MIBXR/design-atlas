@@ -2,6 +2,9 @@
   "id": "aligned-metadata-rows",
   "title": "编号与元数据对齐列表",
   "category": "内容组织",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "让编号、名称、日期和操作横向可比。",
   "mechanism": "用稳定列宽组织每行的编号、名称、类别、日期与收藏；手机将次级元数据折到名称下方。",
   "trigger": "逐行浏览目录",

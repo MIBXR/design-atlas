@@ -133,9 +133,9 @@
     {
       "path": "prompts/palace-museum.md",
       "role": "prompt",
-      "content": "# 故宫 · 六章探索与宫廷视觉目录 · 复用 Prompt\n\n由 [结构化案例](../entries/palace-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/palace-museum.md)。\n\n## 正向 Prompt\n\n按2026-10-09故宫中文探索页六章快照复现文化门户。先逐模块对照DOM和计算样式，保留1258px内容宽、源字体栈、章节间距、全部圆形题饰和真实本地化图像；建筑朱红纹理托起左侧说明/八项名称索引及右下屋脊，藏品保留异形图像拼图、500ms文字叠层，典籍保留八条1s/0.3s序列及反向恢复，历史五类入口，文物医院35/65分栏、两图5000ms自动/500ms水平切换和hover暂停，最后保留全部五类纸签专题及官方手机图。导航要含悬停子菜单、全站菜单、搜索空词提示、二维码与浏览建议。记录原站/本地状态矩阵、素材来源/尺寸/hash和未复刻服务；业务及第三方语音读屏走官方，减少动态关闭自动位移而保留手动操作。\n\n## 负向约束\n\n不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。\n\n## 制作约束\n\n- 固定中文探索页六章快照，不合并官网首页轮播、全景故宫或数字文物库的独立服务。\n- 完整检查并本地化本页适用图像、背景纹理与伪元素题饰；保留原字节、宽高和水印，权利归原机构/作者。\n- 原站业务链接回官方；第三方无障碍工具实际观察到15项入口，但语音/读屏服务未在本地克隆。\n- 桌面六章盒模型与原站同值；390px手机前四章同值、医院高度约0.5px差；不声称全站业务或所有浏览器像素一致。\n- 减少动态时保持内容可见、手动轮播可用，取消自动播放和位移。\n\n## 检查方法\n\n替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。\n\n[查看 Demo](../demos/palace-museum/index.html) · [返回浏览案例](../cases.html#style/palace-museum)\n",
-      "sha256": "83316416523dc4273a3e450cdc65934ad97cda36a256cbc83d455f5385886744",
-      "bytes": 2125
+      "content": "# 故宫 · 六章探索与宫廷视觉目录 · 复用 Prompt\n\n由 [结构化案例](../entries/palace-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/palace-museum.md)。\n\n## 正向 Prompt\n\n按2026-10-09故宫中文探索页六章快照复现文化门户。先逐模块对照DOM和计算样式，保留1258px内容宽、源字体栈、章节间距、全部圆形题饰和真实本地化图像；建筑朱红纹理托起左侧说明/八项名称索引及右下屋脊，藏品保留异形图像拼图、500ms文字叠层，典籍保留八条1s/0.3s序列及反向恢复，历史五类入口，文物医院35/65分栏、两图5000ms自动/500ms水平切换和hover暂停，最后保留全部五类纸签专题及官方手机图。导航要含悬停子菜单、全站菜单、搜索空词提示、二维码与浏览建议。记录原站/本地状态矩阵、素材来源/尺寸/hash和未复刻服务；业务及第三方语音读屏走官方，减少动态关闭自动位移而保留手动操作。\n\n## 负向约束\n\n不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。\n\n## 制作约束\n\n- 固定中文探索页六章快照，不合并官网首页轮播、全景故宫或数字文物库的独立服务。\n- 完整检查并本地化本页适用图像、背景纹理与伪元素题饰；保留原字节、宽高和水印，权利归原机构/作者。\n- 原站业务链接回官方；第三方无障碍工具实际观察到15项入口，但语音/读屏服务未在本地克隆。\n- 桌面六章盒模型与原站同值；390px手机前四章同值、医院高度约0.5px差；不声称全站业务或所有浏览器像素一致。\n- 减少动态时保持内容可见、手动轮播可用，取消自动播放和位移。\n\n## 检查方法\n\n替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。\n\n[查看 Demo](../demos/palace-museum/index.html) · [返回案例库](../cases.html#style/palace-museum)\n",
+      "sha256": "6085b94d130aa03329c3e6f565bd185046db25df0493fc20ee39c429e6f83840",
+      "bytes": 2122
     },
     {
       "path": "demos/palace-museum/fidelity.md",
@@ -174,8 +174,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -864,20 +864,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/palace-museum.json",
@@ -906,8 +906,8 @@
     {
       "path": "prompts/palace-museum.md",
       "role": "context",
-      "sha256": "83316416523dc4273a3e450cdc65934ad97cda36a256cbc83d455f5385886744",
-      "bytes": 2125
+      "sha256": "6085b94d130aa03329c3e6f565bd185046db25df0493fc20ee39c429e6f83840",
+      "bytes": 2122
     },
     {
       "path": "research/palace-museum.md",
@@ -924,26 +924,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

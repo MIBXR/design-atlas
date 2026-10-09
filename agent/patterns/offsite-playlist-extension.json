@@ -5,6 +5,10 @@
     "id": "offsite-playlist-extension",
     "title": "以官方播放列表延伸主题",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound",
+      "structure"
+    ],
     "summary": "用户主动离开读页进入听觉回看。",
     "mechanism": "明确的Playlist或官方影片入口链接真实外部平台，不加载无授权播放器或自动音乐；说明目标与声音来源。",
     "trigger": "激活播放列表或官方影片链接",
@@ -88,7 +92,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
+      "bundleSha256": "4a82993f1ff41bec4d8dc02d5b8a133dba191d484e8cdf20fd91926be31b692d"
     },
     {
       "id": "persona-kinetic",
@@ -97,7 +101,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "8cd2f928c61afb00bf28cb215b0c4c89f92a34be6de4e3a0b4ecf417d104c3f6"
+      "bundleSha256": "6496f9f65ed1aed9d384585d9e234f0bfdd4d80fba2d6b403ae0dd6c409c2465"
     },
     {
       "id": "philharmonie-music",
@@ -106,7 +110,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "0280f9cb8a02c32998ad187257d5857a9f4948ecca4948f63e792df2d82a25d0"
+      "bundleSha256": "f134d6113b9260ee90975694c7678ebe78efe98c0814d1dee43b0ab39ac1e9da"
     }
   ]
 }

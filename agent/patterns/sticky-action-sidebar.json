@@ -5,6 +5,9 @@
     "id": "sticky-action-sidebar",
     "title": "桌面粘性行动栏、手机回文档流",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "内容阅读和到访决定并行。",
     "mechanism": "桌面正文旁的票务/行动面板保持sticky，时间与价格在面板内展开；窄屏把面板置回内容流前部。",
     "trigger": "阅读长详情",
@@ -64,7 +67,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "0280f9cb8a02c32998ad187257d5857a9f4948ecca4948f63e792df2d82a25d0"
+      "bundleSha256": "f134d6113b9260ee90975694c7678ebe78efe98c0814d1dee43b0ab39ac1e9da"
     }
   ]
 }

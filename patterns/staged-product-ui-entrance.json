@@ -2,6 +2,9 @@
   "id": "staged-product-ui-entrance",
   "title": "延迟产品界面与扫光入场",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "让主张先出现，再揭示工作系统。",
   "mechanism": "稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。",
   "trigger": "进入页面及继续下滚",

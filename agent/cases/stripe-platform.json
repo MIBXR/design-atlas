@@ -143,9 +143,9 @@
     {
       "path": "prompts/stripe-platform.md",
       "role": "prompt",
-      "content": "# Stripe — 彩带与金融产品矩阵 · 复用 Prompt\n\n由 [结构化案例](../entries/stripe-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/stripe-platform.md)。\n\n## 正向 Prompt\n\n以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。桌面菜单保留指针进入/离开及键盘路径，popup高度/位移/透明度300ms、裁切200ms采用源曲线，分类自然高度衔接；手机使用全屏顶层分类、500ms侧向二级、Back返回与固定底部行动，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/stripe-platform/index.html) · [返回浏览案例](../cases.html#style/stripe-platform)\n",
-      "sha256": "2b178dfb142962342a3fac2e30cab8135cff8e9cb691717ffe3bf21f74e29a68",
-      "bytes": 2334
+      "content": "# Stripe — 彩带与金融产品矩阵 · 复用 Prompt\n\n由 [结构化案例](../entries/stripe-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/stripe-platform.md)。\n\n## 正向 Prompt\n\n以 https://stripe.com/ 在【采集日期】的 英文全球首页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留官方 SingleWave 的几何、shader、home 相机和 light palette，不能换任意 CSS 渐变。保持连续段落式主张、小圆角按钮、1266px 内容框与浅色产品 Bento；终端纵向 mask 和 checkout 同步；四统计选择/进度；四客户的高度折叠和官方摄影切换。Startup、平台、开发者和活动顺序保留，架子原生横滑，后段海军蓝是章节主题不是全局深色开关。桌面菜单保留指针进入/离开及键盘路径，popup高度/位移/透明度300ms、裁切200ms采用源曲线，分类自然高度衔接；手机使用全屏顶层分类、500ms侧向二级、Back返回与固定底部行动，所有弹窗可关闭；此页没有配乐。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/stripe-platform/index.html) · [返回案例库](../cases.html#style/stripe-platform)\n",
+      "sha256": "7f906ca2eceabda57ad1e5c9d911efc3d6010f7cf58254657517c42f88a2b36d",
+      "bytes": 2331
     },
     {
       "path": "demos/stripe-platform/fidelity.md",
@@ -184,8 +184,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -334,20 +334,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/stripe-platform.json",
@@ -376,8 +376,8 @@
     {
       "path": "prompts/stripe-platform.md",
       "role": "context",
-      "sha256": "2b178dfb142962342a3fac2e30cab8135cff8e9cb691717ffe3bf21f74e29a68",
-      "bytes": 2334
+      "sha256": "7f906ca2eceabda57ad1e5c9d911efc3d6010f7cf58254657517c42f88a2b36d",
+      "bytes": 2331
     },
     {
       "path": "research/screenshots/stripe-platform-source.png",
@@ -400,26 +400,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

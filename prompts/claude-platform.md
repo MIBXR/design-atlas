@@ -21,4 +21,4 @@
 
 以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。
 
-[查看 Demo](../demos/claude-platform/index.html) · [返回浏览案例](../cases.html#style/claude-platform)
+[查看 Demo](../demos/claude-platform/index.html) · [返回案例库](../cases.html#style/claude-platform)

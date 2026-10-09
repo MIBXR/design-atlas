@@ -2,6 +2,9 @@
   "id": "independent-outfit-state",
   "title": "人物与服装分别管理",
   "category": "交互反馈",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "一个人物可有多个身份表现。",
   "mechanism": "人物选择与学校/怪盗服装使用独立状态，换装只切换对应立绘与入场，不误改当前人物。",
   "trigger": "切换人物或服装",

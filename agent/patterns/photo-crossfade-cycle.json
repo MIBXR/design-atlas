@@ -5,6 +5,9 @@
     "id": "photo-crossfade-cycle",
     "title": "给摄影留阅读时间的淡化轮换",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "先完整展示一张，再以透明度交接。",
     "mechanism": "静态摄影在明确停留间隔后交叉淡化，图像保持比例；手动选择更新索引与题注。",
     "trigger": "轮换周期或手动索引",
@@ -85,7 +88,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "49cea30096e1454044bb301b68cfff03272367dcb37f606d652b93e18a8a0ccd"
+      "bundleSha256": "95aaf137b4a64162e7b0516cf829a0caab9de96155b90ce355c607e093273524"
     },
     {
       "id": "fuji-rock",
@@ -94,7 +97,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
+      "bundleSha256": "4a82993f1ff41bec4d8dc02d5b8a133dba191d484e8cdf20fd91926be31b692d"
     }
   ]
 }

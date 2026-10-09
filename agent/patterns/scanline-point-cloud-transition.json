@@ -5,6 +5,9 @@
     "id": "scanline-point-cloud-transition",
     "title": "扫描线与射线驱动的点云交接",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "真实xyz点云在扫描带中显现与退场，射线和短暂旋转共同提示模型交接。",
     "mechanism": "读取Float32 xyz二进制点位，规范化后为旧、新模型分别建立点云actor；多条扫描线改变点的可见与扰动，射线指向扫描附近点，旋转短暂加速后恢复，模型选择与标题/编号同步，交接期间限制再入。",
     "trigger": "选择世界观模型、前后按钮或六段索引；拖动改变观察方向",
@@ -97,7 +100,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+      "bundleSha256": "57e5c154343dafce05cb186e475796b28082b0503a1cfed3a126ccef61e70f1f"
     }
   ]
 }

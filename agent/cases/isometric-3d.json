@@ -131,9 +131,9 @@
     {
       "path": "prompts/isometric-3d.md",
       "role": "prompt",
-      "content": "# 等轴 3D：让空间讲述系统 · 复用 Prompt\n\n由 [结构化案例](../entries/isometric-3d.json) 自动生成。参考观察与具体边界见 [调研](../research/isometric-3d.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构宁静世界 Little Terraces 制作本地网页，借鉴 Monument Valley 的极简建筑世界呈现，并依据 Adobe 等轴制图说明使用严格 30° 平行投影。不要复制其关卡、角色和标志。信息顺序：宁静探索的价值主张→一个原创浮岛的完整世界→三个旅程章节→回到场景的邀请。画面包含陶土基础台、奶油塔楼、薄荷温室、水池、树木和连续路径；全部用同一 x/y/z 投影函数与统一三面明度生成 SVG。左侧窄文案右侧大场景，避免通用卡片首屏。提供整岛/花园/建筑焦点按钮，和将平台、建筑、植物分层的展开按钮；状态说明和 aria-pressed 同步。至少三节内容，小屏重排，SVG 适配视口，键盘可操作，reduced motion 即时切换；无CDN、外部素材或WebGL依赖。\n\n要素协调要求：柔和调色、衬线标题和稳定投影共享安静情绪；结构展开解释层次，不能随意更换投影角度。\n\n## 负向约束\n\n不要混合透视消失点与等轴投影；不要复制原游戏地图；不要自动旋转、强制视差或密集热点；不要声称 SVG 是真正可旋转的实时 3D。\n\n## 制作约束\n\n- 真正等轴投影使用平行轴和统一比例，不随意混入透视消失点\n- 左右平面约 30°，同一组坐标生成全部物体\n- 光源与三面明度方向一致\n- 场景图层必须有文字控件，不能只依赖小物体热点\n- 移动端先呈现价值主张，再呈现场景和控件\n- reduced motion 时立即切换图层位置\n\n## 检查方法\n\n把浮岛替换成数据平台的等轴系统图，让三种焦点分别对应计算、存储、网络，保留统一坐标与分层解释。\n\n[查看 Demo](../demos/isometric-3d/index.html) · [返回浏览案例](../cases.html#style/isometric-3d)\n",
-      "sha256": "ad6d668ae87a2420a9f17a24edd46ecd40137156c507989ae288eacfffd03a52",
-      "bytes": 2268
+      "content": "# 等轴 3D：让空间讲述系统 · 复用 Prompt\n\n由 [结构化案例](../entries/isometric-3d.json) 自动生成。参考观察与具体边界见 [调研](../research/isometric-3d.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构宁静世界 Little Terraces 制作本地网页，借鉴 Monument Valley 的极简建筑世界呈现，并依据 Adobe 等轴制图说明使用严格 30° 平行投影。不要复制其关卡、角色和标志。信息顺序：宁静探索的价值主张→一个原创浮岛的完整世界→三个旅程章节→回到场景的邀请。画面包含陶土基础台、奶油塔楼、薄荷温室、水池、树木和连续路径；全部用同一 x/y/z 投影函数与统一三面明度生成 SVG。左侧窄文案右侧大场景，避免通用卡片首屏。提供整岛/花园/建筑焦点按钮，和将平台、建筑、植物分层的展开按钮；状态说明和 aria-pressed 同步。至少三节内容，小屏重排，SVG 适配视口，键盘可操作，reduced motion 即时切换；无CDN、外部素材或WebGL依赖。\n\n要素协调要求：柔和调色、衬线标题和稳定投影共享安静情绪；结构展开解释层次，不能随意更换投影角度。\n\n## 负向约束\n\n不要混合透视消失点与等轴投影；不要复制原游戏地图；不要自动旋转、强制视差或密集热点；不要声称 SVG 是真正可旋转的实时 3D。\n\n## 制作约束\n\n- 真正等轴投影使用平行轴和统一比例，不随意混入透视消失点\n- 左右平面约 30°，同一组坐标生成全部物体\n- 光源与三面明度方向一致\n- 场景图层必须有文字控件，不能只依赖小物体热点\n- 移动端先呈现价值主张，再呈现场景和控件\n- reduced motion 时立即切换图层位置\n\n## 检查方法\n\n把浮岛替换成数据平台的等轴系统图，让三种焦点分别对应计算、存储、网络，保留统一坐标与分层解释。\n\n[查看 Demo](../demos/isometric-3d/index.html) · [返回案例库](../cases.html#style/isometric-3d)\n",
+      "sha256": "4fafdec160d59a12b9420e6c7b86855d3c82f7a398a5d524e092ceb8f209f4f0",
+      "bytes": 2265
     }
   ],
   "files": [
@@ -158,8 +158,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -194,20 +194,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/isometric-3d.json",
@@ -236,8 +236,8 @@
     {
       "path": "prompts/isometric-3d.md",
       "role": "context",
-      "sha256": "ad6d668ae87a2420a9f17a24edd46ecd40137156c507989ae288eacfffd03a52",
-      "bytes": 2268
+      "sha256": "4fafdec160d59a12b9420e6c7b86855d3c82f7a398a5d524e092ceb8f209f4f0",
+      "bytes": 2265
     },
     {
       "path": "research/isometric-3d.md",
@@ -254,26 +254,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

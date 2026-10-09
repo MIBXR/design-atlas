@@ -5,6 +5,9 @@
     "id": "message-to-board-demonstration",
     "title": "消息到任务板的可重播演示",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "把自然语言请求的结果变成可见工作项。",
     "mechanism": "按请求、回复、卡片插入和状态移动分阶段展示同一任务；Replay恢复初态，消息与任务数量同步。",
     "trigger": "发送示例请求或重播",
@@ -62,7 +65,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "a245270c6e4b7e4d2243595955d14964747bf5506d7fce9093b0fee572a589ce"
+      "bundleSha256": "6d4a8a143c3d11eda036557bd5c87027db0816a18a3d3f4f78295d76ace53d23"
     }
   ]
 }

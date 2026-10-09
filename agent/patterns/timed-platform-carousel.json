@@ -5,6 +5,9 @@
     "id": "timed-platform-carousel",
     "title": "可暂停的平台场景轮换",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "平台tabs、点控和场景保持同一索引。",
     "mechanism": "选择平台让场景水平交接，自动周期可由悬停或手动暂停，后台停止，快速选择只留下一个场景。",
     "trigger": "选择平台、手势或自动周期",
@@ -68,7 +71,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "278865bae3c8d4f55e19502f6addc55eb37f48678d7292034273dbfe53ac73b2"
+      "bundleSha256": "1b8b2ea1793d95b507306df01faa6fef3e986949d3291a57ff04b057d55f1f3f"
     }
   ]
 }

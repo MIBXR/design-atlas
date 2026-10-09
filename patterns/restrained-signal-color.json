@@ -2,6 +2,9 @@
   "id": "restrained-signal-color",
   "title": "单一信号色集中强调",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "用少量品牌色建立可识别的操作角色。",
   "mechanism": "正文采用稳定中性色，强调色只分配给行动、选中态或机构锚点；作品图像保持自己的原色。",
   "trigger": "查看行动和状态",

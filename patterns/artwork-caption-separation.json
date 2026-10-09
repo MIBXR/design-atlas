@@ -2,6 +2,9 @@
   "id": "artwork-caption-separation",
   "title": "作品原图与图下题注分工",
   "category": "内容组织",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "让作品保持自己的视觉，说明放在图外。",
   "mechanism": "海报、馆藏或艺术摄影保留原色及比例，名称、日期与来源放在图下正文，不在原图上重复绘制标题。",
   "trigger": "浏览作品与展览目录",

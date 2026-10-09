@@ -144,9 +144,9 @@
     {
       "path": "prompts/pixel-world.md",
       "role": "prompt",
-      "content": "# 像素：微型世界 · 复用 Prompt\n\n由 [结构化案例](../entries/pixel-world.json) 自动生成。参考观察与具体边界见 [调研](../research/pixel-world.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构小型IP [品牌] 制作地图驱动的像素风介绍页。参考PICO-8的128×128、16色、8×8tile创作约束，自绘一个可辨认轮廓的岛屿世界；禁止复制Celeste或其他游戏角色/背景。使用Canvas整数像素绘制并用image-rendering:pixelated放大，桌面尽量整数倍率，手机完整显示地图。首屏地图为主，旅行手账为辅：四个可聚焦DOM地点按钮、实时地点说明、角色位置与发现计数，方向键/WASD仅在地图聚焦时生效，手机提供四向按钮。探索记录可存当前浏览器并可清除。后续至少两節为地点索引与玩法说明；中文正文使用正常可读系统字体，英文元数据可用等宽字。没有自动音频、闪烁扫描线或滚动劫持，尊重reduced-motion。注明这是PICO-8约束的局部迁移，而不是所有像素艺术的定义。\n\n要素协调要求：低分辨率地景、有限调色与清楚状态共同形成游戏感；中文说明保留正常可读字体，不强行像素化。\n\n## 负向约束\n\n不要平滑缩放像素图、随机混合像素尺度、把照片马赛克当作像素美术、隐藏于Canvas的唯一导航、不可读中文小字或自动播放音效。\n\n## 制作约束\n\n- PICO-8的128×128/16色是这个实例的明确创作约束，不是所有像素艺术的定义。\n- 本地图使用16色原生PICO-8色板和整数像素绘制；桌面用整数倍率，窄屏优先完整显示。\n- Canvas放大使用image-rendering:pixelated；禁止图片模糊插值。\n- 关键地点有可聚焦DOM按钮与文本说明，不只隐藏在Canvas里。\n- 长文使用可读系统字体，不能把业务信息全部压成像素小字。\n- 无角色原作素材、复杂游戏引擎或音频自动播放；降低动态偏好时取消非必要动画。\n\n## 检查方法\n\n为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。\n\n[查看 Demo](../demos/pixel-world/index.html) · [返回浏览案例](../cases.html#style/pixel-world)\n",
-      "sha256": "d3a6c84cf7b5048749f61060e0425d90b6a9a9a419b386b5fe0979f665bac291",
-      "bytes": 2479
+      "content": "# 像素：微型世界 · 复用 Prompt\n\n由 [结构化案例](../entries/pixel-world.json) 自动生成。参考观察与具体边界见 [调研](../research/pixel-world.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构小型IP [品牌] 制作地图驱动的像素风介绍页。参考PICO-8的128×128、16色、8×8tile创作约束，自绘一个可辨认轮廓的岛屿世界；禁止复制Celeste或其他游戏角色/背景。使用Canvas整数像素绘制并用image-rendering:pixelated放大，桌面尽量整数倍率，手机完整显示地图。首屏地图为主，旅行手账为辅：四个可聚焦DOM地点按钮、实时地点说明、角色位置与发现计数，方向键/WASD仅在地图聚焦时生效，手机提供四向按钮。探索记录可存当前浏览器并可清除。后续至少两節为地点索引与玩法说明；中文正文使用正常可读系统字体，英文元数据可用等宽字。没有自动音频、闪烁扫描线或滚动劫持，尊重reduced-motion。注明这是PICO-8约束的局部迁移，而不是所有像素艺术的定义。\n\n要素协调要求：低分辨率地景、有限调色与清楚状态共同形成游戏感；中文说明保留正常可读字体，不强行像素化。\n\n## 负向约束\n\n不要平滑缩放像素图、随机混合像素尺度、把照片马赛克当作像素美术、隐藏于Canvas的唯一导航、不可读中文小字或自动播放音效。\n\n## 制作约束\n\n- PICO-8的128×128/16色是这个实例的明确创作约束，不是所有像素艺术的定义。\n- 本地图使用16色原生PICO-8色板和整数像素绘制；桌面用整数倍率，窄屏优先完整显示。\n- Canvas放大使用image-rendering:pixelated；禁止图片模糊插值。\n- 关键地点有可聚焦DOM按钮与文本说明，不只隐藏在Canvas里。\n- 长文使用可读系统字体，不能把业务信息全部压成像素小字。\n- 无角色原作素材、复杂游戏引擎或音频自动播放；降低动态偏好时取消非必要动画。\n\n## 检查方法\n\n为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。\n\n[查看 Demo](../demos/pixel-world/index.html) · [返回案例库](../cases.html#style/pixel-world)\n",
+      "sha256": "210ab0841567e68ffbb3b6a02909ebf322639044e150ced77729b6371bcbf337",
+      "bytes": 2476
     }
   ],
   "files": [
@@ -171,8 +171,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -195,20 +195,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/pixel-world.json",
@@ -237,8 +237,8 @@
     {
       "path": "prompts/pixel-world.md",
       "role": "context",
-      "sha256": "d3a6c84cf7b5048749f61060e0425d90b6a9a9a419b386b5fe0979f665bac291",
-      "bytes": 2479
+      "sha256": "210ab0841567e68ffbb3b6a02909ebf322639044e150ced77729b6371bcbf337",
+      "bytes": 2476
     },
     {
       "path": "research/pixel-world.md",
@@ -255,26 +255,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

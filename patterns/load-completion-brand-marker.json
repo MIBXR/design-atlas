@@ -2,6 +2,9 @@
   "id": "load-completion-brand-marker",
   "title": "资源完成后品牌标记退场",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "等待真实图片就绪，不编造长进度。",
   "mechanism": "关键图片加载期间显示轻量品牌旋转标记，load完成后载入层与主图淡化交接；失败可继续读页。",
   "trigger": "首屏资源完成",

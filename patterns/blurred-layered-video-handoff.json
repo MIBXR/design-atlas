@@ -2,6 +2,9 @@
   "id": "blurred-layered-video-handoff",
   "title": "旧片模糊退出、新片延后进入",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "影片与主题字按不同阶段交接。",
   "mechanism": "旧影片先模糊退出，新影片稍后进入，标题再延迟进入；同一舞台叠层和最后请求队列管理快选。",
   "trigger": "选择影片章节",

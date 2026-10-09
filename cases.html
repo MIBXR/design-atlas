@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="theme.js"></script><title>浏览案例 · Design Atlas</title><meta name="description" content="浏览完整案例与可组合的设计巧思，按触发、效果和来源检索，取得可复用 Prompt、源码与证据。"><link rel="stylesheet" href="atlas.css"><link rel="stylesheet" href="cases-layout.css"><link rel="stylesheet" href="patterns-ui.css"><link rel="stylesheet" href="site-nav.css"><link rel="icon" href="favicon.svg?v=atlas-cross-1" type="image/svg+xml"><script src="site-shell.js" defer></script><link rel="stylesheet" href="theme-control.css"><link rel="stylesheet" href="site-typography.css"><link rel="stylesheet" href="site-footer.css">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="theme.js"></script><script src="legacy-links.js"></script><title>案例库 · Design Atlas</title><meta name="description" content="浏览完整案例与可组合的设计巧思，按触发、效果和来源检索，取得可复用 Prompt、源码与证据。"><link rel="stylesheet" href="atlas.css"><link rel="stylesheet" href="cases-layout.css"><link rel="stylesheet" href="patterns-ui.css"><link rel="stylesheet" href="site-nav.css"><link rel="icon" href="favicon.svg?v=atlas-cross-1" type="image/svg+xml"><script src="site-shell.js" defer></script><link rel="stylesheet" href="theme-control.css"><link rel="stylesheet" href="site-typography.css"><link rel="stylesheet" href="site-footer.css">
 </head>
 <body class="cases-page">
 <a class="skip" href="#main">跳到内容</a>
 <header class="atlas-site-header"><div class="atlas-site-header-inner">
 <a class="atlas-site-brand" href="index.html" aria-label="Design Atlas 首页"><svg class="atlas-site-mark" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M24 8 88 72 72 88 8 24Z M8 72 72 8 88 24 24 88Z"/></svg><span class="atlas-site-wordmark"><strong>DESIGN ATLAS</strong><small>从案例到实践</small></span></a>
-<nav class="atlas-site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="cases.html" aria-current="page">浏览案例</a><a href="fundamentals.html">设计实验室</a><a href="agent.html">Agent 工作流</a></nav>
+<nav class="atlas-site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="cases.html" aria-current="page">案例库</a><a href="patterns.html">巧思库</a><a href="fundamentals.html">设计实验室</a><a href="agent.html">Agent 工作流</a></nav>
 <div class="atlas-site-theme"><button class="atlas-directory-toggle" type="button" data-directory-toggle aria-controls="page-directory" aria-expanded="false" aria-label="打开页面目录" hidden><span>目录</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m3 6 5 5 5-5"/></svg></button><button id="theme-control" class="atlas-theme-toggle" type="button" data-theme-toggle aria-label="显示主题：跟随系统；点击切换为深色" title="显示主题：跟随系统；点击切换为深色"><svg class="atlas-theme-icon" data-theme-icon="system" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg><svg class="atlas-theme-icon" data-theme-icon="dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.9 13.3A9 9 0 0 1 10.7 3.1 9 9 0 1 0 20.9 13.3Z"/></svg><svg class="atlas-theme-icon" data-theme-icon="light" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div>
 </div></header>
 <div class="case-layout">
-<aside class="rail atlas-page-directory" id="page-directory" data-page-directory tabindex="-1" aria-label="案例与巧思目录"><div class="atlas-directory-heading"><strong>案例与巧思目录</strong><button type="button" data-directory-close>收起 ×</button></div>
-<details class="atlas-page-menu case-menu" id="case-menu"><summary>案例分类与工具</summary><div class="case-menu-content">
+<aside class="rail atlas-page-directory" id="page-directory" data-page-directory tabindex="-1" aria-label="案例目录"><div class="atlas-directory-heading"><strong>案例目录</strong><button type="button" data-directory-close>收起 ×</button></div>
+<details class="atlas-page-menu case-menu" id="case-menu"><summary>案例分类</summary><div class="case-menu-content">
   <span class="rail-label">CASE COLLECTION</span>
   <nav aria-label="案例分类">
     <button class="nav-item active" data-filter="all"><span>全部风格</span><b id="all-count">34</b></button>
@@ -22,11 +22,7 @@
     <button class="nav-item" data-filter="favorites"><span>我的收藏</span><b id="fav-count">00</b></button>
   </nav>
 </div></details>
-<details class="atlas-page-menu case-menu pattern-menu" id="pattern-menu"><summary>设计巧思 <span id="pattern-count">…</span></summary><div class="case-menu-content">
-  <span class="rail-label">REUSABLE DESIGN PATTERNS</span>
-  <nav id="pattern-navigation" aria-label="设计巧思分类"><a class="nav-item" href="#patterns"><span>全部设计巧思</span></a></nav>
-  <p class="pattern-rail-note">从完整案例中拆出设计机制，按用途组合到自己的页面。</p>
-</div></details>
+<a class="rail-link" href="patterns.html"><span>独立浏览设计巧思</span></a>
 <div class="rail-rule"></div><button class="rail-link" id="favorite-manage"><span>收藏备份与说明</span></button>
 <a class="rail-link" href="document.html?file=README.md"><span>使用与维护指南</span></a>
 <a class="rail-link" href="document.html?file=research%2FOVERVIEW.md"><span>调研方法与风格地图</span></a>
@@ -43,14 +39,7 @@
   </section>
   <section id="detail" hidden></section>
   <section id="comparison" hidden></section>
-  <section id="patterns-library" hidden aria-label="设计巧思库">
-    <div class="hero patterns-hero"><div><p class="eyebrow">OBSERVE. EXTRACT. COMBINE.</p><h1>小巧思，<br>构成新的设计<span class="period">.</span></h1><p class="hero-desc">按触发方式、设计效果和适用场景，发现可独立借用的设计机制。<br class="desktop">查看来源案例中的完整效果，再确定它在你的页面中承担什么角色。</p></div><div class="pattern-hero-note"><span id="patterns-total">0</span><p>个可复用机制<br>保留来源 · 明确约束</p></div></div>
-    <div class="pattern-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="pattern-search" type="search" placeholder="搜索巧思、触发方式或应用场景…" aria-label="搜索设计巧思"><kbd>/</kbd></label><label class="sort">类别<select id="pattern-category" aria-label="按设计巧思类别筛选"><option value="all">全部类别</option></select></label><label class="sort">来源案例<select id="pattern-source" aria-label="按来源案例筛选"><option value="all">全部案例</option></select></label></div>
-    <div class="list-caption"><span id="pattern-results-label" role="status"></span><a class="pattern-catalog-link" href="agent/patterns.json" download="design-atlas-patterns.json">下载巧思目录</a></div>
-    <div id="pattern-cards" class="pattern-cards"></div><div id="patterns-empty" class="empty" hidden><h2>没有找到对应的设计巧思</h2><p>试试“悬停”“加载”“导航”，或放宽来源与类别。</p><button id="pattern-reset">清除巧思筛选</button></div>
-    <p class="pattern-library-note">先选择一个机制负责主要信息层级，再让辅助机制承担特定操作或反馈。每个巧思都记录了适配方法、组合建议与谨慎使用项。</p>
-  </section>
-  <section id="pattern-detail" hidden></section>
+
 </main>
 </div>
 <footer class="atlas-site-footer">
@@ -61,12 +50,12 @@
       <small>案例按采集快照归档，标明来源与复现范围。品牌与素材归原作者所有。</small>
     </div>
     <nav class="atlas-site-footer-nav" aria-label="页脚导航">
-      <div class="atlas-site-footer-links"><p>探索 Atlas</p><a href="index.html">首页</a><a href="cases.html">浏览案例</a><a href="fundamentals.html">设计实验室</a><a href="agent.html">Agent 工作流</a></div>
-      <div class="atlas-site-footer-links"><p>项目资料</p><a href="document.html?file=README.md">使用与维护</a><a href="document.html?file=research%2FOVERVIEW.md">调研方法</a><a href="https://github.com/MIBXR/design-atlas" target="_blank" rel="noopener noreferrer">项目 GitHub <span class="atlas-external-icon" aria-hidden="true">↗︎</span></a></div>
+      <div class="atlas-site-footer-links"><p>探索 Atlas</p><a href="index.html">首页</a><a href="cases.html">案例库</a><a href="patterns.html">巧思库</a><a href="fundamentals.html">设计实验室</a><a href="agent.html">Agent 工作流</a></div>
+      <div class="atlas-site-footer-links"><p>项目资料</p><a href="document.html">文档中心</a><a href="document.html?file=README.md">使用与维护</a><a href="document.html?file=research%2FOVERVIEW.md">调研方法</a><a href="https://github.com/MIBXR/design-atlas" target="_blank" rel="noopener noreferrer">项目 GitHub <span class="atlas-external-icon" aria-hidden="true">↗︎</span></a></div>
     </nav>
   </div>
 </footer>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-text"></span><button id="compare-go">并排比较</button><button id="compare-clear" class="text-button">清空</button></div>
-<dialog id="favorite-dialog"><form method="dialog"><button class="dialog-close" aria-label="关闭收藏管理">×</button></form><h2>收藏在你的浏览器中</h2><p>收藏保存为本网站的 localStorage 数据，只包含案例 ID。刷新仍在；浏览器、地址或端口不同会产生独立收藏。清理网站数据会删除收藏，Git 不会自动保存它。</p><button id="favorite-export" class="primary-button">下载收藏 JSON</button><p>导出时，下方也会显示 JSON，方便复制或自行放进 Git 留存。粘贴备份后导入，会合并有效案例 ID：</p><textarea id="favorite-json" aria-label="收藏备份 JSON" placeholder="粘贴导出的 JSON…"></textarea><button id="favorite-import" class="primary-button">导入并合并</button><p id="favorite-status" role="status"></p></dialog><div id="toast" role="status" class="toast"></div>
-<script src="asset-sources.js"></script><script src="asset-runtime.js"></script><script src="asset-cache.js"></script><script src="catalog.js"></script><script src="patterns.js"></script><script src="patterns-ui.js"></script><script src="atlas.js"></script>
+<dialog id="favorite-dialog"></dialog><div id="toast" role="status" class="toast"></div>
+<script src="asset-sources.js"></script><script src="asset-runtime.js"></script><script src="asset-cache.js"></script><script src="catalog.js"></script><script src="patterns.js"></script><script src="favorites.js"></script><script src="favorite-controls.js"></script><script src="demo-preview.js"></script><script src="patterns-ui.js"></script><script src="atlas.js"></script>
 </body></html>

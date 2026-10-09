@@ -5,6 +5,9 @@
     "id": "sequential-stroke-reveal",
     "title": "按构造顺序描绘线稿",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "从基础到细节显示结构关系。",
     "mechanism": "主体路径以stroke表示，用归一化pathLength将进度映射到dashoffset；按组成逻辑依次描绘。",
     "trigger": "用户主动重播",
@@ -63,7 +66,7 @@
         "bundle": "agent/cases/line-art.json",
         "demo": "demos/line-art/index.html"
       },
-      "bundleSha256": "11a5cff97d06d10874da7e3a5aa5d68e65539746c5fee10c817a15ae617f9211"
+      "bundleSha256": "78ddca618af51690206e9614556a55b36fd084445cb6628fb1a85843d0ccb86a"
     }
   ]
 }

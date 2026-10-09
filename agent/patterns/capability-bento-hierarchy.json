@@ -5,6 +5,9 @@
     "id": "capability-bento-hierarchy",
     "title": "以跨列比例表达能力层次",
     "category": "内容组织",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "不同产品权重使用不同面积。",
     "mechanism": "根据功能关系设置跨列主能力、并列辅助能力或通栏协作能力，图文各有稳定位置。",
     "trigger": "阅读能力矩阵",
@@ -77,7 +80,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "6c18ed29f48b83d111afd43f2989556c8ee01864c29073161d232fbad4d7db48"
+      "bundleSha256": "7743a10e1d840defd5d9ef4bc2eea241204f175753500556bee1e02088ed6541"
     },
     {
       "id": "stripe-platform",
@@ -86,7 +89,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
+      "bundleSha256": "ed45ebde0617cec606551b1cb6ed55e674dbdcdc8fe2702e83765a3b03b73507"
     }
   ]
 }

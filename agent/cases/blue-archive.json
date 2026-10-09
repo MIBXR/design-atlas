@@ -163,9 +163,9 @@
     {
       "path": "prompts/blue-archive.md",
       "role": "prompt",
-      "content": "# 碧蓝档案：学园都市的天空与光 · 复用 Prompt\n\n由 [结构化案例](../entries/blue-archive.json) 自动生成。参考观察与具体边界见 [调研](../research/blue-archive.md)。\n\n## 正向 Prompt\n\n以一个 URL 和采集日期归档【学园/轻科幻 IP】。参考 Blue Archive 日本首页：原始蓝白城市视频做满幅世界，透明青白 Logo 居中，右侧窄竖排标语，上方深蓝半透明导航，下载在左下、官方漫画图像在右下；中心不堆营销卡片。源首页为 KV→footer，CHARACTER 导航必须打开独立人物页，HOME 返回首页，不能同页串接；源公开 router-view 没有转场包装，不添加无证据的跨页 fade。人物舞台保留左学院标记、中透明资料卡、右完整立绘，四个真实阿比多斯学生的姓名、CV、生日、学年、身高一一对应；点击人物用 1000ms 整轨水平平移，缓动未核验就明说，不用只淡换小头像替代。VOICE 按钮使用原图和对应官方 WAV，用户点击播放、再点暂停、换人停止，声线作为人物身份而不是 BGM。城市背景静音并可暂停，未证实的音乐不添加。手机保持完整人物并重新安排资料和可触摸选择，明确适配范围；减少动态停止背景、即时切换，键盘与焦点可用。NEWS/SYSTEM/其他学院等未实现页面链接官网，不生成冒牌内容。保留固定蓝白主题及原始商店/漫画入口轮廓，输出代码、来源与字节哈希 manifest、复现边界和真实两尺寸预览。\n\n## 负向约束\n\n不要通用双栏hero、紫色霓虹仪表盘、虚构人物页、假背景音乐或自动有声播放；不要复制原站跟踪、运营接口、登录与支付逻辑。\n\n## 制作约束\n\n- 归档 https://bluearchive.jp/ 在 2026-10-07 的单一快照；其可见 CHARACTER 导航进入 /character，作为同次采集的关联子页。\n- 原首页只含 KV→footer，独立 character.html 仅复现 /character 的阿比多斯；本地使用文档导航，源为 Vue router.push，未添加无证据的入场淡化。\n- 4 位学生姓名、CV、学年、生日、身高、立绘和 WAV 已核验；其他学院、全部人物和运营页面用官方入口。\n- 角色整轨 1000ms 有来源依据；缓动、键盘、触摸阈值、声线暂停与减少动态为本地补充或近似。\n- 城市视频保持静音；角色台词不是 BGM，完整 PV 使用官方外链，未添加通用音乐。\n- 手机改为可读排布而非逐像素原页；保持透明资料卡、完整人物和蓝白色，不加强制暗色主题。\n- 韩国为开发来源、日本为本次发行版；官方素材和商标权利归相应权利方，manifest 记录 URL/哈希。\n\n## 检查方法\n\n改变背景映像的一个静态画面，保持Logo和下载位置，观察天空、建筑和高光是否遮挡标语，再记录允许控件落点的安全区域。\n\n[查看 Demo](../demos/blue-archive/index.html) · [返回浏览案例](../cases.html#style/blue-archive)\n",
-      "sha256": "391ae378b6f21767824803ce2548c9f00383cce804ae7d8111d95394ac7b4182",
-      "bytes": 3028
+      "content": "# 碧蓝档案：学园都市的天空与光 · 复用 Prompt\n\n由 [结构化案例](../entries/blue-archive.json) 自动生成。参考观察与具体边界见 [调研](../research/blue-archive.md)。\n\n## 正向 Prompt\n\n以一个 URL 和采集日期归档【学园/轻科幻 IP】。参考 Blue Archive 日本首页：原始蓝白城市视频做满幅世界，透明青白 Logo 居中，右侧窄竖排标语，上方深蓝半透明导航，下载在左下、官方漫画图像在右下；中心不堆营销卡片。源首页为 KV→footer，CHARACTER 导航必须打开独立人物页，HOME 返回首页，不能同页串接；源公开 router-view 没有转场包装，不添加无证据的跨页 fade。人物舞台保留左学院标记、中透明资料卡、右完整立绘，四个真实阿比多斯学生的姓名、CV、生日、学年、身高一一对应；点击人物用 1000ms 整轨水平平移，缓动未核验就明说，不用只淡换小头像替代。VOICE 按钮使用原图和对应官方 WAV，用户点击播放、再点暂停、换人停止，声线作为人物身份而不是 BGM。城市背景静音并可暂停，未证实的音乐不添加。手机保持完整人物并重新安排资料和可触摸选择，明确适配范围；减少动态停止背景、即时切换，键盘与焦点可用。NEWS/SYSTEM/其他学院等未实现页面链接官网，不生成冒牌内容。保留固定蓝白主题及原始商店/漫画入口轮廓，输出代码、来源与字节哈希 manifest、复现边界和真实两尺寸预览。\n\n## 负向约束\n\n不要通用双栏hero、紫色霓虹仪表盘、虚构人物页、假背景音乐或自动有声播放；不要复制原站跟踪、运营接口、登录与支付逻辑。\n\n## 制作约束\n\n- 归档 https://bluearchive.jp/ 在 2026-10-07 的单一快照；其可见 CHARACTER 导航进入 /character，作为同次采集的关联子页。\n- 原首页只含 KV→footer，独立 character.html 仅复现 /character 的阿比多斯；本地使用文档导航，源为 Vue router.push，未添加无证据的入场淡化。\n- 4 位学生姓名、CV、学年、生日、身高、立绘和 WAV 已核验；其他学院、全部人物和运营页面用官方入口。\n- 角色整轨 1000ms 有来源依据；缓动、键盘、触摸阈值、声线暂停与减少动态为本地补充或近似。\n- 城市视频保持静音；角色台词不是 BGM，完整 PV 使用官方外链，未添加通用音乐。\n- 手机改为可读排布而非逐像素原页；保持透明资料卡、完整人物和蓝白色，不加强制暗色主题。\n- 韩国为开发来源、日本为本次发行版；官方素材和商标权利归相应权利方，manifest 记录 URL/哈希。\n\n## 检查方法\n\n改变背景映像的一个静态画面，保持Logo和下载位置，观察天空、建筑和高光是否遮挡标语，再记录允许控件落点的安全区域。\n\n[查看 Demo](../demos/blue-archive/index.html) · [返回案例库](../cases.html#style/blue-archive)\n",
+      "sha256": "2f684031b2ea21a1588ca6d3b403d98e6c64c769f2f985b3b9236a5f970477c7",
+      "bytes": 3025
     },
     {
       "path": "demos/blue-archive/fidelity.md",
@@ -204,8 +204,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -456,20 +456,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/blue-archive.json",
@@ -498,8 +498,8 @@
     {
       "path": "prompts/blue-archive.md",
       "role": "context",
-      "sha256": "391ae378b6f21767824803ce2548c9f00383cce804ae7d8111d95394ac7b4182",
-      "bytes": 3028
+      "sha256": "2f684031b2ea21a1588ca6d3b403d98e6c64c769f2f985b3b9236a5f970477c7",
+      "bytes": 3025
     },
     {
       "path": "research/blue-archive.md",
@@ -522,26 +522,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

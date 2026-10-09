@@ -135,9 +135,9 @@
     {
       "path": "prompts/met-museum.md",
       "role": "prompt",
-      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回浏览案例](../cases.html#style/met-museum)\n",
-      "sha256": "4621d7250cac09d814e3b5ad6fcc55919bcfb4ebe04102135772ea59c1a06bdb",
-      "bytes": 2061
+      "content": "# The Met · 编辑式展览与馆藏陈列 · 复用 Prompt\n\n由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。\n\n## 正向 Prompt\n\n为[博物馆]制作以2026-10-07采集的https://www.metmuseum.org/en为唯一参考的局部交互demo。使用官方Met红色标志、建筑静图、Austin大标题、白色正文与Inter导航，构成欢迎/到访信息、展览横轨、馆藏和会员顺序。保留真实作品图片比例和署名；原生水平轨道scroll-snap:none，导航立即展开，按钮与键盘有可读反馈。不新增原站没有的加载、全屏转场、视频或音乐。手机重排、触摸横滚，减少动态保留全部内容。浅色固定主题与作品原色一致；本地搜索和作品dialog明确为练习补充。交易/预约回官方链接。素材本地化并记录来源、尺寸、hash、处理与归属。归档这次采集，不维护官网后来变化。\n\n## 负向约束\n\n不要深色科技SaaS模板，不用统一圆角卡片阵列，不虚构藏品或展期，不自动轮播，不把Open Access许可扩大到品牌资产。\n\n## 制作约束\n\n- 标题用官方Austin Medium，操作文用官方Inter字体；不可用夸张科技字体替代。\n- 四列实用信息在手机堆叠；展览依靠横向overflow，不让整个页面溢出。\n- 展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。\n- 日期和闭馆信息标注观察日，不由当前机器日期制造未核验开放状态。\n- 官方开放许可只覆盖带OA条件的藏品资源，不涵盖全部品牌、字体与主页摄影。\n- 以2026-10-07采集的https://www.metmuseum.org/en首页为单一归档对象；完整版馆藏、预约、会员与捐赠服务不复制。\n\n## 检查方法\n\n用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。\n\n[查看 Demo](../demos/met-museum/index.html) · [返回案例库](../cases.html#style/met-museum)\n",
+      "sha256": "d71963aca5aaee2ed7895075d24e577807999fe7368bc2751f4f93713b6673ac",
+      "bytes": 2058
     },
     {
       "path": "demos/met-museum/fidelity.md",
@@ -176,8 +176,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -290,20 +290,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/met-museum.json",
@@ -332,8 +332,8 @@
     {
       "path": "prompts/met-museum.md",
       "role": "context",
-      "sha256": "4621d7250cac09d814e3b5ad6fcc55919bcfb4ebe04102135772ea59c1a06bdb",
-      "bytes": 2061
+      "sha256": "d71963aca5aaee2ed7895075d24e577807999fe7368bc2751f4f93713b6673ac",
+      "bytes": 2058
     },
     {
       "path": "research/met-museum.md",
@@ -356,26 +356,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

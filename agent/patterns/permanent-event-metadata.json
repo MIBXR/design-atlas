@@ -5,6 +5,9 @@
     "id": "permanent-event-metadata",
     "title": "常驻日期与边缘票据入口",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "场景摄影变化时实用信息仍有位置。",
     "mechanism": "日期、地点与导览保持稳定位置，边缘票据入口独立于照片；Featured与新闻各承担不同后续任务。",
     "trigger": "照片更替和长页浏览",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
+      "bundleSha256": "4a82993f1ff41bec4d8dc02d5b8a133dba191d484e8cdf20fd91926be31b692d"
     }
   ]
 }

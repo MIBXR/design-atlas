@@ -5,6 +5,9 @@
     "id": "heatmap-focus-tooltip",
     "title": "热图指针与焦点提示",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "让微小格子具有可读事实。",
     "mechanism": "格子悬停或获得焦点后短延迟显示日期/对话提示，离开或失焦关闭；文字提示不只依赖格子色深。",
     "trigger": "pointer enter/focus或leave/blur",
@@ -65,7 +68,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "278865bae3c8d4f55e19502f6addc55eb37f48678d7292034273dbfe53ac73b2"
+      "bundleSha256": "1b8b2ea1793d95b507306df01faa6fef3e986949d3291a57ff04b057d55f1f3f"
     }
   ]
 }

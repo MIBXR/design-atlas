@@ -5,6 +5,9 @@
     "id": "interruptible-morph",
     "title": "从当前中间态继续变形",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "快速选择、暂停和恢复不产生闪回。",
     "mechanism": "新目标从当前顶点坐标出发；暂停保存插值位置，恢复校正计时，重置恢复初始参数。",
     "trigger": "中途改选、暂停或恢复",
@@ -64,7 +67,7 @@
         "bundle": "agent/cases/shape-morph.json",
         "demo": "demos/shape-morph/index.html"
       },
-      "bundleSha256": "5315106c44178661c8c83b0307688ed394e511a88129d968c8a0b193acc7a0ec"
+      "bundleSha256": "76be77e19a7ba9bcdaf06365418ecaefd3f2d055ee08ef9a67986caa8990be87"
     }
   ]
 }

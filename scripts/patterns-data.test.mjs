@@ -64,7 +64,25 @@ test('source edits cannot combine fresh case hashes with stale observation text'
   } finally { f.cleanup(); }
 });
 
-test('invalid relations, unknown provenance, uncovered cases and paths outside manifests are rejected', () => {
+test('experience types preserve schema-1 compatibility and reject invalid classifications', () => {
+  const f = fixture();
+  try {
+    assert.equal(loadPatterns({ root: f.root }).length, 1);
+    f.writePattern({ ...f.pattern, experienceTypes: ['visual', 'micro-motion'] });
+    assert.deepEqual(loadPatterns({ root: f.root })[0].experienceTypes, ['visual', 'micro-motion']);
+    for (const [experienceTypes, error] of [
+      ['visual', /Expected pattern array/],
+      [[], /Empty pattern experience types/],
+      [['motion'], /Unknown pattern experience type/],
+      [['sound', 'sound'], /Duplicate pattern value/],
+    ]) {
+      f.writePattern({ ...f.pattern, experienceTypes });
+      assert.throws(() => loadPatterns({ root: f.root }), error);
+    }
+  } finally { f.cleanup(); }
+});
+
+test('invalid relations, provenance, optional coverage and paths outside manifests are checked', () => {
   const f = fixture();
   try {
     f.writePattern({ ...f.pattern, composition: { ...f.pattern.composition, pairsWellWith: ['missing-pattern'] } });
@@ -73,7 +91,8 @@ test('invalid relations, unknown provenance, uncovered cases and paths outside m
     assert.throws(() => loadPatterns({ root: f.root }), /Unknown pattern source case/);
     f.writePattern();
     f.write('entries/uncovered-case.json', JSON.stringify({ id: 'uncovered-case' }));
-    assert.throws(() => loadPatterns({ root: f.root }), /Case has no extracted patterns/);
+    assert.equal(loadPatterns({ root: f.root }).length, 1);
+    assert.throws(() => loadPatterns({ root: f.root, requireCoverage: true }), /Case has no extracted patterns/);
     fs.unlinkSync(path.join(f.root, 'entries/uncovered-case.json'));
     f.writePattern({ ...f.pattern, sourceFiles: ['entries/fixture-case.json', '../outside'] });
     assert.throws(() => loadPatterns({ root: f.root }), /Unsafe pattern path/);
@@ -99,6 +118,7 @@ test('combined library version includes the pattern version and every case has r
   assert.equal(metadata.sha256, sha256(generated.outputs.get(metadata.path)));
   const caseInput = [...generated.catalog.entries].sort((a, b) => a.id.localeCompare(b.id, 'en')).map(record => `${record.id}:${record.bundleSha256}\n`).join('');
   assert.equal(generated.catalog.contentVersion, sha256(Buffer.from(caseInput + `patterns:${metadata.contentVersion}\n`)));
-  for (const bundle of generated.bundles) assert.ok(bundle.patternIds.length > 0, `${bundle.id}: missing extraction coverage`);
+  const patterns = loadPatterns();
+  for (const bundle of generated.bundles) assert.deepEqual(bundle.patternIds, patterns.filter(pattern => pattern.sources.some(source => source.caseId === bundle.id)).map(pattern => pattern.id).sort(), `${bundle.id}: reverse associations differ from pattern sources`);
   assert.equal(verifyPatterns().patternCount, metadata.patternCount);
 });

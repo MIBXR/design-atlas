@@ -2,6 +2,9 @@
   "id": "native-horizontal-shelf",
   "title": "原生横向内容架子",
   "category": "导航与状态",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "保留触摸横滑与显式前后入口。",
   "mechanism": "内容只在局部容器水平overflow，保留浏览器原生滚动，前后按钮提供同等入口；主页面继续自然纵向阅读。",
   "trigger": "横滑或点击前后按钮",

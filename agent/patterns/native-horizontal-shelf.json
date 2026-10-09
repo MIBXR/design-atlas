@@ -5,6 +5,9 @@
     "id": "native-horizontal-shelf",
     "title": "原生横向内容架子",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "保留触摸横滑与显式前后入口。",
     "mechanism": "内容只在局部容器水平overflow，保留浏览器原生滚动，前后按钮提供同等入口；主页面继续自然纵向阅读。",
     "trigger": "横滑或点击前后按钮",
@@ -107,7 +110,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
+      "bundleSha256": "c8038c83add331ef0a938bced6dacfd656e133c2fa18455423577d041f58ced2"
     },
     {
       "id": "chatgpt-platform",
@@ -116,7 +119,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
+      "bundleSha256": "1b4e5662c2a08f459f150770cc857308f94d5ac780ef0129f308160fb8c4f450"
     },
     {
       "id": "met-museum",
@@ -125,7 +128,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
+      "bundleSha256": "0970147bfee00469744b170b99704a6a655e00527d3c8ebb61e511de246cf20b"
     },
     {
       "id": "stripe-platform",
@@ -134,7 +137,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
+      "bundleSha256": "ed45ebde0617cec606551b1cb6ed55e674dbdcdc8fe2702e83765a3b03b73507"
     }
   ]
 }

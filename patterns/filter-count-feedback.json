@@ -2,6 +2,9 @@
   "id": "filter-count-feedback",
   "title": "筛选与结果计数同步",
   "category": "交互反馈",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "筛选动作立即给出结果数量。",
   "mechanism": "改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。",
   "trigger": "激活分类按钮",

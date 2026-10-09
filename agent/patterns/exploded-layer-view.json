@@ -5,6 +5,9 @@
     "id": "exploded-layer-view",
     "title": "展开图层解释组成",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "将整体拆成基础、建筑和植物层。",
     "mechanism": "保持空间投影和图层顺序，用受控偏移将各组分离；再次选择整体恢复完整场景。",
     "trigger": "选择展开/整体",
@@ -58,7 +61,7 @@
         "bundle": "agent/cases/isometric-3d.json",
         "demo": "demos/isometric-3d/index.html"
       },
-      "bundleSha256": "3c64530f38ba045a95893773c8007f6bce4dab33079b84cb3589e033cca6d1c5"
+      "bundleSha256": "ec2d5cb888e21de773a8900506f65464ed397406aee6a9ab1a94d713c2ee47d0"
     }
   ]
 }

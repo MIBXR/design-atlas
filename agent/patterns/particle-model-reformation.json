@@ -5,6 +5,9 @@
     "id": "particle-model-reformation",
     "title": "术语选择重组同一粒子池",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "选中概念以一个新形状得到解释。",
     "mechanism": "术语目录进入详情后，同一粒子池重组为对应模型，箭头、索引和返回共享模型状态及设定文字。",
     "trigger": "选择术语、箭头或返回",
@@ -70,7 +73,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "eb89c82a05466a45d5ed691225cbebf9bb4abde9bf9149278c3101bf6630d1d0"
     }
   ]
 }

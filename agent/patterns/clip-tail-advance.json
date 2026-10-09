@@ -5,6 +5,9 @@
     "id": "clip-tail-advance",
     "title": "在影片片尾前交给下一章",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "避免片尾黑场打断章节观看。",
     "mechanism": "监测当前影片剩余时间，在片尾前固定余量触发下一章，用户暂停或降低动态时关闭自动推进。",
     "trigger": "影片到达尾段",
@@ -67,7 +70,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "7a42a497ab8ed65b066ed9a9302c5538ed747fd11b03143bcd74b45aeb89811d"
+      "bundleSha256": "5647019b3aaaa734a79479e7518b483109329862b14100dd9cbb5e0ddf38556c"
     }
   ]
 }

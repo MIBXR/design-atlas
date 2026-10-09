@@ -5,6 +5,9 @@
     "id": "bounded-panel-track",
     "title": "有界的完整面板横向轨道",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "图像、资料与说明作为同一面板移动。",
     "mechanism": "每次选择使整块相关内容沿单一轨道平移，首尾禁用前后按钮并停止；人物或玩法状态同步更新。",
     "trigger": "选择编号、箭头或手势",
@@ -91,7 +94,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "6810a34427dd80e190f72b2afc843d1483ce72f34861bdcc01ab0265d72c0c4e"
+      "bundleSha256": "845b70a87ab7df799590c6b4d6812ea11945a95b76f2029ea1f9245813cda2cf"
     },
     {
       "id": "persona-kinetic",
@@ -100,7 +103,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "8cd2f928c61afb00bf28cb215b0c4c89f92a34be6de4e3a0b4ecf417d104c3f6"
+      "bundleSha256": "6496f9f65ed1aed9d384585d9e234f0bfdd4d80fba2d6b403ae0dd6c409c2465"
     },
     {
       "id": "uma-musume",
@@ -109,7 +112,7 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "d0c663e7d14e579c0895bd536990572b6bb9e5c5eb33863d3aa1b31b73550bfc"
+      "bundleSha256": "bfe96ddd5d1aa0469683ba85170c43ec1c79483b2708d6e25b8235cb7846c227"
     }
   ]
 }

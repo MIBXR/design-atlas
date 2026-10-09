@@ -139,9 +139,9 @@
     {
       "path": "prompts/genshin-world.md",
       "role": "prompt",
-      "content": "# 原神 · 版本群像与角色舞台 · 复用 Prompt\n\n由 [结构化案例](../entries/genshin-world.json) 自动生成。参考观察与具体边界见 [调研](../research/genshin-world.md)。\n\n## 正向 Prompt\n\n归档【目标游戏版本页】一个确定 URL 和采集日期。参考原神此快照：真实群像铺满首屏，深红暗紫底、巨幅官方主题字、下载与版本号保持清楚层级。滚轮以垂直 translate3d 切换独立舞台，必须能反向回到首屏；末尾仅移动剩余距离露出 footer。人物章节以完整背景承担换色，不只替换一张立绘；选择两角色时同步姓名、简介、原始肖像、立绘及麦克风图，立绘用来源确认的 100ms 交叉淡化。麦克风只在用户操作时随机播放该角色 3 条真实台词，再点暂停，换角色或离屏即停；首屏无声短片另有暂停，不添加未证实 BGM。未核验的整屏时长需在 fidelity 中明说，本地使用 600ms ease 和 650ms 输入锁并收敛最新操作。用原生 dialog 展示局部详情与可放大官方日历，支持 Escape、焦点与键盘章节/角色操作。手机保留独立舞台与可触摸控件，减少动态取消位移且背景初始暂停。明确删减章节、手机适配与本地无障碍补充，输出 HTML/CSS/JS、完整素材 manifest、风格与复现边界以及真实两尺寸预览。\n\n## 负向约束\n\n不要用蓝色通用SaaS hero替代深红角色群像；不要编造当前角色名、版本或曲目；不要冒充完整官网、领奖、登录或购买流程；不要复制追踪脚本。\n\n## 制作约束\n\n- 只归档 https://genshin.hoyoverse.com/en/ 在 2026-10-07 的单一快照，不跟随后续版本。\n- 源页 6 个章节缩为本地 3 个核心章节加 footer；领取、Xbox、登录、完整武器与 Wiki 不在本地范围。\n- 源垂直 Swiper 与角色 100ms 时序已确认；整屏的精确时长未核验，本地 600ms ease / 650ms 输入锁为明确近似。\n- 3 秒首屏本地短片没有音轨；6 条台词是官方角色语音，不能称作原站 BGM。\n- 详情是摘要 dialog，手机人物排布及可触摸控件属于本地适配，并非逐像素移动版。\n- 官方品牌、美术、视频与语音权利归相应权利方，资产 manifest 记录直接来源；不复制账户或追踪服务。\n\n## 检查方法\n\n依据这次归档的舞台规则，设计一个虚构双角色专题：保持整屏交接、角色连背景换色、声音归属与下载层级，比较不同美术是否仍有清楚的章节识别。\n\n[查看 Demo](../demos/genshin-world/index.html) · [返回浏览案例](../cases.html#style/genshin-world)\n",
-      "sha256": "1a9751000430f48f93fb5eb814818881db7c4b0787a84ead1ad56f24e6970ecf",
-      "bytes": 2677
+      "content": "# 原神 · 版本群像与角色舞台 · 复用 Prompt\n\n由 [结构化案例](../entries/genshin-world.json) 自动生成。参考观察与具体边界见 [调研](../research/genshin-world.md)。\n\n## 正向 Prompt\n\n归档【目标游戏版本页】一个确定 URL 和采集日期。参考原神此快照：真实群像铺满首屏，深红暗紫底、巨幅官方主题字、下载与版本号保持清楚层级。滚轮以垂直 translate3d 切换独立舞台，必须能反向回到首屏；末尾仅移动剩余距离露出 footer。人物章节以完整背景承担换色，不只替换一张立绘；选择两角色时同步姓名、简介、原始肖像、立绘及麦克风图，立绘用来源确认的 100ms 交叉淡化。麦克风只在用户操作时随机播放该角色 3 条真实台词，再点暂停，换角色或离屏即停；首屏无声短片另有暂停，不添加未证实 BGM。未核验的整屏时长需在 fidelity 中明说，本地使用 600ms ease 和 650ms 输入锁并收敛最新操作。用原生 dialog 展示局部详情与可放大官方日历，支持 Escape、焦点与键盘章节/角色操作。手机保留独立舞台与可触摸控件，减少动态取消位移且背景初始暂停。明确删减章节、手机适配与本地无障碍补充，输出 HTML/CSS/JS、完整素材 manifest、风格与复现边界以及真实两尺寸预览。\n\n## 负向约束\n\n不要用蓝色通用SaaS hero替代深红角色群像；不要编造当前角色名、版本或曲目；不要冒充完整官网、领奖、登录或购买流程；不要复制追踪脚本。\n\n## 制作约束\n\n- 只归档 https://genshin.hoyoverse.com/en/ 在 2026-10-07 的单一快照，不跟随后续版本。\n- 源页 6 个章节缩为本地 3 个核心章节加 footer；领取、Xbox、登录、完整武器与 Wiki 不在本地范围。\n- 源垂直 Swiper 与角色 100ms 时序已确认；整屏的精确时长未核验，本地 600ms ease / 650ms 输入锁为明确近似。\n- 3 秒首屏本地短片没有音轨；6 条台词是官方角色语音，不能称作原站 BGM。\n- 详情是摘要 dialog，手机人物排布及可触摸控件属于本地适配，并非逐像素移动版。\n- 官方品牌、美术、视频与语音权利归相应权利方，资产 manifest 记录直接来源；不复制账户或追踪服务。\n\n## 检查方法\n\n依据这次归档的舞台规则，设计一个虚构双角色专题：保持整屏交接、角色连背景换色、声音归属与下载层级，比较不同美术是否仍有清楚的章节识别。\n\n[查看 Demo](../demos/genshin-world/index.html) · [返回案例库](../cases.html#style/genshin-world)\n",
+      "sha256": "bcfe47c3c6d15dde7b05729967d2a2912ebcecc7d0f699a837be43f3f32d9aa5",
+      "bytes": 2674
     },
     {
       "path": "demos/genshin-world/fidelity.md",
@@ -180,8 +180,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -360,20 +360,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/genshin-world.json",
@@ -402,8 +402,8 @@
     {
       "path": "prompts/genshin-world.md",
       "role": "context",
-      "sha256": "1a9751000430f48f93fb5eb814818881db7c4b0787a84ead1ad56f24e6970ecf",
-      "bytes": 2677
+      "sha256": "bcfe47c3c6d15dde7b05729967d2a2912ebcecc7d0f699a837be43f3f32d9aa5",
+      "bytes": 2674
     },
     {
       "path": "research/genshin-world.md",
@@ -426,26 +426,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

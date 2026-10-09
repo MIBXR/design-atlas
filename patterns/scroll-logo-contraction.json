@@ -2,6 +2,9 @@
   "id": "scroll-logo-contraction",
   "title": "滚动后品牌标识收回导航",
   "category": "滚动叙事",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "首屏大标识与长页导航共享身份。",
   "mechanism": "首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。",
   "trigger": "跨越滚动阈值或返回",

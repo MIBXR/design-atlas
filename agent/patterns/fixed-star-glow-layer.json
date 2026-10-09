@@ -5,6 +5,9 @@
     "id": "fixed-star-glow-layer",
     "title": "固定星光的明暗呼吸层",
     "category": "视觉构成",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "少量光点为群像提供节奏。",
     "mechanism": "固定位置的星图使用低密度明暗周期与错峰延迟，保持正文和人物轮廓稳定。",
     "trigger": "观看首屏",
@@ -66,7 +69,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "8cd2f928c61afb00bf28cb215b0c4c89f92a34be6de4e3a0b4ecf417d104c3f6"
+      "bundleSha256": "6496f9f65ed1aed9d384585d9e234f0bfdd4d80fba2d6b403ae0dd6c409c2465"
     }
   ]
 }

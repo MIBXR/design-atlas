@@ -129,9 +129,9 @@
     {
       "path": "prompts/bauhaus-geometry.md",
       "role": "prompt",
-      "content": "# 包豪斯：几何与实验 · 复用 Prompt\n\n由 [结构化案例](../entries/bauhaus-geometry.json) 自动生成。参考观察与具体边界见 [调研](../research/bauhaus-geometry.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构品牌 [品牌] 的设计工坊制作包豪斯基础形色课程启发的网页。聚焦几何关系和实际制作，背景温暖纸色，以红、黄、蓝、炭黑为有限色板。首屏采用非对称文字/构成两区，大标题保持正常可读；右侧原创SVG包含圆、三角、矩形、线条。提供三组明确的构成预设、原生range旋转控件、实时角度文字以及下载当前SVG的导出动作。后续至少两节分别介绍材料课程与制作方法，以横向条目/details组织，避免圆角卡片堆砌。手机图文纵向重排，键盘可操作，尊重reduced-motion。明确这是Bauhaus形色课程的局部现代迁移，不能把Kandinsky的形色对应宣称为科学定律，也不要复制任何馆藏练习。\n\n要素协调要求：形色实验与排版共享比例关系；每个色块承担构成任务，不能把原色和几何物随机铺满。\n\n## 负向约束\n\n不要把红黄蓝随机撒满画面，不要声称包豪斯只包含圆三角方形，不要给文字加3D阴影或霓虹，不要让几何覆盖按钮；不要只换颜色却不改变构成。\n\n## 制作约束\n\n- 红方、黄三角、蓝圆是Kandinsky课程的一种历史性对应，不是科学验证的通用用户心理规则。\n- 包豪斯存在不同教师和阶段；本例聚焦基础形色课程，不宣称代表整个运动。\n- 所有几何形均为原创SVG，不复制馆藏练习。\n- 圆/三角/矩形承担平衡和张力，不能阻挡可读文字或操作区。\n- 手机将构成和控制纵向排列；范围输入、按钮和details都可键盘使用。\n\n## 检查方法\n\n加入第二组不使用原色的材料色板，检验相同几何关系是否仍能表达平衡与张力。\n\n[查看 Demo](../demos/bauhaus-geometry/index.html) · [返回浏览案例](../cases.html#style/bauhaus-geometry)\n",
-      "sha256": "d3a3f2b845a9c661ac1526c47bb0f14cf7c3caef7dc20f2429e2dd4c97319893",
-      "bytes": 2301
+      "content": "# 包豪斯：几何与实验 · 复用 Prompt\n\n由 [结构化案例](../entries/bauhaus-geometry.json) 自动生成。参考观察与具体边界见 [调研](../research/bauhaus-geometry.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构品牌 [品牌] 的设计工坊制作包豪斯基础形色课程启发的网页。聚焦几何关系和实际制作，背景温暖纸色，以红、黄、蓝、炭黑为有限色板。首屏采用非对称文字/构成两区，大标题保持正常可读；右侧原创SVG包含圆、三角、矩形、线条。提供三组明确的构成预设、原生range旋转控件、实时角度文字以及下载当前SVG的导出动作。后续至少两节分别介绍材料课程与制作方法，以横向条目/details组织，避免圆角卡片堆砌。手机图文纵向重排，键盘可操作，尊重reduced-motion。明确这是Bauhaus形色课程的局部现代迁移，不能把Kandinsky的形色对应宣称为科学定律，也不要复制任何馆藏练习。\n\n要素协调要求：形色实验与排版共享比例关系；每个色块承担构成任务，不能把原色和几何物随机铺满。\n\n## 负向约束\n\n不要把红黄蓝随机撒满画面，不要声称包豪斯只包含圆三角方形，不要给文字加3D阴影或霓虹，不要让几何覆盖按钮；不要只换颜色却不改变构成。\n\n## 制作约束\n\n- 红方、黄三角、蓝圆是Kandinsky课程的一种历史性对应，不是科学验证的通用用户心理规则。\n- 包豪斯存在不同教师和阶段；本例聚焦基础形色课程，不宣称代表整个运动。\n- 所有几何形均为原创SVG，不复制馆藏练习。\n- 圆/三角/矩形承担平衡和张力，不能阻挡可读文字或操作区。\n- 手机将构成和控制纵向排列；范围输入、按钮和details都可键盘使用。\n\n## 检查方法\n\n加入第二组不使用原色的材料色板，检验相同几何关系是否仍能表达平衡与张力。\n\n[查看 Demo](../demos/bauhaus-geometry/index.html) · [返回案例库](../cases.html#style/bauhaus-geometry)\n",
+      "sha256": "c9cf3e45abc89e6b1990a91192c43f18879aeccc73ebba7677e19eb25000a828",
+      "bytes": 2298
     }
   ],
   "files": [
@@ -156,8 +156,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -180,20 +180,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/bauhaus-geometry.json",
@@ -222,8 +222,8 @@
     {
       "path": "prompts/bauhaus-geometry.md",
       "role": "context",
-      "sha256": "d3a3f2b845a9c661ac1526c47bb0f14cf7c3caef7dc20f2429e2dd4c97319893",
-      "bytes": 2301
+      "sha256": "c9cf3e45abc89e6b1990a91192c43f18879aeccc73ebba7677e19eb25000a828",
+      "bytes": 2298
     },
     {
       "path": "research/bauhaus-geometry.md",
@@ -240,26 +240,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

@@ -5,6 +5,9 @@
     "id": "load-completion-brand-marker",
     "title": "资源完成后品牌标记退场",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "等待真实图片就绪，不编造长进度。",
     "mechanism": "关键图片加载期间显示轻量品牌旋转标记，load完成后载入层与主图淡化交接；失败可继续读页。",
     "trigger": "首屏资源完成",
@@ -85,7 +88,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "49cea30096e1454044bb301b68cfff03272367dcb37f606d652b93e18a8a0ccd"
+      "bundleSha256": "95aaf137b4a64162e7b0516cf829a0caab9de96155b90ce355c607e093273524"
     },
     {
       "id": "fuji-rock",
@@ -94,7 +97,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
+      "bundleSha256": "4a82993f1ff41bec4d8dc02d5b8a133dba191d484e8cdf20fd91926be31b692d"
     }
   ]
 }

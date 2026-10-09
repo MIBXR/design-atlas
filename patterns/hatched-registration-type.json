@@ -2,6 +2,9 @@
   "id": "hatched-registration-type",
   "title": "斜线注册大字与前景记录",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "让巨大背景字承担技术身份，让实心前景文字承担阅读。",
   "mechanism": "用低对比斜线纹理填充巨大背景字，并以小编号、十字标定点和淡网格定位；前景姓名与资料保持实心、清楚边界和独立留白。",
   "trigger": "呈现角色或技术档案首屏",

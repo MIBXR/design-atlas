@@ -5,6 +5,9 @@
     "id": "activity-title-ticket-overlap",
     "title": "活动标题与票务跨区并置",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "视觉主题与行动面板处于同一视线。",
     "mechanism": "大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。",
     "trigger": "查看活动首屏并继续阅读",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "0280f9cb8a02c32998ad187257d5857a9f4948ecca4948f63e792df2d82a25d0"
+      "bundleSha256": "f134d6113b9260ee90975694c7678ebe78efe98c0814d1dee43b0ab39ac1e9da"
     }
   ]
 }

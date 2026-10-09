@@ -2,6 +2,9 @@
   "id": "hover-focus-mode-selection",
   "title": "标题悬停与聚焦选择模式",
   "category": "交互反馈",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "标题本身成为多能力选择入口。",
   "mechanism": "把主标题中的能力词做成可操作控制，悬停、键盘聚焦与点击选择同一模式，离开后保留最后选择。",
   "trigger": "悬停/聚焦/点击能力词",

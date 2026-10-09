@@ -6,10 +6,10 @@ snapshots; their fidelity boundaries and asset attribution travel with each case
 
 - [Agent workflow](AGENT.md): keyword search, complete context, source retrieval and export.
 - [Catalog](agent/catalog.json): candidate summaries and case bundle paths/hashes.
-- [Design patterns](agent/patterns.json): independently reusable mechanisms with triggers, effects, constraints, composition guidance, evidence and bundle hashes.
+- [Design patterns](agent/patterns.json): visual, micro-motion, page-motion, sound, and structure mechanisms with triggers, effects, constraints, composition guidance, evidence and bundle hashes.
 - [Overview](index.html): introductions to cases, the design lab and the Agent workflow.
 - [Human preview](cases.html): interactive browsing, comparisons and demos.
-- [Human pattern library](cases.html#patterns): browse atoms, filter by source case, and return to the complete case.
+- [Human pattern library](patterns.html): browse atoms, filter by source case, and return to the complete case.
 - [Skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas): explore the latest catalog, refine candidates through conversation, and retrieve complete context within one pinned session.
 
 Read catalog first, then agent/cases/<id>.json. Case bundles preserve the original

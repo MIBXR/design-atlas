@@ -5,6 +5,10 @@
     "id": "image-destination-mosaic",
     "title": "多尺度图像目的地目录",
     "category": "内容组织",
+    "experienceTypes": [
+      "visual",
+      "micro-motion"
+    ],
     "summary": "让每张图像直接成为进入一类内容的窗口。",
     "mechanism": "九个图像区域按75%主区和25%侧区组织不同宽高比，以窄白缝分隔真实目的地；类别文字常显，源CSS与脚本共同产生悬停扩张。",
     "trigger": "浏览、聚焦或选择机构目的地",
@@ -76,7 +80,7 @@
         "bundle": "agent/cases/suzhou-museum.json",
         "demo": "demos/suzhou-museum/index.html"
       },
-      "bundleSha256": "fd3cc2742b2dd0192f5e699ed6c17b8259f47da70e3a416f9dbd3b0d5ad88344"
+      "bundleSha256": "e1575983c1bdfce960aa1e496260bd9f5a69db9e3f535e390e30ab6b16f391d0"
     }
   ]
 }

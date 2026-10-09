@@ -135,9 +135,9 @@
     {
       "path": "prompts/claude-platform.md",
       "role": "prompt",
-      "content": "# Claude — 衬线语气与 Cowork 演示 · 复用 Prompt\n\n由 [结构化案例](../entries/claude-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/claude-platform.md)。\n\n## 正向 Prompt\n\n以 https://claude.com/ 在【采集日期】的 匿名英文营销页 HTTP/公共模块快照 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。以当前 claude.com 匿名 HTML/公共 CSS/JS 快照为结构依据，源浏览器若重定向账户明确记未验证。保留 Serif 主张、Sans 控件、奶油/系统深色及官方静音 Cowork 视频。具体机制：单词 1s 透明度、总 .2s 交错；组 750ms/10px/100ms 在 −20% 视口边界带入；桌面 pointer 菜单+150ms 离开；手机 clip 800ms 进入/400ms 离开与320+80i交错；套餐选中底板；FAQ 单开与400ms网格高度/透明度。邮箱动作跳到源 URL，不造首页表单或账期切换。减少动态取消动画保留内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 源菜单与滚动机制属于公共源码依据的实现，本地桌面/390 手机实测；并未完成源浏览器的逐节操作。菜单条目和 FAQ/套餐内容压缩，局部曲线/布局拟合。没有认证、订阅、SSO 与下载后端，未核实全局手动主题按钮；不要添加无来源的标题飞入或缩放。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/claude-platform/index.html) · [返回浏览案例](../cases.html#style/claude-platform)\n",
-      "sha256": "6be4d6fed83df6b8abf1df3666bf9d8e3e147b00474e9629575649d5b5199681",
-      "bytes": 2255
+      "content": "# Claude — 衬线语气与 Cowork 演示 · 复用 Prompt\n\n由 [结构化案例](../entries/claude-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/claude-platform.md)。\n\n## 正向 Prompt\n\n以 https://claude.com/ 在【采集日期】的 匿名英文营销页 HTTP/公共模块快照 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。以当前 claude.com 匿名 HTML/公共 CSS/JS 快照为结构依据，源浏览器若重定向账户明确记未验证。保留 Serif 主张、Sans 控件、奶油/系统深色及官方静音 Cowork 视频。具体机制：单词 1s 透明度、总 .2s 交错；组 750ms/10px/100ms 在 −20% 视口边界带入；桌面 pointer 菜单+150ms 离开；手机 clip 800ms 进入/400ms 离开与320+80i交错；套餐选中底板；FAQ 单开与400ms网格高度/透明度。邮箱动作跳到源 URL，不造首页表单或账期切换。减少动态取消动画保留内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 源菜单与滚动机制属于公共源码依据的实现，本地桌面/390 手机实测；并未完成源浏览器的逐节操作。菜单条目和 FAQ/套餐内容压缩，局部曲线/布局拟合。没有认证、订阅、SSO 与下载后端，未核实全局手动主题按钮；不要添加无来源的标题飞入或缩放。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/claude-platform/index.html) · [返回案例库](../cases.html#style/claude-platform)\n",
+      "sha256": "c516d5942d1e311eeeef410991f89e5698aec2361e21119a287399f2a9d5928c",
+      "bytes": 2252
     },
     {
       "path": "demos/claude-platform/fidelity.md",
@@ -176,8 +176,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -254,20 +254,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/claude-platform.json",
@@ -296,8 +296,8 @@
     {
       "path": "prompts/claude-platform.md",
       "role": "context",
-      "sha256": "6be4d6fed83df6b8abf1df3666bf9d8e3e147b00474e9629575649d5b5199681",
-      "bytes": 2255
+      "sha256": "c516d5942d1e311eeeef410991f89e5698aec2361e21119a287399f2a9d5928c",
+      "bytes": 2252
     },
     {
       "path": "research/claude-platform.md",
@@ -320,26 +320,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

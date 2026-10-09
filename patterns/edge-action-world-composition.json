@@ -2,6 +2,9 @@
   "id": "edge-action-world-composition",
   "title": "中心世界与边缘行动分工",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "让世界视觉保持主角，下载入口仍直接可找。",
   "mechanism": "背景建立空间，中心Logo识别产品，竖排标语补充主题；下载与漫画等行动分布边缘，避免覆盖主视觉焦点。",
   "trigger": "进入世界首页",

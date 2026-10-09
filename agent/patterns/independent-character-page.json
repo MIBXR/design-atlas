@@ -5,6 +5,9 @@
     "id": "independent-character-page",
     "title": "首页世界与人物档案分别成页",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "按用户任务保留不同页面职责。",
     "mechanism": "首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。",
     "trigger": "选择角色导航或返回HOME",
@@ -62,7 +65,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "6810a34427dd80e190f72b2afc843d1483ce72f34861bdcc01ab0265d72c0c4e"
+      "bundleSha256": "845b70a87ab7df799590c6b4d6812ea11945a95b76f2029ea1f9245813cda2cf"
     }
   ]
 }

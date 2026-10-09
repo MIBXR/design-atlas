@@ -5,6 +5,9 @@
     "id": "paper-material-collage",
     "title": "纸页与贴纸的任务隐喻",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用纸页、胶带与贴纸解释记录活动。",
     "mechanism": "原创记录页和植物线稿与记录任务并置，材料只做小角度倾斜；装饰开关不会改变主要文字布局。",
     "trigger": "阅读纸页示范或切换贴纸",
@@ -58,7 +61,7 @@
         "bundle": "agent/cases/hand-drawn.json",
         "demo": "demos/hand-drawn/index.html"
       },
-      "bundleSha256": "e9329817b7a7ed91da7694e8f8181df9280d41c89723796fdd1781a4ff0e68bc"
+      "bundleSha256": "0ce5a50c0f9f94235dc7104ff5084ae1bac1d62738c68e12676541b43c81c29b"
     }
   ]
 }

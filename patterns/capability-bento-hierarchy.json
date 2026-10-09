@@ -2,6 +2,9 @@
   "id": "capability-bento-hierarchy",
   "title": "以跨列比例表达能力层次",
   "category": "内容组织",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "不同产品权重使用不同面积。",
   "mechanism": "根据功能关系设置跨列主能力、并列辅助能力或通栏协作能力，图文各有稳定位置。",
   "trigger": "阅读能力矩阵",

@@ -2,6 +2,9 @@
   "id": "mixed-ratio-archive-columns",
   "title": "等宽栏目保留不同图像比例",
   "category": "内容组织",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "统一栏目线索，不强行统一作品高度。",
   "mechanism": "栏目有共同宽度与标题规则，内部竖海报、横摄影按各自比例排列；不同内容长度产生不同列高，手机逐列阅读。",
   "trigger": "浏览机构档案",

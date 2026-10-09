@@ -144,9 +144,9 @@
     {
       "path": "prompts/chatgpt-platform.md",
       "role": "prompt",
-      "content": "# ChatGPT — 巨字、飞入拼贴与滚动交接 · 复用 Prompt\n\n由 [结构化案例](../entries/chatgpt-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/chatgpt-platform.md)。\n\n## 正向 Prompt\n\n以 https://chatgpt.com/zh-Hans-CN/overview/ 在【采集日期】的 简体中文公开介绍页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留 64px 导航、五行中文标题、每个中文字符各自的当前模式强调色与原始字标/字体。20 个官方独立素材按模式使用不同坐标、比例、层级和手机几何；进场与离场分开，快速选择不堆积离场层。主窗口以垂直卡片切换；悬停选择释放后保留模式。长段必须连续保留首屏拼贴、滚动带入、拼贴收束、同一 sticky 窗口阈值触发向右下移动、左侧 rail 出现，以及三段说明/图像/进度同步；顶层模式与 rail 状态独立。手机使用原生横向三卡，不强塞桌面长段。按系统主题切换桌面真实界面图片；原站没有配乐。减少动态时停止自动运动并保留所有内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/chatgpt-platform/index.html) · [返回浏览案例](../cases.html#style/chatgpt-platform)\n",
-      "sha256": "a30a07ec66cd707db3d8ba905f84d005cdfb3041ea57703735a344a3ccfaa3bc",
-      "bytes": 2443
+      "content": "# ChatGPT — 巨字、飞入拼贴与滚动交接 · 复用 Prompt\n\n由 [结构化案例](../entries/chatgpt-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/chatgpt-platform.md)。\n\n## 正向 Prompt\n\n以 https://chatgpt.com/zh-Hans-CN/overview/ 在【采集日期】的 简体中文公开介绍页 为单一依据，先观察初始入场、所有章节至页尾再返回、真实指针与手机操作。保留 64px 导航、五行中文标题、每个中文字符各自的当前模式强调色与原始字标/字体。20 个官方独立素材按模式使用不同坐标、比例、层级和手机几何；进场与离场分开，快速选择不堆积离场层。主窗口以垂直卡片切换；悬停选择释放后保留模式。长段必须连续保留首屏拼贴、滚动带入、拼贴收束、同一 sticky 窗口阈值触发向右下移动、左侧 rail 出现，以及三段说明/图像/进度同步；顶层模式与 rail 状态独立。手机使用原生横向三卡，不强塞桌面长段。按系统主题切换桌面真实界面图片；原站没有配乐。减少动态时停止自动运动并保留所有内容。用于【目标产品】时重新观察其真实操作与资产，不把本案例的拟合数值当作其他产品通用公式。\n\n## 负向约束\n\n不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。\n\n## 制作约束\n\n- 保留当前来源的触发→响应→目的，不用通用淡入代替定义性交互。\n- 720ms 主窗口过渡、340px 交接阈值、周边层的轨迹/交错及 6500ms 自动周期为本地拟合；中央产品图是官方截图，不是可登录、对话、编辑的完整产品。没有复制账户、付费和下载服务，原站三个静态故事卡未移植。暂停控制停止自动轮换和周边运动，正常滚动仍可阅读。\n- 品牌与官方素材仅用于此个人参考库；归档来源与权利。\n- 减少动态保留可读内容、键盘焦点和手动选择。\n\n## 检查方法\n\n以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。\n\n[查看 Demo](../demos/chatgpt-platform/index.html) · [返回案例库](../cases.html#style/chatgpt-platform)\n",
+      "sha256": "45474f75f55664f7c9eaa750d6eb9e7c44b93fca7f2b4e85ec2e9073a0f4b8c1",
+      "bytes": 2440
     },
     {
       "path": "demos/chatgpt-platform/fidelity.md",
@@ -185,8 +185,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -467,20 +467,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/chatgpt-platform.json",
@@ -509,8 +509,8 @@
     {
       "path": "prompts/chatgpt-platform.md",
       "role": "context",
-      "sha256": "a30a07ec66cd707db3d8ba905f84d005cdfb3041ea57703735a344a3ccfaa3bc",
-      "bytes": 2443
+      "sha256": "45474f75f55664f7c9eaa750d6eb9e7c44b93fca7f2b4e85ec2e9073a0f4b8c1",
+      "bytes": 2440
     },
     {
       "path": "research/chatgpt-platform.md",
@@ -533,26 +533,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

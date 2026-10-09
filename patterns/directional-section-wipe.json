@@ -2,6 +2,9 @@
   "id": "directional-section-wipe",
   "title": "按方向侧向裁切交接整章",
   "category": "滚动叙事",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "让章节空间方向与输入方向一致。",
   "mechanism": "两个整屏场景以横向遮罩覆盖出入，旧场景退出与新场景进入共享方向；稳定后只有一章可交互。",
   "trigger": "滚轮、章节导航或键盘换章",

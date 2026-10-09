@@ -2,6 +2,9 @@
   "id": "footer-aware-back-to-top",
   "title": "回顶入口避让页脚",
   "category": "导航与状态",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "长页回程入口不遮挡末端内容。",
   "mechanism": "达到阅读深度后显示回顶按钮，接近页脚由fixed转为footer内部定位；返回页首后消失。",
   "trigger": "深入页面、接近页脚或回顶",

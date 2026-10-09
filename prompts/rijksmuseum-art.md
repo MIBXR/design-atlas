@@ -24,4 +24,4 @@
 
 替换一组经过授权的场所摄影，保留文字与图像的职责分工；检查手机裁切是否保住人物与作品。
 
-[查看 Demo](../demos/rijksmuseum-art/index.html) · [返回浏览案例](../cases.html#style/rijksmuseum-art)
+[查看 Demo](../demos/rijksmuseum-art/index.html) · [返回案例库](../cases.html#style/rijksmuseum-art)

@@ -2,6 +2,9 @@
   "id": "photo-crossfade-cycle",
   "title": "给摄影留阅读时间的淡化轮换",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "先完整展示一张，再以透明度交接。",
   "mechanism": "静态摄影在明确停留间隔后交叉淡化，图像保持比例；手动选择更新索引与题注。",
   "trigger": "轮换周期或手动索引",

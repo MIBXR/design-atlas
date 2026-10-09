@@ -5,6 +5,9 @@
     "id": "native-document-reading",
     "title": "原生长页与正常回程",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "按内容顺序浏览，不额外劫持滚轮。",
     "mechanism": "章节处于普通文档流，浏览器处理上下滚动和锚点；局部轨道、sticky或菜单各自管理状态。",
     "trigger": "自然滚动、反向返回或页内链接",
@@ -107,7 +110,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
+      "bundleSha256": "4a82993f1ff41bec4d8dc02d5b8a133dba191d484e8cdf20fd91926be31b692d"
     },
     {
       "id": "met-museum",
@@ -116,7 +119,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
+      "bundleSha256": "0970147bfee00469744b170b99704a6a655e00527d3c8ebb61e511de246cf20b"
     },
     {
       "id": "rijksmuseum-art",
@@ -125,7 +128,7 @@
         "bundle": "agent/cases/rijksmuseum-art.json",
         "demo": "demos/rijksmuseum-art/index.html"
       },
-      "bundleSha256": "45bacbc97ac544e74afc9046a72489a71ab882851819b2e28817840643fdd59d"
+      "bundleSha256": "850a40e065e8422b03cb2e8428fd98c21d7cd28e71040311c395e0dc9f161cdf"
     },
     {
       "id": "uma-musume",
@@ -134,7 +137,7 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "d0c663e7d14e579c0895bd536990572b6bb9e5c5eb33863d3aa1b31b73550bfc"
+      "bundleSha256": "bfe96ddd5d1aa0469683ba85170c43ec1c79483b2708d6e25b8235cb7846c227"
     }
   ]
 }

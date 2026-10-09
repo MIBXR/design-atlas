@@ -5,6 +5,9 @@
     "id": "world-shaped-thumbnail-frame",
     "title": "目录边框延续世界语汇",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "让缩略目录属于同一个故事世界。",
     "mechanism": "缩略入口使用来源角纹与削角轮廓，hover/current增加内框，真实内容图与选中状态保持稳定。",
     "trigger": "浏览、聚焦或选择缩略图",
@@ -60,7 +63,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "7a42a497ab8ed65b066ed9a9302c5538ed747fd11b03143bcd74b45aeb89811d"
+      "bundleSha256": "5647019b3aaaa734a79479e7518b483109329862b14100dd9cbb5e0ddf38556c"
     }
   ]
 }

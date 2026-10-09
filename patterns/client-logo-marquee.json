@@ -2,6 +2,9 @@
   "id": "client-logo-marquee",
   "title": "可停的连续客户标识条带",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "用连续条带提供客户范围线索。",
   "mechanism": "重复标识轨道缓慢横移以形成连续序列，指针停留暂停；重复视觉不增加重复读屏内容。",
   "trigger": "查看条带或停留",

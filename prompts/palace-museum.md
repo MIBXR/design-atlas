@@ -22,4 +22,4 @@
 
 替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。
 
-[查看 Demo](../demos/palace-museum/index.html) · [返回浏览案例](../cases.html#style/palace-museum)
+[查看 Demo](../demos/palace-museum/index.html) · [返回案例库](../cases.html#style/palace-museum)

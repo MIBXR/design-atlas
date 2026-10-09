@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "c8003cbf2835bf3f330e180bd00aa19b21496b218f86564579e632ad84d080a8",
+  "contentVersion": "5054be0290986bc6c1b2e64afa22ccc198ce060741182b602c942c95cd2547fe",
   "patternCount": 129,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -8,6 +8,9 @@
       "id": "activity-title-ticket-overlap",
       "title": "活动标题与票务跨区并置",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "视觉主题与行动面板处于同一视线。",
       "mechanism": "大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。",
       "trigger": "查看活动首屏并继续阅读",
@@ -58,12 +61,15 @@
       "paths": {
         "bundle": "agent/patterns/activity-title-ticket-overlap.json"
       },
-      "bundleSha256": "11682983d03ab88af1c16e2dba6d34980d3f63612a353980dc578bbb9a14de7b"
+      "bundleSha256": "4e69e00db905001b0c86f5c8c2825c4fa08542031d8dbd225937ca68e7a708f0"
     },
     {
       "id": "aligned-metadata-rows",
       "title": "编号与元数据对齐列表",
       "category": "内容组织",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "让编号、名称、日期和操作横向可比。",
       "mechanism": "用稳定列宽组织每行的编号、名称、类别、日期与收藏；手机将次级元数据折到名称下方。",
       "trigger": "逐行浏览目录",
@@ -109,12 +115,15 @@
       "paths": {
         "bundle": "agent/patterns/aligned-metadata-rows.json"
       },
-      "bundleSha256": "458c69e9e70333d174f0c1e77e55889cf8e4d6a803c133b28a20a9f4796b31d0"
+      "bundleSha256": "9637957ec05f8523abd76a6dc6a808dbce6d513a27b231b022098b834f6ae2ad"
     },
     {
       "id": "architectural-fragment-anchor",
       "title": "建筑局部与名称目录锚点",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "用真实建筑的一角让大色面具有地点身份。",
       "mechanism": "朱红实物纹理内以真实透明屋脊和独立圆形题饰定位建筑身份，左侧说明与八项名称目录承担检索；图像不替代文字入口。",
       "trigger": "进入建筑或文化章节",
@@ -179,12 +188,15 @@
       "paths": {
         "bundle": "agent/patterns/architectural-fragment-anchor.json"
       },
-      "bundleSha256": "fc954388688c5abbbd3c9aac200e49bb615e8e96e4611fc82d6efa8337ae1da0"
+      "bundleSha256": "c426a3e3eb28dd14e62970363d80288af4429457ef09138f89939d38384e2883"
     },
     {
       "id": "architectural-outline-whitespace",
       "title": "机构摄影的白色外缘",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "以白色外缘、窄缝和访问白板组织真实机构摄影。",
       "mechanism": "用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。",
       "trigger": "阅读建筑说明或相关文化章节",
@@ -250,12 +262,15 @@
       "paths": {
         "bundle": "agent/patterns/architectural-outline-whitespace.json"
       },
-      "bundleSha256": "1422984c971690120b2a8e01ce1ea9712ac6ca8d4ba2f623c86e21a6ea997ee1"
+      "bundleSha256": "4a51f8ec76fc18e146f10c0d9558265872082c6b2255898449ee0a04abaabd58"
     },
     {
       "id": "artwork-caption-separation",
       "title": "作品原图与图下题注分工",
       "category": "内容组织",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "让作品保持自己的视觉，说明放在图外。",
       "mechanism": "海报、馆藏或艺术摄影保留原色及比例，名称、日期与来源放在图下正文，不在原图上重复绘制标题。",
       "trigger": "浏览作品与展览目录",
@@ -329,12 +344,16 @@
       "paths": {
         "bundle": "agent/patterns/artwork-caption-separation.json"
       },
-      "bundleSha256": "0b247af0228f97ce899b628418364e5cb952c38847980931e7193e2c380f3331"
+      "bundleSha256": "2e3cd310a3431d47c0a783856b04a32cf938320b3097d65a0114b9a31caccf02"
     },
     {
       "id": "audio-signal-panel",
       "title": "按信号流程组织声音面板",
       "category": "内容组织",
+      "experienceTypes": [
+        "sound",
+        "structure"
+      ],
       "summary": "让功能邻接关系解释声音制作流程。",
       "mechanism": "将预设、波形显示、滤波/包络/输出和演奏按实际信号链组织，改变控件确实改变音频节点。",
       "trigger": "查看并操作合成器面板",
@@ -380,12 +399,15 @@
       "paths": {
         "bundle": "agent/patterns/audio-signal-panel.json"
       },
-      "bundleSha256": "42ce7a65ac37cb95ff6c5d319686cee7f335682a8f71f8e7c2ce837af21951ca"
+      "bundleSha256": "14e241ec4b11543898fc0830f2f25f31fef42044366038f2b798883d9532790a"
     },
     {
       "id": "avatar-pile-personality",
       "title": "组合头像表达团队人格",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "用一组独立头像为工具加入团队气质。",
       "mechanism": "多张真实授权头像以小范围叠放组成一个稳定装饰层，手机调整到标题上方，文字仍是主要信息。",
       "trigger": "浏览团队主张",
@@ -436,12 +458,15 @@
       "paths": {
         "bundle": "agent/patterns/avatar-pile-personality.json"
       },
-      "bundleSha256": "da6f04b98d969973ebd0ffb4aff351388f9850da0d326c1165a09db6451c4b53"
+      "bundleSha256": "92a16d413770433a4b587ef0020ecf2eb30b37d02d8f742e9268b49572402523"
     },
     {
       "id": "blurred-layered-video-handoff",
       "title": "旧片模糊退出、新片延后进入",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "影片与主题字按不同阶段交接。",
       "mechanism": "旧影片先模糊退出，新影片稍后进入，标题再延迟进入；同一舞台叠层和最后请求队列管理快选。",
       "trigger": "选择影片章节",
@@ -503,12 +528,15 @@
       "paths": {
         "bundle": "agent/patterns/blurred-layered-video-handoff.json"
       },
-      "bundleSha256": "574094d53a30c6f47170425662721abb72890484ed3572bb9d823195a1f44f28"
+      "bundleSha256": "43fa2ce01cd8a980bf0b4e9d3b341ff07704c4912604222ebdeaf49b0a3282dd"
     },
     {
       "id": "bounded-image-inspection",
       "title": "公开边界内的瓦片细察",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "让图像从全貌到局部，再明确回到总览。",
       "mechanism": "独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。",
       "trigger": "主动加减、滚轮缩放、拖动或键盘平移",
@@ -577,12 +605,15 @@
       "paths": {
         "bundle": "agent/patterns/bounded-image-inspection.json"
       },
-      "bundleSha256": "1b2f804f8a2a2438411a120ea3aebd33c8cf3aa44cd52aa5aa59687afecb2550"
+      "bundleSha256": "6c8dacace3afbe062ac8f648281229337879f866341005776379eb84ecb8f902"
     },
     {
       "id": "bounded-panel-track",
       "title": "有界的完整面板横向轨道",
       "category": "导航与状态",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "图像、资料与说明作为同一面板移动。",
       "mechanism": "每次选择使整块相关内容沿单一轨道平移，首尾禁用前后按钮并停止；人物或玩法状态同步更新。",
       "trigger": "选择编号、箭头或手势",
@@ -663,12 +694,15 @@
       "paths": {
         "bundle": "agent/patterns/bounded-panel-track.json"
       },
-      "bundleSha256": "a778bb8edf0a2ab57e4e1fa09becad3bc98f611f782891f029038a6449e617fc"
+      "bundleSha256": "fd677993b4bb176b39a7863c8ffd74810bd7ed236d0e728d1479056d33225ec6"
     },
     {
       "id": "capability-bento-hierarchy",
       "title": "以跨列比例表达能力层次",
       "category": "内容组织",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "不同产品权重使用不同面积。",
       "mechanism": "根据功能关系设置跨列主能力、并列辅助能力或通栏协作能力，图文各有稳定位置。",
       "trigger": "阅读能力矩阵",
@@ -735,12 +769,16 @@
       "paths": {
         "bundle": "agent/patterns/capability-bento-hierarchy.json"
       },
-      "bundleSha256": "b1340718f6575956f9607951b3ad5ba99f79adb84bdd49fe6974c7c08302e48e"
+      "bundleSha256": "ae01e8d1d1056c007858dc8bfa2728bdfc35dd7020b89672768c6afa29a5f1cb"
     },
     {
       "id": "center-aligned-section-index",
       "title": "章节中心定位的侧边索引",
       "category": "导航与状态",
+      "experienceTypes": [
+        "micro-motion",
+        "structure"
+      ],
       "summary": "点击时让阅读目标落在视口中心。",
       "mechanism": "侧边索引按视口中心更新，点击将目标章中心对齐；指针/焦点进入索引显示标签并降低内容强调。",
       "trigger": "点击索引或聚焦索引区",
@@ -796,12 +834,15 @@
       "paths": {
         "bundle": "agent/patterns/center-aligned-section-index.json"
       },
-      "bundleSha256": "a46c9b48fa4781fad5f3e2c561141e177320320d80c8cb049c7d883832592ece"
+      "bundleSha256": "657cd1af0c044c9296f4143cf368518970342f92323bc1c812d7890f9c9636c6"
     },
     {
       "id": "centered-loop-gallery",
       "title": "中心图与邻图预告的循环轨道",
       "category": "导航与状态",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "当前图突出，侧图提示还有内容。",
       "mechanism": "同一水平轨道移位，中心图清晰、邻图部分露出；首尾以克隆衔接后复位，手动与自动状态共享索引。",
       "trigger": "箭头、索引、触摸或自动周期",
@@ -895,12 +936,15 @@
       "paths": {
         "bundle": "agent/patterns/centered-loop-gallery.json"
       },
-      "bundleSha256": "5a8e83bad3b79a6756529cb447aff02da8cefcf7a285a14bca3ed2fd1ec5982e"
+      "bundleSha256": "6cec0e010725bd00d4892924af7ddb3e3cf3279663b5b15e330dd94f0bae3a78"
     },
     {
       "id": "character-stage-coordination",
       "title": "人物、背景与资料成组换态",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "换人时保持所有身份线索一致。",
       "mechanism": "选中人物统一更新立绘、姓名、简介、肖像与背景/资料卡；人物阶段或服装作为独立状态，避免图片和声音归属错位。",
       "trigger": "选择人物或阶段",
@@ -981,12 +1025,15 @@
       "paths": {
         "bundle": "agent/patterns/character-stage-coordination.json"
       },
-      "bundleSha256": "613db0850e21b5e7a04d6dddf64557415f218ca8bb01eb11e8fbf6da6c5d8e2c"
+      "bundleSha256": "1adaba3b04211644a4ea95f4024ad7332e8a2141c8640717ed057fbf67703607"
     },
     {
       "id": "character-voice-ownership",
       "title": "声线主动播放并归属于当前人物",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "sound"
+      ],
       "summary": "切换人物时不会叠加上一人的声音。",
       "mechanism": "麦克风主动播放当前人物对应音轨，再次点击暂停；换人、离开角色区域或后台停止旧声音。",
       "trigger": "点击人物VOICE或换人",
@@ -1067,12 +1114,15 @@
       "paths": {
         "bundle": "agent/patterns/character-voice-ownership.json"
       },
-      "bundleSha256": "798abf5df4368e321b93187f1a2a86634ada4524bf4c6d85d544885c25b0d879"
+      "bundleSha256": "84d089bcfb8e7e0a381307c31e40236ce56e0a55d98f58aea4b48cf6bc5b359b"
     },
     {
       "id": "checklist-progress",
       "title": "短清单与即时完成进度",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "把抽象品牌主张变成几个可完成动作。",
       "mechanism": "原生复选框代表真实步骤，改变勾选即更新完成数，并提供清单重置。",
       "trigger": "勾选/取消或重置",
@@ -1120,12 +1170,15 @@
       "paths": {
         "bundle": "agent/patterns/checklist-progress.json"
       },
-      "bundleSha256": "5c2f69d01e7947b2185bcb8a69a01aa491824153dd9734b504fd499060cea09b"
+      "bundleSha256": "0540f5b85293a1d19324328f75ec943a07fc88449c5799e99dadeb27aef511ce"
     },
     {
       "id": "client-logo-marquee",
       "title": "可停的连续客户标识条带",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "用连续条带提供客户范围线索。",
       "mechanism": "重复标识轨道缓慢横移以形成连续序列，指针停留暂停；重复视觉不增加重复读屏内容。",
       "trigger": "查看条带或停留",
@@ -1192,12 +1245,15 @@
       "paths": {
         "bundle": "agent/patterns/client-logo-marquee.json"
       },
-      "bundleSha256": "54659561f6d8a3851dbd1db6e4a7c988246377943630ceb8cfd6fc4d0de0326a"
+      "bundleSha256": "2b6dfe39a78a89bc55d209bfbde3edfc14635a23e30f5c584e882c3303b9ced0"
     },
     {
       "id": "clip-tail-advance",
       "title": "在影片片尾前交给下一章",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "避免片尾黑场打断章节观看。",
       "mechanism": "监测当前影片剩余时间，在片尾前固定余量触发下一章，用户暂停或降低动态时关闭自动推进。",
       "trigger": "影片到达尾段",
@@ -1254,12 +1310,15 @@
       "paths": {
         "bundle": "agent/patterns/clip-tail-advance.json"
       },
-      "bundleSha256": "099a652e7509c2cc237b850350db66f851f319b538e56376e4f9fd945f97142f"
+      "bundleSha256": "4f9305f945f87592a7ed49a846db0a912c4572f88e4d8ea84b398b8b1c9852c1"
     },
     {
       "id": "compact-scroll-header",
       "title": "跨过品牌区出现紧凑导航",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "大标识与持久导航按阅读位置交接。",
       "mechanism": "顶部保留大机构标志，超过标志高度加偏移后从上方出现紧凑导航，返回顶部退出恢复大标志。",
       "trigger": "跨越阈值或回到首屏",
@@ -1316,12 +1375,15 @@
       "paths": {
         "bundle": "agent/patterns/compact-scroll-header.json"
       },
-      "bundleSha256": "3a59a2573bcf214bcea86191d3d3d5ea6132a8323586db4ec6f004e3613903a0"
+      "bundleSha256": "dcce67a6dbe97cac1d637033bacbff53c774ca9ced70d17b8a98d4bdc2052593"
     },
     {
       "id": "continuous-bgm-bridge",
       "title": "跨章节连续的环境声音",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "sound"
+      ],
       "summary": "以连续音轨连接不同场景。",
       "mechanism": "用户开启后BGM跨章节保持同一播放位置，启停使用有依据的音量渐变；人物语音与环境音乐分开管理。",
       "trigger": "主动开启或关闭BGM、切换章节",
@@ -1393,12 +1455,15 @@
       "paths": {
         "bundle": "agent/patterns/continuous-bgm-bridge.json"
       },
-      "bundleSha256": "e8db4cd374b2b85000f4c3c1db1619bfeaab6040e5eb6e0eb9be74a49519044a"
+      "bundleSha256": "6fb9d608720c8169dae30c53baa91e18f8f5850257857d9caa8c45e535a5585f"
     },
     {
       "id": "controlled-rough-outlines",
       "title": "受控不规则轮廓",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "以稳定骨架承托草稿感轮廓。",
       "mechanism": "用固定SVG曲线、有限双线与统一排线密度制造手绘感；正文和操作边界保持清楚稳定。",
       "trigger": "浏览插画与短批注",
@@ -1445,12 +1510,15 @@
       "paths": {
         "bundle": "agent/patterns/controlled-rough-outlines.json"
       },
-      "bundleSha256": "e7965df076d23fb067345325bda8aa7772a61c0a14ad90951ff979023ed8f2ef"
+      "bundleSha256": "0648bdce6eaa5ed6dfcb705e8325a0898f4737db07a81adc1972e7874a08f0f9"
     },
     {
       "id": "current-state-svg-export",
       "title": "导出当前构成",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "把操作结果变成可使用的原创SVG。",
       "mechanism": "导出时读取当前几何位置与角度，生成与画布一致的SVG文件；文件内容包含当前状态。",
       "trigger": "激活导出按钮",
@@ -1495,12 +1563,15 @@
       "paths": {
         "bundle": "agent/patterns/current-state-svg-export.json"
       },
-      "bundleSha256": "6a45db9210d8dd10f6cb5cd775243705e82473bb22ff2a9fc8ae47bf19c1bec8"
+      "bundleSha256": "9697f50dbf981540504779dfcf18005d3a6dcc84623a894f1af4dc980913be12"
     },
     {
       "id": "department-code-matrix",
       "title": "机构缩写的中心矩阵",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "保留特殊字标和非等宽的中心/外围关系，让代码同时表达机构身份和归属。",
       "mechanism": "中心双行代码和九个外围短代码共享环形连字，黑白表面、倾斜与尺度差共同组织关系；细射线与小面积橙色节点连接焦点。完整名称与等价语义目录承担阅读，不将原字标重排成普通字体卡片。",
       "trigger": "呈现机构代码目录",
@@ -1574,12 +1645,15 @@
       "paths": {
         "bundle": "agent/patterns/department-code-matrix.json"
       },
-      "bundleSha256": "9f698356f3ae2a46909176c2145a0fae3d2edecf15aa4874f09193e4ecf2e345"
+      "bundleSha256": "99d3409b804598ae8bef5d0e3cc6f1044279cc55dc5a236950538f0a2adf3e7e"
     },
     {
       "id": "direct-purpose-navigation",
       "title": "机构目的地即时展开",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "把到访、活动等常见目的直接组织成入口。",
       "mechanism": "点击目的类别立即显示相应目的地列表，层级结构留在同一导航区域；小屏可以在文档流展开。",
       "trigger": "打开Visit或主菜单类别",
@@ -1646,12 +1720,15 @@
       "paths": {
         "bundle": "agent/patterns/direct-purpose-navigation.json"
       },
-      "bundleSha256": "e26d3aecff8b7b0cbda751fa73921a38f5b824496c66050d38f2c88ee14fb2eb"
+      "bundleSha256": "7bb7a84eab8b9521eb14324d5e59f01e92f8a628f7704f838b0aeade4598c220"
     },
     {
       "id": "directional-section-wipe",
       "title": "按方向侧向裁切交接整章",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "让章节空间方向与输入方向一致。",
       "mechanism": "两个整屏场景以横向遮罩覆盖出入，旧场景退出与新场景进入共享方向；稳定后只有一章可交互。",
       "trigger": "滚轮、章节导航或键盘换章",
@@ -1711,12 +1788,15 @@
       "paths": {
         "bundle": "agent/patterns/directional-section-wipe.json"
       },
-      "bundleSha256": "e77f00972ad451ce71f05f08a4c74fecdb68909b57fbf8529c1294779b6029e9"
+      "bundleSha256": "b46e062804c1e44cdef595c217a4e58c5fb762f3f7e37549265233a538b70e5e"
     },
     {
       "id": "directional-sticky-navigation",
       "title": "向上找回、向下让位的导览条",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "按浏览方向决定持久导览可见性。",
       "mechanism": "跨过指定内容区后导览固定，向上滚动显现、向下收起；语言目录在离开时合拢。",
       "trigger": "阈值后上下滚动",
@@ -1767,12 +1847,15 @@
       "paths": {
         "bundle": "agent/patterns/directional-sticky-navigation.json"
       },
-      "bundleSha256": "e793d3acbebe9cef9f25e06874605f879a90213a2d099286a10fef1e61f9903e"
+      "bundleSha256": "6cd9075603a23d762fc989d200c1e33ad4ce7be84795815308ff6d86e6478e41"
     },
     {
       "id": "discovery-progress-journal",
       "title": "探索进度与可重置手账",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "把访问过的地点变成可回看的进度。",
       "mechanism": "访问地点时记录发现集合，同步地点按钮、进度文本与旅行手账，并允许清除后重新探索。",
       "trigger": "首次抵达地点或重置",
@@ -1824,12 +1907,15 @@
       "paths": {
         "bundle": "agent/patterns/discovery-progress-journal.json"
       },
-      "bundleSha256": "4b758635dbcdaffaa60d328cf9e3015b9f30c419e498134b70cddcf3a862c2c6"
+      "bundleSha256": "6a817370521d0e49369c24af804dcde543cc772252b035fff8de502e53063961"
     },
     {
       "id": "edge-action-world-composition",
       "title": "中心世界与边缘行动分工",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "让世界视觉保持主角，下载入口仍直接可找。",
       "mechanism": "背景建立空间，中心Logo识别产品，竖排标语补充主题；下载与漫画等行动分布边缘，避免覆盖主视觉焦点。",
       "trigger": "进入世界首页",
@@ -1880,12 +1966,15 @@
       "paths": {
         "bundle": "agent/patterns/edge-action-world-composition.json"
       },
-      "bundleSha256": "cb6c0a7955b48b2cc33b3d39498c3aa8ae14118b5efdf688e550c4b95ee871f3"
+      "bundleSha256": "558ca3166b4a0a4c450dc0a0db4e3a60f344965089fa885dc5ad1620a98570df"
     },
     {
       "id": "editorial-alignment-grid",
       "title": "共享对齐线的编辑网格",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "用共同基线连接标题、日期和行动。",
       "mechanism": "先按内容角色建立列网格，再让标题、日期、类别和行动反复对齐；非对称留白仍服从共同线。",
       "trigger": "阅读首屏及列表",
@@ -1937,12 +2026,15 @@
       "paths": {
         "bundle": "agent/patterns/editorial-alignment-grid.json"
       },
-      "bundleSha256": "84954f92667b33fdd13eeed35b61773fbea6f65394a904d8520a16129b34f23a"
+      "bundleSha256": "c64c4fde5fbcf848a76f5559d8ef3ab4879ca56835be1e7f9eb347f6deb65248"
     },
     {
       "id": "explicit-facet-summary",
       "title": "分面条件在列表前显式呈现",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "先说明筛选依据，再展示剩下的资料。",
       "mechanism": "遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。",
       "trigger": "选择条件、提交关键词或移除单项",
@@ -2010,12 +2102,15 @@
       "paths": {
         "bundle": "agent/patterns/explicit-facet-summary.json"
       },
-      "bundleSha256": "8e705ee338bc4d2915f23487ed6371a85d7840088f61496f99e13864ec228212"
+      "bundleSha256": "99afa010cc292cadbd2a21b58124f67b8738378010638f15b1ac6297f72bddd5"
     },
     {
       "id": "exploded-layer-view",
       "title": "展开图层解释组成",
       "category": "交互反馈",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "将整体拆成基础、建筑和植物层。",
       "mechanism": "保持空间投影和图层顺序，用受控偏移将各组分离；再次选择整体恢复完整场景。",
       "trigger": "选择展开/整体",
@@ -2063,12 +2158,16 @@
       "paths": {
         "bundle": "agent/patterns/exploded-layer-view.json"
       },
-      "bundleSha256": "bfffa0319f42b6b854053279af897227140a40aa43a830b4fe9cafda126d46a4"
+      "bundleSha256": "5f4922c6e884f2e0b1f81bd9c0cc5d9defff8c41f4060f09bc45eafbae0ba164"
     },
     {
       "id": "film-overlay",
       "title": "主动观看的独立影片层",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "sound",
+        "structure"
+      ],
       "summary": "将有声观看与普通读页分别组织。",
       "mechanism": "用户激活播放入口后打开独立影片层，提供原生进度、暂停和音量；关闭即暂停，背景媒体让出。",
       "trigger": "主动观看/关闭影片",
@@ -2148,12 +2247,15 @@
       "paths": {
         "bundle": "agent/patterns/film-overlay.json"
       },
-      "bundleSha256": "8c1fbba7f08ff38595dedeaa60dd98209ab015c7789b8c31164aea84c483e669"
+      "bundleSha256": "2cbaa35c2f48b41ed7de875ba15586fe66c381a0e95789075ac5ea759af10436"
     },
     {
       "id": "filter-count-feedback",
       "title": "筛选与结果计数同步",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "筛选动作立即给出结果数量。",
       "mechanism": "改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。",
       "trigger": "激活分类按钮",
@@ -2212,12 +2314,15 @@
       "paths": {
         "bundle": "agent/patterns/filter-count-feedback.json"
       },
-      "bundleSha256": "801f1076bb20818008ff15ec8c22c52a4dc1fbc9c20ea004f7339526e5a39d7c"
+      "bundleSha256": "6460d3ec16d76e62b5abf31935cd15d0bf261df6997bccbbc752a75ccafe2e19"
     },
     {
       "id": "fixed-star-glow-layer",
       "title": "固定星光的明暗呼吸层",
       "category": "视觉构成",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "少量光点为群像提供节奏。",
       "mechanism": "固定位置的星图使用低密度明暗周期与错峰延迟，保持正文和人物轮廓稳定。",
       "trigger": "观看首屏",
@@ -2273,12 +2378,16 @@
       "paths": {
         "bundle": "agent/patterns/fixed-star-glow-layer.json"
       },
-      "bundleSha256": "e12374a2183faa70798a79e4b4edbd3c3f152ee86bc0d028574e860b14a51728"
+      "bundleSha256": "852cc5febf9fad3b82f1dd5755dba031d756526b9cc93e1232dbd6763f730f7b"
     },
     {
       "id": "fixed-task-timeline",
       "title": "固定任务按阶段揭示交付",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion",
+        "structure"
+      ],
       "summary": "让工具过程和交付文件先后可见。",
       "mechanism": "用预设时间线展开会话阶段，输入/发送进入明确固定演示，文件开关显示关联旁栏，新任务可复位。",
       "trigger": "启动固定示例或查看交付文件",
@@ -2330,12 +2439,15 @@
       "paths": {
         "bundle": "agent/patterns/fixed-task-timeline.json"
       },
-      "bundleSha256": "c4b1b42ccca766b8bff57731e04ae0c69d632c7565772e1c78c0731ac515653d"
+      "bundleSha256": "9b7c1c0c4052f9f8c8d07e2438dbb5fbde62174c84d973d53d86e32edcabdf13"
     },
     {
       "id": "fixed-topology-morph",
       "title": "同拓扑碎片形态转换",
       "category": "交互反馈",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "同一组几何片保持身份连续。",
       "mechanism": "每种状态保留相同片数和顶点次序，在同一拓扑上插值位置；形态同步解释不同内容语义。",
       "trigger": "选择形态按钮",
@@ -2389,12 +2501,15 @@
       "paths": {
         "bundle": "agent/patterns/fixed-topology-morph.json"
       },
-      "bundleSha256": "ebcda7e5b88f217aea92a85f7f3fde31df77f6bbd0aa247468a0693036f6ea90"
+      "bundleSha256": "d27b433594b73fa9f8fdd1777b903c28948991452c08738a720d3e18224b786e"
     },
     {
       "id": "folded-wave-hero",
       "title": "折叠波带与文字共同构成首屏",
       "category": "视觉构成",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "品牌波带提供流动舞台，标题保持可读。",
       "mechanism": "独立WebGL网格与shader产生折叠彩带，主张位于稳定文本区；GPU失败使用同源静帧。",
       "trigger": "进入首屏",
@@ -2447,12 +2562,15 @@
       "paths": {
         "bundle": "agent/patterns/folded-wave-hero.json"
       },
-      "bundleSha256": "34f4b19ab39aabf6132d8aec2cf15684ae6364c35da098333f76771f9a1a5c91"
+      "bundleSha256": "6a627de06171c25caed189c3820687239c25b743fba6162fa3eafce96600dae5"
     },
     {
       "id": "footer-aware-back-to-top",
       "title": "回顶入口避让页脚",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "长页回程入口不遮挡末端内容。",
       "mechanism": "达到阅读深度后显示回顶按钮，接近页脚由fixed转为footer内部定位；返回页首后消失。",
       "trigger": "深入页面、接近页脚或回顶",
@@ -2503,12 +2621,15 @@
       "paths": {
         "bundle": "agent/patterns/footer-aware-back-to-top.json"
       },
-      "bundleSha256": "eba326e1bf29bede7066d3eb9d94928a24f9196cf4a2cc5e1e7cdfec7cec0157"
+      "bundleSha256": "c346b5d70981809c1e22f8d8a31e070b7e77b2d9000e6be975543eeb2431959f"
     },
     {
       "id": "full-bleed-photography-brand",
       "title": "全幅摄影与巨大完整字标",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "图像建立情境，字标建立身份。",
       "mechanism": "摄影铺满约一个视口，完整品牌字标叠于图上，简短专题文字与行动定位边缘；普通滚动更换专题。",
       "trigger": "首次观看或滚到下一专题",
@@ -2560,12 +2681,16 @@
       "paths": {
         "bundle": "agent/patterns/full-bleed-photography-brand.json"
       },
-      "bundleSha256": "87d930440fd195dde9a1dffb91eb244e3b3367c203b4316423ec971d2663a156"
+      "bundleSha256": "a0eed21238ff65380c617d2e7993b28d01775a949e1e97e10eb7b60bcb873b10"
     },
     {
       "id": "fullscreen-photography-menu",
       "title": "摄影与分列链接组成全屏目录",
       "category": "导航与状态",
+      "experienceTypes": [
+        "visual",
+        "page-motion"
+      ],
       "summary": "导航拥有自己的品牌场景。",
       "mechanism": "打开菜单时全屏摄影和目的地链接成组淡入，关闭淡出并返回原阅读位置；目录层和主页面层职责分开。",
       "trigger": "打开或关闭菜单",
@@ -2621,12 +2746,15 @@
       "paths": {
         "bundle": "agent/patterns/fullscreen-photography-menu.json"
       },
-      "bundleSha256": "7693c226a3835e6d78d6ad3c58e0f7e16d8116433101e283bca02beee48e640c"
+      "bundleSha256": "a5fdd6229c1f2f6ca2c8529724551ef0e7bfe3e1b8ca3061b7d88b05988f98d3"
     },
     {
       "id": "geometric-balance-presets",
       "title": "几何关系预设实验",
       "category": "交互反馈",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "改变位置关系来比较平衡、节奏和张力。",
       "mechanism": "保持同一组圆、三角与矩形，让不同预设改变比例和位置；图形之外保留稳定操作区。",
       "trigger": "选择构成预设",
@@ -2672,12 +2800,15 @@
       "paths": {
         "bundle": "agent/patterns/geometric-balance-presets.json"
       },
-      "bundleSha256": "e5e87b3f590fe501b3e23d5af764fe4ee64a34b8b0c11e3bfe4ea221b6aef03f"
+      "bundleSha256": "19741616d7f4c15244c2356ba7924a26289116dc4e365fdebd05a66b1ff92a22"
     },
     {
       "id": "half-paper-category-label",
       "title": "图像与半幅纸签分类",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "作品负责观看，半幅浅纸签负责读清类别。",
       "mechanism": "完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。",
       "trigger": "浏览或聚焦文化专题目录",
@@ -2743,12 +2874,15 @@
       "paths": {
         "bundle": "agent/patterns/half-paper-category-label.json"
       },
-      "bundleSha256": "c53183f3b5b186a96b99f60b853f59bf7472f4f332576c02602ebf4d9a770345"
+      "bundleSha256": "274809e98fd3150f679f9f4630f581e3423ca3db5e7b3ca4f72abf928b397718"
     },
     {
       "id": "hatched-registration-type",
       "title": "斜线注册大字与前景记录",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "让巨大背景字承担技术身份，让实心前景文字承担阅读。",
       "mechanism": "用低对比斜线纹理填充巨大背景字，并以小编号、十字标定点和淡网格定位；前景姓名与资料保持实心、清楚边界和独立留白。",
       "trigger": "呈现角色或技术档案首屏",
@@ -2817,12 +2951,16 @@
       "paths": {
         "bundle": "agent/patterns/hatched-registration-type.json"
       },
-      "bundleSha256": "a6bd925131c761c4cf39311f969dd755ef054f0151f4359f9f732c51d17b163c"
+      "bundleSha256": "0bd2335967cda37de651bc445a36b13765f71240857022b2c1aa506736cc3089"
     },
     {
       "id": "header-below-mobile-navigation",
       "title": "顶栏下展开并恢复阅读位置",
       "category": "导航与状态",
+      "experienceTypes": [
+        "micro-motion",
+        "structure"
+      ],
       "summary": "菜单与长档案在手机上暂时分离。",
       "mechanism": "菜单从固定顶栏下方直接显示，汉堡图标单独形变；锁住背景并在关闭时恢复原滚动位置。",
       "trigger": "手机打开/关闭菜单",
@@ -2878,12 +3016,15 @@
       "paths": {
         "bundle": "agent/patterns/header-below-mobile-navigation.json"
       },
-      "bundleSha256": "c01e0e246f24556752bb9d48be477d7ef72d80694562a022c228218db84e9531"
+      "bundleSha256": "a0ae78d885ef8820643ae9bba63ea1d0209e3b539e2b3958d2f0b72b66411c52"
     },
     {
       "id": "heatmap-focus-tooltip",
       "title": "热图指针与焦点提示",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "让微小格子具有可读事实。",
       "mechanism": "格子悬停或获得焦点后短延迟显示日期/对话提示，离开或失焦关闭；文字提示不只依赖格子色深。",
       "trigger": "pointer enter/focus或leave/blur",
@@ -2938,12 +3079,15 @@
       "paths": {
         "bundle": "agent/patterns/heatmap-focus-tooltip.json"
       },
-      "bundleSha256": "f1945d9aced5f83fac1cad0f94ba22b09fef48bc634d9dfef1214f9588dd8f18"
+      "bundleSha256": "8c36e21ffdd7ef82e807bba754145b3c380e45cec4fa44ca1d45c85d03698b6f"
     },
     {
       "id": "highlight-progress-gallery",
       "title": "逐项亮点与可暂停进度",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "把产品重点分成可直接选择的摄影章节。",
       "mechanism": "每个亮点有独立图像、标题与进度，进入视口后推进；用户可以跳选、暂停，结束后重播。",
       "trigger": "进入亮点区域或选择条目",
@@ -3000,12 +3144,15 @@
       "paths": {
         "bundle": "agent/patterns/highlight-progress-gallery.json"
       },
-      "bundleSha256": "964a0fc678aa94d287d3e531647e7cc4f165b4aeaadd4a5a72fe089b9a69a97d"
+      "bundleSha256": "46702a91d05c193573a937327cf0465a178885d225bc06fcc11e5c85099a0c0e"
     },
     {
       "id": "hover-focus-mode-selection",
       "title": "标题悬停与聚焦选择模式",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "标题本身成为多能力选择入口。",
       "mechanism": "把主标题中的能力词做成可操作控制，悬停、键盘聚焦与点击选择同一模式，离开后保留最后选择。",
       "trigger": "悬停/聚焦/点击能力词",
@@ -3059,12 +3206,15 @@
       "paths": {
         "bundle": "agent/patterns/hover-focus-mode-selection.json"
       },
-      "bundleSha256": "96c3826218d41c1bbbd090ea806c65d78fe2f831e57fa13228db60ac714c9667"
+      "bundleSha256": "a50ae8a1353f3b16ad75aedd4226595b3e18ab579e9f1b9c210c6776f02bdc42"
     },
     {
       "id": "idle-interface-retreat",
       "title": "闲置时控件退隐、操作时恢复",
       "category": "导航与状态",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "在观看状态让界面暂时让出画面。",
       "mechanism": "指针移动或触摸唤醒控件，闲置短时间后模糊淡出；焦点仍在操作区时保持可见。",
       "trigger": "闲置、指针移动、触摸或聚焦",
@@ -3120,12 +3270,16 @@
       "paths": {
         "bundle": "agent/patterns/idle-interface-retreat.json"
       },
-      "bundleSha256": "8229fb7b702cbd8cea84b5531fe3927962e5627207ddf49e74198e77d14942af"
+      "bundleSha256": "eddc74041a749ed7869cde66df1c330bd1d09be9025b6081ffefa2d5d386fc2c"
     },
     {
       "id": "image-destination-mosaic",
       "title": "多尺度图像目的地目录",
       "category": "内容组织",
+      "experienceTypes": [
+        "visual",
+        "micro-motion"
+      ],
       "summary": "让每张图像直接成为进入一类内容的窗口。",
       "mechanism": "九个图像区域按75%主区和25%侧区组织不同宽高比，以窄白缝分隔真实目的地；类别文字常显，源CSS与脚本共同产生悬停扩张。",
       "trigger": "浏览、聚焦或选择机构目的地",
@@ -3191,12 +3345,15 @@
       "paths": {
         "bundle": "agent/patterns/image-destination-mosaic.json"
       },
-      "bundleSha256": "f78aea24e9c3f975ec687ca14175237733057205fb077d4991807242566a07b6"
+      "bundleSha256": "bcd73567cbdc07eda8341907ee76de210a125b6dc1bd34829b546b0ffa25d378"
     },
     {
       "id": "inclined-motion-bands",
       "title": "斜切条带延续运动方向",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "通过有限倾斜建立运动或海报节奏。",
       "mechanism": "标题带、说明板与箭头重复同一倾斜方向，正文水平可读，下载徽章保留自己的标准轮廓。",
       "trigger": "阅读章节分隔与行动入口",
@@ -3260,12 +3417,15 @@
       "paths": {
         "bundle": "agent/patterns/inclined-motion-bands.json"
       },
-      "bundleSha256": "ad445f21fa7ae48768ff8e1377eca5ff7e8c4310589f51d64b3795f4f955a646"
+      "bundleSha256": "48cfbebf7db115f61168971720f8fb1a031f600b473246177ac749c159ddb75a"
     },
     {
       "id": "independent-character-page",
       "title": "首页世界与人物档案分别成页",
       "category": "内容组织",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "按用户任务保留不同页面职责。",
       "mechanism": "首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。",
       "trigger": "选择角色导航或返回HOME",
@@ -3317,12 +3477,15 @@
       "paths": {
         "bundle": "agent/patterns/independent-character-page.json"
       },
-      "bundleSha256": "48ce7b808e4b72b80b2660cc29ae788d57313d6cffdf7531f7a165d3ae8552e4"
+      "bundleSha256": "8b8a497c6cde9d9bc207ba144a55e02bd974e7dd9308a68ad9bd33cd5f0068eb"
     },
     {
       "id": "independent-outfit-state",
       "title": "人物与服装分别管理",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "一个人物可有多个身份表现。",
       "mechanism": "人物选择与学校/怪盗服装使用独立状态，换装只切换对应立绘与入场，不误改当前人物。",
       "trigger": "切换人物或服装",
@@ -3373,12 +3536,15 @@
       "paths": {
         "bundle": "agent/patterns/independent-outfit-state.json"
       },
-      "bundleSha256": "68b07ac29225f01e12ef1aea82df02b0ac54d4a8959c0b4c5688a979001e4d2f"
+      "bundleSha256": "c1631d09b4fe7b014107c864fe592f72bdd525ace7bb33f3541988bad44c520b"
     },
     {
       "id": "inline-detail-disclosure",
       "title": "原位展开次级信息",
       "category": "内容组织",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "让时间、价格或课程内容按需展开。",
       "mechanism": "将概览保持在文档流，较长事实放在原位展开区域；手机先显示核心条目，再允许读取全部。",
       "trigger": "展开时间/价格/课程或更多内容",
@@ -3451,12 +3617,15 @@
       "paths": {
         "bundle": "agent/patterns/inline-detail-disclosure.json"
       },
-      "bundleSha256": "f90e5624805264c6cd8428e07b0796b713487bbb07eeaea8cf50c771cf696984"
+      "bundleSha256": "95b86efa7568b7547b00397fe0d3b8f9d33f39f59cffa46b93f3e43ced6d21ce"
     },
     {
       "id": "inline-product-detail-viewer",
       "title": "胶囊原位展开产品说明",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "让细节解释与对应摄影处于同一舞台。",
       "mechanism": "选择胶囊后原位出现说明卡，其他胶囊让位下移，右侧图像更新；卡内前后与关闭能恢复原态。",
       "trigger": "选择细节胶囊",
@@ -3507,12 +3676,15 @@
       "paths": {
         "bundle": "agent/patterns/inline-product-detail-viewer.json"
       },
-      "bundleSha256": "a90d6949c32e4a4d034cdd80df86ddf752ec368f67391d005d3bea7e5fc12a90"
+      "bundleSha256": "17ca72e4afe21fc67361e26cfef09df4fe1fa805db675182a889826d16f2693f"
     },
     {
       "id": "instant-open-menu-category-switch",
       "title": "已打开菜单分类即时切换",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "首次入场之后分类浏览不重复等待。",
       "mechanism": "菜单首次带入，容器打开期间切换分类直接换内容；退出有短延迟且旧关闭计时在新打开时失效。",
       "trigger": "首次打开、改分类或离开",
@@ -3571,12 +3743,15 @@
       "paths": {
         "bundle": "agent/patterns/instant-open-menu-category-switch.json"
       },
-      "bundleSha256": "3751bca824ba441f9a9fcbc94465f66ee2d6e08bcd8c2444b1cac9e4a5f6dba3"
+      "bundleSha256": "1b866f404d2575da57d61831fa46a834ffe25164e2c929e48a236164a3b3665f"
     },
     {
       "id": "institution-overlap-logo",
       "title": "方形机构锚点跨主图边界",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "在艺术海报之外持续确认机构身份。",
       "mechanism": "方形机构标志叠在海报边界上，尺寸和上浮位置按断点变化；艺术图保持自身色彩与比例。",
       "trigger": "进入展览主图",
@@ -3628,12 +3803,15 @@
       "paths": {
         "bundle": "agent/patterns/institution-overlap-logo.json"
       },
-      "bundleSha256": "8041cfe028dc7bb9edd7599c199255fc971ef4977f201a8a5f56685b7fcba57f"
+      "bundleSha256": "9828b97a9907265cde1d8720a94237e60e6c063c31aac0ffa5ab92422f31df46"
     },
     {
       "id": "integer-pixel-canvas",
       "title": "整数像素与有限色板",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "从绘制尺度建立像素世界的统一性。",
       "mechanism": "在小画布内用整数坐标与有限色板绘制轮廓，放大保持pixelated边缘；正文单独用可读字体。",
       "trigger": "查看与缩放场景",
@@ -3684,12 +3862,15 @@
       "paths": {
         "bundle": "agent/patterns/integer-pixel-canvas.json"
       },
-      "bundleSha256": "ea39d1eeeba52a68c5f6a8cf102b7dcb7f4d21cd0d5233f2ee897ef47f5e60db"
+      "bundleSha256": "fcf9982067f91a267ff5af4e5bbe34feb6c138621e710854010eafd6d143bd84"
     },
     {
       "id": "interruptible-morph",
       "title": "从当前中间态继续变形",
       "category": "导航与状态",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "快速选择、暂停和恢复不产生闪回。",
       "mechanism": "新目标从当前顶点坐标出发；暂停保存插值位置，恢复校正计时，重置恢复初始参数。",
       "trigger": "中途改选、暂停或恢复",
@@ -3743,12 +3924,15 @@
       "paths": {
         "bundle": "agent/patterns/interruptible-morph.json"
       },
-      "bundleSha256": "2dcbb1da97145d70bc472ffd78192bc08056775cb670f724f1da2f627dc3def2"
+      "bundleSha256": "00fce005eadf41061c2aa4dea74f0e2af7eb56f63f6eef4474789ccc5380aca7"
     },
     {
       "id": "keyboard-playable-notes",
       "title": "可聚焦音键与物理键演奏",
       "category": "交互反馈",
+      "experienceTypes": [
+        "sound"
+      ],
       "summary": "让屏幕琴键与键盘演奏保持同一状态。",
       "mechanism": "屏幕按键包含音名，按下或指定物理键启动音符，释放、失焦或关闭声音停止声音。",
       "trigger": "按住屏幕或键盘音键",
@@ -3794,12 +3978,15 @@
       "paths": {
         "bundle": "agent/patterns/keyboard-playable-notes.json"
       },
-      "bundleSha256": "549f1eaa3d82cc873bdfce18bd9150c4f249a811b7b5d2b0f86bc1bb507487a9"
+      "bundleSha256": "9858d4a26ae47be8cc48f7435bffea96f4ac26ab804402fc107f04aebd8f73dd"
     },
     {
       "id": "last-request-transition",
       "title": "快速切换保留最后目标",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "中途反向或改选仍收束到最后意图。",
       "mechanism": "单一状态控制器记录最新目标，取消旧退出回调并限制同时交互层；交接结束继续最后请求。",
       "trigger": "转场期间再次选择或反向",
@@ -3897,12 +4084,15 @@
       "paths": {
         "bundle": "agent/patterns/last-request-transition.json"
       },
-      "bundleSha256": "9ab5f77deba9682042ecf817661956f5cd9659c277200e44d00bdcf1d4d68792"
+      "bundleSha256": "749c45af8758af3e4007c02857a3c84b9aff23e41d6595cccc2d56771d475fd4"
     },
     {
       "id": "layer-focus-dimming",
       "title": "聚焦一层并减弱其余层",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "在完整系统中强调一个子系统。",
       "mechanism": "选定图层保持清晰，其余图层降低透明度但仍留在原位，文字说明与选中按钮同步。",
       "trigger": "选择花园/建筑/整体",
@@ -3950,12 +4140,15 @@
       "paths": {
         "bundle": "agent/patterns/layer-focus-dimming.json"
       },
-      "bundleSha256": "ea7f42aeff89eecd5893249319f0339fb3afbc10cf7713ed6d9a08d2ddf3ec60"
+      "bundleSha256": "4e77d510f27042fe88a80e535323f8b5f7052e216fb8ab7049c08b9caeebf976"
     },
     {
       "id": "layered-directional-media-reveal",
       "title": "黑层、信号层与媒体的方向揭示",
       "category": "交互反馈",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "黑色遮层、强调色与实际图像依次揭示，让局部相册切换有明确方向和节奏。",
       "mechanism": "组件内将黑层、信号色层、实际图像或影片叠为同方向裁切/slide-in，错峰推进；说明文字先退后入，选中索引、页码和媒体共同交接，旧媒体完成后暂停并清理。",
       "trigger": "点击局部相册的前后或编号，选择新的图像/影片",
@@ -4040,12 +4233,15 @@
       "paths": {
         "bundle": "agent/patterns/layered-directional-media-reveal.json"
       },
-      "bundleSha256": "48475ab8f19ba2b7aea294bb90998e30fdc326fba2265c8207402684bf0e031a"
+      "bundleSha256": "52e54a5e53ee3bfffd7ae2f891eaac278a3dda9ae68e4cd70044f4bf18a9d745"
     },
     {
       "id": "layered-navigation-drawer",
       "title": "导航容器先行、内容后入",
       "category": "导航与状态",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "在同一抽屉中分清容器与次级层级。",
       "mechanism": "先让侧向导航容器进入，再延迟显示二级内容；返回保留相同空间位置，关闭恢复触发焦点。",
       "trigger": "进入目录或二级主题",
@@ -4101,12 +4297,15 @@
       "paths": {
         "bundle": "agent/patterns/layered-navigation-drawer.json"
       },
-      "bundleSha256": "295248ad28b6378fe3145b39239017d38284c28bda52bbaa03435952b7c9eb6c"
+      "bundleSha256": "22093a24c5fa7d05dbce5cc9646e93002cf099f1beb435e1409e4e6fa3955eaf"
     },
     {
       "id": "live-parameter-readout",
       "title": "滑块与带单位读数联动",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "用数值说明参数如何改变真实对象。",
       "mechanism": "原生范围输入直接更新目标属性和相邻读数；明确单位、范围以及参数立即生效还是影响下一次变化。",
       "trigger": "拖动或键盘调整滑块",
@@ -4173,12 +4372,15 @@
       "paths": {
         "bundle": "agent/patterns/live-parameter-readout.json"
       },
-      "bundleSha256": "8bd595ce7ec52e2d9102d405984348f8f1d0e25218a6bef355e39794b9910706"
+      "bundleSha256": "c4172958037cfe2efaa8b13c0b7877868790e056cea0d3d3bb9ca851554efdb3"
     },
     {
       "id": "load-completion-brand-marker",
       "title": "资源完成后品牌标记退场",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "等待真实图片就绪，不编造长进度。",
       "mechanism": "关键图片加载期间显示轻量品牌旋转标记，load完成后载入层与主图淡化交接；失败可继续读页。",
       "trigger": "首屏资源完成",
@@ -4253,12 +4455,15 @@
       "paths": {
         "bundle": "agent/patterns/load-completion-brand-marker.json"
       },
-      "bundleSha256": "ac2f5c31cb769faa3adae9191568f638800a109ea75c920e808271295ae4d5de"
+      "bundleSha256": "cd8b8a437ca718c9b50097491bb25f66a4df79a568d8f27c2a411142b41c84d6"
     },
     {
       "id": "local-code-theme-preview",
       "title": "代码主题只改变局部预览",
       "category": "交互反馈",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "把代码外观探索限定在代码区域。",
       "mechanism": "编辑代码更新行数与语法内容，主题选择更新局部token颜色；营销页面全局配色保持自己的语义。",
       "trigger": "编辑或选择语法主题",
@@ -4309,12 +4514,15 @@
       "paths": {
         "bundle": "agent/patterns/local-code-theme-preview.json"
       },
-      "bundleSha256": "4187cd338dfd418b9aca3a46f18c70d9afefa48b8747578f20e82f49d1f81167"
+      "bundleSha256": "4c6eab1114086cbcd7a98b91bee3a618d78a44ce1bcb1789abe96aa089a31403"
     },
     {
       "id": "local-save-toggle",
       "title": "可取消的本地收藏",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "明确保存在当前浏览器的收藏状态。",
       "mechanism": "每条内容使用可反复切换的收藏按钮，记录条目ID并恢复当前浏览器的状态。",
       "trigger": "收藏或取消收藏",
@@ -4357,12 +4565,15 @@
       "paths": {
         "bundle": "agent/patterns/local-save-toggle.json"
       },
-      "bundleSha256": "556da2018ee147138f15de09e6f3375ebf9ca93a72fa76bb8977805916981296"
+      "bundleSha256": "9674b12d940de5c6317dafa6d803c05a7e49f3c989d3d2b384da57d1684fae62"
     },
     {
       "id": "masked-transaction-rotation",
       "title": "裁切文字与交易预览同步",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "把一条交易变化同时映射到文字与界面。",
       "mechanism": "商户文本在mask内纵向交接，结账示例同时更新对应商户和金额；关联字段统一由一个状态驱动。",
       "trigger": "交易演示轮换",
@@ -4414,12 +4625,15 @@
       "paths": {
         "bundle": "agent/patterns/masked-transaction-rotation.json"
       },
-      "bundleSha256": "9a6fab899d49a90cd2bb8ab8f3ef8d516130bf41ee707829ecc21082c6d52e96"
+      "bundleSha256": "76931018f8ab01a0b1ac982f7bf0ff463b103a176bb5f0e1cd9ef79e25aaa88f"
     },
     {
       "id": "measured-width-action-pill",
       "title": "测量文字宽度的动作胶囊",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "换词时只让容器宽度平稳变化。",
       "mechanism": "动作词直接替换，再测量内容宽度并过渡胶囊inline-size；颜色与圆点随语义同步，不给字加额外飞入。",
       "trigger": "固定词轮换周期",
@@ -4476,12 +4690,15 @@
       "paths": {
         "bundle": "agent/patterns/measured-width-action-pill.json"
       },
-      "bundleSha256": "4c2b7bd10b0075e41ee35598de12c69ab91e0d1ed65d60ed80f9f65d9e55d8fd"
+      "bundleSha256": "11e6aea2a09e7b011dd32256830d5e53c504e0d626ee9f2c601a30d18ae2dbc6"
     },
     {
       "id": "message-to-board-demonstration",
       "title": "消息到任务板的可重播演示",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "把自然语言请求的结果变成可见工作项。",
       "mechanism": "按请求、回复、卡片插入和状态移动分阶段展示同一任务；Replay恢复初态，消息与任务数量同步。",
       "trigger": "发送示例请求或重播",
@@ -4533,12 +4750,15 @@
       "paths": {
         "bundle": "agent/patterns/message-to-board-demonstration.json"
       },
-      "bundleSha256": "16547f9f8406e319e7ebb12304578b82cfe0ad3252613ac0fec9939114951d00"
+      "bundleSha256": "de40aaf609b18b91795a975796d38d23bf7ac96a76a989f98c3ededcc272978d"
     },
     {
       "id": "metric-explanation-selector",
       "title": "指标选择与解释联动",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "让数字、进度与说明成为同一条事实。",
       "mechanism": "选择统计项强调当前数字并更新细线进度及基础设施解释，自动周期与指针暂停共享当前索引。",
       "trigger": "选择指标或自动推进",
@@ -4590,12 +4810,15 @@
       "paths": {
         "bundle": "agent/patterns/metric-explanation-selector.json"
       },
-      "bundleSha256": "0cd5eaffb23c4ffb11fdbba9382d183f6f22ffac7e0496ddb53d20d843b3aaf1"
+      "bundleSha256": "79e757b65f95b6b4eae1e267db044f52ba2adcffb52aa46fd32a20cc1b2ea69d"
     },
     {
       "id": "mixed-ratio-archive-columns",
       "title": "等宽栏目保留不同图像比例",
       "category": "内容组织",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "统一栏目线索，不强行统一作品高度。",
       "mechanism": "栏目有共同宽度与标题规则，内部竖海报、横摄影按各自比例排列；不同内容长度产生不同列高，手机逐列阅读。",
       "trigger": "浏览机构档案",
@@ -4654,12 +4877,15 @@
       "paths": {
         "bundle": "agent/patterns/mixed-ratio-archive-columns.json"
       },
-      "bundleSha256": "192818ce12115f07bff3c2eb449fd6a5a71fce4e3cebed70fc3e11f35d6272c7"
+      "bundleSha256": "45fe17feadd1447dd48cfb0e3a6f9ac66c8221ae4115a4ae04bdeb7a039b2d32"
     },
     {
       "id": "mobile-drilldown-menu",
       "title": "手机菜单逐层进入与返回",
       "category": "导航与状态",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "长目录以层级页面保留方向。",
       "mechanism": "全屏菜单先显示顶层分类，选择分类让二级页侧向进入；Back返回顶层，核心行动固定在底部。",
       "trigger": "手机打开分类或返回",
@@ -4712,12 +4938,15 @@
       "paths": {
         "bundle": "agent/patterns/mobile-drilldown-menu.json"
       },
-      "bundleSha256": "8240c01e6218224ebc8638c0c0d0ebb0f6cbfeb7f4aeac19de852846d64374e4"
+      "bundleSha256": "569af6511dd53bc8108bee4e9344de04c68aef0580ce5a3ef68949b34c93f269"
     },
     {
       "id": "mobile-media-prioritization",
       "title": "按手机信息任务裁减复杂演示",
       "category": "内容组织",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "复杂媒体变体与正文分别管理。",
       "mechanism": "窄屏保留主张、操作和说明，按来源变体隐藏重型演示或仅保留消息线程，避免把桌面全部缩到不可读。",
       "trigger": "进入窄屏布局",
@@ -4783,12 +5012,15 @@
       "paths": {
         "bundle": "agent/patterns/mobile-media-prioritization.json"
       },
-      "bundleSha256": "0d12cc82561af977b21fc93804d61365b4bf41b4812e09725de4ac5a03a417e2"
+      "bundleSha256": "bdf484ff25419342c2fc311ed879c6730159687389ec08b4c0d4b3774b30d992"
     },
     {
       "id": "mobile-native-mode-cards",
       "title": "手机以原生模式卡替代桌面长舞台",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "按设备任务重排交互，保持能力可浏览。",
       "mechanism": "窄屏把桌面sticky模式舞台转换为三张原生水平卡；标题选择将对应卡定位到视口。",
       "trigger": "手机横滑或选择能力词",
@@ -4842,12 +5074,15 @@
       "paths": {
         "bundle": "agent/patterns/mobile-native-mode-cards.json"
       },
-      "bundleSha256": "7c8eb1f6304e5fb9123e605140f883ff7b79a82decb5a6467560edeb3f35a137"
+      "bundleSha256": "807bc5366c2b2f33fad05218f161c46fb7bc193081cae341c279ddf54243a55d"
     },
     {
       "id": "mobile-single-open-navigation",
       "title": "手机菜单原位单开分类",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "展开一组同时收起上一组。",
       "mechanism": "在全屏导航中原位展开当前分类，其他分类降低强调，同一分类再点收起，下载与登录入口固定底部。",
       "trigger": "手机选择导航分类",
@@ -4900,12 +5135,15 @@
       "paths": {
         "bundle": "agent/patterns/mobile-single-open-navigation.json"
       },
-      "bundleSha256": "5392b944973672975f10f5bb67ce1164829003ebec7b99641f3746df185f2409"
+      "bundleSha256": "dec98cdfcf6c9827c13fb673d9fc44e8e05e59c147445d23861cc5b3a1518c8f"
     },
     {
       "id": "mode-character-accent",
       "title": "当前能力词逐字强调色",
       "category": "交互反馈",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "通过字色让当前能力选择可见。",
       "mechanism": "将能力词分成保持阅读顺序的字符层，选中模式更新该词的逐字强调色，其余标题维持稳定。",
       "trigger": "能力模式改变",
@@ -4958,12 +5196,15 @@
       "paths": {
         "bundle": "agent/patterns/mode-character-accent.json"
       },
-      "bundleSha256": "74c0284fbd303f5e317e7e3aa4fc345d1ed59f4c3de3f06ec9778476149ce74d"
+      "bundleSha256": "7b7aa8dddcf2adf41a71ab62a6d42f1d310781511382c36021949116f79241ba"
     },
     {
       "id": "mode-specific-collage",
       "title": "按模式组织独立拼贴层",
       "category": "视觉构成",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "一组周边素材共同解释一种用途。",
       "mechanism": "每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。",
       "trigger": "选择不同能力模式",
@@ -5017,12 +5258,15 @@
       "paths": {
         "bundle": "agent/patterns/mode-specific-collage.json"
       },
-      "bundleSha256": "c0fe43401ef870bb9d48b88ba202d18b26ed4494fc53911705d7b95c308095b8"
+      "bundleSha256": "f5c759f5fa27bdbb877345a4fa778d14a179688d27349a3b01faed79f8852bb1"
     },
     {
       "id": "mountain-scaled-menu",
       "title": "菜单缩放倾转与背景降强调",
       "category": "导航与状态",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "品牌形状打开一层可专注的导览。",
       "mechanism": "山形菜单控制打开目录，菜单由缩小/倾转状态进入，背景缓慢降低透明度；反向关闭从当前变换继续。",
       "trigger": "打开、关闭或快速反向菜单",
@@ -5078,12 +5322,15 @@
       "paths": {
         "bundle": "agent/patterns/mountain-scaled-menu.json"
       },
-      "bundleSha256": "2e0b4de975aa21f4d11456c0e69b34f30537a8b04d7ea2ee128c71e6d0189a46"
+      "bundleSha256": "32b08b60831d08b5b0ca6467376ef8939289f53aa640d743d956a6d03ea97a3e"
     },
     {
       "id": "moving-tab-selection-bed",
       "title": "选中底板与套餐组联动",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "让套餐受众切换保持明确选中位置。",
       "mechanism": "一个选中底板沿tabs位置移动，同时替换当前受众对应的套餐卡；不同卡数仍由内容区域自然布局。",
       "trigger": "选择个人或团队受众",
@@ -5134,12 +5381,15 @@
       "paths": {
         "bundle": "agent/patterns/moving-tab-selection-bed.json"
       },
-      "bundleSha256": "aa029bdd96b026982f726c31b550a9da3ae6c5da7aede6b27c086f52af8fb89a"
+      "bundleSha256": "31f946b0394cd62ae172b9bda59ad69b9220e6a7cb0916f361b074b57c5e9c78"
     },
     {
       "id": "native-document-reading",
       "title": "原生长页与正常回程",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "按内容顺序浏览，不额外劫持滚轮。",
       "mechanism": "章节处于普通文档流，浏览器处理上下滚动和锚点；局部轨道、sticky或菜单各自管理状态。",
       "trigger": "自然滚动、反向返回或页内链接",
@@ -5236,12 +5486,15 @@
       "paths": {
         "bundle": "agent/patterns/native-document-reading.json"
       },
-      "bundleSha256": "84ddcfab55546ef427a22b7a0aa651d72d33395dc61d8f810f8ded900ea8de1a"
+      "bundleSha256": "edddc6eca7ab4e11773a9b50c39f2cf5dfa4af03edfa19d88da2fea43e8c4dfd"
     },
     {
       "id": "native-horizontal-shelf",
       "title": "原生横向内容架子",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "保留触摸横滑与显式前后入口。",
       "mechanism": "内容只在局部容器水平overflow，保留浏览器原生滚动，前后按钮提供同等入口；主页面继续自然纵向阅读。",
       "trigger": "横滑或点击前后按钮",
@@ -5338,12 +5591,15 @@
       "paths": {
         "bundle": "agent/patterns/native-horizontal-shelf.json"
       },
-      "bundleSha256": "9d4cc8d0c9c6459a37f9bb1131acadfe3dfca8b9b2c7ae945d36b30739fae8f5"
+      "bundleSha256": "a3edb0b99b68660ca1dd1b08865ff342b1eefeae8c918c95a5d662909879b53a"
     },
     {
       "id": "natural-height-mega-menu",
       "title": "自然高度连续衔接的目录",
       "category": "导航与状态",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "分类切换保持同一个目录容器。",
       "mechanism": "桌面目录随分类真实内容改变高度，位移、透明度与裁切同步，快速反向取消旧动画；关闭后hidden/inert与aria一致。",
       "trigger": "指针进入、点击分类或关闭",
@@ -5401,12 +5657,16 @@
       "paths": {
         "bundle": "agent/patterns/natural-height-mega-menu.json"
       },
-      "bundleSha256": "80e8ebbbb707c83110fa634cd7a09f94d42f301917acafb458409ab3b0d5bcc7"
+      "bundleSha256": "2eec29240947977d3fe04808b5614b035bdce23c80c4d6e1833bf4c714516393"
     },
     {
       "id": "offsite-playlist-extension",
       "title": "以官方播放列表延伸主题",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "sound",
+        "structure"
+      ],
       "summary": "用户主动离开读页进入听觉回看。",
       "mechanism": "明确的Playlist或官方影片入口链接真实外部平台，不加载无授权播放器或自动音乐；说明目标与声音来源。",
       "trigger": "激活播放列表或官方影片链接",
@@ -5484,12 +5744,15 @@
       "paths": {
         "bundle": "agent/patterns/offsite-playlist-extension.json"
       },
-      "bundleSha256": "e50f4b0ba5e4a3b078b50570f460b63d72df1c1e2c302b36231b4393b371a5be"
+      "bundleSha256": "0c7f17285e07ed2ac2a1127ee5abd1263906daf4bdd6999a979b514746f749a3"
     },
     {
       "id": "paper-material-collage",
       "title": "纸页与贴纸的任务隐喻",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "用纸页、胶带与贴纸解释记录活动。",
       "mechanism": "原创记录页和植物线稿与记录任务并置，材料只做小角度倾斜；装饰开关不会改变主要文字布局。",
       "trigger": "阅读纸页示范或切换贴纸",
@@ -5537,12 +5800,15 @@
       "paths": {
         "bundle": "agent/patterns/paper-material-collage.json"
       },
-      "bundleSha256": "3f09eb8fca73aa1c343b357096eacbbf66ba8cffe893dd398d70de7ce44e7f8c"
+      "bundleSha256": "1b1f2b068db3d3d9c4e846c251be33bfccb5904d4a6619d9e11dd714ab73b47b"
     },
     {
       "id": "parallel-isometric-projection",
       "title": "统一等轴投影与三面明度",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "用一个坐标规则构成整个微型世界。",
       "mechanism": "全部体块共享30°平行轴与比例，顶/左/右使用统一明度方向，路径与植物提供尺度。",
       "trigger": "查看系统场景",
@@ -5590,12 +5856,15 @@
       "paths": {
         "bundle": "agent/patterns/parallel-isometric-projection.json"
       },
-      "bundleSha256": "fae50ed71c5883c89902a0be722f5a554edec2bd493da6cc2bedb97e98851685"
+      "bundleSha256": "720689c9d1e4a4e5c4ca9dc3d143d9c4c12dfa516a84ead59c871de06fee341b"
     },
     {
       "id": "particle-model-reformation",
       "title": "术语选择重组同一粒子池",
       "category": "交互反馈",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "选中概念以一个新形状得到解释。",
       "mechanism": "术语目录进入详情后，同一粒子池重组为对应模型，箭头、索引和返回共享模型状态及设定文字。",
       "trigger": "选择术语、箭头或返回",
@@ -5655,12 +5924,15 @@
       "paths": {
         "bundle": "agent/patterns/particle-model-reformation.json"
       },
-      "bundleSha256": "23ef82e9239a4c7731a7bcf75360fdf1a3de00addccaa61e546499edd16f4db7"
+      "bundleSha256": "3c2dfc1bc7561cc34bf9a3dbb5c045f4b19fd0d2de003828161c292082bf4222"
     },
     {
       "id": "permanent-event-metadata",
       "title": "常驻日期与边缘票据入口",
       "category": "内容组织",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "场景摄影变化时实用信息仍有位置。",
       "mechanism": "日期、地点与导览保持稳定位置，边缘票据入口独立于照片；Featured与新闻各承担不同后续任务。",
       "trigger": "照片更替和长页浏览",
@@ -5711,12 +5983,15 @@
       "paths": {
         "bundle": "agent/patterns/permanent-event-metadata.json"
       },
-      "bundleSha256": "961fbff150ba970607d2cc1fbcbad7e34e6c0284adeafa40b0bef75377e4889d"
+      "bundleSha256": "aaa42553ab9719fbe70f1f3031341a1bbe8f6d357df63abb6cc31a834dacdf5d"
     },
     {
       "id": "photo-crossfade-cycle",
       "title": "给摄影留阅读时间的淡化轮换",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "先完整展示一张，再以透明度交接。",
       "mechanism": "静态摄影在明确停留间隔后交叉淡化，图像保持比例；手动选择更新索引与题注。",
       "trigger": "轮换周期或手动索引",
@@ -5791,12 +6066,15 @@
       "paths": {
         "bundle": "agent/patterns/photo-crossfade-cycle.json"
       },
-      "bundleSha256": "b3a5d8600fe94005fd4aa4251fde58c66e5118ef4566e971a2bab38a4a9c0cda"
+      "bundleSha256": "4e95df3f2f2623b8369121b313d3bbf10990a66eb6a4d25cbee0512fad105e5e"
     },
     {
       "id": "photo-edge-text-contrast",
       "title": "仅在照片文字边缘增强对比",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "局部文字能读，整张照片保持原色。",
       "mechanism": "在底缘文字所在区域加有限黑色渐变，白字、橙色行动与摄影形成稳定角色，其他图像区域不整体滤镜化。",
       "trigger": "查看照片底部标题和行动",
@@ -5847,12 +6125,15 @@
       "paths": {
         "bundle": "agent/patterns/photo-edge-text-contrast.json"
       },
-      "bundleSha256": "b13f6cb3fad8f36b90d6615bfeab47d9a78e6b68ad75a687d0b75263ac070e9a"
+      "bundleSha256": "a6d2996d617192107898a33ddc6c424094dd6dfaaebe0535757d4df3dcce8cf3"
     },
     {
       "id": "photography-option-selector",
       "title": "选项与真实摄影对应",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "用图片直接比较颜色或参数结果。",
       "mechanism": "离散色点或参数选项对应一张真实摄影，选择状态与图像同步，图片比例及观察角度尽量稳定。",
       "trigger": "选择颜色或景深值",
@@ -5911,12 +6192,15 @@
       "paths": {
         "bundle": "agent/patterns/photography-option-selector.json"
       },
-      "bundleSha256": "ba6e1e31ee1178c72e9c5ea2775e94610b8d93b7c881b335ddba730a4c830487"
+      "bundleSha256": "1ca9a91cc5a733d974eb269ccae2f917a81c38bf2e56366e3a6763908ed6e166"
     },
     {
       "id": "pointer-image-shader-preview",
       "title": "术语图像随指针形变预览",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "在目录层先给设定一个视觉线索。",
       "mechanism": "悬停术语时让对应原图随指针定位，并以同源形变和RGB偏移shader反馈移动；点击再进入完整详情。",
       "trigger": "悬停与移动术语",
@@ -5967,12 +6251,15 @@
       "paths": {
         "bundle": "agent/patterns/pointer-image-shader-preview.json"
       },
-      "bundleSha256": "43a959addd012ea62aa2f3724cbcbe0c069820d35ce3ee397cf4fe72bc8f448c"
+      "bundleSha256": "fe7195cc559a09684048c638de37acbbbcf9b1b8fc38887b3890db0e0c5b1147"
     },
     {
       "id": "pointer-repulsion-particles",
       "title": "指针排斥与回聚点阵",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "静态标识因指针接近而获得可触感。",
       "mechanism": "WebGL点阵以目标点位维持形状，指针附近点按距离受排斥，移开后回归原模型；文字位于独立稳定层。",
       "trigger": "指针进入、移动或离开粒子区域",
@@ -6032,12 +6319,15 @@
       "paths": {
         "bundle": "agent/patterns/pointer-repulsion-particles.json"
       },
-      "bundleSha256": "c3faaa147fa969fd2a0c1d8c4498839cda821a3e12a07d0a83151cb324c0f3ed"
+      "bundleSha256": "d4e45bc23d45f20269b773d7b2c0357c9a9f128f07bdb3513d9a39d328500be4"
     },
     {
       "id": "product-entrance-film",
       "title": "真实产品影片建立首屏主角",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "用真实材质与镜头让产品先出现。",
       "mechanism": "静音产品影片置于全宽舞台，主标题与行动不等待影片结束；重播只重放这一段。",
       "trigger": "首次进入或选择重播",
@@ -6089,12 +6379,15 @@
       "paths": {
         "bundle": "agent/patterns/product-entrance-film.json"
       },
-      "bundleSha256": "98d4826323fe8e4564dc980a68759d941d7406bbb72e86b6826a48e041e53705"
+      "bundleSha256": "5d0e79663f730023289ca7fdd767e987847afee82215b66e6ed2a265ff358ad9"
     },
     {
       "id": "resource-bound-fullscreen-loading",
       "title": "真实资源驱动的全屏载入",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "只等待入口关键资源，以真实完成数推进，再移交可用场景。",
       "mechanism": "入口关键图片和必要字体完成数驱动全屏加载状态；全部任务结束不等于全部成功，失败保持明确重试/继续，成功后以短品牌遮层或wipe移交目标场景。",
       "trigger": "首次进入或缓存重载",
@@ -6181,12 +6474,15 @@
       "paths": {
         "bundle": "agent/patterns/resource-bound-fullscreen-loading.json"
       },
-      "bundleSha256": "bd5156a178cf0dc1603bf4623a3bcf02c57f2f85bb149586a952f31c75c1e35e"
+      "bundleSha256": "64e6af1bb5f5ee788125f2edfbd2ad70729456cdb0257a5b6886a6715f9017f1"
     },
     {
       "id": "responsive-art-direction",
       "title": "桌面与手机使用专门主图",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "按画面意图替换素材，而非盲目裁切。",
       "mechanism": "通过picture或响应式资源选择桌面宽图与手机专图，保留主体位置及图内文字，正文与控件按设备重新排。",
       "trigger": "视口进入手机断点",
@@ -6265,12 +6561,15 @@
       "paths": {
         "bundle": "agent/patterns/responsive-art-direction.json"
       },
-      "bundleSha256": "cc5d9ee634fb83cf7221e0640b21ee6f7812ea02a299a802d5bc610e08408578"
+      "bundleSha256": "f30ba51fc08e312ce104f7d6c7817f2303cbc595daa58dc7984240a67335f9d3"
     },
     {
       "id": "restrained-signal-color",
       "title": "单一信号色集中强调",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "用少量品牌色建立可识别的操作角色。",
       "mechanism": "正文采用稳定中性色，强调色只分配给行动、选中态或机构锚点；作品图像保持自己的原色。",
       "trigger": "查看行动和状态",
@@ -6374,12 +6673,15 @@
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
       },
-      "bundleSha256": "d434f4f971c41dedb866e604204a59dad79de731a626f127f136319577e8a9ef"
+      "bundleSha256": "021ca3d96dbf44cf59e31c1f3c7c64f5121bf44eac7f3fecdd280bcbb9fc6bbc"
     },
     {
       "id": "reversible-center-reveal",
       "title": "穿越章节中心的双向显现",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "返回章节时同样遵循显现规则。",
       "mechanism": "章节中心进入视口时以短位移/透明度显示事实，中心离开恢复；手机额外事实用可收回展开替代密集首屏。",
       "trigger": "正向或反向穿越章节中心",
@@ -6436,12 +6738,15 @@
       "paths": {
         "bundle": "agent/patterns/reversible-center-reveal.json"
       },
-      "bundleSha256": "18df2c36ddb873527472bae0880de6204621927347ce3525929956ade3240439"
+      "bundleSha256": "b81dd94b1e1c153488635fecbeb94e5d5ede71b0c45f4609a36de00fb6f7c6b1"
     },
     {
       "id": "scanline-point-cloud-transition",
       "title": "扫描线与射线驱动的点云交接",
       "category": "交互反馈",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "真实xyz点云在扫描带中显现与退场，射线和短暂旋转共同提示模型交接。",
       "mechanism": "读取Float32 xyz二进制点位，规范化后为旧、新模型分别建立点云actor；多条扫描线改变点的可见与扰动，射线指向扫描附近点，旋转短暂加速后恢复，模型选择与标题/编号同步，交接期间限制再入。",
       "trigger": "选择世界观模型、前后按钮或六段索引；拖动改变观察方向",
@@ -6528,12 +6833,15 @@
       "paths": {
         "bundle": "agent/patterns/scanline-point-cloud-transition.json"
       },
-      "bundleSha256": "d6c26696d962581b24f73efca376775ce2e4f7b37d6ac69fecfc17d0184d74da"
+      "bundleSha256": "f3863fede79aa840406e5781016b036aee29f8ae401d4bfc94302497c3d19357"
     },
     {
       "id": "scroll-differential-stars",
       "title": "滚动差值驱动背景不同速光点",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "背景运动来自滚动而非指针。",
       "mechanism": "背景星按前后滚动位置差值除以不同系数移动，越界重置；主图仍沿自然文档滚动。",
       "trigger": "向下或向上自然滚动",
@@ -6590,12 +6898,15 @@
       "paths": {
         "bundle": "agent/patterns/scroll-differential-stars.json"
       },
-      "bundleSha256": "7be7ff9cf1c3735de745e1bc630eeb481ea5def5c0de16932a3811d01ae02a5c"
+      "bundleSha256": "0314967d0ddb73e5edbaf2d7ad7ceb804c2d62a662f609c6b1679c5bea521032"
     },
     {
       "id": "scroll-logo-contraction",
       "title": "滚动后品牌标识收回导航",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "首屏大标识与长页导航共享身份。",
       "mechanism": "首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。",
       "trigger": "跨越滚动阈值或返回",
@@ -6656,12 +6967,15 @@
       "paths": {
         "bundle": "agent/patterns/scroll-logo-contraction.json"
       },
-      "bundleSha256": "9e5533329d7935ed88d1b7e998168209a3a8c079ebd3e0e0f29af7ede9741630"
+      "bundleSha256": "d46236859faa3d39adc05fad740831a64b1c84b8e553012d92f195ce02548355"
     },
     {
       "id": "scroll-synchronized-rail",
       "title": "说明索引与窗口进度同步",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "文字、窗口模式和进度共同指示当前段落。",
       "mechanism": "长段内用多个内容哨兵更新侧栏展开、标题尺度、产品窗口与进度；点击或方向键定位同一状态。",
       "trigger": "滚动或选择说明索引",
@@ -6713,12 +7027,15 @@
       "paths": {
         "bundle": "agent/patterns/scroll-synchronized-rail.json"
       },
-      "bundleSha256": "884f07024dccf903a1474dd61d3e15783c2c81aee09cb51c19f6145bbb37d7d0"
+      "bundleSha256": "11cd14614d949cba3647e21a8e85f0783f49756dfb673268f15bb499fd1b9709"
     },
     {
       "id": "scroll-video-scrub",
       "title": "滚动进度驱动视频帧",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "让镜头细节与读页进度对应。",
       "mechanism": "暂停短片并把sticky段滚动进度映射到currentTime，标题在交接区让出画面；反向滚动可以回看。",
       "trigger": "上下滚动镜头段",
@@ -6775,12 +7092,15 @@
       "paths": {
         "bundle": "agent/patterns/scroll-video-scrub.json"
       },
-      "bundleSha256": "838957a601308098130cf96a5ad13cbb71c749bbe258abb87f670e5683ee6a05"
+      "bundleSha256": "1d76dbd8cdf50337ad8210c6663da9eed17f4b43ba548a4fb010fe75bc6b84f1"
     },
     {
       "id": "scrubbable-animation-progress",
       "title": "可拖动回看的动画进度",
       "category": "交互反馈",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "让用户中断动画并观察任意中间态。",
       "mechanism": "进度滑块直接控制绘制完成度，手动输入取消当前自动帧调度，重播则重新开始。",
       "trigger": "拖动进度或选择重播",
@@ -6834,12 +7154,15 @@
       "paths": {
         "bundle": "agent/patterns/scrubbable-animation-progress.json"
       },
-      "bundleSha256": "663c737bb75137a48a6f4cb35eea0f8373f089cca5d9e2b002485237105caf64"
+      "bundleSha256": "b16d0dce12b57e44c0219aed05edca97d29ef6c47fb7b47ce65f597912cf00cb"
     },
     {
       "id": "section-color-rhythm",
       "title": "整节配色形成阅读节奏",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "通过章节背景切换划分不同内容任务。",
       "mechanism": "产品摄影、技术说明或行动区域各用明确的整节色带；文字与表面在每节成对定义，图像不反色。",
       "trigger": "依次阅读不同章节",
@@ -6920,12 +7243,15 @@
       "paths": {
         "bundle": "agent/patterns/section-color-rhythm.json"
       },
-      "bundleSha256": "edb31b504548631622263db612dba9d3e9666ba26df3ec37a168fcde6507ac62"
+      "bundleSha256": "f936b40a254169ca64081834015cbd7f17586560bfce3b9cedaf53d6c0b1a7c2"
     },
     {
       "id": "semantic-theme-roles",
       "title": "语义颜色角色整体切换",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "背景、文字、表面和行动成对适应主题。",
       "mechanism": "按surface/on-surface、primary/on-primary等角色一起切换，保存手动值并明确系统变化时的优先规则，媒体保持原色。",
       "trigger": "手动选择或系统主题改变",
@@ -6976,12 +7302,15 @@
       "paths": {
         "bundle": "agent/patterns/semantic-theme-roles.json"
       },
-      "bundleSha256": "318473fff5d6de467a1dd9a4aba085c4b0e63f8b6e7c082f10d19dd785cb93c3"
+      "bundleSha256": "bee6999dabf8e726f16d62273f425c4f6242875e40c115092c71443440f8adcd"
     },
     {
       "id": "sequential-stroke-reveal",
       "title": "按构造顺序描绘线稿",
       "category": "交互反馈",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "从基础到细节显示结构关系。",
       "mechanism": "主体路径以stroke表示，用归一化pathLength将进度映射到dashoffset；按组成逻辑依次描绘。",
       "trigger": "用户主动重播",
@@ -7034,12 +7363,16 @@
       "paths": {
         "bundle": "agent/patterns/sequential-stroke-reveal.json"
       },
-      "bundleSha256": "9604334ca431898ef6a79fc01ffb4794a9d2cbfb95f7a12e6be780a8ca4103b4"
+      "bundleSha256": "e49b5bf33e1d3dd2df1ed67edadf47e132d24af2ad27e6095eb5adf2d94b437c"
     },
     {
       "id": "single-open-accordion",
       "title": "单开内容与图像联动",
       "category": "内容组织",
+      "experienceTypes": [
+        "micro-motion",
+        "structure"
+      ],
       "summary": "同一时刻集中阅读一个展开项。",
       "mechanism": "激活一项收起前项并展开当前正文；内容高度与图标同步，案例故事还可同时替换旁侧摄影。",
       "trigger": "展开FAQ或故事行",
@@ -7121,12 +7454,16 @@
       "paths": {
         "bundle": "agent/patterns/single-open-accordion.json"
       },
-      "bundleSha256": "4d2393a23d7dbdf16414251c777d59fb147da726f01ecc8a2d95da64da93c50f"
+      "bundleSha256": "bce79e3e4cc0bd0d6dcb6433276f7e2277bcb496496b52e64dac6f09a5497717"
     },
     {
       "id": "sound-choice-emblem-opening",
       "title": "声音选择与纹章开场同步",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion",
+        "sound"
+      ],
       "summary": "视觉打开世界与声音启用属于同一次选择。",
       "mechanism": "入口先提供ON/OFF，选择后显示纹章并向外发光扩散；开场SE对应显现，移交影片时BGM接续。",
       "trigger": "选择声音ON或OFF",
@@ -7184,12 +7521,15 @@
       "paths": {
         "bundle": "agent/patterns/sound-choice-emblem-opening.json"
       },
-      "bundleSha256": "8c2ceb95d610e92909b9936f314ce6df5bdec0f750a5fd123c6fcfefe7f980be"
+      "bundleSha256": "0b5c19af00f91e8f1907302a081cb3775743599c099557ffd20f6710b1112b48"
     },
     {
       "id": "sound-opt-in",
       "title": "声音主动启用与随时停止",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "sound"
+      ],
       "summary": "先征求声音选择，再进入听觉体验。",
       "mechanism": "声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。",
       "trigger": "开启/关闭声音",
@@ -7280,12 +7620,15 @@
       "paths": {
         "bundle": "agent/patterns/sound-opt-in.json"
       },
-      "bundleSha256": "0d1268c113f1cddc439b455df86ab8cd896cb41fec1b8e8e9749ff400b098ea5"
+      "bundleSha256": "1b74984f5371c14d8d74fa9b3d37e3d881a2a5688975c182400cfc1afab70270"
     },
     {
       "id": "spatial-navigation-map",
       "title": "场景地标作为导航",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "让角色位置、地点信息与目录同时变化。",
       "mechanism": "地标选择移动角色并更新对应文本，地图上的空间状态与DOM地点索引保持一致。",
       "trigger": "选择地标或移动到地点",
@@ -7331,12 +7674,16 @@
       "paths": {
         "bundle": "agent/patterns/spatial-navigation-map.json"
       },
-      "bundleSha256": "d16507042cca4e2e0beb9bd869955357964f3a800b12bbb4699fe2ac4abb98f3"
+      "bundleSha256": "c069c2370e325d3da25bc3b5a63ffbe3250396316c9fcdc66fbebcf1fbff326d"
     },
     {
       "id": "specimen-pullout-selection",
       "title": "样本阵列的抽出选择",
       "category": "交互反馈",
+      "experienceTypes": [
+        "visual",
+        "structure"
+      ],
       "summary": "在真实立体阵列中保留单件抽出，用独立网页状态同步观察与阅读。",
       "mechanism": "大量平行立体档案与被抬出的焦点板保留来源透视/材质；本地以同一选择状态同步热点、观察编号、标题和正文，背景阵列可隐藏而焦点板保留。影片抽出运动与网页点击分别归档。",
       "trigger": "点选本地观察热点、前后按钮或阵列显隐",
@@ -7410,12 +7757,15 @@
       "paths": {
         "bundle": "agent/patterns/specimen-pullout-selection.json"
       },
-      "bundleSha256": "cf2baa5944d7ea60d0caadb7c50ce47c571b435d056afb0b60cf881df4665639"
+      "bundleSha256": "915826162ae97fee2173777afe969d805d1b2d99a14d44a4b41dffa7292e46ee"
     },
     {
       "id": "staged-product-ui-entrance",
       "title": "延迟产品界面与扫光入场",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "让主张先出现，再揭示工作系统。",
       "mechanism": "稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。",
       "trigger": "进入页面及继续下滚",
@@ -7472,12 +7822,15 @@
       "paths": {
         "bundle": "agent/patterns/staged-product-ui-entrance.json"
       },
-      "bundleSha256": "d6d13f935e034a2c891803c0d7abdfb0b6fbc5b0649706625b1385bd822c5713"
+      "bundleSha256": "d2ffb0023988553c79e7f0509faf7c014ce92bae016404acacc4d48f3998a02b"
     },
     {
       "id": "staggered-agent-columns",
       "title": "交错代理状态展示",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "多列代理不同时抢占注意。",
       "mechanism": "代理列按交错时序显示思考与回答，进入视口启动，离开或后台停止，暂停保持已出现结果。",
       "trigger": "AI章节进入视口",
@@ -7528,12 +7881,15 @@
       "paths": {
         "bundle": "agent/patterns/staggered-agent-columns.json"
       },
-      "bundleSha256": "c0f50f1556204bc19c3564b15026dffb5690cd2316011cbf4e197801e7949c7b"
+      "bundleSha256": "7e795789f218fb778b687ae3b8fb6b3c446478a2a131774e616c2909cd861e51"
     },
     {
       "id": "state-shape-feedback",
       "title": "按压与聚焦改变容器形状",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "圆角变化为当前动作提供反馈。",
       "mechanism": "控件按压/键盘激活时按角色改变圆角，状态层同时改变；反馈留在稳定布局与触控边界内。",
       "trigger": "激活按钮或资源卡",
@@ -7589,12 +7945,15 @@
       "paths": {
         "bundle": "agent/patterns/state-shape-feedback.json"
       },
-      "bundleSha256": "2c97750510910ba938d104e5ba8d1e41f4381ff1b7783228248b4c4cc625a9f2"
+      "bundleSha256": "9ecafcb4dbe2cb44075cef2234a21c94ba2b8a1f2928e10dae6666cb05fd1553"
     },
     {
       "id": "sticky-action-sidebar",
       "title": "桌面粘性行动栏、手机回文档流",
       "category": "内容组织",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "内容阅读和到访决定并行。",
       "mechanism": "桌面正文旁的票务/行动面板保持sticky，时间与价格在面板内展开；窄屏把面板置回内容流前部。",
       "trigger": "阅读长详情",
@@ -7648,12 +8007,15 @@
       "paths": {
         "bundle": "agent/patterns/sticky-action-sidebar.json"
       },
-      "bundleSha256": "d1d835703ae57d95d6bfbe4568462f6e78659d7843bbf02fb4d1ef184ec96885"
+      "bundleSha256": "254888aef67e07807074ddcc749f89ff34a3f91b4c847bf1267edad9c93ed4c0"
     },
     {
       "id": "sticky-stage-handoff",
       "title": "同一媒体从主舞台交给说明",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "滚动时让同一对象继续承担叙事。",
       "mechanism": "媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。",
       "trigger": "上下穿越交接段",
@@ -7721,12 +8083,15 @@
       "paths": {
         "bundle": "agent/patterns/sticky-stage-handoff.json"
       },
-      "bundleSha256": "7a23935babf5f58178e124b1d8bf744457ff77ee12894bbeea25727bd5138f16"
+      "bundleSha256": "d73620bbe6d5a44e4d0d5253e26d8da62b12b55d3433239a860afd4fbb217661"
     },
     {
       "id": "synchronized-rolling-index",
       "title": "编号、计数与章名分组滚动",
       "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "标题之外持续标示当前位置。",
       "mechanism": "将编号、总数与章名放入独立裁切框，按换章方向滚出、换值、滚入，组间使用小时间差。",
       "trigger": "当前章节改变",
@@ -7783,12 +8148,15 @@
       "paths": {
         "bundle": "agent/patterns/synchronized-rolling-index.json"
       },
-      "bundleSha256": "d9a3fcdb8993a4fa949242dc5853063e8bde3584bf8ecbbe8c9f7b69bb3ec115"
+      "bundleSha256": "948317d66b8862475ce6ccf7e1b4ea5fe5867e341dfe5600c7bc81d1028fcb7e"
     },
     {
       "id": "system-theme-without-toggle",
       "title": "跟随系统的媒体与文字主题",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "按系统偏好换配色，不虚构手动按钮。",
       "mechanism": "根据prefers-color-scheme选用对应的表面、文字与产品截图；主题范围明确到实际有变体的区域。",
       "trigger": "系统深浅偏好改变",
@@ -7855,12 +8223,15 @@
       "paths": {
         "bundle": "agent/patterns/system-theme-without-toggle.json"
       },
-      "bundleSha256": "5380e4ba39bbb1c7d77656aa3b31325dfc101840481843b843402f92204224dc"
+      "bundleSha256": "29f044aa93964ea00e42de589f6897fbdb45f8efc500e2d9c036e6f63fe3864b"
     },
     {
       "id": "timed-platform-carousel",
       "title": "可暂停的平台场景轮换",
       "category": "导航与状态",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "平台tabs、点控和场景保持同一索引。",
       "mechanism": "选择平台让场景水平交接，自动周期可由悬停或手动暂停，后台停止，快速选择只留下一个场景。",
       "trigger": "选择平台、手势或自动周期",
@@ -7918,12 +8289,15 @@
       "paths": {
         "bundle": "agent/patterns/timed-platform-carousel.json"
       },
-      "bundleSha256": "5548b31bd1cbe15d0c8dd58aa5a83f7a5f605aafa8c0ff805aa56dff0fc6fe96"
+      "bundleSha256": "b594e8ba3ce432798f661634ce68ce3261af4a93886c462a5e43933f09d4e05e"
     },
     {
       "id": "top-down-clipped-menu",
       "title": "从上向下裁切的全屏菜单",
       "category": "导航与状态",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "用一个进入方向组织菜单项目。",
       "mechanism": "全屏面板从顶部向下clip进入，项目按次序交错；关闭反向收束，背景阅读状态随关闭恢复。",
       "trigger": "手机打开/关闭菜单",
@@ -7985,12 +8359,15 @@
       "paths": {
         "bundle": "agent/patterns/top-down-clipped-menu.json"
       },
-      "bundleSha256": "80ea3542b88df98207ca92d36b99ba4540a00a9544a18713c5865f035e43a965"
+      "bundleSha256": "c52c238f3dba0979fef04b8fd13c10565c033af12851dcd2a1871285b3979bec"
     },
     {
       "id": "transparent-video-mode-stage",
       "title": "透明视频的静态与动态模式舞台",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "静态立绘与RGB/alpha透明视频共享人物位置，进入短片结束后接续idle循环。",
       "mechanism": "同一影片左半保存RGB颜色、右半保存亮度alpha遮罩，经WebGL合成为半宽透明canvas；2D立绘与3D影片模式独立于人物选择，enter完成后接idle，换人或退出时取消旧资源回调和帧调度。",
       "trigger": "用户选择静态/动态模式，或在动态模式中切换人物",
@@ -8076,12 +8453,15 @@
       "paths": {
         "bundle": "agent/patterns/transparent-video-mode-stage.json"
       },
-      "bundleSha256": "56a26b4e1bccc6136163ed61a1a81907d8792a5b7afc4bec62c5dbb6e28761e7"
+      "bundleSha256": "6287676d39506bc9eea9687528b41392cd0c09efdbcac61114e1eba11a5ac592"
     },
     {
       "id": "vertical-card-swap",
       "title": "中央窗口垂直退出与进入",
       "category": "交互反馈",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "同一窗口舞台用垂直方向交接模式。",
       "mechanism": "旧产品图沿垂直方向离开，新图从对应方向进入；统一裁切舞台与层级，快速切换清理旧离场层。",
       "trigger": "选择产品模式",
@@ -8140,12 +8520,15 @@
       "paths": {
         "bundle": "agent/patterns/vertical-card-swap.json"
       },
-      "bundleSha256": "21ba229be2ac49b21de962c88d14569dc17fdafd911567cf5d9e3cce56f0e819"
+      "bundleSha256": "826289e66d007088f09e5f88e77ac0ab1f9b17dff562d11fbd733b7484c17f59"
     },
     {
       "id": "vertical-fullscreen-stage",
       "title": "有限章节的垂直整屏舞台",
       "category": "滚动叙事",
+      "experienceTypes": [
+        "page-motion"
+      ],
       "summary": "用可逆整屏空间组织版本与角色。",
       "mechanism": "多个场景由同一垂直translate3d舞台控制，滚轮/手势前后切换，最后以有限位移露出页脚。",
       "trigger": "向前或反向输入",
@@ -8198,12 +8581,15 @@
       "paths": {
         "bundle": "agent/patterns/vertical-fullscreen-stage.json"
       },
-      "bundleSha256": "5c26e0a28938331b48319e6a401e3f1353d97974bc448b22719892ecfeb793dc"
+      "bundleSha256": "3d949c6eea71251589c44ff0a422cd29c3f03c8311c1530ad6a7948399473169"
     },
     {
       "id": "vertical-media-spine",
       "title": "竖向类别书脊与横向媒体",
       "category": "内容组织",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "让类别像书脊一样固定在媒体边缘，编号和正文完成同一模块。",
       "mechanism": "把短类别名称沿媒体侧边竖向排布，横向图像占主面积，下方编号与说明共用对齐边界；方向差提供归属线索而不是额外装饰。",
       "trigger": "呈现某一类别的图像/影片资料模块",
@@ -8270,12 +8656,15 @@
       "paths": {
         "bundle": "agent/patterns/vertical-media-spine.json"
       },
-      "bundleSha256": "3f0eeddd3eb68b0e0767b2cea50b61c4b658ceb27ba07dcd6bc186363d4122bc"
+      "bundleSha256": "3d4f83d4f2365563f25aa2499c22857c5ea6eb737328b34da9018cdb45a82170"
     },
     {
       "id": "viewport-animation-lifecycle",
       "title": "视口与前台驱动的动态生命周期",
       "category": "导航与状态",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "只在能被观看时推进演示。",
       "mechanism": "用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。",
       "trigger": "进入/离开视口、切后台或用户暂停",
@@ -8388,12 +8777,15 @@
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
       },
-      "bundleSha256": "6ecc855c9c4714ace62c2df66759cba82c65c6e1712224ace19cc62aeed005ab"
+      "bundleSha256": "9dedb1e7f2bf36fc89023a6f26af1f03e4880b48fb1d13e578133d909f83b27f"
     },
     {
       "id": "visit-facts-grid",
       "title": "到访事实在行动旁成组呈现",
       "category": "内容组织",
+      "experienceTypes": [
+        "structure"
+      ],
       "summary": "实体机构介绍后直接给到访依据。",
       "mechanism": "建筑或展览视觉确认机构后，欢迎区用稳定小列组织日期、开放、地点和行动；手机按事实顺序堆叠。",
       "trigger": "从首图继续阅读",
@@ -8444,12 +8836,15 @@
       "paths": {
         "bundle": "agent/patterns/visit-facts-grid.json"
       },
-      "bundleSha256": "c990b9ba40bd9b78ca2ce282620bd0e1b1450939fb0b885ae58e7f8d227342fb"
+      "bundleSha256": "62503ae8dd1c5b585c921d55525b6aa514812d6a2e6135f59ce27954bf57a58e"
     },
     {
       "id": "word-opacity-stagger",
       "title": "单词透明度的低幅交错",
       "category": "加载与媒体",
+      "experienceTypes": [
+        "micro-motion"
+      ],
       "summary": "通过少量时间差支持标题阅读顺序。",
       "mechanism": "单词只过渡透明度并以短总跨度交错，正文组用小位移带入；标题文字保持原排版。",
       "trigger": "标题或正文组进入阈值",
@@ -8511,12 +8906,15 @@
       "paths": {
         "bundle": "agent/patterns/word-opacity-stagger.json"
       },
-      "bundleSha256": "365666e2da1c92899d8784ca62317e7ce7adf388c9b9a67f69022b050a880c60"
+      "bundleSha256": "5cd1cb89b5d3e752a4f19b7698dece819a3b6f2ff63c83d422266c60e158a935"
     },
     {
       "id": "world-shaped-thumbnail-frame",
       "title": "目录边框延续世界语汇",
       "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
       "summary": "让缩略目录属于同一个故事世界。",
       "mechanism": "缩略入口使用来源角纹与削角轮廓，hover/current增加内框，真实内容图与选中状态保持稳定。",
       "trigger": "浏览、聚焦或选择缩略图",
@@ -8566,7 +8964,7 @@
       "paths": {
         "bundle": "agent/patterns/world-shaped-thumbnail-frame.json"
       },
-      "bundleSha256": "6b95395311e0b448b06ff8287301b50bbd5129885d2fb7334e0df05fa9cbc64e"
+      "bundleSha256": "a7e11f6e063804e2366711be5d652eab3883821875996b63e5f15cd6bea9f182"
     }
   ]
 }

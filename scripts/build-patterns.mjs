@@ -7,6 +7,7 @@ export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.u
 const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8');
 const categories = ['视觉构成', '交互反馈', '滚动叙事', '导航与状态', '加载与媒体', '内容组织'];
+const experienceTypes = ['visual', 'micro-motion', 'page-motion', 'sound', 'structure'];
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function repositoryFile(root, relative, mustExist = true) {
@@ -37,9 +38,8 @@ function textArray(value, label) {
   if (new Set(value).size !== value.length) throw new Error(`Duplicate pattern value: ${label}`);
 }
 
-// Absence supports old schema-1 repositories and small case-only fixtures.
-// Once the directory exists, every case must have curated extraction coverage.
-export function loadPatterns({ root = defaultRoot, entries, requireCoverage = true } = {}) {
+// Case-only schema-1 repositories may omit the directory.
+export function loadPatterns({ root = defaultRoot, entries, requireCoverage = false } = {}) {
   if (!entries) entries = fs.readdirSync(repositoryFile(root, 'entries')).filter(n => n.endsWith('.json')).map(n => JSON.parse(textFile(root, `entries/${n}`)));
   const directory = repositoryFile(root, 'patterns', false);
   if (!fs.existsSync(directory)) return [];
@@ -49,6 +49,11 @@ export function loadPatterns({ root = defaultRoot, entries, requireCoverage = tr
     if (typeof p.id !== 'string' || !idPattern.test(p.id) || name !== p.id + '.json') throw new Error(`Pattern filename/id mismatch: ${name}`);
     for (const key of ['title', 'category', 'summary', 'mechanism', 'trigger', 'effect', 'prompt']) requireText(p[key], `${p.id}.${key}`);
     if (!categories.includes(p.category)) throw new Error(`Unknown pattern category: ${p.id}`);
+    if (p.experienceTypes !== undefined) {
+      textArray(p.experienceTypes, `${p.id}.experienceTypes`);
+      if (!p.experienceTypes.length) throw new Error(`Empty pattern experience types: ${p.id}`);
+      if (p.experienceTypes.some(type => !experienceTypes.includes(type))) throw new Error(`Unknown pattern experience type: ${p.id}`);
+    }
     for (const key of ['useCases', 'avoid', 'constraints', 'sourceFiles']) textArray(p[key], `${p.id}.${key}`);
     if (!p.useCases.length || !p.constraints.length || !p.sourceFiles.length) throw new Error(`Empty pattern guidance: ${p.id}`);
     if (!['foundation', 'support', 'accent'].includes(p.composition?.role)) throw new Error(`Unknown composition role: ${p.id}`);

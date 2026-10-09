@@ -5,6 +5,9 @@
     "id": "institution-overlap-logo",
     "title": "方形机构锚点跨主图边界",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "在艺术海报之外持续确认机构身份。",
     "mechanism": "方形机构标志叠在海报边界上，尺寸和上浮位置按断点变化；艺术图保持自身色彩与比例。",
     "trigger": "进入展览主图",
@@ -62,7 +65,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "1ba31f1dbfdf52cd8d0473a7d0776eaf1ecdd145f95b0411d05a4abe0aa66a46"
+      "bundleSha256": "50259d1eb5f37497dc3b7b8bd7cda7d914fdf774f924eb07ea867b0a0cc58186"
     }
   ]
 }

@@ -5,6 +5,9 @@
     "id": "vertical-fullscreen-stage",
     "title": "有限章节的垂直整屏舞台",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "用可逆整屏空间组织版本与角色。",
     "mechanism": "多个场景由同一垂直translate3d舞台控制，滚轮/手势前后切换，最后以有限位移露出页脚。",
     "trigger": "向前或反向输入",
@@ -63,7 +66,7 @@
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/genshin-world/index.html"
       },
-      "bundleSha256": "dc1e08e472f6d8443a09fa6c6dda3205b2ab7a67ed5fb13f6fd14114d1dfc0a6"
+      "bundleSha256": "6ab8bc097466d9ce19bf1f2fcfd0cb7e2b51e911f05fc36e575f5968a7569d58"
     }
   ]
 }

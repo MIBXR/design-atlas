@@ -5,6 +5,9 @@
     "id": "mobile-drilldown-menu",
     "title": "手机菜单逐层进入与返回",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "长目录以层级页面保留方向。",
     "mechanism": "全屏菜单先显示顶层分类，选择分类让二级页侧向进入；Back返回顶层，核心行动固定在底部。",
     "trigger": "手机打开分类或返回",
@@ -63,7 +66,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
+      "bundleSha256": "ed45ebde0617cec606551b1cb6ed55e674dbdcdc8fe2702e83765a3b03b73507"
     }
   ]
 }

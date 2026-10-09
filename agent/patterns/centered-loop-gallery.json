@@ -5,6 +5,9 @@
     "id": "centered-loop-gallery",
     "title": "中心图与邻图预告的循环轨道",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "当前图突出，侧图提示还有内容。",
     "mechanism": "同一水平轨道移位，中心图清晰、邻图部分露出；首尾以克隆衔接后复位，手动与自动状态共享索引。",
     "trigger": "箭头、索引、触摸或自动周期",
@@ -104,7 +107,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
+      "bundleSha256": "4a82993f1ff41bec4d8dc02d5b8a133dba191d484e8cdf20fd91926be31b692d"
     },
     {
       "id": "monument-valley-game",
@@ -113,7 +116,7 @@
         "bundle": "agent/cases/monument-valley-game.json",
         "demo": "demos/monument-valley-game/index.html"
       },
-      "bundleSha256": "bb8320dbd68b71e84efe641cc42b33d1a35c3cf4e354d6c07d089d5f1a76cb7a"
+      "bundleSha256": "d81bd02dc09b1426f4628aeab1408d9b7fba528fe981f5754459bb0052c3996f"
     },
     {
       "id": "persona-kinetic",
@@ -122,7 +125,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "8cd2f928c61afb00bf28cb215b0c4c89f92a34be6de4e3a0b4ecf417d104c3f6"
+      "bundleSha256": "6496f9f65ed1aed9d384585d9e234f0bfdd4d80fba2d6b403ae0dd6c409c2465"
     },
     {
       "id": "philharmonie-music",
@@ -131,7 +134,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "0280f9cb8a02c32998ad187257d5857a9f4948ecca4948f63e792df2d82a25d0"
+      "bundleSha256": "f134d6113b9260ee90975694c7678ebe78efe98c0814d1dee43b0ab39ac1e9da"
     }
   ]
 }

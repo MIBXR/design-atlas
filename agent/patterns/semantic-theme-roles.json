@@ -5,6 +5,9 @@
     "id": "semantic-theme-roles",
     "title": "语义颜色角色整体切换",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "背景、文字、表面和行动成对适应主题。",
     "mechanism": "按surface/on-surface、primary/on-primary等角色一起切换，保存手动值并明确系统变化时的优先规则，媒体保持原色。",
     "trigger": "手动选择或系统主题改变",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/google-material.json",
         "demo": "demos/google-material/index.html"
       },
-      "bundleSha256": "1f66cc3428be4b9b8394e9bd38b6b50984b8985e4eb8f65ebf62e20d1c05592a"
+      "bundleSha256": "5de5a7f3f0ab9e7fd90130acf34e7024209e31333f9f4d2f559d22ccd2db9b6b"
     }
   ]
 }

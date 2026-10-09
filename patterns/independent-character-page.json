@@ -2,6 +2,9 @@
   "id": "independent-character-page",
   "title": "首页世界与人物档案分别成页",
   "category": "内容组织",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "按用户任务保留不同页面职责。",
   "mechanism": "首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。",
   "trigger": "选择角色导航或返回HOME",

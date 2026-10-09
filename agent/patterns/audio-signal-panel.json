@@ -5,6 +5,10 @@
     "id": "audio-signal-panel",
     "title": "按信号流程组织声音面板",
     "category": "内容组织",
+    "experienceTypes": [
+      "sound",
+      "structure"
+    ],
     "summary": "让功能邻接关系解释声音制作流程。",
     "mechanism": "将预设、波形显示、滤波/包络/输出和演奏按实际信号链组织，改变控件确实改变音频节点。",
     "trigger": "查看并操作合成器面板",
@@ -56,7 +60,7 @@
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
       },
-      "bundleSha256": "d3e8936655a4c9cbf7d9afbf49618e9b11632748dd123d01782c433ae8a98f74"
+      "bundleSha256": "6a86fe6233d1864bb96fee752925ac7972ab26ed372007800f65764735591cde"
     }
   ]
 }

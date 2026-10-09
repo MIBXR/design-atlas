@@ -33,10 +33,39 @@
 .document-page a{color:inherit;text-underline-offset:4px}
 .document-page [hidden]{display:none!important}
 .document-page a:focus-visible,.document-page select:focus-visible,.document-page button:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
-.document-main{width:100%;max-width:1100px;margin:0 auto;padding:30px clamp(20px,5vw,64px) 80px}
+.document-layout{display:grid;grid-template-columns:clamp(260px,21vw,320px) minmax(0,1fr);gap:24px;width:100%;max-width:1640px;margin:0 auto;padding:0 32px;align-items:start}
+.document-rail{--document-navigation-offset:136px;display:flex;flex-direction:column;position:sticky;top:calc(var(--atlas-header-height) + 24px);max-height:calc(100svh - var(--atlas-header-height) - 48px);margin:24px 0;padding:16px;overflow:hidden;border-radius:12px;background:#242721;color:#f5f4ed}
+.document-menu{min-height:0}
+.document-rail .document-menu>summary{color:#f5f4ed;background:#30362a;border-color:#4b5442}
+.document-rail .document-menu>summary::after{color:#d4ef76}
+.document-menu>nav{max-height:calc(100svh - var(--atlas-header-height) - var(--document-navigation-offset));margin-top:12px;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scroll-padding-top:52px}
+.document-group+.document-group{margin-top:8px}
+.document-group>summary{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:10px 12px;border:1px solid #4b5442;border-radius:7px;background:#30362a;color:#d4ef76;font-size:14px;font-weight:600;line-height:1.6;list-style:none;cursor:pointer;touch-action:manipulation}
+.document-group>summary::-webkit-details-marker{display:none}
+.document-group>summary::after{content:'+';flex:none;font-size:18px;font-weight:400;line-height:1}
+.document-group[open]>summary::after{content:'−'}
+.document-group>summary:focus-visible{outline:3px solid #d4ef76;outline-offset:-3px}
+.document-rail ul{list-style:none;margin:0;padding:0}
+.document-rail a{display:block;min-height:44px;padding:10px 12px;border-radius:7px;font-size:14px;line-height:1.6;text-decoration:none;overflow-wrap:anywhere}
+.document-rail a:hover{background:#353a2e;text-decoration:underline}
+.document-rail a[aria-current=page]{background:#d4ef76;color:#252822}
+.document-rail :is(a,summary):focus-visible{outline-color:#d4ef76}
+.document-main{width:100%;min-width:0;margin:0;padding:30px 0 80px}
+.document-section-label{margin:0 0 16px;color:var(--muted);font-size:12px}
 .document-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 28px}
 .document-main h1{font-size:clamp(26px,4vw,40px);font-weight:650;line-height:1.25;letter-spacing:-1px;margin:0 0 12px}
 .document-main #path{color:var(--muted);font-size:12px;line-height:1.8;overflow-wrap:anywhere;margin:0 0 28px}
+.document-reading{display:grid;grid-template-columns:minmax(0,1fr) clamp(240px,16vw,260px);gap:24px;align-items:start}
+.document-reading>.markdown-body{grid-column:1;grid-row:1;min-width:0}
+.document-outline{grid-column:2;grid-row:1;position:sticky;top:calc(var(--atlas-header-height) + 24px);max-height:calc(100svh - var(--atlas-header-height) - 48px);overflow-y:auto;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.document-outline nav{display:grid;gap:4px;padding-top:12px}
+.document-outline a{display:block;padding:8px 10px;border-left:2px solid transparent;font-size:14px;line-height:1.6;text-decoration:none;overflow-wrap:anywhere}
+.document-outline a:hover{text-decoration:underline}
+.document-outline a.outline-level-1{font-weight:600}
+.document-outline a.outline-level-2{padding-left:18px}
+.document-outline a[aria-current=location]{border-color:var(--focus);background:var(--field);font-weight:600}
+.document-outline-controls{display:none}
+.document-main :is(h1,h2){scroll-margin-top:8px}
 .markdown-body{border-top:1px solid var(--line);padding-top:24px;font-size:16px;line-height:1.8;overflow-wrap:anywhere}
 .markdown-body> :first-child{margin-top:0}
 .markdown-body h2{font-size:26px;line-height:1.4;margin:2em 0 .7em;letter-spacing:-.5px}
@@ -59,6 +88,36 @@
 .markdown-body tr:last-child td{border-bottom:0}
 .markdown-body td img{margin:0 0 12px}
 .markdown-body div[align="center"]{text-align:center}
+@media(min-width:1200px) and (max-width:1439px){
+  .document-layout{gap:20px;padding:0 24px}
+  .document-reading{gap:20px}
+}
+@media(max-width:1199px){
+  .document-reading{display:block}
+  .document-outline{position:static;max-height:none;margin-bottom:24px}
+  .document-outline nav{max-height:320px;overflow-y:auto}
+}
+@media(min-width:801px) and (max-width:1159px){
+  .document-layout{grid-template-columns:228px minmax(0,1fr);gap:24px;padding:0 24px}
+  .document-rail{--document-navigation-offset:128px;padding:12px}
+}
+@media(max-width:800px){
+  .document-layout{display:block;padding:0 20px}
+  .document-rail{position:static}
+  body.document-page #page-directory[data-directory-open]{--document-navigation-offset:183px;display:flex;overflow:hidden}
+  .document-outline{position:fixed;top:auto;right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));z-index:75;max-height:none;margin:0;padding:0;border:0;background:none;overflow:visible}
+  body.document-page #document-outline-toggle{min-height:44px;height:44px;padding:8px 14px;border-color:var(--line);background:var(--field);color:var(--ink);box-shadow:0 4px 16px #0002;cursor:pointer}
+  .document-outline-toggle[aria-expanded=true]{border-color:var(--focus)}
+  .document-outline details{position:absolute;right:0;bottom:56px;width:min(340px,calc(100vw - 32px - env(safe-area-inset-left) - env(safe-area-inset-right)));padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 12px 36px #0003}
+  .document-outline details:not([open]){display:none}
+  .document-outline details>summary{display:none}
+  .document-outline details>summary::after{content:none}
+  .document-outline-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px}
+  body.document-page #document-outline-close{min-height:44px;height:44px}
+  .document-outline a{min-height:44px}
+  .document-outline nav{max-height:max(80px,calc(100svh - var(--atlas-header-height) - 180px - env(safe-area-inset-bottom)));overscroll-behavior:contain}
+}
+@media(max-width:360px){.document-layout{padding:0 16px}}
 @media(max-width:600px){
   .document-main{padding-top:22px}
   .document-toolbar{margin-bottom:24px}

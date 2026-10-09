@@ -2,6 +2,9 @@
   "id": "native-document-reading",
   "title": "原生长页与正常回程",
   "category": "滚动叙事",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "按内容顺序浏览，不额外劫持滚轮。",
   "mechanism": "章节处于普通文档流，浏览器处理上下滚动和锚点；局部轨道、sticky或菜单各自管理状态。",
   "trigger": "自然滚动、反向返回或页内链接",

@@ -131,9 +131,9 @@
     {
       "path": "prompts/retro-80s.md",
       "role": "prompt",
-      "content": "# 80年代：合成器面板 · 复用 Prompt\n\n由 [结构化案例](../entries/retro-80s.json) 自动生成。参考观察与具体边界见 [调研](../research/retro-80s.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构音频品牌 [品牌] 制作1980年代模拟合成器设备启发的可试玩宣传页。参考Arturia Jup-8 V的实体面板逻辑，采用哑光海军灰/炭灰、暖白标字、橙色分区、青色低亮读数。首屏让真实可操作面板成为主角：预设列表、波形显示、带数值标签的Cutoff/Attack/Output原生滑块、可聚焦琴键。实现原创单振荡器Web Audio，三个预设改变波形和参数；默认静音，主动开启后才演奏，可关闭。提供A–K白键键盘演奏，失焦停止声音。后续至少两节说明信号流程与预设用途，采用设备手册式排版。手机面板分区纵向重排、每控件至少44px、避免只有颜色的状态、尊重reduced-motion。不复制商标、音色或音乐，不声称模拟Jupiter-8全部电路，也不以霓虹网格代表所有80年代。\n\n要素协调要求：等宽标签、功能分区、彩色标识和直接反馈构成同一种设备语言；装饰必须对应可操作控制。\n\n## 负向约束\n\n不要假旋钮、无效播放按钮、自动音频、版权曲目、巨量霓虹、反复闪烁扫描线；不要宣称8复音或精确模拟不存在的功能。\n\n## 制作约束\n\n- 仅聚焦1981 Jupiter-8启发的合成器面板，不将其代表整个80年代。\n- 官方2014手册描述的是旧版Arturia界面；用于历史面板结构证据，不冒称当前软件全部细节。\n- demo 是单振荡器简化合成器，不能宣称精确模拟Jupiter-8音色或8复音。\n- 读数、滑块、预设都有文本标签，不只用颜色表达状态。\n- 声音默认关闭；无自动播放、原歌曲或外部音频素材。\n- 窄屏分区纵向重排；控件点击区至少44px，动态波形尊重reduced-motion。\n\n## 检查方法\n\n增加一个真正可编辑的8步音序器；让步骤、速率与播放状态在视觉和声音上同步。\n\n[查看 Demo](../demos/retro-80s/index.html) · [返回浏览案例](../cases.html#style/retro-80s)\n",
-      "sha256": "5f814d3b5ce1f2aee08b4ce0471650843131c63b022c8e2a419ec0547d5fd755",
-      "bytes": 2416
+      "content": "# 80年代：合成器面板 · 复用 Prompt\n\n由 [结构化案例](../entries/retro-80s.json) 自动生成。参考观察与具体边界见 [调研](../research/retro-80s.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构音频品牌 [品牌] 制作1980年代模拟合成器设备启发的可试玩宣传页。参考Arturia Jup-8 V的实体面板逻辑，采用哑光海军灰/炭灰、暖白标字、橙色分区、青色低亮读数。首屏让真实可操作面板成为主角：预设列表、波形显示、带数值标签的Cutoff/Attack/Output原生滑块、可聚焦琴键。实现原创单振荡器Web Audio，三个预设改变波形和参数；默认静音，主动开启后才演奏，可关闭。提供A–K白键键盘演奏，失焦停止声音。后续至少两节说明信号流程与预设用途，采用设备手册式排版。手机面板分区纵向重排、每控件至少44px、避免只有颜色的状态、尊重reduced-motion。不复制商标、音色或音乐，不声称模拟Jupiter-8全部电路，也不以霓虹网格代表所有80年代。\n\n要素协调要求：等宽标签、功能分区、彩色标识和直接反馈构成同一种设备语言；装饰必须对应可操作控制。\n\n## 负向约束\n\n不要假旋钮、无效播放按钮、自动音频、版权曲目、巨量霓虹、反复闪烁扫描线；不要宣称8复音或精确模拟不存在的功能。\n\n## 制作约束\n\n- 仅聚焦1981 Jupiter-8启发的合成器面板，不将其代表整个80年代。\n- 官方2014手册描述的是旧版Arturia界面；用于历史面板结构证据，不冒称当前软件全部细节。\n- demo 是单振荡器简化合成器，不能宣称精确模拟Jupiter-8音色或8复音。\n- 读数、滑块、预设都有文本标签，不只用颜色表达状态。\n- 声音默认关闭；无自动播放、原歌曲或外部音频素材。\n- 窄屏分区纵向重排；控件点击区至少44px，动态波形尊重reduced-motion。\n\n## 检查方法\n\n增加一个真正可编辑的8步音序器；让步骤、速率与播放状态在视觉和声音上同步。\n\n[查看 Demo](../demos/retro-80s/index.html) · [返回案例库](../cases.html#style/retro-80s)\n",
+      "sha256": "2e58151413d3a1135e6c49deb33eb87bf97261ed113bf8f4ce306841b9922842",
+      "bytes": 2413
     }
   ],
   "files": [
@@ -158,8 +158,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -182,20 +182,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/retro-80s.json",
@@ -224,8 +224,8 @@
     {
       "path": "prompts/retro-80s.md",
       "role": "context",
-      "sha256": "5f814d3b5ce1f2aee08b4ce0471650843131c63b022c8e2a419ec0547d5fd755",
-      "bytes": 2416
+      "sha256": "2e58151413d3a1135e6c49deb33eb87bf97261ed113bf8f4ce306841b9922842",
+      "bytes": 2413
     },
     {
       "path": "research/retro-80s.md",
@@ -242,26 +242,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

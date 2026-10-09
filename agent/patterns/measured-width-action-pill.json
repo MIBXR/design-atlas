@@ -5,6 +5,9 @@
     "id": "measured-width-action-pill",
     "title": "测量文字宽度的动作胶囊",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "换词时只让容器宽度平稳变化。",
     "mechanism": "动作词直接替换，再测量内容宽度并过渡胶囊inline-size；颜色与圆点随语义同步，不给字加额外飞入。",
     "trigger": "固定词轮换周期",
@@ -67,7 +70,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "6c18ed29f48b83d111afd43f2989556c8ee01864c29073161d232fbad4d7db48"
+      "bundleSha256": "7743a10e1d840defd5d9ef4bc2eea241204f175753500556bee1e02088ed6541"
     }
   ]
 }

@@ -2,6 +2,9 @@
   "id": "idle-interface-retreat",
   "title": "闲置时控件退隐、操作时恢复",
   "category": "导航与状态",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "在观看状态让界面暂时让出画面。",
   "mechanism": "指针移动或触摸唤醒控件，闲置短时间后模糊淡出；焦点仍在操作区时保持可见。",
   "trigger": "闲置、指针移动、触摸或聚焦",

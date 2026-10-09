@@ -5,6 +5,9 @@
     "id": "resource-bound-fullscreen-loading",
     "title": "真实资源驱动的全屏载入",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "只等待入口关键资源，以真实完成数推进，再移交可用场景。",
     "mechanism": "入口关键图片和必要字体完成数驱动全屏加载状态；全部任务结束不等于全部成功，失败保持明确重试/继续，成功后以短品牌遮层或wipe移交目标场景。",
     "trigger": "首次进入或缓存重载",
@@ -97,7 +100,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "eb89c82a05466a45d5ed691225cbebf9bb4abde9bf9149278c3101bf6630d1d0"
     },
     {
       "id": "endfield-industrial",
@@ -106,7 +109,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+      "bundleSha256": "57e5c154343dafce05cb186e475796b28082b0503a1cfed3a126ccef61e70f1f"
     }
   ]
 }

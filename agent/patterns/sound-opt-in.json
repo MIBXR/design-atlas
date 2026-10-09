@@ -5,6 +5,9 @@
     "id": "sound-opt-in",
     "title": "声音主动启用与随时停止",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound"
+    ],
     "summary": "先征求声音选择，再进入听觉体验。",
     "mechanism": "声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。",
     "trigger": "开启/关闭声音",
@@ -101,7 +104,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "eb89c82a05466a45d5ed691225cbebf9bb4abde9bf9149278c3101bf6630d1d0"
     },
     {
       "id": "endfield-industrial",
@@ -110,7 +113,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+      "bundleSha256": "57e5c154343dafce05cb186e475796b28082b0503a1cfed3a126ccef61e70f1f"
     },
     {
       "id": "retro-80s",
@@ -119,7 +122,7 @@
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
       },
-      "bundleSha256": "d3e8936655a4c9cbf7d9afbf49618e9b11632748dd123d01782c433ae8a98f74"
+      "bundleSha256": "6a86fe6233d1864bb96fee752925ac7972ab26ed372007800f65764735591cde"
     },
     {
       "id": "zelda-world",
@@ -128,7 +131,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "7a42a497ab8ed65b066ed9a9302c5538ed747fd11b03143bcd74b45aeb89811d"
+      "bundleSha256": "5647019b3aaaa734a79479e7518b483109329862b14100dd9cbb5e0ddf38556c"
     }
   ]
 }

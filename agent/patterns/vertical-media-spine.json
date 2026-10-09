@@ -5,6 +5,9 @@
     "id": "vertical-media-spine",
     "title": "竖向类别书脊与横向媒体",
     "category": "内容组织",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "让类别像书脊一样固定在媒体边缘，编号和正文完成同一模块。",
     "mechanism": "把短类别名称沿媒体侧边竖向排布，横向图像占主面积，下方编号与说明共用对齐边界；方向差提供归属线索而不是额外装饰。",
     "trigger": "呈现某一类别的图像/影片资料模块",
@@ -77,7 +80,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+      "bundleSha256": "57e5c154343dafce05cb186e475796b28082b0503a1cfed3a126ccef61e70f1f"
     }
   ]
 }

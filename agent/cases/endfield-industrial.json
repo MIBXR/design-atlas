@@ -152,9 +152,9 @@
     {
       "path": "prompts/endfield-industrial.md",
       "role": "prompt",
-      "content": "# 终末地 · 完整工业科幻门户 · 复用 Prompt\n\n由 [结构化案例](../entries/endfield-industrial.json) 自动生成。参考观察与具体边界见 [调研](../research/endfield-industrial.md)。\n\n## 正向 Prompt\n\n完整对照2026-10-09终末地中国大陆公开官网的八章，不把干员与AIC缩成两张静图。先检查原DOM/CSS/手机规则、数据模块/影片/二进制及运行状态，保留活动首页、35人真实元数据与头像窗口/全部目录，翻页箭头只翻四头像，点击才切角色。保留2D与原RGB/alpha透明enter→idle视频，0.3/0.59/0.11合成原透明边缘；别将它替代成可旋转人物模型。世界观六项使用原Float32 xyz bin、Y跨度1900规范化及各模型参数，核对扫描/旋转/拖动/切换和离屏暂停。10影像、日历、4玩法/5AIC与公告保留原媒体、文字、编号和返回，黑黄媒体三层400ms delay0/250/500及500/500ms文案。采用原CSS与字体，亮黄只作信号，白色工业区、深色世界观和当前活动各保持身份。人物完整中文介绍从当前语言映射静态解码，按35个当前角色key核对，避免混入旧26人数据；音轨由用户打开，账号/支付/公告详情与长片保留官方边界。每页逐状态用真实浏览器检验并记录尺寸/时序/资源失败/反向/键盘/减少动态，来源观察、源码配置、实现覆盖和验证pending分开，严禁凭截图概括或伪造全面pass。\n\n## 负向约束\n\n不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要混入旧版本人物介绍、伪造实时业务或自动播放BGM。\n\n## 制作约束\n\n- 固定2026-10-09大陆官网快照；完整八章的视觉/内容机制不表示账号、交易、实时更新与全站所有详情已复刻。\n- 姓名/代号/阵营/种族/职业/属性/CV、目录和媒体映射来自当前35人模块；源码内另26人旧数组不能混作当前总量。完整人物介绍来自当前简中文本映射，保留段落、空格与标点并逐角色核验。\n- 人物3D是透明视频而非可拖转三维角色；世界观才使用六真实bin点云，格式/归一化/参数与源码可回读，渲染效果仍需逐状态浏览器核验。\n- 70角色视频、公开静图、字体、六点云、影像预览、BGM与四种操作短音保留来源/字节/尺寸/hash；完整长片仍依赖官方URL，不承诺离线全片。\n- 桌面CSS使用源设计坐标与实际宽高比例，手机沿源portrait规则；需要验证手机、减弱动态、资源失败、快速反向输入以及视频/点云生命周期，未完成项以fidelity明确pending。\n- 采用来源CSS、字体与运行DOM；品牌与素材归相应权利人，不附商业再分发承诺。\n\n## 检查方法\n\n替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。\n\n[查看 Demo](../demos/endfield-industrial/index.html) · [返回浏览案例](../cases.html#style/endfield-industrial)\n",
-      "sha256": "414203108723403a39c8fa152dc349a8c02945eb27dd9f9854ddd827264e65b3",
-      "bytes": 3177
+      "content": "# 终末地 · 完整工业科幻门户 · 复用 Prompt\n\n由 [结构化案例](../entries/endfield-industrial.json) 自动生成。参考观察与具体边界见 [调研](../research/endfield-industrial.md)。\n\n## 正向 Prompt\n\n完整对照2026-10-09终末地中国大陆公开官网的八章，不把干员与AIC缩成两张静图。先检查原DOM/CSS/手机规则、数据模块/影片/二进制及运行状态，保留活动首页、35人真实元数据与头像窗口/全部目录，翻页箭头只翻四头像，点击才切角色。保留2D与原RGB/alpha透明enter→idle视频，0.3/0.59/0.11合成原透明边缘；别将它替代成可旋转人物模型。世界观六项使用原Float32 xyz bin、Y跨度1900规范化及各模型参数，核对扫描/旋转/拖动/切换和离屏暂停。10影像、日历、4玩法/5AIC与公告保留原媒体、文字、编号和返回，黑黄媒体三层400ms delay0/250/500及500/500ms文案。采用原CSS与字体，亮黄只作信号，白色工业区、深色世界观和当前活动各保持身份。人物完整中文介绍从当前语言映射静态解码，按35个当前角色key核对，避免混入旧26人数据；音轨由用户打开，账号/支付/公告详情与长片保留官方边界。每页逐状态用真实浏览器检验并记录尺寸/时序/资源失败/反向/键盘/减少动态，来源观察、源码配置、实现覆盖和验证pending分开，严禁凭截图概括或伪造全面pass。\n\n## 负向约束\n\n不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要混入旧版本人物介绍、伪造实时业务或自动播放BGM。\n\n## 制作约束\n\n- 固定2026-10-09大陆官网快照；完整八章的视觉/内容机制不表示账号、交易、实时更新与全站所有详情已复刻。\n- 姓名/代号/阵营/种族/职业/属性/CV、目录和媒体映射来自当前35人模块；源码内另26人旧数组不能混作当前总量。完整人物介绍来自当前简中文本映射，保留段落、空格与标点并逐角色核验。\n- 人物3D是透明视频而非可拖转三维角色；世界观才使用六真实bin点云，格式/归一化/参数与源码可回读，渲染效果仍需逐状态浏览器核验。\n- 70角色视频、公开静图、字体、六点云、影像预览、BGM与四种操作短音保留来源/字节/尺寸/hash；完整长片仍依赖官方URL，不承诺离线全片。\n- 桌面CSS使用源设计坐标与实际宽高比例，手机沿源portrait规则；需要验证手机、减弱动态、资源失败、快速反向输入以及视频/点云生命周期，未完成项以fidelity明确pending。\n- 采用来源CSS、字体与运行DOM；品牌与素材归相应权利人，不附商业再分发承诺。\n\n## 检查方法\n\n替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。\n\n[查看 Demo](../demos/endfield-industrial/index.html) · [返回案例库](../cases.html#style/endfield-industrial)\n",
+      "sha256": "06f2560f57859e6c6cf104e1caf36d33afe7ee435356c366a98219c3487fa450",
+      "bytes": 3174
     },
     {
       "path": "demos/endfield-industrial/fidelity.md",
@@ -193,8 +193,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -2425,20 +2425,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/endfield-industrial.json",
@@ -2467,8 +2467,8 @@
     {
       "path": "prompts/endfield-industrial.md",
       "role": "context",
-      "sha256": "414203108723403a39c8fa152dc349a8c02945eb27dd9f9854ddd827264e65b3",
-      "bytes": 3177
+      "sha256": "06f2560f57859e6c6cf104e1caf36d33afe7ee435356c366a98219c3487fa450",
+      "bytes": 3174
     },
     {
       "path": "research/endfield-industrial.md",
@@ -2485,26 +2485,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

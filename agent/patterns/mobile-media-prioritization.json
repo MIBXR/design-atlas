@@ -5,6 +5,9 @@
     "id": "mobile-media-prioritization",
     "title": "按手机信息任务裁减复杂演示",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "复杂媒体变体与正文分别管理。",
     "mechanism": "窄屏保留主张、操作和说明，按来源变体隐藏重型演示或仅保留消息线程，避免把桌面全部缩到不可读。",
     "trigger": "进入窄屏布局",
@@ -76,7 +79,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "a245270c6e4b7e4d2243595955d14964747bf5506d7fce9093b0fee572a589ce"
+      "bundleSha256": "6d4a8a143c3d11eda036557bd5c87027db0816a18a3d3f4f78295d76ace53d23"
     },
     {
       "id": "notion-editorial",
@@ -85,7 +88,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "6c18ed29f48b83d111afd43f2989556c8ee01864c29073161d232fbad4d7db48"
+      "bundleSha256": "7743a10e1d840defd5d9ef4bc2eea241204f175753500556bee1e02088ed6541"
     }
   ]
 }

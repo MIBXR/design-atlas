@@ -5,6 +5,9 @@
     "id": "character-stage-coordination",
     "title": "人物、背景与资料成组换态",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "换人时保持所有身份线索一致。",
     "mechanism": "选中人物统一更新立绘、姓名、简介、肖像与背景/资料卡；人物阶段或服装作为独立状态，避免图片和声音归属错位。",
     "trigger": "选择人物或阶段",
@@ -91,7 +94,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "eb89c82a05466a45d5ed691225cbebf9bb4abde9bf9149278c3101bf6630d1d0"
     },
     {
       "id": "blue-archive",
@@ -100,7 +103,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "6810a34427dd80e190f72b2afc843d1483ce72f34861bdcc01ab0265d72c0c4e"
+      "bundleSha256": "845b70a87ab7df799590c6b4d6812ea11945a95b76f2029ea1f9245813cda2cf"
     },
     {
       "id": "genshin-world",
@@ -109,7 +112,7 @@
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/genshin-world/index.html"
       },
-      "bundleSha256": "dc1e08e472f6d8443a09fa6c6dda3205b2ab7a67ed5fb13f6fd14114d1dfc0a6"
+      "bundleSha256": "6ab8bc097466d9ce19bf1f2fcfd0cb7e2b51e911f05fc36e575f5968a7569d58"
     }
   ]
 }

@@ -5,6 +5,10 @@
     "id": "single-open-accordion",
     "title": "单开内容与图像联动",
     "category": "内容组织",
+    "experienceTypes": [
+      "micro-motion",
+      "structure"
+    ],
     "summary": "同一时刻集中阅读一个展开项。",
     "mechanism": "激活一项收起前项并展开当前正文；内容高度与图标同步，案例故事还可同时替换旁侧摄影。",
     "trigger": "展开FAQ或故事行",
@@ -92,7 +96,7 @@
         "bundle": "agent/cases/claude-platform.json",
         "demo": "demos/claude-platform/index.html"
       },
-      "bundleSha256": "1b678763f4f2b8b4debad77707d3cf3418ba3612c77ab651e81058683af4abf9"
+      "bundleSha256": "4a36b79db0300a490aaba154662bf7dfbd8d328f77797687757aa3f9736cabe4"
     },
     {
       "id": "qoder-platform",
@@ -101,7 +105,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "278865bae3c8d4f55e19502f6addc55eb37f48678d7292034273dbfe53ac73b2"
+      "bundleSha256": "1b8b2ea1793d95b507306df01faa6fef3e986949d3291a57ff04b057d55f1f3f"
     },
     {
       "id": "stripe-platform",
@@ -110,7 +114,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
+      "bundleSha256": "ed45ebde0617cec606551b1cb6ed55e674dbdcdc8fe2702e83765a3b03b73507"
     }
   ]
 }

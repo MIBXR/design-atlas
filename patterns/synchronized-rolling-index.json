@@ -2,6 +2,9 @@
   "id": "synchronized-rolling-index",
   "title": "编号、计数与章名分组滚动",
   "category": "交互反馈",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "标题之外持续标示当前位置。",
   "mechanism": "将编号、总数与章名放入独立裁切框，按换章方向滚出、换值、滚入，组间使用小时间差。",
   "trigger": "当前章节改变",

@@ -2,6 +2,9 @@
   "id": "activity-title-ticket-overlap",
   "title": "活动标题与票务跨区并置",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "视觉主题与行动面板处于同一视线。",
   "mechanism": "大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。",
   "trigger": "查看活动首屏并继续阅读",

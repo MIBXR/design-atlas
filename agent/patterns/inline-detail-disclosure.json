@@ -5,6 +5,9 @@
     "id": "inline-detail-disclosure",
     "title": "原位展开次级信息",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让时间、价格或课程内容按需展开。",
     "mechanism": "将概览保持在文档流，较长事实放在原位展开区域；手机先显示核心条目，再允许读取全部。",
     "trigger": "展开时间/价格/课程或更多内容",
@@ -83,7 +86,7 @@
         "bundle": "agent/cases/bauhaus-geometry.json",
         "demo": "demos/bauhaus-geometry/index.html"
       },
-      "bundleSha256": "44c85b762c571039bcf6d0a9c45072f714d31f717f33d32ae5051c3689f45101"
+      "bundleSha256": "410eedc9feb6e320eeb6953ebc294925d290e8e0d3c65f6290cc3a031fe949d6"
     },
     {
       "id": "design-sight",
@@ -92,7 +95,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "49cea30096e1454044bb301b68cfff03272367dcb37f606d652b93e18a8a0ccd"
+      "bundleSha256": "95aaf137b4a64162e7b0516cf829a0caab9de96155b90ce355c607e093273524"
     },
     {
       "id": "philharmonie-music",
@@ -101,7 +104,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "0280f9cb8a02c32998ad187257d5857a9f4948ecca4948f63e792df2d82a25d0"
+      "bundleSha256": "f134d6113b9260ee90975694c7678ebe78efe98c0814d1dee43b0ab39ac1e9da"
     }
   ]
 }

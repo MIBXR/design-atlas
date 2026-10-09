@@ -5,6 +5,9 @@
     "id": "idle-interface-retreat",
     "title": "闲置时控件退隐、操作时恢复",
     "category": "导航与状态",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "在观看状态让界面暂时让出画面。",
     "mechanism": "指针移动或触摸唤醒控件，闲置短时间后模糊淡出；焦点仍在操作区时保持可见。",
     "trigger": "闲置、指针移动、触摸或聚焦",
@@ -66,7 +69,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "7a42a497ab8ed65b066ed9a9302c5538ed747fd11b03143bcd74b45aeb89811d"
+      "bundleSha256": "5647019b3aaaa734a79479e7518b483109329862b14100dd9cbb5e0ddf38556c"
     }
   ]
 }

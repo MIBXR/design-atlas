@@ -5,6 +5,9 @@
     "id": "inline-product-detail-viewer",
     "title": "胶囊原位展开产品说明",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让细节解释与对应摄影处于同一舞台。",
     "mechanism": "选择胶囊后原位出现说明卡，其他胶囊让位下移，右侧图像更新；卡内前后与关闭能恢复原态。",
     "trigger": "选择细节胶囊",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
+      "bundleSha256": "c8038c83add331ef0a938bced6dacfd656e133c2fa18455423577d041f58ced2"
     }
   ]
 }

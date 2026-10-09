@@ -5,6 +5,9 @@
     "id": "keyboard-playable-notes",
     "title": "可聚焦音键与物理键演奏",
     "category": "交互反馈",
+    "experienceTypes": [
+      "sound"
+    ],
     "summary": "让屏幕琴键与键盘演奏保持同一状态。",
     "mechanism": "屏幕按键包含音名，按下或指定物理键启动音符，释放、失焦或关闭声音停止声音。",
     "trigger": "按住屏幕或键盘音键",
@@ -56,7 +59,7 @@
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
       },
-      "bundleSha256": "d3e8936655a4c9cbf7d9afbf49618e9b11632748dd123d01782c433ae8a98f74"
+      "bundleSha256": "6a86fe6233d1864bb96fee752925ac7972ab26ed372007800f65764735591cde"
     }
   ]
 }

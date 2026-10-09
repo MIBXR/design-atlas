@@ -5,6 +5,9 @@
     "id": "controlled-rough-outlines",
     "title": "受控不规则轮廓",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "以稳定骨架承托草稿感轮廓。",
     "mechanism": "用固定SVG曲线、有限双线与统一排线密度制造手绘感；正文和操作边界保持清楚稳定。",
     "trigger": "浏览插画与短批注",
@@ -57,7 +60,7 @@
         "bundle": "agent/cases/hand-drawn.json",
         "demo": "demos/hand-drawn/index.html"
       },
-      "bundleSha256": "e9329817b7a7ed91da7694e8f8181df9280d41c89723796fdd1781a4ff0e68bc"
+      "bundleSha256": "0ce5a50c0f9f94235dc7104ff5084ae1bac1d62738c68e12676541b43c81c29b"
     }
   ]
 }

@@ -5,6 +5,9 @@
     "id": "directional-section-wipe",
     "title": "按方向侧向裁切交接整章",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "让章节空间方向与输入方向一致。",
     "mechanism": "两个整屏场景以横向遮罩覆盖出入，旧场景退出与新场景进入共享方向；稳定后只有一章可交互。",
     "trigger": "滚轮、章节导航或键盘换章",
@@ -70,7 +73,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "eb89c82a05466a45d5ed691225cbebf9bb4abde9bf9149278c3101bf6630d1d0"
     }
   ]
 }

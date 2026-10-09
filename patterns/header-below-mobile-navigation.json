@@ -2,6 +2,10 @@
   "id": "header-below-mobile-navigation",
   "title": "顶栏下展开并恢复阅读位置",
   "category": "导航与状态",
+  "experienceTypes": [
+    "micro-motion",
+    "structure"
+  ],
   "summary": "菜单与长档案在手机上暂时分离。",
   "mechanism": "菜单从固定顶栏下方直接显示，汉堡图标单独形变；锁住背景并在关闭时恢复原滚动位置。",
   "trigger": "手机打开/关闭菜单",

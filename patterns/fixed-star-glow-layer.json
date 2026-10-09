@@ -2,6 +2,9 @@
   "id": "fixed-star-glow-layer",
   "title": "固定星光的明暗呼吸层",
   "category": "视觉构成",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "少量光点为群像提供节奏。",
   "mechanism": "固定位置的星图使用低密度明暗周期与错峰延迟，保持正文和人物轮廓稳定。",
   "trigger": "观看首屏",

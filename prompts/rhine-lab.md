@@ -24,4 +24,4 @@
 
 将拥有使用权的机构影片拆为四个有明确时间范围的场景，保留原尺寸与片内时序；用语义按钮与数据状态实现章选和目录，分别审阅媒体准确度与交互可复用性。
 
-[查看 Demo](../demos/rhine-lab/index.html) · [返回浏览案例](../cases.html#style/rhine-lab)
+[查看 Demo](../demos/rhine-lab/index.html) · [返回案例库](../cases.html#style/rhine-lab)

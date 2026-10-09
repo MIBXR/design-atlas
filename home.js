@@ -3,11 +3,26 @@
   const entries = window.DESIGN_ATLAS;
   if (Array.isArray(entries)) {
     const studies = entries.filter(entry => entry.implementation === 'reference-study').length;
-    const counts = {all: entries.length, studies, classics: entries.length - studies};
+    const counts = {all: entries.length, studies, classics: entries.length - studies, patterns: Array.isArray(window.DESIGN_PATTERNS) ? window.DESIGN_PATTERNS.length : 129};
     document.querySelectorAll('[data-home-count]').forEach(element => {
       element.textContent = String(counts[element.dataset.homeCount]);
     });
   }
+
+  const patternButtons = [...document.querySelectorAll('[data-home-pattern]')];
+  patternButtons.forEach(button => button.addEventListener('click', () => {
+    if (button.getAttribute('aria-pressed') === 'true') return;
+    patternButtons.forEach(choice => {
+      const selected = choice === button;
+      choice.setAttribute('aria-pressed', String(selected));
+      const panel = document.getElementById(`home-pattern-${choice.dataset.homePattern}`);
+      const playground = panel.querySelector('[data-pattern-playground]');
+      window.DesignAtlasPlayground.dispose(playground);
+      panel.hidden = !selected;
+      panel.inert = !selected;
+      if (selected) window.DesignAtlasPlayground.mount(playground);
+    });
+  }));
 
   let refreshStory = () => {};
   const labFrame = document.querySelector('.landing-lab-frame');
@@ -45,7 +60,7 @@
       const desktop = window.matchMedia('(min-width:1100px)');
       const tallEnough = window.matchMedia('(min-height:740px)');
       const reduced = window.matchMedia('(prefers-reduced-motion:reduce)');
-      const labels = ['浏览案例', '设计实验室', 'Agent 工作流'];
+      const labels = ['案例库', '设计实验室', 'Agent 工作流'];
       const clamp = value => Math.max(0, Math.min(1, value));
       let active = 0;
       let introMode = 0;
@@ -145,7 +160,7 @@
           navigationTarget = {index, top, expires:Date.now() + 1400};
           window.scrollTo({top, behavior:'smooth'});
         } else {
-          const title = document.getElementById('paths-title');
+          const title = document.getElementById('home-patterns-title') || document.getElementById('paths-title');
           if (title) { title.tabIndex = -1; title.focus({preventScroll:true}); }
           window.scrollTo({top:stage.getBoundingClientRect().bottom + window.scrollY - inset(), behavior:'smooth'});
         }

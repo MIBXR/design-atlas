@@ -2,6 +2,9 @@
   "id": "checklist-progress",
   "title": "短清单与即时完成进度",
   "category": "交互反馈",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "把抽象品牌主张变成几个可完成动作。",
   "mechanism": "原生复选框代表真实步骤，改变勾选即更新完成数，并提供清单重置。",
   "trigger": "勾选/取消或重置",

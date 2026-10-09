@@ -151,9 +151,9 @@
     {
       "path": "prompts/digital-dunhuang.md",
       "role": "prompt",
-      "content": "# 数字敦煌 · 全幅影像与真实瓦片细察 · 复用 Prompt\n\n由 [结构化案例](../entries/digital-dunhuang.json) 自动生成。参考观察与具体边界见 [调研](../research/digital-dunhuang.md)。\n\n## 正向 Prompt\n\n逐页对照数字敦煌同日首页、洞窟列表与257西壁查看器，完整保留四图3000ms/500ms轮播、中央检索、1500ms计数、六洞窟/十壁画/寻境/DLC横幅序列，严禁只用单张图替代。用源站19个真实单facet响应成员集建立遗址/形制/时代筛选及可回退URL，保留32项档案和已选条件。查看器使用真正Leaflet/DeepZoom、本地公开1024瓦片、21515×15796逻辑尺寸、min9.75/max12和官方登录边界，完整测试加减/拖动/滚轮/键盘。来源图像、CSS和运行库应记录hash/版权和许可；云游戏、账户与更高清服务仍回官方，不用CSS放大低清图冒充瓦片引擎。\n\n## 负向约束\n\n不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。\n\n## 制作约束\n\n- 固定同日主页、洞窟目录与一幅壁画查看器；32目录结果与首页固定30统计同时保留，不能自行将来源不一致改成同一数字。\n- 19个单条件响应已验证，组合用公开成员集交集；没有声称枚举所有服务端组合、账户和实时数据库。\n- 真实匿名瓦片浏览只覆盖莫高窟257西壁；其他洞窟详页、另九幅查看器、登录后更高分辨率、云游戏与订阅不复制。\n- 原图保留水印与原字节；逻辑21515×15796不表示本地已下载此完整高清图，最高实际归档级别12。\n- 减少动态暂停自动轮播和计数过程，保持导航、筛选与查看器手动操作；加载旋转反馈使用原 Control.Loading 库。\n\n## 检查方法\n\n用有使用权的真实瓦片图像和完整元数据替换档案；逐条件验证成员集、组合空态、URL返回以及查看器真实精度、平移和缩放边界。\n\n[查看 Demo](../demos/digital-dunhuang/index.html) · [返回浏览案例](../cases.html#style/digital-dunhuang)\n",
-      "sha256": "328934d5a4eee9ab40dfab0c108cb875b771a7bab3e56a039d00114f5e9805f4",
-      "bytes": 2144
+      "content": "# 数字敦煌 · 全幅影像与真实瓦片细察 · 复用 Prompt\n\n由 [结构化案例](../entries/digital-dunhuang.json) 自动生成。参考观察与具体边界见 [调研](../research/digital-dunhuang.md)。\n\n## 正向 Prompt\n\n逐页对照数字敦煌同日首页、洞窟列表与257西壁查看器，完整保留四图3000ms/500ms轮播、中央检索、1500ms计数、六洞窟/十壁画/寻境/DLC横幅序列，严禁只用单张图替代。用源站19个真实单facet响应成员集建立遗址/形制/时代筛选及可回退URL，保留32项档案和已选条件。查看器使用真正Leaflet/DeepZoom、本地公开1024瓦片、21515×15796逻辑尺寸、min9.75/max12和官方登录边界，完整测试加减/拖动/滚轮/键盘。来源图像、CSS和运行库应记录hash/版权和许可；云游戏、账户与更高清服务仍回官方，不用CSS放大低清图冒充瓦片引擎。\n\n## 负向约束\n\n不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。\n\n## 制作约束\n\n- 固定同日主页、洞窟目录与一幅壁画查看器；32目录结果与首页固定30统计同时保留，不能自行将来源不一致改成同一数字。\n- 19个单条件响应已验证，组合用公开成员集交集；没有声称枚举所有服务端组合、账户和实时数据库。\n- 真实匿名瓦片浏览只覆盖莫高窟257西壁；其他洞窟详页、另九幅查看器、登录后更高分辨率、云游戏与订阅不复制。\n- 原图保留水印与原字节；逻辑21515×15796不表示本地已下载此完整高清图，最高实际归档级别12。\n- 减少动态暂停自动轮播和计数过程，保持导航、筛选与查看器手动操作；加载旋转反馈使用原 Control.Loading 库。\n\n## 检查方法\n\n用有使用权的真实瓦片图像和完整元数据替换档案；逐条件验证成员集、组合空态、URL返回以及查看器真实精度、平移和缩放边界。\n\n[查看 Demo](../demos/digital-dunhuang/index.html) · [返回案例库](../cases.html#style/digital-dunhuang)\n",
+      "sha256": "04362de5e1c6a243f27fb8c0f50865e58e99be3d3cc6c0a9252bad0162c9f806",
+      "bytes": 2141
     },
     {
       "path": "demos/digital-dunhuang/fidelity.md",
@@ -192,8 +192,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "0ee7145a8684d63c0d8f03981091c6507795df46ba35cec3378af32716f36361",
-      "bytes": 132498
+      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
+      "bytes": 132776
     },
     {
       "path": "case-loading.css",
@@ -828,20 +828,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
+      "bytes": 8899
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
+      "bytes": 6173
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
+      "bytes": 12469
     },
     {
       "path": "entries/digital-dunhuang.json",
@@ -870,8 +870,8 @@
     {
       "path": "prompts/digital-dunhuang.md",
       "role": "context",
-      "sha256": "328934d5a4eee9ab40dfab0c108cb875b771a7bab3e56a039d00114f5e9805f4",
-      "bytes": 2144
+      "sha256": "04362de5e1c6a243f27fb8c0f50865e58e99be3d3cc6c0a9252bad0162c9f806",
+      "bytes": 2141
     },
     {
       "path": "research/digital-dunhuang.md",
@@ -888,26 +888,26 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "9d3f2e2a0b2811a4f0e4563b9c084bd808ba2bf152bd8ca23a13a1b844daaccd",
+      "bytes": 17891
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "6843949cce0ea7de5a3205fb6c40e7e67ee3f17c0840591398ea4225f1baab02",
-      "bytes": 4447
+      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
+      "bytes": 7963
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
+      "bytes": 15154
     },
     {
       "path": "theme-control.css",
       "role": "source",
-      "sha256": "be4ddcd5ea274c1b8d24da1c9eff42b71ac74146bb63a22a107eab3dbd53afa9",
-      "bytes": 2236
+      "sha256": "a0eb112553a17b5c9022951c569c88bb8e1924afd4f0fcefef10477fb0fddb10",
+      "bytes": 2513
     },
     {
       "path": "theme.js",

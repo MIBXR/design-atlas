@@ -5,6 +5,10 @@
     "id": "fixed-task-timeline",
     "title": "固定任务按阶段揭示交付",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion",
+      "structure"
+    ],
     "summary": "让工具过程和交付文件先后可见。",
     "mechanism": "用预设时间线展开会话阶段，输入/发送进入明确固定演示，文件开关显示关联旁栏，新任务可复位。",
     "trigger": "启动固定示例或查看交付文件",
@@ -62,7 +66,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "278865bae3c8d4f55e19502f6addc55eb37f48678d7292034273dbfe53ac73b2"
+      "bundleSha256": "1b8b2ea1793d95b507306df01faa6fef3e986949d3291a57ff04b057d55f1f3f"
     }
   ]
 }

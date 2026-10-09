@@ -2,15 +2,15 @@
 
 # DESIGN ATLAS
 
-### 可交互 · 可查询 · 可回看的个人网页设计案例库
+### 可交互 · 可查询 · 可回看的个人网页设计案例与巧思库
 
-从真实网站学习设计，让配色、排版、图像、形状和动效共同工作。
+从真实网站学习设计，让配色、排版、图像、形状和动效共同工作；从完整案例理解整体，把独立巧思组合成自己的设计。
 
 <!-- atlas-counts:start -->
 **34 个案例**　·　**26 个品牌／文化研究**　·　**8 种经典设计语言**
 <!-- atlas-counts:end -->
 
-[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计巧思](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#patterns) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
+[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [案例库](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [巧思库](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/document.html) · [完整索引](research/CASE-INDEX.md)
 
 ![Design Atlas 实际 Demo 全景](docs/readme/cover.webp)
 
@@ -22,20 +22,21 @@
 
 这是一份能亲手体验的设计参考。每个条目包含实际参考与观察日期、设计元素的协作方式、约束、可复制 Prompt、独立代码 Demo、原站／本地对照及素材来源。
 
-首页介绍案例库、设计实验室与 Agent 工作流，四个页面的主导航可直接切换。案例浏览位于 `cases.html`；已有根路径的案例深链接、比较入口与分类／地区／搜索／排序 URL 会保留状态并进入案例库。
+首页介绍完整案例、独立巧思、设计实验室与 Agent 工作流，主导航可直接切换。案例浏览位于 `cases.html`；已有根路径的案例深链接、比较入口与分类／地区／搜索／排序 URL 会保留状态并进入案例库。
 
 真实网站案例固定为所标注网址与采集日期的单一归档；完成后保留当时的页面与交互，不追随官网后续变化。
 
 - **查找**：按产品、游戏/IP、艺术文化、经典语言与国家／地区筛选；搜索品牌、配色、布局、交互或约束。分类、地区、搜索与排序保留在 URL 中，支持刷新恢复、浏览器前进／后退和分享筛选结果（例如 `cases.html?category=games`）。
-- **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；手机面板限制为390px。
+- **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；案例与巧思共用适应面板、桌面 1440px、手机 ≤390px 和重播控件，高度随可用视口调整，内容在 Demo 内滚动。
 - **比较**：选择2–3项并排比较，七节说明按同名章节逐行对齐；每行采用最长内容所需的自然高度，便于比较不同案例在同一设计维度上的区别。
-- **设计巧思**：在“浏览案例”的侧栏切换到原子库，按机制类别、来源案例与关键词找可单独借用的设计；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
+- **巧思库**：独立巧思页按视觉、微动效、页面动效、声音、内容与组织筛选，再按功能用途、来源案例与关键词找可单独借用的机制；首页和实验室可实际操作本地示意，巧思详情按需载入完整来源 Demo；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
 - **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在设计实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
 - **Agent 选型**：调用 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
-- **桌面与手机**：真实1440px桌面预览保留完整断点；ChatGPT默认展示桌面动效，手机模式可切换。
+- **桌面与手机**：每个案例保留真实桌面与手机预览；手机页面目录默认收在顶栏，长页面提供浮动“回到顶部”。
 - **主题与声音**：案例库支持跟随系统／浅色／深色；每个案例说明原站的主题方式、音乐或媒体声音及其交互作用，固定品牌主题保留原貌。
-- **收藏**：浏览器localStorage保存个人策展结果，并导出／导入 JSON 备份；不同设备或域名不会自动同步。
+- **收藏**：案例与巧思都能收藏，使用同一个 JSON 文件导出／合并导入，兼容已有案例备份；保存在当前浏览器，不同设备或域名不会自动同步。
+- **文档阅读**：在文档中心查看指南、案例研究、Prompt 与复现说明；左侧分类可折叠，切换文档保留目录状态和滚动位置，右侧列出当前文档的一、二级标题，手机使用浮动本文目录。
 - **加载与复用**：案例先准备首屏关键图像、字体与视频第一帧，再开始开场；未就绪时显示进度与重试。固定版本的大素材在同一站点内缓存，嵌入预览与独立打开共享已经下载的内容。
 
 ![从观察到复用](docs/readme/workflow.webp)
@@ -46,13 +47,29 @@ Design Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案
 
 从案例中找依据，在实际使用中观察，再结合人的反馈改进网站本体。这也是这份案例库从参考走向实践的过程。
 
-![Design Atlas 首页：三大功能的统一入口](docs/site/home.png)
+![Design Atlas 首页：案例、巧思与实践入口](docs/site/home.jpg)
 
-| 首页中的真实实验室 | 浏览案例 |
+| 首页中的真实实验室 | 案例库 |
 | --- | --- |
-| ![首页实验室展示：左侧调配元素，右侧查看真实效果](docs/site/workflow.png) | ![浏览案例界面：筛选设计方向与查看案例预览](docs/site/cases.png) |
+| ![设计实验室：调配元素与操作巧思示意](docs/site/workflow.jpg) | ![浏览案例界面：筛选设计方向与查看案例预览](docs/site/cases.png) |
 
 以上为网站本体的实际浏览器截图；各案例的独立 Demo 预览见下方画廊。
+
+### 按体验方式理解巧思
+
+| 类型 | 关注点 | 可以操作的示意 |
+| --- | --- | --- |
+| 视觉巧思 | 颜色、字体、容器与图形形成静态关系 | 标题强调与容器圆角 |
+| 微动效 | 局部反馈或辅助信息的运动 | 按钮浮起、形状变化与回程 |
+| 页面动效 | 页面或主要内容舞台的交接 | 按方向进入、覆盖、交接与退出的遮罩 |
+| 声音巧思 | 音乐、语音与操作音的主动体验 | 主动开启、合成确认短音与静音 |
+| 内容与组织 | 阅读、导航和状态规则 | 单开信息与折叠 |
+
+类型可以交叉；功能用途分类继续独立保留。不要求每个案例都有视觉、动效或声音巧思。巧思库与案例库共用首部、卡片、网格与详情结构；工具栏的“体验当前类型”按需打开示意，跟随当前体验类型切换。示意使用通用内容与本地拟合参数，完整来源保留归档观察与复现边界。声音默认关闭，示意切到后台会关闭，回到前台需要重新启用。
+
+案例与巧思收藏共用一份备份，支持合并导入与旧案例备份；[文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/document.html)集中阅读本站公开的指南、研究、Prompt 与复现说明。
+
+![独立巧思页：类型与可操作示意](docs/site/patterns.jpg)
 
 ## Agent 直接取材
 
@@ -198,7 +215,7 @@ npm start
 
 固定 GitHub 地址的大素材使用浏览器 Cache Storage 保存；后续再次进入时优先复用，完整视频缓存支持字节区间读取与拖动。嵌入预览与独立页面同属一个站点时共享这份缓存。只按访问加载，不在进入案例库时下载所有案例；素材缓存最多256MiB，按存入顺序移除较早的素材。HTML、脚本与样式照常获取当前版本。本地服务使用 ETag／Last-Modified 条件请求，未变化的本地文件返回304并复用已下载内容。
 
-浏览器可能因空间不足、隐私模式或清理网站数据而移除缓存；此时页面正常重新加载。“收藏备份与说明”中可查看、清除素材缓存。收藏与素材缓存分别保存。Cache Storage 的容量和可用性由浏览器管理，参见 [MDN Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache)。
+浏览器可能因空间不足、隐私模式或清理网站数据而移除缓存；此时页面正常重新加载。顶栏主题按钮旁的素材缓存工具可查看、清除已下载的素材。收藏与素材缓存分别保存。Cache Storage 的容量和可用性由浏览器管理，参见 [MDN Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache)。
 
 ### 从参考到自己的设计
 
@@ -212,9 +229,15 @@ npm start
 
 ### 收藏与迁移
 
-收藏保存在当前站点浏览器的 `localStorage`，键为 `atlas-favorites`，内容只有案例ID。它不上传、不同步账号，也不会自动写入Git。
+案例与巧思收藏保存在当前站点浏览器的 `localStorage`，使用 `atlas-favorites-v2` 分别保存两种条目的 ID，兼容 `atlas-favorites` 案例收藏。它不上传、不同步账号，也不会自动写入 Git。
 
-刷新保留；换浏览器、地址、端口或清理网站数据后，收藏不同。“收藏备份与说明”可导出JSON并粘贴导入，导入合并有效ID、去重并忽略未知条目。将导出的JSON自行纳入Git即可保存个人策展结果。
+刷新保留；换浏览器、地址、端口或清理网站数据后，收藏不同。两库的“收藏备份与说明”导出同一个 JSON 文件，包含案例与巧思收藏；粘贴导入时合并有效 ID、去重并忽略未知条目，也可导入已有案例备份。将导出的 JSON 自行纳入 Git 即可保存个人策展结果。已下载的素材由顶栏缓存工具单独管理。
+
+### 文档中心与新增文档
+
+首次进入文档中心只展开当前文档所在分类，其余分类可手动展开。目录控制与长分类标题保持置顶；切换文档只更新正文与本文目录，保留左栏的开合和滚动位置。本文目录支持章节定位，手机可随时从右下角展开。
+
+文档目录与静态发布使用同一份清单：新增 `.md` 放入已公开的 `docs/`、`research/`、`prompts/` 等目录后，`npm run build` 会自动收录到 `documents.js`；`npm run check` 会拒绝未重建的目录。根目录新文档或新的公开目录需先加入 `scripts/build-static.mjs` 的发布清单，再构建、校验并发布网站；Git push 本身不会自动收录或上线。完整维护规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 资料结构与维护
 
@@ -230,8 +253,14 @@ previews/                     案例桌面与手机预览
 docs/readme/                  本README配图
 docs/site/                    网站本体的实际浏览器截图
 vendor/                       固定版本的Markdown解析库、HTML清理库与许可证
+patterns/<id>.json            人工策展的独立巧思与体验类型
+patterns.html / patterns-ui.*  独立巧思浏览、来源 Demo 与复用方法
+pattern-playground.*          首页、巧思页与实验室共用的本地机制示意
 fundamentals.*                可操作的设计实验室
 catalog.js                    自动生成的浏览器目录
+documents.js                  按静态发布范围生成的公开文档目录
+document.*                    文档阅读、可折叠分类与章节目录
+favorites.js                  案例与巧思的共享收藏与备份
 asset-sources.js               固定 Git 提交、远端URL与本地素材字节／哈希映射
 asset-runtime.js               本地优先、失败回退与显式来源切换
 case-loading.*                首屏就绪、开场门控与章节素材准备
@@ -240,7 +269,7 @@ scripts/                      本机服务、目录生成、静态构建与资�
 .openai/hosting.json           现有Sites项目与静态目录配置
 ```
 
-`npm run build` 从 entries 更新目录、完整索引及 Prompt；`npm run check` 检查字段、来源、本地引用、JS语法、预览和资产大小／哈希。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含Git元数据和本地服务。新增或修改案例遵循 [贡献流程](CONTRIBUTING.md)。
+`npm run build` 同步案例与巧思目录、完整 Agent 包、Prompt 和公开文档目录；`npm run check` 检查来源、关联、资料与渲染一致性、本地引用、JS 语法、预览、资产大小／哈希及目录是否最新。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含 Git 元数据和本地服务。新增或修改案例、提取巧思与维护文档遵循 [贡献流程](CONTRIBUTING.md)。
 
 ```bash
 npm run build

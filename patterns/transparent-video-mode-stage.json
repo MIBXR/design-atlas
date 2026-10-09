@@ -2,6 +2,9 @@
   "id": "transparent-video-mode-stage",
   "title": "透明视频的静态与动态模式舞台",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "静态立绘与RGB/alpha透明视频共享人物位置，进入短片结束后接续idle循环。",
   "mechanism": "同一影片左半保存RGB颜色、右半保存亮度alpha遮罩，经WebGL合成为半宽透明canvas；2D立绘与3D影片模式独立于人物选择，enter完成后接idle，换人或退出时取消旧资源回调和帧调度。",
   "trigger": "用户选择静态/动态模式，或在动态模式中切换人物",

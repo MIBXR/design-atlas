@@ -65,13 +65,13 @@
   }
   function config(){
     return {
-      version:2,
+      version:3,
       purpose:'同一虚构产品内容的设计元素教学实验，不是来源网站复刻',
       reference:referenceEntry?{id:referenceEntry.id,title:referenceEntry.title,sources:referenceEntry.sources.map(s=>({title:s.title,url:s.url}))}:null,
       baseScheme:state.name,
       color:{background:resolvedPalette().bg,text:resolvedPalette().ink,accent:resolvedPalette().accent,buttonText:bestText(resolvedPalette().accent)},
       theme:{choice:state.themeChoice||'reference',resolved:luminance(resolvedPalette().bg)<.25?'dark':'light',systemDark:systemTheme.matches,sourceBehavior:referenceEntry?.themeBehavior||null,note:'教学迁移使用协调颜色角色，固定主题案例的真实demo不改色'},
-      sound:referenceEntry?.soundBehavior||{kind:'none',control:'教学示例不添加BGM',interactionRole:'反馈由文字和微动效表达'},
+      sound:{kind:'none',control:'协调实验不播放音乐或操作音',interactionRole:'反馈由文字和微动效表达',sourceBehavior:referenceEntry?.soundBehavior||null},
       typography:{choice:state.type,titleFont:fontRules[state.type].title,bodyFont:fontRules[state.type].body},
       layout:{choice:state.layout,meaning:layoutNames[state.layout]},
       shape:{choice:state.shape,radiusPx:shapeRules[state.shape].radius,strokePx:shapeRules[state.shape].stroke,buttonRadiusPx:8},
@@ -79,7 +79,7 @@
       graphic:{choice:state.graphic,meaning:graphicNames[state.graphic],asset:'本地原创SVG，无外部素材'},
       hierarchy:state.hierarchy,
       texture:state.texture,
-      motion:{enabled:state.motion,reducedMotionPreferred:matchMedia('(prefers-reduced-motion:reduce)').matches,note:'减少动态偏好优先，文字反馈始终存在'},
+      motion:{type:'micro-motion',enabled:state.motion,reducedMotionPreferred:matchMedia('(prefers-reduced-motion:reduce)').matches,note:'仅协调实验的局部反馈；减少动态偏好优先，文字反馈始终存在'},
       elementOrigins:clone(groupOrigins),
       constraints:['内容先于装饰','颜色角色一致，状态不只依靠颜色','自然滚动，手机重排，键盘焦点可见','尊重prefers-reduced-motion','产品文案保持相同，图形呈现方式可单独切换']
     };
@@ -107,7 +107,7 @@
     const origin=referenceEntry?.themeBehavior;
     el('theme-note').textContent='当前示例：'+(dark?'深色':'浅色')+'；'+((state.themeChoice||'reference')==='system'?'随系统变化。':'可切换比较。')+(origin?'原案例：'+origin.control+'；'+origin.designReason:'背景、表面、正文、强调和边界按角色协同变化，不对图片施加反色。');
     const sound=referenceEntry?.soundBehavior;
-    el('reference-sound-note').textContent=sound?'原案例声音：'+sound.control+' '+sound.interactionRole:'本教学示例无配乐；音乐应从案例的具体节奏与内容目的出发。';
+    el('reference-sound-note').textContent=sound?'协调实验无声音。原案例声音：'+sound.control+' '+sound.interactionRole:'协调实验无声音；下方声音机制实验可单独启用合成操作音。';
     setVar('bg',bg);setVar('ink',ink);setVar('accent',accent);setVar('on-accent',bestText(accent));
     setVar('surface',blend(bg,ink,.035));setVar('soft',blend(bg,ink,.075));setVar('line',blend(bg,ink,.26));setVar('muted',blend(ink,bg,.18));
     setVar('accent-text',contrast(accent,bg)>=4.5?accent:ink);

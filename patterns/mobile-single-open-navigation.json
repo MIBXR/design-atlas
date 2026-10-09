@@ -2,6 +2,9 @@
   "id": "mobile-single-open-navigation",
   "title": "手机菜单原位单开分类",
   "category": "导航与状态",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "展开一组同时收起上一组。",
   "mechanism": "在全屏导航中原位展开当前分类，其他分类降低强调，同一分类再点收起，下载与登录入口固定底部。",
   "trigger": "手机选择导航分类",

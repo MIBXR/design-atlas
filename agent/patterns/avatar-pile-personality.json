@@ -5,6 +5,9 @@
     "id": "avatar-pile-personality",
     "title": "组合头像表达团队人格",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用一组独立头像为工具加入团队气质。",
     "mechanism": "多张真实授权头像以小范围叠放组成一个稳定装饰层，手机调整到标题上方，文字仍是主要信息。",
     "trigger": "浏览团队主张",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "6c18ed29f48b83d111afd43f2989556c8ee01864c29073161d232fbad4d7db48"
+      "bundleSha256": "7743a10e1d840defd5d9ef4bc2eea241204f175753500556bee1e02088ed6541"
     }
   ]
 }

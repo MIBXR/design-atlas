@@ -5,6 +5,9 @@
     "id": "mobile-single-open-navigation",
     "title": "手机菜单原位单开分类",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "展开一组同时收起上一组。",
     "mechanism": "在全屏导航中原位展开当前分类，其他分类降低强调，同一分类再点收起，下载与登录入口固定底部。",
     "trigger": "手机选择导航分类",
@@ -63,7 +66,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "6c18ed29f48b83d111afd43f2989556c8ee01864c29073161d232fbad4d7db48"
+      "bundleSha256": "7743a10e1d840defd5d9ef4bc2eea241204f175753500556bee1e02088ed6541"
     }
   ]
 }

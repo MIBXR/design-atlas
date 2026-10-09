@@ -5,6 +5,9 @@
     "id": "synchronized-rolling-index",
     "title": "编号、计数与章名分组滚动",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "标题之外持续标示当前位置。",
     "mechanism": "将编号、总数与章名放入独立裁切框，按换章方向滚出、换值、滚入，组间使用小时间差。",
     "trigger": "当前章节改变",
@@ -67,7 +70,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "eb89c82a05466a45d5ed691225cbebf9bb4abde9bf9149278c3101bf6630d1d0"
     }
   ]
 }

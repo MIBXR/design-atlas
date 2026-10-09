@@ -2,6 +2,9 @@
   "id": "exploded-layer-view",
   "title": "展开图层解释组成",
   "category": "交互反馈",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "将整体拆成基础、建筑和植物层。",
   "mechanism": "保持空间投影和图层顺序，用受控偏移将各组分离；再次选择整体恢复完整场景。",
   "trigger": "选择展开/整体",

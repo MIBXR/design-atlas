@@ -5,6 +5,9 @@
     "id": "fixed-topology-morph",
     "title": "同拓扑碎片形态转换",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "同一组几何片保持身份连续。",
     "mechanism": "每种状态保留相同片数和顶点次序，在同一拓扑上插值位置；形态同步解释不同内容语义。",
     "trigger": "选择形态按钮",
@@ -64,7 +67,7 @@
         "bundle": "agent/cases/shape-morph.json",
         "demo": "demos/shape-morph/index.html"
       },
-      "bundleSha256": "5315106c44178661c8c83b0307688ed394e511a88129d968c8a0b193acc7a0ec"
+      "bundleSha256": "76be77e19a7ba9bcdaf06365418ecaefd3f2d055ee08ef9a67986caa8990be87"
     }
   ]
 }

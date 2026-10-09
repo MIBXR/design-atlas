@@ -5,6 +5,9 @@
     "id": "explicit-facet-summary",
     "title": "分面条件在列表前显式呈现",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "先说明筛选依据，再展示剩下的资料。",
     "mechanism": "遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。",
     "trigger": "选择条件、提交关键词或移除单项",
@@ -78,7 +81,7 @@
         "bundle": "agent/cases/digital-dunhuang.json",
         "demo": "demos/digital-dunhuang/index.html"
       },
-      "bundleSha256": "61efed34f9d77580baa4be9387d18864f4f777898193ccfc82e448581f894952"
+      "bundleSha256": "10847e12aea270f2f155a32ed69ec62f759282671b3b2e0a8abea38a88857388"
     }
   ]
 }

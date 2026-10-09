@@ -8,9 +8,9 @@
     "build": "node scripts/build.mjs",
     "build:site": "node scripts/build.mjs && node scripts/build-static.mjs --assets=github",
     "build:local": "node scripts/build.mjs && node scripts/build-static.mjs --assets=local",
-    "check": "node scripts/check.mjs --require-previews && node scripts/check-assets.mjs && node scripts/check-agent.mjs && node scripts/check-patterns.mjs && node scripts/check-detail-alignment.mjs && node scripts/check-readme.mjs",
+    "check": "node scripts/check.mjs --require-previews && node scripts/check-assets.mjs && node scripts/check-agent.mjs && node scripts/check-patterns.mjs && node scripts/check-detail-alignment.mjs && node scripts/check-readme.mjs && node scripts/build-documents.mjs --check",
     "atlas": "node scripts/atlas.mjs",
     "test:patterns": "node --test scripts/patterns-data.test.mjs",
-    "test:agent": "node --test scripts/agent-data.test.mjs scripts/patterns-data.test.mjs scripts/atlas.test.mjs scripts/legacy-links.test.mjs scripts/site-shell.test.mjs scripts/lab-embed.test.mjs scripts/home-features.test.mjs scripts/theme.test.mjs scripts/collection-ui.test.mjs scripts/readme.test.mjs scripts/preview-validation.test.mjs scripts/script-validation.test.mjs"
+    "test:agent": "node --test scripts/agent-data.test.mjs scripts/patterns-data.test.mjs scripts/atlas.test.mjs scripts/legacy-links.test.mjs scripts/site-shell.test.mjs scripts/lab-embed.test.mjs scripts/home-features.test.mjs scripts/theme.test.mjs scripts/collection-ui.test.mjs scripts/readme.test.mjs scripts/preview-validation.test.mjs scripts/script-validation.test.mjs scripts/favorites.test.mjs scripts/document-ui.test.mjs scripts/documents-data.test.mjs scripts/demo-preview.test.mjs"
   }
 }

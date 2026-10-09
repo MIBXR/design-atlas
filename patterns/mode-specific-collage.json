@@ -2,6 +2,9 @@
   "id": "mode-specific-collage",
   "title": "按模式组织独立拼贴层",
   "category": "视觉构成",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "一组周边素材共同解释一种用途。",
   "mechanism": "每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。",
   "trigger": "选择不同能力模式",

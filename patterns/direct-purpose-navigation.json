@@ -2,6 +2,9 @@
   "id": "direct-purpose-navigation",
   "title": "机构目的地即时展开",
   "category": "导航与状态",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "把到访、活动等常见目的直接组织成入口。",
   "mechanism": "点击目的类别立即显示相应目的地列表，层级结构留在同一导航区域；小屏可以在文档流展开。",
   "trigger": "打开Visit或主菜单类别",

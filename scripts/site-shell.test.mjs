@@ -4,10 +4,12 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const source = fs.readFileSync(new URL('../site-shell.js', import.meta.url), 'utf8');
-function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = false } = {}) {
+function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = false, hasTools = false, cacheApi, reducedMotion = false } = {}) {
   const documentListeners = new Map();
+  const windowListeners = new Map();
   const mediaListeners = new Map();
   const navigationCalls = [];
+  const scrollCalls = [];
   const document = { activeElement: { name: 'body' }, documentElement: { dataset: embedded ? { labEmbed: 'home' } : {} }, addEventListener: (name, listener) => documentListeners.set(name, listener) };
   function element(name, { inside = false, href, action = false } = {}) {
     const attributes = new Map(href === undefined ? [] : [['href', href]]);
@@ -22,7 +24,7 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = 
       toggleAttribute(key, force) { force ? attributes.set(key, '') : attributes.delete(key); },
       contains(target) { return target === this || target?.parent === this; },
       closest() { return this.action ? this : this.parent?.action ? this.parent : null; },
-      activate() { listeners.get('click')?.(); },
+      activate() { return listeners.get('click')?.(); },
       emit(type) { listeners.get(type)?.(); },
     };
   }
@@ -32,26 +34,50 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = 
   const main = element('main');
   const favoriteDialog = element('favorite-dialog');
   document.body = element('body');
+  const cacheStatus = element('cache-status');
+  const cacheClear = element('cache-clear');
+  const loadedScripts = [];
+  let cacheButton, cacheDialog, backToTop;
+  const themeControl = element('theme-control');
+  themeControl.insertAdjacentElement = (_, button) => { cacheButton = button; };
+  document.body.append = node => { if (node.name === 'dialog') cacheDialog = node; else backToTop = node; };
+  document.head = { append: script => loadedScripts.push(script) };
+  document.createElement = tag => {
+    const node = element(tag);
+    if (tag === 'dialog') {
+      node.querySelector = selector => selector === '#cache-status' ? cacheStatus : selector === '#cache-clear' ? cacheClear : null;
+      node.showModal = () => { node.open = true; };
+    }
+    return node;
+  };
   document.activeElement = document.body;
   const directory = element('directory', { inside: true });
   directory.contains = target => !!target?.inside;
   const menus = Array.from({ length: menuCount }, () => ({ open: false }));
   directory.querySelectorAll = selector => selector === '.atlas-page-menu' ? menus : [];
   directory.querySelector = selector => selector === '[data-directory-close]' ? closeButton : selector === 'nav a[href], nav button' ? filter : null;
-  document.querySelector = selector => selector === '[data-page-directory]' ? hasDirectory ? directory : null : selector === '[data-directory-toggle]' ? hasDirectory ? toggle : null : selector === 'main' ? main : selector === '#favorite-dialog' ? favoriteDialog : null;
+  document.querySelector = selector => selector === '[data-page-directory]' ? hasDirectory ? directory : null : selector === '[data-directory-toggle]' ? hasDirectory ? toggle : null : selector === '[data-theme-toggle]' ? hasTools ? themeControl : null : selector === 'main' ? main : selector === '#favorite-dialog' ? favoriteDialog : null;
   const sections = new Map([['lab', element('lab')], ['elements', element('elements')], ['prompt', element('prompt')]]);
   document.getElementById = id => sections.get(id) || null;
   const media = { matches: compact, addEventListener: (name, listener) => mediaListeners.set(name, listener) };
   let mediaQueries = 0;
   const window = {
+    DesignAtlasAssetCache: cacheApi,
+    innerHeight:800, scrollY:0,
+    addEventListener: (name, listener) => windowListeners.set(name, listener),
+    scrollTo(options) { scrollCalls.push(options); window.scrollY = options.top; windowListeners.get('scroll')?.(); },
     location: { href: 'https://atlas.test/fundamentals.html', replace: value => navigationCalls.push(value) },
     history: { pushState: (...values) => navigationCalls.push(values), replaceState: (...values) => navigationCalls.push(values) },
-    matchMedia(query) { assert.equal(query, '(max-width: 800px)'); mediaQueries++; return media; },
+    matchMedia(query) {
+      if (query === '(prefers-reduced-motion: reduce)') return {matches:reducedMotion};
+      assert.equal(query, '(max-width: 800px)'); mediaQueries++; return media;
+    },
   };
   vm.runInNewContext(source, { document, window, URL }, { timeout: 1000, filename: 'site-shell.js' });
   return {
-    document, menus, media, directory, toggle, closeButton, filter, main, favoriteDialog, sections, documentListeners, navigationCalls, element,
+    document, window, menus, media, directory, toggle, closeButton, filter, main, favoriteDialog, sections, documentListeners, navigationCalls, element, cacheButton, cacheDialog, cacheStatus, cacheClear, loadedScripts, backToTop, scrollCalls,
     mediaQueries: () => mediaQueries,
+    scroll(top) { window.scrollY = top; windowListeners.get('scroll')?.(); },
     resize(isCompact) { media.matches = isCompact; mediaListeners.get('change')?.(); },
     click(target) {
       let prevented = false;
@@ -66,6 +92,41 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, embedded = 
     },
   };
 }
+
+test('the shared header opens and clears media cache independently of favorites and directories', async () => {
+  const calls = [];
+  const fixture = page({ hasDirectory: false, hasTools: true, cacheApi: {
+    status: async () => { calls.push('status'); return { available: true, files: 4, bytes: 3 * 1024 * 1024 }; },
+    clear: async () => { calls.push('clear'); return { available: true, files: 0, bytes: 0 }; },
+  } });
+  assert.equal(fixture.cacheButton.getAttribute('aria-controls'), fixture.cacheDialog.id);
+  assert.equal(fixture.cacheButton.getAttribute('aria-haspopup'), 'dialog');
+  assert.match(fixture.cacheDialog.innerHTML, /<form method="dialog">/);
+  await fixture.cacheButton.activate();
+  assert.equal(fixture.cacheDialog.open, true);
+  assert.equal(fixture.cacheStatus.textContent, '4 项 · 3.0 MiB');
+  assert.equal(fixture.cacheClear.disabled, false);
+  await fixture.cacheClear.activate();
+  assert.match(fixture.cacheStatus.textContent, /^0 项 · 0\.0 MiB · 下次打开时按需重新下载$/);
+  assert.deepEqual(calls, ['status', 'clear']);
+  assert.equal(fixture.favoriteDialog.open, undefined);
+  assert.equal(fixture.loadedScripts.length, 0);
+});
+
+test('pages without the cache runtime load it on demand and retain unsupported-browser feedback', async () => {
+  const fixture = page({ hasDirectory: false, hasTools: true });
+  assert.equal(fixture.loadedScripts.length, 0);
+  const opening = fixture.cacheButton.activate();
+  assert.equal(fixture.loadedScripts.length, 1);
+  assert.equal(fixture.loadedScripts[0].src, 'asset-cache.js');
+  assert.equal(fixture.cacheClear.disabled, true);
+  fixture.window.DesignAtlasAssetCache = { status: async () => ({ available: false }) };
+  fixture.loadedScripts[0].onload();
+  await opening;
+  assert.match(fixture.cacheStatus.textContent, /此浏览器暂不支持持久素材缓存/);
+  assert.equal(fixture.cacheClear.disabled, true);
+  assert.equal(fixture.mediaQueries(), 0);
+});
 
 test('mobile hides the complete directory and one header control reveals all subdirectories', () => {
   const mobile = page({ compact: true });
@@ -184,12 +245,31 @@ test('desktop keeps the original sidebar and breakpoint changes never leave focu
   assert.equal(fixture.document.activeElement, outside);
 });
 
-test('embedded home lab and pages without directories install no shell listeners', () => {
+test('embedded home lab skips shared controls and pages without directories skip directory listeners', () => {
   for (const options of [{ hasDirectory: false }, { embedded: true }]) {
     const fixture = page(options);
     assert.equal(fixture.mediaQueries(), 0);
     assert.equal(fixture.documentListeners.size, 0);
     assert.deepEqual(fixture.navigationCalls, []);
+    assert.equal(!!fixture.backToTop, !options.embedded);
+  }
+});
+
+test('outer pages show back to top after one viewport and respect motion preferences', () => {
+  for (const reducedMotion of [false, true]) {
+    const fixture = page({hasDirectory:false, reducedMotion});
+    assert.equal(fixture.backToTop.hidden, true);
+    assert.equal(fixture.backToTop.textContent, '回到顶部');
+    fixture.scroll(800);
+    assert.equal(fixture.backToTop.hidden, true);
+    fixture.scroll(801);
+    assert.equal(fixture.backToTop.hidden, false);
+    fixture.document.activeElement = fixture.backToTop;
+    fixture.click(fixture.backToTop);
+    assert.equal(fixture.scrollCalls[0].top, 0);
+    assert.equal(fixture.scrollCalls[0].behavior, reducedMotion ? 'instant' : 'smooth');
+    assert.equal(fixture.backToTop.hidden, true);
+    assert.equal(fixture.document.activeElement, fixture.main);
   }
 });
 

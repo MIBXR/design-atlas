@@ -5,6 +5,9 @@
     "id": "local-code-theme-preview",
     "title": "代码主题只改变局部预览",
     "category": "交互反馈",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "把代码外观探索限定在代码区域。",
     "mechanism": "编辑代码更新行数与语法内容，主题选择更新局部token颜色；营销页面全局配色保持自己的语义。",
     "trigger": "编辑或选择语法主题",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "a245270c6e4b7e4d2243595955d14964747bf5506d7fce9093b0fee572a589ce"
+      "bundleSha256": "6d4a8a143c3d11eda036557bd5c87027db0816a18a3d3f4f78295d76ace53d23"
     }
   ]
 }

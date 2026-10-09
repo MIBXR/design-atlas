@@ -5,6 +5,9 @@
     "id": "staged-product-ui-entrance",
     "title": "延迟产品界面与扫光入场",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "让主张先出现，再揭示工作系统。",
     "mechanism": "稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。",
     "trigger": "进入页面及继续下滚",
@@ -67,7 +70,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "a245270c6e4b7e4d2243595955d14964747bf5506d7fce9093b0fee572a589ce"
+      "bundleSha256": "6d4a8a143c3d11eda036557bd5c87027db0816a18a3d3f4f78295d76ace53d23"
     }
   ]
 }

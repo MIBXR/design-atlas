@@ -5,6 +5,9 @@
     "id": "mode-specific-collage",
     "title": "按模式组织独立拼贴层",
     "category": "视觉构成",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "一组周边素材共同解释一种用途。",
     "mechanism": "每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。",
     "trigger": "选择不同能力模式",
@@ -64,7 +67,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
+      "bundleSha256": "1b4e5662c2a08f459f150770cc857308f94d5ac780ef0129f308160fb8c4f450"
     }
   ]
 }

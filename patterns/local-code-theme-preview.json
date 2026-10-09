@@ -2,6 +2,9 @@
   "id": "local-code-theme-preview",
   "title": "代码主题只改变局部预览",
   "category": "交互反馈",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "把代码外观探索限定在代码区域。",
   "mechanism": "编辑代码更新行数与语法内容，主题选择更新局部token颜色；营销页面全局配色保持自己的语义。",
   "trigger": "编辑或选择语法主题",

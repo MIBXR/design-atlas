@@ -5,6 +5,9 @@
     "id": "sticky-stage-handoff",
     "title": "同一媒体从主舞台交给说明",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "滚动时让同一对象继续承担叙事。",
     "mechanism": "媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。",
     "trigger": "上下穿越交接段",
@@ -78,7 +81,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
+      "bundleSha256": "c8038c83add331ef0a938bced6dacfd656e133c2fa18455423577d041f58ced2"
     },
     {
       "id": "chatgpt-platform",
@@ -87,7 +90,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
+      "bundleSha256": "1b4e5662c2a08f459f150770cc857308f94d5ac780ef0129f308160fb8c4f450"
     }
   ]
 }

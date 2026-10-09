@@ -3,6 +3,9 @@ window.DESIGN_PATTERNS = [
     "id": "activity-title-ticket-overlap",
     "title": "活动标题与票务跨区并置",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "视觉主题与行动面板处于同一视线。",
     "mechanism": "大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。",
     "trigger": "查看活动首屏并继续阅读",
@@ -55,6 +58,9 @@ window.DESIGN_PATTERNS = [
     "id": "aligned-metadata-rows",
     "title": "编号与元数据对齐列表",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让编号、名称、日期和操作横向可比。",
     "mechanism": "用稳定列宽组织每行的编号、名称、类别、日期与收藏；手机将次级元数据折到名称下方。",
     "trigger": "逐行浏览目录",
@@ -102,6 +108,9 @@ window.DESIGN_PATTERNS = [
     "id": "architectural-fragment-anchor",
     "title": "建筑局部与名称目录锚点",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用真实建筑的一角让大色面具有地点身份。",
     "mechanism": "朱红实物纹理内以真实透明屋脊和独立圆形题饰定位建筑身份，左侧说明与八项名称目录承担检索；图像不替代文字入口。",
     "trigger": "进入建筑或文化章节",
@@ -168,6 +177,9 @@ window.DESIGN_PATTERNS = [
     "id": "architectural-outline-whitespace",
     "title": "机构摄影的白色外缘",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "以白色外缘、窄缝和访问白板组织真实机构摄影。",
     "mechanism": "用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。",
     "trigger": "阅读建筑说明或相关文化章节",
@@ -235,6 +247,9 @@ window.DESIGN_PATTERNS = [
     "id": "artwork-caption-separation",
     "title": "作品原图与图下题注分工",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让作品保持自己的视觉，说明放在图外。",
     "mechanism": "海报、馆藏或艺术摄影保留原色及比例，名称、日期与来源放在图下正文，不在原图上重复绘制标题。",
     "trigger": "浏览作品与展览目录",
@@ -310,6 +325,10 @@ window.DESIGN_PATTERNS = [
     "id": "audio-signal-panel",
     "title": "按信号流程组织声音面板",
     "category": "内容组织",
+    "experienceTypes": [
+      "sound",
+      "structure"
+    ],
     "summary": "让功能邻接关系解释声音制作流程。",
     "mechanism": "将预设、波形显示、滤波/包络/输出和演奏按实际信号链组织，改变控件确实改变音频节点。",
     "trigger": "查看并操作合成器面板",
@@ -357,6 +376,9 @@ window.DESIGN_PATTERNS = [
     "id": "avatar-pile-personality",
     "title": "组合头像表达团队人格",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用一组独立头像为工具加入团队气质。",
     "mechanism": "多张真实授权头像以小范围叠放组成一个稳定装饰层，手机调整到标题上方，文字仍是主要信息。",
     "trigger": "浏览团队主张",
@@ -409,6 +431,9 @@ window.DESIGN_PATTERNS = [
     "id": "blurred-layered-video-handoff",
     "title": "旧片模糊退出、新片延后进入",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "影片与主题字按不同阶段交接。",
     "mechanism": "旧影片先模糊退出，新影片稍后进入，标题再延迟进入；同一舞台叠层和最后请求队列管理快选。",
     "trigger": "选择影片章节",
@@ -472,6 +497,9 @@ window.DESIGN_PATTERNS = [
     "id": "bounded-image-inspection",
     "title": "公开边界内的瓦片细察",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让图像从全貌到局部，再明确回到总览。",
     "mechanism": "独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。",
     "trigger": "主动加减、滚轮缩放、拖动或键盘平移",
@@ -542,6 +570,9 @@ window.DESIGN_PATTERNS = [
     "id": "bounded-panel-track",
     "title": "有界的完整面板横向轨道",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "图像、资料与说明作为同一面板移动。",
     "mechanism": "每次选择使整块相关内容沿单一轨道平移，首尾禁用前后按钮并停止；人物或玩法状态同步更新。",
     "trigger": "选择编号、箭头或手势",
@@ -624,6 +655,9 @@ window.DESIGN_PATTERNS = [
     "id": "capability-bento-hierarchy",
     "title": "以跨列比例表达能力层次",
     "category": "内容组织",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "不同产品权重使用不同面积。",
     "mechanism": "根据功能关系设置跨列主能力、并列辅助能力或通栏协作能力，图文各有稳定位置。",
     "trigger": "阅读能力矩阵",
@@ -692,6 +726,10 @@ window.DESIGN_PATTERNS = [
     "id": "center-aligned-section-index",
     "title": "章节中心定位的侧边索引",
     "category": "导航与状态",
+    "experienceTypes": [
+      "micro-motion",
+      "structure"
+    ],
     "summary": "点击时让阅读目标落在视口中心。",
     "mechanism": "侧边索引按视口中心更新，点击将目标章中心对齐；指针/焦点进入索引显示标签并降低内容强调。",
     "trigger": "点击索引或聚焦索引区",
@@ -749,6 +787,9 @@ window.DESIGN_PATTERNS = [
     "id": "centered-loop-gallery",
     "title": "中心图与邻图预告的循环轨道",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "当前图突出，侧图提示还有内容。",
     "mechanism": "同一水平轨道移位，中心图清晰、邻图部分露出；首尾以克隆衔接后复位，手动与自动状态共享索引。",
     "trigger": "箭头、索引、触摸或自动周期",
@@ -844,6 +885,9 @@ window.DESIGN_PATTERNS = [
     "id": "character-stage-coordination",
     "title": "人物、背景与资料成组换态",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "换人时保持所有身份线索一致。",
     "mechanism": "选中人物统一更新立绘、姓名、简介、肖像与背景/资料卡；人物阶段或服装作为独立状态，避免图片和声音归属错位。",
     "trigger": "选择人物或阶段",
@@ -926,6 +970,9 @@ window.DESIGN_PATTERNS = [
     "id": "character-voice-ownership",
     "title": "声线主动播放并归属于当前人物",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound"
+    ],
     "summary": "切换人物时不会叠加上一人的声音。",
     "mechanism": "麦克风主动播放当前人物对应音轨，再次点击暂停；换人、离开角色区域或后台停止旧声音。",
     "trigger": "点击人物VOICE或换人",
@@ -1008,6 +1055,9 @@ window.DESIGN_PATTERNS = [
     "id": "checklist-progress",
     "title": "短清单与即时完成进度",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "把抽象品牌主张变成几个可完成动作。",
     "mechanism": "原生复选框代表真实步骤，改变勾选即更新完成数，并提供清单重置。",
     "trigger": "勾选/取消或重置",
@@ -1057,6 +1107,9 @@ window.DESIGN_PATTERNS = [
     "id": "client-logo-marquee",
     "title": "可停的连续客户标识条带",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "用连续条带提供客户范围线索。",
     "mechanism": "重复标识轨道缓慢横移以形成连续序列，指针停留暂停；重复视觉不增加重复读屏内容。",
     "trigger": "查看条带或停留",
@@ -1125,6 +1178,9 @@ window.DESIGN_PATTERNS = [
     "id": "clip-tail-advance",
     "title": "在影片片尾前交给下一章",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "避免片尾黑场打断章节观看。",
     "mechanism": "监测当前影片剩余时间，在片尾前固定余量触发下一章，用户暂停或降低动态时关闭自动推进。",
     "trigger": "影片到达尾段",
@@ -1183,6 +1239,9 @@ window.DESIGN_PATTERNS = [
     "id": "compact-scroll-header",
     "title": "跨过品牌区出现紧凑导航",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "大标识与持久导航按阅读位置交接。",
     "mechanism": "顶部保留大机构标志，超过标志高度加偏移后从上方出现紧凑导航，返回顶部退出恢复大标志。",
     "trigger": "跨越阈值或回到首屏",
@@ -1241,6 +1300,9 @@ window.DESIGN_PATTERNS = [
     "id": "continuous-bgm-bridge",
     "title": "跨章节连续的环境声音",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound"
+    ],
     "summary": "以连续音轨连接不同场景。",
     "mechanism": "用户开启后BGM跨章节保持同一播放位置，启停使用有依据的音量渐变；人物语音与环境音乐分开管理。",
     "trigger": "主动开启或关闭BGM、切换章节",
@@ -1314,6 +1376,9 @@ window.DESIGN_PATTERNS = [
     "id": "controlled-rough-outlines",
     "title": "受控不规则轮廓",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "以稳定骨架承托草稿感轮廓。",
     "mechanism": "用固定SVG曲线、有限双线与统一排线密度制造手绘感；正文和操作边界保持清楚稳定。",
     "trigger": "浏览插画与短批注",
@@ -1362,6 +1427,9 @@ window.DESIGN_PATTERNS = [
     "id": "current-state-svg-export",
     "title": "导出当前构成",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "把操作结果变成可使用的原创SVG。",
     "mechanism": "导出时读取当前几何位置与角度，生成与画布一致的SVG文件；文件内容包含当前状态。",
     "trigger": "激活导出按钮",
@@ -1408,6 +1476,9 @@ window.DESIGN_PATTERNS = [
     "id": "department-code-matrix",
     "title": "机构缩写的中心矩阵",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "保留特殊字标和非等宽的中心/外围关系，让代码同时表达机构身份和归属。",
     "mechanism": "中心双行代码和九个外围短代码共享环形连字，黑白表面、倾斜与尺度差共同组织关系；细射线与小面积橙色节点连接焦点。完整名称与等价语义目录承担阅读，不将原字标重排成普通字体卡片。",
     "trigger": "呈现机构代码目录",
@@ -1483,6 +1554,9 @@ window.DESIGN_PATTERNS = [
     "id": "direct-purpose-navigation",
     "title": "机构目的地即时展开",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "把到访、活动等常见目的直接组织成入口。",
     "mechanism": "点击目的类别立即显示相应目的地列表，层级结构留在同一导航区域；小屏可以在文档流展开。",
     "trigger": "打开Visit或主菜单类别",
@@ -1551,6 +1625,9 @@ window.DESIGN_PATTERNS = [
     "id": "directional-section-wipe",
     "title": "按方向侧向裁切交接整章",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "让章节空间方向与输入方向一致。",
     "mechanism": "两个整屏场景以横向遮罩覆盖出入，旧场景退出与新场景进入共享方向；稳定后只有一章可交互。",
     "trigger": "滚轮、章节导航或键盘换章",
@@ -1612,6 +1689,9 @@ window.DESIGN_PATTERNS = [
     "id": "directional-sticky-navigation",
     "title": "向上找回、向下让位的导览条",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "按浏览方向决定持久导览可见性。",
     "mechanism": "跨过指定内容区后导览固定，向上滚动显现、向下收起；语言目录在离开时合拢。",
     "trigger": "阈值后上下滚动",
@@ -1664,6 +1744,9 @@ window.DESIGN_PATTERNS = [
     "id": "discovery-progress-journal",
     "title": "探索进度与可重置手账",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "把访问过的地点变成可回看的进度。",
     "mechanism": "访问地点时记录发现集合，同步地点按钮、进度文本与旅行手账，并允许清除后重新探索。",
     "trigger": "首次抵达地点或重置",
@@ -1717,6 +1800,9 @@ window.DESIGN_PATTERNS = [
     "id": "edge-action-world-composition",
     "title": "中心世界与边缘行动分工",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "让世界视觉保持主角，下载入口仍直接可找。",
     "mechanism": "背景建立空间，中心Logo识别产品，竖排标语补充主题；下载与漫画等行动分布边缘，避免覆盖主视觉焦点。",
     "trigger": "进入世界首页",
@@ -1769,6 +1855,9 @@ window.DESIGN_PATTERNS = [
     "id": "editorial-alignment-grid",
     "title": "共享对齐线的编辑网格",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用共同基线连接标题、日期和行动。",
     "mechanism": "先按内容角色建立列网格，再让标题、日期、类别和行动反复对齐；非对称留白仍服从共同线。",
     "trigger": "阅读首屏及列表",
@@ -1822,6 +1911,9 @@ window.DESIGN_PATTERNS = [
     "id": "explicit-facet-summary",
     "title": "分面条件在列表前显式呈现",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "先说明筛选依据，再展示剩下的资料。",
     "mechanism": "遗址、形制、时代三个维度各保留一个条件，已选行可再次移除；URL保存选择，结果由19个公开源响应成员集交集决定，返回可恢复选择。",
     "trigger": "选择条件、提交关键词或移除单项",
@@ -1891,6 +1983,9 @@ window.DESIGN_PATTERNS = [
     "id": "exploded-layer-view",
     "title": "展开图层解释组成",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "将整体拆成基础、建筑和植物层。",
     "mechanism": "保持空间投影和图层顺序，用受控偏移将各组分离；再次选择整体恢复完整场景。",
     "trigger": "选择展开/整体",
@@ -1940,6 +2035,10 @@ window.DESIGN_PATTERNS = [
     "id": "film-overlay",
     "title": "主动观看的独立影片层",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound",
+      "structure"
+    ],
     "summary": "将有声观看与普通读页分别组织。",
     "mechanism": "用户激活播放入口后打开独立影片层，提供原生进度、暂停和音量；关闭即暂停，背景媒体让出。",
     "trigger": "主动观看/关闭影片",
@@ -2021,6 +2120,9 @@ window.DESIGN_PATTERNS = [
     "id": "filter-count-feedback",
     "title": "筛选与结果计数同步",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "筛选动作立即给出结果数量。",
     "mechanism": "改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。",
     "trigger": "激活分类按钮",
@@ -2081,6 +2183,9 @@ window.DESIGN_PATTERNS = [
     "id": "fixed-star-glow-layer",
     "title": "固定星光的明暗呼吸层",
     "category": "视觉构成",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "少量光点为群像提供节奏。",
     "mechanism": "固定位置的星图使用低密度明暗周期与错峰延迟，保持正文和人物轮廓稳定。",
     "trigger": "观看首屏",
@@ -2138,6 +2243,10 @@ window.DESIGN_PATTERNS = [
     "id": "fixed-task-timeline",
     "title": "固定任务按阶段揭示交付",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion",
+      "structure"
+    ],
     "summary": "让工具过程和交付文件先后可见。",
     "mechanism": "用预设时间线展开会话阶段，输入/发送进入明确固定演示，文件开关显示关联旁栏，新任务可复位。",
     "trigger": "启动固定示例或查看交付文件",
@@ -2191,6 +2300,9 @@ window.DESIGN_PATTERNS = [
     "id": "fixed-topology-morph",
     "title": "同拓扑碎片形态转换",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "同一组几何片保持身份连续。",
     "mechanism": "每种状态保留相同片数和顶点次序，在同一拓扑上插值位置；形态同步解释不同内容语义。",
     "trigger": "选择形态按钮",
@@ -2246,6 +2358,9 @@ window.DESIGN_PATTERNS = [
     "id": "folded-wave-hero",
     "title": "折叠波带与文字共同构成首屏",
     "category": "视觉构成",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "品牌波带提供流动舞台，标题保持可读。",
     "mechanism": "独立WebGL网格与shader产生折叠彩带，主张位于稳定文本区；GPU失败使用同源静帧。",
     "trigger": "进入首屏",
@@ -2300,6 +2415,9 @@ window.DESIGN_PATTERNS = [
     "id": "footer-aware-back-to-top",
     "title": "回顶入口避让页脚",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "长页回程入口不遮挡末端内容。",
     "mechanism": "达到阅读深度后显示回顶按钮，接近页脚由fixed转为footer内部定位；返回页首后消失。",
     "trigger": "深入页面、接近页脚或回顶",
@@ -2352,6 +2470,9 @@ window.DESIGN_PATTERNS = [
     "id": "full-bleed-photography-brand",
     "title": "全幅摄影与巨大完整字标",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "图像建立情境，字标建立身份。",
     "mechanism": "摄影铺满约一个视口，完整品牌字标叠于图上，简短专题文字与行动定位边缘；普通滚动更换专题。",
     "trigger": "首次观看或滚到下一专题",
@@ -2405,6 +2526,10 @@ window.DESIGN_PATTERNS = [
     "id": "fullscreen-photography-menu",
     "title": "摄影与分列链接组成全屏目录",
     "category": "导航与状态",
+    "experienceTypes": [
+      "visual",
+      "page-motion"
+    ],
     "summary": "导航拥有自己的品牌场景。",
     "mechanism": "打开菜单时全屏摄影和目的地链接成组淡入，关闭淡出并返回原阅读位置；目录层和主页面层职责分开。",
     "trigger": "打开或关闭菜单",
@@ -2462,6 +2587,9 @@ window.DESIGN_PATTERNS = [
     "id": "geometric-balance-presets",
     "title": "几何关系预设实验",
     "category": "交互反馈",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "改变位置关系来比较平衡、节奏和张力。",
     "mechanism": "保持同一组圆、三角与矩形，让不同预设改变比例和位置；图形之外保留稳定操作区。",
     "trigger": "选择构成预设",
@@ -2509,6 +2637,9 @@ window.DESIGN_PATTERNS = [
     "id": "half-paper-category-label",
     "title": "图像与半幅纸签分类",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "作品负责观看，半幅浅纸签负责读清类别。",
     "mechanism": "完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。",
     "trigger": "浏览或聚焦文化专题目录",
@@ -2576,6 +2707,9 @@ window.DESIGN_PATTERNS = [
     "id": "hatched-registration-type",
     "title": "斜线注册大字与前景记录",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "让巨大背景字承担技术身份，让实心前景文字承担阅读。",
     "mechanism": "用低对比斜线纹理填充巨大背景字，并以小编号、十字标定点和淡网格定位；前景姓名与资料保持实心、清楚边界和独立留白。",
     "trigger": "呈现角色或技术档案首屏",
@@ -2646,6 +2780,10 @@ window.DESIGN_PATTERNS = [
     "id": "header-below-mobile-navigation",
     "title": "顶栏下展开并恢复阅读位置",
     "category": "导航与状态",
+    "experienceTypes": [
+      "micro-motion",
+      "structure"
+    ],
     "summary": "菜单与长档案在手机上暂时分离。",
     "mechanism": "菜单从固定顶栏下方直接显示，汉堡图标单独形变；锁住背景并在关闭时恢复原滚动位置。",
     "trigger": "手机打开/关闭菜单",
@@ -2703,6 +2841,9 @@ window.DESIGN_PATTERNS = [
     "id": "heatmap-focus-tooltip",
     "title": "热图指针与焦点提示",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "让微小格子具有可读事实。",
     "mechanism": "格子悬停或获得焦点后短延迟显示日期/对话提示，离开或失焦关闭；文字提示不只依赖格子色深。",
     "trigger": "pointer enter/focus或leave/blur",
@@ -2759,6 +2900,9 @@ window.DESIGN_PATTERNS = [
     "id": "highlight-progress-gallery",
     "title": "逐项亮点与可暂停进度",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "把产品重点分成可直接选择的摄影章节。",
     "mechanism": "每个亮点有独立图像、标题与进度，进入视口后推进；用户可以跳选、暂停，结束后重播。",
     "trigger": "进入亮点区域或选择条目",
@@ -2817,6 +2961,9 @@ window.DESIGN_PATTERNS = [
     "id": "hover-focus-mode-selection",
     "title": "标题悬停与聚焦选择模式",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "标题本身成为多能力选择入口。",
     "mechanism": "把主标题中的能力词做成可操作控制，悬停、键盘聚焦与点击选择同一模式，离开后保留最后选择。",
     "trigger": "悬停/聚焦/点击能力词",
@@ -2872,6 +3019,9 @@ window.DESIGN_PATTERNS = [
     "id": "idle-interface-retreat",
     "title": "闲置时控件退隐、操作时恢复",
     "category": "导航与状态",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "在观看状态让界面暂时让出画面。",
     "mechanism": "指针移动或触摸唤醒控件，闲置短时间后模糊淡出；焦点仍在操作区时保持可见。",
     "trigger": "闲置、指针移动、触摸或聚焦",
@@ -2929,6 +3079,10 @@ window.DESIGN_PATTERNS = [
     "id": "image-destination-mosaic",
     "title": "多尺度图像目的地目录",
     "category": "内容组织",
+    "experienceTypes": [
+      "visual",
+      "micro-motion"
+    ],
     "summary": "让每张图像直接成为进入一类内容的窗口。",
     "mechanism": "九个图像区域按75%主区和25%侧区组织不同宽高比，以窄白缝分隔真实目的地；类别文字常显，源CSS与脚本共同产生悬停扩张。",
     "trigger": "浏览、聚焦或选择机构目的地",
@@ -2996,6 +3150,9 @@ window.DESIGN_PATTERNS = [
     "id": "inclined-motion-bands",
     "title": "斜切条带延续运动方向",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "通过有限倾斜建立运动或海报节奏。",
     "mechanism": "标题带、说明板与箭头重复同一倾斜方向，正文水平可读，下载徽章保留自己的标准轮廓。",
     "trigger": "阅读章节分隔与行动入口",
@@ -3061,6 +3218,9 @@ window.DESIGN_PATTERNS = [
     "id": "independent-character-page",
     "title": "首页世界与人物档案分别成页",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "按用户任务保留不同页面职责。",
     "mechanism": "首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。",
     "trigger": "选择角色导航或返回HOME",
@@ -3114,6 +3274,9 @@ window.DESIGN_PATTERNS = [
     "id": "independent-outfit-state",
     "title": "人物与服装分别管理",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "一个人物可有多个身份表现。",
     "mechanism": "人物选择与学校/怪盗服装使用独立状态，换装只切换对应立绘与入场，不误改当前人物。",
     "trigger": "切换人物或服装",
@@ -3166,6 +3329,9 @@ window.DESIGN_PATTERNS = [
     "id": "inline-detail-disclosure",
     "title": "原位展开次级信息",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让时间、价格或课程内容按需展开。",
     "mechanism": "将概览保持在文档流，较长事实放在原位展开区域；手机先显示核心条目，再允许读取全部。",
     "trigger": "展开时间/价格/课程或更多内容",
@@ -3240,6 +3406,9 @@ window.DESIGN_PATTERNS = [
     "id": "inline-product-detail-viewer",
     "title": "胶囊原位展开产品说明",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让细节解释与对应摄影处于同一舞台。",
     "mechanism": "选择胶囊后原位出现说明卡，其他胶囊让位下移，右侧图像更新；卡内前后与关闭能恢复原态。",
     "trigger": "选择细节胶囊",
@@ -3292,6 +3461,9 @@ window.DESIGN_PATTERNS = [
     "id": "instant-open-menu-category-switch",
     "title": "已打开菜单分类即时切换",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "首次入场之后分类浏览不重复等待。",
     "mechanism": "菜单首次带入，容器打开期间切换分类直接换内容；退出有短延迟且旧关闭计时在新打开时失效。",
     "trigger": "首次打开、改分类或离开",
@@ -3352,6 +3524,9 @@ window.DESIGN_PATTERNS = [
     "id": "institution-overlap-logo",
     "title": "方形机构锚点跨主图边界",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "在艺术海报之外持续确认机构身份。",
     "mechanism": "方形机构标志叠在海报边界上，尺寸和上浮位置按断点变化；艺术图保持自身色彩与比例。",
     "trigger": "进入展览主图",
@@ -3405,6 +3580,9 @@ window.DESIGN_PATTERNS = [
     "id": "integer-pixel-canvas",
     "title": "整数像素与有限色板",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "从绘制尺度建立像素世界的统一性。",
     "mechanism": "在小画布内用整数坐标与有限色板绘制轮廓，放大保持pixelated边缘；正文单独用可读字体。",
     "trigger": "查看与缩放场景",
@@ -3457,6 +3635,9 @@ window.DESIGN_PATTERNS = [
     "id": "interruptible-morph",
     "title": "从当前中间态继续变形",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "快速选择、暂停和恢复不产生闪回。",
     "mechanism": "新目标从当前顶点坐标出发；暂停保存插值位置，恢复校正计时，重置恢复初始参数。",
     "trigger": "中途改选、暂停或恢复",
@@ -3512,6 +3693,9 @@ window.DESIGN_PATTERNS = [
     "id": "keyboard-playable-notes",
     "title": "可聚焦音键与物理键演奏",
     "category": "交互反馈",
+    "experienceTypes": [
+      "sound"
+    ],
     "summary": "让屏幕琴键与键盘演奏保持同一状态。",
     "mechanism": "屏幕按键包含音名，按下或指定物理键启动音符，释放、失焦或关闭声音停止声音。",
     "trigger": "按住屏幕或键盘音键",
@@ -3559,6 +3743,9 @@ window.DESIGN_PATTERNS = [
     "id": "last-request-transition",
     "title": "快速切换保留最后目标",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "中途反向或改选仍收束到最后意图。",
     "mechanism": "单一状态控制器记录最新目标，取消旧退出回调并限制同时交互层；交接结束继续最后请求。",
     "trigger": "转场期间再次选择或反向",
@@ -3658,6 +3845,9 @@ window.DESIGN_PATTERNS = [
     "id": "layer-focus-dimming",
     "title": "聚焦一层并减弱其余层",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "在完整系统中强调一个子系统。",
     "mechanism": "选定图层保持清晰，其余图层降低透明度但仍留在原位，文字说明与选中按钮同步。",
     "trigger": "选择花园/建筑/整体",
@@ -3707,6 +3897,9 @@ window.DESIGN_PATTERNS = [
     "id": "layered-directional-media-reveal",
     "title": "黑层、信号层与媒体的方向揭示",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "黑色遮层、强调色与实际图像依次揭示，让局部相册切换有明确方向和节奏。",
     "mechanism": "组件内将黑层、信号色层、实际图像或影片叠为同方向裁切/slide-in，错峰推进；说明文字先退后入，选中索引、页码和媒体共同交接，旧媒体完成后暂停并清理。",
     "trigger": "点击局部相册的前后或编号，选择新的图像/影片",
@@ -3793,6 +3986,9 @@ window.DESIGN_PATTERNS = [
     "id": "layered-navigation-drawer",
     "title": "导航容器先行、内容后入",
     "category": "导航与状态",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "在同一抽屉中分清容器与次级层级。",
     "mechanism": "先让侧向导航容器进入，再延迟显示二级内容；返回保留相同空间位置，关闭恢复触发焦点。",
     "trigger": "进入目录或二级主题",
@@ -3850,6 +4046,9 @@ window.DESIGN_PATTERNS = [
     "id": "live-parameter-readout",
     "title": "滑块与带单位读数联动",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "用数值说明参数如何改变真实对象。",
     "mechanism": "原生范围输入直接更新目标属性和相邻读数；明确单位、范围以及参数立即生效还是影响下一次变化。",
     "trigger": "拖动或键盘调整滑块",
@@ -3918,6 +4117,9 @@ window.DESIGN_PATTERNS = [
     "id": "load-completion-brand-marker",
     "title": "资源完成后品牌标记退场",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "等待真实图片就绪，不编造长进度。",
     "mechanism": "关键图片加载期间显示轻量品牌旋转标记，load完成后载入层与主图淡化交接；失败可继续读页。",
     "trigger": "首屏资源完成",
@@ -3994,6 +4196,9 @@ window.DESIGN_PATTERNS = [
     "id": "local-code-theme-preview",
     "title": "代码主题只改变局部预览",
     "category": "交互反馈",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "把代码外观探索限定在代码区域。",
     "mechanism": "编辑代码更新行数与语法内容，主题选择更新局部token颜色；营销页面全局配色保持自己的语义。",
     "trigger": "编辑或选择语法主题",
@@ -4046,6 +4251,9 @@ window.DESIGN_PATTERNS = [
     "id": "local-save-toggle",
     "title": "可取消的本地收藏",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "明确保存在当前浏览器的收藏状态。",
     "mechanism": "每条内容使用可反复切换的收藏按钮，记录条目ID并恢复当前浏览器的状态。",
     "trigger": "收藏或取消收藏",
@@ -4090,6 +4298,9 @@ window.DESIGN_PATTERNS = [
     "id": "masked-transaction-rotation",
     "title": "裁切文字与交易预览同步",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "把一条交易变化同时映射到文字与界面。",
     "mechanism": "商户文本在mask内纵向交接，结账示例同时更新对应商户和金额；关联字段统一由一个状态驱动。",
     "trigger": "交易演示轮换",
@@ -4143,6 +4354,9 @@ window.DESIGN_PATTERNS = [
     "id": "measured-width-action-pill",
     "title": "测量文字宽度的动作胶囊",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "换词时只让容器宽度平稳变化。",
     "mechanism": "动作词直接替换，再测量内容宽度并过渡胶囊inline-size；颜色与圆点随语义同步，不给字加额外飞入。",
     "trigger": "固定词轮换周期",
@@ -4201,6 +4415,9 @@ window.DESIGN_PATTERNS = [
     "id": "message-to-board-demonstration",
     "title": "消息到任务板的可重播演示",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "把自然语言请求的结果变成可见工作项。",
     "mechanism": "按请求、回复、卡片插入和状态移动分阶段展示同一任务；Replay恢复初态，消息与任务数量同步。",
     "trigger": "发送示例请求或重播",
@@ -4254,6 +4471,9 @@ window.DESIGN_PATTERNS = [
     "id": "metric-explanation-selector",
     "title": "指标选择与解释联动",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让数字、进度与说明成为同一条事实。",
     "mechanism": "选择统计项强调当前数字并更新细线进度及基础设施解释，自动周期与指针暂停共享当前索引。",
     "trigger": "选择指标或自动推进",
@@ -4307,6 +4527,9 @@ window.DESIGN_PATTERNS = [
     "id": "mixed-ratio-archive-columns",
     "title": "等宽栏目保留不同图像比例",
     "category": "内容组织",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "统一栏目线索，不强行统一作品高度。",
     "mechanism": "栏目有共同宽度与标题规则，内部竖海报、横摄影按各自比例排列；不同内容长度产生不同列高，手机逐列阅读。",
     "trigger": "浏览机构档案",
@@ -4367,6 +4590,9 @@ window.DESIGN_PATTERNS = [
     "id": "mobile-drilldown-menu",
     "title": "手机菜单逐层进入与返回",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "长目录以层级页面保留方向。",
     "mechanism": "全屏菜单先显示顶层分类，选择分类让二级页侧向进入；Back返回顶层，核心行动固定在底部。",
     "trigger": "手机打开分类或返回",
@@ -4421,6 +4647,9 @@ window.DESIGN_PATTERNS = [
     "id": "mobile-media-prioritization",
     "title": "按手机信息任务裁减复杂演示",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "复杂媒体变体与正文分别管理。",
     "mechanism": "窄屏保留主张、操作和说明，按来源变体隐藏重型演示或仅保留消息线程，避免把桌面全部缩到不可读。",
     "trigger": "进入窄屏布局",
@@ -4488,6 +4717,9 @@ window.DESIGN_PATTERNS = [
     "id": "mobile-native-mode-cards",
     "title": "手机以原生模式卡替代桌面长舞台",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "按设备任务重排交互，保持能力可浏览。",
     "mechanism": "窄屏把桌面sticky模式舞台转换为三张原生水平卡；标题选择将对应卡定位到视口。",
     "trigger": "手机横滑或选择能力词",
@@ -4543,6 +4775,9 @@ window.DESIGN_PATTERNS = [
     "id": "mobile-single-open-navigation",
     "title": "手机菜单原位单开分类",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "展开一组同时收起上一组。",
     "mechanism": "在全屏导航中原位展开当前分类，其他分类降低强调，同一分类再点收起，下载与登录入口固定底部。",
     "trigger": "手机选择导航分类",
@@ -4597,6 +4832,9 @@ window.DESIGN_PATTERNS = [
     "id": "mode-character-accent",
     "title": "当前能力词逐字强调色",
     "category": "交互反馈",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "通过字色让当前能力选择可见。",
     "mechanism": "将能力词分成保持阅读顺序的字符层，选中模式更新该词的逐字强调色，其余标题维持稳定。",
     "trigger": "能力模式改变",
@@ -4651,6 +4889,9 @@ window.DESIGN_PATTERNS = [
     "id": "mode-specific-collage",
     "title": "按模式组织独立拼贴层",
     "category": "视觉构成",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "一组周边素材共同解释一种用途。",
     "mechanism": "每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。",
     "trigger": "选择不同能力模式",
@@ -4706,6 +4947,9 @@ window.DESIGN_PATTERNS = [
     "id": "mountain-scaled-menu",
     "title": "菜单缩放倾转与背景降强调",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "品牌形状打开一层可专注的导览。",
     "mechanism": "山形菜单控制打开目录，菜单由缩小/倾转状态进入，背景缓慢降低透明度；反向关闭从当前变换继续。",
     "trigger": "打开、关闭或快速反向菜单",
@@ -4763,6 +5007,9 @@ window.DESIGN_PATTERNS = [
     "id": "moving-tab-selection-bed",
     "title": "选中底板与套餐组联动",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "让套餐受众切换保持明确选中位置。",
     "mechanism": "一个选中底板沿tabs位置移动，同时替换当前受众对应的套餐卡；不同卡数仍由内容区域自然布局。",
     "trigger": "选择个人或团队受众",
@@ -4815,6 +5062,9 @@ window.DESIGN_PATTERNS = [
     "id": "native-document-reading",
     "title": "原生长页与正常回程",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "按内容顺序浏览，不额外劫持滚轮。",
     "mechanism": "章节处于普通文档流，浏览器处理上下滚动和锚点；局部轨道、sticky或菜单各自管理状态。",
     "trigger": "自然滚动、反向返回或页内链接",
@@ -4913,6 +5163,9 @@ window.DESIGN_PATTERNS = [
     "id": "native-horizontal-shelf",
     "title": "原生横向内容架子",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "保留触摸横滑与显式前后入口。",
     "mechanism": "内容只在局部容器水平overflow，保留浏览器原生滚动，前后按钮提供同等入口；主页面继续自然纵向阅读。",
     "trigger": "横滑或点击前后按钮",
@@ -5011,6 +5264,9 @@ window.DESIGN_PATTERNS = [
     "id": "natural-height-mega-menu",
     "title": "自然高度连续衔接的目录",
     "category": "导航与状态",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "分类切换保持同一个目录容器。",
     "mechanism": "桌面目录随分类真实内容改变高度，位移、透明度与裁切同步，快速反向取消旧动画；关闭后hidden/inert与aria一致。",
     "trigger": "指针进入、点击分类或关闭",
@@ -5070,6 +5326,10 @@ window.DESIGN_PATTERNS = [
     "id": "offsite-playlist-extension",
     "title": "以官方播放列表延伸主题",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound",
+      "structure"
+    ],
     "summary": "用户主动离开读页进入听觉回看。",
     "mechanism": "明确的Playlist或官方影片入口链接真实外部平台，不加载无授权播放器或自动音乐；说明目标与声音来源。",
     "trigger": "激活播放列表或官方影片链接",
@@ -5149,6 +5409,9 @@ window.DESIGN_PATTERNS = [
     "id": "paper-material-collage",
     "title": "纸页与贴纸的任务隐喻",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用纸页、胶带与贴纸解释记录活动。",
     "mechanism": "原创记录页和植物线稿与记录任务并置，材料只做小角度倾斜；装饰开关不会改变主要文字布局。",
     "trigger": "阅读纸页示范或切换贴纸",
@@ -5198,6 +5461,9 @@ window.DESIGN_PATTERNS = [
     "id": "parallel-isometric-projection",
     "title": "统一等轴投影与三面明度",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用一个坐标规则构成整个微型世界。",
     "mechanism": "全部体块共享30°平行轴与比例，顶/左/右使用统一明度方向，路径与植物提供尺度。",
     "trigger": "查看系统场景",
@@ -5247,6 +5513,9 @@ window.DESIGN_PATTERNS = [
     "id": "particle-model-reformation",
     "title": "术语选择重组同一粒子池",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "选中概念以一个新形状得到解释。",
     "mechanism": "术语目录进入详情后，同一粒子池重组为对应模型，箭头、索引和返回共享模型状态及设定文字。",
     "trigger": "选择术语、箭头或返回",
@@ -5308,6 +5577,9 @@ window.DESIGN_PATTERNS = [
     "id": "permanent-event-metadata",
     "title": "常驻日期与边缘票据入口",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "场景摄影变化时实用信息仍有位置。",
     "mechanism": "日期、地点与导览保持稳定位置，边缘票据入口独立于照片；Featured与新闻各承担不同后续任务。",
     "trigger": "照片更替和长页浏览",
@@ -5360,6 +5632,9 @@ window.DESIGN_PATTERNS = [
     "id": "photo-crossfade-cycle",
     "title": "给摄影留阅读时间的淡化轮换",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "先完整展示一张，再以透明度交接。",
     "mechanism": "静态摄影在明确停留间隔后交叉淡化，图像保持比例；手动选择更新索引与题注。",
     "trigger": "轮换周期或手动索引",
@@ -5436,6 +5711,9 @@ window.DESIGN_PATTERNS = [
     "id": "photo-edge-text-contrast",
     "title": "仅在照片文字边缘增强对比",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "局部文字能读，整张照片保持原色。",
     "mechanism": "在底缘文字所在区域加有限黑色渐变，白字、橙色行动与摄影形成稳定角色，其他图像区域不整体滤镜化。",
     "trigger": "查看照片底部标题和行动",
@@ -5488,6 +5766,9 @@ window.DESIGN_PATTERNS = [
     "id": "photography-option-selector",
     "title": "选项与真实摄影对应",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "用图片直接比较颜色或参数结果。",
     "mechanism": "离散色点或参数选项对应一张真实摄影，选择状态与图像同步，图片比例及观察角度尽量稳定。",
     "trigger": "选择颜色或景深值",
@@ -5548,6 +5829,9 @@ window.DESIGN_PATTERNS = [
     "id": "pointer-image-shader-preview",
     "title": "术语图像随指针形变预览",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "在目录层先给设定一个视觉线索。",
     "mechanism": "悬停术语时让对应原图随指针定位，并以同源形变和RGB偏移shader反馈移动；点击再进入完整详情。",
     "trigger": "悬停与移动术语",
@@ -5600,6 +5884,9 @@ window.DESIGN_PATTERNS = [
     "id": "pointer-repulsion-particles",
     "title": "指针排斥与回聚点阵",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "静态标识因指针接近而获得可触感。",
     "mechanism": "WebGL点阵以目标点位维持形状，指针附近点按距离受排斥，移开后回归原模型；文字位于独立稳定层。",
     "trigger": "指针进入、移动或离开粒子区域",
@@ -5661,6 +5948,9 @@ window.DESIGN_PATTERNS = [
     "id": "product-entrance-film",
     "title": "真实产品影片建立首屏主角",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "用真实材质与镜头让产品先出现。",
     "mechanism": "静音产品影片置于全宽舞台，主标题与行动不等待影片结束；重播只重放这一段。",
     "trigger": "首次进入或选择重播",
@@ -5714,6 +6004,9 @@ window.DESIGN_PATTERNS = [
     "id": "resource-bound-fullscreen-loading",
     "title": "真实资源驱动的全屏载入",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "只等待入口关键资源，以真实完成数推进，再移交可用场景。",
     "mechanism": "入口关键图片和必要字体完成数驱动全屏加载状态；全部任务结束不等于全部成功，失败保持明确重试/继续，成功后以短品牌遮层或wipe移交目标场景。",
     "trigger": "首次进入或缓存重载",
@@ -5802,6 +6095,9 @@ window.DESIGN_PATTERNS = [
     "id": "responsive-art-direction",
     "title": "桌面与手机使用专门主图",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "按画面意图替换素材，而非盲目裁切。",
     "mechanism": "通过picture或响应式资源选择桌面宽图与手机专图，保留主体位置及图内文字，正文与控件按设备重新排。",
     "trigger": "视口进入手机断点",
@@ -5882,6 +6178,9 @@ window.DESIGN_PATTERNS = [
     "id": "restrained-signal-color",
     "title": "单一信号色集中强调",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用少量品牌色建立可识别的操作角色。",
     "mechanism": "正文采用稳定中性色，强调色只分配给行动、选中态或机构锚点；作品图像保持自己的原色。",
     "trigger": "查看行动和状态",
@@ -5987,6 +6286,9 @@ window.DESIGN_PATTERNS = [
     "id": "reversible-center-reveal",
     "title": "穿越章节中心的双向显现",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "返回章节时同样遵循显现规则。",
     "mechanism": "章节中心进入视口时以短位移/透明度显示事实，中心离开恢复；手机额外事实用可收回展开替代密集首屏。",
     "trigger": "正向或反向穿越章节中心",
@@ -6045,6 +6347,9 @@ window.DESIGN_PATTERNS = [
     "id": "scanline-point-cloud-transition",
     "title": "扫描线与射线驱动的点云交接",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "真实xyz点云在扫描带中显现与退场，射线和短暂旋转共同提示模型交接。",
     "mechanism": "读取Float32 xyz二进制点位，规范化后为旧、新模型分别建立点云actor；多条扫描线改变点的可见与扰动，射线指向扫描附近点，旋转短暂加速后恢复，模型选择与标题/编号同步，交接期间限制再入。",
     "trigger": "选择世界观模型、前后按钮或六段索引；拖动改变观察方向",
@@ -6133,6 +6438,9 @@ window.DESIGN_PATTERNS = [
     "id": "scroll-differential-stars",
     "title": "滚动差值驱动背景不同速光点",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "背景运动来自滚动而非指针。",
     "mechanism": "背景星按前后滚动位置差值除以不同系数移动，越界重置；主图仍沿自然文档滚动。",
     "trigger": "向下或向上自然滚动",
@@ -6191,6 +6499,9 @@ window.DESIGN_PATTERNS = [
     "id": "scroll-logo-contraction",
     "title": "滚动后品牌标识收回导航",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "首屏大标识与长页导航共享身份。",
     "mechanism": "首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。",
     "trigger": "跨越滚动阈值或返回",
@@ -6253,6 +6564,9 @@ window.DESIGN_PATTERNS = [
     "id": "scroll-synchronized-rail",
     "title": "说明索引与窗口进度同步",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "文字、窗口模式和进度共同指示当前段落。",
     "mechanism": "长段内用多个内容哨兵更新侧栏展开、标题尺度、产品窗口与进度；点击或方向键定位同一状态。",
     "trigger": "滚动或选择说明索引",
@@ -6306,6 +6620,9 @@ window.DESIGN_PATTERNS = [
     "id": "scroll-video-scrub",
     "title": "滚动进度驱动视频帧",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "让镜头细节与读页进度对应。",
     "mechanism": "暂停短片并把sticky段滚动进度映射到currentTime，标题在交接区让出画面；反向滚动可以回看。",
     "trigger": "上下滚动镜头段",
@@ -6364,6 +6681,9 @@ window.DESIGN_PATTERNS = [
     "id": "scrubbable-animation-progress",
     "title": "可拖动回看的动画进度",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让用户中断动画并观察任意中间态。",
     "mechanism": "进度滑块直接控制绘制完成度，手动输入取消当前自动帧调度，重播则重新开始。",
     "trigger": "拖动进度或选择重播",
@@ -6419,6 +6739,9 @@ window.DESIGN_PATTERNS = [
     "id": "section-color-rhythm",
     "title": "整节配色形成阅读节奏",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "通过章节背景切换划分不同内容任务。",
     "mechanism": "产品摄影、技术说明或行动区域各用明确的整节色带；文字与表面在每节成对定义，图像不反色。",
     "trigger": "依次阅读不同章节",
@@ -6501,6 +6824,9 @@ window.DESIGN_PATTERNS = [
     "id": "semantic-theme-roles",
     "title": "语义颜色角色整体切换",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "背景、文字、表面和行动成对适应主题。",
     "mechanism": "按surface/on-surface、primary/on-primary等角色一起切换，保存手动值并明确系统变化时的优先规则，媒体保持原色。",
     "trigger": "手动选择或系统主题改变",
@@ -6553,6 +6879,9 @@ window.DESIGN_PATTERNS = [
     "id": "sequential-stroke-reveal",
     "title": "按构造顺序描绘线稿",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "从基础到细节显示结构关系。",
     "mechanism": "主体路径以stroke表示，用归一化pathLength将进度映射到dashoffset；按组成逻辑依次描绘。",
     "trigger": "用户主动重播",
@@ -6607,6 +6936,10 @@ window.DESIGN_PATTERNS = [
     "id": "single-open-accordion",
     "title": "单开内容与图像联动",
     "category": "内容组织",
+    "experienceTypes": [
+      "micro-motion",
+      "structure"
+    ],
     "summary": "同一时刻集中阅读一个展开项。",
     "mechanism": "激活一项收起前项并展开当前正文；内容高度与图标同步，案例故事还可同时替换旁侧摄影。",
     "trigger": "展开FAQ或故事行",
@@ -6690,6 +7023,10 @@ window.DESIGN_PATTERNS = [
     "id": "sound-choice-emblem-opening",
     "title": "声音选择与纹章开场同步",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion",
+      "sound"
+    ],
     "summary": "视觉打开世界与声音启用属于同一次选择。",
     "mechanism": "入口先提供ON/OFF，选择后显示纹章并向外发光扩散；开场SE对应显现，移交影片时BGM接续。",
     "trigger": "选择声音ON或OFF",
@@ -6749,6 +7086,9 @@ window.DESIGN_PATTERNS = [
     "id": "sound-opt-in",
     "title": "声音主动启用与随时停止",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound"
+    ],
     "summary": "先征求声音选择，再进入听觉体验。",
     "mechanism": "声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。",
     "trigger": "开启/关闭声音",
@@ -6841,6 +7181,9 @@ window.DESIGN_PATTERNS = [
     "id": "spatial-navigation-map",
     "title": "场景地标作为导航",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让角色位置、地点信息与目录同时变化。",
     "mechanism": "地标选择移动角色并更新对应文本，地图上的空间状态与DOM地点索引保持一致。",
     "trigger": "选择地标或移动到地点",
@@ -6888,6 +7231,10 @@ window.DESIGN_PATTERNS = [
     "id": "specimen-pullout-selection",
     "title": "样本阵列的抽出选择",
     "category": "交互反馈",
+    "experienceTypes": [
+      "visual",
+      "structure"
+    ],
     "summary": "在真实立体阵列中保留单件抽出，用独立网页状态同步观察与阅读。",
     "mechanism": "大量平行立体档案与被抬出的焦点板保留来源透视/材质；本地以同一选择状态同步热点、观察编号、标题和正文，背景阵列可隐藏而焦点板保留。影片抽出运动与网页点击分别归档。",
     "trigger": "点选本地观察热点、前后按钮或阵列显隐",
@@ -6963,6 +7310,9 @@ window.DESIGN_PATTERNS = [
     "id": "staged-product-ui-entrance",
     "title": "延迟产品界面与扫光入场",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "让主张先出现，再揭示工作系统。",
     "mechanism": "稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。",
     "trigger": "进入页面及继续下滚",
@@ -7021,6 +7371,9 @@ window.DESIGN_PATTERNS = [
     "id": "staggered-agent-columns",
     "title": "交错代理状态展示",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "多列代理不同时抢占注意。",
     "mechanism": "代理列按交错时序显示思考与回答，进入视口启动，离开或后台停止，暂停保持已出现结果。",
     "trigger": "AI章节进入视口",
@@ -7073,6 +7426,9 @@ window.DESIGN_PATTERNS = [
     "id": "state-shape-feedback",
     "title": "按压与聚焦改变容器形状",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "圆角变化为当前动作提供反馈。",
     "mechanism": "控件按压/键盘激活时按角色改变圆角，状态层同时改变；反馈留在稳定布局与触控边界内。",
     "trigger": "激活按钮或资源卡",
@@ -7130,6 +7486,9 @@ window.DESIGN_PATTERNS = [
     "id": "sticky-action-sidebar",
     "title": "桌面粘性行动栏、手机回文档流",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "内容阅读和到访决定并行。",
     "mechanism": "桌面正文旁的票务/行动面板保持sticky，时间与价格在面板内展开；窄屏把面板置回内容流前部。",
     "trigger": "阅读长详情",
@@ -7185,6 +7544,9 @@ window.DESIGN_PATTERNS = [
     "id": "sticky-stage-handoff",
     "title": "同一媒体从主舞台交给说明",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "滚动时让同一对象继续承担叙事。",
     "mechanism": "媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。",
     "trigger": "上下穿越交接段",
@@ -7254,6 +7616,9 @@ window.DESIGN_PATTERNS = [
     "id": "synchronized-rolling-index",
     "title": "编号、计数与章名分组滚动",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "标题之外持续标示当前位置。",
     "mechanism": "将编号、总数与章名放入独立裁切框，按换章方向滚出、换值、滚入，组间使用小时间差。",
     "trigger": "当前章节改变",
@@ -7312,6 +7677,9 @@ window.DESIGN_PATTERNS = [
     "id": "system-theme-without-toggle",
     "title": "跟随系统的媒体与文字主题",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "按系统偏好换配色，不虚构手动按钮。",
     "mechanism": "根据prefers-color-scheme选用对应的表面、文字与产品截图；主题范围明确到实际有变体的区域。",
     "trigger": "系统深浅偏好改变",
@@ -7380,6 +7748,9 @@ window.DESIGN_PATTERNS = [
     "id": "timed-platform-carousel",
     "title": "可暂停的平台场景轮换",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "平台tabs、点控和场景保持同一索引。",
     "mechanism": "选择平台让场景水平交接，自动周期可由悬停或手动暂停，后台停止，快速选择只留下一个场景。",
     "trigger": "选择平台、手势或自动周期",
@@ -7439,6 +7810,9 @@ window.DESIGN_PATTERNS = [
     "id": "top-down-clipped-menu",
     "title": "从上向下裁切的全屏菜单",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "用一个进入方向组织菜单项目。",
     "mechanism": "全屏面板从顶部向下clip进入，项目按次序交错；关闭反向收束，背景阅读状态随关闭恢复。",
     "trigger": "手机打开/关闭菜单",
@@ -7502,6 +7876,9 @@ window.DESIGN_PATTERNS = [
     "id": "transparent-video-mode-stage",
     "title": "透明视频的静态与动态模式舞台",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "静态立绘与RGB/alpha透明视频共享人物位置，进入短片结束后接续idle循环。",
     "mechanism": "同一影片左半保存RGB颜色、右半保存亮度alpha遮罩，经WebGL合成为半宽透明canvas；2D立绘与3D影片模式独立于人物选择，enter完成后接idle，换人或退出时取消旧资源回调和帧调度。",
     "trigger": "用户选择静态/动态模式，或在动态模式中切换人物",
@@ -7589,6 +7966,9 @@ window.DESIGN_PATTERNS = [
     "id": "vertical-card-swap",
     "title": "中央窗口垂直退出与进入",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "同一窗口舞台用垂直方向交接模式。",
     "mechanism": "旧产品图沿垂直方向离开，新图从对应方向进入；统一裁切舞台与层级，快速切换清理旧离场层。",
     "trigger": "选择产品模式",
@@ -7649,6 +8029,9 @@ window.DESIGN_PATTERNS = [
     "id": "vertical-fullscreen-stage",
     "title": "有限章节的垂直整屏舞台",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "用可逆整屏空间组织版本与角色。",
     "mechanism": "多个场景由同一垂直translate3d舞台控制，滚轮/手势前后切换，最后以有限位移露出页脚。",
     "trigger": "向前或反向输入",
@@ -7703,6 +8086,9 @@ window.DESIGN_PATTERNS = [
     "id": "vertical-media-spine",
     "title": "竖向类别书脊与横向媒体",
     "category": "内容组织",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "让类别像书脊一样固定在媒体边缘，编号和正文完成同一模块。",
     "mechanism": "把短类别名称沿媒体侧边竖向排布，横向图像占主面积，下方编号与说明共用对齐边界；方向差提供归属线索而不是额外装饰。",
     "trigger": "呈现某一类别的图像/影片资料模块",
@@ -7771,6 +8157,9 @@ window.DESIGN_PATTERNS = [
     "id": "viewport-animation-lifecycle",
     "title": "视口与前台驱动的动态生命周期",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "只在能被观看时推进演示。",
     "mechanism": "用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。",
     "trigger": "进入/离开视口、切后台或用户暂停",
@@ -7885,6 +8274,9 @@ window.DESIGN_PATTERNS = [
     "id": "visit-facts-grid",
     "title": "到访事实在行动旁成组呈现",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "实体机构介绍后直接给到访依据。",
     "mechanism": "建筑或展览视觉确认机构后，欢迎区用稳定小列组织日期、开放、地点和行动；手机按事实顺序堆叠。",
     "trigger": "从首图继续阅读",
@@ -7937,6 +8329,9 @@ window.DESIGN_PATTERNS = [
     "id": "word-opacity-stagger",
     "title": "单词透明度的低幅交错",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "通过少量时间差支持标题阅读顺序。",
     "mechanism": "单词只过渡透明度并以短总跨度交错，正文组用小位移带入；标题文字保持原排版。",
     "trigger": "标题或正文组进入阈值",
@@ -8000,6 +8395,9 @@ window.DESIGN_PATTERNS = [
     "id": "world-shaped-thumbnail-frame",
     "title": "目录边框延续世界语汇",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "让缩略目录属于同一个故事世界。",
     "mechanism": "缩略入口使用来源角纹与削角轮廓，hover/current增加内框，真实内容图与选中状态保持稳定。",
     "trigger": "浏览、聚焦或选择缩略图",
