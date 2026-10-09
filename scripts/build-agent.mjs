@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { renderDetailNotes } from './detail-notes.mjs';
 import { loadPatterns, buildPatterns } from './build-patterns.mjs';
+import { assertRepositoryLineEndings } from './check-line-endings.mjs';
 
 export const repository = 'https://github.com/MIBXR/design-atlas';
 export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -106,6 +107,7 @@ function makeBundle(root, entry, entryPath, patternIds = []) {
 }
 
 export function buildAgent({ root = defaultRoot, write = true } = {}) {
+  assertRepositoryLineEndings(root);
   const entryDirectory = resolveRepositoryPath(root, 'entries');
   const entries = fs.readdirSync(entryDirectory).filter(name => name.endsWith('.json')).sort().map(name => {
     const entryPath = 'entries/' + name;

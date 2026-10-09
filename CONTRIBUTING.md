@@ -124,4 +124,12 @@ Prompt应写结构、尺度、素材、关键状态及交接、音乐和主题�
 
 Agent 文件清单的 SHA256 指向原始仓库字节；部署中的播放 HTML／CSS 与编码标记可能不同。先完成源码构建与检查、提交并推送，再运行静态部署打包；打包要求工作树干净，并把当前提交的 GitHub Raw 基址写入部署索引的 `source`。生成案例包不含 Git SHA 自引用，原始案例包的哈希在站点与 Git 中保持一致。
 
+### 跨平台换行与字节校验
+
+`.gitattributes` 将仓库自有文本统一为 LF；Windows、Linux、macOS 均遵循这一规则。编辑器保存源码、JSON 和文档时选择 UTF-8／LF，不依赖操作系统默认换行或 `core.autocrlf`。`demos/**/assets/**`、`vendor/**` 的 `-text` 文件与二进制素材保留原字节，不批量转换。构建与 Agent 检查在 Git checkout 中会拒绝受 LF 规则约束的 CRLF／混合换行，并列出路径；无 Git 元数据的源码包仍需自行遵守这些保存规则。
+
+`git status` 干净不代表工作树字节与提交相同：Git 可以在暂存文本时转换 CRLF，而资料生成器按工作树原始字节计算长度与 SHA256。遇到换行错误，先用 `git ls-files --eol` 查看索引、工作树与属性，将列出的自有文本保存为 LF，再运行 `npm run build`、`npm run check` 和 `npm run test:agent`。不要只修改清单哈希，也不要让读取器转换下载内容后绕过校验。
+
+提交并推送重建资料后，用 Skill 的 `--ref <完整提交SHA>` 验证 `show <案例ID> --source`、`export <案例ID> --code-only` 和对应巧思的 `pattern-show --source`／`pattern-export --code-only`。校验对象是该提交的 GitHub Raw 原始响应字节，读取与导出不进行系统换行转换。发布使用同一源码提交重新打包；已上线的旧索引／资料包也必须更新，再核对线上 `catalog.source`、`contentVersion` 与案例包哈希。
+
 若托管方的源 Git 上传限制无法接收完整媒体历史，使用独立的发布 checkout：先用 Sites 官方 source helper 打开同一 Site 的最新源版本，再在完整案例仓库运行 `node scripts/export-site.mjs --checkout <发布checkout绝对路径>`。它只复制已验证的 `dist/`，保存 GitHub 精确源码 SHA、内容版本、素材提交和逐文件 SHA256 到 `site-provenance.json`；原始媒体仍在完整案例仓库和固定 GitHub 提交中。发布 checkout 不重新运行旧源码的构建命令。为发布目录添加 `dist/** -text` 的 Git 属性，显式 `git add --force -- dist site-provenance.json`，由官方 helper 正常追加提交、推送和打包。保存版本使用 helper 返回的原生源提交，Agent 的 `catalog.source` 保持案例仓库的 GitHub 提交；两者不能互换。导出后运行 `--verify`，核对已提交文件及归档字节（托管方生成的 hosting sidecar 单独核验），发布后再核对在线内容版本与关键交互。这个出口不改 PR 历史、不合并主干、不删减原始案例素材。

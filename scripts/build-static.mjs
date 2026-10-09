@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {loadAssetSources} from './build-asset-sources.mjs';
+import {assertRepositoryLineEndings} from './check-line-endings.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(root, 'dist');
@@ -112,6 +113,7 @@ function injectAssets(text, documentPath, assetsMode) {
 }
 
 export function prepareStatic(assetsMode = 'local') {
+  assertRepositoryLineEndings(root);
   if (!['local', 'github'].includes(assetsMode)) throw new Error('Asset mode must be local or github.');
   if (path.relative(root, output) !== 'dist' || fs.lstatSync(output, {throwIfNoEntry:false})?.isSymbolicLink()) throw new Error('Static output must be the real dist directory inside this repository.');
   const includedRuntime = runtimeFiles.filter(name => fs.existsSync(path.join(root, name)));
