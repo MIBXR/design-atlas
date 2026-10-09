@@ -56,7 +56,7 @@
       && (state.source === 'all' || pattern.sources.some(source => source.caseId === state.source))
       && terms.every(term => [pattern.title, pattern.category, ...(pattern.experienceTypes || []).map(type => typeLabels[type]), pattern.summary, pattern.mechanism, pattern.trigger, pattern.effect,
         ...pattern.useCases, ...pattern.constraints, ...pattern.sources.map(source => caseTitle(source.caseId))].join(' ').toLocaleLowerCase().includes(term)));
-    $('#pattern-cards').innerHTML = results.map(pattern => `<article class="pattern-card"><a class="pattern-card-preview" href="${patternHref(pattern.id)}" aria-label="查看${esc(pattern.title)}与实操"><img src="${esc(entries.find(entry => entry.id === pattern.sources[0].caseId)?.preview || '')}" alt="${esc(caseTitle(pattern.sources[0].caseId))}来源案例首屏" loading="lazy"><span>来源案例预览 · 进入详情实操 ↗</span></a><div class="pattern-card-top"><span class="eyebrow">${esc(pattern.category)}</span><span class="pattern-role">${esc(roleLabels[pattern.composition?.role] || '可复用机制')}</span></div><div class="pattern-type-badges">${badges(pattern)}</div><h2><a href="${patternHref(pattern.id)}">${esc(pattern.title)}</a></h2><p class="pattern-card-summary">${esc(pattern.summary)}</p><dl class="pattern-card-mechanism"><div><dt>触发</dt><dd>${esc(pattern.trigger)}</dd></div><div><dt>效果</dt><dd>${esc(pattern.effect)}</dd></div></dl><div class="tags">${pattern.useCases.slice(0, 2).map(value => `<span class="tag">${esc(value)}</span>`).join('')}</div><div class="pattern-card-bottom"><a class="pattern-detail-link" href="${patternHref(pattern.id)}">查看机制与复用方法 <span aria-hidden="true">→</span></a><div class="pattern-source-links">${sourceLinks(pattern)}</div></div></article>`).join('');
+    $('#pattern-cards').innerHTML = results.map(pattern => `<article class="pattern-card"><h2><a href="${patternHref(pattern.id)}">${esc(pattern.title)}</a></h2><a class="pattern-card-preview" href="${patternHref(pattern.id)}" aria-label="查看${esc(pattern.title)}与实操"><img src="${esc(entries.find(entry => entry.id === pattern.sources[0].caseId)?.preview || '')}" alt="${esc(caseTitle(pattern.sources[0].caseId))}来源案例首屏" loading="lazy"><span>来源案例预览 · 进入详情实操 ↗</span></a><div class="pattern-card-top"><span class="eyebrow">${esc(pattern.category)}</span><span class="pattern-role">${esc(roleLabels[pattern.composition?.role] || '可复用机制')}</span></div><div class="pattern-type-badges">${badges(pattern)}</div><p class="pattern-card-summary">${esc(pattern.summary)}</p><dl class="pattern-card-mechanism"><div><dt>触发</dt><dd>${esc(pattern.trigger)}</dd></div><div><dt>效果</dt><dd>${esc(pattern.effect)}</dd></div></dl><div class="tags">${pattern.useCases.slice(0, 2).map(value => `<span class="tag">${esc(value)}</span>`).join('')}</div><div class="pattern-card-bottom"><a class="pattern-detail-link" href="${patternHref(pattern.id)}">查看机制与复用方法 <span aria-hidden="true">→</span></a><div class="pattern-source-links">${sourceLinks(pattern)}</div></div></article>`).join('');
     $('#pattern-results-label').textContent = `${state.type !== 'all' ? typeLabels[state.type] : state.category === 'all' ? '全部设计巧思' : state.category} / ${results.length} 个机制${state.source !== 'all' ? ' · ' + caseTitle(state.source) : ''}${state.query ? ' · ' + state.query : ''}`;
     $('#patterns-empty').hidden = !!results.length;
     updateNavigation(true);
@@ -76,7 +76,7 @@
     url.hash = `patterns${stateQuery()}`;
     history[replace ? 'replaceState' : 'pushState'](null, '', url);
     renderCards();
-    onStateChange();
+    onStateChange({ type: state.type });
   }
   let previewObserver;
   function clearDetail() {
@@ -156,6 +156,7 @@
       if (pattern) renderDetail(pattern);
       else $('#pattern-detail').innerHTML = `<div class="detail-top"><a class="back" href="#patterns${stateQuery()}">返回设计巧思</a></div><h1>没有找到这个设计巧思</h1><p>这个链接可能来自另一个归档版本。请回到巧思库重新选择。</p>`;
     }
+    onStateChange({ type: state.type });
     return true;
   }
   function caseLinks(id) {
@@ -192,7 +193,6 @@
       $('#pattern-search').value = state.query; $('#pattern-category').value = state.category; $('#pattern-source').value = state.source;
       if ($('#pattern-type')) $('#pattern-type').value = state.type;
       writeState();
-      if (window.DesignAtlasPlayground && $('#pattern-showcase')) window.DesignAtlasPlayground.mount($('#pattern-showcase'), { type: $('#pattern-showcase-type').value });
     }
     $('#pattern-search').focus();
     return true;

@@ -5,6 +5,7 @@ import vm from 'node:vm';
 
 const atlasSource = fs.readFileSync(new URL('../atlas.js', import.meta.url), 'utf8');
 const patternsSource = fs.readFileSync(new URL('../patterns-ui.js', import.meta.url), 'utf8');
+const patternsPageSource = fs.readFileSync(new URL('../patterns-page.js', import.meta.url), 'utf8');
 const entryFiles = fs.readdirSync(new URL('../entries/', import.meta.url)).filter(name => name.endsWith('.json'));
 const entries = entryFiles.map(name => JSON.parse(fs.readFileSync(new URL(`../entries/${name}`, import.meta.url), 'utf8'))).sort((a, b) => a.order - b.order);
 const fixturePatterns = [
@@ -13,11 +14,12 @@ const fixturePatterns = [
   { id: 'layout-test', title: '内容分组', category: '内容组织', experienceTypes: ['structure'], summary: '布局层级', mechanism: '语义分组', trigger: '内容出现', effect: '结构清晰', useCases: ['文档'], avoid: [], constraints: [], composition: { role: 'foundation', notes: '负责主体结构', pairsWellWith: [], conflicts: [] }, accessibility: { keyboard: '语义导航', reducedMotion: '静态' }, parameters: [], prompt: '分组内容', sources: [{ caseId: entries[2].id, locator: 'principles[0]', observation: '结构观察', evidence: 'adapted' }], sourceFiles: [] },
 ];
 
-function page({ hash = '', clipboardRejects = false, data = entries, patterns = fixturePatterns, withPatterns = true } = {}) {
+function page({ hash = '', clipboardRejects = false, data = entries, patterns = fixturePatterns, withPatterns = true, dedicated = false } = {}) {
   const nodes = new Map();
   const documentListeners = new Map();
   const windowListeners = new Map();
   const copied = [];
+  const playgroundOperations = [];
   const location = new URL(`https://atlas.test/cases.html?category=products&q=原有筛选${hash}`);
   const document = { activeElement: { tagName: 'BODY' } };
   function node(selector) {
@@ -33,6 +35,7 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
       addEventListener(name, listener) { listeners.set(name, listener); },
       setAttribute(name, value) { attributes.set(name, value); }, removeAttribute(name) { attributes.delete(name); },
       append() {}, scrollIntoView() {}, showModal() {},
+      querySelectorAll() { return []; },
       focus() { document.activeElement = element; }, select() { element.selected = true; },
       emit(name, value) { element.value = value; return listeners.get(name)?.({ target: element }); },
       click() { return listeners.get('click')?.({ target: element }); },
@@ -44,15 +47,22 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
   document.querySelectorAll = () => [];
   document.createElement = tag => node(`created:${tag}`);
   document.body = node('body');
+  if (dedicated) document.body.classList.add('patterns-page');
   document.addEventListener = (name, listener) => { if (!documentListeners.has(name)) documentListeners.set(name, []); documentListeners.get(name).push(listener); };
   const window = { DESIGN_ATLAS: data, DESIGN_PATTERNS: patterns, addEventListener(name, listener) { if (!windowListeners.has(name)) windowListeners.set(name, []); windowListeners.get(name).push(listener); }, scrollTo() {} };
+  if (dedicated) window.DesignAtlasPlayground = {
+    labels: { visual: '视觉构成', 'micro-motion': '微动效', 'page-motion': '页面动效', sound: '声音反馈', structure: '内容与状态' },
+    mount(root, { type = 'visual' } = {}) { root.dataset.type = type; root.innerHTML = type; playgroundOperations.push({ action: 'mount', root, type }); },
+    dispose(root) { playgroundOperations.push({ action: 'dispose', root }); },
+    disposeDetached() {},
+  };
   const history = { replaceState(_state, _title, href) { location.href = new URL(href, location).href; }, pushState(_state, _title, href) { location.href = new URL(href, location).href; } };
   const scope = { window, document, location, history, URL, URLSearchParams, console, navigator: { clipboard: { async writeText(value) { if (clipboardRejects) throw Error('denied'); copied.push(value); } } }, localStorage: { getItem: () => null, setItem() {} }, ResizeObserver: class { observe() {} disconnect() {} }, setTimeout: () => 0, clearTimeout() {}, Blob };
   const context = vm.createContext(scope);
   if (withPatterns) vm.runInContext(patternsSource, context, { filename: 'patterns-ui.js', timeout: 2000 });
-  vm.runInContext(atlasSource, context, { filename: 'atlas.js', timeout: 2000 });
+  vm.runInContext(dedicated ? patternsPageSource : atlasSource, context, { filename: dedicated ? 'patterns-page.js' : 'atlas.js', timeout: 2000 });
   return {
-    node, location, copied, document,
+    node, location, copied, document, playgroundOperations,
     navigate(hash) { location.hash = hash; windowListeners.get('hashchange')?.forEach(listener => listener()); },
     backTo(href) { location.href = href; windowListeners.get('popstate')?.forEach(listener => listener()); },
     select(id, checked = true) { const target = { dataset: { compare: id }, checked, closest(selector) { return selector === '[data-compare]' ? target : null; } }; documentListeners.get('change')?.forEach(listener => listener({ target })); },
@@ -160,4 +170,50 @@ test('experience types combine with source and purpose filters and survive retur
   fixture.navigate('#patterns?type=unknown');
   assert.equal(fixture.node('#pattern-type').value, 'all');
   assert.match(fixture.node('#pattern-results-label').textContent, /3 个机制/);
+});
+
+test('collapsed showcase follows navigation, filter controls and history', () => {
+  const fixture = page({ dedicated: true, hash: '#patterns?type=page-motion' });
+  const panel = fixture.node('#pattern-showcase-panel'), showcase = fixture.node('#pattern-showcase');
+  const mounts = () => fixture.playgroundOperations.filter(operation => operation.root === showcase && operation.action === 'mount');
+  assert.equal(mounts().length, 0, 'closed showcase is not initialized');
+  assert.match(fixture.node('#pattern-showcase-label').textContent, /页面动效/);
+  panel.open = true; panel.emit('toggle');
+  assert.equal(mounts().at(-1).type, 'page-motion');
+  fixture.navigate('#patterns?type=micro-motion');
+  const previous = fixture.location.href;
+  assert.equal(mounts().at(-1).type, 'micro-motion');
+  fixture.node('#pattern-type').emit('change', 'sound');
+  assert.equal(mounts().at(-1).type, 'sound');
+  fixture.backTo(previous);
+  assert.equal(mounts().at(-1).type, 'micro-motion');
+  assert.match(fixture.node('#pattern-showcase-label').textContent, /微动效/);
+  fixture.navigate('#patterns?type=unknown');
+  assert.equal(mounts().at(-1).type, 'visual');
+  assert.match(fixture.node('#pattern-showcase-label').textContent, /全部类型预览/);
+});
+
+test('showcase preserves same-type controls and disposes on collapse or detail navigation', () => {
+  const fixture = page({ dedicated: true, hash: '#patterns?type=visual' });
+  const panel = fixture.node('#pattern-showcase-panel'), showcase = fixture.node('#pattern-showcase');
+  const operations = () => fixture.playgroundOperations.filter(operation => operation.root === showcase);
+  panel.open = true; panel.emit('toggle');
+  showcase.innerHTML = 'user-adjusted-preview';
+  fixture.node('#pattern-search').emit('input', '悬停');
+  fixture.node('#pattern-category').emit('change', '交互反馈');
+  fixture.node('#pattern-source').emit('change', entries[0].id);
+  assert.equal(operations().filter(operation => operation.action === 'mount').length, 1);
+  assert.equal(showcase.innerHTML, 'user-adjusted-preview');
+  fixture.navigate('#pattern/focus-test?type=visual');
+  assert.equal(operations().at(-1).action, 'dispose');
+  fixture.key('/');
+  assert.equal(fixture.node('#patterns-library').hidden, false);
+  assert.equal(fixture.document.activeElement, fixture.node('#pattern-search'));
+  assert.equal(operations().at(-1).type, 'visual');
+  panel.open = false; panel.emit('toggle');
+  assert.equal(operations().at(-1).action, 'dispose');
+  fixture.node('#pattern-type').emit('change', 'structure');
+  assert.equal(operations().at(-1).action, 'dispose');
+  panel.open = true; panel.emit('toggle');
+  assert.equal(operations().at(-1).type, 'structure');
 });
