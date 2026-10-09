@@ -81,7 +81,7 @@
 .landing-case img{width:100%;aspect-ratio:1.8;height:auto;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--line)}
 .landing-case--main img{aspect-ratio:2.2}
 .landing-case>span{display:flex;align-items:center;gap:9px;min-height:42px;padding:8px 11px;font-size:11px;font-weight:600;line-height:1.6}
-.landing-case small{font-size:9px;color:var(--muted);font-weight:400;margin-left:auto}
+.landing-case small{font-size:10px;color:var(--muted);font-weight:400;margin-left:auto}
 .landing-case b{font-size:15px;font-weight:400;color:var(--muted);margin-left:2px}
 .landing-caption{font-size:10px;line-height:1.8;color:var(--muted);margin:15px 0 0}
 .landing-lab-preview{margin-top:23px;border:1px solid var(--line);border-radius:10px;background:var(--field);padding:13px;box-shadow:var(--landing-shadow)}
@@ -135,7 +135,7 @@
   .landing-description{font-size:12px}
   .landing-case-grid{gap:9px}
   .landing-case>span{padding:8px;font-size:10px}
-  .landing-case small{font-size:8px}
+  .landing-case small{font-size:10px}
   .landing-lab-preview{padding:10px}
   .landing-module--agent{padding:30px;gap:30px;grid-template-columns:minmax(0,.85fr) minmax(0,1.25fr)}
   .landing-module--agent h3{font-size:31px}
@@ -170,7 +170,7 @@
 @media(max-width:650px){
   .landing-main{padding:0 20px}
   .landing-hero{padding:39px 0 29px}
-  .landing-kicker{font-size:9px;letter-spacing:1.3px;margin-bottom:17px}
+  .landing-kicker{font-size:10px;letter-spacing:1.3px;margin-bottom:17px}
   .landing-hero h1{font-size:clamp(29px,8.8vw,46px);letter-spacing:-1.25px;line-height:1.25}
   .landing-lead{font-size:13px;line-height:1.9;max-width:440px;margin-top:20px}
   .landing-desktop{display:none}
@@ -179,16 +179,16 @@
 .landing-actions{grid-template-columns:minmax(0,240px)}
 .landing-actions>.landing-button{height:48px;min-height:48px;padding:10px 16px}
   .landing-button>span{font-size:14px}
-  .landing-hero-note{font-size:9px;max-width:300px;margin:17px auto 0}
+  .landing-hero-note{font-size:10px;max-width:300px;margin:17px auto 0}
   .landing-hero-note>span[aria-hidden]{padding:0 3px}
   .landing-features{padding-top:25px}
   .landing-section-heading{margin-bottom:24px}
-  .landing-section-heading .landing-kicker{font-size:8px;margin-bottom:9px}
+  .landing-section-heading .landing-kicker{font-size:10px;margin-bottom:9px}
   .landing-section-heading h2{font-size:28px;letter-spacing:-.8px}
   .landing-section-heading>p:last-child{font-size:11px;margin-top:10px}
   .landing-modules{gap:15px}
   .landing-module{padding:24px 18px 17px;border-radius:14px}
-  .landing-module-tag{font-size:9px;margin-bottom:12px}
+  .landing-module-tag{font-size:10px;margin-bottom:12px}
   .landing-module h3{font-size:31px;letter-spacing:-1px;margin-bottom:14px}
   .landing-description{font-size:12px;line-height:1.85}
   .landing-module-link{font-size:11px;margin-top:9px;gap:15px}
@@ -197,22 +197,22 @@
   .landing-case img{aspect-ratio:1.5}
   .landing-case--main img{aspect-ratio:1.72}
   .landing-case>span{min-height:42px;font-size:10px;flex-wrap:wrap;gap:1px 7px;padding:7px 8px}
-  .landing-case small{font-size:8px}
+  .landing-case small{font-size:10px}
   .landing-case b{font-size:14px;margin-left:auto}
-  .landing-caption{font-size:9px;margin-top:12px}
+  .landing-caption{font-size:10px;margin-top:12px}
   .landing-lab-preview{margin-top:18px;padding:9px}
   .landing-module--agent{padding:24px 18px;gap:20px}
   .landing-module--agent h3{font-size:29px}
   .landing-command-heading{padding:7px 10px;gap:7px}
-  .landing-command-heading label{font-size:9px;max-width:130px}
-  .landing-command-heading button{font-size:9px;padding:8px 10px;gap:7px}
+  .landing-command-heading label{font-size:10px;max-width:130px}
+  .landing-command-heading button{font-size:10px;padding:8px 10px;gap:7px}
   .landing-command textarea{font-size:11px;line-height:1.9;height:168px;min-height:168px;padding:15px 12px}
-  .landing-command>p{font-size:9px;min-height:3.6em;padding:10px 12px}
+  .landing-command>p{font-size:10px;min-height:3.6em;padding:10px 12px}
   .landing-materials{margin-top:15px}
-  .landing-materials>p{font-size:9px}
+  .landing-materials>p{font-size:10px}
   .landing-materials dl{gap:7px}
   .landing-materials dl>div{padding:9px 10px}
-  .landing-materials dt{font-size:9px}
+  .landing-materials dt{font-size:10px}
   .landing-materials dd{font-size:10px}
   .landing-paths{padding:54px 0 48px}
   .landing-paths ol{grid-template-columns:1fr;gap:22px;margin-top:27px}
@@ -223,11 +223,11 @@
   .landing-paths li>a{font-size:10px;margin-top:5px}
   .landing-ending{padding:44px 0 51px}
   .landing-ending h2{font-size:36px;letter-spacing:-1.1px}
-  .landing-ending>p:last-child{font-size:9px;line-height:1.8}
+  .landing-ending>p:last-child{font-size:10px;line-height:1.8}
   .landing-footer{padding:26px 20px 29px}
   .landing-footer strong{font-size:12px}
   .landing-footer p{font-size:10px}
-  .landing-footer small{font-size:9px}
+  .landing-footer small{font-size:10px}
   .landing-footer nav{gap:18px;font-size:10px}
 }
 @media(max-width:360px){
@@ -244,11 +244,11 @@
   .landing-case b{position:absolute;right:8px;top:8px}
   .landing-case>span{position:relative;min-height:44px}
   .landing-module--agent h3{font-size:26px}
-  .landing-command-heading label{max-width:118px;font-size:8px}
-  .landing-command-heading button{padding:8px;font-size:8px}
+  .landing-command-heading label{max-width:118px;font-size:10px}
+  .landing-command-heading button{padding:8px;font-size:10px}
   .landing-command textarea{font-size:10px;height:169px;min-height:169px}
   .landing-materials dl>div{padding:9px 8px}
-  .landing-materials dt{font-size:8px}
+  .landing-materials dt{font-size:10px}
   .landing-footer{padding-right:16px;padding-left:16px}
 }
 @media(prefers-reduced-motion:reduce){

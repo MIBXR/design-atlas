@@ -110,7 +110,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "3fdca5d0f13279c70bca3c66d1e3e4274564839b19246e24d26e263777a92ce9"
+      "bundleSha256": "af169c07364007c7121552b7c87715633de7a9435296cbda10db6b335e655c89"
     },
     {
       "id": "met-museum",
@@ -119,7 +119,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "e043c4bdcb1e61233d389b8b810e8f05a1c90c3fb86bff407b4e7db474ca6fa4"
+      "bundleSha256": "3f529f283cb87286760c009cc493700f82cc2ca6e1a029e18d77437ca33de649"
     },
     {
       "id": "rijksmuseum-art",
@@ -128,7 +128,7 @@
         "bundle": "agent/cases/rijksmuseum-art.json",
         "demo": "demos/rijksmuseum-art/index.html"
       },
-      "bundleSha256": "87a2de76f650562bdbdb2b58b8c73214b6fff1f8693fce10081dfe0e68bccaa6"
+      "bundleSha256": "45d7c9bee4b4f9238ae5791fe0a439c234aa1e8c3bd85644418494a933bc762d"
     },
     {
       "id": "uma-musume",
@@ -137,7 +137,7 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "915b41ff03889873057cc56793b4cabba849d3132cce110e7c54f19abba8ae72"
+      "bundleSha256": "0f316cec3e55352c11983b8263fccb9825b4a22a4e587a162d6064e095985f48"
     }
   ]
 }

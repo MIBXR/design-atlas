@@ -34,7 +34,8 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
       style: { setProperty() {} },
       addEventListener(name, listener) { listeners.set(name, listener); },
       setAttribute(name, value) { attributes.set(name, value); }, removeAttribute(name) { attributes.delete(name); },
-      append() {}, scrollIntoView() {}, showModal() {},
+      append() {}, scrollIntoView() {}, showModal() { element.open = true; },
+      close() { element.open = false; listeners.get('close')?.({ target: element }); },
       querySelectorAll() { return []; },
       focus() { document.activeElement = element; }, select() { element.selected = true; },
       emit(name, value) { element.value = value; return listeners.get(name)?.({ target: element }); },
@@ -172,13 +173,14 @@ test('experience types combine with source and purpose filters and survive retur
   assert.match(fixture.node('#pattern-results-label').textContent, /3 个机制/);
 });
 
-test('collapsed showcase follows navigation, filter controls and history', () => {
+test('showcase dialog follows navigation, filter controls and history', () => {
   const fixture = page({ dedicated: true, hash: '#patterns?type=page-motion' });
   const panel = fixture.node('#pattern-showcase-panel'), showcase = fixture.node('#pattern-showcase');
   const mounts = () => fixture.playgroundOperations.filter(operation => operation.root === showcase && operation.action === 'mount');
   assert.equal(mounts().length, 0, 'closed showcase is not initialized');
   assert.match(fixture.node('#pattern-showcase-label').textContent, /页面动效/);
-  panel.open = true; panel.emit('toggle');
+  fixture.node('#pattern-showcase-open').click();
+  assert.equal(panel.open, true);
   assert.equal(mounts().at(-1).type, 'page-motion');
   fixture.navigate('#patterns?type=micro-motion');
   const previous = fixture.location.href;
@@ -193,11 +195,11 @@ test('collapsed showcase follows navigation, filter controls and history', () =>
   assert.match(fixture.node('#pattern-showcase-label').textContent, /全部类型预览/);
 });
 
-test('showcase preserves same-type controls and disposes on collapse or detail navigation', () => {
+test('showcase dialog preserves same-type controls and disposes on close or detail navigation', () => {
   const fixture = page({ dedicated: true, hash: '#patterns?type=visual' });
   const panel = fixture.node('#pattern-showcase-panel'), showcase = fixture.node('#pattern-showcase');
   const operations = () => fixture.playgroundOperations.filter(operation => operation.root === showcase);
-  panel.open = true; panel.emit('toggle');
+  fixture.node('#pattern-showcase-open').click();
   showcase.innerHTML = 'user-adjusted-preview';
   fixture.node('#pattern-search').emit('input', '悬停');
   fixture.node('#pattern-category').emit('change', '交互反馈');
@@ -205,15 +207,19 @@ test('showcase preserves same-type controls and disposes on collapse or detail n
   assert.equal(operations().filter(operation => operation.action === 'mount').length, 1);
   assert.equal(showcase.innerHTML, 'user-adjusted-preview');
   fixture.navigate('#pattern/focus-test?type=visual');
+  assert.equal(panel.open, false);
+  assert.equal(fixture.node('#pattern-showcase-open').hidden, true);
   assert.equal(operations().at(-1).action, 'dispose');
   fixture.key('/');
   assert.equal(fixture.node('#patterns-library').hidden, false);
   assert.equal(fixture.document.activeElement, fixture.node('#pattern-search'));
-  assert.equal(operations().at(-1).type, 'visual');
-  panel.open = false; panel.emit('toggle');
+  assert.equal(operations().at(-1).action, 'dispose');
+  assert.equal(fixture.node('#pattern-showcase-open').hidden, false);
+  fixture.node('#pattern-showcase-open').click();
+  panel.close();
   assert.equal(operations().at(-1).action, 'dispose');
   fixture.node('#pattern-type').emit('change', 'structure');
   assert.equal(operations().at(-1).action, 'dispose');
-  panel.open = true; panel.emit('toggle');
+  fixture.node('#pattern-showcase-open').click();
   assert.equal(operations().at(-1).type, 'structure');
 });

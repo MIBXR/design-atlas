@@ -64,7 +64,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "485061e20518ee9001dcde38e167361746fba6d8cb66a21c086d5f3781fdd1cc"
+      "bundleSha256": "133502c67d8523b34e14504e74d019359904518ea957bef7b65effbed7cc528a"
     }
   ]
 }
