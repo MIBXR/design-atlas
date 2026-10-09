@@ -77,7 +77,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "7c218407efdae7021d312382d45a32c819438066d1a784443076a537f0c8d57f"
+      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
     },
     {
       "id": "philharmonie-music",
@@ -86,7 +86,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "4c003b18eec29a5b48df77ac8b6e674d1ef96c882b0d7531f092f60dc4e24ff3"
+      "bundleSha256": "0280f9cb8a02c32998ad187257d5857a9f4948ecca4948f63e792df2d82a25d0"
     }
   ]
 }

@@ -89,7 +89,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "9b008bbe308408507974379eb311e92d2ab9eb080a57638d5fd693d86019e63a"
+      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
     },
     {
       "id": "mori-art-museum",
@@ -98,7 +98,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "b6b385580b93c5cdc56881bc76456003817e2861f69d7e37a3fa3ee3711146fd"
+      "bundleSha256": "1ba31f1dbfdf52cd8d0473a7d0776eaf1ecdd145f95b0411d05a4abe0aa66a46"
     },
     {
       "id": "uma-musume",
@@ -107,7 +107,7 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "8ac390184d456ba64d46a627b027cd6eb8ab2a63467cecfeccdcc8c3f21ea9c4"
+      "bundleSha256": "d0c663e7d14e579c0895bd536990572b6bb9e5c5eb33863d3aa1b31b73550bfc"
     }
   ]
 }

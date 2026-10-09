@@ -55,7 +55,7 @@
         "bundle": "agent/cases/bauhaus-geometry.json",
         "demo": "demos/bauhaus-geometry/index.html"
       },
-      "bundleSha256": "fc354f2517cd8322c03292ed065d762d1645160dab4504b3a21715f2a238c563"
+      "bundleSha256": "44c85b762c571039bcf6d0a9c45072f714d31f717f33d32ae5051c3689f45101"
     }
   ]
 }

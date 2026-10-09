@@ -123,7 +123,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "ee220ef48f822a510eac179897cb0e4efba6a33354b757b0d92cdf8a03781228"
+      "bundleSha256": "2b5820d40e3dfc66dcd2f03c181dbdfcc7fe998a93316996c6a93bbc389306f3"
     },
     {
       "id": "linear-workflow",
@@ -132,7 +132,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "13c7a26e0617c9eba114df580c82bc73812f6812350425183b96bf24e9b2c4be"
+      "bundleSha256": "a245270c6e4b7e4d2243595955d14964747bf5506d7fce9093b0fee572a589ce"
     },
     {
       "id": "qoder-platform",
@@ -141,7 +141,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "de379175ba91805098c116793603ebd8e3dea5774676fc4324b2f5552129f0f8"
+      "bundleSha256": "278865bae3c8d4f55e19502f6addc55eb37f48678d7292034273dbfe53ac73b2"
     },
     {
       "id": "stripe-platform",
@@ -150,7 +150,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "cc860783f1519a47931d858585781836392c5b5072117e4596a26b3e5b41d740"
+      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
     }
   ]
 }
