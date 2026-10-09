@@ -77,7 +77,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "a3762f0c28bef2239c0e09c7d20f96dfaa4ba0608adf5a2848606007ff1eaae1"
+      "bundleSha256": "2fef78d7709abb9c096110f301d764cb662d1520bfdda79e0b1c6218e1083b7b"
     }
   ]
 }
