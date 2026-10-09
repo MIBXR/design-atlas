@@ -2,6 +2,9 @@
   "id": "permanent-event-metadata",
   "title": "常驻日期与边缘票据入口",
   "category": "内容组织",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "场景摄影变化时实用信息仍有位置。",
   "mechanism": "日期、地点与导览保持稳定位置，边缘票据入口独立于照片；Featured与新闻各承担不同后续任务。",
   "trigger": "照片更替和长页浏览",

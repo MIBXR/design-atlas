@@ -5,6 +5,9 @@
     "id": "filter-count-feedback",
     "title": "筛选与结果计数同步",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "筛选动作立即给出结果数量。",
     "mechanism": "改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。",
     "trigger": "激活分类按钮",
@@ -69,7 +72,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "1ba31f1dbfdf52cd8d0473a7d0776eaf1ecdd145f95b0411d05a4abe0aa66a46"
+      "bundleSha256": "24264a05672461453bc5e38afacbc55b987d770531cbb71c3140c352bda6586e"
     },
     {
       "id": "swiss-grid",
@@ -78,7 +81,7 @@
         "bundle": "agent/cases/swiss-grid.json",
         "demo": "demos/swiss-grid/index.html"
       },
-      "bundleSha256": "33ca09e6273c85201d099990aba207daad7c83267db1ff3292be4c1f2eb0a758"
+      "bundleSha256": "054fe49dfbc7ef6ebf6509e649b9c4146aff93c59ed54e35d3e4ac8e989935ad"
     }
   ]
 }

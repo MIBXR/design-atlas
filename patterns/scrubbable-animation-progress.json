@@ -2,6 +2,9 @@
   "id": "scrubbable-animation-progress",
   "title": "可拖动回看的动画进度",
   "category": "交互反馈",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "让用户中断动画并观察任意中间态。",
   "mechanism": "进度滑块直接控制绘制完成度，手动输入取消当前自动帧调度，重播则重新开始。",
   "trigger": "拖动进度或选择重播",

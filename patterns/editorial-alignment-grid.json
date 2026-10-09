@@ -2,6 +2,9 @@
   "id": "editorial-alignment-grid",
   "title": "共享对齐线的编辑网格",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "用共同基线连接标题、日期和行动。",
   "mechanism": "先按内容角色建立列网格，再让标题、日期、类别和行动反复对齐；非对称留白仍服从共同线。",
   "trigger": "阅读首屏及列表",

@@ -5,6 +5,9 @@
     "id": "viewport-animation-lifecycle",
     "title": "视口与前台驱动的动态生命周期",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "只在能被观看时推进演示。",
     "mechanism": "用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。",
     "trigger": "进入/离开视口、切后台或用户暂停",
@@ -123,7 +126,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+      "bundleSha256": "8142eb61feb497a0c364dd0a354e4ec27fde6b495a5f564919d9f3e93df57af2"
     },
     {
       "id": "linear-workflow",
@@ -132,7 +135,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "a245270c6e4b7e4d2243595955d14964747bf5506d7fce9093b0fee572a589ce"
+      "bundleSha256": "2d184a140180ac19475480eaea3b2eb236a1505bf9afcb410af8f10deab7e9cd"
     },
     {
       "id": "qoder-platform",
@@ -141,7 +144,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "278865bae3c8d4f55e19502f6addc55eb37f48678d7292034273dbfe53ac73b2"
+      "bundleSha256": "e1876672eff04e79ac6f77d786e0b7dbfccd3addf684a4d43c7d4950042c547f"
     },
     {
       "id": "stripe-platform",
@@ -150,7 +153,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
+      "bundleSha256": "e12a3123e1354e7498443e932549131c66c6d8da9a82c95a02d70a024594328c"
     }
   ]
 }

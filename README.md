@@ -10,7 +10,7 @@
 **34 个案例**　·　**26 个品牌／文化研究**　·　**8 种经典设计语言**
 <!-- atlas-counts:end -->
 
-[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计巧思](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#patterns) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
+[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计巧思](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
 
 ![Design Atlas 实际 Demo 全景](docs/readme/cover.webp)
 
@@ -22,14 +22,14 @@
 
 这是一份能亲手体验的设计参考。每个条目包含实际参考与观察日期、设计元素的协作方式、约束、可复制 Prompt、独立代码 Demo、原站／本地对照及素材来源。
 
-首页介绍案例库、设计实验室与 Agent 工作流，四个页面的主导航可直接切换。案例浏览位于 `cases.html`；已有根路径的案例深链接、比较入口与分类／地区／搜索／排序 URL 会保留状态并进入案例库。
+首页介绍完整案例、独立巧思、设计实验室与 Agent 工作流，主导航可直接切换。案例浏览位于 `cases.html`；已有根路径的案例深链接、比较入口与分类／地区／搜索／排序 URL 会保留状态并进入案例库。
 
 真实网站案例固定为所标注网址与采集日期的单一归档；完成后保留当时的页面与交互，不追随官网后续变化。
 
 - **查找**：按产品、游戏/IP、艺术文化、经典语言与国家／地区筛选；搜索品牌、配色、布局、交互或约束。分类、地区、搜索与排序保留在 URL 中，支持刷新恢复、浏览器前进／后退和分享筛选结果（例如 `cases.html?category=games`）。
 - **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；手机面板限制为390px。
 - **比较**：选择2–3项并排比较，七节说明按同名章节逐行对齐；每行采用最长内容所需的自然高度，便于比较不同案例在同一设计维度上的区别。
-- **设计巧思**：在“浏览案例”的侧栏切换到原子库，按机制类别、来源案例与关键词找可单独借用的设计；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
+- **设计巧思**：独立巧思页按视觉、微动效、页面动效、声音、内容与组织筛选，再按功能用途、来源案例与关键词找可单独借用的机制；首页和实验室可实际操作本地示意，巧思详情按需载入完整来源 Demo；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
 - **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在设计实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
 - **Agent 选型**：调用 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
@@ -46,13 +46,27 @@ Design Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案
 
 从案例中找依据，在实际使用中观察，再结合人的反馈改进网站本体。这也是这份案例库从参考走向实践的过程。
 
-![Design Atlas 首页：三大功能的统一入口](docs/site/home.png)
+![Design Atlas 首页：案例、巧思与实践入口](docs/site/home.jpg)
 
 | 首页中的真实实验室 | 浏览案例 |
 | --- | --- |
-| ![首页实验室展示：左侧调配元素，右侧查看真实效果](docs/site/workflow.png) | ![浏览案例界面：筛选设计方向与查看案例预览](docs/site/cases.png) |
+| ![设计实验室：调配元素与操作巧思示意](docs/site/workflow.jpg) | ![浏览案例界面：筛选设计方向与查看案例预览](docs/site/cases.png) |
 
 以上为网站本体的实际浏览器截图；各案例的独立 Demo 预览见下方画廊。
+
+### 按体验方式理解巧思
+
+| 类型 | 关注点 | 可以操作的示意 |
+| --- | --- | --- |
+| 视觉巧思 | 颜色、字体、容器与图形形成静态关系 | 标题强调与容器圆角 |
+| 微动效 | 局部反馈或辅助信息的运动 | 按钮浮起、形状变化与回程 |
+| 页面动效 | 页面或主要内容舞台的交接 | 按方向进入、覆盖、交接与退出的遮罩 |
+| 声音巧思 | 音乐、语音与操作音的主动体验 | 主动开启、合成确认短音与静音 |
+| 内容与组织 | 阅读、导航和状态规则 | 单开信息与折叠 |
+
+类型可以交叉；功能用途分类继续独立保留。不要求每个案例都有视觉、动效或声音巧思。示意使用通用内容与本地拟合参数，完整来源保留归档观察与复现边界。声音默认关闭，示意切到后台会关闭，回到前台需要重新启用。
+
+![独立巧思页：类型与可操作示意](docs/site/patterns.jpg)
 
 ## Agent 直接取材
 
@@ -230,6 +244,9 @@ previews/                     案例桌面与手机预览
 docs/readme/                  本README配图
 docs/site/                    网站本体的实际浏览器截图
 vendor/                       固定版本的Markdown解析库、HTML清理库与许可证
+patterns/<id>.json            人工策展的独立巧思与体验类型
+patterns.html / patterns-ui.*  独立巧思浏览、来源 Demo 与复用方法
+pattern-playground.*          首页、巧思页与实验室共用的本地机制示意
 fundamentals.*                可操作的设计实验室
 catalog.js                    自动生成的浏览器目录
 asset-sources.js               固定 Git 提交、远端URL与本地素材字节／哈希映射

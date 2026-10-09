@@ -2,6 +2,9 @@
   "id": "fixed-topology-morph",
   "title": "同拓扑碎片形态转换",
   "category": "交互反馈",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "同一组几何片保持身份连续。",
   "mechanism": "每种状态保留相同片数和顶点次序，在同一拓扑上插值位置；形态同步解释不同内容语义。",
   "trigger": "选择形态按钮",

@@ -5,6 +5,9 @@
     "id": "character-voice-ownership",
     "title": "声线主动播放并归属于当前人物",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound"
+    ],
     "summary": "切换人物时不会叠加上一人的声音。",
     "mechanism": "麦克风主动播放当前人物对应音轨，再次点击暂停；换人、离开角色区域或后台停止旧声音。",
     "trigger": "点击人物VOICE或换人",
@@ -91,7 +94,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "cec74c0e907c2d261710a71096287af99c54c4e8ee0b191f5362b276f923281c"
     },
     {
       "id": "blue-archive",
@@ -100,7 +103,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "6810a34427dd80e190f72b2afc843d1483ce72f34861bdcc01ab0265d72c0c4e"
+      "bundleSha256": "f10453650487ea8b961321ccb1696e09e924021810788fd873877d5eb9a2f00a"
     },
     {
       "id": "genshin-world",
@@ -109,7 +112,7 @@
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/genshin-world/index.html"
       },
-      "bundleSha256": "dc1e08e472f6d8443a09fa6c6dda3205b2ab7a67ed5fb13f6fd14114d1dfc0a6"
+      "bundleSha256": "1d0da9de1bbcda88d9b73754317541c396ba6f398883aadbb9a2094fe488078c"
     }
   ]
 }

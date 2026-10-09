@@ -2,6 +2,9 @@
   "id": "particle-model-reformation",
   "title": "术语选择重组同一粒子池",
   "category": "交互反馈",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "选中概念以一个新形状得到解释。",
   "mechanism": "术语目录进入详情后，同一粒子池重组为对应模型，箭头、索引和返回共享模型状态及设定文字。",
   "trigger": "选择术语、箭头或返回",

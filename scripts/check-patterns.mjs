@@ -34,6 +34,6 @@ export function verifyPatterns({ root = defaultRoot } = {}) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  try { const result = verifyPatterns(); console.log(`PASS: ${result.patternCount} atomic design patterns; provenance, references, source coverage and generated hashes match across ${result.caseCount} cases.`); }
+  try { const result = verifyPatterns(); console.log(`PASS: ${result.patternCount} atomic design patterns; provenance, references, reverse associations and generated hashes match across ${result.caseCount} cases.`); }
   catch (error) { console.error(error.message); process.exitCode = 1; }
 }

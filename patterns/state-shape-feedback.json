@@ -2,6 +2,9 @@
   "id": "state-shape-feedback",
   "title": "按压与聚焦改变容器形状",
   "category": "交互反馈",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "圆角变化为当前动作提供反馈。",
   "mechanism": "控件按压/键盘激活时按角色改变圆角，状态层同时改变；反馈留在稳定布局与触控边界内。",
   "trigger": "激活按钮或资源卡",

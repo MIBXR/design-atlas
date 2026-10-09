@@ -5,6 +5,9 @@
     "id": "photography-option-selector",
     "title": "选项与真实摄影对应",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "用图片直接比较颜色或参数结果。",
     "mechanism": "离散色点或参数选项对应一张真实摄影，选择状态与图像同步，图片比例及观察角度尽量稳定。",
     "trigger": "选择颜色或景深值",
@@ -69,7 +72,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
+      "bundleSha256": "3462369f2d926511c5c98624715ff8987be5f73bffccb47d5e7e5cfbcf9ee5b5"
     }
   ]
 }

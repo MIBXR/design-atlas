@@ -5,6 +5,9 @@
     "id": "word-opacity-stagger",
     "title": "单词透明度的低幅交错",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "通过少量时间差支持标题阅读顺序。",
     "mechanism": "单词只过渡透明度并以短总跨度交错，正文组用小位移带入；标题文字保持原排版。",
     "trigger": "标题或正文组进入阈值",
@@ -72,7 +75,7 @@
         "bundle": "agent/cases/claude-platform.json",
         "demo": "demos/claude-platform/index.html"
       },
-      "bundleSha256": "1b678763f4f2b8b4debad77707d3cf3418ba3612c77ab651e81058683af4abf9"
+      "bundleSha256": "b8ea6b4e6353289a7e0d7120935259a83f76e21efadcc1531821548a029f7471"
     }
   ]
 }

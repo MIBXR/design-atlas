@@ -5,6 +5,9 @@
     "id": "continuous-bgm-bridge",
     "title": "跨章节连续的环境声音",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound"
+    ],
     "summary": "以连续音轨连接不同场景。",
     "mechanism": "用户开启后BGM跨章节保持同一播放位置，启停使用有依据的音量渐变；人物语音与环境音乐分开管理。",
     "trigger": "主动开启或关闭BGM、切换章节",
@@ -82,7 +85,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "cec74c0e907c2d261710a71096287af99c54c4e8ee0b191f5362b276f923281c"
     },
     {
       "id": "zelda-world",
@@ -91,7 +94,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "7a42a497ab8ed65b066ed9a9302c5538ed747fd11b03143bcd74b45aeb89811d"
+      "bundleSha256": "5243ad9e9d7e9f8536afe7a383ff6d3719a80eefd8c090e186765655278517f0"
     }
   ]
 }

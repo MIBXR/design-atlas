@@ -2,6 +2,9 @@
   "id": "folded-wave-hero",
   "title": "折叠波带与文字共同构成首屏",
   "category": "视觉构成",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "品牌波带提供流动舞台，标题保持可读。",
   "mechanism": "独立WebGL网格与shader产生折叠彩带，主张位于稳定文本区；GPU失败使用同源静帧。",
   "trigger": "进入首屏",

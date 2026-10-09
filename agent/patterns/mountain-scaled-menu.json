@@ -5,6 +5,9 @@
     "id": "mountain-scaled-menu",
     "title": "菜单缩放倾转与背景降强调",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "品牌形状打开一层可专注的导览。",
     "mechanism": "山形菜单控制打开目录，菜单由缩小/倾转状态进入，背景缓慢降低透明度；反向关闭从当前变换继续。",
     "trigger": "打开、关闭或快速反向菜单",
@@ -66,7 +69,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
+      "bundleSha256": "3fdca5d0f13279c70bca3c66d1e3e4274564839b19246e24d26e263777a92ce9"
     }
   ]
 }

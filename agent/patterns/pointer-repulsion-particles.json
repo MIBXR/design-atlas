@@ -5,6 +5,9 @@
     "id": "pointer-repulsion-particles",
     "title": "指针排斥与回聚点阵",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "静态标识因指针接近而获得可触感。",
     "mechanism": "WebGL点阵以目标点位维持形状，指针附近点按距离受排斥，移开后回归原模型；文字位于独立稳定层。",
     "trigger": "指针进入、移动或离开粒子区域",
@@ -70,7 +73,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "4966b56ca8bccd38afb7c9c524302ea148130ce0f77f86cc304a2c8393a9aba9"
+      "bundleSha256": "cec74c0e907c2d261710a71096287af99c54c4e8ee0b191f5362b276f923281c"
     }
   ]
 }

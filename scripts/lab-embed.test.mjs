@@ -49,7 +49,7 @@ test('the home embed skips responsive menus and leaves the focused real experime
   vm.runInNewContext(shellSource, { document, window: {} }, { timeout: 1000 });
 });
 
-function experiment({ embed = false, width = 822, height = 416 } = {}) {
+function experiment({ embed = false, width = 822, height = 416, catalog = [] } = {}) {
   const nodes = new Map();
   let activeElement;
   let resizeObserver;
@@ -78,7 +78,7 @@ function experiment({ embed = false, width = 822, height = 416 } = {}) {
   };
   const location = new URL(`https://atlas.test/fundamentals.html${embed ? '?embed=home' : ''}`);
   const media = { matches: false, addEventListener() {} };
-  const window = { innerWidth: width };
+  const window = { innerWidth: width, DESIGN_ATLAS: catalog };
   window.parent = embed ? { postMessage(message, origin) { reports.push({ message, origin }); } } : window;
   node('lab').getBoundingClientRect = () => ({ height: measuredHeight });
   const ResizeObserver = class { constructor(callback) { resizeObserver = callback; } observe() {} };
@@ -104,6 +104,18 @@ test('all base presets begin in YaHei sans while an explicit font experiment rem
   }
   lab.node('type-choice').listeners.get('change')({ target: { value: 'serif' } });
   assert.match(lab.node('sample').style.properties.get('--font-title'), /Georgia/);
+});
+
+test('exported configuration keeps source audio separate from the silent coordination experiment', () => {
+  const soundBehavior = { kind:'background', control:'由用户启用背景音乐', interactionRole:'建立场景氛围' };
+  const entry = { id:'zelda-world', title:'世界舞台', order:1, category:'游戏', background:'#f4eee2', accent:'#49654d', sources:[], soundBehavior };
+  const lab = experiment({ catalog:[entry] });
+  lab.node('reference-style').listeners.get('change')({ target:{ value:entry.id } });
+  const configuration = JSON.parse(lab.node('current-config').value);
+  assert.equal(configuration.sound.kind, 'none');
+  assert.deepEqual(configuration.sound.sourceBehavior, soundBehavior);
+  assert.equal(configuration.motion.type, 'micro-motion');
+  assert.match(lab.node('reference-sound-note').textContent, /^协调实验无声音。原案例声音：/);
 });
 
 test('the real note composer can return focus and preserves its draft and saved note through preset switches', () => {

@@ -5,6 +5,9 @@
     "id": "restrained-signal-color",
     "title": "单一信号色集中强调",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用少量品牌色建立可识别的操作角色。",
     "mechanism": "正文采用稳定中性色，强调色只分配给行动、选中态或机构锚点；作品图像保持自己的原色。",
     "trigger": "查看行动和状态",
@@ -114,7 +117,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+      "bundleSha256": "8142eb61feb497a0c364dd0a354e4ec27fde6b495a5f564919d9f3e93df57af2"
     },
     {
       "id": "met-museum",
@@ -123,7 +126,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
+      "bundleSha256": "e043c4bdcb1e61233d389b8b810e8f05a1c90c3fb86bff407b4e7db474ca6fa4"
     },
     {
       "id": "mori-art-museum",
@@ -132,7 +135,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "1ba31f1dbfdf52cd8d0473a7d0776eaf1ecdd145f95b0411d05a4abe0aa66a46"
+      "bundleSha256": "24264a05672461453bc5e38afacbc55b987d770531cbb71c3140c352bda6586e"
     },
     {
       "id": "rhine-lab",
@@ -141,7 +144,7 @@
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/rhine-lab/index.html"
       },
-      "bundleSha256": "d683b358e71a275f3b755b06595744262c91b09219c9985b913a5bd55a84233d"
+      "bundleSha256": "43e290cb9576ea938ef65b29da660fffeef169d4474c2d1ddffb3dc3248b9a59"
     },
     {
       "id": "swiss-grid",
@@ -150,7 +153,7 @@
         "bundle": "agent/cases/swiss-grid.json",
         "demo": "demos/swiss-grid/index.html"
       },
-      "bundleSha256": "33ca09e6273c85201d099990aba207daad7c83267db1ff3292be4c1f2eb0a758"
+      "bundleSha256": "054fe49dfbc7ef6ebf6509e649b9c4146aff93c59ed54e35d3e4ac8e989935ad"
     }
   ]
 }

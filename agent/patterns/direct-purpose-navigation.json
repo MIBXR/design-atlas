@@ -5,6 +5,9 @@
     "id": "direct-purpose-navigation",
     "title": "机构目的地即时展开",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "把到访、活动等常见目的直接组织成入口。",
     "mechanism": "点击目的类别立即显示相应目的地列表，层级结构留在同一导航区域；小屏可以在文档流展开。",
     "trigger": "打开Visit或主菜单类别",
@@ -77,7 +80,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
+      "bundleSha256": "e043c4bdcb1e61233d389b8b810e8f05a1c90c3fb86bff407b4e7db474ca6fa4"
     },
     {
       "id": "philharmonie-music",
@@ -86,7 +89,7 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
       },
-      "bundleSha256": "0280f9cb8a02c32998ad187257d5857a9f4948ecca4948f63e792df2d82a25d0"
+      "bundleSha256": "485061e20518ee9001dcde38e167361746fba6d8cb66a21c086d5f3781fdd1cc"
     }
   ]
 }

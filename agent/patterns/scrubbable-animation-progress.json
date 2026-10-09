@@ -5,6 +5,9 @@
     "id": "scrubbable-animation-progress",
     "title": "可拖动回看的动画进度",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让用户中断动画并观察任意中间态。",
     "mechanism": "进度滑块直接控制绘制完成度，手动输入取消当前自动帧调度，重播则重新开始。",
     "trigger": "拖动进度或选择重播",
@@ -64,7 +67,7 @@
         "bundle": "agent/cases/line-art.json",
         "demo": "demos/line-art/index.html"
       },
-      "bundleSha256": "11a5cff97d06d10874da7e3a5aa5d68e65539746c5fee10c817a15ae617f9211"
+      "bundleSha256": "fa8e0aadf54848da654bb4c25051b330f6fa20d4b5b0a94fb7518bc42d8f01e2"
     }
   ]
 }

@@ -91,7 +91,7 @@ html{scrollbar-gutter:stable;scroll-padding-top:calc(var(--atlas-header-height) 
 }
 .atlas-site-header .atlas-site-nav{
   display:grid;
-  grid-template-columns:60px 100px 110px 128px;
+  grid-template-columns:50px 85px 85px 100px 115px;
   align-items:center;
   justify-content:center;
   gap:4px;
@@ -247,7 +247,7 @@ a.atlas-ui-button:hover,button.atlas-ui-button:hover{border-color:var(--atlas-sh
   .atlas-site-header .atlas-site-brand{gap:8px}
   .atlas-site-header .atlas-site-wordmark strong{font-size:13px;letter-spacing:.4px}
   .atlas-site-header .atlas-site-wordmark small{font-size:8px}
-  .atlas-site-header .atlas-site-nav{grid-template-columns:50px 85px 105px 118px}
+  .atlas-site-header .atlas-site-nav{grid-template-columns:45px 78px 78px 90px 100px}
   .atlas-site-header .atlas-site-nav>a{font-size:11px}
   .atlas-site-header .atlas-site-theme{width:148px;gap:6px;font-size:9px}
   .atlas-site-header .atlas-site-theme select{width:100px;font-size:9px}
@@ -259,7 +259,7 @@ a.atlas-ui-button:hover,button.atlas-ui-button:hover{border-color:var(--atlas-sh
   .atlas-site-header .atlas-site-mark{width:28px;height:28px}
   .atlas-site-header .atlas-site-theme{grid-column:2;grid-row:1;width:136px;font-size:9px}
   .atlas-site-header .atlas-site-theme select{width:94px;padding-left:8px}
-  .atlas-site-header .atlas-site-nav{grid-column:1/-1;grid-row:2;grid-template-columns:repeat(4,minmax(0,1fr));justify-content:stretch;width:100%}
+  .atlas-site-header .atlas-site-nav{grid-column:1/-1;grid-row:2;grid-template-columns:repeat(5,minmax(0,1fr));justify-content:stretch;width:100%}
   .atlas-site-header .atlas-site-nav>a{padding:8px 5px;font-size:11px}
   .atlas-lab-menu{margin-top:16px;padding:0 20px}
   .atlas-section-nav{gap:7px}
@@ -272,7 +272,7 @@ a.atlas-ui-button:hover,button.atlas-ui-button:hover{border-color:var(--atlas-sh
   .atlas-site-header .atlas-site-brand{gap:6px}
   .atlas-site-header .atlas-site-wordmark strong{font-size:12px;letter-spacing:.2px}
   .atlas-site-header .atlas-site-wordmark small{font-size:8px;letter-spacing:.3px}
-  .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:44px 44px;height:92px}
+  .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:44px 44px;height:92px}
   .atlas-site-header .atlas-site-nav>a{font-size:11px}
   .atlas-section-nav>a{padding-right:7px;padding-left:7px;font-size:9px}
 }
@@ -322,3 +322,6 @@ html[data-lab-embed=home] .atlas-directory-toggle,html[data-lab-embed=home] .atl
   body:is(.cases-page,.lab-page) .atlas-page-directory[data-page-directory][data-directory-open]{border-color:CanvasText;background:Canvas;color:CanvasText}
   .atlas-directory-heading{border-color:CanvasText}
 }
+
+@media(min-width:801px){.atlas-site-header-inner{grid-template-columns:190px minmax(0,1fr) 116px;gap:20px}.atlas-site-header .atlas-site-theme{width:116px}}
+@media(max-width:800px){.atlas-site-header .atlas-site-nav>a{font-size:12px;padding:8px 2px}.atlas-site-header .atlas-site-nav>a:last-child{font-size:11px}}

@@ -2,6 +2,9 @@
   "id": "word-opacity-stagger",
   "title": "单词透明度的低幅交错",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "通过少量时间差支持标题阅读顺序。",
   "mechanism": "单词只过渡透明度并以短总跨度交错，正文组用小位移带入；标题文字保持原排版。",
   "trigger": "标题或正文组进入阈值",

@@ -5,6 +5,9 @@
     "id": "mode-character-accent",
     "title": "当前能力词逐字强调色",
     "category": "交互反馈",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "通过字色让当前能力选择可见。",
     "mechanism": "将能力词分成保持阅读顺序的字符层，选中模式更新该词的逐字强调色，其余标题维持稳定。",
     "trigger": "能力模式改变",
@@ -63,7 +66,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
+      "bundleSha256": "6068da489fdcb5f2191a2d9242c0b0f1434d4f33ad54d1ea472c49c9aed693d8"
     }
   ]
 }

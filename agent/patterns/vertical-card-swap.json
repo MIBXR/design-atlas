@@ -5,6 +5,9 @@
     "id": "vertical-card-swap",
     "title": "中央窗口垂直退出与进入",
     "category": "交互反馈",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "同一窗口舞台用垂直方向交接模式。",
     "mechanism": "旧产品图沿垂直方向离开，新图从对应方向进入；统一裁切舞台与层级，快速切换清理旧离场层。",
     "trigger": "选择产品模式",
@@ -69,7 +72,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
+      "bundleSha256": "6068da489fdcb5f2191a2d9242c0b0f1434d4f33ad54d1ea472c49c9aed693d8"
     }
   ]
 }

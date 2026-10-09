@@ -5,6 +5,9 @@
     "id": "top-down-clipped-menu",
     "title": "从上向下裁切的全屏菜单",
     "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "用一个进入方向组织菜单项目。",
     "mechanism": "全屏面板从顶部向下clip进入，项目按次序交错；关闭反向收束，背景阅读状态随关闭恢复。",
     "trigger": "手机打开/关闭菜单",
@@ -72,7 +75,7 @@
         "bundle": "agent/cases/claude-platform.json",
         "demo": "demos/claude-platform/index.html"
       },
-      "bundleSha256": "1b678763f4f2b8b4debad77707d3cf3418ba3612c77ab651e81058683af4abf9"
+      "bundleSha256": "b8ea6b4e6353289a7e0d7120935259a83f76e21efadcc1531821548a029f7471"
     }
   ]
 }

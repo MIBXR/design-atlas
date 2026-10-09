@@ -5,6 +5,9 @@
     "id": "hatched-registration-type",
     "title": "斜线注册大字与前景记录",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "让巨大背景字承担技术身份，让实心前景文字承担阅读。",
     "mechanism": "用低对比斜线纹理填充巨大背景字，并以小编号、十字标定点和淡网格定位；前景姓名与资料保持实心、清楚边界和独立留白。",
     "trigger": "呈现角色或技术档案首屏",
@@ -79,7 +82,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "ffa0f45b34c2a6d74995393213eae6bcca403d33ca6aee007731d7c3affd5a52"
+      "bundleSha256": "8142eb61feb497a0c364dd0a354e4ec27fde6b495a5f564919d9f3e93df57af2"
     }
   ]
 }

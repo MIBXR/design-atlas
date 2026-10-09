@@ -5,6 +5,9 @@
     "id": "metric-explanation-selector",
     "title": "指标选择与解释联动",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让数字、进度与说明成为同一条事实。",
     "mechanism": "选择统计项强调当前数字并更新细线进度及基础设施解释，自动周期与指针暂停共享当前索引。",
     "trigger": "选择指标或自动推进",
@@ -62,7 +65,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "869522e3d8b4871ced39a89eccfe4686e896fd5b78c3dddb795a8a9bf240f15b"
+      "bundleSha256": "e12a3123e1354e7498443e932549131c66c6d8da9a82c95a02d70a024594328c"
     }
   ]
 }

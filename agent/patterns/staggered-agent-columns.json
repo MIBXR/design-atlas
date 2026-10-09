@@ -5,6 +5,9 @@
     "id": "staggered-agent-columns",
     "title": "交错代理状态展示",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "多列代理不同时抢占注意。",
     "mechanism": "代理列按交错时序显示思考与回答，进入视口启动，离开或后台停止，暂停保持已出现结果。",
     "trigger": "AI章节进入视口",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "a245270c6e4b7e4d2243595955d14964747bf5506d7fce9093b0fee572a589ce"
+      "bundleSha256": "2d184a140180ac19475480eaea3b2eb236a1505bf9afcb410af8f10deab7e9cd"
     }
   ]
 }

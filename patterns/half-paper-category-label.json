@@ -2,6 +2,9 @@
   "id": "half-paper-category-label",
   "title": "图像与半幅纸签分类",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "作品负责观看，半幅浅纸签负责读清类别。",
   "mechanism": "完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。",
   "trigger": "浏览或聚焦文化专题目录",

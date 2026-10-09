@@ -2,6 +2,9 @@
   "id": "last-request-transition",
   "title": "快速切换保留最后目标",
   "category": "导航与状态",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "中途反向或改选仍收束到最后意图。",
   "mechanism": "单一状态控制器记录最新目标，取消旧退出回调并限制同时交互层；交接结束继续最后请求。",
   "trigger": "转场期间再次选择或反向",

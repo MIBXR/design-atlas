@@ -5,6 +5,10 @@
     "id": "header-below-mobile-navigation",
     "title": "顶栏下展开并恢复阅读位置",
     "category": "导航与状态",
+    "experienceTypes": [
+      "micro-motion",
+      "structure"
+    ],
     "summary": "菜单与长档案在手机上暂时分离。",
     "mechanism": "菜单从固定顶栏下方直接显示，汉堡图标单独形变；锁住背景并在关闭时恢复原滚动位置。",
     "trigger": "手机打开/关闭菜单",
@@ -66,7 +70,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "49cea30096e1454044bb301b68cfff03272367dcb37f606d652b93e18a8a0ccd"
+      "bundleSha256": "cf043c64966e3be515b020144d4ecf1ecf42955f890edb4d20c45c5701272c15"
     }
   ]
 }

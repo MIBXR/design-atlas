@@ -5,6 +5,9 @@
     "id": "compact-scroll-header",
     "title": "跨过品牌区出现紧凑导航",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "大标识与持久导航按阅读位置交接。",
     "mechanism": "顶部保留大机构标志，超过标志高度加偏移后从上方出现紧凑导航，返回顶部退出恢复大标志。",
     "trigger": "跨越阈值或回到首屏",
@@ -67,7 +70,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "1ba31f1dbfdf52cd8d0473a7d0776eaf1ecdd145f95b0411d05a4abe0aa66a46"
+      "bundleSha256": "24264a05672461453bc5e38afacbc55b987d770531cbb71c3140c352bda6586e"
     }
   ]
 }

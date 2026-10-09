@@ -5,6 +5,9 @@
     "id": "scroll-logo-contraction",
     "title": "滚动后品牌标识收回导航",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "首屏大标识与长页导航共享身份。",
     "mechanism": "首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。",
     "trigger": "跨越滚动阈值或返回",
@@ -71,7 +74,7 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "d0c663e7d14e579c0895bd536990572b6bb9e5c5eb33863d3aa1b31b73550bfc"
+      "bundleSha256": "915b41ff03889873057cc56793b4cabba849d3132cce110e7c54f19abba8ae72"
     }
   ]
 }

@@ -5,6 +5,9 @@
     "id": "mobile-native-mode-cards",
     "title": "手机以原生模式卡替代桌面长舞台",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "按设备任务重排交互，保持能力可浏览。",
     "mechanism": "窄屏把桌面sticky模式舞台转换为三张原生水平卡；标题选择将对应卡定位到视口。",
     "trigger": "手机横滑或选择能力词",
@@ -64,7 +67,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
+      "bundleSha256": "6068da489fdcb5f2191a2d9242c0b0f1434d4f33ad54d1ea472c49c9aed693d8"
     }
   ]
 }

@@ -2,6 +2,9 @@
   "id": "photo-edge-text-contrast",
   "title": "仅在照片文字边缘增强对比",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "局部文字能读，整张照片保持原色。",
   "mechanism": "在底缘文字所在区域加有限黑色渐变，白字、橙色行动与摄影形成稳定角色，其他图像区域不整体滤镜化。",
   "trigger": "查看照片底部标题和行动",

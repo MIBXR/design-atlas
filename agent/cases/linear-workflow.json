@@ -274,8 +274,8 @@
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "71faa05e2ca967e4e16f917c25f5d8a9bb9ff596e10216b420d66f0f1c5c654f",
-      "bytes": 4329
+      "sha256": "934b0c85f273ae3aabfa00cc41af5e59a28c810f62ee6ab77d0a989d52eb501c",
+      "bytes": 4409
     },
     {
       "path": "document.js",
@@ -334,8 +334,8 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "bce3cec83b967ac62db2458f60b912bd9a2cf84eafd717cc2454dc65dc694aad",
-      "bytes": 14852
+      "sha256": "3d80c589770b5da97f76ea1115655201679565751ffae8143e2b8c11d4010f2a",
+      "bytes": 15175
     },
     {
       "path": "site-shell.js",
@@ -346,8 +346,8 @@
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "94b36c76ca735054baae6232dd06f4ce3980e6d92ba1dd8ce38450e631b8bfa7",
-      "bytes": 15208
+      "sha256": "c56fcc571ebca1282eac417621023d2b3283cc744a4bf9da81fd1d50955a1799",
+      "bytes": 15216
     },
     {
       "path": "theme-control.css",

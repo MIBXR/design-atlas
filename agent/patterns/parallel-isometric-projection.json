@@ -5,6 +5,9 @@
     "id": "parallel-isometric-projection",
     "title": "统一等轴投影与三面明度",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "用一个坐标规则构成整个微型世界。",
     "mechanism": "全部体块共享30°平行轴与比例，顶/左/右使用统一明度方向，路径与植物提供尺度。",
     "trigger": "查看系统场景",
@@ -58,7 +61,7 @@
         "bundle": "agent/cases/isometric-3d.json",
         "demo": "demos/isometric-3d/index.html"
       },
-      "bundleSha256": "3c64530f38ba045a95893773c8007f6bce4dab33079b84cb3589e033cca6d1c5"
+      "bundleSha256": "eddc5c2489c903a13af9ab02751100df6941bad74e589f5fc77656a9cb56de0e"
     }
   ]
 }

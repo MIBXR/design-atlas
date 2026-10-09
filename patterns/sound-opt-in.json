@@ -2,6 +2,9 @@
   "id": "sound-opt-in",
   "title": "声音主动启用与随时停止",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "sound"
+  ],
   "summary": "先征求声音选择，再进入听觉体验。",
   "mechanism": "声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。",
   "trigger": "开启/关闭声音",

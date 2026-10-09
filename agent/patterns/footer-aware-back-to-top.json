@@ -5,6 +5,9 @@
     "id": "footer-aware-back-to-top",
     "title": "回顶入口避让页脚",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "长页回程入口不遮挡末端内容。",
     "mechanism": "达到阅读深度后显示回顶按钮，接近页脚由fixed转为footer内部定位；返回页首后消失。",
     "trigger": "深入页面、接近页脚或回顶",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "1ba31f1dbfdf52cd8d0473a7d0776eaf1ecdd145f95b0411d05a4abe0aa66a46"
+      "bundleSha256": "24264a05672461453bc5e38afacbc55b987d770531cbb71c3140c352bda6586e"
     }
   ]
 }

@@ -2,6 +2,9 @@
   "id": "pointer-repulsion-particles",
   "title": "指针排斥与回聚点阵",
   "category": "交互反馈",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "静态标识因指针接近而获得可触感。",
   "mechanism": "WebGL点阵以目标点位维持形状，指针附近点按距离受排斥，移开后回归原模型；文字位于独立稳定层。",
   "trigger": "指针进入、移动或离开粒子区域",

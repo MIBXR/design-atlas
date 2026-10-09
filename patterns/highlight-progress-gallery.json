@@ -2,6 +2,9 @@
   "id": "highlight-progress-gallery",
   "title": "逐项亮点与可暂停进度",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "把产品重点分成可直接选择的摄影章节。",
   "mechanism": "每个亮点有独立图像、标题与进度，进入视口后推进；用户可以跳选、暂停，结束后重播。",
   "trigger": "进入亮点区域或选择条目",

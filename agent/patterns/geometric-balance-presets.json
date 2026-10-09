@@ -5,6 +5,9 @@
     "id": "geometric-balance-presets",
     "title": "几何关系预设实验",
     "category": "交互反馈",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "改变位置关系来比较平衡、节奏和张力。",
     "mechanism": "保持同一组圆、三角与矩形，让不同预设改变比例和位置；图形之外保留稳定操作区。",
     "trigger": "选择构成预设",
@@ -56,7 +59,7 @@
         "bundle": "agent/cases/bauhaus-geometry.json",
         "demo": "demos/bauhaus-geometry/index.html"
       },
-      "bundleSha256": "44c85b762c571039bcf6d0a9c45072f714d31f717f33d32ae5051c3689f45101"
+      "bundleSha256": "33fd8afc92b21c8d09f1af1b2c2d4b64167d8ddb1a351d7b17ad823d086d8ac2"
     }
   ]
 }

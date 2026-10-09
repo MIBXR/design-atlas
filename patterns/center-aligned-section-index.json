@@ -2,6 +2,10 @@
   "id": "center-aligned-section-index",
   "title": "章节中心定位的侧边索引",
   "category": "导航与状态",
+  "experienceTypes": [
+    "micro-motion",
+    "structure"
+  ],
   "summary": "点击时让阅读目标落在视口中心。",
   "mechanism": "侧边索引按视口中心更新，点击将目标章中心对齐；指针/焦点进入索引显示标签并降低内容强调。",
   "trigger": "点击索引或聚焦索引区",

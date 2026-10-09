@@ -2,6 +2,10 @@
   "id": "specimen-pullout-selection",
   "title": "样本阵列的抽出选择",
   "category": "交互反馈",
+  "experienceTypes": [
+    "visual",
+    "structure"
+  ],
   "summary": "在真实立体阵列中保留单件抽出，用独立网页状态同步观察与阅读。",
   "mechanism": "大量平行立体档案与被抬出的焦点板保留来源透视/材质；本地以同一选择状态同步热点、观察编号、标题和正文，背景阵列可隐藏而焦点板保留。影片抽出运动与网页点击分别归档。",
   "trigger": "点选本地观察热点、前后按钮或阵列显隐",

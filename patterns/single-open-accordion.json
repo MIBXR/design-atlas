@@ -2,6 +2,10 @@
   "id": "single-open-accordion",
   "title": "单开内容与图像联动",
   "category": "内容组织",
+  "experienceTypes": [
+    "micro-motion",
+    "structure"
+  ],
   "summary": "同一时刻集中阅读一个展开项。",
   "mechanism": "激活一项收起前项并展开当前正文；内容高度与图标同步，案例故事还可同时替换旁侧摄影。",
   "trigger": "展开FAQ或故事行",

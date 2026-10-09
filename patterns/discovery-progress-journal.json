@@ -2,6 +2,9 @@
   "id": "discovery-progress-journal",
   "title": "探索进度与可重置手账",
   "category": "导航与状态",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "把访问过的地点变成可回看的进度。",
   "mechanism": "访问地点时记录发现集合，同步地点按钮、进度文本与旅行手账，并允许清除后重新探索。",
   "trigger": "首次抵达地点或重置",

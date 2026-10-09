@@ -2,6 +2,9 @@
   "id": "integer-pixel-canvas",
   "title": "整数像素与有限色板",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "从绘制尺度建立像素世界的统一性。",
   "mechanism": "在小画布内用整数坐标与有限色板绘制轮廓，放大保持pixelated边缘；正文单独用可读字体。",
   "trigger": "查看与缩放场景",

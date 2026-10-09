@@ -5,6 +5,9 @@
     "id": "visit-facts-grid",
     "title": "到访事实在行动旁成组呈现",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "实体机构介绍后直接给到访依据。",
     "mechanism": "建筑或展览视觉确认机构后，欢迎区用稳定小列组织日期、开放、地点和行动；手机按事实顺序堆叠。",
     "trigger": "从首图继续阅读",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
+      "bundleSha256": "e043c4bdcb1e61233d389b8b810e8f05a1c90c3fb86bff407b4e7db474ca6fa4"
     }
   ]
 }

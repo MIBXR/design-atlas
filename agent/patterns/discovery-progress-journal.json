@@ -5,6 +5,9 @@
     "id": "discovery-progress-journal",
     "title": "探索进度与可重置手账",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "把访问过的地点变成可回看的进度。",
     "mechanism": "访问地点时记录发现集合，同步地点按钮、进度文本与旅行手账，并允许清除后重新探索。",
     "trigger": "首次抵达地点或重置",
@@ -62,7 +65,7 @@
         "bundle": "agent/cases/pixel-world.json",
         "demo": "demos/pixel-world/index.html"
       },
-      "bundleSha256": "9936e5592ca689afa4b8eabfd3e72f79382981b8566a2bedd2266f5d02c755d8"
+      "bundleSha256": "2d0e630a2d4476b883bf0a187aaffa30a78d9e29da8f7c5e892600fd85fea19c"
     }
   ]
 }

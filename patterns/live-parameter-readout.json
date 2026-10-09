@@ -2,6 +2,9 @@
   "id": "live-parameter-readout",
   "title": "滑块与带单位读数联动",
   "category": "交互反馈",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "用数值说明参数如何改变真实对象。",
   "mechanism": "原生范围输入直接更新目标属性和相邻读数；明确单位、范围以及参数立即生效还是影响下一次变化。",
   "trigger": "拖动或键盘调整滑块",

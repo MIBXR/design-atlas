@@ -2,6 +2,9 @@
   "id": "geometric-balance-presets",
   "title": "几何关系预设实验",
   "category": "交互反馈",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "改变位置关系来比较平衡、节奏和张力。",
   "mechanism": "保持同一组圆、三角与矩形，让不同预设改变比例和位置；图形之外保留稳定操作区。",
   "trigger": "选择构成预设",

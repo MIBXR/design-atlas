@@ -2,6 +2,9 @@
   "id": "centered-loop-gallery",
   "title": "中心图与邻图预告的循环轨道",
   "category": "导航与状态",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "当前图突出，侧图提示还有内容。",
   "mechanism": "同一水平轨道移位，中心图清晰、邻图部分露出；首尾以克隆衔接后复位，手动与自动状态共享索引。",
   "trigger": "箭头、索引、触摸或自动周期",

@@ -5,6 +5,9 @@
     "id": "hover-focus-mode-selection",
     "title": "标题悬停与聚焦选择模式",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "标题本身成为多能力选择入口。",
     "mechanism": "把主标题中的能力词做成可操作控制，悬停、键盘聚焦与点击选择同一模式，离开后保留最后选择。",
     "trigger": "悬停/聚焦/点击能力词",
@@ -64,7 +67,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "82d09b923f9988c19284bcc6c372ee560bb3e9af565168bd35b756f46ee28dee"
+      "bundleSha256": "6068da489fdcb5f2191a2d9242c0b0f1434d4f33ad54d1ea472c49c9aed693d8"
     }
   ]
 }

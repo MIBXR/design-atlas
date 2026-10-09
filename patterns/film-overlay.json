@@ -2,6 +2,10 @@
   "id": "film-overlay",
   "title": "主动观看的独立影片层",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "sound",
+    "structure"
+  ],
   "summary": "将有声观看与普通读页分别组织。",
   "mechanism": "用户激活播放入口后打开独立影片层，提供原生进度、暂停和音量；关闭即暂停，背景媒体让出。",
   "trigger": "主动观看/关闭影片",

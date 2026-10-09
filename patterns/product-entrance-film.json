@@ -2,6 +2,9 @@
   "id": "product-entrance-film",
   "title": "真实产品影片建立首屏主角",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "用真实材质与镜头让产品先出现。",
   "mechanism": "静音产品影片置于全宽舞台，主标题与行动不等待影片结束；重播只重放这一段。",
   "trigger": "首次进入或选择重播",

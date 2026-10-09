@@ -5,6 +5,9 @@
     "id": "instant-open-menu-category-switch",
     "title": "已打开菜单分类即时切换",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "首次入场之后分类浏览不重复等待。",
     "mechanism": "菜单首次带入，容器打开期间切换分类直接换内容；退出有短延迟且旧关闭计时在新打开时失效。",
     "trigger": "首次打开、改分类或离开",
@@ -69,7 +72,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "6c18ed29f48b83d111afd43f2989556c8ee01864c29073161d232fbad4d7db48"
+      "bundleSha256": "da7bfc6980dde1bf89079f70589eed13f2c62b609ff84e077cb2c5ec7123181f"
     }
   ]
 }

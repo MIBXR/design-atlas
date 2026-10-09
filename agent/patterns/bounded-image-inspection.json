@@ -5,6 +5,9 @@
     "id": "bounded-image-inspection",
     "title": "公开边界内的瓦片细察",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让图像从全貌到局部，再明确回到总览。",
     "mechanism": "独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。",
     "trigger": "主动加减、滚轮缩放、拖动或键盘平移",
@@ -79,7 +82,7 @@
         "bundle": "agent/cases/digital-dunhuang.json",
         "demo": "demos/digital-dunhuang/index.html"
       },
-      "bundleSha256": "61efed34f9d77580baa4be9387d18864f4f777898193ccfc82e448581f894952"
+      "bundleSha256": "902bddf95d6a6a488f5ea8c51f72c6e7e06ec444786e5ecf8d1d6ada8a7697c8"
     }
   ]
 }

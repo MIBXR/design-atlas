@@ -56,8 +56,8 @@ for(const e of entries){
   const seenScripts=new Set();
   for(const file of fs.readdirSync(path.dirname(demoPath)).filter(x=>x.endsWith('.js'))){try{const target=path.join(path.dirname(demoPath),file),source=fs.readFileSync(target,'utf8');const module=/<script\b[^>]*type=["']module["'][^>]*src=["']/.test(html)&&/\b(?:import|export)\s/.test(source);scripts+=validateScript(target,{module,seen:seenScripts});}catch(err){fail(`${e.id}: ${file} ${err.message}`);}}
 }
-for(const file of ['home.js','legacy-links.js','site-shell.js','atlas.js','agent.js','catalog.js','fundamentals.js','document.js','theme.js','asset-sources.js','asset-runtime.js','asset-cache.js','asset-cache-worker.js','case-loading.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
-for(const file of ['index.html','cases.html','agent.html','fundamentals.html','document.html']){
+for(const file of ['patterns-ui.js','patterns-page.js','pattern-playground.js','home.js','legacy-links.js','site-shell.js','atlas.js','agent.js','catalog.js','fundamentals.js','document.js','theme.js','asset-sources.js','asset-runtime.js','asset-cache.js','asset-cache-worker.js','case-loading.js']){try{new vm.Script(fs.readFileSync(path.join(root,file),'utf8'));scripts++;}catch(err){fail(`${file}: ${err.message}`);}}
+for(const file of ['index.html','cases.html','patterns.html','agent.html','fundamentals.html','document.html']){
   const html=fs.readFileSync(path.join(root,file),'utf8');
   if(!/<meta[^>]+name=["']viewport["']/.test(html))fail(`${file}: missing viewport`);
   for(const match of html.matchAll(/<(?:script|img|link)[^>]+(?:src|href)=["']([^"']+)["']/g)){

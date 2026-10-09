@@ -56,3 +56,12 @@ test('legacy state added after arriving on the landing page is restored on hash 
   historyNavigation.listeners.get('popstate')();
   assert.deepEqual(historyNavigation.replacements, ['https://atlas.test/cases.html?country=Japan&q=grid']);
 });
+
+test('legacy pattern collection and detail links reach the independent page with filters intact', () => {
+  for (const path of ['/', '/index.html', '/cases.html', '/cases']) for (const hash of ['#patterns', '#patterns?type=sound&source=zelda-world', '#pattern/sound-opt-in?type=sound']) {
+    const href = 'https://atlas.test' + path + '?utm_source=shared' + hash;
+    const expected = new URL(href); expected.pathname = '/patterns.html';
+    assert.deepEqual(visit(href).replacements, [expected.href]);
+  }
+  assert.deepEqual(visit('https://atlas.test/patterns.html#patterns?type=visual').replacements, []);
+});

@@ -2,6 +2,9 @@
   "id": "bounded-panel-track",
   "title": "有界的完整面板横向轨道",
   "category": "导航与状态",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "图像、资料与说明作为同一面板移动。",
   "mechanism": "每次选择使整块相关内容沿单一轨道平移，首尾禁用前后按钮并停止；人物或玩法状态同步更新。",
   "trigger": "选择编号、箭头或手势",

@@ -2,6 +2,9 @@
   "id": "timed-platform-carousel",
   "title": "可暂停的平台场景轮换",
   "category": "导航与状态",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "平台tabs、点控和场景保持同一索引。",
   "mechanism": "选择平台让场景水平交接，自动周期可由悬停或手动暂停，后台停止，快速选择只留下一个场景。",
   "trigger": "选择平台、手势或自动周期",

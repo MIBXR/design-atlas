@@ -2,6 +2,9 @@
   "id": "compact-scroll-header",
   "title": "跨过品牌区出现紧凑导航",
   "category": "滚动叙事",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "大标识与持久导航按阅读位置交接。",
   "mechanism": "顶部保留大机构标志，超过标志高度加偏移后从上方出现紧凑导航，返回顶部退出恢复大标志。",
   "trigger": "跨越阈值或回到首屏",

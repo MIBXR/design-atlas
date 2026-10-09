@@ -2,6 +2,9 @@
   "id": "inclined-motion-bands",
   "title": "斜切条带延续运动方向",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "通过有限倾斜建立运动或海报节奏。",
   "mechanism": "标题带、说明板与箭头重复同一倾斜方向，正文水平可读，下载徽章保留自己的标准轮廓。",
   "trigger": "阅读章节分隔与行动入口",

@@ -2,6 +2,9 @@
   "id": "sequential-stroke-reveal",
   "title": "按构造顺序描绘线稿",
   "category": "交互反馈",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "从基础到细节显示结构关系。",
   "mechanism": "主体路径以stroke表示，用归一化pathLength将进度映射到dashoffset；按组成逻辑依次描绘。",
   "trigger": "用户主动重播",

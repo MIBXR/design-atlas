@@ -2,6 +2,9 @@
   "id": "scroll-differential-stars",
   "title": "滚动差值驱动背景不同速光点",
   "category": "滚动叙事",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "背景运动来自滚动而非指针。",
   "mechanism": "背景星按前后滚动位置差值除以不同系数移动，越界重置；主图仍沿自然文档滚动。",
   "trigger": "向下或向上自然滚动",

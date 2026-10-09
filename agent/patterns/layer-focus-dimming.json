@@ -5,6 +5,9 @@
     "id": "layer-focus-dimming",
     "title": "聚焦一层并减弱其余层",
     "category": "交互反馈",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "在完整系统中强调一个子系统。",
     "mechanism": "选定图层保持清晰，其余图层降低透明度但仍留在原位，文字说明与选中按钮同步。",
     "trigger": "选择花园/建筑/整体",
@@ -58,7 +61,7 @@
         "bundle": "agent/cases/isometric-3d.json",
         "demo": "demos/isometric-3d/index.html"
       },
-      "bundleSha256": "3c64530f38ba045a95893773c8007f6bce4dab33079b84cb3589e033cca6d1c5"
+      "bundleSha256": "eddc5c2489c903a13af9ab02751100df6941bad74e589f5fc77656a9cb56de0e"
     }
   ]
 }

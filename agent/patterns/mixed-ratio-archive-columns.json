@@ -5,6 +5,9 @@
     "id": "mixed-ratio-archive-columns",
     "title": "等宽栏目保留不同图像比例",
     "category": "内容组织",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "统一栏目线索，不强行统一作品高度。",
     "mechanism": "栏目有共同宽度与标题规则，内部竖海报、横摄影按各自比例排列；不同内容长度产生不同列高，手机逐列阅读。",
     "trigger": "浏览机构档案",
@@ -69,7 +72,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "49cea30096e1454044bb301b68cfff03272367dcb37f606d652b93e18a8a0ccd"
+      "bundleSha256": "cf043c64966e3be515b020144d4ecf1ecf42955f890edb4d20c45c5701272c15"
     }
   ]
 }

@@ -2,6 +2,9 @@
   "id": "sticky-stage-handoff",
   "title": "同一媒体从主舞台交给说明",
   "category": "滚动叙事",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "滚动时让同一对象继续承担叙事。",
   "mechanism": "媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。",
   "trigger": "上下穿越交接段",

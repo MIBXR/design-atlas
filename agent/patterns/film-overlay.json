@@ -5,6 +5,10 @@
     "id": "film-overlay",
     "title": "主动观看的独立影片层",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "sound",
+      "structure"
+    ],
     "summary": "将有声观看与普通读页分别组织。",
     "mechanism": "用户激活播放入口后打开独立影片层，提供原生进度、暂停和音量；关闭即暂停，背景媒体让出。",
     "trigger": "主动观看/关闭影片",
@@ -90,7 +94,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
+      "bundleSha256": "3462369f2d926511c5c98624715ff8987be5f73bffccb47d5e7e5cfbcf9ee5b5"
     },
     {
       "id": "monument-valley-game",
@@ -99,7 +103,7 @@
         "bundle": "agent/cases/monument-valley-game.json",
         "demo": "demos/monument-valley-game/index.html"
       },
-      "bundleSha256": "bb8320dbd68b71e84efe641cc42b33d1a35c3cf4e354d6c07d089d5f1a76cb7a"
+      "bundleSha256": "dfcc29089c58dd0c7c3878e7585573af884d0f494a2f9846622abf49adcc4381"
     },
     {
       "id": "uma-musume",
@@ -108,7 +112,7 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "d0c663e7d14e579c0895bd536990572b6bb9e5c5eb33863d3aa1b31b73550bfc"
+      "bundleSha256": "915b41ff03889873057cc56793b4cabba849d3132cce110e7c54f19abba8ae72"
     }
   ]
 }

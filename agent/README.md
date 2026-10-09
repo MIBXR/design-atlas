@@ -14,4 +14,4 @@
 
 生成文件使用UTF-8与LF；被引用的文件遵循.gitattributes。二进制只记录原仓库路径/字节数/SHA256，不嵌入JSON。源码来自原始Git字节，区别于部署中重写素材地址或增加UTF-8标记的展示文件。
 
-修改内容后运行npm run build，再运行npm run check与npm run test:agent。构建扫描全部entries/及patterns/；检查覆盖、去重、源观察漂移、组合ID、manifest和生成哈希。首次增加案例须拆巧思，终态维护不复制内容到skill仓库。
+修改内容后运行npm run build，再运行npm run check与npm run test:agent。构建扫描全部entries/及patterns/；检查去重、源观察漂移、组合ID、manifest和生成哈希。按独立机制维护巧思，终态维护不复制内容到skill仓库。

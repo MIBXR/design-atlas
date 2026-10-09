@@ -2,6 +2,9 @@
   "id": "continuous-bgm-bridge",
   "title": "跨章节连续的环境声音",
   "category": "加载与媒体",
+  "experienceTypes": [
+    "sound"
+  ],
   "summary": "以连续音轨连接不同场景。",
   "mechanism": "用户开启后BGM跨章节保持同一播放位置，启停使用有依据的音量渐变；人物语音与环境音乐分开管理。",
   "trigger": "主动开启或关闭BGM、切换章节",

@@ -2,6 +2,9 @@
   "id": "responsive-art-direction",
   "title": "桌面与手机使用专门主图",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "按画面意图替换素材，而非盲目裁切。",
   "mechanism": "通过picture或响应式资源选择桌面宽图与手机专图，保留主体位置及图内文字，正文与控件按设备重新排。",
   "trigger": "视口进入手机断点",

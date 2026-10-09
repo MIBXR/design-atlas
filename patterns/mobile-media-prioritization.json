@@ -2,6 +2,9 @@
   "id": "mobile-media-prioritization",
   "title": "按手机信息任务裁减复杂演示",
   "category": "内容组织",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "复杂媒体变体与正文分别管理。",
   "mechanism": "窄屏保留主张、操作和说明，按来源变体隐藏重型演示或仅保留消息线程，避免把桌面全部缩到不可读。",
   "trigger": "进入窄屏布局",

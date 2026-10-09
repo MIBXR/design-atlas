@@ -2,6 +2,9 @@
   "id": "local-save-toggle",
   "title": "可取消的本地收藏",
   "category": "交互反馈",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "明确保存在当前浏览器的收藏状态。",
   "mechanism": "每条内容使用可反复切换的收藏按钮，记录条目ID并恢复当前浏览器的状态。",
   "trigger": "收藏或取消收藏",

@@ -5,6 +5,9 @@
     "id": "highlight-progress-gallery",
     "title": "逐项亮点与可暂停进度",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "把产品重点分成可直接选择的摄影章节。",
     "mechanism": "每个亮点有独立图像、标题与进度，进入视口后推进；用户可以跳选、暂停，结束后重播。",
     "trigger": "进入亮点区域或选择条目",
@@ -67,7 +70,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "82cc0565c550918c5b1aa305628dab64b3687395e1355ba3d117bfb939e013c7"
+      "bundleSha256": "3462369f2d926511c5c98624715ff8987be5f73bffccb47d5e7e5cfbcf9ee5b5"
     }
   ]
 }

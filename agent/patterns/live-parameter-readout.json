@@ -5,6 +5,9 @@
     "id": "live-parameter-readout",
     "title": "滑块与带单位读数联动",
     "category": "交互反馈",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "用数值说明参数如何改变真实对象。",
     "mechanism": "原生范围输入直接更新目标属性和相邻读数；明确单位、范围以及参数立即生效还是影响下一次变化。",
     "trigger": "拖动或键盘调整滑块",
@@ -77,7 +80,7 @@
         "bundle": "agent/cases/bauhaus-geometry.json",
         "demo": "demos/bauhaus-geometry/index.html"
       },
-      "bundleSha256": "44c85b762c571039bcf6d0a9c45072f714d31f717f33d32ae5051c3689f45101"
+      "bundleSha256": "33fd8afc92b21c8d09f1af1b2c2d4b64167d8ddb1a351d7b17ad823d086d8ac2"
     },
     {
       "id": "retro-80s",
@@ -86,7 +89,7 @@
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
       },
-      "bundleSha256": "d3e8936655a4c9cbf7d9afbf49618e9b11632748dd123d01782c433ae8a98f74"
+      "bundleSha256": "6ff8f61401137fbf14db45c45c66659b8ba4b806a27fb36c82294545e62a6055"
     },
     {
       "id": "shape-morph",
@@ -95,7 +98,7 @@
         "bundle": "agent/cases/shape-morph.json",
         "demo": "demos/shape-morph/index.html"
       },
-      "bundleSha256": "5315106c44178661c8c83b0307688ed394e511a88129d968c8a0b193acc7a0ec"
+      "bundleSha256": "beb9b6998074544dfb84aa734083967febc2ec736770829c5d5435533690db4a"
     }
   ]
 }

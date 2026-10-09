@@ -2,6 +2,9 @@
   "id": "natural-height-mega-menu",
   "title": "自然高度连续衔接的目录",
   "category": "导航与状态",
+  "experienceTypes": [
+    "micro-motion"
+  ],
   "summary": "分类切换保持同一个目录容器。",
   "mechanism": "桌面目录随分类真实内容改变高度，位移、透明度与裁切同步，快速反向取消旧动画；关闭后hidden/inert与aria一致。",
   "trigger": "指针进入、点击分类或关闭",

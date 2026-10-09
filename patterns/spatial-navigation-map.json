@@ -2,6 +2,9 @@
   "id": "spatial-navigation-map",
   "title": "场景地标作为导航",
   "category": "导航与状态",
+  "experienceTypes": [
+    "structure"
+  ],
   "summary": "让角色位置、地点信息与目录同时变化。",
   "mechanism": "地标选择移动角色并更新对应文本，地图上的空间状态与DOM地点索引保持一致。",
   "trigger": "选择地标或移动到地点",

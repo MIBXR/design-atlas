@@ -2,6 +2,9 @@
   "id": "keyboard-playable-notes",
   "title": "可聚焦音键与物理键演奏",
   "category": "交互反馈",
+  "experienceTypes": [
+    "sound"
+  ],
   "summary": "让屏幕琴键与键盘演奏保持同一状态。",
   "mechanism": "屏幕按键包含音名，按下或指定物理键启动音符，释放、失焦或关闭声音停止声音。",
   "trigger": "按住屏幕或键盘音键",

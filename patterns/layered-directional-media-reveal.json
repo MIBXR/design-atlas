@@ -2,6 +2,9 @@
   "id": "layered-directional-media-reveal",
   "title": "黑层、信号层与媒体的方向揭示",
   "category": "交互反馈",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "黑色遮层、强调色与实际图像依次揭示，让局部相册切换有明确方向和节奏。",
   "mechanism": "组件内将黑层、信号色层、实际图像或影片叠为同方向裁切/slide-in，错峰推进；说明文字先退后入，选中索引、页码和媒体共同交接，旧媒体完成后暂停并清理。",
   "trigger": "点击局部相册的前后或编号，选择新的图像/影片",

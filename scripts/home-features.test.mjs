@@ -5,6 +5,32 @@ import vm from 'node:vm';
 
 const source = fs.readFileSync(new URL('../home.js', import.meta.url), 'utf8');
 
+test('switching a home mechanism disposes hidden players and restarts only the selected one', () => {
+  const types = ['visual', 'micro-motion', 'page-motion', 'sound'];
+  const players = types.map(type => ({ dataset:{type} }));
+  const panels = players.map((player, index) => ({ hidden:index !== 0, inert:index !== 0, querySelector:() => player }));
+  const buttons = types.map((type, index) => ({
+    dataset:{homePattern:type}, pressed:String(index === 0),
+    getAttribute() { return this.pressed; }, setAttribute(_, value) { this.pressed = value; },
+    addEventListener(_, handler) { this.click = handler; },
+  }));
+  const disposed = [], mounted = [];
+  const document = {
+    querySelector:() => null, querySelectorAll:selector => selector === '[data-home-pattern]' ? buttons : [],
+    getElementById:id => panels[types.findIndex(type => id === `home-pattern-${type}`)] || null,
+  };
+  vm.runInNewContext(source, { document, window:{DesignAtlasPlayground:{dispose:player => disposed.push(player), mount:player => mounted.push(player)}} });
+  buttons[3].click();
+  assert.deepEqual(panels.map(panel => panel.hidden || panel.inert), [true, true, true, false]);
+  assert.deepEqual(disposed, players);
+  assert.deepEqual(mounted, [players[3]]);
+  buttons[3].click();
+  assert.equal(mounted.length, 1, 'reselecting the same type preserves its live operation');
+  buttons[0].click();
+  assert.deepEqual(mounted, [players[3], players[0]]);
+  assert.equal(buttons[3].pressed, 'false');
+});
+
 // Run the actual controller against a controllable browser boundary. Persistent
 // content rejects replacement so a handoff cannot discard the live Lab draft.
 function fixture({ desktop = true, tallEnough = true, reduced = false } = {}) {

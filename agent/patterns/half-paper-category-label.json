@@ -5,6 +5,9 @@
     "id": "half-paper-category-label",
     "title": "图像与半幅纸签分类",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "作品负责观看，半幅浅纸签负责读清类别。",
     "mechanism": "完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。",
     "trigger": "浏览或聚焦文化专题目录",
@@ -76,7 +79,7 @@
         "bundle": "agent/cases/palace-museum.json",
         "demo": "demos/palace-museum/index.html"
       },
-      "bundleSha256": "973ae4ab8c4e5312f168a1d98bcc447c9b50f820570300669ce18c02ad193557"
+      "bundleSha256": "cf9d3ea63a8e69d4dcf0f70c0e3d0fdc0636970af44b23a5adda0fc5d2a60b42"
     }
   ]
 }

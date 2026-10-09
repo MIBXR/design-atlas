@@ -5,6 +5,9 @@
     "id": "current-state-svg-export",
     "title": "导出当前构成",
     "category": "导航与状态",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "把操作结果变成可使用的原创SVG。",
     "mechanism": "导出时读取当前几何位置与角度，生成与画布一致的SVG文件；文件内容包含当前状态。",
     "trigger": "激活导出按钮",
@@ -55,7 +58,7 @@
         "bundle": "agent/cases/bauhaus-geometry.json",
         "demo": "demos/bauhaus-geometry/index.html"
       },
-      "bundleSha256": "44c85b762c571039bcf6d0a9c45072f714d31f717f33d32ae5051c3689f45101"
+      "bundleSha256": "33fd8afc92b21c8d09f1af1b2c2d4b64167d8ddb1a351d7b17ad823d086d8ac2"
     }
   ]
 }

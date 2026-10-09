@@ -5,6 +5,9 @@
     "id": "reversible-center-reveal",
     "title": "穿越章节中心的双向显现",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "返回章节时同样遵循显现规则。",
     "mechanism": "章节中心进入视口时以短位移/透明度显示事实，中心离开恢复；手机额外事实用可收回展开替代密集首屏。",
     "trigger": "正向或反向穿越章节中心",
@@ -67,7 +70,7 @@
         "bundle": "agent/cases/monument-valley-game.json",
         "demo": "demos/monument-valley-game/index.html"
       },
-      "bundleSha256": "bb8320dbd68b71e84efe641cc42b33d1a35c3cf4e354d6c07d089d5f1a76cb7a"
+      "bundleSha256": "dfcc29089c58dd0c7c3878e7585573af884d0f494a2f9846622abf49adcc4381"
     }
   ]
 }

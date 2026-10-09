@@ -29,7 +29,7 @@ body .atlas-site-header{font-family:var(--atlas-font-sans);font-size:var(--atlas
 body .atlas-site-header .atlas-site-brand{font-family:var(--atlas-font-sans)}
 body .atlas-site-header .atlas-site-wordmark strong{font-family:var(--atlas-font-sans);font-size:16px}
 body .atlas-site-header .atlas-site-wordmark small{font-family:var(--atlas-font-sans);font-size:12px;margin-top:4px;letter-spacing:0}
-body .atlas-site-header .atlas-site-nav{grid-template-columns:60px 100px 122px 146px;font-family:var(--atlas-font-sans)}
+body .atlas-site-header .atlas-site-nav{grid-template-columns:50px 90px 90px 112px 130px;font-family:var(--atlas-font-sans)}
 body .atlas-site-header .atlas-site-nav>a{font-family:var(--atlas-font-sans);font-size:14px}
 body .atlas-site-header .atlas-site-theme,
 body .atlas-site-header .atlas-site-theme select{font-family:var(--atlas-font-sans);font-size:12px}
@@ -213,11 +213,11 @@ html[data-lab-embed=home] body.lab-page .sample :is(.sample-copy>p,.sample-compo
 
 @media(max-width:1050px){
   body .atlas-site-header .atlas-site-wordmark strong{font-size:13px}
-  body .atlas-site-header .atlas-site-nav{grid-template-columns:50px 85px 105px 126px}
+  body .atlas-site-header .atlas-site-nav{grid-template-columns:45px 78px 78px 90px 108px}
   body .atlas-site-header .atlas-site-nav>a{font-size:12px}
 }
 @media(max-width:800px){
-  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(5,minmax(0,1fr))}
   body.landing-page .landing-feature-tabs button{padding-inline:6px}
 }
 @media(max-width:800px),(any-pointer:coarse){:root{--atlas-control-height:40px}}
@@ -229,7 +229,7 @@ html[data-lab-embed=home] body.lab-page .sample :is(.sample-copy>p,.sample-compo
 }
 @media(max-width:360px){
   body .atlas-site-header .atlas-site-wordmark strong{font-size:12px}
-  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(3,minmax(0,1fr))}
   body.cases-page .detail-top :is(.copy-button,.primary-button){padding-right:10px;padding-left:10px}
   html[data-lab-embed=home] body.lab-page .scheme-btn{flex-direction:column;align-items:flex-start;gap:5px}
 }

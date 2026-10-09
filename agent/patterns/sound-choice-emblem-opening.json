@@ -5,6 +5,10 @@
     "id": "sound-choice-emblem-opening",
     "title": "声音选择与纹章开场同步",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion",
+      "sound"
+    ],
     "summary": "视觉打开世界与声音启用属于同一次选择。",
     "mechanism": "入口先提供ON/OFF，选择后显示纹章并向外发光扩散；开场SE对应显现，移交影片时BGM接续。",
     "trigger": "选择声音ON或OFF",
@@ -68,7 +72,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "7a42a497ab8ed65b066ed9a9302c5538ed747fd11b03143bcd74b45aeb89811d"
+      "bundleSha256": "5243ad9e9d7e9f8536afe7a383ff6d3719a80eefd8c090e186765655278517f0"
     }
   ]
 }

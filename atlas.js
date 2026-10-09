@@ -72,14 +72,15 @@ function route(){
   let hash;
   try{hash=decodeURIComponent(location.hash);}catch{hash='';}
   $('#collection').hidden=true;$('#detail').hidden=true;$('#comparison').hidden=true;
-  $('#patterns-library').hidden=true;$('#pattern-detail').hidden=true;
+  if($('#patterns-library'))$('#patterns-library').hidden=true;
+  if($('#pattern-detail'))$('#pattern-detail').hidden=true;
   const patternRoute=window.DesignAtlasPatterns?.renderRoute();
   if(hash.startsWith('#style/')){
     const entry=entries.find(x=>x.id===hash.slice(7));
     if(entry){renderDetail(entry);$('#detail').hidden=false;}
     else{const url=new URL(location.href);url.hash='';history.replaceState(null,'',url);$('#collection').hidden=false;renderCards();}
   }else if(hash==='#compare'){renderComparison();$('#comparison').hidden=false;}
-  else if(patternRoute){/* The atomic library shares this collection route. */}
+  else if(patternRoute){}
   else{$('#collection').hidden=false;renderCards();}
   renderedLocation=location.href;
   window.scrollTo({top:0,behavior:'instant'});updateTray();

@@ -8,9 +8,9 @@ const patternsSource = fs.readFileSync(new URL('../patterns-ui.js', import.meta.
 const entryFiles = fs.readdirSync(new URL('../entries/', import.meta.url)).filter(name => name.endsWith('.json'));
 const entries = entryFiles.map(name => JSON.parse(fs.readFileSync(new URL(`../entries/${name}`, import.meta.url), 'utf8'))).sort((a, b) => a.order - b.order);
 const fixturePatterns = [
-  { id: 'focus-test', title: '悬停聚焦 <安全>', category: '交互反馈', summary: '聚焦当前内容', mechanism: '压低其他内容强调目标', trigger: '悬停或键盘聚焦', effect: '局部强调', useCases: ['展示平台'], avoid: ['纯触屏'], constraints: ['不能依赖颜色'], composition: { role: 'accent', notes: '只强调当前目标', pairsWellWith: ['loading-test'], conflicts: [] }, accessibility: { keyboard: 'focus-visible', reducedMotion: '移除位移' }, parameters: [{ name: '位移', value: '8px', note: '按内容调整' }], prompt: '用 <button> 实现悬停聚焦', sources: [{ caseId: entries[0].id, locator: 'interaction[0]', observation: '观察文本', evidence: 'observed', referenceUrl: 'https://example.com', capturedAt: '2026-10-08' }, { caseId: entries[1].id, locator: 'interaction[0]', observation: '适配文本', evidence: 'adapted' }], sourceFiles: [] },
-  { id: 'loading-test', title: '加载遮罩', category: '加载与媒体', summary: '明确页面状态', mechanism: '加载状态机', trigger: '资源等待', effect: '有界反馈', useCases: ['媒体'], avoid: ['永久拦截'], constraints: ['超时退出'], composition: { role: 'support', notes: '仅用于真实等待', pairsWellWith: [], conflicts: ['focus-test'] }, accessibility: { keyboard: '无需聚焦', reducedMotion: '静态文本' }, parameters: [], prompt: '实现有退出路径的加载状态', sources: [{ caseId: entries[0].id, locator: 'interaction[1]', observation: '设计推断文本', evidence: 'inferred', referenceUrl: 'javascript:alert(1)' }], sourceFiles: [] },
-  { id: 'layout-test', title: '内容分组', category: '内容组织', summary: '布局层级', mechanism: '语义分组', trigger: '内容出现', effect: '结构清晰', useCases: ['文档'], avoid: [], constraints: [], composition: { role: 'foundation', notes: '负责主体结构', pairsWellWith: [], conflicts: [] }, accessibility: { keyboard: '语义导航', reducedMotion: '静态' }, parameters: [], prompt: '分组内容', sources: [{ caseId: entries[2].id, locator: 'principles[0]', observation: '结构观察', evidence: 'adapted' }], sourceFiles: [] },
+  { id: 'focus-test', title: '悬停聚焦 <安全>', category: '交互反馈', experienceTypes: ['micro-motion'], summary: '聚焦当前内容', mechanism: '压低其他内容强调目标', trigger: '悬停或键盘聚焦', effect: '局部强调', useCases: ['展示平台'], avoid: ['纯触屏'], constraints: ['不能依赖颜色'], composition: { role: 'accent', notes: '只强调当前目标', pairsWellWith: ['loading-test'], conflicts: [] }, accessibility: { keyboard: 'focus-visible', reducedMotion: '移除位移' }, parameters: [{ name: '位移', value: '8px', note: '按内容调整' }], prompt: '用 <button> 实现悬停聚焦', sources: [{ caseId: entries[0].id, locator: 'interaction[0]', observation: '观察文本', evidence: 'observed', referenceUrl: 'https://example.com', capturedAt: '2026-10-08' }, { caseId: entries[1].id, locator: 'interaction[0]', observation: '适配文本', evidence: 'adapted' }], sourceFiles: [] },
+  { id: 'loading-test', title: '加载遮罩', category: '加载与媒体', experienceTypes: ['page-motion'], summary: '明确页面状态', mechanism: '加载状态机', trigger: '资源等待', effect: '有界反馈', useCases: ['媒体'], avoid: ['永久拦截'], constraints: ['超时退出'], composition: { role: 'support', notes: '仅用于真实等待', pairsWellWith: [], conflicts: ['focus-test'] }, accessibility: { keyboard: '无需聚焦', reducedMotion: '静态文本' }, parameters: [], prompt: '实现有退出路径的加载状态', sources: [{ caseId: entries[0].id, locator: 'interaction[1]', observation: '设计推断文本', evidence: 'inferred', referenceUrl: 'javascript:alert(1)' }], sourceFiles: [] },
+  { id: 'layout-test', title: '内容分组', category: '内容组织', experienceTypes: ['structure'], summary: '布局层级', mechanism: '语义分组', trigger: '内容出现', effect: '结构清晰', useCases: ['文档'], avoid: [], constraints: [], composition: { role: 'foundation', notes: '负责主体结构', pairsWellWith: [], conflicts: [] }, accessibility: { keyboard: '语义导航', reducedMotion: '静态' }, parameters: [], prompt: '分组内容', sources: [{ caseId: entries[2].id, locator: 'principles[0]', observation: '结构观察', evidence: 'adapted' }], sourceFiles: [] },
 ];
 
 function page({ hash = '', clipboardRejects = false, data = entries, patterns = fixturePatterns, withPatterns = true } = {}) {
@@ -147,4 +147,17 @@ test('case details link back to related atoms without changing archived notes, a
   assert.match(fixture.node('#pattern-results-label').textContent, /3 个机制/);
   const legacy = page({ hash: `#style/${entries[0].id}`, withPatterns: false });
   assert.equal(legacy.node('#detail').hidden, false, 'renderer works without pattern runtime for Agent extraction');
+});
+
+test('experience types combine with source and purpose filters and survive return navigation', () => {
+  const fixture = page({ hash: '#patterns?type=micro-motion&category=交互反馈&source=' + entries[0].id });
+  assert.match(fixture.node('#pattern-cards').innerHTML, /悬停聚焦/);
+  assert.doesNotMatch(fixture.node('#pattern-cards').innerHTML, /加载遮罩|内容分组/);
+  assert.equal(fixture.node('#pattern-type').value, 'micro-motion');
+  fixture.node('#pattern-type').emit('change', 'structure');
+  assert.equal(fixture.node('#patterns-empty').hidden, false);
+  assert.match(fixture.location.hash, /type=structure/);
+  fixture.navigate('#patterns?type=unknown');
+  assert.equal(fixture.node('#pattern-type').value, 'all');
+  assert.match(fixture.node('#pattern-results-label').textContent, /3 个机制/);
 });

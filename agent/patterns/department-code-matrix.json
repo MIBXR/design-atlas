@@ -5,6 +5,9 @@
     "id": "department-code-matrix",
     "title": "机构缩写的中心矩阵",
     "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
     "summary": "保留特殊字标和非等宽的中心/外围关系，让代码同时表达机构身份和归属。",
     "mechanism": "中心双行代码和九个外围短代码共享环形连字，黑白表面、倾斜与尺度差共同组织关系；细射线与小面积橙色节点连接焦点。完整名称与等价语义目录承担阅读，不将原字标重排成普通字体卡片。",
     "trigger": "呈现机构代码目录",
@@ -84,7 +87,7 @@
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/rhine-lab/index.html"
       },
-      "bundleSha256": "d683b358e71a275f3b755b06595744262c91b09219c9985b913a5bd55a84233d"
+      "bundleSha256": "43e290cb9576ea938ef65b29da660fffeef169d4474c2d1ddffb3dc3248b9a59"
     }
   ]
 }

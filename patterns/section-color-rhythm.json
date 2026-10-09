@@ -2,6 +2,9 @@
   "id": "section-color-rhythm",
   "title": "整节配色形成阅读节奏",
   "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
   "summary": "通过章节背景切换划分不同内容任务。",
   "mechanism": "产品摄影、技术说明或行动区域各用明确的整节色带；文字与表面在每节成对定义，图像不反色。",
   "trigger": "依次阅读不同章节",

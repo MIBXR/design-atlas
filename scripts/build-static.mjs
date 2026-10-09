@@ -8,7 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(root, 'dist');
 const files = ['index.html', 'landing.css', 'home-features.css', 'home.js', 'legacy-links.js', 'site-nav.css', 'theme-control.css', 'site-typography.css', 'site-footer.css', 'site-shell.js', 'cases.html', 'cases-layout.css', 'atlas.css', 'atlas.js', 'theme.js', 'catalog.js', 'fundamentals.html', 'fundamentals.css', 'lab-layout.css', 'lab-embed.css', 'fundamentals.js', 'document.html', 'document.css', 'document.js', 'favicon.svg', 'favicon-light.svg', 'favicon-dark.svg', 'README.md', 'CONTRIBUTING.md', 'agent.html', 'agent.css', 'agent.js', 'AGENT.md', 'llms.txt'];
 const runtimeFiles = ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.js', 'case-loading.css'];
-files.push('patterns.js', 'patterns-ui.js', 'patterns-ui.css');
+files.push('patterns.html', 'patterns-page.js', 'patterns.js', 'patterns-ui.js', 'patterns-ui.css', 'pattern-playground.js', 'pattern-playground.css');
 const folders = ['demos', 'entries', 'patterns', 'previews', 'research', 'prompts', 'docs', 'vendor', 'agent'];
 const localOrigin = 'https://design-atlas.invalid';
 

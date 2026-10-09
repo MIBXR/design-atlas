@@ -2,6 +2,9 @@
   "id": "top-down-clipped-menu",
   "title": "从上向下裁切的全屏菜单",
   "category": "导航与状态",
+  "experienceTypes": [
+    "page-motion"
+  ],
   "summary": "用一个进入方向组织菜单项目。",
   "mechanism": "全屏面板从顶部向下clip进入，项目按次序交错；关闭反向收束，背景阅读状态随关闭恢复。",
   "trigger": "手机打开/关闭菜单",

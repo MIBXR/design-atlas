@@ -5,6 +5,9 @@
     "id": "directional-sticky-navigation",
     "title": "向上找回、向下让位的导览条",
     "category": "滚动叙事",
+    "experienceTypes": [
+      "micro-motion"
+    ],
     "summary": "按浏览方向决定持久导览可见性。",
     "mechanism": "跨过指定内容区后导览固定，向上滚动显现、向下收起；语言目录在离开时合拢。",
     "trigger": "阈值后上下滚动",
@@ -61,7 +64,7 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
       },
-      "bundleSha256": "47e0946bcd634be71134db28c4cf5e248311a83612b4363665ccc8e2f09473a6"
+      "bundleSha256": "3fdca5d0f13279c70bca3c66d1e3e4274564839b19246e24d26e263777a92ce9"
     }
   ]
 }

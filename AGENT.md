@@ -16,7 +16,9 @@
 
 候选比较应依据完整条目和文档；关键词得分只是召回线索。用户需要组合巧思时先按真实任务、触发和设备筛选原子，读取其完整机制与来源案例，再明确哪个负责当前区域的骨架、衔接和反馈。`composition.role`、配对与冲突是适配建议，需要解释共享滚动容器、输入、自动周期和声音状态的处理。用户只在探索时完成讨论；要求构建时取得所采用巧思及完整来源的必要资料和源码后实施。
 
-巧思按视觉构成、交互反馈、滚动叙事、导航与状态、加载与媒体、内容组织检索。优先读 `mechanism`、`trigger`、`effect`、`useCases`、`avoid`、`constraints`、`composition`、`accessibility` 与 `parameters`。`sources.evidence` 的 `observed`／`adapted`／`inferred` 分别保留源端观察、本地迁移、公共资料推断的边界；归档日期来自案例，不表示巧思被再次实访。
+巧思先按 `experienceTypes` 区分视觉构成（`visual`）、微动效（`micro-motion`）、主体与页面动效（`page-motion`）、声音与音效（`sound`）、信息与状态（`structure`），再用 `category` 的视觉构成、交互反馈、滚动叙事、导航与状态、加载与媒体、内容组织缩小用途。微动效负责局部反馈或辅助信息，主体与页面动效负责整页或主要展示舞台；状态响应不自动等于动效。声音包括音乐、操作音、人物语音和主动媒体声音，外部播放入口仍是站外体验。按每项实际机制取材，不要求某个案例具有所有体验类型，也不为凑类型提取巧思。
+
+优先读 `mechanism`、`trigger`、`effect`、`useCases`、`avoid`、`constraints`、`composition`、`accessibility` 与 `parameters`。`sources.evidence` 的 `observed`／`adapted`／`inferred` 分别保留源端观察、本地迁移、公共资料推断的边界；体验类型不改变这些证据等级，归档日期也不表示巧思被再次实访。
 
 ## 本地检索与取材
 
@@ -58,8 +60,8 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 ## 数据契约与维护
 
-Case与pattern的Schema均为 `1`，案例协议通过 `patternIds` 和主索引 `patterns` 扩展保持兼容。巧思目录 `contentVersion` 对按ID排序的 `id:bundleSha256\n` UTF-8文本计算SHA256；总库 `catalog.contentVersion` 对同样排序的案例记录文本追加 `patterns:<巧思contentVersion>\n` 后计算SHA256。案例包只保存巧思ID，巧思包再引用来源案例哈希，因此没有哈希循环或Git SHA自引用。`bundleSha256` 校验原始UTF-8 JSON字节，巧思目录描述另校验其 `sha256` 与 `bytes`。
+Case与pattern的Schema均为 `1`，案例协议通过 `patternIds` 和主索引 `patterns` 扩展保持兼容。巧思 `experienceTypes` 存在时必须是非空、去重的数组，仅接受 `visual`、`micro-motion`、`page-motion`、`sound`、`structure`；读取器接受未提供该字段的 schema-1 资料，不从 `category` 或案例标签推断补齐。没有可独立提取巧思的案例保留空 `patternIds`。巧思目录 `contentVersion` 对按ID排序的 `id:bundleSha256\n` UTF-8文本计算SHA256；总库 `catalog.contentVersion` 对同样排序的案例记录文本追加 `patterns:<巧思contentVersion>\n` 后计算SHA256。案例包只保存巧思ID，巧思包再引用来源案例哈希，因此没有哈希循环或Git SHA自引用。`bundleSha256` 校验原始UTF-8 JSON字节，巧思目录描述另校验其 `sha256` 与 `bytes`。
 
-案例包保留原 `entry`、文档与完整文件清单；巧思保留来源定位及原观察文本。SHA256保证读取一致性，不替代来源或权利判断。巧思 `sourceFiles` 只列取材文件，完整运行依赖由来源案例的 `files` 提供；新读取器接受原来没有巧思目录的schema1仓库。
+案例包保留原 `entry`、文档与完整文件清单；巧思保留来源定位及原观察文本。SHA256保证读取一致性，不替代来源或权利判断。巧思 `sourceFiles` 只列取材文件，完整运行依赖由来源案例的 `files` 提供；读取器接受未包含巧思目录的schema1仓库。
 
-修改案例、巧思或源码后运行 `npm run build`，再运行 `npm run check`；构建扫描全部案例和巧思，同步网页、Prompt、两个Agent目录、完整包及反向关联。检查会拒绝未拆巧思的案例、过期观察原文、不存在的组合ID和不一致生成内容。维护标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。功能分支推送后可用同一SHA发布Site与验证skill，PR是否合入按用户授权；合入默认分支之后新会话自动发现。普通新增内容无需复制到skill，数据协议变化才同步获取脚本。
+修改案例、巧思或源码后运行 `npm run build`，再运行 `npm run check`；构建扫描全部案例和巧思，同步网页、Prompt、两个Agent目录、完整包及反向关联。检查会拒绝无效体验类型、过期观察原文、不存在的组合ID和不一致生成内容。维护标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。功能分支推送后可用同一SHA发布Site与验证skill，PR是否合入按用户授权；合入默认分支之后新会话自动发现。普通新增内容无需复制到skill，数据协议变化才同步获取脚本。

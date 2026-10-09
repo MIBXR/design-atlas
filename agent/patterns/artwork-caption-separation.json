@@ -5,6 +5,9 @@
     "id": "artwork-caption-separation",
     "title": "作品原图与图下题注分工",
     "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
     "summary": "让作品保持自己的视觉，说明放在图外。",
     "mechanism": "海报、馆藏或艺术摄影保留原色及比例，名称、日期与来源放在图下正文，不在原图上重复绘制标题。",
     "trigger": "浏览作品与展览目录",
@@ -84,7 +87,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "49cea30096e1454044bb301b68cfff03272367dcb37f606d652b93e18a8a0ccd"
+      "bundleSha256": "cf043c64966e3be515b020144d4ecf1ecf42955f890edb4d20c45c5701272c15"
     },
     {
       "id": "met-museum",
@@ -93,7 +96,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "0dd0a926bcf9fe1e917115541a6c622dbd1b2b1c391377842c8048bf2008a5fe"
+      "bundleSha256": "e043c4bdcb1e61233d389b8b810e8f05a1c90c3fb86bff407b4e7db474ca6fa4"
     }
   ]
 }

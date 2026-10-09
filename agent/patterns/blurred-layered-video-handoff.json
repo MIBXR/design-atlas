@@ -5,6 +5,9 @@
     "id": "blurred-layered-video-handoff",
     "title": "旧片模糊退出、新片延后进入",
     "category": "加载与媒体",
+    "experienceTypes": [
+      "page-motion"
+    ],
     "summary": "影片与主题字按不同阶段交接。",
     "mechanism": "旧影片先模糊退出，新影片稍后进入，标题再延迟进入；同一舞台叠层和最后请求队列管理快选。",
     "trigger": "选择影片章节",
@@ -72,7 +75,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "7a42a497ab8ed65b066ed9a9302c5538ed747fd11b03143bcd74b45aeb89811d"
+      "bundleSha256": "5243ad9e9d7e9f8536afe7a383ff6d3719a80eefd8c090e186765655278517f0"
     }
   ]
 }
