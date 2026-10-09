@@ -6761,6 +6761,7 @@ window.DESIGN_PATTERNS = [
     ],
     "constraints": [
       "声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。",
+      "操作短音绑定实际点击/键盘选择，悬停与聚焦不额外发声；关闭或后台停止短效，返回不续播过期反馈。",
       "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
     ],
     "composition": {
@@ -6773,11 +6774,11 @@ window.DESIGN_PATTERNS = [
       "conflicts": []
     },
     "accessibility": {
-      "keyboard": "开启、静音与停止均用有可见文字的按钮，aria-pressed与实际声音状态一致。",
+      "keyboard": "开启、静音与停止均用有明确可访问名称的按钮，图标按钮提供aria-label，aria-pressed与实际声音状态一致。",
       "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
     },
     "parameters": [],
-    "prompt": "为【目标页面/组件】实现「声音主动启用与随时停止」。声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。触发：开启/关闭声音。可见结果：用户掌握听觉环境，浏览正文不被自动出声打断。适用任务：互动乐器、游戏世界与品牌影片。声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。键盘：开启、静音与停止均用有可见文字的按钮，aria-pressed与实际声音状态一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户掌握听觉环境，浏览正文不被自动出声打断，职责限定在当前区域。组合时声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+    "prompt": "为【目标页面/组件】实现「声音主动启用与随时停止」。声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。触发：开启/关闭声音。可见结果：用户掌握听觉环境，浏览正文不被自动出声打断。适用任务：互动乐器、游戏世界与品牌影片。声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。键盘：开启、静音与停止均用有明确可访问名称的按钮，图标按钮提供aria-label，aria-pressed与实际声音状态一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户掌握听觉环境，浏览正文不被自动出声打断，职责限定在当前区域。组合时声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。 操作短音在实际选择或切换时立即触发，跟随同一声音开关；返回前台不重放过期短效。",
     "sources": [
       {
         "caseId": "retro-80s",
@@ -6800,6 +6801,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "observed",
         "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "endfield-industrial",
+        "locator": "entries/endfield-industrial.json#soundBehavior/control",
+        "observation": "桌面声音工具与手机喇叭共用状态，默认关闭、aria-pressed同步；用户开启后播放原BGM及选干员/2D↔3D、头像翻页、档案展开/收起四种原音。关闭或后台立即停止，返回只恢复已开启BGM；预览和角色影片静音，完整影像独立控制。",
+        "evidence": "adapted",
+        "referenceUrl": "https://endfield.hypergryph.com/",
+        "capturedAt": "2026-10-09"
       }
     ],
     "sourceFiles": [
@@ -6818,7 +6827,14 @@ window.DESIGN_PATTERNS = [
       "entries/zelda-world.json",
       "research/arknights-world.md",
       "research/retro-80s.md",
-      "research/zelda-world.md"
+      "research/zelda-world.md",
+      "entries/endfield-industrial.json",
+      "research/endfield-industrial.md",
+      "demos/endfield-industrial/fidelity.md",
+      "demos/endfield-industrial/app.js",
+      "demos/endfield-industrial/state.css",
+      "demos/endfield-industrial/assets-manifest.json",
+      "demos/endfield-industrial/source-provenance.json"
     ]
   },
   {
@@ -7823,7 +7839,7 @@ window.DESIGN_PATTERNS = [
       {
         "caseId": "endfield-industrial",
         "locator": "entries/endfield-industrial.json#interaction/7",
-        "observation": "声音和业务：原BGM仅在用户打开声音后播放，离开标签/隐藏页面停止相关媒体；登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
+        "observation": "声音和业务：原BGM及四种原始操作音由桌面/手机共用声音开关启用，默认关闭；选干员与2D/3D切换播放机械短音，头像翻页和档案展开/收起分别反馈。10槽音频池保留快速重复操作的叠响；关闭声音或隐藏页面立即停止，返回不重放短效。登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
         "evidence": "adapted",
         "referenceUrl": "https://endfield.hypergryph.com/",
         "capturedAt": "2026-10-09"

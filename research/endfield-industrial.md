@@ -10,6 +10,21 @@
 
 影像有10项真实标题/日期/分类和预览，玩法四项为视频、AIC五项为图片。原相册黑→黄→媒体400ms各delay0/250/500，文字500/500ms。原公告采用左clip500ms与Y30%组件600ms入场，延迟300ms后卡片300ms横移。原CSS字体、斜线大字、网格/mask、媒体书脊与自然滚动构成比仅配色更有辨识度。
 
+## 交互声音
+
+干员页用短促机械音确认操作，头像悬停不发声。当前官网实测以下四段均进入实际 `playing` 状态，音量为 `1`；重复点击已选头像仍播放，双击会让两个音频对象重叠。
+
+| 操作 | 官方音效 | 浏览器读取时长 |
+| --- | --- | --- |
+| 选择头像、2D/3D切换 | [char_click.beff5b.mp3](https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/char_click.beff5b.mp3) | 0.625秒 |
+| 上下翻动头像轨道 | [arrow_click.a72c10.mp3](https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/arrow_click.a72c10.mp3) | 0.217秒 |
+| 手机展开人物档案 | [char_detail_enter.babc4e.mp3](https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/char_detail_enter.babc4e.mp3) | 1.467秒 |
+| 手机关闭人物档案 | [close_click.fe1dc4.mp3](https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/close_click.fe1dc4.mp3) | 0.435秒 |
+
+[源码8858模块26097](https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js)使用10个 `HTMLAudioElement` 的池，检查持久化 `ef-official-sound-control.enabled`，同音效可叠加，池空时忽略新声，结束后归还槽位；关闭只阻止后续短效。[Header源码226](https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js)将PC及手机喇叭连到同一全局状态，并同时控制循环BGM；手机关闭时换静音SVG及 `#cccccc`，开启时用原喇叭SVG。BGM独立淡入淡出并在后台暂停，源码配置桌面音量1、移动UA音量0.1，与短效固定音量1分开。
+
+本地沿用四段原始短效和10槽叠加；关闭声音或进入后台时立即停止已响短效，是本地控制策略。目录卡片选择复用头像反馈，属于网页内的迁移；已采集首页“全部干员”仅打开官方目录，独立目录的选卡音效尚未核验。源码偏移及逐段出处见[来源映射](../demos/endfield-industrial/source-provenance.json)。
+
 ## 实现与可提取机制
 
 [本地八章](../demos/endfield-industrial/index.html#operator)恢复原CSS/字体、35目录与真透明视频、六点云、10影像、日历、4玩法/5AIC与公告。35位人物完整中文介绍从当前简中文本映射提取，逐key及原值哈希核对；正式业务仍进入官方。原[明日方舟案例](../entries/arknights-world.json)的暗灰青色全屏档案与[莱茵影像](rhine-lab.md)的米白橙色有不同媒介与状态证据，不能混为一句“方舟风”。

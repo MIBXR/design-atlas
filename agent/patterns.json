@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "1cff71acab0d53a64751f25a84b54138c915e41fa6e0dfc07b3b2c4dbef89ef6",
+  "contentVersion": "8942aa2f32fc8e596c05b64640e212402e4ed58e11dbca009bf4b8327cefbf3f",
   "patternCount": 129,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -2817,7 +2817,7 @@
       "paths": {
         "bundle": "agent/patterns/hatched-registration-type.json"
       },
-      "bundleSha256": "791f0a6af942e0d4918c414dab0000efd2a575ec4b379a9e229baec7b22b9588"
+      "bundleSha256": "4d83331b6e0cb7adac91de7abd46d393609b90c60d2cfb89aa2d01b75f331e20"
     },
     {
       "id": "header-below-mobile-navigation",
@@ -4040,7 +4040,7 @@
       "paths": {
         "bundle": "agent/patterns/layered-directional-media-reveal.json"
       },
-      "bundleSha256": "d6e445e8d0281cfeb0af4e90650682ad649bdf5f40b281b6c12e081fe0d48548"
+      "bundleSha256": "6a7d73349f1dbf1b23fca023450d1be9f13144bb2b800171cb673eae4dba31ee"
     },
     {
       "id": "layered-navigation-drawer",
@@ -6181,7 +6181,7 @@
       "paths": {
         "bundle": "agent/patterns/resource-bound-fullscreen-loading.json"
       },
-      "bundleSha256": "1d773fb57feaaa98b17a3fde934fbd37817e047b8116cc8a7c5359416fe1fd90"
+      "bundleSha256": "4d295ce06fe3a20d75593abcc6f84652eef036baab02a0d484f7509870c6cc3e"
     },
     {
       "id": "responsive-art-direction",
@@ -6374,7 +6374,7 @@
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
       },
-      "bundleSha256": "f2ff232d46dcd3b1225ed381fa3f69029db48560b3edec1cd25416e0b519f567"
+      "bundleSha256": "6b87e533f3689f3cf2a33f5515420e020e3abccbadd5c3339873a9e880f2405f"
     },
     {
       "id": "reversible-center-reveal",
@@ -6528,7 +6528,7 @@
       "paths": {
         "bundle": "agent/patterns/scanline-point-cloud-transition.json"
       },
-      "bundleSha256": "70744729389fc0ea6b1ba7f79e5d16249b22871ddce6c81a8856489712b7a9b1"
+      "bundleSha256": "882365473c07674ae1500de5b2986edadcf00e7336e4ff0a88166e9451ed5f38"
     },
     {
       "id": "scroll-differential-stars",
@@ -7202,6 +7202,7 @@
       ],
       "constraints": [
         "声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。",
+        "操作短音绑定实际点击/键盘选择，悬停与聚焦不额外发声；关闭或后台停止短效，返回不续播过期反馈。",
         "迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。"
       ],
       "composition": {
@@ -7214,11 +7215,11 @@
         "conflicts": []
       },
       "accessibility": {
-        "keyboard": "开启、静音与停止均用有可见文字的按钮，aria-pressed与实际声音状态一致。",
+        "keyboard": "开启、静音与停止均用有明确可访问名称的按钮，图标按钮提供aria-label，aria-pressed与实际声音状态一致。",
         "reducedMotion": "停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。"
       },
       "parameters": [],
-      "prompt": "为【目标页面/组件】实现「声音主动启用与随时停止」。声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。触发：开启/关闭声音。可见结果：用户掌握听觉环境，浏览正文不被自动出声打断。适用任务：互动乐器、游戏世界与品牌影片。声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。键盘：开启、静音与停止均用有可见文字的按钮，aria-pressed与实际声音状态一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户掌握听觉环境，浏览正文不被自动出声打断，职责限定在当前区域。组合时声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。",
+      "prompt": "为【目标页面/组件】实现「声音主动启用与随时停止」。声音初始关闭，用户明确开启后才初始化或播放；关闭与离开前台都能停止当前声音。触发：开启/关闭声音。可见结果：用户掌握听觉环境，浏览正文不被自动出声打断。适用任务：互动乐器、游戏世界与品牌影片。声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。键盘：开启、静音与停止均用有明确可访问名称的按钮，图标按钮提供aria-label，aria-pressed与实际声音状态一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户掌握听觉环境，浏览正文不被自动出声打断，职责限定在当前区域。组合时声音和动态暂停分别管理，降低动态偏好不剥夺主动声音选择。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。 操作短音在实际选择或切换时立即触发，跟随同一声音开关；返回前台不重放过期短效。",
       "sources": [
         {
           "caseId": "retro-80s",
@@ -7241,6 +7242,14 @@
           "evidence": "observed",
           "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
           "capturedAt": "2026-10-07"
+        },
+        {
+          "caseId": "endfield-industrial",
+          "locator": "entries/endfield-industrial.json#soundBehavior/control",
+          "observation": "桌面声音工具与手机喇叭共用状态，默认关闭、aria-pressed同步；用户开启后播放原BGM及选干员/2D↔3D、头像翻页、档案展开/收起四种原音。关闭或后台立即停止，返回只恢复已开启BGM；预览和角色影片静音，完整影像独立控制。",
+          "evidence": "adapted",
+          "referenceUrl": "https://endfield.hypergryph.com/",
+          "capturedAt": "2026-10-09"
         }
       ],
       "sourceFiles": [
@@ -7259,12 +7268,19 @@
         "entries/zelda-world.json",
         "research/arknights-world.md",
         "research/retro-80s.md",
-        "research/zelda-world.md"
+        "research/zelda-world.md",
+        "entries/endfield-industrial.json",
+        "research/endfield-industrial.md",
+        "demos/endfield-industrial/fidelity.md",
+        "demos/endfield-industrial/app.js",
+        "demos/endfield-industrial/state.css",
+        "demos/endfield-industrial/assets-manifest.json",
+        "demos/endfield-industrial/source-provenance.json"
       ],
       "paths": {
         "bundle": "agent/patterns/sound-opt-in.json"
       },
-      "bundleSha256": "8f540ade75b8049bf56226b1f542fd894145f1f847b8272fb45664ec41330228"
+      "bundleSha256": "73e7335c60a6236c9da6202f930db04cc5a3941102d99c3b0efa5af330dcab2f"
     },
     {
       "id": "spatial-navigation-map",
@@ -8060,7 +8076,7 @@
       "paths": {
         "bundle": "agent/patterns/transparent-video-mode-stage.json"
       },
-      "bundleSha256": "4e1768a8d89b334cbb8604ac2b2ae8ccfa392cd07ad4b04292350eccbf73d564"
+      "bundleSha256": "402978216b7dab7ce1e7e8b4c0709bd9fc8064758582253f7eb46936e3c6589a"
     },
     {
       "id": "vertical-card-swap",
@@ -8254,7 +8270,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-media-spine.json"
       },
-      "bundleSha256": "9e516fbc2549fe6eea8d3d1a73704583fd3eadc715820cd9a9d6a6e27fa6280c"
+      "bundleSha256": "c0daa62a8830a32f9c275d54d59cbd8ae34dadd27af3957618bd9bc0812bf217"
     },
     {
       "id": "viewport-animation-lifecycle",
@@ -8328,7 +8344,7 @@
         {
           "caseId": "endfield-industrial",
           "locator": "entries/endfield-industrial.json#interaction/7",
-          "observation": "声音和业务：原BGM仅在用户打开声音后播放，离开标签/隐藏页面停止相关媒体；登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
+          "observation": "声音和业务：原BGM及四种原始操作音由桌面/手机共用声音开关启用，默认关闭；选干员与2D/3D切换播放机械短音，头像翻页和档案展开/收起分别反馈。10槽音频池保留快速重复操作的叠响；关闭声音或隐藏页面立即停止，返回不重放短效。登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
           "evidence": "adapted",
           "referenceUrl": "https://endfield.hypergryph.com/",
           "capturedAt": "2026-10-09"
@@ -8372,7 +8388,7 @@
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
       },
-      "bundleSha256": "11994a9d9e159880efe568c110e02a59f6a1a6cbc2cb44c2415f5092927d440f"
+      "bundleSha256": "2bf369893cb8f859dc66daa2850a8d9f50a1c1b3daeb8ae5220bf7f0fb5d44b1"
     },
     {
       "id": "visit-facts-grid",

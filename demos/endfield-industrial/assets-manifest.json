@@ -2,7 +2,7 @@
   "sourceDate": "2026-10-09",
   "referenceUrl": "https://endfield.hypergryph.com/",
   "edition": "中国大陆公开官网同日快照；八章、35角色、六点云、10影像、4玩法、5AIC、版本日历与公告",
-  "scope": "保留来源摄影/字体/媒体/二进制及hash；干员长篇叙事采用事实摘要，不将它冒称逐字复刻；后台与登录支付为官方外链。布局/交互最终浏览器证据见fidelity。",
+  "scope": "保留来源摄影、字体、媒体、二进制及hash；35干员完整中文介绍来自当前简中文本映射，后台与登录支付为官方外链。布局、交互和声音的浏览器验证边界见fidelity。",
   "assets": [
     {
       "file": "assets/01.aae95e75.png",
@@ -5726,6 +5726,50 @@
         1824,
         1775
       ]
+    },
+    {
+      "file": "assets/char_click.beff5b.mp3",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/char_click.beff5b.mp3",
+      "bytes": 27840,
+      "sha256": "88ef3f9efe14eb4408ae3b9a5f08ec2cfbc129b896f1cfc7ce63004e4a74f6bd",
+      "format": "mp3",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "purpose": "原干员头像点击与2D/3D切换机械短音；目录选卡为本地复用。",
+      "copyright": "Hypergryph / 鹰角网络及相应媒体权利人；个人设计研究，非官方产品，不作开放或商业授权承诺。"
+    },
+    {
+      "file": "assets/arrow_click.a72c10.mp3",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/arrow_click.a72c10.mp3",
+      "bytes": 11520,
+      "sha256": "8ad864535190ef537a437938b4c0688127eae96f963cf65e1c8e5cd7bf48f4b2",
+      "format": "mp3",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "purpose": "原头像轨道上下翻页短音。",
+      "copyright": "Hypergryph / 鹰角网络及相应媒体权利人；个人设计研究，非官方产品，不作开放或商业授权承诺。"
+    },
+    {
+      "file": "assets/char_detail_enter.babc4e.mp3",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/char_detail_enter.babc4e.mp3",
+      "bytes": 64706,
+      "sha256": "0c246e54df814a406a77d6e1ac3c8d7a3660a848b64892d03a184f8a93e026bb",
+      "format": "mp3",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "purpose": "原干员档案抽屉展开短音。",
+      "copyright": "Hypergryph / 鹰角网络及相应媒体权利人；个人设计研究，非官方产品，不作开放或商业授权承诺。"
+    },
+    {
+      "file": "assets/close_click.fe1dc4.mp3",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/close_click.fe1dc4.mp3",
+      "bytes": 23426,
+      "sha256": "bf5b5e04b1381b7daba90d115218caeb9df4f071ac5bf800f11087639adcce39",
+      "format": "mp3",
+      "retrievedAt": "2026-10-09",
+      "status": "downloaded",
+      "purpose": "原干员档案抽屉收起短音。",
+      "copyright": "Hypergryph / 鹰角网络及相应媒体权利人；个人设计研究，非官方产品，不作开放或商业授权承诺。"
     }
   ],
   "sharedDependencies": [

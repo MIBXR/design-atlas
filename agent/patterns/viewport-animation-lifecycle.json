@@ -73,7 +73,7 @@
       {
         "caseId": "endfield-industrial",
         "locator": "entries/endfield-industrial.json#interaction/7",
-        "observation": "声音和业务：原BGM仅在用户打开声音后播放，离开标签/隐藏页面停止相关媒体；登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
+        "observation": "声音和业务：原BGM及四种原始操作音由桌面/手机共用声音开关启用，默认关闭；选干员与2D/3D切换播放机械短音，头像翻页和档案展开/收起分别反馈。10槽音频池保留快速重复操作的叠响；关闭声音或隐藏页面立即停止，返回不重放短效。登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
         "evidence": "adapted",
         "referenceUrl": "https://endfield.hypergryph.com/",
         "capturedAt": "2026-10-09"
@@ -123,7 +123,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "2b5820d40e3dfc66dcd2f03c181dbdfcc7fe998a93316996c6a93bbc389306f3"
+      "bundleSha256": "51c26fe12b13e661132632b3d82a74e863ab535431693ae78a258cd2a4eef5e2"
     },
     {
       "id": "linear-workflow",

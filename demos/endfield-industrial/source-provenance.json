@@ -43,6 +43,13 @@
       "sha256": "5a7fe7b4a26423ea1f1cdfc684f19671e24562dac1c5d54e8bc3a5b5e15b9a82",
       "utf8Bytes": 3769,
       "decodedCodePoints": 3769
+    },
+    {
+      "file": "source/4231-53da7c4de7468a06.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/4231-53da7c4de7468a06.js",
+      "sha256": "33d21303f6149ba5a3be3ffab657bf9bb3530435b31f63041ca6bde5224bf7f6",
+      "utf8Bytes": 134368,
+      "decodedCodePoints": 134368
     }
   ],
   "coverage": {
@@ -649,5 +656,258 @@
         "profileItems": 2
       }
     ]
+  },
+  "interactionAudio": {
+    "effectManager": {
+      "module": 26097,
+      "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+      "characterOffset": 43850,
+      "characterEndExclusive": 43856,
+      "utf8ByteOffset": 43866,
+      "utf8ByteEndExclusive": 43872,
+      "sourceSha256": "323cbcc29ffd57e54225c68adaa1cd7124617ab725638a15581f3bf221211bdf",
+      "gate": {
+        "expression": "if(!L.E.getState().enabled)return this;",
+        "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+        "characterOffset": 44893,
+        "characterEndExclusive": 44932,
+        "utf8ByteOffset": 44909,
+        "utf8ByteEndExclusive": 44948
+      },
+      "poolSize": 10,
+      "poolEvidence": {
+        "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+        "characterOffset": 44862,
+        "characterEndExclusive": 44871,
+        "utf8ByteOffset": 44878,
+        "utf8ByteEndExclusive": 44887
+      },
+      "volume": 1,
+      "volumeEvidence": {
+        "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+        "characterOffset": 44975,
+        "characterEndExclusive": 44985,
+        "utf8ByteOffset": 44991,
+        "utf8ByteEndExclusive": 45001
+      },
+      "overlap": "Every accepted play obtains a free HTMLAudioElement; same URL can overlap. An empty pool drops the new request. ended returns the element. No same-URL cancellation or de-duplication.",
+      "mute": "The enabled gate blocks future effect plays; the source manager does not stop effects already playing."
+    },
+    "clips": [
+      {
+        "key": "char_click",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/char_click.beff5b.mp3",
+        "declaration": {
+          "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+          "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+          "characterOffset": 43989,
+          "characterEndExclusive": 44031,
+          "utf8ByteOffset": 44005,
+          "utf8ByteEndExclusive": 44047
+        },
+        "sourceTriggers": [
+          "avatar selection, including the already-selected avatar",
+          "desktop/H5 2D/3D toggle"
+        ],
+        "browserDurationSeconds": 0.624979,
+        "browserVolume": 1
+      },
+      {
+        "key": "arrow_click",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/arrow_click.a72c10.mp3",
+        "declaration": {
+          "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+          "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+          "characterOffset": 43939,
+          "characterEndExclusive": 43982,
+          "utf8ByteOffset": 43955,
+          "utf8ByteEndExclusive": 43998
+        },
+        "sourceTriggers": [
+          "operator roster top/bottom arrows"
+        ],
+        "browserDurationSeconds": 0.216979,
+        "browserVolume": 1
+      },
+      {
+        "key": "char_detail_enter",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/char_detail_enter.babc4e.mp3",
+        "declaration": {
+          "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+          "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+          "characterOffset": 44038,
+          "characterEndExclusive": 44087,
+          "utf8ByteOffset": 44054,
+          "utf8ByteEndExclusive": 44103
+        },
+        "sourceTriggers": [
+          "H5 character dossier open"
+        ],
+        "browserDurationSeconds": 1.4672,
+        "browserVolume": 1
+      },
+      {
+        "key": "close_click",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/close_click.fe1dc4.mp3",
+        "declaration": {
+          "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+          "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+          "characterOffset": 44148,
+          "characterEndExclusive": 44191,
+          "utf8ByteOffset": 44164,
+          "utf8ByteEndExclusive": 44207
+        },
+        "sourceTriggers": [
+          "H5 character dossier close"
+        ],
+        "browserDurationSeconds": 0.4352,
+        "browserVolume": 1
+      }
+    ],
+    "triggers": {
+      "avatar": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 6003,
+        "characterEndExclusive": 6046,
+        "utf8ByteOffset": 6003,
+        "utf8ByteEndExclusive": 6046
+      },
+      "rosterPrevious": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 6281,
+        "characterEndExclusive": 6324,
+        "utf8ByteOffset": 6281,
+        "utf8ByteEndExclusive": 6324
+      },
+      "rosterNext": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 6471,
+        "characterEndExclusive": 6514,
+        "utf8ByteOffset": 6471,
+        "utf8ByteEndExclusive": 6514
+      },
+      "desktop2D3D": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 18405,
+        "characterEndExclusive": 18449,
+        "utf8ByteOffset": 18405,
+        "utf8ByteEndExclusive": 18449
+      },
+      "h5Dossier": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 20706,
+        "characterEndExclusive": 20775,
+        "utf8ByteOffset": 20706,
+        "utf8ByteEndExclusive": 20775
+      },
+      "h5Dossier2D3D": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 21009,
+        "characterEndExclusive": 21053,
+        "utf8ByteOffset": 21009,
+        "utf8ByteEndExclusive": 21053
+      },
+      "sameSelectedAvatar": "The avatar handler invokes play on every click without a same-selection sound guard.",
+      "hover": "No sound handler on avatar/2D3D hover; a visible avatar hover produced no additional play call.",
+      "officialDirectory": "The homepage all-operators button opens /operator without an effect call. The independent directory selection effect was not verified; char_list_enter has a declaration but no call in the captured homepage chunks."
+    },
+    "globalControl": {
+      "storeModule": 2285,
+      "persistenceKey": "ef-official-sound-control",
+      "stateProperty": "enabled",
+      "store": {
+        "sourceFile": "source/8858-4aae27eec09dc3ad.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/8858-4aae27eec09dc3ad.js",
+        "characterOffset": 3689,
+        "characterEndExclusive": 3694,
+        "utf8ByteOffset": 3689,
+        "utf8ByteEndExclusive": 3694
+      },
+      "header": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 73443,
+        "characterEndExclusive": 73533,
+        "utf8ByteOffset": 73459,
+        "utf8ByteEndExclusive": 73549
+      },
+      "h5ExistingIcon": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 76342,
+        "characterEndExclusive": 76492,
+        "utf8ByteOffset": 76358,
+        "utf8ByteEndExclusive": 76508
+      },
+      "h5On": {
+        "viewBox": "0 0 20 28",
+        "observedColor": "#7c7c7c"
+      },
+      "h5Off": {
+        "viewBox": "0 0 32 28",
+        "observedColor": "#cccccc"
+      },
+      "scope": "PC and H5 use the same Header state to enable/disable the BGM instance and effect-store gate."
+    },
+    "bgm": {
+      "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/media/sound/bgm.3ce37f.mp3",
+      "configuration": {
+        "sourceFile": "source/226-a3c1ec0fe1472086.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/226-a3c1ec0fe1472086.js",
+        "characterOffset": 21909,
+        "characterEndExclusive": 22053,
+        "utf8ByteOffset": 21909,
+        "utf8ByteEndExclusive": 22053
+      },
+      "playerModule": 58572,
+      "playerSource": {
+        "sourceFile": "source/4231-53da7c4de7468a06.js",
+        "sourceUrl": "https://web.hycdn.cn/endfield/official-v4/_next/static/chunks/4231-53da7c4de7468a06.js",
+        "characterOffset": 29268,
+        "characterEndExclusive": 29274,
+        "utf8ByteOffset": 29268,
+        "utf8ByteEndExclusive": 29274
+      },
+      "playerSourceSha256": "33d21303f6149ba5a3be3ffab657bf9bb3530435b31f63041ca6bde5224bf7f6",
+      "desktopVolume": 1,
+      "mobileUaVolume": 0.1,
+      "mobileUaPattern": "Mobi|Android|iPhone|Huawei",
+      "fadeDurationDefaultMs": 1000,
+      "visibility": "The independent BGM player suspends when hidden and resumes if it had been playing; its state is separate from the effect pool."
+    },
+    "localAdaptation": {
+      "directorySelection": "Local directory cards share avatar feedback; this is not an observed official directory interaction.",
+      "muteAndBackground": "Local sound-off/background handling stops active effects immediately. The source effect manager only gates future play calls."
+    },
+    "browserEvidence": {
+      "capturedAt": "2026-10-09",
+      "referenceUrl": "https://endfield.hypergryph.com/#operator",
+      "desktopViewport": [
+        2040,
+        986
+      ],
+      "h5Viewport": [
+        390,
+        844
+      ],
+      "observed": [
+        "All four effect URLs reached playing with readyState=4 and volume=1.",
+        "Double-clicking already-selected minghe started two distinct char_click audio elements 35.1ms apart; both lasted 0.624979s.",
+        "With global enabled=false, purrche selection did not add an audio play call.",
+        "Visible desktop avatar hover did not add an audio play call.",
+        "The existing H5 sound icon changed the same persisted enabled state and displayed the corresponding on/off SVG."
+      ],
+      "scope": "Audio-only verification. MP4/model requests were blocked only in the owned source tab; no 3D playback result is claimed."
+    }
   }
 }

@@ -16,8 +16,8 @@
 
 390×844无整页横溢出和缺图，最终减少动态人物静态idle0.033333/paused=true且可见；模块动态偏好、快速视频替换与离屏恢复实测留矩阵。父监听真实切后台8.025秒时，Lore帧、角度与BGM播放时间冻结，返回后恢复，关闭音乐后不再播放；并排除旧人物视频在2D状态被恢复。减少动态下手动BGM同样后台8.339秒冻结、返回恢复、关闭停止实测通过。BGM默认关闭，仅用户打开后播放。这些是本地有限实测，不推广至原站、全部媒体组合或全部语音。
 
-临时人物影片停滞后，禁缓存/绕SW的多路径与最终默认设置均恢复正常；完整字节和解码已核验，**未孤立归因SW或HTTP缓存**。手机drawer旧左偏也在新载及独立390复查后解决，旧诊断截图不当最终预览。
+原始四种短音保留字节：干员选择/2D↔3D使用char_click（0.624979s），头像翻页arrow_click（0.216979s），档案展开char_detail_enter（1.4672s），收起close_click（0.4352s）。四项原站均取得playing/ready4/volume1，重复当前头像叠响已核验；本地四种均取得playing/ended。10槽池保留短音并发，触发调用在点击/键盘选择的首个await前；实际声音开始仍受浏览器加载/解码延迟影响，不承诺零延迟。桌面工具与现有手机喇叭共享状态，手机OFF图标使用原静音SVG及#ccc。默认关闭、立即停止及不持久保存偏好是本地声音选择策略；源站用共享enabled状态与localStorage，关闭仅阻止新短音。本地关闭和隐藏页面立即停止并撤销待播放意图，返回不重放过期短效；目录选卡的角色短音为本地共享反馈，源目录未验证。
 
-[素材清单](assets-manifest.json)核对实际350文件的字节、尺寸、SHA-256、来源与变换。选中环来自官方公开DOM完整SVG，只去class并把currentColor改#cccccc；Three.js许可在vendor/THREE-LICENSE.txt。材料归原权利人，本归档不承诺商业许可。PC采用来源设计坐标，手机沿portrait规则；本地焦点语义、失败处理与减少动态补充不等于原站整体合规认证。
+[素材清单](assets-manifest.json)核对实际354文件的字节、尺寸、SHA-256、来源与变换。选中环来自官方公开DOM完整SVG，只去class并把currentColor改#cccccc；Three.js许可在vendor/THREE-LICENSE.txt。材料归原权利人，本归档不承诺商业许可。PC采用来源设计坐标，手机沿portrait规则；本地焦点语义、失败处理与减少动态补充不等于原站整体合规认证。
 
-旧单角色/单工厂图、600ms教学放大与构成说明按钮已删除。原始浏览器/源码过程证据在仓库外work/fidelity/endfield、work/fidelity/independent-audit和rhine-audit；[状态矩阵](state-matrix.md)给出具体路径和未核验项。正式预览来自最终实际浏览器。[研究](../../research/endfield-industrial.md) · [Demo](index.html#operator)。
+原始浏览器/源码过程证据在仓库外work/fidelity/endfield、work/fidelity/independent-audit和rhine-audit；[状态矩阵](state-matrix.md)给出具体路径和未核验项。正式预览来自最终实际浏览器。[研究](../../research/endfield-industrial.md) · [Demo](index.html#operator)。

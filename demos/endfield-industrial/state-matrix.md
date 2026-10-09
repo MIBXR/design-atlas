@@ -15,7 +15,7 @@
 | 日历 | 原当前版本日历与portrait图 | 原影像与normal/fixed/bottom结构 | 手机横滚207.2=max/末图right374.49通过。PC源/本地normal top54.1、fixed top0、bottom终态通过；1440×1000/scroll5420.7998时heading x147.0875/y-117.0375/w1285.3125/h313.9500/bottom196.9125同值。固定快照不是实时活动。 |
 | 4玩法/5AIC | 原三层slide-in400ms，delay0/250/500，文字exit/enter各500ms | 真4视频/5图、编号/说明/分页、黑→黄→媒体 | PC玩法height942.75；四对应mp4均实际播放、4→3反向/outgoing清理通过。AIC五项图/正文/页码逐项对应，4/5图natural1600×900/complete=true、outgoing0；5→1→5首末双向通过。1→2中态黑0/黄4.41%/top100%，终态2/5协议核心/02加载/outgoing0通过；源同帧时序与快输入不作通过结论。 |
 | 公告 | 原10字段；clip500ms，组件Y30%600ms，delay300后卡片横移300ms | 原标题/日期/图片、桌面/手机双条分页与官方详情 | 修复后fresh禁缓存PC1→2→1、1→2→3→4→5、5→4实测通过；端点class/aria/tabIndex/pointer同步。手机1→2→3/3→2每页两条、标题与alt同步通过。此为本地操作验收，源转场同帧仍不作通过结论。 |
-| 声音 | 原BGM/声音工具存在 | 默认关闭、用户打开后播放、aria/隐页策略 | 本地真实切后台8.025秒，BGM time8.031918/paused=true冻结；返回time8.605204/paused=false恢复。减少动态下用户手动BGM也实测：后台8.339秒time30.152478冻结，返回30.675366/paused=false，关闭50.881139/paused=true/aria=false。修复单独Audio对象未被DOM媒体选择器暂停的问题；减少动态不取消手动声音选择。资源字节已归档，不宣称全部语音已采或原站同序列实测。 |
+| 声音 | 原BGM、PC/H5共享声音状态；226的四短音调用与8858模块26097的volume1/10槽池；源头像/2D3D/箭头现场playing | 默认关闭，原四短音随桌面/手机共享开关；鼠标/键盘/触摸走相同操作，关闭和隐藏显式停止 | 1440×1000：Enter选明河、同头像连续实际鼠标点击、头像箭头、2D↔3D取得playing/ended与0.624979s/0.216979s；快速短音并发5。关闭后两个模式操作无新增play且active0，两端pressed=false。390×844：喇叭启用、档案开合取得1.4672s/0.4352s，真实触摸在reduced下仍播放；无横溢出。浏览器hidden=true两次采样间48.1684秒，BGM time125.369386及短效time0冻结/paused=true，返回shortPlays仍9，仅BGM恢复；涵盖未开始短效被取消。关闭立即停止、不持久保存、键盘及目录共享短音为本地策略；抽屉源端组合与全部官网操作音不宣称已实测。 |
 | 正式业务 | 登录/下载/支付/社区/云游戏/详情目的地 | 官方入口，不复制账户后台 | 外部业务目的地不算本地功能已通过。 |
 | 减少动态与离屏 | 源机制与补充策略分开 | 静态人物、暂停点云/非必要自动媒体，保留手动操作 | 最终390×844 reduced：人物idle.time0.033333/paused=true/loop=true且可见，canvas924.4375×520（native1920×1080）/sw390通过。模块动态切换视频2.24964冻结→2.3539恢复，Lore angle0稳定→.00657恢复。父监听真实后台8.025秒，Lore frame542/angle0.5491946559冻结，返回frame557/angle0.6241946恢复。自动媒体恢复排除旧人物视频，2D状态不会重新播放隐藏3D。快速2D→3D替换/切角色/离屏恢复的模块用例已实测，不推广至全部35人或所有媒体组合。 |
 
@@ -33,7 +33,3 @@
 - rhine-audit/endfield-reduced-bgm-visibility-proof.json、endfield-reduced-bgm-return-local.png：减少动态时手动BGM后台暂停、返回恢复、关闭实测。
 - rhine-audit/endfield-3d-idle-local.png、endfield-3d-mobile-reduced-local.png：最终正常循环与减少动态静态帧。normal-mobile图捕获enter.5378，并非idle证据。
 - rhine-audit/endfield-pile-{source,local}-scan-rays.json及factory/trinity/enemy/spaceship/mobile配对PNG：六模型/扫描/触摸证据。
-
-人物媒体曾在临时状态ready2/paused=false但时间停滞；完整影片字节与解码已核验。禁缓存+绕SW、仅禁缓存、仅绕SW三路径及最终默认设置均恢复正常，本轮**未孤立证明SW或HTTP缓存的因果**，不将历史停滞写成当前缺陷或确定缓存bug。
-
-之前遗漏原因：首版仅保留祀、两肖像外链和静态工厂图，另造教学“细节”开关；未完整检查目录、原字体/CSS、70段透明影片、六bin与运行状态。主动缩减丢失源站定义性机制。本轮恢复八章与真实数据媒体；当前版本文本、业务外链和未逐项状态保留清楚边界。代码/下载完成不等于全部状态通过。
