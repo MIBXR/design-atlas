@@ -295,31 +295,31 @@ a.atlas-ui-button:hover,button.atlas-ui-button:hover{border-color:var(--atlas-sh
 .atlas-site-header .atlas-directory-toggle,.atlas-directory-heading{display:none}
 .atlas-page-directory[hidden]{display:none!important}
 @media(max-width:800px){
-  body:is(.cases-page,.lab-page) .atlas-site-header-inner{grid-template-columns:minmax(0,1fr) 116px}
-  body:is(.cases-page,.lab-page) .atlas-site-header .atlas-site-theme{width:116px;gap:8px}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-site-header-inner{grid-template-columns:minmax(0,1fr) 116px}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-site-header .atlas-site-theme{width:116px;gap:8px}
   .atlas-site-header .atlas-directory-toggle:not([hidden]){box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:4px;flex:none;width:64px;height:44px;min-height:44px;padding:8px;border:1px solid var(--atlas-shell-line);border-radius:var(--atlas-ui-radius);background:var(--atlas-shell-field);color:var(--atlas-shell-ink);font:14px/1.5 var(--atlas-font-sans,sans-serif);cursor:pointer;touch-action:manipulation}
   .atlas-site-header .atlas-directory-toggle svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
   .atlas-site-header .atlas-directory-toggle[aria-expanded=true]{background:var(--atlas-shell-surface);border-color:var(--atlas-shell-focus)}
   .atlas-site-header .atlas-directory-toggle[aria-expanded=true] svg{transform:rotate(180deg)}
   .atlas-site-header .atlas-directory-toggle:hover{background:var(--atlas-shell-surface)}
   .atlas-site-header .atlas-directory-toggle:focus-visible{outline:3px solid var(--atlas-shell-focus);outline-offset:3px}
-  body:is(.cases-page,.lab-page) .atlas-page-directory[data-page-directory]:not([data-directory-open]){display:none}
-  body:is(.cases-page,.lab-page) .atlas-page-directory[data-page-directory][data-directory-open]{box-sizing:border-box;display:block;position:fixed;inset:calc(var(--atlas-header-height) + 8px) 20px auto;width:auto;height:auto;max-height:calc(100svh - var(--atlas-header-height) - 24px);margin:0;padding:16px;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;z-index:70;border:1px solid #4b5442;border-radius:12px;background:#242721;color:#f5f4ed;box-shadow:0 12px 36px #0004;scroll-padding-top:64px}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-page-directory[data-page-directory]:not([data-directory-open]){display:none}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-page-directory[data-page-directory][data-directory-open]{box-sizing:border-box;display:block;position:fixed;inset:calc(var(--atlas-header-height) + 8px) 20px auto;width:auto;height:auto;max-height:calc(100svh - var(--atlas-header-height) - 24px);margin:0;padding:16px;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;z-index:70;border:1px solid #4b5442;border-radius:12px;background:#242721;color:#f5f4ed;box-shadow:0 12px 36px #0004;scroll-padding-top:64px}
   .atlas-directory-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid #434838;font:14px/1.7 var(--atlas-font-sans,sans-serif)}
   .atlas-directory-heading strong{font-size:16px;font-weight:600}
   .atlas-directory-heading button{flex:none;min-height:44px;padding:8px 12px;border:1px solid #59624e;border-radius:7px;background:#30362a;color:#f5f4ed;font:14px/1.5 var(--atlas-font-sans,sans-serif);cursor:pointer;touch-action:manipulation}
   .atlas-directory-heading button:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
 }
 @media(max-width:360px){
-  body:is(.cases-page,.lab-page) .atlas-site-header .atlas-site-wordmark strong{font-size:13px;letter-spacing:.2px}
-  body:is(.cases-page,.lab-page) .atlas-site-header .atlas-site-wordmark small{font-size:11px;letter-spacing:0}
-  body:is(.cases-page,.lab-page) .atlas-site-header .atlas-site-mark{width:26px;height:26px}
-  body:is(.cases-page,.lab-page) .atlas-page-directory[data-page-directory][data-directory-open]{left:16px;right:16px}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-site-header .atlas-site-wordmark strong{font-size:13px;letter-spacing:.2px}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-site-header .atlas-site-wordmark small{font-size:11px;letter-spacing:0}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-site-header .atlas-site-mark{width:26px;height:26px}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-page-directory[data-page-directory][data-directory-open]{left:16px;right:16px}
 }
 html[data-lab-embed=home] .atlas-directory-toggle,html[data-lab-embed=home] .atlas-page-directory{display:none!important}
 @media(forced-colors:active){
   .atlas-site-header .atlas-directory-toggle:not([hidden]),.atlas-directory-heading button{border-color:ButtonText;background:ButtonFace;color:ButtonText}
-  body:is(.cases-page,.lab-page) .atlas-page-directory[data-page-directory][data-directory-open]{border-color:CanvasText;background:Canvas;color:CanvasText}
+  body:is(.cases-page,.lab-page,.document-page) .atlas-page-directory[data-page-directory][data-directory-open]{border-color:CanvasText;background:Canvas;color:CanvasText}
   .atlas-directory-heading{border-color:CanvasText}
 }
 

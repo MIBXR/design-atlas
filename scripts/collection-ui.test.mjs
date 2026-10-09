@@ -5,6 +5,7 @@ import vm from 'node:vm';
 
 const atlasSource = fs.readFileSync(new URL('../atlas.js', import.meta.url), 'utf8');
 const patternsSource = fs.readFileSync(new URL('../patterns-ui.js', import.meta.url), 'utf8');
+const favoritesSource = fs.readFileSync(new URL('../favorites.js', import.meta.url), 'utf8');
 const patternsPageSource = fs.readFileSync(new URL('../patterns-page.js', import.meta.url), 'utf8');
 const entryFiles = fs.readdirSync(new URL('../entries/', import.meta.url)).filter(name => name.endsWith('.json'));
 const entries = entryFiles.map(name => JSON.parse(fs.readFileSync(new URL(`../entries/${name}`, import.meta.url), 'utf8'))).sort((a, b) => a.order - b.order);
@@ -34,7 +35,7 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
       style: { setProperty() {} },
       addEventListener(name, listener) { listeners.set(name, listener); },
       setAttribute(name, value) { attributes.set(name, value); }, removeAttribute(name) { attributes.delete(name); },
-      append() {}, scrollIntoView() {}, showModal() { element.open = true; },
+      append() {}, insertAdjacentHTML(_position, html) { element.innerHTML += html; }, scrollIntoView() {}, showModal() { element.open = true; },
       close() { element.open = false; listeners.get('close')?.({ target: element }); },
       querySelectorAll() { return []; },
       focus() { document.activeElement = element; }, select() { element.selected = true; },
@@ -50,7 +51,7 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
   document.body = node('body');
   if (dedicated) document.body.classList.add('patterns-page');
   document.addEventListener = (name, listener) => { if (!documentListeners.has(name)) documentListeners.set(name, []); documentListeners.get(name).push(listener); };
-  const window = { DESIGN_ATLAS: data, DESIGN_PATTERNS: patterns, addEventListener(name, listener) { if (!windowListeners.has(name)) windowListeners.set(name, []); windowListeners.get(name).push(listener); }, scrollTo() {} };
+  const window = { DESIGN_ATLAS: data, DESIGN_PATTERNS: patterns, DesignAtlasPreview: { mount: () => ({ refresh() {}, disconnect() {} }) }, addEventListener(name, listener) { if (!windowListeners.has(name)) windowListeners.set(name, []); windowListeners.get(name).push(listener); }, scrollTo() {} };
   if (dedicated) window.DesignAtlasPlayground = {
     labels: { visual: '视觉构成', 'micro-motion': '微动效', 'page-motion': '页面动效', sound: '声音反馈', structure: '内容与状态' },
     mount(root, { type = 'visual' } = {}) { root.dataset.type = type; root.innerHTML = type; playgroundOperations.push({ action: 'mount', root, type }); },
@@ -60,6 +61,7 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
   const history = { replaceState(_state, _title, href) { location.href = new URL(href, location).href; }, pushState(_state, _title, href) { location.href = new URL(href, location).href; } };
   const scope = { window, document, location, history, URL, URLSearchParams, console, navigator: { clipboard: { async writeText(value) { if (clipboardRejects) throw Error('denied'); copied.push(value); } } }, localStorage: { getItem: () => null, setItem() {} }, ResizeObserver: class { observe() {} disconnect() {} }, setTimeout: () => 0, clearTimeout() {}, Blob };
   const context = vm.createContext(scope);
+  vm.runInContext(favoritesSource, context, { filename: 'favorites.js', timeout: 2000 });
   if (withPatterns) vm.runInContext(patternsSource, context, { filename: 'patterns-ui.js', timeout: 2000 });
   vm.runInContext(dedicated ? patternsPageSource : atlasSource, context, { filename: dedicated ? 'patterns-page.js' : 'atlas.js', timeout: 2000 });
   return {
@@ -95,7 +97,7 @@ test('comparison keeps two or three complete cases within shared semantic rows a
   assert.equal((html.match(/<td headers=/g) || []).length, 30);
   assert.ok(!html.includes(`<h2>${data[3].title}</h2>`));
   fixture.node('#compare-clear').onclick();
-  assert.match(fixture.node('#comparison').innerHTML, /请先在浏览案例页选择 2–3 个条目/);
+  assert.match(fixture.node('#comparison').innerHTML, /请先在案例库选择 2–3 个条目/);
 });
 
 test('pattern search combines URL query, category and source while preserving independent case filters', () => {
@@ -171,6 +173,23 @@ test('experience types combine with source and purpose filters and survive retur
   fixture.navigate('#patterns?type=unknown');
   assert.equal(fixture.node('#pattern-type').value, 'all');
   assert.match(fixture.node('#pattern-results-label').textContent, /3 个机制/);
+});
+
+test('search shortcuts preserve both detail routes while the favorites dialog is open', () => {
+  for (const dedicated of [false, true]) {
+    const fixture = page({ dedicated, hash: dedicated ? '#pattern/focus-test' : `#style/${entries[0].id}` });
+    const detail = fixture.node(dedicated ? '#pattern-detail' : '#detail');
+    const dialog = fixture.node('#favorite-dialog');
+    dialog.open = true;
+    const before = fixture.location.href;
+    fixture.key('/');
+    assert.equal(fixture.location.href, before);
+    assert.equal(detail.hidden, false);
+    dialog.open = false;
+    fixture.key('/');
+    assert.equal(detail.hidden, true);
+    assert.equal(fixture.document.activeElement, fixture.node(dedicated ? '#pattern-search' : '#search'));
+  }
 });
 
 test('showcase dialog follows navigation, filter controls and history', () => {

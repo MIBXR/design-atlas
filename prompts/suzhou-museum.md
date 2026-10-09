@@ -22,4 +22,4 @@
 
 把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。
 
-[查看 Demo](../demos/suzhou-museum/index.html) · [返回浏览案例](../cases.html#style/suzhou-museum)
+[查看 Demo](../demos/suzhou-museum/index.html) · [返回案例库](../cases.html#style/suzhou-museum)

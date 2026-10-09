@@ -72,7 +72,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "48d1b17da1b7807a18554de37cc6a3dbdb28223765afe19b2b3fb3e6a15cfb12"
+      "bundleSha256": "8e66eb8379cd777aefbfe4c167173e7abe0156b7e6990b423ed578286a22cd79"
     },
     {
       "id": "swiss-grid",
@@ -81,7 +81,7 @@
         "bundle": "agent/cases/swiss-grid.json",
         "demo": "demos/swiss-grid/index.html"
       },
-      "bundleSha256": "c79a24645e5d80c5a80dfbf8515b2566fc17b2e67a761ead3c4cb5c0c852a98e"
+      "bundleSha256": "acd1e8957860d22cb2f8a89e1bdc2d43e341a4d2c150c049f39105c1885cd101"
     }
   ]
 }

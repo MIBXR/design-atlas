@@ -79,7 +79,7 @@
         "bundle": "agent/cases/palace-museum.json",
         "demo": "demos/palace-museum/index.html"
       },
-      "bundleSha256": "90b570ee3d7b50f7d7c0879b0da356ff506cd83142e94de5a3ce196605542f9c"
+      "bundleSha256": "e8b354882a5302b5e241d335a021f2e696f5c03a9ffff3448fa6e7beb4bba24b"
     }
   ]
 }

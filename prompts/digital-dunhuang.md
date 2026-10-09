@@ -22,4 +22,4 @@
 
 用有使用权的真实瓦片图像和完整元数据替换档案；逐条件验证成员集、组合空态、URL返回以及查看器真实精度、平移和缩放边界。
 
-[查看 Demo](../demos/digital-dunhuang/index.html) · [返回浏览案例](../cases.html#style/digital-dunhuang)
+[查看 Demo](../demos/digital-dunhuang/index.html) · [返回案例库](../cases.html#style/digital-dunhuang)

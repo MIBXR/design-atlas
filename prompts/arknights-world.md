@@ -25,4 +25,4 @@
 
 在已授权角色素材不变时，加入一个可查询的干员职业目录，保持工业档案的网格与状态语汇。
 
-[查看 Demo](../demos/arknights-world/index.html) · [返回浏览案例](../cases.html#style/arknights-world)
+[查看 Demo](../demos/arknights-world/index.html) · [返回案例库](../cases.html#style/arknights-world)

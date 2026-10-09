@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {buildAgent} from './build-agent.mjs';
+import {buildDocuments} from './build-documents.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const entries = fs.readdirSync(path.join(root,'entries')).filter(x=>x.endsWith('.json')).map(x=>JSON.parse(fs.readFileSync(path.join(root,'entries',x),'utf8'))).sort((a,b)=>a.order-b.order);
 const referenceCount = entries.filter(entry=>entry.implementation==='reference-study').length;
@@ -23,7 +24,7 @@ for (const file of ['index.html', 'cases.html']) {
 }
 fs.mkdirSync(path.join(root, 'prompts'), {recursive:true});
 for (const entry of entries) {
-  const prompt = `# ${entry.title} · 复用 Prompt\n\n由 [结构化案例](../entries/${entry.id}.json) 自动生成。参考观察与具体边界见 [调研](../${entry.research})。\n\n## 正向 Prompt\n\n${entry.prompt}\n\n## 负向约束\n\n${entry.negativePrompt}\n\n## 制作约束\n\n${entry.constraints.map(item => '- ' + item).join('\n')}\n\n## 检查方法\n\n${entry.exercise}\n\n[查看 Demo](../${entry.demo}) · [返回浏览案例](../cases.html#style/${entry.id})\n`;
+  const prompt = `# ${entry.title} · 复用 Prompt\n\n由 [结构化案例](../entries/${entry.id}.json) 自动生成。参考观察与具体边界见 [调研](../${entry.research})。\n\n## 正向 Prompt\n\n${entry.prompt}\n\n## 负向约束\n\n${entry.negativePrompt}\n\n## 制作约束\n\n${entry.constraints.map(item => '- ' + item).join('\n')}\n\n## 检查方法\n\n${entry.exercise}\n\n[查看 Demo](../${entry.demo}) · [返回案例库](../cases.html#style/${entry.id})\n`;
   fs.writeFileSync(path.join(root, 'prompts', entry.id + '.md'), prompt, 'utf8');
 }
 const clean = value => String(value).replace(/\|/g, '\\|').replace(/\n/g, ' ');
@@ -37,3 +38,4 @@ console.log(`Built ${entries.length} entries. Open index.html or run npm start.`
 const {catalog} = buildAgent();
 console.log(`Built ${catalog.entryCount} Agent case bundles (${catalog.contentVersion.slice(0,12)}).`);
 console.log(`Built ${catalog.patterns?.patternCount || 0} curated design patterns with linked, verifiable sources.`);
+console.log(`Built ${buildDocuments().length} public Markdown documents.`);

@@ -24,4 +24,4 @@
 
 再选择一场经过官方核验的音乐会，对照节目/阵容结构，保留展览与音乐会信息表达差异。
 
-[查看 Demo](../demos/philharmonie-music/index.html) · [返回浏览案例](../cases.html#style/philharmonie-music)
+[查看 Demo](../demos/philharmonie-music/index.html) · [返回案例库](../cases.html#style/philharmonie-music)

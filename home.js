@@ -60,7 +60,7 @@
       const desktop = window.matchMedia('(min-width:1100px)');
       const tallEnough = window.matchMedia('(min-height:740px)');
       const reduced = window.matchMedia('(prefers-reduced-motion:reduce)');
-      const labels = ['浏览案例', '设计实验室', 'Agent 工作流'];
+      const labels = ['案例库', '设计实验室', 'Agent 工作流'];
       const clamp = value => Math.max(0, Math.min(1, value));
       let active = 0;
       let introMode = 0;

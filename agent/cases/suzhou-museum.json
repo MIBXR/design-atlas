@@ -139,9 +139,9 @@
     {
       "path": "prompts/suzhou-museum.md",
       "role": "prompt",
-      "content": "# 苏州博物馆 · 四屏门户与图像目的地 · 复用 Prompt\n\n由 [结构化案例](../entries/suzhou-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/suzhou-museum.md)。\n\n## 正向 Prompt\n\n完整复现2026-10-09苏州博物馆中文PC首页的四屏，不只截第3/4屏。采用源字标、摄影、50px白色外缘、四条章节导航和fullPage700ms受控滚动/第四屏循环；首屏2图5000ms/800ms fade及hover暂停，展览7项5000ms/500ms淡入/7指示条，九目的地按75/25和原多尺度几何排列，标签常显，复用源CSS与脚本双重hover；第四屏保留两张背景及70%半透明开放/预约白板，底栏含500ms网站地图及浏览建议。所有源可见素材和jQuery UI缓动依赖本地化。第三方统计阻塞及受控启动写清证据，WAP未取到时将手机同内容适配明确标出，不能宣称原移动端复刻。官方服务保持真实外链，减少动态关闭自动轮播，别添加不在源站的建筑dialog或框线卡片。\n\n## 负向约束\n\n不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。\n\n## 制作约束\n\n- 固定同日四屏、当前七项展览及九个图像入口，不声称预约、留言、商店、课堂或账户业务复制。\n- 公开摄影、机构字标、两类轮播和全部页面纹理/图饰检查本地化；保持原字节及水印。\n- 原站初载第三方阻塞与受控jQuery.ready验证分开记录，正常访客加载效果不能由受控状态推断。\n- 源PC最小1366px、移动UA跳到独立WAP；未取得WAP内容，因此手机响应适配明确不作为原站移动端像素复刻。\n- 部分源CSS的未用背景或隐藏箭头URL返回HTML，记录失败，不用猜测图片替代可见主要素材。\n\n## 检查方法\n\n把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。\n\n[查看 Demo](../demos/suzhou-museum/index.html) · [返回浏览案例](../cases.html#style/suzhou-museum)\n",
-      "sha256": "938e539c1a58c62c2e2050cb7d4a855a3a4476aa4656b3e566167463f0041b5f",
-      "bytes": 2159
+      "content": "# 苏州博物馆 · 四屏门户与图像目的地 · 复用 Prompt\n\n由 [结构化案例](../entries/suzhou-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/suzhou-museum.md)。\n\n## 正向 Prompt\n\n完整复现2026-10-09苏州博物馆中文PC首页的四屏，不只截第3/4屏。采用源字标、摄影、50px白色外缘、四条章节导航和fullPage700ms受控滚动/第四屏循环；首屏2图5000ms/800ms fade及hover暂停，展览7项5000ms/500ms淡入/7指示条，九目的地按75/25和原多尺度几何排列，标签常显，复用源CSS与脚本双重hover；第四屏保留两张背景及70%半透明开放/预约白板，底栏含500ms网站地图及浏览建议。所有源可见素材和jQuery UI缓动依赖本地化。第三方统计阻塞及受控启动写清证据，WAP未取到时将手机同内容适配明确标出，不能宣称原移动端复刻。官方服务保持真实外链，减少动态关闭自动轮播，别添加不在源站的建筑dialog或框线卡片。\n\n## 负向约束\n\n不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。\n\n## 制作约束\n\n- 固定同日四屏、当前七项展览及九个图像入口，不声称预约、留言、商店、课堂或账户业务复制。\n- 公开摄影、机构字标、两类轮播和全部页面纹理/图饰检查本地化；保持原字节及水印。\n- 原站初载第三方阻塞与受控jQuery.ready验证分开记录，正常访客加载效果不能由受控状态推断。\n- 源PC最小1366px、移动UA跳到独立WAP；未取得WAP内容，因此手机响应适配明确不作为原站移动端像素复刻。\n- 部分源CSS的未用背景或隐藏箭头URL返回HTML，记录失败，不用猜测图片替代可见主要素材。\n\n## 检查方法\n\n把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。\n\n[查看 Demo](../demos/suzhou-museum/index.html) · [返回案例库](../cases.html#style/suzhou-museum)\n",
+      "sha256": "5d3f1ef9dd45b2d883fcb0cf57baecc283ed735d886667b750f162d7977a11a1",
+      "bytes": 2156
     },
     {
       "path": "demos/suzhou-museum/fidelity.md",
@@ -522,20 +522,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "21f837e33a18fcf6017b2206e67bcb88472ce27ed09ea0b8c16548d33aec1005",
+      "bytes": 6333
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "934b0c85f273ae3aabfa00cc41af5e59a28c810f62ee6ab77d0a989d52eb501c",
-      "bytes": 4409
+      "sha256": "45540b169acc624f71047f09540ace58da4ab991e07d98a168e624d0a2095437",
+      "bytes": 5770
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "048af3620b84f0f994cf8b19bc8bf09594cc8a8c69b271af53d8ae613b099117",
+      "bytes": 7748
     },
     {
       "path": "entries/suzhou-museum.json",
@@ -564,8 +564,8 @@
     {
       "path": "prompts/suzhou-museum.md",
       "role": "context",
-      "sha256": "938e539c1a58c62c2e2050cb7d4a855a3a4476aa4656b3e566167463f0041b5f",
-      "bytes": 2159
+      "sha256": "5d3f1ef9dd45b2d883fcb0cf57baecc283ed735d886667b750f162d7977a11a1",
+      "bytes": 2156
     },
     {
       "path": "research/suzhou-museum.md",
@@ -582,8 +582,8 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "6c0f52de94010b533432352a06f14e47731d261f1d99115229f76863942633b9",
-      "bytes": 15182
+      "sha256": "fd79ea6a12381a7cd8650067a5f0978d8faef70a278bf5fbc5c8a7874836c343",
+      "bytes": 15644
     },
     {
       "path": "site-shell.js",

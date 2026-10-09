@@ -133,9 +133,9 @@
     {
       "path": "prompts/swiss-grid.md",
       "role": "prompt",
-      "content": "# 瑞士设计：编辑网格 · 复用 Prompt\n\n由 [结构化案例](../entries/swiss-grid.json) 自动生成。参考观察与具体边界见 [调研](../research/swiss-grid.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构文化机构 [品牌] 制作瑞士国际主义启发的 [展览/课程] 页面。先建立标题、日期、地点、分类和行动层级，再用桌面12栏、32px间距、手机单列落地。纸白背景、炭黑正文、单一信号红；采用本地系统无衬线字体，最多两个字重。首屏是非对称的大标题和一幅原创抽象节奏图；后续用横向编号日程而非圆角卡片。提供有aria-pressed的分类筛选、结果计数和可取消的本地收藏。至少三个内容章节。保留常规滚动、可见键盘焦点、中文可读正文与reduced-motion降级。参考Swissted与Müller-Brockmann的排版逻辑，不复制商标、海报或宣称字体与原作相同。\n\n要素协调要求：标题尺度、对齐线、间距和日期位置重复形成秩序；红色只是集中强调，不能代替信息层级。\n\n## 负向约束\n\n不要玻璃拟态、渐变霓虹、满屏圆角卡片、横向滚动劫持、裁切中文标题；不要将Helvetica当作Swiss的唯一字体或混用包豪斯形色定律。\n\n## 制作约束\n\n- Swissted 官网明确使用 Berthold Akzidenz-Grotesk medium，并非 Helvetica；本 demo 用系统 Arial 近似结构，不声称字体等同。\n- 桌面 12 栏，移动端折为单列；文字不能为了维持海报形状被裁切。\n- 红色用于主视觉和状态，正文以黑字/纸白保持对比。\n- 字号差必须伴随语义标题层级，不能以超大字替代内容组织。\n- 几何图形只是局部节奏；不要把 Swiss 和包豪斯的形色课程混为一个流派。\n\n## 检查方法\n\n将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。\n\n[查看 Demo](../demos/swiss-grid/index.html) · [返回浏览案例](../cases.html#style/swiss-grid)\n",
-      "sha256": "f29c218718cca2161fa9265c079c03d8608536353ac4457b93961651a225c30c",
-      "bytes": 2247
+      "content": "# 瑞士设计：编辑网格 · 复用 Prompt\n\n由 [结构化案例](../entries/swiss-grid.json) 自动生成。参考观察与具体边界见 [调研](../research/swiss-grid.md)。\n\n## 正向 Prompt\n\n可替换内容：产品/品牌【名称】；受众【用户】；核心价值【卖点与证据】；主行动【希望用户完成的动作】。以下为风格示范任务，可替换具体品牌与内容，保留设计约束。\n\n为虚构文化机构 [品牌] 制作瑞士国际主义启发的 [展览/课程] 页面。先建立标题、日期、地点、分类和行动层级，再用桌面12栏、32px间距、手机单列落地。纸白背景、炭黑正文、单一信号红；采用本地系统无衬线字体，最多两个字重。首屏是非对称的大标题和一幅原创抽象节奏图；后续用横向编号日程而非圆角卡片。提供有aria-pressed的分类筛选、结果计数和可取消的本地收藏。至少三个内容章节。保留常规滚动、可见键盘焦点、中文可读正文与reduced-motion降级。参考Swissted与Müller-Brockmann的排版逻辑，不复制商标、海报或宣称字体与原作相同。\n\n要素协调要求：标题尺度、对齐线、间距和日期位置重复形成秩序；红色只是集中强调，不能代替信息层级。\n\n## 负向约束\n\n不要玻璃拟态、渐变霓虹、满屏圆角卡片、横向滚动劫持、裁切中文标题；不要将Helvetica当作Swiss的唯一字体或混用包豪斯形色定律。\n\n## 制作约束\n\n- Swissted 官网明确使用 Berthold Akzidenz-Grotesk medium，并非 Helvetica；本 demo 用系统 Arial 近似结构，不声称字体等同。\n- 桌面 12 栏，移动端折为单列；文字不能为了维持海报形状被裁切。\n- 红色用于主视觉和状态，正文以黑字/纸白保持对比。\n- 字号差必须伴随语义标题层级，不能以超大字替代内容组织。\n- 几何图形只是局部节奏；不要把 Swiss 和包豪斯的形色课程混为一个流派。\n\n## 检查方法\n\n将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。\n\n[查看 Demo](../demos/swiss-grid/index.html) · [返回案例库](../cases.html#style/swiss-grid)\n",
+      "sha256": "526add59aa93b198c666a7b8ee7167119fc93107d10c4f66513b4e60bfeea574",
+      "bytes": 2244
     }
   ],
   "files": [
@@ -184,20 +184,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "21f837e33a18fcf6017b2206e67bcb88472ce27ed09ea0b8c16548d33aec1005",
+      "bytes": 6333
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "934b0c85f273ae3aabfa00cc41af5e59a28c810f62ee6ab77d0a989d52eb501c",
-      "bytes": 4409
+      "sha256": "45540b169acc624f71047f09540ace58da4ab991e07d98a168e624d0a2095437",
+      "bytes": 5770
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "048af3620b84f0f994cf8b19bc8bf09594cc8a8c69b271af53d8ae613b099117",
+      "bytes": 7748
     },
     {
       "path": "entries/swiss-grid.json",
@@ -226,8 +226,8 @@
     {
       "path": "prompts/swiss-grid.md",
       "role": "context",
-      "sha256": "f29c218718cca2161fa9265c079c03d8608536353ac4457b93961651a225c30c",
-      "bytes": 2247
+      "sha256": "526add59aa93b198c666a7b8ee7167119fc93107d10c4f66513b4e60bfeea574",
+      "bytes": 2244
     },
     {
       "path": "research/swiss-grid.md",
@@ -244,8 +244,8 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "6c0f52de94010b533432352a06f14e47731d261f1d99115229f76863942633b9",
-      "bytes": 15182
+      "sha256": "fd79ea6a12381a7cd8650067a5f0978d8faef70a278bf5fbc5c8a7874836c343",
+      "bytes": 15644
     },
     {
       "path": "site-shell.js",

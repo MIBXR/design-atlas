@@ -10,7 +10,7 @@
 **34 个案例**　·　**26 个品牌／文化研究**　·　**8 种经典设计语言**
 <!-- atlas-counts:end -->
 
-[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [设计巧思](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
+[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [浏览案例](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [巧思库](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [完整索引](research/CASE-INDEX.md)
 
 ![Design Atlas 实际 Demo 全景](docs/readme/cover.webp)
 
@@ -29,7 +29,7 @@
 - **查找**：按产品、游戏/IP、艺术文化、经典语言与国家／地区筛选；搜索品牌、配色、布局、交互或约束。分类、地区、搜索与排序保留在 URL 中，支持刷新恢复、浏览器前进／后退和分享筛选结果（例如 `cases.html?category=games`）。
 - **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；手机面板限制为390px。
 - **比较**：选择2–3项并排比较，七节说明按同名章节逐行对齐；每行采用最长内容所需的自然高度，便于比较不同案例在同一设计维度上的区别。
-- **设计巧思**：独立巧思页按视觉、微动效、页面动效、声音、内容与组织筛选，再按功能用途、来源案例与关键词找可单独借用的机制；首页和实验室可实际操作本地示意，巧思详情按需载入完整来源 Demo；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
+- **巧思库**：独立巧思页按视觉、微动效、页面动效、声音、内容与组织筛选，再按功能用途、来源案例与关键词找可单独借用的机制；首页和实验室可实际操作本地示意，巧思详情按需载入完整来源 Demo；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
 - **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在设计实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
 - **Agent 选型**：调用 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
@@ -48,7 +48,7 @@ Design Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案
 
 ![Design Atlas 首页：案例、巧思与实践入口](docs/site/home.jpg)
 
-| 首页中的真实实验室 | 浏览案例 |
+| 首页中的真实实验室 | 案例库 |
 | --- | --- |
 | ![设计实验室：调配元素与操作巧思示意](docs/site/workflow.jpg) | ![浏览案例界面：筛选设计方向与查看案例预览](docs/site/cases.png) |
 
@@ -65,6 +65,8 @@ Design Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案
 | 内容与组织 | 阅读、导航和状态规则 | 单开信息与折叠 |
 
 类型可以交叉；功能用途分类继续独立保留。不要求每个案例都有视觉、动效或声音巧思。巧思库与案例库共用首部、卡片、网格与详情结构；工具栏的“体验当前类型”按需打开示意，跟随当前体验类型切换。示意使用通用内容与本地拟合参数，完整来源保留归档观察与复现边界。声音默认关闭，示意切到后台会关闭，回到前台需要重新启用。
+
+案例与巧思收藏共用一份备份，支持合并导入与旧案例备份；[文档中心](document.html)集中阅读本站公开的指南、研究、Prompt 与复现说明。
 
 ![独立巧思页：类型与可操作示意](docs/site/patterns.jpg)
 

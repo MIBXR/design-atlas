@@ -67,7 +67,7 @@
         "bundle": "agent/cases/shape-morph.json",
         "demo": "demos/shape-morph/index.html"
       },
-      "bundleSha256": "104832317975860219de5c0f5735ff97ea546412eab2366cd5cedc10b711ce6d"
+      "bundleSha256": "fe2a1f61d80d9c1082f685bbc3738733de87dedfd9e925e438215d5975107756"
     }
   ]
 }

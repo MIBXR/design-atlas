@@ -152,9 +152,9 @@
     {
       "path": "prompts/uma-musume.md",
       "role": "prompt",
-      "content": "# 赛马娘：群像赛道与斜切叙事 · 复用 Prompt\n\n由 [结构化案例](../entries/uma-musume.json) 自动生成。参考观察与具体边界见 [调研](../research/uma-musume.md)。\n\n## 正向 Prompt\n\n以一个明确 URL 和采集日期归档【竞技/养成游戏】。参考 Umamusume 国际页：官方赛道群像满宽铺开，独立竖版 KV 用于手机；下载徽章避开人物脸部。正常长页依次接入新闻条目、居中轻微倾斜的 About 缩略图和 Gameplay，不改成通用整屏 Swiper。草地绿、荧绿斜切标题带、粗重斜体标题与白底新闻形成运动方向和阅读节奏。点击 About 在站内原生 dialog 播放官方 top_about.mp4，文件无音轨，保留播放/暂停/进度与关闭或后台暂停；用比赛画面和剪辑建立节奏，不把未静音属性称为原声。官网 PV 外链的声音未在本地核实，不额外添加未核验 BGM。三组 Gameplay 必须将人物立绘、两张竖屏游戏图与文案板整块移动，400ms cubic-bezier(.25,1,.5,1)，首尾箭头禁用，不自动、不循环；按钮、编号、左右键与手势更新同一状态。保留来源证实的造型，不把所有图加统一圆角或玻璃卡片。明确内容缩减、手机适配与本地键盘/菜单补充，提供减少动态、可见焦点、原图 manifest 和真实桌面/390px 预览。 导航须保留真实 Logo 与蓝色纹理，滚过 min(viewportWidth,2000) 的7%阈值时2.8倍Logo缩回基准，300ms cubic-bezier(.19,1,.22,1)，反向恢复；手机1.72倍、马蹄图标菜单，Play Now打开原图下载层。\n\n## 负向约束\n\n不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。\n\n## 制作约束\n\n- 只归档 https://umamusume.com/ 在 2026-10-07 的国际英文页，不混入日本门户布局或追随后续改版。\n- 群像、新闻、About 和 Gameplay 使用官方本地素材；新闻数量和后半部角色/媒体内容有缩减。\n- About 原始 top_about.mp4 无音轨，播放器未静音不代表有原声；官网其他 PV 外链的声音未在本地核实，未发现独立 BGM，不给滚动章节配通用音乐。\n- Gameplay 不自动推进、不循环；400ms cubic-bezier(.25,1,.5,1) 与首尾边界有源样式依据。\n- 手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。\n- 官方品牌、群像、美术和 PV 权利归相应权利方，manifest 留存 URL/尺寸/哈希；不复制运营服务。\n\n## 检查方法\n\n保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。\n\n[查看 Demo](../demos/uma-musume/index.html) · [返回浏览案例](../cases.html#style/uma-musume)\n",
-      "sha256": "fd68606280b7e501e360a435caed54d672928bcae9e27c2dcca81faec5b27476",
-      "bytes": 2935
+      "content": "# 赛马娘：群像赛道与斜切叙事 · 复用 Prompt\n\n由 [结构化案例](../entries/uma-musume.json) 自动生成。参考观察与具体边界见 [调研](../research/uma-musume.md)。\n\n## 正向 Prompt\n\n以一个明确 URL 和采集日期归档【竞技/养成游戏】。参考 Umamusume 国际页：官方赛道群像满宽铺开，独立竖版 KV 用于手机；下载徽章避开人物脸部。正常长页依次接入新闻条目、居中轻微倾斜的 About 缩略图和 Gameplay，不改成通用整屏 Swiper。草地绿、荧绿斜切标题带、粗重斜体标题与白底新闻形成运动方向和阅读节奏。点击 About 在站内原生 dialog 播放官方 top_about.mp4，文件无音轨，保留播放/暂停/进度与关闭或后台暂停；用比赛画面和剪辑建立节奏，不把未静音属性称为原声。官网 PV 外链的声音未在本地核实，不额外添加未核验 BGM。三组 Gameplay 必须将人物立绘、两张竖屏游戏图与文案板整块移动，400ms cubic-bezier(.25,1,.5,1)，首尾箭头禁用，不自动、不循环；按钮、编号、左右键与手势更新同一状态。保留来源证实的造型，不把所有图加统一圆角或玻璃卡片。明确内容缩减、手机适配与本地键盘/菜单补充，提供减少动态、可见焦点、原图 manifest 和真实桌面/390px 预览。 导航须保留真实 Logo 与蓝色纹理，滚过 min(viewportWidth,2000) 的7%阈值时2.8倍Logo缩回基准，300ms cubic-bezier(.19,1,.22,1)，反向恢复；手机1.72倍、马蹄图标菜单，Play Now打开原图下载层。\n\n## 负向约束\n\n不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。\n\n## 制作约束\n\n- 只归档 https://umamusume.com/ 在 2026-10-07 的国际英文页，不混入日本门户布局或追随后续改版。\n- 群像、新闻、About 和 Gameplay 使用官方本地素材；新闻数量和后半部角色/媒体内容有缩减。\n- About 原始 top_about.mp4 无音轨，播放器未静音不代表有原声；官网其他 PV 外链的声音未在本地核实，未发现独立 BGM，不给滚动章节配通用音乐。\n- Gameplay 不自动推进、不循环；400ms cubic-bezier(.25,1,.5,1) 与首尾边界有源样式依据。\n- 手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。\n- 官方品牌、群像、美术和 PV 权利归相应权利方，manifest 留存 URL/尺寸/哈希；不复制运营服务。\n\n## 检查方法\n\n保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。\n\n[查看 Demo](../demos/uma-musume/index.html) · [返回案例库](../cases.html#style/uma-musume)\n",
+      "sha256": "eb06a9776ff1896ecdff7e3c432820a3162f939f6ceaf3b8ea16a7677a4cd6e1",
+      "bytes": 2932
     },
     {
       "path": "demos/uma-musume/fidelity.md",
@@ -397,20 +397,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "c8013736775b0d7a1166d417d97380f900ff4c6aa4b6b01b39c4d761e4d6fbd6",
-      "bytes": 3700
+      "sha256": "21f837e33a18fcf6017b2206e67bcb88472ce27ed09ea0b8c16548d33aec1005",
+      "bytes": 6333
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "934b0c85f273ae3aabfa00cc41af5e59a28c810f62ee6ab77d0a989d52eb501c",
-      "bytes": 4409
+      "sha256": "45540b169acc624f71047f09540ace58da4ab991e07d98a168e624d0a2095437",
+      "bytes": 5770
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "6d8053aa3cc0550978a3da56e97e8127b7f190b10208936636549a274324f03b",
-      "bytes": 3933
+      "sha256": "048af3620b84f0f994cf8b19bc8bf09594cc8a8c69b271af53d8ae613b099117",
+      "bytes": 7748
     },
     {
       "path": "entries/uma-musume.json",
@@ -439,8 +439,8 @@
     {
       "path": "prompts/uma-musume.md",
       "role": "context",
-      "sha256": "fd68606280b7e501e360a435caed54d672928bcae9e27c2dcca81faec5b27476",
-      "bytes": 2935
+      "sha256": "eb06a9776ff1896ecdff7e3c432820a3162f939f6ceaf3b8ea16a7677a4cd6e1",
+      "bytes": 2932
     },
     {
       "path": "research/screenshots/uma-musume-source.jpg",
@@ -463,8 +463,8 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "6c0f52de94010b533432352a06f14e47731d261f1d99115229f76863942633b9",
-      "bytes": 15182
+      "sha256": "fd79ea6a12381a7cd8650067a5f0978d8faef70a278bf5fbc5c8a7874836c343",
+      "bytes": 15644
     },
     {
       "path": "site-shell.js",
