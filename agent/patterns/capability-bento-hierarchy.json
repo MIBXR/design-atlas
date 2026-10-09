@@ -80,7 +80,7 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
       },
-      "bundleSha256": "d249287048dc2635f5c0e17ba25985ad93ec010b0e97fb8f84152940a9153737"
+      "bundleSha256": "340824c6fb084b62e3cf2e69480e736ee3b747605ca2da2ce9b76cdc35d78d90"
     },
     {
       "id": "stripe-platform",
@@ -89,7 +89,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "1ca082efb7b1f20464f0c8d4e219406acda21e57bd6c60bfa6cc6eb88c5aa6f2"
+      "bundleSha256": "30e78be2a56257911d99b5ac1a63c18ce7e2a9a87a781b1db6d65f5f231bf5b9"
     }
   ]
 }

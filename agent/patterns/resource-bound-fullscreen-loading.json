@@ -100,7 +100,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "0cc2aac8ac312a3e0aa5ee6dffc914accfb26b25cfdeee712bdd2d6bcec9d4b9"
+      "bundleSha256": "6e14db8b3c4558445440f6cadf23bbc03c8f3b74f5b8239544a7a45e1ff11093"
     },
     {
       "id": "endfield-industrial",
@@ -109,7 +109,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "60dbdeb9190fb6d97f74fbdd6bfd1b65c6c424964cdf647bcdeebd8b37ff7ea1"
+      "bundleSha256": "e530a02a9d88933b8b7b7df42ea9f0d54a958a92af2347d809c1c91dafb2c14b"
     }
   ]
 }
