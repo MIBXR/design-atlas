@@ -80,7 +80,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "166afe4c1c155374dd7fbc3af1c00aad5b0ae3e7c7d9408b43239ac029827ba1"
+      "bundleSha256": "4724f40e8870e74f973603e808e34f3fe3be3c0591ddbf46b205ba735d5e5edb"
     },
     {
       "id": "claude-platform",
@@ -89,7 +89,7 @@
         "bundle": "agent/cases/claude-platform.json",
         "demo": "demos/claude-platform/index.html"
       },
-      "bundleSha256": "a2446bae4d4c4d1e27abb809d6c5b7f1053b0427392cb01180924c13df0e98bb"
+      "bundleSha256": "7026d8045c7adeb3eca4007f0c1bb481b34096693daa19661b7a0e78d9ba0b24"
     }
   ]
 }

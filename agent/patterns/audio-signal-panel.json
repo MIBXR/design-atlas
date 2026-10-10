@@ -60,7 +60,7 @@
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
       },
-      "bundleSha256": "422d7993936350c2f8eebd8c92c15b90be8c389823f4d552c2c9d00cecfcc798"
+      "bundleSha256": "c52b76d6f1e3df376f0dbd1350b52028e7933594f77139431d9486c1eea5c341"
     }
   ]
 }

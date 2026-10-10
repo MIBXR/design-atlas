@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "1efd4d6100399e00f7aedaaa5fcca7de6b1aecc3b63509d6f4ac75e073f3692c",
+  "contentVersion": "fae45a557c9462972819e7ba76edb18ff8db13a5996767169efb5a320b772170",
   "patternCount": 135,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -61,7 +61,7 @@
       "paths": {
         "bundle": "agent/patterns/activity-title-ticket-overlap.json"
       },
-      "bundleSha256": "5c56f132dfb5f8a5a96a7a5470160c43e0659a79341a630651e30ea26fefe78c"
+      "bundleSha256": "a04d149d05ace991e20c77133a279f56695dfb5c54710d710fa963493f4a3ce7"
     },
     {
       "id": "aligned-metadata-rows",
@@ -115,7 +115,7 @@
       "paths": {
         "bundle": "agent/patterns/aligned-metadata-rows.json"
       },
-      "bundleSha256": "dfddab74fd0482d8c8719acdfbf0b5110c5aba97bfea473ea9adf1d8bc1b57a5"
+      "bundleSha256": "c589551562b650c8d904333b072cf479c5dc57e6b7fb843ae9c50f70adc77481"
     },
     {
       "id": "architectural-fragment-anchor",
@@ -188,7 +188,7 @@
       "paths": {
         "bundle": "agent/patterns/architectural-fragment-anchor.json"
       },
-      "bundleSha256": "d07c0dbdda294549f272940801d782007c53948195d30e20be8e093bcfcfef8b"
+      "bundleSha256": "2bc33606cfba844c20a99734d0af9d21ef3869197e3da72053e862ebfd65dfd7"
     },
     {
       "id": "architectural-outline-whitespace",
@@ -262,7 +262,7 @@
       "paths": {
         "bundle": "agent/patterns/architectural-outline-whitespace.json"
       },
-      "bundleSha256": "06118705edf43c91392c489b7ff7a54dc5d5a4afaff5a3c375af7cb73b3eb043"
+      "bundleSha256": "0f76da8a993b9102b1a452cb232d8b5bdff943d94f974c2756eb3e9afea1991f"
     },
     {
       "id": "artwork-caption-separation",
@@ -344,7 +344,7 @@
       "paths": {
         "bundle": "agent/patterns/artwork-caption-separation.json"
       },
-      "bundleSha256": "4688e7c54e7146a88ea74f9c3e18414ede326f1c0cb7f4bd7ff5ad3ef93e3bc0"
+      "bundleSha256": "86317b4f34c191b037bf54b5f1543fec5547f7df8fc240ce70e5e301dda6cb12"
     },
     {
       "id": "audio-signal-panel",
@@ -399,7 +399,7 @@
       "paths": {
         "bundle": "agent/patterns/audio-signal-panel.json"
       },
-      "bundleSha256": "502b5627f089cc767017b5906a110966d06cd4ad6753990e297294578b64664b"
+      "bundleSha256": "2f8c55c2f6bd799ca665a968b9743f8947408d1c3253c3e6811266e7fdff44ba"
     },
     {
       "id": "avatar-pile-personality",
@@ -458,7 +458,7 @@
       "paths": {
         "bundle": "agent/patterns/avatar-pile-personality.json"
       },
-      "bundleSha256": "783ad57363321f1a009c91b2135cc84290bf739ebbda219a1ecbeb40e07a9d25"
+      "bundleSha256": "9d199eedb07bf4b0f95a63174615b5a55457afd8ab47ab9216f70086feda65f5"
     },
     {
       "id": "blurred-layered-video-handoff",
@@ -528,7 +528,7 @@
       "paths": {
         "bundle": "agent/patterns/blurred-layered-video-handoff.json"
       },
-      "bundleSha256": "a2113fc95fa39940d6f02adea6786b81c424402385edba92157e778b78e82897"
+      "bundleSha256": "1472470dad2dcdd8cde03bd252395a9da368e5c4e44f0686b235b985af5a3967"
     },
     {
       "id": "bounded-image-inspection",
@@ -605,7 +605,7 @@
       "paths": {
         "bundle": "agent/patterns/bounded-image-inspection.json"
       },
-      "bundleSha256": "76c28d7b955974a74d7d61d73f3cfe749578f0ceb8506907f02302f055c3387d"
+      "bundleSha256": "7243ed9ffd1d06108c169f96e872d7a4ff50da58139d53bec2f0075350cb99e9"
     },
     {
       "id": "bounded-panel-track",
@@ -694,7 +694,7 @@
       "paths": {
         "bundle": "agent/patterns/bounded-panel-track.json"
       },
-      "bundleSha256": "2c831fbd37b5eefed327ebd331f3ab888a913e8125d6a9f484d14373eaa3a229"
+      "bundleSha256": "1d8b05ec5d1620d6bd4e190b75f7e23c8c34a09b4702a333464e18050598d0ba"
     },
     {
       "id": "capability-bento-hierarchy",
@@ -769,7 +769,7 @@
       "paths": {
         "bundle": "agent/patterns/capability-bento-hierarchy.json"
       },
-      "bundleSha256": "6158c73030eab0fac2db9518b6a9e625709d8ecc4df9d278c68c57244b43c876"
+      "bundleSha256": "2db84d736967a997195e3ff76eb86afdd5d34861a990ecea34a37e8a761b425c"
     },
     {
       "id": "center-aligned-section-index",
@@ -834,7 +834,7 @@
       "paths": {
         "bundle": "agent/patterns/center-aligned-section-index.json"
       },
-      "bundleSha256": "54e5017616972f0c7f6d0b038316244cf5739c4ad2bb8eb0de2077c1b8cf4de7"
+      "bundleSha256": "49e6d3564a7644b62e86e5eec0392b3333e6dfcb3a575380f65adc529370eb24"
     },
     {
       "id": "centered-loop-gallery",
@@ -936,7 +936,7 @@
       "paths": {
         "bundle": "agent/patterns/centered-loop-gallery.json"
       },
-      "bundleSha256": "5c3900f8f2b2dd428e605d9df635c3f82abac5f0e06eefaf3b9693749d742391"
+      "bundleSha256": "2f0c2aaa54554165ea2f740a778304d9da4cd021007bd8663ba258488e6a2e9f"
     },
     {
       "id": "character-stage-coordination",
@@ -1043,7 +1043,7 @@
       "paths": {
         "bundle": "agent/patterns/character-stage-coordination.json"
       },
-      "bundleSha256": "200111436803d17a32d083b6711478a78d44de6d8227b104842f0516cc30b6ff"
+      "bundleSha256": "6215b14571ca02be33a1cdb3a7ccb2c3a485e9e47fc3121aeac676c47507cb90"
     },
     {
       "id": "character-voice-ownership",
@@ -1132,7 +1132,7 @@
       "paths": {
         "bundle": "agent/patterns/character-voice-ownership.json"
       },
-      "bundleSha256": "e4c2f0de8761430322c1ff49d622081ec084f3b670fa8733c374170adb944af7"
+      "bundleSha256": "eaf15d4123a11f54299af3187cee913038893baa23b08858f931442db4c03c38"
     },
     {
       "id": "checklist-progress",
@@ -1188,7 +1188,7 @@
       "paths": {
         "bundle": "agent/patterns/checklist-progress.json"
       },
-      "bundleSha256": "f08dc96b27e30a80cf3aafd81fa4aa61d37bfa646aed4cb56c017fad58fbe018"
+      "bundleSha256": "68eed93e33cb527accb80e81bcae7881de2030d5e6bfac402ec8d2ef4147036a"
     },
     {
       "id": "client-logo-marquee",
@@ -1263,7 +1263,7 @@
       "paths": {
         "bundle": "agent/patterns/client-logo-marquee.json"
       },
-      "bundleSha256": "b86cf4b84227942fccab1907c060e78e6e7ab84a58a6e52d0581d734f7b23794"
+      "bundleSha256": "e0348ca915573fb716ab3c2bcd212bb4f1f6dc69c97aaa0e7700cf9e1e499408"
     },
     {
       "id": "clip-tail-advance",
@@ -1328,7 +1328,7 @@
       "paths": {
         "bundle": "agent/patterns/clip-tail-advance.json"
       },
-      "bundleSha256": "252d261a1ce3cf908b89feb554a2f7f3dc6647e9216e1812c895ee953800f2e2"
+      "bundleSha256": "937d47c1fc8b67eb7e36ed7f4f6d13aa9c7da16e0e4dce6a23b2722b673e6425"
     },
     {
       "id": "compact-scroll-header",
@@ -1393,7 +1393,7 @@
       "paths": {
         "bundle": "agent/patterns/compact-scroll-header.json"
       },
-      "bundleSha256": "af9b1fe62145054dbd09fac6de92a44e7ac82489857320989f2fc6c66650674f"
+      "bundleSha256": "149cb5b0b4923a5f2a1518c0c7d29fca91bd5e4ac7cd6546ba0ba39fb3df6016"
     },
     {
       "id": "continuous-bgm-bridge",
@@ -1473,7 +1473,7 @@
       "paths": {
         "bundle": "agent/patterns/continuous-bgm-bridge.json"
       },
-      "bundleSha256": "e976f811c43048e62d66d25766c6ab9ead7852705ebd9778bec42e44e1907dd9"
+      "bundleSha256": "88b48fe38e44e289ba4fc040ab4c5d17fe375b1b0bbd271890b0a38e2de61f65"
     },
     {
       "id": "controlled-rough-outlines",
@@ -1528,7 +1528,7 @@
       "paths": {
         "bundle": "agent/patterns/controlled-rough-outlines.json"
       },
-      "bundleSha256": "0261eabbaed3beb3a9d45ab8590c42d885d2c859a11f4010d0f8d68aac68e942"
+      "bundleSha256": "4fa30b62b9d6ca106e022529168efc0f78acb9e0a49142b83beea81ad78a2aa1"
     },
     {
       "id": "current-state-svg-export",
@@ -1581,7 +1581,7 @@
       "paths": {
         "bundle": "agent/patterns/current-state-svg-export.json"
       },
-      "bundleSha256": "d71a12cac2c3b915b081f2af2659731d7a316d014986d647576fa37648ae711d"
+      "bundleSha256": "3630dcf76510f2706bf2d50beb4fdd8d2a50c357aaebf7bbfab5ad8ace4f472c"
     },
     {
       "id": "department-code-matrix",
@@ -1663,7 +1663,7 @@
       "paths": {
         "bundle": "agent/patterns/department-code-matrix.json"
       },
-      "bundleSha256": "ae754b050731d2e677a4138c50a418e26153663fb59f5fb4f6b50b9bf2867f5c"
+      "bundleSha256": "b9fca4dfc84817c768768234f5b18aab7676791f45939a7aa324a4a875177aa2"
     },
     {
       "id": "direct-purpose-navigation",
@@ -1738,7 +1738,7 @@
       "paths": {
         "bundle": "agent/patterns/direct-purpose-navigation.json"
       },
-      "bundleSha256": "20c599bae04161524f3a771b97bd8c512ff0dc08b90d51c762387cd0d5bb18cf"
+      "bundleSha256": "a0e2b32fb6706b029de36cb877b9ae1c4c0b46e373fe2b75ffa8339ebdcdbcd0"
     },
     {
       "id": "directional-section-wipe",
@@ -1806,7 +1806,7 @@
       "paths": {
         "bundle": "agent/patterns/directional-section-wipe.json"
       },
-      "bundleSha256": "5c8e7850c81b53986101d3af68af053fd0f67ace28ed7f63a7e586bb5290da96"
+      "bundleSha256": "b94a7246a6b00b6e02e0591f9b4ab0505e6c454a7ccaf97cf2631e23693fc75b"
     },
     {
       "id": "directional-sticky-navigation",
@@ -1865,7 +1865,7 @@
       "paths": {
         "bundle": "agent/patterns/directional-sticky-navigation.json"
       },
-      "bundleSha256": "74103e2b62d7597e33cbf47cc1fc906cf488acf41e083b7288c175fcde53c6b6"
+      "bundleSha256": "6b1a1b494500a9d0b08fc97a524f047be052f17f495488f61a6f830d086a4871"
     },
     {
       "id": "discovery-progress-journal",
@@ -1925,7 +1925,7 @@
       "paths": {
         "bundle": "agent/patterns/discovery-progress-journal.json"
       },
-      "bundleSha256": "41b5d09386d90efbe94d8ef1297f51ba5c4daa750742d75fafd159eb98d782af"
+      "bundleSha256": "8a316af56cbf0e28a94faea8e9ae4c4a64bf8edb8bfe5cc8d05648ceeea3901a"
     },
     {
       "id": "edge-action-world-composition",
@@ -1984,7 +1984,7 @@
       "paths": {
         "bundle": "agent/patterns/edge-action-world-composition.json"
       },
-      "bundleSha256": "863f3dafbc9402b583a856a9bed3116975a58a49cb704b2a89da27354d9191e2"
+      "bundleSha256": "0bbe5ca12c676bb5a538b0b184eb0e9f291fcc19befca1307f354735d3400d70"
     },
     {
       "id": "editorial-alignment-grid",
@@ -2044,7 +2044,7 @@
       "paths": {
         "bundle": "agent/patterns/editorial-alignment-grid.json"
       },
-      "bundleSha256": "aeab90c7d4eddf2b75fcdf78093e3c456299e8adc96935c8cebc529b93af6e2d"
+      "bundleSha256": "663ae167f48580108165d52616248bf09ae72ea6db5cc4a5d0a0645b5f059a90"
     },
     {
       "id": "execution-trace-drilldown",
@@ -2136,7 +2136,7 @@
       "paths": {
         "bundle": "agent/patterns/execution-trace-drilldown.json"
       },
-      "bundleSha256": "9bdb46f5dd2c709f89ca0876e4b8715b278d912ef1adf29c24ce119e763ca5bc"
+      "bundleSha256": "e17805c85de8c5d8fd438d01eb7b521b8685a8738ea70fa4ffe00f5b4fb6ccef"
     },
     {
       "id": "explicit-facet-summary",
@@ -2212,7 +2212,7 @@
       "paths": {
         "bundle": "agent/patterns/explicit-facet-summary.json"
       },
-      "bundleSha256": "b5b98abbd851fe8f60f46905b6d178f435ad438b2926449b03296aa8d70e8dfe"
+      "bundleSha256": "16ef6501c3ff98424495ef33a116eb5a91836b61c222179fc13bb6700094aa41"
     },
     {
       "id": "exploded-layer-view",
@@ -2268,7 +2268,7 @@
       "paths": {
         "bundle": "agent/patterns/exploded-layer-view.json"
       },
-      "bundleSha256": "53c4a7198bb0c76e4aee4dcceb6bfe0b0337545a968034653476ef58236f60db"
+      "bundleSha256": "14962bf0b878834725f55d0646f12a1c75867766556f32c621bf172be51cf87e"
     },
     {
       "id": "film-overlay",
@@ -2357,7 +2357,7 @@
       "paths": {
         "bundle": "agent/patterns/film-overlay.json"
       },
-      "bundleSha256": "03e8efb38a88a843994646076961589e1c74d7ad6e4cd35749288e0efaeb1716"
+      "bundleSha256": "5fe9a8b0c3bc6ae920369544d554c07c13aa78f6de4ae1754284d2d9aa2ce26e"
     },
     {
       "id": "filter-count-feedback",
@@ -2424,7 +2424,7 @@
       "paths": {
         "bundle": "agent/patterns/filter-count-feedback.json"
       },
-      "bundleSha256": "1b97768cca8c1063b75feeffea512d7d9073c65140aa04abad3606459a02780a"
+      "bundleSha256": "7da48909bf1bc82761e8feefaff6cf7e6c88e40b50844290e857af77090e4263"
     },
     {
       "id": "fixed-star-glow-layer",
@@ -2488,7 +2488,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-star-glow-layer.json"
       },
-      "bundleSha256": "8b5a655b41b7e47f85d117583b8fefa85deec206f6b4ee83bc967619cd7a08f0"
+      "bundleSha256": "e8fe37b02d98fb412999d8b57eb46e96e841a12cdaa0baf5458d8cae92e3e19a"
     },
     {
       "id": "fixed-task-timeline",
@@ -2549,7 +2549,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-task-timeline.json"
       },
-      "bundleSha256": "0b27b684e720f02c314a065cac4212f5f2605ddf60519505ee4d228be1dc66d6"
+      "bundleSha256": "a18b34f9f6c4feeba958a263d9ee6231b576384381d9f756d7b37204c4bfe802"
     },
     {
       "id": "fixed-topology-morph",
@@ -2611,7 +2611,7 @@
       "paths": {
         "bundle": "agent/patterns/fixed-topology-morph.json"
       },
-      "bundleSha256": "3c245ecdcc277b3515912c846dc8a1431a8c6a105a1813eb8e94f0c6cb7a4ccc"
+      "bundleSha256": "b05580235e2a86a8e7f71d4a4024c0ee79961f31d33f02c83f14c560497886c9"
     },
     {
       "id": "folded-wave-hero",
@@ -2672,7 +2672,7 @@
       "paths": {
         "bundle": "agent/patterns/folded-wave-hero.json"
       },
-      "bundleSha256": "6a494b436e1f5f4c6feb37ae70956f8f39a782a4a7986556deae897e99ae8fbd"
+      "bundleSha256": "a2d87a0a5dcc9ab2d4a447c6228160b35099661fb223b36eaa4a716bd5ffac6b"
     },
     {
       "id": "footer-aware-back-to-top",
@@ -2731,7 +2731,7 @@
       "paths": {
         "bundle": "agent/patterns/footer-aware-back-to-top.json"
       },
-      "bundleSha256": "ba2d06cc38cfd145d8c1b60a0b8299d36261f952da7c5471fd321915be5ce11b"
+      "bundleSha256": "bdef9a64189ff5157a5c71259c802e28912abc6b350194396af434651f217033"
     },
     {
       "id": "full-bleed-photography-brand",
@@ -2791,7 +2791,7 @@
       "paths": {
         "bundle": "agent/patterns/full-bleed-photography-brand.json"
       },
-      "bundleSha256": "dfad0ef2b149f129b7c5d1e71dc3022230dfa7060e7d6b19b252a4d088cf13c8"
+      "bundleSha256": "33bdd9eea4bdb1e6603d64f371ed6cb8492684c72200898e2a6c8b66e7d4b56b"
     },
     {
       "id": "fullscreen-photography-menu",
@@ -2856,7 +2856,7 @@
       "paths": {
         "bundle": "agent/patterns/fullscreen-photography-menu.json"
       },
-      "bundleSha256": "9dd2e14ac6226a777ff30015093831c1d187f86fdc12f7a0ffd787b5c5fa6972"
+      "bundleSha256": "4bc2b758cf207e23cf2f220b6edf9b075cc28b22857943715867012214d94aae"
     },
     {
       "id": "geometric-balance-presets",
@@ -2910,7 +2910,7 @@
       "paths": {
         "bundle": "agent/patterns/geometric-balance-presets.json"
       },
-      "bundleSha256": "29ceb67ba6ea5b81be970e696b1c29b469f609c5b68a751e268da4f59998a530"
+      "bundleSha256": "43f16f64feb64fb0d6f485e879cd267c8fb07c5c7862e62465b6806555fa1bec"
     },
     {
       "id": "half-paper-category-label",
@@ -2984,7 +2984,7 @@
       "paths": {
         "bundle": "agent/patterns/half-paper-category-label.json"
       },
-      "bundleSha256": "6c8383ce75dcfb1937c398ba754c3385a74a87e190b72728db5a0899c84a2bae"
+      "bundleSha256": "916f1caefa22c6f72e20e34b947d73bb704b31d37d2d93f880b6d13c27fad186"
     },
     {
       "id": "hatched-registration-type",
@@ -3061,7 +3061,7 @@
       "paths": {
         "bundle": "agent/patterns/hatched-registration-type.json"
       },
-      "bundleSha256": "8277c54086997581571ffa5389a73619cd0329c615b5be4d29d830bf0d279135"
+      "bundleSha256": "fa7a2a5945b02d07da4459f0e12024520f5fe3be2f7517722660c58c60abb9e3"
     },
     {
       "id": "header-below-mobile-navigation",
@@ -3126,7 +3126,7 @@
       "paths": {
         "bundle": "agent/patterns/header-below-mobile-navigation.json"
       },
-      "bundleSha256": "6733a2c9499c1b0140dcffb8b71c5fd313caf0757957b1e635eed1426d5772a0"
+      "bundleSha256": "fdce2b7c1c675f898ce74738af2f41a9bfaf15cd467f9b418c7286477118d13e"
     },
     {
       "id": "heatmap-focus-tooltip",
@@ -3189,7 +3189,7 @@
       "paths": {
         "bundle": "agent/patterns/heatmap-focus-tooltip.json"
       },
-      "bundleSha256": "57305bc6805c3cde419a3e5f52f024782d924539dbb3780442ec57ca62ffcd04"
+      "bundleSha256": "0439a122e81b5f286086b73cdaf9a08cff940388973d91fc820f263be83e92f6"
     },
     {
       "id": "highlight-progress-gallery",
@@ -3254,7 +3254,7 @@
       "paths": {
         "bundle": "agent/patterns/highlight-progress-gallery.json"
       },
-      "bundleSha256": "836e16e9720f0b5d8f2553ada2bbb7f1665cee2355b785a779ae4bd8d63b57d2"
+      "bundleSha256": "13149594f850e9cda7fecdb9d630db026d7c8ceb5a6a978f4871a1e38bc98d8e"
     },
     {
       "id": "hover-focus-mode-selection",
@@ -3316,7 +3316,7 @@
       "paths": {
         "bundle": "agent/patterns/hover-focus-mode-selection.json"
       },
-      "bundleSha256": "ddad979329814edcf763a5388b760ba4450c6933d1b644814d56bf125373c1e4"
+      "bundleSha256": "9dfa2245484243358473db508e7c389d5fadd8719a14e2a1650d4c2a0090d763"
     },
     {
       "id": "idle-interface-retreat",
@@ -3380,7 +3380,7 @@
       "paths": {
         "bundle": "agent/patterns/idle-interface-retreat.json"
       },
-      "bundleSha256": "000e72f56408f7d45577ec4376b27d27a38c02f52b668b37eb8cb34e4a911ef6"
+      "bundleSha256": "8ad1e006c2310e554b673ca5c9619b227abd5e3f1ea1e01ec00cc06b869d82b5"
     },
     {
       "id": "image-destination-mosaic",
@@ -3455,7 +3455,7 @@
       "paths": {
         "bundle": "agent/patterns/image-destination-mosaic.json"
       },
-      "bundleSha256": "c9fbada90452690d3ccc1a730f916ae705224577fc14e77baec20d59da09c251"
+      "bundleSha256": "484bd392d34ee9b13abbae5783f368a96d410eb4b8d469b8c782ff2cf85f5b6b"
     },
     {
       "id": "inclined-motion-bands",
@@ -3545,7 +3545,7 @@
       "paths": {
         "bundle": "agent/patterns/inclined-motion-bands.json"
       },
-      "bundleSha256": "db580aab22dce6073f62a7074bc15a4133ada6f517ff628ff060bc35464e9939"
+      "bundleSha256": "0ba19f34dad6c229979041cf1ef8c42dd30b8778f6331ece26738a45e898e0ea"
     },
     {
       "id": "independent-character-page",
@@ -3605,7 +3605,7 @@
       "paths": {
         "bundle": "agent/patterns/independent-character-page.json"
       },
-      "bundleSha256": "19d81826bdc64f2c99517da2431212ff993c1266da8a800ce33d335f2a158262"
+      "bundleSha256": "2723f7869dae7d85c1d6e51b825b9dd1527912939396af2336357d776cbf551b"
     },
     {
       "id": "independent-outfit-state",
@@ -3664,7 +3664,7 @@
       "paths": {
         "bundle": "agent/patterns/independent-outfit-state.json"
       },
-      "bundleSha256": "4cad9ed2e2ad6fb2f138f7d47effc9661a4298d9baaf1f3df6e49b548020bded"
+      "bundleSha256": "1738d88693c8d02986e6e77c818b154b35c2ffcb960f6a873a5881bd28566998"
     },
     {
       "id": "inline-detail-disclosure",
@@ -3745,7 +3745,7 @@
       "paths": {
         "bundle": "agent/patterns/inline-detail-disclosure.json"
       },
-      "bundleSha256": "8bd1fc045df2661ca6bd4ab86b42f6466c0b3a5943b3becd7eaa9f77c56ed31a"
+      "bundleSha256": "ab463acfc685b8a8a553273ab67910230209574cc8bbe5c7945213aa7bd6133b"
     },
     {
       "id": "inline-product-detail-viewer",
@@ -3804,7 +3804,7 @@
       "paths": {
         "bundle": "agent/patterns/inline-product-detail-viewer.json"
       },
-      "bundleSha256": "73505024e6e5a5e837fe4078ef1f0a21568ec86e299098ceabe702e22e2ddd57"
+      "bundleSha256": "c6fa180ed65ddcd08724a353da9f3e9b3f37ff47479fd83e900af75de233eb11"
     },
     {
       "id": "instant-open-menu-category-switch",
@@ -3871,7 +3871,7 @@
       "paths": {
         "bundle": "agent/patterns/instant-open-menu-category-switch.json"
       },
-      "bundleSha256": "72a0530cc4d79a34f7b7218c4fa409f6ae3190ba7cf43090c7c2796448b12c29"
+      "bundleSha256": "65be3b6ef5e129702e6d232a26c547ba2a182b2a36aa4bcd2eb76a6a6fe79398"
     },
     {
       "id": "institution-overlap-logo",
@@ -3931,7 +3931,7 @@
       "paths": {
         "bundle": "agent/patterns/institution-overlap-logo.json"
       },
-      "bundleSha256": "00f31df7a313f14bd182816463efa10edbdc9bd1cf13a2bd04f96727c4baecba"
+      "bundleSha256": "676c59540f7dd8d6912805f038b8f51cc9e0ac70927b289363f321ca3e11f4e9"
     },
     {
       "id": "integer-pixel-canvas",
@@ -3990,7 +3990,7 @@
       "paths": {
         "bundle": "agent/patterns/integer-pixel-canvas.json"
       },
-      "bundleSha256": "0f22920ff30e66ae1e5f6a84bb1db7e2db35210c10b1861942c7bc5af320ae50"
+      "bundleSha256": "efdeceaba63427c870f7f08a7e0bc2917e750a88069da92715a3f1ade1a4171f"
     },
     {
       "id": "interruptible-morph",
@@ -4052,7 +4052,7 @@
       "paths": {
         "bundle": "agent/patterns/interruptible-morph.json"
       },
-      "bundleSha256": "b1fa0692177e1387d516fdb8a5d1c450d2f47961be0c4656ead62a7f3d6b06f0"
+      "bundleSha256": "5547fb793994485a462e094b84bd0e1cf72b117083880223f591513f5df6549a"
     },
     {
       "id": "keyboard-playable-notes",
@@ -4106,7 +4106,7 @@
       "paths": {
         "bundle": "agent/patterns/keyboard-playable-notes.json"
       },
-      "bundleSha256": "8a3e433069134ebdfc857f1e7570ca29fda399e1935f9301dc78965fb33e4e77"
+      "bundleSha256": "049457fc3bd9607edf8d81eb4a3d0216054b82023be1de2f775f486c9430ac52"
     },
     {
       "id": "last-request-transition",
@@ -4212,7 +4212,7 @@
       "paths": {
         "bundle": "agent/patterns/last-request-transition.json"
       },
-      "bundleSha256": "708711a84e9aa6ee10f5e2677775e32969285d5d1bd9da65d562a8016cb8395a"
+      "bundleSha256": "6143340c79619aeb748a5ce0b7461f6448dfc6f253b91a3beac8324b6122c144"
     },
     {
       "id": "layer-focus-dimming",
@@ -4268,7 +4268,7 @@
       "paths": {
         "bundle": "agent/patterns/layer-focus-dimming.json"
       },
-      "bundleSha256": "61e0f5ba18471e9c883511aeea6886dd8998c30f5e30fe98c094d10b238a91dc"
+      "bundleSha256": "3e5b39ac7e7bb2da5a595d700832f08d77647eb808b81a95121525209f475087"
     },
     {
       "id": "layered-directional-media-reveal",
@@ -4361,7 +4361,7 @@
       "paths": {
         "bundle": "agent/patterns/layered-directional-media-reveal.json"
       },
-      "bundleSha256": "8817e89b0cb60b55fd0402116dca6f86f072a7cf022cb74dab9beead2e9bd06c"
+      "bundleSha256": "d60278319cc051d1216f31153d78a3bb2321f2a84a301e9a1441a42cb220f2fb"
     },
     {
       "id": "layered-navigation-drawer",
@@ -4425,7 +4425,7 @@
       "paths": {
         "bundle": "agent/patterns/layered-navigation-drawer.json"
       },
-      "bundleSha256": "f24b016e39a91d5f6889ce00ea6748aa43913e499d4c81d28f6bcd2b1c3f2eda"
+      "bundleSha256": "48629f1071f2c056f29ab9c33defda3c19df9cacb20afc60e18ec4da9dc16970"
     },
     {
       "id": "live-parameter-readout",
@@ -4500,7 +4500,7 @@
       "paths": {
         "bundle": "agent/patterns/live-parameter-readout.json"
       },
-      "bundleSha256": "ffd1af5a436df9d2c9c6a2d8847bb81c01a5e0e570d297ce754585ad4fae2517"
+      "bundleSha256": "c0acf063160d18871842fa433e9debfe51d128cbe84c59d76fef96b45293cb96"
     },
     {
       "id": "load-completion-brand-marker",
@@ -4583,7 +4583,7 @@
       "paths": {
         "bundle": "agent/patterns/load-completion-brand-marker.json"
       },
-      "bundleSha256": "6c9bd9294d3f5b133ba46aa40bc5a84b46def4436bcaa7f87bb4032f0edafc87"
+      "bundleSha256": "9566cc18ff6e69a354fb015532e30a96568d75b9433d9b168a8050556e58df4d"
     },
     {
       "id": "local-code-theme-preview",
@@ -4642,7 +4642,7 @@
       "paths": {
         "bundle": "agent/patterns/local-code-theme-preview.json"
       },
-      "bundleSha256": "3c5068c13b22d283c751cbd1355b346cf4c4248ab70a7486493d3d1807294c24"
+      "bundleSha256": "3d71a65c445a9b2886c3564bef2e362ce7ab80287b35bf78d05aa38ab750702b"
     },
     {
       "id": "local-save-toggle",
@@ -4693,7 +4693,7 @@
       "paths": {
         "bundle": "agent/patterns/local-save-toggle.json"
       },
-      "bundleSha256": "030b20c4fcac0f49a3b97966f613696bf4e5acbe843d730041f2575d7628fa6e"
+      "bundleSha256": "04b66873ea67318d85c0b7197b4048cf4ae6c28c1fa4dd7d817855e1ca7b5017"
     },
     {
       "id": "masked-transaction-rotation",
@@ -4753,7 +4753,7 @@
       "paths": {
         "bundle": "agent/patterns/masked-transaction-rotation.json"
       },
-      "bundleSha256": "41b698b735fb89c451bf0ea19b3f98faec9de8923b6550a2061814819fbf5c63"
+      "bundleSha256": "55eacf83d30cf43db559528abb2bbd17faf37a566bd52af817c1ffcf36e962e8"
     },
     {
       "id": "measured-width-action-pill",
@@ -4818,7 +4818,7 @@
       "paths": {
         "bundle": "agent/patterns/measured-width-action-pill.json"
       },
-      "bundleSha256": "b5b47b22a64c904a8924e65b4c0c2d9767c2a437d3a6d62f29683e77bf559210"
+      "bundleSha256": "df14c2d5dfd30c6428a00c0f565cf08f78e11e7b2900ff432d8b74e306ba0641"
     },
     {
       "id": "message-to-board-demonstration",
@@ -4878,7 +4878,7 @@
       "paths": {
         "bundle": "agent/patterns/message-to-board-demonstration.json"
       },
-      "bundleSha256": "a15e002809f2627876b0e7bfb3d49ea9d2f2d26ce31a3c626df99c989175a90b"
+      "bundleSha256": "a2793ee6e8eba61609422f3fffbd8fbaf103bf87d4a5c7d19a042d20b20343e7"
     },
     {
       "id": "metric-explanation-selector",
@@ -4938,7 +4938,7 @@
       "paths": {
         "bundle": "agent/patterns/metric-explanation-selector.json"
       },
-      "bundleSha256": "ae8085d49e7cf87b55af533f36d8aeb87a1f98de220ff5da9ac93f757e7d6e6c"
+      "bundleSha256": "aa9ea93b77b184a58c9701ca5fb51092198f2b0d321b04730c53adf309fdc498"
     },
     {
       "id": "mixed-ratio-archive-columns",
@@ -5005,7 +5005,7 @@
       "paths": {
         "bundle": "agent/patterns/mixed-ratio-archive-columns.json"
       },
-      "bundleSha256": "80b5e8dc572350bee8402a80337a455ac8b7cdc935dbda5a93b99b021b80add5"
+      "bundleSha256": "e0108eabe4a9730b451abb224d22ad658caaa5b4dfa5d45251184cecb3e2065f"
     },
     {
       "id": "mobile-drilldown-menu",
@@ -5066,7 +5066,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-drilldown-menu.json"
       },
-      "bundleSha256": "f67a7a5d3ff94a85f7b4265e3eaaeeb4e03694877afaf0d602e1bc06a311397c"
+      "bundleSha256": "a3aceeabbc664c013e798f0d541997c5642d0604b2336f05e5a4bd33b6383eac"
     },
     {
       "id": "mobile-media-prioritization",
@@ -5140,7 +5140,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-media-prioritization.json"
       },
-      "bundleSha256": "06876e66284933a4fad7c11fa04f0babf58414d9c7b83a6e29808f05cb1acea5"
+      "bundleSha256": "44ed1c37670a006b82506f50e5e6636aa7a31b14a6e52598b66e47fc149f2524"
     },
     {
       "id": "mobile-native-mode-cards",
@@ -5202,7 +5202,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-native-mode-cards.json"
       },
-      "bundleSha256": "6ed2752c9738d59a4e2464b34b70958de23540d8f545c97f01d7b530334363bb"
+      "bundleSha256": "75db13da83d6f924b3b0854e843cfff299c963550d2eeb3fe0237d0b37cbcedd"
     },
     {
       "id": "mobile-single-open-navigation",
@@ -5263,7 +5263,7 @@
       "paths": {
         "bundle": "agent/patterns/mobile-single-open-navigation.json"
       },
-      "bundleSha256": "c99e72f36513950201f3578d22831391994382af1368f94542e9ef04b0e87104"
+      "bundleSha256": "bd28857902b40f8f61f56823d6d29bb0152f770f2d5cb3d25618706920bd7242"
     },
     {
       "id": "mode-character-accent",
@@ -5324,7 +5324,7 @@
       "paths": {
         "bundle": "agent/patterns/mode-character-accent.json"
       },
-      "bundleSha256": "913cf213c2e2dbaf6200d729f15385cc96be81ca9425a3f6f637c70e1ea24b14"
+      "bundleSha256": "619a18db3f34ea55aa988ac332f6e12620d182dbcd3c92416e2884babc3d630b"
     },
     {
       "id": "mode-specific-collage",
@@ -5386,7 +5386,7 @@
       "paths": {
         "bundle": "agent/patterns/mode-specific-collage.json"
       },
-      "bundleSha256": "f5145cfaf1265b78bb88c752d8e7c2484e6c82651990684ea3fe5e7baf60429e"
+      "bundleSha256": "544f6a94095f28940cf4acaefdf1a0e3b61ce5d51132d4541bb92eca669071c3"
     },
     {
       "id": "mountain-scaled-menu",
@@ -5450,7 +5450,7 @@
       "paths": {
         "bundle": "agent/patterns/mountain-scaled-menu.json"
       },
-      "bundleSha256": "ee8e0edf1c0fa231b02ca9aabd357a200e7cc02d9542f818f42e5624ff453203"
+      "bundleSha256": "fd8b49490edd85a45b17f761f7b760d69fc9f6f7ee32274e17641f9dc16ec3f9"
     },
     {
       "id": "moving-tab-selection-bed",
@@ -5509,7 +5509,7 @@
       "paths": {
         "bundle": "agent/patterns/moving-tab-selection-bed.json"
       },
-      "bundleSha256": "8a123daeaa10860f878623306041b5f0db299f9ea748f7bb6afc359b48a1728c"
+      "bundleSha256": "d95efc384294b6c112ab60644e8dfc0c0b3e64affb365c66adafe1c73afc2e5b"
     },
     {
       "id": "native-document-reading",
@@ -5614,7 +5614,7 @@
       "paths": {
         "bundle": "agent/patterns/native-document-reading.json"
       },
-      "bundleSha256": "ec8da2645b16937103947bfd712222f0810eb53d0af983fd7b48c4b06e068ef5"
+      "bundleSha256": "a2aa2ff9e97cbc69d55dd80b898231c5fd17d3ca0d0dc5bc6a52a88a7773faf5"
     },
     {
       "id": "native-horizontal-shelf",
@@ -5719,7 +5719,7 @@
       "paths": {
         "bundle": "agent/patterns/native-horizontal-shelf.json"
       },
-      "bundleSha256": "f0807f75c3277458d8b6c9847062de9744367b433d50c4f45500fbcf3c310e23"
+      "bundleSha256": "07248459942bc6f04d35aaa9fb21b8719e5944671aaf88827021657d7831e057"
     },
     {
       "id": "natural-height-mega-menu",
@@ -5785,7 +5785,7 @@
       "paths": {
         "bundle": "agent/patterns/natural-height-mega-menu.json"
       },
-      "bundleSha256": "d96e2eb13c9d12a5e320dfb9097180397f728535f3136be74383fd1cc2d9fc4f"
+      "bundleSha256": "4cded235a1c08c938b02cb029490d14fa3d742cccb7fb82b28eaf6ad4bc904f4"
     },
     {
       "id": "offsite-playlist-extension",
@@ -5872,7 +5872,7 @@
       "paths": {
         "bundle": "agent/patterns/offsite-playlist-extension.json"
       },
-      "bundleSha256": "51ab89ef2332b9c79037ef444e9f31c59262f06e95e5b6860346d0c542502483"
+      "bundleSha256": "6efa70540e9ad767ee58dda3d6930afd5779f497834117067cf6bd405b5e1858"
     },
     {
       "id": "paper-material-collage",
@@ -5928,7 +5928,7 @@
       "paths": {
         "bundle": "agent/patterns/paper-material-collage.json"
       },
-      "bundleSha256": "e49e99624a31fc7cdcc1412427668e80c0b02ea7c4400207651709b4df92d279"
+      "bundleSha256": "ecc961c64f57026cf6185de959717653fc5a6fd62f7abcaa0de2a0549ef6d3af"
     },
     {
       "id": "parallel-isometric-projection",
@@ -5984,7 +5984,7 @@
       "paths": {
         "bundle": "agent/patterns/parallel-isometric-projection.json"
       },
-      "bundleSha256": "b3ce63a05b0c87e56234d8496cb7bde6074d0756fff7861202536dc7263b9afe"
+      "bundleSha256": "7d91c643bf491645193cee986113747d906894ca0d9d49f6e636fff4bb03991b"
     },
     {
       "id": "particle-model-reformation",
@@ -6052,7 +6052,7 @@
       "paths": {
         "bundle": "agent/patterns/particle-model-reformation.json"
       },
-      "bundleSha256": "c5254bd11145570743dd43b579ceb8dac15b6a1fc7a57deed912dda2c6d0503a"
+      "bundleSha256": "b058a6f476cea1dc87ac10aae2825a77a95280e5632558c11840aaea275156da"
     },
     {
       "id": "permanent-event-metadata",
@@ -6111,7 +6111,7 @@
       "paths": {
         "bundle": "agent/patterns/permanent-event-metadata.json"
       },
-      "bundleSha256": "4d67672de2da19d700860dbae584d071486accaf13f68ffe223fed69f9b1deae"
+      "bundleSha256": "a21c5b0755b20d8d7a16a5ffe8ccffc9508b8a3ed00f5814a75072361de31293"
     },
     {
       "id": "persistent-created-widget",
@@ -6203,7 +6203,7 @@
       "paths": {
         "bundle": "agent/patterns/persistent-created-widget.json"
       },
-      "bundleSha256": "6ba8e3cd5218b95aa06013ab67589360acf93268d321b994719f2d5c78c7c016"
+      "bundleSha256": "1f99c95071bdc121c97d83d32d2eff4ba89b8f071a7a1de4e059426490c1710e"
     },
     {
       "id": "photo-crossfade-cycle",
@@ -6286,7 +6286,7 @@
       "paths": {
         "bundle": "agent/patterns/photo-crossfade-cycle.json"
       },
-      "bundleSha256": "c4b65e12621bd8fce4e2d7cb0c47834f2d01bc1d2d6005ad90ec161ccbbe7b00"
+      "bundleSha256": "bbab800bd70d27b034f210d8b80d49a9fac495f0231121cda66b28cd39925fdd"
     },
     {
       "id": "photo-edge-text-contrast",
@@ -6345,7 +6345,7 @@
       "paths": {
         "bundle": "agent/patterns/photo-edge-text-contrast.json"
       },
-      "bundleSha256": "d188d59356019cf8be6e675715a48ed1f67fc78c2438dfdc56195a7de8404921"
+      "bundleSha256": "949e737abc40c744ab660bd5774632d14385bc33e6d831b3adda63216da6d7f1"
     },
     {
       "id": "photography-option-selector",
@@ -6412,7 +6412,7 @@
       "paths": {
         "bundle": "agent/patterns/photography-option-selector.json"
       },
-      "bundleSha256": "7256014644ab28a0e7b59c8b500d32f6da66b1c29372861fb5efef72d1aa4ec4"
+      "bundleSha256": "0e2946f9aaf2bfd110007a589c6e17944e62c247c3ce573154714b405df9bf28"
     },
     {
       "id": "pointer-image-shader-preview",
@@ -6471,7 +6471,7 @@
       "paths": {
         "bundle": "agent/patterns/pointer-image-shader-preview.json"
       },
-      "bundleSha256": "a5fd5aa346520b8050df55ccf0f41e9a9b0c1f694b282fad3a812e5840a28b65"
+      "bundleSha256": "99c00a56090c118bd8ed7638847bd6e9a9f53be2a0a7fc43fa5fe9d707bf7b2d"
     },
     {
       "id": "pointer-repulsion-particles",
@@ -6539,7 +6539,7 @@
       "paths": {
         "bundle": "agent/patterns/pointer-repulsion-particles.json"
       },
-      "bundleSha256": "8d4c6cc6c909ff6e24ea76f1547bd74216265deeaf6f8cb044b71c6ddf02b2e3"
+      "bundleSha256": "045b2fae6162e8aa3a636572ddec8c54c4ed56d4da29f2f9c89ce2699a9767f1"
     },
     {
       "id": "procedural-fluid-spotlight",
@@ -6630,7 +6630,7 @@
       "paths": {
         "bundle": "agent/patterns/procedural-fluid-spotlight.json"
       },
-      "bundleSha256": "ec7ee55a461cc5875751b253a502f4e551c972eec0203b34de4ce010b66835a3"
+      "bundleSha256": "30b63cf1128ee4689da5ad83ff883940af1e0a49966203c8b9708c0940bdd561"
     },
     {
       "id": "process-to-result-collapse",
@@ -6722,7 +6722,7 @@
       "paths": {
         "bundle": "agent/patterns/process-to-result-collapse.json"
       },
-      "bundleSha256": "e284e33a58da3e3507bf6abc0c53dd1d1472c2c7d83c5a9154f7e1bec7072745"
+      "bundleSha256": "e017126f18c2ab1cb8d0587a4dc85d0581d8c519c2fd0260e20d44c3d7ace81e"
     },
     {
       "id": "product-entrance-film",
@@ -6782,7 +6782,7 @@
       "paths": {
         "bundle": "agent/patterns/product-entrance-film.json"
       },
-      "bundleSha256": "5492b1c4a1a3208c3404676fda3ea10d10db7478fee29690c2438fe80bb3a443"
+      "bundleSha256": "5f375bd18c1270bf437590a92e9ea01630734a3cc432d0f5e15e21538152448e"
     },
     {
       "id": "resource-bound-fullscreen-loading",
@@ -6877,7 +6877,7 @@
       "paths": {
         "bundle": "agent/patterns/resource-bound-fullscreen-loading.json"
       },
-      "bundleSha256": "687294d8b740a3c508423d78fc650a4ed097b23e0990ea420f07edde337fe38d"
+      "bundleSha256": "e25d6e9da8d9acb7b298691785f2ec64b5451cdda3b97e4da257392627dc604c"
     },
     {
       "id": "responsive-art-direction",
@@ -6964,7 +6964,7 @@
       "paths": {
         "bundle": "agent/patterns/responsive-art-direction.json"
       },
-      "bundleSha256": "0ff45d103a4ee64adf92a44eb203d8f5d1733fb0cea9b2756246f8896ea5a898"
+      "bundleSha256": "f92558361453636fa91c0e6a8b6bf0ab0b5980ed2e1ec45e4f9fea8a0c059f85"
     },
     {
       "id": "restrained-signal-color",
@@ -7076,7 +7076,7 @@
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
       },
-      "bundleSha256": "6781346469e96a6ddcda5a767dc2c71344e202c4aebed3ebec2b121f643f8c1d"
+      "bundleSha256": "f6fed3bb7819f4d3bfeb64d0309871124d46a570814f91b6cf42f88dfb00da08"
     },
     {
       "id": "reversible-center-reveal",
@@ -7141,7 +7141,7 @@
       "paths": {
         "bundle": "agent/patterns/reversible-center-reveal.json"
       },
-      "bundleSha256": "c58041b2d4c97120135d25a81931589c1732b5935423cd2997fedb010f441cab"
+      "bundleSha256": "a458f0509e160dab7fcd397baa6c90e82c6609e7da61d2c582cef32e57a8c63a"
     },
     {
       "id": "scanline-point-cloud-transition",
@@ -7236,7 +7236,7 @@
       "paths": {
         "bundle": "agent/patterns/scanline-point-cloud-transition.json"
       },
-      "bundleSha256": "9adb69f9ba54a975cb59c4257cba886726fd5d08c1168d35dd49de7f7106b8da"
+      "bundleSha256": "f2b293f9b98d659571611933f26b02ebb563ae1b526e8bd8a0ed68d928d50871"
     },
     {
       "id": "scroll-differential-stars",
@@ -7301,7 +7301,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-differential-stars.json"
       },
-      "bundleSha256": "40ac81b67fadbcba69cd1f22da0f4a0a4f69753a024d8c97aafe3334d7ad089e"
+      "bundleSha256": "916ffc1e5dac6346c69de19aa164194a8adb6c68d6d7164407848f897c95c1e3"
     },
     {
       "id": "scroll-gathered-pixel-mark",
@@ -7397,7 +7397,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-gathered-pixel-mark.json"
       },
-      "bundleSha256": "21f322b293d89a6f65e89521f155b6a63cab3183f55505d76b7edaf65797640c"
+      "bundleSha256": "5c59c64eb0b6d3a2c1e4ae58cae83d2ef4146ff15bfbaddf7b602bfc769dbfef"
     },
     {
       "id": "scroll-logo-contraction",
@@ -7466,7 +7466,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-logo-contraction.json"
       },
-      "bundleSha256": "8e018cc2654fb91117f2d2ac3dd6edfa1b1368ff7670a86952fb71b679df5b9a"
+      "bundleSha256": "1d3a9f345a468c268eae2a7ae6b91949d3a09db792f043ebd1ca5008e89e9d54"
     },
     {
       "id": "scroll-synchronized-rail",
@@ -7526,7 +7526,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-synchronized-rail.json"
       },
-      "bundleSha256": "f820401618f17524471054bf1977183a77bde3512f4c0c05dcec4967af4cacad"
+      "bundleSha256": "085b5710162d0e371b3548401c8b68b008611bad93ae60a069e4635f5625b775"
     },
     {
       "id": "scroll-video-scrub",
@@ -7591,7 +7591,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-video-scrub.json"
       },
-      "bundleSha256": "f40de42ed2e1485b36a05cbfd8ab846917162d500236202c5a3112fbd31cc9b3"
+      "bundleSha256": "81babd0bc8eea0d1eeb3b377f98341a17fcda0295ecf24566467f753bdbc26e9"
     },
     {
       "id": "scrubbable-animation-progress",
@@ -7653,7 +7653,7 @@
       "paths": {
         "bundle": "agent/patterns/scrubbable-animation-progress.json"
       },
-      "bundleSha256": "eb8be68301e3d9c106219e43f0e8715788ec2d13a8983747157a806bd3b3d964"
+      "bundleSha256": "dc6eda2599bc2514e3a2b9d84c5a6c92936d34a21e0e77cc95f77144189f28a7"
     },
     {
       "id": "section-color-rhythm",
@@ -7742,7 +7742,7 @@
       "paths": {
         "bundle": "agent/patterns/section-color-rhythm.json"
       },
-      "bundleSha256": "e771b684bbdcdf89a041855e9981e7bb3cba401860507cbdaafc211c50d9d845"
+      "bundleSha256": "1222bcfb718d271323f0748e32913c9f5bd5b2275b30e762f680f80a356c74d4"
     },
     {
       "id": "semantic-theme-roles",
@@ -7801,7 +7801,7 @@
       "paths": {
         "bundle": "agent/patterns/semantic-theme-roles.json"
       },
-      "bundleSha256": "65ad856226c2586c62fc8a61854780c712ab5eb91e9b5ffa83c44c651d647520"
+      "bundleSha256": "defe07b49a09bbeb2defe5b5bfc0e863c5015779d5561e7a72b33020bebb6e59"
     },
     {
       "id": "separate-thumbnail-window",
@@ -7871,7 +7871,7 @@
       "paths": {
         "bundle": "agent/patterns/separate-thumbnail-window.json"
       },
-      "bundleSha256": "98b34de9fb9d3b6e422dc17f0e5ea9e465888a1ab4b0f9ec9026df30449ea5bd"
+      "bundleSha256": "6983a2831899041add1066aac54aa4a9fddf4f9e29e1faa3bb9915a20b3daae9"
     },
     {
       "id": "sequential-stroke-reveal",
@@ -7932,7 +7932,7 @@
       "paths": {
         "bundle": "agent/patterns/sequential-stroke-reveal.json"
       },
-      "bundleSha256": "c16092d06d82547d831dbc8fd50365e2b46081cb57123d0bd1a2fc3b6c4e0b60"
+      "bundleSha256": "40522831ab4b39e61ee05763f340f5fe43801fd051837a90998f638cb7b71310"
     },
     {
       "id": "single-open-accordion",
@@ -8023,7 +8023,7 @@
       "paths": {
         "bundle": "agent/patterns/single-open-accordion.json"
       },
-      "bundleSha256": "9ab6d64775a4df59d285717765f4566495c1e9c275be3e5e5ca06f16c454eec1"
+      "bundleSha256": "b4041b8d4c56ae6eb12fb2768c757a13e956ced3191897d311b3289f351a5d11"
     },
     {
       "id": "sound-choice-emblem-opening",
@@ -8090,7 +8090,7 @@
       "paths": {
         "bundle": "agent/patterns/sound-choice-emblem-opening.json"
       },
-      "bundleSha256": "09f6b4a27d33630e11746f1ac523831332eeb3fe3673b564ac649e8501030090"
+      "bundleSha256": "fb7a1eb91aa4806b889ad9c3aaaf0a447c213d9c6148b6b85b818c2cb1a427e3"
     },
     {
       "id": "sound-opt-in",
@@ -8189,7 +8189,7 @@
       "paths": {
         "bundle": "agent/patterns/sound-opt-in.json"
       },
-      "bundleSha256": "e81283b53489b49be3c2dc943b6a921d68c79b902d31c9e16880d81c1bd54e0d"
+      "bundleSha256": "521dad2f4b7c99307ecb99c7101d3b37ce8b5ba9de2d569465041e43c2702396"
     },
     {
       "id": "spatial-navigation-map",
@@ -8243,7 +8243,7 @@
       "paths": {
         "bundle": "agent/patterns/spatial-navigation-map.json"
       },
-      "bundleSha256": "29ada6e4409bb41aaa3b73e818955a48b0283c4edcb26471cc877939f290ef43"
+      "bundleSha256": "eff6c77cdb88b00caaa4e16f0221ca984f6fb31172961c36b47598ff9ba80ddc"
     },
     {
       "id": "specimen-pullout-selection",
@@ -8326,7 +8326,7 @@
       "paths": {
         "bundle": "agent/patterns/specimen-pullout-selection.json"
       },
-      "bundleSha256": "80b9aec75f9fdb2d5b57c07083bbb353b8c06b5eab95736c7d10b10bd90dd148"
+      "bundleSha256": "0285f8667a7f77e99fd31c0eae697b004861c728f308db87ff28901dc88577af"
     },
     {
       "id": "staged-product-ui-entrance",
@@ -8391,7 +8391,7 @@
       "paths": {
         "bundle": "agent/patterns/staged-product-ui-entrance.json"
       },
-      "bundleSha256": "7065aa5049686fe794f82fd6c96ec6095c85c0c992bd7d351caa9503516c400d"
+      "bundleSha256": "8c09f1baae57e2807514ade82c6ce1fd8a5d47bc248efe660a5307f11f032b8b"
     },
     {
       "id": "staggered-agent-columns",
@@ -8450,7 +8450,7 @@
       "paths": {
         "bundle": "agent/patterns/staggered-agent-columns.json"
       },
-      "bundleSha256": "5d70a2fcbea2409e848b20132093fe93a134585945ea5c30ac766d98f11433d1"
+      "bundleSha256": "0fab611161acbbae8a0de87230d0d5d6cd12ac645e72424149bb31b88dce5aa2"
     },
     {
       "id": "state-shape-feedback",
@@ -8514,7 +8514,7 @@
       "paths": {
         "bundle": "agent/patterns/state-shape-feedback.json"
       },
-      "bundleSha256": "7b29190d7d83499c0b31db884b3707d8743e97035800cded62279f96186d7d77"
+      "bundleSha256": "2242b7376c5809ade20ac9d74e180a4618921bed4975044c9c98577bea38deaa"
     },
     {
       "id": "sticky-action-sidebar",
@@ -8576,7 +8576,7 @@
       "paths": {
         "bundle": "agent/patterns/sticky-action-sidebar.json"
       },
-      "bundleSha256": "9ba819749016432704cf0298bec1f39fcd2d06ec982ea586cf2288d12deff23e"
+      "bundleSha256": "8fa81e2992e711fe235edaf9bbd399ec9d45d4de38da1e7fdf4c27360bfc2e53"
     },
     {
       "id": "sticky-stage-handoff",
@@ -8652,7 +8652,7 @@
       "paths": {
         "bundle": "agent/patterns/sticky-stage-handoff.json"
       },
-      "bundleSha256": "3aefe4914079eac905d8a6d13dab60cfc658da28d92943ec5acc8b731ae57cc7"
+      "bundleSha256": "f823c7ee8ff049bcbd42baa7824641234c6f2ab7d644f287335105623c15e682"
     },
     {
       "id": "synchronized-rolling-index",
@@ -8717,7 +8717,7 @@
       "paths": {
         "bundle": "agent/patterns/synchronized-rolling-index.json"
       },
-      "bundleSha256": "f8b635cd05815c8cc2b56b9b545364accc97220191254b1aee51645a3059f892"
+      "bundleSha256": "089616f559ba70f6b60215d54e16c3c6999a0f6ae43aad723f238dae2dc1cbec"
     },
     {
       "id": "system-theme-without-toggle",
@@ -8792,7 +8792,7 @@
       "paths": {
         "bundle": "agent/patterns/system-theme-without-toggle.json"
       },
-      "bundleSha256": "3f4ee4517a9658d0e609ca336dd6159007e1ce7f17f322cb665eda0fcbe6d321"
+      "bundleSha256": "2fdc999c3bd84d53165e88badf0d8c8ee3e337316dbbc06e5f421476c1e1332e"
     },
     {
       "id": "timed-platform-carousel",
@@ -8858,7 +8858,7 @@
       "paths": {
         "bundle": "agent/patterns/timed-platform-carousel.json"
       },
-      "bundleSha256": "a58b8f25415dff30b8eb9f07730635255ff44a9265b8330f09d1c61c4144cdb1"
+      "bundleSha256": "4fcfa7fb50d78ac2b8148f64b824cb79c3f309df05d09f72d7eb4d64a744c4c0"
     },
     {
       "id": "top-down-clipped-menu",
@@ -8928,7 +8928,7 @@
       "paths": {
         "bundle": "agent/patterns/top-down-clipped-menu.json"
       },
-      "bundleSha256": "50edb0b0de40fe6a86dc96fe89529c5d9def4f2c6c5a441fdab1cdbc78828137"
+      "bundleSha256": "0401d0ddfa69882fabba9be8c0ec5b8348ecdaf28fae866db608576b5910b1d4"
     },
     {
       "id": "transparent-video-mode-stage",
@@ -9022,7 +9022,7 @@
       "paths": {
         "bundle": "agent/patterns/transparent-video-mode-stage.json"
       },
-      "bundleSha256": "4d3057c25e0c54f9cc5529bb25f2f29a4c48b00c118ef74125538ed68d8c4ec5"
+      "bundleSha256": "6426f07d05699b17750e6f26761a1b520c166a32cc3784493c38330599084698"
     },
     {
       "id": "vertical-card-swap",
@@ -9089,7 +9089,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-card-swap.json"
       },
-      "bundleSha256": "5ff487e0d7dbc4cca0ee6dfa1058aaad1909339424969ab201e33e606649c68e"
+      "bundleSha256": "93f588d408bfc48b4f1bba40b4c6d8484566b1294e87527fddd736b556c2535f"
     },
     {
       "id": "vertical-fullscreen-stage",
@@ -9150,7 +9150,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-fullscreen-stage.json"
       },
-      "bundleSha256": "deda28541dcdfa0e2264a473ac6fe26556e5ce0849ae7ea8d29209160657701f"
+      "bundleSha256": "250d36ca9321a131de1af1e786274972deef99d750b9c1afe45a0b0857470986"
     },
     {
       "id": "vertical-media-spine",
@@ -9225,7 +9225,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-media-spine.json"
       },
-      "bundleSha256": "0ad83a130fb1a64074b31c36a87b7c52a901d2854701baf2ebc093010d3cfa22"
+      "bundleSha256": "97521de19621f82f2bc74e391471fc0d461d78776d2d27b8950a63ccdea261a1"
     },
     {
       "id": "viewport-animation-lifecycle",
@@ -9379,7 +9379,7 @@
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
       },
-      "bundleSha256": "78f673356fb32d0d742f92a04a0d0b88eb69abe72de3e9f8ca033d21409ce9a8"
+      "bundleSha256": "9d01760c2bef5fe40b441f08bcc97938b225d1d5b2ae4549f3e592228a43b4f5"
     },
     {
       "id": "visit-facts-grid",
@@ -9438,7 +9438,7 @@
       "paths": {
         "bundle": "agent/patterns/visit-facts-grid.json"
       },
-      "bundleSha256": "7611bacea645be532111e6f6b4f00b4bdf9a210909a29f85af6221255bb9c04f"
+      "bundleSha256": "949e1b7b61541496d4acb11d85a681a9734392c13f14f4fd5c56e9f7ae42f296"
     },
     {
       "id": "word-opacity-stagger",
@@ -9508,7 +9508,7 @@
       "paths": {
         "bundle": "agent/patterns/word-opacity-stagger.json"
       },
-      "bundleSha256": "a4ff8eccdaf257f9346146c3625b28ad8e1950b03d666b4a5416bd616d060331"
+      "bundleSha256": "ddf8c123428d3710a528e7cc5d2af08cdb4ab96a0a2ca39ce53e6fd25e237504"
     },
     {
       "id": "world-shaped-thumbnail-frame",
@@ -9566,7 +9566,7 @@
       "paths": {
         "bundle": "agent/patterns/world-shaped-thumbnail-frame.json"
       },
-      "bundleSha256": "420b730c34cf35673ae0b8ca1fb7dbc106830e6f35ab3b8e32b7e21b9a943de7"
+      "bundleSha256": "222a3489aaafbf5fab17524577b1e74a19c7bb72e2e1ce84b02e9ddae46402a0"
     }
   ]
 }

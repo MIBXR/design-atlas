@@ -191,8 +191,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
-      "bytes": 132776
+      "sha256": "60a6773c098f7065ce2b7340582eb4c486fae6c8e2b50bcc4ed4a985bc6fb539",
+      "bytes": 179077
     },
     {
       "path": "case-loading.css",
@@ -2093,13 +2093,13 @@
     {
       "path": "demos/zenless-zone-zero/index.html",
       "role": "source",
-      "sha256": "81130101f457002d8b5ef1ae4d03a057321265a106098e2fbb07646e4740ee6b",
+      "sha256": "f23dd183d0c5fdb9e1759286657658f0d36830befce5719ecae256b6c7744d7f",
       "bytes": 136395
     },
     {
       "path": "demos/zenless-zone-zero/mobile.html",
       "role": "source",
-      "sha256": "203fd0d38ed3f219c14dcdaf233d22151f0079bc5d56059da146261b315fbe0b",
+      "sha256": "5a4826cc216090eff065779192fca8139c6b8ffe119d44b8cdb012b88902598c",
       "bytes": 147723
     },
     {

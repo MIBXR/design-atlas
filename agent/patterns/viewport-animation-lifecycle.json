@@ -159,7 +159,7 @@
         "bundle": "agent/cases/deepseek-harness.json",
         "demo": "demos/deepseek-harness/index.html"
       },
-      "bundleSha256": "c1de4430c5f93c3ee9b776958b8def30fbe4b75a9573d0be92ab6b8647783d31"
+      "bundleSha256": "84652774b734505bdf9a8ddd56e5c311336adba5dd1cf69ff7e0d150c0e219f6"
     },
     {
       "id": "endfield-industrial",
@@ -168,7 +168,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "36871b7d4935a3d2ad342fba704a1810f13264f2f7a51d9cdb2d67d7dcc67abf"
+      "bundleSha256": "d7b196434c77be44e8f146e67f357013a7bef3bea6419ba72de35a0f1e7511bb"
     },
     {
       "id": "linear-workflow",
@@ -177,7 +177,7 @@
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
       },
-      "bundleSha256": "04171c457dee3e57c17f72e433d17891bcfdb3a10deb0eb740e19f4dce9dce81"
+      "bundleSha256": "39e9166a60fbb19f6ed648a71b363bdc512b90a16ea20b89c76c7364f14b2f2c"
     },
     {
       "id": "qoder-platform",
@@ -186,7 +186,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "c0a7bb008a861c3b2ad91cfebf2bbf1b766e43efea70dd3bc66b9ed9e8f3af15"
+      "bundleSha256": "7f97c7056f195e3821489ec8b3fe8ef392198ec5b7a931fe704014aa66ffed0b"
     },
     {
       "id": "stripe-platform",
@@ -195,7 +195,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "fb356ec72305ded27dee4da1a362268a653a0fc5955e1de4f9bf4ef1667837a2"
+      "bundleSha256": "54813430f2ec01cb1fbb121d2ab81804c98fed149ef12937f9103e3617a3f623"
     }
   ]
 }
