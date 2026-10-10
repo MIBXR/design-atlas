@@ -941,6 +941,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "zenless-zone-zero",
+        "locator": "entries/zenless-zone-zero.json#interaction/0",
+        "observation": "选择角色缩略图，同时切换62人中的立绘、阴影、阵营、中文名与英文背景；桌面角色图以500ms位移/透明度进入，阴影300ms，姓名与阵营延迟交接。",
+        "evidence": "observed",
+        "referenceUrl": "https://zzz.mihoyo.com/main",
+        "capturedAt": "2026-10-11"
       }
     ],
     "sourceFiles": [
@@ -963,7 +971,17 @@ window.DESIGN_PATTERNS = [
       "entries/genshin-world.json",
       "research/arknights-world.md",
       "research/blue-archive.md",
-      "research/genshin-world.md"
+      "research/genshin-world.md",
+      "entries/zenless-zone-zero.json",
+      "research/zenless-zone-zero.md",
+      "demos/zenless-zone-zero/app.js",
+      "demos/zenless-zone-zero/data.js",
+      "demos/zenless-zone-zero/fidelity.md",
+      "demos/zenless-zone-zero/index.html",
+      "demos/zenless-zone-zero/mobile.html",
+      "demos/zenless-zone-zero/reference-mobile.css",
+      "demos/zenless-zone-zero/reference.css",
+      "demos/zenless-zone-zero/state.css"
     ]
   },
   {
@@ -1906,6 +1924,94 @@ window.DESIGN_PATTERNS = [
       "entries/swiss-grid.json",
       "research/swiss-grid.md"
     ]
+  },
+  {
+    "id": "execution-trace-drilldown",
+    "title": "时间线泳道定位调用详情",
+    "category": "内容组织",
+    "experienceTypes": [
+      "structure",
+      "page-motion"
+    ],
+    "summary": "把全程概览、日志与单次调用连起来。",
+    "mechanism": "输入、模型、工具分别占用时间线泳道；日志沿同一执行顺序展开，选定调用在侧栏显示结果和计时，使宏观节奏与局部证据互相定位。",
+    "trigger": "查看执行轨迹并深入单次工具调用",
+    "effect": "用户从整段过程走到具体结果与耗时，不丢失调用所在轮次。",
+    "useCases": [
+      "开发者诊断工具",
+      "智能体执行过程介绍"
+    ],
+    "avoid": [
+      "把装饰色条当作实际时序",
+      "把固定演示日志说成本机执行结果"
+    ],
+    "constraints": [
+      "泳道时长、轮次和侧栏调用必须对应同一数据。",
+      "源页面自动演示切到详情与计时，本巧思的实际产品点击迁移属于adapted建议。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "负责多尺度执行信息关联，可与过程折叠配合；保持时间线为概览，不在每个span里重复全文日志。",
+      "pairsWellWith": [
+        "process-to-result-collapse",
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "演示提供暂停和文字描述；实际交互迁移时每次调用需可键盘选中，关闭详情回到原调用。",
+      "reducedMotion": "保留时间线、日志和选中详情的稳定图解。"
+    },
+    "parameters": [
+      {
+        "name": "泳道 / span",
+        "value": "3 / 37",
+        "note": "官方DOM数据；不是随机时间条。"
+      },
+      {
+        "name": "侧栏进入",
+        "value": "11.55–12.45秒 / 15秒周期",
+        "note": "先展示结果，再显示计时。"
+      }
+    ],
+    "sources": [
+      {
+        "caseId": "deepseek-harness",
+        "locator": "entries/deepseek-harness.json#interaction/4",
+        "observation": "轨迹演示15秒：工具栏、三条泳道和37段时序先后进入，两轮日志上移，最后展开bash调用详情，在结果与计时之间交接，显示NAVIGATION_OK和34毫秒。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.deepseek.com/harness/",
+        "capturedAt": "2026-10-11"
+      }
+    ],
+    "sourceFiles": [
+      "entries/deepseek-harness.json",
+      "research/deepseek-harness.md",
+      "demos/deepseek-harness/app.js",
+      "demos/deepseek-harness/fidelity.md",
+      "demos/deepseek-harness/index.html",
+      "demos/deepseek-harness/messages.js",
+      "demos/deepseek-harness/reference.css",
+      "demos/deepseek-harness/runtime.js",
+      "demos/deepseek-harness/state.css",
+      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+    ],
+    "prompt": "为【目标页面/组件】实现「时间线泳道定位调用详情」。输入、模型、工具分别占用时间线泳道；日志沿同一执行顺序展开，选定调用在侧栏显示结果和计时，使宏观节奏与局部证据互相定位。 触发：查看执行轨迹并深入单次工具调用。结果：用户从整段过程走到具体结果与耗时，不丢失调用所在轮次。 泳道时长、轮次和侧栏调用必须对应同一数据。 源页面自动演示切到详情与计时，本巧思的实际产品点击迁移属于adapted建议。 负责多尺度执行信息关联，可与过程折叠配合；保持时间线为概览，不在每个span里重复全文日志。 键盘：演示提供暂停和文字描述；实际交互迁移时每次调用需可键盘选中，关闭详情回到原调用。 减少动态：保留时间线、日志和选中详情的稳定图解。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
   },
   {
     "id": "explicit-facet-summary",
@@ -3197,6 +3303,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "observed",
         "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "zenless-zone-zero",
+        "locator": "entries/zenless-zone-zero.json#composition/shape",
+        "observation": "胶片齿孔、斜切面板、斜向人物窗口、粗描边胶囊和边缘编号轨道。",
+        "evidence": "observed",
+        "referenceUrl": "https://zzz.mihoyo.com/main",
+        "capturedAt": "2026-10-11"
       }
     ],
     "sourceFiles": [
@@ -3211,7 +3325,17 @@ window.DESIGN_PATTERNS = [
       "entries/persona-kinetic.json",
       "entries/uma-musume.json",
       "research/persona-kinetic.md",
-      "research/uma-musume.md"
+      "research/uma-musume.md",
+      "entries/zenless-zone-zero.json",
+      "research/zenless-zone-zero.md",
+      "demos/zenless-zone-zero/app.js",
+      "demos/zenless-zone-zero/data.js",
+      "demos/zenless-zone-zero/fidelity.md",
+      "demos/zenless-zone-zero/index.html",
+      "demos/zenless-zone-zero/mobile.html",
+      "demos/zenless-zone-zero/reference-mobile.css",
+      "demos/zenless-zone-zero/reference.css",
+      "demos/zenless-zone-zero/state.css"
     ]
   },
   {
@@ -5629,6 +5753,94 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "persistent-created-widget",
+    "title": "已创建挂件跨场景保留",
+    "category": "内容组织",
+    "experienceTypes": [
+      "page-motion",
+      "structure"
+    ],
+    "summary": "生成的结果继续参与下一段演示。",
+    "mechanism": "创建过程结束后将结果挂件先放大展示，再缩到固定角落；后台界面切换到管理列表时挂件持续存在，最后通过已安装项确认结果归属。",
+    "trigger": "创建过程完成并转入管理场景",
+    "effect": "用户看到生成、可用与被管理的是同一个对象。",
+    "useCases": [
+      "插件创建演示",
+      "生成组件或工具安装介绍"
+    ],
+    "avoid": [
+      "切场后成果消失导致身份断裂",
+      "把固定动画伪装成真实安装"
+    ],
+    "constraints": [
+      "挂件状态不能在场景交接时重置；放大与紧凑形态共享同一内容。",
+      "手机保留挂件与管理器的对应关系，同时避免遮住列表的主要信息。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "负责成果身份连续性，前序可搭配过程折叠，运行控制交给独立暂停生命周期。",
+      "pairsWellWith": [
+        "process-to-result-collapse",
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "暂停按钮可键盘操作；图解内部不伪造可编辑输入或可点击安装。",
+      "reducedMotion": "呈现挂件与管理器已安装项的稳定终态，并给出过程说明。"
+    },
+    "parameters": [
+      {
+        "name": "完整周期",
+        "value": "22秒",
+        "note": "官网CSS。"
+      },
+      {
+        "name": "挂件交接",
+        "value": "8.69–9.24秒展开，11.66秒紧凑",
+        "note": "官网关键帧，管理器在11.44–12.1秒进入。"
+      }
+    ],
+    "sources": [
+      {
+        "caseId": "deepseek-harness",
+        "locator": "entries/deepseek-harness.json#interaction/1",
+        "observation": "插件演示22秒：对话输入、10条工具步骤、过程折叠、番茄钟放大，再缩至右上角；插件管理器滚过7个官方插件并高亮已安装项，挂件贯穿场景交接。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.deepseek.com/harness/",
+        "capturedAt": "2026-10-11"
+      }
+    ],
+    "sourceFiles": [
+      "entries/deepseek-harness.json",
+      "research/deepseek-harness.md",
+      "demos/deepseek-harness/app.js",
+      "demos/deepseek-harness/fidelity.md",
+      "demos/deepseek-harness/index.html",
+      "demos/deepseek-harness/messages.js",
+      "demos/deepseek-harness/reference.css",
+      "demos/deepseek-harness/runtime.js",
+      "demos/deepseek-harness/state.css",
+      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+    ],
+    "prompt": "为【目标页面/组件】实现「已创建挂件跨场景保留」。创建过程结束后将结果挂件先放大展示，再缩到固定角落；后台界面切换到管理列表时挂件持续存在，最后通过已安装项确认结果归属。 触发：创建过程完成并转入管理场景。结果：用户看到生成、可用与被管理的是同一个对象。 挂件状态不能在场景交接时重置；放大与紧凑形态共享同一内容。 手机保留挂件与管理器的对应关系，同时避免遮住列表的主要信息。 负责成果身份连续性，前序可搭配过程折叠，运行控制交给独立暂停生命周期。 键盘：暂停按钮可键盘操作；图解内部不伪造可编辑输入或可点击安装。 减少动态：呈现挂件与管理器已安装项的稳定终态，并给出过程说明。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
+  },
+  {
     "id": "photo-crossfade-cycle",
     "title": "给摄影留阅读时间的淡化轮换",
     "category": "加载与媒体",
@@ -5943,6 +6155,181 @@ window.DESIGN_PATTERNS = [
       "entries/arknights-world.json",
       "research/arknights-world.md"
     ]
+  },
+  {
+    "id": "procedural-fluid-spotlight",
+    "title": "流体色场中的固定光核",
+    "category": "视觉构成",
+    "experienceTypes": [
+      "visual",
+      "page-motion"
+    ],
+    "summary": "背景缓慢演化，标题与操作保持稳定。",
+    "mechanism": "以程序化多层扭曲形成流体色场，用位置固定的光核、光晕和暗角控制明暗；文本和工作台位于独立DOM层，不随纹理变形。",
+    "trigger": "进入首屏并保持可见",
+    "effect": "背景提供空间和氛围，阅读与操作不受纹理运动影响。",
+    "useCases": [
+      "深色产品首屏",
+      "有明确品牌色场的展示"
+    ],
+    "avoid": [
+      "用同一渐变背景覆盖所有品牌",
+      "把未存在的指针搅动写成来源事实"
+    ],
+    "constraints": [
+      "GPU层只负责装饰，不遮挡点击、正文和焦点。",
+      "源案例flowmap为中性纹理，没有指针扰动；复用时应保留离屏停止和帧率上限。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "作为首屏背景与稳定工作台组合，勿叠加同区域大幅粒子、文字变形和多套指针反馈。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "Canvas不进入Tab顺序；标题、CTA和工作台以DOM保持可读。",
+      "reducedMotion": "迁移时提供静态色场或停止时间推进；源页面GPU的减少动态行为需单独核验。"
+    },
+    "parameters": [
+      {
+        "name": "帧率与DPR",
+        "value": "30fps / ≤1.5",
+        "note": "官网源码参数。"
+      },
+      {
+        "name": "光核 / 光晕",
+        "value": "0.14 / 0.2",
+        "note": "源实例实际着色参数，不作为其他品牌通用值。"
+      }
+    ],
+    "sources": [
+      {
+        "caseId": "deepseek-harness",
+        "locator": "entries/deepseek-harness.json#interaction/0",
+        "observation": "Hero使用官方WebGL2流体着色器，蓝灰五色场、暖色光核与低强度光晕持续演化；30fps、DPR上限1.5、离屏暂停。输入流场是1×1中性纹理，没有指针搅动逻辑。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.deepseek.com/harness/",
+        "capturedAt": "2026-10-11"
+      }
+    ],
+    "sourceFiles": [
+      "entries/deepseek-harness.json",
+      "research/deepseek-harness.md",
+      "demos/deepseek-harness/app.js",
+      "demos/deepseek-harness/fidelity.md",
+      "demos/deepseek-harness/index.html",
+      "demos/deepseek-harness/messages.js",
+      "demos/deepseek-harness/reference.css",
+      "demos/deepseek-harness/runtime.js",
+      "demos/deepseek-harness/state.css",
+      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+    ],
+    "prompt": "为【目标页面/组件】实现「流体色场中的固定光核」。以程序化多层扭曲形成流体色场，用位置固定的光核、光晕和暗角控制明暗；文本和工作台位于独立DOM层，不随纹理变形。 触发：进入首屏并保持可见。结果：背景提供空间和氛围，阅读与操作不受纹理运动影响。 GPU层只负责装饰，不遮挡点击、正文和焦点。 源案例flowmap为中性纹理，没有指针扰动；复用时应保留离屏停止和帧率上限。 作为首屏背景与稳定工作台组合，勿叠加同区域大幅粒子、文字变形和多套指针反馈。 键盘：Canvas不进入Tab顺序；标题、CTA和工作台以DOM保持可读。 减少动态：迁移时提供静态色场或停止时间推进；源页面GPU的减少动态行为需单独核验。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
+  },
+  {
+    "id": "process-to-result-collapse",
+    "title": "执行过程折叠后保留结果",
+    "category": "内容组织",
+    "experienceTypes": [
+      "micro-motion",
+      "structure"
+    ],
+    "summary": "先证明过程，再把阅读重心交给成果。",
+    "mechanism": "先展开结构化输入，替换为任务结果，再折叠中间执行过程；完成文案和独立任务卡保留在原阅读位置，下一轮更换示例而不改变结构。",
+    "trigger": "演示任务由输入进入完成阶段",
+    "effect": "用户能理解关键执行信息，又能清楚看到最终可用对象。",
+    "useCases": [
+      "自动化任务介绍",
+      "代码与报告生成流程"
+    ],
+    "avoid": [
+      "直接跳过过程只显示成功",
+      "完成时同时清空结果与步骤"
+    ],
+    "constraints": [
+      "真实产品要由实际执行状态驱动；演示应明确固定故事与日期。",
+      "输入和结果使用同一任务标识，折叠只改变呈现而不改变事实。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "负责过程与结果的层级交接，可与跨场景成果保留组合；日志详情属于独立深入查看职责。",
+      "pairsWellWith": [
+        "persistent-created-widget",
+        "execution-trace-drilldown"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "提供独立暂停；若迁移成实际产品，用语义展开按钮保留回看过程的入口。",
+      "reducedMotion": "直接呈现可读结果与完成卡，保留执行说明。"
+    },
+    "parameters": [
+      {
+        "name": "周期 / 故事数",
+        "value": "11秒 / 3种",
+        "note": "周报、销售汇总、项目测试；官网animationiteration推进。"
+      },
+      {
+        "name": "过程折叠",
+        "value": "7.15–7.81秒",
+        "note": "完成文案与任务卡随后在7.81–8.58秒进入。"
+      }
+    ],
+    "sources": [
+      {
+        "caseId": "deepseek-harness",
+        "locator": "entries/deepseek-harness.json#interaction/3",
+        "observation": "工作流演示每11秒切换周报、销售汇总和项目测试三种故事；输入JSON先出现，替换为计划结果，再收起执行过程并留下任务卡。使用固定2026-09-01演示时间，不创建真实任务。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.deepseek.com/harness/",
+        "capturedAt": "2026-10-11"
+      }
+    ],
+    "sourceFiles": [
+      "entries/deepseek-harness.json",
+      "research/deepseek-harness.md",
+      "demos/deepseek-harness/app.js",
+      "demos/deepseek-harness/fidelity.md",
+      "demos/deepseek-harness/index.html",
+      "demos/deepseek-harness/messages.js",
+      "demos/deepseek-harness/reference.css",
+      "demos/deepseek-harness/runtime.js",
+      "demos/deepseek-harness/state.css",
+      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+    ],
+    "prompt": "为【目标页面/组件】实现「执行过程折叠后保留结果」。先展开结构化输入，替换为任务结果，再折叠中间执行过程；完成文案和独立任务卡保留在原阅读位置，下一轮更换示例而不改变结构。 触发：演示任务由输入进入完成阶段。结果：用户能理解关键执行信息，又能清楚看到最终可用对象。 真实产品要由实际执行状态驱动；演示应明确固定故事与日期。 输入和结果使用同一任务标识，折叠只改变呈现而不改变事实。 负责过程与结果的层级交接，可与跨场景成果保留组合；日志详情属于独立深入查看职责。 键盘：提供独立暂停；若迁移成实际产品，用语义展开按钮保留回看过程的入口。 减少动态：直接呈现可读结果与完成卡，保留执行说明。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
   },
   {
     "id": "product-entrance-film",
@@ -6496,6 +6883,98 @@ window.DESIGN_PATTERNS = [
     ]
   },
   {
+    "id": "scroll-gathered-pixel-mark",
+    "title": "散布立方体随滚动聚合标记",
+    "category": "滚动叙事",
+    "experienceTypes": [
+      "visual",
+      "page-motion"
+    ],
+    "summary": "页尾从散点收束成可识别的形状。",
+    "mechanism": "同一批立方体在球面起点和固定像素网格目标之间插值，滚动推进聚合量，反向滚动可散开；小幅旋转与漂浮在聚合期间减弱。",
+    "trigger": "滚动进入或离开页尾CTA",
+    "effect": "抽象空间逐步收束成品牌标记，为内容结束提供可逆的视觉回应。",
+    "useCases": [
+      "品牌或生态页尾",
+      "从多个元素汇聚为一个结果的叙事"
+    ],
+    "avoid": [
+      "用随机星点替代固定目标形状",
+      "装饰覆盖CTA点击区域"
+    ],
+    "constraints": [
+      "目标点位决定最终图形，必须与已确认的标记一致。",
+      "源页面手机隐藏三维层；正文与行动不能依赖GPU才能阅读。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "负责页尾视觉收束，CTA文本保持独立；与首屏背景共享色彩即可，不需要共享粒子状态。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "装饰层不拦截指针和焦点，链接保持原生DOM。",
+      "reducedMotion": "迁移时直接给出目标标记或隐藏装饰，保留同一CTA；源GPU减少动态行为单列验证。"
+    },
+    "parameters": [
+      {
+        "name": "立方体数量",
+        "value": "196",
+        "note": "官方固定像素数据。"
+      },
+      {
+        "name": "聚合量",
+        "value": "clamp(1-(top+0.5×height)/viewportHeight,0,1)",
+        "note": "官网公式，2.5×dt平滑跟随。"
+      },
+      {
+        "name": "渲染上限",
+        "value": "30fps，DPR 1–1.5",
+        "note": "源页面参数。"
+      }
+    ],
+    "sources": [
+      {
+        "caseId": "deepseek-harness",
+        "locator": "entries/deepseek-harness.json#interaction/6",
+        "observation": "页尾196个Three.js立方体随滚动从球面散布聚合为像素标志；独立2D网格以90px间隔绘制断开线段和3.6px方点，手机隐藏三维层。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.deepseek.com/harness/",
+        "capturedAt": "2026-10-11"
+      }
+    ],
+    "sourceFiles": [
+      "entries/deepseek-harness.json",
+      "research/deepseek-harness.md",
+      "demos/deepseek-harness/app.js",
+      "demos/deepseek-harness/fidelity.md",
+      "demos/deepseek-harness/index.html",
+      "demos/deepseek-harness/messages.js",
+      "demos/deepseek-harness/reference.css",
+      "demos/deepseek-harness/runtime.js",
+      "demos/deepseek-harness/state.css",
+      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+    ],
+    "prompt": "为【目标页面/组件】实现「散布立方体随滚动聚合标记」。同一批立方体在球面起点和固定像素网格目标之间插值，滚动推进聚合量，反向滚动可散开；小幅旋转与漂浮在聚合期间减弱。 触发：滚动进入或离开页尾CTA。结果：抽象空间逐步收束成品牌标记，为内容结束提供可逆的视觉回应。 目标点位决定最终图形，必须与已确认的标记一致。 源页面手机隐藏三维层；正文与行动不能依赖GPU才能阅读。 负责页尾视觉收束，CTA文本保持独立；与首屏背景共享色彩即可，不需要共享粒子状态。 键盘：装饰层不拦截指针和焦点，链接保持原生DOM。 减少动态：迁移时直接给出目标标记或隐藏装饰，保留同一CTA；源GPU减少动态行为单列验证。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
+  },
+  {
     "id": "scroll-logo-contraction",
     "title": "滚动后品牌标识收回导航",
     "category": "滚动叙事",
@@ -6874,6 +7353,72 @@ window.DESIGN_PATTERNS = [
       "entries/google-material.json",
       "research/google-material.md"
     ]
+  },
+  {
+    "id": "separate-thumbnail-window",
+    "title": "头像翻页与舞台选择分离",
+    "category": "导航与状态",
+    "experienceTypes": [
+      "structure",
+      "micro-motion"
+    ],
+    "summary": "翻看更多候选时，当前人物保持稳定。",
+    "mechanism": "分别保存缩略图窗口起点和当前选中人物；窗口箭头只移动可见候选，点击具体头像才换舞台，人物所有身份线索使用同一选中索引。",
+    "trigger": "点击缩略图窗口箭头或选择头像",
+    "effect": "大名单可逐段浏览，同时保留当前人物上下文。",
+    "useCases": [
+      "大规模角色与专家名录",
+      "图片作品的局部候选栏"
+    ],
+    "avoid": [
+      "窗口翻页时意外清空或替换当前选择"
+    ],
+    "constraints": [
+      "最后一组不足整页时夹紧窗口边界；箭头禁用状态与真实可滚动范围一致。",
+      "影像箭头切换当前内容属于另一种导航语义，不能套用为所有轮播统一行为。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "负责候选窗口和选中状态的分工；与人物换态组合时只共享选择事件，不让翻页事件直接触发换人。",
+      "pairsWellWith": [
+        "character-stage-coordination"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "头像使用按钮，方向键/Home/End提供等价选择；需要时移动窗口使焦点可见，当前项同步aria-pressed。",
+      "reducedMotion": "关闭窗口位移与角色过渡，窗口和选择状态仍分别更新。"
+    },
+    "parameters": [
+      {
+        "name": "窗口步长",
+        "value": "3张",
+        "note": "绝区零首页组件的已观察值；目标设计可按可见窗口调整。"
+      }
+    ],
+    "sources": [
+      {
+        "caseId": "zenless-zone-zero",
+        "locator": "entries/zenless-zone-zero.json#interaction/1",
+        "observation": "角色箭头每次移动三张缩略图，保持当前人物不变；点击缩略图才选择角色。影像箭头则同步改变当前视频、标题、日期和缩略图位置，9部影像不循环越界。",
+        "evidence": "observed",
+        "referenceUrl": "https://zzz.mihoyo.com/main",
+        "capturedAt": "2026-10-11"
+      }
+    ],
+    "sourceFiles": [
+      "entries/zenless-zone-zero.json",
+      "research/zenless-zone-zero.md",
+      "demos/zenless-zone-zero/app.js",
+      "demos/zenless-zone-zero/data.js",
+      "demos/zenless-zone-zero/fidelity.md",
+      "demos/zenless-zone-zero/index.html",
+      "demos/zenless-zone-zero/mobile.html",
+      "demos/zenless-zone-zero/reference-mobile.css",
+      "demos/zenless-zone-zero/reference.css",
+      "demos/zenless-zone-zero/state.css"
+    ],
+    "prompt": "为【目标页面/组件】实现「头像翻页与舞台选择分离」。分别保存缩略图窗口起点和当前选中人物；窗口箭头只移动可见候选，点击具体头像才换舞台，人物所有身份线索使用同一选中索引。 触发：点击缩略图窗口箭头或选择头像。结果：大名单可逐段浏览，同时保留当前人物上下文。 最后一组不足整页时夹紧窗口边界；箭头禁用状态与真实可滚动范围一致。 影像箭头切换当前内容属于另一种导航语义，不能套用为所有轮播统一行为。 负责候选窗口和选中状态的分工；与人物换态组合时只共享选择事件，不让翻页事件直接触发换人。 键盘：头像使用按钮，方向键/Home/End提供等价选择；需要时移动窗口使焦点可见，当前项同步aria-pressed。 减少动态：关闭窗口位移与角色过渡，窗口和选择状态仍分别更新。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
   },
   {
     "id": "sequential-stroke-reveal",
@@ -8232,6 +8777,14 @@ window.DESIGN_PATTERNS = [
         "evidence": "adapted",
         "referenceUrl": "https://endfield.hypergryph.com/",
         "capturedAt": "2026-10-09"
+      },
+      {
+        "caseId": "deepseek-harness",
+        "locator": "entries/deepseek-harness.json#interaction/5",
+        "observation": "四组演示分别在进入视口后播放，手动暂停优先于重入；离屏或后台暂停。减少动态使用原版插件/轨迹静态回退和文件/工作流的可读状态。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.deepseek.com/harness/",
+        "capturedAt": "2026-10-11"
       }
     ],
     "sourceFiles": [
@@ -8267,7 +8820,32 @@ window.DESIGN_PATTERNS = [
       "demos/endfield-industrial/state.css",
       "demos/endfield-industrial/app.js",
       "demos/endfield-industrial/lore.js",
-      "demos/endfield-industrial/transparent-video.js"
+      "demos/endfield-industrial/transparent-video.js",
+      "entries/deepseek-harness.json",
+      "research/deepseek-harness.md",
+      "demos/deepseek-harness/app.js",
+      "demos/deepseek-harness/fidelity.md",
+      "demos/deepseek-harness/index.html",
+      "demos/deepseek-harness/messages.js",
+      "demos/deepseek-harness/reference.css",
+      "demos/deepseek-harness/runtime.js",
+      "demos/deepseek-harness/state.css",
+      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
     ]
   },
   {

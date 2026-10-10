@@ -1,0 +1,88 @@
+{
+  "id": "process-to-result-collapse",
+  "title": "执行过程折叠后保留结果",
+  "category": "内容组织",
+  "experienceTypes": [
+    "micro-motion",
+    "structure"
+  ],
+  "summary": "先证明过程，再把阅读重心交给成果。",
+  "mechanism": "先展开结构化输入，替换为任务结果，再折叠中间执行过程；完成文案和独立任务卡保留在原阅读位置，下一轮更换示例而不改变结构。",
+  "trigger": "演示任务由输入进入完成阶段",
+  "effect": "用户能理解关键执行信息，又能清楚看到最终可用对象。",
+  "useCases": [
+    "自动化任务介绍",
+    "代码与报告生成流程"
+  ],
+  "avoid": [
+    "直接跳过过程只显示成功",
+    "完成时同时清空结果与步骤"
+  ],
+  "constraints": [
+    "真实产品要由实际执行状态驱动；演示应明确固定故事与日期。",
+    "输入和结果使用同一任务标识，折叠只改变呈现而不改变事实。"
+  ],
+  "composition": {
+    "role": "accent",
+    "notes": "负责过程与结果的层级交接，可与跨场景成果保留组合；日志详情属于独立深入查看职责。",
+    "pairsWellWith": [
+      "persistent-created-widget",
+      "execution-trace-drilldown"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "提供独立暂停；若迁移成实际产品，用语义展开按钮保留回看过程的入口。",
+    "reducedMotion": "直接呈现可读结果与完成卡，保留执行说明。"
+  },
+  "parameters": [
+    {
+      "name": "周期 / 故事数",
+      "value": "11秒 / 3种",
+      "note": "周报、销售汇总、项目测试；官网animationiteration推进。"
+    },
+    {
+      "name": "过程折叠",
+      "value": "7.15–7.81秒",
+      "note": "完成文案与任务卡随后在7.81–8.58秒进入。"
+    }
+  ],
+  "sources": [
+    {
+      "caseId": "deepseek-harness",
+      "locator": "entries/deepseek-harness.json#interaction/3",
+      "observation": "工作流演示每11秒切换周报、销售汇总和项目测试三种故事；输入JSON先出现，替换为计划结果，再收起执行过程并留下任务卡。使用固定2026-09-01演示时间，不创建真实任务。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.deepseek.com/harness/",
+      "capturedAt": "2026-10-11"
+    }
+  ],
+  "sourceFiles": [
+    "entries/deepseek-harness.json",
+    "research/deepseek-harness.md",
+    "demos/deepseek-harness/app.js",
+    "demos/deepseek-harness/fidelity.md",
+    "demos/deepseek-harness/index.html",
+    "demos/deepseek-harness/messages.js",
+    "demos/deepseek-harness/reference.css",
+    "demos/deepseek-harness/runtime.js",
+    "demos/deepseek-harness/state.css",
+    "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+    "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+    "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+    "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+    "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+    "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+    "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+    "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+    "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+    "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+    "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+    "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+    "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+    "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+    "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+    "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+  ],
+  "prompt": "为【目标页面/组件】实现「执行过程折叠后保留结果」。先展开结构化输入，替换为任务结果，再折叠中间执行过程；完成文案和独立任务卡保留在原阅读位置，下一轮更换示例而不改变结构。 触发：演示任务由输入进入完成阶段。结果：用户能理解关键执行信息，又能清楚看到最终可用对象。 真实产品要由实际执行状态驱动；演示应明确固定故事与日期。 输入和结果使用同一任务标识，折叠只改变呈现而不改变事实。 负责过程与结果的层级交接，可与跨场景成果保留组合；日志详情属于独立深入查看职责。 键盘：提供独立暂停；若迁移成实际产品，用语义展开按钮保留回看过程的入口。 减少动态：直接呈现可读结果与完成卡，保留执行说明。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
+}

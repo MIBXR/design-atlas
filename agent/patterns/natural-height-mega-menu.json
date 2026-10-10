@@ -71,7 +71,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "fb356ec72305ded27dee4da1a362268a653a0fc5955e1de4f9bf4ef1667837a2"
+      "bundleSha256": "54813430f2ec01cb1fbb121d2ab81804c98fed149ef12937f9103e3617a3f623"
     }
   ]
 }

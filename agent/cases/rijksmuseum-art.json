@@ -173,8 +173,8 @@
     {
       "path": "asset-sources.js",
       "role": "source",
-      "sha256": "3dc077c30050a003d31a8573aa63b942e4cf06eef53c6c5d63a75546c87a8d36",
-      "bytes": 132776
+      "sha256": "60a6773c098f7065ce2b7340582eb4c486fae6c8e2b50bcc4ed4a985bc6fb539",
+      "bytes": 179077
     },
     {
       "path": "case-loading.css",

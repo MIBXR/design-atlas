@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "separate-thumbnail-window",
+  "pattern": {
+    "id": "separate-thumbnail-window",
+    "title": "头像翻页与舞台选择分离",
+    "category": "导航与状态",
+    "experienceTypes": [
+      "structure",
+      "micro-motion"
+    ],
+    "summary": "翻看更多候选时，当前人物保持稳定。",
+    "mechanism": "分别保存缩略图窗口起点和当前选中人物；窗口箭头只移动可见候选，点击具体头像才换舞台，人物所有身份线索使用同一选中索引。",
+    "trigger": "点击缩略图窗口箭头或选择头像",
+    "effect": "大名单可逐段浏览，同时保留当前人物上下文。",
+    "useCases": [
+      "大规模角色与专家名录",
+      "图片作品的局部候选栏"
+    ],
+    "avoid": [
+      "窗口翻页时意外清空或替换当前选择"
+    ],
+    "constraints": [
+      "最后一组不足整页时夹紧窗口边界；箭头禁用状态与真实可滚动范围一致。",
+      "影像箭头切换当前内容属于另一种导航语义，不能套用为所有轮播统一行为。"
+    ],
+    "composition": {
+      "role": "accent",
+      "notes": "负责候选窗口和选中状态的分工；与人物换态组合时只共享选择事件，不让翻页事件直接触发换人。",
+      "pairsWellWith": [
+        "character-stage-coordination"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "头像使用按钮，方向键/Home/End提供等价选择；需要时移动窗口使焦点可见，当前项同步aria-pressed。",
+      "reducedMotion": "关闭窗口位移与角色过渡，窗口和选择状态仍分别更新。"
+    },
+    "parameters": [
+      {
+        "name": "窗口步长",
+        "value": "3张",
+        "note": "绝区零首页组件的已观察值；目标设计可按可见窗口调整。"
+      }
+    ],
+    "sources": [
+      {
+        "caseId": "zenless-zone-zero",
+        "locator": "entries/zenless-zone-zero.json#interaction/1",
+        "observation": "角色箭头每次移动三张缩略图，保持当前人物不变；点击缩略图才选择角色。影像箭头则同步改变当前视频、标题、日期和缩略图位置，9部影像不循环越界。",
+        "evidence": "observed",
+        "referenceUrl": "https://zzz.mihoyo.com/main",
+        "capturedAt": "2026-10-11"
+      }
+    ],
+    "sourceFiles": [
+      "entries/zenless-zone-zero.json",
+      "research/zenless-zone-zero.md",
+      "demos/zenless-zone-zero/app.js",
+      "demos/zenless-zone-zero/data.js",
+      "demos/zenless-zone-zero/fidelity.md",
+      "demos/zenless-zone-zero/index.html",
+      "demos/zenless-zone-zero/mobile.html",
+      "demos/zenless-zone-zero/reference-mobile.css",
+      "demos/zenless-zone-zero/reference.css",
+      "demos/zenless-zone-zero/state.css"
+    ],
+    "prompt": "为【目标页面/组件】实现「头像翻页与舞台选择分离」。分别保存缩略图窗口起点和当前选中人物；窗口箭头只移动可见候选，点击具体头像才换舞台，人物所有身份线索使用同一选中索引。 触发：点击缩略图窗口箭头或选择头像。结果：大名单可逐段浏览，同时保留当前人物上下文。 最后一组不足整页时夹紧窗口边界；箭头禁用状态与真实可滚动范围一致。 影像箭头切换当前内容属于另一种导航语义，不能套用为所有轮播统一行为。 负责候选窗口和选中状态的分工；与人物换态组合时只共享选择事件，不让翻页事件直接触发换人。 键盘：头像使用按钮，方向键/Home/End提供等价选择；需要时移动窗口使焦点可见，当前项同步aria-pressed。 减少动态：关闭窗口位移与角色过渡，窗口和选择状态仍分别更新。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
+  },
+  "sourceCases": [
+    {
+      "id": "zenless-zone-zero",
+      "title": "绝区零 · 六章街头拼贴首页",
+      "paths": {
+        "bundle": "agent/cases/zenless-zone-zero.json",
+        "demo": "demos/zenless-zone-zero/index.html"
+      },
+      "bundleSha256": "1bae6cadceefa2eb4774e447b58c409cee942cf1f4538c186327ed6e498a9448"
+    }
+  ]
+}
