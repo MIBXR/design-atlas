@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "fae45a557c9462972819e7ba76edb18ff8db13a5996767169efb5a320b772170",
+  "contentVersion": "b069d1ea480e5dab49797abcb3ba2625a54a704c3c2c531a32740241165b1bab",
   "patternCount": 135,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -1043,7 +1043,7 @@
       "paths": {
         "bundle": "agent/patterns/character-stage-coordination.json"
       },
-      "bundleSha256": "6215b14571ca02be33a1cdb3a7ccb2c3a485e9e47fc3121aeac676c47507cb90"
+      "bundleSha256": "cc9fb7780d1e99f87bb51211fc614735761c1dc4c7efc03d2c083e9abef98dcb"
     },
     {
       "id": "character-voice-ownership",
@@ -3545,7 +3545,7 @@
       "paths": {
         "bundle": "agent/patterns/inclined-motion-bands.json"
       },
-      "bundleSha256": "0ba19f34dad6c229979041cf1ef8c42dd30b8778f6331ece26738a45e898e0ea"
+      "bundleSha256": "ac08c5dddff898d07136badd3d6bf748752e4a31536bef86eb82159b7f57efcb"
     },
     {
       "id": "independent-character-page",
@@ -7871,7 +7871,7 @@
       "paths": {
         "bundle": "agent/patterns/separate-thumbnail-window.json"
       },
-      "bundleSha256": "6983a2831899041add1066aac54aa4a9fddf4f9e29e1faa3bb9915a20b3daae9"
+      "bundleSha256": "60406c7e43eb3d30659b76a1c476ea4aebe82c015e4e692c85f7ffe2be219696"
     },
     {
       "id": "sequential-stroke-reveal",

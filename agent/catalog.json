@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "a1dc25aee8cb0e257fec7daae41ea670ca75eb14cf3c7b7ff3f7b7d603db3382",
+  "contentVersion": "e3cd34dc6764786e61b8f7c1114565a22bbb7c3007f85cf17f41392cefc57760",
   "entryCount": 36,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
@@ -2632,7 +2632,7 @@
         "demo": "demos/zenless-zone-zero/index.html",
         "entry": "entries/zenless-zone-zero.json"
       },
-      "bundleSha256": "f4e6f242a2c37230010b6a60c5e87b3fd433001ded75f9b08eaaff89a34ba139"
+      "bundleSha256": "1bae6cadceefa2eb4774e447b58c409cee942cf1f4538c186327ed6e498a9448"
     },
     {
       "id": "deepseek-harness",
@@ -2716,9 +2716,9 @@
   ],
   "patterns": {
     "path": "agent/patterns.json",
-    "sha256": "0d3df7a39ed85310078ed9752a6be35e6ee3a8f56bd29b9bf4f4b0ade411bcb5",
+    "sha256": "3f76cb7b393a1bd3ec23745ce7a2daca596d9c5a3735c3483f81b1991d50b9c3",
     "bytes": 549307,
     "patternCount": 135,
-    "contentVersion": "fae45a557c9462972819e7ba76edb18ff8db13a5996767169efb5a320b772170"
+    "contentVersion": "b069d1ea480e5dab49797abcb3ba2625a54a704c3c2c531a32740241165b1bab"
   }
 }
