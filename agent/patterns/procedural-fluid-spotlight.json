@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "procedural-fluid-spotlight",
+  "pattern": {
+    "id": "procedural-fluid-spotlight",
+    "title": "流体色场中的固定光核",
+    "category": "视觉构成",
+    "experienceTypes": [
+      "visual",
+      "page-motion"
+    ],
+    "summary": "背景缓慢演化，标题与操作保持稳定。",
+    "mechanism": "以程序化多层扭曲形成流体色场，用位置固定的光核、光晕和暗角控制明暗；文本和工作台位于独立DOM层，不随纹理变形。",
+    "trigger": "进入首屏并保持可见",
+    "effect": "背景提供空间和氛围，阅读与操作不受纹理运动影响。",
+    "useCases": [
+      "深色产品首屏",
+      "有明确品牌色场的展示"
+    ],
+    "avoid": [
+      "用同一渐变背景覆盖所有品牌",
+      "把未存在的指针搅动写成来源事实"
+    ],
+    "constraints": [
+      "GPU层只负责装饰，不遮挡点击、正文和焦点。",
+      "源案例flowmap为中性纹理，没有指针扰动；复用时应保留离屏停止和帧率上限。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "作为首屏背景与稳定工作台组合，勿叠加同区域大幅粒子、文字变形和多套指针反馈。",
+      "pairsWellWith": [
+        "viewport-animation-lifecycle"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "Canvas不进入Tab顺序；标题、CTA和工作台以DOM保持可读。",
+      "reducedMotion": "迁移时提供静态色场或停止时间推进；源页面GPU的减少动态行为需单独核验。"
+    },
+    "parameters": [
+      {
+        "name": "帧率与DPR",
+        "value": "30fps / ≤1.5",
+        "note": "官网源码参数。"
+      },
+      {
+        "name": "光核 / 光晕",
+        "value": "0.14 / 0.2",
+        "note": "源实例实际着色参数，不作为其他品牌通用值。"
+      }
+    ],
+    "sources": [
+      {
+        "caseId": "deepseek-harness",
+        "locator": "entries/deepseek-harness.json#interaction/0",
+        "observation": "Hero使用官方WebGL2流体着色器，蓝灰五色场、暖色光核与低强度光晕持续演化；30fps、DPR上限1.5、离屏暂停。输入流场是1×1中性纹理，没有指针搅动逻辑。",
+        "evidence": "observed",
+        "referenceUrl": "https://www.deepseek.com/harness/",
+        "capturedAt": "2026-10-11"
+      }
+    ],
+    "sourceFiles": [
+      "entries/deepseek-harness.json",
+      "research/deepseek-harness.md",
+      "demos/deepseek-harness/app.js",
+      "demos/deepseek-harness/fidelity.md",
+      "demos/deepseek-harness/index.html",
+      "demos/deepseek-harness/messages.js",
+      "demos/deepseek-harness/reference.css",
+      "demos/deepseek-harness/runtime.js",
+      "demos/deepseek-harness/state.css",
+      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+    ],
+    "prompt": "为【目标页面/组件】实现「流体色场中的固定光核」。以程序化多层扭曲形成流体色场，用位置固定的光核、光晕和暗角控制明暗；文本和工作台位于独立DOM层，不随纹理变形。 触发：进入首屏并保持可见。结果：背景提供空间和氛围，阅读与操作不受纹理运动影响。 GPU层只负责装饰，不遮挡点击、正文和焦点。 源案例flowmap为中性纹理，没有指针扰动；复用时应保留离屏停止和帧率上限。 作为首屏背景与稳定工作台组合，勿叠加同区域大幅粒子、文字变形和多套指针反馈。 键盘：Canvas不进入Tab顺序；标题、CTA和工作台以DOM保持可读。 减少动态：迁移时提供静态色场或停止时间推进；源页面GPU的减少动态行为需单独核验。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
+  },
+  "sourceCases": [
+    {
+      "id": "deepseek-harness",
+      "title": "DeepSeek Harness · 可观察的产品演示",
+      "paths": {
+        "bundle": "agent/cases/deepseek-harness.json",
+        "demo": "demos/deepseek-harness/index.html"
+      },
+      "bundleSha256": "c1de4430c5f93c3ee9b776958b8def30fbe4b75a9573d0be92ab6b8647783d31"
+    }
+  ]
+}

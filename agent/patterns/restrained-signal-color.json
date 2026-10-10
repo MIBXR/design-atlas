@@ -144,7 +144,7 @@
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/rhine-lab/index.html"
       },
-      "bundleSha256": "0b2644577a429aca240d17ca744c1e8ee61103916f1d3db4c6986daf5dfa5357"
+      "bundleSha256": "0008882a66c5ffb950cc92dc5edd970c4d9788b8cd6fcc1694b176b6d7f03792"
     },
     {
       "id": "swiss-grid",

@@ -2,3 +2,5 @@
 
 /* Keep the complete 16:9 source and its controls in the initial viewport. */
 .terminal{max-width:calc((100svh - 223px)*16/9);margin-inline:auto}.studio:has(#reference-only:checked) .terminal{max-width:none}@media(max-width:800px){.terminal{max-width:none}}
+
+.external-code{margin:32px 0;padding:28px 0;border-top:1px solid #b9b6b0;border-bottom:1px solid #b9b6b0}.external-code h3{font-size:clamp(22px,3vw,34px);margin:12px 0}.external-code>p{max-width:78ch;line-height:1.8}.external-code .source-bottom{margin:20px 0}

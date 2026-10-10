@@ -1,0 +1,2488 @@
+{
+  "source": "https://zzz.mihoyo.com/main",
+  "capturedAt": "2026-10-11",
+  "rights": "米哈游及各权利人所有。研究归档不构成独立素材授权；复用前确认许可。字体按官方加载文件保存，不推定可自由再分发。",
+  "scope": "桌面及移动首页实际引用资源；长视频以官方公开地址按用户播放请求加载。data URI 保留于来源样式和 DOM。",
+  "assets": [
+    {
+      "file": "assets/28136c19d804.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/logo.1e072ee.png",
+      "bytes": 11220,
+      "sha256": "1d26b38b6c5c82b10bbccb8ce73be12aceb0389cdcd8b8754cac72b5b43af447",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/39256c03ca2d.svg",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/logo-sm.1b88313.svg",
+      "bytes": 12017,
+      "sha256": "e3825542622f1f7e1c6fa227692700a2285694ab42dbf5f1ba993d72e7aca88b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a2012521521f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164324/aa0a9a0bbace11973e7ce47f53b39cf2_4207561875277679871.png",
+      "bytes": 3015,
+      "sha256": "e058f0dd271f0e47a87f6198f21fc0acb6f5ff4b570577ad51b598f91e46b11d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b88911fe59c5.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164324/ec22f81a17fb8c4f7b750381c27f0dae_7887680772654488515.png",
+      "bytes": 3015,
+      "sha256": "f2162d6ac0acbd10c26431c1f842e1851daf15bbf42f4a9d0c9be2e40e8985d0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5aa202beb676.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164324/210d3c27ecf78d1ca6992fd56355f453_5287588253466526853.png",
+      "bytes": 45672,
+      "sha256": "5721add28333a4a77ae34dc1f8f398d3a9d8d5a2f1b0cbf839b5d8c322e7555d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f7de8c908e04.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164322/6526e7a95c205bd8a4cb8fdd577c054c_2127683605935136077.png",
+      "bytes": 2069,
+      "sha256": "c3d9786ed26434c3803734fee9330b1d3a3bb5eceb69fe46e92996d5fc963335",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3e5e10ef80aa.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164322/de13ec4277aaaff9a2141d260bea83f3_280180703808007766.png",
+      "bytes": 2069,
+      "sha256": "e12531d5e3710f22d2fcf34b2c5517c6a68e1a1f19d130c5a642923b8dab7225",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4b79c47ecf87.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164323/a7b32e8b0d173fdd91ec23b67ecf5d51_7603979382798753340.png",
+      "bytes": 1887,
+      "sha256": "80b316c43de5316dbf428bd068b5501253701c324e2e2195bfbe783962272649",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/77ee9cdb8daf.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164323/e9b02c2d6bb719bb7d479561d1696a7b_362415236509342645.png",
+      "bytes": 1887,
+      "sha256": "7ca338fc86f27c6f08af725a59d0252418e53c805ecb4702df2fb876474d1b87",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8d12d894c0e5.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/06/8d448a7b9675cb465efe414fc8e13ef4_9178827440698094330.png",
+      "bytes": 1134,
+      "sha256": "70e1107eae0e7c209ce19c1ebd1cfb002c5a5413212722b8269d559fb7f3a2b9",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5944f95eadfc.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/06/c121ff69fcb4177b8542880ecc54c5a5_1615859228517081638.png",
+      "bytes": 1134,
+      "sha256": "d1e3222e176ee04537526a2452138b8dce22e911a268ce76edd1e52c133388ae",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/aeb428229020.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/06/636260d33f746307b1f0919b98ee2e42_1962287044943225327.png",
+      "bytes": 977,
+      "sha256": "3c34bc3dbbfd45a545e29b09646ebec4f0bd43df18ed2f09276521387ac03da7",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1ab9e2e9ab8c.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/06/1d59851bb856f4d4103c082abda4dcd1_6729336271219224082.png",
+      "bytes": 1115,
+      "sha256": "bb37d3a6edeaca246daa2aeafc62d8c650a794fc49490a3c41bb769457a3ecc5",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/eca41240cee2.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/12/ffab6d4d7bb930881463e0e92b163734_8379055080660022342.png",
+      "bytes": 30095,
+      "sha256": "7f5d20a7898e935b800d53c7d18e499e7f99f43d8775162a80d3e2f3e6db5273",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e23cb144988d.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/06/fac33a19bd6f99b67a4d03ea1ad601da_283422069360002333.png",
+      "bytes": 2092,
+      "sha256": "c73567659db2c127f8adfdab530a54a512993674bb7eb3e36319f036785a080f",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/28289bb2dd2d.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/06/a7f8675128d5b53ccd83ed3bab047f56_7964897250748485822.png",
+      "bytes": 2066,
+      "sha256": "f436685968436b285e942e566b997dd0250ad67e8ad4c683d96b81413775378d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/52a75307a459.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/06/69e6ad114247224371d5b0451b78fdff_2432322462258203290.png",
+      "bytes": 1146,
+      "sha256": "978d9f4fc7b87e749705e1a6afbc9f52a2fd2261c48f726a8b521f7e76ae45dd",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/20093fbc4b9f.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/06/f32b87bd3860de02ad9a16b520e5ab9b_6817787712158136382.png",
+      "bytes": 859,
+      "sha256": "7a7ed3ffbba3c78f2a5649af03b1658f480710f3987b61ae092833ab5d3c0d5e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ea748e8b9701.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/05/9afa1db07293fe897ae633464771281c_3334246706554554168.png",
+      "bytes": 996,
+      "sha256": "f1a1be1f07b08341f7dbfd888912d65d376d3d234733f6fad5260733eca9ba32",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d685aff9cdfe.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/05/ddb365feee82d9cdb6d10ccaeb6be014_7593885204719954942.png",
+      "bytes": 876,
+      "sha256": "5f5f764667172d59987dae10fffd5f61051d31db37ab324580f15c4d36eb513b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1feca365d8dc.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-bg.c5ecc5f.png",
+      "bytes": 99840,
+      "sha256": "df33b0565bfbb1e52e6f2c5d9f9c267b892380f53e8b61b4e87bfaf24b460cdc",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a395e6dbb1c0.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-text.b4d7ce4.png",
+      "bytes": 18160,
+      "sha256": "4fa13768953cb8d15bd3758c6cc3e73d8631aaffbfb96789cf62bc12589df43b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/552aafb328b3.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102005/37198ce9c5ee13abb2c49f1bd1c3ca97_7702488080246216541.png",
+      "bytes": 737576,
+      "sha256": "5f336ebd5cbd7788651f7b0d9c8a1571b563f85659e06bd32160c70c379c298a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/841aaf2fd9c1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/mi18n/nap_cn/m03111446031031/upload/213b59a561ef246cc73c8a0649736adc_6056048249904957872.png",
+      "bytes": 27556,
+      "sha256": "1486370eabb02bd4f86b38aa0381ff3cd0f2579bc68445efbdf6e89244acb8b2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f63974c78324.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/04/27/fde5edcc28d0a26087a5ee10adbad529_1429746946814537313.png",
+      "bytes": 6642,
+      "sha256": "3a00fce9605f86b8c1da713abd67ea62aa1d0bc10adcb9e94d685e3741e0bf22",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/db901ebb7505.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-bar.3e3b1a7.png",
+      "bytes": 71721,
+      "sha256": "788bdca55ff9bdf37e0b1f74a294add796b992c12fbeb8c0bb6c9f3e7ef6c13c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5374db89f762.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-black-right.c6c1db1.png",
+      "bytes": 28870,
+      "sha256": "de6166612c06adf8a29809f7a1148b22dab547722c693ab90377957470934f2d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/0980ec96a683.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/page-full-screen-bg.96cb2a8.png",
+      "bytes": 303122,
+      "sha256": "9c92835805ff37259289ba058eb0e56fb1bc151114e71befa22b0cb0e5cecb93",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/786896549e26.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166039/530dbc51d4110698542793a41b7cac48_6681445803694897542.png",
+      "bytes": 6863,
+      "sha256": "fde1c4009655c4619028f206d9785c04f07a0a4c062d332efb2633c62b298361",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6707fbb22286.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166038/a6f7c96c70f1fa5d3abf6ac820a9f192_4944913161567598097.png",
+      "bytes": 6902,
+      "sha256": "0725881a6c7a7d07495b19c3d0226c5fa040117007029715e29395d22bc36aa6",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/9b9f76ce26e6.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165550/2422c21d4ad5b0f7fdeeea7a12cabb58_4338444699118830779.png",
+      "bytes": 6641,
+      "sha256": "2b715d249260b4e77f0c2508fe83efa4aa3db402e6a4d28749cf7b82ef0b3ec6",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/700b51cb7742.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165541/687e285892a9d885c3fe222714d4c584_8807955215049888984.png",
+      "bytes": 6655,
+      "sha256": "75090deefb82fc03d5be9ee1cf947bebb905bd1bdb145b310ad763f2efbb4cb0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4cf723037fba.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164868/57c7faad0c2efc8f4c8499dec35b9c68_4877227288020027174.png",
+      "bytes": 6796,
+      "sha256": "3a3c87655b3a7cf70e28802ceb3510e456248596c8bd01e1c090b3598ee59147",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4a2319db5630.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164847/1631969a57c39c09ff1f9bfc7db909fb_4125037844176832265.png",
+      "bytes": 7066,
+      "sha256": "211d9f68d088d59c75fb0c4d51c182da83c872eab95bd9e5ac45fe2d45021a1a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/95de6eec44bb.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163770/45d619f746cb6914a10c15a6a81bcc31_4363118402382667371.png",
+      "bytes": 6638,
+      "sha256": "118c0860ebe7976ca2decdd0f6e30a07dee9978ca69c7bcd30aec68aa70edfc6",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a641689a40fc.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163769/bdb0f9a62b920ae0bf82ea369a6e293f_4405657454444741760.png",
+      "bytes": 6667,
+      "sha256": "0b93ddc6aeb66acf18993fa9fab112157ca1ad3b3d8761b4675a817eed637caf",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/20683f70f624.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163761/e4905fa4bda2cce5a801353b03608e69_1379205979375094904.png",
+      "bytes": 6421,
+      "sha256": "68543be0ec863bd12c7a591fb286120399f8d22d1579dd27a37c4fdddbe42407",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e225692afdec.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163303/28d23c50c6c4f4cb06575b59d043e5af_6778622691661297456.png",
+      "bytes": 6650,
+      "sha256": "aeb145b08faf324fafcff6c077e3f38b6c8314042cd5455b9f8cdf7aed4a54de",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1130f76e48f5.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163311/2cd11a3b7d505d40065d7dbd40577552_5286621281129792215.png",
+      "bytes": 6240,
+      "sha256": "ec56d54e843c9e743e6fdbb1d688ea22d141fbdbb8bd52b8802c99753a1ecd86",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/03ba8bd8139c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/162663/5e310111c288e79458136872d29e1aba_3834067547087914903.png",
+      "bytes": 6743,
+      "sha256": "bbcbff16fd92dbcabaee08ad05d0b8508204bc677b09e34b3d4dc52b6077ba6c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b1949bf8297f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/162659/b8b867d7725bd51fc67781d2adf10802_587276303716180900.png",
+      "bytes": 6317,
+      "sha256": "ccda766f95c30ce4cd5408831eb42fabcdbb02ec1998e23d1e227c55b71abc85",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/553fbc7ffb54.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/161825/527900f1eccab5b683c40783b0923cb6_7198631506363079911.png",
+      "bytes": 7134,
+      "sha256": "aff176baf790997e8bbe9b265b587d9ea53b9fc830f6937ffcbe9cc9dfc1b33f",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/06ff9870a41c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/161826/1782d10f7e3be156b513dd5c13b8199b_6147766939292805548.png",
+      "bytes": 6277,
+      "sha256": "11fa5c38b4d30a18ed70c3c8f8e4b627592548119992dfb779164346f7436c6b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/92d5f2398a1d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160752/72decac9f08ade9215c5c0b86001748a_2178963111203081947.png",
+      "bytes": 6378,
+      "sha256": "9e5684fd02a5c44428323cb6cd504b1ee2f4a6e43f6a86ddbdf6aa22cd0ed9e8",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/501bf1255fc0.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160754/e00785d194cb0ea13b2483033f0ef14f_4397024505719687728.png",
+      "bytes": 7061,
+      "sha256": "6ffd352b8d5b2fe5afc48c01053ca1cfc50388b3869d1cf99005e40d848ada3b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d064d1faf817.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160148/33f9feb9073b58c87041b87732422459_8252492351475876493.png",
+      "bytes": 7386,
+      "sha256": "d64f372c5ab96f34725b21c3d17bbce7121190ffe10926d861495b900100f269",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3728fc7f65b8.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160147/75bd51f7024230b601a5d3487a3eebce_1244640627175526165.png",
+      "bytes": 6761,
+      "sha256": "74b188a144c392943e89baec2e795081dda0d22dd9d4fd06e7d896a5a50abbf5",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e9e73cc7dace.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158876/18361ff08208de65d06a24a6a954888a_1666023613177354761.png",
+      "bytes": 7574,
+      "sha256": "58aaf204b1473f0f683c82a827810af3c24871af88ab069217c3dd94139a1cd8",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ec05d52b1403.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158864/efef9ce9a894a05b3043dd228c65750c_1216129979887180489.png",
+      "bytes": 7379,
+      "sha256": "3a47389163e2b2fff77a3d296170bcda12ee1333d60c8d2606fb3a73de0a7cfd",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5e4b3c8276cc.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158875/866b2bad3181f9b3ea15e9ff37cdb59c_8742517813140786576.png",
+      "bytes": 6881,
+      "sha256": "cd0c6ae0c8599e5a17ca08069e1ea37e99b62f40f3f34b5e8dc226d475cb6333",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/884434c16d98.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/157719/263d5c5aedf462153051ab05aa7b30ab_1651023803382040456.png",
+      "bytes": 23421,
+      "sha256": "aa97c661b47df69512314bac42e0b191bef8ba58ab729baf71bbabe68c18af94",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6e940e66546f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/157717/b1d603f5c1e38063e1b17b96d09c11dd_4056012267900834626.png",
+      "bytes": 23139,
+      "sha256": "64e58e07fcfe156676f39bf3f70f963cfc0811e2f807318bd3e1de19447c92d9",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6667990cb536.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155981/c6cc916bf74a0900072a2debe48b0fec_6074765590600251675.png",
+      "bytes": 20286,
+      "sha256": "47a88dd29962488315c560b7824dee83cb645300f0ca21a1e9cb501df0220a70",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f6ec4da12571.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155983/360c300b50d822ed3001faa3263df758_6428397574441045752.png",
+      "bytes": 22076,
+      "sha256": "5d867110e47b2cdeb66047af8cd3834285b6a1bda3040da4284325e5e8082c8b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/93f946c812c8.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155411/98e561842efaad1d09da855078331e47_4869399553670916890.png",
+      "bytes": 21260,
+      "sha256": "07ad359c52cc8458566d329d8e48a81d31c45ebd275aeb3c3c3883a7541a7391",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6f24f8531434.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155425/8ec44a4435eab0c7f4437983adac7b20_8191664005311770987.png",
+      "bytes": 23312,
+      "sha256": "b69d0b04354a2088657ea6d57d08c1fb7cd77ce6b6e182899a9adf03a19fa319",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c8eaf1796222.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155445/7b5cc7ae6af2622093578c02811f3acd_5234254309335023177.png",
+      "bytes": 23311,
+      "sha256": "40efe6480124db4da5f531d56b507dec3d6f3bd3af5cb7a902c5d22006dc3bf2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/336e865ee0ca.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/154535/8853bd0f0863e04a49661317269f0e90_6992720314907561071.png",
+      "bytes": 22700,
+      "sha256": "91f48525cf48a0f7ce7e7bacc9d24d5f37d8b156649bdf63729643594bfb49e5",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/03b31fcb2f21.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/154534/3fad331f39f9e51d09afaaf6c9a439e6_6150259876636280243.png",
+      "bytes": 23763,
+      "sha256": "105a23b8ed6a74cc8ce46e58ff7dc1057761cdff936f8a0a8fe56c238f92e01c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/0762f6aefda1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129599/8e94d5712d2c172a1b20f9756076553a_7894338811589796098.png",
+      "bytes": 22005,
+      "sha256": "65b915034117f63ffe9648e4a5ec0d8e93a2885bbbb7cf7d8a4af7f9c72f1d9e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/94b1a02719cb.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129600/820e6dcd91c095d82f1d91341268ab60_3689559570095373388.png",
+      "bytes": 24386,
+      "sha256": "4a3d02b1fece0e015a2a38c86357aa100833469ad611f6b88ad1d2173cda7aae",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/eb86ca60bff1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129598/15de6cc83e600f80b5b5ec04b2e2c030_3445470507031858702.png",
+      "bytes": 23456,
+      "sha256": "b1cf623b2fc0b70c22fbab68ed458e27d2b3fb5cc3281b1d1103208fa9da4fdb",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8d27d2e42796.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/127388/a3979e2ea4b0e8500dcca926ed86b66d_8511246162177920437.png",
+      "bytes": 20216,
+      "sha256": "982befb6b8910230990dff16cd8af477ad214ef353f85f1f796a9b06925ef8a8",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/05a02722d29f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/127386/eec883c4a9d605e0560a33c94b5ad57a_5472093573158944655.png",
+      "bytes": 18247,
+      "sha256": "398bb3ab9da1689cebcb081965729265728e91d6b84e5b1e96deafb0bbc8d31a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/feaadba2dd0d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126690/3abf4d78d4690773832818539dab745c_5235135619896963010.png",
+      "bytes": 24020,
+      "sha256": "17eb85b8166ce4bfd1358642f7dc64dbc98389042ddd9ea536e665092bff5662",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/66d75453e7ed.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126035/e3a83944351e7cffac437d430c647326_53602171373909339.png",
+      "bytes": 21971,
+      "sha256": "294ce18f45c30a603757f0130d3d5385204910738ca273d34fafd145cc0006cb",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5d7e3b7dfbe2.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126033/420a0cedbccc759dafb2419d661ae8ea_8148654615334349950.png",
+      "bytes": 23500,
+      "sha256": "2f9dbb2b558ab0980ef816f64b7a304d94920e6cb1868927697528c71c888c60",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ff00f66e2799.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/125189/fcf4102d972717bf4013d758869f6977_7726299303398592528.png",
+      "bytes": 7824,
+      "sha256": "103b5a6baf06be806e93b4dae9a2afc4018a1cc4c68fb5637fccd2cbe8da0c6b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e7c4eec4ecdf.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/125188/da7598f135499abde7d4a330d5b0c284_2743673942453738940.png",
+      "bytes": 8602,
+      "sha256": "14456b49827ef7e4c31bc347dac7899f15bbab56a5fedd95cd6541fdf4e45967",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/aa1f4529f759.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124678/6dcbd243180b1b3d4d93f15c76af683e_7856106070775273352.png",
+      "bytes": 22174,
+      "sha256": "ec1147d18538f09d2b01a25cbd5006b5a6167265d8b30ba856c6a908d3bd17a6",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/bdb9a108a870.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124648/1e6763ee7ca69649d977de39ecd872d3_2378770078920447109.png",
+      "bytes": 22794,
+      "sha256": "87efb0b0461031dc022311faf1c6f8b63a32ccf2307a7c7393aedf8518e490cf",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a033ff16c93d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124640/8fd4fdcf36fa667319437548a586244e_7954959136544120435.png",
+      "bytes": 23842,
+      "sha256": "17520e026d222ec003c9da962cdb3120cb979fc3eca760f51618ee9e21b4b254",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b710c1832fd8.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124186/de5867b22cbfe83937d9c7667b3a8d10_888201434337465291.png",
+      "bytes": 26824,
+      "sha256": "6529bffb4ec53953f35b6a9748dcb5cf49cc2f8abeb07e93b35f4e6bb369191b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/97bf0cd28ad2.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124268/ea5d8e79bc9632bce861903c8560e242_4657378367235518087.png",
+      "bytes": 23999,
+      "sha256": "bb25d807a45009807cc6461a19e7e8c11c9a641ff38738a3943d7dd0a0a005ea",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2eb94897f5a2.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/122875/8e630c9ce1ad419428b9d5116e7acacc_140126744688744094.png",
+      "bytes": 23999,
+      "sha256": "0eaae5908fac933f24799ce7f901a31d787b42e2e9bc77e318c0b5aa159cd79f",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/30803faef6e8.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113456/31a08fd51ed246d3abe769a0cd4db416_1372095782038267638.png",
+      "bytes": 22216,
+      "sha256": "aba0bd8cc5f7b2b86b18ed6f5578bfdf4a24d7c1c1e7f576716864aded7e879b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/41c487d42fcc.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113455/eaeeb664e42cce8a58d1ae0820d1a64b_2626904048738414325.png",
+      "bytes": 26283,
+      "sha256": "d64e97058dd01891896464f7fb5128c03690173730473b178f74ed7daf6f92a8",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/435374d1aaf3.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113451/feefd6518c9d41ac3e636a02a9636419_1298720152727331629.png",
+      "bytes": 22263,
+      "sha256": "16e6538d5a0e8ebbe8c5bb205844bc751cec833fb245d0d6e84456cdc3c7d1be",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/739400aeba2c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/103307/d2d59188b26ec17eda7df3596cd468bc_4403161735323081090.png",
+      "bytes": 24177,
+      "sha256": "64f229f4aa90f671e1d45cc8d0294637f5c99fb83a3eb447f8d0e70dd5cbf25a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c8051ed2b30a.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/11/02/b95c89df20ca7bf40239090fca8df69b_7448288099020364408.png",
+      "bytes": 19630,
+      "sha256": "08e70ad91e1b1f6b25d98415d539fa15f5460f43a6c328d90489aec897447914",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3b394e514980.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/08/23/9be37f4a398294accce788927a18cb8a_7135475444330709962.png",
+      "bytes": 17737,
+      "sha256": "42004533e758dbf279e8c44811f4dba23584d626afafd3a1098005bac3c5a06f",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1bb805db728f.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/08/30/777248e6e1c5df00d4563a09d1b7a6bc_655187364897343814.png",
+      "bytes": 18257,
+      "sha256": "794fa238ff9ce5dd7939375389f41a15cbc2d8d730e44369ec8c6130d7979138",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ae890d29297d.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/08/16/92240698325f9a43d1cadc7bf9013876_2013918261346662269.png",
+      "bytes": 23775,
+      "sha256": "24febe4c47914fcddb215a0f794bccbe3f589f2d8a2b3e793e91ff4530b993d2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ac2f053e7417.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/07/20/48b6cd15a6ebf15b713a92752706f187_5084950287210384422.png",
+      "bytes": 24782,
+      "sha256": "43a53b96faa6028a64d4a2c1498330ab1756f0a728169a2770b180dddd680562",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/7f31980b362a.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/07/11/d65889606bfc4761f27ffbceac210428_8647681539395766999.png",
+      "bytes": 21376,
+      "sha256": "3401eae69268397ea116f562df1199258c40ba686047584661d8710f6492403d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c24047d75b12.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/06/29/adf53a0bcb7f752d97057d41ea7057ca_2173968277661069600.png",
+      "bytes": 21004,
+      "sha256": "f5da9761d4b2e9d7c0021ee7c177f19ee03666c37ecf186a408f5a07126484b4",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/bd7cd0b859c0.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/06/09/6097731abea2b214a8efc36d02e045e5_4444671332929358443.png",
+      "bytes": 23589,
+      "sha256": "ede4ded1dcfba78e3057a1d681d5d5a325700431e248e9abd1c3cd2c9798f014",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5fec48168eee.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/20/19844abe45504a8a07e5272dee1996ec_49417024557867641.png",
+      "bytes": 22879,
+      "sha256": "77ec4b672c95479cbf967322b5d08f3fc1e89cd86f084a125ad03d47a23921fe",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/384f9f2d6190.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/19/25d5849819f17dd04d1be982e1e23078_3291708584029848528.png",
+      "bytes": 21677,
+      "sha256": "807858313e26d43820a75cc1f3b07b09fe2f06685e128da7dafefbfc3ec8e9ef",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/67038c574080.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/09/7b6d41d4c342c681d0bb108565fcac37_365359464221034230.png",
+      "bytes": 18797,
+      "sha256": "e1a19d634de22ca901b3bed10dbb3039e50199373972bf3994a25828944b0aff",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c057124f26c7.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166039/0fb99c7c0fddc6c9d79ed700fcd80a4a_3446542377181752912.png",
+      "bytes": 476770,
+      "sha256": "beb53dcd5e5a3649e35413876f86238ce19564ba59e98e414bc4628f6078e70d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2e8ff44bc86b.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/162662/41d1af32ce0f9644cde4577e4832160d_7037372567643198838.png",
+      "bytes": 84396,
+      "sha256": "6d6153c269efc7d399e1278e68a031494a43a5203e7d5c650e3e84e6da6c35c0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/db1eb4676fd4.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166038/4bf5f224cdb37010a380d2e93bc98090_3120233783632261663.png",
+      "bytes": 381607,
+      "sha256": "5424ca96cb4038b84bda4597855a99526bd6daecc19351dae64de4a16e5f60a2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ad9eeb8339ed.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160144/3ce38b6bc4f519d52f3515216aa90d01_6448458059163090694.png",
+      "bytes": 90240,
+      "sha256": "fc5cbe48c318d11ca2fb329bdf3245f2c4ec46435e1cd7b81a1438a0e360defa",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/295c797432f6.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165550/e4f58b2e99c695ce841d515125522b79_3017495558881945327.png",
+      "bytes": 347677,
+      "sha256": "e325862ea4e1e81b7df6f799b9a544bfe3efeac59dedfcdb0f2dc896e48a30a4",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/cbe715fd7c68.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165540/f405123d566c560d8dc2c5d9bc3c4702_329946005481329529.png",
+      "bytes": 57825,
+      "sha256": "2ba238e35ebdb32232a4d054dfc8d61228319bb2eeab3228a10a6f558be84060",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e3edae50b8b5.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165541/48b9b7f832a1309400d531b466a930f1_3130953574016463771.png",
+      "bytes": 360506,
+      "sha256": "b857182f288b3ed1b908cd16dcdb31a3a5236904fd11483370d8c145a249e726",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/76e6688aa327.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164868/d39ab376b235297a8003663428e221a4_1328844414092232502.png",
+      "bytes": 297203,
+      "sha256": "db4ac763483c1c2e5eb0416aeba208ac0af59720cb8dc557884fbebd384e5e1b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/273f61069244.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164864/802bfaa04af9929534640e948236341e_659557791111266218.png",
+      "bytes": 91847,
+      "sha256": "b5eb45c1cf86916d44b30cd7b09725abb10d94970990e386ffd26bac09ae4cdd",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/08ce4786a840.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164847/58722549a77e88c1c1a140aebdc45887_628146939979442711.png",
+      "bytes": 519632,
+      "sha256": "c2bf647ab8cac1708f5e4e504389ad6dca8d1ebf1c5e5cc1970466ae3bb0e941",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8e11f0c9530d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164846/0293cdb8d0bbd996190074402d49207c_7966021269120926966.png",
+      "bytes": 106056,
+      "sha256": "224f3bc948fe12f327395c753ad0449b11984cbcf00b86612501b56925234bbc",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/da4ca88fa4e5.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163770/021b182cab019a84305f17c22cef1f43_1209191059516581098.png",
+      "bytes": 395805,
+      "sha256": "8a83b5a95905f5e92acbeeff77e3318ac3a15949e6f093c9d12aa44614b48c70",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d53072d357c3.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163767/9fc4b6a80fa1705ed1d171d1ad8c6c7c_6308672867339793425.png",
+      "bytes": 57234,
+      "sha256": "10d9651964b53a0f4cee35f20e3846d064e03b43bc6251cde2e0981851dcfe28",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e9c57220a025.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163769/81a1ed69aa0f5c922796b394cfbe14f6_4187109950906221987.png",
+      "bytes": 487186,
+      "sha256": "139969f836fcb3de15df8a9f7322e3cc087b55de5af91ce32c48872aca1d1fe2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/516be2f7c99f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163761/ffd8d102dd14599857d971a93116f0a3_8620963032912252782.png",
+      "bytes": 363543,
+      "sha256": "bfac4fdaff11a66bec0b27cfb25942c7820463a6c9e85a8a2dbc6b00b3f884f8",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2bbc2f585f24.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163758/8ba0313dbf5d75d1fa398690b4e747f0_8468819781900905118.png",
+      "bytes": 74047,
+      "sha256": "6fb461475a5e7fdaea349203f4dabeb2614822aed0533c385fbdfffd3e1e21f9",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/db9a27ea69f1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163303/6b788347b8b8df5f8ade26670948d4f1_927850052542582572.png",
+      "bytes": 303026,
+      "sha256": "15284ab1a5ea3257f063f943baeeefd5399b6a8183956fe6b6db45e7e030ce1b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f26bc3215991.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/14/9f3591d864c6c896cbc576b69120137d_3254221047274391699.png",
+      "bytes": 188281,
+      "sha256": "9a2b65202cabf354dd9b12714b7ac5e3b3103021df15e03d2467be26b4681715",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/11ec068a38d3.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163311/2e5bccbbb3750090c44d2f7250bdfd1f_3992712527932497389.png",
+      "bytes": 320047,
+      "sha256": "3d59933caa4e3802577b73babf44327afcb5d9acfffdb52d24dc1d3a44a4f451",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8c6b3b4b57b5.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/162663/d9f56330c5f7d6816fcb39d12538eaa3_5339370129160018679.png",
+      "bytes": 359564,
+      "sha256": "38112548226eee85654d92d2d0a56bb2ec37dbde3ed783cc35c907465ce16653",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5af869559309.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/162659/d3c6e69268a368cb5a95fffb526d1949_6722580277650049303.png",
+      "bytes": 406131,
+      "sha256": "5a2b210103f982a51dfabc27bf01ccecbf11e5233dbd318531918ab646314b90",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3dca28daba9b.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/161823/71e0fa4b11c489fc23512afd99dcd803_9094157812837722862.png",
+      "bytes": 53634,
+      "sha256": "e520aa1dbd93bb13b6e8831d6b42e42a4b3678a71c52df50f633674b258d8ee3",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/550172f4ee8c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/161825/1638cc9d66e2a69dff75423f15e6316c_8451519298098096624.png",
+      "bytes": 517258,
+      "sha256": "52efef7d335bfccb5ac1fb826144d9f63b166dd1c059388a7aae137dea253e4b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8d868879c619.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/161826/b9b035a1078de47cbb193bd74c6d5e0e_1368826831814538977.png",
+      "bytes": 334042,
+      "sha256": "16646c7ec1e06b8ba268a0522e7b74e59b41ad5fa9245463414f8a96f7704f27",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/698fe257ece1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160752/969653ea3e021389846c42b3c4f27ab4_6855945976697123603.png",
+      "bytes": 457828,
+      "sha256": "e73306d781f0374c647b7a7df4113f0ada203f27f2ab87b9aa04cc2ef19ed369",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1d29b1cb3dcf.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155410/270915b297f037a3c88b28279c2a1d5d_754974495370849951.png",
+      "bytes": 515486,
+      "sha256": "47c2251d732113978779eccb7febf40c7d21bd75e42e997da988ee28fed7d2d4",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1fca980a5638.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160754/95e9f42f1bdb9c52d71867aeabf24d50_5158550196748352648.png",
+      "bytes": 341398,
+      "sha256": "9309a6f4d3487e1a42520c6184641cc097fe4239bb15b3eba0eefdebddaa4aaf",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4ce595f1138e.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160148/571c11b813124451065413f16b75122e_2157431896260881852.png",
+      "bytes": 425901,
+      "sha256": "3e076b5513406a4e154d41c96803e06fe860748e60e90ce4af01609e551e5f51",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/78242a542ac7.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160147/b7808860e5bf066a6cb3acf54d6c1bc9_8466808847992282540.png",
+      "bytes": 454473,
+      "sha256": "a34b2c744373861cd98f91768a0a5637366145012781969de3920e84422f7d8b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3b01f467440d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158876/08f75c27c495115214021d3f1490b290_6148685139200233765.png",
+      "bytes": 444660,
+      "sha256": "6b449693f650bbb3c077f23d0277daa9754741a4444c0d96dfdd48260b8c8ffa",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ac97215d024f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155982/cf27da50dabc87416669174768da9169_6749939918160191812.png",
+      "bytes": 336999,
+      "sha256": "2461885839293e65d45e66754007b40f068e1782702d058156eed4db0c49a30e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/fcd2526e80b8.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158864/da2df60f3301effcdb2cce40a1bb8908_4607282289498899812.png",
+      "bytes": 524347,
+      "sha256": "d65577f9e4f466fdb26046c7bddaea380355483ef30824ab47bb6801d4a675d4",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/630c6b9af435.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158875/014903bb6d6083bc8975aa90e20d936a_6461815687505801445.png",
+      "bytes": 332134,
+      "sha256": "dc7d4cea527c6f195ac51a9536e038315c71964ed096c8742971390a9ef745e2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/380ede366a5c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/157719/4753ac41fd39f1bfc4d498d95dd9413f_1272493161853162588.png",
+      "bytes": 392116,
+      "sha256": "451a9a6097d33facf925c4f2fb80ea8846e600d6aa8e12c9b23800682a81ed21",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/eb0a40c25e36.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102200/5cf3c77dd10dbc87adfff8d0204b695b_6190345915024415060.png",
+      "bytes": 63695,
+      "sha256": "b6596f949140444f3580f8525a55f534446183f94a017eaae788f7fe644ca4c1",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/499fac8901fc.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/157717/d516676e8f25ce417d31039bab96b094_5499643579689360025.png",
+      "bytes": 286465,
+      "sha256": "c9318172c02e66ed0678da7f67ad47dcb48b9eb8dacc24036845834a29c39108",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8fdddfeedea4.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155981/89dc2b52ab90b5e3553ba108ffef6ce2_8341057295992283188.png",
+      "bytes": 347059,
+      "sha256": "8bf3469e3fb59aa1d705fdd6b1f3845d9971ffc23ea3835f7f39eb0e62d8fba2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b151bb13743f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155983/d199623f93344770295bb5fe5bdbf59f_1590067043750521175.png",
+      "bytes": 427168,
+      "sha256": "7b98f11ff91e8975032bf03993ce17080ce9aaaf0b1834d195a698760699e1b7",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d39ea3518896.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155411/dbbf26de8101c4e37e36eeaac7eacca8_2394560732779416390.png",
+      "bytes": 1677709,
+      "sha256": "849865c2658dbd16b611c8af23d72622af2806ee35c9c439f5b9e8e2e9d57a32",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/7fabbc3c4a77.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155425/9addb3fb69ed17ec48fed8a65cd7abfa_8616291384884159001.png",
+      "bytes": 1785299,
+      "sha256": "64069bacf74375572558a13a3dc829cd94df2178b617de261942a883fcdff796",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c05743e9ac9e.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155445/72d22b01e56074b0c69b86f952e64a19_1117254457194153961.png",
+      "bytes": 454994,
+      "sha256": "7aebc620b8c59114eb0c20e511c498f814fd9908d600443f4a88828f87cece30",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/41448b0ea215.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/154535/931ae0d821ace45a375a4332bf3e038e_1515618232549166078.png",
+      "bytes": 1775086,
+      "sha256": "4c3dc99c252657db8746c7f6052a14b484af0107670e2c447a6091263562eb86",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/aac672c88b24.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/154533/ebe000d132344f7117673fce19474ac8_511849598041534807.png",
+      "bytes": 442026,
+      "sha256": "3bae74a7ad3caf209c29029dbc54359679f4bb55521d87ab2451a5709c7beca1",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/edbff5dac501.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/154534/f6b7a0a29487f8153da57fe124f048a9_276776528208536302.png",
+      "bytes": 1439940,
+      "sha256": "0bb7e429563baf548de2a02fa7cb484b5b254304a9325ca6523009aaac7fb910",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/163919b49af3.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129599/ab70d69803b35b1bd5cccaa75aff3369_4342889004006919561.png",
+      "bytes": 330298,
+      "sha256": "1a9c15486f424aaeb8c0a4a8aa488e125525854da3bb1986fd28aa70f418955b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2f86ebda6ac5.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129600/edaf4a7434676ec37a3e474d64ea94ca_8004813395254430594.png",
+      "bytes": 1327953,
+      "sha256": "07ca63d323e9948ddac72b8c1ba3e1a2cc89d157fa84551fcc302fb9a7a153b4",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b29097fe4dab.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124272/76dfdd30792027a9a4c9884406523f53_2559970779352990870.png",
+      "bytes": 240403,
+      "sha256": "2357f16fb190bcb138945ae698f5e1515adba882f72aff87418a6ab733084058",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/77f617c27190.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129598/d173d2ea2b2304b6a907ea74022df992_4759543487112007432.png",
+      "bytes": 1284982,
+      "sha256": "e986af900c4bd795e1d08688c67548c51f8f9d8d595c6c11c2ed9ec7f9bf4a14",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/00210c17e090.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124680/e60ebb3da6cd8adc2efb77bb4e3e1435_2911493249340653031.png",
+      "bytes": 456160,
+      "sha256": "6795cc836293e00b9c4f285b51710505ad9c40595e75c08331c8e9d7acff4dec",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a3bbfd8b38d1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/127388/02dec006a297051d8566a4cd01b1b4bd_2321840857522163540.png",
+      "bytes": 335997,
+      "sha256": "870d27e1816f61e1f0f9f63818c7a57cb954a73ac2f375098d64cb48d6b6f973",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/0d1037513d7f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/127359/94da254b54e82d80d2ffb9a4401009e2_8039030397205189676.png",
+      "bytes": 239933,
+      "sha256": "5f38da2b31b2729431bd680b485017bd23f260e75a733d46606f26b79a53b7cb",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f8a2fb19fa1d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/127386/d03a4e46d5e3ae386907b1ef95f5a333_5449748605157615841.png",
+      "bytes": 417541,
+      "sha256": "ba1f7a810efba9c9c972831aafd1b2ff75929b84da67a60bf14c1970ffc6b2f6",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/fcc3688f3f59.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126690/6745b3d4425e0cc3616e6ea7f36a0c4b_2650005640534836356.png",
+      "bytes": 1564601,
+      "sha256": "637d32c690834c8febc99ca1b5359745c9cabca77bce8bbef7784980c26784f0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2ffe7a617dd9.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/103262/9aafc15bb0d7a617ba0c37fb572e862b_5448592690966134766.png",
+      "bytes": 403597,
+      "sha256": "f00057c109fdb17a2fc032033de5368c0e244e2be43e804b8996da82afc4c8f3",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6587505aecee.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126035/4fcbe0b3d97cf0bd90ee5f79181809fc_1545699008016867791.png",
+      "bytes": 1389160,
+      "sha256": "8dc7b875ca928a3f35612555754c3103f7aa109c498e2bbc54fe187903f3d7a6",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ffa19bf13828.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126033/909e27d4a1f840fff6d1856068be06f2_8059498103404164733.png",
+      "bytes": 1742933,
+      "sha256": "daf02f15c38891817272f38643dbd70d8b316e1c39628ecc82187c5f69eb1216",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/bb3ddfb47082.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/125189/1917005b1490693a16de2e6223c986e8_3805444425509939985.png",
+      "bytes": 418662,
+      "sha256": "7cb88952b3992aa2bf69af53f42bb0b46a3e5669010aceaed96af1157f998639",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5926a3a97d94.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/125188/814b42bde05eb41997c32b94705a0a5e_2611912350546358824.png",
+      "bytes": 541203,
+      "sha256": "7f4e5ce01e43b83ba72a7d1bc5e71d9056b638ddce14f1a197e10d91d725961d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/790b9db1f7b3.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124678/e0bf1cb7547cbc89b67226ec9bfc9acd_553574231696496548.png",
+      "bytes": 1577521,
+      "sha256": "f3ad00968bf4327eb90502da1fda6b30ec49950b0047df3a53d42b2874a4a36d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8397a5ceba8f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/122780/9ba182a0025ec69d4fc1a543d8d795cb_7817244322984783945.png",
+      "bytes": 437435,
+      "sha256": "de303687c622b80e4df99037391dd345bdc213f0641f1b31fb47a89606b9601a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/308c84cd426d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124648/14988767fd0916d0063fc0097f656a42_7231698147028403245.png",
+      "bytes": 1816708,
+      "sha256": "ee1e17cf57f73d588b3f39559a7aba9652a2018059762f78687e797ebfd1a6a9",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/28041419b2f9.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124640/394f0f4e60787ba0669ebfe2ae572d98_4215286215230789325.png",
+      "bytes": 1664950,
+      "sha256": "0323727825f62b029e8f51d059013951a786bfdf6d57099c4e26d27bd047c445",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4ce3a958a45f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124186/168da80aafe64cb42bbbd12575208329_7010897639295574159.png",
+      "bytes": 1130712,
+      "sha256": "0378840cc54d2ebb210bf9e2b0761bc4c1bbc9b91dcd6dcb7bc4f38acb3ce9f2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e5408763f16a.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124268/aaecc6959db75ce722d409a16795e5de_5701152236388265281.png",
+      "bytes": 1474192,
+      "sha256": "b84027282b2f4185fcdb856e4c4bfdf2cc7c43d0120dbd6ab9b5ed17f634ff43",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/85f5f87e24a3.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/122875/dc80a0bf1d57d4343c03110f84ae2fcc_7212875961253816924.png",
+      "bytes": 1474192,
+      "sha256": "67e345a030325f78ca517842e4976cb8dc0d1455418731d347cfbd3a820a6ad8",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/82b51964e335.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113456/ac73015ad575dd0093228a46eebd79d9_882160339076120706.png",
+      "bytes": 1559518,
+      "sha256": "24f23ce93c7f3e09ffb2d7a67f93813cac2d628556bcf09d65174183b5f6c782",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/93f5c4427235.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/07/11/1a94de6462dba23318a8b62697720ee4_601705931323124710.png",
+      "bytes": 306333,
+      "sha256": "2232561823ef3e9b7a144ef9a9cc61ebdc54657f5b970a5e21c07d292296b883",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/7c7fd3c5988c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113455/aba218021520e66e0dcfac1114df4a71_6613820379150484450.png",
+      "bytes": 1978879,
+      "sha256": "9a570061dc15f04e807a7b33113e33a1ee78223b4ac5d98b7c5e7e5b3816da01",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/7489d8f76e84.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113451/0e4a2f50886d5d9dfffcc6029adc6b5e_6984290895133478797.png",
+      "bytes": 334678,
+      "sha256": "315dfc14a30660da06cedb2db8f92807c478e541a3a522164473a4e9a2934d1e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/63f3a70d6a70.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2023/03/08/148e92d277d30473b7a53e0af1d8bae6_7472951923593688345.png",
+      "bytes": 187425,
+      "sha256": "066ff1ec9a58527bebb70a6b89e5edb79a5edd58ad7a9fffc6a291fe69b2fc16",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/9b56086c41e6.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/103307/0196c30d294f6e1cfa33e9223bdbd724_673579875613999669.png",
+      "bytes": 556891,
+      "sha256": "3a5f354bc0aa06047bfb0caf0a631da0b94e6eefef330a7c95caec9d0a8e3ac0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e99f79eb85ab.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/103261/b380466a3eaed83c58a907ff4234c8f3_7416784381467135090.png",
+      "bytes": 1428754,
+      "sha256": "7d6614a169faf5abeb2b40d9b678082f9e4c0663837b46578e32793ef1a37522",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/99ad142d9ba5.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/08/23/15b460d611ddea2b83ce16d7ab601af1_7759236297099696876.png",
+      "bytes": 838635,
+      "sha256": "a2919b76ec17c09839ad266b947a8e32f9ae5856586f4346c3b6c394cfc31e72",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/46370985d48e.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/08/30/e7d89bcf7b4bddf3814b69c71c4432b7_590290760522381374.png",
+      "bytes": 611908,
+      "sha256": "02f22ca35c0c09a4bd6e64a9c3df6ee9e9b949785f99a22b77e814aa5ad67c7a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d3fa7feb86c4.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102672/c6586d89e3561e3b30859c14861bd51a_8863562908834130711.png",
+      "bytes": 493705,
+      "sha256": "d11c48caf3690d4431afc58cfa361a4a835d53b43ee5ca5a1c0f961aca73d732",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e9cba6871c1c.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/07/21/be629e986380c894d4104435fda2d348_6752742334694093902.png",
+      "bytes": 1657871,
+      "sha256": "8487121e841dbd352a1dc41a082644a65cb523300afd96a3217780442ebe4476",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6cc5806c0bad.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/07/11/62797155403e116e2e4bf55a90e31506_6231077478078331945.png",
+      "bytes": 1798913,
+      "sha256": "ad734e35da436fb230023b2fc1c10c9177193da31ebe03ee76e0d1961fbd999c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3ef8b4335733.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102371/14e9dbcd1e22c15efee2f6521755c4f0_8086221496131001199.png",
+      "bytes": 326570,
+      "sha256": "40e6bce53846eea74c9c2d74c832f131b1cf8b7c36a4431b760a79ee36e928b2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6f409f538c6d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102276/679983102dba5b485de849c08dc15751_6697097801804941989.png",
+      "bytes": 336481,
+      "sha256": "1d01c7dda91350fda38ca80fbd1da519a59caceafd1375088dcc349d04fdeb96",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/79d1d1b06160.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/20/a54460842077b4ca7ce6f04ce8fcea32_2255897375504950444.png",
+      "bytes": 1703593,
+      "sha256": "31e21e1248a5b97bb9a770899d6e5019dbc5ff361d273cc918c37da6541c8cda",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f2410542c487.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102169/62512dd00e05045759ec3521dddbdef5_8800873235300323298.png",
+      "bytes": 461365,
+      "sha256": "a0e414a72e034dd33c9b2f6fe1527ac2abe1b4e1230bda40100be8b74f52da24",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6fc061872d5e.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102162/eecdce796ddabd20b80ab942dc49b754_6877946544895812021.png",
+      "bytes": 1138775,
+      "sha256": "401cfd2182bf684f5d20ae6f65c7b1f6636486a82994a71b345503859e3d29e2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b80daabf5145.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166656/229731cc3ad07efeed558688cb6de335_4566447043480340555.png",
+      "bytes": 351618,
+      "sha256": "734cdc5265e26c4495b27aa1b03e6f9a71e05c759d480fd2d3399eef70bb4515",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/636cf1a6273a.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166649/2eb2692d3b9089112d4469e7a3777f63_8430064379291431839.png",
+      "bytes": 267020,
+      "sha256": "3be7297da8a8d7537d4e8bd4698ef4c7e2c48a412db258d94b3648058cc08194",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/39fa70e516ea.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166541/176a8f93ba4650d6f66a1e102098c70a_1448282587951589121.png",
+      "bytes": 265019,
+      "sha256": "9571f38514232990b9e09dc98cff094b022796f95475f797b5efd17ea30fff1d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c11fc0ade9c1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166495/889ae94d7390e04731843abffdceb2c7_2201197429796844170.png",
+      "bytes": 125350,
+      "sha256": "77aa3bf1a36278ee84d2a91608f5c55a4d30a087abbce5875678427853023886",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/fd5e48c5e8c3.jpg",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165987/46f0fe9cbf9f2496266581deb8385ae9_2763491884393385888.jpg",
+      "bytes": 237775,
+      "sha256": "4ea6dca05ea264975865dc2eb3dc5578cbf0de6692a6e8d0df260f68a9b89bcf",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4a6e62458766.jpg",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165973/48547d039e9ebbdf875f4310ea1546fd_3053826013813975065.jpg",
+      "bytes": 194812,
+      "sha256": "7a0f1c99a25f279ddaee1fd8dc43b5af33efe4b5764a75ba565847bb0aa049a0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d0d2e01e5318.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165930/8f9ccdcaf3b9ce382ecdd6439014fc63_5596698127833622482.png",
+      "bytes": 225256,
+      "sha256": "65144ffd268b380482fadcdf37aaa6a2850030ead2aab347f2f2b9d2fc630b3d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/23e707e5323b.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165753/972d6f2af45112c9f8739b9839d5e510_3155313637199599333.png",
+      "bytes": 220013,
+      "sha256": "be09674318c9e6524e1d1539ec171777d7b2bad32a227ad81a67a3b6ae754202",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/df21cfaa3cbc.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165727/6ed5fe07764b09c58ea1b8461973f4d1_3620118356373989254.png",
+      "bytes": 128437,
+      "sha256": "098d0ebbe13c33de574c426873ae18c063515e2ba35f1041664d5c61abcb05cb",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/65df6f5b4831.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166656/16fc1fb7ec4b0cac34a921462e5b0867_4713660794455811848.png",
+      "bytes": 129888,
+      "sha256": "734a462f4cc647eed8fec744ecf5a3bff512fbf9ece958be6f5eda9eaeb8d3b6",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3ab719fbe782.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166649/982d93bbfa5fc12522b7d1232a2d1a11_4125976057537208077.png",
+      "bytes": 101986,
+      "sha256": "e426f9ab4d4fadeed2241dd6c14f9bdb3c9ad940e3de6831d303b6f97984cbb8",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6ddfb3a8d8da.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166541/f23f220746c8d7b28e137102058e0bd3_6237361267017642529.png",
+      "bytes": 135784,
+      "sha256": "6bf125a67524309e6bff3494c9f993e0af38602662d5ec228641be3e6bc99f8e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b8a42c8533f9.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166495/d13cfcea8efc17d15d99846cf8013e08_232268126090932531.png",
+      "bytes": 58659,
+      "sha256": "29d74a112748fca7381763e97996df98f608ca3aeca7622deaaeb424a7f25b39",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a2f223e35b7b.jpg",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165987/5eb43a5293ae6eb8e1e768fe5e36e59e_7729092924737494823.jpg",
+      "bytes": 86460,
+      "sha256": "523c1909f85cbefd5336654cf6068474a7a6dc43f052642e5a003e8928fd67eb",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1f6a9f77af08.jpg",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165973/8a160516f924c21101e3f20987b3fdde_4003558066864816010.jpg",
+      "bytes": 85671,
+      "sha256": "f8dd79908bbed9361615dd1e800f4fef6f399c4bfb510ada16bf55ad6ec2e152",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4763607d7074.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165930/5f2bb19276cf3271d5d206a94364c8d1_4802272970344063451.png",
+      "bytes": 103169,
+      "sha256": "c1dc4436ad62e660a9fe32c848eb930de404b1ca4bd7e6081e9dd03a5800bdb5",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8486f57f3890.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165753/759bcd0127dd60838b31b1cef3968157_1825265449210071094.png",
+      "bytes": 96105,
+      "sha256": "937376d62d922a84f0831cb4171947a308ca519632c614459a4b8178dce8ea34",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6be0a5700f5b.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165727/1c34a865764078c705c24f91cb66b678_4065752568074931321.png",
+      "bytes": 58354,
+      "sha256": "b5a3b046113df64d7eb5c33861e791f54424dc44f5993fe02393c62541351e07",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5a78234d0ad1.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-film-bg.bbdc31c.png",
+      "bytes": 48067,
+      "sha256": "c84f2231df3830d15e53678e1f0debf552481b71786b0d560782e2c937ec2aa4",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c97c463b12de.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/news-page-bg.2b65d54.png",
+      "bytes": 11891,
+      "sha256": "aff6ed1826fced6d09c4663b6b571b374243db4e1f144f8d82bad49ea1f9847a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2049fbe4ecda.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166661/c061846dfa239187b1732138913e7372_2778602530345191687.png",
+      "bytes": 84025,
+      "sha256": "ad319703b2a7f25a6b06b98e089da45af07364abd530d530bbe4bc7c179fea4c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d45f6d89e28e.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166660/61397275302f0b32a00e892ebdeae74a_2742699067851153952.png",
+      "bytes": 127959,
+      "sha256": "d814d37a20f703eca6f225e2cc463c08919b66f28ba7b2cb18102de8f1eb9198",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/7d883b5057b2.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166652/59482cfb38c6b9e4adf301cb0dea4d4d_7371442782445059882.png",
+      "bytes": 95311,
+      "sha256": "e5d16aebdc1e08b37fbf180558e8c0f273ad1d1fcddeddb3ea91c832aa8025bb",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/84b72a86b805.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166654/7a20e5a45dfce45ee016a12fe103b017_1343311906569422281.png",
+      "bytes": 94529,
+      "sha256": "c35b363625103fd03ff91f003050d40f6f1ce1535c1cced068e55c93250189f1",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f65a18789532.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166579/054724169b208e43cb2ab856a69aa20a_7432691502878892923.png",
+      "bytes": 95926,
+      "sha256": "a6c3e8587b4078c2e8eeb71a10a44d7219514023ec0b822372ca1d97a64cbf9a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1ad11214bc51.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166583/0ca4c58bc219d776fe0bcafd98d1267c_3651861097617105796.png",
+      "bytes": 92838,
+      "sha256": "eab2fca4f788de1c4413e03ada609802208c65bbd2411869e95a07ee424d657e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/bec8ee6738a7.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102198/7dc8e490e0e15e0656458003241b94ad_8371389282001677330.png",
+      "bytes": 1017235,
+      "sha256": "6d0fb5340df10d3f144aa011862aa223dfe19d2f93286b50d30ea1e6b172e761",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d8388725cad1.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/20/7a001b1888212dcf02dac506218db1a8_6221512774701940076.png",
+      "bytes": 761796,
+      "sha256": "b28b7790fc30a149c06eda9069feb27d4665cb3410b6653e66a1d95459d93725",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/277ceaf3bdc6.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102356/2c922e7a628a0da421c379fd01dadbc7_3613600539715984322.png",
+      "bytes": 799259,
+      "sha256": "015e429566c595ef38a624c094376c1260c4e1a5081db4af806ca349d6533fb7",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c75bcdb7366a.gif",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/static-resource/2022/05/11/6360987773eec96ad06bd5037979034a_7429561287467471877.gif",
+      "bytes": 2081026,
+      "sha256": "3d9e0c40a9a88d6f73a82d3a404e04b45e814ea547f6dd266d960e4fe974e1bd",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/140d2ff39bd8.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102104/7bc55ff86cdd49d516156efd1568fa07_7826478948842356827.png",
+      "bytes": 509326,
+      "sha256": "1d2d3f2d0d52e6c2ebf0c03a61e8ea71414cc162f088bda5a8a489cf950b85cb",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/21cc93e90969.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102100/0ca14fb6ac16cb7601028e2f1a4f99fa_1686184486288045334.png",
+      "bytes": 541902,
+      "sha256": "a18b2cf2d07fdac887d0c5bb68b5f00e8858b32c4bcda72a0b434737a94671e2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/fdafb11a7a14.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/mi18n/plat_cn/m202004281054311/upload/fb9fb8e171957fc3a06322e5f19c772f_6978451248621653135.png",
+      "bytes": 14784,
+      "sha256": "bf59f723db106d292c646a80fca0b85c20ac9a2496858c77454b74cc3be58e47",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8ff3770e78d1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/static-resource-v2/2026/08/20/e54ab16739dacf7ef3ce1c05835ebff8_5415879245535330275.png",
+      "bytes": 21426,
+      "sha256": "c318ef2ff2f00fd844825365d64204aad038551f9ad21ad19b8ff5f82428aa21",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/7d4a46bdb796.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/mi18n/nap_cn/m03111446031031/upload/57fdfe111958715b375dc2ce70c584ee_9202857019387822900.png",
+      "bytes": 34973,
+      "sha256": "27d26c8d7f4ab3137be3fadda2b6113217d1345bbac2f94ead39c601b9f9afe1",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/53c98eba4954.png",
+      "sourceUrl": "https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/jubao_1575020039_5071.png",
+      "bytes": 5771,
+      "sha256": "ac2ebcb2893d5c5f85607481676833ac4aa9c1e131502b14fad93055012fc913",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/25eda5279049.png",
+      "sourceUrl": "https://uploadstatic.mihoyo.com/bh3/upload/officialsites/202005/youhai_1589857356_1416.png",
+      "bytes": 2638,
+      "sha256": "d4c3672690728cfdefa76697e4d24c3cb7ca6d17fb7fd8800a3b3da3a923681a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/7967840ab282.png",
+      "sourceUrl": "https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/culture_1575020039_5478.png",
+      "bytes": 4662,
+      "sha256": "78f0ef1bcbb314b9ef7b7a8f65cdb9a4605200afc335ca5958e0d1f25c4bbb88",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f2897f605ae5.png",
+      "sourceUrl": "https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/e110_1575020039_7486.png",
+      "bytes": 4461,
+      "sha256": "7a5d2a2e5b6b248f12414cf70f8e7673c4bc8e9ddffdaf7d035818dda93f8fac",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/56076ef718f5.png",
+      "sourceUrl": "https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/zhizhao_1575020039_4362.png",
+      "bytes": 5937,
+      "sha256": "819f253231c534feb6547ad712bc58897b7b7cc74783492b85ebe8d37bb9dfc1",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/405b72f6bdb6.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-bg-m.7d30c6d.png",
+      "bytes": 29988,
+      "sha256": "ff0530f79e49d183138b6878043fbcfdb019a43a737fc892199b55e42bfef976",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b43f51d3fd94.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102005/ff3ca6430916baa25ec4a1e3e2d59ba2_3412465597481313268.png",
+      "bytes": 161576,
+      "sha256": "5f017fe89536025065f6b7871f49b43dfcd7ad958ff5372c6d4007535a293bbc",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b9dc02c6e0cf.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-bar-m.b04684a.png",
+      "bytes": 25690,
+      "sha256": "0688c4d0f1fca26cdfa7473f38470d1aafab8dd38ade05af22f09066538134d5",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b7f3765fa22b.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-black-right-m.3d2c3f0.png",
+      "bytes": 67848,
+      "sha256": "83c3a7984a6891e6a12cb88336955a2dbf4d78ff4816ab711d864b339e1ba032",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5a6c24a8c86d.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/page-full-screen-bg-m.4fb2e5a.png",
+      "bytes": 473289,
+      "sha256": "8b6ca33eea7ca96b575522d42f1469d0228f81f3df888d8e696cd4bbb30f4851",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2f376952ad38.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166039/4657bf8158ca31dabe59b481111b1ce9_7320809914078964745.png",
+      "bytes": 86036,
+      "sha256": "a39366d2a3a58ed3861d7c67a9828deed3658fa77aa7d1da14464b81b5c8077b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/351a831ae237.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166038/323ec7b9e43d070a1d7ca7472203d99e_8170086858598492885.png",
+      "bytes": 73712,
+      "sha256": "e1179a98dfc85091c5500cb83019e6c594f26f8d4856a9cb4b6a6c73925f5529",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8c7fc524a3d0.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165550/441bf966bc9f1b9c650b94035c8bf5b9_3550926803171109954.png",
+      "bytes": 56040,
+      "sha256": "5d0c01089d50529babd1640e470af8612e455536ad8a3ce65c7c0a3c886fba33",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2b73d2b77f90.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/165541/47a0aeb8a2a44f56380e97f06cc8238d_1059266344451430344.png",
+      "bytes": 65617,
+      "sha256": "69d71dca9353af6adeb76b00fc21cf73d70046bc9196a5fd7a62484cf5620471",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1628b9211f34.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164868/38bfc3a37247a1f81ed758fd5d9ba89b_9059203545338635843.png",
+      "bytes": 50739,
+      "sha256": "e65d6af94c4a51ed957c64e1bf4f97c83e0c9963b88a95b701bc4ee2a355b720",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/282efa61968c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/164847/ebf3c5eab624c061807526fb22d7910b_6872030707624052587.png",
+      "bytes": 96526,
+      "sha256": "23a272eb59db793aaddb9e61ac592f4ab4d1ba3878a2223553fa7f6c04316b42",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d4cea241c55b.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163770/8927c297b5a2918a3b42bad5b2dbd4fe_7761139593782630494.png",
+      "bytes": 67685,
+      "sha256": "5ff3c5564d630e1dc1ab48df8a24a2d13b75ef0e113cc146b53f77898b723090",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/75ea0b230b61.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163769/2220c3f5c361c0ae998a33543d829321_5962235061382882863.png",
+      "bytes": 98978,
+      "sha256": "a2f6f8c2b9b2746abdd0d01ac329ddd3b7c2d2adea40ffb7b65ce1b076e2d84b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/020fe3bbc2bf.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163761/8f5fd02361eb35c99bccd6d21ea2ad70_8570224297881687197.png",
+      "bytes": 73972,
+      "sha256": "38d889040d9bb7c0da2a4052b53285f354391a7cc45867fbe768ff963ce5379d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/0111f6566352.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163303/47f60fddee205bc7078f9a9e2b0dfad7_2575072604347498769.png",
+      "bytes": 59539,
+      "sha256": "17ce01c80b870617ff46cd0e93d4779d7237839211c9b617dc8270a70a2d4643",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4ae1d49f2eea.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/163311/ac6ccfea15ff3b3fd66e2e2a0d0b831f_8195601923487078858.png",
+      "bytes": 52194,
+      "sha256": "0d82678c29812f7abe8b27b3983d833973721f7f189fe3df7e254e6876c0f84a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c140de5e9351.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/162663/07e73146c1f4432cd6cfca6f0d1453e5_6548379887419428939.png",
+      "bytes": 65215,
+      "sha256": "e4ffc098fc1aebe52ec13c36d2fab22c8508792926de251df9cca6952ccfd9b8",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/dbb041966ab8.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/162659/c17d688e573d9786117b2bcf2b46cc73_5330729138881868453.png",
+      "bytes": 75679,
+      "sha256": "69dca7a1e78dfa25c8520ecbc788ff9a315eb1231c374bae6e1ff20f0fec77e0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/dea0f38d4288.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/161825/752db65c6a6105d2898d6ed44a675d74_6620111898008778989.png",
+      "bytes": 74847,
+      "sha256": "1ef04239d967484b5a55092d8763c82aaef4a4e8714b64a9a6433c5cd89cd5af",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b837ba352a4e.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/161826/dcefb79d757aa575fe878e4f5438d160_1789052901747283979.png",
+      "bytes": 48054,
+      "sha256": "1433fb9b414889c2b1bc4fb066c5aff2b41c8e37b6366be9338546b30c578f50",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/cad372f589d6.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160752/521a0e5885c0d85de7705d018c12fa46_1617043584897483777.png",
+      "bytes": 79441,
+      "sha256": "67deaaf8c7d942dee41953cf1512497a925b40b94d4eb9961f7245a264ab79c2",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/2f821bb624bc.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160754/906bba84985d90ca373395bfceeeccc3_191900894102584797.png",
+      "bytes": 56507,
+      "sha256": "42c40644226f9195c04337e17617c859942f2289931b2d7747d7c5106d245bcb",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/03e18abeb42b.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160148/7eafa4645dbe5f0707ba84fa6a866feb_8447940500231053468.png",
+      "bytes": 72295,
+      "sha256": "47d4b3ae5c450c279011aee672c16a1c5a65cfdacdde89722afb2517944b53ad",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8f20637ed5ee.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/160147/126df89bf56975e2dcaecf30ebc55c18_8379655718731284778.png",
+      "bytes": 76386,
+      "sha256": "512800a0e491cb12cdb94cfcc868960dee51180be606aac9531b6b830f921e71",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/074fd4f8bc7c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158876/3931e8db343bccb53eace280e17e1db1_8734889592165785288.png",
+      "bytes": 69763,
+      "sha256": "3971c72ace2f5400bbe021b2ea295ac91ee9acabdad08bcf2ff6c440bdb03582",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/916b56bbbd6f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158864/27ebfc3aa605602e8bdaf94f5a7fbefa_973430897823540739.png",
+      "bytes": 303522,
+      "sha256": "d49f830cf0c5ffdca650f99edd5e59882bc18bbbe9352904fdecb699150db803",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/544c871eb82a.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/158875/318945a2f624c11664c5992a0f428e45_4996880111386319437.png",
+      "bytes": 53118,
+      "sha256": "0fa77ba2e5a02d23b7088c8548c00c5d208410f47ababe615a60b81e4f40008b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3b717aa07221.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/157719/5019a3736b17c54d3348b128788077c0_1471199181487767227.png",
+      "bytes": 312148,
+      "sha256": "b0b3ed3e5ada6b7a55f5e5bc0a8111d51084020b2a3bef066fe9348655364d7f",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/3072f5d1a900.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/157717/8f70070b6a99e4242ee4b4811c7f508c_3054793507416871607.png",
+      "bytes": 212258,
+      "sha256": "3c61238d370b860d7b82dfaa21b4ec00e00d294cae96a946620534d770bc233b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/09e86c388b24.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155981/a7bdd307833f953b6079a2e931437a7d_6129479079700939885.png",
+      "bytes": 227281,
+      "sha256": "4beb72cf72ff54ed3783a30a3d1e8e7f03983fd95402ce2cd7df3fe89926b6f0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/9ce3af2836af.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155983/3b1f3f04d2effe00111036780e248140_6375210334837714290.png",
+      "bytes": 274821,
+      "sha256": "e9dd1529ce374dbe6d43bf004505116fd426d1c6e1bdf13b512030b14c0846bd",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/463339f4ddb9.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155411/ba2ef6829cdea90da22999319c0cc66b_6214014558424122635.png",
+      "bytes": 266385,
+      "sha256": "387935f80a40e86906abb7cfd85a9768d38007bee8fde1ec87b1661f534dc343",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ccf29f5792e0.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155425/f4073db3fa7f07aec6438f90187d7f49_1146648433303022196.png",
+      "bytes": 333818,
+      "sha256": "fb891d266cd6b7831c5c893306e79eba5f8061696be14a5486bce56879e99c65",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8e7d7ea81975.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/155445/1fce7b0519ac2c7487d503b73b2d5c2d_253535247428716513.png",
+      "bytes": 364232,
+      "sha256": "e96f9e474af243fde0bc9e4e1bebcfd5227cca19afcff6229deb162be25a101f",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/9d0f8e0bc825.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/154535/f9ca8419ebf937a3d850d9ac70b518fd_3301829501279002728.png",
+      "bytes": 319546,
+      "sha256": "1aa2d4791e4d5152017fd9cee086dcfa6fc4215d7eeaaf8075f6aa7604db8043",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/feba0de5ee92.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/154534/f5e5f3c9dbd74d149d06f2ca40db70df_6016164840599620205.png",
+      "bytes": 274002,
+      "sha256": "74eaeff3e7a5b56766712e2866d02a1ee67387dacaabe1bbc4d8f22aad733de9",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4637d8c0a17f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129599/82dd1cdebb2bc068d5d56f4d18e086ff_5304397098173927567.png",
+      "bytes": 232924,
+      "sha256": "a55c3b88a7f75ec77220f04917184eca4053c82e1d82f2db381c13045add38f1",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b15e5b4bfeb3.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129600/cb513cdb35693520dc85335e03ea5392_1025103490102400605.png",
+      "bytes": 228973,
+      "sha256": "3d7ffb3eef565fb39157803159295508f89e24a5cdde1090148ad4ba62f0d81e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/319ef9e69f0f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/129598/ace67bffbeb28ac12fc83a0838d6e117_1733510011446419433.png",
+      "bytes": 192596,
+      "sha256": "66fdbc9eaa4222fb824a3427815738c61ba659d139f2c81721abbb1f3ab89402",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e3d1dbf33e39.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/127388/e9a42d2cdbd01169cb37548f47685538_6315801125847990219.png",
+      "bytes": 243602,
+      "sha256": "fb77f65f578f78662b0648a5321f7c3b77ce45bd574cd7fce735dd02d568db29",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a0aa2e59e321.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/127386/0cb2b418c50a19cd2ca69c864d2646b2_6179982189353147005.png",
+      "bytes": 293728,
+      "sha256": "bb0a5477f5dd75524fcfb8e24ac6ea582bbd160250d7a81ee38b6459c1683d50",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/03eeed850898.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126690/e9d9356f7a7c3aa6d9c67edb70bcad5f_3984061372722809078.png",
+      "bytes": 250613,
+      "sha256": "5c6187987fbb4d0112d7a0c6bf9a3045554e089422b23be779b0f485cf072d96",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/fdfdb54554e6.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126035/77ba0fc2ebbca506a7cb325c2730e684_5849966721076689741.png",
+      "bytes": 268418,
+      "sha256": "5f7e66ab02f9d37cf941728f74f6e94fc7c9294e3ec48f086fe966f774e8148a",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5df459aecfab.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/126033/0bc9e76686dbaf3c10b98531f4ddca6b_4632985438635746148.png",
+      "bytes": 234298,
+      "sha256": "90a6474d66335425ea99745ee6c1412a30dd1104011dc1aaa33fcd6454d565dc",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8c0b53eed262.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/125189/c2fcb835ab5872f84fa5f74358d31f6f_7253578310399811875.png",
+      "bytes": 82177,
+      "sha256": "1b119173102e166656bdb41b44927ea671f33205cc2959d33caa9379de34f8ae",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/322f5c0a11e0.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/125188/14425a742482e33a948d76ea07a5737a_3573823116452334691.png",
+      "bytes": 91010,
+      "sha256": "64bbbd07d7776790e9d7a3b17d9d36a5068fde1f4943c7aebc46b6fbb5032e71",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/03c69b23c691.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124678/b8f0fb306b1bd5f0e07caebfe998e26c_3574352339898904419.png",
+      "bytes": 258483,
+      "sha256": "f6ff64f4801e0d962d034551da9a69b331665eaf2a1bfa0e92de6f0876f8ff4e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a41e65c454da.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124648/b562e3e8dcf4375c438e68128b88a4cf_4144430640797966795.png",
+      "bytes": 304292,
+      "sha256": "0e6b8858e2b6c12871cc44f540a1c14792e4ddf75739999fb9f9e0595ada42aa",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1a422c32ab16.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124640/1f2eeb936b84bea7231bafdad1cafbf6_1770718365993957890.png",
+      "bytes": 275429,
+      "sha256": "1774a929fa32eac2d0393b6ef4d76966f74f49b08dd2a79a31de0121a24ea449",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c54a8dfc7546.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124186/76f8d0f01cdd0a5de8144bcfb7a5a990_483037012054844165.png",
+      "bytes": 189626,
+      "sha256": "66c855fce83e7c7a3e690d82aa9d13f875bcd7a53f2c0f36039c97bda52c4d51",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ec0a66602869.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/124268/93c97973b06ac1aaceb639a9ee9d6fc0_8549097928210426537.png",
+      "bytes": 320868,
+      "sha256": "6d7d740e63c6e42a177f67d15a8b5d9cdd24b30dabaf8749672e7ab37cd0cf44",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/fd7b07a1b5fc.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/122875/3715cfcb5c7e78c30934a0cd5f25adf0_8792167914873347764.png",
+      "bytes": 258830,
+      "sha256": "a244fe78ff75353fe7151bf98d72ce2eadd73a58c7fefcbf399b2ed4467eebee",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/e3861e10e0a4.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113456/5963e952e75150ca0f9bbf1ff5d1c0f7_3367397082449422917.png",
+      "bytes": 246626,
+      "sha256": "7f9ebec535690b30eb288500b0e7115a757300168c85f75613dca8673492e1d5",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/0603254bc5fe.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113455/b617588f1a43dda5be3fe1cb1ed2a59d_588615100495581472.png",
+      "bytes": 316142,
+      "sha256": "d61a1d37757653a4a6d03117218c8511b76c008e544eabdcd414bedcbbb204e0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/33d47f31c266.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/113451/2b96a965c8c8ce631473bf88d6258129_1232581319674070666.png",
+      "bytes": 209545,
+      "sha256": "0ef3b967f8cc3ab238997f5cc25d42b3f748ece0eb4d035018936eb74b745197",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/6ebc713f824d.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/103307/e6d8e040b515ed30cf723ae3a2c6b637_7689306502743289450.png",
+      "bytes": 423941,
+      "sha256": "1c84328648805ae608d3a801d21c96a3907baaa239cadcf518720b901d02bf40",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ce5a0b320be5.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/103261/bdd1fa2c5a4be7e300349ce0e59315f0_4366637190225763936.png",
+      "bytes": 270915,
+      "sha256": "e77430d6f31ed437bcbcc8e876cf1f88acc0ad39d9096764bbf7aad7ac8cdcbf",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/44ea5c78ce7e.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/08/25/eec5d7d3955113f17812e842a6781dc4_7736226561675367649.png",
+      "bytes": 433483,
+      "sha256": "db5909a8763670ad76af94d067cfcde7b3a37267b8660ba67d9c88d5a258e7a0",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/46ec9bafb74a.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/08/30/98ff2f3cc338e1a81dbb091ca40aa54a_7743184424972493647.png",
+      "bytes": 316141,
+      "sha256": "eaa25f6438bca16b7c7f7db840ba34c7778e422f90f31024d75cd40432278b39",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d7642ddb517c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102672/744421259cbf34ec52fe566237995b14_968293872205342758.png",
+      "bytes": 306169,
+      "sha256": "27eb55cd6e18faefb9295d6e252a09b8eb1c726dbe8b00a98d10efe77bf63288",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c3ff1eed297e.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/07/21/1826d4867c84165edba18cfbd84839eb_5236852305352373566.png",
+      "bytes": 244102,
+      "sha256": "f2b75eb9e22b887e1a4dfefa07ffed3b236ea239c58cee29dc0b6699c7e0e773",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/b26e5d42ad19.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/08/25/bfb691bb4c6141dc6ff50ebae0036786_4868417543827193224.png",
+      "bytes": 271747,
+      "sha256": "4cd95865df55105ed02dd5b928beae28098d37dd431cff7177fded51f208f3e5",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c8a90dbd2e58.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102371/aa0bc2c08b85b3b263700e1ec6b1c304_5785392592792471054.png",
+      "bytes": 52802,
+      "sha256": "8dade3f0a3f4c705b411f253fd7194be3d5fcd7f3131bc381f193e6898a367bd",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1d370378b478.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102276/af30ebf8e52bedc4af9b79552d21208b_1384827770347897626.png",
+      "bytes": 228252,
+      "sha256": "2732bf85f14441bdea1c35ef3f58f9205810f56cdcceb91df51f01927440db8b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/90737ae02889.png",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/op-public/2022/05/20/dce99aa71c0cfcfa519f8cf152ae194a_426272975991038410.png",
+      "bytes": 282345,
+      "sha256": "a685f39ab0ac215d6d532a2f3ae0d25e71761f10f2b39ef2c478c011595fc2fe",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/164309b35775.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102169/9d1acec79f0755124cdc057d5729f879_4624058999984789776.png",
+      "bytes": 61499,
+      "sha256": "8982f773333e6c502d69644dc986be4903d5d88fefd564d472dfff1ba9c2a1ed",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/9c6e79f6b957.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102162/f5547a6b694cd2d6ec23501bef3a0869_535060706342938862.png",
+      "bytes": 200275,
+      "sha256": "b559866503ac32922aed03bc17da1252b958ba69f89e41bddcee8a444a7c6c50",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/a75acca82b9f.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-black-short-m.5a311b4.png",
+      "bytes": 324716,
+      "sha256": "559bd06437b712a4a5677862cb0f5bba4309b2e1811a0adf2b6e8602ff07a13c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/15cc30cb128e.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102104/b6df4303b484176f52d0dec2567c5763_1596170055359721333.png",
+      "bytes": 84055,
+      "sha256": "e339bae1ef1cf04d7b2d7e5fcad345e482ac5ca79cd53b4f0b1f1e16a7f52d55",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ea0095968bd7.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102100/d7b2e6dc0a25c667b692098132b8dd96_1211807991190020549.png",
+      "bytes": 91335,
+      "sha256": "ba303f28230bcc913b08ca0d68862850796744ee27c6d9a34e50af6216d4ddc6",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/954a7c985b8f.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102099/49c9ca548d5d661d80bd09aadb82ec84_7352540349972485215.png",
+      "bytes": 99075,
+      "sha256": "5d596ccc5b8875f42cb3258cc47282d9040d69fd15dfd26685b92ff5d296a09e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c29fcafb19d1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102101/6ea482e5796ecc7c76c62cc586e494a8_707914316616125882.png",
+      "bytes": 98948,
+      "sha256": "dff03923961ca396b141da4cd646b1f2a47b7740af6c25bdf8220e8f9b658eee",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/785199501d67.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/inner-foot.ebee1c3.png",
+      "bytes": 14084,
+      "sha256": "14ac81bf826a9933f9741498afc4fae23dc1a05b3246294a08032c71b8a12274",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/f0abc6332be1.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_115427045797695536.png",
+      "bytes": 208385,
+      "sha256": "7ce2f8ddc1bf23d5b255dfacde2afb96f053e0af1dd8e1f35407d6a7f994c03d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/942dbc23dd42.ttf",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/fonts/Impact.2f7e286.TTF",
+      "bytes": 138488,
+      "sha256": "57e95627fd36fe2740e5ee8a91ff1ae74fb216df9580bd23e30d6772814727be",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/9721c1d67dbd.woff2",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/fonts/hongmengti.7e79f4e.woff2",
+      "bytes": 3837152,
+      "sha256": "c9ad32a3b99eaf7b596b54825f1921e15bc91dfc815e7b260ff0eb171951486c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/59c418da94f9.woff",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/fonts/hongmengti.4285934.woff",
+      "bytes": 4513864,
+      "sha256": "d68b18eb48a45ed4296fe129a2721be8837a8cfe4048e07fe0313c20b593545c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/7720875938d1.woff2",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/fonts/hongmengti_light.a935fd0.woff2",
+      "bytes": 2890824,
+      "sha256": "11cbda53c45b0d7b908601970c7f5843a7d4c89c92d07a82a51b9153fa7724a9",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/58ad4025d73e.woff",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/fonts/hongmengti_light.ac888b8.woff",
+      "bytes": 3709596,
+      "sha256": "3c3a9dd58f3ffee83c82ecdc999e862f0a8a9cc9a1205b3fac3c778c29354eac",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/8033511fffbc.woff",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/fonts/Mont-Heavy.88bdd4a.woff",
+      "bytes": 10800,
+      "sha256": "3b90525e0f6939374067d2efd6e96f5c1cfdc86e777eb8c696e845c4e9a0ccf3",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/41b26fd93414.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/age-modal.7af2ac4.png",
+      "bytes": 60195,
+      "sha256": "f61b3b157974aa425940983d6b423945c04bc46ea553eeb6ed860f892ef6d8e9",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1367a2555c30.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/age-modal-m.6d1acf6.png",
+      "bytes": 34526,
+      "sha256": "e17da33984ea55ff460ca6531e16419acb9dd5e341f894cdebd0f2b62699d5ef",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ccddeead1810.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/inner-title.3d621d1.png",
+      "bytes": 24203,
+      "sha256": "e8030b342b905c49ae614e733e998ee3939006e94432d9cd769658a754810709",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/9f3a2c3ac723.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/bg-nav.daea1f6.png",
+      "bytes": 16278,
+      "sha256": "1b6a7fe0d3b696d1243bec785be086aef921981dadc2038416de40a416e6c0c3",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/1b8c53faf03e.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/chara-panel-bg.86c2c99.png",
+      "bytes": 12117,
+      "sha256": "4c764c25b63a598c5cbf593eaf2586b8956af419169a06304fedeca2aac10b0c",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/c23e27a8f7e6.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/chara-panel.20d68d6.png",
+      "bytes": 17887,
+      "sha256": "55cc11a056700602ac6388e65bad5ad138bd767c420a56629e535f8022b64e90",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/5e7a3946f03b.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/panel.66cafff.png",
+      "bytes": 41724,
+      "sha256": "45f14c72c88d04421eef6e6c7c5250c4c3f8295381d32c05bf5e7800103035da",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4b9a82720684.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/bar.9dcf6df.png",
+      "bytes": 12442,
+      "sha256": "9df84a77ab0b916af99e7e1a830e3631f40ec28994a47623259a0eb57f8adeb9",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/862590df3619.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/concept-nav.7bc3606.png",
+      "bytes": 11932,
+      "sha256": "807f3a4e32fb828e7db8a0c2e53831c4700119c493c6d8ffbfd40868a50e29be",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d37a1dd86f6e.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/concept-icon.02e8c67.png",
+      "bytes": 12442,
+      "sha256": "f6eb5ce801e696ba1656749bdc53d140d89ea3b2735528f3188546424994dd06",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/091928c8c55f.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/concept-tv.8242ab6.png",
+      "bytes": 13344,
+      "sha256": "50da5a15c6e5e15f9d75964aa1a03d4ed5057b586f97db62bcb82749e2c0c47d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/205995ca8e0a.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-video-bg.4f4b8d0.png",
+      "bytes": 17430,
+      "sha256": "66ae4989ca13ffb8082d5170757046e05687c7fb454e723e466e4b3682d28547",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/d90c8d9d4afc.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/fill-film-bar.0db1011.png",
+      "bytes": 40328,
+      "sha256": "ebec68a16b00a460d531cdb88d9c51e0b3e0fbfe1b91e9a733f4eb496503af4b",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/ed6e107f022b.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/inner-top.224793e.png",
+      "bytes": 93166,
+      "sha256": "f316a0c40c159f3b2b02edc3c4ea4b4b268cb8918ade7fb3bae51e2b6d01c6f3",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/9a9e73bcb11f.png",
+      "sourceUrl": "https://zzz.mihoyo.com/_nuxt/img/concept-nav-m.4af3094.png",
+      "bytes": 11164,
+      "sha256": "a459c39a978b3e88434b1524a9ed594df7cb38e7defc2d68f1db463d19bd3b1d",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/bgm.mp3",
+      "sourceUrl": "https://webstatic.mihoyo.com/upload/static-resource/2022/04/19/aeefeb96a2a294cf1d7ab7324fd9a492_9102035117345458586.mp3",
+      "bytes": 3510912,
+      "sha256": "a7a144088e45aa354b85a5133b949d82cdbda83aab2df6d8e95bd8e4de8a8e06",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/cfc0070f735c.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102099/a5d353ee8b41c8fdd5027dd9640c9c48_8422308003420318124.png",
+      "bytes": 591574,
+      "sha256": "bf3ddbfed50588656b5f0c3b3e2e2c24b31895e4e09df94cc04ac42bfcb7355e",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    },
+    {
+      "file": "assets/4662d1040b39.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/content-v2/nap/102101/6041e75e34197fc0f5c9546e6d5bafa9_1448305097617697538.png",
+      "bytes": 586959,
+      "sha256": "d561531d92793c2bf6e1f6252b5bf291d7ca454473582b7b882a0a1d0d9a1c84",
+      "usage": "官方首页样式、角色、媒体封面、图形、字体或背景音乐；具体位置按文件引用",
+      "transformation": "原始字节；仅本地文件名改变"
+    }
+  ]
+}

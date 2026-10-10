@@ -58,6 +58,14 @@
       "evidence": "adapted",
       "referenceUrl": "https://ak.hypergryph.com/",
       "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "zenless-zone-zero",
+      "locator": "entries/zenless-zone-zero.json#interaction/0",
+      "observation": "选择角色缩略图，同时切换62人中的立绘、阴影、阵营、中文名与英文背景；桌面角色图以500ms位移/透明度进入，阴影300ms，姓名与阵营延迟交接。",
+      "evidence": "observed",
+      "referenceUrl": "https://zzz.mihoyo.com/main",
+      "capturedAt": "2026-10-11"
     }
   ],
   "sourceFiles": [
@@ -80,6 +88,16 @@
     "entries/genshin-world.json",
     "research/arknights-world.md",
     "research/blue-archive.md",
-    "research/genshin-world.md"
+    "research/genshin-world.md",
+    "entries/zenless-zone-zero.json",
+    "research/zenless-zone-zero.md",
+    "demos/zenless-zone-zero/app.js",
+    "demos/zenless-zone-zero/data.js",
+    "demos/zenless-zone-zero/fidelity.md",
+    "demos/zenless-zone-zero/index.html",
+    "demos/zenless-zone-zero/mobile.html",
+    "demos/zenless-zone-zero/reference-mobile.css",
+    "demos/zenless-zone-zero/reference.css",
+    "demos/zenless-zone-zero/state.css"
   ]
 }

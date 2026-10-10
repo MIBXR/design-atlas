@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "8b7a6d974ade1be342ada108830d651875db7d7577b567fb5d890c426de84ed6",
-  "entryCount": 34,
+  "contentVersion": "5a0190b6e28e1ae9bab1e273eb36580fd0a5b9d2b1889f11af4a337520ab5fde",
+  "entryCount": 36,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
     {
@@ -2554,14 +2554,171 @@
         "demo": "demos/rhine-lab/index.html",
         "entry": "entries/rhine-lab.json"
       },
-      "bundleSha256": "0b2644577a429aca240d17ca744c1e8ee61103916f1d3db4c6986daf5dfa5357"
+      "bundleSha256": "0008882a66c5ffb950cc92dc5edd970c4d9788b8cd6fcc1694b176b6d7f03792"
+    },
+    {
+      "id": "zenless-zone-zero",
+      "title": "绝区零 · 六章街头拼贴首页",
+      "category": "游戏/IP",
+      "tags": [
+        "绝区零",
+        "完整首页",
+        "街头拼贴",
+        "斜切",
+        "角色舞台",
+        "缩略图分页",
+        "BGM",
+        "中国"
+      ],
+      "summary": "原画、斜切胶片和荧光黄章节标记串起六章首页；62名角色、9部影像、6条新闻、3张设定与4组游戏特色保留各自的浏览方式。",
+      "useCases": [
+        "具有强角色身份的游戏首页",
+        "多章品牌与媒体展示",
+        "大量人物的局部浏览窗口"
+      ],
+      "avoid": [
+        "删减完整首页章节或角色名单",
+        "让头像翻页意外切换人物",
+        "将动态换态替换为整页视频截图"
+      ],
+      "country": "中国",
+      "implementation": "reference-study",
+      "capturedAt": "2026-10-11",
+      "tokens": {
+        "palette": [
+          "#efefef",
+          "#111111",
+          "#dfff00",
+          "#767678",
+          "#464646"
+        ],
+        "type": "官方Impact数字与英文、鸿蒙体常规/细体、MontHeavy及图标字形；桌面根字号width/25.6，手机width/7.5。来源艺术字号按原构图保存。",
+        "layout": "六章自然滚动；斜面交错、右侧编号轨道、人物立绘跨越面板边界、新闻/影像/设定使用各自尺寸窗口；手机保留独立移动布局。",
+        "motion": "章节650ms立方缓出；角色500/300ms分层换态；三种轮播默认300ms；新闻摘要20s线性循环；加载精灵500ms/30帧。"
+      },
+      "composition": {
+        "color": "灰白连续页面、黑色结构板与荧光黄定位标记承担层级，彩色角色与摄影作为主体。",
+        "typography": "Impact英文和大编号提供章节尺度，鸿蒙体用于中文名、菜单与内容，图像中的品牌字标保留原素材。",
+        "layout": "六章沿自然滚动连接，左右交错的章节索引与斜面构成节奏；固定右轨提供位置感。",
+        "imagery": "官方桌面/手机主视觉、62人分层角色图、9个影像封面、6个新闻封面、3个设定和4个特色画面。",
+        "shape": "胶片齿孔、斜切面板、斜向人物窗口、粗描边胶囊和边缘编号轨道。",
+        "hierarchy": "主视觉先传递游戏身份；人物和影像建立兴趣，新闻与设定提供深读入口，特色收束卖点。",
+        "motion": "角色分层换态、独立头像窗口、影像选择、新闻横移、特色淡化与跨章视差各有职责。",
+        "coherence": "轮廓、字体和荧光色跨六章重复，内容密度与主图尺寸随模块职责变化，手机保留同一视觉语言。"
+      },
+      "interaction": [
+        "选择角色缩略图，同时切换62人中的立绘、阴影、阵营、中文名与英文背景；桌面角色图以500ms位移/透明度进入，阴影300ms，姓名与阵营延迟交接。",
+        "角色箭头每次移动三张缩略图，保持当前人物不变；点击缩略图才选择角色。影像箭头则同步改变当前视频、标题、日期和缩略图位置，9部影像不循环越界。",
+        "右侧01–06及上下箭头以650ms Power2.easeOut滚动到章节顶部，编号同步当前位置；背景、巨字和斜面按不同幅度视差移动，章节标题与面板分层进入。",
+        "新闻6张横向轮播并同步标题、日期与滚动摘要；设定3张循环横移；特色4张交叉淡化并更换标题和说明。手机支持水平手势，独立内容打开官方详情。",
+        "背景音乐由用户主动启用；点击影像静音BGM、打开原始官方视频播放器，关闭后按先前声音意图恢复。媒体失败显示可重试的官方入口；不把封面或静图称作视频播放。",
+        "手机滚动超过三分之一视口显示菜单按钮；菜单支持关闭、Escape和焦点返回，底部下载栏在滚动100px后收起，可手动展开；下载与云游戏使用官网公开配置的实际入口。",
+        "进入首页时显示官方邦布30帧精灵加载动画；主视觉图和字体就绪后退出。适龄提示、关注面板、二维码、分享链接与回到顶部均有对应操作。"
+      ],
+      "themeBehavior": {
+        "mode": "fixed",
+        "default": "light",
+        "control": "固定品牌主题，无全局切换。",
+        "designReason": "保留灰白空间、黑色斜面与荧光黄目录的关系。"
+      },
+      "soundBehavior": {
+        "kind": "background",
+        "control": "顶栏主动启用BGM；影片打开静音、关闭按用户意图恢复；后台暂停。",
+        "interactionRole": "原BGM提供游戏氛围，影片保留原音轨；未发现足够证据支持额外角色/按钮短音，不添加虚构音效。"
+      },
+      "paths": {
+        "bundle": "agent/cases/zenless-zone-zero.json",
+        "preview": "previews/zenless-zone-zero.jpg",
+        "demo": "demos/zenless-zone-zero/index.html",
+        "entry": "entries/zenless-zone-zero.json"
+      },
+      "bundleSha256": "19997dce5e314e8aa6134ae421ab4448fa4d904526c6c7c9d0f751293be62c2f"
+    },
+    {
+      "id": "deepseek-harness",
+      "title": "DeepSeek Harness · 可观察的产品演示",
+      "category": "产品",
+      "tags": [
+        "DeepSeek",
+        "Harness",
+        "完整产品页",
+        "流体着色器",
+        "插件",
+        "执行轨迹",
+        "代码动效",
+        "中国"
+      ],
+      "summary": "深色流体主视觉衬托真实DOM工作台；插件、文件、自动化和执行轨迹四组代码动画，把产品能力拆成可观察的过程与结果。",
+      "useCases": [
+        "开发者工具落地页",
+        "需要解释多阶段能力的智能体产品",
+        "以过程和成果说明功能的产品演示"
+      ],
+      "avoid": [
+        "以一张截图代替演示全部状态",
+        "把产品预设动画称作模型真实执行",
+        "把页面依赖引入整个参考库主站"
+      ],
+      "country": "中国",
+      "implementation": "reference-study",
+      "capturedAt": "2026-10-11",
+      "tokens": {
+        "palette": [
+          "#0a0a0a",
+          "#ffffff",
+          "#204a7e",
+          "#cec8bb",
+          "#82b7fc"
+        ],
+        "type": "DM Sans正文、Montserrat拉丁标题、Fragment Mono代码；中文系统回退。H2手机28/42px、桌面36/54px，H3 20/30px；拟真UI内部7–9px保留来源尺度。",
+        "layout": "内容最大1140px，超宽1280px；Hero工作台612px高，手机504px并隐藏侧栏。能力区1024px以上两列，下方单列，卡片40px内边距、32px间距。",
+        "motion": "Hero标题900ms，说明延迟150ms、预览400ms；四卡22/17.5/11/15秒，循环与暂停独立；顶栏spring180/28；页尾三维层30fps、DPR上限1.5。"
+      },
+      "composition": {
+        "color": "黑底与透明白表面形成深度，蓝灰流体和页尾蓝光将重心限定在产品舞台。",
+        "typography": "自然语言标题与等宽代码形成职责对比；两种语言保留相同内容层级和原生换行。",
+        "layout": "Hero主张和工作台→四卡能力→两种开发入口→生态和版权；1024px下改为单列。",
+        "imagery": "绝大部分产品画面为可检查的DOM，不是视频；WebP仅用于指定回退，SVG图标与字体保持原资产。",
+        "shape": "磨砂胶囊导航、低对比细边框卡片、真实工具窗口、输入框与微小控件。",
+        "hierarchy": "主张先建立用途，演示解释怎么做，命令和生态链接提供真实下一步。",
+        "motion": "流体承担氛围，四张卡各自解释一个过程，页尾散点聚合完成品牌收束，暂停状态独立。",
+        "coherence": "同一产品UI语言贯穿预览、插件、文件、任务和轨迹；低装饰表面让过程本身成为视觉焦点。"
+      },
+      "interaction": [
+        "Hero使用官方WebGL2流体着色器，蓝灰五色场、暖色光核与低强度光晕持续演化；30fps、DPR上限1.5、离屏暂停。输入流场是1×1中性纹理，没有指针搅动逻辑。",
+        "插件演示22秒：对话输入、10条工具步骤、过程折叠、番茄钟放大，再缩至右上角；插件管理器滚过7个官方插件并高亮已安装项，挂件贯穿场景交接。",
+        "成果演示17.5秒：Word、Excel、HTML、TypeScript、Python、PDF、Markdown七类文件向上轮换；每格保持1.3秒、移动1.2秒，固定代码差异层显示+2−1。",
+        "工作流演示每11秒切换周报、销售汇总和项目测试三种故事；输入JSON先出现，替换为计划结果，再收起执行过程并留下任务卡。使用固定2026-09-01演示时间，不创建真实任务。",
+        "轨迹演示15秒：工具栏、三条泳道和37段时序先后进入，两轮日志上移，最后展开bash调用详情，在结果与计时之间交接，显示NAVIGATION_OK和34毫秒。",
+        "四组演示分别在进入视口后播放，手动暂停优先于重入；离屏或后台暂停。减少动态使用原版插件/轨迹静态回退和文件/工作流的可读状态。",
+        "页尾196个Three.js立方体随滚动从球面散布聚合为像素标志；独立2D网格以90px间隔绘制断开线段和3.6px方点，手机隐藏三维层。",
+        "滚动超过80px，顶栏收缩为磨砂胶囊；中英切换、桌面下载菜单、手机全屏导航、命令复制反馈及公众号二维码均保留原组件。"
+      ],
+      "themeBehavior": {
+        "mode": "fixed",
+        "default": "dark",
+        "control": "固定深色，没有额外系统主题按钮。",
+        "designReason": "维持官网流体、透明窗口与代码演示的层次。"
+      },
+      "soundBehavior": {
+        "kind": "none",
+        "control": "原页面无audio/video和声音开关；本地不添加配乐。",
+        "interactionRole": "动效和状态文本承担反馈，演示静音。"
+      },
+      "paths": {
+        "bundle": "agent/cases/deepseek-harness.json",
+        "preview": "previews/deepseek-harness.jpg",
+        "demo": "demos/deepseek-harness/index.html",
+        "entry": "entries/deepseek-harness.json"
+      },
+      "bundleSha256": "c1de4430c5f93c3ee9b776958b8def30fbe4b75a9573d0be92ab6b8647783d31"
     }
   ],
   "patterns": {
     "path": "agent/patterns.json",
-    "sha256": "5b3ce8eed60a9ebc7ac11a6176b9714651a8cc78d156e5fd9dbef91454741032",
-    "bytes": 515244,
-    "patternCount": 129,
-    "contentVersion": "aac70a32438f1cd0f177a9b881839e77fd67ec01acf9f446b8e24c39272cd665"
+    "sha256": "fc3ee3fd469deb94629deb1da32af3b1fb3a2ced96c9ea83f1252ba44f348432",
+    "bytes": 549307,
+    "patternCount": 135,
+    "contentVersion": "1efd4d6100399e00f7aedaaa5fcca7de6b1aecc3b63509d6f4ac75e073f3692c"
   }
 }
