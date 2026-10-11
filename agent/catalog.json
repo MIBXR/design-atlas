@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "e3cd34dc6764786e61b8f7c1114565a22bbb7c3007f85cf17f41392cefc57760",
+  "contentVersion": "384df7dc4a8fb7c9e74d2801dc927f7991fad9c01e908362acf5dff2a1710ae3",
   "entryCount": 36,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
@@ -2711,14 +2711,14 @@
         "demo": "demos/deepseek-harness/index.html",
         "entry": "entries/deepseek-harness.json"
       },
-      "bundleSha256": "84652774b734505bdf9a8ddd56e5c311336adba5dd1cf69ff7e0d150c0e219f6"
+      "bundleSha256": "2fe645937cc464ed7d3bd71c542fb81d85d548ad981fb4cf06d7d73f72ffe6d3"
     }
   ],
   "patterns": {
     "path": "agent/patterns.json",
-    "sha256": "3f76cb7b393a1bd3ec23745ce7a2daca596d9c5a3735c3483f81b1991d50b9c3",
+    "sha256": "3d2efad3c6c4a7c2942344bc646e577f5b36bbe65294f0214b7c924bf4d72ea5",
     "bytes": 549307,
     "patternCount": 135,
-    "contentVersion": "b069d1ea480e5dab49797abcb3ba2625a54a704c3c2c531a32740241165b1bab"
+    "contentVersion": "c0dca4cf39e222d6cdaceb94d9920f9a0f347032b097374b92c37eea7b8f4607"
   }
 }
