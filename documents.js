@@ -20,11 +20,6 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "项目指南"
   },
   {
-    "path": "research/fidelity-audit-2026-10-09.md",
-    "title": "2026-10-09新增批次：复刻精度与验收流程审计",
-    "group": "研究方法与索引"
-  },
-  {
     "path": "research/CASE-INDEX.md",
     "title": "案例与代码索引",
     "group": "研究方法与索引"
