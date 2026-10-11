@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "b069d1ea480e5dab49797abcb3ba2625a54a704c3c2c531a32740241165b1bab",
+  "contentVersion": "c0dca4cf39e222d6cdaceb94d9920f9a0f347032b097374b92c37eea7b8f4607",
   "patternCount": 135,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -2136,7 +2136,7 @@
       "paths": {
         "bundle": "agent/patterns/execution-trace-drilldown.json"
       },
-      "bundleSha256": "e17805c85de8c5d8fd438d01eb7b521b8685a8738ea70fa4ffe00f5b4fb6ccef"
+      "bundleSha256": "b9ee71a8218108e43e0e86cc1f0019d022157b9e4022db276070431e8d83f945"
     },
     {
       "id": "explicit-facet-summary",
@@ -6203,7 +6203,7 @@
       "paths": {
         "bundle": "agent/patterns/persistent-created-widget.json"
       },
-      "bundleSha256": "1f99c95071bdc121c97d83d32d2eff4ba89b8f071a7a1de4e059426490c1710e"
+      "bundleSha256": "3393a55a1944d2f0bde32b241a6ad615341fc28d1afa9400219dfd016a6c48ed"
     },
     {
       "id": "photo-crossfade-cycle",
@@ -6630,7 +6630,7 @@
       "paths": {
         "bundle": "agent/patterns/procedural-fluid-spotlight.json"
       },
-      "bundleSha256": "30b63cf1128ee4689da5ad83ff883940af1e0a49966203c8b9708c0940bdd561"
+      "bundleSha256": "99bf59ba41b14c46963d58570aa0fba2ff23383f71e95b7b03928882b060c24c"
     },
     {
       "id": "process-to-result-collapse",
@@ -6722,7 +6722,7 @@
       "paths": {
         "bundle": "agent/patterns/process-to-result-collapse.json"
       },
-      "bundleSha256": "e017126f18c2ab1cb8d0587a4dc85d0581d8c519c2fd0260e20d44c3d7ace81e"
+      "bundleSha256": "bef476277f70096fb703c1c7ee9b6ebbd4191d7c05706700de7e529b2410e6f7"
     },
     {
       "id": "product-entrance-film",
@@ -7397,7 +7397,7 @@
       "paths": {
         "bundle": "agent/patterns/scroll-gathered-pixel-mark.json"
       },
-      "bundleSha256": "5c59c64eb0b6d3a2c1e4ae58cae83d2ef4146ff15bfbaddf7b602bfc769dbfef"
+      "bundleSha256": "28862e2e353f30ae6e7291f4c57d1be28cdfb53890801905798c96addb7aea1e"
     },
     {
       "id": "scroll-logo-contraction",
@@ -9379,7 +9379,7 @@
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
       },
-      "bundleSha256": "9d01760c2bef5fe40b441f08bcc97938b225d1d5b2ae4549f3e592228a43b4f5"
+      "bundleSha256": "2ea36a865da49e7e28ddfdc58fe4e731e26e8471b2268da7fd41ec9807287757"
     },
     {
       "id": "visit-facts-grid",
