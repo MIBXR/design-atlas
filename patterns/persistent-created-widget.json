@@ -1,0 +1,88 @@
+{
+  "id": "persistent-created-widget",
+  "title": "已创建挂件跨场景保留",
+  "category": "内容组织",
+  "experienceTypes": [
+    "page-motion",
+    "structure"
+  ],
+  "summary": "生成的结果继续参与下一段演示。",
+  "mechanism": "创建过程结束后将结果挂件先放大展示，再缩到固定角落；后台界面切换到管理列表时挂件持续存在，最后通过已安装项确认结果归属。",
+  "trigger": "创建过程完成并转入管理场景",
+  "effect": "用户看到生成、可用与被管理的是同一个对象。",
+  "useCases": [
+    "插件创建演示",
+    "生成组件或工具安装介绍"
+  ],
+  "avoid": [
+    "切场后成果消失导致身份断裂",
+    "把固定动画伪装成真实安装"
+  ],
+  "constraints": [
+    "挂件状态不能在场景交接时重置；放大与紧凑形态共享同一内容。",
+    "手机保留挂件与管理器的对应关系，同时避免遮住列表的主要信息。"
+  ],
+  "composition": {
+    "role": "accent",
+    "notes": "负责成果身份连续性，前序可搭配过程折叠，运行控制交给独立暂停生命周期。",
+    "pairsWellWith": [
+      "process-to-result-collapse",
+      "viewport-animation-lifecycle"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "暂停按钮可键盘操作；图解内部不伪造可编辑输入或可点击安装。",
+    "reducedMotion": "呈现挂件与管理器已安装项的稳定终态，并给出过程说明。"
+  },
+  "parameters": [
+    {
+      "name": "完整周期",
+      "value": "22秒",
+      "note": "官网CSS。"
+    },
+    {
+      "name": "挂件交接",
+      "value": "8.69–9.24秒展开，11.66秒紧凑",
+      "note": "官网关键帧，管理器在11.44–12.1秒进入。"
+    }
+  ],
+  "sources": [
+    {
+      "caseId": "deepseek-harness",
+      "locator": "entries/deepseek-harness.json#interaction/1",
+      "observation": "插件演示22秒：对话输入、10条工具步骤、过程折叠、番茄钟放大，再缩至右上角；插件管理器滚过7个官方插件并高亮已安装项，挂件贯穿场景交接。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.deepseek.com/harness/",
+      "capturedAt": "2026-10-11"
+    }
+  ],
+  "sourceFiles": [
+    "entries/deepseek-harness.json",
+    "research/deepseek-harness.md",
+    "demos/deepseek-harness/app.js",
+    "demos/deepseek-harness/fidelity.md",
+    "demos/deepseek-harness/index.html",
+    "demos/deepseek-harness/messages.js",
+    "demos/deepseek-harness/reference.css",
+    "demos/deepseek-harness/runtime.js",
+    "demos/deepseek-harness/state.css",
+    "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+    "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+    "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+    "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+    "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+    "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+    "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+    "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+    "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+    "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+    "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+    "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+    "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+    "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+    "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+    "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+  ],
+  "prompt": "为【目标页面/组件】实现「已创建挂件跨场景保留」。创建过程结束后将结果挂件先放大展示，再缩到固定角落；后台界面切换到管理列表时挂件持续存在，最后通过已安装项确认结果归属。 触发：创建过程完成并转入管理场景。结果：用户看到生成、可用与被管理的是同一个对象。 挂件状态不能在场景交接时重置；放大与紧凑形态共享同一内容。 手机保留挂件与管理器的对应关系，同时避免遮住列表的主要信息。 负责成果身份连续性，前序可搭配过程折叠，运行控制交给独立暂停生命周期。 键盘：暂停按钮可键盘操作；图解内部不伪造可编辑输入或可点击安装。 减少动态：呈现挂件与管理器已安装项的稳定终态，并给出过程说明。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
+}

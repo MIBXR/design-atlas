@@ -1,0 +1,336 @@
+{
+  "source": "https://www.deepseek.com/harness/",
+  "capturedAt": "2026-10-11",
+  "rights": "营销页面代码、品牌、图像与字体分别归 DeepSeek 及各权利人；deepseek-harness 产品仓库 MIT 不自动授权营销网站或品牌。本目录仅作有来源的设计研究，重用需自行确认许可。",
+  "scope": "官方公开页面所需依赖在 vendor 下保持原字节；本地 runtime 仅注册模块，不执行 Next 路由入口。reference.css 的字体及图片 URL 本地化。",
+  "assets": [
+    {
+      "file": "assets/harness/icons/file-types/word.svg",
+      "sourceUrl": "https://www.deepseek.com/harness/icons/file-types/word.svg",
+      "bytes": 1517,
+      "sha256": "1a083627487b74922f95c4fc4dae054d73510834e0ab2f72289d2dedf5808503",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/harness/icons/file-types/excel.svg",
+      "sourceUrl": "https://www.deepseek.com/harness/icons/file-types/excel.svg",
+      "bytes": 1851,
+      "sha256": "2f3f144010d254b1545ed821759a7c807606a64efca8bd90b18776bcbf15b1ff",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/harness/icons/file-types/html.svg",
+      "sourceUrl": "https://www.deepseek.com/harness/icons/file-types/html.svg",
+      "bytes": 2777,
+      "sha256": "72f25759a044b1aea488a054e204691e0cc70721c1e56c20559de61a87379a9a",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/harness/icons/file-types/typescript.svg",
+      "sourceUrl": "https://www.deepseek.com/harness/icons/file-types/typescript.svg",
+      "bytes": 1372,
+      "sha256": "f1102e986864f0edb50c0b2addcbc3e8dadee7db1fbd208bf45dc51e2ea7de65",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/harness/icons/file-types/python.svg",
+      "sourceUrl": "https://www.deepseek.com/harness/icons/file-types/python.svg",
+      "bytes": 2478,
+      "sha256": "473b1f8f8812cb063c7db2f5d7359302e922c4b5f6b7e7e5d68bda69c3475c1f",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/harness/icons/file-types/pdf.svg",
+      "sourceUrl": "https://www.deepseek.com/harness/icons/file-types/pdf.svg",
+      "bytes": 2638,
+      "sha256": "b0ab99cc812ef34d8eaa77c06b6832cc0e1f0246088b78875423b438d10f16a4",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/harness/icons/file-types/markdown.svg",
+      "sourceUrl": "https://www.deepseek.com/harness/icons/file-types/markdown.svg",
+      "bytes": 2125,
+      "sha256": "0c6126931a57540050771620a440aba5ccc4d26e4511530ad3a24f123897637f",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/_next/static/css/25f198211a7e1205.css",
+      "sourceUrl": "https://www.deepseek.com/_next/static/css/25f198211a7e1205.css",
+      "bytes": 81022,
+      "sha256": "e6103fa2edd3ed877666ed3433b926fa6621be0c11e4168adf1851728d0498c1",
+      "transformation": "原始字节",
+      "usage": "stylesheet"
+    },
+    {
+      "file": "assets/harness/images/qr-wechat.png",
+      "sourceUrl": "https://www.deepseek.com/harness/images/qr-wechat.png",
+      "bytes": 14947,
+      "sha256": "10cc748b634b0d9ab65cf625ddd42dbef4f403b9be2e08e8f04581fa9f9fd924",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/_next/static/css/826310b8bcf73c16.css",
+      "sourceUrl": "https://www.deepseek.com/_next/static/css/826310b8bcf73c16.css",
+      "bytes": 27980,
+      "sha256": "861be216b7e8af62761ccf464e5b8ede7e910cda090a67c4a89a941c35854b74",
+      "transformation": "原始字节",
+      "usage": "stylesheet"
+    },
+    {
+      "file": "assets/_next/static/css/5adb47a13a2794be.css",
+      "sourceUrl": "https://www.deepseek.com/_next/static/css/5adb47a13a2794be.css",
+      "bytes": 70954,
+      "sha256": "ac26a538f44f950dfd00dbe0f07be8f2a1680d10b93513040e0a2462178864ca",
+      "transformation": "原始字节",
+      "usage": "stylesheet"
+    },
+    {
+      "file": "assets/_next/static/css/aa0e993381ed79dc.css",
+      "sourceUrl": "https://www.deepseek.com/_next/static/css/aa0e993381ed79dc.css",
+      "bytes": 1140,
+      "sha256": "28588cc57490f8c1f54187e0304642f0755ef85fd7426fab395f698ea058e6b2",
+      "transformation": "原始字节",
+      "usage": "stylesheet"
+    },
+    {
+      "file": "assets/fonts/dm-sans-500.woff2",
+      "sourceUrl": "https://www.deepseek.com/fonts/dm-sans-500.woff2",
+      "bytes": 14304,
+      "sha256": "19bf1984956517c35c2bd35b6cdedac12a21d6fcd3596c614ecdfb88b648909d",
+      "transformation": "原始字节",
+      "usage": "font"
+    },
+    {
+      "file": "assets/fonts/dm-sans-400.woff2",
+      "sourceUrl": "https://www.deepseek.com/fonts/dm-sans-400.woff2",
+      "bytes": 14200,
+      "sha256": "4ab51eb2cd7305d177187908d6397474d4520663f6c6e572feb0a64f4fa80006",
+      "transformation": "原始字节",
+      "usage": "font"
+    },
+    {
+      "file": "assets/fonts/montserrat-500.woff2",
+      "sourceUrl": "https://www.deepseek.com/fonts/montserrat-500.woff2",
+      "bytes": 18748,
+      "sha256": "2b53300fb9471520df2f4905847fb7a209879b2029ae893c05c6ee346b1320cd",
+      "transformation": "原始字节",
+      "usage": "font"
+    },
+    {
+      "file": "assets/fonts/montserrat.woff2",
+      "sourceUrl": "https://www.deepseek.com/fonts/montserrat.woff2",
+      "bytes": 18780,
+      "sha256": "e66bcd2761ab6924b25ce70dafe10e57a39193c4fea1516730bd9cb5240af6c8",
+      "transformation": "原始字节",
+      "usage": "font"
+    },
+    {
+      "file": "assets/harness/fonts/fragment-mono-latin.woff2",
+      "sourceUrl": "https://www.deepseek.com/harness/fonts/fragment-mono-latin.woff2",
+      "bytes": 15176,
+      "sha256": "4f4dc27f4a770c0d02fde800daa836c8adc0d1e423b28da74baaf0d1cc3ab96c",
+      "transformation": "原始字节",
+      "usage": "font"
+    },
+    {
+      "file": "assets/harness/images/feat-plugins-zh.webp",
+      "sourceUrl": "https://www.deepseek.com/harness/images/feat-plugins-zh.webp",
+      "bytes": 73284,
+      "sha256": "f8fa9e6a600c287062b62a4fe3fe67c3b65a7cfee2862427723134bf1a3875a6",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/harness/images/feat-trace-zh.webp",
+      "sourceUrl": "https://www.deepseek.com/harness/images/feat-trace-zh.webp",
+      "bytes": 215432,
+      "sha256": "8a8b3d9fcbe1e535c567b59bd2c4dc0e50167e0fc02a803951a881f5b34975b5",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/harness/favicon.svg",
+      "sourceUrl": "https://www.deepseek.com/harness/favicon.svg",
+      "bytes": 3864,
+      "sha256": "d19b62d73c8db53d5a241dfb4adbc7cad259557e5da8da6587a86d7dd4b06382",
+      "transformation": "原始字节",
+      "usage": "image"
+    },
+    {
+      "file": "assets/fonts/dm-sans-700.woff2",
+      "sourceUrl": "https://www.deepseek.com/fonts/dm-sans-700.woff2",
+      "bytes": 14348,
+      "sha256": "35c5efa0e5daa52ee5c6500f5be354bf751fb65c4e49e1d6806c6eb5883e8fe9",
+      "transformation": "原始字节",
+      "usage": "font"
+    },
+    {
+      "file": "vendor/1798-4c32a4b3e02e20fe.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/1798-4c32a4b3e02e20fe.js",
+      "bytes": 44028,
+      "sha256": "52526153e49eb35f904cd614a1dfe1585cdbfaad91c19dfce8f2354947add939",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/7386dc53.5bf20d414744188e.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/7386dc53.5bf20d414744188e.js",
+      "bytes": 685386,
+      "sha256": "19e84ed3c67895b0ae4dabb09d52e25d89865208b46a38a682ea76e5acfb7b3b",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/7591-a9eaac0cc94f9f3e.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/7591-a9eaac0cc94f9f3e.js",
+      "bytes": 122834,
+      "sha256": "c0cd38c9a6e86e77bbe37b413fec8cbb697308a3938591f11e3fd3137c177a65",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/1835-f521304a15b83224.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/1835-f521304a15b83224.js",
+      "bytes": 7740,
+      "sha256": "9d65ca420300112acf26929ae764b2615592b8223420f3bb172e5d418f9b2cd8",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/3743-7c4be9ad33829b7f.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/3743-7c4be9ad33829b7f.js",
+      "bytes": 132768,
+      "sha256": "f2e83bdc66fd02d5172af4508dbe9a31eb8958674232ccb2000c62b6f19483a3",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/app/%5Blocale%5D/harness/page-82b977ba6da9187f.js",
+      "bytes": 119789,
+      "sha256": "c921c4ea59dff520a1862246c170ce2336cecaf0a60c400fe6bcd0dd72ead40c",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/5565.779b207d687b6031.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/5565.779b207d687b6031.js",
+      "bytes": 7978,
+      "sha256": "d09b1e3dc16552bd9e982fe9ab29886b8dc0a585bf6ea895c99c2a8e35e559e6",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/1563-d3f244478cac7e75.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/1563-d3f244478cac7e75.js",
+      "bytes": 18068,
+      "sha256": "eb66d386c7c2b8b3de78f318951fe81ae298b5479f5f6bbdd86cb7b6eef1a95b",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/app/%5Blocale%5D/template-4dc2bb6be23dc661.js",
+      "bytes": 5057,
+      "sha256": "6eaca21779e60b3cfc43f9a6f0d1ba8c0138eabf110eb410403fccdeb34afd1b",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/9164-9f2478a2648a9516.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/9164-9f2478a2648a9516.js",
+      "bytes": 110330,
+      "sha256": "82e68029386d7120f089b6db672363e6ae37dcce81fe91c70ea57ff58986a0ca",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/8091.573531f4257c3cd0.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/8091.573531f4257c3cd0.js",
+      "bytes": 131068,
+      "sha256": "cc57d4c1634339493b851ade4d38885ed83e879fd23bce42dc8c3b055f198158",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/6872-122f878b6e348922.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/6872-122f878b6e348922.js",
+      "bytes": 144581,
+      "sha256": "9b90cd9f5e423d886410378367820198557d9d5af082ae81877da306f3ce3671",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/8809-44db951c56e60f28.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/8809-44db951c56e60f28.js",
+      "bytes": 12373,
+      "sha256": "391a14b90d038481bcf67b3e0741ba6cda348d15d26f2575e92514cff85249cc",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/6336-e0040a1eb23dd92b.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/6336-e0040a1eb23dd92b.js",
+      "bytes": 24676,
+      "sha256": "302a4dd841b8412afae2c9fa42fc4d7f80a84f857be5b49a2bcc31e133696229",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/8555-7c9518c428e988c2.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/8555-7c9518c428e988c2.js",
+      "bytes": 35916,
+      "sha256": "559a41a2bb154c55ec1d5a225b02db62b8e51a6d0bcb3df58383597b7a929b40",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "vendor/86b88eeb-5b86058878847f6a.js",
+      "sourceUrl": "https://www.deepseek.com/_next/static/chunks/86b88eeb-5b86058878847f6a.js",
+      "bytes": 171906,
+      "sha256": "b07c8e05ab1102f4980e72efadefceec5f0775dbf1e8d161338b4509c649fe02",
+      "transformation": "原始字节",
+      "usage": "script"
+    },
+    {
+      "file": "assets/deepseek-harness-LICENSE",
+      "sourceUrl": "https://raw.githubusercontent.com/deepseek-ai/deepseek-harness/master/LICENSE",
+      "bytes": 1065,
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
+      "transformation": "原始字节",
+      "usage": "license"
+    },
+    {
+      "file": "assets/BRAND_GUIDELINES.zh.md",
+      "sourceUrl": "https://raw.githubusercontent.com/deepseek-ai/deepseek-harness/master/BRAND_GUIDELINES.zh.md",
+      "bytes": 1609,
+      "sha256": "da32025bf0f7e36cf8ef0ff6c875f043c4acd94150b348af9689441a17950bce",
+      "transformation": "原始字节",
+      "usage": "license"
+    },
+    {
+      "file": "assets/harness/images/feat-plugins-en.webp",
+      "sourceUrl": "https://www.deepseek.com/harness/images/feat-plugins-en.webp",
+      "bytes": 87434,
+      "sha256": "bd8b4f698246a548e07f982294849364c9f87cced83d46f4dd0d6d9783b5e24e",
+      "transformation": "原始字节",
+      "usage": "英文减少动态效果回退图"
+    },
+    {
+      "file": "assets/harness/images/feat-trace-en.webp",
+      "sourceUrl": "https://www.deepseek.com/harness/images/feat-trace-en.webp",
+      "bytes": 326206,
+      "sha256": "dae69a9bef22b4734d4e10817fb1af7fa6c2d44c91a86e10f0f3642bcc573276",
+      "transformation": "原始字节",
+      "usage": "英文减少动态效果回退图"
+    }
+  ]
+}

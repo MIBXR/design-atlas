@@ -7,7 +7,7 @@
 从真实网站学习设计，让配色、排版、图像、形状和动效共同工作；从完整案例理解整体，把独立巧思组合成自己的设计。
 
 <!-- atlas-counts:start -->
-**34 个案例**　·　**26 个品牌／文化研究**　·　**8 种经典设计语言**
+**36 个案例**　·　**28 个品牌／文化研究**　·　**8 种经典设计语言**
 <!-- atlas-counts:end -->
 
 [打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [案例库](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [巧思库](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/document.html) · [完整索引](research/CASE-INDEX.md)
@@ -87,9 +87,9 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 ## 案例画廊
 
-图片进入对应在线案例，文字链接可直接阅读 Prompt、研究与代码。品牌页面是注明范围的局部学习还原，官方影像条目明确标记网页转译，经典语言是有真实参考与理论依据的构成练习。
+图片进入对应在线案例，文字链接可直接阅读 Prompt、研究与代码。品牌页面按各自注明范围归档复现，官方影像条目明确标记网页转译，经典语言是有真实参考与理论依据的构成练习。
 
-### 产品与平台 · 8
+### 产品与平台 · 9
 
 从产品卖点到可观察的工作结果，版式与交互各自承担说明任务。
 
@@ -107,11 +107,11 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 <tr>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/qoder-platform"><img src="previews/qoder-platform.jpg" alt="Qoder — 绿色工作台与多形态平台 实际代码预览" width="100%"></a><br><strong>Qoder — 绿色工作台与多形态平台</strong><br><sub>无衬线巨字、产品内嵌预览、400ms横向平台切换。</sub><br><br><a href="prompts/qoder-platform.md">Prompt</a> · <a href="research/qoder-platform.md">研究</a> · <a href="demos/qoder-platform">代码</a> · <a href="previews/mobile/qoder-platform.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/google-material"><img src="previews/google-material.jpg" alt="Google Material：表现力与组件秩序 实际代码预览" width="100%"></a><br><strong>Google Material：表现力与组件秩序</strong><br><sub>系统与手动主题、300ms目录、9秒组件视频与圆角反馈。</sub><br><br><a href="prompts/google-material.md">Prompt</a> · <a href="research/google-material.md">研究</a> · <a href="demos/google-material">代码</a> · <a href="previews/mobile/google-material.jpg">手机预览</a></td>
-<td></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/deepseek-harness"><img src="previews/deepseek-harness.jpg" alt="DeepSeek Harness · 可观察的产品演示 实际代码预览" width="100%"></a><br><strong>DeepSeek Harness · 可观察的产品演示</strong><br><sub>完整双语产品页、四组代码动效、流体与三维聚合页尾。</sub><br><br><a href="prompts/deepseek-harness.md">Prompt</a> · <a href="research/deepseek-harness.md">研究</a> · <a href="demos/deepseek-harness">代码</a> · <a href="previews/mobile/deepseek-harness.jpg">手机预览</a></td>
 </tr>
 </table>
 
-### 游戏与 IP · 9
+### 游戏与 IP · 10
 
 角色、世界、音乐与切换节奏共同塑造品牌体验。
 
@@ -130,6 +130,11 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/monument-valley-game"><img src="previews/monument-valley-game.jpg" alt="纪念碑谷：电影首入、奖项进入与中心画廊 实际代码预览" width="100%"></a><br><strong>纪念碑谷：电影首入、奖项进入与中心画廊</strong><br><sub>一秒加载、奖项双向进出、手机展开与十四图居中循环。</sub><br><br><a href="prompts/monument-valley-game.md">Prompt</a> · <a href="research/monument-valley-game.md">研究</a> · <a href="demos/monument-valley-game">代码</a> · <a href="previews/mobile/monument-valley-game.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/endfield-industrial"><img src="previews/endfield-industrial.jpg" alt="终末地 · 白底工业档案 实际代码预览" width="100%"></a><br><strong>终末地 · 白底工业档案</strong><br><sub>八章官网研究：真实透明视频、点云射线与分层切换。</sub><br><br><a href="prompts/endfield-industrial.md">Prompt</a> · <a href="research/endfield-industrial.md">研究</a> · <a href="demos/endfield-industrial">代码</a> · <a href="previews/mobile/endfield-industrial.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/rhine-lab"><img src="previews/rhine-lab.jpg" alt="莱茵生命 · 官方影像的网页转译 实际代码预览" width="100%"></a><br><strong>莱茵生命 · 官方影像的网页转译</strong><br><sub>官方影像网页转译：米白透明档案、科室缩写与橙色信号。</sub><br><br><a href="prompts/rhine-lab.md">Prompt</a> · <a href="research/rhine-lab.md">研究</a> · <a href="demos/rhine-lab">代码</a> · <a href="previews/mobile/rhine-lab.jpg">手机预览</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/zenless-zone-zero"><img src="previews/zenless-zone-zero.jpg" alt="绝区零 · 六章街头拼贴首页 实际代码预览" width="100%"></a><br><strong>绝区零 · 六章街头拼贴首页</strong><br><sub>六章完整首页、62人角色舞台、9部影像与独立头像窗口。</sub><br><br><a href="prompts/zenless-zone-zero.md">Prompt</a> · <a href="research/zenless-zone-zero.md">研究</a> · <a href="demos/zenless-zone-zero">代码</a> · <a href="previews/mobile/zenless-zone-zero.jpg">手机预览</a></td>
+<td></td>
+<td></td>
 </tr>
 </table>
 

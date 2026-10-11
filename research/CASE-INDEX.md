@@ -1,6 +1,6 @@
 # 案例与代码索引
 
-由 entries/ 自动生成，共 34 项。真实网站案例按原始网址与采集日期固定归档，不跟随官网后续变化。国家/地区按具体机构、创作来源收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。
+由 entries/ 自动生成，共 36 项。真实网站案例按原始网址与采集日期固定归档，不跟随官网后续变化。国家/地区按具体机构、创作来源收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。
 
 | 顺序 | 案例 | 分类 | 国家/地区 | 类型 | 采集日期 | 可查询资料 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -38,3 +38,5 @@
 | 32 | [苏州博物馆 · 四屏门户与图像目的地](../cases.html#style/suzhou-museum) | 艺术/文化 | 中国 | 原站局部复现 | 2026-10-09 | [原始案例](https://www.szmuseum.com/Home/Index) · [研究](suzhou-museum.md) · [Prompt数据](../entries/suzhou-museum.json) · [Demo](../demos/suzhou-museum/index.html) |
 | 33 | [终末地 · 完整工业科幻门户](../cases.html#style/endfield-industrial) | 游戏/IP | 中国 | 原站局部复现 | 2026-10-09 | [原始案例](https://endfield.hypergryph.com/) · [研究](endfield-industrial.md) · [Prompt数据](../entries/endfield-industrial.json) · [Demo](../demos/endfield-industrial/index.html) |
 | 34 | [莱茵生命 · 影像终端的网页转译](../cases.html#style/rhine-lab) | 游戏/IP | 中国 | 官方影像网页转译 | 2026-10-09 | [原始案例](https://www.bilibili.com/video/BV1rr4y1b7sz/) · [研究](rhine-lab.md) · [Prompt数据](../entries/rhine-lab.json) · [Demo](../demos/rhine-lab/index.html) |
+| 35 | [绝区零 · 六章街头拼贴首页](../cases.html#style/zenless-zone-zero) | 游戏/IP | 中国 | 原站局部复现 | 2026-10-11 | [原始案例](https://zzz.mihoyo.com/main) · [研究](zenless-zone-zero.md) · [Prompt数据](../entries/zenless-zone-zero.json) · [Demo](../demos/zenless-zone-zero/index.html) |
+| 36 | [DeepSeek Harness · 可观察的产品演示](../cases.html#style/deepseek-harness) | 产品 | 中国 | 原站局部复现 | 2026-10-11 | [原始案例](https://www.deepseek.com/harness/) · [研究](deepseek-harness.md) · [Prompt数据](../entries/deepseek-harness.json) · [Demo](../demos/deepseek-harness/index.html) |

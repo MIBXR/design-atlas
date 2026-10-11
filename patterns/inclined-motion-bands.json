@@ -49,6 +49,14 @@
       "evidence": "observed",
       "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
       "capturedAt": "2026-10-07"
+    },
+    {
+      "caseId": "zenless-zone-zero",
+      "locator": "entries/zenless-zone-zero.json#composition/shape",
+      "observation": "胶片齿孔、斜切面板、斜向人物窗口、粗描边胶囊和边缘编号轨道。",
+      "evidence": "observed",
+      "referenceUrl": "https://zzz.mihoyo.com/main",
+      "capturedAt": "2026-10-11"
     }
   ],
   "sourceFiles": [
@@ -63,6 +71,16 @@
     "entries/persona-kinetic.json",
     "entries/uma-musume.json",
     "research/persona-kinetic.md",
-    "research/uma-musume.md"
+    "research/uma-musume.md",
+    "entries/zenless-zone-zero.json",
+    "research/zenless-zone-zero.md",
+    "demos/zenless-zone-zero/app.js",
+    "demos/zenless-zone-zero/data.js",
+    "demos/zenless-zone-zero/fidelity.md",
+    "demos/zenless-zone-zero/index.html",
+    "demos/zenless-zone-zero/mobile.html",
+    "demos/zenless-zone-zero/reference-mobile.css",
+    "demos/zenless-zone-zero/reference.css",
+    "demos/zenless-zone-zero/state.css"
   ]
 }

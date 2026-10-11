@@ -1,0 +1,88 @@
+{
+  "id": "execution-trace-drilldown",
+  "title": "时间线泳道定位调用详情",
+  "category": "内容组织",
+  "experienceTypes": [
+    "structure",
+    "page-motion"
+  ],
+  "summary": "把全程概览、日志与单次调用连起来。",
+  "mechanism": "输入、模型、工具分别占用时间线泳道；日志沿同一执行顺序展开，选定调用在侧栏显示结果和计时，使宏观节奏与局部证据互相定位。",
+  "trigger": "查看执行轨迹并深入单次工具调用",
+  "effect": "用户从整段过程走到具体结果与耗时，不丢失调用所在轮次。",
+  "useCases": [
+    "开发者诊断工具",
+    "智能体执行过程介绍"
+  ],
+  "avoid": [
+    "把装饰色条当作实际时序",
+    "把固定演示日志说成本机执行结果"
+  ],
+  "constraints": [
+    "泳道时长、轮次和侧栏调用必须对应同一数据。",
+    "源页面自动演示切到详情与计时，本巧思的实际产品点击迁移属于adapted建议。"
+  ],
+  "composition": {
+    "role": "accent",
+    "notes": "负责多尺度执行信息关联，可与过程折叠配合；保持时间线为概览，不在每个span里重复全文日志。",
+    "pairsWellWith": [
+      "process-to-result-collapse",
+      "viewport-animation-lifecycle"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "演示提供暂停和文字描述；实际交互迁移时每次调用需可键盘选中，关闭详情回到原调用。",
+    "reducedMotion": "保留时间线、日志和选中详情的稳定图解。"
+  },
+  "parameters": [
+    {
+      "name": "泳道 / span",
+      "value": "3 / 37",
+      "note": "官方DOM数据；不是随机时间条。"
+    },
+    {
+      "name": "侧栏进入",
+      "value": "11.55–12.45秒 / 15秒周期",
+      "note": "先展示结果，再显示计时。"
+    }
+  ],
+  "sources": [
+    {
+      "caseId": "deepseek-harness",
+      "locator": "entries/deepseek-harness.json#interaction/4",
+      "observation": "轨迹演示15秒：工具栏、三条泳道和37段时序先后进入，两轮日志上移，最后展开bash调用详情，在结果与计时之间交接，显示NAVIGATION_OK和34毫秒。",
+      "evidence": "observed",
+      "referenceUrl": "https://www.deepseek.com/harness/",
+      "capturedAt": "2026-10-11"
+    }
+  ],
+  "sourceFiles": [
+    "entries/deepseek-harness.json",
+    "research/deepseek-harness.md",
+    "demos/deepseek-harness/app.js",
+    "demos/deepseek-harness/fidelity.md",
+    "demos/deepseek-harness/index.html",
+    "demos/deepseek-harness/messages.js",
+    "demos/deepseek-harness/reference.css",
+    "demos/deepseek-harness/runtime.js",
+    "demos/deepseek-harness/state.css",
+    "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
+    "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
+    "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
+    "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
+    "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
+    "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
+    "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
+    "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
+    "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
+    "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
+    "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
+    "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
+    "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
+    "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
+    "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
+    "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+  ],
+  "prompt": "为【目标页面/组件】实现「时间线泳道定位调用详情」。输入、模型、工具分别占用时间线泳道；日志沿同一执行顺序展开，选定调用在侧栏显示结果和计时，使宏观节奏与局部证据互相定位。 触发：查看执行轨迹并深入单次工具调用。结果：用户从整段过程走到具体结果与耗时，不丢失调用所在轮次。 泳道时长、轮次和侧栏调用必须对应同一数据。 源页面自动演示切到详情与计时，本巧思的实际产品点击迁移属于adapted建议。 负责多尺度执行信息关联，可与过程折叠配合；保持时间线为概览，不在每个span里重复全文日志。 键盘：演示提供暂停和文字描述；实际交互迁移时每次调用需可键盘选中，关闭详情回到原调用。 减少动态：保留时间线、日志和选中详情的稳定图解。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
+}

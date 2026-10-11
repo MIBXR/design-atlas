@@ -52,6 +52,14 @@
         "evidence": "observed",
         "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "zenless-zone-zero",
+        "locator": "entries/zenless-zone-zero.json#composition/shape",
+        "observation": "胶片齿孔、斜切面板、斜向人物窗口、粗描边胶囊和边缘编号轨道。",
+        "evidence": "observed",
+        "referenceUrl": "https://zzz.mihoyo.com/main",
+        "capturedAt": "2026-10-11"
       }
     ],
     "sourceFiles": [
@@ -66,7 +74,17 @@
       "entries/persona-kinetic.json",
       "entries/uma-musume.json",
       "research/persona-kinetic.md",
-      "research/uma-musume.md"
+      "research/uma-musume.md",
+      "entries/zenless-zone-zero.json",
+      "research/zenless-zone-zero.md",
+      "demos/zenless-zone-zero/app.js",
+      "demos/zenless-zone-zero/data.js",
+      "demos/zenless-zone-zero/fidelity.md",
+      "demos/zenless-zone-zero/index.html",
+      "demos/zenless-zone-zero/mobile.html",
+      "demos/zenless-zone-zero/reference-mobile.css",
+      "demos/zenless-zone-zero/reference.css",
+      "demos/zenless-zone-zero/state.css"
     ]
   },
   "sourceCases": [
@@ -77,7 +95,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "3ffdc98e89595cb89c4db592c8589865955598f94fddbcbced3cc66306ef0901"
+      "bundleSha256": "2896d12f94c01807251a930c0c82cb362717ab10e9cf018bbb44b8f66abea78b"
     },
     {
       "id": "uma-musume",
@@ -86,7 +104,16 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "5940e44243639f9289af53a176c9bce0e779bf0f24cbd0211a4558d1df7b032c"
+      "bundleSha256": "fa96e7c1491c15554398d6dc28facd920cf59f0e98b5600f8400f7b9b9dc85ab"
+    },
+    {
+      "id": "zenless-zone-zero",
+      "title": "绝区零 · 六章街头拼贴首页",
+      "paths": {
+        "bundle": "agent/cases/zenless-zone-zero.json",
+        "demo": "demos/zenless-zone-zero/index.html"
+      },
+      "bundleSha256": "1bae6cadceefa2eb4774e447b58c409cee942cf1f4538c186327ed6e498a9448"
     }
   ]
 }

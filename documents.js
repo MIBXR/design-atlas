@@ -95,6 +95,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "案例研究"
   },
   {
+    "path": "research/zenless-zone-zero.md",
+    "title": "绝区零：六章街头拼贴首页",
+    "group": "案例研究"
+  },
+  {
     "path": "research/rhine-lab.md",
     "title": "莱茵生命：官方影像的网页转译",
     "group": "案例研究"
@@ -172,6 +177,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "research/claude-platform.md",
     "title": "Claude：当前页面的设计与交互",
+    "group": "案例研究"
+  },
+  {
+    "path": "research/deepseek-harness.md",
+    "title": "DeepSeek Harness：可观察的产品演示",
     "group": "案例研究"
   },
   {
@@ -265,6 +275,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复用 Prompt"
   },
   {
+    "path": "prompts/zenless-zone-zero.md",
+    "title": "绝区零 · 六章街头拼贴首页 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
     "path": "prompts/rhine-lab.md",
     "title": "莱茵生命 · 影像终端的网页转译 · 复用 Prompt",
     "group": "复用 Prompt"
@@ -345,6 +360,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复用 Prompt"
   },
   {
+    "path": "prompts/deepseek-harness.md",
+    "title": "DeepSeek Harness · 可观察的产品演示 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
     "path": "prompts/fuji-rock.md",
     "title": "Fuji Rock：现场照片与节日导览 · 复用 Prompt",
     "group": "复用 Prompt"
@@ -417,6 +437,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "demos/monument-valley-game/fidelity.md",
     "title": "纪念碑谷一代：对应范围",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/zenless-zone-zero/fidelity.md",
+    "title": "绝区零首页复现说明",
     "group": "复现与素材"
   },
   {
@@ -497,6 +522,16 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "demos/claude-platform/fidelity.md",
     "title": "Claude：当前页面的设计与交互",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/deepseek-harness/fidelity.md",
+    "title": "DeepSeek Harness 复现说明",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/deepseek-harness/assets/BRAND_GUIDELINES.zh.md",
+    "title": "DeepSeek Harness 品牌素材使用规范",
     "group": "复现与素材"
   },
   {

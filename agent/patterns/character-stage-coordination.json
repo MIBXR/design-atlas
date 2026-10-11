@@ -61,6 +61,14 @@
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "zenless-zone-zero",
+        "locator": "entries/zenless-zone-zero.json#interaction/0",
+        "observation": "选择角色缩略图，同时切换62人中的立绘、阴影、阵营、中文名与英文背景；桌面角色图以500ms位移/透明度进入，阴影300ms，姓名与阵营延迟交接。",
+        "evidence": "observed",
+        "referenceUrl": "https://zzz.mihoyo.com/main",
+        "capturedAt": "2026-10-11"
       }
     ],
     "sourceFiles": [
@@ -83,7 +91,17 @@
       "entries/genshin-world.json",
       "research/arknights-world.md",
       "research/blue-archive.md",
-      "research/genshin-world.md"
+      "research/genshin-world.md",
+      "entries/zenless-zone-zero.json",
+      "research/zenless-zone-zero.md",
+      "demos/zenless-zone-zero/app.js",
+      "demos/zenless-zone-zero/data.js",
+      "demos/zenless-zone-zero/fidelity.md",
+      "demos/zenless-zone-zero/index.html",
+      "demos/zenless-zone-zero/mobile.html",
+      "demos/zenless-zone-zero/reference-mobile.css",
+      "demos/zenless-zone-zero/reference.css",
+      "demos/zenless-zone-zero/state.css"
     ]
   },
   "sourceCases": [
@@ -94,7 +112,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "a12d45545faacb25c604607bf3d9ac8a5ef404edf1511e3b5f22c7d1e2fb9e9c"
+      "bundleSha256": "53422fa7b32b290b7f43c0e13eb8b7300cc0055d82d536eec8e18df1869e7b5d"
     },
     {
       "id": "blue-archive",
@@ -103,7 +121,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "7274895f4abdcfeced23c893b6b3afcae8a807fe0adb4bd799062ecd843e77d1"
+      "bundleSha256": "daddbc958d7251b54c2290daf44a5f7d69a319ee2177179181c25363a82c952a"
     },
     {
       "id": "genshin-world",
@@ -112,7 +130,16 @@
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/genshin-world/index.html"
       },
-      "bundleSha256": "eecdd4e9622d7e6123289062a4bb0a6a2c75cfe7558033a8336c739c0df2e512"
+      "bundleSha256": "e266036e0562acc3303df0edba2f392412ef816551f573d7be6b2d18f6d105fc"
+    },
+    {
+      "id": "zenless-zone-zero",
+      "title": "绝区零 · 六章街头拼贴首页",
+      "paths": {
+        "bundle": "agent/cases/zenless-zone-zero.json",
+        "demo": "demos/zenless-zone-zero/index.html"
+      },
+      "bundleSha256": "1bae6cadceefa2eb4774e447b58c409cee942cf1f4538c186327ed6e498a9448"
     }
   ]
 }

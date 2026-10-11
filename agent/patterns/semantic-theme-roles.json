@@ -64,7 +64,7 @@
         "bundle": "agent/cases/google-material.json",
         "demo": "demos/google-material/index.html"
       },
-      "bundleSha256": "0c7429e4440eb10f1ac96750aaa2188ddbcfb573802860de62ec34e9f1eaf578"
+      "bundleSha256": "69dd3dcdb08025c64b549cff189067a951d8e7e1b32022a99a57e9b10c7c41e2"
     }
   ]
 }

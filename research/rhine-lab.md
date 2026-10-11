@@ -57,3 +57,11 @@
 真实浏览器已验证媒体加载／播放暂停／重播、时间码／范围条、快速章切换、显隐、五项循环、方向键焦点／展开。十热点／十目录项齐全，ECO／NRG同步全称与节点。390×844无横向溢出；减少动态初始静态并停用连续。独立自然连续播放四段后，矩阵片段13.8秒结束并暂停／关闭连续；网络阻断后有失败提示／静态退路，解除阻断恢复正常。
 
 未复现完整影片／声音／3D工程／渲染器／真实登录／周年完整流程；未完整核验周年手机／播放器。触发、精确选段、覆盖层近似与未复现范围见 [fidelity.md](../demos/rhine-lab/fidelity.md)。
+
+## 外部代码参考：RhineLabUI
+
+[LBEILC 的原仓库](https://github.com/LBEILC/RhineLabUI) 与 [用户 fork](https://github.com/MIBXR/RhineLabUI) 提供第三方代码复刻。2026-10-11 两者均指向 [`12cc5e4013acb9408f753ff71de6b8492299b7c8`](https://github.com/MIBXR/RhineLabUI/tree/12cc5e4013acb9408f753ff71de6b8492299b7c8)。TypeScript、Three.js 与 Vite 实现 DOM／SVG 开场、循环档案阵列、玻璃及正文解密、模型旋转／拆解／重组；检索、收藏属于开发者扩展，不归为官方影片的网页交互。
+
+本案例只提供链接和简要说明，不集成其 Three.js 工程、GLB、字体或音频。已阅读并按 Git blob 核验 README、依赖、许可与关键源码；未安装运行，视觉精度、移动端表现、帧率和功耗均未实测。作者也说明其折射、景深与局部细节存在复现差异。
+
+[MIT 许可](https://github.com/MIBXR/RhineLabUI/blob/12cc5e4013acb9408f753ff71de6b8492299b7c8/LICENSE) 为作者有权授权的原创代码保留 Copyright (c) 2026 LBEILC；游戏名称、标志、原作视觉／音频、第三方字体与依赖不因此获得统一授权。可独立研究 [DOM 正文遮挡条](https://github.com/MIBXR/RhineLabUI/blob/12cc5e4013acb9408f753ff71de6b8492299b7c8/src/document-decryption.ts)、[开场时间轴](https://github.com/MIBXR/RhineLabUI/blob/12cc5e4013acb9408f753ff71de6b8492299b7c8/src/boot-motion.ts) 与 [可中断面板过渡](https://github.com/MIBXR/RhineLabUI/blob/12cc5e4013acb9408f753ff71de6b8492299b7c8/src/ui-transitions.ts)，本地 Demo 没有移植这些模块。
