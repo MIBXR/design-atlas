@@ -61,7 +61,7 @@
         "bundle": "agent/cases/isometric-3d.json",
         "demo": "demos/isometric-3d/index.html"
       },
-      "bundleSha256": "0803a647438d6376a95f89b62bff404f78c112174c2ca41ea65dd8cf9ef795c2"
+      "bundleSha256": "04d0034e7da6216662393f70d03d46d2dec3bedf906f7b0ca43fe96b928c95da"
     }
   ]
 }

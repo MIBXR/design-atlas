@@ -13,6 +13,7 @@
   const patternPrefix = () => dedicated() ? '' : 'patterns.html';
   const badges = pattern => (pattern.experienceTypes || []).map(type => `<span class="tag">${esc(typeLabels[type])}</span>`).join('');
   const roleLabels = { foundation: '主要结构', support: '辅助机制', accent: '局部强调' };
+  const favoriteStar = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.3.9-4.5 4.4 1.1 6.2-5.7-3-5.7 3 1.1-6.2L3.2 9.6l6.3-.9Z"/></svg>';
   let state = { query: '', category: 'all', source: 'all', type: 'all', favorites: false };
   let notify = () => {};
   let onStateChange = () => {};
@@ -54,7 +55,7 @@
   }
   function favoriteButton(pattern) {
     const selected = favoriteStore.has('patterns', pattern.id);
-    return `<button class="favorite ${selected ? 'selected' : ''}" data-pattern-fav="${esc(pattern.id)}" aria-label="收藏${esc(pattern.title)}" aria-pressed="${selected}">${selected ? '★︎' : '☆︎'}</button>`;
+    return `<button class="favorite ${selected ? 'selected' : ''}" data-pattern-fav="${esc(pattern.id)}" aria-label="收藏${esc(pattern.title)}" aria-pressed="${selected}">${favoriteStar}</button>`;
   }
   function renderCards() {
     const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
@@ -188,7 +189,7 @@
       $('#pattern-fav-count').textContent = String(favoriteStore.ids('patterns').length).padStart(2, '0');
       document.querySelectorAll('[data-pattern-fav]').forEach(button => {
         const selected = favoriteStore.has('patterns', button.dataset.patternFav);
-        button.classList.toggle('selected', selected); button.setAttribute('aria-pressed', String(selected)); button.textContent = selected ? '★︎' : '☆︎';
+        button.classList.toggle('selected', selected); button.setAttribute('aria-pressed', String(selected));
       });
       if (error) notify(error);
       if (state.favorites && !$('#patterns-library').hidden) renderCards();

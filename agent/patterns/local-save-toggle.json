@@ -56,7 +56,7 @@
         "bundle": "agent/cases/swiss-grid.json",
         "demo": "demos/swiss-grid/index.html"
       },
-      "bundleSha256": "4a00ead3659c651b5852eb511276bee192d60545f3d86b71ac24e75243bf0b10"
+      "bundleSha256": "1508c88708c4cddadc90fb09695fb9840782b0dd18318a2309449e154d518775"
     }
   ]
 }

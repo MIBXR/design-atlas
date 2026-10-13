@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const source = fs.readFileSync(new URL('../demo-preview.js', import.meta.url), 'utf8');
-function preview({ loaded = true, mode = 'desktop' } = {}) {
+function preview({ loaded = true, mode = 'desktop', scaleWide = true } = {}) {
   const classes = new Set(), events = new Map();
   const frame = { style: {} };
   const controls = ['desktop', 'wide', 'mobile'].map(value => ({
@@ -28,7 +28,7 @@ function preview({ loaded = true, mode = 'desktop' } = {}) {
     getComputedStyle: () => ({ borderTopWidth: '1px', borderBottomWidth: '1px', paddingTop: classes.has('mobile') ? '12px' : '0px', paddingBottom: classes.has('mobile') ? '12px' : '0px' }),
     ResizeObserver: class { constructor(callback) { observer = this; this.resize = callback; } observe() {} disconnect() { this.disconnected = true; } },
   });
-  const controller = window.DesignAtlasPreview.mount(wrap, controls, mode);
+  const controller = window.DesignAtlasPreview.mount(wrap, controls, mode, {scaleWide});
   return { window, wrap, frame, controls, classes, events, observer, controller, load() { loaded = true; controller.refresh(); } };
 }
 
@@ -71,4 +71,16 @@ test('an unloaded source stays lazy and retains its chosen viewport when loaded 
   assert.equal(view.frame.style.height, '458px');
   view.controller.refresh();
   assert.equal(view.controls[2].attributes['aria-pressed'], 'true');
+});
+
+test('material desktop previews keep their native type size while sharing the viewport budget', () => {
+  const view = preview({loaded:false,mode:'wide',scaleWide:false});
+  assert.equal(view.wrap.style.height,undefined);
+  view.load();
+  assert.equal(view.wrap.style['--preview-scale'],1);
+  assert.equal(view.frame.style.height,'482px');
+  view.wrap.clientWidth = 360;
+  view.observer.resize();
+  assert.equal(view.wrap.style['--preview-scale'],1);
+  assert.equal(view.frame.style.height,'482px');
 });

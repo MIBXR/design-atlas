@@ -63,7 +63,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "f6f3f7bf2f02bc5fe051ca8f96040f106dc4f4ce685016780eeee06afc29bab3"
+      "bundleSha256": "6780133dc621947974f439dc5eca3a830663f970d3c34fe5046b4186dc5b6dab"
     }
   ]
 }

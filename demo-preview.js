@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  function mount(wrap, controls, initialMode = 'desktop') {
+  function mount(wrap, controls, initialMode = 'desktop', { scaleWide = true } = {}) {
     let mode = initialMode;
     const resize = () => {
       const frame = wrap.querySelector('iframe');
@@ -12,7 +12,7 @@
       const style = getComputedStyle(wrap);
       const inset = ['borderTopWidth', 'borderBottomWidth', 'paddingTop', 'paddingBottom'].reduce((total, property) => total + parseFloat(style[property]), 0);
       const contentHeight = Math.max(1, height - inset);
-      const scale = mode === 'wide' ? Math.min(1, wrap.clientWidth / 1440) : 1;
+      const scale = mode === 'wide' && scaleWide ? Math.min(1, wrap.clientWidth / 1440) : 1;
       wrap.style.height = `${height}px`;
       wrap.style.setProperty('--preview-scale', scale);
       frame.style.height = `${contentHeight / scale}px`;

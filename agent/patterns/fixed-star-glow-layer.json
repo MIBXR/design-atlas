@@ -69,7 +69,7 @@
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
       },
-      "bundleSha256": "77efa90066b774c4cec9ba63537b13ee78ae7017c22dc75da3aafe5a7417d66e"
+      "bundleSha256": "463c7ba091876f85f70c59332b525310bd848c92117c7ede6884f822092fbda4"
     }
   ]
 }

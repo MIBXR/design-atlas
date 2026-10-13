@@ -117,6 +117,8 @@ body:is(.cases-page,.agent-page) .search{height:var(--atlas-control-height);min-
 body:is(.cases-page,.agent-page) .search input{height:100%;padding:0;line-height:1.5}
 body.cases-page .case-layout main .favorite,
 body.cases-page .dialog-close{display:inline-flex;align-items:center;justify-content:center;padding:0;line-height:1}
+body.cases-page .favorite svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;flex:none}
+body.cases-page .favorite.selected svg{fill:var(--lime)}
 body.landing-page :is(.landing-module-link,.landing-paths li>a),
 body.cases-page .card-bottom :is(a,label){min-height:var(--atlas-control-height)}
 body.landing-page .landing-feature-tabs button{padding-inline:12px}

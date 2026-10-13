@@ -104,7 +104,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "ba929beb6c213770f6c5ec3c4d2778e1a48e6d0c8a7495542f7cedb2cc4be243"
+      "bundleSha256": "917d05085611dd38fadbbf7ff46abd6fe7f127a00367add22fd491d6dc2b0490"
     },
     {
       "id": "endfield-industrial",
@@ -113,7 +113,7 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
       },
-      "bundleSha256": "3b2b2c9a7fc82403d60e80c7129ff91c20f4ccc6b8e8e57c334d9a46797edaf4"
+      "bundleSha256": "637e302969517bc0f3564f8ab6fb7ca11eca96aa20c453690d45234befa3b359"
     },
     {
       "id": "retro-80s",
@@ -122,7 +122,7 @@
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
       },
-      "bundleSha256": "f36a67226f9c7ae82f69f0bce8af48a459fda7812d28da65c134a5448f3eecd9"
+      "bundleSha256": "7554f0d92763a2e8edc231ad69c1466a01573111da971ec27a7571516f08d5bf"
     },
     {
       "id": "zelda-world",
@@ -131,7 +131,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "f6f3f7bf2f02bc5fe051ca8f96040f106dc4f4ce685016780eeee06afc29bab3"
+      "bundleSha256": "6780133dc621947974f439dc5eca3a830663f970d3c34fe5046b4186dc5b6dab"
     }
   ]
 }

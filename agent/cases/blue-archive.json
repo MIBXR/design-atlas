@@ -534,8 +534,8 @@
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "749297843e5f90db4cdc348106eb528931eba4986665ffe9b0c63e0c7ce3887d",
-      "bytes": 15565
+      "sha256": "1dbba80778876405a1df646d6134219a8ac59bd0f19858eb6d39a6a584ecfbbb",
+      "bytes": 15733
     },
     {
       "path": "theme-control.css",
