@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { renderDetailNotes } from './detail-notes.mjs';
 import { loadPatterns, buildPatterns } from './build-patterns.mjs';
+import { loadMaterials, buildMaterials } from './build-materials.mjs';
 import { assertRepositoryLineEndings } from './check-line-endings.mjs';
 
 export const repository = 'https://github.com/MIBXR/design-atlas';
@@ -137,19 +138,27 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
   });
   const patternData = patterns.length ? buildPatterns({ root, patterns, caseRecords: records, caseBundles: bundles, write: false }) : null;
   if (patternData) for (const [relative, bytes] of patternData.outputs) outputs.set(relative, bytes);
+  const materials = loadMaterials({ root });
+  const materialData = materials.length ? buildMaterials({ root, materials, write: false }) : null;
+  if (materialData) for (const [relative, bytes] of materialData.outputs) outputs.set(relative, bytes);
   const caseVersionInput = records.map(record => [record.id, record.bundleSha256]).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([id, hash]) => `${id}:${hash}\n`).join('');
-  const contentVersion = sha256(Buffer.from(caseVersionInput + (patternData ? `patterns:${patternData.catalog.contentVersion}\n` : ''), 'utf8'));
+  const contentVersion = sha256(Buffer.from(caseVersionInput + (patternData ? `patterns:${patternData.catalog.contentVersion}\n` : '') + (materialData ? `materials:${materialData.catalog.contentVersion}\n` : ''), 'utf8'));
   const catalog = { schemaVersion: 1, contentVersion, entryCount: records.length, repository, entries: records };
   if (patternData) {
     const bytes = outputs.get('agent/patterns.json');
     catalog.patterns = { path: 'agent/patterns.json', sha256: sha256(bytes), bytes: bytes.length, patternCount: patterns.length, contentVersion: patternData.catalog.contentVersion };
   }
+  if (materialData) {
+    const bytes = outputs.get('agent/materials.json');
+    catalog.materials = { path: 'agent/materials.json', sha256: sha256(bytes), bytes: bytes.length, materialCount: materials.length, contentVersion: materialData.catalog.contentVersion };
+  }
   outputs.set('agent/catalog.json', encode(catalog));
-  outputs.set('agent/README.md', Buffer.from("# Design Atlas · Agent 数据\n\n完整工作流与数据协议见 [AGENT.md](../AGENT.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：完整案例索引与设计巧思目录的路径、SHA256、字节数和版本。\n- cases/<id>.json：原始条目、研究与Prompt原文、网页说明webNotes、完整源码/素材清单，以及反向关联patternIds。\n- [patterns.json](patterns.json)：人工策展的完整原子记录、来源、约束、参数与组合关系，并提供巧思包路径/哈希。\n- patterns/<id>.json：完整pattern与sourceCases；来源案例包含标题、完整包/演示路径及包SHA256。sourceFiles从来源案例清单核验，完整运行依赖按来源案例导出。\n- webNotes由真实atlas.js生成，保存网页案例七节原始HTML；比较界面按同名章节逐行对齐，原始单例说明保持一致。\n\n巧思sources的observed/adapted/inferred保留观察、迁移与公共资料推断的边界。先核验主索引patterns描述，再核验巧思bundleSha256与sourceCases；全部资料、索引和文件使用同一个固定会话SHA。在线发布只在主索引添加source.commit/baseUrl，完整案例/巧思包和巧思目录保持原始字节。\n\n巧思contentVersion由排序后的巧思ID与包SHA256确定；总库contentVersion由排序后的案例ID/哈希加巧思contentVersion确定。案例只引用巧思ID，巧思引用案例哈希，没有哈希循环、时钟或Git SHA自引用。\n\n生成文件使用UTF-8与LF；被引用的文件遵循.gitattributes。二进制只记录原仓库路径/字节数/SHA256，不嵌入JSON。源码来自原始Git字节，区别于部署中重写素材地址或增加UTF-8标记的展示文件。\n\n修改内容后运行npm run build，再运行npm run check与npm run test:agent。构建扫描全部entries/及patterns/；检查去重、源观察漂移、组合ID、manifest和生成哈希。按独立机制维护巧思，终态维护不复制内容到skill仓库。\n", 'utf8'));
+  outputs.set('agent/README.md', Buffer.from("# Design Atlas · Agent 数据\n\n完整工作流与数据协议见 [AGENT.md](../AGENT.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：完整案例索引与巧思／素材目录的路径、SHA256、字节数和版本。\n- cases/<id>.json：原始条目、研究与Prompt原文、网页说明webNotes、完整源码/素材清单，以及反向关联patternIds。\n- [patterns.json](patterns.json)：人工策展的完整原子记录、来源、约束、参数与组合关系，并提供巧思包路径/哈希。\n- patterns/<id>.json：完整pattern与sourceCases；来源案例包含标题、完整包/演示路径及包SHA256。sourceFiles从来源案例清单核验，完整运行依赖按来源案例导出。\n- [materials.json](materials.json)：独立内容素材摘要、分类、用途、约束及完整包路径／哈希。\n- materials/<id>.json：完整material、文档原文、独立运行依赖files与主要取材sourceFiles；来源版本和许可随包保留。\n- webNotes由真实atlas.js生成，保存网页案例七节原始HTML；比较界面按同名章节逐行对齐，原始单例说明保持一致。\n\n巧思sources的observed/adapted/inferred保留观察、迁移与公共资料推断的边界。先核验主索引patterns描述，再核验巧思bundleSha256与sourceCases；全部资料、索引和文件使用同一个固定会话SHA。在线发布只在主索引添加source.commit/baseUrl，完整案例／巧思／素材包与子目录保持原始字节。\n\n巧思contentVersion由排序后的巧思ID与包SHA256确定；素材contentVersion按同样方法计算；总库contentVersion由排序后的案例ID/哈希依次加巧思及素材contentVersion确定。案例只引用巧思ID，巧思引用案例哈希，没有哈希循环、时钟或Git SHA自引用。\n\n生成文件使用UTF-8与LF；被引用的文件遵循.gitattributes。二进制只记录原仓库路径/字节数/SHA256，不嵌入JSON。源码来自原始Git字节，区别于部署中重写素材地址或增加UTF-8标记的展示文件。\n\n修改内容后运行npm run build，再运行npm run check与npm run test:agent。构建扫描全部entries/、patterns/及materials/；检查去重、源观察漂移、组合ID、manifest和生成哈希。按独立机制维护巧思，终态维护不复制内容到skill仓库。\n", 'utf8'));
   if (write) {
     // Check the destination before creating directories or replacing any bytes.
     fs.mkdirSync(resolveRepositoryPath(root, 'agent/cases', { mustExist: false }), { recursive: true });
     if (patternData) fs.mkdirSync(resolveRepositoryPath(root, 'agent/patterns', { mustExist: false }), { recursive: true });
+    if (materialData) fs.mkdirSync(resolveRepositoryPath(root, 'agent/materials', { mustExist: false }), { recursive: true });
     for (const [relative, data] of outputs) fs.writeFileSync(resolveRepositoryPath(root, relative, { mustExist: false }), data);
     const casesPath = resolveRepositoryPath(root, 'agent/cases');
     for (const name of fs.readdirSync(casesPath)) {
@@ -164,8 +173,12 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
       const relative = `agent/patterns/${name}`;
       if (name.endsWith('.json') && !outputs.has(relative)) fs.unlinkSync(resolveRepositoryPath(root, relative));
     }
+    if (materialData) for (const name of fs.readdirSync(resolveRepositoryPath(root, 'agent/materials'))) {
+      const relative = `agent/materials/${name}`;
+      if (name.endsWith('.json') && !outputs.has(relative)) fs.unlinkSync(resolveRepositoryPath(root, relative));
+    }
   }
-  return { catalog, bundles, patternCatalog: patternData?.catalog, patternBundles: patternData?.bundles || [], outputs };
+  return { catalog, bundles, patternCatalog: patternData?.catalog, patternBundles: patternData?.bundles || [], materialCatalog: materialData?.catalog, materialBundles: materialData?.bundles || [], outputs };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

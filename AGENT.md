@@ -1,6 +1,6 @@
 # Design Atlas：从真实需求取得设计依据
 
-这是前端设计参考库。`entries/`、`patterns/`、研究和可运行 Demo 是内容源，`agent/` 是构建时生成的读取接口。完整案例说明机制如何协作，设计巧思保存可独立借用的原子。网页继续供人预览、对照和调配。真实品牌案例固定为标注日期的局部学习快照；经典风格条目是构成练习。`studyScope: "visual-adaptation"` 表示官方影像等资料的教学网页转译，不能将其中本地设计的交互说成官网实测行为；请结合研究、复现范围与巧思的证据等级取材。
+这是前端设计参考库。`entries/`、`patterns/`、`materials/`、研究和可运行 Demo 是内容源，`agent/` 是构建时生成的读取接口。完整案例说明机制如何协作，设计巧思保存可独立借用的原子，内容素材保存带许可和可操作样例的实际资源。网页继续供人预览、对照和调配。真实品牌案例固定为标注日期的局部学习快照；经典风格条目是构成练习。`studyScope: "visual-adaptation"` 表示官方影像等资料的教学网页转译，不能将其中本地设计的交互说成官网实测行为；请结合研究、复现范围与巧思的证据等级取材。
 
 ## skill 与案例库的关系
 
@@ -44,11 +44,19 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 - `agent/cases/<id>.json`：完整上下文和文件清单。
 - [设计巧思目录](agent/patterns.json)：完整原子记录、来源、组合关系与巧思包位置／哈希。
 - `agent/patterns/<id>.json`：完整 `pattern` 与关联 `sourceCases`；不会把巧思声称为另一个独立运行Demo。
+- [内容素材目录](agent/materials.json)：资源摘要、类型、适用与避用场景，以及独立素材包路径／哈希。
+- `agent/materials/<id>.json`：完整 `material`、文档原文、运行文件清单与 `sourceFiles`，可独立导出。
 - [轻量 skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)：发现最新目录，在同一会话版本中筛选、读取与导出。
 
 在线站也提供同样的 `/agent/catalog.json` 与 `/agent/cases/<id>.json` 路径。部署索引额外提供 `source.commit` 与 `source.baseUrl`，把 `files[].path` 接在此基址后取得原始文件；“复制 Agent 入口”使用当前网页发布版本对应的固定提交。新发布会自动换成新提交。探索仓库最新内容可通过 skill 开始新会话，即使网页尚未发布也能发现已合入上游的案例。网站中的播放 HTML／CSS 会转换素材地址、文档会加 UTF-8 标记，因此源码与哈希校验使用原始 Git 文件。先取得一次索引，再核对其 `bundleSha256`；在线更新时发现不一致就重新取得索引与案例。直接读 GitHub 时先解析最新完整 SHA，再从同一个 SHA 读取所有文件。
 
 在线站的 `/agent/patterns.json` 和 `/agent/patterns/<id>.json` 保留原始JSON字节，使用主索引的巧思描述核验。选择原子后，skill 提供 `pattern-search`（类别／来源／查询）、`pattern-show`（完整资料，可加 `--source`）与 `pattern-export`（新目录，可加 `--code-only`）；具体选项见skill命令帮助。Case／pattern索引、完整包及源码必须来自同一固定会话SHA。测试未合并PR或与网页一致的功能分支内容时，显式使用 `--ref <网页source.commit的完整SHA>`；默认新会话仍以默认分支为准。
+
+## 内容素材取材
+
+内容素材用于组件、图像、声音、字体及视觉资源的选择。先读取 `agent/catalog.json` 的 `materials` 描述，以其 `sha256`／`bytes` 校验 `agent/materials.json`，再按摘要的 `paths.bundle` 与 `bundleSha256` 取得完整包。摘要提供类型、分类、标签、用途、避用项与约束；素材独立于案例，包中 `material` 保留来源版本、许可、样例、参数和 Prompt，`documents` 保留原文，`files` 列出完整运行依赖。`sourceFiles` 只指向该包清单中的主要取材源码。
+
+配套 skill 使用 `material-search`（查询／分类／类型）、`material-show`（完整资料，可加 `--source`）与 `material-export`（新目录，可加 `--code-only`）。素材目录、包与文件沿用同一固定会话 SHA。没有素材目录的 schema-1 仓库仍可读取案例与巧思。先核对 `upstream`、`license`、`constraints`、`demos` 和可访问性，再用其 Demo 调节和验证实际参数；静态后备只说明构成，不证明 WebGPU 等特定能力已运行。素材软件许可与上游官网平台内容分别处理，详见 [内容素材库](docs/materials.md)。
 
 ## 从案例适配真实任务
 
@@ -60,8 +68,8 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 ## 数据契约与维护
 
-Case与pattern的Schema均为 `1`，案例协议通过 `patternIds` 和主索引 `patterns` 扩展保持兼容。巧思 `experienceTypes` 存在时必须是非空、去重的数组，仅接受 `visual`、`micro-motion`、`page-motion`、`sound`、`structure`；读取器接受未提供该字段的 schema-1 资料，不从 `category` 或案例标签推断补齐。没有可独立提取巧思的案例保留空 `patternIds`。巧思目录 `contentVersion` 对按ID排序的 `id:bundleSha256\n` UTF-8文本计算SHA256；总库 `catalog.contentVersion` 对同样排序的案例记录文本追加 `patterns:<巧思contentVersion>\n` 后计算SHA256。案例包只保存巧思ID，巧思包再引用来源案例哈希，因此没有哈希循环或Git SHA自引用。`bundleSha256` 校验原始UTF-8 JSON字节，巧思目录描述另校验其 `sha256` 与 `bytes`。
+案例、巧思与素材的Schema均为 `1`，案例协议通过 `patternIds` 和主索引 `patterns` 扩展保持兼容。巧思 `experienceTypes` 存在时必须是非空、去重的数组，仅接受 `visual`、`micro-motion`、`page-motion`、`sound`、`structure`；读取器接受未提供该字段的 schema-1 资料，不从 `category` 或案例标签推断补齐。没有可独立提取巧思的案例保留空 `patternIds`。巧思目录 `contentVersion` 对按ID排序的 `id:bundleSha256\n` UTF-8文本计算SHA256；总库 `catalog.contentVersion` 对同样排序的案例记录文本依次追加存在的 `patterns:<巧思contentVersion>\n` 和 `materials:<素材contentVersion>\n` 后计算SHA256。素材目录也按排序的 `id:bundleSha256\n` 计算自身版本；案例包只保存巧思ID，巧思包再引用来源案例哈希，素材包保留独立依赖，因此没有哈希循环或Git SHA自引用。`bundleSha256` 校验原始UTF-8 JSON字节，巧思目录描述另校验其 `sha256` 与 `bytes`。
 
 案例包保留原 `entry`、文档与完整文件清单；巧思保留来源定位及原观察文本。SHA256保证读取一致性，不替代来源或权利判断。巧思 `sourceFiles` 只列取材文件，完整运行依赖由来源案例的 `files` 提供；读取器接受未包含巧思目录的schema1仓库。
 
-修改案例、巧思或源码后运行 `npm run build`，再运行 `npm run check`；构建扫描全部案例和巧思，同步网页、Prompt、两个Agent目录、完整包及反向关联。检查会拒绝无效体验类型、过期观察原文、不存在的组合ID和不一致生成内容。维护标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。功能分支推送后可用同一SHA发布Site与验证skill，PR是否合入按用户授权；合入默认分支之后新会话自动发现。普通新增内容无需复制到skill，数据协议变化才同步获取脚本。
+修改案例、巧思、素材或源码后运行 `npm run build`，再运行 `npm run check`；构建扫描全部案例、巧思和素材，同步网页、Prompt、Agent目录、完整包及案例与巧思的反向关联。检查会拒绝无效体验类型、过期观察原文、不存在的组合ID和不一致生成内容。维护标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。功能分支推送后可用同一SHA发布Site与验证skill，PR是否合入按用户授权；合入默认分支之后新会话自动发现。普通新增内容无需复制到skill，数据协议变化才同步获取脚本。

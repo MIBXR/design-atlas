@@ -5,3 +5,4 @@
 demos/**/assets/** -text -whitespace
 demos/**/vendor/** -text -whitespace
 vendor/** -text -whitespace
+material-demos/**/vendor/** -text -whitespace

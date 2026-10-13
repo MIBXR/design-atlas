@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/MIBXR/design-atlas",
+  "materialCount": 1,
+  "contentVersion": "b2cd31747f4000848bca43d62712a841a6ce5c364777a417b6e60eeb4a661710",
+  "materials": [
+    {
+      "id": "shaders",
+      "title": "Shaders · 可调节的 WebGPU 效果",
+      "type": "component-library",
+      "category": "组件与效果",
+      "summary": "把渐变、玻璃折射、指针涟漪与溶解转场作为可组合的图层；在本地调节四种效果，再按真实页面任务取材。",
+      "tags": [
+        "WebGPU",
+        "JavaScript",
+        "渐变",
+        "玻璃",
+        "指针反馈",
+        "转场",
+        "MeshGradient",
+        "FlutedGlass",
+        "CursorRipples",
+        "NoiseDissolve"
+      ],
+      "useCases": [
+        "产品首部的动态渐变背景",
+        "展示卡片的玻璃与折射质感",
+        "局部画布的指针反馈",
+        "图片或内容切换的溶解遮罩"
+      ],
+      "avoid": [
+        "把整页文字和关键操作只绘制在 GPU 画布里",
+        "没有静态后备的核心阅读流程",
+        "同时运行大量装饰画布",
+        "直接搬用官网的付费预设或完整页面区块"
+      ],
+      "constraints": [
+        "本地 Demo 使用固定的 shaders 4.0.4 JavaScript 运行时，需要浏览器提供 WebGPU。",
+        "通过 HTTP/HTTPS 访问；WebGPU 不可用时显示明确的静态示意与状态，不把它当作真实着色器运行结果。",
+        "减少动态、页面隐藏或主动暂停时停止持续动画；恢复运行由页面状态与用户操作决定。",
+        "保留 MIT 版权和许可文本；官网编辑器、预设与区块的使用条款与开源软件分开核验。",
+        "本地参考图和四套参数是 Design Atlas 的演示选择，不代表官网预设或作者推荐。"
+      ],
+      "paths": {
+        "bundle": "agent/materials/shaders.json",
+        "demo": "material-demos/shaders/index.html",
+        "entry": "materials/shaders.json",
+        "preview": "previews/materials/shaders.png"
+      },
+      "bundleSha256": "6b2030ba24dc55dac530f8cb8548780f38f0c9be85841f08ad2b3023da28d797"
+    }
+  ]
+}

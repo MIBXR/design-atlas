@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720">
+  <defs>
+    <linearGradient id="sky" x2="1" y2="1"><stop stop-color="#21396a"/><stop offset="1" stop-color="#122633"/></linearGradient>
+    <linearGradient id="orb" x2="1" y2="1"><stop stop-color="#ffbc90"/><stop offset="1" stop-color="#dd5e7d"/></linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#abd8dc" stroke-opacity=".35" stroke-width="1.5"/></pattern>
+    <pattern id="lines" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M0 0V18" fill="none" stroke="#133b44" stroke-width="7"/></pattern>
+    <clipPath id="circle"><circle cx="687" cy="307" r="225"/></clipPath>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1000v720H0z"/>
+  <path fill="url(#grid)" d="M0 0h1000v720H0z"/>
+  <path fill="#d6f2dd" d="m-70 505 815-255 43 134L-28 640z"/>
+  <circle cx="687" cy="307" r="225" fill="url(#orb)"/>
+  <path clip-path="url(#circle)" fill="url(#lines)" d="M660 45h340v525H660z"/>
+  <circle cx="290" cy="255" r="130" fill="none" stroke="#b3eddc" stroke-width="31"/>
+  <path d="M30 678h940" stroke="#acd6dc" stroke-width="2"/>
+  <path d="m131 621 43-14m13-4 43-14m13-4 43-14m13-4 43-14m13-4 43-14m13-4 43-14m13-4 43-14m13-4 43-14m13-4 43-14m13-4 43-14m13-4 43-14" stroke="#24505b" stroke-width="7"/>
+</svg>

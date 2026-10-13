@@ -16,7 +16,7 @@
     cacheDialog.id = 'asset-cache-dialog';
     cacheDialog.className = 'atlas-cache-dialog';
     cacheDialog.setAttribute('aria-labelledby', 'asset-cache-title');
-    cacheDialog.innerHTML = '<form method="dialog"><button class="dialog-close" aria-label="关闭素材缓存管理">×</button></form><h2 id="asset-cache-title">已下载的素材</h2><p>嵌入预览与独立页面共享当前站点的素材缓存。浏览器空间不足时会重新下载。</p><p id="cache-status" role="status"></p><button id="cache-clear" class="atlas-ui-button" disabled>清除素材缓存</button>';
+    cacheDialog.innerHTML = '<form method="dialog"><button class="dialog-close" aria-label="关闭素材缓存管理"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><h2 id="asset-cache-title">已下载的素材</h2><p>嵌入预览与独立页面共享当前站点的素材缓存。浏览器空间不足时会重新下载。</p><p id="cache-status" role="status"></p><button id="cache-clear" class="atlas-ui-button" disabled>清除素材缓存</button>';
     document.body.append(cacheDialog);
     let cacheReady;
     async function showCacheStatus(clear = false) {

@@ -96,7 +96,7 @@
         "bundle": "agent/cases/deepseek-harness.json",
         "demo": "demos/deepseek-harness/index.html"
       },
-      "bundleSha256": "2fe645937cc464ed7d3bd71c542fb81d85d548ad981fb4cf06d7d73f72ffe6d3"
+      "bundleSha256": "0a9f933f4c57bfe178b7dd6179afa4728cc1483a2e22686097ccb24fb3e053f1"
     }
   ]
 }

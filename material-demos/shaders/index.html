@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Shaders · 开源效果实验</title>
+  <link rel="icon" href="reference.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <main class="demo-shell">
+    <header class="demo-header">
+      <div><p class="eyebrow">SHADERS / OPEN SOURCE</p><h1>开源效果实验</h1></div>
+      <span class="version">shaders 4.0.4</span>
+    </header>
+    <div class="effect-tabs" role="tablist" aria-label="选择效果">
+      <button id="tab-mesh-gradient" type="button" role="tab" aria-selected="true" aria-controls="effect-panel" data-effect="mesh-gradient">流动渐变</button>
+      <button id="tab-fluted-glass" type="button" role="tab" aria-selected="false" aria-controls="effect-panel" tabindex="-1" data-effect="fluted-glass">条纹玻璃</button>
+      <button id="tab-cursor-ripples" type="button" role="tab" aria-selected="false" aria-controls="effect-panel" tabindex="-1" data-effect="cursor-ripples">指针波纹</button>
+      <button id="tab-noise-dissolve" type="button" role="tab" aria-selected="false" aria-controls="effect-panel" tabindex="-1" data-effect="noise-dissolve">噪声溶解</button>
+    </div>
+    <section id="effect-panel" class="experiment" role="tabpanel" aria-labelledby="tab-mesh-gradient">
+      <div class="stage-column">
+        <div id="stage" class="stage" data-mode="loading">
+          <img class="reference-art" src="reference.svg" alt="本地原创的几何图形输入素材">
+          <canvas id="shader-canvas" aria-label="Shaders 效果演示" style="width:100%;height:100%"></canvas>
+          <div class="stage-caption"><span id="component-name">MeshGradient</span><span id="stage-hint">调整参数，观察颜色如何流动</span></div>
+        </div>
+        <p id="render-status" class="render-status" role="status" aria-live="polite">正在准备效果。若 WebGPU 不可用，将显示静态参考。</p>
+        <div class="playback"><button id="toggle-play" type="button" disabled>暂停演示</button><button id="reset" type="button">重置参数</button></div>
+      </div>
+      <aside class="controls-panel" aria-label="效果说明与参数">
+        <p class="eyebrow" id="effect-category">背景 / 生成图层</p>
+        <h2 id="effect-title">流动网格渐变</h2>
+        <p id="effect-description" class="description"></p>
+        <div id="parameters" class="parameters"></div>
+        <p id="effect-use" class="use-note"></p>
+        <a id="component-source" class="source-link" href="https://github.com/shader-effects-inc/shaders" target="_blank" rel="noopener noreferrer">查看组件源码</a>
+      </aside>
+    </section>
+    <details class="code-panel">
+      <summary>查看与复制当前 JavaScript 示例</summary>
+      <div class="code-actions"><button id="copy-example" type="button">复制当前示例</button><button id="copy-install" type="button">复制安装命令</button><span id="copy-status" role="status" aria-live="polite"></span></div>
+      <pre><code id="example-code"></code></pre>
+    </details>
+    <footer class="demo-footer">
+      <span>真实开源组件 · MIT · 原创输入图形</span>
+      <div><a href="https://github.com/shader-effects-inc/shaders" target="_blank" rel="noopener noreferrer">上游仓库</a><a href="https://shaders.com/docs" target="_blank" rel="noopener noreferrer">官方文档</a><a href="vendor/NOTICE.md" target="_blank">版本与许可</a></div>
+    </footer>
+  </main>
+  <script type="module" src="demo.js"></script>
+</body>
+</html>
