@@ -75,7 +75,7 @@
         "bundle": "agent/cases/zenless-zone-zero.json",
         "demo": "demos/zenless-zone-zero/index.html"
       },
-      "bundleSha256": "1bae6cadceefa2eb4774e447b58c409cee942cf1f4538c186327ed6e498a9448"
+      "bundleSha256": "ba041a7ca1060c4da2755d125fc0c1dfd4ac05466593214b188c3d6d3479b490"
     }
   ]
 }

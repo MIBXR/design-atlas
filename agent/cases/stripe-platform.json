@@ -340,8 +340,8 @@
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "a3d6c8cd3f40bc2a89ec2e5f4f6121e51ff45a5f3f7efe2747545614a236eafa",
-      "bytes": 6173
+      "sha256": "dfa74b0572f0423b098027dfc060dc4832fdf38cfa8b4a21372f95f89d9b212b",
+      "bytes": 6261
     },
     {
       "path": "document.js",
@@ -400,20 +400,20 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "ac79c4d21fa5e0f238b707c59ab845280497ad415037e2cbf91010bb332e3b4e",
-      "bytes": 17574
+      "sha256": "e56157fb0fb0b8e41b49412c98d58bb44e33e900b3b20187c0b7a3ab42024576",
+      "bytes": 17683
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "94c85df146060a02d99766e536ad78612bbcd53c752dfe4150504c80f76503f0",
-      "bytes": 7963
+      "sha256": "a2f93bb79865329d6d92994ccc7e645de98fa4123611503bed0ea71a7cca0dbe",
+      "bytes": 8061
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "02ded1022969669b96bd122cd8442b89025b341886e9dece52774dfdbce94826",
-      "bytes": 15154
+      "sha256": "749297843e5f90db4cdc348106eb528931eba4986665ffe9b0c63e0c7ce3887d",
+      "bytes": 15565
     },
     {
       "path": "theme-control.css",

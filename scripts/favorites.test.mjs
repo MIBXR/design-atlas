@@ -5,13 +5,14 @@ import vm from 'node:vm';
 
 const source = fs.readFileSync(new URL('../favorites.js', import.meta.url), 'utf8');
 const key = 'atlas-favorites-v2', legacyKey = 'atlas-favorites';
-const backup = (cases = [], patterns = []) => ({ format: 'design-atlas-favorites', version: 2, cases, patterns });
+const backup = (cases = [], patterns = [], materials = []) => ({ format: 'design-atlas-favorites', version: 2, cases, patterns, materials });
 function page(initial = {}, { failRead = false, failWrite = false } = {}) {
   const storage = new Map(Object.entries(initial).map(([name, value]) => [name, JSON.stringify(value)]));
   const events = new Map();
   const window = {
     DESIGN_ATLAS: [{ id: 'case-a' }, { id: 'case-b' }, { id: 'shared' }],
     DESIGN_PATTERNS: [{ id: 'pattern-a' }, { id: 'pattern-b' }, { id: 'shared' }],
+    DESIGN_MATERIALS: [{ id: 'shaders' }],
     addEventListener: (name, listener) => events.set(name, listener),
   };
   const localStorage = {
@@ -40,7 +41,7 @@ test('legacy storage and backups preserve case favorites while namespaces stay i
 test('versioned import merges valid IDs without replacing either library and exports both', () => {
   const { api } = page({ [key]: backup(['case-a'], ['pattern-a']) });
   const result = api.importBackup(JSON.stringify(backup(['case-b', 'case-b', 'pattern-a', null], ['pattern-b', 'case-a', 'pattern-b'])));
-  assert.deepEqual(plain(result), { added: { cases: 1, patterns: 1 }, total: { cases: 2, patterns: 2 }, persisted: true });
+  assert.deepEqual(plain(result), { added: { cases: 1, patterns: 1, materials: 0 }, total: { cases: 2, patterns: 2, materials: 0 }, persisted: true });
   const exported = plain(api.exportBackup());
   assert.equal(exported.format, 'design-atlas-favorites'); assert.equal(exported.version, 2);
   assert.deepEqual(exported.cases, ['case-a', 'case-b']);
@@ -50,6 +51,20 @@ test('versioned import merges valid IDs without replacing either library and exp
   assert.equal(api.has('cases', 'shared'), false);
   api.toggle('cases', 'case-a');
   assert.deepEqual(plain(api.ids('patterns')), ['pattern-a', 'pattern-b']);
+});
+
+test('materials join backups without losing old case and pattern favorites', () => {
+  const { api } = page({ [key]: { format: 'design-atlas-favorites', version: 2, cases: ['case-a'], patterns: ['pattern-a'] } });
+  api.toggle('materials', 'shaders');
+  const exported = plain(api.exportBackup());
+  assert.deepEqual(exported.materials, ['shaders']);
+  assert.deepEqual(exported.cases, ['case-a']);
+  const restored = page().api;
+  restored.importBackup(exported);
+  assert.equal(restored.has('materials', 'shaders'), true);
+  restored.importBackup({ format: 'design-atlas-favorites', version: 2, cases: ['case-b'], patterns: [] });
+  assert.deepEqual(plain(restored.ids('materials')), ['shaders']);
+  assert.deepEqual(plain(restored.ids('cases')), ['case-a','case-b']);
 });
 
 test('invalid JSON or schema cannot partially modify favorites or persisted storage', () => {

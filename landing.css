@@ -261,3 +261,6 @@
   .landing-command-heading,.landing-command textarea{border-color:CanvasText}
   .landing-command button:focus-visible,.landing-command textarea:focus-visible{outline-color:Highlight}
 }
+
+.home-materials{padding:72px 0;border-top:1px solid var(--landing-line)}
+.home-material-preview{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:center;color:inherit;text-decoration:none}.home-material-preview img{display:block;width:100%;border:1px solid var(--landing-line);border-radius:8px}.home-material-preview h3{font-size:28px;line-height:1.4;margin:8px 0 16px}.home-material-preview p{font-size:16px;line-height:1.8}.home-material-preview .landing-module-tag{font-size:12px}.home-material-preview:hover h3{text-decoration:underline;text-underline-offset:6px}@media(max-width:800px){.home-materials{padding:48px 0}.home-material-preview{grid-template-columns:1fr;gap:20px}.home-material-preview h3{font-size:24px}}

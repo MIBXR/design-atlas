@@ -445,6 +445,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
+    "path": "docs/materials.md",
+    "title": "内容素材库与 Shaders",
+    "group": "复现与素材"
+  },
+  {
     "path": "demos/pattern-playground/fidelity.md",
     "title": "巧思共享示意：实现与边界",
     "group": "复现与素材"
@@ -567,6 +572,16 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "demos/rijksmuseum-art/fidelity.md",
     "title": "Rijksmuseum · 全幅摄影与巨大字标：复现范围",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/shaders/README.md",
+    "title": "Shaders 开源效果实验",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/shaders/vendor/NOTICE.md",
+    "title": "Shaders 运行包与第三方许可",
     "group": "复现与素材"
   },
   {

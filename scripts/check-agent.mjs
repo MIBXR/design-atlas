@@ -27,6 +27,15 @@ export function verifyAgent({ root = defaultRoot } = {}) {
     assert.equal(patterns.contentVersion, catalog.patterns.contentVersion);
     assert.deepEqual(fs.readdirSync(resolveRepositoryPath(root, 'agent/patterns')).sort(), expected.patternBundles.map(bundle => bundle.id + '.json').sort(), 'Unexpected or missing pattern bundle');
   }
+  if (catalog.materials) {
+    const bytes = fs.readFileSync(resolveRepositoryPath(root, catalog.materials.path));
+    assert.equal(sha256(bytes), catalog.materials.sha256, 'Material index hash differs');
+    assert.equal(bytes.length, catalog.materials.bytes, 'Material index size differs');
+    const materials = JSON.parse(bytes);
+    assert.equal(materials.materialCount, catalog.materials.materialCount);
+    assert.equal(materials.contentVersion, catalog.materials.contentVersion);
+    assert.deepEqual(fs.readdirSync(resolveRepositoryPath(root, 'agent/materials')).sort(), expected.materialBundles.map(bundle => bundle.id + '.json').sort(), 'Unexpected or missing material bundle');
+  }
   let files = 0, documents = 0;
   for (const record of catalog.entries) {
     const bundleBytes = fs.readFileSync(resolveRepositoryPath(root, record.paths.bundle));
@@ -52,7 +61,7 @@ export function verifyAgent({ root = defaultRoot } = {}) {
       files++;
     }
   }
-  return { entryCount: catalog.entryCount, documents, files, contentVersion: catalog.contentVersion };
+  return { entryCount: catalog.entryCount, materialCount: catalog.materials?.materialCount || 0, documents, files, contentVersion: catalog.contentVersion };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

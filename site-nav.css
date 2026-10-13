@@ -170,6 +170,7 @@ html{scrollbar-gutter:stable;scroll-padding-top:calc(var(--atlas-header-height) 
 .atlas-cache-dialog #cache-status{font-variant-numeric:tabular-nums;color:var(--atlas-shell-muted)}
 .atlas-cache-dialog .dialog-close{float:right;min-width:44px;min-height:44px;padding:0;border:0;background:none;color:inherit;font:25px/1 var(--atlas-font-sans,sans-serif);cursor:pointer}
 .atlas-cache-dialog .dialog-close:focus-visible{outline:3px solid var(--atlas-shell-focus);outline-offset:3px}
+.atlas-cache-dialog .dialog-close svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
 .atlas-site-header a:focus-visible,.atlas-site-header select:focus-visible,
 .atlas-page-menu>summary:focus-visible,.atlas-section-nav>a:focus-visible,
 .atlas-ui-button:focus-visible{

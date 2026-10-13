@@ -65,7 +65,7 @@
         "bundle": "agent/cases/pixel-world.json",
         "demo": "demos/pixel-world/index.html"
       },
-      "bundleSha256": "e94376694656e05e47c93b40034e6d2b731eb068159e3416eb8e2c30dbe149d8"
+      "bundleSha256": "93df0009e0c3694a3ea83662f7023935afdf4ac45e7967aa6d1181605b18ad0b"
     }
   ]
 }

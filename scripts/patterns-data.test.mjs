@@ -111,13 +111,18 @@ test('symlinks and junctions are forbidden in pattern provenance', () => {
   } finally { f.cleanup(); }
 });
 
-test('combined library version includes the pattern version and every case has reverse associations', () => {
+test('combined library version includes pattern and material versions and every case has reverse associations', () => {
   const generated = buildAgent({ write: false });
   const metadata = generated.catalog.patterns;
   assert.ok(metadata.patternCount > 0);
   assert.equal(metadata.sha256, sha256(generated.outputs.get(metadata.path)));
   const caseInput = [...generated.catalog.entries].sort((a, b) => a.id.localeCompare(b.id, 'en')).map(record => `${record.id}:${record.bundleSha256}\n`).join('');
-  assert.equal(generated.catalog.contentVersion, sha256(Buffer.from(caseInput + `patterns:${metadata.contentVersion}\n`)));
+  assert.equal(generated.catalog.contentVersion, sha256(Buffer.from(caseInput + `patterns:${metadata.contentVersion}\n` + (generated.materialCatalog ? `materials:${generated.materialCatalog.contentVersion}\n` : ''))));
+  if (generated.materialCatalog) {
+    const bytes = generated.outputs.get('agent/materials.json');
+    assert.equal(generated.catalog.materials.sha256, sha256(bytes));
+    assert.equal(generated.catalog.materials.contentVersion, generated.materialCatalog.contentVersion);
+  }
   const patterns = loadPatterns();
   for (const bundle of generated.bundles) assert.deepEqual(bundle.patternIds, patterns.filter(pattern => pattern.sources.some(source => source.caseId === bundle.id)).map(pattern => pattern.id).sort(), `${bundle.id}: reverse associations differ from pattern sources`);
   assert.equal(verifyPatterns().patternCount, metadata.patternCount);
