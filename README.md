@@ -30,7 +30,7 @@
 - **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；案例与巧思共用适应面板、桌面 1440px、手机 ≤390px 和重播控件，高度随可用视口调整，内容在 Demo 内滚动。
 - **比较**：选择2–3项并排比较，七节说明按同名章节逐行对齐；每行采用最长内容所需的自然高度，便于比较不同案例在同一设计维度上的区别。
 - **巧思库**：独立巧思页按视觉、微动效、页面动效、声音、内容与组织筛选，再按功能用途、来源案例与关键词找可单独借用的机制；首页和实验室可实际操作本地示意，巧思详情按需载入完整来源 Demo；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
-- **内容素材库**：在代表性样例中试用组件与资源，按类型、用途与关键词筛选；详情保留参数、安装方式、源码、Prompt、版本、来源与许可证。首条 [Shaders](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html#material/shaders) 收录流动渐变、条纹玻璃、指针波纹和噪声溶解四种真实 WebGPU 效果，按需启动一个画布，兼容性不足时显示明确标注的静态参考；完整库与作者工具回到原始仓库。
+- **内容素材库**：在代表性样例中试用组件与资源，按类型、用途与关键词筛选；详情保留参数、安装方式、源码、Prompt、版本、来源与许可证。Google Material Web、手绘 Wired Elements、复古 98.css、Recursive 可变字体与 Shaders 提供不同的组件语言、试排与视觉效果，按需载入并保留明确的兼容性后备；完整库与作者工具回到原始仓库。
 - **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在设计实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
 - **Agent 选型**：调用 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
@@ -88,7 +88,15 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 ## 内容素材取材
 
-[内容素材库](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html) 与案例、巧思共用浏览和详情结构；素材资料独立维护在 `materials/`，可运行样例与必要依赖保存在 `material-demos/`。首条资源使用固定的 `shaders 4.0.4` MIT 运行时，保留上游许可证和原始文件摘要，官网平台预设与软件许可分开说明。
+[内容素材库](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html) 与案例、巧思共用浏览和详情结构；素材资料独立维护在 `materials/`，可运行样例与必要依赖保存在 `material-demos/`。资源保留固定版本、上游许可证和文件摘要，区分原始资源、本地原创组合与兼容性后备。
+
+| 素材 | 适合借用的方向 | 使用说明 |
+| --- | --- | --- |
+| [Google Material Web](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html#material/material-web) | Material 3 操作层级、表单与设置 | [版本、维护状态与接入](docs/materials-material-web.md) |
+| [Wired Elements](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html#material/wired-elements) | 手绘轮廓、任务卡与轻量原型 | [真实组件与原创组合](docs/materials-wired-elements.md) |
+| [98.css](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html#material/98-css) | 复古桌面、窗口与系统控件 | [字号适配与分别授权](docs/materials-98-css.md) |
+| [Recursive](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html#material/recursive) | 五轴可变字体、等宽与海报试排 | [字体范围、CSS 与回退](docs/materials-recursive.md) |
+| [Shaders](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html#material/shaders) | 渐变、玻璃、涟漪与溶解 | [WebGPU 与静态后备](docs/materials.md#shaders-的来源与范围) |
 
 ![Shaders 四种代表样例](previews/materials/shaders.png)
 

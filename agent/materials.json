@@ -1,9 +1,150 @@
 {
   "schemaVersion": 1,
   "repository": "https://github.com/MIBXR/design-atlas",
-  "materialCount": 1,
-  "contentVersion": "b2cd31747f4000848bca43d62712a841a6ce5c364777a417b6e60eeb4a661710",
+  "materialCount": 5,
+  "contentVersion": "c5c23ecbac964718a8905cb69541588e95f4073ef1929cd352cc7468a7765861",
   "materials": [
+    {
+      "id": "98-css",
+      "title": "98.css · 复古桌面组件",
+      "type": "component-library",
+      "category": "组件与效果",
+      "summary": "以真实 Windows 98 风格 CSS 组合设置窗口、可筛选素材目录与可暂停进度；保留复古边框，同时提高文字与触控可用性。",
+      "tags": [
+        "98.css",
+        "Windows 98",
+        "复古",
+        "CSS",
+        "桌面隐喻",
+        "窗口",
+        "表单",
+        "目录",
+        "进度条"
+      ],
+      "useCases": [
+        "怀旧主题作品与小型展品",
+        "私人档案或游戏道具目录",
+        "带桌面隐喻的工具与教程"
+      ],
+      "avoid": [
+        "以复古为理由使用过小文字和触控区域",
+        "将 CSS 库当作完整操作系统或业务框架",
+        "用模拟进度证明真实下载或安装完成"
+      ],
+      "constraints": [
+        "固定 98.css 0.1.21；原库仅有 CSS，本地 JavaScript 实现行为。",
+        "原库控件 11px 已在适配层提高为 14px，辅助信息不低于 12px；不以缩放还原旧屏幕。",
+        "CSS 为 MIT；随包 MS Sans Serif 与 Bold 字体来自 lou，采用 CC BY-SA 3.0，需保留独立署名与许可。",
+        "模拟进度每 240ms 增加 2% 为本地参数，不产生文件；真实任务必须接真实进度。",
+        "页面隐藏或切换演示暂停，返回需用户继续；减少动态时手动步进。",
+        "静态后备保留样式和说明；没有 JavaScript 时应用、筛选和演示计时不执行。"
+      ],
+      "paths": {
+        "bundle": "agent/materials/98-css.json",
+        "demo": "material-demos/98-css/index.html",
+        "entry": "materials/98-css.json",
+        "preview": "previews/materials/98-css.png"
+      },
+      "bundleSha256": "3d0d1e9b6ab0f970463405ed387af109027bf62fd753f1da7f490fafac43c231"
+    },
+    {
+      "id": "material-web",
+      "title": "Google Material Web · Material 3 官方组件",
+      "type": "component-library",
+      "category": "组件与效果",
+      "summary": "Google Material Design 的官方 Web Components 实现：用色彩角色、圆角、浮动标签和状态层，体验操作层级、表单验证、偏好设置与确认对话框。",
+      "tags": [
+        "Google",
+        "Google Material Design",
+        "Material Design",
+        "Material 3",
+        "Material Web",
+        "Web Components",
+        "Lit",
+        "设计系统",
+        "浮动标签",
+        "色彩角色",
+        "表单",
+        "对话框"
+      ],
+      "useCases": [
+        "有明确主次操作的产品工具",
+        "需要持续显示字段含义的表单",
+        "有即时结果预览的偏好面板",
+        "需要确认与撤回路径的任务流程",
+        "希望以 CSS tokens 统一色彩与形状的原生 Web 页面"
+      ],
+      "avoid": [
+        "把本版本当作完整 Material 3 Expressive 实现",
+        "依赖持续新增组件或官方快速响应的长期路线",
+        "仅为套用外观而丢弃现有网站的信息结构",
+        "需要旧浏览器而不准备原生 DOM 后备的关键流程"
+      ],
+      "constraints": [
+        "固定 @material/web 2.5.0；官方 README 在核验时仍标注维护模式、等待新维护者。",
+        "官方是 Web Components/Lit 实现，不等同于 Angular Material 或 MUI；本条目不覆盖整个 Material Design 规范。",
+        "本地 vendor 合并了所选官方组件、CSS-in-JS 及 Lit/tslib 依赖，保留许可和锁文件；更换版本须重新核验 API 与 Shadow DOM 适配。",
+        "以 HTTP/HTTPS 提供 ES module；模块失败时仅显示明确标注的静态说明，不声称真实组件已运行。",
+        "配色、4–28px 圆角范围、中文内容与四种业务组合为本地原创演示，未接入服务端、持久化或真实账户。",
+        "系统减少动态或手动选择时关闭局部过渡和 ripple，dialog 使用 quick；滑块值标签取消缩放过渡以保持文字至少12px；无持续动画或后台计时器。",
+        "实际浏览器验证限定于 Chromium 桌面及390px窄屏；Safari、Firefox、真实触屏与屏幕阅读器仍需目标项目验证。"
+      ],
+      "paths": {
+        "bundle": "agent/materials/material-web.json",
+        "demo": "material-demos/material-web/index.html",
+        "entry": "materials/material-web.json",
+        "preview": "previews/materials/material-web.png"
+      },
+      "bundleSha256": "989069065be750e8dd8603a2cfbe99a6ba926f2176e79033bd99d026b7c201ab"
+    },
+    {
+      "id": "recursive",
+      "title": "Recursive · 五轴可变字体",
+      "type": "font",
+      "category": "字体与排版",
+      "summary": "在同一原始字体中切换比例与等宽字形，调节笔触、字重、倾斜和草写；用界面标题、代码及海报三种试排理解用途。",
+      "tags": [
+        "字体",
+        "可变字体",
+        "Recursive",
+        "ArrowType",
+        "等宽",
+        "代码",
+        "招牌",
+        "海报",
+        "Typography",
+        "WOFF2",
+        "OFL"
+      ],
+      "useCases": [
+        "需要比例标题与等宽代码共享气质的产品",
+        "数据界面、技术文档与终端片段",
+        "有手写招牌个性的拉丁短标题",
+        "试验字体轴对层级、字形与换行的影响"
+      ],
+      "avoid": [
+        "把它当作中文或全语言覆盖字体",
+        "在小字号正文使用极重字重与强草写",
+        "将等宽字体试排误称功能完整的代码编辑器",
+        "只下载源码而遗漏字体及 OFL 许可"
+      ],
+      "constraints": [
+        "固定使用 v1.085 的完整 WOFF2，718,680 字节；未修改、子集化或转码。",
+        "自定义轴需要可变字体支持；加载失败时采用明确标注的系统字体后备。",
+        "主要支持拉丁文字及相关符号；中文由系统字体回退，不响应 Recursive 的 MONO、CASL、CRSV 等轴。",
+        "MONO 会改变字宽；固定 MONO 下其他轴保持字体设计的横向度量，混排与实际换行仍需验证。",
+        "三套参数、文案和版式为本地原创组合；字号范围 16–88px 也是本地选择，不表示原作者推荐所有组合。",
+        "本示例无自动动画和声音，不产生持续后台绘制；所有试排修改由用户输入触发。",
+        "再分发保留版权和 OFL 1.1 完整文本，不单独出售字体；更换版本或生成字体子集时重新核对许可与字形范围。"
+      ],
+      "paths": {
+        "bundle": "agent/materials/recursive.json",
+        "demo": "material-demos/recursive/index.html",
+        "entry": "materials/recursive.json",
+        "preview": "previews/materials/recursive.png"
+      },
+      "bundleSha256": "9ed65260af8828019dd62702a4ef2ce4dd16c5fe5c9d73bc9b4c5d6c6e4fc481"
+    },
     {
       "id": "shaders",
       "title": "Shaders · 可调节的 WebGPU 效果",
@@ -47,7 +188,51 @@
         "entry": "materials/shaders.json",
         "preview": "previews/materials/shaders.png"
       },
-      "bundleSha256": "6b2030ba24dc55dac530f8cb8548780f38f0c9be85841f08ad2b3023da28d797"
+      "bundleSha256": "8729e2c343528174871ca08f2a0fa00d9037fe05dc556fac0e523cb5890e1e2b"
+    },
+    {
+      "id": "wired-elements",
+      "title": "Wired Elements · 可操作的手绘草稿",
+      "type": "component-library",
+      "category": "组件与效果",
+      "summary": "用真实手绘 Web Components 组合任务清单、偏好面板与概念卡片；让草图在保留讨论感的同时具备可验证的状态。",
+      "tags": [
+        "Wired Elements",
+        "Web Components",
+        "手绘",
+        "草图",
+        "原型",
+        "SVG",
+        "任务清单",
+        "偏好设置",
+        "卡片",
+        "Rough"
+      ],
+      "useCases": [
+        "工作坊中的可勾选行动清单",
+        "用户访谈中的设置流程原型",
+        "学习工具和概念卡片"
+      ],
+      "avoid": [
+        "把草图当作完整生产设计系统",
+        "未验证就依赖自定义组件的表单提交与校验",
+        "要求每次重绘像素一致的展示"
+      ],
+      "constraints": [
+        "锁定最新非预发布版本 2.1.2；核验时 npm latest 指向 3.0.0-rc.6，不据此宣称 3.x 已验证。",
+        "需要 JavaScript、Custom Elements 和 Shadow DOM；自托管官方完整 ESM，运行无 CDN。",
+        "随机手绘线条来自原库；页面场景、文案、配色与联动为本地原创组合。",
+        "标签、复选框、滑块和开关保留键盘路径；内部开关和滑块补充可访问名称。",
+        "无循环动画与声音；静态后备只解释用法，不代表组件运行。",
+        "保留 Wired / RoughJS MIT 与 bundle 内 Lit / lit-html BSD 3-Clause 许可。"
+      ],
+      "paths": {
+        "bundle": "agent/materials/wired-elements.json",
+        "demo": "material-demos/wired-elements/index.html",
+        "entry": "materials/wired-elements.json",
+        "preview": "previews/materials/wired-elements.png"
+      },
+      "bundleSha256": "de110e1973fbed588811bfe9beb912437eaaa68c138ee275ae1115fa6c882fc0"
     }
   ]
 }

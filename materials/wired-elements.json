@@ -1,0 +1,169 @@
+{
+  "id": "wired-elements",
+  "title": "Wired Elements · 可操作的手绘草稿",
+  "type": "component-library",
+  "category": "组件与效果",
+  "demo": "material-demos/wired-elements/index.html",
+  "preview": "previews/materials/wired-elements.png",
+  "research": "docs/materials-wired-elements.md",
+  "sourceFiles": [
+    "material-demos/wired-elements/index.html",
+    "material-demos/wired-elements/demo.css",
+    "material-demos/wired-elements/demo.js"
+  ],
+  "summary": "用真实手绘 Web Components 组合任务清单、偏好面板与概念卡片；让草图在保留讨论感的同时具备可验证的状态。",
+  "install": "npm install wired-elements@2.1.2",
+  "demoNote": "三个本地原创场景直接运行官方组件。无自动动画；模块不可用时显示标注的静态说明。",
+  "tags": [
+    "Wired Elements",
+    "Web Components",
+    "手绘",
+    "草图",
+    "原型",
+    "SVG",
+    "任务清单",
+    "偏好设置",
+    "卡片",
+    "Rough"
+  ],
+  "useCases": [
+    "工作坊中的可勾选行动清单",
+    "用户访谈中的设置流程原型",
+    "学习工具和概念卡片"
+  ],
+  "avoid": [
+    "把草图当作完整生产设计系统",
+    "未验证就依赖自定义组件的表单提交与校验",
+    "要求每次重绘像素一致的展示"
+  ],
+  "constraints": [
+    "锁定最新非预发布版本 2.1.2；核验时 npm latest 指向 3.0.0-rc.6，不据此宣称 3.x 已验证。",
+    "需要 JavaScript、Custom Elements 和 Shadow DOM；自托管官方完整 ESM，运行无 CDN。",
+    "随机手绘线条来自原库；页面场景、文案、配色与联动为本地原创组合。",
+    "标签、复选框、滑块和开关保留键盘路径；内部开关和滑块补充可访问名称。",
+    "无循环动画与声音；静态后备只解释用法，不代表组件运行。",
+    "保留 Wired / RoughJS MIT 与 bundle 内 Lit / lit-html BSD 3-Clause 许可。"
+  ],
+  "upstream": {
+    "repository": "rough-stuff/wired-elements",
+    "url": "https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b",
+    "commit": "04756df72181e08b4255f8b6dfefea130398e24b",
+    "version": "2.1.2",
+    "verifiedAt": "2026-10-16"
+  },
+  "license": {
+    "name": "MIT + BSD-3-Clause",
+    "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/LICENSE",
+    "scope": "Wired Elements 与内含 RoughJS 渲染代码采用 MIT；完整 bundle 内 Lit Element 2.3.1 / lit-html 1.2.1 采用 BSD 3-Clause。",
+    "notes": "vendor 保留官方 bundle 原字节及四份许可；复制整个 Demo 时一并保留。RoughJS 上游声明 ^4.3.1，精确构建解析版本未暴露。场景组合与参数默认值为本地实现。"
+  },
+  "sources": [
+    {
+      "title": "Wired Elements 固定版本源码",
+      "url": "https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b",
+      "note": "核对组件包、完整 ESM 接入与 MIT 许可。",
+      "evidence": "source"
+    },
+    {
+      "title": "wired-elements 2.1.2 npm 元数据",
+      "url": "https://registry.npmjs.org/wired-elements/2.1.2",
+      "note": "官方分发及 gitHead；本地 ESM 来自该 tarball。",
+      "evidence": "source"
+    },
+    {
+      "title": "Wired Elements 官方组件演示",
+      "url": "https://wiredjs.com/showcase",
+      "note": "浏览器实际操作 wired-checkbox，从未选中到选中；不能据此宣称整套组件均已验证。",
+      "evidence": "observed"
+    },
+    {
+      "title": "卡片参数依据",
+      "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-card/README.md",
+      "note": "elevation 1–5、fill 和动态尺寸重绘。",
+      "evidence": "source"
+    },
+    {
+      "title": "滑块参数依据",
+      "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-slider/README.md",
+      "note": "value、min、max 与 change；本地把范围设置为卡片层级 1–5。",
+      "evidence": "source"
+    },
+    {
+      "title": "复选状态与事件",
+      "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-checkbox/README.md",
+      "note": "checked、disabled 与 change。",
+      "evidence": "source"
+    },
+    {
+      "title": "开关状态",
+      "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-toggle/README.md",
+      "note": "checked 与 change；与预览的联动是本地行为。",
+      "evidence": "source"
+    },
+    {
+      "title": "进度条参数",
+      "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-progress/README.md",
+      "note": "value / max；三项任务计数为本地示例。",
+      "evidence": "source"
+    }
+  ],
+  "demos": [
+    {
+      "id": "checklist",
+      "title": "任务清单",
+      "component": "wired-checkbox / wired-progress / wired-button",
+      "summary": "勾选真实手绘复选框，计数同步进度条；可恢复默认。",
+      "entrypoint": "material-demos/wired-elements/index.html?demo=checklist",
+      "parameters": [
+        {
+          "name": "checked",
+          "value": "true / false",
+          "note": "官方布尔属性；三项任务默认完成第一项为本地选择。"
+        },
+        {
+          "name": "value / max",
+          "value": "0–3 / 3",
+          "note": "官方进度属性；任务数与联动为本地组合。"
+        }
+      ]
+    },
+    {
+      "id": "preferences",
+      "title": "偏好面板",
+      "component": "wired-toggle / wired-checkbox",
+      "summary": "设置专注模式与摘要，再应用到当前示例；不修改系统或保存偏好。",
+      "entrypoint": "material-demos/wired-elements/index.html?demo=preferences",
+      "parameters": [
+        {
+          "name": "checked",
+          "value": "true / false",
+          "note": "官方开关与复选属性；摘要显示与应用动作由本地代码处理。"
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "title": "概念卡片",
+      "component": "wired-card / wired-slider",
+      "summary": "调整真实手绘卡片的层级与填色，比较概念信息的主次。",
+      "entrypoint": "material-demos/wired-elements/index.html?demo=card",
+      "parameters": [
+        {
+          "name": "elevation",
+          "value": "1–5",
+          "note": "官方文档范围；本地默认 3。"
+        },
+        {
+          "name": "fill",
+          "value": "#f8e9a1 / 自选颜色",
+          "note": "官方颜色属性；默认纸面色为本地选择。"
+        }
+      ]
+    }
+  ],
+  "prompt": "使用固定版本 wired-elements 2.1.2，在现有 HTML/CSS/JavaScript 项目里为可讨论的轻量流程选择任务清单、偏好面板或概念卡片。读取本地演示，把真实 wired-checkbox、wired-progress、wired-toggle、wired-card 和 wired-slider 接到当前页面的明确状态。使用原库 SVG 手绘边界，保持 DOM 文本、标签、键盘操作和至少 12px 的实际文字。卡片 elevation 遵循 1–5；配色与内容按任务选择。自托管官方 ESM，保留 MIT 与 BSD 许可；加载失败时显示明确静态说明，不声称组件仍已运行。无需求时不加入循环动画、声音、持久化或额外框架。",
+  "accessibility": {
+    "keyboard": "标签支持左右、Home、End；真实组件内部原生复选框、滑块和按钮可键盘操作，开关与滑块补上内部名称。",
+    "reducedMotion": "没有自动动画或持续帧循环，参数和状态变化保留。随机线条重绘由实际内容与尺寸变化触发。"
+  }
+}
