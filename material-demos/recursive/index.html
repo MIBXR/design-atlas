@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recursive 字体试排 · Design Atlas</title>
+  <link rel="stylesheet" href="demo.css">
+  <script type="module" src="demo.js"></script>
+</head>
+<body>
+  <main class="demo-shell">
+    <header class="demo-header">
+      <div><p class="eyebrow">TYPE / FIVE VARIABLE AXES</p><h1>Recursive 字体试排</h1></div>
+      <span class="version">v1.085 · OFL 1.1</span>
+    </header>
+    <div class="preset-tabs" role="tablist" aria-label="试排用途">
+      <button id="tab-interface" type="button" role="tab" aria-selected="true" aria-controls="specimen-panel" data-preset="interface">界面标题</button>
+      <button id="tab-code" type="button" role="tab" aria-selected="false" aria-controls="specimen-panel" tabindex="-1" data-preset="code">等宽代码</button>
+      <button id="tab-poster" type="button" role="tab" aria-selected="false" aria-controls="specimen-panel" tabindex="-1" data-preset="poster">个性海报</button>
+    </div>
+    <div class="experiment">
+      <section id="specimen-panel" role="tabpanel" aria-labelledby="tab-interface">
+        <div id="stage" class="stage" data-preset="interface">
+          <p id="specimen-kicker">PRODUCT / UI TYPOGRAPHY</p>
+          <div id="specimen" class="specimen" lang="en">Make room for better ideas.</div>
+          <p class="stage-caption">原始 Recursive 字体 · 本地原创排版组合</p>
+        </div>
+        <p id="font-status" class="status" role="status">字体加载中；当前使用系统后备。</p>
+        <label class="text-label" for="sample-text">试排文字</label>
+        <textarea id="sample-text" rows="3" spellcheck="false">Make room for better ideas.</textarea>
+        <p class="hint">支持拉丁文字和越南语等；中文使用系统字体，不受 Recursive 自定义轴控制。长行会折行，请另行检查真实代码的列对齐。</p>
+      </section>
+      <aside class="controls-panel" aria-label="字体参数">
+        <h2 id="preset-title">界面标题</h2>
+        <p id="preset-use" class="description">比例字宽、直立字形与中粗字重，为产品界面建立清晰层级。</p>
+        <div class="parameters">
+          <label class="parameter" for="axis-MONO"><span>字宽 MONO <output id="value-MONO" for="axis-MONO">0</output></span><input id="axis-MONO" type="range" min="0" max="1" step="0.01" value="0"></label>
+          <label class="parameter" for="axis-CASL"><span>个性 CASL <output id="value-CASL" for="axis-CASL">0</output></span><input id="axis-CASL" type="range" min="0" max="1" step="0.01" value="0"></label>
+          <label class="parameter" for="axis-wght"><span>字重 wght <output id="value-wght" for="axis-wght">650</output></span><input id="axis-wght" type="range" min="300" max="1000" step="10" value="650"></label>
+          <label class="parameter" for="axis-slnt"><span>倾斜 slnt <output id="value-slnt" for="axis-slnt">0</output></span><input id="axis-slnt" type="range" min="-15" max="0" step="0.5" value="0"></label>
+          <label class="parameter" for="axis-CRSV"><span>草写 CRSV</span><select id="axis-CRSV"><option value="0">0 · 始终正体</option><option value="0.5" selected>0.5 · 随倾斜自动</option><option value="1">1 · 始终草写</option></select></label>
+          <label class="parameter" for="font-size"><span>字号 <output id="size-value" for="font-size">48px</output></span><input id="font-size" type="range" min="16" max="88" step="1" value="48"></label>
+        </div>
+        <p class="hint">MONO 1 为等宽；CASL 1 更接近手写招牌。CRSV 为自动时，倾斜到 −14° 附近切换草写字形。</p>
+        <button id="reset" type="button">重置当前试排</button>
+        <label class="fallback-toggle"><input id="fallback" type="checkbox">模拟字体不可用</label>
+      </aside>
+    </div>
+    <details class="code-panel">
+      <summary>使用方法与当前 CSS</summary>
+      <p>将 vendor 中的完整字体和 OFL 许可一起复制到项目，调整下面的相对路径。无需框架或运行时库。</p>
+      <div class="code-actions"><button id="copy-css" type="button">复制 CSS</button><span id="copy-status" role="status"></span></div>
+      <pre><code id="example-code"></code></pre>
+    </details>
+    <footer class="demo-footer"><span>手动试排，无自动动画或声音。</span><div><a href="https://www.recursive.design/" target="_blank" rel="noreferrer">官方字体样张</a><a href="https://github.com/arrowtype/recursive/tree/5f4be025122d72d4710267e959128e8986ebe435" target="_blank" rel="noreferrer">固定版本源码</a><a href="vendor/LICENSE-OFL.txt">字体许可</a></div></footer>
+  </main>
+</body>
+</html>

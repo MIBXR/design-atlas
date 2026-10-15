@@ -410,6 +410,21 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
+    "path": "material-demos/98-css/README.md",
+    "title": "98.css 复古桌面组件工作台",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/98-css/vendor/NOTICE.md",
+    "title": "98.css 样式与字体来源",
+    "group": "复现与素材"
+  },
+  {
+    "path": "docs/materials-98-css.md",
+    "title": "98.css：带有桌面记忆的 CSS 组件",
+    "group": "复现与素材"
+  },
+  {
     "path": "demos/philharmonie-music/fidelity.md",
     "title": "巴黎爱乐厅 · 音乐展与音乐会详情：复现范围",
     "group": "复现与素材"
@@ -446,7 +461,7 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   },
   {
     "path": "docs/materials.md",
-    "title": "内容素材库与 Shaders",
+    "title": "内容素材库",
     "group": "复现与素材"
   },
   {
@@ -545,6 +560,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
+    "path": "docs/materials-material-web.md",
+    "title": "Google Material Web：Material 3 官方组件",
+    "group": "复现与素材"
+  },
+  {
     "path": "demos/google-material/fidelity.md",
     "title": "Google Material：表现力与组件秩序：复现范围",
     "group": "复现与素材"
@@ -552,6 +572,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "demos/linear-workflow/fidelity.md",
     "title": "Linear：当前页面的设计与交互",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/material-web/vendor/README.md",
+    "title": "Material Web 本地运行依赖",
     "group": "复现与素材"
   },
   {
@@ -567,6 +592,21 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "demos/qoder-platform/fidelity.md",
     "title": "Qoder CN：当前页面的设计与交互",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/recursive/README.md",
+    "title": "Recursive 五轴字体试排",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/recursive/vendor/NOTICE.md",
+    "title": "Recursive 字体来源",
+    "group": "复现与素材"
+  },
+  {
+    "path": "docs/materials-recursive.md",
+    "title": "Recursive：从界面到招牌的五轴字体",
     "group": "复现与素材"
   },
   {
@@ -597,6 +637,21 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "demos/uma-musume/fidelity.md",
     "title": "Umamusume 复现边界",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/wired-elements/README.md",
+    "title": "Wired Elements 手绘组件工作台",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/wired-elements/vendor/NOTICE.md",
+    "title": "Wired Elements 运行时来源",
+    "group": "复现与素材"
+  },
+  {
+    "path": "docs/materials-wired-elements.md",
+    "title": "Wired Elements：有手绘语言的可操作组件",
     "group": "复现与素材"
   }
 ];

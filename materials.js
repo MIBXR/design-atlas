@@ -1,5 +1,578 @@
 window.DESIGN_MATERIALS = [
   {
+    "id": "98-css",
+    "title": "98.css · 复古桌面组件",
+    "type": "component-library",
+    "category": "组件与效果",
+    "demo": "material-demos/98-css/index.html",
+    "preview": "previews/materials/98-css.png",
+    "research": "docs/materials-98-css.md",
+    "sourceFiles": [
+      "material-demos/98-css/index.html",
+      "material-demos/98-css/demo.css",
+      "material-demos/98-css/demo.js"
+    ],
+    "summary": "以真实 Windows 98 风格 CSS 组合设置窗口、可筛选素材目录与可暂停进度；保留复古边框，同时提高文字与触控可用性。",
+    "install": "npm install 98.css@0.1.21",
+    "demoNote": "原库提供 CSS，本地代码提供标签切换、筛选与模拟进度；不会修改系统或执行下载。",
+    "tags": [
+      "98.css",
+      "Windows 98",
+      "复古",
+      "CSS",
+      "桌面隐喻",
+      "窗口",
+      "表单",
+      "目录",
+      "进度条"
+    ],
+    "useCases": [
+      "怀旧主题作品与小型展品",
+      "私人档案或游戏道具目录",
+      "带桌面隐喻的工具与教程"
+    ],
+    "avoid": [
+      "以复古为理由使用过小文字和触控区域",
+      "将 CSS 库当作完整操作系统或业务框架",
+      "用模拟进度证明真实下载或安装完成"
+    ],
+    "constraints": [
+      "固定 98.css 0.1.21；原库仅有 CSS，本地 JavaScript 实现行为。",
+      "原库控件 11px 已在适配层提高为 14px，辅助信息不低于 12px；不以缩放还原旧屏幕。",
+      "CSS 为 MIT；随包 MS Sans Serif 与 Bold 字体来自 lou，采用 CC BY-SA 3.0，需保留独立署名与许可。",
+      "模拟进度每 240ms 增加 2% 为本地参数，不产生文件；真实任务必须接真实进度。",
+      "页面隐藏或切换演示暂停，返回需用户继续；减少动态时手动步进。",
+      "静态后备保留样式和说明；没有 JavaScript 时应用、筛选和演示计时不执行。"
+    ],
+    "upstream": {
+      "repository": "jdan/98.css",
+      "url": "https://github.com/jdan/98.css/tree/517d174b30392d39e068ef4eca457da66a189f8f",
+      "commit": "517d174b30392d39e068ef4eca457da66a189f8f",
+      "version": "0.1.21",
+      "verifiedAt": "2026-10-16"
+    },
+    "license": {
+      "name": "MIT（CSS） / CC BY-SA 3.0（字体）",
+      "url": "https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/LICENSE",
+      "scope": "Jordan Scales 的 CSS 为 MIT；lou 的 MS Sans Serif 与 Bold 字体为 CC BY-SA 3.0。",
+      "notes": "CSS、字体保持原始字节，并分别保存原始许可及来源。字体不归入 MIT；再分发或修改字体按其独立条款处理。"
+    },
+    "sources": [
+      {
+        "title": "98.css 固定版本源码",
+        "url": "https://github.com/jdan/98.css/tree/517d174b30392d39e068ef4eca457da66a189f8f",
+        "note": "确认 CSS-only 架构、字体文件和许可边界。",
+        "evidence": "source"
+      },
+      {
+        "title": "98.css 官方组件文档",
+        "url": "https://jdan.github.io/98.css/",
+        "note": "浏览器确认原生复选框可选中；文档提供窗口、表格、状态栏、进度与语义要求。",
+        "evidence": "observed"
+      },
+      {
+        "title": "98.css 0.1.21 npm 元数据",
+        "url": "https://registry.npmjs.org/98.css/0.1.21",
+        "note": "确认稳定分发版本与完整 gitHead。",
+        "evidence": "source"
+      },
+      {
+        "title": "固定版本 CSS 参数",
+        "url": "https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/style.css",
+        "note": "默认 11px 控件、窗口与面板类名、分段进度；提高字号为本地适配。",
+        "evidence": "source"
+      },
+      {
+        "title": "MS Sans Serif 字体许可",
+        "url": "https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/fonts/src/ms-sans-serif/license.txt",
+        "note": "lou / FontStruct，CC BY-SA 3.0；独立于 CSS MIT。",
+        "evidence": "source"
+      },
+      {
+        "title": "MS Sans Serif Bold 字体许可",
+        "url": "https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/fonts/src/ms-sans-serif-bold/license.txt",
+        "note": "粗体的独立原始署名与许可。",
+        "evidence": "source"
+      }
+    ],
+    "demos": [
+      {
+        "id": "settings",
+        "title": "设置窗口",
+        "component": "window / title-bar / form / tabs",
+        "summary": "在外观与选项间切换，应用桌面配色与留白并重置。",
+        "entrypoint": "material-demos/98-css/index.html?demo=settings",
+        "parameters": [
+          {
+            "name": "桌面配色",
+            "value": "青绿 / 蓝灰 / 紫红",
+            "note": "三种色值为本地场景选择，不是上游主题 API。"
+          },
+          {
+            "name": "显示说明 / 紧凑留白",
+            "value": "原生 checkbox",
+            "note": "使用原库表单样式，具体开关行为为本地组合。"
+          }
+        ]
+      },
+      {
+        "id": "catalog",
+        "title": "素材目录",
+        "component": "sunken-panel / table / highlighted",
+        "summary": "输入名称筛选三项示例，选中后查看用途并测试空结果。",
+        "entrypoint": "material-demos/98-css/index.html?demo=catalog",
+        "parameters": [
+          {
+            "name": "filter",
+            "value": "名称关键词",
+            "note": "筛选为本地 JavaScript；官方仅提供输入与列表样式。"
+          },
+          {
+            "name": "highlighted",
+            "value": "选中行",
+            "note": "官方表格选中样式，键盘条目按钮由本地提供。"
+          }
+        ]
+      },
+      {
+        "id": "progress",
+        "title": "传输进度",
+        "component": "progress-indicator / segmented",
+        "summary": "切换实心或分段进度，开始、暂停、单步、重置；不执行真实下载。",
+        "entrypoint": "material-demos/98-css/index.html?demo=progress",
+        "parameters": [
+          {
+            "name": "value",
+            "value": "0–100%",
+            "note": "通过宽度表现官方进度样式；数值与 ARIA 同步为本地代码。"
+          },
+          {
+            "name": "tick",
+            "value": "240ms / +2%",
+            "note": "本地演示计时，手动每步 10%；不是性能测量。"
+          },
+          {
+            "name": "segmented",
+            "value": "开启 / 关闭",
+            "note": "原库分段进度类名。"
+          }
+        ]
+      }
+    ],
+    "prompt": "使用固定版本 98.css 0.1.21，为当前任务构建一个有实际用途的复古设置窗口、素材目录或进度界面。使用原库 window、title-bar、status-bar、sunken-panel、table 和 progress-indicator 样式，行为由小量原生 JavaScript 实现。所有控件保留语义与可访问名称，标签键盘方向导航，最终文本至少 12px，扩大触控区域，窄屏自然重排，不缩小整个界面。真实任务连接真实进度；若使用教学模拟须明确标注，允许暂停、重置、手动前进，后台与减少动态时停下持续变化。保存 MIT CSS 与 CC BY-SA 3.0 字体的独立署名许可，自托管所需文件，提供静态后备。",
+    "accessibility": {
+      "keyboard": "原生按钮、输入、下拉与复选框；设置标签支持左右、Home、End；目录每行可用 Tab / Enter 选择。",
+      "reducedMotion": "减少动态时进度改为手动步进；正常模式仅主动开始计时，隐藏页面或切换示例暂停，返回不会自动继续。"
+    }
+  },
+  {
+    "id": "material-web",
+    "title": "Google Material Web · Material 3 官方组件",
+    "type": "component-library",
+    "category": "组件与效果",
+    "summary": "Google Material Design 的官方 Web Components 实现：用色彩角色、圆角、浮动标签和状态层，体验操作层级、表单验证、偏好设置与确认对话框。",
+    "install": "npm install @material/web@2.5.0；本地 Demo 已捆绑运行依赖，直接以 HTTP/HTTPS 打开。",
+    "demoNote": "四套原创业务组合使用真实官方组件，可调配色、明暗与按钮圆角。库处于维护模式，不代表完整 Material 3 Expressive；输入和状态仅留在当前页面。",
+    "tags": [
+      "Google",
+      "Google Material Design",
+      "Material Design",
+      "Material 3",
+      "Material Web",
+      "Web Components",
+      "Lit",
+      "设计系统",
+      "浮动标签",
+      "色彩角色",
+      "表单",
+      "对话框"
+    ],
+    "useCases": [
+      "有明确主次操作的产品工具",
+      "需要持续显示字段含义的表单",
+      "有即时结果预览的偏好面板",
+      "需要确认与撤回路径的任务流程",
+      "希望以 CSS tokens 统一色彩与形状的原生 Web 页面"
+    ],
+    "avoid": [
+      "把本版本当作完整 Material 3 Expressive 实现",
+      "依赖持续新增组件或官方快速响应的长期路线",
+      "仅为套用外观而丢弃现有网站的信息结构",
+      "需要旧浏览器而不准备原生 DOM 后备的关键流程"
+    ],
+    "constraints": [
+      "固定 @material/web 2.5.0；官方 README 在核验时仍标注维护模式、等待新维护者。",
+      "官方是 Web Components/Lit 实现，不等同于 Angular Material 或 MUI；本条目不覆盖整个 Material Design 规范。",
+      "本地 vendor 合并了所选官方组件、CSS-in-JS 及 Lit/tslib 依赖，保留许可和锁文件；更换版本须重新核验 API 与 Shadow DOM 适配。",
+      "以 HTTP/HTTPS 提供 ES module；模块失败时仅显示明确标注的静态说明，不声称真实组件已运行。",
+      "配色、4–28px 圆角范围、中文内容与四种业务组合为本地原创演示，未接入服务端、持久化或真实账户。",
+      "系统减少动态或手动选择时关闭局部过渡和 ripple，dialog 使用 quick；滑块值标签取消缩放过渡以保持文字至少12px；无持续动画或后台计时器。",
+      "实际浏览器验证限定于 Chromium 桌面及390px窄屏；Safari、Firefox、真实触屏与屏幕阅读器仍需目标项目验证。"
+    ],
+    "upstream": {
+      "repository": "material-components/material-web",
+      "url": "https://github.com/material-components/material-web",
+      "commit": "b4de401eb665ec63474f39319a4ba8f2145974cc",
+      "version": "2.5.0",
+      "verifiedAt": "2026-10-16"
+    },
+    "license": {
+      "name": "Apache-2.0（Material Web）；BSD-3-Clause / 0BSD（运行依赖）",
+      "url": "https://github.com/material-components/material-web/blob/b4de401eb665ec63474f39319a4ba8f2145974cc/LICENSE",
+      "scope": "@material/web 软件代码及所选官方组件；Lit 系列和 tslib 的许可随运行包分别保留。",
+      "notes": "保留 vendor 中全部 LICENSE 文件、版权声明、行内许可和来源记录。合并/压缩是本地转换；品牌标志、官网内容及 Google 商标不因软件许可自动成为可自由使用资产。本地插图为原创 SVG。"
+    },
+    "sources": [
+      {
+        "title": "Google Material Web 固定版本仓库",
+        "url": "https://github.com/material-components/material-web/tree/b4de401eb665ec63474f39319a4ba8f2145974cc",
+        "note": "官方 Web Components 实现、Material 3 定位与源码；不将其和同名设计案例或第三方 MUI 混同。",
+        "evidence": "source"
+      },
+      {
+        "title": "@material/web 2.5.0 npm 元数据",
+        "url": "https://registry.npmjs.org/@material/web/2.5.0",
+        "note": "版本、gitHead、依赖范围、官方 tarball 与 integrity。核验时 latest 为2.5.0。",
+        "evidence": "source"
+      },
+      {
+        "title": "官方维护模式公告",
+        "url": "https://github.com/material-components/material-web/discussions/5642",
+        "note": "官方 README 当前仍指向此公告；选型时需独立评估维护能力，不推断未来支持计划。",
+        "evidence": "source"
+      },
+      {
+        "title": "按钮文档与实际交互样例",
+        "url": "https://material-web.dev/components/button/",
+        "note": "读取五种按钮层级、SVG icon slot、disabled及形状token；浏览器打开官方stories并点击真实按钮。本地计划卡不是官网样例复刻。",
+        "evidence": "observed"
+      },
+      {
+        "title": "文本框与验证接口",
+        "url": "https://material-web.dev/components/text-field/",
+        "note": "required、type=email、maxlength、checkValidity、error和errorText；本地校验流程与中文错误文案为原创组合。",
+        "evidence": "source"
+      },
+      {
+        "title": "开关接口",
+        "url": "https://material-web.dev/components/switch/",
+        "note": "selected、icons、change及aria-label用法；本地完成标记用途为演示选择。",
+        "evidence": "source"
+      },
+      {
+        "title": "滑块接口",
+        "url": "https://material-web.dev/components/slider/",
+        "note": "min、max、step、value、ticks和labeled；1–8范围与每日目标用途为本地选择。",
+        "evidence": "source"
+      },
+      {
+        "title": "对话框接口与可访问性",
+        "url": "https://material-web.dev/components/dialog/",
+        "note": "show、close、returnValue、closed及quick；按归档/取消区分结果，关闭后等待Lit更新再恢复焦点。",
+        "evidence": "source"
+      },
+      {
+        "title": "官方 Material Theming",
+        "url": "https://material-web.dev/theming/material-theming/",
+        "note": "系统颜色与组件形状token的层级；官方未支持通用md-sys-motion token，本地减少动态另外处理。",
+        "evidence": "source"
+      },
+      {
+        "title": "固定版本浏览器支持声明",
+        "url": "https://github.com/material-components/material-web/blob/b4de401eb665ec63474f39319a4ba8f2145974cc/docs/support.md",
+        "note": "上游支持目标为Chrome/Edge120+、Firefox119+、Safari16.4+；这是官方声明，不等于本次跨浏览器实测。",
+        "evidence": "source"
+      }
+    ],
+    "demos": [
+      {
+        "id": "actions",
+        "title": "操作层级",
+        "component": "MdFilledButton / MdOutlinedButton / MdTextButton",
+        "summary": "对比填充、描边与文字操作；添加后禁用主要按钮，查看安排保留次要层级，重置可重复体验。",
+        "entrypoint": "material-demos/material-web/index.html?sample=actions",
+        "parameters": [
+          {
+            "name": "--md-*-button-container-shape",
+            "value": "4–28px，步长2px",
+            "note": "接口见官方按钮tokens；本地调节filled、filled-tonal和outlined的container-shape，范围/默认20px为演示选择。"
+          },
+          {
+            "name": "--md-sys-color-*",
+            "value": "鸢尾紫 / 深海绿 × 浅色 / 深色",
+            "note": "使用官方颜色角色；演示配色与主题控件为本地选择，并可跟随Atlas主题。"
+          },
+          {
+            "name": "disabled",
+            "value": "加入计划后true；重置后false",
+            "note": "官方布尔属性；本地用于防止重复添加。"
+          }
+        ]
+      },
+      {
+        "id": "form",
+        "title": "表单验证",
+        "component": "MdOutlinedTextField",
+        "summary": "保留浮动标签，比较空值、无效邮箱与校验通过；输入只在内存中，不发送或保存。",
+        "entrypoint": "material-demos/material-web/index.html?sample=form",
+        "parameters": [
+          {
+            "name": "required / type / maxlength",
+            "value": "名称必填且最多24字符；邮箱必填且type=email",
+            "note": "接口来自官方文本框文档；24字符业务限制为本地演示值。"
+          },
+          {
+            "name": "checkValidity / error / errorText",
+            "value": "检查资料后显示错误或成功状态",
+            "note": "使用上游校验接口，手动错误消息由当前业务流程提供。"
+          }
+        ]
+      },
+      {
+        "id": "preferences",
+        "title": "偏好设置",
+        "component": "MdSwitch / MdSlider",
+        "summary": "开关控制预览中的完成标记，离散滑块控制目标数量；支持键盘方向键、Home/End和触摸。",
+        "entrypoint": "material-demos/material-web/index.html?sample=preferences",
+        "parameters": [
+          {
+            "name": "selected",
+            "value": "true / false",
+            "note": "官方switch状态，change后读取；本地对应完成标记显隐。"
+          },
+          {
+            "name": "min / max / step / value",
+            "value": "1 / 8 / 1 / 4",
+            "note": "官方slider接口；所有数值为每日目标示例的本地选择。"
+          },
+          {
+            "name": "labeled / ticks",
+            "value": "true",
+            "note": "官方离散刻度与值标签；本地取消标签缩放过渡，固定12px显示。"
+          }
+        ]
+      },
+      {
+        "id": "dialog",
+        "title": "确认对话框",
+        "component": "MdDialog / MdFilledTonalButton",
+        "summary": "打开确认、取消/Escape返回、确认归档和恢复计划；关注局部状态、焦点与撤回路径。",
+        "entrypoint": "material-demos/material-web/index.html?sample=dialog",
+        "parameters": [
+          {
+            "name": "type",
+            "value": "alert",
+            "note": "官方针对需要用户响应的重要确认的类型；本地说明可撤回影响。"
+          },
+          {
+            "name": "returnValue",
+            "value": "archive / cancel / 空值",
+            "note": "通过官方close(value)区分本地结果，Escape作为取消处理。"
+          },
+          {
+            "name": "quick",
+            "value": "减少动态或页面隐藏时true",
+            "note": "官方跳过打开/关闭动画的布尔属性。"
+          }
+        ]
+      }
+    ],
+    "prompt": "在已有HTML/CSS/JavaScript页面中使用Google官方@material/web 2.5.0，先读取Material Web素材包的来源、维护模式边界、许可、四种样例与依赖锁定记录。依据页面任务选择操作层级、带验证的文本框、switch/slider偏好面板或确认对话框，不复制示例业务文案。沿用当前页面导航与布局，用官方CSS系统颜色角色和组件形状token统一主题。提供真实标签、SVG功能图标、错误纠正、取消/Escape与关闭后焦点返回；所有文本包括Shadow DOM浮动标签及slider值标签在实际渲染中至少12px，取消会缩小文字的过渡。模块失败显示标注的静态后备；系统减少动态或手动减少时关闭局部过渡/ripple，dialog使用quick，页面隐藏时停止当前短动画。保持输入本地或明确接入当前项目的真实提交逻辑，不宣称示例已联网保存。保留Apache-2.0、Lit BSD-3-Clause、tslib 0BSD及转换说明；通过HTTP运行并检查桌面、窄屏、键盘、触摸和资源加载。",
+    "accessibility": {
+      "keyboard": "原生按钮切换样例，真实官方组件处理Tab、Enter/Space、滑块方向键/Home/End与Escape。所有输入和开关有标签，错误状态同步可见消息；对话框关闭后等待触发按钮渲染完成再恢复焦点。",
+      "reducedMotion": "遵循prefers-reduced-motion，并提供手动减少动效。以本地Shadow DOM样式关闭过渡、禁用ripple、dialog.quick跳过开关动画；slider值标签不使用缩放过渡。无自动循环、音频或计时器，隐藏页面结束当前短动画。"
+    },
+    "demo": "material-demos/material-web/index.html",
+    "preview": "previews/materials/material-web.png",
+    "research": "docs/materials-material-web.md",
+    "sourceFiles": [
+      "material-demos/material-web/index.html",
+      "material-demos/material-web/demo.css",
+      "material-demos/material-web/demo.js",
+      "material-demos/material-web/vendor/components.mjs"
+    ]
+  },
+  {
+    "id": "recursive",
+    "title": "Recursive · 五轴可变字体",
+    "type": "font",
+    "category": "字体与排版",
+    "summary": "在同一原始字体中切换比例与等宽字形，调节笔触、字重、倾斜和草写；用界面标题、代码及海报三种试排理解用途。",
+    "install": "本地 @font-face 加载 Recursive_VF_1.085.woff2；随字体保留 OFL 1.1 许可。",
+    "demoNote": "真实原始字体与五轴调节；三种原创排版可编辑、重置及复制 CSS。中文使用系统后备，字体不可用时明确显示后备状态。",
+    "tags": [
+      "字体",
+      "可变字体",
+      "Recursive",
+      "ArrowType",
+      "等宽",
+      "代码",
+      "招牌",
+      "海报",
+      "Typography",
+      "WOFF2",
+      "OFL"
+    ],
+    "useCases": [
+      "需要比例标题与等宽代码共享气质的产品",
+      "数据界面、技术文档与终端片段",
+      "有手写招牌个性的拉丁短标题",
+      "试验字体轴对层级、字形与换行的影响"
+    ],
+    "avoid": [
+      "把它当作中文或全语言覆盖字体",
+      "在小字号正文使用极重字重与强草写",
+      "将等宽字体试排误称功能完整的代码编辑器",
+      "只下载源码而遗漏字体及 OFL 许可"
+    ],
+    "constraints": [
+      "固定使用 v1.085 的完整 WOFF2，718,680 字节；未修改、子集化或转码。",
+      "自定义轴需要可变字体支持；加载失败时采用明确标注的系统字体后备。",
+      "主要支持拉丁文字及相关符号；中文由系统字体回退，不响应 Recursive 的 MONO、CASL、CRSV 等轴。",
+      "MONO 会改变字宽；固定 MONO 下其他轴保持字体设计的横向度量，混排与实际换行仍需验证。",
+      "三套参数、文案和版式为本地原创组合；字号范围 16–88px 也是本地选择，不表示原作者推荐所有组合。",
+      "本示例无自动动画和声音，不产生持续后台绘制；所有试排修改由用户输入触发。",
+      "再分发保留版权和 OFL 1.1 完整文本，不单独出售字体；更换版本或生成字体子集时重新核对许可与字形范围。"
+    ],
+    "upstream": {
+      "repository": "arrowtype/recursive",
+      "url": "https://github.com/arrowtype/recursive",
+      "commit": "5f4be025122d72d4710267e959128e8986ebe435",
+      "version": "1.085",
+      "verifiedAt": "2026-10-16"
+    },
+    "license": {
+      "name": "SIL OFL 1.1",
+      "url": "https://github.com/arrowtype/recursive/blob/5f4be025122d72d4710267e959128e8986ebe435/OFL.txt",
+      "scope": "Recursive 字体软件及本地保留的原始 WOFF2。",
+      "notes": "保留字体版权与完整 OFL；字体不可单独出售，修改和再分发遵循原许可。本地排版与代码是原创示例，不代表原作者背书。"
+    },
+    "sources": [
+      {
+        "title": "Recursive 固定版本 README",
+        "url": "https://github.com/arrowtype/recursive/blob/5f4be025122d72d4710267e959128e8986ebe435/README.md",
+        "note": "五轴范围、CRSV 三态、字体接入、语言列表与大字号端点建议的依据。",
+        "evidence": "source"
+      },
+      {
+        "title": "官方 v1.085 发布",
+        "url": "https://github.com/arrowtype/recursive/releases/tag/v1.085",
+        "note": "2022-06-30 发布，固定版本源头；核验时 GitHub latest release 返回这一版本。",
+        "evidence": "source"
+      },
+      {
+        "title": "Recursive 官方交互样张",
+        "url": "https://www.recursive.design/",
+        "note": "真实浏览器选择 Mono Casual ExtraBlack Italic 后，页面显示 MONO 1、CASL 1、wght 1000、slnt -15、CRSV 1；此观察仅涵盖该预设与页面状态。",
+        "evidence": "observed"
+      },
+      {
+        "title": "完整 WOFF2 原始文件",
+        "url": "https://github.com/arrowtype/recursive/blob/5f4be025122d72d4710267e959128e8986ebe435/fonts/ArrowType-Recursive-1.085/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2",
+        "note": "本地字体保持原字节，718,680 字节，SHA256 与来源说明一同保存。",
+        "evidence": "source"
+      },
+      {
+        "title": "v1.084 数学希腊字母范围",
+        "url": "https://github.com/arrowtype/recursive/releases/tag/v1.084",
+        "note": "上游明确增加部分数学用希腊字母，不能据此声称完整希腊文字覆盖。",
+        "evidence": "source"
+      }
+    ],
+    "demos": [
+      {
+        "id": "interface",
+        "title": "界面标题",
+        "component": "Recursive Sans Linear",
+        "summary": "以比例字宽、直立字形与中粗字重建立产品标题层级；可替换文字并查看混排后备。",
+        "entrypoint": "material-demos/recursive/index.html?preset=interface",
+        "parameters": [
+          {
+            "name": "MONO / CASL",
+            "value": "0–1 / 0–1",
+            "note": "来自官方五轴表；本地默认均为 0，滑块步长 0.01。"
+          },
+          {
+            "name": "wght",
+            "value": "300–1000",
+            "note": "来自官方五轴表；本地标题默认 650，步长 10。"
+          },
+          {
+            "name": "slnt / CRSV",
+            "value": "-15–0 / 0、0.5、1",
+            "note": "来自官方五轴表；本地默认 0 / 0.5，slnt 步长 0.5。"
+          },
+          {
+            "name": "font-size",
+            "value": "16–88px",
+            "note": "本地试排范围，默认 48px；不使用容器缩放。"
+          }
+        ]
+      },
+      {
+        "id": "code",
+        "title": "等宽代码",
+        "component": "Recursive Mono Linear",
+        "summary": "用数字、标点和多行代码观察等宽字形；明确区分字体试排与编辑器能力。",
+        "entrypoint": "material-demos/recursive/index.html?preset=code",
+        "parameters": [
+          {
+            "name": "MONO",
+            "value": "1",
+            "note": "官方轴值 1 表示等宽；0–1 可调，离开 1 后不再保证等宽。"
+          },
+          {
+            "name": "CASL / wght / slnt / CRSV",
+            "value": "0 / 450 / 0 / 0",
+            "note": "本地代码组合；范围沿用官方五轴表，可与标题采用不同字形。"
+          },
+          {
+            "name": "font-size / line-height",
+            "value": "19px / 1.6",
+            "note": "本地预设；字号可在 16–88px 调节，长行折行以保留窄屏阅读。"
+          }
+        ]
+      },
+      {
+        "id": "poster",
+        "title": "个性海报",
+        "component": "Recursive Sans Casual Italic",
+        "summary": "以 Casual 端点、重字重和草写短标题形成招牌气质；比较倾斜与草写的独立作用。",
+        "entrypoint": "material-demos/recursive/index.html?preset=poster",
+        "parameters": [
+          {
+            "name": "MONO / CASL",
+            "value": "0 / 1",
+            "note": "本地组合；CASL 大标题采用端点遵循官方设计建议。"
+          },
+          {
+            "name": "wght / slnt / CRSV",
+            "value": "900 / -15 / 1",
+            "note": "本地海报默认值；使用官方允许范围，倾斜和草写可独立比较。"
+          },
+          {
+            "name": "font-size",
+            "value": "72px",
+            "note": "本地默认，16–88px 可调；重字重在较大字号下更适合阅读。"
+          }
+        ]
+      }
+    ],
+    "prompt": "为现有页面选择 Recursive v1.085 的一种具体排版用途：拉丁界面标题、等宽代码或个性海报。先读取字体试排源码与原始 OFL，保留完整 WOFF2 并通过本地 @font-face 声明 300–1000 字重范围。根据内容设置 MONO、CASL、wght、slnt 和 CRSV；CRSV 使用 0、0.5、1，展示标题优先 CASL/slnt 端点。以真实 DOM 文字排版，保留中文系统后备并检查混排行高、字重和换行，不将系统字体伪装成 Recursive。字体下载失败时继续阅读，固定字符宽度只在 MONO 1 的覆盖字形上判断。所有界面文字至少 12px，不通过缩放压小。尊重用户减少动态偏好，无需为静态试排制造自动动画。标明原创版式与上游字体的边界，完整导出时携带字体、许可和来源信息。",
+    "accessibility": {
+      "keyboard": "试排标签支持方向键和 Home/End，轴滑块、CRSV 下拉、文字输入、重置和复制均使用原生控件；焦点清晰，触摸使用原生输入。",
+      "reducedMotion": "没有自动动画、音频或持续绘制；减少动态和后台时保留静态试排，轴值仅随用户输入更新。"
+    },
+    "demo": "material-demos/recursive/index.html",
+    "preview": "previews/materials/recursive.png",
+    "research": "docs/materials-recursive.md",
+    "sourceFiles": [
+      "material-demos/recursive/index.html",
+      "material-demos/recursive/demo.css",
+      "material-demos/recursive/demo.js"
+    ]
+  },
+  {
     "id": "shaders",
     "title": "Shaders · 可调节的 WebGPU 效果",
     "type": "component-library",
@@ -222,5 +795,174 @@ window.DESIGN_MATERIALS = [
       "material-demos/shaders/demo.js",
       "material-demos/shaders/reference.svg"
     ]
+  },
+  {
+    "id": "wired-elements",
+    "title": "Wired Elements · 可操作的手绘草稿",
+    "type": "component-library",
+    "category": "组件与效果",
+    "demo": "material-demos/wired-elements/index.html",
+    "preview": "previews/materials/wired-elements.png",
+    "research": "docs/materials-wired-elements.md",
+    "sourceFiles": [
+      "material-demos/wired-elements/index.html",
+      "material-demos/wired-elements/demo.css",
+      "material-demos/wired-elements/demo.js"
+    ],
+    "summary": "用真实手绘 Web Components 组合任务清单、偏好面板与概念卡片；让草图在保留讨论感的同时具备可验证的状态。",
+    "install": "npm install wired-elements@2.1.2",
+    "demoNote": "三个本地原创场景直接运行官方组件。无自动动画；模块不可用时显示标注的静态说明。",
+    "tags": [
+      "Wired Elements",
+      "Web Components",
+      "手绘",
+      "草图",
+      "原型",
+      "SVG",
+      "任务清单",
+      "偏好设置",
+      "卡片",
+      "Rough"
+    ],
+    "useCases": [
+      "工作坊中的可勾选行动清单",
+      "用户访谈中的设置流程原型",
+      "学习工具和概念卡片"
+    ],
+    "avoid": [
+      "把草图当作完整生产设计系统",
+      "未验证就依赖自定义组件的表单提交与校验",
+      "要求每次重绘像素一致的展示"
+    ],
+    "constraints": [
+      "锁定最新非预发布版本 2.1.2；核验时 npm latest 指向 3.0.0-rc.6，不据此宣称 3.x 已验证。",
+      "需要 JavaScript、Custom Elements 和 Shadow DOM；自托管官方完整 ESM，运行无 CDN。",
+      "随机手绘线条来自原库；页面场景、文案、配色与联动为本地原创组合。",
+      "标签、复选框、滑块和开关保留键盘路径；内部开关和滑块补充可访问名称。",
+      "无循环动画与声音；静态后备只解释用法，不代表组件运行。",
+      "保留 Wired / RoughJS MIT 与 bundle 内 Lit / lit-html BSD 3-Clause 许可。"
+    ],
+    "upstream": {
+      "repository": "rough-stuff/wired-elements",
+      "url": "https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b",
+      "commit": "04756df72181e08b4255f8b6dfefea130398e24b",
+      "version": "2.1.2",
+      "verifiedAt": "2026-10-16"
+    },
+    "license": {
+      "name": "MIT + BSD-3-Clause",
+      "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/LICENSE",
+      "scope": "Wired Elements 与内含 RoughJS 渲染代码采用 MIT；完整 bundle 内 Lit Element 2.3.1 / lit-html 1.2.1 采用 BSD 3-Clause。",
+      "notes": "vendor 保留官方 bundle 原字节及四份许可；复制整个 Demo 时一并保留。RoughJS 上游声明 ^4.3.1，精确构建解析版本未暴露。场景组合与参数默认值为本地实现。"
+    },
+    "sources": [
+      {
+        "title": "Wired Elements 固定版本源码",
+        "url": "https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b",
+        "note": "核对组件包、完整 ESM 接入与 MIT 许可。",
+        "evidence": "source"
+      },
+      {
+        "title": "wired-elements 2.1.2 npm 元数据",
+        "url": "https://registry.npmjs.org/wired-elements/2.1.2",
+        "note": "官方分发及 gitHead；本地 ESM 来自该 tarball。",
+        "evidence": "source"
+      },
+      {
+        "title": "Wired Elements 官方组件演示",
+        "url": "https://wiredjs.com/showcase",
+        "note": "浏览器实际操作 wired-checkbox，从未选中到选中；不能据此宣称整套组件均已验证。",
+        "evidence": "observed"
+      },
+      {
+        "title": "卡片参数依据",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-card/README.md",
+        "note": "elevation 1–5、fill 和动态尺寸重绘。",
+        "evidence": "source"
+      },
+      {
+        "title": "滑块参数依据",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-slider/README.md",
+        "note": "value、min、max 与 change；本地把范围设置为卡片层级 1–5。",
+        "evidence": "source"
+      },
+      {
+        "title": "复选状态与事件",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-checkbox/README.md",
+        "note": "checked、disabled 与 change。",
+        "evidence": "source"
+      },
+      {
+        "title": "开关状态",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-toggle/README.md",
+        "note": "checked 与 change；与预览的联动是本地行为。",
+        "evidence": "source"
+      },
+      {
+        "title": "进度条参数",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-progress/README.md",
+        "note": "value / max；三项任务计数为本地示例。",
+        "evidence": "source"
+      }
+    ],
+    "demos": [
+      {
+        "id": "checklist",
+        "title": "任务清单",
+        "component": "wired-checkbox / wired-progress / wired-button",
+        "summary": "勾选真实手绘复选框，计数同步进度条；可恢复默认。",
+        "entrypoint": "material-demos/wired-elements/index.html?demo=checklist",
+        "parameters": [
+          {
+            "name": "checked",
+            "value": "true / false",
+            "note": "官方布尔属性；三项任务默认完成第一项为本地选择。"
+          },
+          {
+            "name": "value / max",
+            "value": "0–3 / 3",
+            "note": "官方进度属性；任务数与联动为本地组合。"
+          }
+        ]
+      },
+      {
+        "id": "preferences",
+        "title": "偏好面板",
+        "component": "wired-toggle / wired-checkbox",
+        "summary": "设置专注模式与摘要，再应用到当前示例；不修改系统或保存偏好。",
+        "entrypoint": "material-demos/wired-elements/index.html?demo=preferences",
+        "parameters": [
+          {
+            "name": "checked",
+            "value": "true / false",
+            "note": "官方开关与复选属性；摘要显示与应用动作由本地代码处理。"
+          }
+        ]
+      },
+      {
+        "id": "card",
+        "title": "概念卡片",
+        "component": "wired-card / wired-slider",
+        "summary": "调整真实手绘卡片的层级与填色，比较概念信息的主次。",
+        "entrypoint": "material-demos/wired-elements/index.html?demo=card",
+        "parameters": [
+          {
+            "name": "elevation",
+            "value": "1–5",
+            "note": "官方文档范围；本地默认 3。"
+          },
+          {
+            "name": "fill",
+            "value": "#f8e9a1 / 自选颜色",
+            "note": "官方颜色属性；默认纸面色为本地选择。"
+          }
+        ]
+      }
+    ],
+    "prompt": "使用固定版本 wired-elements 2.1.2，在现有 HTML/CSS/JavaScript 项目里为可讨论的轻量流程选择任务清单、偏好面板或概念卡片。读取本地演示，把真实 wired-checkbox、wired-progress、wired-toggle、wired-card 和 wired-slider 接到当前页面的明确状态。使用原库 SVG 手绘边界，保持 DOM 文本、标签、键盘操作和至少 12px 的实际文字。卡片 elevation 遵循 1–5；配色与内容按任务选择。自托管官方 ESM，保留 MIT 与 BSD 许可；加载失败时显示明确静态说明，不声称组件仍已运行。无需求时不加入循环动画、声音、持久化或额外框架。",
+    "accessibility": {
+      "keyboard": "标签支持左右、Home、End；真实组件内部原生复选框、滑块和按钮可键盘操作，开关与滑块补上内部名称。",
+      "reducedMotion": "没有自动动画或持续帧循环，参数和状态变化保留。随机线条重绘由实际内容与尺寸变化触发。"
+    }
   }
 ];

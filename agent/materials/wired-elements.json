@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "id": "wired-elements",
+  "material": {
+    "id": "wired-elements",
+    "title": "Wired Elements · 可操作的手绘草稿",
+    "type": "component-library",
+    "category": "组件与效果",
+    "demo": "material-demos/wired-elements/index.html",
+    "preview": "previews/materials/wired-elements.png",
+    "research": "docs/materials-wired-elements.md",
+    "sourceFiles": [
+      "material-demos/wired-elements/index.html",
+      "material-demos/wired-elements/demo.css",
+      "material-demos/wired-elements/demo.js"
+    ],
+    "summary": "用真实手绘 Web Components 组合任务清单、偏好面板与概念卡片；让草图在保留讨论感的同时具备可验证的状态。",
+    "install": "npm install wired-elements@2.1.2",
+    "demoNote": "三个本地原创场景直接运行官方组件。无自动动画；模块不可用时显示标注的静态说明。",
+    "tags": [
+      "Wired Elements",
+      "Web Components",
+      "手绘",
+      "草图",
+      "原型",
+      "SVG",
+      "任务清单",
+      "偏好设置",
+      "卡片",
+      "Rough"
+    ],
+    "useCases": [
+      "工作坊中的可勾选行动清单",
+      "用户访谈中的设置流程原型",
+      "学习工具和概念卡片"
+    ],
+    "avoid": [
+      "把草图当作完整生产设计系统",
+      "未验证就依赖自定义组件的表单提交与校验",
+      "要求每次重绘像素一致的展示"
+    ],
+    "constraints": [
+      "锁定最新非预发布版本 2.1.2；核验时 npm latest 指向 3.0.0-rc.6，不据此宣称 3.x 已验证。",
+      "需要 JavaScript、Custom Elements 和 Shadow DOM；自托管官方完整 ESM，运行无 CDN。",
+      "随机手绘线条来自原库；页面场景、文案、配色与联动为本地原创组合。",
+      "标签、复选框、滑块和开关保留键盘路径；内部开关和滑块补充可访问名称。",
+      "无循环动画与声音；静态后备只解释用法，不代表组件运行。",
+      "保留 Wired / RoughJS MIT 与 bundle 内 Lit / lit-html BSD 3-Clause 许可。"
+    ],
+    "upstream": {
+      "repository": "rough-stuff/wired-elements",
+      "url": "https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b",
+      "commit": "04756df72181e08b4255f8b6dfefea130398e24b",
+      "version": "2.1.2",
+      "verifiedAt": "2026-10-16"
+    },
+    "license": {
+      "name": "MIT + BSD-3-Clause",
+      "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/LICENSE",
+      "scope": "Wired Elements 与内含 RoughJS 渲染代码采用 MIT；完整 bundle 内 Lit Element 2.3.1 / lit-html 1.2.1 采用 BSD 3-Clause。",
+      "notes": "vendor 保留官方 bundle 原字节及四份许可；复制整个 Demo 时一并保留。RoughJS 上游声明 ^4.3.1，精确构建解析版本未暴露。场景组合与参数默认值为本地实现。"
+    },
+    "sources": [
+      {
+        "title": "Wired Elements 固定版本源码",
+        "url": "https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b",
+        "note": "核对组件包、完整 ESM 接入与 MIT 许可。",
+        "evidence": "source"
+      },
+      {
+        "title": "wired-elements 2.1.2 npm 元数据",
+        "url": "https://registry.npmjs.org/wired-elements/2.1.2",
+        "note": "官方分发及 gitHead；本地 ESM 来自该 tarball。",
+        "evidence": "source"
+      },
+      {
+        "title": "Wired Elements 官方组件演示",
+        "url": "https://wiredjs.com/showcase",
+        "note": "浏览器实际操作 wired-checkbox，从未选中到选中；不能据此宣称整套组件均已验证。",
+        "evidence": "observed"
+      },
+      {
+        "title": "卡片参数依据",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-card/README.md",
+        "note": "elevation 1–5、fill 和动态尺寸重绘。",
+        "evidence": "source"
+      },
+      {
+        "title": "滑块参数依据",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-slider/README.md",
+        "note": "value、min、max 与 change；本地把范围设置为卡片层级 1–5。",
+        "evidence": "source"
+      },
+      {
+        "title": "复选状态与事件",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-checkbox/README.md",
+        "note": "checked、disabled 与 change。",
+        "evidence": "source"
+      },
+      {
+        "title": "开关状态",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-toggle/README.md",
+        "note": "checked 与 change；与预览的联动是本地行为。",
+        "evidence": "source"
+      },
+      {
+        "title": "进度条参数",
+        "url": "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-progress/README.md",
+        "note": "value / max；三项任务计数为本地示例。",
+        "evidence": "source"
+      }
+    ],
+    "demos": [
+      {
+        "id": "checklist",
+        "title": "任务清单",
+        "component": "wired-checkbox / wired-progress / wired-button",
+        "summary": "勾选真实手绘复选框，计数同步进度条；可恢复默认。",
+        "entrypoint": "material-demos/wired-elements/index.html?demo=checklist",
+        "parameters": [
+          {
+            "name": "checked",
+            "value": "true / false",
+            "note": "官方布尔属性；三项任务默认完成第一项为本地选择。"
+          },
+          {
+            "name": "value / max",
+            "value": "0–3 / 3",
+            "note": "官方进度属性；任务数与联动为本地组合。"
+          }
+        ]
+      },
+      {
+        "id": "preferences",
+        "title": "偏好面板",
+        "component": "wired-toggle / wired-checkbox",
+        "summary": "设置专注模式与摘要，再应用到当前示例；不修改系统或保存偏好。",
+        "entrypoint": "material-demos/wired-elements/index.html?demo=preferences",
+        "parameters": [
+          {
+            "name": "checked",
+            "value": "true / false",
+            "note": "官方开关与复选属性；摘要显示与应用动作由本地代码处理。"
+          }
+        ]
+      },
+      {
+        "id": "card",
+        "title": "概念卡片",
+        "component": "wired-card / wired-slider",
+        "summary": "调整真实手绘卡片的层级与填色，比较概念信息的主次。",
+        "entrypoint": "material-demos/wired-elements/index.html?demo=card",
+        "parameters": [
+          {
+            "name": "elevation",
+            "value": "1–5",
+            "note": "官方文档范围；本地默认 3。"
+          },
+          {
+            "name": "fill",
+            "value": "#f8e9a1 / 自选颜色",
+            "note": "官方颜色属性；默认纸面色为本地选择。"
+          }
+        ]
+      }
+    ],
+    "prompt": "使用固定版本 wired-elements 2.1.2，在现有 HTML/CSS/JavaScript 项目里为可讨论的轻量流程选择任务清单、偏好面板或概念卡片。读取本地演示，把真实 wired-checkbox、wired-progress、wired-toggle、wired-card 和 wired-slider 接到当前页面的明确状态。使用原库 SVG 手绘边界，保持 DOM 文本、标签、键盘操作和至少 12px 的实际文字。卡片 elevation 遵循 1–5；配色与内容按任务选择。自托管官方 ESM，保留 MIT 与 BSD 许可；加载失败时显示明确静态说明，不声称组件仍已运行。无需求时不加入循环动画、声音、持久化或额外框架。",
+    "accessibility": {
+      "keyboard": "标签支持左右、Home、End；真实组件内部原生复选框、滑块和按钮可键盘操作，开关与滑块补上内部名称。",
+      "reducedMotion": "没有自动动画或持续帧循环，参数和状态变化保留。随机线条重绘由实际内容与尺寸变化触发。"
+    }
+  },
+  "documents": [
+    {
+      "path": "docs/materials-wired-elements.md",
+      "role": "research",
+      "content": "# Wired Elements：有手绘语言的可操作组件\n\n[本地工作台](../material-demos/wired-elements/index.html) · [结构化资料](../materials/wired-elements.json) · [作者完整示例](https://wiredjs.com/showcase)\n\n## 来源与版本\n\n本条目使用 [rough-stuff/wired-elements](https://github.com/rough-stuff/wired-elements) 的官方 [npm 2.1.2](https://registry.npmjs.org/wired-elements/2.1.2) 分发，固定源码提交 `04756df72181e08b4255f8b6dfefea130398e24b`，核验日期 `2026-10-16`。查询时 npm `latest` 指向 `3.0.0-rc.6`；本条目选取最新非预发布版本 2.1.2，不代表 3.x 的接口或兼容性。\n\n组件用 SVG 随机线条形成手绘边界，适合明确表达“可讨论、可修改”的工作坊、学习工具与概念原型。它不是完整的生产设计系统，也不自动提供业务校验、持久化、表单提交或所有辅助技术适配。\n\n## 三种可借用组合\n\n| 场景 | 组件与参数依据 | 本地职责 |\n| --- | --- | --- |\n| 任务清单 | [checkbox 的 checked / change](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-checkbox/README.md)、[progress 的 value / max](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-progress/README.md) | 三项任务和 1/3 默认进度为本地示例；勾选实时同步并可重置 |\n| 偏好面板 | [toggle 的 checked](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-toggle/README.md) | 将模式和摘要选项应用到当前预览，不保存设置 |\n| 概念卡片 | [card 的 elevation 1–5 / fill](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-card/README.md)、[slider 的 value / min / max](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-slider/README.md) | 默认层级 3、纸面与填色为本地选择，变化时重绘边界 |\n\n三者都使用真实库组件；场景布局、文案、主题与状态联动是 Design Atlas 原创组合。官方 showcase 浏览器观察确认复选框可由未选中变为选中；这只支持该控件观察，不能替代对整套组件或其他浏览器的验证。\n\n## 接入与适配\n\n项目安装固定版本 `npm install wired-elements@2.1.2` 后导入包。这里直接自托管官方 `lib/wired-elements-esm.js`，其中已包含组件和 Lit 运行时，不依赖 CDN。通过 HTTP/HTTPS 服务目录，保留其相对文件路径和许可；完整导出清单由 Agent 构建生成并附字节数与 SHA256。\n\n说明面板继承 Atlas 主题，手绘舞台固定浅纸面。所有文本至少 12px，不缩小整个 Demo。标签支持方向键；组件内部复选框提供原生键盘操作，滑块和开关补齐内部名称。无自动动画或声音；减少动态仍可改变参数。模块无法加载时显示明确的静态说明，`?fallback=1` 可查看该分支。静态后备不是手绘组件渲染证据。\n\n## 许可与边界\n\nWired Elements 采用 [MIT](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/LICENSE)。原始单文件 bundle 内含的 Lit Element 2.3.1 与 lit-html 1.2.1 为 BSD 3-Clause；[wired-lib 源码](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-lib/src/wired-lib.ts) 将 RoughJS 的 MIT 渲染代码构建在内。四份声明随 `vendor/` 保存。RoughJS 在上游清单声明为 `^4.3.1`，该分发未暴露精确构建解析版本；这里使用官方 bundle 原字节，不声称重建了上游依赖树。原始上游文件不改写，本站的组合不冒充原作者模板。\n\n浏览器范围、读屏器、不同移动设备与宿主框架的表单绑定仍需在目标项目验证。随机线条会随组件重绘而变化，不用于要求跨次截图完全一致的视觉基准。\n",
+      "sha256": "e9f1152e45e1a3918ee6c14f632be97793a860c3974a024ae829e58881c6c58f",
+      "bytes": 4018
+    },
+    {
+      "path": "material-demos/wired-elements/README.md",
+      "role": "context",
+      "content": "# Wired Elements 手绘组件工作台\n\n使用真实 `wired-elements@2.1.2` 官方完整 ESM，搭配本地原创 HTML/CSS/JavaScript 场景。运行只需静态 HTTP 服务，无 CDN、网络字体、框架或安装步骤。入口是 `index.html`。\n\n| `demo` 参数 | 实际组件 | 本地交互 |\n| --- | --- | --- |\n| `checklist` | wired-card / checkbox / progress / button | 三项任务同步计数与手绘进度，可重置 |\n| `preferences` | wired-card / toggle / checkbox / button | 调整偏好后应用到本页摘要，不保存或修改系统设置 |\n| `card` | wired-card / slider | 层级 1–5 与填色实时变化 |\n\n例如 `index.html?demo=card`。`theme=light` / `theme=dark` 指定说明面板主题；同源嵌入继承 Atlas 主题。纸面舞台固定浅色，避免改变手绘资源的辨识度。`fallback=1` 主动跳过运行时并显示标注的静态说明；模块失败时使用同一后备。静态说明不能证明组件已运行。\n\n组件在 Custom Elements、Shadow DOM 与 JavaScript 可用的浏览器运行。任务使用组件内部原生复选框，开关与滑块补上内部可访问名称；标签支持左右、Home、End 键。无循环动画或声音，减少动态不影响功能。导出包应保留整个目录及 vendor 许可。\n\n`vendor/wired-elements-2.1.2.js` 保留 npm 包原字节。`demo.js` 是本地联动与主题代码；`demo.css` 保证文本至少 12px，不以缩小视口解决布局。来源、版本及许可证见 [vendor/NOTICE.md](vendor/NOTICE.md)，范围见 [素材研究](../../docs/materials-wired-elements.md)。\n",
+      "sha256": "cc82c9d382ce1a05b88259727435dc5f8f6f73839ff4750df8fae3c7b32dac2b",
+      "bytes": 1597
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/LICENSE-lit-element.txt",
+      "role": "context",
+      "content": "BSD 3-Clause License\n\nCopyright (c) 2017, The Polymer Authors. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\n  list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice,\n  this list of conditions and the following disclaimer in the documentation\n  and/or other materials provided with the distribution.\n\n* Neither the name of the copyright holder nor the names of its\n  contributors may be used to endorse or promote products derived from\n  this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+      "sha256": "1a5ae5ab221af81b68f4f4c156c0d2e044851272c5e2e6c07d685946557878ea",
+      "bytes": 1520
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/LICENSE-lit-html.txt",
+      "role": "context",
+      "content": "BSD 3-Clause License\n\nCopyright (c) 2017, The Polymer Authors. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\n  list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice,\n  this list of conditions and the following disclaimer in the documentation\n  and/or other materials provided with the distribution.\n\n* Neither the name of the copyright holder nor the names of its\n  contributors may be used to endorse or promote products derived from\n  this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+      "sha256": "1a5ae5ab221af81b68f4f4c156c0d2e044851272c5e2e6c07d685946557878ea",
+      "bytes": 1520
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/LICENSE-roughjs.txt",
+      "role": "context",
+      "content": "MIT License\n\nCopyright (c) 2019 Preet Shihn\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+      "bytes": 1068
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/LICENSE-wired-elements.txt",
+      "role": "context",
+      "content": "MIT License\n\nCopyright (c) 2019 Preet Shihn\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+      "bytes": 1068
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/NOTICE.md",
+      "role": "context",
+      "content": "# Wired Elements 运行时来源\n\n官方 [wired-elements 2.1.2 tarball](https://registry.npmjs.org/wired-elements/-/wired-elements-2.1.2.tgz)，[源码提交](https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b)。\n\n`wired-elements-2.1.2.js` 直接来自包内 `lib/wired-elements-esm.js`，未改写。该完整 bundle 不需要运行时外部 import；包含 Wired 组件及 Lit。文件内版本标记确认 lit-element 2.3.1、lit-html 1.2.1，两份 BSD-3-Clause 许可分别取自对应官方 npm 包；Wired MIT 许可来自同一 2.1.2 包。\n\nCopyright Wired Elements: Preet Shihn；Lit / lit-html: The Polymer Project Authors。实际版权文本以随附 LICENSE 为准。\n\nwired-lib 源码将 RoughJS 渲染代码构建在内，上游开发依赖声明为 ^4.3.1；官方单文件未暴露其精确解析版本，不能据此声称完成了上游依赖树重建。LICENSE-roughjs.txt 原文取自官方 roughjs 4.3.1 npm 包，版权为 2019 Preet Shihn（MIT）。运行仍只需此固定 bundle。\n\n核验日期：2026-10-16。\n\n| 文件 | 字节 | SHA256 |\n| --- | ---: | --- |\n| `LICENSE-lit-element.txt` | 1520 | `1a5ae5ab221af81b68f4f4c156c0d2e044851272c5e2e6c07d685946557878ea` |\n| `LICENSE-lit-html.txt` | 1520 | `1a5ae5ab221af81b68f4f4c156c0d2e044851272c5e2e6c07d685946557878ea` |\n| `LICENSE-wired-elements.txt` | 1068 | `dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d` |\n| `wired-elements-2.1.2.js` | 117062 | `0b7fdd90265bf7c9b38e0fcddc3a86f06fbbe81866806042cb0d3204bf3877ed` |\n| `LICENSE-roughjs.txt` | 1068 | `dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d` |\n",
+      "sha256": "5f0ff8cac2ed149b2380930be726a952e3494c72279aed7a4703c7d125565e43",
+      "bytes": 1661
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/materials-wired-elements.md",
+      "role": "context",
+      "sha256": "e9f1152e45e1a3918ee6c14f632be97793a860c3974a024ae829e58881c6c58f",
+      "bytes": 4018
+    },
+    {
+      "path": "material-demos/wired-elements/README.md",
+      "role": "context",
+      "sha256": "cc82c9d382ce1a05b88259727435dc5f8f6f73839ff4750df8fae3c7b32dac2b",
+      "bytes": 1597
+    },
+    {
+      "path": "material-demos/wired-elements/demo.css",
+      "role": "source",
+      "sha256": "a8007f12e69905ef6a0f9d0c2bacf310a192becccb64655d3d7890669cc3b829",
+      "bytes": 4262
+    },
+    {
+      "path": "material-demos/wired-elements/demo.js",
+      "role": "source",
+      "sha256": "3f778b60c2054fda7efd031c8a3769157cc1425bee4846ca41b7f102d92bdaa9",
+      "bytes": 4444
+    },
+    {
+      "path": "material-demos/wired-elements/index.html",
+      "role": "source",
+      "sha256": "f799e2f59fe80f29a9e472c221d709c5a8eb09cf053b79ab280ad65d0e7f0ee0",
+      "bytes": 6488
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/LICENSE-lit-element.txt",
+      "role": "context",
+      "sha256": "1a5ae5ab221af81b68f4f4c156c0d2e044851272c5e2e6c07d685946557878ea",
+      "bytes": 1520
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/LICENSE-lit-html.txt",
+      "role": "context",
+      "sha256": "1a5ae5ab221af81b68f4f4c156c0d2e044851272c5e2e6c07d685946557878ea",
+      "bytes": 1520
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/LICENSE-roughjs.txt",
+      "role": "context",
+      "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+      "bytes": 1068
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/LICENSE-wired-elements.txt",
+      "role": "context",
+      "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+      "bytes": 1068
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/NOTICE.md",
+      "role": "context",
+      "sha256": "5f0ff8cac2ed149b2380930be726a952e3494c72279aed7a4703c7d125565e43",
+      "bytes": 1661
+    },
+    {
+      "path": "material-demos/wired-elements/vendor/wired-elements-2.1.2.js",
+      "role": "source",
+      "sha256": "0b7fdd90265bf7c9b38e0fcddc3a86f06fbbe81866806042cb0d3204bf3877ed",
+      "bytes": 117062
+    },
+    {
+      "path": "materials/wired-elements.json",
+      "role": "context",
+      "sha256": "d08e4ca7ff6005e334692dece9650509dd7349b19d651806fab3ca6ad22ea7dd",
+      "bytes": 7863
+    },
+    {
+      "path": "previews/materials/wired-elements.png",
+      "role": "preview",
+      "sha256": "da618c409f5deb926512b99b70c0e6c0ae632fce9ccd5da4052036ad8fe9b356",
+      "bytes": 96011
+    }
+  ],
+  "sourceFiles": [
+    "material-demos/wired-elements/index.html",
+    "material-demos/wired-elements/demo.css",
+    "material-demos/wired-elements/demo.js"
+  ]
+}

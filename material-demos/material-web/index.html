@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Material Web · 有层级的日常界面</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <main class="demo-shell">
+    <header class="demo-header"><div><p class="eyebrow">GOOGLE / MATERIAL WEB</p><h1>有层级的日常界面</h1></div><span class="version">2.5.0 · Material 3</span></header>
+    <p class="intro">色彩角色、圆角与状态层，让一套控件拥有共同语言。四个组合均为本地原创，实际控件来自 Google 官方库。</p>
+    <nav class="sample-tabs" aria-label="选择组件样例">
+      <button type="button" data-sample="actions" aria-pressed="true">操作层级</button>
+      <button type="button" data-sample="form" aria-pressed="false">表单验证</button>
+      <button type="button" data-sample="preferences" aria-pressed="false">偏好设置</button>
+      <button type="button" data-sample="dialog" aria-pressed="false">确认对话框</button>
+    </nav>
+    <div class="experiment">
+      <section class="stage" aria-label="Material Web 实际组件演示">
+        <div id="fallback" class="fallback" role="status"><p class="eyebrow">STATIC REFERENCE</p><h2>先看结构，再体验组件</h2><p id="fallback-message">正在加载本地组件。模块不可用时保留这份静态结构说明。</p><div class="fallback-shapes" aria-hidden="true"><span>主要操作</span><span>次要操作</span><span>普通操作</span></div><p>填充按钮突出完成操作；描边与文字按钮降低强调。可从下方来源与代码继续取材。</p></div>
+        <div id="live-demo" hidden>
+          <section class="sample" data-panel="actions">
+            <p class="eyebrow">01 / ACTION HIERARCHY</p><div class="hero-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 12h24v28H12zM18 8h12v8H18zM18 24h12M18 31h8"/></svg></div><h2>把好想法收进计划</h2><p class="sample-description">同一张计划卡，用按钮的视觉权重区分主要、次要与辅助操作。</p>
+            <div class="plan-card"><span class="pill">本地练习</span><h3>周末的城市观察</h3><p>3 个街区 · 1 本速写册 · 不赶时间</p><div class="button-row"><md-filled-button id="save-plan" type="button">加入计划<svg slot="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></md-filled-button><md-outlined-button id="preview-plan" type="button">查看安排</md-outlined-button><md-text-button id="clear-plan" type="button">重置</md-text-button></div></div>
+            <p class="feedback" id="action-feedback" role="status">选择一个操作，观察层级与状态反馈。</p>
+          </section>
+          <section class="sample" data-panel="form" hidden>
+            <p class="eyebrow">02 / FORM & VALIDATION</p><h2>先说明，再收集</h2><p class="sample-description">浮动标签保留字段含义；错误消息说明如何修正。本地验证，不发送或保存输入。</p>
+            <form id="signup" novalidate><md-outlined-text-field id="display-name" label="显示名称" name="name" required maxlength="24" supporting-text="最多 24 个字符" autocomplete="off"></md-outlined-text-field><md-outlined-text-field id="email" label="电子邮箱" name="email" type="email" required supporting-text="示例：hello@example.com" autocomplete="off"></md-outlined-text-field><div class="button-row"><md-filled-button type="submit">检查资料</md-filled-button><md-text-button type="reset">清空</md-text-button></div></form>
+            <p class="feedback" id="form-feedback" role="status">可以先留空提交，再填写有效邮箱比较状态。</p>
+          </section>
+          <section class="sample" data-panel="preferences" hidden>
+            <p class="eyebrow">03 / SETTINGS & LIVE PREVIEW</p><h2>让设置立即有结果</h2><p class="sample-description">开关负责二选一，滑块负责有边界的数量。所有变化只影响本页预览。</p>
+            <label class="setting-row"><span><strong>显示完成标记</strong><small>在目标卡上显示状态</small></span><md-switch id="completion" aria-label="显示完成标记" selected icons></md-switch></label>
+            <div class="slider-label"><span id="goal-label">每日目标</span><output id="goal-value">4 项</output></div><md-slider id="goal" aria-label="每日目标" min="1" max="8" step="1" value="4" ticks labeled></md-slider>
+            <div id="goal-preview" class="goal-preview" aria-label="目标数量预览"></div><p class="feedback" id="preference-feedback" role="status">4 项目标，显示完成标记。</p>
+          </section>
+          <section class="sample" data-panel="dialog" hidden>
+            <p class="eyebrow">04 / CONFIRM & RETURN</p><h2>给重要决定一个停顿</h2><p class="sample-description">先说明影响，再确认选择。取消或 Escape 关闭后回到触发按钮；确认只更新本地示例。</p>
+            <div class="plan-card"><span class="pill" id="archive-state">进行中</span><h3>城市观察计划</h3><p>归档后会标记为已完成。你可以随时恢复。</p><div class="button-row"><md-filled-tonal-button id="open-dialog" type="button">归档计划</md-filled-tonal-button><md-text-button id="restore-plan" type="button">恢复计划</md-text-button></div></div><p class="feedback" id="dialog-feedback" role="status">计划仍在进行中。</p>
+          </section>
+        </div>
+      </section>
+      <aside class="controls"><p class="eyebrow">TRY THE TOKENS</p><h2>同一种语言，不同气质</h2><label for="palette">色彩方案</label><select id="palette"><option value="violet">鸢尾紫</option><option value="teal">深海绿</option></select><label for="theme">明暗主题</label><select id="theme"><option value="auto">跟随站点 / 系统</option><option value="light">浅色</option><option value="dark">深色</option></select><label class="range-label" for="shape">按钮圆角 <output id="shape-value">20px</output></label><input id="shape" type="range" min="4" max="28" step="2" value="20"><label class="motion-control"><input id="reduce-motion" type="checkbox">减少动效</label><p class="control-note">色彩使用系统角色，圆角使用组件 token；范围与配色为本地选型。没有自动循环或后台任务。</p><button id="reset" type="button">重置当前样例</button><p id="runtime-status" role="status">组件加载中</p><a href="https://material-web.dev/" target="_blank" rel="noreferrer">完整官方文档</a></aside>
+    </div>
+    <details class="code-panel"><summary>查看当前样例接入代码</summary><pre><code id="example-code">import './vendor/material-web.js';</code></pre><p>运行时已随包保存。业务数据、配色和演示组合属于本地示例。</p></details>
+    <footer><span>Apache-2.0 · 官方库处于维护模式；不代表完整 Material 3 Expressive。</span><a href="https://github.com/material-components/material-web" target="_blank" rel="noreferrer">来源仓库</a><a href="vendor/README.md">依赖与许可</a></footer>
+  </main>
+  <md-dialog id="archive-dialog" type="alert" aria-label="归档城市观察计划">
+    <div slot="headline">归档这个计划？</div><div slot="content">计划会标记为已完成，仍可通过「恢复计划」撤回。本演示不会修改真实资料。</div><div slot="actions"><md-text-button id="cancel-dialog" type="button">继续编辑</md-text-button><md-filled-button id="confirm-dialog" type="button">确认归档</md-filled-button></div>
+  </md-dialog>
+  <script type="module" src="demo.js"></script>
+</body>
+</html>
