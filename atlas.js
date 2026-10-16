@@ -68,6 +68,9 @@ function route(){
   }else if(hash==='#compare'){renderComparison();$('#comparison').hidden=false;}
   else if(patternRoute){}
   else{$('#collection').hidden=false;renderCards();}
+  const inDetail=!$('#detail').hidden;
+  $('#compare-list-label').hidden=inDetail;
+  $('#compare-detail-label').hidden=!inDetail;
   renderedLocation=location.href;
   window.scrollTo({top:0,behavior:'instant'});updateTray();
 }
@@ -105,7 +108,26 @@ $('#reset-search').onclick=()=>{
   query='';filter='all';country='all';sort='curated';
   writeCollectionState({showCollection:true});
 };
-$('#compare-open').onclick=$('#compare-go').onclick=()=>{if(selected.length<2){toast('先勾选 2–3 个条目的“加入比较”。');return;}location.hash='#compare';};
+function showCompareSelection(){
+  const url=new URL(location.href);
+  url.hash='';
+  if(url.href!==location.href)history.pushState(null,'',url);
+  route();
+  (document.querySelector('#cards [data-compare]:not(:checked)')||$('#search')).focus();
+}
+$('#compare-open').onclick=()=>{
+  const inDetail=!$('#detail').hidden;
+  if(inDetail){
+    const id=location.hash.slice(7);
+    if(!selected.includes(id)){
+      if(selected.length===3){showCompareSelection();toast('已选满 3 项，请在列表调整选择。');return;}
+      selectCompare(id,true);
+    }
+  }
+  if(selected.length<2){showCompareSelection();toast(inDetail?'已加入当前案例，请再勾选一个案例。':'请在列表再勾选一个案例。');return;}
+  location.hash='#compare';
+};
+$('#compare-go').onclick=()=>{if(selected.length>=2)location.hash='#compare';};
 $('#compare-clear').onclick=()=>{selected=[];updateTray();if(location.hash==='#compare')renderComparison();else if(!$('#collection').hidden)renderCards();};
 document.addEventListener('keydown',event=>{
   if($('#favorite-dialog').open||$('#asset-cache-dialog')?.open)return;

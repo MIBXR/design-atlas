@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const source = fs.readFileSync(new URL('../site-shell.js', import.meta.url), 'utf8');
-function page({ compact = false, menuCount = 2, hasDirectory = true, hasHeader = false, embedded = false, hasTools = false, cacheApi, reducedMotion = false } = {}) {
+function page({ compact = false, menuCount = 2, hasDirectory = true, hasHeader = hasDirectory, embedded = false, hasTools = false, cacheApi, reducedMotion = false } = {}) {
   const documentListeners = new Map();
   const windowListeners = new Map();
   const mediaListeners = new Map();
@@ -34,15 +34,21 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, hasHeader =
   const main = element('main');
   const favoriteDialog = element('favorite-dialog');
   document.body = element('body');
+  const bodyClasses = new Set();
+  document.body.classList = { toggle(name, on) { on ? bodyClasses.add(name) : bodyClasses.delete(name); }, contains: name => bodyClasses.has(name) };
   const cacheStatus = element('cache-status');
   const cacheClear = element('cache-clear');
   const loadedScripts = [];
   let cacheButton, cacheDialog, backToTop;
   const themeControl = element('theme-control');
   const header = element('header');
+  const navHome = element('header-inner');
   const nav = element('nav');
-  const navToggle = element('nav-toggle');
+  const navToggle = toggle;
   const currentLink = element('current-link');
+  nav.parentNode = navHome;
+  nav.nextSibling = navToggle;
+  navHome.insertBefore = child => { child.parentNode = navHome; };
   const headerClasses = new Set();
   header.classList = { add: name => headerClasses.add(name), remove: name => headerClasses.delete(name), contains: name => headerClasses.has(name) };
   header.querySelector = selector => selector === '.atlas-site-nav' ? nav : selector === '[data-nav-toggle]' ? navToggle : null;
@@ -62,20 +68,23 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, hasHeader =
   };
   document.activeElement = document.body;
   const directory = element('directory', { inside: true });
-  directory.contains = target => !!target?.inside;
+  directory.id = 'page-directory';
+  directory.firstChild = closeButton;
+  directory.insertBefore = child => { child.parentNode = directory; };
+  directory.contains = target => !!target?.inside || nav.parentNode === directory && (target === nav || target === currentLink);
   const menus = Array.from({ length: menuCount }, () => ({ open: false }));
   directory.querySelectorAll = selector => selector === '.atlas-page-menu' ? menus : [];
   directory.querySelector = selector => selector === '[data-directory-close]' ? closeButton : selector === 'nav a[href], nav button' ? filter : null;
-  document.querySelector = selector => selector === '[data-page-directory]' ? hasDirectory ? directory : null : selector === '[data-directory-toggle]' ? hasDirectory ? toggle : null : selector === '.atlas-site-header' ? hasHeader ? header : null : selector === '[data-theme-toggle]' ? hasTools ? themeControl : null : selector === 'main' ? main : selector === '#favorite-dialog' ? favoriteDialog : null;
+  document.querySelector = selector => selector === '[data-page-directory]' ? hasDirectory ? directory : null : selector === '.atlas-site-header' ? hasHeader ? header : null : selector === '[data-theme-toggle]' ? hasTools ? themeControl : null : selector === 'main' ? main : selector === '#favorite-dialog' ? favoriteDialog : null;
   const sections = new Map([['lab', element('lab')], ['elements', element('elements')], ['prompt', element('prompt')]]);
   document.getElementById = id => sections.get(id) || null;
-  const media = { matches: compact, addEventListener: (name, listener) => mediaListeners.set(name, listener) };
+  const media = { matches: compact, addEventListener: (name, listener) => mediaListeners.set(name, [...(mediaListeners.get(name) || []), listener]) };
   let mediaQueries = 0;
   const window = {
     DesignAtlasAssetCache: cacheApi,
     innerHeight:800, scrollY:0,
-    addEventListener: (name, listener) => windowListeners.set(name, listener),
-    scrollTo(options) { scrollCalls.push(options); window.scrollY = options.top; windowListeners.get('scroll')?.(); },
+    addEventListener: (name, listener) => windowListeners.set(name, [...(windowListeners.get(name) || []), listener]),
+    scrollTo(options) { scrollCalls.push(options); window.scrollY = options.top; windowListeners.get('scroll')?.forEach(listener => listener()); },
     location: { href: 'https://atlas.test/fundamentals.html', replace: value => navigationCalls.push(value) },
     history: { pushState: (...values) => navigationCalls.push(values), replaceState: (...values) => navigationCalls.push(values) },
     matchMedia(query) {
@@ -85,10 +94,10 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, hasHeader =
   };
   vm.runInNewContext(source, { document, window, URL }, { timeout: 1000, filename: 'site-shell.js' });
   return {
-    document, window, menus, media, directory, toggle, header, nav, navToggle, currentLink, closeButton, filter, main, favoriteDialog, sections, documentListeners, navigationCalls, element, cacheButton, cacheDialog, cacheStatus, cacheClear, loadedScripts, backToTop, scrollCalls,
+    document, window, menus, media, directory, toggle, header, navHome, nav, navToggle, currentLink, closeButton, filter, main, favoriteDialog, sections, documentListeners, navigationCalls, element, cacheButton, cacheDialog, cacheStatus, cacheClear, loadedScripts, backToTop, scrollCalls,
     mediaQueries: () => mediaQueries,
-    scroll(top) { window.scrollY = top; windowListeners.get('scroll')?.(); },
-    resize(isCompact) { media.matches = isCompact; mediaListeners.get('change')?.(); },
+    scroll(top) { window.scrollY = top; windowListeners.get('scroll')?.forEach(listener => listener()); },
+    resize(isCompact) { media.matches = isCompact; mediaListeners.get('change')?.forEach(listener => listener()); },
     click(target) {
       let prevented = false;
       target.activate?.();
@@ -158,14 +167,17 @@ test('mobile main navigation opens accessibly and the header follows scroll dire
   assert.equal(fixture.document.activeElement, fixture.currentLink, 'desktop keeps focus on its visible navigation link');
 });
 
-test('mobile hides the complete directory and one header control reveals all subdirectories', () => {
+test('mobile menu combines page navigation and the complete directory', () => {
   const mobile = page({ compact: true });
   assert.equal(mobile.directory.hidden, true, 'utilities and submenus share the hidden aside');
   assert.equal(mobile.toggle.hidden, false);
   assert.equal(mobile.toggle.getAttribute('aria-expanded'), 'false');
+  assert.equal(mobile.toggle.getAttribute('aria-controls'), 'page-directory');
+  assert.equal(mobile.nav.parentNode, mobile.directory);
   mobile.menus[0].open = false;
   mobile.click(mobile.toggle);
   assert.equal(mobile.directory.hidden, false);
+  assert.equal(mobile.document.body.classList.contains('atlas-menu-open'), true);
   assert.equal(mobile.directory.hasAttribute('data-directory-open'), true);
   assert.ok(mobile.menus.every(menu => menu.open), 'opening must not require a second disclosure');
   assert.equal(mobile.directory.scrollTop, 0);
@@ -173,6 +185,7 @@ test('mobile hides the complete directory and one header control reveals all sub
   assert.equal(mobile.document.activeElement, mobile.directory);
   assert.equal(mobile.escape(), true);
   assert.equal(mobile.directory.hidden, true);
+  assert.equal(mobile.document.body.classList.contains('atlas-menu-open'), false);
   assert.equal(mobile.toggle.getAttribute('aria-expanded'), 'false');
   assert.equal(mobile.document.activeElement, mobile.toggle);
   mobile.click(mobile.toggle); mobile.click(mobile.closeButton);
@@ -264,11 +277,12 @@ test('desktop keeps the original sidebar and breakpoint changes never leave focu
   assert.equal(fixture.document.activeElement, fixture.toggle);
   fixture.resize(false);
   assert.equal(fixture.directory.hidden, false);
-  assert.equal(fixture.document.activeElement, fixture.filter);
+  assert.equal(fixture.nav.parentNode, fixture.navHome);
+  assert.equal(fixture.document.activeElement, fixture.currentLink);
   fixture.resize(true); fixture.click(fixture.toggle);
   fixture.document.activeElement = fixture.closeButton;
   fixture.resize(false);
-  assert.equal(fixture.document.activeElement, fixture.filter);
+  assert.equal(fixture.document.activeElement, fixture.currentLink);
   const outside = fixture.element('main-link');
   fixture.document.activeElement = outside;
   fixture.resize(true);
@@ -303,10 +317,11 @@ test('outer pages show back to top after one viewport and respect motion prefere
   }
 });
 
-test('both real page headers own an accessible directory button beside theme and reuse the entire aside', () => {
-  for (const name of ['cases.html', 'fundamentals.html']) {
+test('pages with directories expose one mobile menu button and retain the complete aside', () => {
+  for (const name of ['cases.html', 'patterns.html', 'materials.html', 'fundamentals.html', 'document.html']) {
     const html = fs.readFileSync(new URL(`../${name}`, import.meta.url), 'utf8');
-    assert.match(html, /<div class="atlas-site-theme"><button[^>]*data-directory-toggle[^>]*aria-controls="page-directory"[^>]*aria-expanded="false"[^>]*hidden>/);
+    assert.match(html, /<button[^>]*data-nav-toggle[^>]*aria-expanded="false"[^>]*aria-label="打开菜单"/);
+    assert.doesNotMatch(html, /data-directory-toggle/);
     assert.match(html, /<aside[^>]*class="[^"]*atlas-page-directory[^>]*id="page-directory"[^>]*data-page-directory[^>]*tabindex="-1"/);
     assert.match(html, /<main[^>]*id="main"[^>]*tabindex="-1"/);
   }

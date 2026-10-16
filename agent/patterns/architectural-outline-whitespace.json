@@ -79,7 +79,7 @@
         "bundle": "agent/cases/suzhou-museum.json",
         "demo": "demos/suzhou-museum/index.html"
       },
-      "bundleSha256": "971b886a5a700b253f5e1a3b969239d910d3a8d569883ab6039b4f0bc47d2995"
+      "bundleSha256": "192a0d739c0626c37408edc811b8b9b3192aab74eb75e0ceb4100bdc1fa0bb4d"
     }
   ]
 }

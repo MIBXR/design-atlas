@@ -87,7 +87,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "8ec1f844968f7707f658fa54dc80fcb40e5dec3f3487e56ff50c9b4c6ac42bf3"
+      "bundleSha256": "6e4694b53ea02d12f14df63f950000a0faba53b33a93f59b65a7173c44d8fb09"
     },
     {
       "id": "met-museum",
@@ -96,7 +96,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "bbaa0d113760edeb038a0f35d4294e1367a9966e0863d4ee99be34557ddeaef5"
+      "bundleSha256": "0d297f4e2f90f4e13bd8969adcdb7cdba1d961e8ec729f8f5a76cc3597f5bc95"
     }
   ]
 }

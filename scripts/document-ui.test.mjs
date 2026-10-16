@@ -181,6 +181,8 @@ test('mobile outline opens from its floating control, closes accessibly and yiel
   toggle.click(); const directory = fixture.node('#page-directory'); directory.focus();
   fixture.outside({id:'header-directory-toggle'});
   assert.equal(menu.open, false); assert.equal(fixture.document.activeElement, directory);
+  toggle.click(); fixture.node('[data-nav-toggle]').click();
+  assert.equal(menu.open, false); assert.equal(toggle.attributes['aria-expanded'], 'false');
 });
 
 test('document outline moves focus to a visible control when its responsive layout changes', async () => {

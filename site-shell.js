@@ -59,10 +59,10 @@
   });
   syncBackToTop();
   const directory = document.querySelector('[data-page-directory]');
-  const toggle = document.querySelector('[data-directory-toggle]');
   const header = document.querySelector('.atlas-site-header');
   const nav = header?.querySelector('.atlas-site-nav');
   const navToggle = header?.querySelector('[data-nav-toggle]');
+  const toggle = navToggle;
   if (header && nav && navToggle) {
     const mobile = window.matchMedia('(max-width: 800px)');
     let navOpen = false;
@@ -72,7 +72,7 @@
       header.toggleAttribute('data-nav-open', navOpen);
       header.classList.remove('is-hidden');
       navToggle.setAttribute('aria-expanded', String(navOpen));
-      navToggle.setAttribute('aria-label', navOpen ? '收起主导航' : '打开主导航');
+      navToggle.setAttribute('aria-label', navOpen ? '收起菜单' : '打开菜单');
       if (navOpen) (nav.querySelector('a[aria-current=page]') || nav.querySelector('a'))?.focus({ preventScroll: true });
       else if (mobile.matches && nav.contains(document.activeElement)) navToggle.focus({ preventScroll: true });
     }
@@ -89,22 +89,25 @@
         lastScrollY = y;
       }
     }
-    navToggle.addEventListener('click', () => setNavOpen(!navOpen));
-    toggle?.addEventListener('click', () => setNavOpen(false));
-    document.addEventListener('click', event => {
-      if (navOpen && !header.contains(event.target)) setNavOpen(false);
-    });
-    document.addEventListener('keydown', event => {
-      if (event.key !== 'Escape' || !navOpen) return;
-      event.preventDefault();
-      setNavOpen(false);
-    });
+    if (!directory) {
+      navToggle.addEventListener('click', () => setNavOpen(!navOpen));
+      document.addEventListener('click', event => {
+        if (navOpen && !header.contains(event.target)) setNavOpen(false);
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key !== 'Escape' || !navOpen) return;
+        event.preventDefault();
+        setNavOpen(false);
+      });
+    }
     header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
     window.addEventListener('scroll', syncHeader, { passive: true });
-    mobile.addEventListener('change', () => { setNavOpen(false); syncHeader(); });
+    mobile.addEventListener('change', () => { if (!directory) setNavOpen(false); syncHeader(); });
     syncHeader();
   }
-  if (!directory || !toggle) return;
+  if (!directory || !toggle || !nav) return;
+  const navHome = nav.parentNode;
+  const navNext = nav.nextSibling;
   const menus = [...directory.querySelectorAll('.atlas-page-menu')];
   const closeButton = directory.querySelector('[data-directory-close]');
   const favoriteDialog = document.querySelector('#favorite-dialog');
@@ -112,11 +115,15 @@
   let open = false;
   let restoreFavoriteFocus = false;
   function syncVisibility() {
+    if (compact.matches) directory.insertBefore(nav, directory.firstChild);
+    else navHome.insertBefore(nav, navNext);
     directory.hidden = compact.matches && !open;
     directory.toggleAttribute('data-directory-open', compact.matches && open);
+    document.body.classList.toggle('atlas-menu-open', compact.matches && open);
     toggle.hidden = !compact.matches;
+    toggle.setAttribute('aria-controls', directory.id);
     toggle.setAttribute('aria-expanded', String(compact.matches && open));
-    toggle.setAttribute('aria-label', open ? '收起页面目录' : '打开页面目录');
+    toggle.setAttribute('aria-label', open ? '收起菜单' : '打开菜单');
   }
   function close({ restoreFocus = false } = {}) {
     if (!open) return;
@@ -127,21 +134,21 @@
   function show() {
     if (!compact.matches) return;
     open = true;
-    // The one header control reveals the entire directory in one operation.
     for (const menu of menus) menu.open = true;
     syncVisibility();
+    header.classList.remove('is-hidden');
     directory.scrollTop = 0;
     directory.focus({ preventScroll: true });
   }
   function syncLayout() {
     const active = document.activeElement;
-    const inside = directory.contains(active);
+    const inside = directory.contains(active) || nav.contains(active);
     const controlFocused = active === toggle || active === closeButton;
     open = false;
     for (const menu of menus) menu.open = true;
     syncVisibility();
     if (compact.matches && inside) toggle.focus({ preventScroll: true });
-    else if (!compact.matches && controlFocused) directory.querySelector('nav a[href], nav button')?.focus({ preventScroll: true });
+    else if (!compact.matches && controlFocused) (nav.querySelector('a[aria-current=page]') || nav.querySelector('a'))?.focus({ preventScroll: true });
   }
   function focusDestination(action) {
     let destination;

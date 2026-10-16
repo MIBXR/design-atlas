@@ -136,6 +136,9 @@ function renderOutline(headings) {
       current?.scrollIntoView({block:'nearest'});
     }
   });
+  listen(document.querySelector('[data-nav-toggle]'), 'click', () => {
+    if (compact.matches && menu.open) setOpen(false);
+  });
   listen(closeButton, 'click', () => setOpen(false, {restoreFocus:true}));
   listen(document, 'keydown', event => {
     if (!compact.matches || !menu.open || event.key !== 'Escape') return;
