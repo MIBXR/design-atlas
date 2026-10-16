@@ -15,6 +15,7 @@
 .agent-page .agent-section-copy>.copy-button{width:100%;flex-shrink:0}
 .agent-page .agent-command{align-self:start;padding:20px}
 .agent-page .agent-command pre{font-family:var(--atlas-font-mono,"Cascadia Code",Consolas,"Microsoft YaHei",monospace)}
+.agent-page .agent-local>pre{white-space:pre-wrap;overflow-wrap:anywhere}
 @media(max-width:800px){
   .agent-page :is(.agent-start,.agent-local){grid-template-columns:minmax(0,1fr);gap:20px}
   .agent-page .agent-section-intro{grid-column:auto}

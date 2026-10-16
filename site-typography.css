@@ -219,23 +219,19 @@ html[data-lab-embed=home] body.lab-page .sample :is(.sample-copy>p,.sample-compo
   body .atlas-site-header .atlas-site-nav>a{font-size:12px}
 }
 @media(max-width:800px){
-  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(6,minmax(0,1fr))}
-  body .atlas-site-header .atlas-site-nav>a:last-child{font-size:12px}
+  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body .atlas-site-header .atlas-site-nav>a{font-size:14px}
   body.landing-page .landing-feature-tabs button{padding-inline:6px}
 }
 @media(max-width:800px),(any-pointer:coarse){:root{--atlas-control-height:40px}}
 @media(max-width:400px){body.landing-page .landing-main .landing-feature-tabs button{font-size:12px;padding-inline:4px;white-space:nowrap}}
 @media(max-width:600px){
-  :root{--atlas-header-height:181px}
-  .atlas-site-header-inner{grid-template-rows:44px 92px}
-  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:44px 44px;height:92px}
   body.landing-page .landing-command textarea{height:230px;min-height:230px}
   body.cases-page .demo-toolbar>div{gap:6px}
   body.cases-page .demo-toolbar button{font-size:12px;padding:5px 9px}
 }
 @media(max-width:360px){
   body .atlas-site-header .atlas-site-wordmark strong{font-size:12px}
-  body .atlas-site-header .atlas-site-nav{grid-template-columns:repeat(3,minmax(0,1fr))}
   body.cases-page .detail-top :is(.copy-button,.primary-button){padding-right:10px;padding-left:10px}
   html[data-lab-embed=home] body.lab-page .scheme-btn{flex-direction:column;align-items:flex-start;gap:5px}
 }

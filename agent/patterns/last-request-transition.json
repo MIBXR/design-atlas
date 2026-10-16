@@ -111,7 +111,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "917d05085611dd38fadbbf7ff46abd6fe7f127a00367add22fd491d6dc2b0490"
+      "bundleSha256": "22eb5819032e434e24f3bcfeb9991af7d744d02a19a4357be722db64192a200b"
     },
     {
       "id": "chatgpt-platform",
@@ -120,7 +120,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "1df5bd34aeb80b038279871d9c6640c714ee03e79ad4e5dbb88feaf203185e77"
+      "bundleSha256": "af1d5a915d0d23af0f5ee4d6dc1ba41c17bed1ffb50a5d35741dd5426b1753f9"
     },
     {
       "id": "qoder-platform",
@@ -129,7 +129,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "1a57a74c3c75c2916d77159380d33f9c1aa3de4dd0db495fc16f013af199fd4a"
+      "bundleSha256": "fbe437500f87836754e384bc131a1bd9c37500de823abc83c3a36150331405fc"
     },
     {
       "id": "zelda-world",
@@ -138,7 +138,7 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
       },
-      "bundleSha256": "6780133dc621947974f439dc5eca3a830663f970d3c34fe5046b4186dc5b6dab"
+      "bundleSha256": "5288cbe702915be9074d922a26f480c2194e726f18ffac52421ca4652e53eaee"
     }
   ]
 }
