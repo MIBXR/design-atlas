@@ -70,7 +70,7 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
       },
-      "bundleSha256": "d645fa7a286619fd33c689c8139c93f129e242aa82083f9b62ddd2314c25d55a"
+      "bundleSha256": "846a00e3a970e56945750cc8336be9579c0bdaa6c1bc1705314fa140a34507ff"
     }
   ]
 }

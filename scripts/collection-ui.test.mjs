@@ -104,6 +104,20 @@ test('comparison keeps two or three complete cases within shared semantic rows a
   assert.match(fixture.node('#comparison').innerHTML, /请先在案例库选择 2–3 个条目/);
 });
 
+test('comparison from a case detail selects that case and returns to the selectable list', () => {
+  const fixture = page({ hash: `#style/${entries[0].id}` });
+  assert.equal(fixture.node('#compare-detail-label').hidden, false);
+  fixture.node('#compare-open').onclick();
+  assert.equal(fixture.location.hash, '');
+  assert.equal(fixture.node('#collection').hidden, false);
+  assert.equal(fixture.node('#compare-detail-label').hidden, true);
+  assert.equal(fixture.node('#compare-count').textContent, 1);
+  assert.equal(fixture.document.activeElement, fixture.node('#cards [data-compare]:not(:checked)'));
+  fixture.select(entries[1].id);
+  fixture.node('#compare-open').onclick();
+  assert.equal(fixture.location.hash, '#compare');
+});
+
 test('pattern search combines URL query, category and source while preserving independent case filters', () => {
   const fixture = page({ hash: `#patterns?category=${encodeURIComponent('交互反馈')}&source=${entries[1].id}&q=${encodeURIComponent('悬停')}` });
   assert.equal(fixture.node('#patterns-library').hidden, false);

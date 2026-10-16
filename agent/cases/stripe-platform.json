@@ -334,20 +334,20 @@
     {
       "path": "document.css",
       "role": "source",
-      "sha256": "3cb11a2a0a21c5f373b17b7900cfceee5b3328da830289b40800beec01312be9",
-      "bytes": 8899
+      "sha256": "226401d0c7ed8655101bdb59ef89e49ef835e7abddfe32b42345fb42537d6498",
+      "bytes": 8989
     },
     {
       "path": "document.html",
       "role": "source",
-      "sha256": "5b77e9de6b81f6a86fbdb3a8f7aea9cbea32eafdbd37285a30d7036830af99ab",
-      "bytes": 6642
+      "sha256": "4fc6455d58a677bd9601dd21ed32cc1d8ecd4b0be0fc0b6b40b4e7c77353237e",
+      "bytes": 6371
     },
     {
       "path": "document.js",
       "role": "source",
-      "sha256": "8bc143d33ca018d78267b1e1f18d3578a3bb90048a4284d820a4f4dd9b2de2b7",
-      "bytes": 12469
+      "sha256": "dd45e889c4ebe8208b2d88b0099940decab6ff6bf52cb9f7c152807a5a2dd67b",
+      "bytes": 12600
     },
     {
       "path": "entries/stripe-platform.json",
@@ -400,20 +400,20 @@
     {
       "path": "site-nav.css",
       "role": "source",
-      "sha256": "6b03635979afdb82f7affecc8ce2b8674ac5940d939920a6418f48afc587216d",
-      "bytes": 17107
+      "sha256": "7f49191788193b94cfd4a9f91d3639aacdabceb1dda08c1cc403629b20793879",
+      "bytes": 17484
     },
     {
       "path": "site-shell.js",
       "role": "source",
-      "sha256": "739f3dae231747b9fdfc70f86ddce99a442457426c95d5c80128272bd94b3c65",
-      "bytes": 10141
+      "sha256": "b1b16ed8477974beedf7407423cc1dd24567c1cf1e6a8fc130930e9534315975",
+      "bytes": 10423
     },
     {
       "path": "site-typography.css",
       "role": "source",
-      "sha256": "afa44189573a185c3b18efc972c056658327e9397471705970191f30aea6fd33",
-      "bytes": 15409
+      "sha256": "1f9133f740e4aba92dae3e85428da8abfdd7819391418e38712adc3945b28e9a",
+      "bytes": 16559
     },
     {
       "path": "theme-control.css",

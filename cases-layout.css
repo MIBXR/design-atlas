@@ -46,6 +46,11 @@
   .cases-page .hero .eyebrow{margin-bottom:8px}
   .cases-page .hero h1{font-size:34px;line-height:1.15;margin-bottom:10px}
   .cases-page .hero .hero-desc{font-size:14px;line-height:1.6;margin:10px 0 0}
+  .cases-page .collection-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .cases-page .collection-tools .search{grid-column:1/-1;width:100%;min-width:0}
+  .cases-page .collection-tools .sort{display:grid;gap:4px;margin:0;min-width:0}
+  .cases-page .collection-tools .sort select{width:100%;min-width:0}
+  .patterns-page .pattern-tools .sort:last-child{grid-column:1/-1}
   .cases-page .list-caption{margin:12px 0}
 }
 @media(max-width:360px){.cases-page{--case-gutter:16px}.cases-page .rail .nav-item{font-size:11px;padding:10px}.case-toolbar{gap:8px}}

@@ -227,11 +227,22 @@ html[data-lab-embed=home] body.lab-page .sample :is(.sample-copy>p,.sample-compo
 @media(max-width:400px){body.landing-page .landing-main .landing-feature-tabs button{font-size:12px;padding-inline:4px;white-space:nowrap}}
 @media(max-width:600px){
   body.landing-page .landing-command textarea{height:230px;min-height:230px}
-  body.cases-page .demo-toolbar>div{gap:6px}
-  body.cases-page .demo-toolbar button{font-size:12px;padding:5px 9px}
+  body.cases-page .detail-top{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:8px}
+  body.cases-page .detail-top>div{display:contents}
+  body.cases-page .detail-top>div>.favorite{grid-column:2;grid-row:1;justify-self:end}
+  body.cases-page .detail-top>div>:is(.copy-button,.primary-button){width:100%;min-width:0;padding-inline:6px;white-space:normal;text-align:center}
+  body.cases-page #detail .detail-top>div>.primary-button{grid-column:1/-1}
+  body.cases-page #detail .detail-top>div>.copy-button:nth-child(4):nth-last-child(2){grid-column:1/-1}
+  body.cases-page .demo-toolbar{display:grid;grid-template-columns:minmax(0,1fr);justify-content:stretch;gap:8px}
+  body.cases-page .demo-toolbar>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%}
+  body.cases-page .demo-toolbar>div>[data-viewport]{width:100%;min-width:0;padding:5px 2px;font-size:12px;white-space:nowrap}
+  body.cases-page .demo-toolbar>div>button:not([data-viewport]):not([hidden]){grid-column:1}
+  body.cases-page .demo-toolbar>div>#reload-demo,
+  body.cases-page .demo-toolbar>div>button[hidden]+a.copy-button{grid-column:1/-1}
+  body.cases-page .demo-toolbar>div>a.copy-button{grid-column:2/-1;width:100%}
 }
 @media(max-width:360px){
   body .atlas-site-header .atlas-site-wordmark strong{font-size:12px}
-  body.cases-page .detail-top :is(.copy-button,.primary-button){padding-right:10px;padding-left:10px}
+  body.cases-page :is(#pattern-detail,#material-detail) .detail-top>div>:is(.copy-button,.primary-button){grid-column:1/-1}
   html[data-lab-embed=home] body.lab-page .scheme-btn{flex-direction:column;align-items:flex-start;gap:5px}
 }

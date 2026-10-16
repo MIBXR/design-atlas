@@ -112,7 +112,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "22eb5819032e434e24f3bcfeb9991af7d744d02a19a4357be722db64192a200b"
+      "bundleSha256": "605487700526a55689db3a0a53f5e890d5b14cf8ce8709371450cf8a300145e5"
     },
     {
       "id": "blue-archive",
@@ -121,7 +121,7 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
       },
-      "bundleSha256": "dc9c44cadfd1366422fa98bd4d593c252786e9e6b3989a579adac544e88bc826"
+      "bundleSha256": "831c8ee9f6f60559028230aebd43a95c139fdc1ea46e2054d007728becf532ee"
     },
     {
       "id": "genshin-world",
@@ -130,7 +130,7 @@
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/genshin-world/index.html"
       },
-      "bundleSha256": "c8517240a37dd54a69582c0018d85d9f0e60f312290530ef7416f1315a230959"
+      "bundleSha256": "51bcea1726c9e6bc81300e93fc14e0566c5673fc244423ebcb91f2d7547cc03b"
     },
     {
       "id": "zenless-zone-zero",
@@ -139,7 +139,7 @@
         "bundle": "agent/cases/zenless-zone-zero.json",
         "demo": "demos/zenless-zone-zero/index.html"
       },
-      "bundleSha256": "9dea296259d2623c287aa3c5bbbe91f1c448367f3f70d5d4ba34e21522d4dcf1"
+      "bundleSha256": "6849b1b17d1d6bbb712a22ce73090f577d4854d354883303ddd3657c4e6f73f7"
     }
   ]
 }
