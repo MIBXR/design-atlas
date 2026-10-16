@@ -70,7 +70,7 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
       },
-      "bundleSha256": "79184f460adb411b0dede1d80bd2c20d2ed3da4db07f5ef4a8e94fdc8d0e5023"
+      "bundleSha256": "8ec1f844968f7707f658fa54dc80fcb40e5dec3f3487e56ff50c9b4c6ac42bf3"
     }
   ]
 }

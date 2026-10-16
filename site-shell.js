@@ -60,6 +60,50 @@
   syncBackToTop();
   const directory = document.querySelector('[data-page-directory]');
   const toggle = document.querySelector('[data-directory-toggle]');
+  const header = document.querySelector('.atlas-site-header');
+  const nav = header?.querySelector('.atlas-site-nav');
+  const navToggle = header?.querySelector('[data-nav-toggle]');
+  if (header && nav && navToggle) {
+    const mobile = window.matchMedia('(max-width: 800px)');
+    let navOpen = false;
+    let lastScrollY = window.scrollY;
+    function setNavOpen(open) {
+      navOpen = open && mobile.matches;
+      header.toggleAttribute('data-nav-open', navOpen);
+      header.classList.remove('is-hidden');
+      navToggle.setAttribute('aria-expanded', String(navOpen));
+      navToggle.setAttribute('aria-label', navOpen ? '收起主导航' : '打开主导航');
+      if (navOpen) (nav.querySelector('a[aria-current=page]') || nav.querySelector('a'))?.focus({ preventScroll: true });
+      else if (mobile.matches && nav.contains(document.activeElement)) navToggle.focus({ preventScroll: true });
+    }
+    function syncHeader() {
+      const y = Math.max(0, window.scrollY);
+      if (!mobile.matches || y < 80 || navOpen || directory?.hasAttribute('data-directory-open')) {
+        header.classList.remove('is-hidden');
+        lastScrollY = y;
+      } else if (y > lastScrollY + 8) {
+        header.classList.add('is-hidden');
+        lastScrollY = y;
+      } else if (y < lastScrollY - 8) {
+        header.classList.remove('is-hidden');
+        lastScrollY = y;
+      }
+    }
+    navToggle.addEventListener('click', () => setNavOpen(!navOpen));
+    toggle?.addEventListener('click', () => setNavOpen(false));
+    document.addEventListener('click', event => {
+      if (navOpen && !header.contains(event.target)) setNavOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || !navOpen) return;
+      event.preventDefault();
+      setNavOpen(false);
+    });
+    header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
+    window.addEventListener('scroll', syncHeader, { passive: true });
+    mobile.addEventListener('change', () => { setNavOpen(false); syncHeader(); });
+    syncHeader();
+  }
   if (!directory || !toggle) return;
   const menus = [...directory.querySelectorAll('.atlas-page-menu')];
   const closeButton = directory.querySelector('[data-directory-close]');

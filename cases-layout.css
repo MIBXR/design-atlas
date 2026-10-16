@@ -16,6 +16,7 @@
 .cases-page .rail .rail-bottom{display:block;margin:24px 12px 4px}
 .cases-page .rail a:focus-visible,.cases-page .rail button:focus-visible,.cases-page .rail summary:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
 .cases-page .case-layout>main{margin:0;padding:0;max-width:none;min-width:0}
+.cases-page .search svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;flex:none}
 .case-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;border-bottom:1px solid var(--line);font:10px/1.6 ui-monospace,monospace;color:var(--muted)}
 .case-toolbar .text-button{min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:7px;background:var(--field);color:var(--ink);font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;white-space:nowrap}
 .cases-page .hero{padding:36px 0}
@@ -38,6 +39,14 @@
   .cases-page .hero h1{font-size:40px}
   .cases-page.has-tray .case-layout>main{padding-bottom:90px}
   .cases-page .compare-tray{bottom:10px}
+}
+@media(max-width:600px){
+  .case-toolbar{min-height:56px;gap:8px}
+  .cases-page .hero{padding:18px 0 14px}
+  .cases-page .hero .eyebrow{margin-bottom:8px}
+  .cases-page .hero h1{font-size:34px;line-height:1.15;margin-bottom:10px}
+  .cases-page .hero .hero-desc{font-size:14px;line-height:1.6;margin:10px 0 0}
+  .cases-page .list-caption{margin:12px 0}
 }
 @media(max-width:360px){.cases-page{--case-gutter:16px}.cases-page .rail .nav-item{font-size:11px;padding:10px}.case-toolbar{gap:8px}}
 @media(forced-colors:active){.cases-page .rail{border:1px solid CanvasText}.cases-page .rail .nav-item.active{outline:1px solid Highlight}.cases-page .rail a:focus-visible,.cases-page .rail button:focus-visible,.cases-page .rail summary:focus-visible{outline-color:Highlight}}

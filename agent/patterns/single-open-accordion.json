@@ -96,7 +96,7 @@
         "bundle": "agent/cases/claude-platform.json",
         "demo": "demos/claude-platform/index.html"
       },
-      "bundleSha256": "d6380ff23b6176ce5539d6ce881e81aa1703c7ac284435c1bdc0196dec878584"
+      "bundleSha256": "59d991875246b5915b531729cff22139c26095944b184cd78c9e357546a30c37"
     },
     {
       "id": "qoder-platform",
@@ -105,7 +105,7 @@
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
       },
-      "bundleSha256": "1a57a74c3c75c2916d77159380d33f9c1aa3de4dd0db495fc16f013af199fd4a"
+      "bundleSha256": "fbe437500f87836754e384bc131a1bd9c37500de823abc83c3a36150331405fc"
     },
     {
       "id": "stripe-platform",
@@ -114,7 +114,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "c021aa21ab9c4883aab887732c0b777da9660574f9b3e3cc775e5ba11e3d943f"
+      "bundleSha256": "ab70def0df181ab5d794bbd8b22b94851c38c70b8f4530508319d387d34a467c"
     }
   ]
 }

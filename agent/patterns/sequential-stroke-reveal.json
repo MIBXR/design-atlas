@@ -66,7 +66,7 @@
         "bundle": "agent/cases/line-art.json",
         "demo": "demos/line-art/index.html"
       },
-      "bundleSha256": "0963572ba7c5daa53191a3043f94f56914f101376546b141130bd62252f9e292"
+      "bundleSha256": "402b5f01280c146989a584c66c4fe46314fff8cff3b86827b4141a5a47d4b917"
     }
   ]
 }

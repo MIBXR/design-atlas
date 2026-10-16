@@ -64,7 +64,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "b9ca4b630639f3651c5ac1df1700496a7925c238da839b02737a5c91b1adb06e"
+      "bundleSha256": "d7f8bc318ea24aa53ab115ceb1bb3d7e16754b4162656c83095200c4832083dd"
     }
   ]
 }
