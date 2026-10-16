@@ -74,7 +74,7 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
       },
-      "bundleSha256": "2a3775d5099349796e6ac24d258918e150ab1d37cbbebe05d41c5d2cc14e6f6b"
+      "bundleSha256": "81d01cddbf91c0ddc40e92657dc93780153539903948cd5c940bb1bf76c587ee"
     }
   ]
 }

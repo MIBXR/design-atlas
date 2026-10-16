@@ -24,6 +24,8 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, hasHeader =
       toggleAttribute(key, force) { force ? attributes.set(key, '') : attributes.delete(key); },
       contains(target) { return target === this || target?.parent === this; },
       closest() { return this.action ? this : this.parent?.action ? this.parent : null; },
+      append(...children) { this.children = [...(this.children || []), ...children]; for (const child of children) child.parent = this; },
+      after(...children) { this.nextView = children[0]; for (const child of children) { child.parent = this.parent; child.parentNode = this.parent; } },
       activate() { return listeners.get('click')?.(); },
       emit(type) { listeners.get(type)?.(); },
     };
@@ -69,12 +71,16 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, hasHeader =
   document.activeElement = document.body;
   const directory = element('directory', { inside: true });
   directory.id = 'page-directory';
-  directory.firstChild = closeButton;
+  const heading = element('heading', { inside: true });
+  const headingLabel = element('heading-label', { inside: true });
+  heading.parent = directory;
+  heading.querySelector = selector => selector === 'strong' ? headingLabel : null;
+  directory.firstChild = heading;
   directory.insertBefore = child => { child.parentNode = directory; };
-  directory.contains = target => !!target?.inside || nav.parentNode === directory && (target === nav || target === currentLink);
+  directory.contains = target => !!target?.inside || target?.parent === directory || target?.parent?.parent === directory || nav.parentNode === directory && (target === nav || target === currentLink);
   const menus = Array.from({ length: menuCount }, () => ({ open: false }));
   directory.querySelectorAll = selector => selector === '.atlas-page-menu' ? menus : [];
-  directory.querySelector = selector => selector === '[data-directory-close]' ? closeButton : selector === 'nav a[href], nav button' ? filter : null;
+  directory.querySelector = selector => selector === '.atlas-directory-heading' ? heading : selector === '[data-directory-close]' ? closeButton : selector === 'nav a[href], nav button' ? filter : null;
   document.querySelector = selector => selector === '[data-page-directory]' ? hasDirectory ? directory : null : selector === '.atlas-site-header' ? hasHeader ? header : null : selector === '[data-theme-toggle]' ? hasTools ? themeControl : null : selector === 'main' ? main : selector === '#favorite-dialog' ? favoriteDialog : null;
   const sections = new Map([['lab', element('lab')], ['elements', element('elements')], ['prompt', element('prompt')]]);
   document.getElementById = id => sections.get(id) || null;
@@ -95,6 +101,7 @@ function page({ compact = false, menuCount = 2, hasDirectory = true, hasHeader =
   vm.runInNewContext(source, { document, window, URL }, { timeout: 1000, filename: 'site-shell.js' });
   return {
     document, window, menus, media, directory, toggle, header, navHome, nav, navToggle, currentLink, closeButton, filter, main, favoriteDialog, sections, documentListeners, navigationCalls, element, cacheButton, cacheDialog, cacheStatus, cacheClear, loadedScripts, backToTop, scrollCalls,
+    pageView: heading.nextView?.children?.[0], siteView: heading.nextView?.children?.[1],
     mediaQueries: () => mediaQueries,
     scroll(top) { window.scrollY = top; windowListeners.get('scroll')?.forEach(listener => listener()); },
     resize(isCompact) { media.matches = isCompact; mediaListeners.get('change')?.forEach(listener => listener()); },
@@ -167,7 +174,7 @@ test('mobile main navigation opens accessibly and the header follows scroll dire
   assert.equal(fixture.document.activeElement, fixture.currentLink, 'desktop keeps focus on its visible navigation link');
 });
 
-test('mobile menu combines page navigation and the complete directory', () => {
+test('mobile menu switches between the page directory and site navigation', () => {
   const mobile = page({ compact: true });
   assert.equal(mobile.directory.hidden, true, 'utilities and submenus share the hidden aside');
   assert.equal(mobile.toggle.hidden, false);
@@ -180,6 +187,15 @@ test('mobile menu combines page navigation and the complete directory', () => {
   assert.equal(mobile.document.body.classList.contains('atlas-menu-open'), true);
   assert.equal(mobile.directory.hasAttribute('data-directory-open'), true);
   assert.ok(mobile.menus.every(menu => menu.open), 'opening must not require a second disclosure');
+  assert.equal(mobile.directory.getAttribute('data-menu-view'), 'page');
+  assert.equal(mobile.pageView.getAttribute('aria-pressed'), 'true');
+  mobile.click(mobile.siteView);
+  assert.equal(mobile.directory.getAttribute('data-menu-view'), 'site');
+  assert.equal(mobile.siteView.getAttribute('aria-pressed'), 'true');
+  assert.equal(mobile.directory.hidden, false);
+  mobile.click(mobile.pageView);
+  assert.equal(mobile.directory.getAttribute('data-menu-view'), 'page');
+  assert.equal(mobile.siteView.getAttribute('aria-pressed'), 'false');
   assert.equal(mobile.directory.scrollTop, 0);
   assert.equal(mobile.toggle.getAttribute('aria-expanded'), 'true');
   assert.equal(mobile.document.activeElement, mobile.directory);
@@ -191,6 +207,8 @@ test('mobile menu combines page navigation and the complete directory', () => {
   mobile.click(mobile.toggle); mobile.click(mobile.closeButton);
   assert.equal(mobile.document.activeElement, mobile.toggle);
   assert.equal(mobile.directory.hidden, true);
+  mobile.click(mobile.toggle);
+  assert.equal(mobile.directory.getAttribute('data-menu-view'), 'page', 'opening returns to the current page');
 });
 
 test('choosing a filter or native section link dismisses the directory and focuses visible content', () => {

@@ -295,6 +295,7 @@ body button.atlas-ui-button.atlas-back-to-top{min-height:44px}
   @keyframes atlas-dialog-enter{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
   @keyframes atlas-backdrop-enter{from{opacity:0}to{opacity:1}}
   .atlas-site-header[data-nav-open] .atlas-site-nav,.atlas-page-directory[data-directory-open]{animation:atlas-panel-enter 180ms cubic-bezier(.2,.7,.2,1) both}
+  .atlas-page-directory[data-directory-open][data-menu-view=site]>.atlas-site-nav,.atlas-page-directory[data-directory-open][data-menu-view=page]>.atlas-page-menu{animation:atlas-panel-enter 160ms cubic-bezier(.2,.7,.2,1) both}
   body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page) dialog[open],.document-outline details[open]{animation:atlas-dialog-enter 180ms cubic-bezier(.2,.7,.2,1) both}
   body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page) dialog[open]::backdrop{animation:atlas-backdrop-enter 180ms ease-out both}
   @view-transition{navigation:auto}
@@ -312,20 +313,28 @@ body button.atlas-ui-button.atlas-back-to-top{min-height:44px}
 
 /* Mobile page directories reuse the desktop aside as the shared menu panel. */
 .atlas-directory-heading{display:none}
+.atlas-menu-views{display:none}
 .atlas-page-directory[hidden]{display:none!important}
 .atlas-page-directory[data-page-directory]>.atlas-site-nav{display:none}
 @media(max-width:800px){
   body:is(.cases-page,.lab-page,.document-page) .atlas-page-directory[data-page-directory]:not([data-directory-open]){display:none}
   body:is(.cases-page,.lab-page,.document-page) .atlas-page-directory[data-page-directory][data-directory-open]{box-sizing:border-box;display:block;position:fixed;inset:calc(var(--atlas-header-height) + 8px) 20px auto;width:auto;height:auto;max-height:calc(100svh - var(--atlas-header-height) - 24px);margin:0;padding:16px;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;z-index:70;border:1px solid #4b5442;border-radius:12px;background:#242721;color:#f5f4ed;box-shadow:0 12px 36px #0004;scroll-padding-top:64px}
-  .atlas-page-directory[data-page-directory][data-directory-open]>.atlas-site-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:0 0 16px;padding:0 0 16px;border-bottom:1px solid #434838}
+  .atlas-page-directory[data-menu-view=site][data-directory-open]>.atlas-site-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:0}
+  .atlas-page-directory[data-menu-view=site]>:not(.atlas-directory-heading,.atlas-menu-views,.atlas-site-nav){display:none}
   .atlas-page-directory>.atlas-site-nav>a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border:1px solid transparent;border-radius:7px;color:#f5f4ed;font:14px/1.5 var(--atlas-font-sans,sans-serif);text-decoration:none}
   .atlas-page-directory>.atlas-site-nav>a[aria-current=page]{background:#d4ef76;color:#252822;font-weight:650}
   .atlas-page-directory>.atlas-site-nav>a:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
-  .atlas-directory-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid #434838;font:14px/1.7 var(--atlas-font-sans,sans-serif)}
+  .atlas-directory-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;font:14px/1.7 var(--atlas-font-sans,sans-serif)}
   .atlas-directory-heading strong{font-size:16px;font-weight:600}
   .atlas-directory-heading button{display:flex;align-items:center;gap:6px;flex:none;min-height:44px;padding:8px 12px;border:1px solid #59624e;border-radius:7px;background:#30362a;color:#f5f4ed;font:14px/1.5 var(--atlas-font-sans,sans-serif);cursor:pointer;touch-action:manipulation}
   .atlas-directory-heading button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
   .atlas-directory-heading button:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
+  .atlas-menu-views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;margin:0 0 16px;padding:4px;border:1px solid #434838;border-radius:9px;background:#1b1e19}
+  .atlas-menu-views button{min-height:44px;padding:8px;border:0;border-radius:6px;background:transparent;color:#c9cdbf;font:14px/1.5 var(--atlas-font-sans,sans-serif);cursor:pointer}
+  .atlas-menu-views button[aria-pressed=true]{background:#d4ef76;color:#252822;font-weight:650}
+  .atlas-menu-views button:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
+  .atlas-page-directory[data-page-directory]>.atlas-page-menu>summary{display:none}
+  .cases-page .atlas-page-directory[data-menu-view=page] .case-menu nav{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:600px){
   body:is(.cases-page,.lab-page,.document-page) .atlas-site-header .atlas-site-mark{width:26px;height:26px}
@@ -338,7 +347,9 @@ html[data-lab-embed=home] .atlas-page-directory{display:none!important}
   .atlas-directory-heading button{border-color:ButtonText;background:ButtonFace;color:ButtonText}
   body:is(.cases-page,.lab-page,.document-page) .atlas-page-directory[data-page-directory][data-directory-open]{border-color:CanvasText;background:Canvas;color:CanvasText}
   .atlas-page-directory>.atlas-site-nav>a[aria-current=page]{border-color:Highlight;background:Canvas;color:Highlight}
-  .atlas-directory-heading{border-color:CanvasText}
+  .atlas-menu-views{border-color:CanvasText;background:Canvas}
+  .atlas-menu-views button{color:CanvasText}
+  .atlas-menu-views button[aria-pressed=true]{outline:2px solid Highlight;background:Canvas;color:Highlight}
 }
 
 @media(min-width:801px){.atlas-site-header-inner{grid-template-columns:190px minmax(0,1fr) 116px;gap:20px}.atlas-site-header .atlas-site-theme{width:116px}}

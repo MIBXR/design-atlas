@@ -6,9 +6,11 @@
 .cases-page .rail .case-menu>summary{color:#f5f4ed;background:#30362a;border-color:#4b5442}
 .cases-page .rail .case-menu>summary::after{color:#d4ef76}
 .cases-page .rail .case-menu-content{padding-top:10px}
-.cases-page .rail .rail-label{display:block;margin:12px 12px 14px;font-size:10px;letter-spacing:1.4px}
+.cases-page .rail .rail-label{display:none}
 .cases-page .rail nav{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;margin:0;overflow:visible}
 .cases-page .rail .nav-item,.cases-page .rail .rail-link{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;margin:0;padding:12px;border:0;border-radius:7px;font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;letter-spacing:0;text-align:left;text-decoration:none;white-space:normal}
+.cases-page .rail .nav-item.active{background:#d4ef76;color:#252822;font-weight:650}
+.cases-page .rail .nav-item.active b{color:#3c4a26}
 .cases-page .rail .nav-item b,.cases-page .rail .rail-link b{flex:none;font:11px/1.6 ui-monospace,monospace;font-weight:400}
 .cases-page .rail .rail-link{background:none;color:#d5dacb;cursor:pointer}
 .cases-page .rail .rail-link:hover{background:#353a2e}

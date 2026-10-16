@@ -64,7 +64,7 @@
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
       },
-      "bundleSha256": "605487700526a55689db3a0a53f5e890d5b14cf8ce8709371450cf8a300145e5"
+      "bundleSha256": "ba2bbfd6fa2badb2280270c749a522f6e13f24d589b45da855efb94631d003b6"
     }
   ]
 }
