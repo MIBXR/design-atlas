@@ -104,7 +104,7 @@
 @media(max-width:800px){
   .document-layout{display:block;padding:0 20px}
   .document-rail{position:static}
-  body.document-page #page-directory[data-directory-open]{--document-navigation-offset:183px;display:flex;overflow:hidden}
+  body.document-page #page-directory[data-directory-open]{--document-navigation-offset:205px;display:block;overflow-y:auto}
   .document-outline{position:fixed;top:auto;right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));z-index:75;max-height:none;margin:0;padding:0;border:0;background:none;overflow:visible}
   .document-page.atlas-menu-open .document-outline{visibility:hidden;pointer-events:none}
   body.document-page #document-outline-toggle{min-height:44px;height:44px;padding:8px 14px;border-color:var(--line);background:var(--field);color:var(--ink);box-shadow:0 4px 16px #0002;cursor:pointer}

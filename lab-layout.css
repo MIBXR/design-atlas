@@ -45,6 +45,7 @@ html:not([data-lab-embed=home]) .lab-page .lab-workspace .experiment{position:st
   .lab-page{--lab-gutter:20px;--lab-rail-width:0px;--lab-column-gap:0px}
   .lab-page .lab-layout{display:block}
   .lab-page .lab-rail{position:static;max-height:none;margin:20px 0 0;padding:8px 12px}
+  .lab-page .lab-rail .atlas-lab-menu>summary{display:none}
   .lab-page .lab-rail .atlas-section-nav{grid-template-columns:repeat(2,minmax(0,1fr));padding-top:4px}
 }
 @media(max-width:360px){.lab-page{--lab-gutter:16px}}

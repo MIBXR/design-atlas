@@ -82,7 +82,7 @@
         "bundle": "agent/cases/digital-dunhuang.json",
         "demo": "demos/digital-dunhuang/index.html"
       },
-      "bundleSha256": "ea9e3f48cee1975079018bb4569b12d9455af58db720f713ce6a2d14dbedefb9"
+      "bundleSha256": "424859d815c00ad4c232aa42550d11e89667f76117a73cecd81a04b44870a761"
     }
   ]
 }

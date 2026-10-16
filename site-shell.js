@@ -109,13 +109,33 @@
   const navHome = nav.parentNode;
   const navNext = nav.nextSibling;
   const menus = [...directory.querySelectorAll('.atlas-page-menu')];
+  const heading = directory.querySelector('.atlas-directory-heading');
   const closeButton = directory.querySelector('[data-directory-close]');
   const favoriteDialog = document.querySelector('#favorite-dialog');
   const compact = window.matchMedia('(max-width: 800px)');
+  const views = document.createElement('div');
+  const pageView = document.createElement('button');
+  const siteView = document.createElement('button');
+  views.className = 'atlas-menu-views';
+  views.setAttribute('role', 'group');
+  views.setAttribute('aria-label', '菜单内容');
+  for (const [button, label] of [[pageView, '本页目录'], [siteView, '全站导航']]) {
+    button.type = 'button';
+    button.textContent = label;
+    views.append(button);
+  }
+  heading.querySelector('strong').textContent = '菜单';
+  heading.after(views);
   let open = false;
   let restoreFavoriteFocus = false;
+  function setView(view) {
+    directory.setAttribute('data-menu-view', view);
+    pageView.setAttribute('aria-pressed', String(view === 'page'));
+    siteView.setAttribute('aria-pressed', String(view === 'site'));
+    directory.scrollTop = 0;
+  }
   function syncVisibility() {
-    if (compact.matches) directory.insertBefore(nav, directory.firstChild);
+    if (compact.matches) views.after(nav);
     else navHome.insertBefore(nav, navNext);
     directory.hidden = compact.matches && !open;
     directory.toggleAttribute('data-directory-open', compact.matches && open);
@@ -135,9 +155,9 @@
     if (!compact.matches) return;
     open = true;
     for (const menu of menus) menu.open = true;
+    setView('page');
     syncVisibility();
     header.classList.remove('is-hidden');
-    directory.scrollTop = 0;
     directory.focus({ preventScroll: true });
   }
   function syncLayout() {
@@ -168,6 +188,8 @@
     destination.focus({ preventScroll: true });
   }
   toggle.addEventListener('click', () => open ? close({ restoreFocus: true }) : show());
+  pageView.addEventListener('click', () => setView('page'));
+  siteView.addEventListener('click', () => setView('site'));
   closeButton?.addEventListener('click', () => close({ restoreFocus: true }));
   favoriteDialog?.addEventListener('close', () => {
     if (!restoreFavoriteFocus) return;
