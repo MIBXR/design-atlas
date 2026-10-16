@@ -2,7 +2,7 @@
 .pg-stage{position:relative;box-sizing:border-box;min-height:270px;padding:28px;overflow:hidden;border:1px solid var(--line,var(--atlas-shell-line,#d5d8ce));border-radius:12px;background:var(--surface,var(--atlas-shell-surface,#f3f4ed))}
 .pg-stage h3{font-size:clamp(26px,3vw,40px);line-height:1.25;letter-spacing:-1px;margin:18px 0}
 .pg-stage p{font-size:14px;line-height:1.7;margin:12px 0}
-.pg-eyebrow{font-size:10px;letter-spacing:1.4px;color:var(--muted,var(--atlas-shell-muted,#606757))}
+.pg-eyebrow{font-size:12px;letter-spacing:1.4px;color:var(--muted,var(--atlas-shell-muted,#606757))}
 .pg-highlight{color:var(--pg-accent)}
 .pg-visual[data-highlight=underline] .pg-highlight{color:inherit;text-decoration:underline;text-decoration-color:#9cbf48;text-decoration-thickness:5px;text-underline-offset:7px}
 .pg-visual[data-highlight=none] .pg-highlight{color:inherit}
