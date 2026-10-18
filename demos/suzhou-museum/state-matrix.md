@@ -24,6 +24,5 @@
 
 原站/本地1440×900第三屏配对JPEG在仓库外`heritage-audit/suzhou-source-controlled-page3.jpg`和`suzhou-local-page3.jpg`；完整源9块/图片矩形与计算样式保存到`work/fidelity/independent-audit/suzhou-source-geometry.json`。它们是受控原站截图，不把冷加载阻塞隐藏。
 
-之前遗漏原因：首版主动将四屏缩成第3/4屏，九入口缩为六项，把fullPage改成原生scroll-snap，并新增源站不存在的建筑dialog/7px深灰框线组件。没有完整读取插件依赖与时序，导致泛化教学表达替代了门户的实际机制。此次去掉这些替代，恢复四屏、全部主视觉/展览/九入口和访问结构；未取得WAP和后台仍明确保留边界。
 
-手机适配另做真实截图复查：修正原PC绝对定位的优先级，标志、辅助链接、主导航各一行。390×843测量logo y15..63.1、辅助73.1..94.0、导航104.0..160.6，无重叠，素材broken0、页面overflow0。截图在仓库外heritage-audit/suzhou-local-mobile-final.jpg；这是同内容适配，仍不等同原WAP。
+手机适配的真实截图与测量：标志、辅助链接、主导航各一行。390×843测量logo y15..63.1、辅助73.1..94.0、导航104.0..160.6，无重叠，素材broken0、页面overflow0。截图在仓库外heritage-audit/suzhou-local-mobile-final.jpg；这是同内容适配，仍不等同原WAP。

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "45e4e47ad4f7e4619da1addb9acfb4d9b928d7b0b56c4dbb9410810cceb94a84",
+  "contentVersion": "0ac494810b14f6a6103e8763b0469af34a3ee5650aa890750104e15791b72ceb",
   "entryCount": 36,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
@@ -2242,7 +2242,7 @@
         "demo": "demos/palace-museum/index.html",
         "entry": "entries/palace-museum.json"
       },
-      "bundleSha256": "63c3c3717f6a78a80997def4acbf2a3e7fed2ed0f71413b3d9f5e0597b9597b3"
+      "bundleSha256": "244f60d15cf0ed743b81710540114c8ec6f092c7a194d627dec2643e05edce07"
     },
     {
       "id": "digital-dunhuang",
@@ -2318,7 +2318,7 @@
         "demo": "demos/digital-dunhuang/index.html",
         "entry": "entries/digital-dunhuang.json"
       },
-      "bundleSha256": "424859d815c00ad4c232aa42550d11e89667f76117a73cecd81a04b44870a761"
+      "bundleSha256": "8df19af8f4e42130f1f29458b17765ff9e9d4f1df5826b8988f9f70a450719d0"
     },
     {
       "id": "suzhou-museum",
@@ -2394,7 +2394,7 @@
         "demo": "demos/suzhou-museum/index.html",
         "entry": "entries/suzhou-museum.json"
       },
-      "bundleSha256": "7f0053554ec83d38363ec89c92c68675b67819456164b03d657b75b3e76a6aed"
+      "bundleSha256": "a49d4fadef1a7d5c6abe5094f18d70a62be8868db07b3ef4a4210d02b3997ee8"
     },
     {
       "id": "endfield-industrial",
@@ -2474,7 +2474,7 @@
         "demo": "demos/endfield-industrial/index.html",
         "entry": "entries/endfield-industrial.json"
       },
-      "bundleSha256": "5236b5a3870205f3cdc9f55a7c27615292693365c04358a53dd3a5273655cdeb"
+      "bundleSha256": "2f12ee4e8b4b8550aad1ec8e62963ac3cf1c925c7cd480b77bc5ffe7f0bb89e6"
     },
     {
       "id": "rhine-lab",
@@ -2716,10 +2716,10 @@
   ],
   "patterns": {
     "path": "agent/patterns.json",
-    "sha256": "5250b64b0761cf2ceadef09bb06a564f5b57565b5144f6bdcb22a8b0918dc9bb",
+    "sha256": "f65a9679b278773208f42e72062235e16a5dd11dcf7b9f6058d0bcd6258491cf",
     "bytes": 549307,
     "patternCount": 135,
-    "contentVersion": "01feaec087860867591b91846185845a9c78496f7900b621354871b31cece2f0"
+    "contentVersion": "98b0a83a15a82cd0a7c3b3280815033f3cc799e50db106d51b99d5dd3c620ece"
   },
   "materials": {
     "path": "agent/materials.json",

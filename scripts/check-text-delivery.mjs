@@ -1,7 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -27,7 +26,7 @@ for (const name of documents) {
     const expected = fs.readFileSync(path.join(root, name));
     const payload = hasBom ? bytes.subarray(3) : bytes;
     const sourcePayload = expected.subarray(0, 3).equals(Buffer.from([0xef, 0xbb, 0xbf])) ? expected.subarray(3) : expected;
-    assert.equal(createHash('sha256').update(payload).digest('hex'), createHash('sha256').update(sourcePayload).digest('hex'),
+    assert.ok(payload.equals(sourcePayload),
       `${name}: document payload must equal the tracked UTF-8 source after removing an encoding marker`);
     assert.ok(/[\u3400-\u9fff]/u.test(text), `${name}: Chinese text must be present`);
     console.log(`PASS ${name}: ${type}, UTF-8 BOM=${hasBom}, exact source payload, valid Chinese UTF-8.`);

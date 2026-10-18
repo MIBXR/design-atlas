@@ -22,7 +22,9 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
   const copied = [];
   const playgroundOperations = [];
   const previewOperations = [];
-  const location = new URL(`https://atlas.test/cases.html?category=products&q=原有筛选${hash}`);
+  const location = new URL(`https://atlas.test/${dedicated ? 'patterns.html' : 'cases.html?category=products&q=原有筛选'}${hash}`);
+  const pageHTML = fs.readFileSync(new URL(`../${dedicated ? 'patterns' : 'cases'}.html`, import.meta.url), 'utf8');
+  let routeCalls = 0;
   const document = { activeElement: { tagName: 'BODY' } };
   function node(selector) {
     if (nodes.has(selector)) return nodes.get(selector);
@@ -46,10 +48,17 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
     nodes.set(selector, element);
     return element;
   }
-  document.querySelector = node;
+  document.querySelector = selector => {
+    if (/^#[\w-]+$/.test(selector)) {
+      const attribute = `id="${selector.slice(1)}"`;
+      if (!pageHTML.includes(attribute) && ![...nodes.values()].some(element => element.innerHTML.includes(attribute))) return null;
+    }
+    return node(selector);
+  };
   document.querySelectorAll = () => [];
   document.createElement = tag => node(`created:${tag}`);
   document.body = node('body');
+  document.body.innerHTML = '<dialog id="asset-cache-dialog"></dialog>';
   if (dedicated) document.body.classList.add('patterns-page');
   document.addEventListener = (name, listener) => { if (!documentListeners.has(name)) documentListeners.set(name, []); documentListeners.get(name).push(listener); };
   const window = { DESIGN_ATLAS: data, DESIGN_PATTERNS: patterns, DesignAtlasPreview: { mount: root => {
@@ -67,11 +76,16 @@ function page({ hash = '', clipboardRejects = false, data = entries, patterns = 
   const context = vm.createContext(scope);
   vm.runInContext(favoritesSource, context, { filename: 'favorites.js', timeout: 2000 });
   if (withPatterns) vm.runInContext(patternsSource, context, { filename: 'patterns-ui.js', timeout: 2000 });
+  if (dedicated) {
+    const renderRoute = window.DesignAtlasPatterns.renderRoute;
+    window.DesignAtlasPatterns.renderRoute = () => { routeCalls++; return renderRoute(); };
+  }
   vm.runInContext(dedicated ? patternsPageSource : atlasSource, context, { filename: dedicated ? 'patterns-page.js' : 'atlas.js', timeout: 2000 });
   return {
     node, location, copied, document, playgroundOperations, previewOperations,
+    get routeCalls() { return routeCalls; },
     navigate(hash) { location.hash = hash; windowListeners.get('hashchange')?.forEach(listener => listener()); },
-    backTo(href) { location.href = href; windowListeners.get('popstate')?.forEach(listener => listener()); },
+    backTo(href) { location.href = href; windowListeners.get('popstate')?.forEach(listener => listener()); windowListeners.get('hashchange')?.forEach(listener => listener()); },
     select(id, checked = true) { const target = { dataset: { compare: id }, checked, closest(selector) { return selector === '[data-compare]' ? target : null; } }; documentListeners.get('change')?.forEach(listener => listener({ target })); },
     key(key) { documentListeners.get('keydown')?.forEach(listener => listener({ key, preventDefault() {} })); },
   };
@@ -118,8 +132,8 @@ test('comparison from a case detail selects that case and returns to the selecta
   assert.equal(fixture.location.hash, '#compare');
 });
 
-test('pattern search combines URL query, category and source while preserving independent case filters', () => {
-  const fixture = page({ hash: `#patterns?category=${encodeURIComponent('交互反馈')}&source=${entries[1].id}&q=${encodeURIComponent('悬停')}` });
+test('pattern search combines URL query, category and source on the independent page', () => {
+  const fixture = page({ dedicated: true, hash: `#patterns?category=${encodeURIComponent('交互反馈')}&source=${entries[1].id}&q=${encodeURIComponent('悬停')}` });
   assert.equal(fixture.node('#patterns-library').hidden, false);
   assert.match(fixture.node('#pattern-results-label').textContent, /1 个机制/);
   assert.match(fixture.node('#pattern-cards').innerHTML, /focus-test/);
@@ -129,8 +143,7 @@ test('pattern search combines URL query, category and source while preserving in
   const previous = fixture.location.href;
   fixture.node('#pattern-source').emit('change', entries[2].id);
   assert.equal(fixture.node('#patterns-empty').hidden, false);
-  assert.equal(fixture.location.searchParams.get('q'), '原有筛选');
-  assert.equal(fixture.location.searchParams.get('category'), 'products');
+  assert.equal(fixture.location.pathname, '/patterns.html');
   fixture.backTo(previous);
   assert.equal(fixture.node('#pattern-source').value, entries[1].id, 'Back restores source filter');
   assert.equal(fixture.node('#patterns-empty').hidden, true);
@@ -140,10 +153,10 @@ test('pattern search combines URL query, category and source while preserving in
 });
 
 test('pattern detail retains source provenance, composition links, exact Prompt and clipboard fallback', async () => {
-  const fixture = page({ hash: '#pattern/focus-test?category=交互反馈', clipboardRejects: true });
+  const fixture = page({ dedicated: true, hash: '#pattern/focus-test?category=交互反馈', clipboardRejects: true });
   const html = fixture.node('#pattern-detail').innerHTML;
   assert.equal(fixture.node('#pattern-detail').hidden, false);
-  assert.equal(fixture.node('#collection').hidden, true);
+  assert.equal(fixture.document.querySelector('#collection'), null);
   assert.match(html, /#style\//);
   assert.match(html, /实访观察|练习适配/);
   assert.match(html, /#pattern\/loading-test/);
@@ -159,12 +172,12 @@ test('pattern detail retains source provenance, composition links, exact Prompt 
   assert.doesNotMatch(fixture.node('#pattern-detail').innerHTML, /javascript:/);
   assert.match(fixture.node('#pattern-detail').innerHTML, /设计推断/);
   await fixture.node('#copy-pattern-prompt').click();
-  const copySuccess = page({ hash: '#pattern/focus-test' });
+  const copySuccess = page({ dedicated: true, hash: '#pattern/focus-test' });
   await copySuccess.node('#copy-pattern-prompt').click();
   assert.deepEqual(copySuccess.copied, [fixturePatterns[0].prompt], 'clipboard gets the exact canonical Prompt');
 });
 
-test('case details link back to related atoms without changing archived notes, and unknown atoms are recoverable', () => {
+test('case details link back to related atoms without changing archived notes', () => {
   const fixture = page({ hash: `#style/${entries[0].id}` });
   const html = fixture.node('#detail').innerHTML;
   assert.match(html, /这个案例的设计巧思/);
@@ -172,16 +185,21 @@ test('case details link back to related atoms without changing archived notes, a
   const notes = html.split('<aside class="notes">')[1].split('</aside>')[0];
   assert.equal((notes.match(/<section>/g) || []).length, 7);
   assert.doesNotMatch(notes, /这个案例的设计巧思/);
-  fixture.navigate('#pattern/missing');
-  assert.match(fixture.node('#pattern-detail').innerHTML, /没有找到这个设计巧思/);
-  fixture.navigate('#patterns?category=不存在&source=missing');
-  assert.match(fixture.node('#pattern-results-label').textContent, /3 个机制/);
+  assert.equal(fixture.document.querySelector('#patterns-library'), null);
+  assert.equal(fixture.document.querySelector('#pattern-detail'), null);
   const legacy = page({ hash: `#style/${entries[0].id}`, withPatterns: false });
   assert.equal(legacy.node('#detail').hidden, false, 'renderer works without pattern runtime for Agent extraction');
 });
 
+test('unknown patterns and invalid filters recover on the independent page', () => {
+  const fixture = page({ dedicated: true, hash: '#pattern/missing' });
+  assert.match(fixture.node('#pattern-detail').innerHTML, /没有找到这个设计巧思/);
+  fixture.navigate('#patterns?category=不存在&source=missing');
+  assert.match(fixture.node('#pattern-results-label').textContent, /3 个机制/);
+});
+
 test('experience types combine with source and purpose filters and survive return navigation', () => {
-  const fixture = page({ hash: '#patterns?type=micro-motion&category=交互反馈&source=' + entries[0].id });
+  const fixture = page({ dedicated: true, hash: '#patterns?type=micro-motion&category=交互反馈&source=' + entries[0].id });
   assert.match(fixture.node('#pattern-cards').innerHTML, /悬停聚焦/);
   assert.doesNotMatch(fixture.node('#pattern-cards').innerHTML, /加载遮罩|内容分组/);
   assert.equal(fixture.node('#pattern-type').value, 'micro-motion');
@@ -259,6 +277,9 @@ test('showcase dialog follows navigation, filter controls and history', () => {
   fixture.navigate('#patterns?type=unknown');
   assert.equal(mounts().at(-1).type, 'visual');
   assert.match(fixture.node('#pattern-showcase-label').textContent, /全部类型预览/);
+  const before = fixture.routeCalls;
+  fixture.backTo('https://atlas.test/patterns.html#pattern/focus-test');
+  assert.equal(fixture.routeCalls, before + 1, 'popstate and hashchange for one address render once');
 });
 
 test('showcase dialog preserves same-type controls and disposes on close or detail navigation', () => {

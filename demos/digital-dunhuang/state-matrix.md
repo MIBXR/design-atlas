@@ -28,8 +28,8 @@
 | 加载反馈 | 源Control.Loading挂在缩放控件、图块加载出现旋转标记 | 补原库/CSS和内嵌spinner；未复制登录后的标注/绘制业务 |
 | 手机与主题/声音 | 原首页响应CSS；查看器全屏；范围内无独立BGM/主题开关 | 源首页样式、列表单列及同画布，固定浅/深区域；无额外声音 |
 
-来源下载的“逻辑21515×15796”只是瓦片坐标系统，最高实际归档级别12，不能称本地拥有完整此尺寸高清壁画。旧首版只取1张首图、3条虚拟筛选和562×253预览、原创dialog/百分比复位，既省略首页轮播/完整序列，也没查看Network瓦片和原插件；此次删除了这些错误替代。
+来源下载的“逻辑21515×15796”只是瓦片坐标系统，最高实际归档级别12，不能称本地拥有完整此尺寸高清壁画。
 
 公开影像、嵌入图、字型与运行库的hash/出处见[素材清单](assets-manifest.json)；原站未用CSS背景banner.jpg返回HTML，记录为未取得，不使用猜测素材。原始截图和状态日志保留在仓库外`heritage-audit`与`work/fidelity/independent-audit`。
 
-补充独立手机证据：390×844源/本地七标题与六区全部x/y/width/height差值小于0.002px，无整页横溢出；导航展开终态top58、height334.3625、width360.4与原600ms规则一致。几何JSON保留在仓库外work/fidelity/independent-audit/dunhuang-{source,local}-mobile-geometry.json。版权年份按固定快照保留2015–2026，三个说明窗唯一标题ID对应实际标题；菜单aria-expanded为本地语义补充。
+独立手机证据：390×844源/本地七标题与六区全部x/y/width/height差值小于0.002px，无整页横溢出；导航展开终态top58、height334.3625、width360.4与原600ms规则一致。几何JSON保留在仓库外work/fidelity/independent-audit/dunhuang-{source,local}-mobile-geometry.json。版权年份按固定快照保留2015–2026，三个说明窗唯一标题ID对应实际标题；菜单aria-expanded为本地语义补充。

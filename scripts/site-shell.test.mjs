@@ -241,17 +241,6 @@ test('outside dismissal preserves a newly focused control and returns stranded p
   assert.equal(mobile.document.activeElement, mobile.toggle);
 });
 
-test('tools that open dialogs retain dialog focus when the directory closes', () => {
-  const mobile = page({ compact: true });
-  mobile.click(mobile.toggle);
-  const favoriteTool = mobile.element('favorite-manage', { inside: true, action: true });
-  const dialog = mobile.element('dialog-close');
-  mobile.document.activeElement = dialog; // showModal ran in the target listener.
-  mobile.click(favoriteTool);
-  assert.equal(mobile.directory.hidden, true);
-  assert.equal(mobile.document.activeElement, dialog);
-});
-
 test('closing favorites restores the visible directory control only when the hidden opener stranded focus', () => {
   const mobile = page({ compact: true });
   function openFavorites() {
@@ -263,6 +252,7 @@ test('closing favorites restores the visible directory control only when the hid
     dialogControl.parent = mobile.favoriteDialog;
     mobile.document.activeElement = dialogControl;
     mobile.click(tool);
+    assert.equal(mobile.directory.hidden, true);
     assert.equal(mobile.document.activeElement, dialogControl, 'opening must retain modal focus');
     mobile.favoriteDialog.open = false;
   }
@@ -338,9 +328,16 @@ test('outer pages show back to top after one viewport and respect motion prefere
 test('pages with directories expose one mobile menu button and retain the complete aside', () => {
   for (const name of ['cases.html', 'patterns.html', 'materials.html', 'fundamentals.html', 'document.html']) {
     const html = fs.readFileSync(new URL(`../${name}`, import.meta.url), 'utf8');
-    assert.match(html, /<button[^>]*data-nav-toggle[^>]*aria-expanded="false"[^>]*aria-label="打开菜单"/);
+    const buttons = html.match(/<button\b[^>]*\bdata-nav-toggle\b[^>]*>/g) || [];
+    assert.equal(buttons.length, 1, `${name}: expected one mobile menu button`);
+    assert.match(buttons[0], /\baria-expanded="false"/);
+    assert.match(buttons[0], /\baria-label="打开菜单"/);
     assert.doesNotMatch(html, /data-directory-toggle/);
-    assert.match(html, /<aside[^>]*class="[^"]*atlas-page-directory[^>]*id="page-directory"[^>]*data-page-directory[^>]*tabindex="-1"/);
-    assert.match(html, /<main[^>]*id="main"[^>]*tabindex="-1"/);
+    const aside = html.match(/<aside\b[^>]*\bdata-page-directory\b[^>]*>/)?.[0] || '';
+    assert.match(aside, /\bclass="[^"]*\batlas-page-directory\b/);
+    assert.match(aside, /\bid="page-directory"/);
+    assert.match(aside, /\btabindex="-1"/);
+    const main = html.match(/<main\b[^>]*\bid="main"[^>]*>/)?.[0] || '';
+    assert.match(main, /\btabindex="-1"/);
   }
 });

@@ -33,7 +33,7 @@ function plainPath(filename) {
   return absolute;
 }
 
-function inventory(directory) {
+function inventory(directory, { hash = true } = {}) {
   plainPath(directory);
   if (!fs.lstatSync(directory).isDirectory()) throw new Error('Expected a real directory: ' + directory);
   const files = [];
@@ -44,6 +44,7 @@ function inventory(directory) {
       const stat = fs.lstatSync(filename);
       if (stat.isDirectory()) visit(filename);
       else if (stat.isFile()) {
+        if (!hash) continue;
         const bytes = fs.readFileSync(filename);
         files.push({path:path.relative(directory, filename).split(path.sep).join('/'), bytes:bytes.length, sha256:sha256(bytes)});
       } else throw new Error('Static output contains a link or special file: ' + filename);
@@ -121,7 +122,7 @@ export function exportSite(checkout, {sourceRoot = root, verify = false} = {}) {
     if (cleanSource(sourceRoot) !== sourceCommit) throw new Error('Canonical source advanced during verification.');
     return result;
   }
-  if (fs.existsSync(targetDist)) inventory(targetDist);
+  if (fs.existsSync(targetDist)) inventory(targetDist, {hash:false});
   if (fs.existsSync(targetProvenance) && !fs.lstatSync(targetProvenance).isFile()) throw new Error('Existing provenance is not a regular file.');
   const staging = fs.mkdtempSync(path.join(checkout, '.site-export-stage-'));
   const stagedDist = path.join(staging, 'dist');
@@ -139,7 +140,7 @@ export function exportSite(checkout, {sourceRoot = root, verify = false} = {}) {
     plainPath(targetDist);
     plainPath(targetProvenance);
     if (fs.existsSync(targetDist)) {
-      inventory(targetDist);
+      inventory(targetDist, {hash:false});
       fs.renameSync(targetDist, previousDist);
     }
     if (fs.existsSync(targetProvenance)) fs.renameSync(targetProvenance, previousProvenance);
@@ -153,7 +154,7 @@ export function exportSite(checkout, {sourceRoot = root, verify = false} = {}) {
   } catch (error) {
     if (installedDist) {
       plainPath(targetDist);
-      inventory(targetDist);
+      inventory(targetDist, {hash:false});
       fs.rmSync(targetDist, {recursive:true});
     }
     if (installedProvenance) fs.unlinkSync(targetProvenance);
@@ -163,7 +164,7 @@ export function exportSite(checkout, {sourceRoot = root, verify = false} = {}) {
   } finally {
     if (!inside(checkout, staging)) throw new Error('Unsafe staging cleanup path.');
     plainPath(staging);
-    inventory(staging);
+    inventory(staging, {hash:false});
     fs.rmSync(staging, {recursive:true});
   }
 }

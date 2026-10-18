@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "01feaec087860867591b91846185845a9c78496f7900b621354871b31cece2f0",
+  "contentVersion": "98b0a83a15a82cd0a7c3b3280815033f3cc799e50db106d51b99d5dd3c620ece",
   "patternCount": 135,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -188,7 +188,7 @@
       "paths": {
         "bundle": "agent/patterns/architectural-fragment-anchor.json"
       },
-      "bundleSha256": "8a89e75ae257a539cc2a28b88fc8e30f181f98623606e2ceebc49eb7638c13bf"
+      "bundleSha256": "b0177a9c855bb37ef48acb00cd912e40e6de247d0ea59d537e874abf08ed6b6d"
     },
     {
       "id": "architectural-outline-whitespace",
@@ -262,7 +262,7 @@
       "paths": {
         "bundle": "agent/patterns/architectural-outline-whitespace.json"
       },
-      "bundleSha256": "f9a83eff21c1e0e6f94f2ae69b2f85a04de6094d264603417dc6454526f18990"
+      "bundleSha256": "7af284d0c1202621cdce73ba05af789d1a53990220781c3882f5fe9e19851b54"
     },
     {
       "id": "artwork-caption-separation",
@@ -605,7 +605,7 @@
       "paths": {
         "bundle": "agent/patterns/bounded-image-inspection.json"
       },
-      "bundleSha256": "a5e35b73d29256cb9e13beacd56614cf700d8f79139c0f0a1334cf9ad419f232"
+      "bundleSha256": "3d1430f94d83517d1ecb41debc93f1e301b48e82120a67c07b9866763436d4e1"
     },
     {
       "id": "bounded-panel-track",
@@ -2212,7 +2212,7 @@
       "paths": {
         "bundle": "agent/patterns/explicit-facet-summary.json"
       },
-      "bundleSha256": "20885cbd69bb10e8f260e33683eb5c8d50b0f45d2e0661971af9eaf88aa2b118"
+      "bundleSha256": "508a6b67c8b84e72778edf255061f3f79d5f2ccd6dcb7cf2c5e9188fd29f92de"
     },
     {
       "id": "exploded-layer-view",
@@ -2984,7 +2984,7 @@
       "paths": {
         "bundle": "agent/patterns/half-paper-category-label.json"
       },
-      "bundleSha256": "a81fe7fcd3503ee78e8f56ade4175db89132489d7cd60bd9aeb8beefa0d03938"
+      "bundleSha256": "48250f27a209db6f4a56f3975764e92c6089467d1cb0fe2296ec9d6a242ff989"
     },
     {
       "id": "hatched-registration-type",
@@ -3061,7 +3061,7 @@
       "paths": {
         "bundle": "agent/patterns/hatched-registration-type.json"
       },
-      "bundleSha256": "fe07c2ed2e21da8177651b1e23fc1da6347f85c953d928174b514ce2cc756b7b"
+      "bundleSha256": "7bf0b1a893f6601e66616cd45fe51955f4bc728c19201699e3fb1261cb8abd9c"
     },
     {
       "id": "header-below-mobile-navigation",
@@ -3455,7 +3455,7 @@
       "paths": {
         "bundle": "agent/patterns/image-destination-mosaic.json"
       },
-      "bundleSha256": "5f8595afa8a8268df428d261abb6b52c5e21374aff576483bed705e599e60fd7"
+      "bundleSha256": "691c92bdcda64606c44a78f44a7a807139cd8a7d2147fe6c1f1e9efcafea401e"
     },
     {
       "id": "inclined-motion-bands",
@@ -4361,7 +4361,7 @@
       "paths": {
         "bundle": "agent/patterns/layered-directional-media-reveal.json"
       },
-      "bundleSha256": "d65eeedca98ca25239c556b4bc61ba5ad2825685a890743745eaf790b06ce2b0"
+      "bundleSha256": "44bb9a44e0c8511f2be608d8a071fceab98591be4f9f4ef4fa253260b7a4b9a3"
     },
     {
       "id": "layered-navigation-drawer",
@@ -6877,7 +6877,7 @@
       "paths": {
         "bundle": "agent/patterns/resource-bound-fullscreen-loading.json"
       },
-      "bundleSha256": "8ad828c02893d2a2ba7e1502172f39d8f028c863828aa359cae42992e406129a"
+      "bundleSha256": "8c540e5e2e046eedb0b42cf6fa03ca6f44f66426f81f2fe9f13ad23e5afab1ea"
     },
     {
       "id": "responsive-art-direction",
@@ -7076,7 +7076,7 @@
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
       },
-      "bundleSha256": "f164d8727e682ebc321a5abb25109d9246f71ad5cdb0acb49521637c37a5d168"
+      "bundleSha256": "80122cd617fdbcb352982efc9e7ee1b995b0a04e1c64817e8782df602427adb8"
     },
     {
       "id": "reversible-center-reveal",
@@ -7236,7 +7236,7 @@
       "paths": {
         "bundle": "agent/patterns/scanline-point-cloud-transition.json"
       },
-      "bundleSha256": "bc88a169aa0afa55f4d70bbc11d4ab4447f990ac3352ea7b0c612bcc6921afe8"
+      "bundleSha256": "0e75e882aa189d7c0ff2bd7e40133b47fc01ab6f82d66b9ff12aecd5147f4fc4"
     },
     {
       "id": "scroll-differential-stars",
@@ -8189,7 +8189,7 @@
       "paths": {
         "bundle": "agent/patterns/sound-opt-in.json"
       },
-      "bundleSha256": "5e2c316d4c85e42f711cd2fe945df9d6963f6221eb2c1a1d92cadaa6d2283a16"
+      "bundleSha256": "317232dd09dcc92932f1f8e6164f34d5c26ac0a85d8174fac72aca99e5a806d2"
     },
     {
       "id": "spatial-navigation-map",
@@ -9022,7 +9022,7 @@
       "paths": {
         "bundle": "agent/patterns/transparent-video-mode-stage.json"
       },
-      "bundleSha256": "3c1553e1422c06d90c6f14fcacd4b2e06008b2df3c0f42467c04386e0542ddc9"
+      "bundleSha256": "8c13428e72502658776972eda7ce71650b1b99e16bfa23dfb35bd0188d8f7470"
     },
     {
       "id": "vertical-card-swap",
@@ -9225,7 +9225,7 @@
       "paths": {
         "bundle": "agent/patterns/vertical-media-spine.json"
       },
-      "bundleSha256": "d38a02bbd46f97734759d71bebb711fceaf4d8ab048d4498de6e824dfa33a0de"
+      "bundleSha256": "3adbd5ee2948c446e3227e1ce57c71182b307ea17f480062628d5ff221e28cff"
     },
     {
       "id": "viewport-animation-lifecycle",
@@ -9379,7 +9379,7 @@
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
       },
-      "bundleSha256": "1eb4510ddb0b1ef95b3080ecc3028a1366e8df02f923e09bfa6a2d6765f86939"
+      "bundleSha256": "472fbe31ff31870051f5e1a491ea95ee46cbf4fb3f9b09c4fc6b309ac2bfebdb"
     },
     {
       "id": "visit-facts-grid",

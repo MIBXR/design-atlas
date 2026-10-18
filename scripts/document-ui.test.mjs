@@ -86,7 +86,8 @@ async function page(search = '', {headings, headingsByFile = {}, wide = true, co
   const scope = {document, window, location, history, URL, URLSearchParams, AbortController, TextDecoder, requestAnimationFrame:callback => callback(),
     fetch:async (url, options = {}) => {
       const path = url.pathname.slice(1); fetched.push(url.href);
-      const response = {ok:!!(headings || headingsByFile[path]), status:503, arrayBuffer:async () => Buffer.from(path)};
+      const ok = !!(headings || headingsByFile[path]);
+      const response = {ok, status:ok ? 200 : 503, arrayBuffer:async () => Buffer.from(path)};
       const request = {path, signal:options.signal}; requests.push(request);
       return requests.length - 1 < deferFrom ? response : new Promise(resolve => { request.resolve = () => resolve(response); });
     },
@@ -117,15 +118,20 @@ async function page(search = '', {headings, headingsByFile = {}, wide = true, co
 }
 
 test('document center opens the project guide and retains encoded document deep links', async () => {
-  const home = await page();
+  const home = await page('', {headings:[['h1', '项目指南'], ['h2', '指南正文']]});
   assert.deepEqual(home.fetched, ['https://atlas.test/README.md']);
   assert.equal(home.node('#document-count').textContent, String(documents.length));
-  assert.equal(home.links.length, documents.length);
+  assert.equal(home.directoryLinks().length, documents.length);
+  assert.notEqual(home.node('#content').getAttribute('role'), 'alert');
+  assert.equal(home.node('#title').textContent, '项目指南');
+  assert.equal(home.node('#content').querySelector('h2').textContent, '指南正文');
   assert.equal(home.documentLink('README.md').attributes['aria-current'], 'page');
   assert.equal(home.documentLink('research/OVERVIEW.md').href, 'document.html?file=research%2FOVERVIEW.md');
-  const deepLink = await page('?file=research%2FOVERVIEW.md#sources');
+  const deepLink = await page('?file=research%2FOVERVIEW.md#sources', {headings:[['h1', '调研方法'], ['h2', '来源']]});
   assert.deepEqual(deepLink.fetched, ['https://atlas.test/research/OVERVIEW.md']);
   assert.equal(deepLink.documentLink('research/OVERVIEW.md').attributes['aria-current'], 'page');
+  assert.equal(deepLink.node('#title').textContent, '调研方法');
+  assert.equal(deepLink.node('#content').querySelector('h2').textContent, '来源');
 });
 
 test('document reader rejects unpublished files, traversal and external paths before fetching', async () => {

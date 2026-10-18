@@ -90,7 +90,7 @@ export function checkDetailAlignment({ root = defaultRoot } = {}) {
     assert.equal(bundle.webNotes?.sha256, sha256(Buffer.from(notes, 'utf8')), `${entry.id}: web notes hash differs`);
     assert.equal(bundle.webNotes?.bytes, Buffer.byteLength(notes, 'utf8'), `${entry.id}: web notes byte count differs`);
     report.checkedFields += checkedFields;
-    report.entries.push({ id: entry.id, sections: sections.length, checkedFields, notesSha256: sha256(Buffer.from(notes, 'utf8')), agentEntryMatches: true, websiteCatalogMatches: true });
+    report.entries.push({ id: entry.id, sections: sections.length, checkedFields, agentEntryMatches: true, websiteCatalogMatches: true });
   }
   return report;
 }

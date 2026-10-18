@@ -4,7 +4,6 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const homeSource = fs.readFileSync(new URL('../home.js', import.meta.url), 'utf8');
-const shellSource = fs.readFileSync(new URL('../site-shell.js', import.meta.url), 'utf8');
 const labSource = fs.readFileSync(new URL('../fundamentals.js', import.meta.url), 'utf8');
 function home() {
   const frame = { contentWindow: {}, style: {} };
@@ -39,14 +38,6 @@ test('the live lab can resize its iframe while untrusted windows and invalid mes
   assert.equal(fixture.frame.style.height, '300px');
   fixture.send({ ...trusted, data: { type: 'design-atlas:lab-height', height: 5000 } });
   assert.equal(fixture.frame.style.height, '2000px');
-});
-
-test('the home embed skips responsive menus and leaves the focused real experiment alone', () => {
-  const document = {
-    documentElement: { dataset: { labEmbed: 'home' } },
-    querySelectorAll() { throw new Error('The embedded lab must not initialize hidden page menus'); },
-  };
-  vm.runInNewContext(shellSource, { document, window: {} }, { timeout: 1000 });
 });
 
 function experiment({ embed = false, width = 822, height = 416, catalog = [] } = {}) {

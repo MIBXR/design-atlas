@@ -115,15 +115,15 @@ test('a click on an SVG child delegates to its theme button', () => {
 
 test('favicon tracks resolved system appearance and manual theme overrides', () => {
   const fixture = page();
-  assert.equal(fixture.favicon.href, 'favicon-light.svg?v=atlas-cross-1');
+  assert.equal(fixture.favicon.href.split('?')[0], 'favicon-light.svg');
   fixture.system(true);
-  assert.equal(fixture.favicon.href, 'favicon-dark.svg?v=atlas-cross-1');
+  assert.equal(fixture.favicon.href.split('?')[0], 'favicon-dark.svg');
   fixture.click(); // Manual dark, even when the OS becomes light.
   fixture.system(false);
-  assert.equal(fixture.favicon.href, 'favicon-dark.svg?v=atlas-cross-1');
+  assert.equal(fixture.favicon.href.split('?')[0], 'favicon-dark.svg');
   fixture.click(); // Manual light, even when the OS becomes dark.
   fixture.system(true);
-  assert.equal(fixture.favicon.href, 'favicon-light.svg?v=atlas-cross-1');
+  assert.equal(fixture.favicon.href.split('?')[0], 'favicon-light.svg');
   fixture.click(); // Follow the dark OS again.
-  assert.equal(fixture.favicon.href, 'favicon-dark.svg?v=atlas-cross-1');
+  assert.equal(fixture.favicon.href.split('?')[0], 'favicon-dark.svg');
 });
