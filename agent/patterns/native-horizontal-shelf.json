@@ -110,7 +110,7 @@
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
       },
-      "bundleSha256": "5776136b40b2f41203b13dc03d99171330a96f3e1a1640dd51a06d57c16b9ebb"
+      "bundleSha256": "e9b3de448bd805400f754c33bb4f4b86fd9c7ca084b403f2623a4a9b3e138db9"
     },
     {
       "id": "chatgpt-platform",
@@ -119,7 +119,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "d4e6234bbad1a63b5ee87eec5c8201b801edf1140baf569013b60827bad44ab5"
+      "bundleSha256": "e1c8c61627deab3b61d22a6f85c6c0a58925b7eba8a349c034b02ff68a3c2222"
     },
     {
       "id": "met-museum",
@@ -128,7 +128,7 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
       },
-      "bundleSha256": "52f971156b5d53463381b0ead98ad980adda798f8c9381a2292fa9961f0721e8"
+      "bundleSha256": "736c94668000a339b0cdf312a69a720cd7b828091e0a9d6cb324fda4141d832c"
     },
     {
       "id": "stripe-platform",
@@ -137,7 +137,7 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
       },
-      "bundleSha256": "1a52c89686c6b295f3bfc193f0b9de5a7d1f1a45702c4a2d74d52101da1806c0"
+      "bundleSha256": "251cac9ea0f01a8b4dae49af5b9c93f23379dea8903b139ef5291de9d784314d"
     }
   ]
 }
