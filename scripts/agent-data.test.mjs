@@ -75,6 +75,66 @@ test('bundles preserve original fields, document bytes and binary asset hashes d
   } finally { f.cleanup(); }
 });
 
+test('combined library versions case, pattern and material changes and checks every generated directory', () => {
+  const f = fixture();
+  try {
+    const pattern = {
+      id: 'fixture-feedback', title: '反馈', category: '交互反馈', summary: '局部反馈', mechanism: '同步状态', trigger: '点击', effect: '状态可见',
+      useCases: ['工具'], avoid: [], constraints: ['保留来源'], parameters: [], prompt: '实现同步反馈',
+      composition: { role: 'accent', notes: '当前控件', pairsWellWith: [], conflicts: [] },
+      accessibility: { keyboard: '按钮', reducedMotion: '即时终态' },
+      sources: [{ caseId: f.entry.id, locator: 'entries/fixture-case.json#interaction/0', observation: f.entry.interaction[0], evidence: 'adapted' }],
+      sourceFiles: ['entries/fixture-case.json', f.entry.demo],
+    };
+    const material = {
+      id: 'fixture', title: '素材', type: 'component-library', category: '组件与效果', summary: '交互素材', tags: [],
+      useCases: ['工具'], avoid: [], constraints: ['保留来源'], prompt: '使用真实素材',
+      upstream: { url: 'https://example.test', verifiedAt: '2026-10-07' },
+      license: { name: 'MIT', url: 'https://example.test/license', scope: '软件', notes: '保留许可' },
+      sources: [{ title: '来源', url: 'https://example.test/source', note: '参数依据' }],
+      accessibility: { keyboard: '按钮', reducedMotion: '静态' },
+      demo: 'material-demos/fixture/index.html', preview: 'previews/materials/fixture.png', research: 'docs/fixture.md',
+      demos: [{ id: 'effect', title: '效果', summary: '可调节', entrypoint: 'material-demos/fixture/index.html' }],
+      sourceFiles: ['material-demos/fixture/index.html'],
+    };
+    f.write('patterns/fixture-feedback.json', JSON.stringify(pattern));
+    f.write('materials/fixture.json', JSON.stringify(material));
+    f.write(material.demo, '<!doctype html><button>Fixture</button>');
+    f.write(material.preview, Buffer.from([0, 255, 13, 10]));
+    f.write(material.research, '# Fixture material\n');
+    const first = buildAgent({ root: f.root });
+    assert.deepEqual(first.bundles[0].patternIds, [pattern.id]);
+    assert.equal(first.patternBundles[0].sourceCases[0].id, f.entry.id);
+    assert.equal(first.patternBundles[0].sourceCases[0].bundleSha256, first.catalog.entries[0].bundleSha256);
+    assert.equal(first.catalog.materials.contentVersion, first.materialCatalog.contentVersion);
+    assert.equal(verifyAgent({ root: f.root }).patternCount, 1);
+    for (const directory of ['cases', 'patterns', 'materials']) {
+      const extra = `agent/${directory}/unexpected.json`;
+      f.write(extra, '{}');
+      assert.throws(() => verifyAgent({ root: f.root }), /Unexpected or missing generated/);
+      fs.unlinkSync(path.join(f.root, extra));
+    }
+    f.write('patterns/fixture-feedback.json', JSON.stringify({ ...pattern, mechanism: '更新反馈机制' }));
+    assert.throws(() => verifyAgent({ root: f.root }), /Stale generated content/);
+    const changedPattern = buildAgent({ root: f.root });
+    assert.notEqual(changedPattern.catalog.contentVersion, first.catalog.contentVersion);
+    assert.notEqual(changedPattern.catalog.patterns.contentVersion, first.catalog.patterns.contentVersion);
+    assert.equal(changedPattern.catalog.materials.contentVersion, first.catalog.materials.contentVersion);
+    f.write(material.demo, '<!doctype html><button>Changed material</button>');
+    assert.throws(() => verifyAgent({ root: f.root }), /Stale generated content/);
+    const changedMaterial = buildAgent({ root: f.root });
+    assert.notEqual(changedMaterial.catalog.contentVersion, changedPattern.catalog.contentVersion);
+    assert.notEqual(changedMaterial.catalog.materials.contentVersion, changedPattern.catalog.materials.contentVersion);
+    assert.equal(changedMaterial.catalog.patterns.contentVersion, changedPattern.catalog.patterns.contentVersion);
+    f.write(f.entry.demo, '<!doctype html><button>Changed case</button>');
+    const changedCase = buildAgent({ root: f.root });
+    assert.notEqual(changedCase.catalog.contentVersion, changedMaterial.catalog.contentVersion);
+    assert.notEqual(changedCase.catalog.patterns.contentVersion, changedMaterial.catalog.patterns.contentVersion);
+    assert.equal(changedCase.catalog.materials.contentVersion, changedMaterial.catalog.materials.contentVersion);
+    verifyAgent({ root: f.root });
+  } finally { f.cleanup(); }
+});
+
 test('Git LF text rejects checkout drift while original assets keep their bytes', () => {
   const f = fixture();
   try {

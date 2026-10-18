@@ -6,7 +6,7 @@
 
 | 机制 | 本地实现与核验 |
 |---|---|
-| 桌面外框/四屏 | 原左右50px白缘、顶部与页尾；原 fullPage1.5.3、jQueryUI缓动，4锚点、700ms/easeInQuart、loopBottom；不再用两章 scroll-snap 替代。 |
+| 桌面外框/四屏 | 原左右50px白缘、顶部与页尾；原 fullPage1.5.3、jQueryUI缓动，4锚点、700ms/easeInQuart、loopBottom。 |
 | 首屏 | 两张原建筑摄影、原字标/题饰、Owl5000ms轮换、800ms/fade、悬停暂停与两点。 |
 | 展览 | 当日七项原图、日期、标题与链接；原 lrtk5000ms/500ms淡入、七指标和横向触摸。 |
 | 九入口 | 原75%/25%主侧结构、不等尺度图片与窄白缝；资讯/云课堂/馆藏/活动/文创/数字苏博/展览/游戏/建筑美图完整保留。 |
@@ -19,8 +19,8 @@
 
 已知边界：不加载第三方统计；源隐藏左右箭头 URL 返回 HTML，不凭此虚构可见操作；源脚本里的动态侧栏目标不在该页 DOM，不凭字符串新增组件；预约、账户、商城、课堂和调查仍官方。源码库保留原作者署名，无商业授权承诺。
 
-原站/本地同尺寸第三屏截图在仓库外 heritage-audit/suzhou-source-controlled-page3.jpg 与 suzhou-local-page3.jpg；完整几何JSON在 work/fidelity/independent-audit/suzhou-{source,local}-geometry.json。正式预览由实际浏览器生成。完整状态矩阵及之前遗漏原因见[状态矩阵](state-matrix.md)：首版误缩成两章和六入口，还增加源站没有的建筑dialog/深灰框组件，现已移除。
+原站/本地同尺寸第三屏截图在仓库外 heritage-audit/suzhou-source-controlled-page3.jpg 与 suzhou-local-page3.jpg；完整几何JSON在 work/fidelity/independent-audit/suzhou-{source,local}-geometry.json。正式预览由实际浏览器生成。完整机制与证据边界见[状态矩阵](state-matrix.md)。
 
 [研究](../../research/suzhou-museum.md) · [Demo](index.html)
 
-手机适配另做真实截图复查：修正原PC绝对定位的优先级，标志、辅助链接、主导航各一行。390×843测量logo y15..63.1、辅助73.1..94.0、导航104.0..160.6，无重叠，素材broken0、页面overflow0。截图在仓库外heritage-audit/suzhou-local-mobile-final.jpg；这是同内容适配，仍不等同原WAP。
+手机适配的真实截图与测量：标志、辅助链接、主导航各一行。390×843测量logo y15..63.1、辅助73.1..94.0、导航104.0..160.6，无重叠，素材broken0、页面overflow0。截图在仓库外heritage-audit/suzhou-local-mobile-final.jpg；这是同内容适配，仍不等同原WAP。

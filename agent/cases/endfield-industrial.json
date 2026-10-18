@@ -211,8 +211,8 @@
     {
       "path": "demos/endfield-industrial/app.js",
       "role": "source",
-      "sha256": "9a2a08abf76cc283806002ee0db9154d90a76ff314d221779b7ba74935e4bb89",
-      "bytes": 35045
+      "sha256": "896141f523b02348829e8f0b32a1783bdaa2527578ea618bedbc18af7c9cd19f",
+      "bytes": 34992
     },
     {
       "path": "demos/endfield-industrial/assets-manifest.json",

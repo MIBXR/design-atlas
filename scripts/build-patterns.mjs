@@ -39,7 +39,7 @@ function textArray(value, label) {
 }
 
 // Case-only schema-1 repositories may omit the directory.
-export function loadPatterns({ root = defaultRoot, entries, requireCoverage = false } = {}) {
+export function loadPatterns({ root = defaultRoot, entries } = {}) {
   if (!entries) entries = fs.readdirSync(repositoryFile(root, 'entries')).filter(n => n.endsWith('.json')).map(n => JSON.parse(textFile(root, `entries/${n}`)));
   const directory = repositoryFile(root, 'patterns', false);
   if (!fs.existsSync(directory)) return [];
@@ -99,7 +99,6 @@ export function loadPatterns({ root = defaultRoot, entries, requireCoverage = fa
   if (ids.size !== patterns.length || !patterns.length) throw new Error('Duplicate or empty pattern library');
   if (new Set(patterns.map(p => p.title)).size !== patterns.length) throw new Error('Duplicate pattern title; merge shared mechanisms');
   for (const p of patterns) for (const key of ['pairsWellWith', 'conflicts']) for (const id of p.composition[key]) if (!ids.has(id) || id === p.id) throw new Error(`Invalid pattern relationship: ${p.id}/${id}`);
-  if (requireCoverage) for (const entry of entries) if (!patterns.some(p => p.sources.some(s => s.caseId === entry.id))) throw new Error(`Case has no extracted patterns: ${entry.id}`);
   return patterns;
 }
 

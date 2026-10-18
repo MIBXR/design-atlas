@@ -58,15 +58,11 @@ function route(){
   let hash;
   try{hash=decodeURIComponent(location.hash);}catch{hash='';}
   $('#collection').hidden=true;$('#detail').hidden=true;$('#comparison').hidden=true;
-  if($('#patterns-library'))$('#patterns-library').hidden=true;
-  if($('#pattern-detail'))$('#pattern-detail').hidden=true;
-  const patternRoute=window.DesignAtlasPatterns?.renderRoute();
   if(hash.startsWith('#style/')){
     const entry=entries.find(x=>x.id===hash.slice(7));
     if(entry){renderDetail(entry);$('#detail').hidden=false;}
     else{const url=new URL(location.href);url.hash='';history.replaceState(null,'',url);$('#collection').hidden=false;renderCards();}
   }else if(hash==='#compare'){renderComparison();$('#comparison').hidden=false;}
-  else if(patternRoute){}
   else{$('#collection').hidden=false;renderCards();}
   const inDetail=!$('#detail').hidden;
   $('#compare-list-label').hidden=inDetail;
@@ -133,7 +129,6 @@ document.addEventListener('keydown',event=>{
   if($('#favorite-dialog').open||$('#asset-cache-dialog')?.open)return;
   if(event.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){
     event.preventDefault();
-    if(window.DesignAtlasPatterns?.focusSearch())return;
     if($('#collection').hidden)writeCollectionState({showCollection:true});
     $('#search').focus();
   }
@@ -146,7 +141,6 @@ function restoreRoute(){
 }
 window.addEventListener('popstate',restoreRoute);
 window.addEventListener('hashchange',restoreRoute);
-window.DesignAtlasPatterns?.init({toast,onStateChange:()=>{renderedLocation=location.href;}});
 $('#all-count').textContent=entries.length;$('#hero-count').textContent=entries.length;
 $('#footer-count').textContent=entries.length+' DEMOS · '+entries.filter(e=>e.implementation!=='reference-study').length+' CLASSIC STYLES · GIT ARCHIVE';
 document.querySelectorAll('[data-category-count]').forEach(el=>el.textContent=String(entries.filter(e=>e.category===el.dataset.categoryCount).length).padStart(2,'0'));

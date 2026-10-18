@@ -3,8 +3,7 @@ import path from 'node:path';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { loadPatterns, buildPatterns, defaultRoot } from './build-patterns.mjs';
-import { buildAgent, sha256 } from './build-agent.mjs';
-import { verifyPatterns } from './check-patterns.mjs';
+import { sha256 } from './build-agent.mjs';
 
 const testWork = path.resolve(defaultRoot, 'work', 'patterns-data-tests');
 fs.mkdirSync(testWork, { recursive: true });
@@ -42,7 +41,6 @@ test('pattern generation preserves complete metadata, is deterministic, and vers
     assert.deepEqual(first.bundles[0].pattern, f.pattern);
     const record = first.catalog.patterns[0];
     assert.equal(record.bundleSha256, sha256(first.outputs.get(record.paths.bundle)));
-    assert.equal(first.catalog.contentVersion, sha256(Buffer.from(`${record.id}:${record.bundleSha256}\n`)));
     assert.deepEqual(first.bundles[0].sourceCases[0], { id: f.entry.id, title: f.entry.title, paths: { bundle: f.caseRecord.paths.bundle, demo: f.entry.demo }, bundleSha256: f.caseRecord.bundleSha256 });
     f.writePattern({ ...f.pattern, mechanism: 'A refined independent mechanism.' });
     const changedAtom = build();
@@ -82,7 +80,7 @@ test('experience types preserve schema-1 compatibility and reject invalid classi
   } finally { f.cleanup(); }
 });
 
-test('invalid relations, provenance, optional coverage and paths outside manifests are checked', () => {
+test('invalid relations, provenance and paths outside manifests are checked while uncovered cases are allowed', () => {
   const f = fixture();
   try {
     f.writePattern({ ...f.pattern, composition: { ...f.pattern.composition, pairsWellWith: ['missing-pattern'] } });
@@ -92,7 +90,6 @@ test('invalid relations, provenance, optional coverage and paths outside manifes
     f.writePattern();
     f.write('entries/uncovered-case.json', JSON.stringify({ id: 'uncovered-case' }));
     assert.equal(loadPatterns({ root: f.root }).length, 1);
-    assert.throws(() => loadPatterns({ root: f.root, requireCoverage: true }), /Case has no extracted patterns/);
     fs.unlinkSync(path.join(f.root, 'entries/uncovered-case.json'));
     f.writePattern({ ...f.pattern, sourceFiles: ['entries/fixture-case.json', '../outside'] });
     assert.throws(() => loadPatterns({ root: f.root }), /Unsafe pattern path/);
@@ -109,21 +106,4 @@ test('symlinks and junctions are forbidden in pattern provenance', () => {
     f.writePattern({ ...f.pattern, sourceFiles: [...f.pattern.sourceFiles, 'linked-demo/index.html'] });
     assert.throws(() => loadPatterns({ root: f.root }), /Symlink is forbidden/);
   } finally { f.cleanup(); }
-});
-
-test('combined library version includes pattern and material versions and every case has reverse associations', () => {
-  const generated = buildAgent({ write: false });
-  const metadata = generated.catalog.patterns;
-  assert.ok(metadata.patternCount > 0);
-  assert.equal(metadata.sha256, sha256(generated.outputs.get(metadata.path)));
-  const caseInput = [...generated.catalog.entries].sort((a, b) => a.id.localeCompare(b.id, 'en')).map(record => `${record.id}:${record.bundleSha256}\n`).join('');
-  assert.equal(generated.catalog.contentVersion, sha256(Buffer.from(caseInput + `patterns:${metadata.contentVersion}\n` + (generated.materialCatalog ? `materials:${generated.materialCatalog.contentVersion}\n` : ''))));
-  if (generated.materialCatalog) {
-    const bytes = generated.outputs.get('agent/materials.json');
-    assert.equal(generated.catalog.materials.sha256, sha256(bytes));
-    assert.equal(generated.catalog.materials.contentVersion, generated.materialCatalog.contentVersion);
-  }
-  const patterns = loadPatterns();
-  for (const bundle of generated.bundles) assert.deepEqual(bundle.patternIds, patterns.filter(pattern => pattern.sources.some(source => source.caseId === bundle.id)).map(pattern => pattern.id).sort(), `${bundle.id}: reverse associations differ from pattern sources`);
-  assert.equal(verifyPatterns().patternCount, metadata.patternCount);
 });

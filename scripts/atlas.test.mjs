@@ -5,6 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {searchCatalog, readBundle, readVerified, exportBundle} from './atlas.mjs';
+import {sha256} from './build-agent.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const catalog = JSON.parse(fs.readFileSync(path.join(root,'agent/catalog.json'),'utf8'));
@@ -17,16 +18,15 @@ test('keyword search selects the named case and explains matching fields', () =>
   assert.ok(searchCatalog(catalog,'',{category:'经典风格',limit:100}).every(e => e.category === '经典风格'));
 });
 
-test('show preserves original entries/documents, and source reads reject changed files', () => {
-  for(const e of catalog.entries) {
-    const bundle=readBundle(catalog,e.id);
-    assert.deepEqual(bundle.entry,JSON.parse(fs.readFileSync(path.join(root,e.paths.entry),'utf8')));
-    for(const doc of bundle.documents) assert.equal(doc.content,fs.readFileSync(path.join(root,doc.path),'utf8'));
-  }
+test('source reads reject same-length changed bytes and unsafe paths', () => {
   const scratch=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-read-'));
   try {
+    const original=Buffer.from('source!');
+    const file={path:'source.js',bytes:original.length,sha256:sha256(original)};
+    fs.writeFileSync(path.join(scratch,'source.js'),original);
+    assert.deepEqual(readVerified(scratch,file),original);
     fs.writeFileSync(path.join(scratch,'source.js'),'changed');
-    assert.throws(()=>readVerified(scratch,{path:'source.js',bytes:1,sha256:'0'.repeat(64)}),/differs/);
+    assert.throws(()=>readVerified(scratch,file),/differs/);
     assert.throws(()=>readVerified(scratch,{path:'../escape',bytes:1,sha256:'0'.repeat(64)}),/Unsafe/);
   } finally { fs.rmSync(scratch,{recursive:true,force:true}); }
 });

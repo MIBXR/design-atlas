@@ -9,8 +9,9 @@
   const panel = document.querySelector('#pattern-showcase-panel');
   const openShowcase = document.querySelector('#pattern-showcase-open');
   const showcase = document.querySelector('#pattern-showcase');
-  let currentType = 'all', mountedType;
+  let currentType = 'all', mountedType, renderedLocation;
   function syncShowcase({ type = currentType } = {}) {
+    renderedLocation = location.href;
     currentType = type;
     const exampleType = type === 'all' ? 'visual' : type;
     const label = window.DesignAtlasPlayground.labels[exampleType];
@@ -39,8 +40,11 @@
     if (panel.open || document.querySelector('#favorite-dialog').open || document.querySelector('#asset-cache-dialog')?.open || event.key !== '/' || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
     event.preventDefault(); window.DesignAtlasPatterns.focusSearch();
   });
-  window.addEventListener('hashchange', route);
-  window.addEventListener('popstate', route);
+  function restoreRoute() {
+    if (renderedLocation !== location.href) route();
+  }
+  window.addEventListener('hashchange', restoreRoute);
+  window.addEventListener('popstate', restoreRoute);
   window.addEventListener('pageshow', event => {
     if (event.persisted) { mountedType = undefined; syncShowcase(); }
   });

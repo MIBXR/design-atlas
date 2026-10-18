@@ -48,7 +48,6 @@ $$('.pc-cn-button,.h5-cn-button').forEach(e=>outgoing(e,e.textContent.includes('
 $$('.header-button').forEach(e=>{if(e.textContent.includes('声音'))return;outgoing(e,'https://user.hypergryph.com/',e.textContent.trim());});
 
 let operatorIndex=0,rosterWindow=1,operatorGeneration=0,mode='2D';
-const operatorRoot=$('.operator-section-container');
 const player=new TransparentOperator($('.operator-illustration-container'),assets,reduced);
 const viewButtons=$$('.operator-switcher3d');viewButtons.forEach(e=>{e.dataset.mode='2D';activate(e,()=>setOperatorMode(mode==='2D'?'3D':'2D'),'切换干员2D和3D');});
 // The source renders a moving window. Build the complete directory before positioning it.

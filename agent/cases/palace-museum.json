@@ -852,8 +852,8 @@
     {
       "path": "demos/palace-museum/state-matrix.md",
       "role": "context",
-      "sha256": "6bec023eb3f271ce22adf4a0d188c5787b7ad9d911335f409361d21847bb7300",
-      "bytes": 4736
+      "sha256": "52135f63a7b11cfc4b9e8d6768d3f7bdc484f474c974cfd023e6516b1658c003",
+      "bytes": 4352
     },
     {
       "path": "demos/palace-museum/style.css",
