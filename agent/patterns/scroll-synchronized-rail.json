@@ -65,7 +65,7 @@
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
       },
-      "bundleSha256": "d4e6234bbad1a63b5ee87eec5c8201b801edf1140baf569013b60827bad44ab5"
+      "bundleSha256": "e1c8c61627deab3b61d22a6f85c6c0a58925b7eba8a349c034b02ff68a3c2222"
     }
   ]
 }

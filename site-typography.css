@@ -59,9 +59,7 @@ body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page)
 }
 body:is(.cases-page,.agent-page) .primary-button{border-color:transparent}
 body.cases-page .detail-top>div{flex-wrap:wrap;gap:8px}
-body.cases-page .detail-top :is(.copy-button,.primary-button),
-body.cases-page .compare-column>:is(.copy-button,.primary-button){height:var(--atlas-control-height);white-space:nowrap}
-body.cases-page .compare-column>:is(.copy-button,.primary-button){margin:4px 4px 0 0}
+body.cases-page .detail-top :is(.copy-button,.primary-button){height:var(--atlas-control-height);white-space:nowrap}
 body.cases-page .demo-toolbar,
 body.cases-page .demo-toolbar>div{flex-wrap:wrap}
 body.cases-page .demo-toolbar button,
@@ -145,7 +143,7 @@ body.landing-page .landing-materials>p{font-size:14px}
 body.landing-page .landing-materials :is(dt,dd){font-size:14px}
 
 /* Catalog, detail notes and comparison views belong to the website shell. */
-body.cases-page :is(.hero-desc,.card-summary,.detail-title p,.notes p,.notes li,.compare-column p,.compare-column li){font-size:16px}
+body.cases-page :is(.hero-desc,.card-summary,.detail-title p,.notes p,.notes li){font-size:16px}
 body.cases-page :is(.eyebrow,.detail-title .eyebrow,.hero-art small,.card-number,.subtitle,.tag,.source-badge,.behavior-label){font-size:12px}
 body.cases-page .rail :is(.rail-label,.rail-bottom,.rail-bottom>span:last-child){font-family:var(--atlas-font-sans);font-size:12px;letter-spacing:.5px}
 body.cases-page .rail :is(.nav-item,.rail-link){font-family:var(--atlas-font-sans);font-size:14px}
@@ -164,7 +162,6 @@ body.cases-page .element-map div{font-size:14px;grid-template-columns:72px minma
 body.cases-page .element-lab-link{font-size:14px;min-height:44px}
 body.cases-page .source-item>a{font-size:16px}
 body.cases-page .source-item small{font-size:14px}
-body.cases-page .compare-column h3{font-size:16px}
 body.cases-page .prompt-box{font-family:var(--atlas-font-mono);font-size:16px}
 body.cases-page #favorite-dialog p{font-size:16px}
 body.cases-page #favorite-dialog textarea{font-family:var(--atlas-font-mono);font-size:16px}

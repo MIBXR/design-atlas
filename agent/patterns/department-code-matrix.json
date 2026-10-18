@@ -87,7 +87,7 @@
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/rhine-lab/index.html"
       },
-      "bundleSha256": "36142c4de203a5217479f35eac6a37398e4e0f286d2121844ef95b7f65b7f365"
+      "bundleSha256": "f870e3f4f7b0ba888bd0389d3082d3464393890da6af61dedcb70c48db928dec"
     }
   ]
 }
