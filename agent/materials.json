@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "repository": "https://github.com/MIBXR/design-atlas",
   "materialCount": 5,
-  "contentVersion": "c5c23ecbac964718a8905cb69541588e95f4073ef1929cd352cc7468a7765861",
+  "contentVersion": "744f01194da29f99e471a4b70f667d10c67ca5cde312dcf038c8c0bb4d3fa4f2",
   "materials": [
     {
       "id": "98-css",
@@ -188,7 +188,7 @@
         "entry": "materials/shaders.json",
         "preview": "previews/materials/shaders.png"
       },
-      "bundleSha256": "8729e2c343528174871ca08f2a0fa00d9037fe05dc556fac0e523cb5890e1e2b"
+      "bundleSha256": "03f917f62097243227590fcce0baee6fa1ec6c35ed6a299ae94bcbe33dcf21cd"
     },
     {
       "id": "wired-elements",

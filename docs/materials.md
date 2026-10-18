@@ -51,4 +51,4 @@
 
 `npm run build` 同步网页 `materials.js`、独立目录 `agent/materials.json` 与完整包 `agent/materials/<id>.json`。素材包包含完整条目、文档原文和全部运行文件清单，不依赖来源案例。主目录的 `materials` 描述保存子目录路径、字节数、SHA256、数量和版本。读取流程与固定会话 SHA 见 [Agent 工作流](../AGENT.md#内容素材取材)。
 
-`npm run check` 校验生成内容、实际依赖、演示入口、源码定位及哈希；`npm run test:materials` 验证原文与版本传播的关键路径。文件一致性检查不证明 GPU 已运行。发布验收需分别记录支持 WebGPU 的浏览器中四种效果和控件的实际响应，以及不支持时的静态状态。
+`npm run check` 校验生成内容、实际依赖、演示入口、源码定位及哈希。文件一致性检查不证明 GPU 已运行。发布验收需分别记录支持 WebGPU 的浏览器中四种效果和控件的实际响应，以及不支持时的静态状态。

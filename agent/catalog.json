@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "f8c91f09867b7f4fa2e965a71a8317f68e0d8a06937a8b994f29860aeb5c3c9a",
+  "contentVersion": "cc8cdb22c3adaf10d1d869e09b4b0d027a063c07a06a74913e26c1cf56266074",
   "entryCount": 36,
   "repository": "https://github.com/MIBXR/design-atlas",
   "entries": [
@@ -2723,9 +2723,9 @@
   },
   "materials": {
     "path": "agent/materials.json",
-    "sha256": "34ad7f23c43790ce0abe04dd6d5bca650308d0d49d63f0c23bbb057d919c6a93",
+    "sha256": "8986c40160c0a1b9dcf18f98b1cb6166ccd977a54aa4a0868930a648848ae54c",
     "bytes": 11092,
     "materialCount": 5,
-    "contentVersion": "c5c23ecbac964718a8905cb69541588e95f4073ef1929cd352cc7468a7765861"
+    "contentVersion": "744f01194da29f99e471a4b70f667d10c67ca5cde312dcf038c8c0bb4d3fa4f2"
   }
 }

@@ -302,11 +302,12 @@ scripts/                      本机服务、目录生成、静态构建与资�
 .openai/hosting.json           现有Sites项目与静态目录配置
 ```
 
-`npm run build` 同步案例、巧思与素材目录、完整 Agent 包、Prompt 和公开文档目录；`npm run check` 检查来源、关联、资料与渲染一致性、本地引用、JS 语法、预览、资产大小／哈希及目录是否最新。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含 Git 元数据和本地服务。新增或修改案例、提取巧思与维护文档遵循 [贡献流程](CONTRIBUTING.md)。
+`npm run build` 同步案例、巧思与素材目录、完整 Agent 包、Prompt 和公开文档目录；`npm run check` 检查来源、关联、资料与渲染一致性、本地引用、JS 语法、预览、资产大小／哈希及目录是否最新。`npm test` 运行少量收藏备份与取材导出边界检查；受影响页面通过实际浏览器验收交互、布局、字体与资源加载。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含 Git 元数据和本地服务。新增或修改案例、提取巧思与维护文档遵循 [贡献流程](CONTRIBUTING.md)。
 
 ```bash
 npm run build
 npm run check
+npm test
 npm run build:site
 ```
 
