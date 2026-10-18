@@ -79,8 +79,7 @@
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
-      },
-      "bundleSha256": "af260e125cade81550986c7aa003a748b22486af54a14111c6cee532b9706eec"
+      }
     },
     {
       "id": "stripe-platform",
@@ -88,8 +87,7 @@
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/stripe-platform/index.html"
-      },
-      "bundleSha256": "251cac9ea0f01a8b4dae49af5b9c93f23379dea8903b139ef5291de9d784314d"
+      }
     }
   ]
 }

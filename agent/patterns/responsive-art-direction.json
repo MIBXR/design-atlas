@@ -91,8 +91,7 @@
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
-      },
-      "bundleSha256": "2ad7b2a0f59e6aa138ee9718eb768484e3ec6102789b45dce2538db94e1c38a4"
+      }
     },
     {
       "id": "mori-art-museum",
@@ -100,8 +99,7 @@
       "paths": {
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/mori-art-museum/index.html"
-      },
-      "bundleSha256": "556cc617f64218363eee543e7750ebc7914df56117bb2ca01a6416790dffb7e8"
+      }
     },
     {
       "id": "uma-musume",
@@ -109,8 +107,7 @@
       "paths": {
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
-      },
-      "bundleSha256": "253b7230bee523c5b0c880b01bc672e5817af91510495b02340b0e372ad9b4e4"
+      }
     }
   ]
 }

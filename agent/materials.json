@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "repository": "https://github.com/MIBXR/design-atlas",
   "materialCount": 5,
-  "contentVersion": "744f01194da29f99e471a4b70f667d10c67ca5cde312dcf038c8c0bb4d3fa4f2",
   "materials": [
     {
       "id": "98-css",
@@ -44,8 +43,7 @@
         "demo": "material-demos/98-css/index.html",
         "entry": "materials/98-css.json",
         "preview": "previews/materials/98-css.png"
-      },
-      "bundleSha256": "3d0d1e9b6ab0f970463405ed387af109027bf62fd753f1da7f490fafac43c231"
+      }
     },
     {
       "id": "material-web",
@@ -94,8 +92,7 @@
         "demo": "material-demos/material-web/index.html",
         "entry": "materials/material-web.json",
         "preview": "previews/materials/material-web.png"
-      },
-      "bundleSha256": "989069065be750e8dd8603a2cfbe99a6ba926f2176e79033bd99d026b7c201ab"
+      }
     },
     {
       "id": "recursive",
@@ -142,8 +139,7 @@
         "demo": "material-demos/recursive/index.html",
         "entry": "materials/recursive.json",
         "preview": "previews/materials/recursive.png"
-      },
-      "bundleSha256": "9ed65260af8828019dd62702a4ef2ce4dd16c5fe5c9d73bc9b4c5d6c6e4fc481"
+      }
     },
     {
       "id": "shaders",
@@ -187,8 +183,7 @@
         "demo": "material-demos/shaders/index.html",
         "entry": "materials/shaders.json",
         "preview": "previews/materials/shaders.png"
-      },
-      "bundleSha256": "03f917f62097243227590fcce0baee6fa1ec6c35ed6a299ae94bcbe33dcf21cd"
+      }
     },
     {
       "id": "wired-elements",
@@ -231,8 +226,7 @@
         "demo": "material-demos/wired-elements/index.html",
         "entry": "materials/wired-elements.json",
         "preview": "previews/materials/wired-elements.png"
-      },
-      "bundleSha256": "de110e1973fbed588811bfe9beb912437eaaa68c138ee275ae1115fa6c882fc0"
+      }
     }
   ]
 }

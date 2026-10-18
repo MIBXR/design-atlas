@@ -1,10 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8');
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const summaryFields = ['id', 'title', 'type', 'category', 'summary', 'tags', 'useCases', 'avoid', 'constraints'];
@@ -72,13 +70,13 @@ export function loadMaterials({ root = defaultRoot } = {}) {
     if (new Set(material.demos.map(demo => demo.id)).size !== material.demos.length) throw new Error(`Duplicate material demo: ${material.id}`);
     for (const demo of material.demos) {
       for (const key of ['id', 'title', 'summary', 'entrypoint']) text(demo[key], `${material.id}.demos.${key}`);
-      readFile(root, demo.entrypoint.split(/[?#]/)[0]);
+      repositoryFile(root, demo.entrypoint.split(/[?#]/)[0]);
       if (demo.parameters !== undefined) {
         if (!Array.isArray(demo.parameters)) throw new Error(`Expected material parameters: ${material.id}/${demo.id}`);
         for (const parameter of demo.parameters) for (const key of ['name', 'value', 'note']) text(parameter[key], `${material.id}/${demo.id}.${key}`);
       }
     }
-    for (const relative of [material.demo, material.preview, material.research, ...material.sourceFiles]) readFile(root, relative);
+    for (const relative of [material.demo, material.preview, material.research, ...material.sourceFiles]) repositoryFile(root, relative);
     return material;
   });
 }
@@ -92,13 +90,12 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
     const documents = [...new Set(documentPaths)].map(relative => {
       const bytes = readFile(root, relative);
       new TextDecoder('utf-8', { fatal: true }).decode(bytes);
-      return { path: relative, role: relative === material.research ? 'research' : 'context', content: bytes.toString('utf8'), sha256: digest(bytes), bytes: bytes.length };
+      return { path: relative, role: relative === material.research ? 'research' : 'context', content: bytes.toString('utf8') };
     });
     const paths = new Set([`materials/${material.id}.json`, material.preview, ...documentPaths, ...walkFiles(root, `material-demos/${material.id}`)]);
     const files = [...paths].sort().map(relative => {
-      const bytes = readFile(root, relative);
       const role = relative === material.preview ? 'preview' : documentPaths.includes(relative) || relative === `materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
-      return { path: relative, role, sha256: digest(bytes), bytes: bytes.length };
+      return { path: relative, role };
     });
     for (const relative of material.sourceFiles) if (!files.some(file => file.path === relative && file.role === 'source')) throw new Error(`Material source is outside its source manifest: ${material.id}/${relative}`);
     for (const demo of material.demos) if (!files.some(file => file.path === demo.entrypoint.split(/[?#]/)[0] && file.role === 'source')) throw new Error(`Material demo is outside its source manifest: ${material.id}/${demo.id}`);
@@ -107,10 +104,9 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
     const bytes = encode(bundle);
     outputs.set(relative, bytes);
     bundles.push(bundle);
-    return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, entry: `materials/${material.id}.json`, preview: material.preview }, bundleSha256: digest(bytes) };
+    return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, entry: `materials/${material.id}.json`, preview: material.preview } };
   });
-  const contentVersion = digest(Buffer.from(records.map(record => `${record.id}:${record.bundleSha256}\n`).sort().join(''), 'utf8'));
-  const catalog = { schemaVersion: 1, repository: 'https://github.com/MIBXR/design-atlas', materialCount: records.length, contentVersion, materials: records };
+  const catalog = { schemaVersion: 1, repository: 'https://github.com/MIBXR/design-atlas', materialCount: records.length, materials: records };
   outputs.set('agent/materials.json', encode(catalog));
   outputs.set('materials.js', Buffer.from('window.DESIGN_MATERIALS = ' + JSON.stringify(materials, null, 2) + ';\n', 'utf8'));
   if (write) {

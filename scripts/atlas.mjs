@@ -1,11 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {resolveRepositoryPath} from './build-agent.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const help = `Design Atlas — local, dependency-free Agent interface
 node scripts/atlas.mjs search "深色 产品" [--category 产品] [--limit 5]
 node scripts/atlas.mjs show linear-workflow [--source]
@@ -40,16 +38,13 @@ export function readBundle(catalog, id, base = root) {
   const entry = catalog.entries.find(e => e.id === id);
   if (!entry) throw new Error('Unknown case: ' + id);
   const bytes = fs.readFileSync(safePath(base, entry.paths.bundle));
-  if (hash(bytes) !== entry.bundleSha256) throw new Error('Case bundle differs from catalog; run npm run build.');
   const bundle = JSON.parse(bytes.toString('utf8'));
   if (bundle.schemaVersion !== 1 || bundle.id !== id || bundle.entry.id !== id) throw new Error('Invalid case bundle.');
   return bundle;
 }
 
-export function readVerified(base, file) {
-  const bytes = fs.readFileSync(safePath(base, file.path));
-  if (bytes.length !== file.bytes || hash(bytes) !== file.sha256) throw new Error('File differs from case bundle: ' + file.path + '; run npm run build.');
-  return bytes;
+function readSource(base, file) {
+  return fs.readFileSync(safePath(base, file.path));
 }
 
 export function exportBundle(bundle, directory, {codeOnly = false, base = root} = {}) {
@@ -58,17 +53,21 @@ export function exportBundle(bundle, directory, {codeOnly = false, base = root} 
   const parent = path.dirname(out);
   if (!fs.existsSync(parent) || fs.realpathSync(parent) !== parent) throw new Error('Output parent must exist and contain no symlinks.');
   const selected = bundle.files.filter(file => !codeOnly || ['source','context'].includes(file.role));
-  // Verify every selected byte before creating a deliverable.
-  for (const file of selected) readVerified(base, file);
   fs.mkdirSync(out);
-  for (const file of selected) {
-    const target = safePath(out, file.path);
-    fs.mkdirSync(path.dirname(target), {recursive:true});
-    fs.writeFileSync(target, readVerified(base, file), {flag:'wx'});
-  }
   const omitted = bundle.files.filter(file => !selected.includes(file)).map(file => file.path);
-  fs.writeFileSync(path.join(out,'atlas-export.json'), JSON.stringify({schemaVersion:1,id:bundle.id,codeOnly,files:selected,omitted,bundle},null,2)+'\n', {flag:'wx'});
-  return {id:bundle.id,directory:out,files:selected.length,bytes:selected.reduce((sum,file) => sum+file.bytes,0),omitted,entrypoint:bundle.entry.demo};
+  try {
+    for (const file of selected) {
+      const bytes = readSource(base, file);
+      const target = safePath(out, file.path);
+      fs.mkdirSync(path.dirname(target), {recursive:true});
+      fs.writeFileSync(target, bytes, {flag:'wx'});
+    }
+    fs.writeFileSync(path.join(out,'atlas-export.json'), JSON.stringify({schemaVersion:1,id:bundle.id,codeOnly,files:selected,omitted,bundle,entrypoint:bundle.entry.demo},null,2)+'\n', {flag:'wx'});
+  } catch (error) {
+    fs.rmSync(out, {recursive:true, force:true});
+    throw error;
+  }
+  return {id:bundle.id,directory:out,files:selected.length,omitted,entrypoint:bundle.entry.demo};
 }
 
 function main() {
@@ -98,12 +97,12 @@ function main() {
     const limit = options.limit === undefined ? 5 : Number(options.limit);
     if (!Number.isInteger(limit) || limit < 1 || limit > 100) throw new Error('Limit must be an integer from 1 to 100.');
     const query = positionals.join(' ');
-    result = {schemaVersion:1,contentVersion:catalog.contentVersion,query,method:'keyword',results:searchCatalog(catalog,query,{category:options.category,limit})};
+    result = {schemaVersion:1,query,method:'keyword',results:searchCatalog(catalog,query,{category:options.category,limit})};
   } else {
     if (positionals.length !== 1) throw new Error('Supply exactly one case ID.');
     const bundle = readBundle(catalog,positionals[0]);
     if (command === 'show') {
-      result = options.source ? {...bundle,source:bundle.files.filter(f => f.role === 'source').map(f => ({...f,content:readVerified(root,f).toString('utf8')}))} : bundle;
+      result = options.source ? {...bundle,source:bundle.files.filter(f => f.role === 'source').map(f => ({...f,content:readSource(root,f).toString('utf8')}))} : bundle;
     } else {
       if (!options.out) throw new Error('Export requires --out <new-directory>.');
       result = exportBundle(bundle,options.out,{codeOnly:options['code-only']});

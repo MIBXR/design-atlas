@@ -74,9 +74,9 @@ Design Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案
 
 ## Agent 直接取材
 
-网页保留人工预览与比较；Agent 可通过 [工作流入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html)、[结构化索引](agent/catalog.json) 和按案例生成的完整上下文取得设计依据。原始条目、原 Prompt、研究、复现边界与带 SHA256 的文件清单一起读取，源码与媒体按需获取。
+网页保留人工预览与比较；Agent 可通过 [工作流入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html)、[结构化索引](agent/catalog.json) 和按案例生成的完整上下文取得设计依据。原始条目、原 Prompt、研究、复现边界与文件路径一起读取，源码与媒体从同一个固定 Git 提交按需获取。
 
-组合机制时先读 [设计巧思目录](agent/patterns.json)，再取得 `agent/patterns/<id>.json`。巧思包保留完整机制资料、证据类型、参数来源、组合关系、取材文件及关联案例包位置／哈希；例如 [标题悬停与聚焦选择](patterns/hover-focus-mode-selection.json)、[窗口垂直进出](patterns/vertical-card-swap.json) 和 [指针排斥点阵](patterns/pointer-repulsion-particles.json)。完整案例继续帮助判断多个机制在一个页面中如何协作。普通新增巧思由构建扫描，无需复制内容到skill仓库。
+组合机制时先读 [设计巧思目录](agent/patterns.json)，再取得 `agent/patterns/<id>.json`。巧思包保留完整机制资料、证据类型、参数来源、组合关系、取材文件及关联案例包位置；例如 [标题悬停与聚焦选择](patterns/hover-focus-mode-selection.json)、[窗口垂直进出](patterns/vertical-card-swap.json) 和 [指针排斥点阵](patterns/pointer-repulsion-particles.json)。完整案例继续帮助判断多个机制在一个页面中如何协作。普通新增巧思由构建扫描，无需复制内容到skill仓库。
 
 ```sh
 node scripts/atlas.mjs search "深色 产品" --limit 3
@@ -108,7 +108,7 @@ python ATLAS_SCRIPT --session SESSION_FILE material-show shaders --source
 python ATLAS_SCRIPT --session SESSION_FILE material-export shaders --out NEW_DIRECTORY
 ```
 
-[素材目录](agent/materials.json) 与 `agent/materials/<id>.json` 提供无需网页的读取入口；文件按 SHA256 和字节数校验。[素材使用与维护](docs/materials.md) 说明收录标准、示例边界和新增资源方式。完整导出在静态 HTTP 服务下打开 `material.demo`；`--code-only` 会列出未下载的媒体与预览，代码形式的 SVG 输入图形随源码导出。
+[素材目录](agent/materials.json) 与 `agent/materials/<id>.json` 提供无需网页的读取入口；目录、资料包和文件使用同一个固定 Git 提交。[素材使用与维护](docs/materials.md) 说明收录标准、示例边界和新增资源方式。完整导出在静态 HTTP 服务下打开 `material.demo`；`--code-only` 会列出未下载的媒体与预览，代码形式的 SVG 输入图形随源码导出。
 
 ## 案例画廊
 
@@ -278,7 +278,7 @@ research/<id>.md               观察、理论、分析推断、复现映射
 research/screenshots/          归档页面的原站对照截图
 demos/<id>/                   HTML、CSS、JS与本地图片／字体／音视频
   fidelity.md                 已复现、近似、未实现与观察限制
-  assets-manifest.json        公开来源、用途、处理方式、字节数、SHA256
+  assets-manifest.json        公开来源、用途、处理方式与采集记录
 previews/                     案例桌面与手机预览
 docs/readme/                  本README配图
 docs/site/                    网站本体的实际浏览器截图
@@ -294,7 +294,7 @@ catalog.js                    自动生成的浏览器目录
 documents.js                  按静态发布范围生成的公开文档目录
 document.*                    文档阅读、可折叠分类与章节目录
 favorites.js                  案例、巧思与素材的共享收藏与备份
-asset-sources.js               固定 Git 提交、远端URL与本地素材字节／哈希映射
+asset-sources.js               固定 Git 提交、媒体路径、大小与远端 URL
 asset-runtime.js               本地优先、失败回退与显式来源切换
 case-loading.*                首屏就绪、开场门控与章节素材准备
 asset-cache*.js                固定版本大素材缓存与视频区间读取
@@ -302,7 +302,7 @@ scripts/                      本机服务、目录生成、静态构建与资�
 .openai/hosting.json           现有Sites项目与静态目录配置
 ```
 
-`npm run build` 同步案例、巧思与素材目录、完整 Agent 包、Prompt 和公开文档目录；`npm run check` 检查来源、关联、资料与渲染一致性、本地引用、JS 语法、预览、资产大小／哈希及目录是否最新。`npm test` 运行少量收藏备份与取材导出边界检查；受影响页面通过实际浏览器验收交互、布局、字体与资源加载。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含 Git 元数据和本地服务。新增或修改案例、提取巧思与维护文档遵循 [贡献流程](CONTRIBUTING.md)。
+`npm run build` 同步案例、巧思与素材目录、完整 Agent 包、Prompt 和公开文档目录；`npm run check` 检查条目字段、本地引用、JS 语法、预览、README 画廊与公开文档目录。`npm test` 运行少量收藏备份与取材导出边界检查；受影响页面通过实际浏览器验收交互、布局、字体与资源加载。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含 Git 元数据和本地服务。新增或修改案例、提取巧思与维护文档遵循 [贡献流程](CONTRIBUTING.md)。
 
 ```bash
 npm run build

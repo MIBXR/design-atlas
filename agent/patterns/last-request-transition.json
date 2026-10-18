@@ -110,8 +110,7 @@
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
-      },
-      "bundleSha256": "4c4d2990d43255cde9107d26a4c7fb54c7fab355be4be14404a2a4345643e9f5"
+      }
     },
     {
       "id": "chatgpt-platform",
@@ -119,8 +118,7 @@
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
-      },
-      "bundleSha256": "e1c8c61627deab3b61d22a6f85c6c0a58925b7eba8a349c034b02ff68a3c2222"
+      }
     },
     {
       "id": "qoder-platform",
@@ -128,8 +126,7 @@
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
-      },
-      "bundleSha256": "f46fa8c5992ea698b53e40135f1f64e104ae58b884d6ac12d04e87ae7f9eb6f6"
+      }
     },
     {
       "id": "zelda-world",
@@ -137,8 +134,7 @@
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
-      },
-      "bundleSha256": "3c2b3aa2d48f70fc0243576503e13d9a7b2e8502959e8b15f46b90d9f9908f45"
+      }
     }
   ]
 }

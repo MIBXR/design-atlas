@@ -62,8 +62,7 @@
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
-      },
-      "bundleSha256": "3c2b3aa2d48f70fc0243576503e13d9a7b2e8502959e8b15f46b90d9f9908f45"
+      }
     }
   ]
 }

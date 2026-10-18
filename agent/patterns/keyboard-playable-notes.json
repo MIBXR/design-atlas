@@ -58,8 +58,7 @@
       "paths": {
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
-      },
-      "bundleSha256": "5237bb60776d5197fb3546d39f7fc387ebf9a99357e4f72d4bbb1bc64b377165"
+      }
     }
   ]
 }

@@ -63,8 +63,7 @@
       "paths": {
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
-      },
-      "bundleSha256": "01c90bf19bcd95339a601fbbda9ec69852217b7fe2130cf12e67a9ed33d6b641"
+      }
     }
   ]
 }

@@ -73,8 +73,7 @@
       "paths": {
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
-      },
-      "bundleSha256": "253b7230bee523c5b0c880b01bc672e5817af91510495b02340b0e372ad9b4e4"
+      }
     }
   ]
 }

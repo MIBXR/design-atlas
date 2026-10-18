@@ -71,8 +71,7 @@
       "paths": {
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/design-sight/index.html"
-      },
-      "bundleSha256": "4a28422fda33c49d5a6eff239fb88014cd8b15b1cd4d4be179b0a9fb1dad38ef"
+      }
     }
   ]
 }

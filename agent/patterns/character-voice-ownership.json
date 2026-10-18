@@ -93,8 +93,7 @@
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
-      },
-      "bundleSha256": "4c4d2990d43255cde9107d26a4c7fb54c7fab355be4be14404a2a4345643e9f5"
+      }
     },
     {
       "id": "blue-archive",
@@ -102,8 +101,7 @@
       "paths": {
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/blue-archive/index.html"
-      },
-      "bundleSha256": "c66e0898fc9ec572c2b6ef07aaa3f9297064338590e2e0335546358dd6b0d08d"
+      }
     },
     {
       "id": "genshin-world",
@@ -111,8 +109,7 @@
       "paths": {
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/genshin-world/index.html"
-      },
-      "bundleSha256": "531d3aef67ac1bb70e057da3ad1926051008ca351135ac2b93f675d5892edcf0"
+      }
     }
   ]
 }

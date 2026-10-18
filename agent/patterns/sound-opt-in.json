@@ -103,8 +103,7 @@
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
         "demo": "demos/arknights-world/index.html"
-      },
-      "bundleSha256": "4c4d2990d43255cde9107d26a4c7fb54c7fab355be4be14404a2a4345643e9f5"
+      }
     },
     {
       "id": "endfield-industrial",
@@ -112,8 +111,7 @@
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/endfield-industrial/index.html"
-      },
-      "bundleSha256": "0a94aedfc133402733358b35eb485248e457b4adf91986deedb63aca9ac45780"
+      }
     },
     {
       "id": "retro-80s",
@@ -121,8 +119,7 @@
       "paths": {
         "bundle": "agent/cases/retro-80s.json",
         "demo": "demos/retro-80s/index.html"
-      },
-      "bundleSha256": "5237bb60776d5197fb3546d39f7fc387ebf9a99357e4f72d4bbb1bc64b377165"
+      }
     },
     {
       "id": "zelda-world",
@@ -130,8 +127,7 @@
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/zelda-world/index.html"
-      },
-      "bundleSha256": "3c2b3aa2d48f70fc0243576503e13d9a7b2e8502959e8b15f46b90d9f9908f45"
+      }
     }
   ]
 }

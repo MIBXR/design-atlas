@@ -25,15 +25,15 @@
       const e = catalog.entries.find(entry => entry.id === button.dataset.case);
       const source = catalog.source;
       const bundleURL = source ? new URL(e.paths.bundle,source.baseUrl).href : new URL(e.paths.bundle,location.href).href;
-      const sourceHint = source ? `原始文件基址：${source.baseUrl}\n对 files 中每个 path 使用这个基址获取并核验 SHA256；网页播放文件经过部署转换。此入口对应当前网页发布版本：${source.commit}。若要探索上游最新案例，请调用 design-atlas skill 开始新会话。` : '通过 design-atlas skill 开始会话，解析上游最新完整提交 SHA，并用本次会话的同一提交读取原始文件。';
-      copy(`请读取 Design Atlas 案例 ${e.id} 的完整上下文：\n${bundleURL}\n先结合我的真实需求阅读 entry、webNotes（网页右侧说明）和 documents，再按 files 取用源码。保留原始约束、来源和复现边界。\n本次索引中的案例包 SHA256：${e.bundleSha256}\n${sourceHint}`);
+      const sourceHint = source ? `原始文件基址：${source.baseUrl}\n对 files 中每个 path 使用这个基址获取原始文件；网页播放文件经过部署转换。此入口对应当前网页发布版本：${source.commit}。若要探索上游最新案例，请调用 design-atlas skill 开始新会话。` : '通过 design-atlas skill 开始会话，解析上游最新完整提交 SHA，并用本次会话的同一提交读取原始文件。';
+      copy(`请读取 Design Atlas 案例 ${e.id} 的完整上下文：\n${bundleURL}\n先结合我的真实需求阅读 entry、webNotes（网页右侧说明）和 documents，再按 files 取用源码。保留原始约束、来源和复现边界。\n${sourceHint}`);
     }));
   }
   document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click',()=>copy(document.getElementById(button.dataset.copy).textContent)));
   $('#agent-query').addEventListener('input', () => { if(catalog)render(); });
   fetch('agent/catalog.json').then(response => { if(!response.ok)throw new Error('HTTP '+response.status);return response.json(); }).then(data => {
     if(data.schemaVersion!==1 || !Array.isArray(data.entries))throw new Error('不支持的索引版本');
-    catalog=data;$('#agent-count').textContent=catalog.entryCount;$('#agent-pattern-count').textContent=catalog.patterns?.patternCount ?? 0;$('#agent-version').textContent=`CONTENT ${catalog.contentVersion.slice(0,12)} / SCHEMA 1`;
+    catalog=data;$('#agent-count').textContent=catalog.entryCount;$('#agent-pattern-count').textContent=catalog.patterns?.patternCount ?? 0;$('#agent-version').textContent=catalog.source?.commit ? `GIT ${catalog.source.commit.slice(0,12)} / SCHEMA 1` : 'SOURCE-BACKED / SCHEMA 1';
     const selected = decodeURIComponent(location.hash.slice(1));
     if(catalog.entries.some(entry => entry.id === selected)) $('#agent-query').value = selected;
     render();

@@ -1,6 +1,5 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "a54101a570515d639552c993d379df89b5a9b03c0c9cc34489c6c43180b21b9a",
   "patternCount": 135,
   "repository": "https://github.com/MIBXR/design-atlas",
   "patterns": [
@@ -60,8 +59,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/activity-title-ticket-overlap.json"
-      },
-      "bundleSha256": "44e85017895893394a81887403a03a0f98c874c2e98567319e1fe9d874851e0f"
+      }
     },
     {
       "id": "aligned-metadata-rows",
@@ -114,8 +112,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/aligned-metadata-rows.json"
-      },
-      "bundleSha256": "7b1f508e0a8bcfc1435d8f49faf604b544de343157fb3ddc948ed28db9267734"
+      }
     },
     {
       "id": "architectural-fragment-anchor",
@@ -187,8 +184,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/architectural-fragment-anchor.json"
-      },
-      "bundleSha256": "259860623a9b4d647ebc18272eb50180324d894dffc7d041c7e8c2fb433dc88a"
+      }
     },
     {
       "id": "architectural-outline-whitespace",
@@ -261,8 +257,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/architectural-outline-whitespace.json"
-      },
-      "bundleSha256": "2ba98bf8570ecaa635814f5c8ca1820e85ae369492e2bd057b1958f56469791f"
+      }
     },
     {
       "id": "artwork-caption-separation",
@@ -343,8 +338,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/artwork-caption-separation.json"
-      },
-      "bundleSha256": "d6ba609bae162410ce375b6defef97ddb3eb269314368603440f4bd5ee0c3aa9"
+      }
     },
     {
       "id": "audio-signal-panel",
@@ -398,8 +392,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/audio-signal-panel.json"
-      },
-      "bundleSha256": "ccdda2a486f03bc956cbd76c9040c1159e0d5342c40e88915409adeffc4601d1"
+      }
     },
     {
       "id": "avatar-pile-personality",
@@ -457,8 +450,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/avatar-pile-personality.json"
-      },
-      "bundleSha256": "2b395db7b9faeebc1a95c095effdef81bb049ab1131e47392ac379345ba9a8d3"
+      }
     },
     {
       "id": "blurred-layered-video-handoff",
@@ -527,8 +519,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/blurred-layered-video-handoff.json"
-      },
-      "bundleSha256": "c57d56ae739aebfdae3d57573f20deef30d865646a96e8ac41bdd052d8a21d5d"
+      }
     },
     {
       "id": "bounded-image-inspection",
@@ -604,8 +595,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/bounded-image-inspection.json"
-      },
-      "bundleSha256": "3785425293bdca97d2b58cf180f227c41e2f254929566fb7879ef22384449473"
+      }
     },
     {
       "id": "bounded-panel-track",
@@ -693,8 +683,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/bounded-panel-track.json"
-      },
-      "bundleSha256": "d935b506279fa68829bcdf48d39f0eb76e01d160da1da296d4d83277548447b1"
+      }
     },
     {
       "id": "capability-bento-hierarchy",
@@ -768,8 +757,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/capability-bento-hierarchy.json"
-      },
-      "bundleSha256": "82699c66039d8fbcd76f0044fd35a59a315f2e0be17b4b2dc057ef43bf5776b6"
+      }
     },
     {
       "id": "center-aligned-section-index",
@@ -833,8 +821,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/center-aligned-section-index.json"
-      },
-      "bundleSha256": "fb552aae24d39619847d883b1d9a075e30c48baf5514446030aa39609b2a6970"
+      }
     },
     {
       "id": "centered-loop-gallery",
@@ -935,8 +922,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/centered-loop-gallery.json"
-      },
-      "bundleSha256": "c1f1c23795d62939234d39920467f5c475679ba631c9bacf9bd1bbefbb336453"
+      }
     },
     {
       "id": "character-stage-coordination",
@@ -1042,8 +1028,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/character-stage-coordination.json"
-      },
-      "bundleSha256": "c75c6634474d303d8a92cf13336dafa82813a5bc343b873831471a1558e885cc"
+      }
     },
     {
       "id": "character-voice-ownership",
@@ -1131,8 +1116,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/character-voice-ownership.json"
-      },
-      "bundleSha256": "78191f6e7f72cc4018992ce8a4f6af4e2ca81a4b59300a2d6932d0925a6ca164"
+      }
     },
     {
       "id": "checklist-progress",
@@ -1187,8 +1171,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/checklist-progress.json"
-      },
-      "bundleSha256": "1e97e08ae19067dfb5c0f124a0d5aad5da7d6e8a6dcea66348c54a3ea1589f63"
+      }
     },
     {
       "id": "client-logo-marquee",
@@ -1262,8 +1245,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/client-logo-marquee.json"
-      },
-      "bundleSha256": "eb9c51d4fc67cd10e36f9ef83dc5f7354954a8a0eed0d50beb01d82cb20cc854"
+      }
     },
     {
       "id": "clip-tail-advance",
@@ -1327,8 +1309,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/clip-tail-advance.json"
-      },
-      "bundleSha256": "f2fde2756994770b1f9a8bb51c0545eff975f92b8923dcb4cf3fbad517e21908"
+      }
     },
     {
       "id": "compact-scroll-header",
@@ -1392,8 +1373,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/compact-scroll-header.json"
-      },
-      "bundleSha256": "be684fdc5802abe4a656e174138b4bae3ac2244c36193e42abbd745fa135cc3d"
+      }
     },
     {
       "id": "continuous-bgm-bridge",
@@ -1472,8 +1452,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/continuous-bgm-bridge.json"
-      },
-      "bundleSha256": "f20f16b00aa76448940b57c5e77e144551054dc1c6c28aa654f2de6e5e1d6c32"
+      }
     },
     {
       "id": "controlled-rough-outlines",
@@ -1527,8 +1506,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/controlled-rough-outlines.json"
-      },
-      "bundleSha256": "2ec505383eec6276630630ce9a171271487cdb44bac997a46e7cf4331b8d449f"
+      }
     },
     {
       "id": "current-state-svg-export",
@@ -1580,8 +1558,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/current-state-svg-export.json"
-      },
-      "bundleSha256": "30e15ac17a5bcaf65c8d05294f06cb372e6836751d8bbcb1296c3dfc2fa036f8"
+      }
     },
     {
       "id": "department-code-matrix",
@@ -1662,8 +1639,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/department-code-matrix.json"
-      },
-      "bundleSha256": "378d23a19adb09c36ba8bce6c63c03052ad13ecb3c390b26da16ea8db4d344d5"
+      }
     },
     {
       "id": "direct-purpose-navigation",
@@ -1737,8 +1713,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/direct-purpose-navigation.json"
-      },
-      "bundleSha256": "634bc2618b04f764624c2f5977fefabb23eae9aa7b6b6e6490a40c05b635b5e3"
+      }
     },
     {
       "id": "directional-section-wipe",
@@ -1805,8 +1780,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/directional-section-wipe.json"
-      },
-      "bundleSha256": "8c1d25c6ac02897449aefaf9c1080881e8225a777a2fea184aac715aa022b9b9"
+      }
     },
     {
       "id": "directional-sticky-navigation",
@@ -1864,8 +1838,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/directional-sticky-navigation.json"
-      },
-      "bundleSha256": "003a9d29fc47af8f4a1928af0f504df4e30e5816580b4ef5fabf687f180c4e49"
+      }
     },
     {
       "id": "discovery-progress-journal",
@@ -1924,8 +1897,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/discovery-progress-journal.json"
-      },
-      "bundleSha256": "1361a1d7885b5c3310bce480899a0ea9c0f78d9f1cb5f9f2997b240579418fd2"
+      }
     },
     {
       "id": "edge-action-world-composition",
@@ -1983,8 +1955,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/edge-action-world-composition.json"
-      },
-      "bundleSha256": "78147ab13f0e92a4359c5c40c4edca0d7ebe09c6d1dce6f83f7a39df3dd2b816"
+      }
     },
     {
       "id": "editorial-alignment-grid",
@@ -2043,8 +2014,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/editorial-alignment-grid.json"
-      },
-      "bundleSha256": "a7559e1abbea6b352c26e5189bafa5d11c877335d1facbb1243400656302dd30"
+      }
     },
     {
       "id": "execution-trace-drilldown",
@@ -2135,8 +2105,7 @@
       "prompt": "为【目标页面/组件】实现「时间线泳道定位调用详情」。输入、模型、工具分别占用时间线泳道；日志沿同一执行顺序展开，选定调用在侧栏显示结果和计时，使宏观节奏与局部证据互相定位。 触发：查看执行轨迹并深入单次工具调用。结果：用户从整段过程走到具体结果与耗时，不丢失调用所在轮次。 泳道时长、轮次和侧栏调用必须对应同一数据。 源页面自动演示切到详情与计时，本巧思的实际产品点击迁移属于adapted建议。 负责多尺度执行信息关联，可与过程折叠配合；保持时间线为概览，不在每个span里重复全文日志。 键盘：演示提供暂停和文字描述；实际交互迁移时每次调用需可键盘选中，关闭详情回到原调用。 减少动态：保留时间线、日志和选中详情的稳定图解。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。",
       "paths": {
         "bundle": "agent/patterns/execution-trace-drilldown.json"
-      },
-      "bundleSha256": "6cd35af70a89e7712dc0b73e4406a28428cadbfabbb72d1f47c2724b4e3e1056"
+      }
     },
     {
       "id": "explicit-facet-summary",
@@ -2211,8 +2180,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/explicit-facet-summary.json"
-      },
-      "bundleSha256": "fa97bebe6ae5802b4c793c5a4e14cd3a2e24e280352dcbf2a1ed16825d6cd780"
+      }
     },
     {
       "id": "exploded-layer-view",
@@ -2267,8 +2235,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/exploded-layer-view.json"
-      },
-      "bundleSha256": "fd72483c178f1630ff27c9c50fac58f42669597b4c77e52e52fbfffd7019aab8"
+      }
     },
     {
       "id": "film-overlay",
@@ -2356,8 +2323,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/film-overlay.json"
-      },
-      "bundleSha256": "445318e35148082fe3107dce44dedfd9a82430e50dbb1b5baf884206136847f9"
+      }
     },
     {
       "id": "filter-count-feedback",
@@ -2423,8 +2389,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/filter-count-feedback.json"
-      },
-      "bundleSha256": "d49614fb67bae20936aa38f061521db957b5f1ca359267b459d750e8c99266f2"
+      }
     },
     {
       "id": "fixed-star-glow-layer",
@@ -2487,8 +2452,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/fixed-star-glow-layer.json"
-      },
-      "bundleSha256": "1d192712b2deb06795380421c751a213fbb92309f12fe62755033e43af53ad0f"
+      }
     },
     {
       "id": "fixed-task-timeline",
@@ -2548,8 +2512,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/fixed-task-timeline.json"
-      },
-      "bundleSha256": "13b1a2ca7eebda30590ae566082ed0c38703e5b59c6b17bdada1f39a6d1b0072"
+      }
     },
     {
       "id": "fixed-topology-morph",
@@ -2610,8 +2573,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/fixed-topology-morph.json"
-      },
-      "bundleSha256": "df1be9f4fe751a8cf501ecbbfcc0244480b4f806459abb4b950f06eaaa7d4fd8"
+      }
     },
     {
       "id": "folded-wave-hero",
@@ -2671,8 +2633,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/folded-wave-hero.json"
-      },
-      "bundleSha256": "694b0e98e6316fd8654604e2743a0a6c48f756460d051bd21ca0823d770a2a08"
+      }
     },
     {
       "id": "footer-aware-back-to-top",
@@ -2730,8 +2691,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/footer-aware-back-to-top.json"
-      },
-      "bundleSha256": "449b815af496669d79bd0d40c799607ffe11a27033863b9706a79fb059a2173e"
+      }
     },
     {
       "id": "full-bleed-photography-brand",
@@ -2790,8 +2750,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/full-bleed-photography-brand.json"
-      },
-      "bundleSha256": "7d4a4d46fae9d9be585b9d12e0d8a285852f58cfca9718bca163eb0b50dd6e36"
+      }
     },
     {
       "id": "fullscreen-photography-menu",
@@ -2855,8 +2814,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/fullscreen-photography-menu.json"
-      },
-      "bundleSha256": "1b6275afe8518a0b9772a173d94a116aae1492b6e5d22e79bbc72155e0ebf1a2"
+      }
     },
     {
       "id": "geometric-balance-presets",
@@ -2909,8 +2867,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/geometric-balance-presets.json"
-      },
-      "bundleSha256": "8a9e2e1668bb9820bdf4e89d07a6b3f0de2a3207311305a048ccc0df670c8004"
+      }
     },
     {
       "id": "half-paper-category-label",
@@ -2983,8 +2940,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/half-paper-category-label.json"
-      },
-      "bundleSha256": "0ae289413b2396b5d29e2123f9840f5c2e29f4f623a2a9660b94635553113b82"
+      }
     },
     {
       "id": "hatched-registration-type",
@@ -3060,8 +3016,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/hatched-registration-type.json"
-      },
-      "bundleSha256": "bf82f64f5d4e15270013632baf93fe1b0cdbbf79463a9e7cd2346058863c0f15"
+      }
     },
     {
       "id": "header-below-mobile-navigation",
@@ -3125,8 +3080,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/header-below-mobile-navigation.json"
-      },
-      "bundleSha256": "8c135edea829c0778276bd6e443761f45bedfa776c224e27590d169e3bef8a06"
+      }
     },
     {
       "id": "heatmap-focus-tooltip",
@@ -3188,8 +3142,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/heatmap-focus-tooltip.json"
-      },
-      "bundleSha256": "f201bf6e83e8bbfd4f25e7933124bea4bf88fde0c911c2a4a966d44695870261"
+      }
     },
     {
       "id": "highlight-progress-gallery",
@@ -3253,8 +3206,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/highlight-progress-gallery.json"
-      },
-      "bundleSha256": "2d6d564366a7b4be873a598db787c0e5b5a4c43bd397c1437841488e682158d8"
+      }
     },
     {
       "id": "hover-focus-mode-selection",
@@ -3315,8 +3267,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/hover-focus-mode-selection.json"
-      },
-      "bundleSha256": "608d0abbdbe92683a808ac72d417b08e68ebd26be31cbecd845df6a37e048b9c"
+      }
     },
     {
       "id": "idle-interface-retreat",
@@ -3379,8 +3330,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/idle-interface-retreat.json"
-      },
-      "bundleSha256": "7709316a2181d7d7720689adc49efd070448154e613e0489ea63442eb03097dc"
+      }
     },
     {
       "id": "image-destination-mosaic",
@@ -3454,8 +3404,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/image-destination-mosaic.json"
-      },
-      "bundleSha256": "7abc126245aed626fcec659d252e5789e7988d78fc891e91f551b4bd1e79c6d4"
+      }
     },
     {
       "id": "inclined-motion-bands",
@@ -3544,8 +3493,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/inclined-motion-bands.json"
-      },
-      "bundleSha256": "e2f147307c06826d4b83b63085decad33cb443004d0ff5aecc25074281d25a06"
+      }
     },
     {
       "id": "independent-character-page",
@@ -3604,8 +3552,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/independent-character-page.json"
-      },
-      "bundleSha256": "9562aadc6a085a676915caa6125c91b5b46441f13b376f469a894cdb8a29bfa8"
+      }
     },
     {
       "id": "independent-outfit-state",
@@ -3663,8 +3610,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/independent-outfit-state.json"
-      },
-      "bundleSha256": "a1fffa3799c25a9ee4f05905170bc1a00ec836edaf77deccdbdfe6a26cb081f5"
+      }
     },
     {
       "id": "inline-detail-disclosure",
@@ -3744,8 +3690,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/inline-detail-disclosure.json"
-      },
-      "bundleSha256": "a2d474b005bde47ebd2dcb374e16798c097c07ccaf6ce4470ae258e3cecb3849"
+      }
     },
     {
       "id": "inline-product-detail-viewer",
@@ -3803,8 +3748,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/inline-product-detail-viewer.json"
-      },
-      "bundleSha256": "2356a89e9300f589897d6c3ffc609ac4d43b50c3e79b3c59a96b75d8290f547b"
+      }
     },
     {
       "id": "instant-open-menu-category-switch",
@@ -3870,8 +3814,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/instant-open-menu-category-switch.json"
-      },
-      "bundleSha256": "bd31431f62bad6d7fe431bd563e07d53c22a5275148bdf2747ed9efe93f8fa98"
+      }
     },
     {
       "id": "institution-overlap-logo",
@@ -3930,8 +3873,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/institution-overlap-logo.json"
-      },
-      "bundleSha256": "18b6f8424e27d755ce41cdcddecf52b5dea8d05708a10c9dc7d384cf401093c1"
+      }
     },
     {
       "id": "integer-pixel-canvas",
@@ -3989,8 +3931,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/integer-pixel-canvas.json"
-      },
-      "bundleSha256": "773a9e0660591423c5f025af3dd4e2ce829939370bff27776963bd7e1b599e6e"
+      }
     },
     {
       "id": "interruptible-morph",
@@ -4051,8 +3992,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/interruptible-morph.json"
-      },
-      "bundleSha256": "478d8613b081246345ceb8c4c0573c5838938df40d46b17ed17c083fdb69fe44"
+      }
     },
     {
       "id": "keyboard-playable-notes",
@@ -4105,8 +4045,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/keyboard-playable-notes.json"
-      },
-      "bundleSha256": "fd0b551eb15bea3c3174703de27feb0e93f13ea69916c2ddf74992bd151f2863"
+      }
     },
     {
       "id": "last-request-transition",
@@ -4211,8 +4150,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/last-request-transition.json"
-      },
-      "bundleSha256": "37b422bb0de5ad1cbc0d8f847fa8ec114d6177e12eb7346e3784d677e36046cb"
+      }
     },
     {
       "id": "layer-focus-dimming",
@@ -4267,8 +4205,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/layer-focus-dimming.json"
-      },
-      "bundleSha256": "db42b29fc28428e684c6d9870ec57386639f5442175e51fcb34347937d5be839"
+      }
     },
     {
       "id": "layered-directional-media-reveal",
@@ -4360,8 +4297,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/layered-directional-media-reveal.json"
-      },
-      "bundleSha256": "641f5c9c5c5c8118a5158d09b27e323d9b819324f180e65ad0c660651105d800"
+      }
     },
     {
       "id": "layered-navigation-drawer",
@@ -4424,8 +4360,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/layered-navigation-drawer.json"
-      },
-      "bundleSha256": "3cc6398be68ee784058f7bb32157bff384b262c72b3aa3c0221cc22e2e017cfc"
+      }
     },
     {
       "id": "live-parameter-readout",
@@ -4499,8 +4434,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/live-parameter-readout.json"
-      },
-      "bundleSha256": "a088d4c8610cbc24c48f8dc0b20765ae8f821a234054224a572bf4b38ac1e829"
+      }
     },
     {
       "id": "load-completion-brand-marker",
@@ -4582,8 +4516,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/load-completion-brand-marker.json"
-      },
-      "bundleSha256": "7bd0e48c278c0b106edf214fea51aace72743f852d2b55678218f4966fe27dae"
+      }
     },
     {
       "id": "local-code-theme-preview",
@@ -4641,8 +4574,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/local-code-theme-preview.json"
-      },
-      "bundleSha256": "b5330e8aa944d4ca9f24350f6be62932dc0d04b9850f34ba05e9323f0c7c4827"
+      }
     },
     {
       "id": "local-save-toggle",
@@ -4692,8 +4624,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/local-save-toggle.json"
-      },
-      "bundleSha256": "b3cadbec20c8c0ed6b9439fac23d981f0cb9d9ed2f0a001fdd040a1b90d0947c"
+      }
     },
     {
       "id": "masked-transaction-rotation",
@@ -4752,8 +4683,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/masked-transaction-rotation.json"
-      },
-      "bundleSha256": "46b4aeaae43069be2df7bf7bd8f9cd7ed24091c894dea8194bb5b4ec5c475447"
+      }
     },
     {
       "id": "measured-width-action-pill",
@@ -4817,8 +4747,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/measured-width-action-pill.json"
-      },
-      "bundleSha256": "f47dc7304ba99fdce25146e4f48aa5eaf28f6bb05373900a95a64c0adc22e508"
+      }
     },
     {
       "id": "message-to-board-demonstration",
@@ -4877,8 +4806,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/message-to-board-demonstration.json"
-      },
-      "bundleSha256": "1a32ce8e852a8c999f762bb52cdb8285ccadfba79d41ef1e077eeb57c09811b7"
+      }
     },
     {
       "id": "metric-explanation-selector",
@@ -4937,8 +4865,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/metric-explanation-selector.json"
-      },
-      "bundleSha256": "96d9b5e5a6d3551c2178f15e678f38a7b19acf7c9f2efdfd03d834b7dff0bf9d"
+      }
     },
     {
       "id": "mixed-ratio-archive-columns",
@@ -5004,8 +4931,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/mixed-ratio-archive-columns.json"
-      },
-      "bundleSha256": "387cf8dc872f015a6bcacc421552e6a7ccf17d5f5554286f6819d7889c666984"
+      }
     },
     {
       "id": "mobile-drilldown-menu",
@@ -5065,8 +4991,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/mobile-drilldown-menu.json"
-      },
-      "bundleSha256": "245dcc9b8a39cc4c3d3cc304e4f08fa6b74b5355c5f33d1afd09c81dc899912e"
+      }
     },
     {
       "id": "mobile-media-prioritization",
@@ -5139,8 +5064,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/mobile-media-prioritization.json"
-      },
-      "bundleSha256": "8dbfdeaa018432b94a38329d7c277a7fa16f8f6d560d914dd9c5558275cb105e"
+      }
     },
     {
       "id": "mobile-native-mode-cards",
@@ -5201,8 +5125,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/mobile-native-mode-cards.json"
-      },
-      "bundleSha256": "1e979a5d1c141a333a1db4761ee55cfc49959c10b07fea3cd67112cb53f2204a"
+      }
     },
     {
       "id": "mobile-single-open-navigation",
@@ -5262,8 +5185,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/mobile-single-open-navigation.json"
-      },
-      "bundleSha256": "556dd42144748cb69ae687364b5043ee1f3a5505b53a108038c4f68ce08f962f"
+      }
     },
     {
       "id": "mode-character-accent",
@@ -5323,8 +5245,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/mode-character-accent.json"
-      },
-      "bundleSha256": "bfbb22fe4f871d34d2f05a7f45254d88f9882e4b26cafdb57cf1cd7a07a0a9bd"
+      }
     },
     {
       "id": "mode-specific-collage",
@@ -5385,8 +5306,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/mode-specific-collage.json"
-      },
-      "bundleSha256": "b205ef1fcc34edde0c17f8a445eea93c8fe030bfdde0d75d355f00d07b14f134"
+      }
     },
     {
       "id": "mountain-scaled-menu",
@@ -5449,8 +5369,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/mountain-scaled-menu.json"
-      },
-      "bundleSha256": "529ab2b6672767b9944b555392bb708df726503c9450f88c9397f978de58dd5f"
+      }
     },
     {
       "id": "moving-tab-selection-bed",
@@ -5508,8 +5427,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/moving-tab-selection-bed.json"
-      },
-      "bundleSha256": "70e574f2537f7ea1205fc17d7e0fa528e92efd6f5933d31360b64118aba57460"
+      }
     },
     {
       "id": "native-document-reading",
@@ -5613,8 +5531,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/native-document-reading.json"
-      },
-      "bundleSha256": "9256c107075dabfb3382e4bc33f0ccabc01819f3a3832221c5aeef6c37cf9d7e"
+      }
     },
     {
       "id": "native-horizontal-shelf",
@@ -5718,8 +5635,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/native-horizontal-shelf.json"
-      },
-      "bundleSha256": "7238b7496533b98f1d61480f3f938ed90a6acc3034d166b8cbf856cabc62af39"
+      }
     },
     {
       "id": "natural-height-mega-menu",
@@ -5784,8 +5700,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/natural-height-mega-menu.json"
-      },
-      "bundleSha256": "dfaf49e9d2e646e6fa058c9f71ea020b640aa0f8de92414d1bb0ed80f8f43a1a"
+      }
     },
     {
       "id": "offsite-playlist-extension",
@@ -5871,8 +5786,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/offsite-playlist-extension.json"
-      },
-      "bundleSha256": "7bc42f35e9d394b4966c13147bbcad65cfa7f40f1f8a7272627ca34640320070"
+      }
     },
     {
       "id": "paper-material-collage",
@@ -5927,8 +5841,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/paper-material-collage.json"
-      },
-      "bundleSha256": "31f2ffed088da51f67d74a9100fa8cedfef6651d9bfbbf77bf48d485dd1088ad"
+      }
     },
     {
       "id": "parallel-isometric-projection",
@@ -5983,8 +5896,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/parallel-isometric-projection.json"
-      },
-      "bundleSha256": "b32609ed68e488d826f642c8bc7e3e2a4fa21faaefb7f69473567ff2a4d8fc22"
+      }
     },
     {
       "id": "particle-model-reformation",
@@ -6051,8 +5963,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/particle-model-reformation.json"
-      },
-      "bundleSha256": "a88469c89dc3bbf849cb2966b8ef995c218f4d867293d495fc25d6036ebcec7b"
+      }
     },
     {
       "id": "permanent-event-metadata",
@@ -6110,8 +6021,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/permanent-event-metadata.json"
-      },
-      "bundleSha256": "5cb5b54424393646c379cacbd0e83daff83cf6a2bd96d2285b194ca4b3e78404"
+      }
     },
     {
       "id": "persistent-created-widget",
@@ -6202,8 +6112,7 @@
       "prompt": "为【目标页面/组件】实现「已创建挂件跨场景保留」。创建过程结束后将结果挂件先放大展示，再缩到固定角落；后台界面切换到管理列表时挂件持续存在，最后通过已安装项确认结果归属。 触发：创建过程完成并转入管理场景。结果：用户看到生成、可用与被管理的是同一个对象。 挂件状态不能在场景交接时重置；放大与紧凑形态共享同一内容。 手机保留挂件与管理器的对应关系，同时避免遮住列表的主要信息。 负责成果身份连续性，前序可搭配过程折叠，运行控制交给独立暂停生命周期。 键盘：暂停按钮可键盘操作；图解内部不伪造可编辑输入或可点击安装。 减少动态：呈现挂件与管理器已安装项的稳定终态，并给出过程说明。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。",
       "paths": {
         "bundle": "agent/patterns/persistent-created-widget.json"
-      },
-      "bundleSha256": "0e7193e14c505d8c7fc23e18bcc3751f2059d9a62a612bf89002a4cbe06c4b8d"
+      }
     },
     {
       "id": "photo-crossfade-cycle",
@@ -6285,8 +6194,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/photo-crossfade-cycle.json"
-      },
-      "bundleSha256": "27f437cd4c6c5b3c8c9a3fac12116db1115bb7cce3cdd12bbe0e8350ccd34189"
+      }
     },
     {
       "id": "photo-edge-text-contrast",
@@ -6344,8 +6252,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/photo-edge-text-contrast.json"
-      },
-      "bundleSha256": "2fa6b969f4059692f13f4adf15e3b0be360cc609cdf9f08e4f7966604994394a"
+      }
     },
     {
       "id": "photography-option-selector",
@@ -6411,8 +6318,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/photography-option-selector.json"
-      },
-      "bundleSha256": "03bf5eaac871e8f80a97fc3cbf17e773326850831ceb3be0b99562f388bd9004"
+      }
     },
     {
       "id": "pointer-image-shader-preview",
@@ -6470,8 +6376,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/pointer-image-shader-preview.json"
-      },
-      "bundleSha256": "be9b3aacbcdfec34477a2d8561ff846bb5fa53d9e58cf0455e80064d2aca1f8e"
+      }
     },
     {
       "id": "pointer-repulsion-particles",
@@ -6538,8 +6443,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/pointer-repulsion-particles.json"
-      },
-      "bundleSha256": "6ddda361b086588b05c40b308a27b037ce1411e17ffc58eb6fe547d823520592"
+      }
     },
     {
       "id": "procedural-fluid-spotlight",
@@ -6629,8 +6533,7 @@
       "prompt": "为【目标页面/组件】实现「流体色场中的固定光核」。以程序化多层扭曲形成流体色场，用位置固定的光核、光晕和暗角控制明暗；文本和工作台位于独立DOM层，不随纹理变形。 触发：进入首屏并保持可见。结果：背景提供空间和氛围，阅读与操作不受纹理运动影响。 GPU层只负责装饰，不遮挡点击、正文和焦点。 源案例flowmap为中性纹理，没有指针扰动；复用时应保留离屏停止和帧率上限。 作为首屏背景与稳定工作台组合，勿叠加同区域大幅粒子、文字变形和多套指针反馈。 键盘：Canvas不进入Tab顺序；标题、CTA和工作台以DOM保持可读。 减少动态：迁移时提供静态色场或停止时间推进；源页面GPU的减少动态行为需单独核验。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。",
       "paths": {
         "bundle": "agent/patterns/procedural-fluid-spotlight.json"
-      },
-      "bundleSha256": "824c6e9f3e6d6817db4d2719c50624c0a5f51fccfed451f9c5f51760a0efa52f"
+      }
     },
     {
       "id": "process-to-result-collapse",
@@ -6721,8 +6624,7 @@
       "prompt": "为【目标页面/组件】实现「执行过程折叠后保留结果」。先展开结构化输入，替换为任务结果，再折叠中间执行过程；完成文案和独立任务卡保留在原阅读位置，下一轮更换示例而不改变结构。 触发：演示任务由输入进入完成阶段。结果：用户能理解关键执行信息，又能清楚看到最终可用对象。 真实产品要由实际执行状态驱动；演示应明确固定故事与日期。 输入和结果使用同一任务标识，折叠只改变呈现而不改变事实。 负责过程与结果的层级交接，可与跨场景成果保留组合；日志详情属于独立深入查看职责。 键盘：提供独立暂停；若迁移成实际产品，用语义展开按钮保留回看过程的入口。 减少动态：直接呈现可读结果与完成卡，保留执行说明。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。",
       "paths": {
         "bundle": "agent/patterns/process-to-result-collapse.json"
-      },
-      "bundleSha256": "b0c4f04dd037d17c0d6783727d2e059da3a3c65c7d7404d5744bb89947ae943d"
+      }
     },
     {
       "id": "product-entrance-film",
@@ -6781,8 +6683,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/product-entrance-film.json"
-      },
-      "bundleSha256": "cb57dbf84951163b045792feedb2b56be48fca8554958ddeed6ed7838e348627"
+      }
     },
     {
       "id": "resource-bound-fullscreen-loading",
@@ -6876,8 +6777,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/resource-bound-fullscreen-loading.json"
-      },
-      "bundleSha256": "dd32e67419cec9d1c766887af48de9fb47fc62ba2d85118c59f4779bd6c59f7e"
+      }
     },
     {
       "id": "responsive-art-direction",
@@ -6963,8 +6863,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/responsive-art-direction.json"
-      },
-      "bundleSha256": "5be1d96314fd589a1f55f70f28dbc48b7c3938a6d1308fbdfaa808412e73a60d"
+      }
     },
     {
       "id": "restrained-signal-color",
@@ -7075,8 +6974,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/restrained-signal-color.json"
-      },
-      "bundleSha256": "43c9f2ae88270460b4f442cd1f85745394d076968531c5242f5a042cdfed4527"
+      }
     },
     {
       "id": "reversible-center-reveal",
@@ -7140,8 +7038,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/reversible-center-reveal.json"
-      },
-      "bundleSha256": "99843c4668942799ec1981652a611101fad99c9f5c66176e58adfbfc513cb800"
+      }
     },
     {
       "id": "scanline-point-cloud-transition",
@@ -7235,8 +7132,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/scanline-point-cloud-transition.json"
-      },
-      "bundleSha256": "9c32c199f22e8af34b3884b5425d93bfeb19b0f33a8e0db4ab316f1daac86959"
+      }
     },
     {
       "id": "scroll-differential-stars",
@@ -7300,8 +7196,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/scroll-differential-stars.json"
-      },
-      "bundleSha256": "a9873ab6e7f3328bafa9d46394180249d79e107f6a3dcdcfb30b64fe39a9e8d5"
+      }
     },
     {
       "id": "scroll-gathered-pixel-mark",
@@ -7396,8 +7291,7 @@
       "prompt": "为【目标页面/组件】实现「散布立方体随滚动聚合标记」。同一批立方体在球面起点和固定像素网格目标之间插值，滚动推进聚合量，反向滚动可散开；小幅旋转与漂浮在聚合期间减弱。 触发：滚动进入或离开页尾CTA。结果：抽象空间逐步收束成品牌标记，为内容结束提供可逆的视觉回应。 目标点位决定最终图形，必须与已确认的标记一致。 源页面手机隐藏三维层；正文与行动不能依赖GPU才能阅读。 负责页尾视觉收束，CTA文本保持独立；与首屏背景共享色彩即可，不需要共享粒子状态。 键盘：装饰层不拦截指针和焦点，链接保持原生DOM。 减少动态：迁移时直接给出目标标记或隐藏装饰，保留同一CTA；源GPU减少动态行为单列验证。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。",
       "paths": {
         "bundle": "agent/patterns/scroll-gathered-pixel-mark.json"
-      },
-      "bundleSha256": "48ea9c9bfc7ad2450b69abdc745a6f1c1c98d4402efe7e9b6982d7b2d8f2708b"
+      }
     },
     {
       "id": "scroll-logo-contraction",
@@ -7465,8 +7359,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/scroll-logo-contraction.json"
-      },
-      "bundleSha256": "bf444397254e973561d2881407e3be5e14cdbdc47822b3d68850528158fc933c"
+      }
     },
     {
       "id": "scroll-synchronized-rail",
@@ -7525,8 +7418,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/scroll-synchronized-rail.json"
-      },
-      "bundleSha256": "8117541c08c4e06537b24a8c19d6f55946a9561fb16280ccb48bd1858d00ef45"
+      }
     },
     {
       "id": "scroll-video-scrub",
@@ -7590,8 +7482,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/scroll-video-scrub.json"
-      },
-      "bundleSha256": "799f0a46b8407a4dcfea6fd9233e7c89a5191b54898811e1cd5bf6364832287f"
+      }
     },
     {
       "id": "scrubbable-animation-progress",
@@ -7652,8 +7543,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/scrubbable-animation-progress.json"
-      },
-      "bundleSha256": "2da72ff1944183ad9ee8b849b5db40ffd9b9d51228c4d8d9fd5abb0ecf72db1b"
+      }
     },
     {
       "id": "section-color-rhythm",
@@ -7741,8 +7631,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/section-color-rhythm.json"
-      },
-      "bundleSha256": "06113409735187c5ef9920026bbe70234caa999ee0164a01448ccee180fba82d"
+      }
     },
     {
       "id": "semantic-theme-roles",
@@ -7800,8 +7689,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/semantic-theme-roles.json"
-      },
-      "bundleSha256": "984597d13cfda1669a988e10ac06be5cd7e8b691aca7177b363451ca09c05f77"
+      }
     },
     {
       "id": "separate-thumbnail-window",
@@ -7870,8 +7758,7 @@
       "prompt": "为【目标页面/组件】实现「头像翻页与舞台选择分离」。分别保存缩略图窗口起点和当前选中人物；窗口箭头只移动可见候选，点击具体头像才换舞台，人物所有身份线索使用同一选中索引。 触发：点击缩略图窗口箭头或选择头像。结果：大名单可逐段浏览，同时保留当前人物上下文。 最后一组不足整页时夹紧窗口边界；箭头禁用状态与真实可滚动范围一致。 影像箭头切换当前内容属于另一种导航语义，不能套用为所有轮播统一行为。 负责候选窗口和选中状态的分工；与人物换态组合时只共享选择事件，不让翻页事件直接触发换人。 键盘：头像使用按钮，方向键/Home/End提供等价选择；需要时移动窗口使焦点可见，当前项同步aria-pressed。 减少动态：关闭窗口位移与角色过渡，窗口和选择状态仍分别更新。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。",
       "paths": {
         "bundle": "agent/patterns/separate-thumbnail-window.json"
-      },
-      "bundleSha256": "f7cfe5b6d65365797b819c78cd30e489837688a8f22d89a3cdc9a023bdcf9048"
+      }
     },
     {
       "id": "sequential-stroke-reveal",
@@ -7931,8 +7818,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/sequential-stroke-reveal.json"
-      },
-      "bundleSha256": "107593c1dd0f8bec6f593c74f730aae33a3ccb0076922a434289db665d535f9c"
+      }
     },
     {
       "id": "single-open-accordion",
@@ -8022,8 +7908,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/single-open-accordion.json"
-      },
-      "bundleSha256": "0d987b020df85c470a105200e11a16104d727f30de2ad918f6eef3dbf6f4c845"
+      }
     },
     {
       "id": "sound-choice-emblem-opening",
@@ -8089,8 +7974,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/sound-choice-emblem-opening.json"
-      },
-      "bundleSha256": "7df2399a624bff2f9f4f925ec209a8c941773b0236b73d5a377b1254c80f26d7"
+      }
     },
     {
       "id": "sound-opt-in",
@@ -8188,8 +8072,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/sound-opt-in.json"
-      },
-      "bundleSha256": "a8a32e897820fa42de6dbbf867c357e559600c3e679a8ee0a9e3f8f3d0bfb348"
+      }
     },
     {
       "id": "spatial-navigation-map",
@@ -8242,8 +8125,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/spatial-navigation-map.json"
-      },
-      "bundleSha256": "917ed7e15cc023d5033889c26ffa483c9619f7363bd7b200112a9c0bd45a7910"
+      }
     },
     {
       "id": "specimen-pullout-selection",
@@ -8325,8 +8207,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/specimen-pullout-selection.json"
-      },
-      "bundleSha256": "ed3e4a2f8b0076e395abb73081e73faad08997ba0fe6d9f9ca92682325e0aa59"
+      }
     },
     {
       "id": "staged-product-ui-entrance",
@@ -8390,8 +8271,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/staged-product-ui-entrance.json"
-      },
-      "bundleSha256": "8b454cb35879c1aa943dbe89f5715ed962b30762af67629e7b1615c8ef090daf"
+      }
     },
     {
       "id": "staggered-agent-columns",
@@ -8449,8 +8329,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/staggered-agent-columns.json"
-      },
-      "bundleSha256": "cef22a81d189313068aae4c615b3d382e6ef4f28f956c3b17fcaeaea119d2fcd"
+      }
     },
     {
       "id": "state-shape-feedback",
@@ -8513,8 +8392,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/state-shape-feedback.json"
-      },
-      "bundleSha256": "435da14ddd88c805382970445c3f7b3841d8c4c6349eca59ea0af550e9f7d8d2"
+      }
     },
     {
       "id": "sticky-action-sidebar",
@@ -8575,8 +8453,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/sticky-action-sidebar.json"
-      },
-      "bundleSha256": "88c8bb7e6204b1c0b157899b31693d0f47ebc8fade936731eb280e35880d2091"
+      }
     },
     {
       "id": "sticky-stage-handoff",
@@ -8651,8 +8528,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/sticky-stage-handoff.json"
-      },
-      "bundleSha256": "61ac09c50b085216ce86fa91d270c473f7064a078af81e03e96eea039377270f"
+      }
     },
     {
       "id": "synchronized-rolling-index",
@@ -8716,8 +8592,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/synchronized-rolling-index.json"
-      },
-      "bundleSha256": "9c079f54ef35a2197c272bce935a71a70ad863f3a411cf14e2a44c9d21bfb439"
+      }
     },
     {
       "id": "system-theme-without-toggle",
@@ -8791,8 +8666,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/system-theme-without-toggle.json"
-      },
-      "bundleSha256": "24d2a95c32d1a80a110c32807b702b46f2c1b71ea377d6a6e44872556608a5cc"
+      }
     },
     {
       "id": "timed-platform-carousel",
@@ -8857,8 +8731,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/timed-platform-carousel.json"
-      },
-      "bundleSha256": "6cbdfd7b7a8bcbf08730d54690a36fb308c5dd94d183925811963e29e0cb4c3a"
+      }
     },
     {
       "id": "top-down-clipped-menu",
@@ -8927,8 +8800,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/top-down-clipped-menu.json"
-      },
-      "bundleSha256": "9bb0f56a1aa1005d85577ec991aeff5e1056cea8bd24d7a3c698bf1b8836d067"
+      }
     },
     {
       "id": "transparent-video-mode-stage",
@@ -9021,8 +8893,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/transparent-video-mode-stage.json"
-      },
-      "bundleSha256": "c2c22cf1860c7b432eafb3fc31d81952f1ed0096f5c932f99059820c2da8efcf"
+      }
     },
     {
       "id": "vertical-card-swap",
@@ -9088,8 +8959,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/vertical-card-swap.json"
-      },
-      "bundleSha256": "1f1db4f3f5bdf9d7e9938a48bd8686c95f2062acd50e76fb8c2746acf8ba3ba2"
+      }
     },
     {
       "id": "vertical-fullscreen-stage",
@@ -9149,8 +9019,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/vertical-fullscreen-stage.json"
-      },
-      "bundleSha256": "87876477cb642f9ed1ff7fa0fc6d1fb5aecd4650599fb6e51cfa0d187607d465"
+      }
     },
     {
       "id": "vertical-media-spine",
@@ -9224,8 +9093,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/vertical-media-spine.json"
-      },
-      "bundleSha256": "49f2725cbd6b96b3f8eb71c29ffeff09bfee1bbad72ae166a62df9456bd7c887"
+      }
     },
     {
       "id": "viewport-animation-lifecycle",
@@ -9378,8 +9246,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"
-      },
-      "bundleSha256": "7616cb0121d1b7d1cbd0f847a08420926d2b15b35bca72d559edc33716ef2cc3"
+      }
     },
     {
       "id": "visit-facts-grid",
@@ -9437,8 +9304,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/visit-facts-grid.json"
-      },
-      "bundleSha256": "c285190d7bec91932d2ece9b11f5dd54bcb6af098b8a997392570db019f3b5e1"
+      }
     },
     {
       "id": "word-opacity-stagger",
@@ -9507,8 +9373,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/word-opacity-stagger.json"
-      },
-      "bundleSha256": "79d7dcb78a3acfcf67d361dc1ae6fc16b626ef786c2162f84d028fdbaf9b1f91"
+      }
     },
     {
       "id": "world-shaped-thumbnail-frame",
@@ -9565,8 +9430,7 @@
       ],
       "paths": {
         "bundle": "agent/patterns/world-shaped-thumbnail-frame.json"
-      },
-      "bundleSha256": "75d5ab28c6949c3473693c6201c9c481ea843fd507de25663522dbdfca8fb8d5"
+      }
     }
   ]
 }

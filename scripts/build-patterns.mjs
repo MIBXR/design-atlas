@@ -1,10 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8');
 const categories = ['视觉构成', '交互反馈', '滚动叙事', '导航与状态', '加载与媒体', '内容组织'];
 const experienceTypes = ['visual', 'micro-motion', 'page-motion', 'sound', 'structure'];
@@ -117,7 +115,7 @@ export function buildPatterns({ root = defaultRoot, patterns, caseRecords, caseB
     const sourceCases = [...new Set(pattern.sources.map(s => s.caseId))].sort().map(id => {
       const record = recordsById.get(id);
       if (!record) throw new Error(`Pattern source record missing: ${id}`);
-      return { id, title: record.title, paths: { bundle: record.paths.bundle, demo: record.paths.demo }, bundleSha256: record.bundleSha256 };
+      return { id, title: record.title, paths: { bundle: record.paths.bundle, demo: record.paths.demo } };
     });
     for (const source of pattern.sources) {
       const relative = source.locator.split('#')[0];
@@ -129,10 +127,9 @@ export function buildPatterns({ root = defaultRoot, patterns, caseRecords, caseB
     const bytes = encode(bundle);
     outputs.set(relative, bytes);
     bundles.push(bundle);
-    return { ...pattern, paths: { bundle: relative }, bundleSha256: digest(bytes) };
+    return { ...pattern, paths: { bundle: relative } };
   });
-  const contentVersion = digest(Buffer.from(records.map(p => `${p.id}:${p.bundleSha256}\n`).sort().join(''), 'utf8'));
-  const catalog = { schemaVersion: 1, contentVersion, patternCount: records.length, repository: 'https://github.com/MIBXR/design-atlas', patterns: records };
+  const catalog = { schemaVersion: 1, patternCount: records.length, repository: 'https://github.com/MIBXR/design-atlas', patterns: records };
   outputs.set('agent/patterns.json', encode(catalog));
   outputs.set('patterns.js', Buffer.from('window.DESIGN_PATTERNS = ' + JSON.stringify(patterns, null, 2) + ';\n', 'utf8'));
   if (write) {

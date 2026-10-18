@@ -70,8 +70,7 @@
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
-      },
-      "bundleSha256": "f46fa8c5992ea698b53e40135f1f64e104ae58b884d6ac12d04e87ae7f9eb6f6"
+      }
     }
   ]
 }

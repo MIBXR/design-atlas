@@ -5,9 +5,9 @@ The source of truth is entries/, patterns/, materials/, research/, demos/, and m
 snapshots; their fidelity boundaries and asset attribution travel with each case.
 
 - [Agent workflow](AGENT.md): keyword search, complete context, source retrieval and export.
-- [Catalog](agent/catalog.json): candidate summaries and case bundle paths/hashes.
-- [Design patterns](agent/patterns.json): visual, micro-motion, page-motion, sound, and structure mechanisms with triggers, effects, constraints, composition guidance, evidence and bundle hashes.
-- [Materials](agent/materials.json): independently reusable resources with interactive demos, pinned upstream versions, license scope, constraints and bundle hashes.
+- [Catalog](agent/catalog.json): candidate summaries and case bundle paths.
+- [Design patterns](agent/patterns.json): visual, micro-motion, page-motion, sound, and structure mechanisms with triggers, effects, constraints, composition guidance, evidence and bundle paths.
+- [Materials](agent/materials.json): independently reusable resources with interactive demos, pinned upstream versions, license scope, constraints and bundle paths.
 - [Human material library](materials.html): browse resources and adjust their runnable examples.
 - [Overview](index.html): introductions to cases, the design lab and the Agent workflow.
 - [Human preview](cases.html): interactive browsing, comparisons and demos.
@@ -15,15 +15,14 @@ snapshots; their fidelity boundaries and asset attribution travel with each case
 - [Skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas): explore the latest catalog, refine candidates through conversation, and retrieve complete context within one pinned session.
 
 Read catalog first, then agent/cases/<id>.json. Case bundles preserve the original
-entry, full documents, and files with bytes/SHA256. Get source only when selected.
+entry, full documents, and file paths and roles. Get source only when selected.
 Resolve the latest default-branch SHA at the start of a new session, then use
 that same SHA for catalog, bundle and files. Refresh explicitly to discover
 newly added cases. Adapt mechanisms to actual user requirements and owned assets.
 
-For cross-case composition, read catalog.patterns, verify patterns.json by its
-SHA256/bytes, then read agent/patterns/<id>.json by bundleSha256. Each bundle keeps
-the complete pattern and sourceCases with case bundle paths/hashes. Use the
-sourceCases manifests to verify sourceFiles and retrieve runnable dependencies.
+For cross-case composition, read agent/patterns.json and follow paths.bundle.
+Each bundle keeps the complete pattern and sourceCases with case bundle paths.
+Use sourceCases and sourceFiles to retrieve runnable dependencies.
 Keep case and pattern indexes, bundles and files on one pinned SHA. Respect
 observed/adapted/inferred provenance and each atom's keyboard/reduced-motion
 guidance. Pattern composition roles and links guide adaptation, not rigid rules.
@@ -31,8 +30,8 @@ Case bundles include patternIds. The skill supports pattern-search, pattern-show
 and pattern-export. For an unmerged PR or the exact live Site version, explicitly
 pin the full source.commit SHA; latest default-branch discovery stays separate.
 
-For components, images, sound, fonts and other resources, verify catalog.materials
-by SHA256/bytes, then read agent/materials/<id>.json by bundleSha256. Material
+For components, images, sound, fonts and other resources, read agent/materials.json
+and follow paths.bundle. Material
 bundles preserve the complete material, original documents and all runnable
 dependencies in files. sourceFiles identifies the main source to inspect; it
 does not replace the complete file manifest. Use material-search, material-show
@@ -40,3 +39,6 @@ and material-export in the skill. Keep material indexes, bundles and files on
 the same pinned SHA as cases and patterns. Read upstream version, license scope,
 constraints and demos before adapting; a static fallback does not verify GPU
 execution. Repositories without catalog.materials keep their case/pattern flow.
+
+Load case, pattern and material indexes only when needed; a missing unrelated
+index does not block retrieval. The fixed Git commit is the content version.
