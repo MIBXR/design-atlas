@@ -59,8 +59,7 @@
       "paths": {
         "bundle": "agent/cases/hand-drawn.json",
         "demo": "demos/hand-drawn/index.html"
-      },
-      "bundleSha256": "f1767cd6722a7b88a90cb209f922004a0072066767b5d4689c79e7327d2547d2"
+      }
     }
   ]
 }

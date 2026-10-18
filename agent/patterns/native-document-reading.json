@@ -109,8 +109,7 @@
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
-      },
-      "bundleSha256": "2ad7b2a0f59e6aa138ee9718eb768484e3ec6102789b45dce2538db94e1c38a4"
+      }
     },
     {
       "id": "met-museum",
@@ -118,8 +117,7 @@
       "paths": {
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/met-museum/index.html"
-      },
-      "bundleSha256": "736c94668000a339b0cdf312a69a720cd7b828091e0a9d6cb324fda4141d832c"
+      }
     },
     {
       "id": "rijksmuseum-art",
@@ -127,8 +125,7 @@
       "paths": {
         "bundle": "agent/cases/rijksmuseum-art.json",
         "demo": "demos/rijksmuseum-art/index.html"
-      },
-      "bundleSha256": "f3ef30621d748948a78864a20c7b14a4b7783e9b6f49de5f0c0f3e61d9630410"
+      }
     },
     {
       "id": "uma-musume",
@@ -136,8 +133,7 @@
       "paths": {
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/uma-musume/index.html"
-      },
-      "bundleSha256": "253b7230bee523c5b0c880b01bc672e5817af91510495b02340b0e372ad9b4e4"
+      }
     }
   ]
 }

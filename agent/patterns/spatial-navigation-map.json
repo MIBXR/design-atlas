@@ -58,8 +58,7 @@
       "paths": {
         "bundle": "agent/cases/pixel-world.json",
         "demo": "demos/pixel-world/index.html"
-      },
-      "bundleSha256": "53a2885e3cd64e50de25311fb35f723b654d1cc3e3c4894abbf06f49049cec23"
+      }
     }
   ]
 }

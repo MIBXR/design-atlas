@@ -80,8 +80,7 @@
       "paths": {
         "bundle": "agent/cases/digital-dunhuang.json",
         "demo": "demos/digital-dunhuang/index.html"
-      },
-      "bundleSha256": "00e08b3ac8986b33cdd4555b2dfe71a34f7980d161b5c6cdc4444c81ea8b0d7a"
+      }
     }
   ]
 }

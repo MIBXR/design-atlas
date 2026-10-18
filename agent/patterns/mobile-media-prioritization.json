@@ -78,8 +78,7 @@
       "paths": {
         "bundle": "agent/cases/linear-workflow.json",
         "demo": "demos/linear-workflow/index.html"
-      },
-      "bundleSha256": "e4a12e2ad67328267e8e52fad5cf1acec99b49e342c173836a63b4477096aecf"
+      }
     },
     {
       "id": "notion-editorial",
@@ -87,8 +86,7 @@
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/notion-editorial/index.html"
-      },
-      "bundleSha256": "af260e125cade81550986c7aa003a748b22486af54a14111c6cee532b9706eec"
+      }
     }
   ]
 }

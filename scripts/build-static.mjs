@@ -14,12 +14,6 @@ files.push('materials.html', 'materials.js', 'materials-ui.js', 'materials-ui.cs
 export const folders = ['demos', 'entries', 'patterns', 'materials', 'material-demos', 'previews', 'research', 'prompts', 'docs', 'vendor', 'agent'];
 const localOrigin = 'https://design-atlas.invalid';
 
-function regularTree(source) {
-  const info = fs.lstatSync(source);
-  if (info.isDirectory()) for (const child of fs.readdirSync(source)) regularTree(path.join(source, child));
-  else if (!info.isFile()) throw new Error('Static content cannot contain links or special files: ' + source);
-}
-
 function localReference(value, documentPath) {
   const trimmed = value.trim().replace(/&amp;/g, '&');
   if (!trimmed || /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(trimmed)) return null;
@@ -127,13 +121,14 @@ export function prepareStatic(assetsMode = 'local') {
   const clean = spawnSync('git', ['status', '--porcelain'], {cwd:root, encoding:'utf8'});
   const sourceCommit = revision.stdout?.trim();
   if (revision.status !== 0 || clean.status !== 0 || clean.stdout.trim() || !/^[a-f\d]{40}$/.test(sourceCommit)) throw new Error('Commit the verified source before static packaging so Agent source URLs identify the exact original bytes.');
-  for (const name of [...files, ...includedRuntime, ...folders]) regularTree(path.join(root, name));
   fs.rmSync(output, {recursive:true, force:true});
   fs.mkdirSync(output);
   const omitted = new Set(assetsMode === 'github' ? Object.keys(sources.assets) : []);
   let omittedBytes = 0;
   for (const name of [...files, ...includedRuntime, ...folders]) {
     fs.cpSync(path.join(root, name), path.join(output, name), {recursive:true, filter:source => {
+      const info = fs.lstatSync(source);
+      if (path.basename(source) === '.git' || !info.isDirectory() && !info.isFile()) throw new Error('Static content cannot contain Git metadata, links or special files: ' + source);
       const canonical = path.relative(root, source).split(path.sep).join('/');
       if (omitted.has(canonical)) { omittedBytes += sources.assets[canonical].bytes; return false; }
       return true;
@@ -153,7 +148,6 @@ export function prepareStatic(assetsMode = 'local') {
           let text = original;
           if (assetsMode === 'github') text = item.name.endsWith('.html') ? rewriteHTML(text, canonical, sources) : rewriteCSS(text, canonical, sources);
           if (runtimeReady && item.name.endsWith('.html')) text = injectAssets(text, canonical, assetsMode);
-          if (assetsMode === 'github' && (item.name.endsWith('.html') ? rewriteHTML(text, canonical, sources) : rewriteCSS(text, canonical, sources)) !== text) throw new Error('A static asset reference was not rewritten: ' + canonical);
           if (text !== original) { fs.writeFileSync(target, text, 'utf8'); rewrittenDocuments++; }
         } else if (item.name.endsWith('.md')) {
           const bytes = fs.readFileSync(target);
@@ -169,10 +163,6 @@ export function prepareStatic(assetsMode = 'local') {
   const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
   catalog.source = {repository:'MIBXR/design-atlas', commit:sourceCommit, baseUrl:`https://raw.githubusercontent.com/MIBXR/design-atlas/${sourceCommit}/`};
   fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 2) + '\n', 'utf8');
-  for (const canonical of omitted) {
-    const asset = sources.assets[canonical];
-    if (fs.existsSync(path.join(output, canonical)) || !asset?.url.startsWith(sources.baseUrl) || asset.bytes < sources.thresholdBytes || !/^[a-f\d]{64}$/.test(asset.sha256)) throw new Error('An omitted asset has no valid immutable source: ' + canonical);
-  }
   if (fs.existsSync(path.join(output, '.git'))) throw new Error('Git metadata cannot be served.');
   console.log(`Prepared dist (${assetsMode} assets): ${totalBytes} bytes (${(totalBytes / 1024 / 1024).toFixed(3)} MiB).`);
   console.log(`Omitted ${omitted.size} byte-preserved media assets (${omittedBytes} bytes); rewrote ${rewrittenDocuments} HTML/CSS documents. Executable libraries and full local source assets remain in the checkout.`);

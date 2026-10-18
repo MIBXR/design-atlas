@@ -1,6 +1,5 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { renderDetailNotes } from './detail-notes.mjs';
 import { loadPatterns, buildPatterns } from './build-patterns.mjs';
@@ -9,7 +8,6 @@ import { assertRepositoryLineEndings } from './check-line-endings.mjs';
 
 export const repository = 'https://github.com/MIBXR/design-atlas';
 export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-export const sha256 = data => crypto.createHash('sha256').update(data).digest('hex');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8');
 const catalogFields = ['id', 'title', 'category', 'tags', 'summary', 'useCases', 'avoid', 'country', 'implementation', 'studyScope', 'capturedAt', 'theoryVerifiedAt', 'tokens', 'composition', 'interaction', 'themeBehavior', 'soundBehavior'];
 const sharedFiles = ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.css', 'case-loading.js', 'theme.js', 'favicon.svg', 'document.html', 'document.js', 'document.css', 'site-nav.css', 'theme-control.css', 'site-typography.css', 'site-footer.css', 'site-shell.js'];
@@ -73,8 +71,7 @@ function fileRole(relative, entry, documentPaths) {
 }
 
 function documentRecord(root, relative, role) {
-  const bytes = readFile(root, relative);
-  return { path: relative, role, content: readText(root, relative), sha256: sha256(bytes), bytes: bytes.length };
+  return { path: relative, role, content: readText(root, relative) };
 }
 
 function makeBundle(root, entry, entryPath, patternIds = []) {
@@ -100,10 +97,7 @@ function makeBundle(root, entry, entryPath, patternIds = []) {
   const mobilePreview = `previews/mobile/${entry.id}.jpg`;
   const mobilePath = resolveRepositoryPath(root, mobilePreview, { mustExist: false });
   if (fs.existsSync(mobilePath)) paths.add(mobilePreview);
-  const files = [...paths].sort().map(relative => {
-    const bytes = readFile(root, relative);
-    return { path: relative, role: fileRole(relative, entry, documentPaths), sha256: sha256(bytes), bytes: bytes.length };
-  });
+  const files = [...paths].sort().map(relative => ({ path: relative, role: fileRole(relative, entry, documentPaths) }));
   return { schemaVersion: 1, id: entry.id, entry, patternIds, documents, files };
 }
 
@@ -125,15 +119,13 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
     const patternIds = patterns.filter(pattern => pattern.sources.some(source => source.caseId === entry.id)).map(pattern => pattern.id);
     const bundle = makeBundle(root, entry, entryPath, patternIds);
     const { notes } = renderDetailNotes({ entries: originalEntries, id: entry.id, rendererSource });
-    const notesBytes = Buffer.from(notes, 'utf8');
-    bundle.webNotes = { format: 'text/html', renderer: 'atlas.js', content: notes, sha256: sha256(notesBytes), bytes: notesBytes.length };
+    bundle.webNotes = { format: 'text/html', renderer: 'atlas.js', content: notes };
     const bundlePath = `agent/cases/${entry.id}.json`;
     const data = encode(bundle);
     outputs.set(bundlePath, data);
     bundles.push(bundle);
     const record = Object.fromEntries(catalogFields.filter(key => entry[key] !== undefined).map(key => [key, entry[key]]));
     record.paths = { bundle: bundlePath, preview: entry.preview, demo: entry.demo, entry: entryPath };
-    record.bundleSha256 = sha256(data);
     return record;
   });
   const patternData = patterns.length ? buildPatterns({ root, patterns, caseRecords: records, caseBundles: bundles, write: false }) : null;
@@ -141,19 +133,15 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
   const materials = loadMaterials({ root });
   const materialData = materials.length ? buildMaterials({ root, materials, write: false }) : null;
   if (materialData) for (const [relative, bytes] of materialData.outputs) outputs.set(relative, bytes);
-  const caseVersionInput = records.map(record => [record.id, record.bundleSha256]).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([id, hash]) => `${id}:${hash}\n`).join('');
-  const contentVersion = sha256(Buffer.from(caseVersionInput + (patternData ? `patterns:${patternData.catalog.contentVersion}\n` : '') + (materialData ? `materials:${materialData.catalog.contentVersion}\n` : ''), 'utf8'));
-  const catalog = { schemaVersion: 1, contentVersion, entryCount: records.length, repository, entries: records };
+  const catalog = { schemaVersion: 1, entryCount: records.length, repository, entries: records };
   if (patternData) {
-    const bytes = outputs.get('agent/patterns.json');
-    catalog.patterns = { path: 'agent/patterns.json', sha256: sha256(bytes), bytes: bytes.length, patternCount: patterns.length, contentVersion: patternData.catalog.contentVersion };
+    catalog.patterns = { path: 'agent/patterns.json', patternCount: patterns.length };
   }
   if (materialData) {
-    const bytes = outputs.get('agent/materials.json');
-    catalog.materials = { path: 'agent/materials.json', sha256: sha256(bytes), bytes: bytes.length, materialCount: materials.length, contentVersion: materialData.catalog.contentVersion };
+    catalog.materials = { path: 'agent/materials.json', materialCount: materials.length };
   }
   outputs.set('agent/catalog.json', encode(catalog));
-  outputs.set('agent/README.md', Buffer.from("# Design Atlas · Agent 数据\n\n完整工作流与数据协议见 [AGENT.md](../AGENT.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：完整案例索引与巧思／素材目录的路径、SHA256、字节数和版本。\n- cases/<id>.json：原始条目、研究与Prompt原文、网页说明webNotes、完整源码/素材清单，以及反向关联patternIds。\n- [patterns.json](patterns.json)：人工策展的完整原子记录、来源、约束、参数与组合关系，并提供巧思包路径/哈希。\n- patterns/<id>.json：完整pattern与sourceCases；来源案例包含标题、完整包/演示路径及包SHA256。sourceFiles从来源案例清单核验，完整运行依赖按来源案例导出。\n- [materials.json](materials.json)：独立内容素材摘要、分类、用途、约束及完整包路径／哈希。\n- materials/<id>.json：完整material、文档原文、独立运行依赖files与主要取材sourceFiles；来源版本和许可随包保留。\n- webNotes由真实atlas.js生成，保存网页案例七节原始HTML；比较界面按同名章节逐行对齐，原始单例说明保持一致。\n\n巧思sources的observed/adapted/inferred保留观察、迁移与公共资料推断的边界。先核验主索引patterns描述，再核验巧思bundleSha256与sourceCases；全部资料、索引和文件使用同一个固定会话SHA。在线发布只在主索引添加source.commit/baseUrl，完整案例／巧思／素材包与子目录保持原始字节。\n\n巧思contentVersion由排序后的巧思ID与包SHA256确定；素材contentVersion按同样方法计算；总库contentVersion由排序后的案例ID/哈希依次加巧思及素材contentVersion确定。案例只引用巧思ID，巧思引用案例哈希，没有哈希循环、时钟或Git SHA自引用。\n\n生成文件使用UTF-8与LF；被引用的文件遵循.gitattributes。二进制只记录原仓库路径/字节数/SHA256，不嵌入JSON。源码来自原始Git字节，区别于部署中重写素材地址或增加UTF-8标记的展示文件。\n\n修改内容后运行npm run build，再运行npm run check与npm test。构建扫描全部entries/、patterns/及materials/；检查去重、源观察漂移、组合ID、manifest和生成哈希。按独立机制维护巧思，终态维护不复制内容到skill仓库。\n", 'utf8'));
+  outputs.set('agent/README.md', Buffer.from("# Design Atlas · Agent 数据\n\n完整工作流见 [AGENT.md](../AGENT.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：案例摘要、包路径及巧思／素材目录路径。\n- cases/<id>.json：完整 entry、documents 原文、webNotes HTML、files 路径与角色、patternIds 关联。\n- [patterns.json](patterns.json)：巧思机制、来源、约束、参数、组合关系与包路径。\n- patterns/<id>.json：完整 pattern 与 sourceCases；按来源案例路径和 sourceFiles 取得上下文。\n- [materials.json](materials.json)：独立内容素材摘要和包路径。\n- materials/<id>.json：完整 material、documents、files 与主要源码 sourceFiles；来源版本和许可随包保留。\n\n所有资料使用同一个固定 Git 提交。目录按命令需要独立读取。发布索引的 source.commit/baseUrl 指向原始源码；网页播放文件可经过部署转换。\n\nwebNotes 由 atlas.js 的实际详情渲染器生成。来源 observed/adapted/inferred 保留观察、迁移与推断的边界；来源记录原文随资料保留。\n\n运行 npm run build 同步资料，npm run check 检查条目、引用、语法、预览、README 和文档目录，npm test 检查收藏及实际导出。受影响页面通过浏览器验收。\n", 'utf8'));
   if (write) {
     // Check the destination before creating directories or replacing any bytes.
     fs.mkdirSync(resolveRepositoryPath(root, 'agent/cases', { mustExist: false }), { recursive: true });
@@ -184,7 +172,7 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
     const { catalog } = buildAgent();
-    console.log(`Built Agent catalog and ${catalog.entryCount} lossless case bundles (${catalog.contentVersion.slice(0, 12)}).`);
+    console.log(`Built Agent catalog and ${catalog.entryCount} case bundles.`);
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

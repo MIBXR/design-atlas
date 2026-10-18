@@ -80,8 +80,7 @@
       "paths": {
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
-      },
-      "bundleSha256": "e9b3de448bd805400f754c33bb4f4b86fd9c7ca084b403f2623a4a9b3e138db9"
+      }
     },
     {
       "id": "chatgpt-platform",
@@ -89,8 +88,7 @@
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
-      },
-      "bundleSha256": "e1c8c61627deab3b61d22a6f85c6c0a58925b7eba8a349c034b02ff68a3c2222"
+      }
     }
   ]
 }

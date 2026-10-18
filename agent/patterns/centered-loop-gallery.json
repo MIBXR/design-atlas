@@ -106,8 +106,7 @@
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
-      },
-      "bundleSha256": "2ad7b2a0f59e6aa138ee9718eb768484e3ec6102789b45dce2538db94e1c38a4"
+      }
     },
     {
       "id": "monument-valley-game",
@@ -115,8 +114,7 @@
       "paths": {
         "bundle": "agent/cases/monument-valley-game.json",
         "demo": "demos/monument-valley-game/index.html"
-      },
-      "bundleSha256": "6f065d26ef62f42cabe0a38de32fe476c3a2d563f40c2c811f4da3683fd62305"
+      }
     },
     {
       "id": "persona-kinetic",
@@ -124,8 +122,7 @@
       "paths": {
         "bundle": "agent/cases/persona-kinetic.json",
         "demo": "demos/persona-kinetic/index.html"
-      },
-      "bundleSha256": "01c90bf19bcd95339a601fbbda9ec69852217b7fe2130cf12e67a9ed33d6b641"
+      }
     },
     {
       "id": "philharmonie-music",
@@ -133,8 +130,7 @@
       "paths": {
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/philharmonie-music/index.html"
-      },
-      "bundleSha256": "9a7b9613d04c76f7323caebeee458442e48a8198ded3b459eb1dbb8837ad77bb"
+      }
     }
   ]
 }

@@ -71,8 +71,7 @@
       "paths": {
         "bundle": "agent/cases/apple-product.json",
         "demo": "demos/apple-product/index.html"
-      },
-      "bundleSha256": "e9b3de448bd805400f754c33bb4f4b86fd9c7ca084b403f2623a4a9b3e138db9"
+      }
     }
   ]
 }

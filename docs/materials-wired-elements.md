@@ -20,7 +20,7 @@
 
 ## 接入与适配
 
-项目安装固定版本 `npm install wired-elements@2.1.2` 后导入包。这里直接自托管官方 `lib/wired-elements-esm.js`，其中已包含组件和 Lit 运行时，不依赖 CDN。通过 HTTP/HTTPS 服务目录，保留其相对文件路径和许可；完整导出清单由 Agent 构建生成并附字节数与 SHA256。
+项目安装固定版本 `npm install wired-elements@2.1.2` 后导入包。这里直接自托管官方 `lib/wired-elements-esm.js`，其中已包含组件和 Lit 运行时，不依赖 CDN。通过 HTTP/HTTPS 服务目录，保留其相对文件路径和许可；Agent 构建提供完整文件路径与角色。
 
 说明面板继承 Atlas 主题，手绘舞台固定浅纸面。所有文本至少 12px，不缩小整个 Demo。标签支持方向键；组件内部复选框提供原生键盘操作，滑块和开关补齐内部名称。无自动动画或声音；减少动态仍可改变参数。模块无法加载时显示明确的静态说明，`?fallback=1` 可查看该分支。静态后备不是手绘组件渲染证据。
 

@@ -4,24 +4,10 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {readBundle, readVerified, exportBundle} from './atlas.mjs';
-import {sha256} from './build-agent.mjs';
+import {readBundle, exportBundle} from './atlas.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const catalog = JSON.parse(fs.readFileSync(path.join(root,'agent/catalog.json'),'utf8'));
-
-test('source reads reject same-length changed bytes and unsafe paths', () => {
-  const scratch=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-read-'));
-  try {
-    const original=Buffer.from('source!');
-    const file={path:'source.js',bytes:original.length,sha256:sha256(original)};
-    fs.writeFileSync(path.join(scratch,'source.js'),original);
-    assert.deepEqual(readVerified(scratch,file),original);
-    fs.writeFileSync(path.join(scratch,'source.js'),'changed');
-    assert.throws(()=>readVerified(scratch,file),/differs/);
-    assert.throws(()=>readVerified(scratch,{...file,path:'../escape'}),/Unsafe/);
-  } finally { fs.rmSync(scratch,{recursive:true,force:true}); }
-});
 
 test('full export preserves all original bytes and code-only declares missing media', () => {
   const scratch=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-export-'));

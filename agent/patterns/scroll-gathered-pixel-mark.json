@@ -100,8 +100,7 @@
       "paths": {
         "bundle": "agent/cases/deepseek-harness.json",
         "demo": "demos/deepseek-harness/index.html"
-      },
-      "bundleSha256": "5d749efae87baed0f1d9f882e71f9d1eea04a2e3e02d602743b22aa95ab7a8b3"
+      }
     }
   ]
 }

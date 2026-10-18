@@ -43,7 +43,7 @@ Google 的 `@material/web` 将 Material 3 设计语言实现为 Web Components�
 
 Material Web 采用 [Apache-2.0](https://github.com/material-components/material-web/blob/b4de401eb665ec63474f39319a4ba8f2145974cc/LICENSE)。随包 Lit、lit-element、lit-html、@lit/reactive-element 采用 BSD-3-Clause；tslib 采用0BSD并保留其版权声明。Google 商标与官网内容不由软件许可自动授权，本地没有复制品牌图片或远程字体。
 
-`vendor/material-web.js` 由 esbuild 0.25.12 合并并压缩选用的官方模块，CSS-in-JS 随包，保留行内许可；未修改官方组件源码。`vendor/components.mjs`、`package.json`、`package-lock.json` 提供重建输入，[依赖说明](../material-demos/material-web/vendor/README.md) 给出在仓库外重建的命令。`vendor/provenance.json` 保存 npm integrity、bundle摘要以及全部许可文件字节数/SHA256。导出时应保留完整 vendor 目录；Agent 资料由统一构建生成完整文件清单和哈希。
+`vendor/material-web.js` 由 esbuild 0.25.12 合并并压缩选用的官方模块，CSS-in-JS 随包，保留行内许可；未修改官方组件源码。`vendor/components.mjs`、`package.json`、`package-lock.json` 提供重建输入，[依赖说明](../material-demos/material-web/vendor/README.md) 给出在仓库外重建的命令。`vendor/provenance.json` 保存 npm integrity、bundle摘要以及全部许可文件字节数/SHA256。导出时应保留完整 vendor 目录；Agent 资料由统一构建生成完整文件路径与角色。
 
 ## 验证范围
 

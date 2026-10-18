@@ -79,8 +79,7 @@
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
         "demo": "demos/chatgpt-platform/index.html"
-      },
-      "bundleSha256": "e1c8c61627deab3b61d22a6f85c6c0a58925b7eba8a349c034b02ff68a3c2222"
+      }
     },
     {
       "id": "claude-platform",
@@ -88,8 +87,7 @@
       "paths": {
         "bundle": "agent/cases/claude-platform.json",
         "demo": "demos/claude-platform/index.html"
-      },
-      "bundleSha256": "598ea14f940b6bfddde0a2e31dd9462158eb834016cf10dfeae9a50eb3ac43bc"
+      }
     }
   ]
 }

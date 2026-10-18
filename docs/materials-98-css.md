@@ -22,7 +22,7 @@
 
 ## 参数与接入
 
-使用 `npm install 98.css@0.1.21`，将样式及相邻字体一并部署；本页无 CDN、框架或构建器依赖。每个独立目录包含 HTML、适配 CSS、原创 JavaScript、官方 CSS 与字体，Agent 构建递归产生完整文件清单及 SHA256。
+使用 `npm install 98.css@0.1.21`，将样式及相邻字体一并部署；本页无 CDN、框架或构建器依赖。每个独立目录包含 HTML、适配 CSS、原创 JavaScript、官方 CSS 与字体，Agent 构建提供完整文件路径与角色。
 
 窗口类和分段进度来自[固定版本样式](https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/style.css)。三套桌面颜色、留白开关、每 240ms 增加 2% 和手动每次 10% 都是本地演示参数。真实产品应连接真实任务结果，不能以模拟计时器证明下载或安装完成。
 
