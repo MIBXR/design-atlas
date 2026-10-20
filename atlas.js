@@ -4,7 +4,7 @@ const entries = window.DESIGN_ATLAS || [];
 const $ = selector => document.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const docHref = file => `document.html?file=${encodeURIComponent(file)}`;
-const externalIcon = href => {try {const url=new URL(href,location.href);return /^https?:$/.test(url.protocol)&&url.origin!==location.origin?'<span class="atlas-external-icon" aria-hidden="true">↗︎</span>':'';}catch{return '';}};
+const externalIcon = href => {try {const url=new URL(href,location.href);return /^https?:$/.test(url.protocol)&&url.origin!==location.origin?'<span class="atlas-external-icon" aria-hidden="true"><svg class="atlas-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></span>':'';}catch{return '';}};
 const favoriteStore=window.DesignAtlasFavorites;
 let favorites=favoriteStore.ids('cases');
 let previewObserver;
