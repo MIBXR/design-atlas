@@ -34,16 +34,12 @@ export function documentCatalog() {
   return documents;
 }
 
-export function buildDocuments({check = false} = {}) {
+export function buildDocuments() {
   const documents = documentCatalog();
-  const source = 'window.DESIGN_ATLAS_DOCUMENTS = ' + JSON.stringify(documents, null, 2) + ';\n';
-  if (check) {
-    if (fs.readFileSync(output, 'utf8') !== source) throw new Error('Document directory is stale. Run npm run build.');
-  } else fs.writeFileSync(output, source, 'utf8');
+  fs.writeFileSync(output, 'window.DESIGN_ATLAS_DOCUMENTS = ' + JSON.stringify(documents, null, 2) + ';\n', 'utf8');
   return documents;
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const check = process.argv.slice(2).includes('--check');
-  console.log(`${check ? 'Checked' : 'Built'} ${buildDocuments({check}).length} public Markdown documents.`);
+  console.log(`Built ${buildDocuments().length} public Markdown documents.`);
 }

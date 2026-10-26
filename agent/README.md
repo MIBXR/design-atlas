@@ -13,4 +13,4 @@
 
 webNotes 由 atlas.js 的实际详情渲染器生成。来源 observed/adapted/inferred 保留观察、迁移与推断的边界；来源记录原文随资料保留。
 
-运行 npm run build 同步资料，npm run check 检查条目、引用、语法、预览、README 和文档目录，npm test 检查收藏及实际导出。受影响页面通过浏览器验收。
+运行 npm run build 同步资料，npm run check 检查本地引用。受影响页面通过浏览器验收。

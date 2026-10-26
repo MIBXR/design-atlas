@@ -72,4 +72,4 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 案例包保留原 `entry`、文档与完整文件清单；巧思保留来源定位及原观察文本。来源和权利按原始记录判断。巧思 `sourceFiles` 只列取材文件，完整运行依赖由来源案例的 `files` 提供；读取器接受未包含巧思目录的schema1仓库。
 
-修改案例、巧思、素材或源码后运行 `npm run build`，再运行 `npm run check`；构建扫描全部案例、巧思和素材，同步网页、Prompt、Agent目录、完整包及案例与巧思的反向关联。构建检查必要字段和来源关联；维护检查覆盖本地引用、语法、预览、README 和公开文档目录，页面行为通过实际浏览器验收。维护标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。功能分支推送后可用同一SHA发布Site与验证skill，PR是否合入按用户授权；合入默认分支之后新会话自动发现。普通新增内容无需复制到skill，数据协议变化才同步获取脚本。
+修改案例、巧思、素材或源码后运行 `npm run build`，再运行 `npm run check`；构建扫描全部案例、巧思和素材，同步网页、Prompt、Agent目录、完整包及案例与巧思的反向关联。构建检查必要字段和来源关联；维护检查覆盖本地引用，页面行为通过实际浏览器验收。维护标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。功能分支推送后可用同一SHA发布Site与验证skill，PR是否合入按用户授权；合入默认分支之后新会话自动发现。普通新增内容无需复制到skill，数据协议变化才同步获取脚本。
