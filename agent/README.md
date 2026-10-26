@@ -1,4 +1,4 @@
-# Design Atlas · Agent 数据
+# Web Atlas · Agent 数据
 
 完整工作流见 [AGENT.md](../AGENT.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。
 

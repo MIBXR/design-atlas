@@ -609,7 +609,7 @@ window.DESIGN_MATERIALS = [
       "通过 HTTP/HTTPS 访问；WebGPU 不可用时显示明确的静态示意与状态，不把它当作真实着色器运行结果。",
       "减少动态、页面隐藏或主动暂停时停止持续动画；恢复运行由页面状态与用户操作决定。",
       "保留 MIT 版权和许可文本；官网编辑器、预设与区块的使用条款与开源软件分开核验。",
-      "本地参考图和四套参数是 Design Atlas 的演示选择，不代表官网预设或作者推荐。"
+      "本地参考图和四套参数是 Web Atlas 的演示选择，不代表官网预设或作者推荐。"
     ],
     "upstream": {
       "repository": "shader-effects-inc/shaders",

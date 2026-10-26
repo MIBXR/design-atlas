@@ -227,7 +227,7 @@ async function readDocument({focus = false} = {}) {
     currentHeadings = headings;
     document.querySelector('#title').textContent = title;
     document.querySelector('#path').textContent = file;
-    document.title = `${title} · Design Atlas`;
+    document.title = `${title} · Web Atlas`;
     cleanupOutline = renderOutline(headings);
     const download = document.querySelector('#download');
     download.href = file;

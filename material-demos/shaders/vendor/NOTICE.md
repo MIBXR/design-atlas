@@ -9,7 +9,7 @@
 - 运行包 SHA-256：`e00b8c9954c819910f1c8660c5035ca24f79814e752689f819f05c610299625e`
 - 许可原文：[LICENSE-shaders.txt](LICENSE-shaders.txt)，Copyright (c) 2026 Shader Effects Inc.
 
-包内组件、引擎与框架绑定采用 MIT 许可。官网预设、合集、页面区块和平台服务由[独立协议](https://shaders.com/license)管理；本目录的四个组合由 Design Atlas 使用开源组件自行编写，未使用官网预设或页面区块。
+包内组件、引擎与框架绑定采用 MIT 许可。官网预设、合集、页面区块和平台服务由[独立协议](https://shaders.com/license)管理；本目录的四个组合由 Web Atlas 使用开源组件自行编写，未使用官网预设或页面区块。
 
 官方构建包含的运行依赖按该提交的 [`pnpm-lock.yaml`](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/pnpm-lock.yaml) 标注，原始许可随本目录分发：
 
@@ -21,4 +21,4 @@
 | typed-binary | 4.3.3 | [MIT](LICENSE-typed-binary.txt) |
 | tsover-runtime | 0.0.7 | [Apache-2.0](LICENSE-tsover-runtime.txt) |
 
-原始许可证保持上游字节。本地 `reference.svg` 为 Design Atlas 原创几何图形，不包含第三方照片、字体或品牌标志。
+原始许可证保持上游字节。本地 `reference.svg` 为 Web Atlas 原创几何图形，不包含第三方照片、字体或品牌标志。

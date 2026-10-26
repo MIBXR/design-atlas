@@ -2,7 +2,7 @@
 
 [打开字体试排](../material-demos/recursive/index.html) · [结构化条目](../materials/recursive.json) · [官方样张](https://www.recursive.design/)
 
-Recursive 把比例字体与等宽字体放在一个可变字体文件中，并能独立调整手写个性、字重、倾斜与草写字形。适合需要在界面、代码与展示标题之间保持亲缘关系的项目。这里使用真实的官方字体，三种布局与配色是 Design Atlas 的原创组合。
+Recursive 把比例字体与等宽字体放在一个可变字体文件中，并能独立调整手写个性、字重、倾斜与草写字形。适合需要在界面、代码与展示标题之间保持亲缘关系的项目。这里使用真实的官方字体，三种布局与配色是 Web Atlas 的原创组合。
 
 ## 来源与参数
 

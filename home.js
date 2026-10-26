@@ -248,7 +248,7 @@
   document.getElementById('home-copy-prompt')?.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(prompt.value);
-      copyStatus.textContent = '调用示例已复制。安装 design-atlas skill 后，在 Agent 对话中使用。';
+      copyStatus.textContent = '调用示例已复制。安装 web-atlas skill 后，在 Agent 对话中使用。';
     } catch {
       prompt.focus();
       prompt.select();

@@ -1,6 +1,6 @@
 # Recursive 五轴字体试排
 
-本示例使用 ArrowType 的原始 `Recursive_VF_1.085.woff2`，通过本地 `@font-face` 加载。界面标题、等宽代码和个性海报是 Design Atlas 的原创排版组合，不是原作者预设或官网复刻。
+本示例使用 ArrowType 的原始 `Recursive_VF_1.085.woff2`，通过本地 `@font-face` 加载。界面标题、等宽代码和个性海报是 Web Atlas 的原创排版组合，不是原作者预设或官网复刻。
 
 使用静态 HTTP 服务打开 `index.html`；无框架、CDN、外部图片或运行时库依赖。完整导出需保留 `vendor/` 中的字体、许可和来源说明；`--code-only` 导出不含字体资产，不能据此验证真实字形。
 
@@ -18,7 +18,7 @@
 
 ## 适配与边界
 
-`theme=light`／`theme=dark` 可指定控件主题；同源嵌入继承父页面 `data-atlas-theme`，独立打开使用 Design Atlas 已保存的主题或系统偏好。代码与海报舞台保留各自的语义配色。
+`theme=light`／`theme=dark` 可指定控件主题；同源嵌入继承父页面 `data-atlas-theme`，独立打开使用 Web Atlas 已保存的主题或系统偏好。代码与海报舞台保留各自的语义配色。
 
 字体通过 `font-display: swap` 保留加载期间的阅读；完成 `document.fonts.load` 后才显示字体已加载，失败或不支持轴设置时使用系统后备。本示例没有连续动画、声音、轮询或绘制循环，因此无需暂停按钮，减少动态和后台均不主动改变内容。
 

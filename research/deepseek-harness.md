@@ -36,7 +36,7 @@ Hero使用全屏triangle strip，五色`#000/#000/#204a7e/#cec8bb/#000`，light 
 
 ## 源码组织与取材
 
-本地使用原始官网公开bundle注册模块，挂载`92502.HarnessContent`，由`89652.NextIntlClientProvider`提供完整文案。`runtime.js`只读取chunk的模块表，不执行Next启动回调；所有必要依赖预先加载。第三方模块保持原字节，放在Demo自己的`vendor/`，因此源码导出不会把运行必需JS误归为素材，也不改变Design Atlas主站架构。
+本地使用原始官网公开bundle注册模块，挂载`92502.HarnessContent`，由`89652.NextIntlClientProvider`提供完整文案。`runtime.js`只读取chunk的模块表，不执行Next启动回调；所有必要依赖预先加载。第三方模块保持原字节，放在Demo自己的`vendor/`，因此源码导出不会把运行必需JS误归为素材，也不改变Web Atlas主站架构。
 
 `app.js`仅适配路由、资源前缀、固定国内快照及无操作的统计接口。主页面模块在`vendor/app/[locale]/harness/page-82b977ba6da9187f.js`，页尾入口为模块85565，Three/R3F与Framer依赖留在对应原始chunks。`messages.js`保留中文和英文；`reference.css`合并四份源CSS并本地化资源。
 

@@ -615,7 +615,7 @@
       "status": "original-fallback",
       "purpose": "源端隐藏箭头URL返回HTML，本地不可见控制使用原创占位SVG；不替代任何主要摄影或可见入口。",
       "transform": "本地占位绘制，不声称来源下载图像。",
-      "copyright": "Design Atlas原创占位；来源URL只记录未取得的目标。"
+      "copyright": "Web Atlas原创占位；来源URL只记录未取得的目标。"
     }
   ],
   "sharedDependencies": [

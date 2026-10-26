@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {resolveRepositoryPath} from './build-agent.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const help = `Design Atlas — local, dependency-free Agent interface
+const help = `Web Atlas — local, dependency-free Agent interface
 node scripts/atlas.mjs search "深色 产品" [--category 产品] [--limit 5]
 node scripts/atlas.mjs show linear-workflow [--source]
 node scripts/atlas.mjs export linear-workflow --out <new-directory> [--code-only]
