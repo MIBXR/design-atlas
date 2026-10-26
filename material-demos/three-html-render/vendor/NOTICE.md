@@ -1,0 +1,26 @@
+# three-html-render 运行文件与第三方许可
+
+本目录自托管 `three@0.185.1` 与 `three-html-render@0.1.2` 的浏览器端 ESM。下列第三方文件保持来源原始字节；运行模块只改变文件名，通过入口 HTML 的 importmap 解析依赖，无需 CDN、框架或构建器。
+
+| 本地文件 | 原始来源 | 版本／提交 | 许可 |
+| --- | --- | --- | --- |
+| `three-0.185.1.module.js` | npm `three` 的 `build/three.module.js` | `0.185.1`／`2431a09f46f34c560bc8e44b33be0e567723d5b9` | MIT，three.js authors |
+| `three-0.185.1.core.js` | npm `three` 的 `build/three.core.js`，含 `HTMLTexture` | 同上 | MIT，three.js authors |
+| `interaction-manager-0.185.1.js` | npm `three` 的 `examples/jsm/interaction/InteractionManager.js` | 同上 | MIT，three.js authors |
+| `three-html-render-polyfill-0.1.2.mjs` | npm `three-html-render` 的 `dist/polyfill.mjs` | `0.1.2`／`63f085e3fe7be11f0679c0ac17edc2e18e743add` | MIT，repalash |
+| `dependencies.txt` | npm `three-html-render` 的 `dist/dependencies.txt` | 同上；记录打包依赖 `ts-browser-helpers@0.12.0` | MIT，repalash；完整许可原文随文件保留 |
+| `LICENSE-three.txt` | npm `three` 的 `LICENSE` | `0.185.1` | MIT，Copyright © 2010-2026 three.js authors |
+| `LICENSE-three-html-render.txt` | npm `three-html-render` 的 `LICENSE` | `0.1.2` | MIT，Copyright (c) 2025 repalash |
+| `LICENSE-HTML-Light-Demo.txt` | `jinruozai/HTML-Light-Demo` 的 `LICENSE` | `0a0bd3ba53194fff68db78654fc6857ab3faee29` | MIT，原文署名 Copyright (c) 2026 Gooooo |
+
+包与固定源码：
+
+- Three.js：[npm 发布包](https://registry.npmjs.org/three/-/three-0.185.1.tgz)、[固定源码提交](https://github.com/mrdoob/three.js/tree/2431a09f46f34c560bc8e44b33be0e567723d5b9)。
+- three-html-render：[npm 发布包](https://registry.npmjs.org/three-html-render/-/three-html-render-0.1.2.tgz)、[固定源码提交](https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add)。
+- HTML-Light-Demo：[固定参考提交](https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29)、[许可原文](https://github.com/jinruozai/HTML-Light-Demo/blob/0a0bd3ba53194fff68db78654fc6857ab3faee29/LICENSE)。
+
+本地 `demo.js` 的摆锤与 Verlet 约束、指针瞄准与拉拽、光束参数，以及 `texElementImage2D` 兼容垫片改写自 jinruozai 的 HTML-Light-Demo：`app/light/MorsLightCanvas.tsx`、`app/light/config.ts` 和 `app/light/three-html-compatibility.ts`。改写代码遵循其 MIT 许可；兼容垫片只包装 polyfill，不改变浏览器原生实现。
+
+创意与美术方向出自 [@kaolti](https://x.com/kaolti)。本样例不使用原作的品牌、名称、文案、标志与美术素材。“夜间阅读室”的 HTML 内容、排版与界面由 Web Atlas 原创。
+
+`HTMLTexture` 与 `InteractionManager` 来自 Three.js；three-html-render 提供 HTML-in-Canvas polyfill。固定版本组合为 `three@0.185.1`＋`three-html-render@0.1.2`，需配合上述兼容垫片使用。

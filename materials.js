@@ -797,6 +797,173 @@ window.DESIGN_MATERIALS = [
     ]
   },
   {
+    "id": "three-html-render",
+    "title": "three-html-render · HTML-in-Canvas polyfill",
+    "type": "component-library",
+    "category": "组件与效果",
+    "summary": "让 HTML-in-Canvas 标准 API 在所有浏览器可用，配合 three.js 内置的 HTMLTexture 和 InteractionManager，把实时、可交互的 HTML 画进 WebGL 贴图，并能在 3D 表面上继续点击。",
+    "install": "npm install three@0.185.1 three-html-render@0.1.2",
+    "demoNote": "默认体验吊灯照亮网页，也可切换基础平面；本地使用 Three.js 的 HTMLTexture 与 InteractionManager，以及 three-html-render 提供的浏览器 API polyfill。",
+    "tags": [
+      "HTML-in-Canvas",
+      "polyfill",
+      "Three.js",
+      "WebGL",
+      "HTMLTexture",
+      "InteractionManager",
+      "灯光",
+      "3D 交互"
+    ],
+    "useCases": [
+      "氛围型首屏",
+      "作品集",
+      "发布页",
+      "3D 展台中的可交互面板"
+    ],
+    "avoid": [
+      "信息密集页",
+      "长阅读页",
+      "对性能或电量敏感的移动端主流程"
+    ],
+    "constraints": [
+      "HTML-in-Canvas 是 WICG 的浏览器标准提案，原生支持处于实验阶段；本条目收录 three-html-render 库，不是标准本身。HTMLTexture 与 InteractionManager 从 three r185 起由 Three.js 提供，本库补齐浏览器 API。",
+      "浏览器有原生 texElementImage2D 时使用原生路径；缺少原生支持时退回 SVG foreignObject 光栅化。本地 localhost HTTP 下，无头 Edge 155.0.4283.62 已实测运行 WebGL，window.__HTML_IN_CANVAS_POLYFILL__ 为 true，实际使用 SVG foreignObject polyfill 路径；原生路径未验证。",
+      "固定 three 0.185.1 与 three-html-render 0.1.2；0.1.x 存在版本风险，本组合需要 texElementImage2D 兼容垫片。npm 0.1.2 未提供 README 所述的 html-texture／interaction-manager 子路径，需使用 Three.js 自带接口。",
+      "通过 HTTP/HTTPS 访问；WebGL 不可用或初始化失败时保留同一 HTML 页面，以 CSS 径向渐变显示静态灯光，并明确标注后备状态。已实测禁用 WebGL 的独立 Edge 进程，1440px 与 390px 后备保留主题点击、清除 polyfill host 并显示指定说明。",
+      "页面宽度随视口更新，HTMLTexture 尺寸与相机取景随 resize 更新；390px 及以下重排为单列，不使用固定画幅缩小页面。",
+      "减少动态时吊灯固定在初始角度，平面不倾斜；面板仍可即时调整，不播放过渡动画。正常模式已实测拖拽后松手约 0、0.5、1.5 秒画面不同，1.5 秒仍在摆动；最终绘制计数稳定，停止渲染。",
+      "CDP 单指触摸模拟已验证正文拖灯、滚动后选中色板；真实触屏设备、其他浏览器、长期性能与电量表现未验证。",
+      "保留 three-html-render、Three.js 和 HTML-Light-Demo 的独立 MIT 许可与署名；创意与美术方向署名 @kaolti，本地不使用原作品牌、文案或美术素材。"
+    ],
+    "upstream": {
+      "repository": "repalash/three-html-render",
+      "url": "https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add",
+      "commit": "63f085e3fe7be11f0679c0ac17edc2e18e743add",
+      "version": "0.1.2",
+      "threeVersion": "0.185.1",
+      "verifiedAt": "2026-10-27"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/repalash/three-html-render/blob/63f085e3fe7be11f0679c0ac17edc2e18e743add/LICENSE",
+      "scope": "three-html-render 为 repalash 的 MIT 软件；Three.js 核心与 InteractionManager addon 为 MIT；摆锤、拉拽、光束参数和兼容垫片改写自 jinruozai 的 MIT 项目 HTML-Light-Demo。",
+      "notes": "vendor 保留各包原始字节、许可与 NOTICE。创意与美术方向出自 @kaolti（https://x.com/kaolti）；本样例使用原创中文夜间阅读室内容，不使用原作品牌、文案与美术。"
+    },
+    "sources": [
+      {
+        "title": "three-html-render 固定版本源码",
+        "url": "https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add",
+        "note": "核对 HTML-in-Canvas polyfill、原生能力探测、SVG foreignObject 光栅化和软件许可。",
+        "evidence": "source"
+      },
+      {
+        "title": "three-html-render 0.1.2 npm 元数据",
+        "url": "https://registry.npmjs.org/three-html-render/0.1.2",
+        "note": "固定 npm 版本与 gitHead；分发包 exports 不包含 html-texture／interaction-manager 子路径。",
+        "evidence": "source"
+      },
+      {
+        "title": "three 0.185.1 npm 分发",
+        "url": "https://registry.npmjs.org/three/0.185.1",
+        "note": "本地固定的 Three.js 核心、HTMLTexture 和 InteractionManager addon 来自此版本，均保留 MIT 许可。",
+        "evidence": "source"
+      },
+      {
+        "title": "Three.js HTMLTexture 固定版本源码",
+        "url": "https://github.com/mrdoob/three.js/blob/2431a09f46f34c560bc8e44b33be0e567723d5b9/src/textures/HTMLTexture.js",
+        "note": "HTMLTexture 属于 Three.js 核心；本样例以其连接真实 HTML 与 WebGL 贴图。",
+        "evidence": "source"
+      },
+      {
+        "title": "Three.js InteractionManager 固定版本源码",
+        "url": "https://github.com/mrdoob/three.js/blob/2431a09f46f34c560bc8e44b33be0e567723d5b9/examples/jsm/interaction/InteractionManager.js",
+        "note": "平面交互使用此 Three.js addon，采用 Three.js 的 MIT 许可。",
+        "evidence": "source"
+      },
+      {
+        "title": "WICG HTML-in-Canvas 提案",
+        "url": "https://github.com/WICG/html-in-canvas",
+        "note": "浏览器标准提案与实验支持状态；本库的 polyfill 及本地样例不等同于标准或浏览器原生实现。",
+        "evidence": "source"
+      },
+      {
+        "title": "HTML-Light-Demo 吊灯机制与参数",
+        "url": "https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29/app/light",
+        "note": "摆锤与 Verlet 约束、指针瞄准与拉拽、光束初始参数及 texElementImage2D 兼容垫片的改写依据；MIT，作者 jinruozai。",
+        "evidence": "source"
+      },
+      {
+        "title": "创意与美术方向署名",
+        "url": "https://x.com/kaolti",
+        "note": "创意与美术方向出自 @kaolti；本地不分发原作品牌、文案或美术素材。",
+        "evidence": "source"
+      }
+    ],
+    "demos": [
+      {
+        "id": "lamp",
+        "title": "吊灯照亮网页",
+        "component": "HTMLTexture / SpotLight / Verlet",
+        "summary": "拖动吊灯照亮原创夜间阅读室，松手观察摆动；用 DOM 面板调整角度、亮度与颜色。",
+        "entrypoint": "material-demos/three-html-render/index.html?demo=lamp",
+        "parameters": [
+          {
+            "name": "angle",
+            "value": "34°",
+            "note": "参考 config.ts 的初始光束角度；滑杆可调。"
+          },
+          {
+            "name": "brightness",
+            "value": "1450",
+            "note": "参考 config.ts 的初始亮度；滑杆可调。"
+          },
+          {
+            "name": "color",
+            "value": "#ffb36b",
+            "note": "初始暖色；色板为 #ffb36b、#ffd9a3、#8fdcff、#c79cff、#ff5f7f。"
+          },
+          {
+            "name": "输入",
+            "value": "左键／单指拖拽、右键、双击、DOM 面板",
+            "note": "右键拖动调角度，右键单击切颜色，双击复位；触屏及键盘通过面板访问对应功能。"
+          }
+        ]
+      },
+      {
+        "id": "plane",
+        "title": "基础平面",
+        "component": "HTMLTexture / InteractionManager",
+        "summary": "在轻微倾斜的 3D 平面上切换阅读主题，观察贴图内按钮的悬停与键盘焦点。",
+        "entrypoint": "material-demos/three-html-render/index.html?demo=plane",
+        "parameters": [
+          {
+            "name": "倾斜",
+            "value": "最大 8°",
+            "note": "指针移动带动平面；减少动态时保持静止。"
+          },
+          {
+            "name": "主题",
+            "value": "三个真实 HTML 按钮",
+            "note": "Three.js InteractionManager 处理平面交互；鼠标点击切换说明、贴图内悬停和 Tab focus-visible 均已在本地无头 Edge 观察。"
+          }
+        ]
+      }
+    ],
+    "prompt": "使用固定版本 three 0.185.1 与 three-html-render 0.1.2，以原生 HTML/CSS/JavaScript 和本地 importmap 构建可交互 HTML 贴图。由 Three.js HTMLTexture 与 InteractionManager 连接页面和 3D 表面，three-html-render 补齐浏览器 HTML-in-Canvas API，并保留本组合所需的 texElementImage2D 兼容垫片。以原创中文夜间阅读室为内容，保留三个主题按钮及真实 DOM 灯光面板；吊灯使用 Verlet 摆锤和约束，支持鼠标与单指拉拽，静止后停下渲染。以 34°、1450、#ffb36b 为初始光束参数，面板提供角度、亮度、色板、开关及复位。页面随视口重排，390px 及以下使用单列，贴图与相机同步 resize；文字最终至少 12px，功能图标使用有可访问名称的内联 SVG。减少动态时固定灯和页面且即时调整；WebGL 不可用或初始化失败时显示同一 HTML 的 CSS 静态灯光和后备说明。分别核验实际渲染路径、键盘焦点、DOM 保留及桌面手机效果，未实测的读屏能力标明未验证；保留独立 MIT 许可和 @kaolti 署名。",
+    "accessibility": {
+      "keyboard": "本地无头 Edge 实测 Tab 可聚焦真实 DOM 主题按钮与面板 input，ArrowRight 可将角度从 34 调至 35；plane 的 focus-visible 在贴图中可见。DOM 仍连接文档，polyfill 将同一元素移入 body 内的透明 host，不是隐藏副本。本地 host 使用 transform-style: flat 适配命中测试，不改 vendor。读屏器未验证。",
+      "reducedMotion": "本地无头 Edge 的 reduce 模拟下吊灯固定，间隔 1 秒的绘制计数保持 5，计算 transitionDuration 为 0s；面板与右键调整仍即时生效。右键单击切换下一颜色，右拖 100px 将角度 34 调至 48，双击恢复 34 与初始色。平面在减少动态时不倾斜。"
+    },
+    "demo": "material-demos/three-html-render/index.html",
+    "preview": "previews/materials/three-html-render.png",
+    "research": "docs/materials-three-html-render.md",
+    "sourceFiles": [
+      "material-demos/three-html-render/index.html",
+      "material-demos/three-html-render/demo.css",
+      "material-demos/three-html-render/demo.js"
+    ]
+  },
+  {
     "id": "wired-elements",
     "title": "Wired Elements · 可操作的手绘草稿",
     "type": "component-library",
