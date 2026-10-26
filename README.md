@@ -267,7 +267,7 @@ npm start
 
 首次进入文档中心只展开当前文档所在分类，其余分类可手动展开。目录控制与长分类标题保持置顶；切换文档只更新正文与本文目录，保留左栏的开合和滚动位置。本文目录支持章节定位，手机可随时从右下角展开。
 
-文档目录与静态发布使用同一份清单：新增 `.md` 放入已公开的 `docs/`、`research/`、`prompts/` 等目录后，`npm run build` 会自动收录到 `documents.js`；`npm run check` 会拒绝未重建的目录。根目录新文档或新的公开目录需先加入 `scripts/build-static.mjs` 的发布清单，再构建、校验并发布网站；Git push 本身不会自动收录或上线。完整维护规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+文档目录与静态发布使用同一份清单：新增 `.md` 放入已公开的 `docs/`、`research/`、`prompts/` 等目录后，`npm run build` 会自动收录到 `documents.js`。根目录新文档或新的公开目录需先加入 `scripts/build-static.mjs` 的发布清单，再构建、校验并发布网站；Git push 本身不会自动收录或上线。完整维护规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 资料结构与维护
 
@@ -302,12 +302,11 @@ scripts/                      本机服务、目录生成、静态构建与资�
 .openai/hosting.json           现有Sites项目与静态目录配置
 ```
 
-`npm run build` 同步案例、巧思与素材目录、完整 Agent 包、Prompt 和公开文档目录；`npm run check` 检查条目字段、本地引用、JS 语法、预览、README 画廊与公开文档目录。`npm test` 运行少量收藏备份与取材导出边界检查；受影响页面通过实际浏览器验收交互、布局、字体与资源加载。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含 Git 元数据和本地服务。新增或修改案例、提取巧思与维护文档遵循 [贡献流程](CONTRIBUTING.md)。
+`npm run build` 同步案例、巧思与素材目录、完整 Agent 包、Prompt 和公开文档目录；`npm run check` 检查页面引用的本地文件是否存在；受影响页面通过实际浏览器验收交互、布局、字体与资源加载。`npm run build:site` 生成引用固定 GitHub 素材的部署目录 `dist/`，不含 Git 元数据和本地服务。新增或修改案例、提取巧思与维护文档遵循 [贡献流程](CONTRIBUTING.md)。
 
 ```bash
 npm run build
 npm run check
-npm test
 npm run build:site
 ```
 

@@ -64,7 +64,7 @@ Design Atlas 的案例库是站点界面的设计基准。案例库、巧思库�
 
 终态文件包括 `entries/<id>.json`、`research/<id>.md`、`demos/<id>/`、`previews/<id>.jpg` 和 `previews/mobile/<id>.jpg`。标准预览来自实际浏览器：桌面为横向、手机为纵向，扩展名须匹配真实图片编码；检查两份预览的存在、尺寸与结构完整性，不强制精确像素宽度。素材清单包含本地字体、图像、音视频及必要的独立运行模块。
 
-条目的基础字段以 `scripts/check.mjs` 为准。`composition` 包含 color、typography、layout、imagery、shape、hierarchy、motion、coherence。`sources` 至少含真实实例与理论／规范，注明每条来源所支持的结论。
+`composition` 包含 color、typography、layout、imagery、shape、hierarchy、motion、coherence。`sources` 至少含真实实例与理论／规范，注明每条来源所支持的结论。
 
 `themeBehavior` 包含 `mode`（fixed / system / manual / system-and-manual）、`default`（light / dark / system）、`control` 和 `designReason`。`soundBehavior` 包含 `kind`（none / background / video / external / interactive）、`control` 和 `interactionRole`。这两项用于案例说明、比较及实验室配置；参考库显示主题与独立品牌Demo的主题分别管理。
 
@@ -118,9 +118,9 @@ Prompt应写结构、尺度、素材、关键状态及交接、音乐和主题�
 
 ## 验收与提交
 
-`npm test` 保留收藏备份合并与非法导入原子性、实际导出原字节与省略声明及拒绝覆盖的少量边界检查。`npm run check` 检查条目、引用、语法、预览、README 和公开文档目录；受影响页面的交互、布局、字体与资源加载通过实际浏览器验收。
+`npm run check` 检查页面引用的本地文件是否存在；受影响页面的交互、布局、字体与资源加载通过实际浏览器验收。
 
-新增案例的同步链路是：锁定来源与范围、完成原站全模块／状态观察和参数核对 → 写入 `entries/`、研究、Demo 与预览 → 完成原站／本地动态对照与独立复核 → 按实际独立机制提取巧思并复核共享来源 → 同步 README 画廊卡片、分类数字、相关比较研究及公开文档 → `npm run build`（含自动文档目录） → `npm run check` 与 `npm test` → 在功能分支提交、推送并提出PR → 以已验证提交运行 `npm run build:site` 与站点发布，并抽查发布版本的相同关键状态。构建扫描全部条目与巧思，同步人类目录、Prompt、Agent案例／巧思索引及完整包；构建保留完整来源记录、正文与文件路径。README 总数由构建生成，画廊介绍保持人工策展；检查要求每个案例在正确分类中恰有一张卡片，并有桌面预览、手机预览、研究、Prompt 与 Demo 链接。
+新增案例的同步链路是：锁定来源与范围、完成原站全模块／状态观察和参数核对 → 写入 `entries/`、研究、Demo 与预览 → 完成原站／本地动态对照与独立复核 → 按实际独立机制提取巧思并复核共享来源 → 同步 README 画廊卡片、分类数字、相关比较研究及公开文档 → `npm run build`（含自动文档目录） → `npm run check` → 在功能分支提交、推送并提出PR → 以已验证提交运行 `npm run build:site` 与站点发布，并抽查发布版本的相同关键状态。构建扫描全部条目与巧思，同步人类目录、Prompt、Agent案例／巧思索引及完整包；构建保留完整来源记录、正文与文件路径。README 总数由构建生成，画廊介绍保持人工策展；检查要求每个案例在正确分类中恰有一张卡片，并有桌面预览、手机预览、研究、Prompt 与 Demo 链接。
 
 代码检查、图片格式／尺寸、Skill 取材和部署状态分别验证当前源码、文件与交付；它们不证明官网模块、布局或交互已经准确复现。提交说明分别报告这些结果和动态对照结果，不以测试数量替代还原结论。
 
