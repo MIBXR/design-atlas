@@ -12,7 +12,7 @@ export function buildAssetSources(sourceRoot = root, commit) {
   if (!/^[a-f\d]{40}$/.test(commit || '')) throw new Error('Choose a published full Git commit with --commit.');
   const result = spawnSync('git', ['-C', sourceRoot, 'ls-tree', '-r', '-l', '-z', commit], {encoding:'utf8', maxBuffer:16 * 1024 * 1024});
   if (result.status !== 0) throw new Error('Cannot read the selected media commit: ' + (result.error?.message || result.stderr.trim()));
-  const baseUrl = `https://raw.githubusercontent.com/MIBXR/design-atlas/${commit}/`;
+  const baseUrl = `https://raw.githubusercontent.com/MIBXR/web-atlas/${commit}/`;
   const assets = {};
   for (const record of result.stdout.split('\0').filter(Boolean)) {
     const tab = record.indexOf('\t');
@@ -34,7 +34,7 @@ export function loadAssetSources(sourceRoot = root) {
   const match = text.match(/(?:globalThis|window|self)\.DesignAtlasAssetSources\s*=\s*(\{[\s\S]*\})\s*;\s*$/);
   if (!match) throw new Error('asset-sources.js must contain the generated media map.');
   const sources = JSON.parse(match[1]);
-  if (!/^[a-f\d]{40}$/.test(sources.commit) || sources.baseUrl !== `https://raw.githubusercontent.com/MIBXR/design-atlas/${sources.commit}/`) throw new Error('Media URLs must use the selected Git commit.');
+  if (!/^[a-f\d]{40}$/.test(sources.commit) || sources.baseUrl !== `https://raw.githubusercontent.com/MIBXR/web-atlas/${sources.commit}/`) throw new Error('Media URLs must use the selected Git commit.');
   return sources;
 }
 

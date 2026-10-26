@@ -129,7 +129,7 @@ export function buildPatterns({ root = defaultRoot, patterns, caseRecords, caseB
     bundles.push(bundle);
     return { ...pattern, paths: { bundle: relative } };
   });
-  const catalog = { schemaVersion: 1, patternCount: records.length, repository: 'https://github.com/MIBXR/design-atlas', patterns: records };
+  const catalog = { schemaVersion: 1, patternCount: records.length, repository: 'https://github.com/MIBXR/web-atlas', patterns: records };
   outputs.set('agent/patterns.json', encode(catalog));
   outputs.set('patterns.js', Buffer.from('window.DESIGN_PATTERNS = ' + JSON.stringify(patterns, null, 2) + ';\n', 'utf8'));
   if (write) {

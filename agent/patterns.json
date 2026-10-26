@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "patternCount": 135,
-  "repository": "https://github.com/MIBXR/design-atlas",
+  "repository": "https://github.com/MIBXR/web-atlas",
   "patterns": [
     {
       "id": "activity-title-ticket-overlap",

@@ -1,10 +1,12 @@
-# Design Atlas：从真实需求取得设计依据
+# Web Atlas：从真实需求取得设计依据
 
 这是前端设计参考库。`entries/`、`patterns/`、`materials/`、研究和可运行 Demo 是内容源，`agent/` 是构建时生成的读取接口。完整案例说明机制如何协作，设计巧思保存可独立借用的原子，内容素材保存带许可和可操作样例的实际资源。网页继续供人预览、对照和调配。真实品牌案例固定为标注日期的局部学习快照；经典风格条目是构成练习。`studyScope: "visual-adaptation"` 表示官方影像等资料的教学网页转译，不能将其中本地设计的交互说成官网实测行为；请结合研究、复现范围与巧思的证据等级取材。
 
+本库收录以网页为载体的设计：观看者自己滚动、点击和阅读，画面随屏幕宽度重排。视频，以及固定画幅、按时间线播放的操作台与展示台，不在本库范围内。
+
 ## skill 与案例库的关系
 
-案例内容保存在本仓库。独立 [skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas) 保存选型工作流、获取脚本和上游配置；它从本仓库读取目录、案例资料和文件，不保存整套网站副本。新会话解析上游默认分支的最新完整提交 SHA，后续检索、讨论和取材使用这个会话版本；需要查看刚新增的案例时显式刷新会话。也可以指定完整 SHA 复现旧版本，或指定本地仓库离线读取。
+案例内容保存在本仓库。独立 [skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/web-atlas) 保存选型工作流、获取脚本和上游配置；它从本仓库读取目录、案例资料和文件，不保存整套网站副本。新会话解析上游默认分支的最新完整提交 SHA，后续检索、讨论和取材使用这个会话版本；需要查看刚新增的案例时显式刷新会话。也可以指定完整 SHA 复现旧版本，或指定本地仓库离线读取。
 
 “案例包”是 `agent/cases/<id>.json`：完整 `entry`、网页右侧说明 `webNotes`、文档原文 `documents`、源码与素材清单 `files`。JSON 包含资料原文及文件路径／角色；源码和二进制素材通过清单自动获取，导出时保存为可运行的原始文件。
 
@@ -46,7 +48,7 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 - `agent/patterns/<id>.json`：完整 `pattern` 与关联 `sourceCases`；不会把巧思声称为另一个独立运行Demo。
 - [内容素材目录](agent/materials.json)：资源摘要、类型、适用与避用场景，以及独立素材包路径。
 - `agent/materials/<id>.json`：完整 `material`、文档原文、运行文件清单与 `sourceFiles`，可独立导出。
-- [轻量 skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)：发现最新目录，在同一会话版本中筛选、读取与导出。
+- [轻量 skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/web-atlas)：发现最新目录，在同一会话版本中筛选、读取与导出。
 
 在线站提供相同的资料路径。部署索引的 `source.commit` 与 `source.baseUrl` 指向对应的 GitHub 提交，把文件相对路径接在此基址后取得原始文件；“复制 Agent 入口”使用该发布版本。探索最新内容时通过 skill 创建新会话。网站播放 HTML／CSS 会转换素材地址、文档会加 UTF-8 标记，取材使用固定提交的原始 Git 文件。
 

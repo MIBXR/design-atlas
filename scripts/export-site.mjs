@@ -4,7 +4,7 @@ import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const repository = 'MIBXR/design-atlas';
+const repository = 'MIBXR/web-atlas';
 
 function git(directory, args) {
   const result = spawnSync('git', args, {cwd:directory, encoding:'utf8'});

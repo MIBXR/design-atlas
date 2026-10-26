@@ -106,7 +106,7 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
     bundles.push(bundle);
     return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, entry: `materials/${material.id}.json`, preview: material.preview } };
   });
-  const catalog = { schemaVersion: 1, repository: 'https://github.com/MIBXR/design-atlas', materialCount: records.length, materials: records };
+  const catalog = { schemaVersion: 1, repository: 'https://github.com/MIBXR/web-atlas', materialCount: records.length, materials: records };
   outputs.set('agent/materials.json', encode(catalog));
   outputs.set('materials.js', Buffer.from('window.DESIGN_MATERIALS = ' + JSON.stringify(materials, null, 2) + ';\n', 'utf8'));
   if (write) {

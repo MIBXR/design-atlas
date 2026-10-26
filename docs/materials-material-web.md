@@ -2,7 +2,7 @@
 
 [操作四种样例](../material-demos/material-web/index.html) · [结构化条目](../materials/material-web.json) · [官方仓库](https://github.com/material-components/material-web)
 
-Google 的 `@material/web` 将 Material 3 设计语言实现为 Web Components，使用 Lit。这里选取的是官方 Material Web 软件，不是 MUI、Angular Material，也不是完整设计规范的复刻。四个业务组合、中文内容、配色控件与原创 SVG 属于 Design Atlas；按钮、文本框、开关、滑块和对话框使用真实官方实现。
+Google 的 `@material/web` 将 Material 3 设计语言实现为 Web Components，使用 Lit。这里选取的是官方 Material Web 软件，不是 MUI、Angular Material，也不是完整设计规范的复刻。四个业务组合、中文内容、配色控件与原创 SVG 属于 Web Atlas；按钮、文本框、开关、滑块和对话框使用真实官方实现。
 
 ## 来源与当前边界
 

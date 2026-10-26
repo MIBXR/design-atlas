@@ -35,4 +35,4 @@ http.createServer((req,res) => {
     if(req.method==='HEAD'||!stat.size){res.end();return;}
     const stream=fs.createReadStream(file,{start,end});stream.on('error',()=>res.destroy());res.on('close',()=>stream.destroy());stream.pipe(res);
   });
-}).listen(port, '127.0.0.1', () => console.log(`Design Atlas: http://127.0.0.1:${port}`));
+}).listen(port, '127.0.0.1', () => console.log(`Web Atlas: http://127.0.0.1:${port}`));

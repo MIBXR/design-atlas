@@ -1,6 +1,6 @@
 <div align="center">
 
-# DESIGN ATLAS
+# WEB ATLAS
 
 ### 可交互 · 可查询 · 可回看的个人网页设计案例、巧思与内容素材库
 
@@ -12,11 +12,31 @@
 
 [打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [案例库](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [巧思库](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [内容素材库](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/document.html) · [完整索引](research/CASE-INDEX.md)
 
-![Design Atlas 实际 Demo 全景](docs/readme/cover.webp)
+![Web Atlas 实际 Demo 全景](docs/readme/cover.webp)
 
 <sub>配图来自可运行 Demo 的实际浏览器截图。</sub>
 
 </div>
+
+## 收录边界
+
+本库收录以网页为载体的设计：观看者自己滚动、点击和阅读，画面随屏幕宽度重排。页面里的动效、声音和内容组织都属于网页的一部分，一并收录。
+
+**收录**
+- 网站与网页应用的完整案例
+- 能从案例中单独借用的视觉、微动效、页面动效、声音与内容组织巧思
+- 组件库、字体、图像、Shader 等内容素材
+- 经典设计语言的构成练习
+
+**不收录**
+- 视频，以及固定画幅、按时间线播放的操作台与展示台。这类作品收录在 Motion Atlas。
+
+**判定**
+1. 最终形态是网站或网页应用：收录。
+2. 最终形态是视频，或是固定画幅、带时间轴的操作台／展示台：不收录，即使它运行在浏览器里。
+3. 仍难判断时，设想把它逐帧导出为视频。核心价值仍在，它是时间线作品；价值依赖重排、滚动阅读和观看者自己的节奏，它属于本库。
+4. 同一来源在两种载体上都有价值时，只收录网页部分，条目本身保持完整。
+5. 主题相同、表现形式不同的作品可以分别出现在两个库里，各自是独立条目，互不引用。
 
 ## 在这里能做什么
 
@@ -33,7 +53,7 @@
 - **内容素材库**：在代表性样例中试用组件与资源，按类型、用途与关键词筛选；详情保留参数、安装方式、源码、Prompt、版本、来源与许可证。Google Material Web、手绘 Wired Elements、复古 98.css、Recursive 可变字体与 Shaders 提供不同的组件语言、试排与视觉效果，按需载入并保留明确的兼容性后备；完整库与作者工具回到原始仓库。
 - **试验**：配色、字体、布局、留白、形状、图形、层级、质感与动效都能在设计实验室中直接改变画面；深浅主题按背景、表面、文字与强调角色一起变化，JSON和Prompt导出保留实际选择。
 - **复用**：复制案例 Prompt，将品牌、内容和资产换为自己的输入；约束与负向 Prompt 一起使用。
-- **Agent 选型**：调用 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
+- **Agent 选型**：调用 [web-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/web-atlas)，先了解最新目录，再围绕需求迭代筛选，自动取得完整说明、文档和源码。也可从 [Agent 入口](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) 直接取指定案例。
 - **桌面与手机**：每个案例保留真实桌面与手机预览；手机页面目录默认收在顶栏，长页面提供浮动“回到顶部”。
 - **主题与声音**：案例库支持跟随系统／浅色／深色；每个案例说明原站的主题方式、音乐或媒体声音及其交互作用，固定品牌主题保留原貌。
 - **收藏**：案例、巧思与素材都能收藏，使用同一个 JSON 文件导出／合并导入，兼容已有案例备份；保存在当前浏览器，不同设备或域名不会自动同步。
@@ -44,11 +64,11 @@
 
 ## 网站也从自己的案例中学习
 
-Design Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案例](research/chatgpt-platform.md) 的滚动交接，用同一展示窗串起浏览案例、调配元素与参考构建；实验室把案例的配色、排版与构成机制迁移到同一份内容上，让方案可以实际操作与比较。
+Web Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案例](research/chatgpt-platform.md) 的滚动交接，用同一展示窗串起浏览案例、调配元素与参考构建；实验室把案例的配色、排版与构成机制迁移到同一份内容上，让方案可以实际操作与比较。
 
 从案例中找依据，在实际使用中观察，再结合人的反馈改进网站本体。这也是这份案例库从参考走向实践的过程。
 
-![Design Atlas 首页：案例、巧思与实践入口](docs/site/home.jpg)
+![Web Atlas 首页：案例、巧思与实践入口](docs/site/home.jpg)
 
 | 首页中的真实实验室 | 案例库 |
 | --- | --- |
@@ -84,7 +104,7 @@ node scripts/atlas.mjs show linear-workflow --source
 node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 ```
 
-命令只需 Node.js，无需安装依赖。完整导出保留运行所需相对路径和原始素材；`--code-only` 会明确列出尚未导出的媒体。数据契约与真实任务适配方法见 [AGENT.md](AGENT.md)。独立 [design-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/design-atlas) 保存获取脚本与会话版本指针，新会话发现上游默认分支最新提交后固定版本，持续讨论可显式刷新。完整案例仍在本仓库，新增案例无需更新 Skill；未合并 PR 可用 `--ref <已推送的完整SHA>` 读取，支持无需克隆整个库的远程取材。
+命令只需 Node.js，无需安装依赖。完整导出保留运行所需相对路径和原始素材；`--code-only` 会明确列出尚未导出的媒体。数据契约与真实任务适配方法见 [AGENT.md](AGENT.md)。独立 [web-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/web-atlas) 保存获取脚本与会话版本指针，新会话发现上游默认分支最新提交后固定版本，持续讨论可显式刷新。完整案例仍在本仓库，新增案例无需更新 Skill；未合并 PR 可用 `--ref <已推送的完整SHA>` 读取，支持无需克隆整个库的远程取材。
 
 ## 内容素材取材
 

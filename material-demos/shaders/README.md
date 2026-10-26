@@ -13,7 +13,7 @@
 | `cursor-ripples` | `CursorRipples` | 指针移动与触摸拖动；可调波纹强度、衰减速度、影响半径和边缘色散 |
 | `noise-dissolve` | `NoiseDissolve` | 拖动溶解进度，0 为完整输入图形、1 为消失；可调噪声密度和边缘柔度 |
 
-入口示例：`index.html?effect=fluted-glass`。查询参数 `theme=light`／`theme=dark` 可指定控件主题。未指定时，同源嵌入继承父页面的 `data-atlas-theme` 并监听其变化；独立页面读取 Design Atlas 已保存的主题或系统偏好。演示舞台保持深色背景。
+入口示例：`index.html?effect=fluted-glass`。查询参数 `theme=light`／`theme=dark` 可指定控件主题。未指定时，同源嵌入继承父页面的 `data-atlas-theme` 并监听其变化；独立页面读取 Web Atlas 已保存的主题或系统偏好。演示舞台保持深色背景。
 
 ## 运行行为
 

@@ -161,7 +161,7 @@ export function prepareStatic(assetsMode = 'local') {
   finalize(output);
   const catalogPath = path.join(output, 'agent', 'catalog.json');
   const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-  catalog.source = {repository:'MIBXR/design-atlas', commit:sourceCommit, baseUrl:`https://raw.githubusercontent.com/MIBXR/design-atlas/${sourceCommit}/`};
+  catalog.source = {repository:'MIBXR/web-atlas', commit:sourceCommit, baseUrl:`https://raw.githubusercontent.com/MIBXR/web-atlas/${sourceCommit}/`};
   fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 2) + '\n', 'utf8');
   if (fs.existsSync(path.join(output, '.git'))) throw new Error('Git metadata cannot be served.');
   console.log(`Prepared dist (${assetsMode} assets): ${totalBytes} bytes (${(totalBytes / 1024 / 1024).toFixed(3)} MiB).`);
