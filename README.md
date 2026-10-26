@@ -7,7 +7,7 @@
 从真实网站学习设计，让配色、排版、图像、形状和动效共同工作；从完整案例理解整体，把独立巧思组合成自己的设计；亲手试用组件与内容素材，再带着使用方式和授权边界取材。
 
 <!-- atlas-counts:start -->
-**36 个案例**　·　**28 个品牌／文化研究**　·　**8 种经典设计语言**
+**38 个案例**　·　**28 个品牌／文化研究**　·　**8 种经典设计语言**　·　**2 个示范作品**
 <!-- atlas-counts:end -->
 
 [打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [案例库](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [巧思库](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [内容素材库](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/document.html) · [完整索引](research/CASE-INDEX.md)
@@ -27,6 +27,7 @@
 - 能从案例中单独借用的视觉、微动效、页面动效、声音与内容组织巧思
 - 组件库、字体、图像、Shader 等内容素材
 - 经典设计语言的构成练习
+- 公开 skill 或生成工具仓库中随固定提交发布的示范作品；内容可能虚构，重点研究页面的设计机制及有据可查的基线差别。
 
 **不收录**
 - 视频，以及按时间线播放的操作台与展示台。这类作品收录在 Motion Atlas。
@@ -47,7 +48,7 @@
 
 真实网站案例固定为所标注网址与采集日期的单一归档；完成后保留当时的页面与交互，不追随官网后续变化。
 
-- **查找**：按产品、游戏/IP、艺术文化、经典语言与国家／地区筛选；搜索品牌、配色、布局、交互或约束。分类、地区、搜索与排序保留在 URL 中，支持刷新恢复、浏览器前进／后退和分享筛选结果（例如 `cases.html?category=games`）。
+- **查找**：按产品、游戏/IP、艺术文化、经典语言、示范作品与国家／地区筛选；搜索品牌、配色、布局、交互或约束。分类、地区、搜索与排序保留在 URL 中，支持刷新恢复、浏览器前进／后退和分享筛选结果（例如 `cases.html?category=showcases`）。
 - **体验**：在详情内滚动、悬停、切换和播放，或独立打开完整 Demo；案例与巧思共用适应面板、桌面 1440px、手机 ≤390px 和重播控件，高度随可用视口调整，内容在 Demo 内滚动。
 - **比较**：选择2–3项并排比较，七节说明按同名章节逐行对齐；每行采用最长内容所需的自然高度，便于比较不同案例在同一设计维度上的区别。
 - **巧思库**：独立巧思页按视觉、微动效、页面动效、声音、内容与组织筛选，再按功能用途、来源案例与关键词找可单独借用的机制；首页和实验室可实际操作本地示意，巧思详情按需载入完整来源 Demo；每项有触发、结果、适用场景、边界、组合建议、Prompt和完整案例回跳。同一机制可以来自多个案例，也可以与其他案例的机制组合。
@@ -133,7 +134,7 @@ python ATLAS_SCRIPT --session SESSION_FILE material-export shaders --out NEW_DIR
 
 ## 案例画廊
 
-图片进入对应在线案例，文字链接可直接阅读 Prompt、研究与代码。品牌页面按各自注明范围归档复现，官方影像条目明确标记网页转译，经典语言是有真实参考与理论依据的构成练习。
+图片进入对应在线案例，文字链接可直接阅读 Prompt、研究与代码。品牌页面按各自注明范围归档复现，官方影像条目明确标记网页转译，经典语言是有真实参考与理论依据的构成练习；示范作品归档来源仓库的固定提交，虚构人物与机构文案按示范内容阅读。
 
 ### 产品与平台 · 9
 
@@ -225,6 +226,17 @@ python ATLAS_SCRIPT --session SESSION_FILE material-export shaders --out NEW_DIR
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/retro-80s"><img src="previews/retro-80s.jpg" alt="80年代：合成器面板 实际代码预览" width="100%"></a><br><strong>80年代：合成器面板</strong><br><sub>复古硬件面板、音色预设与实时短音符反馈。</sub><br><br><a href="prompts/retro-80s.md">Prompt</a> · <a href="research/retro-80s.md">研究</a> · <a href="demos/retro-80s">代码</a> · <a href="previews/mobile/retro-80s.jpg">手机预览</a></td>
 <td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/pixel-world"><img src="previews/pixel-world.jpg" alt="像素：微型世界 实际代码预览" width="100%"></a><br><strong>像素：微型世界</strong><br><sub>整数像素网格、地点移动与可保存的旅行手账。</sub><br><br><a href="prompts/pixel-world.md">Prompt</a> · <a href="research/pixel-world.md">研究</a> · <a href="demos/pixel-world">代码</a> · <a href="previews/mobile/pixel-world.jpg">手机预览</a></td>
 <td></td>
+</tr>
+</table>
+
+### 示范作品 · 2
+
+公开技能仓库中的完整示范页，保留原文与设计，只将外链资源本地化；研究页面机制及明确存在的基线，不将示范设定作为现实事实。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/stellar-museum"><img src="previews/stellar-museum.jpg" alt="星槎 STELLAR · 太空探索博物馆 实际代码预览" width="100%"></a><br><strong>星槎 STELLAR · 太空探索博物馆</strong><br><sub>编辑式长页、程序化三维展厅及未使用技能的基线对照。</sub><br><br><a href="prompts/stellar-museum.md">Prompt</a> · <a href="research/stellar-museum.md">研究</a> · <a href="demos/stellar-museum">代码</a> · <a href="previews/mobile/stellar-museum.jpg">手机预览</a></td>
+<td width="33%" valign="top"><a href="https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html#style/mira-host-photography"><img src="previews/mira-host-photography.jpg" alt="Mira Høst · 北欧摄影作品集 实际代码预览" width="100%"></a><br><strong>Mira Høst · 北欧摄影作品集</strong><br><sub>全幅摄影、衬线斜体、非对称图组与目录悬停预览。</sub><br><br><a href="prompts/mira-host-photography.md">Prompt</a> · <a href="research/mira-host-photography.md">研究</a> · <a href="demos/mira-host-photography">代码</a> · <a href="previews/mobile/mira-host-photography.jpg">手机预览</a></td>
 </tr>
 </table>
 

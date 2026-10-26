@@ -2,8 +2,9 @@
   'use strict';
   const entries = window.DESIGN_ATLAS;
   if (Array.isArray(entries)) {
-    const studies = entries.filter(entry => entry.implementation === 'reference-study').length;
-    const counts = {all: entries.length, studies, classics: entries.length - studies, patterns: Array.isArray(window.DESIGN_PATTERNS) ? window.DESIGN_PATTERNS.length : 129};
+    const showcases = entries.filter(entry => entry.category === '示范作品').length;
+    const studies = entries.filter(entry => entry.implementation === 'reference-study' && entry.category !== '示范作品').length;
+    const counts = {all: entries.length, studies, showcases, classics: entries.length - studies - showcases, patterns: Array.isArray(window.DESIGN_PATTERNS) ? window.DESIGN_PATTERNS.length : 129};
     document.querySelectorAll('[data-home-count]').forEach(element => {
       element.textContent = String(counts[element.dataset.homeCount]);
     });
