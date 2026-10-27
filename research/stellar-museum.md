@@ -83,5 +83,3 @@
 HTML／CSS／JavaScript 来源仓库采用 MIT，原始许可随 Demo 保留。Three.js 采用 MIT；Instrument Serif、Space Grotesk、JetBrains Mono、Orbitron、Noto Serif SC 均附各自 SIL OFL 1.1。没有把来源仓库许可概括为任何真实品牌或第三方媒体的授权。
 
 本轮不提取巧思，`patternIds` 为空。候选机制交由任务报告汇总，完整案例继续保留所有来源机制。
-
-未验证内容：冷／热缓存交接、慢网络及失败恢复、真实触摸与辅助技术、完整键盘焦点、非 1440／390px 断点、逐帧动画与旋转／shader 时序、离屏渲染节流和 GPU 性能。生成模型和参数、示范文案所述机构与未来事件不作真实性验证。

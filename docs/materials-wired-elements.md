@@ -16,7 +16,7 @@
 | 偏好面板 | [toggle 的 checked](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-toggle/README.md) | 将模式和摘要选项应用到当前预览，不保存设置 |
 | 概念卡片 | [card 的 elevation 1–5 / fill](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-card/README.md)、[slider 的 value / min / max](https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-slider/README.md) | 默认层级 3、纸面与填色为本地选择，变化时重绘边界 |
 
-三者都使用真实库组件；场景布局、文案、主题与状态联动是 Web Atlas 原创组合。官方 showcase 浏览器观察确认复选框可由未选中变为选中；这只支持该控件观察，不能替代对整套组件或其他浏览器的验证。
+三者都使用真实库组件；场景布局、文案、主题与状态联动是 Web Atlas 原创组合。
 
 ## 接入与适配
 
