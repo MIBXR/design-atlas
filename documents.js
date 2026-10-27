@@ -550,6 +550,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
+    "path": "docs/materials-beautiful-article.md",
+    "title": "Beautiful Article · 长文编辑工作流",
+    "group": "复现与素材"
+  },
+  {
     "path": "demos/blue-archive/fidelity.md",
     "title": "Blue Archive 复现边界",
     "group": "复现与素材"
@@ -625,6 +630,21 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
+    "path": "docs/materials-reacticle.md",
+    "title": "Reacticle · 长文排版组件库",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/reacticle/vendor/NOTICE.md",
+    "title": "Reacticle 第三方来源与许可",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/reacticle/README.md",
+    "title": "Reacticle 文章样例",
+    "group": "复现与素材"
+  },
+  {
     "path": "material-demos/recursive/README.md",
     "title": "Recursive 五轴字体试排",
     "group": "复现与素材"
@@ -682,6 +702,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "demos/uma-musume/fidelity.md",
     "title": "Umamusume 复现边界",
+    "group": "复现与素材"
+  },
+  {
+    "path": "docs/materials-web-design-engineer.md",
+    "title": "Web Design Engineer · 网页设计工作流",
     "group": "复现与素材"
   },
   {

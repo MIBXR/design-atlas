@@ -14,5 +14,11 @@
 .materials-page .material-source{padding:16px 0;border-top:1px solid var(--line)}
 .materials-page .material-source p{margin:8px 0}.materials-page .material-source code{overflow-wrap:anywhere;font-size:12px}
 .materials-page .material-context{margin-top:24px}
+.materials-page .material-skill-content{display:block;padding:24px;border:1px solid var(--line);border-top:0;border-radius:0 0 6px 6px;background:var(--card)}
+.materials-page .material-skill-content ol{padding-left:24px;margin:0}
+.materials-page .material-skill-content .material-examples{margin:16px 0}
+.materials-page .material-skill-gallery{margin:16px 0}
+.materials-page .material-skill-gallery img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}
+.materials-page .material-skill-gallery figcaption{margin-top:8px;font-size:14px;color:var(--note)}
 .materials-page #material-detail .detail-title .tags{align-items:start}
 @media(max-width:650px){.material-examples{grid-template-columns:1fr}.materials-page .demo-toolbar>div{justify-content:flex-start}.materials-page .detail-top{gap:12px;flex-wrap:wrap}}

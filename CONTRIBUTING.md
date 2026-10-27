@@ -130,6 +130,10 @@ Prompt应写结构、尺度、素材、关键状态及交接、音乐和主题�
 
 独立素材不要求关联来源案例。素材包完整保留条目、文档原文及递归运行依赖清单，`sourceFiles` 列主要取材源码，必须在该包 `files` 中以 `source` 核验；图片、字体、音频和第三方声明随完整依赖导出。第三方文件保留原字节与权利说明，本地原创样例和上游参数依据分别写清。与官网付费内容或平台功能分开记录许可。
 
+`type: "agent-skill"` 显示为“Agent Skill”，无需 `demo`、`demos` 和 `demoNote`。它使用 `skillPath: "agent-skills/<id>/"` 指向固定提交的原文快照，保留 `SKILL.md`、`README.md`、完整目录和来源许可证；`workflow` 是非空中文步骤数组；`relatedEntries` 是 `{kind: "case"|"material"|"pattern", id, note}` 数组，关联 ID 必须真实存在，`note` 说明关系。可选 `gallery` 为 `{path, caption, replicated: false}` 数组，图片须在仓库内，详情显示“作者产出效果，未复刻”。网页说明使用中文，原文快照保持原语言与原字节。
+
+Agent Skill 详情沿用素材页的左右布局，左侧展示工作流、可跳转的关联条目、可选效果图及 `SKILL.md`／`README` 原文入口，右侧保留使用边界、可访问性、来源和 Prompt。`sourceFiles` 列主要 skill 原文入口，在素材包中记为 `source`；完整快照递归进入 `files`，其中 Markdown 与许可证同时保留 `documents` 原文。`scripts/build-static.mjs` 的 `folders` 包含 `agent-skills`，发布时保持快照原字节；`scripts/build-documents.mjs` 从扫描目录中排除 `agent-skills`，原文 Markdown 不进入文档中心，中文素材说明仍从 `docs/` 收录。
+
 `npm run build` 生成 `materials.js`、`agent/materials.json` 和 `agent/materials/<id>.json`，主目录 `materials` 保存子目录路径和数量。构建保留依赖入口、源码定位与文档原文。人工验收同宽度的素材库／详情和既有库，并分别检查真实效果运行、参数响应、输入、减少动态及不支持环境的明确后备。WebGPU 等运行能力受环境限制时，不把静态示意或文件校验当作真实运行通过。
 
 ## 加载与素材分发

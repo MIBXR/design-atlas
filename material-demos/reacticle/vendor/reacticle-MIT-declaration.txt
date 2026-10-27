@@ -1,0 +1,7 @@
+Reacticle dcfc4baf386bbc220cd1aa6274bed3b741108465
+
+原始 package.json 声明 license: MIT，作者字段为 ConardLi。
+本条目按这一声明记录软件许可。
+该固定提交的仓库内没有 LICENSE 文件，未将其他项目的版权声明冒充其原始许可。
+原始声明见同目录 reacticle-package.json。
+来源：https://github.com/ConardLi/reacticle/blob/dcfc4baf386bbc220cd1aa6274bed3b741108465/package.json

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8');
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const materialTypes = ['component-library', 'image', 'sound', 'font', 'poster', 'agent-skill'];
 const summaryFields = ['id', 'title', 'type', 'category', 'summary', 'tags', 'useCases', 'avoid', 'constraints'];
 
 function repositoryFile(root, relative, mustExist = true) {
@@ -55,7 +56,7 @@ export function loadMaterials({ root = defaultRoot } = {}) {
     for (const key of ['title', 'type', 'category', 'summary', 'prompt', 'research']) text(material[key], `${material.id}.${key}`);
     for (const key of ['tags', 'useCases', 'avoid', 'constraints', 'sourceFiles']) textArray(material[key], `${material.id}.${key}`);
     if (!material.useCases.length || !material.constraints.length || !material.sourceFiles.length) throw new Error(`Empty material guidance: ${material.id}`);
-    if (material.demo !== `material-demos/${material.id}/index.html`) throw new Error(`Unexpected material demo path: ${material.id}`);
+    if (!materialTypes.includes(material.type)) throw new Error(`Unknown material type: ${material.id}/${material.type}`);
     for (const key of ['url', 'verifiedAt']) text(material.upstream?.[key], `${material.id}.upstream.${key}`);
     for (const key of ['repository', 'version', 'commit']) if (material.upstream[key] !== undefined) text(material.upstream[key], `${material.id}.upstream.${key}`);
     if (!/^https?:\/\//.test(material.upstream.url) || !/^\d{4}-\d{2}-\d{2}$/.test(material.upstream.verifiedAt) || material.upstream.commit !== undefined && !/^[a-f0-9]{40}$/.test(material.upstream.commit)) throw new Error(`Invalid material snapshot: ${material.id}`);
@@ -66,9 +67,34 @@ export function loadMaterials({ root = defaultRoot } = {}) {
       for (const key of ['title', 'url', 'note']) text(source[key], `${material.id}.sources.${key}`);
       if (!/^https?:\/\//.test(source.url)) throw new Error(`Invalid material source URL: ${material.id}`);
     }
-    if (!Array.isArray(material.demos) || !material.demos.length) throw new Error(`Missing interactive material demos: ${material.id}`);
-    if (new Set(material.demos.map(demo => demo.id)).size !== material.demos.length) throw new Error(`Duplicate material demo: ${material.id}`);
-    for (const demo of material.demos) {
+    if (material.type === 'agent-skill') {
+      if (typeof material.skillPath !== 'string' || material.skillPath.replace(/\/$/, '') !== `agent-skills/${material.id}`) throw new Error(`Unexpected skill snapshot path: ${material.id}`);
+      const directory = repositoryFile(root, material.skillPath.replace(/\/$/, ''));
+      if (!fs.lstatSync(directory).isDirectory()) throw new Error(`Expected skill snapshot directory: ${material.id}`);
+      for (const name of ['SKILL.md', 'README.md']) readFile(root, `agent-skills/${material.id}/${name}`);
+      textArray(material.workflow, `${material.id}.workflow`);
+      if (!material.workflow.length || material.workflow.some(step => !/[\u3400-\u9fff]/.test(step))) throw new Error(`Expected Chinese skill workflow: ${material.id}`);
+      if (!Array.isArray(material.relatedEntries)) throw new Error(`Expected skill related entries: ${material.id}`);
+      for (const related of material.relatedEntries) {
+        const directory = {case:'entries', material:'materials', pattern:'patterns'}[related.kind];
+        if (!['case', 'material', 'pattern'].includes(related.kind) || !idPattern.test(related.id)) throw new Error(`Invalid skill related entry: ${material.id}`);
+        text(related.note, `${material.id}.relatedEntries.note`);
+        if (JSON.parse(readFile(root, `${directory}/${related.id}.json`)).id !== related.id) throw new Error(`Unknown skill related entry: ${material.id}/${related.id}`);
+      }
+      if (material.gallery !== undefined) {
+        if (!Array.isArray(material.gallery)) throw new Error(`Expected skill gallery: ${material.id}`);
+        for (const picture of material.gallery) {
+          text(picture.caption, `${material.id}.gallery.caption`);
+          if (picture.replicated !== false) throw new Error(`Skill gallery must declare replicated: false: ${material.id}`);
+          readFile(root, picture.path);
+        }
+      }
+    } else {
+      if (material.demo !== `material-demos/${material.id}/index.html`) throw new Error(`Unexpected material demo path: ${material.id}`);
+      if (!Array.isArray(material.demos) || !material.demos.length) throw new Error(`Missing interactive material demos: ${material.id}`);
+      if (new Set(material.demos.map(demo => demo.id)).size !== material.demos.length) throw new Error(`Duplicate material demo: ${material.id}`);
+    }
+    for (const demo of material.demos || []) {
       for (const key of ['id', 'title', 'summary', 'entrypoint']) text(demo[key], `${material.id}.demos.${key}`);
       repositoryFile(root, demo.entrypoint.split(/[?#]/)[0]);
       if (demo.parameters !== undefined) {
@@ -76,7 +102,7 @@ export function loadMaterials({ root = defaultRoot } = {}) {
         for (const parameter of demo.parameters) for (const key of ['name', 'value', 'note']) text(parameter[key], `${material.id}/${demo.id}.${key}`);
       }
     }
-    for (const relative of [material.demo, material.preview, material.research, ...material.sourceFiles]) repositoryFile(root, relative);
+    for (const relative of [material.demo, material.preview, material.research, ...material.sourceFiles].filter(relative => relative !== undefined)) repositoryFile(root, relative);
     return material;
   });
 }
@@ -86,25 +112,26 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
   const outputs = new Map();
   const bundles = [];
   const records = materials.map(material => {
-    const documentPaths = [material.research, ...walkFiles(root, `material-demos/${material.id}`).filter(relative => relative.endsWith('.md') || /\/LICENSE[^/]*\.txt$/.test(relative))];
+    const contentFiles = walkFiles(root, material.type === 'agent-skill' ? material.skillPath.replace(/\/$/, '') : `material-demos/${material.id}`);
+    const documentPaths = [material.research, ...contentFiles.filter(relative => relative.endsWith('.md') || /\/LICENSE(?:[^/]*\.txt)?$/.test(relative))];
     const documents = [...new Set(documentPaths)].map(relative => {
       const bytes = readFile(root, relative);
       new TextDecoder('utf-8', { fatal: true }).decode(bytes);
       return { path: relative, role: relative === material.research ? 'research' : 'context', content: bytes.toString('utf8') };
     });
-    const paths = new Set([`materials/${material.id}.json`, material.preview, ...documentPaths, ...walkFiles(root, `material-demos/${material.id}`)]);
+    const paths = new Set([`materials/${material.id}.json`, material.preview, ...documentPaths, ...contentFiles, ...(material.gallery || []).map(picture => picture.path)]);
     const files = [...paths].sort().map(relative => {
-      const role = relative === material.preview ? 'preview' : documentPaths.includes(relative) || relative === `materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
+      const role = relative === material.preview ? 'preview' : material.type === 'agent-skill' && material.sourceFiles.includes(relative) ? 'source' : documentPaths.includes(relative) || relative === `materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
       return { path: relative, role };
     });
     for (const relative of material.sourceFiles) if (!files.some(file => file.path === relative && file.role === 'source')) throw new Error(`Material source is outside its source manifest: ${material.id}/${relative}`);
-    for (const demo of material.demos) if (!files.some(file => file.path === demo.entrypoint.split(/[?#]/)[0] && file.role === 'source')) throw new Error(`Material demo is outside its source manifest: ${material.id}/${demo.id}`);
+    for (const demo of material.demos || []) if (!files.some(file => file.path === demo.entrypoint.split(/[?#]/)[0] && file.role === 'source')) throw new Error(`Material demo is outside its source manifest: ${material.id}/${demo.id}`);
     const bundle = { schemaVersion: 1, id: material.id, material, documents, files, sourceFiles: material.sourceFiles };
     const relative = `agent/materials/${material.id}.json`;
     const bytes = encode(bundle);
     outputs.set(relative, bytes);
     bundles.push(bundle);
-    return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, entry: `materials/${material.id}.json`, preview: material.preview } };
+    return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, skill: material.skillPath, entry: `materials/${material.id}.json`, preview: material.preview } };
   });
   const catalog = { schemaVersion: 1, repository: 'https://github.com/MIBXR/web-atlas', materialCount: records.length, materials: records };
   outputs.set('agent/materials.json', encode(catalog));
