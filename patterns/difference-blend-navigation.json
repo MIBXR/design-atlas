@@ -1,0 +1,80 @@
+{
+  "id": "difference-blend-navigation",
+  "title": "跨深浅背景的差值导航",
+  "category": "导航与状态",
+  "experienceTypes": [
+    "visual"
+  ],
+  "summary": "让固定导航随下方摄影与深浅表面产生颜色变化，保持连续的视觉身份。",
+  "mechanism": "固定顶栏以暖纸色绘制文字与标记，通过差值混合与下方页面逐像素合成，不保存或切换深浅主题状态。",
+  "trigger": "滚动时固定导航经过摄影、暖纸色正文或墨色区域",
+  "effect": "导航的合成颜色随下方像素改变，在不同页面区域延续同一套文字与标记。",
+  "useCases": [
+    "全幅摄影与深浅章节交替的作品集",
+    "需要固定导航的视觉叙事页面"
+  ],
+  "avoid": [
+    "要求导航颜色始终精确等于品牌色的界面",
+    "未经逐图检查就依靠混合保证文字可读"
+  ],
+  "constraints": [
+    "差值混合不能保证所有图片上的对比度，需要实测。",
+    "混合依赖导航下方的实际像素与合成层级，新增背景、遮罩或隔离层后需重新核对。",
+    "来源导航只有悬停下划线，未实现与其等价的键盘焦点下划线；键盘策略是实施建议。",
+    "迁移时使用有权使用的摄影与真实章节，并按目标页面重新验证颜色。"
+  ],
+  "composition": {
+    "role": "support",
+    "notes": "只处理固定导航与背景的颜色关系；照片中的正文仍由局部对比策略支撑。同一个导航层若同时切换成对语义颜色，混合后的结果需重新验证，不能直接沿用未混合时的对比结论。",
+    "pairsWellWith": [
+      "full-bleed-photography-brand",
+      "photo-edge-text-contrast"
+    ],
+    "conflicts": [
+      "semantic-theme-roles"
+    ]
+  },
+  "accessibility": {
+    "keyboard": "保留原生章节链接与清晰的顺序，用 :focus-visible 提供可辨认的焦点样式，并在每种背景上检查焦点和文字对比。",
+    "reducedMotion": "差值混合无需运动；减少动态时移除顶栏淡入，直接保持导航可见。"
+  },
+  "parameters": [
+    {
+      "name": "导航绘制色",
+      "value": "#f2efe8",
+      "note": "来自来源源码：暖纸色变量用于顶栏文字、中央标记与品牌标记边框。"
+    },
+    {
+      "name": "混合方式",
+      "value": "mix-blend-mode: difference",
+      "note": "来自来源源码：固定顶栏整体应用差值混合。"
+    },
+    {
+      "name": "页面表面色",
+      "value": "#f2efe8 / #161513",
+      "note": "来自来源源码：暖纸色正文与墨色联系、页脚区域构成深浅表面，摄影保持原色。"
+    },
+    {
+      "name": "固定层位置",
+      "value": "top: 0; left: 0; right: 0; z-index: 50",
+      "note": "来自来源源码：顶栏固定覆盖于页面上方，使滚动内容经过其下方。"
+    }
+  ],
+  "prompt": "为【目标页面】实现「跨深浅背景的差值导航」。将固定顶栏的文字与标记设为暖纸色 #f2efe8，并对该层使用 mix-blend-mode: difference，使导航经过摄影、纸色正文和墨色章节时按下方像素合成。导航只承担章节入口，正文对比另行处理。差值混合不能保证所有图片上的对比度，需要实测；检查每张图、深浅表面及新增合成层。来源只有悬停下划线，实施时保留原生链接并用 :focus-visible 提供清晰的焦点反馈。减少动态时直接显示顶栏。若同一层还采用语义主题色切换，重新验证混合结果，不直接套用原色对比结论。",
+  "sources": [
+    {
+      "caseId": "mira-host-photography",
+      "locator": "entries/mira-host-photography.json#theme",
+      "observation": "暖纸色 #f2efe8 与墨色 #161513 构成固定双色基调，联系和页脚反转为墨底浅字；固定顶栏和两侧竖排标记使用差值混合跨越深浅背景。",
+      "evidence": "observed",
+      "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+      "capturedAt": "2026-10-27"
+    }
+  ],
+  "sourceFiles": [
+    "demos/mira-host-photography/fidelity.md",
+    "demos/mira-host-photography/index.html",
+    "entries/mira-host-photography.json",
+    "research/mira-host-photography.md"
+  ]
+}

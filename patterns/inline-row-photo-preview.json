@@ -1,0 +1,90 @@
+{
+  "id": "inline-row-photo-preview",
+  "title": "文字目录行内浮现摄影预览",
+  "category": "交互反馈",
+  "experienceTypes": [
+    "micro-motion"
+  ],
+  "summary": "在保持文字目录易于扫描的同时，为当前行补充一张摄影线索。",
+  "mechanism": "把照片绝对定位在目录行右侧，悬停时以透明度与轻微缩放显现，并让标题和箭头小幅右移；离开后还原。",
+  "trigger": "桌面指针进入或离开作品目录行",
+  "effect": "只有当前行浮现固定位置的摄影预览，标题与箭头共同提示关注对象。",
+  "useCases": [
+    "摄影系列与作品文字目录",
+    "希望保留行式排版的图像索引"
+  ],
+  "avoid": [
+    "把理解作品所必需的内容只放在悬停图片中",
+    "在同一行同时叠加固定预览与随指针预览"
+  ],
+  "constraints": [
+    "来源在 1100px 及以下隐藏摄影预览；窄屏目录继续显示文字。",
+    "来源没有 :focus 或 :focus-visible 等价预览，键盘策略是实施建议。",
+    "来源作品链接使用 # 占位，未实现真实系列详情；迁移时提供真实目的地。",
+    "预览不接收指针事件，不遮挡该行文字与操作；换用有权使用的照片后重新检查裁切和行间遮挡。"
+  ],
+  "composition": {
+    "role": "accent",
+    "notes": "稳定列线负责目录阅读，摄影预览只反馈当前行，不移动整行布局。同一行不再叠加随指针形变预览，以免两种图像提示争夺注意。",
+    "pairsWellWith": [
+      "aligned-metadata-rows",
+      "editorial-alignment-grid"
+    ],
+    "conflicts": [
+      "pointer-image-shader-preview"
+    ]
+  },
+  "accessibility": {
+    "keyboard": "用 :focus-visible 给出同样的预览",
+    "reducedMotion": "保留预览的显示与隐藏，取消缩放、标题和箭头位移，以即时显隐代替过渡。"
+  },
+  "parameters": [
+    {
+      "name": "预览尺寸",
+      "value": "180px × 120px",
+      "note": "来自来源源码：目录行内的矩形缩略图宽高。"
+    },
+    {
+      "name": "预览位置",
+      "value": "right: 220px; top: 50%; translateY(-50%)",
+      "note": "来自来源源码：相对当前目录行固定在右侧并垂直居中。"
+    },
+    {
+      "name": "预览显现",
+      "value": "opacity: 0 → 1; scale: 0.94 → 1",
+      "note": "来自来源源码：悬停进入时显现并恢复原比例，离开时反向恢复。"
+    },
+    {
+      "name": "标题与箭头位移",
+      "value": "translateX(8px) / translateX(6px)",
+      "note": "来自来源源码：标题右移 8px，箭头右移 6px。"
+    },
+    {
+      "name": "反馈过渡",
+      "value": "opacity 0.5s / transform 0.6s; cubic-bezier(0.22, 1, 0.36, 1)",
+      "note": "来自来源源码：预览透明度与箭头为 0.5 秒，预览及标题位移为 0.6 秒，共用柔和缓动。"
+    },
+    {
+      "name": "隐藏断点",
+      "value": "max-width: 1100px",
+      "note": "来自来源源码：该媒体查询将缩略图设为不显示，包含 1100px。"
+    }
+  ],
+  "prompt": "为【作品目录】实现「文字目录行内浮现摄影预览」。保留编号、标题和辅助信息的稳定列线，将 180px × 120px 的照片定位在当前行右侧 220px、垂直居中。指针进入时让照片透明度从 0 到 1、比例从 0.94 到 1，标题右移 8px、箭头右移 6px；离开后还原。透明度与箭头过渡 0.5 秒，预览与标题位移过渡 0.6 秒，使用 cubic-bezier(0.22, 1, 0.36, 1)。来源在 1100px 及以下隐藏预览，未实现键盘等价预览，作品链接仍为占位；实施时用 :focus-visible 给出同样的预览，并连接真实详情，不能只靠图片传达关键内容。减少动态时取消位移和缩放并即时显隐，同一行不叠加随指针预览。",
+  "sources": [
+    {
+      "caseId": "mira-host-photography",
+      "locator": "entries/mira-host-photography.json#interaction/2",
+      "observation": "桌面悬停作品目录行时，标题右移 8px、箭头右移 6px，对应照片缩略图从透明和 0.94 倍缩放进入；离开后回到初态。1100px 及以下隐藏缩略图。",
+      "evidence": "observed",
+      "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+      "capturedAt": "2026-10-27"
+    }
+  ],
+  "sourceFiles": [
+    "demos/mira-host-photography/fidelity.md",
+    "demos/mira-host-photography/index.html",
+    "entries/mira-host-photography.json",
+    "research/mira-host-photography.md"
+  ]
+}

@@ -26,7 +26,7 @@
     ],
     "composition": {
       "role": "support",
-      "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
+      "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。 星槎来源属于仅按视口可见性跳过多个三维窗口渲染的变体，扩展范围为 120px，主帧循环与绝对时间仍推进，未实现后台可见性监听、用户暂停或离屏时间冻结，减少动态仅停止对象旋转，仍更新着色器时间并渲染。",
       "pairsWellWith": [
         "photo-crossfade-cycle",
         "centered-loop-gallery",
@@ -88,6 +88,14 @@
         "evidence": "observed",
         "referenceUrl": "https://www.deepseek.com/harness/",
         "capturedAt": "2026-10-11"
+      },
+      {
+        "caseId": "stellar-museum",
+        "locator": "entries/stellar-museum.json#interaction/7",
+        "observation": "首屏星球及月球、空间站、火星、银河窗口进入或离开扩展 120px 的视口范围：IntersectionObserver 以 rootMargin: '120px'、threshold: 0.0 更新各实例的 visible，统一帧循环跳过离屏实例，只渲染可见窗口；主循环和绝对时间仍持续推进，来源未实现页面后台可见性监听、用户暂停或离屏时间冻结，减少动态仅跳过对象旋转，仍更新着色器时间并渲染。",
+        "evidence": "observed",
+        "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
+        "capturedAt": "2026-10-27"
       }
     ],
     "sourceFiles": [
@@ -148,7 +156,11 @@
       "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
       "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
       "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
-      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js",
+      "demos/stellar-museum/index.html",
+      "demos/stellar-museum/fidelity.md",
+      "entries/stellar-museum.json",
+      "research/stellar-museum.md"
     ]
   },
   "sourceCases": [
@@ -182,6 +194,14 @@
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
         "demo": "demos/qoder-platform/index.html"
+      }
+    },
+    {
+      "id": "stellar-museum",
+      "title": "星槎 STELLAR · 太空探索博物馆",
+      "paths": {
+        "bundle": "agent/cases/stellar-museum.json",
+        "demo": "demos/stellar-museum/index.html"
       }
     },
     {
