@@ -23,13 +23,13 @@ MORS² 品牌、文案、标志与美术方向出自 [@kaolti](https://x.com/kao
 
 ## 参数与接入
 
-使用 `npm install three@0.185.1 three-html-render@0.1.2`。独立演示通过 importmap 指向本地 `vendor/`，不依赖 React、CDN 或运行时构建。通过静态 HTTP/HTTPS 服务访问，不能用直接打开 `file:` 文件代替浏览器运行验证。
+使用 `npm install three@0.185.1 three-html-render@0.1.2`。独立演示通过 importmap 指向本地 `vendor/`，不依赖 React、CDN 或运行时构建。通过静态 HTTP/HTTPS 服务访问。
 
 默认入口为 `index.html?demo=lamp`，基础平面为 `index.html?demo=plane`。吊灯初始 `angle: 34`、`brightness: 1450`、`color: #ffb36b` 与五色色板来自参考项目 `config.ts`，场景与摆锤数值按 `MorsLightCanvas.tsx` 移植。平面最大倾斜 8° 是本地演示参数。
 
 本素材处于 `0.1.x`。npm 0.1.2 不提供 README 所述的 `html-texture`／`interaction-manager` 子路径，不能按这些路径导入；本地从 Three.js 核心和 addon 使用对应能力。
 
-本版本组合需要 `texElementImage2D` 兼容垫片：Three.js 根据函数的参数数量选择上传重载，polyfill 的函数签名会触发不适用的短重载。改写自参考实现的垫片仅在 polyfill 启用且签名符合条件时包装为六参数函数，原生实现保持原样。升级任一依赖后需重新核验，不能将此组合的结果推及其他版本。
+本版本组合需要 `texElementImage2D` 兼容垫片：Three.js 根据函数的参数数量选择上传重载，polyfill 的函数签名会触发不适用的短重载。改写自参考实现的垫片仅在 polyfill 启用且签名符合条件时包装为六参数函数，原生实现保持原样。
 
 接入还通过 polyfill 的 `pageStyles` 仅向 SVG 快照注入 `html,body{overflow:visible!important}`，使高于视口的窄版灯光面板完整光栅化；不修改 vendor 原始文件。
 
@@ -39,16 +39,14 @@ MORS² 品牌、文案、标志与美术方向出自 [@kaolti](https://x.com/kao
 
 正常模式下吊灯保留参考的 Verlet 摆锤与约束、指针瞄准与拉拽、松手动量、右键调节和双击复位，静止后停止渲染。`prefers-reduced-motion: reduce` 时灯固定在初始角度，平面不倾斜；面板照常即时生效，没有过渡动画。
 
-在本地 HTTP 下，无头 Edge `155.0.4283.62` 已实测运行真实 WebGL，实际使用 SVG foreignObject polyfill 路径。浏览器有原生 `texElementImage2D` 时走原生路径，原生路径未验证。
+在本地 HTTP 下，无头 Edge `155.0.4283.62` 已实测运行真实 WebGL，实际使用 SVG foreignObject polyfill 路径。浏览器有原生 `texElementImage2D` 时走原生路径。
 
-1440px 同条件对照中，原作与本地的源页面均为 1440×810，投影矩形均为 `(155.4016, 144.3815, 1129.1948, 628.1824)`；标题计算字号 77px、字重 670、行高 72.38px、字体栈及控制板边界相同。初始画面观察未见明显的构图、黑位、材质或光照差异，保留参考场景的暗部表现。摆动画面的光斑边缘有轻微偏移；取帧时间差为可能原因，属于推断，未独立验证。
+1440px 同条件对照中，原作与本地的源页面均为 1440×810，投影矩形均为 `(155.4016, 144.3815, 1129.1948, 628.1824)`；标题计算字号 77px、字重 670、行高 72.38px、字体栈及控制板边界相同。初始画面观察未见明显的构图、黑位、材质或光照差异，保留参考场景的暗部表现。摆动画面的光斑边缘有轻微偏移。
 
 390px 下源页面实测为 390×1240，五个概念均可真实点击切换。Tab 依次聚焦 Space、Meta、Field、Rule、Latent、power、beam，`focus-visible` 落在文档内真实 DOM 控件；ArrowRight 将光束角度从 34 调至 35。右键单击切换下一颜色，右拖 100px 将角度从 34 调至 48。
 
 摆动后的绘制计数停在 10150，等待 1.2 秒仍为 10150，确认停止渲染。减少动态时灯固定，绘制计数间隔 1 秒保持 `10 → 10`；plane 指针移动前后的矩阵相同，正常模式矩阵会改变。CDP 单触点模拟可拖灯，无 pointercancel，拖动时 `scrollY` 保持 0；浅蓝色板可触摸选中。
 
 WebGL 不可用或初始化失败时，显示同一 MORS² HTML 页面与 CSS 静态光照，并标明“当前环境无法运行 WebGL 光照，显示的是静态示意。”禁用 WebGL 的独立 Edge 进程已验证 390px 后备：可用区域宽 375px、无横向溢出，polyfill host 清除、源页面回到 scene，原面板开关可从开启切换为关闭。
-
-原生渲染路径、读屏器、真实触屏设备、其他浏览器和长期性能／电量表现未验证，不沿用上游 README 的可访问性结论。
 
 适合氛围型首屏、作品集、发布页和 3D 展台中的可交互面板；避免用于信息密集页、长阅读页，以及对性能或电量敏感的移动端主流程。

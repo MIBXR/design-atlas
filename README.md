@@ -301,7 +301,7 @@ npm start
 
 首次进入文档中心只展开当前文档所在分类，其余分类可手动展开。目录控制与长分类标题保持置顶；切换文档只更新正文与本文目录，保留左栏的开合和滚动位置。本文目录支持章节定位，手机可随时从右下角展开。
 
-文档目录与静态发布使用同一份清单：新增 `.md` 放入已公开的 `docs/`、`research/`、`prompts/` 等目录后，`npm run build` 会自动收录到 `documents.js`。根目录新文档或新的公开目录需先加入 `scripts/build-static.mjs` 的发布清单，再构建、校验并发布网站；Git push 本身不会自动收录或上线。完整维护规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+文档目录与静态发布使用同一份清单：新增 `.md` 放入已公开的 `docs/`、`research/`、`prompts/` 等目录后，`npm run build` 会自动收录到 `documents.js`。根目录新文档或新的公开目录需先加入 `scripts/build-static.mjs` 的发布清单，再构建并发布网站。完整维护规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 资料结构与维护
 

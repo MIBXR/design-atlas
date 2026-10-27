@@ -28,7 +28,7 @@ Beautiful Article 把已有的 URL、PDF、DOCX、Markdown、文本或截图材�
 
 [Reacticle · 长文排版组件库](../materials.html#material/reacticle)实现 skill 的 11 套主题，11 篇样文就在 Reacticle 的样例里。可以在样文中比较相同组件体系如何形成不同排版语言，再阅读技能快照中的主题写作资料。
 
-`theme-profiles/` 内共有 11 份主题 Markdown 和一份索引。它们是给 Agent 阅读的写作指导，不是 CSS 主题文件。技能 README 中另外链接了作者公开的成品长文，不能把这些长文与本库归档的 11 篇主题样文混为一组。
+`theme-profiles/` 内共有 11 份主题 Markdown 和一份索引。它们是给 Agent 阅读的写作指导，不是 CSS 主题文件。
 
 条目预览复用 Reacticle 的咖啡因半衰期样文实际画面。
 
@@ -39,7 +39,7 @@ Beautiful Article 把已有的 URL、PDF、DOCX、Markdown、文本或截图材�
 - [原文中文 README](../agent-skills/beautiful-article/README.zh-CN.md)
 - 快照目录：`agent-skills/beautiful-article/`，包含主题写作资料、参考文档、脚本与工程模板。
 
-目录从提交 `2b9a89340b70f632d31c0f1c69fce94a7912423e` 原样复制，语言、指导内容和代码保持来源状态。原文中的仓库相对链接与外部链接可结合[上游固定提交](https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e)阅读。快照不表示已安装或执行技能；其脚手架动态安装版本的行为，也不代表本库固定提交的 Reacticle 样例构建过程。
+目录从提交 `2b9a89340b70f632d31c0f1c69fce94a7912423e` 原样复制，语言、指导内容和代码保持来源状态。原文中的仓库相对链接与外部链接可结合[上游固定提交](https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e)阅读。
 
 单文件 HTML 的封装方式不自动保证字体离线可用；使用技能交付文章时，需要按实际资源核对离线范围。本库 Reacticle 素材的字体与运行依赖单独记录。
 
