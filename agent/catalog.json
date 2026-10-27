@@ -2838,6 +2838,6 @@
   },
   "materials": {
     "path": "agent/materials.json",
-    "materialCount": 8
+    "materialCount": 9
   }
 }

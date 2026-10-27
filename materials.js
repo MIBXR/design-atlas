@@ -1187,6 +1187,181 @@ window.DESIGN_MATERIALS = [
     ]
   },
   {
+    "id": "three-html-render",
+    "title": "three-html-render · HTML-in-Canvas polyfill",
+    "type": "component-library",
+    "category": "组件与效果",
+    "summary": "让 HTML-in-Canvas 标准 API 在所有浏览器可用，配合 three.js 内置的 HTMLTexture 和 InteractionManager，把实时、可交互的 HTML 画进 WebGL 贴图，并能在 3D 表面上继续点击。",
+    "install": "npm install three@0.185.1 three-html-render@0.1.2",
+    "demoNote": "将 HTML-Light-Demo 的 MORS² 页面与吊灯机制移植为原生 HTML/CSS/JavaScript；两个样例共用该页面，以 Three.js HTMLTexture、InteractionManager 和浏览器 API polyfill 运行。",
+    "tags": [
+      "HTML-in-Canvas",
+      "polyfill",
+      "Three.js",
+      "WebGL",
+      "HTMLTexture",
+      "InteractionManager",
+      "灯光",
+      "3D 交互"
+    ],
+    "useCases": [
+      "氛围型首屏",
+      "作品集",
+      "发布页",
+      "3D 展台中的可交互面板"
+    ],
+    "avoid": [
+      "信息密集页",
+      "长阅读页",
+      "对性能或电量敏感的移动端主流程"
+    ],
+    "constraints": [
+      "HTML-in-Canvas 是 WICG 的浏览器标准提案，原生支持处于实验阶段；本条目收录 three-html-render 库，不是标准本身。HTMLTexture 与 InteractionManager 从 three r185 起由 Three.js 提供，本库补齐浏览器 API。",
+      "浏览器有原生 texElementImage2D 时使用原生路径；缺少原生支持时退回 SVG foreignObject 光栅化。本地 HTTP 下，无头 Edge 155.0.4283.62 已实测运行真实 WebGL，实际使用 SVG foreignObject polyfill 路径；原生路径未验证。",
+      "固定 three 0.185.1 与 three-html-render 0.1.2；0.1.x 存在版本风险，本组合需要 texElementImage2D 兼容垫片。npm 0.1.2 未提供 README 所述的 html-texture／interaction-manager 子路径，需使用 Three.js 自带接口。",
+      "通过 HTTP/HTTPS 访问；WebGL 不可用或初始化失败时保留同一 MORS² HTML 页面与 CSS 静态光照。禁用 WebGL 的独立 Edge 进程已验证 390px 后备说明、清除 polyfill host、源页面回到 scene，以及原面板开关点击。",
+      "桌面 CSS 视口不小于 768px 时保留原作 1440×810 页面与参考 fit；小于 768px 时采用原 mobile 上下排列、页面宽度跟随视口，height: auto 与 min-height: 1180px 容纳完整内容。390px 实测源页面 390×1240；后备可用宽度 375px，无横向溢出。HTMLTexture 尺寸与相机随 resize 更新。",
+      "1440px 同条件对照中，初始页面投影、标题样式与面板边界相同，观察未见明显构图、黑位、材质或光照差异；摆动画面的光斑边缘有轻微偏移，取帧时间差为可能原因，未经独立验证。",
+      "正常模式已实测摆动后绘制计数保持 10150，等待 1.2 秒仍为 10150，确认停止渲染。减少动态时灯固定，绘制计数间隔 1 秒保持 10；plane 指针移动前后矩阵相同，正常模式矩阵会改变。面板仍即时生效。",
+      "本地 Edge 已验证五个概念真实点击、键盘调参、右键换色与调角度，以及 CDP 单触点拖灯和色板选择；原生路径、读屏器、真实触屏设备、其他浏览器、长期性能与电量表现未验证。",
+      "软件与参考实现代码保留独立 MIT 许可；MORS² 品牌、文案、标志与美术方向出自 @kaolti 原作，页面实现与光照代码改写自 jinruozai 的 HTML-Light-Demo，本仓库用于个人非商业参考。"
+    ],
+    "upstream": {
+      "repository": "repalash/three-html-render",
+      "url": "https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add",
+      "commit": "63f085e3fe7be11f0679c0ac17edc2e18e743add",
+      "version": "0.1.2",
+      "threeVersion": "0.185.1",
+      "verifiedAt": "2026-10-27"
+    },
+    "license": {
+      "name": "MIT（软件与参考实现代码）",
+      "url": "https://github.com/repalash/three-html-render/blob/63f085e3fe7be11f0679c0ac17edc2e18e743add/LICENSE",
+      "scope": "three-html-render 为 repalash 的 MIT 软件；Three.js 核心与 InteractionManager addon 为 MIT；页面实现、样式与光照代码改写自 jinruozai 的 MIT 项目 HTML-Light-Demo。",
+      "notes": "vendor 保留各包原始字节、许可与 NOTICE；mors-logo.svg 保留参考仓库原始字节。MORS² 品牌、文案、标志与美术方向出自 @kaolti（https://x.com/kaolti）原作；本仓库用于个人非商业参考，软件 MIT 说明与原作署名分别保留。"
+    },
+    "sources": [
+      {
+        "title": "three-html-render 固定版本源码",
+        "url": "https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add",
+        "note": "核对 HTML-in-Canvas polyfill、原生能力探测、SVG foreignObject 光栅化和软件许可。",
+        "evidence": "source"
+      },
+      {
+        "title": "three-html-render 0.1.2 npm 元数据",
+        "url": "https://registry.npmjs.org/three-html-render/0.1.2",
+        "note": "固定 npm 版本与 gitHead；分发包 exports 不包含 html-texture／interaction-manager 子路径。",
+        "evidence": "source"
+      },
+      {
+        "title": "three 0.185.1 npm 分发",
+        "url": "https://registry.npmjs.org/three/0.185.1",
+        "note": "本地固定的 Three.js 核心、HTMLTexture 和 InteractionManager addon 来自此版本，均保留 MIT 许可。",
+        "evidence": "source"
+      },
+      {
+        "title": "Three.js HTMLTexture 固定版本源码",
+        "url": "https://github.com/mrdoob/three.js/blob/2431a09f46f34c560bc8e44b33be0e567723d5b9/src/textures/HTMLTexture.js",
+        "note": "HTMLTexture 属于 Three.js 核心；本样例以其连接真实 HTML 与 WebGL 贴图。",
+        "evidence": "source"
+      },
+      {
+        "title": "Three.js InteractionManager 固定版本源码",
+        "url": "https://github.com/mrdoob/three.js/blob/2431a09f46f34c560bc8e44b33be0e567723d5b9/examples/jsm/interaction/InteractionManager.js",
+        "note": "平面交互使用此 Three.js addon，采用 Three.js 的 MIT 许可。",
+        "evidence": "source"
+      },
+      {
+        "title": "WICG HTML-in-Canvas 提案",
+        "url": "https://github.com/WICG/html-in-canvas",
+        "note": "浏览器标准提案与实验支持状态；本库的 polyfill 及本地样例不等同于标准或浏览器原生实现。",
+        "evidence": "source"
+      },
+      {
+        "title": "HTML-Light-Demo 页面、样式与吊灯机制",
+        "url": "https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29",
+        "note": "MorsPageSurface.tsx、globals.css、MorsLightCanvas.tsx、config.ts 与兼容垫片的原生移植依据；参考实现代码为 MIT，作者 jinruozai。",
+        "evidence": "source"
+      },
+      {
+        "title": "MORS² 标志固定来源",
+        "url": "https://github.com/jinruozai/HTML-Light-Demo/blob/0a0bd3ba53194fff68db78654fc6857ab3faee29/public/mors-logo.svg",
+        "note": "本地 mors-logo.svg 保持该文件原始字节；品牌、文案、标志与美术方向署名 @kaolti。",
+        "evidence": "source"
+      },
+      {
+        "title": "创意与美术方向署名",
+        "url": "https://x.com/kaolti",
+        "note": "MORS² 品牌、文案、标志与美术方向出自 @kaolti 原作；本仓库为个人非商业参考用途。",
+        "evidence": "source"
+      }
+    ],
+    "demos": [
+      {
+        "id": "lamp",
+        "title": "吊灯照亮网页",
+        "component": "HTMLTexture / SpotLight / Verlet",
+        "summary": "拖动吊灯照亮 MORS² 原作页面，松手观察摆动；用原面板调整光束、亮度、预设与自定义颜色。",
+        "entrypoint": "material-demos/three-html-render/index.html?demo=lamp",
+        "parameters": [
+          {
+            "name": "angle",
+            "value": "34°",
+            "note": "参考 config.ts 的初始光束角度；滑杆可调。"
+          },
+          {
+            "name": "brightness",
+            "value": "1450",
+            "note": "参考 config.ts 的初始亮度；滑杆可调。"
+          },
+          {
+            "name": "color",
+            "value": "#ffb36b",
+            "note": "初始暖色；色板为 #ffb36b、#ffd9a3、#8fdcff、#c79cff、#ff5f7f。"
+          },
+          {
+            "name": "输入",
+            "value": "左键／单指拖拽、右键、双击、DOM 面板",
+            "note": "右键拖动调角度，右键单击切颜色，双击复位；触屏及键盘通过面板访问对应功能。"
+          }
+        ]
+      },
+      {
+        "id": "plane",
+        "title": "基础平面",
+        "component": "HTMLTexture / InteractionManager",
+        "summary": "将同一 MORS² 页面贴在轻微倾斜的 3D 平面上，切换五个概念并操作灯光面板。",
+        "entrypoint": "material-demos/three-html-render/index.html?demo=plane",
+        "parameters": [
+          {
+            "name": "倾斜",
+            "value": "最大 8°",
+            "note": "指针移动带动平面；减少动态时保持静止。"
+          },
+          {
+            "name": "概念",
+            "value": "Space / Meta / Field / Rule / Latent",
+            "note": "保留 MorsPageSurface 的五个真实 HTML 按钮与对应说明；本地 Edge 已验证五项点击与真实 DOM 键盘焦点，平面交互使用 Three.js InteractionManager。"
+          }
+        ]
+      }
+    ],
+    "prompt": "使用固定版本 three 0.185.1 与 three-html-render 0.1.2，以原生 HTML/CSS/JavaScript 和本地 importmap 移植固定提交 HTML-Light-Demo 的完整 MorsPageSurface、globals.css 与 MorsLightCanvas。保留 MORS² 标志、原英文文案、五个概念、原面板、页面配色、字号与光照数值；桌面 CSS 视口不小于 768px 时沿用 1440×810 页面与参考 fit，小于 768px 时采用原 mobile 上下排列、页面宽度跟随视口，并以 height: auto 和 min-height: 1180px 容纳内容。由 Three.js HTMLTexture 与 InteractionManager 连接同一页面和 3D 表面，three-html-render 补齐浏览器 API，保留 texElementImage2D 兼容垫片。仅在 polyfill 的 SVG 快照 pageStyles 中使 html/body overflow: visible，保留高于视口的窄版面板，不修改 vendor。吊灯保留摆锤、Verlet 约束、瞄准、拉拽、松手、右键及双击复位，原面板提供光束角度、亮度、五色预设、自定义颜色、开关与复位；初始值为 34°、1450、#ffb36b。plane 复用同一页面并保持最大 8° 指针倾斜。减少动态时固定灯与平面且即时调参，静止后停止持续渲染；不支持时显示同一页面的静态光照并明确说明。分别实测视觉、实际路径、键盘、DOM、触摸、减少动态与后备，未验证项如实标注。保留各软件 MIT 许可；MORS² 品牌文案标志与美术方向署名 @kaolti，页面实现与光照代码署名 jinruozai，本仓库为个人非商业参考用途。",
+    "accessibility": {
+      "keyboard": "本地无头 Edge 实测 Tab 依次聚焦 Space、Meta、Field、Rule、Latent、power、beam，focus-visible 落在文档内真实 DOM 控件；ArrowRight 将光束角度 34 调至 35。五个概念点击均成功，读屏器未验证。",
+      "reducedMotion": "本地无头 Edge 的 reduce 模拟中灯固定，间隔 1 秒绘制计数保持 10；plane 在指针移动前后的矩阵相同，正常模式会改变。面板即时生效，真实设备与其他浏览器未验证。"
+    },
+    "demo": "material-demos/three-html-render/index.html",
+    "preview": "previews/materials/three-html-render.png",
+    "research": "docs/materials-three-html-render.md",
+    "sourceFiles": [
+      "material-demos/three-html-render/index.html",
+      "material-demos/three-html-render/demo.css",
+      "material-demos/three-html-render/demo.js",
+      "material-demos/three-html-render/mors-logo.svg"
+    ]
+  },
+  {
     "id": "web-design-engineer",
     "title": "Web Design Engineer · 网页设计工作流",
     "type": "agent-skill",
