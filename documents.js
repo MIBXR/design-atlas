@@ -150,6 +150,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "案例研究"
   },
   {
+    "path": "research/stellar-museum.md",
+    "title": "星槎 STELLAR：太空博物馆示范页与基线",
+    "group": "案例研究"
+  },
+  {
     "path": "research/genshin-world.md",
     "title": "原神：版本舞台、人物换色与声线",
     "group": "案例研究"
@@ -192,6 +197,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "research/linear-workflow.md",
     "title": "Linear：当前页面的设计与交互",
+    "group": "案例研究"
+  },
+  {
+    "path": "research/mira-host-photography.md",
+    "title": "Mira Høst：北欧摄影作品集示范页",
     "group": "案例研究"
   },
   {
@@ -330,6 +340,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复用 Prompt"
   },
   {
+    "path": "prompts/stellar-museum.md",
+    "title": "星槎 STELLAR · 太空探索博物馆 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
     "path": "prompts/genshin-world.md",
     "title": "原神 · 版本群像与角色舞台 · 复用 Prompt",
     "group": "复用 Prompt"
@@ -372,6 +387,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "prompts/linear-workflow.md",
     "title": "Linear — 深色产品开发系统 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/mira-host-photography.md",
+    "title": "Mira Høst · 北欧摄影作品集 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
@@ -510,6 +530,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
+    "path": "demos/stellar-museum/fidelity.md",
+    "title": "星槎示范页：来源与本地对应",
+    "group": "复现与素材"
+  },
+  {
     "path": "demos/endfield-industrial/state-matrix.md",
     "title": "终末地 · 完整工业科幻门户 · 终末地：八章状态矩阵",
     "group": "复现与素材"
@@ -577,6 +602,11 @@ window.DESIGN_ATLAS_DOCUMENTS = [
   {
     "path": "material-demos/material-web/vendor/README.md",
     "title": "Material Web 本地运行依赖",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/mira-host-photography/fidelity.md",
+    "title": "Mira Høst：复刻范围与本地化清单",
     "group": "复现与素材"
   },
   {

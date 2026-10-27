@@ -1,6 +1,6 @@
 # 案例与代码索引
 
-由 entries/ 自动生成，共 36 项。真实网站案例按原始网址与采集日期固定归档，不跟随官网后续变化。国家/地区按具体机构、创作来源收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。
+由 entries/ 自动生成，共 38 项。真实网站案例按原始网址与采集日期固定归档，不跟随官网后续变化。国家/地区按具体机构、创作来源收录；不代表全国统一风格。详细比较见 [国别案例比较](COUNTRY-COMPARISON.md)。
 
 | 顺序 | 案例 | 分类 | 国家/地区 | 类型 | 采集日期 | 可查询资料 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -40,3 +40,5 @@
 | 34 | [莱茵生命 · 影像终端的网页转译](../cases.html#style/rhine-lab) | 游戏/IP | 中国 | 官方影像网页转译 | 2026-10-09 | [原始案例](https://www.bilibili.com/video/BV1rr4y1b7sz/) · [研究](rhine-lab.md) · [Prompt数据](../entries/rhine-lab.json) · [Demo](../demos/rhine-lab/index.html) |
 | 35 | [绝区零 · 六章街头拼贴首页](../cases.html#style/zenless-zone-zero) | 游戏/IP | 中国 | 原站局部复现 | 2026-10-11 | [原始案例](https://zzz.mihoyo.com/main) · [研究](zenless-zone-zero.md) · [Prompt数据](../entries/zenless-zone-zero.json) · [Demo](../demos/zenless-zone-zero/index.html) |
 | 36 | [DeepSeek Harness · 可观察的产品演示](../cases.html#style/deepseek-harness) | 产品 | 中国 | 原站局部复现 | 2026-10-11 | [原始案例](https://www.deepseek.com/harness/) · [研究](deepseek-harness.md) · [Prompt数据](../entries/deepseek-harness.json) · [Demo](../demos/deepseek-harness/index.html) |
+| 70 | [星槎 STELLAR · 太空探索博物馆](../cases.html#style/stellar-museum) | 示范作品 | 来源未标注 | 示范页面复现 | 2026-10-27 | [原始案例](https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html) · [研究](stellar-museum.md) · [Prompt数据](../entries/stellar-museum.json) · [Demo](../demos/stellar-museum/index.html) |
+| 71 | [Mira Høst · 北欧摄影作品集](../cases.html#style/mira-host-photography) | 示范作品 | 来源未标注 | 示范页面复现 | 2026-10-27 | [原始案例](https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html) · [研究](mira-host-photography.md) · [Prompt数据](../entries/mira-host-photography.json) · [Demo](../demos/mira-host-photography/index.html) |

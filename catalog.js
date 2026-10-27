@@ -4454,5 +4454,251 @@ window.DESIGN_ATLAS = [
       "control": "原页面无audio/video和声音开关；本地不添加配乐。",
       "interactionRole": "动效和状态文本承担反馈，演示静音。"
     }
+  },
+  {
+    "id": "stellar-museum",
+    "order": 70,
+    "title": "星槎 STELLAR · 太空探索博物馆",
+    "subtitle": "garden-skills 的太空博物馆示范页与无 skill 基线",
+    "category": "示范作品",
+    "country": "来源未标注",
+    "tags": [
+      "示范作品",
+      "虚构博物馆",
+      "编辑排版",
+      "程序化星球",
+      "三维展示",
+      "时间线",
+      "基线对照"
+    ],
+    "summary": "来源仓库公开的太空博物馆示范页，以大标题、编号展厅、程序化三维场景和编年史组织长页；附未使用 web-design-engineer skill 时的生成结果作为基线。",
+    "accent": "oklch(0.78 0.13 65)",
+    "background": "oklch(0.10 0.015 250)",
+    "principles": [
+      "主页面以标题、编号、说明与场景组成编辑式网格，四个展厅共享三列结构，在窄屏折为单列。",
+      "Instrument Serif、Space Grotesk 与 JetBrains Mono 分担展示、界面和数据层级；中文沿来源字体栈回退。",
+      "近黑背景、暖白正文、少量琥珀强调和冷蓝数据标签通过 oklch 自定义属性协调。",
+      "程序化月球、空间站、火星和银河属于页面内展示，不依赖外部摄影；编年史与预约票券继续提供阅读结构。"
+    ],
+    "productFocus": "归档 garden-skills 固定提交的生成示范页面，研究其设计机制及与无 skill 基线的结构、字体、色彩、动效和信息层级差别。页面内 STELLARIA／星海博物馆、馆藏、地址、预约信息及未来任务均按示范文案保留，不作为真实机构事实。",
+    "interaction": [
+      "首次进入：标题两行以 1.1 秒上移入场，第二行延迟 0.12 秒；Canvas 星空闪烁，首屏星球持续旋转，UTC 字符串每秒更新。UTC 是浏览器时钟，不是轨道实时数据。",
+      "下滚超过 60px：固定导航加近黑半透明背景、16px 模糊与下边线；返回顶部恢复透明。页内锚点按目标位置减 60px 平滑滚动。",
+      "展厅悬停：桌面行内上下留白从 48px 增至 56px、标题变强调色、场景放大 1.02 倍、箭头右移 8px；行项没有进入新展厅的点击处理。",
+      "三维场景接近视口：IntersectionObserver 以 120px 外边距控制场景渲染；各 canvas 随容器尺寸更新，首屏按宽高比调整星球位置与尺度。",
+      "订阅表单：浏览器校验邮箱后，提交仅阻止默认操作并将按钮文字改为“已订阅”；预约按钮与导览按钮保留来源的占位链接，不发起真实预约。",
+      "基线版本是未使用 web-design-engineer skill 时的生成结果，依据来源 README 第 419、425–431 行；其表单提交显示成功文字，2400ms 后恢复并清空表单，仅为前端示范。"
+    ],
+    "theme": "主页面固定近黑，暖白用于主要文字，琥珀用于斜体强调和节点，冷蓝用于编年史标签；没有主题切换入口。",
+    "constraints": [
+      "归档对象是 ConardLi/garden-skills 的固定提交 2b9a89340b70f632d31c0f1c69fce94a7912423e，不是真实博物馆官网。主页面原文自称 STELLARIA／星海博物馆，基线自称星槎博物馆；归档标题按任务命名，不修改页内文案。",
+      "主页面与基线均从固定提交 Git blob 复制，仅将 Google Fonts、preconnect 与 Three.js 外链替换为本地路径；逐项对应见 fidelity。HTML 内 CSS、JavaScript、占位链接及业务边界均保留来源。",
+      "主页面需要支持 importmap、ESM 与 WebGL 的静态 HTTP 环境；Three.js 0.160.0、字体及各自许可随包保留。没有外部图片、音频或视频素材。",
+      "来源的减少动态分支限制 CSS 动画、停止对象旋转及背景星空闪烁，但着色器时间、UTC 和平滑锚点滚动仍保留；本地不修改该行为，不声称完全静止。",
+      "README 第 427 行文件路径多出 demo2/ 一层；归档依据实际存在的 demo/web-design-demo/demo1.html 与 demo1-with-skill.html。生成模型、运行次数及生成参数没有对应证据，不作补充推断。"
+    ],
+    "useCases": [
+      "文化主题示范页研究",
+      "编辑式长页排版",
+      "程序化三维展品展示",
+      "同题生成基线对照"
+    ],
+    "avoid": [
+      "将示范内容当作真实机构资料",
+      "把占位 CTA 描述为完整业务",
+      "用单张截图判断全部交互精度"
+    ],
+    "tokens": {
+      "palette": [
+        "oklch(0.10 0.015 250)",
+        "oklch(0.94 0.012 80)",
+        "oklch(0.78 0.13 65)",
+        "oklch(0.66 0.085 220)"
+      ],
+      "type": "来源样式：Instrument Serif 展示字、Space Grotesk 界面字、JetBrains Mono 数据字；主标题 clamp(60px, 11vw, 168px)，正文 16px，部分演示画面标签 9–11px。",
+      "layout": "来源样式：内容最大宽度 1400px；横向内边距 clamp(24px, 5vw, 80px)；展厅 80px／1fr／1.1fr 三列、48px 列隙，960px 以下折为单列。",
+      "motion": "来源样式与脚本：标题 1.1s／0.12s 交错；展厅留白 0.4s、图像 0.5s；星空正弦闪烁，三维对象使用共享渲染循环；减少动态边界见约束。"
+    },
+    "composition": {
+      "color": "oklch 定义近黑表面、暖白文字、灰蓝次级信息、琥珀强调与冷蓝标签；边框以低亮度层次划分章节。",
+      "typography": "展示衬线与斜体强调负责标题节奏，无衬线负责段落和导航，等宽字体负责编号、坐标、时间与票券字段；中文保持来源后备字体。",
+      "layout": "全屏首部之后依次是馆长寄语、四个横向展厅、八节点纵向编年史、预约票券和四列页脚；窄屏按来源断点重排。",
+      "imagery": "Three.js 以噪声着色器生成球体，以几何体组合空间站，以 12000 个粒子生成银河；背景星空为 Canvas，票券纹理为内联 SVG。",
+      "shape": "轨道细环、场景四角标定、细分隔线、编年史节点与票券缺口共同延续档案和观测主题。",
+      "hierarchy": "首屏宣言与星球 → 馆长寄语 → 编号展厅与说明 → 年份与历史节点 → 预约示意票券 → 联系与订阅示意。",
+      "motion": "标题从行内遮罩升起，展厅悬停增加留白并放大画面；星球、空间站、银河与星空循环作为局部展示，页面仍由观看者自然滚动。",
+      "coherence": "编号、坐标、细线、少量琥珀与字体职责贯穿首部、展厅、编年史和票券，将虚构博物馆的档案语言维持在同一层级。"
+    },
+    "sources": [
+      {
+        "title": "garden-skills · 有 skill 的太空博物馆示范源码",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
+        "type": "实例",
+        "note": "主页面全部 HTML、CSS 和 JavaScript 的固定版本依据；页内自称 STELLARIA／星海博物馆，内容按示范文案保留。"
+      },
+      {
+        "title": "garden-skills · 无 skill 的基线源码",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1.html",
+        "type": "实例",
+        "note": "未使用 web-design-engineer skill 时的生成结果；版本身份依据 README 第 419、425–431 行，文件实际位置以该固定提交为准。"
+      },
+      {
+        "title": "web-design-engineer · 原始提示词与启用前后对照",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md#L417-L433",
+        "type": "理论",
+        "note": "第 419 行声明相同提示词下的有／无 skill 对照；第 423 行保存原始提示词，第 425–431 行列版本、字体与布局差别。作者的品质评价不作为本库实测结论。"
+      },
+      {
+        "title": "web-design-engineer · 设计机制分析维度",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/SKILL.md#L61-L71",
+        "type": "规范",
+        "note": "来源技能要求从色彩、字体、间距、圆角、阴影、运动和密度分析参考；仅用于解释该示范的设计机制，不声称生成过程逐步执行了全部工作流。"
+      }
+    ],
+    "prompt": "帮我做一个'太空探索博物馆'的线上展览首页——全屏 Hero、4 个核心展览介绍、一个至少 6 个节点的时间线、参观预约 CTA、页脚。整体风格要沉浸感强、有宇宙的深邃感。\n\n出处：来源仓库固定提交 2b9a89340b70f632d31c0f1c69fce94a7912423e 的 skills/web-design-engineer/README.zh-CN.md 第 423 行，原始生成提示词照录。",
+    "negativePrompt": "复现本归档时，不改来源页面的设计、文案、结构、交互或占位业务；只把外链资源换为本地路径。虚构机构、馆藏、地址和未来事件不得作为现实事实。此处为 Web Atlas 的复现约束，非来源原始负向提示词。",
+    "demo": "demos/stellar-museum/index.html",
+    "preview": "previews/stellar-museum.jpg",
+    "research": "research/stellar-museum.md",
+    "exercise": "在同一视口下打开主页面与 baseline.html，逐项观察结构、字体职责、色彩、局部动效与信息层级；区分作者对照说明、源码数值和实际浏览器结果。",
+    "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
+    "implementation": "reference-study",
+    "fidelity": "demos/stellar-museum/fidelity.md",
+    "assetManifest": "demos/stellar-museum/assets-manifest.json",
+    "capturedAt": "2026-10-27",
+    "patternIds": [],
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "dark",
+      "control": "主页面与基线均为固定深色，没有主题切换；两版保留各自色彩系统。",
+      "designReason": "主页面的近黑、暖白、琥珀和冷蓝配合程序化太空场景，形成来源定义的档案氛围。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "源码没有音频、视频或声音播放流程。",
+      "interactionRole": "空间氛围由星空、三维场景与排版承担；叙述中的录音和环境重建只属于示范文案。"
+    }
+  },
+  {
+    "id": "mira-host-photography",
+    "order": 71,
+    "title": "Mira Høst · 北欧摄影作品集",
+    "subtitle": "公开技能仓库中的虚构摄影师示范页",
+    "category": "示范作品",
+    "country": "来源未标注",
+    "tags": [
+      "示范作品",
+      "虚构摄影师",
+      "摄影作品集",
+      "编辑排版",
+      "衬线斜体",
+      "暖纸色",
+      "全幅摄影",
+      "悬停预览"
+    ],
+    "summary": "以全幅摄影、暖纸色与墨色、衬线斜体和编号章节组织虚构摄影师的作品集；保留来源页面的慢速推镜、非对称图组和目录悬停预览。",
+    "accent": "#161513",
+    "background": "#f2efe8",
+    "principles": [
+      "摄影占满首屏，标题、作者与拍摄元数据叠于渐变遮罩上，图像承担第一视觉层。",
+      "展示标题采用 Instrument Serif 正体与斜体，正文和大字距元数据采用 Space Grotesk，以字形和尺度组织层级。",
+      "编号、细横线和重复对齐线连接专题、作品目录、人物介绍、合作方式、随笔与联系区域。",
+      "专题采用左侧粘性说明与右侧非对称四图，目录以行式索引替代等规格卡片。"
+    ],
+    "productFocus": "归档 garden-skills 固定提交中的公开示范页面，研究摄影、编辑排版与局部动效如何构成一套视觉身份。来源 README 明确 Mira Høst 为虚构北欧摄影师；页面中的履历、地址、出版经历和摄影署名属于示范文案，不作为真实人物事实。",
+    "interaction": [
+      "首屏图片加载后增加 loaded 类，以 1.6 秒透明度过渡显现；随后以 24 秒周期交替缓慢缩放与平移，文字按来源的延迟逐词上移进入。",
+      "滚动进入章节标题和内容组时，IntersectionObserver 以 0.12 阈值触发一次淡入上移；内容组按 0.12 秒递增延迟出现。",
+      "桌面悬停作品目录行时，标题右移 8px、箭头右移 6px，对应照片缩略图从透明和 0.94 倍缩放进入；离开后回到初态。1100px 及以下隐藏缩略图。",
+      "专题摄影与随笔封面悬停时以 1.4 秒过渡放大至 1.04 倍，离开后恢复。",
+      "顶栏及页脚真实章节锚点平滑滚动到对应模块；作品目录、随笔详情与社交链接保留来源的 # 占位，不提供真实详情或账户服务。",
+      "来源的减少动态分支停用首图和滚动提示线循环，使滚动显现内容直接可见，并将动画和过渡时长缩短至 0.001 秒；平滑滚动代码按原样保留。"
+    ],
+    "theme": "暖纸色 #f2efe8 与墨色 #161513 构成固定双色基调，联系和页脚反转为墨底浅字；固定顶栏和两侧竖排标记使用差值混合跨越深浅背景。",
+    "constraints": [
+      "归档来源提交 2b9a89340b70f632d31c0f1c69fce94a7912423e 的 demo/web-design-demo/demo2-with-skill.html，仅将远程图片、字体样式表、字体文件与预连接目标改为本地路径，不改文案、布局或交互。",
+      "README.zh-CN.md 第 436 行保存原始生成提示词，第 438–446 行将本页列为有技能示范；未据此推定生成模型、对话轮次或未公开制作过程。",
+      "来源 demo/web-design-demo/demo2/index.html 是林月摄影作品集，内容不同；README 未明确其为无技能版本，本案例不设基线。",
+      "14 个图片 URL 对应 10 张 Unsplash 照片，不同宽度和质量参数分别下载，不重编码；出处、尺寸与归属核查边界见素材清单。",
+      "人物肖像区域保留来源的渐变占位图；作品目录、文章详情与社交链接的 # 占位按原样保留，不补造业务页面。",
+      "独立 Demo 内小字号、文字箭头、加载与减少动态行为属于来源设计，按本轮忠实复制范围保留；不据此声称满足完整无障碍要求。",
+      "页面脚注中的全部摄影归属表述属于虚构示范文案；实际图片为来源引用的 Unsplash 素材，不能据此归属给 Mira Høst。"
+    ],
+    "useCases": [
+      "摄影作品集",
+      "长篇专题展示",
+      "独立创作者介绍",
+      "杂志式作品目录"
+    ],
+    "avoid": [
+      "将示范履历写成真实人物事实",
+      "将所有章节改为等大卡片",
+      "将占位链接包装成完整业务流程"
+    ],
+    "tokens": {
+      "palette": [
+        "#f2efe8",
+        "#e8e4d9",
+        "#161513",
+        "#3a3631",
+        "#8a857d"
+      ],
+      "type": "Instrument Serif 正体与斜体、Space Grotesk 300／400／500；主标题 clamp(54px, 9.2vw, 156px)，540px 以下改为 clamp(46px, 13vw, 80px)；正文约 13.5–15.5px。",
+      "layout": "首屏 100dvh；章节内宽上限 1320px、桌面左右 48px；专题 5:7 双栏，右侧六列拼图；900px 以下改为单列、左右 22px。",
+      "motion": "首图 24 秒交替推镜；标题 1.2 秒分词入场；章节显现 1.1 秒、组内 0.9 秒并错开 0.12 秒；目录预览 0.5／0.6 秒，图片悬停 1.4 秒。数值来自固定提交源码。"
+    },
+    "composition": {
+      "color": "暖纸色与墨色为主体，灰褐色辅助信息降低对比；底部反转为墨色联系区，摄影保持原色。",
+      "typography": "大号衬线标题与大量斜体营造编辑节奏，轻字重无衬线正文承担阅读；大字距小号编号、坐标、年份与图版数量形成元数据层。",
+      "layout": "全幅首屏接编号章节；专题为 5:7 双栏及非对称四图，作品目录共享列线，合作方式三列、随笔三列；窄屏顺序折为单列。",
+      "imagery": "14 个 Unsplash 图片请求分别服务首屏、专题图组、目录预览与随笔封面；人物肖像是 CSS 占位纹理，不是实际照片。",
+      "shape": "细横线、窄编号条、方形字母印记和矩形图版构成边界，不依靠大圆角与投影。",
+      "hierarchy": "摄影与主张 → 重点系列 → 六组作品目录 → 虚构作者介绍 → 三种合作方式 → 随笔 → 联系与页脚。",
+      "motion": "缓慢首图推镜维持摄影氛围；分词入场和一次性滚动显现区分节奏；目录悬停预览只作用于当前行。",
+      "coherence": "纸墨配色、衬线斜体、编号、细线、图版元数据与重复列线贯穿全部模块，联系区反转配色而保留相同文字与线条关系。"
+    },
+    "sources": [
+      {
+        "title": "来源仓库 · 摄影作品集示范页源码",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+        "type": "实例",
+        "note": "固定提交中的完整 HTML、CSS 与 JavaScript；支持页面结构、字体、颜色、动效与占位边界的源码判断。"
+      },
+      {
+        "title": "来源说明 · 原始提示词与虚构角色",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md#L434-L446",
+        "type": "理论",
+        "note": "第 436 行给出原始提示词；第 438–446 行列为有技能示范，第 441 行明确角色虚构。第 440 行文件路径多写一层 demo2/，归档采用实际存在的单文件路径。"
+      },
+      {
+        "title": "来源技能 · 视觉层级与制作原则",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/SKILL.md#L175-L182",
+        "type": "理论",
+        "note": "来源技能讨论视觉层级、对齐、色彩和字体数量，用于理解其设计取向；不视为具体生成过程或本页无障碍实测证据。"
+      }
+    ],
+    "prompt": "帮我做一个独立摄影师的个人作品集网站首页。\n\n原始生成提示词，照录自 garden-skills 固定提交 2b9a89340b70f632d31c0f1c69fce94a7912423e 的 skills/web-design-engineer/README.zh-CN.md 第 436 行：https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md#L436",
+    "negativePrompt": "以下约束由 Web Atlas 撰写：不改来源设计与原文，不将示范人物、地点履历和图片署名当作真实机构事实，不增补来源没有的详情、后端、音乐或基线，不将源码判断写成浏览器实测。",
+    "demo": "demos/mira-host-photography/index.html",
+    "preview": "previews/mira-host-photography.jpg",
+    "research": "research/mira-host-photography.md",
+    "exercise": "用相同视口逐节查看来源与本地页面，核对摄影裁切、字体换行、目录悬停预览、章节导航、窄屏重排与减少动态分支；将真实可用入口和 # 占位链接分开记录。",
+    "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+    "implementation": "reference-study",
+    "fidelity": "demos/mira-host-photography/fidelity.md",
+    "assetManifest": "demos/mira-host-photography/assets-manifest.json",
+    "capturedAt": "2026-10-27",
+    "patternIds": [],
+    "themeBehavior": {
+      "mode": "fixed",
+      "default": "light",
+      "control": "固定暖纸色主题，联系区和页脚使用墨底浅字；没有全局深浅色切换。",
+      "designReason": "摄影保持原色，纸墨基调与编辑排版相互配合；顶栏的差值混合适应经过的深浅背景。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "来源没有音频、背景音乐或声音控制。",
+      "interactionRole": "摄影、排版、滚动与局部悬停承担叙事，不添加声音。"
+    }
   }
 ];
