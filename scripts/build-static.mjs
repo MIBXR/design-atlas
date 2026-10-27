@@ -11,7 +11,7 @@ export const files = ['index.html', 'landing.css', 'home-features.css', 'home.js
 const runtimeFiles = ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.js', 'case-loading.css'];
 files.push('favorites.js', 'favorite-controls.js', 'demo-preview.js', 'documents.js', 'patterns.html', 'patterns-page.js', 'patterns.js', 'patterns-ui.js', 'patterns-ui.css', 'pattern-playground.js', 'pattern-playground.css');
 files.push('materials.html', 'materials.js', 'materials-ui.js', 'materials-ui.css');
-export const folders = ['demos', 'entries', 'patterns', 'materials', 'material-demos', 'previews', 'research', 'prompts', 'docs', 'vendor', 'agent'];
+export const folders = ['demos', 'entries', 'patterns', 'materials', 'material-demos', 'agent-skills', 'previews', 'research', 'prompts', 'docs', 'vendor', 'agent'];
 const localOrigin = 'https://design-atlas.invalid';
 
 function localReference(value, documentPath) {
@@ -143,6 +143,10 @@ export function prepareStatic(assetsMode = 'local') {
       if (item.isDirectory()) finalize(target);
       else if (item.isFile()) {
         const canonical = path.relative(output, target).split(path.sep).join('/');
+        if (canonical.startsWith('agent-skills/')) {
+          totalBytes += fs.statSync(target).size;
+          continue;
+        }
         if (item.name.endsWith('.html') || item.name.endsWith('.css')) {
           const original = fs.readFileSync(target, 'utf8');
           let text = original;

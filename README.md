@@ -110,7 +110,7 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 ## 内容素材取材
 
-[内容素材库](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html) 与案例、巧思共用浏览和详情结构；素材资料独立维护在 `materials/`，可运行样例与必要依赖保存在 `material-demos/`。资源保留固定版本、上游许可证和文件摘要，区分原始资源、本地原创组合与兼容性后备。
+[内容素材库](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html) 与案例、巧思共用浏览和详情结构；素材资料独立维护在 `materials/`，可运行样例与必要依赖保存在 `material-demos/`。Agent Skill 类型提供中文工作流、关联案例与素材，以及 `agent-skills/` 中的原文快照，不要求可运行 Demo。资源保留固定版本和上游许可证，区分原始资源、本地原创组合与兼容性后备。
 
 | 素材 | 适合借用的方向 | 使用说明 |
 | --- | --- | --- |
@@ -126,11 +126,12 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 ```sh
 python ATLAS_SCRIPT --session SESSION_FILE material-search "渐变"
+python ATLAS_SCRIPT --session SESSION_FILE material-search "" --type agent-skill
 python ATLAS_SCRIPT --session SESSION_FILE material-show shaders --source
 python ATLAS_SCRIPT --session SESSION_FILE material-export shaders --out NEW_DIRECTORY
 ```
 
-[素材目录](agent/materials.json) 与 `agent/materials/<id>.json` 提供无需网页的读取入口；目录、资料包和文件使用同一个固定 Git 提交。[素材使用与维护](docs/materials.md) 说明收录标准、示例边界和新增资源方式。完整导出在静态 HTTP 服务下打开 `material.demo`；`--code-only` 会列出未下载的媒体与预览，代码形式的 SVG 输入图形随源码导出。
+[素材目录](agent/materials.json) 与 `agent/materials/<id>.json` 提供无需网页的读取入口；目录、资料包和文件使用同一个固定 Git 提交。[素材使用与维护](docs/materials.md) 说明收录标准、示例边界和新增资源方式。完整导出后，可运行素材在静态 HTTP 服务下打开 `material.demo`，Agent Skill 从 `material.skillPath` 阅读原文指引；`--code-only` 会列出未下载的媒体与预览，代码形式的 SVG 输入图形随源码导出。
 
 ## 案例画廊
 
@@ -320,6 +321,7 @@ patterns/<id>.json            人工策展的独立巧思与体验类型
 patterns.html / patterns-ui.*  独立巧思浏览、来源 Demo 与复用方法
 materials/<id>.json           来源、许可、使用约束与代表性样例
 material-demos/<id>/          独立素材 Demo、固定运行依赖与原始许可
+agent-skills/<id>/            Agent Skill 原文快照、完整附属文件与许可
 materials.html / materials-ui.* 素材浏览、交互预览与取材方法
 pattern-playground.*          首页、巧思页与实验室共用的本地机制示意
 fundamentals.*                可操作的设计实验室

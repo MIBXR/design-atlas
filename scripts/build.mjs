@@ -43,5 +43,5 @@ console.log(`Built ${entries.length} entries. Open index.html or run npm start.`
 const {catalog} = buildAgent();
 console.log(`Built ${catalog.entryCount} Agent case bundles.`);
 console.log(`Built ${catalog.patterns?.patternCount || 0} curated design patterns with linked, verifiable sources.`);
-console.log(`Built ${catalog.materials?.materialCount || 0} source-backed materials with interactive demos.`);
+console.log(`Built ${catalog.materials?.materialCount || 0} source-backed materials.`);
 console.log(`Built ${buildDocuments().length} public Markdown documents.`);

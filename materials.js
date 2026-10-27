@@ -166,6 +166,109 @@ window.DESIGN_MATERIALS = [
     }
   },
   {
+    "id": "beautiful-article",
+    "title": "Beautiful Article · 长文编辑工作流",
+    "type": "agent-skill",
+    "category": "Agent 工作流",
+    "summary": "把已有材料经抽取、编辑规划、主题确认、逐节生成和审阅，制作成基于 Reacticle 的可分享网页文章。",
+    "install": "将 agent-skills/beautiful-article/ 复制到项目的技能目录并按所用 Agent 的发现方式启用；创作文章时按原文调用 scripts/scaffold.sh 创建 React、TypeScript 与 Vite 工作区。",
+    "tags": [
+      "长文排版",
+      "编辑工作流",
+      "Reacticle",
+      "主题",
+      "单文件 HTML",
+      "信息保留"
+    ],
+    "useCases": [
+      "把 URL、PDF、DOCX 或 Markdown 编辑成网页文章",
+      "保留材料信息的长文归档",
+      "制作解释文、教程、研究报告或审阅复盘",
+      "需要主题一致的图文与交互式讲解"
+    ],
+    "avoid": [
+      "没有材料或大纲却要求凭空生成完整内容",
+      "后台、表单、拖拽工作台和完整仪表盘",
+      "产品原型与通用网页应用",
+      "未经用户确认就删减材料或选择交付形式"
+    ],
+    "constraints": [
+      "本条目保存 garden-skills 固定提交中的技能原文、主题写作资料和脚手架，不直接运行技能或提供在线文章生成。",
+      "技能默认保留完整信息；文章类型、信息保留比例、主题、宽度、配图与封面按原文的确认节点决定。",
+      "11 份主题资料是给 Agent 阅读的写作指导，不是主题 CSS；对应运行时、组件和 11 篇样文见 Reacticle 素材。",
+      "原文脚手架安装执行时的最新 reacticle 发布版；本库 Reacticle 样例另行固定提交，不能把二者当作同一次构建。",
+      "脚手架的默认标题、正文和封面是占位内容，需要按文章材料完成；单文件 HTML 的构建形式不自动保证外链字体已离线化。",
+      "原文快照保留原语言与相对链接；本条目不下载 README 中作者长文的外部效果图，也不声称复刻这些成品长文。"
+    ],
+    "upstream": {
+      "repository": "ConardLi/garden-skills",
+      "url": "https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article",
+      "commit": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+      "version": "0.1.0",
+      "verifiedAt": "2026-10-27"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/LICENSE",
+      "scope": "garden-skills 仓库内的技能文本、主题写作资料、脚本与工程模板；根 LICENSE 原样附在快照目录。",
+      "notes": "保留 MIT 版权与许可文本。Reacticle 的运行时代码与字体各按该素材的许可记录使用；README 链接的外部文章、配图与字体不因技能的 MIT 许可而获得再分发许可。"
+    },
+    "sources": [
+      {
+        "title": "Beautiful Article 技能原文",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/SKILL.md",
+        "note": "材料抽取、编辑规划、三次确认、首屏与逐节生成、终审和交付的直接依据。",
+        "evidence": "source"
+      },
+      {
+        "title": "技能说明与 Reacticle 分层",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/README.md",
+        "note": "区分技能的编辑方法与 Reacticle 的组件、主题及运行时；作者展示的成品长文与本库主题样文分别记录。",
+        "evidence": "source"
+      },
+      {
+        "title": "主题写作资料索引",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/theme-profiles/index.json",
+        "note": "11 份主题写作资料与运行时主题标识的对应依据。",
+        "evidence": "source"
+      },
+      {
+        "title": "技能版本声明",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/manifest.json",
+        "note": "固定提交声明版本为 0.1.0；技能兼容声明不作为逐宿主运行实测。",
+        "evidence": "source"
+      }
+    ],
+    "skillPath": "agent-skills/beautiful-article/",
+    "workflow": [
+      "确认目标是文章，收集源材料、目标语言和初步文章类型；将材料抽取成 Markdown，记录不确定项并检查抽取完整性。",
+      "规划简报、大纲、主题与素材；按文章类型确定信息保留比例，默认保留完整信息。",
+      "逐项请用户确认文章类型、主题、版式宽度、配图模式和封面。",
+      "创建文章工程，制作封面、首屏、第一节和代表性视觉块，独立审阅后请用户确认首版与后续开发模式。",
+      "用 Reacticle 语义组件和主题约束的自由图文层逐节完成文章，每节独立文件并审阅。",
+      "从编辑、视觉和技术三个视角终审，按最小范围修复，避免为局部问题重写整篇。",
+      "请用户确认交付形式后导出单文件 HTML；仅在用户选择时另行导出 PDF，并附简短编辑说明。"
+    ],
+    "relatedEntries": [
+      {
+        "kind": "material",
+        "id": "reacticle",
+        "note": "skill 的 11 套主题由 Reacticle 实现，11 篇样文就在 Reacticle 的样例里；技能保存写作指导，组件库提供运行时。"
+      }
+    ],
+    "prompt": "先阅读 agent-skills/beautiful-article/SKILL.md，用我提供的材料制作网页文章。抽取材料并记录不确定项，提出编辑规划，逐项确认文章类型与信息保留、主题、宽度、配图和封面。先做首屏与第一节，确认后按节生成完整文章，保持文章阅读形态并使用 Reacticle 主题令牌。审阅和修复后再确认交付形式。主题选择可先打开 Reacticle 素材的 11 篇实际样文比较排版语言；未经确认不替我删减信息或导出 PDF。",
+    "accessibility": {
+      "keyboard": "技能条目通过真实链接进入原文与 Reacticle 样例；创作文章时保留语义结构、可读目录，以及控件的键盘与焦点操作。",
+      "reducedMotion": "本资源为工作流与文本快照，没有自动播放的演示；文章内自由图文层若带动效，需要在技术终审中检查移动端与可访问性。"
+    },
+    "preview": "previews/materials/beautiful-article.png",
+    "research": "docs/materials-beautiful-article.md",
+    "sourceFiles": [
+      "agent-skills/beautiful-article/SKILL.md",
+      "agent-skills/beautiful-article/README.md"
+    ]
+  },
+  {
     "id": "material-web",
     "title": "Google Material Web · Material 3 官方组件",
     "type": "component-library",
@@ -390,6 +493,293 @@ window.DESIGN_MATERIALS = [
       "material-demos/material-web/demo.css",
       "material-demos/material-web/demo.js",
       "material-demos/material-web/vendor/components.mjs"
+    ]
+  },
+  {
+    "id": "reacticle",
+    "title": "Reacticle · 长文排版组件库",
+    "type": "component-library",
+    "category": "组件与效果",
+    "summary": "一套用于 React 长文的语义化组件，配有 11 套主题，让同一份内容切换为不同的排版语言。",
+    "install": "npm install reacticle",
+    "demoNote": "11 篇样文分别绑定原画廊主题，保留原文、图表与全部文章交互；每项打开一篇独立静态页面。",
+    "tags": [
+      "React",
+      "长文排版",
+      "主题",
+      "文章",
+      "报告",
+      "交互图表",
+      "语义化组件",
+      "beautiful-article"
+    ],
+    "useCases": [
+      "数据笔记与分析报告",
+      "技术解释、故障复盘与系统设计",
+      "出版随笔、媒介特稿与产品上手指南",
+      "带交互图形的长文与教学文章"
+    ],
+    "avoid": [
+      "用文章组件搭建复杂后台或完整应用",
+      "只更换颜色却忽略各主题的排版契约",
+      "把画廊中的样文结论当作独立核验后的事实"
+    ],
+    "constraints": [
+      "固定 Reacticle 0.2.6 源码提交 dcfc4baf386bbc220cd1aa6274bed3b741108465；React 18.3 是上游声明的 peer 依赖，样例使用固定 lockfile 安装结果。",
+      "每篇严格采用 apps/site/src/data/gallery.tsx 中的报告与主题组合；RateLimiter.tsx 导出的组件名为 RateLimiterSpec，11 个主题对应关系与任务表一致。",
+      "组件、文章与主题 CSS 不作修改；独立入口保留原画廊文章容器及原站 CSS，省略官网导航、浮动返回标签与上一篇／下一篇。入口禁用 Prism 自动全页扫描，由原 React 组件保留逐行代码高亮。",
+      "原站 13 个 Google Fonts 家族的 76 个 WOFF2 文件已本地化并附 OFL；中文沿用原主题的系统字体回退，不增加官网没有的中文网络字体。",
+      "通过 HTTP/HTTPS 打开样例目录，JS、CSS、公式字体与本地化字体均使用相对路径；文章外链保留原作指向。",
+      "原始 package.json 声明 MIT，但该固定提交的仓库内没有 LICENSE 文件；许可声明与实际缺失情况同时记录，不虚构上游许可文本。",
+      "样文原文保持原样；主题风格说明为中文概括，依据 garden-skills 固定提交的 theme-profiles。",
+      "样文中的交互、阅读辅助与动态行为沿用上游实现；源码保留不等于读屏器、真实触屏或所有浏览器已经完成实测。"
+    ],
+    "upstream": {
+      "repository": "ConardLi/reacticle",
+      "url": "https://github.com/ConardLi/reacticle",
+      "commit": "dcfc4baf386bbc220cd1aa6274bed3b741108465",
+      "version": "0.2.6",
+      "verifiedAt": "2026-10-27"
+    },
+    "license": {
+      "name": "MIT（package.json 声明）；字体 OFL 1.1",
+      "url": "https://github.com/ConardLi/reacticle/blob/dcfc4baf386bbc220cd1aa6274bed3b741108465/package.json",
+      "scope": "Reacticle 软件与文章实现按作者 package.json 的 MIT 声明记录；React 等运行依赖保留各自 MIT 许可，Google Fonts 与 KaTeX 公式字体保留 OFL 1.1。",
+      "notes": "该固定提交的仓库内没有 LICENSE 文件；vendor 保存原始 package.json、许可声明记录、运行依赖 MIT 及逐家族字体 OFL。本库用于个人非商业学习，原文与署名保留。"
+    },
+    "sources": [
+      {
+        "title": "Reacticle 固定提交与安装说明",
+        "url": "https://github.com/ConardLi/reacticle/tree/dcfc4baf386bbc220cd1aa6274bed3b741108465",
+        "note": "读取 README、package.json、库组件、主题 CSS 与 lockfile，按原源码构建。",
+        "evidence": "source"
+      },
+      {
+        "title": "11 篇画廊文章与主题绑定",
+        "url": "https://github.com/ConardLi/reacticle/blob/dcfc4baf386bbc220cd1aa6274bed3b741108465/apps/site/src/data/gallery.tsx",
+        "note": "逐篇核对 slug、标题、主题与实际报告导出名，入口复用 GalleryReader 的文章容器。",
+        "evidence": "source"
+      },
+      {
+        "title": "Reacticle 在线画廊",
+        "url": "https://rearticle.mmh1.top/#/gallery",
+        "note": "作者公开画廊；本条目展示固定源码中的 11 篇主题样文。",
+        "evidence": "source"
+      },
+      {
+        "title": "beautiful-article 主题定位",
+        "url": "https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/theme-profiles",
+        "note": "中文风格说明概括各主题 profile 的定位，固定 garden-skills 提交。",
+        "evidence": "source"
+      },
+      {
+        "title": "原站字体声明",
+        "url": "https://github.com/ConardLi/reacticle/blob/dcfc4baf386bbc220cd1aa6274bed3b741108465/apps/site/index.html",
+        "note": "本地化相同 Google Fonts 请求中的全部字体资源；字体声明、字重及子集保持一致。",
+        "evidence": "source"
+      }
+    ],
+    "demos": [
+      {
+        "id": "caffeine-half-life",
+        "title": "Tufte · 咖啡因与睡眠：一份关于半衰期的笔记",
+        "component": "CaffeineHalfLife",
+        "summary": "数据墨水风格：克制衬线、充裕页边、发丝参考线与低装饰图表，让论点和证据承载视觉层级。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=caffeine-half-life",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "tufte",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "movable-type",
+        "title": "Press · 活字之后",
+        "component": "MovableType",
+        "summary": "出版书卷风格：暖纸与从容衬线，以线代框，保留数据墨水纪律，用更外放的字号和版式组织叙事。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=movable-type",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "press",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "pool-exhaustion",
+        "title": "Shannon · 连接池耗尽：一次结算级联故障复盘",
+        "component": "PoolExhaustion",
+        "summary": "暗色工程风格：温暖石墨底、暖白墨与琥珀信号色，围绕日志、代码、事件与决策组织可核查证据。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=pool-exhaustion",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "shannon",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "orbit-spec",
+        "title": "Vignelli · Orbit 设计系统 · 基础规范",
+        "component": "OrbitSpec",
+        "summary": "瑞士国际主义风格：冷中性纸面、无衬线字号层级、严密网格与一抹结构红，适合系统规范。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=orbit-spec",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "vignelli",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "linear-attention",
+        "title": "Knuth · 以核特征映射线性化自注意力：一个复杂度视角",
+        "component": "LinearAttention",
+        "summary": "学术预印本风格：正式衬线、编号章节和图表、公式优先与密集引用，强调推导和可核查性。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=linear-attention",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "knuth",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "first-newsletter",
+        "title": "Freddie · 第一封 Newsletter：一份不端着的上手指南",
+        "component": "FirstNewsletter",
+        "summary": "温暖人文风格：白纸黑墨与明黄荧光色块，俏皮衬线标题配干净无衬线正文，亲切且专业。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=first-newsletter",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "freddie",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "slow-breathing",
+        "title": "Andy · 把呼吸放慢：盒式呼吸与平静的神经科学",
+        "component": "SlowBreathing",
+        "summary": "静谧人文风格：暖奶油纸、南瓜橙、暖灰墨与圆润字体，大圆角、柔和阴影和留白帮助放慢节奏。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=slow-breathing",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "andy",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "front-page",
+        "title": "Bodoni · 头版的消亡",
+        "component": "FrontPage",
+        "summary": "黑白报刊风格：纯白纸、真黑墨与发丝栏线，大字刊头、首字下沉和粗细双线建立印刷层级。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=front-page",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "bodoni",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "geometry-of-meaning",
+        "title": "Bayer · 形、色、网格：看得懂的视觉语法",
+        "component": "GeometryOfMeaning",
+        "summary": "包豪斯构成风格：暖纸黑墨，以红蓝黄三原色、几何无衬线、硬边与圆形数字组织清晰结构。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=geometry-of-meaning",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "bayer",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "rate-limiter-spec",
+        "title": "Fuller · 限流器设计规格",
+        "component": "RateLimiterSpec",
+        "summary": "工程蓝图风格：深蓝底、青白墨、制图青与淡方格网，搭配等宽标注、虚线分节和发丝拓扑。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=rate-limiter-spec",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "fuller",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      },
+      {
+        "id": "color-clash",
+        "title": "Sottsass · 撞色不翻车",
+        "component": "ColorClash",
+        "summary": "孟菲斯风格：奶油纸、黑墨与粉青黄蓝撞色，以硬投影、轻旋转、彩色药丸和几何彩屑制造节奏。",
+        "entrypoint": "material-demos/reacticle/index.html?demo=color-clash",
+        "parameters": [
+          {
+            "name": "主题",
+            "value": "sottsass",
+            "note": "固定为原画廊对此文章的绑定；样文内部交互沿用原报告。"
+          }
+        ]
+      }
+    ],
+    "prompt": "使用 Reacticle 0.2.6 的语义化 React 长文组件。先读 beautiful-article 对应主题的 profile，再从这 11 篇原作样文选择与文章目标一致的排版语言。通过公共入口导入 ThemeProvider、Article 与所需组件，沿用主题 token 与结构纪律；自绘 Raw 图形继续使用 --ra-* 变量。保持原始来源、论点与数据出处，图表只在帮助当前段落时加入，交互使用可访问的真实控件。参考样例时保留其完整组件与主题 CSS，不将主题简化为配色；需要离线分发时本地化字体并保留 MIT 声明和 OFL。",
+    "accessibility": {
+      "keyboard": "保留原报告的语义化正文、目录、真实按钮、滑块、展开控件及图表标签；键盘操作和读屏器表现需按所选文章实测，源码复用不等于全部辅助技术验收。",
+      "reducedMotion": "沿用原站与主题中的 prefers-reduced-motion CSS；呼吸练习计时仍由原始开始／暂停控件控制，不增加额外动态行为。"
+    },
+    "demo": "material-demos/reacticle/index.html",
+    "preview": "previews/materials/reacticle.png",
+    "research": "docs/materials-reacticle.md",
+    "sourceFiles": [
+      "material-demos/reacticle/index.html",
+      "material-demos/reacticle/demo.js",
+      "material-demos/reacticle/caffeine-half-life/index.html",
+      "material-demos/reacticle/caffeine-half-life/assets/index-DMYwhlbL.js",
+      "material-demos/reacticle/caffeine-half-life/assets/index-WxgjeHG6.css",
+      "material-demos/reacticle/movable-type/index.html",
+      "material-demos/reacticle/movable-type/assets/index-B-dGzE72.js",
+      "material-demos/reacticle/movable-type/assets/index-CDnsII-G.css",
+      "material-demos/reacticle/pool-exhaustion/index.html",
+      "material-demos/reacticle/pool-exhaustion/assets/index-BtWtZy11.js",
+      "material-demos/reacticle/pool-exhaustion/assets/index-CxoMmBeN.css",
+      "material-demos/reacticle/orbit-spec/index.html",
+      "material-demos/reacticle/orbit-spec/assets/index-BeERXI3Z.js",
+      "material-demos/reacticle/orbit-spec/assets/index-BguD11Q8.css",
+      "material-demos/reacticle/linear-attention/index.html",
+      "material-demos/reacticle/linear-attention/assets/index-lyo_MfEB.js",
+      "material-demos/reacticle/linear-attention/assets/index-WxgjeHG6.css",
+      "material-demos/reacticle/first-newsletter/index.html",
+      "material-demos/reacticle/first-newsletter/assets/index-DlB2uEmW.css",
+      "material-demos/reacticle/first-newsletter/assets/index-DoixGDe2.js",
+      "material-demos/reacticle/slow-breathing/index.html",
+      "material-demos/reacticle/slow-breathing/assets/index-8wSZpDKQ.js",
+      "material-demos/reacticle/slow-breathing/assets/index-DlB2uEmW.css",
+      "material-demos/reacticle/front-page/index.html",
+      "material-demos/reacticle/front-page/assets/index-CZI22ZoU.js",
+      "material-demos/reacticle/front-page/assets/index-DlB2uEmW.css",
+      "material-demos/reacticle/geometry-of-meaning/index.html",
+      "material-demos/reacticle/geometry-of-meaning/assets/index-DlB2uEmW.css",
+      "material-demos/reacticle/geometry-of-meaning/assets/index-zpQvA_KQ.js",
+      "material-demos/reacticle/rate-limiter-spec/index.html",
+      "material-demos/reacticle/rate-limiter-spec/assets/index-BguD11Q8.css",
+      "material-demos/reacticle/rate-limiter-spec/assets/index-BQymDvVh.js",
+      "material-demos/reacticle/color-clash/index.html",
+      "material-demos/reacticle/color-clash/assets/index-Dd_VDUiD.js",
+      "material-demos/reacticle/color-clash/assets/index-DlB2uEmW.css",
+      "material-demos/reacticle/vendor/fonts/fonts.css"
     ]
   },
   {
@@ -794,6 +1184,106 @@ window.DESIGN_MATERIALS = [
       "material-demos/shaders/demo.css",
       "material-demos/shaders/demo.js",
       "material-demos/shaders/reference.svg"
+    ]
+  },
+  {
+    "id": "web-design-engineer",
+    "title": "Web Design Engineer · 网页设计工作流",
+    "type": "agent-skill",
+    "category": "Agent 工作流",
+    "summary": "让 Agent 从需求、参考与设计系统出发，经方向确认、首版反馈和完整实现，制作有明确视觉语言的网页作品。",
+    "install": "将 agent-skills/web-design-engineer/ 复制到项目的 .agents/skills/web-design-engineer/ 或 .claude/skills/web-design-engineer/；按所用 Agent 的技能发现方式启用。",
+    "tags": [
+      "网页设计",
+      "设计系统",
+      "视觉校准",
+      "前端实现",
+      "设计评议",
+      "风格配方"
+    ],
+    "useCases": [
+      "根据参考制作网页与交互原型",
+      "延展既有产品界面",
+      "保留业务与交互的视觉重设计",
+      "探索设计方向并评议网页作品"
+    ],
+    "avoid": [
+      "后端接口、命令行工具和纯逻辑开发",
+      "把源材料转成完整长文文章",
+      "按旁白节拍制作视频演示",
+      "把风格参考图当作已有的可运行网页源码"
+    ],
+    "constraints": [
+      "本条目保存 garden-skills 固定提交中的技能原文、参考配方与宿主元数据，不直接执行技能或提供在线生成服务。",
+      "原文要求先核实不稳定事实、读取参考与现有设计；设计系统和可浏览首版分别经用户确认后再继续。",
+      "原文只在用户明确要求浏览器验收、响应式检查或同类实测时运行浏览器验收流程；普通开发要求不等于已授权该流程。",
+      "快照包含 25 份具名风格配方；README 中引用的配方画廊页面源码未包含在固定提交中，外部效果图不作为本条目复刻页面。",
+      "原文快照保留原语言与相对链接；指向仓库根目录、画廊或外部资源的链接仍须结合上游仓库阅读。"
+    ],
+    "upstream": {
+      "repository": "ConardLi/garden-skills",
+      "url": "https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer",
+      "commit": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+      "version": "1.3.0",
+      "verifiedAt": "2026-10-27"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/LICENSE",
+      "scope": "garden-skills 仓库内的技能文本、参考文件与代码；根 LICENSE 原样附在快照目录。",
+      "notes": "保留 MIT 版权与许可文本。README 链接的第三方品牌、字体和外部效果图不因技能的 MIT 许可而获得再分发许可；本条目没有下载这些效果图。预览复用本库星槎案例的实际画面，其字体等来源许可见案例资料。"
+    },
+    "sources": [
+      {
+        "title": "Web Design Engineer 技能原文",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/SKILL.md",
+        "note": "需求与设计上下文、五项视觉校准、设计系统确认、首版确认、完整实现和验收边界的直接依据。",
+        "evidence": "source"
+      },
+      {
+        "title": "技能说明与同题示范对照",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md",
+        "note": "安装方式、25 份风格配方，以及太空博物馆和摄影主页有／无 skill 对照的作者说明。",
+        "evidence": "source"
+      },
+      {
+        "title": "技能版本与兼容声明",
+        "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/manifest.json",
+        "note": "固定提交声明版本为 1.3.0；兼容列表是作者声明，不作为本库逐宿主运行验证。",
+        "evidence": "source"
+      }
+    ],
+    "skillPath": "agent-skills/web-design-engineer/",
+    "workflow": [
+      "核实产品、品牌与技术事实，明确受众、作品类型、约束及已有界面的保留范围。",
+      "优先阅读用户提供的代码、素材和参考，提取设计系统；按需读取一份具名风格配方。",
+      "梳理设计判断，校准视觉变化、动效强度、信息密度、素材依赖和品牌忠实度，并确定叙事角色、观看距离、视觉温度及内容容量。",
+      "声明配色、字体、间距、圆角、阴影和运动规则，等待用户确认设计系统。",
+      "制作可浏览的首版结构与关键模块，让用户确认方向，再完成组件、状态和动效。",
+      "执行交付前的代码与设计自查；用户明确要求实测时再运行浏览器验收，并按设计理念、层级、工艺、功能和独创性评议与修复。"
+    ],
+    "relatedEntries": [
+      {
+        "kind": "case",
+        "id": "stellar-museum",
+        "note": "同一提示词下有 skill 和无 skill 的对照；案例保留主页面及无 skill 基线。"
+      },
+      {
+        "kind": "case",
+        "id": "mira-host-photography",
+        "note": "有 skill 的摄影主页结果；案例按固定提交归档作者公开的页面。"
+      }
+    ],
+    "prompt": "先阅读 agent-skills/web-design-engineer/SKILL.md，依据任务选择现有界面延展、保留式重设计或完整重设计。核实事实并阅读已有代码、品牌素材和参考，明确受众与约束，给出设计判断和视觉校准，再声明设计系统并请用户确认。先展示可浏览首版，确认后完整实现并自查。需要参考结果时阅读星槎与米拉摄影案例，区分同题对照和单个有 skill 结果；不把案例品质推断为每次调用技能的保证。",
+    "accessibility": {
+      "keyboard": "技能条目通过真实链接进入原文与关联案例；应用技能制作网页时，按原文交付清单检查语义标签、替代文本和键盘导航。",
+      "reducedMotion": "本资源为工作流与文本快照，没有自动播放的演示；应用技能时根据动效强度与用户环境处理减少动态。"
+    },
+    "preview": "previews/materials/web-design-engineer.jpg",
+    "research": "docs/materials-web-design-engineer.md",
+    "sourceFiles": [
+      "agent-skills/web-design-engineer/SKILL.md",
+      "agent-skills/web-design-engineer/README.md"
     ]
   },
   {

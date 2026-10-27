@@ -16,7 +16,7 @@ export function documentCatalog() {
       for (const name of fs.readdirSync(source)) collect(path.posix.join(relative, name));
     } else if (relative.endsWith('.md')) paths.push(relative);
   }
-  for (const relative of [...files.filter(name => name.endsWith('.md')), ...folders]) collect(relative);
+  for (const relative of [...files.filter(name => name.endsWith('.md')), ...folders.filter(name => name !== 'agent-skills')]) collect(relative);
   const entries = fs.readdirSync(path.join(root, 'entries')).filter(name => name.endsWith('.json')).map(name => JSON.parse(fs.readFileSync(path.join(root, 'entries', name), 'utf8')));
   const research = new Set(entries.map(entry => entry.research));
   const caseTitles = new Map(entries.map(entry => [entry.id, entry.title]));

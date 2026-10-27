@@ -56,9 +56,9 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 ## 内容素材取材
 
-内容素材用于组件、图像、声音、字体及视觉资源的选择。读取固定提交的 `agent/materials.json`，再按 `paths.bundle` 取得完整包。摘要提供类型、分类、标签、用途、避用项与约束；素材独立于案例，包中 `material` 保留来源版本、许可、样例、参数和 Prompt，`documents` 保留原文，`files` 列出完整运行依赖。`sourceFiles` 只指向该包清单中的主要取材源码。
+内容素材用于组件、图像、声音、字体、视觉资源及 Agent Skill 的选择。读取固定提交的 `agent/materials.json`，再按 `paths.bundle` 取得完整包。摘要提供类型、分类、标签、用途、避用项与约束；素材独立于案例，包中 `material` 保留来源版本、许可、使用方法和 Prompt，`documents` 保留原文，`files` 列出完整资源与依赖。`sourceFiles` 只指向该包清单中的主要取材源码或技能原文入口。
 
-配套 skill 使用 `material-search`（查询／分类／类型）、`material-show`（完整资料，可加 `--source`）与 `material-export`（新目录，可加 `--code-only`）。素材目录、包与文件沿用同一固定会话 SHA。没有素材目录的 schema-1 仓库仍可读取案例与巧思。先核对 `upstream`、`license`、`constraints`、`demos` 和可访问性，再用其 Demo 调节和验证实际参数；静态后备只说明构成，不证明 WebGPU 等特定能力已运行。素材软件许可与上游官网平台内容分别处理，详见 [内容素材库](docs/materials.md)。
+配套 skill 使用 `material-search`（查询／分类／类型）、`material-show`（完整资料，可加 `--source`）与 `material-export`（新目录，可加 `--code-only`）。素材目录、包与文件沿用同一固定会话 SHA。没有素材目录的 schema-1 仓库仍可读取案例与巧思。先核对 `upstream`、`license`、`constraints` 和可访问性。普通素材通过 `demos` 调节和验证实际参数；静态后备只说明构成，不证明 WebGPU 等特定能力已运行。`agent-skill` 通过 `skillPath`、`workflow` 和 `relatedEntries` 阅读工作流、原文快照与关联结果，可选 `gallery` 标记为作者产出效果、未复刻。素材软件许可与上游官网平台内容分别处理，详见 [内容素材库](docs/materials.md)。
 
 ## 从案例适配真实任务
 
