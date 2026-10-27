@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "patternCount": 135,
+  "patternCount": 138,
   "repository": "https://github.com/MIBXR/web-atlas",
   "patterns": [
     {
@@ -338,6 +338,96 @@
       ],
       "paths": {
         "bundle": "agent/patterns/artwork-caption-separation.json"
+      }
+    },
+    {
+      "id": "aspect-recomposed-3d-hero",
+      "title": "三维主角随画幅重新构图",
+      "category": "视觉构成",
+      "experienceTypes": [
+        "visual"
+      ],
+      "summary": "按容器画幅重排同一三维主角，为横竖屏标题保留清楚的阅读空间。",
+      "mechanism": "读取首屏容器宽高比，以五档位置和等比缩放重新安排同一星球，并同步大气层，使主角与左下标题保持空间关系。",
+      "trigger": "首次布局及首屏容器尺寸改变",
+      "effect": "横屏星球偏右，竖屏星球缩小并上移，标题保持独立留白。",
+      "useCases": [
+        "以实时三维对象作为主角的品牌首屏",
+        "需要同时适配横屏与竖屏的沉浸式展览首页"
+      ],
+      "avoid": [
+        "把固定模型坐标直接用于所有画幅，遮挡标题或行动入口",
+        "不核对模型轮廓就照搬来源缩放与位置"
+      ],
+      "constraints": [
+        "阈值依据首屏容器宽高比，不是视口宽度；位置值是三维场景坐标，缩放相对来源模型，迁移时需按目标模型与相机重新核对。",
+        "星球与大气层必须同步重新构图，标题和操作控件保持独立的语义内容层。",
+        "来源未实现用户暂停；减少动态时跳过对象旋转，但仍更新着色器时间并渲染，不能将其描述为完整静态模式。"
+      ],
+      "composition": {
+        "role": "foundation",
+        "notes": "负责首屏三维主角与文字的空间分配；文字网格继续管理标题与行动的对齐，可见性机制另行决定场景是否渲染，不能用构图断点代替运行状态。",
+        "pairsWellWith": [
+          "editorial-alignment-grid",
+          "viewport-animation-lifecycle"
+        ],
+        "conflicts": []
+      },
+      "accessibility": {
+        "keyboard": "将标题、说明与行动保留为可顺序读取的语义内容，装饰性画布不进入键盘焦点顺序；若增加模型操作，提供可聚焦控件。",
+        "reducedMotion": "保留按画幅重新构图，关闭持续旋转与着色器时间推进，并提供静止场景及可键盘操作的暂停控制；这是实施建议，来源未实现完整静止与暂停。"
+      },
+      "parameters": [
+        {
+          "name": "宽高比计算",
+          "value": "hero.clientWidth / hero.clientHeight",
+          "note": "来自来源源码：reposeHero() 读取首屏容器尺寸。"
+        },
+        {
+          "name": "超宽画幅",
+          "value": "宽高比 > 1.9；位置 [1.15, 0.30, 0]；缩放 0.68",
+          "note": "来自来源源码：位置为场景坐标，缩放使用 setScalar。"
+        },
+        {
+          "name": "标准横屏",
+          "value": "1.4 < 宽高比 <= 1.9；位置 [0.85, 0.30, 0]；缩放 0.58",
+          "note": "来自来源源码：位置为场景坐标，缩放使用 setScalar。"
+        },
+        {
+          "name": "窄横屏",
+          "value": "1.0 < 宽高比 <= 1.4；位置 [0.55, 0.45, 0]；缩放 0.48",
+          "note": "来自来源源码：位置为场景坐标，缩放使用 setScalar。"
+        },
+        {
+          "name": "较宽竖屏",
+          "value": "0.7 < 宽高比 <= 1.0；位置 [0.20, 0.80, 0]；缩放 0.45",
+          "note": "来自来源源码：位置为场景坐标，缩放使用 setScalar。"
+        },
+        {
+          "name": "窄竖屏",
+          "value": "宽高比 <= 0.7；位置 [0.0, 0.95, 0]；缩放 0.42",
+          "note": "来自来源源码：位置为场景坐标，缩放使用 setScalar。"
+        }
+      ],
+      "prompt": "为【目标首屏】实现「三维主角随画幅重新构图」。首次布局与容器尺寸改变时读取容器宽高比，以五档位置与等比缩放调整同一三维主角：大于 1.9、大于 1.4、大于 1.0、大于 0.7 及其余画幅分别使用来源参数作为构图参考，并根据目标模型与相机校准。横屏将主角安排在右侧，竖屏缩小并上移，为左下标题与行动留白；大气层与主角同步变换。标题、说明和行动保留为语义内容，装饰画布不进入键盘焦点顺序。减少动态时保留响应式构图，停止旋转与着色器时间推进并提供暂停控制；来源没有实现完整静止和用户暂停，这些是实施建议。可见性机制另行管理渲染生命周期。",
+      "sources": [
+        {
+          "caseId": "stellar-museum",
+          "locator": "entries/stellar-museum.json#interaction/6",
+          "observation": "首屏首次布局及容器尺寸改变：reposeHero() 按容器宽高比分五档设置同一星球的位置与缩放；宽高比大于 1.9 时为 [1.15, 0.30, 0]／0.68，大于 1.4 至 1.9 时为 [0.85, 0.30, 0]／0.58，大于 1.0 至 1.4 时为 [0.55, 0.45, 0]／0.48，大于 0.7 至 1.0 时为 [0.20, 0.80, 0]／0.45，其余为 [0.0, 0.95, 0]／0.42；大气层同步位置和比例，使横屏主角偏右、竖屏主角上移，为左下标题留白。",
+          "evidence": "observed",
+          "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
+          "capturedAt": "2026-10-27"
+        }
+      ],
+      "sourceFiles": [
+        "demos/stellar-museum/fidelity.md",
+        "demos/stellar-museum/index.html",
+        "entries/stellar-museum.json",
+        "research/stellar-museum.md"
+      ],
+      "paths": {
+        "bundle": "agent/patterns/aspect-recomposed-3d-hero.json"
       }
     },
     {
@@ -1639,6 +1729,89 @@
       ],
       "paths": {
         "bundle": "agent/patterns/department-code-matrix.json"
+      }
+    },
+    {
+      "id": "difference-blend-navigation",
+      "title": "跨深浅背景的差值导航",
+      "category": "导航与状态",
+      "experienceTypes": [
+        "visual"
+      ],
+      "summary": "让固定导航随下方摄影与深浅表面产生颜色变化，保持连续的视觉身份。",
+      "mechanism": "固定顶栏以暖纸色绘制文字与标记，通过差值混合与下方页面逐像素合成，不保存或切换深浅主题状态。",
+      "trigger": "滚动时固定导航经过摄影、暖纸色正文或墨色区域",
+      "effect": "导航的合成颜色随下方像素改变，在不同页面区域延续同一套文字与标记。",
+      "useCases": [
+        "全幅摄影与深浅章节交替的作品集",
+        "需要固定导航的视觉叙事页面"
+      ],
+      "avoid": [
+        "要求导航颜色始终精确等于品牌色的界面",
+        "未经逐图检查就依靠混合保证文字可读"
+      ],
+      "constraints": [
+        "差值混合不能保证所有图片上的对比度，需要实测。",
+        "混合依赖导航下方的实际像素与合成层级，新增背景、遮罩或隔离层后需重新核对。",
+        "来源导航只有悬停下划线，未实现与其等价的键盘焦点下划线；键盘策略是实施建议。",
+        "迁移时使用有权使用的摄影与真实章节，并按目标页面重新验证颜色。"
+      ],
+      "composition": {
+        "role": "support",
+        "notes": "只处理固定导航与背景的颜色关系；照片中的正文仍由局部对比策略支撑。同一个导航层若同时切换成对语义颜色，混合后的结果需重新验证，不能直接沿用未混合时的对比结论。",
+        "pairsWellWith": [
+          "full-bleed-photography-brand",
+          "photo-edge-text-contrast"
+        ],
+        "conflicts": [
+          "semantic-theme-roles"
+        ]
+      },
+      "accessibility": {
+        "keyboard": "保留原生章节链接与清晰的顺序，用 :focus-visible 提供可辨认的焦点样式，并在每种背景上检查焦点和文字对比。",
+        "reducedMotion": "差值混合无需运动；减少动态时移除顶栏淡入，直接保持导航可见。"
+      },
+      "parameters": [
+        {
+          "name": "导航绘制色",
+          "value": "#f2efe8",
+          "note": "来自来源源码：暖纸色变量用于顶栏文字、中央标记与品牌标记边框。"
+        },
+        {
+          "name": "混合方式",
+          "value": "mix-blend-mode: difference",
+          "note": "来自来源源码：固定顶栏整体应用差值混合。"
+        },
+        {
+          "name": "页面表面色",
+          "value": "#f2efe8 / #161513",
+          "note": "来自来源源码：暖纸色正文与墨色联系、页脚区域构成深浅表面，摄影保持原色。"
+        },
+        {
+          "name": "固定层位置",
+          "value": "top: 0; left: 0; right: 0; z-index: 50",
+          "note": "来自来源源码：顶栏固定覆盖于页面上方，使滚动内容经过其下方。"
+        }
+      ],
+      "prompt": "为【目标页面】实现「跨深浅背景的差值导航」。将固定顶栏的文字与标记设为暖纸色 #f2efe8，并对该层使用 mix-blend-mode: difference，使导航经过摄影、纸色正文和墨色章节时按下方像素合成。导航只承担章节入口，正文对比另行处理。差值混合不能保证所有图片上的对比度，需要实测；检查每张图、深浅表面及新增合成层。来源只有悬停下划线，实施时保留原生链接并用 :focus-visible 提供清晰的焦点反馈。减少动态时直接显示顶栏。若同一层还采用语义主题色切换，重新验证混合结果，不直接套用原色对比结论。",
+      "sources": [
+        {
+          "caseId": "mira-host-photography",
+          "locator": "entries/mira-host-photography.json#theme",
+          "observation": "暖纸色 #f2efe8 与墨色 #161513 构成固定双色基调，联系和页脚反转为墨底浅字；固定顶栏和两侧竖排标记使用差值混合跨越深浅背景。",
+          "evidence": "observed",
+          "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+          "capturedAt": "2026-10-27"
+        }
+      ],
+      "sourceFiles": [
+        "demos/mira-host-photography/fidelity.md",
+        "demos/mira-host-photography/index.html",
+        "entries/mira-host-photography.json",
+        "research/mira-host-photography.md"
+      ],
+      "paths": {
+        "bundle": "agent/patterns/difference-blend-navigation.json"
       }
     },
     {
@@ -3748,6 +3921,99 @@
       ],
       "paths": {
         "bundle": "agent/patterns/inline-product-detail-viewer.json"
+      }
+    },
+    {
+      "id": "inline-row-photo-preview",
+      "title": "文字目录行内浮现摄影预览",
+      "category": "交互反馈",
+      "experienceTypes": [
+        "micro-motion"
+      ],
+      "summary": "在保持文字目录易于扫描的同时，为当前行补充一张摄影线索。",
+      "mechanism": "把照片绝对定位在目录行右侧，悬停时以透明度与轻微缩放显现，并让标题和箭头小幅右移；离开后还原。",
+      "trigger": "桌面指针进入或离开作品目录行",
+      "effect": "只有当前行浮现固定位置的摄影预览，标题与箭头共同提示关注对象。",
+      "useCases": [
+        "摄影系列与作品文字目录",
+        "希望保留行式排版的图像索引"
+      ],
+      "avoid": [
+        "把理解作品所必需的内容只放在悬停图片中",
+        "在同一行同时叠加固定预览与随指针预览"
+      ],
+      "constraints": [
+        "来源在 1100px 及以下隐藏摄影预览；窄屏目录继续显示文字。",
+        "来源没有 :focus 或 :focus-visible 等价预览，键盘策略是实施建议。",
+        "来源作品链接使用 # 占位，未实现真实系列详情；迁移时提供真实目的地。",
+        "预览不接收指针事件，不遮挡该行文字与操作；换用有权使用的照片后重新检查裁切和行间遮挡。"
+      ],
+      "composition": {
+        "role": "accent",
+        "notes": "稳定列线负责目录阅读，摄影预览只反馈当前行，不移动整行布局。同一行不再叠加随指针形变预览，以免两种图像提示争夺注意。",
+        "pairsWellWith": [
+          "aligned-metadata-rows",
+          "editorial-alignment-grid"
+        ],
+        "conflicts": [
+          "pointer-image-shader-preview"
+        ]
+      },
+      "accessibility": {
+        "keyboard": "用 :focus-visible 给出同样的预览",
+        "reducedMotion": "保留预览的显示与隐藏，取消缩放、标题和箭头位移，以即时显隐代替过渡。"
+      },
+      "parameters": [
+        {
+          "name": "预览尺寸",
+          "value": "180px × 120px",
+          "note": "来自来源源码：目录行内的矩形缩略图宽高。"
+        },
+        {
+          "name": "预览位置",
+          "value": "right: 220px; top: 50%; translateY(-50%)",
+          "note": "来自来源源码：相对当前目录行固定在右侧并垂直居中。"
+        },
+        {
+          "name": "预览显现",
+          "value": "opacity: 0 → 1; scale: 0.94 → 1",
+          "note": "来自来源源码：悬停进入时显现并恢复原比例，离开时反向恢复。"
+        },
+        {
+          "name": "标题与箭头位移",
+          "value": "translateX(8px) / translateX(6px)",
+          "note": "来自来源源码：标题右移 8px，箭头右移 6px。"
+        },
+        {
+          "name": "反馈过渡",
+          "value": "opacity 0.5s / transform 0.6s; cubic-bezier(0.22, 1, 0.36, 1)",
+          "note": "来自来源源码：预览透明度与箭头为 0.5 秒，预览及标题位移为 0.6 秒，共用柔和缓动。"
+        },
+        {
+          "name": "隐藏断点",
+          "value": "max-width: 1100px",
+          "note": "来自来源源码：该媒体查询将缩略图设为不显示，包含 1100px。"
+        }
+      ],
+      "prompt": "为【作品目录】实现「文字目录行内浮现摄影预览」。保留编号、标题和辅助信息的稳定列线，将 180px × 120px 的照片定位在当前行右侧 220px、垂直居中。指针进入时让照片透明度从 0 到 1、比例从 0.94 到 1，标题右移 8px、箭头右移 6px；离开后还原。透明度与箭头过渡 0.5 秒，预览与标题位移过渡 0.6 秒，使用 cubic-bezier(0.22, 1, 0.36, 1)。来源在 1100px 及以下隐藏预览，未实现键盘等价预览，作品链接仍为占位；实施时用 :focus-visible 给出同样的预览，并连接真实详情，不能只靠图片传达关键内容。减少动态时取消位移和缩放并即时显隐，同一行不叠加随指针预览。",
+      "sources": [
+        {
+          "caseId": "mira-host-photography",
+          "locator": "entries/mira-host-photography.json#interaction/2",
+          "observation": "桌面悬停作品目录行时，标题右移 8px、箭头右移 6px，对应照片缩略图从透明和 0.94 倍缩放进入；离开后回到初态。1100px 及以下隐藏缩略图。",
+          "evidence": "observed",
+          "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+          "capturedAt": "2026-10-27"
+        }
+      ],
+      "sourceFiles": [
+        "demos/mira-host-photography/fidelity.md",
+        "demos/mira-host-photography/index.html",
+        "entries/mira-host-photography.json",
+        "research/mira-host-photography.md"
+      ],
+      "paths": {
+        "bundle": "agent/patterns/inline-row-photo-preview.json"
       }
     },
     {
@@ -6137,7 +6403,7 @@
       ],
       "composition": {
         "role": "support",
-        "notes": "负责同一摄影舞台的慢节奏换图；caption与链接同步当前图。不要与另一套自动模式周期争夺同一个src，用户暂停应优先于重入视口。",
+        "notes": "负责同一摄影舞台的慢节奏换图；caption与链接同步当前图。不要与另一套自动模式周期争夺同一个src，用户暂停应优先于重入视口。 Mira 来源属于同一摄影舞台内单张图每单程 24 秒、交替往返的缩放平移变体，只有首次载入淡入，没有照片切换或交叉淡化，来源未实现暂停或离屏停止，减少动态会停用该动画。",
         "pairsWellWith": [
           "viewport-animation-lifecycle"
         ],
@@ -6176,6 +6442,14 @@
           "evidence": "observed",
           "referenceUrl": "https://www.fujirockfestival.com/",
           "capturedAt": "2026-10-07"
+        },
+        {
+          "caseId": "mira-host-photography",
+          "locator": "entries/mira-host-photography.json#interaction/6",
+          "observation": "首屏始终使用同一张摄影，图片加载后以 1.6 秒透明度过渡显现；CSS 中的 Ken Burns 动画设置 1.6 秒启动延迟，每个单程 24 秒，从 1.04 倍且无平移变为 1.12 倍并平移至横向 -1.5%、纵向 -1%，再交替反向往返。文字保持独立叠层；来源未实现照片切换、交叉淡化、暂停或离屏停止，减少动态时停用该动画。",
+          "evidence": "observed",
+          "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+          "capturedAt": "2026-10-27"
         }
       ],
       "sourceFiles": [
@@ -6190,7 +6464,11 @@
         "entries/design-sight.json",
         "entries/fuji-rock.json",
         "research/design-sight.md",
-        "research/fuji-rock.md"
+        "research/fuji-rock.md",
+        "demos/mira-host-photography/index.html",
+        "demos/mira-host-photography/fidelity.md",
+        "entries/mira-host-photography.json",
+        "research/mira-host-photography.md"
       ],
       "paths": {
         "bundle": "agent/patterns/photo-crossfade-cycle.json"
@@ -9120,7 +9398,7 @@
       ],
       "composition": {
         "role": "support",
-        "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。",
+        "notes": "负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。 星槎来源属于仅按视口可见性跳过多个三维窗口渲染的变体，扩展范围为 120px，主帧循环与绝对时间仍推进，未实现后台可见性监听、用户暂停或离屏时间冻结，减少动态仅停止对象旋转，仍更新着色器时间并渲染。",
         "pairsWellWith": [
           "photo-crossfade-cycle",
           "centered-loop-gallery",
@@ -9182,6 +9460,14 @@
           "evidence": "observed",
           "referenceUrl": "https://www.deepseek.com/harness/",
           "capturedAt": "2026-10-11"
+        },
+        {
+          "caseId": "stellar-museum",
+          "locator": "entries/stellar-museum.json#interaction/7",
+          "observation": "首屏星球及月球、空间站、火星、银河窗口进入或离开扩展 120px 的视口范围：IntersectionObserver 以 rootMargin: '120px'、threshold: 0.0 更新各实例的 visible，统一帧循环跳过离屏实例，只渲染可见窗口；主循环和绝对时间仍持续推进，来源未实现页面后台可见性监听、用户暂停或离屏时间冻结，减少动态仅跳过对象旋转，仍更新着色器时间并渲染。",
+          "evidence": "observed",
+          "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
+          "capturedAt": "2026-10-27"
         }
       ],
       "sourceFiles": [
@@ -9242,7 +9528,11 @@
         "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
         "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
         "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
-        "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+        "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js",
+        "demos/stellar-museum/index.html",
+        "demos/stellar-museum/fidelity.md",
+        "entries/stellar-museum.json",
+        "research/stellar-museum.md"
       ],
       "paths": {
         "bundle": "agent/patterns/viewport-animation-lifecycle.json"

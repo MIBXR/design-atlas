@@ -24,7 +24,7 @@
     ],
     "composition": {
       "role": "support",
-      "notes": "负责同一摄影舞台的慢节奏换图；caption与链接同步当前图。不要与另一套自动模式周期争夺同一个src，用户暂停应优先于重入视口。",
+      "notes": "负责同一摄影舞台的慢节奏换图；caption与链接同步当前图。不要与另一套自动模式周期争夺同一个src，用户暂停应优先于重入视口。 Mira 来源属于同一摄影舞台内单张图每单程 24 秒、交替往返的缩放平移变体，只有首次载入淡入，没有照片切换或交叉淡化，来源未实现暂停或离屏停止，减少动态会停用该动画。",
       "pairsWellWith": [
         "viewport-animation-lifecycle"
       ],
@@ -63,6 +63,14 @@
         "evidence": "observed",
         "referenceUrl": "https://www.fujirockfestival.com/",
         "capturedAt": "2026-10-07"
+      },
+      {
+        "caseId": "mira-host-photography",
+        "locator": "entries/mira-host-photography.json#interaction/6",
+        "observation": "首屏始终使用同一张摄影，图片加载后以 1.6 秒透明度过渡显现；CSS 中的 Ken Burns 动画设置 1.6 秒启动延迟，每个单程 24 秒，从 1.04 倍且无平移变为 1.12 倍并平移至横向 -1.5%、纵向 -1%，再交替反向往返。文字保持独立叠层；来源未实现照片切换、交叉淡化、暂停或离屏停止，减少动态时停用该动画。",
+        "evidence": "observed",
+        "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+        "capturedAt": "2026-10-27"
       }
     ],
     "sourceFiles": [
@@ -77,7 +85,11 @@
       "entries/design-sight.json",
       "entries/fuji-rock.json",
       "research/design-sight.md",
-      "research/fuji-rock.md"
+      "research/fuji-rock.md",
+      "demos/mira-host-photography/index.html",
+      "demos/mira-host-photography/fidelity.md",
+      "entries/mira-host-photography.json",
+      "research/mira-host-photography.md"
     ]
   },
   "sourceCases": [
@@ -95,6 +107,14 @@
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/fuji-rock/index.html"
+      }
+    },
+    {
+      "id": "mira-host-photography",
+      "title": "Mira Høst · 北欧摄影作品集",
+      "paths": {
+        "bundle": "agent/cases/mira-host-photography.json",
+        "demo": "demos/mira-host-photography/index.html"
       }
     }
   ]
