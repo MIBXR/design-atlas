@@ -635,6 +635,21 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
+    "path": "material-demos/three-html-render/vendor/NOTICE.md",
+    "title": "three-html-render 运行文件与第三方许可",
+    "group": "复现与素材"
+  },
+  {
+    "path": "material-demos/three-html-render/README.md",
+    "title": "three-html-render：HTML 贴图实验",
+    "group": "复现与素材"
+  },
+  {
+    "path": "docs/materials-three-html-render.md",
+    "title": "three-html-render：HTML-in-Canvas polyfill",
+    "group": "复现与素材"
+  },
+  {
     "path": "demos/uma-musume/fidelity.md",
     "title": "Umamusume 复现边界",
     "group": "复现与素材"
