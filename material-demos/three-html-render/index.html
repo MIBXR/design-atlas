@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>MORS² Game Engine</title>
+  <link rel="icon" href="mors-logo.svg">
+  <link rel="stylesheet" href="demo.css">
+  <script type="importmap">
+    {"imports":{
+      "three":"./vendor/three-0.185.1.module.js",
+      "./vendor/three.core.js":"./vendor/three-0.185.1.core.js",
+      "three/addons/interaction/InteractionManager.js":"./vendor/interaction-manager-0.185.1.js",
+      "three-html-render/polyfill":"./vendor/three-html-render-polyfill-0.1.2.mjs"
+    }}
+  </script>
+</head>
+<body data-mode="loading">
+  <main id="scene" class="experience-shell" aria-label="Interactive MORS² light study" aria-busy="true">
+    <canvas id="scene-canvas" class="webgl-canvas" aria-label="Interactive MORS² light study">
+    </canvas>
+    <div id="scene-preview" class="scene-preview" aria-hidden="true" inert>
+      <div id="page-source" class="page-source" style="--lamp-color:#ffb36b">
+        <header class="page-header">
+          <div class="page-brand">
+            <span class="page-logo-wrap"><img src="./mors-logo.svg" alt=""></span>
+            <span>MORS²</span>
+            <span class="page-brand-suffix">GAME ENGINE</span>
+          </div>
+          <div class="page-status"><span></span> EARLY DEVELOPMENT</div>
+        </header>
+        <div class="page-main">
+          <section class="page-copy" aria-labelledby="mors-title">
+            <p class="page-kicker">01 / RUNTIME ARCHITECTURE</p>
+            <h1 id="mors-title">Meta is observed<br>by Rule to <span>Step in Space.</span></h1>
+            <p class="page-subtitle">A Rust engine architecture where rules derive tightly packed data layout for elegant performance.</p>
+            <div class="concepts" data-interactive>
+              <div class="concept-list" role="list" aria-label="MORS² engine model">
+                <button type="button" class="is-active" data-concept="Space" aria-pressed="true"><span>01</span>Space</button>
+                <button type="button" data-concept="Meta" aria-pressed="false"><span>02</span>Meta</button>
+                <button type="button" data-concept="Field" aria-pressed="false"><span>03</span>Field</button>
+                <button type="button" data-concept="Rule" aria-pressed="false"><span>04</span>Rule</button>
+                <button type="button" data-concept="Latent" aria-pressed="false"><span>05</span>Latent</button>
+              </div>
+              <p id="concept-description" class="concept-description"><span id="concept-name">Space</span>A sandbox universe where runtime state evolves with clear boundaries.</p>
+            </div>
+          </section>
+          <aside id="light-panel" class="light-controls" data-interactive aria-label="Spotlight controls">
+            <div class="control-heading">
+              <div><p>LIGHT CONTROL</p><span>PHYSICAL SPOT / 01</span></div>
+              <button id="light-toggle" type="button" class="power-toggle is-on" aria-pressed="true" aria-label="Turn spotlight off"><span></span>ON</button>
+            </div>
+            <label class="control-row">
+              <span class="control-label"><b>BEAM</b><output id="angle-value" for="angle">34°</output></span>
+              <input id="angle" type="range" min="16" max="58" step="1" value="34" aria-label="Spotlight beam angle">
+            </label>
+            <label class="control-row">
+              <span class="control-label"><b>BRIGHTNESS</b><output id="brightness-value" for="brightness">1450 lm</output></span>
+              <input id="brightness" type="range" min="300" max="2600" step="50" value="1450" aria-label="Spotlight brightness">
+            </label>
+            <div class="control-row color-control">
+              <span class="control-label"><b>COLOR</b><output id="color-value" for="custom-color">#FFB36B</output></span>
+              <div class="color-options">
+                <button type="button" class="is-active" data-color="#ffb36b" style="--swatch:#ffb36b" aria-label="Set light color to #ffb36b" aria-pressed="true"></button>
+                <button type="button" data-color="#ffd9a3" style="--swatch:#ffd9a3" aria-label="Set light color to #ffd9a3" aria-pressed="false"></button>
+                <button type="button" data-color="#8fdcff" style="--swatch:#8fdcff" aria-label="Set light color to #8fdcff" aria-pressed="false"></button>
+                <button type="button" data-color="#c79cff" style="--swatch:#c79cff" aria-label="Set light color to #c79cff" aria-pressed="false"></button>
+                <button type="button" data-color="#ff5f7f" style="--swatch:#ff5f7f" aria-label="Set light color to #ff5f7f" aria-pressed="false"></button>
+                <label class="custom-color" aria-label="Choose a custom light color"><input id="custom-color" type="color" value="#ffb36b"><span>+</span></label>
+              </div>
+            </div>
+            <button id="reset" type="button" class="reset-light">RESET LIGHT <span>↗</span></button>
+          </aside>
+        </div>
+        <footer class="page-footer">
+          <p>SPACE / META / FIELD / RULE / LATENT</p>
+          <div class="drag-instruction">
+            <span class="drag-orbit" aria-hidden="true"><i></i></span>
+            <div><b>LMB PULL · RMB LIGHT</b><span>Right-drag beam · Right-click color</span></div>
+          </div>
+          <p>FOUNDATION FIRST — OPEN SOURCE WHEN READY</p>
+        </footer>
+      </div>
+    </div>
+    <div id="render-status" class="scene-status" aria-live="polite"><span></span> LOADING INTERACTIVE LIGHT</div>
+    <div id="scene-error" class="scene-error" role="status" hidden></div>
+  </main>
+  <script type="module" src="demo.js"></script>
+</body>
+</html>
