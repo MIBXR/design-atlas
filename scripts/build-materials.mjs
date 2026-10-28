@@ -135,7 +135,7 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
   });
   const catalog = { schemaVersion: 1, repository: 'https://github.com/MIBXR/web-atlas', materialCount: records.length, materials: records };
   outputs.set('agent/materials.json', encode(catalog));
-  outputs.set('materials.js', Buffer.from('window.DESIGN_MATERIALS = ' + JSON.stringify(materials, null, 2) + ';\n', 'utf8'));
+  outputs.set('data/materials.js', Buffer.from('window.DESIGN_MATERIALS = ' + JSON.stringify(materials, null, 2) + ';\n', 'utf8'));
   if (write) {
     fs.mkdirSync(repositoryFile(root, 'agent/materials', false), { recursive: true });
     for (const [relative, bytes] of outputs) fs.writeFileSync(repositoryFile(root, relative, false), bytes);

@@ -10,7 +10,7 @@
 **38 个案例**　·　**28 个品牌／文化研究**　·　**8 种经典设计语言**　·　**2 个示范作品**
 <!-- atlas-counts:end -->
 
-[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [案例库](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [巧思库](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [内容素材库](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/fundamentals.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/document.html) · [完整索引](research/CASE-INDEX.md)
+[打开首页](https://mibxr-design-atlas.mibxranime.chatgpt.site) · [案例库](https://mibxr-design-atlas.mibxranime.chatgpt.site/cases.html) · [巧思库](https://mibxr-design-atlas.mibxranime.chatgpt.site/patterns.html) · [内容素材库](https://mibxr-design-atlas.mibxranime.chatgpt.site/materials.html) · [设计实验室](https://mibxr-design-atlas.mibxranime.chatgpt.site/lab.html) · [Agent 工作流](https://mibxr-design-atlas.mibxranime.chatgpt.site/agent.html) · [文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/docs.html) · [完整索引](research/CASE-INDEX.md)
 
 ![Web Atlas 实际 Demo 全景](docs/readme/cover.webp)
 
@@ -44,7 +44,7 @@
 
 这是一份能亲手体验的设计参考。每个条目包含实际参考与观察日期、设计元素的协作方式、约束、可复制 Prompt、独立代码 Demo、原站／本地对照及素材来源。
 
-首页介绍完整案例、独立巧思、内容素材、设计实验室与 Agent 工作流，主导航可直接切换。案例浏览位于 `cases.html`；已有根路径的案例深链接、比较入口与分类／地区／搜索／排序 URL 会保留状态并进入案例库。
+首页介绍完整案例、独立巧思、内容素材、设计实验室与 Agent 工作流，主导航可直接切换。案例浏览位于 `cases.html`。
 
 真实网站案例固定为所标注网址与采集日期的单一归档；完成后保留当时的页面与交互，不追随官网后续变化。
 
@@ -90,7 +90,7 @@ Web Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案例
 
 类型可以交叉；功能用途分类继续独立保留。不要求每个案例都有视觉、动效或声音巧思。巧思库与案例库共用首部、卡片、网格与详情结构；工具栏的“体验当前类型”按需打开示意，跟随当前体验类型切换。示意使用通用内容与本地拟合参数，完整来源保留归档观察与复现边界。声音默认关闭，示意切到后台会关闭，回到前台需要重新启用。
 
-案例、巧思与素材收藏共用一份备份，支持合并导入与旧案例备份；[文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/document.html)集中阅读本站公开的指南、研究、Prompt 与复现说明。
+案例、巧思与素材收藏共用一份备份，支持合并导入与旧案例备份；[文档中心](https://mibxr-design-atlas.mibxranime.chatgpt.site/docs.html)集中阅读本站公开的指南、研究、Prompt 与复现说明。
 
 ![独立巧思页：类型与可操作示意](docs/site/patterns.jpg)
 
@@ -106,7 +106,7 @@ node scripts/atlas.mjs show linear-workflow --source
 node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 ```
 
-命令只需 Node.js，无需安装依赖。完整导出保留运行所需相对路径和原始素材；`--code-only` 会明确列出尚未导出的媒体。数据契约与真实任务适配方法见 [AGENT.md](AGENT.md)。独立 [web-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/web-atlas) 保存获取脚本与会话版本指针，新会话发现上游默认分支最新提交后固定版本，持续讨论可显式刷新。完整案例仍在本仓库，新增案例无需更新 Skill；未合并 PR 可用 `--ref <已推送的完整SHA>` 读取，支持无需克隆整个库的远程取材。
+命令只需 Node.js，无需安装依赖。完整导出保留运行所需相对路径和原始素材；`--code-only` 会明确列出尚未导出的媒体。数据契约与真实任务适配方法见 [docs/agent.md](docs/agent.md)。独立 [web-atlas skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/web-atlas) 保存获取脚本与会话版本指针，新会话发现上游默认分支最新提交后固定版本，持续讨论可显式刷新。完整案例仍在本仓库，新增案例无需更新 Skill；未合并 PR 可用 `--ref <已推送的完整SHA>` 读取，支持无需克隆整个库的远程取材。
 
 ## 内容素材取材
 
@@ -259,7 +259,7 @@ python ATLAS_SCRIPT --session SESSION_FILE material-export shaders --out NEW_DIR
 
 ### 本地运行
 
-需要 **Node.js**，项目运行不需要安装第三方依赖。Windows可双击 `start.cmd`，或执行：
+需要 **Node.js**，项目运行不需要安装第三方依赖。执行：
 
 ```bash
 npm start
@@ -271,9 +271,9 @@ npm start
 
 仓库保留完整原始素材。本地运行默认 `auto`：先读自身目录，已映射的大素材加载失败时，才使用固定 Git 提交中的 GitHub 备份。在完整源码／本地构建中，独立 Demo 地址可加 `?assets=local` 强制本地，或 `?assets=github` 切换动态图像、视频与声音的来源；样式表中的背景和字体保留本地地址。Sites 构建会在输出时统一将对应CSS地址也改为固定GitHub地址，因此精简Sites包不支持强制本地或离线使用。来源切换不改变布局、动效或声音设计。
 
-复用单个真实网站 Demo 时，也需携带根目录的 `asset-sources.js`、`asset-runtime.js`、`case-loading.js/.css` 与 `asset-cache*.js`，或将这些公共模块连同引用一起迁移。入口HTML是项目的一部分，直接下载一份HTML无法包含它依赖的图像、字体和脚本。
+复用单个真实网站 Demo 时，也需携带`data/asset-sources.js`、`site/runtime/` 中的共享运行时与根目录的 `asset-cache-worker.js`，或将这些公共模块连同引用一起迁移。入口HTML是项目的一部分，直接下载一份HTML无法包含它依赖的图像、字体和脚本。
 
-`npm run build:site` 生成引用 GitHub 大素材的部署目录，省略对应的大文件，保持素材原字节与画质。`npm run build:local` 生成包含全部素材的静态目录，可用于完整本地托管。两种构建都不修改 `demos/` 中的原始素材。GitHub 素材固定到 `asset-sources.js` 中的完整提交 SHA，避免分支变化使代码与图片不匹配；Sites 的大素材首次下载需要网络。
+`npm run build:site` 生成引用 GitHub 大素材的部署目录，省略对应的大文件，保持素材原字节与画质。`npm run build:local` 生成包含全部素材的静态目录，可用于完整本地托管。两种构建都不修改 `demos/` 中的原始素材。GitHub 素材固定到 `data/asset-sources.js` 中的完整提交 SHA，避免分支变化使代码与图片不匹配；Sites 的大素材首次下载需要网络。
 
 首屏加载只等待当前画面必要的图片、可见字体和视频首帧，后续章节提前按需准备。进度按已就绪资源项统计，不伪造下载字节百分比；失败时可以重试或继续浏览。明日方舟与塞尔达保留自己的原站风格加载／声音入口，开场从资源就绪之后开始。音乐由用户启用，不进入首屏必等列表。
 
@@ -301,7 +301,7 @@ npm start
 
 首次进入文档中心只展开当前文档所在分类，其余分类可手动展开。目录控制与长分类标题保持置顶；切换文档只更新正文与本文目录，保留左栏的开合和滚动位置。本文目录支持章节定位，手机可随时从右下角展开。
 
-文档目录与静态发布使用同一份清单：新增 `.md` 放入已公开的 `docs/`、`research/`、`prompts/` 等目录后，`npm run build` 会自动收录到 `documents.js`。根目录新文档或新的公开目录需先加入 `scripts/build-static.mjs` 的发布清单，再构建并发布网站。完整维护规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+文档目录与静态发布使用同一份清单：新增 `.md` 放入已公开的 `docs/`、`research/`、`prompts/` 等目录后，`npm run build` 会自动收录到 `data/docs.js`。根目录新文档或新的公开目录需先加入 `scripts/build-static.mjs` 的发布清单，再构建并发布网站。完整维护规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 资料结构与维护
 
@@ -316,23 +316,18 @@ demos/<id>/                   HTML、CSS、JS与本地图片／字体／音视�
 previews/                     案例桌面与手机预览
 docs/readme/                  本README配图
 docs/site/                    网站本体的实际浏览器截图
-vendor/                       固定版本的Markdown解析库、HTML清理库与许可证
+site/shared/                  共享站点布局、导航、主题、收藏与预览
+site/pages/                   首页、案例、巧思、素材、实验室、Agent与文档页代码
+site/runtime/                 案例与站点共用的素材分发、缓存与加载
+site/playground/              巧思机制示意源码、独立入口与说明
+site/vendor/                  固定版本的Markdown解析库、HTML清理库与许可证
+site/icons/                   站点图标
+data/                         自动生成的catalog.js、patterns.js、materials.js、docs.js、asset-sources.js
+asset-cache-worker.js         根作用域的固定版本媒体缓存与视频区间读取
 patterns/<id>.json            人工策展的独立巧思与体验类型
-patterns.html / patterns-ui.*  独立巧思浏览、来源 Demo 与复用方法
 materials/<id>.json           来源、许可、使用约束与代表性样例
 material-demos/<id>/          独立素材 Demo、固定运行依赖与原始许可
 agent-skills/<id>/            Agent Skill 原文快照、完整附属文件与许可
-materials.html / materials-ui.* 素材浏览、交互预览与取材方法
-pattern-playground.*          首页、巧思页与实验室共用的本地机制示意
-fundamentals.*                可操作的设计实验室
-catalog.js                    自动生成的浏览器目录
-documents.js                  按静态发布范围生成的公开文档目录
-document.*                    文档阅读、可折叠分类与章节目录
-favorites.js                  案例、巧思与素材的共享收藏与备份
-asset-sources.js               固定 Git 提交、媒体路径、大小与远端 URL
-asset-runtime.js               本地优先、失败回退与显式来源切换
-case-loading.*                首屏就绪、开场门控与章节素材准备
-asset-cache*.js                固定版本大素材缓存与视频区间读取
 scripts/                      本机服务、目录生成、静态构建与资产检查
 .openai/hosting.json           现有Sites项目与静态目录配置
 ```

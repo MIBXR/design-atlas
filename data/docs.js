@@ -10,7 +10,7 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "项目指南"
   },
   {
-    "path": "AGENT.md",
+    "path": "docs/agent.md",
     "title": "Agent 工作流与数据契约",
     "group": "项目指南"
   },
@@ -485,7 +485,7 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
-    "path": "demos/pattern-playground/fidelity.md",
+    "path": "site/playground/fidelity.md",
     "title": "巧思共享示意：实现与边界",
     "group": "复现与素材"
   },

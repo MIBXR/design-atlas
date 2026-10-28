@@ -24,7 +24,7 @@ function renderDirectory() {
     for (const item of documents.filter(item => item.group === group)) {
       const row = document.createElement('li');
       const link = document.createElement('a');
-      link.href = 'document.html?file=' + encodeURIComponent(item.path);
+      link.href = 'docs.html?file=' + encodeURIComponent(item.path);
       link.textContent = item.title;
       link.title = item.path;
       link.setAttribute('data-document-file', item.path);
@@ -56,7 +56,7 @@ function prepareLinks(fragment, sourceURL) {
     const url = new URL(reference, sourceURL);
     const path = localPath(url);
     if (path !== null && isAllowedDocument(path)) {
-      const reader = new URL('document.html', libraryURL);
+      const reader = new URL('docs.html', libraryURL);
       reader.searchParams.set('file', path);
       reader.hash = url.hash;
       link.href = reader.href;
@@ -253,7 +253,7 @@ document.addEventListener('click', event => {
   const link = event.target.closest('a[href]');
   if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
   const url = new URL(link.href, document.baseURI);
-  if (url.origin !== libraryURL.origin || url.pathname !== new URL('document.html', libraryURL).pathname) return;
+  if (url.origin !== libraryURL.origin || url.pathname !== new URL('docs.html', libraryURL).pathname) return;
   const nextFile = url.searchParams.get('file') || 'README.md';
   if (!isAllowedDocument(nextFile)) return;
   if (nextFile === file && url.hash) return;

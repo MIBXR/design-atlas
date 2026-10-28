@@ -15,7 +15,8 @@ const readme = fs.readFileSync(readmePath,'utf8');
 const counts = `<!-- atlas-counts:start -->\n**${entries.length} 个案例**　·　**${referenceCount} 个品牌／文化研究**　·　**${classicCount} 种经典设计语言**　·　**${showcaseCount} 个示范作品**\n<!-- atlas-counts:end -->`;
 if(!readme.includes('<!-- atlas-counts:start -->') || !readme.includes('<!-- atlas-counts:end -->'))throw new Error('README case count markers are missing');
 fs.writeFileSync(readmePath,readme.replace(/<!-- atlas-counts:start -->[\s\S]*?<!-- atlas-counts:end -->/,counts),'utf8');
-fs.writeFileSync(path.join(root,'catalog.js'), 'window.DESIGN_ATLAS = ' + JSON.stringify(entries,null,2) + ';\n');
+fs.mkdirSync(path.join(root,'data'), {recursive:true});
+fs.writeFileSync(path.join(root,'data/catalog.js'), 'window.DESIGN_ATLAS = ' + JSON.stringify(entries,null,2) + ';\n');
 for (const file of ['index.html', 'cases.html']) {
   const filePath = path.join(root, file);
   const html = fs.readFileSync(filePath, 'utf8')

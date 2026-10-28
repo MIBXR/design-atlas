@@ -131,7 +131,7 @@ export function buildPatterns({ root = defaultRoot, patterns, caseRecords, caseB
   });
   const catalog = { schemaVersion: 1, patternCount: records.length, repository: 'https://github.com/MIBXR/web-atlas', patterns: records };
   outputs.set('agent/patterns.json', encode(catalog));
-  outputs.set('patterns.js', Buffer.from('window.DESIGN_PATTERNS = ' + JSON.stringify(patterns, null, 2) + ';\n', 'utf8'));
+  outputs.set('data/patterns.js', Buffer.from('window.DESIGN_PATTERNS = ' + JSON.stringify(patterns, null, 2) + ';\n', 'utf8'));
   if (write) {
     fs.mkdirSync(repositoryFile(root, 'agent/patterns', false), { recursive: true });
     for (const [relative, bytes] of outputs) fs.writeFileSync(repositoryFile(root, relative, false), bytes);

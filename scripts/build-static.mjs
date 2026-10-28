@@ -7,11 +7,9 @@ import {assertRepositoryLineEndings} from './check-line-endings.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(root, 'dist');
-export const files = ['index.html', 'landing.css', 'home-features.css', 'home.js', 'legacy-links.js', 'site-nav.css', 'theme-control.css', 'site-typography.css', 'site-footer.css', 'site-shell.js', 'cases.html', 'cases-layout.css', 'atlas.css', 'atlas.js', 'theme.js', 'catalog.js', 'fundamentals.html', 'fundamentals.css', 'lab-layout.css', 'lab-embed.css', 'fundamentals.js', 'document.html', 'document.css', 'document.js', 'favicon.svg', 'favicon-light.svg', 'favicon-dark.svg', 'README.md', 'CONTRIBUTING.md', 'agent.html', 'agent.css', 'agent.js', 'AGENT.md', 'llms.txt'];
-const runtimeFiles = ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.js', 'case-loading.css'];
-files.push('favorites.js', 'favorite-controls.js', 'demo-preview.js', 'documents.js', 'patterns.html', 'patterns-page.js', 'patterns.js', 'patterns-ui.js', 'patterns-ui.css', 'pattern-playground.js', 'pattern-playground.css');
-files.push('materials.html', 'materials.js', 'materials-ui.js', 'materials-ui.css');
-export const folders = ['demos', 'entries', 'patterns', 'materials', 'material-demos', 'agent-skills', 'previews', 'research', 'prompts', 'docs', 'vendor', 'agent'];
+export const files = ['index.html', 'cases.html', 'patterns.html', 'materials.html', 'lab.html', 'agent.html', 'docs.html', 'asset-cache-worker.js', 'README.md', 'CONTRIBUTING.md'];
+const runtimeFiles = ['data/asset-sources.js', 'site/runtime/asset-runtime.js', 'site/runtime/asset-cache.js', 'asset-cache-worker.js', 'site/runtime/case-loading.js', 'site/runtime/case-loading.css'];
+export const folders = ['site', 'data', 'demos', 'entries', 'patterns', 'materials', 'material-demos', 'agent-skills', 'previews', 'research', 'prompts', 'docs', 'agent'];
 const localOrigin = 'https://design-atlas.invalid';
 
 function localReference(value, documentPath) {
@@ -97,12 +95,12 @@ function injectAssets(text, documentPath, assetsMode) {
   const directory = path.posix.dirname(documentPath);
   const relative = name => path.posix.relative(directory === '.' ? '' : directory, name) || name;
   const hasRuntime = /<script\b[^>]*\bsrc\s*=\s*["'][^"']*asset-runtime\.js["']/i.test(text);
-  const scripts = hasRuntime ? '' : `<script src="${relative('asset-sources.js')}"></script><script src="${relative('asset-runtime.js')}"></script>`;
+  const scripts = hasRuntime ? '' : `<script src="${relative('data/asset-sources.js')}"></script><script src="${relative('site/runtime/asset-runtime.js')}"></script>`;
   const setup = `<script data-design-atlas-assets>window.DesignAtlasAssetMode=${JSON.stringify(assetsMode === 'github' ? 'github' : 'auto')};</script>${scripts}`;
   if (!/<head\b[^>]*>/i.test(text)) throw new Error('Asset runtime requires a head element: ' + documentPath);
   // Resolve the library theme before asset loading can delay the first paint.
   const head = /<head\b[^>]*>[\s\S]*?<\/head\s*>/i.exec(text)?.[0] || '';
-  const themeBoot = /<script src="theme\.js"><\/script>/i.exec(head)?.[0];
+  const themeBoot = /<script src="[^"]*\/theme\.js"><\/script>/i.exec(head)?.[0];
   if (themeBoot) return text.replace(themeBoot, themeBoot + setup);
   return text.replace(/<head\b[^>]*>/i, head => head + setup);
 }
@@ -112,9 +110,9 @@ export function prepareStatic(assetsMode = 'local') {
   if (!['local', 'github'].includes(assetsMode)) throw new Error('Asset mode must be local or github.');
   if (path.relative(root, output) !== 'dist' || fs.lstatSync(output, {throwIfNoEntry:false})?.isSymbolicLink()) throw new Error('Static output must be the real dist directory inside this repository.');
   const includedRuntime = runtimeFiles.filter(name => fs.existsSync(path.join(root, name)));
-  const runtimeReady = includedRuntime.includes('asset-runtime.js') && includedRuntime.includes('asset-sources.js');
-  if (assetsMode === 'github' && !runtimeReady) throw new Error('GitHub mode requires asset-sources.js and asset-runtime.js in the source checkout.');
-  const sources = includedRuntime.includes('asset-sources.js') ? loadAssetSources() : {assets:{}};
+  const runtimeReady = includedRuntime.includes('site/runtime/asset-runtime.js') && includedRuntime.includes('data/asset-sources.js');
+  if (assetsMode === 'github' && !runtimeReady) throw new Error('GitHub mode requires data/asset-sources.js and site/runtime/asset-runtime.js in the source checkout.');
+  const sources = includedRuntime.includes('data/asset-sources.js') ? loadAssetSources() : {assets:{}};
   // Hosted HTML/CSS is rewritten for playback, and Markdown gains a UTF-8 BOM.
   // Agent source must come from the original Git bytes, not those display files.
   const revision = spawnSync('git', ['rev-parse', 'HEAD'], {cwd:root, encoding:'utf8'});
@@ -125,7 +123,7 @@ export function prepareStatic(assetsMode = 'local') {
   fs.mkdirSync(output);
   const omitted = new Set(assetsMode === 'github' ? Object.keys(sources.assets) : []);
   let omittedBytes = 0;
-  for (const name of [...files, ...includedRuntime, ...folders]) {
+  for (const name of [...files, ...folders]) {
     fs.cpSync(path.join(root, name), path.join(output, name), {recursive:true, filter:source => {
       const info = fs.lstatSync(source);
       if (path.basename(source) === '.git' || !info.isDirectory() && !info.isFile()) throw new Error('Static content cannot contain Git metadata, links or special files: ' + source);

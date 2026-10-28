@@ -4,6 +4,6 @@
 # Preserve checksum-verified third-party bytes, including original whitespace.
 demos/**/assets/** -text -whitespace
 demos/**/vendor/** -text -whitespace
-vendor/** -text -whitespace
+site/vendor/** -text -whitespace
 material-demos/**/vendor/** -text -whitespace
 agent-skills/** -text -whitespace

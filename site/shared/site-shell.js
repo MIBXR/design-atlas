@@ -27,7 +27,7 @@
       if (!window.DesignAtlasAssetCache) {
         cacheReady ||= new Promise(resolve => {
           const script = document.createElement('script');
-          script.src = 'asset-cache.js';
+          script.src = 'site/runtime/asset-cache.js';
           script.onload = script.onerror = resolve;
           document.head.append(script);
         });

@@ -3,7 +3,7 @@
   const labels = { visual: '视觉构成', 'micro-motion': '微动效', 'page-motion': '页面动效', sound: '声音反馈', structure: '内容与状态' };
   const examples = { visual: 'restrained-signal-color', 'micro-motion': 'state-shape-feedback', 'page-motion': 'directional-section-wipe', sound: 'sound-opt-in', structure: 'single-open-accordion' };
   const cleanups = new Map();
-  const libraryUrl = new URL('patterns.html', document.currentScript.src).href;
+  const libraryUrl = new URL('../../patterns.html', document.currentScript.src).href;
   const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
   function mount(root, options = {}) {
     cleanups.get(root)?.();

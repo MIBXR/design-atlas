@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const base = new URL('.', document.currentScript.src);
+  const base = new URL('../../', document.currentScript.src);
   let registration;
   const ready = (!('serviceWorker' in navigator) || !window.isSecureContext)
     ? Promise.resolve(false)
