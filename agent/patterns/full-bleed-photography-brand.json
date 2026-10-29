@@ -54,7 +54,7 @@
       "demos/cases/rijksmuseum-art/script.js",
       "demos/cases/rijksmuseum-art/style.css",
       "entries/cases/rijksmuseum-art.json",
-      "docs/research/rijksmuseum-art.md"
+      "docs/cases/rijksmuseum-art.md"
     ]
   },
   "sourceCases": [
@@ -65,6 +65,195 @@
         "bundle": "agent/cases/rijksmuseum-art.json",
         "demo": "demos/cases/rijksmuseum-art/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/full-bleed-photography-brand.md",
+      "role": "prompt",
+      "content": "# 全幅摄影与巨大完整字标 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/full-bleed-photography-brand.json)\n\n为【目标页面/组件】实现「全幅摄影与巨大完整字标」。摄影铺满约一个视口，完整品牌字标叠于图上，简短专题文字与行动定位边缘；普通滚动更换专题。触发：首次观看或滚到下一专题。可见结果：作品世界成为首要感受。适用任务：强摄影艺术馆与作品集。手机使用稳定视口单位和正确图像版本，字标保持原比例，行动有足够对比。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责作品世界成为首要感受，职责限定在当前区域。组合时手机使用稳定视口单位和正确图像版本，字标保持原比例，行动有足够对比。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 手机使用稳定视口单位和正确图像版本，字标保持原比例，行动有足够对比。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/chintz.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/de-kooning.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/family.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/founder.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/hero-desktop.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/hero-mobile.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/hero.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/ing.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/kpn.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/lottery.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/rijks-bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/assets/rijks-normal.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/rijksmuseum-art.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/rijksmuseum-art.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/full-bleed-photography-brand.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/rijksmuseum-art-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/rijksmuseum-art-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/rijksmuseum-art.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/rijksmuseum-art.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/full-bleed-photography-brand.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

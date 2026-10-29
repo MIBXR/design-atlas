@@ -67,5 +67,314 @@
         "demo": "demos/cases/chatgpt-platform/index.html"
       }
     }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/mode-specific-collage.md",
+      "role": "prompt",
+      "content": "# 按模式组织独立拼贴层 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/mode-specific-collage.json)\n\n为【目标页面/组件】实现「按模式组织独立拼贴层」。每个模式拥有独立图层清单及坐标、比例、层级和出入轨迹，旧场景离开后新场景成组进入。触发：选择不同能力模式。可见结果：主窗口周边形成具有语义的场景。适用任务：需要多类型成果证明的产品。素材必须解释对应能力，不能盖住标题与控制。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：负责模式对应的成果场景，中央产品窗口负责产品身份，巨字负责选择。图层坐标按素材重设；不能将多来源拼贴叠成遮挡标题的无限装饰。\n\n## 制作约束\n\n- 素材必须解释对应能力，不能盖住标题与控制。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-coding-opt-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-finance.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-health-opt-5.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-images.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-voice-opt-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-work-opt-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-writing.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/chat-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/chat.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/globe-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-chat-shape.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-code-ascii.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-code-picker-light-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-deck.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-preso.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-shape-transparent.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Medium.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-000.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-001.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-002.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-003.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-flower.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-scribble.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-tomato.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/scribble.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-large-dark.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-large-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-small-dark.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-small-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/work-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/work.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/fonts.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/motion-data.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/chatgpt-motion-evidence.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-handoff.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-mode-rail.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-work-scroll.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/chatgpt-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/chatgpt-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/mode-specific-collage.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/chatgpt-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/mode-specific-collage.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
+    }
   ]
 }

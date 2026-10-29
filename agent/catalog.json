@@ -2833,11 +2833,15 @@
     }
   ],
   "patterns": {
-    "path": "agent/patterns.json",
+    "path": "agent/patterns/index.json",
     "patternCount": 138
   },
   "materials": {
-    "path": "agent/materials.json",
+    "path": "agent/materials/index.json",
     "materialCount": 9
+  },
+  "cases": {
+    "path": "agent/cases/index.json",
+    "entryCount": 38
   }
 }

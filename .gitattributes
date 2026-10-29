@@ -1,10 +1,10 @@
 * text=auto eol=lf
 *.jpg binary
 *.png binary
-# Preserve checksum-verified third-party bytes, including original whitespace.
+# Third-party files retain their original bytes.
 demos/**/assets/** -text -whitespace
 demos/**/vendor/** -text -whitespace
 demos/**/fonts/** -text -whitespace
 site/vendor/** -text -whitespace
-material-demos/**/vendor/** -text -whitespace
-agent-skills/** -text -whitespace
+demos/materials/beautiful-article/** -text -whitespace
+demos/materials/web-design-engineer/** -text -whitespace

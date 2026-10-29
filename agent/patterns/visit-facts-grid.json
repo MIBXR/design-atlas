@@ -53,7 +53,7 @@
       "demos/cases/met-museum/script.js",
       "demos/cases/met-museum/style.css",
       "entries/cases/met-museum.json",
-      "docs/research/met-museum.md"
+      "docs/cases/met-museum.md"
     ]
   },
   "sourceCases": [
@@ -64,6 +64,187 @@
         "bundle": "agent/cases/met-museum.json",
         "demo": "demos/cases/met-museum/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/visit-facts-grid.md",
+      "role": "prompt",
+      "content": "# 到访事实在行动旁成组呈现 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/visit-facts-grid.json)\n\n为【目标页面/组件】实现「到访事实在行动旁成组呈现」。建筑或展览视觉确认机构后，欢迎区用稳定小列组织日期、开放、地点和行动；手机按事实顺序堆叠。触发：从首图继续阅读。可见结果：访客无需穿越宣传段落就能找到实用信息。适用任务：博物馆与活动入口。归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责访客无需穿越宣传段落就能找到实用信息，职责限定在当前区域。组合时归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 归档日期与现场运营事实分开，真实预约入口外链或连接真实服务。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/met-museum/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/austin.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/costume.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/dendur.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/facade.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/inter.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/liu-wei.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/orientalism.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/pollock.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/vangogh.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/assets/washington.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/met-museum/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/met-museum/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/met-museum/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/met-museum/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/met-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/met-museum.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/visit-facts-grid.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/met-museum-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/met-museum-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/met-museum.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/met-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/visit-facts-grid.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

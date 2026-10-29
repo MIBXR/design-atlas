@@ -70,5 +70,166 @@
         "demo": "demos/cases/linear-workflow/index.html"
       }
     }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/staged-product-ui-entrance.md",
+      "role": "prompt",
+      "content": "# 延迟产品界面与扫光入场 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/staged-product-ui-entrance.json)\n\n为【目标页面/组件】实现「延迟产品界面与扫光入场」。稳定主标题先可读，产品UI在短延迟后由mask与扫光带入，向下滚动让遮罩衔接下一节。触发：进入页面及继续下滚。可见结果：界面密度逐步出现而不遮住主张。适用任务：工作系统营销首屏。动作不阻止阅读与操作，减少动态直接显示终态界面。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责界面密度逐步出现而不遮住主张，职责限定在当前区域。组合时动作不阻止阅读与操作，减少动态直接显示终态界面。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 动作不阻止阅读与操作，减少动态直接显示终态界面。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets/inter.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets/karri.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets/product-depth.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/linear-workflow/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/linear-workflow/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/linear-workflow/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/linear-workflow/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/linear-workflow/source/assets/hero-atmosphere.webp",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/linear-workflow/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/linear-workflow.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/linear-workflow.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/staged-product-ui-entrance.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/linear-workflow-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/linear-workflow-reference.png",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/linear-workflow.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/linear-workflow.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/staged-product-ui-entrance.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
+    }
   ]
 }

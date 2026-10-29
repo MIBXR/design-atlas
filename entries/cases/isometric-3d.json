@@ -88,7 +88,7 @@
   "demo": "demos/cases/isometric-3d/index.html",
   "preview": "previews/cases/isometric-3d.jpg",
   "theoryVerifiedAt": "2026-10-07",
-  "research": "docs/research/isometric-3d.md",
+  "research": "docs/cases/isometric-3d.md",
   "exercise": "把浮岛替换成数据平台的等轴系统图，让三种焦点分别对应计算、存储、网络，保留统一坐标与分层解释。",
   "composition": {
     "color": "柔和绿和暖土色构成同一空间，每个立方体以三面明度表达体积。",

@@ -1,6 +1,4 @@
 {
-  "sourceDate": "2026-10-27",
-  "sourcePage": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
   "scope": "有 skill 主页面和无 skill 基线页面；仅本地化外链资源，不改页面设计、文案或交互",
   "assets": [
     {

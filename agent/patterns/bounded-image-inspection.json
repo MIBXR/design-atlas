@@ -63,7 +63,7 @@
     ],
     "sourceFiles": [
       "entries/cases/digital-dunhuang.json",
-      "docs/research/digital-dunhuang.md",
+      "docs/cases/digital-dunhuang.md",
       "demos/cases/digital-dunhuang/fidelity.md",
       "demos/cases/digital-dunhuang/index.html",
       "demos/cases/digital-dunhuang/style.css",
@@ -82,6 +82,555 @@
         "bundle": "agent/cases/digital-dunhuang.json",
         "demo": "demos/cases/digital-dunhuang/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/bounded-image-inspection.md",
+      "role": "prompt",
+      "content": "# 公开边界内的瓦片细察 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/bounded-image-inspection.json)\n\n为【目标页面/组件】实现「公开边界内的瓦片细察」。独立全视口画布使用真实DeepZoom瓦片与Leaflet坐标缩放、惯性拖动和加减控件；匿名缩放范围与登录提醒防止把低清CSS放大误称为高清。 源匿名地图范围：minZoom9.75 / maxZoom12。源maxNativeZoom15的65%/80%；不访问更高匿名未授权级别。 源瓦片/逻辑尺寸：1024px；21515×15796逻辑像素。仅实取公开level10/11/12的9瓦片，不能据此声称完整原分辨率已归档。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。\n\n## 制作约束\n\n- 以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。\n- 保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。\n- 正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/05413ed9665cc731.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/05eb55d38b9d4962.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/08c5200cd8c21d90.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/09e964a852248e0e.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/0ee525ab61c4496f.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/1520e50f15fec876.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/1584e2c0ddd0bea1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/16ba5ce9739847f3.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/16e8f3ba6cfceefc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/193244d1acfe0a55.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/1dd71824bad575ef.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/1ffc6cfced96667f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/21d4203c1b96e531.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/29963352bb326975.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/3030b567050830b9.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/33f8f1b905fe3944.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/4dc19aaf1cf4a1a0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/4fcc26eb1a6d6181.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/5374786f122016c8.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/54d4168dc70f3b79.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/55bba6f9e788959c.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/60402cdfd6dc24d3.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/67ea55c7c8abb4e6.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/6a60c3d209566ee7.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/6c17ecbb72270427.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/6f0c93ea1974121d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/77d1394b2d677771.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/792ce77a9ad8dfe8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/796e7f01cfb95cc4.eot",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/835bacca6163d588.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/839e8beefd5e43db.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/8c9034dc2cf12913.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/952673c3d9ba7470.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/9745bf431d5109a0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/978a261a4178f707.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/98880162ef8a635a.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/9e4cfc1d6f05d3e9.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/a030b0f41ed710c0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/a6af0a15a922808f.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/aa16926065b9300f.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/b2aa95e9b997506a.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/b5db4deb22aa2b69.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/b97a08f3742c30ec.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/be2a59f2278e85e8.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/c139bf673072b0f7.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/c1527c2bdac473da.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/c8203072dda1960f.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/c842bb25903ee05f.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/c8fb4c2e329529f5.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/Control.Loading.css",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/Control.Loading.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/d9bdfc32315cd4e1.eot",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/da857bbec920f6c8.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/db426c9f05a90d97.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/dc155320cb86c32e.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/de1669f8b1998998.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/dfbbfe63e5e800a8.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/dlc-banner.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/e0348e1a4de7b534.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/e35c2fc2bfddcb16.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/e4a6fa7ba7ba99b8.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/ea768498dfc29c5f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/ea84e3a775aca5de.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/eb5f03ee1c6eace8.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/ee923dfdfe3ad6d4.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/ef05f3da4a9118b1.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/ef755d2198800b58.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/f281ce84e71d04c2.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/f2e5ea04953cae04.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/f6de7bbed375d65c.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/images/layers-2x.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/images/layers.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/images/marker-icon-2x.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/images/marker-icon.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/images/marker-shadow.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/jquery.cbpFWSlider.min.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/jquery.min.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/leaflet-deepzoom.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/leaflet.css",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/leaflet.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/modernizr.custom.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/10/0_0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/11/0_0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/11/1_0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/12/0_0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/12/0_1.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/12/1_0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/12/1_1.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/12/2_0.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/tiles/12/2_1.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/assets/wow.min.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/catalogue.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/filter-evidence.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/LICENSE-Control-Loading.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/LICENSE-jQuery.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/LICENSE-Leaflet-DeepZoom.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/LICENSE-Leaflet.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/section.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/source/state-matrix.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/THIRD-PARTY-NOTICES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/viewer.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/viewer.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/viewer.js",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/digital-dunhuang.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/digital-dunhuang.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/bounded-image-inspection.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/digital-dunhuang-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/digital-dunhuang.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/digital-dunhuang.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/bounded-image-inspection.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

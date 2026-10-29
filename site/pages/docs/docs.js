@@ -1,5 +1,5 @@
 const content = document.querySelector('#content');
-let file = new URLSearchParams(location.search).get('file') || 'README.md';
+let file = new URLSearchParams(location.search).get('file') || 'docs/guide.md';
 const documents = window.DESIGN_ATLAS_DOCUMENTS || [];
 const documentPaths = new Set(documents.map(item => item.path));
 const libraryURL = new URL('.', document.baseURI);
@@ -7,7 +7,7 @@ let activeRequest;
 let cleanupOutline = () => {};
 let currentHeadings = [];
 function isAllowedDocument(value) {
-  return documentPaths.has(value) && !value.includes('\\') && !value.split('/').some(part => !part || part.startsWith('.'));
+  return (documentPaths.has(value) || /^demos\/(?:cases|patterns|materials)\/[a-z0-9-]+\/(?:fidelity|LICENSES)\.md$/.test(value) || value === 'site/playground/fidelity.md') && !value.includes('\\') && !value.split('/').some(part => !part || part.startsWith('.'));
 }
 function renderDirectory() {
   const navigation = document.querySelector('#document-navigation');
@@ -202,7 +202,7 @@ function focusDocument() {
 async function readDocument({focus = false} = {}) {
   activeRequest?.abort();
   const request = activeRequest = new AbortController();
-  file = new URLSearchParams(location.search).get('file') || 'README.md';
+  file = new URLSearchParams(location.search).get('file') || 'docs/guide.md';
   cleanupOutline();
   currentHeadings = [];
   syncDirectory();
@@ -254,7 +254,7 @@ document.addEventListener('click', event => {
   if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
   const url = new URL(link.href, document.baseURI);
   if (url.origin !== libraryURL.origin || url.pathname !== new URL('docs.html', libraryURL).pathname) return;
-  const nextFile = url.searchParams.get('file') || 'README.md';
+  const nextFile = url.searchParams.get('file') || 'docs/guide.md';
   if (!isAllowedDocument(nextFile)) return;
   if (nextFile === file && url.hash) return;
   event.preventDefault();
@@ -262,7 +262,7 @@ document.addEventListener('click', event => {
   readDocument({focus:true});
 });
 window.addEventListener('popstate', () => {
-  if ((new URLSearchParams(location.search).get('file') || 'README.md') !== file) readDocument({focus:true});
+  if ((new URLSearchParams(location.search).get('file') || 'docs/guide.md') !== file) readDocument({focus:true});
   else focusDocument();
 });
 renderDirectory();

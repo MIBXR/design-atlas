@@ -92,7 +92,7 @@
   "demo": "demos/cases/philharmonie-music/index.html",
   "preview": "previews/cases/philharmonie-music.jpg",
   "referencePreview": "previews/cases/philharmonie-music-reference.jpg",
-  "research": "docs/research/philharmonie-music.md",
+  "research": "docs/cases/philharmonie-music.md",
   "exercise": "再选择一场经过官方核验的音乐会，对照节目/阵容结构，保留展览与音乐会信息表达差异。",
   "composition": {
     "color": "官方CSS核验海军蓝#001b3b、白色面板、#be244f票务和#fdafe3支持入口。",

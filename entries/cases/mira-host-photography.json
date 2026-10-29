@@ -77,7 +77,7 @@
   "negativePrompt": "以下约束由 Web Atlas 撰写：不改来源设计与原文，不将示范人物、地点履历和图片署名当作真实机构事实，不增补来源没有的详情、后端、音乐或基线，不将源码判断写成浏览器实测。",
   "demo": "demos/cases/mira-host-photography/index.html",
   "preview": "previews/cases/mira-host-photography.jpg",
-  "research": "docs/research/mira-host-photography.md",
+  "research": "docs/cases/mira-host-photography.md",
   "exercise": "用相同视口逐节查看来源与本地页面，核对摄影裁切、字体换行、目录悬停预览、章节导航、窄屏重排与减少动态分支；将真实可用入口和 # 占位链接分开记录。",
   "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
   "implementation": "reference-study",

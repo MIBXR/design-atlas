@@ -123,7 +123,7 @@
   "negativePrompt": "不要把官方影像叫官方莱茵品牌网站；不要把大量立体档案改成五张通用平面卡；不要用CSS圆框替代厚度/灰色渐变/橙色内缘，不用Arial重排原作特殊连字；不要把影片抽出说成网页点击，不伪造权限/机密正文；不要声称H264转码字节等同原轨道，不自动出声、裁掉手机画面或复制整片3D源码的虚假边界。",
   "demo": "demos/cases/rhine-lab/index.html",
   "preview": "previews/cases/rhine-lab.jpg",
-  "research": "docs/research/rhine-lab.md",
+  "research": "docs/cases/rhine-lab.md",
   "exercise": "将拥有使用权的机构影片拆为四个有明确时间范围的场景，保留原尺寸与片内时序；用语义按钮与数据状态实现章选和目录，分别审阅媒体准确度与交互可复用性。",
   "composition": {
     "color": "源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。",

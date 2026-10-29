@@ -70,8 +70,8 @@
     "entries/cases/bauhaus-geometry.json",
     "entries/cases/design-sight.json",
     "entries/cases/philharmonie-music.json",
-    "docs/research/bauhaus-geometry.md",
-    "docs/research/design-sight.md",
-    "docs/research/philharmonie-music.md"
+    "docs/cases/bauhaus-geometry.md",
+    "docs/cases/design-sight.md",
+    "docs/cases/philharmonie-music.md"
   ]
 }

@@ -104,7 +104,7 @@
   "negativePrompt": "不使用共同SaaS双栏hero模板，不嵌入整站iframe，不伪造官网功能或实时展期，不复制统计/交易脚本，不使用CDN和远程图像运行时依赖。",
   "demo": "demos/cases/mori-art-museum/index.html",
   "preview": "previews/cases/mori-art-museum.jpg",
-  "research": "docs/research/mori-art-museum.md",
+  "research": "docs/cases/mori-art-museum.md",
   "exercise": "保持艺术海报不变，只移除红色方形馆标与展期带，观察观众还是否能迅速知道机构、展名和日期；恢复后比较信息路径。",
   "composition": {
     "color": "#bf0d3e机构红贯穿Logo、展期、栏目、标签；粉色公告、白色底和艺术海报虹彩承担不同角色。",

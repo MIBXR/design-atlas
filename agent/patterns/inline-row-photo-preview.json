@@ -88,7 +88,7 @@
       "demos/cases/mira-host-photography/fidelity.md",
       "demos/cases/mira-host-photography/index.html",
       "entries/cases/mira-host-photography.json",
-      "docs/research/mira-host-photography.md"
+      "docs/cases/mira-host-photography.md"
     ]
   },
   "sourceCases": [
@@ -99,6 +99,235 @@
         "bundle": "agent/cases/mira-host-photography.json",
         "demo": "demos/cases/mira-host-photography/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/inline-row-photo-preview.md",
+      "role": "prompt",
+      "content": "# 文字目录行内浮现摄影预览 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/inline-row-photo-preview.json)\n\n为【作品目录】实现「文字目录行内浮现摄影预览」。保留编号、标题和辅助信息的稳定列线，将 180px × 120px 的照片定位在当前行右侧 220px、垂直居中。指针进入时让照片透明度从 0 到 1、比例从 0.94 到 1，标题右移 8px、箭头右移 6px；离开后还原。透明度与箭头过渡 0.5 秒，预览与标题位移过渡 0.6 秒，使用 cubic-bezier(0.22, 1, 0.36, 1)。来源在 1100px 及以下隐藏预览，未实现键盘等价预览，作品链接仍为占位；实施时用 :focus-visible 给出同样的预览，并连接真实详情，不能只靠图片传达关键内容。减少动态时取消位移和缩放并即时显隐，同一行不叠加随指针预览。\n\n## 制作约束\n\n- 来源在 1100px 及以下隐藏摄影预览；窄屏目录继续显示文字。\n- 来源没有 :focus 或 :focus-visible 等价预览，键盘策略是实施建议。\n- 来源作品链接使用 # 占位，未实现真实系列详情；迁移时提供真实目的地。\n- 预览不接收指针事件，不遮挡该行文字与操作；换用有权使用的照片后重新检查裁切和行间遮挡。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/fonts.css",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1418065460487-3e41a6c84dc5-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1454496522488-7a8e488e8606-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1454496522488-7a8e488e8606-w900-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1464822759023-fed622ff2c3b-w1000-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1469474968028-56623f02e42e-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1485470733090-0aae1788d5af-w1000-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1486870591958-9b9d0d1dda99-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1486870591958-9b9d0d1dda99-w900-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1495312040802-a929cd14a6ab-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1495312040802-a929cd14a6ab-w900-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1500534314209-a25ddb2bd429-w1600-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1506905925346-21bda4d32df4-w1600-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1518562180175-34a163b1a9a6-w2400-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1518562180175-34a163b1a9a6-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/InstrumentSerif-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/jizBRFtNs2ka5fXjeivQ4LroWlx-6zsTjmbI.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjgn7MsNo.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7M.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/SpaceGrotesk-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/LICENSE",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/mira-host-photography.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/mira-host-photography.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/inline-row-photo-preview.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/mira-host-photography-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mira-host-photography.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/mira-host-photography.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/inline-row-photo-preview.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

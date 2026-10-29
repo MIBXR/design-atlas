@@ -63,7 +63,7 @@
     ],
     "sourceFiles": [
       "entries/cases/suzhou-museum.json",
-      "docs/research/suzhou-museum.md",
+      "docs/cases/suzhou-museum.md",
       "demos/cases/suzhou-museum/fidelity.md",
       "demos/cases/suzhou-museum/index.html",
       "demos/cases/suzhou-museum/style.css",
@@ -79,6 +79,335 @@
         "bundle": "agent/cases/suzhou-museum.json",
         "demo": "demos/cases/suzhou-museum/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/architectural-outline-whitespace.md",
+      "role": "prompt",
+      "content": "# 机构摄影的白色外缘 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/architectural-outline-whitespace.json)\n\n为【目标页面/组件】实现「机构摄影的白色外缘」。用50px白色外缘围住矩形建筑与馆藏影像，窄白缝划分入口、细灰章节条标记浏览阶段；建筑黑灰轮廓保留在真实摄影内，不额外制造框线组件。 源桌面外缘：left/right50px；top9px，bottom30px。1440×900时主内容1340×755，来自源计算样式。 白色层级：页面外缘/入口白缝/访问70%半透明白板。源主页三种实际空间关系；不再使用首版7px黑框组件。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。\n\n## 制作约束\n\n- 以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。\n- 保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。\n- 正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/06e3090c47f4d8ec.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/0e5b616d48a82d29.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/0fc79f9e29e800b9.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/2d0cdd2b2f235b70.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/3379fe1fdb1853d2.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/3909d8d6f7de1a5d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/39d197d7bea119a6.gif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/427421150c11c66f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/438bdec25e4fbd7f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/4862cfe9d6b97a47.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/4e51d01a5e0c269b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/5179e88fe8318d74.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/55d0b17a7a72e481.gif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/5ac82559d5a8f599.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/5cb42ce17da8a1ce.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/5d906cecb72b5bde.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/5edc24c75fe5bb34.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/5fecbb906b367a3d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/6440784e6a2d5fd9.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/7a7f8f1e54235cfb.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/8086d7c12e806cb1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/858474d4071ac635.gif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/912d1002fe6bade0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/96126fdaf8684fdf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/96d238af6b026b00.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/a612568ea26c6b8b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/a64f306e51e9706d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/b29073789c48535f.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/b45f1532a1cfaf8a.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/b4cd86f380a92ee6.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/bc92965fe106d3fd.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/bf8c2ccda9a545cd.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/cb6df0eebcc6fc6d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/cc4eb8a7295852e5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/d2f395ebc4b011b3.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/e375cfd2f05986af.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/f325da10590fdefb.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/f5a5a300cea045df.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/jquery-3.5.1.min.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/jquery-ui.min.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/jquery.fullPage.min.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/lrtk.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/owl.carousel.min.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/assets/unavailable.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/LICENSE-jQuery-UI.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/LICENSE-jQuery.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/source/state-matrix.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/suzhou-museum/THIRD-PARTY-NOTICES.md",
+      "role": "license"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/suzhou-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/suzhou-museum.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/architectural-outline-whitespace.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/suzhou-museum-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/suzhou-museum.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/suzhou-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/architectural-outline-whitespace.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

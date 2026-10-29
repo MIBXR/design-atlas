@@ -84,10 +84,12 @@ function makeBundle(root, entry, entryPath, patternIds = []) {
   if (entry.demo !== `demos/cases/${entry.id}/index.html`) throw new Error(`Unexpected demo path for ${entry.id}: ${entry.demo}`);
   const definitions = [
     [entry.research, 'research'],
-    [`prompts/${entry.id}.md`, 'prompt'],
+    [`prompts/cases/${entry.id}.md`, 'prompt'],
     [entry.fidelity, 'fidelity'],
     [entry.assetManifest, 'asset-manifest'],
   ].filter(([relative]) => relative !== undefined);
+  const licenses = `demos/cases/${entry.id}/LICENSES.md`;
+  if (fs.existsSync(path.join(root, licenses))) definitions.push([licenses, 'license']);
   const documents = definitions.map(([relative, role]) => documentRecord(root, relative, role));
   const documentPaths = new Set(documents.map(doc => doc.path));
   const paths = new Set([
@@ -139,14 +141,16 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
   if (materialData) for (const [relative, bytes] of materialData.outputs) outputs.set(relative, bytes);
   const catalog = { schemaVersion: 1, entryCount: records.length, repository, entries: records };
   if (patternData) {
-    catalog.patterns = { path: 'agent/patterns.json', patternCount: patterns.length };
+    catalog.patterns = { path: 'agent/patterns/index.json', patternCount: patterns.length };
   }
   if (materialData) {
-    catalog.materials = { path: 'agent/materials.json', materialCount: materials.length };
+    catalog.materials = { path: 'agent/materials/index.json', materialCount: materials.length };
   }
+  outputs.set('agent/cases/index.json', encode({schemaVersion:1, repository, entryCount:records.length, entries:records}));
+  catalog.cases = {path:'agent/cases/index.json', entryCount:records.length};
   outputs.set('agent/catalog.json', encode(catalog));
-  outputs.set('agent/README.md', Buffer.from("# Web Atlas · Agent 数据\n\n完整工作流见 [docs/agent.md](../docs/agent.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：案例摘要、包路径及巧思／素材目录路径。\n- cases/<id>.json：完整 entry、documents 原文、webNotes HTML、files 路径与角色、patternIds 关联。\n- [patterns.json](patterns.json)：巧思机制、来源、约束、参数、组合关系与包路径。\n- entries/patterns/<id>.json：完整 pattern 与 sourceCases；按来源案例路径和 sourceFiles 取得上下文。\n- [materials.json](materials.json)：独立内容素材摘要和包路径。\n- entries/materials/<id>.json：完整 material、documents、files 与主要源码 sourceFiles；来源版本和许可随包保留。\n\n所有资料使用同一个固定 Git 提交。目录按命令需要独立读取。发布索引的 source.commit/baseUrl 指向原始源码；网页播放文件可经过部署转换。\n\nwebNotes 由 site/pages/cases/atlas.js 的实际详情渲染器生成。来源 observed/adapted/inferred 保留观察、迁移与推断的边界；来源记录原文随资料保留。\n\n运行 npm run build 同步资料，npm run check 检查本地引用。受影响页面通过浏览器验收。\n", 'utf8'));
   if (write) {
+    fs.rmSync(resolveRepositoryPath(root, 'agent'), {recursive:true, force:true});
     // Check the destination before creating directories or replacing any bytes.
     fs.mkdirSync(resolveRepositoryPath(root, 'agent/cases', { mustExist: false }), { recursive: true });
     if (patternData) fs.mkdirSync(resolveRepositoryPath(root, 'agent/patterns', { mustExist: false }), { recursive: true });

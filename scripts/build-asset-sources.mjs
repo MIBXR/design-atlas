@@ -6,18 +6,20 @@ import {fileURLToPath} from 'node:url';
 export const ASSET_THRESHOLD = 128 * 1024;
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const mediaExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif', '.svg', '.mp4', '.webm', '.mp3', '.wav', '.ogg', '.m4a', '.aac', '.flac', '.woff', '.woff2', '.otf', '.ttf', '.bin']);
-const assetFolders = ['demos/cases', 'demos/materials', 'previews/cases', 'previews/materials', 'docs', 'site/vendor'];
+const assetFolders = ['demos', 'previews', 'docs', 'site/vendor'];
 
 export function buildAssetSources(sourceRoot = root, commit) {
   if (!/^[a-f\d]{40}$/.test(commit || '')) throw new Error('Choose a published full Git commit with --commit.');
   const result = spawnSync('git', ['-C', sourceRoot, 'ls-tree', '-r', '-l', '-z', commit], {encoding:'utf8', maxBuffer:16 * 1024 * 1024});
   if (result.status !== 0) throw new Error('Cannot read the selected media commit: ' + (result.error?.message || result.stderr.trim()));
   const baseUrl = `https://raw.githubusercontent.com/MIBXR/web-atlas/${commit}/`;
+  const snapshotPaths = fs.readdirSync(path.join(sourceRoot, 'entries/materials')).filter(name => name.endsWith('.json')).map(name => JSON.parse(fs.readFileSync(path.join(sourceRoot, 'entries/materials', name), 'utf8')).snapshotPath).filter(Boolean);
   const assets = {};
   for (const record of result.stdout.split('\0').filter(Boolean)) {
     const tab = record.indexOf('\t');
     const canonical = record.slice(tab + 1);
     const [mode, type, , size] = record.slice(0, tab).trim().split(/\s+/);
+    if (snapshotPaths.some(prefix => canonical.startsWith(prefix))) continue;
     if (!assetFolders.some(folder => canonical.startsWith(folder + '/')) || !mediaExtensions.has(path.posix.extname(canonical).toLowerCase()) || Number(size) < ASSET_THRESHOLD) continue;
     if (type !== 'blob' || !['100644', '100755'].includes(mode)) throw new Error('Media must be a regular file: ' + canonical);
     assets[canonical] = {url:baseUrl + canonical.split('/').map(encodeURIComponent).join('/'), bytes:Number(size)};

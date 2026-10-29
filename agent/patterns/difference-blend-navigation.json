@@ -78,7 +78,7 @@
       "demos/cases/mira-host-photography/fidelity.md",
       "demos/cases/mira-host-photography/index.html",
       "entries/cases/mira-host-photography.json",
-      "docs/research/mira-host-photography.md"
+      "docs/cases/mira-host-photography.md"
     ]
   },
   "sourceCases": [
@@ -89,6 +89,235 @@
         "bundle": "agent/cases/mira-host-photography.json",
         "demo": "demos/cases/mira-host-photography/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/difference-blend-navigation.md",
+      "role": "prompt",
+      "content": "# 跨深浅背景的差值导航 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/difference-blend-navigation.json)\n\n为【目标页面】实现「跨深浅背景的差值导航」。将固定顶栏的文字与标记设为暖纸色 #f2efe8，并对该层使用 mix-blend-mode: difference，使导航经过摄影、纸色正文和墨色章节时按下方像素合成。导航只承担章节入口，正文对比另行处理。差值混合不能保证所有图片上的对比度，需要实测；检查每张图、深浅表面及新增合成层。来源只有悬停下划线，实施时保留原生链接并用 :focus-visible 提供清晰的焦点反馈。减少动态时直接显示顶栏。若同一层还采用语义主题色切换，重新验证混合结果，不直接套用原色对比结论。\n\n## 制作约束\n\n- 差值混合不能保证所有图片上的对比度，需要实测。\n- 混合依赖导航下方的实际像素与合成层级，新增背景、遮罩或隔离层后需重新核对。\n- 来源导航只有悬停下划线，未实现与其等价的键盘焦点下划线；键盘策略是实施建议。\n- 迁移时使用有权使用的摄影与真实章节，并按目标页面重新验证颜色。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/fonts.css",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1418065460487-3e41a6c84dc5-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1454496522488-7a8e488e8606-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1454496522488-7a8e488e8606-w900-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1464822759023-fed622ff2c3b-w1000-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1469474968028-56623f02e42e-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1485470733090-0aae1788d5af-w1000-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1486870591958-9b9d0d1dda99-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1486870591958-9b9d0d1dda99-w900-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1495312040802-a929cd14a6ab-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1495312040802-a929cd14a6ab-w900-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1500534314209-a25ddb2bd429-w1600-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1506905925346-21bda4d32df4-w1600-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1518562180175-34a163b1a9a6-w2400-q85.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/assets/photo-1518562180175-34a163b1a9a6-w600-q80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/InstrumentSerif-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/jizBRFtNs2ka5fXjeivQ4LroWlx-6zsTjmbI.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjgn7MsNo.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7M.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/SpaceGrotesk-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/LICENSE",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/mira-host-photography/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/mira-host-photography.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/mira-host-photography.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/difference-blend-navigation.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/mira-host-photography-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mira-host-photography.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/mira-host-photography.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/difference-blend-navigation.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

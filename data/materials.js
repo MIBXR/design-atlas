@@ -171,7 +171,7 @@ window.DESIGN_MATERIALS = [
     "type": "agent-skill",
     "category": "Agent 工作流",
     "summary": "把已有材料经抽取、编辑规划、主题确认、逐节生成和审阅，制作成基于 Reacticle 的可分享网页文章。",
-    "install": "将 agent-skills/beautiful-article/ 复制到项目的技能目录并按所用 Agent 的发现方式启用；创作文章时按原文调用 scripts/scaffold.sh 创建 React、TypeScript 与 Vite 工作区。",
+    "install": "将 demos/materials/beautiful-article/ 复制到项目的技能目录并按所用 Agent 的发现方式启用；创作文章时按原文调用 scripts/scaffold.sh 创建 React、TypeScript 与 Vite 工作区。",
     "tags": [
       "长文排版",
       "编辑工作流",
@@ -239,7 +239,8 @@ window.DESIGN_MATERIALS = [
         "evidence": "source"
       }
     ],
-    "skillPath": "agent-skills/beautiful-article/",
+    "snapshotPath": "demos/materials/beautiful-article/",
+    "snapshotEntry": "SKILL.md",
     "workflow": [
       "确认目标是文章，收集源材料、目标语言和初步文章类型；将材料抽取成 Markdown，记录不确定项并检查抽取完整性。",
       "规划简报、大纲、主题与素材；按文章类型确定信息保留比例，默认保留完整信息。",
@@ -256,7 +257,7 @@ window.DESIGN_MATERIALS = [
         "note": "skill 的 11 套主题由 Reacticle 实现，11 篇样文就在 Reacticle 的样例里；技能保存写作指导，组件库提供运行时。"
       }
     ],
-    "prompt": "先阅读 agent-skills/beautiful-article/SKILL.md，用我提供的材料制作网页文章。抽取材料并记录不确定项，提出编辑规划，逐项确认文章类型与信息保留、主题、宽度、配图和封面。先做首屏与第一节，确认后按节生成完整文章，保持文章阅读形态并使用 Reacticle 主题令牌。审阅和修复后再确认交付形式。主题选择可先打开 Reacticle 素材的 11 篇实际样文比较排版语言；未经确认不替我删减信息或导出 PDF。",
+    "prompt": "先阅读 demos/materials/beautiful-article/SKILL.md，用我提供的材料制作网页文章。抽取材料并记录不确定项，提出编辑规划，逐项确认文章类型与信息保留、主题、宽度、配图和封面。先做首屏与第一节，确认后按节生成完整文章，保持文章阅读形态并使用 Reacticle 主题令牌。审阅和修复后再确认交付形式。主题选择可先打开 Reacticle 素材的 11 篇实际样文比较排版语言；未经确认不替我删减信息或导出 PDF。",
     "accessibility": {
       "keyboard": "技能条目通过真实链接进入原文与 Reacticle 样例；创作文章时保留语义结构、可读目录，以及控件的键盘与焦点操作。",
       "reducedMotion": "本资源为工作流与文本快照，没有自动播放的演示；文章内自由图文层若带动效，需要在技术终审中检查移动端与可访问性。"
@@ -264,8 +265,8 @@ window.DESIGN_MATERIALS = [
     "preview": "previews/materials/beautiful-article.png",
     "research": "docs/materials/beautiful-article.md",
     "sourceFiles": [
-      "agent-skills/beautiful-article/SKILL.md",
-      "agent-skills/beautiful-article/README.md"
+      "demos/materials/beautiful-article/SKILL.md",
+      "demos/materials/beautiful-article/README.md"
     ]
   },
   {
@@ -1178,7 +1179,7 @@ window.DESIGN_MATERIALS = [
     },
     "demo": "demos/materials/shaders/index.html",
     "preview": "previews/materials/shaders.png",
-    "research": "docs/materials/README.md",
+    "research": "docs/materials/shaders.md",
     "sourceFiles": [
       "demos/materials/shaders/index.html",
       "demos/materials/shaders/demo.css",
@@ -1367,7 +1368,7 @@ window.DESIGN_MATERIALS = [
     "type": "agent-skill",
     "category": "Agent 工作流",
     "summary": "让 Agent 从需求、参考与设计系统出发，经方向确认、首版反馈和完整实现，制作有明确视觉语言的网页作品。",
-    "install": "将 agent-skills/web-design-engineer/ 复制到项目的 .agents/skills/web-design-engineer/ 或 .claude/skills/web-design-engineer/；按所用 Agent 的技能发现方式启用。",
+    "install": "将 demos/materials/web-design-engineer/ 复制到项目的 .agents/skills/web-design-engineer/ 或 .claude/skills/web-design-engineer/；按所用 Agent 的技能发现方式启用。",
     "tags": [
       "网页设计",
       "设计系统",
@@ -1428,7 +1429,8 @@ window.DESIGN_MATERIALS = [
         "evidence": "source"
       }
     ],
-    "skillPath": "agent-skills/web-design-engineer/",
+    "snapshotPath": "demos/materials/web-design-engineer/",
+    "snapshotEntry": "SKILL.md",
     "workflow": [
       "核实产品、品牌与技术事实，明确受众、作品类型、约束及已有界面的保留范围。",
       "优先阅读用户提供的代码、素材和参考，提取设计系统；按需读取一份具名风格配方。",
@@ -1449,7 +1451,7 @@ window.DESIGN_MATERIALS = [
         "note": "有 skill 的摄影主页结果；案例按固定提交归档作者公开的页面。"
       }
     ],
-    "prompt": "先阅读 agent-skills/web-design-engineer/SKILL.md，依据任务选择现有界面延展、保留式重设计或完整重设计。核实事实并阅读已有代码、品牌素材和参考，明确受众与约束，给出设计判断和视觉校准，再声明设计系统并请用户确认。先展示可浏览首版，确认后完整实现并自查。需要参考结果时阅读星槎与米拉摄影案例，区分同题对照和单个有 skill 结果；不把案例品质推断为每次调用技能的保证。",
+    "prompt": "先阅读 demos/materials/web-design-engineer/SKILL.md，依据任务选择现有界面延展、保留式重设计或完整重设计。核实事实并阅读已有代码、品牌素材和参考，明确受众与约束，给出设计判断和视觉校准，再声明设计系统并请用户确认。先展示可浏览首版，确认后完整实现并自查。需要参考结果时阅读星槎与米拉摄影案例，区分同题对照和单个有 skill 结果；不把案例品质推断为每次调用技能的保证。",
     "accessibility": {
       "keyboard": "技能条目通过真实链接进入原文与关联案例；应用技能制作网页时，按原文交付清单检查语义标签、替代文本和键盘导航。",
       "reducedMotion": "本资源为工作流与文本快照，没有自动播放的演示；应用技能时根据动效强度与用户环境处理减少动态。"
@@ -1457,8 +1459,8 @@ window.DESIGN_MATERIALS = [
     "preview": "previews/materials/web-design-engineer.jpg",
     "research": "docs/materials/web-design-engineer.md",
     "sourceFiles": [
-      "agent-skills/web-design-engineer/SKILL.md",
-      "agent-skills/web-design-engineer/README.md"
+      "demos/materials/web-design-engineer/SKILL.md",
+      "demos/materials/web-design-engineer/README.md"
     ]
   },
   {

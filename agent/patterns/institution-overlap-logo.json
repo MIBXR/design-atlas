@@ -54,7 +54,7 @@
       "demos/cases/mori-art-museum/index.html",
       "demos/cases/mori-art-museum/style.css",
       "entries/cases/mori-art-museum.json",
-      "docs/research/mori-art-museum.md"
+      "docs/cases/mori-art-museum.md"
     ]
   },
   "sourceCases": [
@@ -65,6 +65,199 @@
         "bundle": "agent/cases/mori-art-museum.json",
         "demo": "demos/cases/mori-art-museum/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/institution-overlap-logo.md",
+      "role": "prompt",
+      "content": "# 方形机构锚点跨主图边界 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/institution-overlap-logo.json)\n\n为【目标页面/组件】实现「方形机构锚点跨主图边界」。方形机构标志叠在海报边界上，尺寸和上浮位置按断点变化；艺术图保持自身色彩与比例。触发：进入展览主图。可见结果：机构身份与作品主题同时存在。适用任务：展览机构的品牌首屏。手机使用专图和合适标志尺寸，重叠区域不侵入作品关键内容。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责机构身份与作品主题同时存在，职责限定在当前区域。组合时手机使用专图和合适标志尺寸，重叠区域不侵入作品关键内容。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 手机使用专图和合适标志尺寸，重叠区域不侵入作品关键内容。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_ATRoMap41_450_225-thumb-450xauto-19213.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mamproject035_1280-thumb-450xauto-18855.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mams024_1280-thumb-450xauto-18960.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_marikomori_schoolprograms_450_225-thumb-450xauto-19151.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_1280_260916-thumb-450xauto-19115.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_1280_261001-thumb-1600xauto-19211.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_450_260916-thumb-450xauto-19114.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_moricaf2026_1280-thumb-450xauto-17981.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_ronmueck_advanceticket_450_225-thumb-450xauto-19133.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo_small.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo450_225-thumb-450xauto-18509.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/TicketEc_thum_2024.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/source/assets/source-style.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/mori-art-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/mori-art-museum.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/institution-overlap-logo.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/mori-art-museum-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mori-art-museum-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mori-art-museum.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/mori-art-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/institution-overlap-logo.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

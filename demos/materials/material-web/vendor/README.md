@@ -6,7 +6,7 @@
 
 官方 [npm 版本](https://registry.npmjs.org/@material/web/2.5.0) 的 `gitHead` 为 `b4de401eb665ec63474f39319a4ba8f2145974cc`。入口 `../source/vendor/components.mjs` 只导入填充、色调填充、描边、文字按钮、描边文本框、开关、滑块、对话框。合并使用浏览器生产入口，移除未使用代码，保留行内许可注释；没有修改上游组件行为源码。网站配色、Shadow DOM 减少动态处理和交互逻辑位于外层 `demo.css`、`demo.js`。
 
-`../source/vendor/provenance.json` 保存上游 npm 完整性值、转换命令、运行模块 SHA256，以及随包许可的原始字节数和 SHA256。Agent 构建另外对完整素材清单计算校验值。
+`../source/vendor/provenance.json` 保存上游 npm 完整性值、转换命令、运行模块 SHA256，以及随包许可的原始字节数和 SHA256。
 
 | 实际进入运行包的依赖 | 固定版本 | 许可 |
 | --- | --- | --- |
@@ -28,4 +28,4 @@ npm ci --ignore-scripts --no-audit --no-fund
 ./node_modules/.bin/esbuild components.mjs --bundle --format=esm --target=es2022 --minify --legal-comments=inline --outfile=material-web.js
 ```
 
-对比新模块与 `../source/vendor/provenance.json` 的摘要，再替换交付模块。不要将 `node_modules` 放入素材目录，否则素材生成器会把它当作导出依赖。更换版本时重新核验官方 API、许可证、浏览器支持与交互，更新该记录并重新生成 Agent 资料。
+重建完成后替换交付模块。构建依赖留在仓库外，`source/vendor/` 保存重建输入，`vendor/` 保存浏览器模块与许可。版本维护与验收遵循 [CONTRIBUTING.md](../../../../CONTRIBUTING.md)。

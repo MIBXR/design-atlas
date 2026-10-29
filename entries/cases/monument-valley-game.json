@@ -120,7 +120,7 @@
   "negativePrompt": "不要泛用营销卡片、重画浮岛、虚构奖项、自动有声播放、虚构独立BGM、无来源hero视差或混入MV2描边；不要用所有区域统一淡入替代原站中心触发和轨道机制。",
   "demo": "demos/cases/monument-valley-game/index.html",
   "preview": "previews/cases/monument-valley-game.jpg",
-  "research": "docs/research/monument-valley-game.md",
+  "research": "docs/cases/monument-valley-game.md",
   "exercise": "比较桌面中心三图与手机一图加20%侧图；切至第十四张再下一张，快速反向选择并暂停自动播放，检查当前索引、轨道和可聚焦元素始终一致。再上下穿越奖项中心，观察350ms双向进入与手机Show All高度变化。",
   "composition": {
     "color": "固定白导航、#221f20影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区与紫页尾，以整幅色带改变观看节奏。",

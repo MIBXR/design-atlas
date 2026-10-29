@@ -93,7 +93,7 @@
   "demo": "demos/cases/shape-morph/index.html",
   "preview": "previews/cases/shape-morph.jpg",
   "theoryVerifiedAt": "2026-10-07",
-  "research": "docs/research/shape-morph.md",
+  "research": "docs/cases/shape-morph.md",
   "exercise": "将三种形态映射为一个产品的收集、处理、输出阶段，让每次变形同步切换解释文本，并保留相同三角片。",
   "composition": {
     "color": "紫色舞台与黄绿碎片形成集中对比，正文保持黑色清晰。",

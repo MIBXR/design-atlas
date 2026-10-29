@@ -117,7 +117,7 @@
   "negativePrompt": "不要通用双栏hero、紫色霓虹仪表盘、虚构人物页、假背景音乐或自动有声播放；不要复制原站跟踪、运营接口、登录与支付逻辑。",
   "demo": "demos/cases/blue-archive/index.html",
   "preview": "previews/cases/blue-archive.jpg",
-  "research": "docs/research/blue-archive.md",
+  "research": "docs/cases/blue-archive.md",
   "exercise": "改变背景映像的一个静态画面，保持Logo和下载位置，观察天空、建筑和高光是否遮挡标语，再记录允许控件落点的安全区域。",
   "composition": {
     "color": "青色强调、白色Logo与天空高光、深蓝透明导航在同一蓝白体系中分工；漫画插画的彩色集中在角落。",

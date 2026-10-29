@@ -35,8 +35,18 @@ Hero背景层从首帧可见，使用相同调色的CSS渐变衔接WebGL初始�
 
 产品仓库MIT不自动授权营销页面、品牌、图像或字体。`assets-manifest.json`逐项记录来源、原始字节SHA256和用途；vendor保留内含许可与版权声明。案例只说明观察到的设计，不表示DeepSeek认可或授权本站。
 
-完整导出包含运行必需vendor与归档素材；`--code-only`仍包含vendor源码，但省略字体、图片等素材。请先读[案例研究](../../../docs/research/deepseek-harness.md)和清单，再按目标项目的许可及产品事实迁移。
+完整导出包含运行必需vendor与归档素材；`--code-only`仍包含vendor源码，但省略字体、图片等素材。请先读[案例研究](../../../docs/cases/deepseek-harness.md)和清单，再按目标项目的许可及产品事实迁移。
 
 ## 复刻未使用的原站素材
 
 - `source/assets/harness/favicon.svg`
+
+## 运行文件
+
+本地使用原始官网公开bundle注册模块，挂载`92502.HarnessContent`，由`89652.NextIntlClientProvider`提供完整文案。`runtime.js`只读取chunk的模块表，不执行Next启动回调；所有必要依赖预先加载。第三方模块保持原字节，放在Demo自己的`vendor/`，因此源码导出不会把运行必需JS误归为素材，也不改变Web Atlas主站架构。
+
+`app.js`仅适配路由、资源前缀、固定国内快照及无操作的统计接口。主页面模块在`vendor/app/[locale]/harness/page-82b977ba6da9187f.js`，页尾入口为模块85565，Three/R3F与Framer依赖留在对应原始chunks。`messages.js`保留中文和英文；`reference.css`合并四份源CSS并本地化资源。
+
+[官方产品仓库](https://github.com/deepseek-ai/deepseek-harness)的`website/`是VitePress文档，不是营销落地页源码。产品MIT、营销资源、品牌和字体分别处理；参考[品牌规范](https://github.com/deepseek-ai/deepseek-harness/blob/master/BRAND_GUIDELINES.zh.md)。素材清单记录每个文件的来源、SHA256、大小和用途。Google Noto Sans SC外部CSS没有打包，观察时未请求其字体子集，不能称为完整字库归档。
+
+[许可原文索引](LICENSES.md)。

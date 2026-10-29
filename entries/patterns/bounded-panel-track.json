@@ -78,8 +78,8 @@
     "entries/cases/blue-archive.json",
     "entries/cases/persona-kinetic.json",
     "entries/cases/uma-musume.json",
-    "docs/research/blue-archive.md",
-    "docs/research/persona-kinetic.md",
-    "docs/research/uma-musume.md"
+    "docs/cases/blue-archive.md",
+    "docs/cases/persona-kinetic.md",
+    "docs/cases/uma-musume.md"
   ]
 }

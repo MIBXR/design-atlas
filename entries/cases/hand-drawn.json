@@ -80,7 +80,7 @@
   "demo": "demos/cases/hand-drawn/index.html",
   "preview": "previews/cases/hand-drawn.jpg",
   "theoryVerifiedAt": "2026-10-07",
-  "research": "docs/research/hand-drawn.md",
+  "research": "docs/cases/hand-drawn.md",
   "exercise": "将手帐俱乐部改造成团队复盘工具：保留低压力草稿感，把植物笔记换为原创流程图，并让清单对应一次复盘的三个阶段。",
   "composition": {
     "color": "奶油纸色和低饱和植物绿保持柔和，黑色线稿提供可读性。",

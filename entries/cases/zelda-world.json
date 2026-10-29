@@ -81,7 +81,7 @@
   "negativePrompt": "不要编造原站世界或曲名；不要以原创浮岛替代官方真实场景；不要自动播放声音；不要嵌入原站整页、追踪脚本或声称像素级完整复刻。",
   "demo": "demos/cases/zelda-world/index.html",
   "preview": "previews/cases/zelda-world.jpg",
-  "research": "docs/research/zelda-world.md",
+  "research": "docs/cases/zelda-world.md",
   "exercise": "将三个真实场景换成另一部已授权游戏的世界章节，保持视频、标题、目录的层级并记录保真差异。",
   "composition": {
     "color": "天空蓝、古代青绿、象牙色标题；自然、神秘与开放探索。",

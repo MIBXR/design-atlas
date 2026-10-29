@@ -54,7 +54,7 @@
       "demos/cases/blue-archive/index.html",
       "demos/cases/blue-archive/style.css",
       "entries/cases/blue-archive.json",
-      "docs/research/blue-archive.md"
+      "docs/cases/blue-archive.md"
     ]
   },
   "sourceCases": [
@@ -65,6 +65,283 @@
         "bundle": "agent/cases/blue-archive.json",
         "demo": "demos/cases/blue-archive/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/independent-character-page.md",
+      "role": "prompt",
+      "content": "# 首页世界与人物档案分别成页 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/independent-character-page.json)\n\n为【目标页面/组件】实现「首页世界与人物档案分别成页」。首页专注KV与页脚，CHARACTER进入独立人物文档，HOME返回世界入口；人物目录不用扩充首页长卷。触发：选择角色导航或返回HOME。可见结果：世界观看与资料查阅各有明确入口。适用任务：单屏世界首页加多角色档案。保留正常链接和页面标题，不添加无来源路由淡化。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责世界观看与资料查阅各有明确入口，职责限定在当前区域。组合时保留正常链接和页面标题，不添加无来源路由淡化。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 保留正常链接和页面标题，不添加无来源路由淡化。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/01.bd71aff1.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/02.73ff260c.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/03.83e84e04.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/04.99faa124.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bg_cover.9bd1cfea.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bg.555a8a72.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bluearhive.f833c198.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/character-background-mobile.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/character-background.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/comicEntry.2de61182.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/ffcLogo.f1e83d2f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/google-play.8c692266.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/help-enter.69f99d8a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/hoshino-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/hoshino.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/ios-play.02d9f9a4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/LogoJP.92d9dcd0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/nonomi.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-abydos-card.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-abydos.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-gehenna.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-millennium.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-trinity.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/serika.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/shiroko-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/shiroko.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/slogan.1ab23877.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/student-card.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/voice-label.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/voice-microphone.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/windows.2b8dd344.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/yostarBottom.6aef7d4b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/character.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/blue-archive/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/source/assets/app.47b744a6.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/blue-archive/source/screenshots/blue-archive-character-source.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/blue-archive/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/blue-archive.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/blue-archive.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/independent-character-page.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/blue-archive-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/blue-archive-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/blue-archive.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/blue-archive.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/independent-character-page.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

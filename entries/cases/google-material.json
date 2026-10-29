@@ -114,7 +114,7 @@
   "negativePrompt": "不要任意Google风格仪表盘、彩色圆球hero、所有区域同一套卡片、伪视频、自动有声、无作用暂停、强行弹簧、长段复制营销文字或原站统计代码；不要把浏览器改色当官方配色。",
   "demo": "demos/cases/google-material/index.html",
   "preview": "previews/cases/google-material.jpg",
-  "research": "docs/research/google-material.md",
+  "research": "docs/cases/google-material.md",
   "exercise": "先用主题开关比较角色配对，再暂停全局动效并用键盘聚焦资源卡，观察没有运动时状态是否仍清楚；若换品牌色，只改一组primary／container会怎样影响正文与按钮的协调？",
   "composition": {
     "color": "原始组件样式的#f8f1f6中性hero与#1c1b1d文字承托紫色#6442d6主动作；深色切换surface/on-surface角色，丰富色彩留给真实组件图像。",

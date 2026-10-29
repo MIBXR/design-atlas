@@ -93,7 +93,7 @@
     "entries/cases/chatgpt-platform.json",
     "entries/cases/met-museum.json",
     "entries/cases/stripe-platform.json",
-    "docs/research/met-museum.md",
-    "docs/research/stripe-platform.md"
+    "docs/cases/met-museum.md",
+    "docs/cases/stripe-platform.md"
   ]
 }

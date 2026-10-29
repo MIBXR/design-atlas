@@ -60,7 +60,7 @@
   ],
   "sourceFiles": [
     "entries/cases/endfield-industrial.json",
-    "docs/research/endfield-industrial.md",
+    "docs/cases/endfield-industrial.md",
     "demos/cases/endfield-industrial/fidelity.md",
     "demos/cases/endfield-industrial/index.html",
     "demos/cases/endfield-industrial/reference.css",

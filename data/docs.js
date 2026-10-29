@@ -1,12 +1,7 @@
 window.DESIGN_ATLAS_DOCUMENTS = [
   {
-    "path": "README.md",
+    "path": "docs/guide.md",
     "title": "项目指南",
-    "group": "项目指南"
-  },
-  {
-    "path": "CONTRIBUTING.md",
-    "title": "添加与维护案例",
     "group": "项目指南"
   },
   {
@@ -15,728 +10,1193 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "项目指南"
   },
   {
-    "path": "agent/README.md",
-    "title": "Agent 资料说明",
-    "group": "项目指南"
-  },
-  {
-    "path": "docs/research/CASE-INDEX.md",
-    "title": "案例与代码索引",
-    "group": "研究方法与索引"
-  },
-  {
-    "path": "docs/research/OVERVIEW.md",
+    "path": "docs/overview.md",
     "title": "调研方法与案例地图",
     "group": "研究方法与索引"
   },
   {
-    "path": "docs/research/pattern-experiences.md",
+    "path": "docs/pattern-experiences.md",
     "title": "巧思的体验类型与可操作示意",
     "group": "研究方法与索引"
   },
   {
-    "path": "docs/research/foundations.md",
+    "path": "docs/foundations.md",
     "title": "网页设计基础：材料、关系与体验",
     "group": "研究方法与索引"
   },
   {
-    "path": "docs/research/COUNTRY-COMPARISON.md",
+    "path": "docs/country-comparison.md",
     "title": "用国别查找案例，再用设计任务作比较",
     "group": "研究方法与索引"
   },
   {
-    "path": "docs/research/design-sight.md",
+    "path": "docs/cases/design-sight.md",
     "title": "21_21 DESIGN SIGHT：海报与四列档案",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/retro-80s.md",
+    "path": "docs/cases/retro-80s.md",
     "title": "80年代：合成器面板",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/philharmonie-music.md",
+    "path": "docs/cases/README.md",
+    "title": "案例与代码索引",
+    "group": "案例研究"
+  },
+  {
+    "path": "docs/cases/philharmonie-music.md",
     "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/bauhaus-geometry.md",
+    "path": "docs/cases/bauhaus-geometry.md",
     "title": "包豪斯：几何与实验",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/blue-archive.md",
+    "path": "docs/cases/blue-archive.md",
     "title": "碧蓝档案：城市映像、人物档案与原始声线",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/isometric-3d.md",
+    "path": "docs/cases/isometric-3d.md",
     "title": "等轴 3D：空间作为解释工具",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/palace-museum.md",
+    "path": "docs/cases/palace-museum.md",
     "title": "故宫：建筑局部与完整文化目录",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/shape-morph.md",
+    "path": "docs/cases/shape-morph.md",
     "title": "几何形状变化：让单元保持连续",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/monument-valley-game.md",
+    "path": "docs/cases/monument-valley-game.md",
     "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/zenless-zone-zero.md",
+    "path": "docs/cases/zenless-zone-zero.md",
     "title": "绝区零：六章街头拼贴首页",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/rhine-lab.md",
+    "path": "docs/cases/rhine-lab.md",
     "title": "莱茵生命：官方影像的网页转译",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/arknights-world.md",
+    "path": "docs/cases/arknights-world.md",
     "title": "明日方舟 · 全屏档案与交互点阵",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/swiss-grid.md",
+    "path": "docs/cases/swiss-grid.md",
     "title": "瑞士设计：编辑网格",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/zelda-world.md",
+    "path": "docs/cases/zelda-world.md",
     "title": "塞尔达 WORLD · 单次参考快照",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/uma-musume.md",
+    "path": "docs/cases/uma-musume.md",
     "title": "赛马娘：群像、斜切节奏与玩法轨道",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/mori-art-museum.md",
+    "path": "docs/cases/mori-art-museum.md",
     "title": "森美术馆：红色机构锚点与艺术海报",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/hand-drawn.md",
+    "path": "docs/cases/hand-drawn.md",
     "title": "手绘：受控的不完美",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/digital-dunhuang.md",
+    "path": "docs/cases/digital-dunhuang.md",
     "title": "数字敦煌：完整发现路径与真实观察尺度",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/suzhou-museum.md",
+    "path": "docs/cases/suzhou-museum.md",
     "title": "苏州博物馆：四屏门户、图像目的地与机构外缘",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/line-art.md",
+    "path": "docs/cases/line-art.md",
     "title": "线描：用绘制顺序解释组成",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/pixel-world.md",
+    "path": "docs/cases/pixel-world.md",
     "title": "像素：微型世界",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/stellar-museum.md",
+    "path": "docs/cases/stellar-museum.md",
     "title": "星槎 STELLAR：太空博物馆示范页与基线",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/genshin-world.md",
+    "path": "docs/cases/genshin-world.md",
     "title": "原神：版本舞台、人物换色与声线",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/endfield-industrial.md",
+    "path": "docs/cases/endfield-industrial.md",
     "title": "终末地：从完整门户理解明亮工业语言",
     "group": "案例研究"
   },
   {
-    "path": "demos/cases/apple-product/fidelity.md",
+    "path": "docs/cases/apple-product.md",
     "title": "Apple iPhone 18 Pro：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "demos/cases/chatgpt-platform/fidelity.md",
+    "path": "docs/cases/chatgpt-platform.md",
     "title": "ChatGPT：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "demos/cases/claude-platform/fidelity.md",
+    "path": "docs/cases/claude-platform.md",
     "title": "Claude：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/deepseek-harness.md",
+    "path": "docs/cases/deepseek-harness.md",
     "title": "DeepSeek Harness：可观察的产品演示",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/fuji-rock.md",
+    "path": "docs/cases/fuji-rock.md",
     "title": "Fuji Rock：现场照片与节日导览",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/google-material.md",
+    "path": "docs/cases/google-material.md",
     "title": "Google Material：表现力与组件秩序",
     "group": "案例研究"
   },
   {
-    "path": "demos/cases/linear-workflow/fidelity.md",
+    "path": "docs/cases/linear-workflow.md",
     "title": "Linear：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/mira-host-photography.md",
+    "path": "docs/cases/mira-host-photography.md",
     "title": "Mira Høst：北欧摄影作品集示范页",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/notion-editorial.md",
+    "path": "docs/cases/notion-editorial.md",
     "title": "Notion：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/persona-kinetic.md",
+    "path": "docs/cases/persona-kinetic.md",
     "title": "Persona 5 Royal · 单次参考快照",
     "group": "案例研究"
   },
   {
-    "path": "demos/cases/qoder-platform/fidelity.md",
+    "path": "docs/cases/qoder-platform.md",
     "title": "Qoder CN：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/rijksmuseum-art.md",
+    "path": "docs/cases/rijksmuseum-art.md",
     "title": "Rijksmuseum · 全幅摄影与巨大字标",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/stripe-platform.md",
+    "path": "docs/cases/stripe-platform.md",
     "title": "Stripe：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "docs/research/met-museum.md",
+    "path": "docs/cases/met-museum.md",
     "title": "The Met · 编辑式展览与馆藏陈列",
     "group": "案例研究"
   },
   {
-    "path": "prompts/design-sight.md",
+    "path": "prompts/cases/design-sight.md",
     "title": "21_21 DESIGN SIGHT：海报与四列档案 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/retro-80s.md",
+    "path": "prompts/cases/retro-80s.md",
     "title": "80年代：合成器面板 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/philharmonie-music.md",
+    "path": "prompts/materials/98-css.md",
+    "title": "98.css · 复古桌面组件 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/directional-section-wipe.md",
+    "title": "按方向侧向裁切交接整章 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/sequential-stroke-reveal.md",
+    "title": "按构造顺序描绘线稿 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/mode-specific-collage.md",
+    "title": "按模式组织独立拼贴层 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/mobile-media-prioritization.md",
+    "title": "按手机信息任务裁减复杂演示 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/audio-signal-panel.md",
+    "title": "按信号流程组织声音面板 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/state-shape-feedback.md",
+    "title": "按压与聚焦改变容器形状 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/philharmonie-music.md",
     "title": "巴黎爱乐厅 · 音乐展与音乐会详情 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/bauhaus-geometry.md",
+    "path": "prompts/cases/bauhaus-geometry.md",
     "title": "包豪斯：几何与实验 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/blue-archive.md",
+    "path": "prompts/cases/blue-archive.md",
     "title": "碧蓝档案：学园都市的天空与光 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/isometric-3d.md",
+    "path": "prompts/patterns/synchronized-rolling-index.md",
+    "title": "编号、计数与章名分组滚动 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/aligned-metadata-rows.md",
+    "title": "编号与元数据对齐列表 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/hover-focus-mode-selection.md",
+    "title": "标题悬停与聚焦选择模式 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/masked-transaction-rotation.md",
+    "title": "裁切文字与交易预览同步 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/mountain-scaled-menu.md",
+    "title": "菜单缩放倾转与背景降强调 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/measured-width-action-pill.md",
+    "title": "测量文字宽度的动作胶囊 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/permanent-event-metadata.md",
+    "title": "常驻日期与边缘票据入口 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/spatial-navigation-map.md",
+    "title": "场景地标作为导航 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/reversible-center-reveal.md",
+    "title": "穿越章节中心的双向显现 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/interruptible-morph.md",
+    "title": "从当前中间态继续变形 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/top-down-clipped-menu.md",
+    "title": "从上向下裁切的全屏菜单 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/local-code-theme-preview.md",
+    "title": "代码主题只改变局部预览 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/word-opacity-stagger.md",
+    "title": "单词透明度的低幅交错 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/single-open-accordion.md",
+    "title": "单开内容与图像联动 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/restrained-signal-color.md",
+    "title": "单一信号色集中强调 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/mode-character-accent.md",
+    "title": "当前能力词逐字强调色 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/current-state-svg-export.md",
+    "title": "导出当前构成 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/layered-navigation-drawer.md",
+    "title": "导航容器先行、内容后入 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/visit-facts-grid.md",
+    "title": "到访事实在行动旁成组呈现 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/mixed-ratio-archive-columns.md",
+    "title": "等宽栏目保留不同图像比例 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/isometric-3d.md",
     "title": "等轴 3D：让空间讲述系统 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/shape-morph.md",
+    "path": "prompts/patterns/header-below-mobile-navigation.md",
+    "title": "顶栏下展开并恢复阅读位置 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/shape-morph.md",
     "title": "动态形状：同一单元，多种表达 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/palace-museum.md",
+    "path": "prompts/patterns/checklist-progress.md",
+    "title": "短清单与即时完成进度 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/image-destination-mosaic.md",
+    "title": "多尺度图像目的地目录 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/institution-overlap-logo.md",
+    "title": "方形机构锚点跨主图边界 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/explicit-facet-summary.md",
+    "title": "分面条件在列表前显式呈现 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/photo-crossfade-cycle.md",
+    "title": "给摄影留阅读时间的淡化轮换 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/system-theme-without-toggle.md",
+    "title": "跟随系统的媒体与文字主题 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/bounded-image-inspection.md",
+    "title": "公开边界内的瓦片细察 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/editorial-alignment-grid.md",
+    "title": "共享对齐线的编辑网格 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/fixed-task-timeline.md",
+    "title": "固定任务按阶段揭示交付 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/fixed-star-glow-layer.md",
+    "title": "固定星光的明暗呼吸层 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/palace-museum.md",
     "title": "故宫 · 六章探索与宫廷视觉目录 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/monument-valley-game.md",
+    "path": "prompts/patterns/scroll-differential-stars.md",
+    "title": "滚动差值驱动背景不同速光点 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/scroll-logo-contraction.md",
+    "title": "滚动后品牌标识收回导航 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/scroll-video-scrub.md",
+    "title": "滚动进度驱动视频帧 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/layered-directional-media-reveal.md",
+    "title": "黑层、信号层与媒体的方向揭示 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/live-parameter-readout.md",
+    "title": "滑块与带单位读数联动 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/footer-aware-back-to-top.md",
+    "title": "回顶入口避让页脚 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/activity-title-ticket-overlap.md",
+    "title": "活动标题与票务跨区并置 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/direct-purpose-navigation.md",
+    "title": "机构目的地即时展开 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/architectural-outline-whitespace.md",
+    "title": "机构摄影的白色外缘 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/department-code-matrix.md",
+    "title": "机构缩写的中心矩阵 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/geometric-balance-presets.md",
+    "title": "几何关系预设实验 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/monument-valley-game.md",
     "title": "纪念碑谷：电影首入、奖项进入与中心画廊 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/zenless-zone-zero.md",
+    "path": "prompts/patterns/architectural-fragment-anchor.md",
+    "title": "建筑局部与名称目录锚点 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/staggered-agent-columns.md",
+    "title": "交错代理状态展示 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/inline-product-detail-viewer.md",
+    "title": "胶囊原位展开产品说明 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/photo-edge-text-contrast.md",
+    "title": "仅在照片文字边缘增强对比 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/blurred-layered-video-handoff.md",
+    "title": "旧片模糊退出、新片延后进入 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/layer-focus-dimming.md",
+    "title": "聚焦一层并减弱其余层 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/zenless-zone-zero.md",
     "title": "绝区零 · 六章街头拼贴首页 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/rhine-lab.md",
+    "path": "prompts/patterns/keyboard-playable-notes.md",
+    "title": "可聚焦音键与物理键演奏 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/local-save-toggle.md",
+    "title": "可取消的本地收藏 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/client-logo-marquee.md",
+    "title": "可停的连续客户标识条带 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/scrubbable-animation-progress.md",
+    "title": "可拖动回看的动画进度 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/timed-platform-carousel.md",
+    "title": "可暂停的平台场景轮换 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/compact-scroll-header.md",
+    "title": "跨过品牌区出现紧凑导航 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/difference-blend-navigation.md",
+    "title": "跨深浅背景的差值导航 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/continuous-bgm-bridge.md",
+    "title": "跨章节连续的环境声音 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/last-request-transition.md",
+    "title": "快速切换保留最后目标 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/rhine-lab.md",
     "title": "莱茵生命 · 影像终端的网页转译 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/arknights-world.md",
+    "path": "prompts/patterns/procedural-fluid-spotlight.md",
+    "title": "流体色场中的固定光核 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/arknights-world.md",
     "title": "明日方舟 · 全屏档案与交互点阵 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/swiss-grid.md",
+    "path": "prompts/patterns/world-shaped-thumbnail-frame.md",
+    "title": "目录边框延续世界语汇 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/full-bleed-photography-brand.md",
+    "title": "全幅摄影与巨大完整字标 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/heatmap-focus-tooltip.md",
+    "title": "热图指针与焦点提示 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/character-stage-coordination.md",
+    "title": "人物、背景与资料成组换态 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/independent-outfit-state.md",
+    "title": "人物与服装分别管理 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/swiss-grid.md",
     "title": "瑞士设计：编辑网格 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/zelda-world.md",
+    "path": "prompts/cases/zelda-world.md",
     "title": "塞尔达 · 全景世界舞台 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/uma-musume.md",
+    "path": "prompts/cases/uma-musume.md",
     "title": "赛马娘：群像赛道与斜切叙事 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/mori-art-museum.md",
+    "path": "prompts/patterns/aspect-recomposed-3d-hero.md",
+    "title": "三维主角随画幅重新构图 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/scroll-gathered-pixel-mark.md",
+    "title": "散布立方体随滚动聚合标记 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/scanline-point-cloud-transition.md",
+    "title": "扫描线与射线驱动的点云交接 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/mori-art-museum.md",
     "title": "森美术馆：红色机构锚点与艺术海报 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/hand-drawn.md",
+    "path": "prompts/patterns/filter-count-feedback.md",
+    "title": "筛选与结果计数同步 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/fullscreen-photography-menu.md",
+    "title": "摄影与分列链接组成全屏目录 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/character-voice-ownership.md",
+    "title": "声线主动播放并归属于当前人物 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/sound-choice-emblem-opening.md",
+    "title": "声音选择与纹章开场同步 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/sound-opt-in.md",
+    "title": "声音主动启用与随时停止 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/execution-trace-drilldown.md",
+    "title": "时间线泳道定位调用详情 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/viewport-animation-lifecycle.md",
+    "title": "视口与前台驱动的动态生命周期 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/hand-drawn.md",
     "title": "手绘：把不完美变成亲近感 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/digital-dunhuang.md",
+    "path": "prompts/patterns/mobile-single-open-navigation.md",
+    "title": "手机菜单原位单开分类 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/mobile-drilldown-menu.md",
+    "title": "手机菜单逐层进入与返回 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/mobile-native-mode-cards.md",
+    "title": "手机以原生模式卡替代桌面长舞台 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/independent-character-page.md",
+    "title": "首页世界与人物档案分别成页 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/controlled-rough-outlines.md",
+    "title": "受控不规则轮廓 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/pointer-image-shader-preview.md",
+    "title": "术语图像随指针形变预览 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/particle-model-reformation.md",
+    "title": "术语选择重组同一粒子池 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/vertical-media-spine.md",
+    "title": "竖向类别书脊与横向媒体 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/digital-dunhuang.md",
     "title": "数字敦煌 · 全幅影像与真实瓦片细察 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/suzhou-museum.md",
+    "path": "prompts/patterns/scroll-synchronized-rail.md",
+    "title": "说明索引与窗口进度同步 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/suzhou-museum.md",
     "title": "苏州博物馆 · 四屏门户与图像目的地 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/line-art.md",
+    "path": "prompts/patterns/discovery-progress-journal.md",
+    "title": "探索进度与可重置手账 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/fixed-topology-morph.md",
+    "title": "同拓扑碎片形态转换 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/sticky-stage-handoff.md",
+    "title": "同一媒体从主舞台交给说明 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/parallel-isometric-projection.md",
+    "title": "统一等轴投影与三面明度 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/separate-thumbnail-window.md",
+    "title": "头像翻页与舞台选择分离 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/transparent-video-mode-stage.md",
+    "title": "透明视频的静态与动态模式舞台 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/half-paper-category-label.md",
+    "title": "图像与半幅纸签分类 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/inline-row-photo-preview.md",
+    "title": "文字目录行内浮现摄影预览 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/idle-interface-retreat.md",
+    "title": "闲置时控件退隐、操作时恢复 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/line-art.md",
     "title": "线条：沿绘制顺序解释结构 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/pixel-world.md",
+    "path": "prompts/patterns/directional-sticky-navigation.md",
+    "title": "向上找回、向下让位的导览条 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/pixel-world.md",
     "title": "像素：微型世界 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/stellar-museum.md",
+    "path": "prompts/patterns/message-to-board-demonstration.md",
+    "title": "消息到任务板的可重播演示 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/inclined-motion-bands.md",
+    "title": "斜切条带延续运动方向 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/hatched-registration-type.md",
+    "title": "斜线注册大字与前景记录 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/stellar-museum.md",
     "title": "星槎 STELLAR · 太空探索博物馆 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/genshin-world.md",
+    "path": "prompts/patterns/photography-option-selector.md",
+    "title": "选项与真实摄影对应 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/moving-tab-selection-bed.md",
+    "title": "选中底板与套餐组联动 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/staged-product-ui-entrance.md",
+    "title": "延迟产品界面与扫光入场 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/specimen-pullout-selection.md",
+    "title": "样本阵列的抽出选择 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/persistent-created-widget.md",
+    "title": "已创建挂件跨场景保留 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/instant-open-menu-category-switch.md",
+    "title": "已打开菜单分类即时切换 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/offsite-playlist-extension.md",
+    "title": "以官方播放列表延伸主题 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/capability-bento-hierarchy.md",
+    "title": "以跨列比例表达能力层次 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/bounded-panel-track.md",
+    "title": "有界的完整面板横向轨道 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/vertical-fullscreen-stage.md",
+    "title": "有限章节的垂直整屏舞台 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/semantic-theme-roles.md",
+    "title": "语义颜色角色整体切换 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/genshin-world.md",
     "title": "原神 · 版本群像与角色舞台 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/endfield-industrial.md",
+    "path": "prompts/patterns/native-horizontal-shelf.md",
+    "title": "原生横向内容架子 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/native-document-reading.md",
+    "title": "原生长页与正常回程 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/inline-detail-disclosure.md",
+    "title": "原位展开次级信息 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/clip-tail-advance.md",
+    "title": "在影片片尾前交给下一章 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/exploded-layer-view.md",
+    "title": "展开图层解释组成 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/center-aligned-section-index.md",
+    "title": "章节中心定位的侧边索引 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/folded-wave-hero.md",
+    "title": "折叠波带与文字共同构成首屏 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/product-entrance-film.md",
+    "title": "真实产品影片建立首屏主角 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/resource-bound-fullscreen-loading.md",
+    "title": "真实资源驱动的全屏载入 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/section-color-rhythm.md",
+    "title": "整节配色形成阅读节奏 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/integer-pixel-canvas.md",
+    "title": "整数像素与有限色板 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/process-to-result-collapse.md",
+    "title": "执行过程折叠后保留结果 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/paper-material-collage.md",
+    "title": "纸页与贴纸的任务隐喻 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/metric-explanation-selector.md",
+    "title": "指标选择与解释联动 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/pointer-repulsion-particles.md",
+    "title": "指针排斥与回聚点阵 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/edge-action-world-composition.md",
+    "title": "中心世界与边缘行动分工 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/centered-loop-gallery.md",
+    "title": "中心图与邻图预告的循环轨道 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/vertical-card-swap.md",
+    "title": "中央窗口垂直退出与进入 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/endfield-industrial.md",
     "title": "终末地 · 完整工业科幻门户 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/apple-product.md",
+    "path": "prompts/patterns/highlight-progress-gallery.md",
+    "title": "逐项亮点与可暂停进度 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/film-overlay.md",
+    "title": "主动观看的独立影片层 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/responsive-art-direction.md",
+    "title": "桌面与手机使用专门主图 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/sticky-action-sidebar.md",
+    "title": "桌面粘性行动栏、手机回文档流 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/load-completion-brand-marker.md",
+    "title": "资源完成后品牌标记退场 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/natural-height-mega-menu.md",
+    "title": "自然高度连续衔接的目录 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/avatar-pile-personality.md",
+    "title": "组合头像表达团队人格 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/artwork-caption-separation.md",
+    "title": "作品原图与图下题注分工 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/apple-product.md",
     "title": "Apple · 滚动产品舞台 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/chatgpt-platform.md",
+    "path": "prompts/materials/beautiful-article.md",
+    "title": "Beautiful Article · 长文编辑工作流 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/chatgpt-platform.md",
     "title": "ChatGPT — 巨字、飞入拼贴与滚动交接 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/claude-platform.md",
+    "path": "prompts/cases/claude-platform.md",
     "title": "Claude — 衬线语气与 Cowork 演示 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/deepseek-harness.md",
+    "path": "prompts/cases/deepseek-harness.md",
     "title": "DeepSeek Harness · 可观察的产品演示 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/fuji-rock.md",
+    "path": "prompts/cases/fuji-rock.md",
     "title": "Fuji Rock：现场照片与节日导览 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/google-material.md",
+    "path": "prompts/materials/material-web.md",
+    "title": "Google Material Web · Material 3 官方组件 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/google-material.md",
     "title": "Google Material：表现力与组件秩序 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/linear-workflow.md",
+    "path": "prompts/cases/linear-workflow.md",
     "title": "Linear — 深色产品开发系统 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/mira-host-photography.md",
+    "path": "prompts/cases/mira-host-photography.md",
     "title": "Mira Høst · 北欧摄影作品集 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/notion-editorial.md",
+    "path": "prompts/cases/notion-editorial.md",
     "title": "Notion — 插画与真实工作空间 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/persona-kinetic.md",
+    "path": "prompts/cases/persona-kinetic.md",
     "title": "Persona 5 Royal · 黑金角色拼贴 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/qoder-platform.md",
+    "path": "prompts/cases/qoder-platform.md",
     "title": "Qoder — 绿色工作台与多形态平台 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/rijksmuseum-art.md",
+    "path": "prompts/materials/reacticle.md",
+    "title": "Reacticle · 长文排版组件库 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/materials/recursive.md",
+    "title": "Recursive · 五轴可变字体 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/rijksmuseum-art.md",
     "title": "Rijksmuseum · 全幅摄影与巨大字标 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/stripe-platform.md",
+    "path": "prompts/materials/shaders.md",
+    "title": "Shaders · 可调节的 WebGPU 效果 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/stripe-platform.md",
     "title": "Stripe — 彩带与金融产品矩阵 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "prompts/met-museum.md",
+    "path": "prompts/cases/met-museum.md",
     "title": "The Met · 编辑式展览与馆藏陈列 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
-    "path": "demos/cases/design-sight/fidelity.md",
-    "title": "21_21 DESIGN SIGHT：海报与四列档案：复现范围",
-    "group": "复现与素材"
+    "path": "prompts/materials/three-html-render.md",
+    "title": "three-html-render · HTML-in-Canvas polyfill · 复用 Prompt",
+    "group": "复用 Prompt"
   },
   {
-    "path": "demos/materials/98-css/README.md",
-    "title": "98.css 复古桌面组件工作台",
-    "group": "复现与素材"
+    "path": "prompts/materials/web-design-engineer.md",
+    "title": "Web Design Engineer · 网页设计工作流 · 复用 Prompt",
+    "group": "复用 Prompt"
   },
   {
-    "path": "demos/materials/98-css/vendor/NOTICE.md",
-    "title": "98.css 样式与字体来源",
-    "group": "复现与素材"
+    "path": "prompts/materials/wired-elements.md",
+    "title": "Wired Elements · 可操作的手绘草稿 · 复用 Prompt",
+    "group": "复用 Prompt"
   },
   {
     "path": "docs/materials/98-css.md",
     "title": "98.css：带有桌面记忆的 CSS 组件",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/philharmonie-music/fidelity.md",
-    "title": "巴黎爱乐厅 · 音乐展与音乐会详情：复现范围",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/rhine-lab/fidelity.md",
-    "title": "当前复现范围：官方影像的网页转译／教学改编",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/palace-museum/source/state-matrix.md",
-    "title": "故宫 · 六章探索与宫廷视觉目录 · 故宫探索页：状态与源码对照",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/palace-museum/fidelity.md",
-    "title": "故宫探索页：复现范围与证据",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/monument-valley-game/fidelity.md",
-    "title": "纪念碑谷一代：对应范围",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/zenless-zone-zero/fidelity.md",
-    "title": "绝区零首页复现说明",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/arknights-world/fidelity.md",
-    "title": "明日方舟 · 全屏档案与交互点阵",
-    "group": "复现与素材"
+    "group": "素材使用"
   },
   {
     "path": "docs/materials/README.md",
-    "title": "内容素材库",
-    "group": "复现与素材"
-  },
-  {
-    "path": "site/playground/fidelity.md",
-    "title": "巧思共享示意：实现与边界",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/zelda-world/fidelity.md",
-    "title": "塞尔达 WORLD · 单次参考快照",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/mori-art-museum/fidelity.md",
-    "title": "森美术馆：红色机构锚点与艺术海报：复现范围",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/digital-dunhuang/THIRD-PARTY-NOTICES.md",
-    "title": "数字敦煌 · 全幅影像与真实瓦片细察 · 第三方运行库与来源署名",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/digital-dunhuang/source/state-matrix.md",
-    "title": "数字敦煌 · 全幅影像与真实瓦片细察 · 数字敦煌：逐页状态与源码对照",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/digital-dunhuang/LICENSES.md",
-    "title": "数字敦煌 · 全幅影像与真实瓦片细察 · 许可与出处",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/digital-dunhuang/fidelity.md",
-    "title": "数字敦煌：复现范围与证据",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/suzhou-museum/THIRD-PARTY-NOTICES.md",
-    "title": "苏州博物馆 · 四屏门户与图像目的地 · 第三方运行库与来源署名",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/suzhou-museum/source/state-matrix.md",
-    "title": "苏州博物馆 · 四屏门户与图像目的地 · 苏州博物馆：四屏状态与源码对照",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/suzhou-museum/LICENSES.md",
-    "title": "苏州博物馆 · 四屏门户与图像目的地 · 许可与出处",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/suzhou-museum/fidelity.md",
-    "title": "苏州博物馆：复现范围与证据",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/stellar-museum/LICENSES.md",
-    "title": "星槎 STELLAR · 太空探索博物馆 · 许可与出处",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/stellar-museum/fidelity.md",
-    "title": "星槎示范页：来源与本地对应",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/endfield-industrial/LICENSES.md",
-    "title": "终末地 · 完整工业科幻门户 · 许可与出处",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/endfield-industrial/source/state-matrix.md",
-    "title": "终末地 · 完整工业科幻门户 · 终末地：八章状态矩阵",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/endfield-industrial/fidelity.md",
-    "title": "终末地：当前复现范围与证据",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/apple-product/LICENSES.md",
-    "title": "Apple · 滚动产品舞台 · 许可与出处",
-    "group": "复现与素材"
+    "title": "内容素材使用说明",
+    "group": "素材使用"
   },
   {
     "path": "docs/materials/beautiful-article.md",
-    "title": "Beautiful Article · 长文编辑工作流",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/blue-archive/fidelity.md",
-    "title": "Blue Archive 复现边界",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/deepseek-harness/LICENSES.md",
-    "title": "DeepSeek Harness · 可观察的产品演示 · 许可与出处",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/deepseek-harness/fidelity.md",
-    "title": "DeepSeek Harness 复现说明",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/deepseek-harness/assets/BRAND_GUIDELINES.zh.md",
-    "title": "DeepSeek Harness 品牌素材使用规范",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/fuji-rock/fidelity.md",
-    "title": "Fuji Rock：现场照片与节日导览：复现范围",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/genshin-world/fidelity.md",
-    "title": "Genshin 复现边界",
-    "group": "复现与素材"
+    "title": "Beautiful Article：阅读与使用资料",
+    "group": "素材使用"
   },
   {
     "path": "docs/materials/material-web.md",
     "title": "Google Material Web：Material 3 官方组件",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/google-material/fidelity.md",
-    "title": "Google Material：表现力与组件秩序：复现范围",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/material-web/vendor/README.md",
-    "title": "Material Web 本地运行依赖",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/mira-host-photography/LICENSES.md",
-    "title": "Mira Høst · 北欧摄影作品集 · 许可与出处",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/mira-host-photography/fidelity.md",
-    "title": "Mira Høst：复刻范围与本地化清单",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/notion-editorial/fidelity.md",
-    "title": "Notion：当前页面的设计与交互",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/persona-kinetic/fidelity.md",
-    "title": "Persona 5 Royal · 单次参考快照",
-    "group": "复现与素材"
+    "group": "素材使用"
   },
   {
     "path": "docs/materials/reacticle.md",
     "title": "Reacticle · 长文排版组件库",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/reacticle/vendor/NOTICE.md",
-    "title": "Reacticle 第三方来源与许可",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/reacticle/README.md",
-    "title": "Reacticle 文章样例",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/recursive/README.md",
-    "title": "Recursive 五轴字体试排",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/recursive/vendor/NOTICE.md",
-    "title": "Recursive 字体来源",
-    "group": "复现与素材"
+    "group": "素材使用"
   },
   {
     "path": "docs/materials/recursive.md",
     "title": "Recursive：从界面到招牌的五轴字体",
-    "group": "复现与素材"
+    "group": "素材使用"
   },
   {
-    "path": "demos/cases/rijksmuseum-art/fidelity.md",
-    "title": "Rijksmuseum · 全幅摄影与巨大字标：复现范围",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/shaders/README.md",
-    "title": "Shaders 开源效果实验",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/shaders/vendor/NOTICE.md",
-    "title": "Shaders 运行包与第三方许可",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/stripe-platform/LICENSES.md",
-    "title": "Stripe — 彩带与金融产品矩阵 · 许可与出处",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/stripe-platform/fidelity.md",
-    "title": "Stripe：当前页面的设计与交互",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/met-museum/fidelity.md",
-    "title": "The Met：复现范围",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/three-html-render/vendor/NOTICE.md",
-    "title": "three-html-render 运行文件与第三方许可",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/three-html-render/README.md",
-    "title": "three-html-render：HTML 贴图实验",
-    "group": "复现与素材"
+    "path": "docs/materials/shaders.md",
+    "title": "Shaders：图层组合与参数调节",
+    "group": "素材使用"
   },
   {
     "path": "docs/materials/three-html-render.md",
     "title": "three-html-render：HTML-in-Canvas polyfill",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/cases/uma-musume/fidelity.md",
-    "title": "Umamusume 复现边界",
-    "group": "复现与素材"
+    "group": "素材使用"
   },
   {
     "path": "docs/materials/web-design-engineer.md",
-    "title": "Web Design Engineer · 网页设计工作流",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/wired-elements/README.md",
-    "title": "Wired Elements 手绘组件工作台",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/materials/wired-elements/vendor/NOTICE.md",
-    "title": "Wired Elements 运行时来源",
-    "group": "复现与素材"
+    "title": "Web Design Engineer：阅读与使用资料",
+    "group": "素材使用"
   },
   {
     "path": "docs/materials/wired-elements.md",
     "title": "Wired Elements：有手绘语言的可操作组件",
-    "group": "复现与素材"
+    "group": "素材使用"
   }
 ];

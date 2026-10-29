@@ -93,9 +93,9 @@
     "entries/cases/met-museum.json",
     "entries/cases/rijksmuseum-art.json",
     "entries/cases/uma-musume.json",
-    "docs/research/fuji-rock.md",
-    "docs/research/met-museum.md",
-    "docs/research/rijksmuseum-art.md",
-    "docs/research/uma-musume.md"
+    "docs/cases/fuji-rock.md",
+    "docs/cases/met-museum.md",
+    "docs/cases/rijksmuseum-art.md",
+    "docs/cases/uma-musume.md"
   ]
 }

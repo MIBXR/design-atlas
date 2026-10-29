@@ -51,7 +51,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/philharmonie-music/script.js",
       "demos/cases/philharmonie-music/style.css",
       "entries/cases/philharmonie-music.json",
-      "docs/research/philharmonie-music.md"
+      "docs/cases/philharmonie-music.md"
     ]
   },
   {
@@ -101,7 +101,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/swiss-grid/index.html",
       "entries/cases/swiss-grid.json",
-      "docs/research/swiss-grid.md"
+      "docs/cases/swiss-grid.md"
     ]
   },
   {
@@ -165,7 +165,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/palace-museum.json",
-      "docs/research/palace-museum.md",
+      "docs/cases/palace-museum.md",
       "demos/cases/palace-museum/fidelity.md",
       "demos/cases/palace-museum/index.html",
       "demos/cases/palace-museum/style.css",
@@ -235,7 +235,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/suzhou-museum.json",
-      "docs/research/suzhou-museum.md",
+      "docs/cases/suzhou-museum.md",
       "demos/cases/suzhou-museum/fidelity.md",
       "demos/cases/suzhou-museum/index.html",
       "demos/cases/suzhou-museum/style.css",
@@ -317,8 +317,8 @@ window.DESIGN_PATTERNS = [
       "demos/cases/met-museum/style.css",
       "entries/cases/design-sight.json",
       "entries/cases/met-museum.json",
-      "docs/research/design-sight.md",
-      "docs/research/met-museum.md"
+      "docs/cases/design-sight.md",
+      "docs/cases/met-museum.md"
     ]
   },
   {
@@ -405,7 +405,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stellar-museum/fidelity.md",
       "demos/cases/stellar-museum/index.html",
       "entries/cases/stellar-museum.json",
-      "docs/research/stellar-museum.md"
+      "docs/cases/stellar-museum.md"
     ]
   },
   {
@@ -456,7 +456,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/retro-80s/index.html",
       "entries/cases/retro-80s.json",
-      "docs/research/retro-80s.md"
+      "docs/cases/retro-80s.md"
     ]
   },
   {
@@ -511,7 +511,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/notion-editorial/script.js",
       "demos/cases/notion-editorial/style.css",
       "entries/cases/notion-editorial.json",
-      "docs/research/notion-editorial.md"
+      "docs/cases/notion-editorial.md"
     ]
   },
   {
@@ -577,7 +577,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/zelda-world/script.js",
       "demos/cases/zelda-world/style.css",
       "entries/cases/zelda-world.json",
-      "docs/research/zelda-world.md"
+      "docs/cases/zelda-world.md"
     ]
   },
   {
@@ -642,7 +642,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/digital-dunhuang.json",
-      "docs/research/digital-dunhuang.md",
+      "docs/cases/digital-dunhuang.md",
       "demos/cases/digital-dunhuang/fidelity.md",
       "demos/cases/digital-dunhuang/index.html",
       "demos/cases/digital-dunhuang/style.css",
@@ -733,9 +733,9 @@ window.DESIGN_PATTERNS = [
       "entries/cases/blue-archive.json",
       "entries/cases/persona-kinetic.json",
       "entries/cases/uma-musume.json",
-      "docs/research/blue-archive.md",
-      "docs/research/persona-kinetic.md",
-      "docs/research/uma-musume.md"
+      "docs/cases/blue-archive.md",
+      "docs/cases/persona-kinetic.md",
+      "docs/cases/uma-musume.md"
     ]
   },
   {
@@ -805,8 +805,8 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/notion-editorial.json",
       "entries/cases/stripe-platform.json",
-      "docs/research/notion-editorial.md",
-      "docs/research/stripe-platform.md"
+      "docs/cases/notion-editorial.md",
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -867,7 +867,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/monument-valley-game/index.html",
       "demos/cases/monument-valley-game/style.css",
       "entries/cases/monument-valley-game.json",
-      "docs/research/monument-valley-game.md"
+      "docs/cases/monument-valley-game.md"
     ]
   },
   {
@@ -962,10 +962,10 @@ window.DESIGN_PATTERNS = [
       "entries/cases/monument-valley-game.json",
       "entries/cases/persona-kinetic.json",
       "entries/cases/philharmonie-music.json",
-      "docs/research/fuji-rock.md",
-      "docs/research/monument-valley-game.md",
-      "docs/research/persona-kinetic.md",
-      "docs/research/philharmonie-music.md"
+      "docs/cases/fuji-rock.md",
+      "docs/cases/monument-valley-game.md",
+      "docs/cases/persona-kinetic.md",
+      "docs/cases/philharmonie-music.md"
     ]
   },
   {
@@ -1056,11 +1056,11 @@ window.DESIGN_PATTERNS = [
       "entries/cases/arknights-world.json",
       "entries/cases/blue-archive.json",
       "entries/cases/genshin-world.json",
-      "docs/research/arknights-world.md",
-      "docs/research/blue-archive.md",
-      "docs/research/genshin-world.md",
+      "docs/cases/arknights-world.md",
+      "docs/cases/blue-archive.md",
+      "docs/cases/genshin-world.md",
       "entries/cases/zenless-zone-zero.json",
-      "docs/research/zenless-zone-zero.md",
+      "docs/cases/zenless-zone-zero.md",
       "demos/cases/zenless-zone-zero/app.js",
       "demos/cases/zenless-zone-zero/data.js",
       "demos/cases/zenless-zone-zero/fidelity.md",
@@ -1151,9 +1151,9 @@ window.DESIGN_PATTERNS = [
       "entries/cases/arknights-world.json",
       "entries/cases/blue-archive.json",
       "entries/cases/genshin-world.json",
-      "docs/research/arknights-world.md",
-      "docs/research/blue-archive.md",
-      "docs/research/genshin-world.md"
+      "docs/cases/arknights-world.md",
+      "docs/cases/blue-archive.md",
+      "docs/cases/genshin-world.md"
     ]
   },
   {
@@ -1205,7 +1205,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/hand-drawn/script.js",
       "demos/cases/hand-drawn/style.css",
       "entries/cases/hand-drawn.json",
-      "docs/research/hand-drawn.md"
+      "docs/cases/hand-drawn.md"
     ]
   },
   {
@@ -1275,8 +1275,8 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/notion-editorial.json",
       "entries/cases/stripe-platform.json",
-      "docs/research/notion-editorial.md",
-      "docs/research/stripe-platform.md"
+      "docs/cases/notion-editorial.md",
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -1337,7 +1337,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/zelda-world/script.js",
       "demos/cases/zelda-world/style.css",
       "entries/cases/zelda-world.json",
-      "docs/research/zelda-world.md"
+      "docs/cases/zelda-world.md"
     ]
   },
   {
@@ -1398,7 +1398,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/mori-art-museum/index.html",
       "demos/cases/mori-art-museum/style.css",
       "entries/cases/mori-art-museum.json",
-      "docs/research/mori-art-museum.md"
+      "docs/cases/mori-art-museum.md"
     ]
   },
   {
@@ -1473,8 +1473,8 @@ window.DESIGN_PATTERNS = [
       "demos/cases/zelda-world/style.css",
       "entries/cases/arknights-world.json",
       "entries/cases/zelda-world.json",
-      "docs/research/arknights-world.md",
-      "docs/research/zelda-world.md"
+      "docs/cases/arknights-world.md",
+      "docs/cases/zelda-world.md"
     ]
   },
   {
@@ -1525,7 +1525,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/hand-drawn/script.js",
       "demos/cases/hand-drawn/style.css",
       "entries/cases/hand-drawn.json",
-      "docs/research/hand-drawn.md"
+      "docs/cases/hand-drawn.md"
     ]
   },
   {
@@ -1574,7 +1574,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/bauhaus-geometry/index.html",
       "entries/cases/bauhaus-geometry.json",
-      "docs/research/bauhaus-geometry.md"
+      "docs/cases/bauhaus-geometry.md"
     ]
   },
   {
@@ -1652,7 +1652,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/rhine-lab/fidelity.md",
       "demos/cases/rhine-lab/assets-manifest.json",
       "entries/cases/rhine-lab.json",
-      "docs/research/rhine-lab.md"
+      "docs/cases/rhine-lab.md"
     ]
   },
   {
@@ -1732,7 +1732,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/mira-host-photography/fidelity.md",
       "demos/cases/mira-host-photography/index.html",
       "entries/cases/mira-host-photography.json",
-      "docs/research/mira-host-photography.md"
+      "docs/cases/mira-host-photography.md"
     ]
   },
   {
@@ -1802,8 +1802,8 @@ window.DESIGN_PATTERNS = [
       "demos/cases/philharmonie-music/style.css",
       "entries/cases/met-museum.json",
       "entries/cases/philharmonie-music.json",
-      "docs/research/met-museum.md",
-      "docs/research/philharmonie-music.md"
+      "docs/cases/met-museum.md",
+      "docs/cases/philharmonie-music.md"
     ]
   },
   {
@@ -1867,7 +1867,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/arknights-world/script.js",
       "demos/cases/arknights-world/style.css",
       "entries/cases/arknights-world.json",
-      "docs/research/arknights-world.md"
+      "docs/cases/arknights-world.md"
     ]
   },
   {
@@ -1922,7 +1922,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/fuji-rock/index.html",
       "demos/cases/fuji-rock/style.css",
       "entries/cases/fuji-rock.json",
-      "docs/research/fuji-rock.md"
+      "docs/cases/fuji-rock.md"
     ]
   },
   {
@@ -1978,7 +1978,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/pixel-world/index.html",
       "entries/cases/pixel-world.json",
-      "docs/research/pixel-world.md"
+      "docs/cases/pixel-world.md"
     ]
   },
   {
@@ -2033,7 +2033,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/blue-archive/index.html",
       "demos/cases/blue-archive/style.css",
       "entries/cases/blue-archive.json",
-      "docs/research/blue-archive.md"
+      "docs/cases/blue-archive.md"
     ]
   },
   {
@@ -2089,7 +2089,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/swiss-grid/index.html",
       "entries/cases/swiss-grid.json",
-      "docs/research/swiss-grid.md"
+      "docs/cases/swiss-grid.md"
     ]
   },
   {
@@ -2153,7 +2153,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/deepseek-harness.json",
-      "docs/research/deepseek-harness.md",
+      "docs/cases/deepseek-harness.md",
       "demos/cases/deepseek-harness/app.js",
       "demos/cases/deepseek-harness/fidelity.md",
       "demos/cases/deepseek-harness/index.html",
@@ -2241,7 +2241,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/digital-dunhuang.json",
-      "docs/research/digital-dunhuang.md",
+      "docs/cases/digital-dunhuang.md",
       "demos/cases/digital-dunhuang/fidelity.md",
       "demos/cases/digital-dunhuang/index.html",
       "demos/cases/digital-dunhuang/style.css",
@@ -2301,7 +2301,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/isometric-3d/script.js",
       "demos/cases/isometric-3d/style.css",
       "entries/cases/isometric-3d.json",
-      "docs/research/isometric-3d.md"
+      "docs/cases/isometric-3d.md"
     ]
   },
   {
@@ -2384,8 +2384,8 @@ window.DESIGN_PATTERNS = [
       "entries/cases/apple-product.json",
       "entries/cases/monument-valley-game.json",
       "entries/cases/uma-musume.json",
-      "docs/research/monument-valley-game.md",
-      "docs/research/uma-musume.md"
+      "docs/cases/monument-valley-game.md",
+      "docs/cases/uma-musume.md"
     ]
   },
   {
@@ -2447,8 +2447,8 @@ window.DESIGN_PATTERNS = [
       "demos/cases/swiss-grid/index.html",
       "entries/cases/mori-art-museum.json",
       "entries/cases/swiss-grid.json",
-      "docs/research/mori-art-museum.md",
-      "docs/research/swiss-grid.md"
+      "docs/cases/mori-art-museum.md",
+      "docs/cases/swiss-grid.md"
     ]
   },
   {
@@ -2508,7 +2508,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/persona-kinetic/script.js",
       "demos/cases/persona-kinetic/style.css",
       "entries/cases/persona-kinetic.json",
-      "docs/research/persona-kinetic.md"
+      "docs/cases/persona-kinetic.md"
     ]
   },
   {
@@ -2622,7 +2622,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/shape-morph/script.js",
       "demos/cases/shape-morph/style.css",
       "entries/cases/shape-morph.json",
-      "docs/research/shape-morph.md"
+      "docs/cases/shape-morph.md"
     ]
   },
   {
@@ -2679,7 +2679,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stripe-platform/style.css",
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -2734,7 +2734,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/mori-art-museum/index.html",
       "demos/cases/mori-art-museum/style.css",
       "entries/cases/mori-art-museum.json",
-      "docs/research/mori-art-museum.md"
+      "docs/cases/mori-art-museum.md"
     ]
   },
   {
@@ -2790,7 +2790,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/rijksmuseum-art/script.js",
       "demos/cases/rijksmuseum-art/style.css",
       "entries/cases/rijksmuseum-art.json",
-      "docs/research/rijksmuseum-art.md"
+      "docs/cases/rijksmuseum-art.md"
     ]
   },
   {
@@ -2851,7 +2851,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/rijksmuseum-art/script.js",
       "demos/cases/rijksmuseum-art/style.css",
       "entries/cases/rijksmuseum-art.json",
-      "docs/research/rijksmuseum-art.md"
+      "docs/cases/rijksmuseum-art.md"
     ]
   },
   {
@@ -2901,7 +2901,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/bauhaus-geometry/index.html",
       "entries/cases/bauhaus-geometry.json",
-      "docs/research/bauhaus-geometry.md"
+      "docs/cases/bauhaus-geometry.md"
     ]
   },
   {
@@ -2966,7 +2966,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/palace-museum.json",
-      "docs/research/palace-museum.md",
+      "docs/cases/palace-museum.md",
       "demos/cases/palace-museum/fidelity.md",
       "demos/cases/palace-museum/index.html",
       "demos/cases/palace-museum/style.css",
@@ -3036,7 +3036,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/index.html",
       "demos/cases/endfield-industrial/reference.css",
@@ -3105,7 +3105,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/design-sight/index.html",
       "demos/cases/design-sight/style.css",
       "entries/cases/design-sight.json",
-      "docs/research/design-sight.md"
+      "docs/cases/design-sight.md"
     ]
   },
   {
@@ -3340,7 +3340,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/zelda-world/script.js",
       "demos/cases/zelda-world/style.css",
       "entries/cases/zelda-world.json",
-      "docs/research/zelda-world.md"
+      "docs/cases/zelda-world.md"
     ]
   },
   {
@@ -3406,7 +3406,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/suzhou-museum.json",
-      "docs/research/suzhou-museum.md",
+      "docs/cases/suzhou-museum.md",
       "demos/cases/suzhou-museum/fidelity.md",
       "demos/cases/suzhou-museum/index.html",
       "demos/cases/suzhou-museum/style.css",
@@ -3486,10 +3486,10 @@ window.DESIGN_PATTERNS = [
       "demos/cases/uma-musume/style.css",
       "entries/cases/persona-kinetic.json",
       "entries/cases/uma-musume.json",
-      "docs/research/persona-kinetic.md",
-      "docs/research/uma-musume.md",
+      "docs/cases/persona-kinetic.md",
+      "docs/cases/uma-musume.md",
       "entries/cases/zenless-zone-zero.json",
-      "docs/research/zenless-zone-zero.md",
+      "docs/cases/zenless-zone-zero.md",
       "demos/cases/zenless-zone-zero/app.js",
       "demos/cases/zenless-zone-zero/data.js",
       "demos/cases/zenless-zone-zero/fidelity.md",
@@ -3553,7 +3553,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/blue-archive/index.html",
       "demos/cases/blue-archive/style.css",
       "entries/cases/blue-archive.json",
-      "docs/research/blue-archive.md"
+      "docs/cases/blue-archive.md"
     ]
   },
   {
@@ -3608,7 +3608,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/persona-kinetic/script.js",
       "demos/cases/persona-kinetic/style.css",
       "entries/cases/persona-kinetic.json",
-      "docs/research/persona-kinetic.md"
+      "docs/cases/persona-kinetic.md"
     ]
   },
   {
@@ -3683,9 +3683,9 @@ window.DESIGN_PATTERNS = [
       "entries/cases/bauhaus-geometry.json",
       "entries/cases/design-sight.json",
       "entries/cases/philharmonie-music.json",
-      "docs/research/bauhaus-geometry.md",
-      "docs/research/design-sight.md",
-      "docs/research/philharmonie-music.md"
+      "docs/cases/bauhaus-geometry.md",
+      "docs/cases/design-sight.md",
+      "docs/cases/philharmonie-music.md"
     ]
   },
   {
@@ -3829,7 +3829,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/mira-host-photography/fidelity.md",
       "demos/cases/mira-host-photography/index.html",
       "entries/cases/mira-host-photography.json",
-      "docs/research/mira-host-photography.md"
+      "docs/cases/mira-host-photography.md"
     ]
   },
   {
@@ -3892,7 +3892,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/notion-editorial/script.js",
       "demos/cases/notion-editorial/style.css",
       "entries/cases/notion-editorial.json",
-      "docs/research/notion-editorial.md"
+      "docs/cases/notion-editorial.md"
     ]
   },
   {
@@ -3948,7 +3948,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/mori-art-museum/index.html",
       "demos/cases/mori-art-museum/style.css",
       "entries/cases/mori-art-museum.json",
-      "docs/research/mori-art-museum.md"
+      "docs/cases/mori-art-museum.md"
     ]
   },
   {
@@ -4003,7 +4003,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/pixel-world/index.html",
       "entries/cases/pixel-world.json",
-      "docs/research/pixel-world.md"
+      "docs/cases/pixel-world.md"
     ]
   },
   {
@@ -4061,7 +4061,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/shape-morph/script.js",
       "demos/cases/shape-morph/style.css",
       "entries/cases/shape-morph.json",
-      "docs/research/shape-morph.md"
+      "docs/cases/shape-morph.md"
     ]
   },
   {
@@ -4111,7 +4111,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/retro-80s/index.html",
       "entries/cases/retro-80s.json",
-      "docs/research/retro-80s.md"
+      "docs/cases/retro-80s.md"
     ]
   },
   {
@@ -4210,8 +4210,8 @@ window.DESIGN_PATTERNS = [
       "entries/cases/chatgpt-platform.json",
       "entries/cases/qoder-platform.json",
       "entries/cases/zelda-world.json",
-      "docs/research/arknights-world.md",
-      "docs/research/zelda-world.md"
+      "docs/cases/arknights-world.md",
+      "docs/cases/zelda-world.md"
     ]
   },
   {
@@ -4263,7 +4263,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/isometric-3d/script.js",
       "demos/cases/isometric-3d/style.css",
       "entries/cases/isometric-3d.json",
-      "docs/research/isometric-3d.md"
+      "docs/cases/isometric-3d.md"
     ]
   },
   {
@@ -4344,7 +4344,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/source/state-matrix.md",
       "demos/cases/endfield-industrial/source/source-provenance.json",
@@ -4412,7 +4412,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/google-material/index.html",
       "demos/cases/google-material/style.css",
       "entries/cases/google-material.json",
-      "docs/research/google-material.md"
+      "docs/cases/google-material.md"
     ]
   },
   {
@@ -4481,9 +4481,9 @@ window.DESIGN_PATTERNS = [
       "entries/cases/bauhaus-geometry.json",
       "entries/cases/retro-80s.json",
       "entries/cases/shape-morph.json",
-      "docs/research/bauhaus-geometry.md",
-      "docs/research/retro-80s.md",
-      "docs/research/shape-morph.md"
+      "docs/cases/bauhaus-geometry.md",
+      "docs/cases/retro-80s.md",
+      "docs/cases/shape-morph.md"
     ]
   },
   {
@@ -4561,8 +4561,8 @@ window.DESIGN_PATTERNS = [
       "demos/cases/fuji-rock/style.css",
       "entries/cases/design-sight.json",
       "entries/cases/fuji-rock.json",
-      "docs/research/design-sight.md",
-      "docs/research/fuji-rock.md"
+      "docs/cases/design-sight.md",
+      "docs/cases/fuji-rock.md"
     ]
   },
   {
@@ -4663,7 +4663,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/swiss-grid/index.html",
       "entries/cases/swiss-grid.json",
-      "docs/research/swiss-grid.md"
+      "docs/cases/swiss-grid.md"
     ]
   },
   {
@@ -4719,7 +4719,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stripe-platform/style.css",
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -4780,7 +4780,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/notion-editorial/script.js",
       "demos/cases/notion-editorial/style.css",
       "entries/cases/notion-editorial.json",
-      "docs/research/notion-editorial.md"
+      "docs/cases/notion-editorial.md"
     ]
   },
   {
@@ -4891,7 +4891,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stripe-platform/style.css",
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -4954,7 +4954,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/design-sight/index.html",
       "demos/cases/design-sight/style.css",
       "entries/cases/design-sight.json",
-      "docs/research/design-sight.md"
+      "docs/cases/design-sight.md"
     ]
   },
   {
@@ -5011,7 +5011,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stripe-platform/style.css",
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -5080,7 +5080,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/notion-editorial/style.css",
       "entries/cases/linear-workflow.json",
       "entries/cases/notion-editorial.json",
-      "docs/research/notion-editorial.md"
+      "docs/cases/notion-editorial.md"
     ]
   },
   {
@@ -5194,7 +5194,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/notion-editorial/script.js",
       "demos/cases/notion-editorial/style.css",
       "entries/cases/notion-editorial.json",
-      "docs/research/notion-editorial.md"
+      "docs/cases/notion-editorial.md"
     ]
   },
   {
@@ -5367,7 +5367,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/fuji-rock/index.html",
       "demos/cases/fuji-rock/style.css",
       "entries/cases/fuji-rock.json",
-      "docs/research/fuji-rock.md"
+      "docs/cases/fuji-rock.md"
     ]
   },
   {
@@ -5519,10 +5519,10 @@ window.DESIGN_PATTERNS = [
       "entries/cases/met-museum.json",
       "entries/cases/rijksmuseum-art.json",
       "entries/cases/uma-musume.json",
-      "docs/research/fuji-rock.md",
-      "docs/research/met-museum.md",
-      "docs/research/rijksmuseum-art.md",
-      "docs/research/uma-musume.md"
+      "docs/cases/fuji-rock.md",
+      "docs/cases/met-museum.md",
+      "docs/cases/rijksmuseum-art.md",
+      "docs/cases/uma-musume.md"
     ]
   },
   {
@@ -5620,8 +5620,8 @@ window.DESIGN_PATTERNS = [
       "entries/cases/chatgpt-platform.json",
       "entries/cases/met-museum.json",
       "entries/cases/stripe-platform.json",
-      "docs/research/met-museum.md",
-      "docs/research/stripe-platform.md"
+      "docs/cases/met-museum.md",
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -5683,7 +5683,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stripe-platform/style.css",
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -5764,9 +5764,9 @@ window.DESIGN_PATTERNS = [
       "entries/cases/fuji-rock.json",
       "entries/cases/persona-kinetic.json",
       "entries/cases/philharmonie-music.json",
-      "docs/research/fuji-rock.md",
-      "docs/research/persona-kinetic.md",
-      "docs/research/philharmonie-music.md"
+      "docs/cases/fuji-rock.md",
+      "docs/cases/persona-kinetic.md",
+      "docs/cases/philharmonie-music.md"
     ]
   },
   {
@@ -5818,7 +5818,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/hand-drawn/script.js",
       "demos/cases/hand-drawn/style.css",
       "entries/cases/hand-drawn.json",
-      "docs/research/hand-drawn.md"
+      "docs/cases/hand-drawn.md"
     ]
   },
   {
@@ -5870,7 +5870,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/isometric-3d/script.js",
       "demos/cases/isometric-3d/style.css",
       "entries/cases/isometric-3d.json",
-      "docs/research/isometric-3d.md"
+      "docs/cases/isometric-3d.md"
     ]
   },
   {
@@ -5934,7 +5934,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/arknights-world/script.js",
       "demos/cases/arknights-world/style.css",
       "entries/cases/arknights-world.json",
-      "docs/research/arknights-world.md"
+      "docs/cases/arknights-world.md"
     ]
   },
   {
@@ -5989,7 +5989,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/fuji-rock/index.html",
       "demos/cases/fuji-rock/style.css",
       "entries/cases/fuji-rock.json",
-      "docs/research/fuji-rock.md"
+      "docs/cases/fuji-rock.md"
     ]
   },
   {
@@ -6053,7 +6053,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/deepseek-harness.json",
-      "docs/research/deepseek-harness.md",
+      "docs/cases/deepseek-harness.md",
       "demos/cases/deepseek-harness/app.js",
       "demos/cases/deepseek-harness/fidelity.md",
       "demos/cases/deepseek-harness/index.html",
@@ -6163,12 +6163,12 @@ window.DESIGN_PATTERNS = [
       "demos/cases/fuji-rock/style.css",
       "entries/cases/design-sight.json",
       "entries/cases/fuji-rock.json",
-      "docs/research/design-sight.md",
-      "docs/research/fuji-rock.md",
+      "docs/cases/design-sight.md",
+      "docs/cases/fuji-rock.md",
       "demos/cases/mira-host-photography/index.html",
       "demos/cases/mira-host-photography/fidelity.md",
       "entries/cases/mira-host-photography.json",
-      "docs/research/mira-host-photography.md"
+      "docs/cases/mira-host-photography.md"
     ]
   },
   {
@@ -6223,7 +6223,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/rijksmuseum-art/script.js",
       "demos/cases/rijksmuseum-art/style.css",
       "entries/cases/rijksmuseum-art.json",
-      "docs/research/rijksmuseum-art.md"
+      "docs/cases/rijksmuseum-art.md"
     ]
   },
   {
@@ -6340,7 +6340,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/arknights-world/script.js",
       "demos/cases/arknights-world/style.css",
       "entries/cases/arknights-world.json",
-      "docs/research/arknights-world.md"
+      "docs/cases/arknights-world.md"
     ]
   },
   {
@@ -6404,7 +6404,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/arknights-world/script.js",
       "demos/cases/arknights-world/style.css",
       "entries/cases/arknights-world.json",
-      "docs/research/arknights-world.md"
+      "docs/cases/arknights-world.md"
     ]
   },
   {
@@ -6467,7 +6467,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/deepseek-harness.json",
-      "docs/research/deepseek-harness.md",
+      "docs/cases/deepseek-harness.md",
       "demos/cases/deepseek-harness/app.js",
       "demos/cases/deepseek-harness/fidelity.md",
       "demos/cases/deepseek-harness/index.html",
@@ -6555,7 +6555,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/deepseek-harness.json",
-      "docs/research/deepseek-harness.md",
+      "docs/cases/deepseek-harness.md",
       "demos/cases/deepseek-harness/app.js",
       "demos/cases/deepseek-harness/fidelity.md",
       "demos/cases/deepseek-harness/index.html",
@@ -6716,9 +6716,9 @@ window.DESIGN_PATTERNS = [
       "demos/cases/arknights-world/script.js",
       "demos/cases/arknights-world/style.css",
       "entries/cases/arknights-world.json",
-      "docs/research/arknights-world.md",
+      "docs/cases/arknights-world.md",
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/source/state-matrix.md",
       "demos/cases/endfield-industrial/source/source-provenance.json",
@@ -6806,9 +6806,9 @@ window.DESIGN_PATTERNS = [
       "entries/cases/fuji-rock.json",
       "entries/cases/mori-art-museum.json",
       "entries/cases/uma-musume.json",
-      "docs/research/fuji-rock.md",
-      "docs/research/mori-art-museum.md",
-      "docs/research/uma-musume.md"
+      "docs/cases/fuji-rock.md",
+      "docs/cases/mori-art-museum.md",
+      "docs/cases/uma-musume.md"
     ]
   },
   {
@@ -6912,11 +6912,11 @@ window.DESIGN_PATTERNS = [
       "entries/cases/mori-art-museum.json",
       "entries/cases/rhine-lab.json",
       "entries/cases/swiss-grid.json",
-      "docs/research/endfield-industrial.md",
-      "docs/research/met-museum.md",
-      "docs/research/mori-art-museum.md",
-      "docs/research/rhine-lab.md",
-      "docs/research/swiss-grid.md"
+      "docs/cases/endfield-industrial.md",
+      "docs/cases/met-museum.md",
+      "docs/cases/mori-art-museum.md",
+      "docs/cases/rhine-lab.md",
+      "docs/cases/swiss-grid.md"
     ]
   },
   {
@@ -6977,7 +6977,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/monument-valley-game/index.html",
       "demos/cases/monument-valley-game/style.css",
       "entries/cases/monument-valley-game.json",
-      "docs/research/monument-valley-game.md"
+      "docs/cases/monument-valley-game.md"
     ]
   },
   {
@@ -7058,7 +7058,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/source/state-matrix.md",
       "demos/cases/endfield-industrial/source/source-provenance.json",
@@ -7129,7 +7129,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/persona-kinetic/script.js",
       "demos/cases/persona-kinetic/style.css",
       "entries/cases/persona-kinetic.json",
-      "docs/research/persona-kinetic.md"
+      "docs/cases/persona-kinetic.md"
     ]
   },
   {
@@ -7197,7 +7197,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/deepseek-harness.json",
-      "docs/research/deepseek-harness.md",
+      "docs/cases/deepseek-harness.md",
       "demos/cases/deepseek-harness/app.js",
       "demos/cases/deepseek-harness/fidelity.md",
       "demos/cases/deepseek-harness/index.html",
@@ -7286,7 +7286,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/uma-musume/index.html",
       "demos/cases/uma-musume/style.css",
       "entries/cases/uma-musume.json",
-      "docs/research/uma-musume.md"
+      "docs/cases/uma-musume.md"
     ]
   },
   {
@@ -7459,7 +7459,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/line-art/script.js",
       "demos/cases/line-art/style.css",
       "entries/cases/line-art.json",
-      "docs/research/line-art.md"
+      "docs/cases/line-art.md"
     ]
   },
   {
@@ -7542,8 +7542,8 @@ window.DESIGN_PATTERNS = [
       "entries/cases/apple-product.json",
       "entries/cases/monument-valley-game.json",
       "entries/cases/stripe-platform.json",
-      "docs/research/monument-valley-game.md",
-      "docs/research/stripe-platform.md"
+      "docs/cases/monument-valley-game.md",
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -7598,7 +7598,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/google-material/index.html",
       "demos/cases/google-material/style.css",
       "entries/cases/google-material.json",
-      "docs/research/google-material.md"
+      "docs/cases/google-material.md"
     ]
   },
   {
@@ -7655,7 +7655,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/zenless-zone-zero.json",
-      "docs/research/zenless-zone-zero.md",
+      "docs/cases/zenless-zone-zero.md",
       "demos/cases/zenless-zone-zero/app.js",
       "demos/cases/zenless-zone-zero/data.js",
       "demos/cases/zenless-zone-zero/fidelity.md",
@@ -7721,7 +7721,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/line-art/script.js",
       "demos/cases/line-art/style.css",
       "entries/cases/line-art.json",
-      "docs/research/line-art.md"
+      "docs/cases/line-art.md"
     ]
   },
   {
@@ -7806,7 +7806,7 @@ window.DESIGN_PATTERNS = [
       "entries/cases/claude-platform.json",
       "entries/cases/qoder-platform.json",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   {
@@ -7869,7 +7869,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/zelda-world/script.js",
       "demos/cases/zelda-world/style.css",
       "entries/cases/zelda-world.json",
-      "docs/research/zelda-world.md"
+      "docs/cases/zelda-world.md"
     ]
   },
   {
@@ -7955,11 +7955,11 @@ window.DESIGN_PATTERNS = [
       "entries/cases/arknights-world.json",
       "entries/cases/retro-80s.json",
       "entries/cases/zelda-world.json",
-      "docs/research/arknights-world.md",
-      "docs/research/retro-80s.md",
-      "docs/research/zelda-world.md",
+      "docs/cases/arknights-world.md",
+      "docs/cases/retro-80s.md",
+      "docs/cases/zelda-world.md",
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/app.js",
       "demos/cases/endfield-industrial/state.css",
@@ -8014,7 +8014,7 @@ window.DESIGN_PATTERNS = [
     "sourceFiles": [
       "demos/cases/pixel-world/index.html",
       "entries/cases/pixel-world.json",
-      "docs/research/pixel-world.md"
+      "docs/cases/pixel-world.md"
     ]
   },
   {
@@ -8093,7 +8093,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/rhine-lab/fidelity.md",
       "demos/cases/rhine-lab/assets-manifest.json",
       "entries/cases/rhine-lab.json",
-      "docs/research/rhine-lab.md"
+      "docs/cases/rhine-lab.md"
     ]
   },
   {
@@ -8267,7 +8267,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/google-material/index.html",
       "demos/cases/google-material/style.css",
       "entries/cases/google-material.json",
-      "docs/research/google-material.md"
+      "docs/cases/google-material.md"
     ]
   },
   {
@@ -8325,7 +8325,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/philharmonie-music/script.js",
       "demos/cases/philharmonie-music/style.css",
       "entries/cases/philharmonie-music.json",
-      "docs/research/philharmonie-music.md"
+      "docs/cases/philharmonie-music.md"
     ]
   },
   {
@@ -8456,7 +8456,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/arknights-world/script.js",
       "demos/cases/arknights-world/style.css",
       "entries/cases/arknights-world.json",
-      "docs/research/arknights-world.md"
+      "docs/cases/arknights-world.md"
     ]
   },
   {
@@ -8732,7 +8732,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/source/state-matrix.md",
       "demos/cases/endfield-industrial/source/source-provenance.json",
@@ -8860,7 +8860,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/genshin-world/script.js",
       "demos/cases/genshin-world/style.css",
       "entries/cases/genshin-world.json",
-      "docs/research/genshin-world.md"
+      "docs/cases/genshin-world.md"
     ]
   },
   {
@@ -8923,7 +8923,7 @@ window.DESIGN_PATTERNS = [
     ],
     "sourceFiles": [
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/index.html",
       "demos/cases/endfield-industrial/reference.css",
@@ -9051,9 +9051,9 @@ window.DESIGN_PATTERNS = [
       "entries/cases/linear-workflow.json",
       "entries/cases/qoder-platform.json",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md",
+      "docs/cases/stripe-platform.md",
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/source/state-matrix.md",
       "demos/cases/endfield-industrial/source/source-provenance.json",
@@ -9064,7 +9064,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/endfield-industrial/lore.js",
       "demos/cases/endfield-industrial/transparent-video.js",
       "entries/cases/deepseek-harness.json",
-      "docs/research/deepseek-harness.md",
+      "docs/cases/deepseek-harness.md",
       "demos/cases/deepseek-harness/app.js",
       "demos/cases/deepseek-harness/fidelity.md",
       "demos/cases/deepseek-harness/index.html",
@@ -9091,7 +9091,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/stellar-museum/index.html",
       "demos/cases/stellar-museum/fidelity.md",
       "entries/cases/stellar-museum.json",
-      "docs/research/stellar-museum.md"
+      "docs/cases/stellar-museum.md"
     ]
   },
   {
@@ -9146,7 +9146,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/met-museum/script.js",
       "demos/cases/met-museum/style.css",
       "entries/cases/met-museum.json",
-      "docs/research/met-museum.md"
+      "docs/cases/met-museum.md"
     ]
   },
   {
@@ -9265,7 +9265,7 @@ window.DESIGN_PATTERNS = [
       "demos/cases/zelda-world/script.js",
       "demos/cases/zelda-world/style.css",
       "entries/cases/zelda-world.json",
-      "docs/research/zelda-world.md"
+      "docs/cases/zelda-world.md"
     ]
   }
 ];

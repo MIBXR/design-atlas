@@ -68,5 +68,178 @@
         "demo": "demos/cases/qoder-platform/index.html"
       }
     }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/heatmap-focus-tooltip.md",
+      "role": "prompt",
+      "content": "# 热图指针与焦点提示 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/heatmap-focus-tooltip.json)\n\n为【目标页面/组件】实现「热图指针与焦点提示」。格子悬停或获得焦点后短延迟显示日期/对话提示，离开或失焦关闭；文字提示不只依赖格子色深。触发：pointer enter/focus或leave/blur。可见结果：微小可视化可以逐项读取。适用任务：活跃度与日期数据图。格子可聚焦并有可读名称，提示不覆盖当前目标。键盘：格子可通过键盘聚焦，焦点触发等同指针，关联日期/数值说明。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责微小可视化可以逐项读取，职责限定在当前区域。组合时格子可聚焦并有可读名称，提示不覆盖当前目标。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 格子可聚焦并有可读名称，提示不覆盖当前目标。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/cli.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/desktop.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/ide.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/jetbrains.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/logo-cn.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/mobile.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/qoder-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/source/assets/logo-dark.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/qoder-platform/source/assets/logo-light.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/qoder-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/qoder-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/qoder-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/heatmap-focus-tooltip.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/qoder-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/qoder-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/heatmap-focus-tooltip.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
+    }
   ]
 }

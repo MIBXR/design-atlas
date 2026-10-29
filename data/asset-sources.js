@@ -2080,10 +2080,6 @@ globalThis.DesignAtlasAssetSources = {
       "url": "https://raw.githubusercontent.com/MIBXR/web-atlas/7396591b60cbb8b57b1bd56b6c5ee9618f5eff62/docs/readme/workflow.png",
       "bytes": 146451
     },
-    "docs/research/screenshots/persona-character-source.jpg": {
-      "url": "https://raw.githubusercontent.com/MIBXR/web-atlas/7396591b60cbb8b57b1bd56b6c5ee9618f5eff62/docs/research/screenshots/persona-character-source.jpg",
-      "bytes": 165390
-    },
     "previews/cases/blue-archive-reference.jpg": {
       "url": "https://raw.githubusercontent.com/MIBXR/web-atlas/7396591b60cbb8b57b1bd56b6c5ee9618f5eff62/previews/cases/blue-archive-reference.jpg",
       "bytes": 168907

@@ -85,7 +85,7 @@
       "demos/cases/stellar-museum/fidelity.md",
       "demos/cases/stellar-museum/index.html",
       "entries/cases/stellar-museum.json",
-      "docs/research/stellar-museum.md"
+      "docs/cases/stellar-museum.md"
     ]
   },
   "sourceCases": [
@@ -96,6 +96,639 @@
         "bundle": "agent/cases/stellar-museum.json",
         "demo": "demos/cases/stellar-museum/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/aspect-recomposed-3d-hero.md",
+      "role": "prompt",
+      "content": "# 三维主角随画幅重新构图 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/aspect-recomposed-3d-hero.json)\n\n为【目标首屏】实现「三维主角随画幅重新构图」。首次布局与容器尺寸改变时读取容器宽高比，以五档位置与等比缩放调整同一三维主角：大于 1.9、大于 1.4、大于 1.0、大于 0.7 及其余画幅分别使用来源参数作为构图参考，并根据目标模型与相机校准。横屏将主角安排在右侧，竖屏缩小并上移，为左下标题与行动留白；大气层与主角同步变换。标题、说明和行动保留为语义内容，装饰画布不进入键盘焦点顺序。减少动态时保留响应式构图，停止旋转与着色器时间推进并提供暂停控制；来源没有实现完整静止和用户暂停，这些是实施建议。可见性机制另行管理渲染生命周期。\n\n## 制作约束\n\n- 阈值依据首屏容器宽高比，不是视口宽度；位置值是三维场景坐标，缩放相对来源模型，迁移时需按目标模型与相机重新核对。\n- 星球与大气层必须同步重新构图，标题和操作控件保持独立的语义内容层。\n- 来源未实现用户暂停；减少动态时跳过对象旋转，但仍更新着色器时间并渲染，不能将其描述为完整静态模式。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stellar-museum/baseline-fonts.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/baseline.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-002.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-003.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-004.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-002.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-003.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-004.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-005.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-006.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-002.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-003.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-004.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-005.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-006.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-007.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-008.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-009.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-010.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-011.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-012.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-013.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-014.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-015.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-016.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-017.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-018.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-019.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-020.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-021.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-022.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-023.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-024.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-025.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-026.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-027.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-028.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-029.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-030.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-031.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-032.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-033.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-034.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-035.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-036.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-037.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-038.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-039.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-040.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-041.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-042.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-043.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-044.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-045.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-046.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-047.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-048.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-049.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-050.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-051.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-052.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-053.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-054.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-055.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-056.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-057.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-058.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-059.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-060.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-061.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-062.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-063.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-064.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-065.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-066.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-067.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-068.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-069.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-070.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-071.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-072.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-073.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-074.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-075.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-076.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-077.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-078.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-079.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-080.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-081.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-082.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-083.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-084.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-085.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-086.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-087.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-088.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-089.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-090.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-091.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-092.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-093.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-094.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-095.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-096.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-097.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-098.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-099.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-100.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-101.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/orbitron-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/orbitron-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/space-grotesk-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/space-grotesk-002.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/space-grotesk-003.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/space-grotesk-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/GARDEN-SKILLS-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/vendor/three/THREE-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/vendor/three/three.module.js",
+      "role": "vendor"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/stellar-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/stellar-museum.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/aspect-recomposed-3d-hero.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/stellar-museum-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stellar-museum.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/stellar-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/aspect-recomposed-3d-hero.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

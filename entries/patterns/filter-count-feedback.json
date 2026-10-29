@@ -57,7 +57,7 @@
     "demos/cases/swiss-grid/index.html",
     "entries/cases/mori-art-museum.json",
     "entries/cases/swiss-grid.json",
-    "docs/research/mori-art-museum.md",
-    "docs/research/swiss-grid.md"
+    "docs/cases/mori-art-museum.md",
+    "docs/cases/swiss-grid.md"
   ]
 }

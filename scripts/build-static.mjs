@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
+import {loadMaterials} from './build-materials.mjs';
 import {loadAssetSources} from './build-asset-sources.mjs';
 import {assertRepositoryLineEndings} from './check-line-endings.mjs';
 
@@ -9,7 +10,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(root, 'dist');
 export const files = ['index.html', 'cases.html', 'patterns.html', 'materials.html', 'lab.html', 'agent.html', 'docs.html', 'asset-cache-worker.js', 'README.md', 'CONTRIBUTING.md'];
 const runtimeFiles = ['data/asset-sources.js', 'site/runtime/asset-runtime.js', 'site/runtime/asset-cache.js', 'asset-cache-worker.js', 'site/runtime/case-loading.js', 'site/runtime/case-loading.css'];
-export const folders = ['site', 'data', 'demos', 'entries', 'agent-skills', 'previews', 'prompts', 'docs', 'agent'];
+export const folders = ['site', 'data', 'demos', 'entries', 'previews', 'prompts', 'docs', 'agent'];
 const localOrigin = 'https://design-atlas.invalid';
 
 function localReference(value, documentPath) {
@@ -112,6 +113,7 @@ export function prepareStatic(assetsMode = 'local') {
   const includedRuntime = runtimeFiles.filter(name => fs.existsSync(path.join(root, name)));
   const runtimeReady = includedRuntime.includes('site/runtime/asset-runtime.js') && includedRuntime.includes('data/asset-sources.js');
   if (assetsMode === 'github' && !runtimeReady) throw new Error('GitHub mode requires data/asset-sources.js and site/runtime/asset-runtime.js in the source checkout.');
+  const snapshotPaths = loadMaterials({root}).filter(material => material.snapshotPath).map(material => material.snapshotPath);
   const sources = includedRuntime.includes('data/asset-sources.js') ? loadAssetSources() : {assets:{}};
   // Hosted HTML/CSS is rewritten for playback, and Markdown gains a UTF-8 BOM.
   // Agent source must come from the original Git bytes, not those display files.
@@ -141,7 +143,7 @@ export function prepareStatic(assetsMode = 'local') {
       if (item.isDirectory()) finalize(target);
       else if (item.isFile()) {
         const canonical = path.relative(output, target).split(path.sep).join('/');
-        if (canonical.startsWith('agent-skills/')) {
+        if (snapshotPaths.some(prefix => canonical.startsWith(prefix))) {
           totalBytes += fs.statSync(target).size;
           continue;
         }

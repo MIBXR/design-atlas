@@ -88,5 +88,478 @@
         "demo": "demos/cases/chatgpt-platform/index.html"
       }
     }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/sticky-stage-handoff.md",
+      "role": "prompt",
+      "content": "# 同一媒体从主舞台交给说明 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/sticky-stage-handoff.json)\n\n为【目标页面/组件】实现「同一媒体从主舞台交给说明」。媒体保持sticky，随可逆滚动收束装饰并移动/缩放到说明侧，为另一侧文字腾出空间。触发：上下穿越交接段。可见结果：注意力从看产品转向理解产品。适用任务：产品长页与功能解释。不劫持自然滚动，移动端可替换为顺序内容，完整说明始终可达。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责同一媒体从吸引到解释的连续关系；说明rail可以同步其阶段。使用自然滚动为主时更适合，整页全屏章切需另设计段内滚动，不能直接叠加两个控制器。\n\n## 制作约束\n\n- 不劫持自然滚动，移动端可替换为顺序内容，完整说明始终可达。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/apple-product/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/3d_viewer__hgotqf9hvvee_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/action_button__f9p8n5h9xk66_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/aperture-balance.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/aperture-depth.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/aperture-light.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/aperture-maxdepth.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/battery_endframe__ds9p2a09r9aq_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/camera_control__f4t7iottmvyy_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/camera_system_startframe__e0gisudnvv2a_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/camera-system.webm",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/chip_endframe__lhkymtfv1uie_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/color_black__dseo2tvypuc2_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/color_burgundy__f95it7a6dnyq_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/color_glacier__fkxlpbz0ruy6_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/color_silver__c0oudn0fzw4m_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/colors_endframe__czfie0zmty4i_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/durability__gluy1en01nqm_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/dynamic_island_endframe__edszr68pgo66_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/hero_endframe__fbxsnz8txcia_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/hls.min.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/icon_large.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/large_2x.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/main_camera_endframe__fcjfhs06rdme_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/siri.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/size__ufk3tqa1f5e2_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/assets/viewer_aperture_endframe__2jpki8xah2au_large_2x.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/apple-product/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/apple-product/HLS-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/apple-product/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/apple-product/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/apple-product/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/apple-product/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/apple-product/source/assets/hero_startframe__ck15fj8f67hy_large_2x.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/apple-product/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-coding-opt-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-finance.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-health-opt-5.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-images.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-voice-opt-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-work-opt-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-writing.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/chat-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/chat.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/globe-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-chat-shape.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-code-ascii.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-code-picker-light-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-deck.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-preso.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-shape-transparent.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Medium.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-000.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-001.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-002.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-003.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-flower.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-scribble.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-tomato.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/scribble.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-large-dark.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-large-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-small-dark.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-small-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/work-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/work.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/fonts.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/motion-data.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/chatgpt-motion-evidence.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-handoff.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-mode-rail.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-work-scroll.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/apple-product.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/chatgpt-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/apple-product.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/chatgpt-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/sticky-stage-handoff.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/apple-product-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/apple-product-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/apple-product.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/apple-product.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/chatgpt-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/sticky-stage-handoff.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
+    }
   ]
 }

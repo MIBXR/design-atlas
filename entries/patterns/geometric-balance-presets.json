@@ -45,6 +45,6 @@
   "sourceFiles": [
     "demos/cases/bauhaus-geometry/index.html",
     "entries/cases/bauhaus-geometry.json",
-    "docs/research/bauhaus-geometry.md"
+    "docs/cases/bauhaus-geometry.md"
   ]
 }

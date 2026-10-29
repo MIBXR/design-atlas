@@ -91,7 +91,7 @@
   "demo": "demos/cases/line-art/index.html",
   "preview": "previews/cases/line-art.jpg",
   "theoryVerifiedAt": "2026-10-07",
-  "research": "docs/research/line-art.md",
+  "research": "docs/cases/line-art.md",
   "exercise": "将建筑线稿改为原创机械产品分解图，让绘制顺序对应支架、外壳、接口，并保持全文始终可读。",
   "composition": {
     "color": "接近白纸的底色和灰蓝线条保持克制，强调色只用于进度。",

@@ -39,4 +39,4 @@
 - `data.js`：固定人物、媒体、新闻、特色与官方入口。
 - `assets-manifest.json`：原始素材的来源、大小、SHA256与权利边界。
 
-完整导出保留所有归档资源；`--code-only`省略素材。两种模式均不包含远端影片文件。更多构成与定位见[案例研究](../../../docs/research/zenless-zone-zero.md)。
+完整导出保留所有归档资源；`--code-only`省略素材。两种模式均不包含远端影片文件。更多构成与定位见[案例研究](../../../docs/cases/zenless-zone-zero.md)。

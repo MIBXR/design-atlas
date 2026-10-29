@@ -97,8 +97,8 @@
       "entries/cases/chatgpt-platform.json",
       "entries/cases/qoder-platform.json",
       "entries/cases/zelda-world.json",
-      "docs/research/arknights-world.md",
-      "docs/research/zelda-world.md"
+      "docs/cases/arknights-world.md",
+      "docs/cases/zelda-world.md"
     ]
   },
   "sourceCases": [
@@ -133,6 +133,843 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/cases/zelda-world/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/last-request-transition.md",
+      "role": "prompt",
+      "content": "# 快速切换保留最后目标 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/last-request-transition.json)\n\n为【目标页面/组件】实现「快速切换保留最后目标」。单一状态控制器记录最新目标，取消旧退出回调并限制同时交互层；交接结束继续最后请求。触发：转场期间再次选择或反向。可见结果：不堆积离场层，也不会被旧回调覆盖。适用任务：多场景与多模式切换。方向与目标分别记录，减少动态直接落到最新稳定状态。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责不堆积离场层，也不会被旧回调覆盖，职责限定在当前区域。组合时方向与目标分别记录，减少动态直接落到最新稳定状态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 方向与目标分别记录，减少动态直接落到最新稳定状态。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-voice.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/animation_m.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/animation.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/arknights-logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/background.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Bender-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Bender-Regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/bg2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/bgm.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-voice.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/common_mask.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/gallery_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/home-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/home.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-animation.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-integrated_strategies.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-reclamation_algorithm.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-terra_historicus.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/infected.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/integrated_strategies_m.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/integrated_strategies.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-voice.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/monster_siren_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/news-yesterday-sea.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/nomadic_city.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Novecentosanswide-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Novecentosanswide-UltraBold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/official-three.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/operator_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/originium_arts.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/originiums.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Oswald-DemiBold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/particle.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reclamation_algorithm_m.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reclamation_algorithm.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reunion.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/rhodes_island.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/rhodes-island.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/terra_historicus_m.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/terra_historicus.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/video_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/world-models.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/particles.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/source/assets/home.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/arknights-world/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-coding-opt-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-finance.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-health-opt-5.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-images.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-voice-opt-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-work-opt-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-writing.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/chat-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/chat.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/globe-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-chat-shape.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-code-ascii.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-code-picker-light-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-deck.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-preso.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-shape-transparent.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Medium.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-000.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-001.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-002.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-003.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-flower.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-scribble.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-tomato.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/scribble.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-large-dark.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-large-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-small-dark.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-small-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/work-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/work.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/fonts.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/motion-data.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/chatgpt-motion-evidence.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-handoff.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-mode-rail.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-work-scroll.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/cli.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/desktop.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/ide.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/jetbrains.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/logo-cn.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/mobile.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/qoder-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/source/assets/logo-dark.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/qoder-platform/source/assets/logo-light.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/qoder-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/bg_loading.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/bgm.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/btn_sound_off.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/btn_sound_on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/caption_1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/caption_2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/caption_3.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/chapter-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/chapter-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/chapter-3.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/frame_thumbnail.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/kakeru-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/kakeru.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/logo.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/mask_loading.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_character_on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_character.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_movie_on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_movie.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_world_on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_world.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/obj_loading_2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/se.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/sound-control-off.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/sound-control-on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/title_sound.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/title-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/title-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/title-3.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/tsukuru-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/tsukuru.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/tsumugu-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/tsumugu.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/txt_sound.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/zelda-world/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zelda-world/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/assets/kakeru.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/assets/tsukuru.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/assets/tsumugu.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/arknights-world.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/chatgpt-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/qoder-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/zelda-world.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/arknights-world.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/chatgpt-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/qoder-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/zelda-world.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/last-request-transition.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/arknights-world-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/arknights-world-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/arknights-world.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/zelda-world-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/zelda-world-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/zelda-world.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/arknights-world.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/chatgpt-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/qoder-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/zelda-world.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/last-request-transition.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

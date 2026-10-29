@@ -56,7 +56,7 @@
       "demos/cases/line-art/script.js",
       "demos/cases/line-art/style.css",
       "entries/cases/line-art.json",
-      "docs/research/line-art.md"
+      "docs/cases/line-art.md"
     ]
   },
   "sourceCases": [
@@ -67,6 +67,131 @@
         "bundle": "agent/cases/line-art.json",
         "demo": "demos/cases/line-art/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/scrubbable-animation-progress.md",
+      "role": "prompt",
+      "content": "# 可拖动回看的动画进度 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/scrubbable-animation-progress.json)\n\n为【目标页面/组件】实现「可拖动回看的动画进度」。进度滑块直接控制绘制完成度，手动输入取消当前自动帧调度，重播则重新开始。触发：拖动进度或选择重播。可见结果：动态过程可检查而不是只能等待。适用任务：教学演示与结构分析。中断后以当前进度为准，减少动态直接显示完成内容。键盘：原生range带进度标签，按钮可重播；完成状态有文字。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责动态过程可检查而不是只能等待，职责限定在当前区域。组合时中断后以当前进度为准，减少动态直接显示完成内容。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 中断后以当前进度为准，减少动态直接显示完成内容。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/line-art/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/line-art/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/line-art/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/line-art.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/line-art.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/scrubbable-animation-progress.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/line-art-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/line-art.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/line-art.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/scrubbable-animation-progress.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

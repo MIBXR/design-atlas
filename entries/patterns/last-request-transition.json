@@ -94,7 +94,7 @@
     "entries/cases/chatgpt-platform.json",
     "entries/cases/qoder-platform.json",
     "entries/cases/zelda-world.json",
-    "docs/research/arknights-world.md",
-    "docs/research/zelda-world.md"
+    "docs/cases/arknights-world.md",
+    "docs/cases/zelda-world.md"
   ]
 }

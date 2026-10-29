@@ -76,7 +76,7 @@
   ],
   "sourceFiles": [
     "entries/cases/endfield-industrial.json",
-    "docs/research/endfield-industrial.md",
+    "docs/cases/endfield-industrial.md",
     "demos/cases/endfield-industrial/fidelity.md",
     "demos/cases/endfield-industrial/source/state-matrix.md",
     "demos/cases/endfield-industrial/source/source-provenance.json",

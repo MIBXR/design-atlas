@@ -111,7 +111,7 @@
   "negativePrompt": "不要把所有区域做成统一圆角卡片；不要虚构官方藏品和开放状态；不要堆砌无来源的龙凤纹样、书法或BGM。",
   "demo": "demos/cases/palace-museum/index.html",
   "preview": "previews/cases/palace-museum.jpg",
-  "research": "docs/research/palace-museum.md",
+  "research": "docs/cases/palace-museum.md",
   "fidelity": "demos/cases/palace-museum/fidelity.md",
   "assetManifest": "demos/cases/palace-museum/assets-manifest.json"
 }

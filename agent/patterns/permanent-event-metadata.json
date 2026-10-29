@@ -53,7 +53,7 @@
       "demos/cases/fuji-rock/index.html",
       "demos/cases/fuji-rock/style.css",
       "entries/cases/fuji-rock.json",
-      "docs/research/fuji-rock.md"
+      "docs/cases/fuji-rock.md"
     ]
   },
   "sourceCases": [
@@ -64,6 +64,239 @@
         "bundle": "agent/cases/fuji-rock.json",
         "demo": "demos/cases/fuji-rock/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/permanent-event-metadata.md",
+      "role": "prompt",
+      "content": "# 常驻日期与边缘票据入口 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/permanent-event-metadata.json)\n\n为【目标页面/组件】实现「常驻日期与边缘票据入口」。日期、地点与导览保持稳定位置，边缘票据入口独立于照片；Featured与新闻各承担不同后续任务。触发：照片更替和长页浏览。可见结果：用户不必反复寻找活动事实。适用任务：节日与活动首页。快照日期与活动状态明确，实际票务链接不能伪造成功。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责用户不必反复寻找活动事实，职责限定在当前区域。组合时快照日期与活动状态明确，实际票务链接不能伪造成功。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 快照日期与活动状态明确，实际票务链接不能伪造成功。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4spc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4ssp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aC8sy0ycHbxdRqtlOkZQXy8CrGnlxFEKz3yPwGxJ.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjpc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjsp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/buy_ticket.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/logo_mountain.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/logo_type.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon02.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon04.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon05.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon06.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon11.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon07.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon08.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon09.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon10.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/teHObwbhgXgjKLqX8HrBRJln7mxMNiwc5nSEcBsA.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/W2upzapTzUVTHJJK0lsN7vMw4gUaVuSQWU6Z2qUb.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJpc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJsp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/xQh5p3rAKkRkA04nH6TGqX7Pnp7hYgJ947xpjHyJ.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/fuji-rock/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/source/assets/source-style.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/fuji-rock/source/screenshots/fuji-rock-menu-source.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/fuji-rock/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/fuji-rock.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/fuji-rock.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/permanent-event-metadata.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/fuji-rock-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/fuji-rock-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/fuji-rock.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/fuji-rock.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/permanent-event-metadata.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

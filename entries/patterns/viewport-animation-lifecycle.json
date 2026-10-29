@@ -115,9 +115,9 @@
     "entries/cases/linear-workflow.json",
     "entries/cases/qoder-platform.json",
     "entries/cases/stripe-platform.json",
-    "docs/research/stripe-platform.md",
+    "docs/cases/stripe-platform.md",
     "entries/cases/endfield-industrial.json",
-    "docs/research/endfield-industrial.md",
+    "docs/cases/endfield-industrial.md",
     "demos/cases/endfield-industrial/fidelity.md",
     "demos/cases/endfield-industrial/source/state-matrix.md",
     "demos/cases/endfield-industrial/source/source-provenance.json",
@@ -128,7 +128,7 @@
     "demos/cases/endfield-industrial/lore.js",
     "demos/cases/endfield-industrial/transparent-video.js",
     "entries/cases/deepseek-harness.json",
-    "docs/research/deepseek-harness.md",
+    "docs/cases/deepseek-harness.md",
     "demos/cases/deepseek-harness/app.js",
     "demos/cases/deepseek-harness/fidelity.md",
     "demos/cases/deepseek-harness/index.html",
@@ -155,6 +155,6 @@
     "demos/cases/stellar-museum/index.html",
     "demos/cases/stellar-museum/fidelity.md",
     "entries/cases/stellar-museum.json",
-    "docs/research/stellar-museum.md"
+    "docs/cases/stellar-museum.md"
   ]
 }

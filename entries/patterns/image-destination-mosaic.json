@@ -61,7 +61,7 @@
   ],
   "sourceFiles": [
     "entries/cases/suzhou-museum.json",
-    "docs/research/suzhou-museum.md",
+    "docs/cases/suzhou-museum.md",
     "demos/cases/suzhou-museum/fidelity.md",
     "demos/cases/suzhou-museum/index.html",
     "demos/cases/suzhou-museum/style.css",

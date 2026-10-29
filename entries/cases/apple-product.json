@@ -77,7 +77,7 @@
   "exercise": "保持黑色产品舞台，使用另一款真实产品摄影练习镜头与文案的滚动交接；先记录原站进度再调整曲线。",
   "demo": "demos/cases/apple-product/index.html",
   "preview": "previews/cases/apple-product.jpg",
-  "research": "demos/cases/apple-product/fidelity.md",
+  "research": "docs/cases/apple-product.md",
   "composition": {
     "color": "黑底展示材质，深灰划分章节；蓝色只指向行动。",
     "typography": "系统无衬线；亮点标题56px，设计章节最大96px；紧凑字距。",

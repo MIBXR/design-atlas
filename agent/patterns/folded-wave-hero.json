@@ -55,7 +55,7 @@
       "demos/cases/stripe-platform/style.css",
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -66,6 +66,215 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/cases/stripe-platform/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/folded-wave-hero.md",
+      "role": "prompt",
+      "content": "# 折叠波带与文字共同构成首屏 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/folded-wave-hero.json)\n\n为【目标页面/组件】实现「折叠波带与文字共同构成首屏」。独立WebGL网格与shader产生折叠彩带，主张位于稳定文本区；GPU失败使用同源静帧。触发：进入首屏。可见结果：品牌流动感与金融主张并存。适用任务：有明确品牌形态的产品首屏。波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责品牌流动感与金融主张并存，职责限定在当前区域。组合时波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 波带不影响正文布局，提供暂停与离屏停止，素材保持来源范围。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-hertz.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-instacart.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-lemonde.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-urbn.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/kettle.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/payments-bg.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/sohne.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/stripe-wave-renderer.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/terminal.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-geometry-worker.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-palette.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-provenance.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stripe-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/three-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stripe-platform/wave.js",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/stripe-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/stripe-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/folded-wave-hero.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/stripe-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform-reference.png",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/stripe-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/folded-wave-hero.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

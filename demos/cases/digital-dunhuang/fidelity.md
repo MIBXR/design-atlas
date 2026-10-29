@@ -19,6 +19,8 @@
 
 证据边界：组合采用19个已取得单条件成员集的交集，没有枚举全部服务端组合；固定首页“30”与当日列表“32”都按源快照保留；源未使用的 CSS 背景 banner.jpg 返回 HTML，未猜造素材。原始截图/日志在仓库外 heritage-audit/ 与 work/fidelity/independent-audit/，正式预览由实际浏览器生成。完整机制与证据边界见[状态矩阵](source/state-matrix.md)。
 
-[研究](../../../docs/research/digital-dunhuang.md) · [Demo](index.html)
+[研究](../../../docs/cases/digital-dunhuang.md) · [Demo](index.html)
 
 独立手机证据：390×844源/本地七标题与六区全部x/y/width/height差值小于0.002px，无整页横溢出；导航展开终态top58、height334.3625、width360.4与原600ms规则一致。几何JSON保留在仓库外work/fidelity/independent-audit/dunhuang-{source,local}-mobile-geometry.json。版权年份按固定快照保留2015–2026，三个说明窗唯一标题ID对应实际标题；菜单aria-expanded为本地语义补充。
+
+[许可原文索引](LICENSES.md)。

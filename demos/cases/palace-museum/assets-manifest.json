@@ -1,7 +1,4 @@
 {
-  "brand": "palace-museum",
-  "sourcePage": "https://www.dpm.org.cn/Explore.html",
-  "capturedAt": "2026-10-09",
   "scope": "对指定公开页面的结构、纹理、原图比例及可观察交互作本地学习复现；正式业务跳转官方，去除统计追踪。",
   "assets": [
     {

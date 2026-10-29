@@ -87,7 +87,7 @@
   "negativePrompt": "不要把当前黑金首页替换为通用红色两栏；不要同一角色换色冒充三人；不要编造原曲或角色技能；不要复制整页SDK、订阅或追踪服务。",
   "demo": "demos/cases/persona-kinetic/index.html",
   "preview": "previews/cases/persona-kinetic.jpg",
-  "research": "docs/research/persona-kinetic.md",
+  "research": "docs/cases/persona-kinetic.md",
   "exercise": "在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。",
   "composition": {
     "color": "黑金首屏表达 Royal；红黑网点、金框与大号切片标题表达都市怪盗风格。",

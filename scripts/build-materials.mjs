@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8');
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const materialTypes = ['component-library', 'image', 'sound', 'font', 'poster', 'agent-skill'];
+const materialTypes = ['component-library', 'image', 'sound', 'font', 'poster', 'agent-skill', 'prompt-kit'];
 const summaryFields = ['id', 'title', 'type', 'category', 'summary', 'tags', 'useCases', 'avoid', 'constraints'];
 
 function repositoryFile(root, relative, mustExist = true) {
@@ -67,11 +67,14 @@ export function loadMaterials({ root = defaultRoot } = {}) {
       for (const key of ['title', 'url', 'note']) text(source[key], `${material.id}.sources.${key}`);
       if (!/^https?:\/\//.test(source.url)) throw new Error(`Invalid material source URL: ${material.id}`);
     }
+    const contentPath = `demos/materials/${material.id}`;
+    if (material.snapshotPath !== undefined) {
+      if (material.snapshotPath !== contentPath + '/') throw new Error(`Unexpected material snapshot path: ${material.id}`);
+      text(material.snapshotEntry, `${material.id}.snapshotEntry`);
+      readFile(root, material.snapshotPath + material.snapshotEntry);
+    }
     if (material.type === 'agent-skill') {
-      if (typeof material.skillPath !== 'string' || material.skillPath.replace(/\/$/, '') !== `agent-skills/${material.id}`) throw new Error(`Unexpected skill snapshot path: ${material.id}`);
-      const directory = repositoryFile(root, material.skillPath.replace(/\/$/, ''));
-      if (!fs.lstatSync(directory).isDirectory()) throw new Error(`Expected skill snapshot directory: ${material.id}`);
-      for (const name of ['SKILL.md', 'README.md']) readFile(root, `agent-skills/${material.id}/${name}`);
+      if (material.snapshotEntry !== 'SKILL.md') throw new Error(`Expected SKILL.md entry: ${material.id}`);
       textArray(material.workflow, `${material.id}.workflow`);
       if (!material.workflow.length || material.workflow.some(step => !/[\u3400-\u9fff]/.test(step))) throw new Error(`Expected Chinese skill workflow: ${material.id}`);
       if (!Array.isArray(material.relatedEntries)) throw new Error(`Expected skill related entries: ${material.id}`);
@@ -89,8 +92,9 @@ export function loadMaterials({ root = defaultRoot } = {}) {
           readFile(root, picture.path);
         }
       }
-    } else {
-      if (material.demo !== `demos/materials/${material.id}/index.html`) throw new Error(`Unexpected material demo path: ${material.id}`);
+    }
+    if (!material.snapshotPath) {
+      if (!material.demo?.startsWith(contentPath + '/')) throw new Error(`Unexpected material demo path: ${material.id}`);
       if (!Array.isArray(material.demos) || !material.demos.length) throw new Error(`Missing interactive material demos: ${material.id}`);
       if (new Set(material.demos.map(demo => demo.id)).size !== material.demos.length) throw new Error(`Duplicate material demo: ${material.id}`);
     }
@@ -112,29 +116,29 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
   const outputs = new Map();
   const bundles = [];
   const records = materials.map(material => {
-    const contentFiles = walkFiles(root, material.type === 'agent-skill' ? material.skillPath.replace(/\/$/, '') : `demos/materials/${material.id}`);
-    const documentPaths = [material.research, ...contentFiles.filter(relative => relative.endsWith('.md') || /\/LICENSE(?:[^/]*\.txt)?$/.test(relative))];
+    const contentFiles = walkFiles(root, `demos/materials/${material.id}`);
+    const documentPaths = [material.research, `prompts/materials/${material.id}.md`, ...contentFiles.filter(relative => relative.endsWith('.md') || /\/LICENSE(?:[^/]*\.txt)?$/.test(relative))];
     const documents = [...new Set(documentPaths)].map(relative => {
       const bytes = readFile(root, relative);
       new TextDecoder('utf-8', { fatal: true }).decode(bytes);
-      return { path: relative, role: relative === material.research ? 'research' : 'context', content: bytes.toString('utf8') };
+      return { path: relative, role: relative === material.research ? 'research' : relative === `prompts/materials/${material.id}.md` ? 'prompt' : 'context', content: bytes.toString('utf8') };
     });
     const paths = new Set([`entries/materials/${material.id}.json`, material.preview, ...documentPaths, ...contentFiles, ...(material.gallery || []).map(picture => picture.path)]);
     const files = [...paths].sort().map(relative => {
-      const role = relative === material.preview ? 'preview' : material.type === 'agent-skill' && material.sourceFiles.includes(relative) ? 'source' : documentPaths.includes(relative) || relative === `entries/materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
+      const role = relative === material.preview ? 'preview' : relative.includes('/source/') ? 'process' : /\/(?:LICENSE[^/]*|[^/]*-OFL\.txt)$/.test(relative) ? 'license' : material.sourceFiles.includes(relative) ? 'source' : relative.includes('/fonts/') ? 'font' : relative.includes('/vendor/') && !documentPaths.includes(relative) ? 'vendor' : documentPaths.includes(relative) || relative === `entries/materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
       return { path: relative, role };
     });
-    for (const relative of material.sourceFiles) if (!files.some(file => file.path === relative && file.role === 'source')) throw new Error(`Material source is outside its source manifest: ${material.id}/${relative}`);
+    for (const relative of material.sourceFiles) if (!files.some(file => file.path === relative)) throw new Error(`Material source is outside its source manifest: ${material.id}/${relative}`);
     for (const demo of material.demos || []) if (!files.some(file => file.path === demo.entrypoint.split(/[?#]/)[0] && file.role === 'source')) throw new Error(`Material demo is outside its source manifest: ${material.id}/${demo.id}`);
     const bundle = { schemaVersion: 1, id: material.id, material, documents, files, sourceFiles: material.sourceFiles };
     const relative = `agent/materials/${material.id}.json`;
     const bytes = encode(bundle);
     outputs.set(relative, bytes);
     bundles.push(bundle);
-    return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, skill: material.skillPath, entry: `entries/materials/${material.id}.json`, preview: material.preview } };
+    return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, snapshot: material.snapshotPath, snapshotEntry: material.snapshotEntry, entry: `entries/materials/${material.id}.json`, preview: material.preview } };
   });
   const catalog = { schemaVersion: 1, repository: 'https://github.com/MIBXR/web-atlas', materialCount: records.length, materials: records };
-  outputs.set('agent/materials.json', encode(catalog));
+  outputs.set('agent/materials/index.json', encode(catalog));
   outputs.set('data/materials.js', Buffer.from('window.DESIGN_MATERIALS = ' + JSON.stringify(materials, null, 2) + ';\n', 'utf8'));
   if (write) {
     fs.mkdirSync(repositoryFile(root, 'agent/materials', false), { recursive: true });

@@ -99,10 +99,10 @@
     "entries/cases/mori-art-museum.json",
     "entries/cases/rhine-lab.json",
     "entries/cases/swiss-grid.json",
-    "docs/research/endfield-industrial.md",
-    "docs/research/met-museum.md",
-    "docs/research/mori-art-museum.md",
-    "docs/research/rhine-lab.md",
-    "docs/research/swiss-grid.md"
+    "docs/cases/endfield-industrial.md",
+    "docs/cases/met-museum.md",
+    "docs/cases/mori-art-museum.md",
+    "docs/cases/rhine-lab.md",
+    "docs/cases/swiss-grid.md"
   ]
 }

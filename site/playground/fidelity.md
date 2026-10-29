@@ -1,6 +1,6 @@
 # 巧思共享示意：实现与边界
 
-[独立入口](index.html)与网站内嵌示意共用 [JavaScript](pattern-playground.js) 和 [样式](pattern-playground.css)。五种示意用本地内容解释机制，取材依据见 [研究](../../docs/research/pattern-experiences.md)。它们没有新增案例或巧思，来源快照、日期与证据等级仍以原巧思记录为准。
+[独立入口](index.html)与网站内嵌示意共用 [JavaScript](pattern-playground.js) 和 [样式](pattern-playground.css)。五种示意用本地内容解释机制，取材依据见 [研究](../../docs/pattern-experiences.md)。它们没有新增案例或巧思，来源快照、日期与证据等级仍以原巧思记录为准。
 
 | 示意与触发 | 来源机制 | 当前本地对应与边界 |
 | --- | --- | --- |

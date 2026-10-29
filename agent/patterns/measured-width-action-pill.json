@@ -59,7 +59,7 @@
       "demos/cases/notion-editorial/script.js",
       "demos/cases/notion-editorial/style.css",
       "entries/cases/notion-editorial.json",
-      "docs/research/notion-editorial.md"
+      "docs/cases/notion-editorial.md"
     ]
   },
   "sourceCases": [
@@ -70,6 +70,223 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/cases/notion-editorial/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/measured-width-action-pill.md",
+      "role": "prompt",
+      "content": "# 测量文字宽度的动作胶囊 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/measured-width-action-pill.json)\n\n为【目标页面/组件】实现「测量文字宽度的动作胶囊」。动作词直接替换，再测量内容宽度并过渡胶囊inline-size；颜色与圆点随语义同步，不给字加额外飞入。触发：固定词轮换周期。可见结果：主张保持一行连续，词长变化可读。适用任务：多个等价动作的产品主张。保留完整静态句子供读屏，减少动态固定一个可读词。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责主张保持一行连续，词长变化可读，职责限定在当前区域。组合时保留完整静态句子供读屏，减少动态固定一个可读词。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 保留完整静态句子供读屏，减少动态固定一个可读词。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/automate.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/capture.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/figma.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/find.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/hero.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/hero.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/mobile.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/notion-bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/notion-regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/openai.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-3.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-5.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-6.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-7.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/ramp.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/notion-editorial/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/notion-editorial/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/notion-editorial/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/notion-editorial/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/notion-editorial.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/notion-editorial.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/measured-width-action-pill.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/notion-editorial-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/notion-editorial-reference.png",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/notion-editorial.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/notion-editorial.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/measured-width-action-pill.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

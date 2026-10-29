@@ -85,7 +85,7 @@
   "demo": "demos/cases/bauhaus-geometry/index.html",
   "preview": "previews/cases/bauhaus-geometry.jpg",
   "theoryVerifiedAt": "2026-10-07",
-  "research": "docs/research/bauhaus-geometry.md",
+  "research": "docs/cases/bauhaus-geometry.md",
   "exercise": "加入第二组不使用原色的材料色板，检验相同几何关系是否仍能表达平衡与张力。",
   "composition": {
     "color": "红、蓝、黄色块以面积与位置建立张力，黑色文字保持稳定。",

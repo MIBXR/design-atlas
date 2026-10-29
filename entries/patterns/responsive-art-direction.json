@@ -76,8 +76,8 @@
     "entries/cases/fuji-rock.json",
     "entries/cases/mori-art-museum.json",
     "entries/cases/uma-musume.json",
-    "docs/research/fuji-rock.md",
-    "docs/research/mori-art-museum.md",
-    "docs/research/uma-musume.md"
+    "docs/cases/fuji-rock.md",
+    "docs/cases/mori-art-museum.md",
+    "docs/cases/uma-musume.md"
   ]
 }

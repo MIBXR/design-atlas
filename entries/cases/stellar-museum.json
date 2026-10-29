@@ -62,7 +62,7 @@
   "negativePrompt": "复现本归档时，不改来源页面的设计、文案、结构、交互或占位业务；只把外链资源换为本地路径。虚构机构、馆藏、地址和未来事件不得作为现实事实。此处为 Web Atlas 的复现约束，非来源原始负向提示词。",
   "demo": "demos/cases/stellar-museum/index.html",
   "preview": "previews/cases/stellar-museum.jpg",
-  "research": "docs/research/stellar-museum.md",
+  "research": "docs/cases/stellar-museum.md",
   "exercise": "在同一视口下打开主页面与 baseline.html，逐项观察结构、字体职责、色彩、局部动效与信息层级；区分作者对照说明、源码数值和实际浏览器结果。",
   "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
   "implementation": "reference-study",

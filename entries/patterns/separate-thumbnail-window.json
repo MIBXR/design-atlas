@@ -52,7 +52,7 @@
   ],
   "sourceFiles": [
     "entries/cases/zenless-zone-zero.json",
-    "docs/research/zenless-zone-zero.md",
+    "docs/cases/zenless-zone-zero.md",
     "demos/cases/zenless-zone-zero/app.js",
     "demos/cases/zenless-zone-zero/data.js",
     "demos/cases/zenless-zone-zero/fidelity.md",

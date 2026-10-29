@@ -64,5 +64,162 @@
         "demo": "demos/cases/claude-platform/index.html"
       }
     }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/moving-tab-selection-bed.md",
+      "role": "prompt",
+      "content": "# 选中底板与套餐组联动 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/moving-tab-selection-bed.json)\n\n为【目标页面/组件】实现「选中底板与套餐组联动」。一个选中底板沿tabs位置移动，同时替换当前受众对应的套餐卡；不同卡数仍由内容区域自然布局。触发：选择个人或团队受众。可见结果：选择位置与可见方案一致。适用任务：受众分组的套餐与能力介绍。按真实受众组织方案，未验证的源动态标明公共模块依据。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责选择位置与可见方案一致，职责限定在当前区域。组合时按真实受众组织方案，未验证的源动态标明公共模块依据。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 按真实受众组织方案，未验证的源动态标明公共模块依据。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/cowork.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/sans.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/serif.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/claude-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/claude-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/claude-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/moving-tab-selection-bed.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/claude-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/claude-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/claude-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/claude-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/moving-tab-selection-bed.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
+    }
   ]
 }

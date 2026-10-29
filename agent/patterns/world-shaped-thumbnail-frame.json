@@ -52,7 +52,7 @@
       "demos/cases/zelda-world/script.js",
       "demos/cases/zelda-world/style.css",
       "entries/cases/zelda-world.json",
-      "docs/research/zelda-world.md"
+      "docs/cases/zelda-world.md"
     ]
   },
   "sourceCases": [
@@ -63,6 +63,291 @@
         "bundle": "agent/cases/zelda-world.json",
         "demo": "demos/cases/zelda-world/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/world-shaped-thumbnail-frame.md",
+      "role": "prompt",
+      "content": "# 目录边框延续世界语汇 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/world-shaped-thumbnail-frame.json)\n\n为【目标页面/组件】实现「目录边框延续世界语汇」。缩略入口使用来源角纹与削角轮廓，hover/current增加内框，真实内容图与选中状态保持稳定。触发：浏览、聚焦或选择缩略图。可见结果：操作控件与主视觉共享身份。适用任务：有明确图形语汇的游戏或展览。可点击面积和可读标签保持规则，装饰不替代选择状态。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责操作控件与主视觉共享身份，职责限定在当前区域。组合时可点击面积和可读标签保持规则，装饰不替代选择状态。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 可点击面积和可读标签保持规则，装饰不替代选择状态。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/bg_loading.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/bgm.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/btn_sound_off.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/btn_sound_on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/caption_1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/caption_2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/caption_3.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/chapter-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/chapter-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/chapter-3.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/frame_thumbnail.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/kakeru-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/kakeru.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/logo.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/mask_loading.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_character_on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_character.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_movie_on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_movie.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_world_on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/nav_world.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/obj_loading_2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/se.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/sound-control-off.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/sound-control-on.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/title_sound.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/title-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/title-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/title-3.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/tsukuru-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/tsukuru.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/tsumugu-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/tsumugu.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/assets/txt_sound.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zelda-world/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/zelda-world/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zelda-world/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/assets/kakeru.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/assets/tsukuru.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/assets/tsumugu.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/zelda-world.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/zelda-world.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/world-shaped-thumbnail-frame.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/zelda-world-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/zelda-world-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/zelda-world.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/zelda-world.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/world-shaped-thumbnail-frame.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

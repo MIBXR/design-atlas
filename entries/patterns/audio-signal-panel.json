@@ -46,6 +46,6 @@
   "sourceFiles": [
     "demos/cases/retro-80s/index.html",
     "entries/cases/retro-80s.json",
-    "docs/research/retro-80s.md"
+    "docs/cases/retro-80s.md"
   ]
 }

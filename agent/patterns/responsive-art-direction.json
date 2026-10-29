@@ -79,9 +79,9 @@
       "entries/cases/fuji-rock.json",
       "entries/cases/mori-art-museum.json",
       "entries/cases/uma-musume.json",
-      "docs/research/fuji-rock.md",
-      "docs/research/mori-art-museum.md",
-      "docs/research/uma-musume.md"
+      "docs/cases/fuji-rock.md",
+      "docs/cases/mori-art-museum.md",
+      "docs/cases/uma-musume.md"
     ]
   },
   "sourceCases": [
@@ -108,6 +108,487 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/cases/uma-musume/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/responsive-art-direction.md",
+      "role": "prompt",
+      "content": "# 桌面与手机使用专门主图 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/responsive-art-direction.json)\n\n为【目标页面/组件】实现「桌面与手机使用专门主图」。通过picture或响应式资源选择桌面宽图与手机专图，保留主体位置及图内文字，正文与控件按设备重新排。触发：视口进入手机断点。可见结果：人物和海报在窄屏仍保持完整表达。适用任务：有官方横竖图的展览与游戏。不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责人物和海报在窄屏仍保持完整表达，职责限定在当前区域。组合时不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 不同素材变体必须有真实来源与用途，不能把本地重排说成逐像素原版。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4spc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4ssp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aC8sy0ycHbxdRqtlOkZQXy8CrGnlxFEKz3yPwGxJ.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjpc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjsp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/buy_ticket.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/logo_mountain.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/logo_type.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon02.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon04.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon05.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon06.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon11.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon07.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon08.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon09.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon10.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/teHObwbhgXgjKLqX8HrBRJln7mxMNiwc5nSEcBsA.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/W2upzapTzUVTHJJK0lsN7vMw4gUaVuSQWU6Z2qUb.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJpc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJsp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/xQh5p3rAKkRkA04nH6TGqX7Pnp7hYgJ947xpjHyJ.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/fuji-rock/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/source/assets/source-style.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/fuji-rock/source/screenshots/fuji-rock-menu-source.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/fuji-rock/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_ATRoMap41_450_225-thumb-450xauto-19213.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mamproject035_1280-thumb-450xauto-18855.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mams024_1280-thumb-450xauto-18960.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_marikomori_schoolprograms_450_225-thumb-450xauto-19151.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_1280_260916-thumb-450xauto-19115.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_1280_261001-thumb-1600xauto-19211.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_450_260916-thumb-450xauto-19114.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_moricaf2026_1280-thumb-450xauto-17981.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_ronmueck_advanceticket_450_225-thumb-450xauto-19133.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo_small.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo450_225-thumb-450xauto-18509.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/TicketEc_thum_2024.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/source/assets/source-style.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/about_bg.BBeJqHpY.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/about_thumbnail.CGFLxShD.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/app-icon.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/badge-appstore.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/badge-googleplay.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/badge-steam.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/download-background.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_bg.BJUQipob.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_1-1.PhrOaKih.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_1-2.DY13j7tt.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_2-1.BcVJ7hBy.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_2-2.BKFdgH7d.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_3-1.BNkL4nTh.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_3-2.Bimj2-Ng.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_silencesuzuka.Chw3ZKQc.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_specialweek.CDUq1xrt.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_winningticket.BucYg9KM.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/header-arrow.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/header-blue.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/horseshoe.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/kv_txt_playnow.D6KNRgME.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/kv.C6tHq3MX.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/kv.CNY-_2Hw.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/logo-umamusume.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/news_bg.nsyAwrrN.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/top_about.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/uma-musume/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/fuji-rock.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/mori-art-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/uma-musume.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/fuji-rock.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/mori-art-museum.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/uma-musume.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/responsive-art-direction.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/fuji-rock-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/fuji-rock-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/fuji-rock.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mori-art-museum-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mori-art-museum-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mori-art-museum.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/uma-musume-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/uma-musume-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/uma-musume.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/fuji-rock.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/mori-art-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/uma-musume.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/responsive-art-direction.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

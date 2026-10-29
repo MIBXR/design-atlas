@@ -1,10 +1,12 @@
 # Reacticle · 长文排版组件库
 
+[来源、版本、许可与使用边界](../../entries/materials/reacticle.json)
+
 Reacticle 是用于文章、报告和交互长文的 React 语义化组件库，提供 11 套有独立排版契约的主题。内容通过同一套组件表达，主题决定文字层级、网格、留白、图表与代码的视觉语言。
 
 ## 安装与取材
 
-上游 README 指向的开始使用页给出 `npm install reacticle`，React 18.3 是 peer 依赖。本库样例直接使用 Reacticle 0.2.6 固定提交 `dcfc4baf386bbc220cd1aa6274bed3b741108465` 的 `src/` 与 `apps/site`，未修改报告组件或主题 CSS。公共入口 `ThemeProvider` 包裹文章，再组合 `Article`、`Hero`、`Section`、公式、代码、决策和媒体组件；自定义 `Raw` 内容继续使用 `--ra-*` 主题变量。
+上游 README 指向的开始使用页给出 `npm install reacticle`，React 18.3 是 peer 依赖。本地样例使用上游 `src/` 与 `apps/site` 的报告组件和主题 CSS。公共入口 `ThemeProvider` 包裹文章，再组合 `Article`、`Hero`、`Section`、公式、代码、决策和媒体组件；自定义 `Raw` 内容继续使用 `--ra-*` 主题变量。
 
 11 个独立入口复用原画廊的文章容器及原站 CSS，仅渲染对应文章。入口在模块加载前设置 `Prism.manual = true`，由原 React 组件逐行高亮，保留代码行容器与换行。样例索引按 `?demo=<id>` 选择后直接打开对应静态页；每篇的 JS、CSS 与公式字体由 Vite 以相对路径构建，Google Fonts 使用共享本地文件。
 
@@ -26,25 +28,12 @@ Reacticle 是用于文章、报告和交互长文的 React 语义化组件库，
 
 主题绑定与上游 `gallery.tsx` 完全一致。限流器文件名为 `RateLimiter.tsx`，实际组件导出为 `RateLimiterSpec`。样文保留原文、图形、公式、代码和交互；图库外壳中的官网导航、浮动返回信息和上一篇／下一篇不属于独立文章页面。
 
-## 适合与不适合
-
-适合数据笔记、研究分析、技术解释、故障复盘、设计规范、出版随笔和教学文章。先按内容任务选主题，再读主题 profile 与相应样例，避免将主题理解为简单换色。它不负责后台应用、复杂表单或完整网站的信息架构。
-
 ## 关联工作流
 
-[beautiful-article](../../materials.html#material/beautiful-article) 提供来源整理、计划、写作、审阅、修复和交付流程，Reacticle 是它的组件与主题实现。11 套风格说明概括自 garden-skills 固定提交 `2b9a89340b70f632d31c0f1c69fce94a7912423e` 的 `theme-profiles/`，每套主题的样文在本条目的样例中。
+[beautiful-article](../../materials.html#material/beautiful-article) 提供来源整理、计划、写作、审阅、修复和交付流程，Reacticle 是它的组件与主题实现。主题写作资料见关联技能快照中的 `theme-profiles/`。
 
 ## 本地资源与可访问性
 
 原站引入的 Newsreader、IBM Plex Sans、IBM Plex Mono、Source Serif 4、JetBrains Mono、Fraunces、Hanken Grotesk、Quicksand、Nunito、Playfair Display、Josefin Sans、Poppins 和 Space Grotesk 共 13 个字体家族、76 个 WOFF2 文件已本地化。保留原字重、样式与子集范围；中文继续使用原主题声明的系统字体回退。
 
 文章内目录、按钮、滑块与展开内容沿用原实现。减少动态使用原站 CSS；呼吸练习保留原始开始／暂停和计时逻辑。源码及依赖完整保留并不等于读屏器、真实触屏和所有浏览器的行为均已实测。
-
-## 来源与许可
-
-- [Reacticle 固定源码](https://github.com/ConardLi/reacticle/tree/dcfc4baf386bbc220cd1aa6274bed3b741108465)：0.2.6，作者 ConardLi。原始 `package.json` 声明 MIT，**仓库内没有 LICENSE 文件**。原始声明保存在 `demos/materials/reacticle/vendor/reacticle-package.json`。
-- React、React DOM、scheduler、KaTeX 与 Prism：保留各自原始 MIT 许可。
-- 13 个 Google Fonts 家族：逐家族附 SIL Open Font License 1.1；KaTeX 公式字体的嵌入 OFL 声明与全文单独保留。
-- 字体、软件版本与文件说明见 [第三方声明](../../demos/materials/reacticle/vendor/NOTICE.md)；[样例说明](../../demos/materials/reacticle/README.md) 记录每篇与原始报告文件的对应。
-
-本库用于个人非商业学习，保留原文与署名，软件许可声明与字体许可分别记录。
