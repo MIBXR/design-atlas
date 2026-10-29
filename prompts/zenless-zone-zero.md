@@ -1,6 +1,6 @@
 # 绝区零 · 六章街头拼贴首页 · 复用 Prompt
 
-由 [结构化案例](../entries/zenless-zone-zero.json) 自动生成。参考观察与具体边界见 [调研](../research/zenless-zone-zero.md)。
+由 [结构化案例](../entries/cases/zenless-zone-zero.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/zenless-zone-zero.md)。
 
 ## 正向 Prompt
 
@@ -23,4 +23,4 @@
 
 保留一套真实人物资料，分别实现头像窗口翻页与人物选择，检查翻页后当前身份不变、快速选择后所有身份线索一致。
 
-[查看 Demo](../demos/zenless-zone-zero/index.html) · [返回案例库](../cases.html#style/zenless-zone-zero)
+[查看 Demo](../demos/cases/zenless-zone-zero/index.html) · [返回案例库](../cases.html#style/zenless-zone-zero)

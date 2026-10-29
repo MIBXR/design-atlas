@@ -54,7 +54,7 @@
     "sources": [
       {
         "caseId": "suzhou-museum",
-        "locator": "entries/suzhou-museum.json#composition/layout",
+        "locator": "entries/cases/suzhou-museum.json#composition/layout",
         "observation": "四屏完整结构；50px左右外缘，1440×900时主画面1340×755；第三屏按原九项/75%与25%两区组织。",
         "evidence": "observed",
         "referenceUrl": "https://www.szmuseum.com/Home/Index",
@@ -62,13 +62,13 @@
       }
     ],
     "sourceFiles": [
-      "entries/suzhou-museum.json",
-      "research/suzhou-museum.md",
-      "demos/suzhou-museum/fidelity.md",
-      "demos/suzhou-museum/index.html",
-      "demos/suzhou-museum/style.css",
-      "demos/suzhou-museum/app.js",
-      "demos/suzhou-museum/state-matrix.md"
+      "entries/cases/suzhou-museum.json",
+      "docs/research/suzhou-museum.md",
+      "demos/cases/suzhou-museum/fidelity.md",
+      "demos/cases/suzhou-museum/index.html",
+      "demos/cases/suzhou-museum/style.css",
+      "demos/cases/suzhou-museum/app.js",
+      "demos/cases/suzhou-museum/source/state-matrix.md"
     ]
   },
   "sourceCases": [
@@ -77,7 +77,7 @@
       "title": "苏州博物馆 · 四屏门户与图像目的地",
       "paths": {
         "bundle": "agent/cases/suzhou-museum.json",
-        "demo": "demos/suzhou-museum/index.html"
+        "demo": "demos/cases/suzhou-museum/index.html"
       }
     }
   ]

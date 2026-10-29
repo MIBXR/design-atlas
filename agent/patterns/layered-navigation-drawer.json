@@ -45,7 +45,7 @@
     "sources": [
       {
         "caseId": "google-material",
-        "locator": "entries/google-material.json#interaction/2",
+        "locator": "entries/cases/google-material.json#interaction/2",
         "observation": "进入目录或二级主题：300ms侧向抽屉；二级内容200ms延后再200ms淡入。 导航容器保持连续，内容层级在同一位置变化。",
         "evidence": "observed",
         "referenceUrl": "https://m3.material.io/",
@@ -53,12 +53,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/google-material/app.js",
-      "demos/google-material/fidelity.md",
-      "demos/google-material/index.html",
-      "demos/google-material/style.css",
-      "entries/google-material.json",
-      "research/google-material.md"
+      "demos/cases/google-material/app.js",
+      "demos/cases/google-material/fidelity.md",
+      "demos/cases/google-material/index.html",
+      "demos/cases/google-material/style.css",
+      "entries/cases/google-material.json",
+      "docs/research/google-material.md"
     ]
   },
   "sourceCases": [
@@ -67,7 +67,7 @@
       "title": "Google Material：表现力与组件秩序",
       "paths": {
         "bundle": "agent/cases/google-material.json",
-        "demo": "demos/google-material/index.html"
+        "demo": "demos/cases/google-material/index.html"
       }
     }
   ]

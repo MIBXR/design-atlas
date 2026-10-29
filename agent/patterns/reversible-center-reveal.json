@@ -46,7 +46,7 @@
     "sources": [
       {
         "caseId": "monument-valley-game",
-        "locator": "entries/monument-valley-game.json#interaction/2",
+        "locator": "entries/cases/monument-valley-game.json#interaction/2",
         "observation": "奖项：视口中心进入/离开时，350ms opacity 0↔1、translateY 20px↔0，双向有效；手机Show All/Hide通过350ms高度变化展开/收回六项。",
         "evidence": "observed",
         "referenceUrl": "https://www.monumentvalleygame.com/mv1",
@@ -54,12 +54,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/monument-valley-game/app.js",
-      "demos/monument-valley-game/fidelity.md",
-      "demos/monument-valley-game/index.html",
-      "demos/monument-valley-game/style.css",
-      "entries/monument-valley-game.json",
-      "research/monument-valley-game.md"
+      "demos/cases/monument-valley-game/app.js",
+      "demos/cases/monument-valley-game/fidelity.md",
+      "demos/cases/monument-valley-game/index.html",
+      "demos/cases/monument-valley-game/style.css",
+      "entries/cases/monument-valley-game.json",
+      "docs/research/monument-valley-game.md"
     ]
   },
   "sourceCases": [
@@ -68,7 +68,7 @@
       "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
       "paths": {
         "bundle": "agent/cases/monument-valley-game.json",
-        "demo": "demos/monument-valley-game/index.html"
+        "demo": "demos/cases/monument-valley-game/index.html"
       }
     }
   ]

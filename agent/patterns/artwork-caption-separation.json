@@ -41,7 +41,7 @@
     "sources": [
       {
         "caseId": "met-museum",
-        "locator": "entries/met-museum.json#composition/imagery",
+        "locator": "entries/cases/met-museum.json#composition/imagery",
         "observation": "官方建筑摄影、Sanity CDN展览海报与符合条件的Met API藏品图，本地保留比例、署名与原色。",
         "evidence": "adapted",
         "referenceUrl": "https://www.metmuseum.org/en",
@@ -49,7 +49,7 @@
       },
       {
         "caseId": "met-museum",
-        "locator": "entries/met-museum.json#constraints/2",
+        "locator": "entries/cases/met-museum.json#constraints/2",
         "observation": "展览海报保留原视觉，不在图片上重复绘制标题或大渐变遮罩。",
         "evidence": "observed",
         "referenceUrl": "https://www.metmuseum.org/en",
@@ -57,7 +57,7 @@
       },
       {
         "caseId": "design-sight",
-        "locator": "entries/design-sight.json#composition/imagery",
+        "locator": "entries/cases/design-sight.json#composition/imagery",
         "observation": "真实方丈记与TYPE-XVII海报、建筑照片、访问地图、研究照片本地化，保留原比例。",
         "evidence": "adapted",
         "referenceUrl": "https://www.2121designsight.jp/",
@@ -65,18 +65,18 @@
       }
     ],
     "sourceFiles": [
-      "demos/design-sight/app.js",
-      "demos/design-sight/fidelity.md",
-      "demos/design-sight/index.html",
-      "demos/design-sight/style.css",
-      "demos/met-museum/fidelity.md",
-      "demos/met-museum/index.html",
-      "demos/met-museum/script.js",
-      "demos/met-museum/style.css",
-      "entries/design-sight.json",
-      "entries/met-museum.json",
-      "research/design-sight.md",
-      "research/met-museum.md"
+      "demos/cases/design-sight/app.js",
+      "demos/cases/design-sight/fidelity.md",
+      "demos/cases/design-sight/index.html",
+      "demos/cases/design-sight/style.css",
+      "demos/cases/met-museum/fidelity.md",
+      "demos/cases/met-museum/index.html",
+      "demos/cases/met-museum/script.js",
+      "demos/cases/met-museum/style.css",
+      "entries/cases/design-sight.json",
+      "entries/cases/met-museum.json",
+      "docs/research/design-sight.md",
+      "docs/research/met-museum.md"
     ]
   },
   "sourceCases": [
@@ -85,7 +85,7 @@
       "title": "21_21 DESIGN SIGHT：海报与四列档案",
       "paths": {
         "bundle": "agent/cases/design-sight.json",
-        "demo": "demos/design-sight/index.html"
+        "demo": "demos/cases/design-sight/index.html"
       }
     },
     {
@@ -93,7 +93,7 @@
       "title": "The Met · 编辑式展览与馆藏陈列",
       "paths": {
         "bundle": "agent/cases/met-museum.json",
-        "demo": "demos/met-museum/index.html"
+        "demo": "demos/cases/met-museum/index.html"
       }
     }
   ]

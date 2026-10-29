@@ -1,6 +1,6 @@
 # 纪念碑谷：电影首入、奖项进入与中心画廊 · 复用 Prompt
 
-由 [结构化案例](../entries/monument-valley-game.json) 自动生成。参考观察与具体边界见 [调研](../research/monument-valley-game.md)。
+由 [结构化案例](../entries/cases/monument-valley-game.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/monument-valley-game.md)。
 
 ## 正向 Prompt
 
@@ -23,4 +23,4 @@
 
 比较桌面中心三图与手机一图加20%侧图；切至第十四张再下一张，快速反向选择并暂停自动播放，检查当前索引、轨道和可聚焦元素始终一致。再上下穿越奖项中心，观察350ms双向进入与手机Show All高度变化。
 
-[查看 Demo](../demos/monument-valley-game/index.html) · [返回案例库](../cases.html#style/monument-valley-game)
+[查看 Demo](../demos/cases/monument-valley-game/index.html) · [返回案例库](../cases.html#style/monument-valley-game)

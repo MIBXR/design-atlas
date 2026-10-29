@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "philharmonie-music",
-        "locator": "entries/philharmonie-music.json#interaction/4",
+        "locator": "entries/cases/philharmonie-music.json#interaction/4",
         "observation": "打开Playlist：转到官方fanlink，选择个人音乐平台。 音乐是展览主题的延伸与回看媒介。",
         "evidence": "observed",
         "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
@@ -48,7 +48,7 @@
       },
       {
         "caseId": "fuji-rock",
-        "locator": "entries/fuji-rock.json#soundBehavior/control",
+        "locator": "entries/cases/fuji-rock.json#soundBehavior/control",
         "observation": "Aftermovie链接到官方YouTube；没有独立BGM开关。",
         "evidence": "observed",
         "referenceUrl": "https://www.fujirockfestival.com/",
@@ -56,7 +56,7 @@
       },
       {
         "caseId": "persona-kinetic",
-        "locator": "entries/persona-kinetic.json#soundBehavior/control",
+        "locator": "entries/cases/persona-kinetic.json#soundBehavior/control",
         "observation": "WATCH THE OFFICIAL TRAILER 点击打开原始YouTube宣传片。",
         "evidence": "observed",
         "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
@@ -64,24 +64,24 @@
       }
     ],
     "sourceFiles": [
-      "demos/fuji-rock/app.js",
-      "demos/fuji-rock/fidelity.md",
-      "demos/fuji-rock/index.html",
-      "demos/fuji-rock/style.css",
-      "demos/persona-kinetic/fidelity.md",
-      "demos/persona-kinetic/index.html",
-      "demos/persona-kinetic/script.js",
-      "demos/persona-kinetic/style.css",
-      "demos/philharmonie-music/fidelity.md",
-      "demos/philharmonie-music/index.html",
-      "demos/philharmonie-music/script.js",
-      "demos/philharmonie-music/style.css",
-      "entries/fuji-rock.json",
-      "entries/persona-kinetic.json",
-      "entries/philharmonie-music.json",
-      "research/fuji-rock.md",
-      "research/persona-kinetic.md",
-      "research/philharmonie-music.md"
+      "demos/cases/fuji-rock/app.js",
+      "demos/cases/fuji-rock/fidelity.md",
+      "demos/cases/fuji-rock/index.html",
+      "demos/cases/fuji-rock/style.css",
+      "demos/cases/persona-kinetic/fidelity.md",
+      "demos/cases/persona-kinetic/index.html",
+      "demos/cases/persona-kinetic/script.js",
+      "demos/cases/persona-kinetic/style.css",
+      "demos/cases/philharmonie-music/fidelity.md",
+      "demos/cases/philharmonie-music/index.html",
+      "demos/cases/philharmonie-music/script.js",
+      "demos/cases/philharmonie-music/style.css",
+      "entries/cases/fuji-rock.json",
+      "entries/cases/persona-kinetic.json",
+      "entries/cases/philharmonie-music.json",
+      "docs/research/fuji-rock.md",
+      "docs/research/persona-kinetic.md",
+      "docs/research/philharmonie-music.md"
     ]
   },
   "sourceCases": [
@@ -90,7 +90,7 @@
       "title": "Fuji Rock：现场照片与节日导览",
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
-        "demo": "demos/fuji-rock/index.html"
+        "demo": "demos/cases/fuji-rock/index.html"
       }
     },
     {
@@ -98,7 +98,7 @@
       "title": "Persona 5 Royal · 黑金角色拼贴",
       "paths": {
         "bundle": "agent/cases/persona-kinetic.json",
-        "demo": "demos/persona-kinetic/index.html"
+        "demo": "demos/cases/persona-kinetic/index.html"
       }
     },
     {
@@ -106,7 +106,7 @@
       "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
       "paths": {
         "bundle": "agent/cases/philharmonie-music.json",
-        "demo": "demos/philharmonie-music/index.html"
+        "demo": "demos/cases/philharmonie-music/index.html"
       }
     }
   ]

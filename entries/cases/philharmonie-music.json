@@ -1,0 +1,125 @@
+{
+  "id": "philharmonie-music",
+  "order": 28,
+  "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
+  "subtitle": "Video Games & Music + Carte blanche à George Benjamin",
+  "category": "艺术/文化",
+  "country": "法国",
+  "tags": [
+    "法国",
+    "音乐厅",
+    "音乐展",
+    "音乐会",
+    "活动详情",
+    "侧栏票务"
+  ],
+  "summary": "法语活动详情以蓝色主视觉、中轴品牌和上浮票务侧栏呈现音乐展；顺序现场摄影与George Benjamin音乐会人物滑轨承担不同内容。",
+  "accent": "#be244f",
+  "background": "#f0f0f0",
+  "principles": [
+    "活动主视觉与日期先建立情境，票务侧栏与介绍承担不同任务。",
+    "中心下垂品牌标识贯穿两层导航，区别于左角产品Logo。",
+    "蓝色图像渐变保持白色标题可读，粉红/酒红胶囊承担预约操作。",
+    "展览以现场摄影证明体验，音乐会以人物、阵容和节目单提供不同内容。"
+  ],
+  "productFocus": "音乐展的互动体验和访问时间，以及音乐会的日期、演出阵容与节目。右侧票务区域支持快速查阅时间/价格，正文保留观展体验和真实图片。",
+  "interaction": [
+    "浏览展览／音乐会详情：原生长页与桌面sticky票务，小屏票务回文档流。 活动内容与来访决定并行，小屏避免固定面板遮挡正文。",
+    "打开主菜单和类别：浅灰全宽导航立即出现，类别切换为目的地列表；小屏菜单在页面流中展开。 机构多种活动保留层级，交互保持直接。",
+    "切换音乐会摄影：三幅署名摄影500ms横向轨道，克隆边界无缝循环；前后与暂停／触摸可操作。 用演出者肖像讲述阵容，邻接图像的运动维持观看连续。",
+    "展开Horaires／Tarifs／Programme：信息即时展开，声乐／乐器阵容以文字分段。 不离开当前详情即可完成到访和节目判断。",
+    "打开Playlist：转到官方fanlink，选择个人音乐平台。 音乐是展览主题的延伸与回看媒介。"
+  ],
+  "theme": "海军蓝、白色内容面板、酒红票务胶囊和官方Philharmonique字形，活动主视觉提供游戏色彩。",
+  "constraints": [
+    "使用官方Video Games & Music主图、展览摄影、George Benjamin摄影与sprite品牌标识。",
+    "桌面主图625px高，左正文约2/3，右侧白色16px圆角票务面板跨越主图和内容边界。",
+    "手机导航精简，票务面板进入正常流优先显示，不粘在窄屏覆盖正文。",
+    "音乐会为2026.10.23 20h00的George Benjamin场次，日期/阵容/节目按2026-10-07官方快照。",
+    "原站视频受第三方cookie控制，本地不嵌入YouTube或追踪脚本。",
+    "自然滚动；展览摄影静态顺序阅读，音乐会滑轨可暂停，减少动态仅手动即时切换。",
+    "展览与音乐会合并为局部学习区域，原独立详情长度不同；第三方视频、账号与售票后端不复制。Ayano Kamei仍是官网图轨素材，但当前节目单钢琴为Chisato Taniguchi，两者不可混为当前阵容。"
+  ],
+  "useCases": [
+    "文化活动详情",
+    "音乐会/音乐展门户",
+    "有丰富节目单的票务介绍"
+  ],
+  "avoid": [
+    "需要仿造售票结果的演示",
+    "把展览和音乐会内容抽象成同样卡片的页面"
+  ],
+  "tokens": {
+    "palette": [
+      "#001b3b",
+      "#ffffff",
+      "#f0f0f0",
+      "#be244f",
+      "#fdafe3"
+    ],
+    "type": "大写标题使用官方 Philharmonique Regular/Bold；正文使用 Arial，原站 Source Sans Pro 未下载。Philharmonique 缺小写字形，不用于正文。",
+    "layout": "双层导航中轴字标 → 蓝色横幅 → 2:1介绍/上浮sticky票务 → 当前音乐会 → 交通信息。",
+    "motion": "展览摄影为顺序静图；音乐会三人摄影500ms横轨对应观察时长，ease/6秒周期为本地近似。侧栏native details、自然滚动，减少动态仅手动即时切换。"
+  },
+  "sources": [
+    {
+      "title": "Video Games & Music exhibition — official detail",
+      "url": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+      "type": "实例",
+      "note": "2026-10-07：展览日期2026.04.02–11.01、蓝色主图、顺序现场照片、票务时间/价格折叠。"
+    },
+    {
+      "title": "Philharmonie saison 26/27",
+      "url": "https://philharmoniedeparis.fr/fr/programmation/saison-26-27",
+      "type": "实例",
+      "note": "2026-10-07官方26/27季节目，用于定位具体音乐会，不将所有场次视为未结束事件。"
+    },
+    {
+      "title": "Carte blanche à George Benjamin — official detail",
+      "url": "https://philharmoniedeparis.fr/fr/activite/concert/29485-carte-blanche-george-benjamin",
+      "type": "实例",
+      "note": "2026-10-07：George Benjamin场次2026.10.23 20h00，四部节目、阵容与三名人物摄影；500ms横轨可观察，自动周期未取得。"
+    },
+    {
+      "title": "W3C WAI Disclosure Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "type": "规范",
+      "note": "原生details与展开状态的实现参考，不证明场馆遵循整个APG或已全面合规。"
+    }
+  ],
+  "prompt": "为[项目]制作基于巴黎爱乐厅 · 音乐展与音乐会详情的局部交互学习页面。参考https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music，观察2026-10-07，固定这一次采集的语言/年度页面，完成后作为单一归档快照留存；后续原站变化不改变此案例。不能只借用品牌色后套通用营销模板。配色：官方CSS核验海军蓝#001b3b、白色面板、#be244f票务和#fdafe3支持入口。 字体：官方Philharmonique标题大写，正文保持分段；原站部分正文Source Sans Pro，本地该部分有字体差异。 版式：主视觉左下活动名，右侧票务面板上浮；长正文与侧栏分工，手机票务回到文档流。 图像：官方游戏手柄字母CG、Joachim Bertrand两张展览现场图，以及Matthew Lloyd、Capucine DeChocqueuse、Franck Ferville署名的三位音乐会艺术家摄影。 形状：品牌标识下垂矩形、16px圆角内容/票务块、长胶囊按钮；非所有内容统一卡片。 层级：大活动名和日期识别主题，预约按钮和折叠时间/价格解决到访问题，照片和节目单提供内容深度。 协调：统一中轴品牌与蓝色基础，展览用互动现场图、音乐会用阵容/节目单，跨内容类型保持不同表达。 关键流程：浏览展览／音乐会详情：原生长页与桌面sticky票务，小屏票务回文档流。 活动内容与来访决定并行，小屏避免固定面板遮挡正文。 打开主菜单和类别：浅灰全宽导航立即出现，类别切换为目的地列表；小屏菜单在页面流中展开。 机构多种活动保留层级，交互保持直接。 切换音乐会摄影：三幅署名摄影500ms横向轨道，克隆边界无缝循环；前后与暂停／触摸可操作。 用演出者肖像讲述阵容，邻接图像的运动维持观看连续。 展开Horaires／Tarifs／Programme：信息即时展开，声乐／乐器阵容以文字分段。 不离开当前详情即可完成到访和节目判断。 打开Playlist：转到官方fanlink，选择个人音乐平台。 音乐是展览主题的延伸与回看媒介。 主题：深蓝文字、浅灰正文和白色票务面板固定，无深浅模式开关。 音乐厅品牌、票务酒红和展览图像协调，反色可能削弱实际CG视觉。 声音：Playlist按钮链接真实官方音乐平台合集，用户主动聆听；首页没有独立BGM。 曲目把展览中的游戏音乐延续到网站外的听觉体验；不将图片轮播说成音频播放。 使用真实本地素材与正确比例，记录URL、作者、尺寸、hash和处理方式；无追踪。保留原站的章节交接、出入方向和指针反馈；桌面与390px手机分别实测。减少动态使用即时状态并保留全部内容；键盘与焦点可操作。完整数据库、账号与交易用真实官方外链。所有近似和未验证项在fidelity.md明确，不能用静态截图宣称全流程已还原。",
+  "negativePrompt": "不要把音乐展做成像素游戏伪官网，不捏造日期或购票成功，不套相同软件产品卡片，不把展览顺序摄影改成轮播。",
+  "demo": "demos/cases/philharmonie-music/index.html",
+  "preview": "previews/cases/philharmonie-music.jpg",
+  "referencePreview": "previews/cases/philharmonie-music-reference.jpg",
+  "research": "docs/research/philharmonie-music.md",
+  "exercise": "再选择一场经过官方核验的音乐会，对照节目/阵容结构，保留展览与音乐会信息表达差异。",
+  "composition": {
+    "color": "官方CSS核验海军蓝#001b3b、白色面板、#be244f票务和#fdafe3支持入口。",
+    "typography": "官方Philharmonique标题大写，正文保持分段；原站部分正文Source Sans Pro，本地该部分有字体差异。",
+    "layout": "主视觉左下活动名，右侧票务面板上浮；长正文与侧栏分工，手机票务回到文档流。",
+    "imagery": "官方游戏手柄字母CG、Joachim Bertrand两张展览现场图，以及Matthew Lloyd、Capucine DeChocqueuse、Franck Ferville署名的三位音乐会艺术家摄影。",
+    "shape": "品牌标识下垂矩形、16px圆角内容/票务块、长胶囊按钮；非所有内容统一卡片。",
+    "hierarchy": "大活动名和日期识别主题，预约按钮和折叠时间/价格解决到访问题，照片和节目单提供内容深度。",
+    "motion": "浏览展览／音乐会详情时原生长页与桌面sticky票务，小屏票务回文档流。；打开主菜单和类别时浅灰全宽导航立即出现，类别切换为目的地列表；小屏菜单在页面流中展开。；切换音乐会摄影时三幅署名摄影500ms横向轨道，克隆边界无缝循环；前后与暂停／触摸可操作。；展开Horaires／Tarifs／Programme时信息即时展开，声乐／乐器阵容以文字分段。；打开Playlist时转到官方fanlink，选择个人音乐平台。",
+    "coherence": "统一中轴品牌与蓝色基础，展览用互动现场图、音乐会用阵容/节目单，跨内容类型保持不同表达。"
+  },
+  "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
+  "implementation": "reference-study",
+  "fidelity": "demos/cases/philharmonie-music/fidelity.md",
+  "assetManifest": "demos/cases/philharmonie-music/assets-manifest.json",
+  "edition": "2026-10-07；法语展览与音乐会详情",
+  "referencePreviewNote": "参考截图的显示配色不作为品牌依据；本地海军蓝、白色面板、票务酒红等依据官方CSS。",
+  "themeBehavior": {
+    "mode": "fixed",
+    "default": "light",
+    "control": "深蓝文字、浅灰正文和白色票务面板固定，无深浅模式开关。",
+    "designReason": "音乐厅品牌、票务酒红和展览图像协调，反色可能削弱实际CG视觉。"
+  },
+  "soundBehavior": {
+    "kind": "external",
+    "control": "Playlist按钮链接真实官方音乐平台合集，用户主动聆听；首页没有独立BGM。",
+    "interactionRole": "曲目把展览中的游戏音乐延续到网站外的听觉体验；不将图片轮播说成音频播放。"
+  },
+  "capturedAt": "2026-10-07"
+}

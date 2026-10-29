@@ -41,7 +41,7 @@
     "sources": [
       {
         "caseId": "monument-valley-game",
-        "locator": "entries/monument-valley-game.json#interaction/3",
+        "locator": "entries/cases/monument-valley-game.json#interaction/3",
         "observation": "十四图画廊：500ms整条水平轨道、3秒自动推进、无限首尾衔接；桌面三张、手机一张加20%侧图，箭头/14个索引/方向键与点击侧图有效。悬停、焦点、离屏和后台暂停。",
         "evidence": "adapted",
         "referenceUrl": "https://www.monumentvalleygame.com/mv1",
@@ -49,7 +49,7 @@
       },
       {
         "caseId": "persona-kinetic",
-        "locator": "entries/persona-kinetic.json#interaction/3",
+        "locator": "entries/cases/persona-kinetic.json#interaction/3",
         "observation": "学校生活与怪盗行动分别采用无限中心轮播：箭头、左右键或横向触摸 → 500ms整条轨道滑动，相邻图露出；到末尾无缝接第一项。",
         "evidence": "adapted",
         "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
@@ -57,7 +57,7 @@
       },
       {
         "caseId": "philharmonie-music",
-        "locator": "entries/philharmonie-music.json#interaction/2",
+        "locator": "entries/cases/philharmonie-music.json#interaction/2",
         "observation": "切换音乐会摄影：三幅署名摄影500ms横向轨道，克隆边界无缝循环；前后与暂停／触摸可操作。 用演出者肖像讲述阵容，邻接图像的运动维持观看连续。",
         "evidence": "observed",
         "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
@@ -65,7 +65,7 @@
       },
       {
         "caseId": "fuji-rock",
-        "locator": "entries/fuji-rock.json#interaction/2",
+        "locator": "entries/cases/fuji-rock.json#interaction/2",
         "observation": "照片或Featured自动／手动切换：照片3600ms间隔、800ms淡化；Featured600ms中心循环，3600ms自动，手机露出两侧邻项。 照片传递现场氛围，中心轨道突出活动主题且提示还有内容。",
         "evidence": "observed",
         "referenceUrl": "https://www.fujirockfestival.com/",
@@ -73,30 +73,30 @@
       }
     ],
     "sourceFiles": [
-      "demos/fuji-rock/app.js",
-      "demos/fuji-rock/fidelity.md",
-      "demos/fuji-rock/index.html",
-      "demos/fuji-rock/style.css",
-      "demos/monument-valley-game/app.js",
-      "demos/monument-valley-game/fidelity.md",
-      "demos/monument-valley-game/index.html",
-      "demos/monument-valley-game/style.css",
-      "demos/persona-kinetic/fidelity.md",
-      "demos/persona-kinetic/index.html",
-      "demos/persona-kinetic/script.js",
-      "demos/persona-kinetic/style.css",
-      "demos/philharmonie-music/fidelity.md",
-      "demos/philharmonie-music/index.html",
-      "demos/philharmonie-music/script.js",
-      "demos/philharmonie-music/style.css",
-      "entries/fuji-rock.json",
-      "entries/monument-valley-game.json",
-      "entries/persona-kinetic.json",
-      "entries/philharmonie-music.json",
-      "research/fuji-rock.md",
-      "research/monument-valley-game.md",
-      "research/persona-kinetic.md",
-      "research/philharmonie-music.md"
+      "demos/cases/fuji-rock/app.js",
+      "demos/cases/fuji-rock/fidelity.md",
+      "demos/cases/fuji-rock/index.html",
+      "demos/cases/fuji-rock/style.css",
+      "demos/cases/monument-valley-game/app.js",
+      "demos/cases/monument-valley-game/fidelity.md",
+      "demos/cases/monument-valley-game/index.html",
+      "demos/cases/monument-valley-game/style.css",
+      "demos/cases/persona-kinetic/fidelity.md",
+      "demos/cases/persona-kinetic/index.html",
+      "demos/cases/persona-kinetic/script.js",
+      "demos/cases/persona-kinetic/style.css",
+      "demos/cases/philharmonie-music/fidelity.md",
+      "demos/cases/philharmonie-music/index.html",
+      "demos/cases/philharmonie-music/script.js",
+      "demos/cases/philharmonie-music/style.css",
+      "entries/cases/fuji-rock.json",
+      "entries/cases/monument-valley-game.json",
+      "entries/cases/persona-kinetic.json",
+      "entries/cases/philharmonie-music.json",
+      "docs/research/fuji-rock.md",
+      "docs/research/monument-valley-game.md",
+      "docs/research/persona-kinetic.md",
+      "docs/research/philharmonie-music.md"
     ]
   },
   "sourceCases": [
@@ -105,7 +105,7 @@
       "title": "Fuji Rock：现场照片与节日导览",
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
-        "demo": "demos/fuji-rock/index.html"
+        "demo": "demos/cases/fuji-rock/index.html"
       }
     },
     {
@@ -113,7 +113,7 @@
       "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
       "paths": {
         "bundle": "agent/cases/monument-valley-game.json",
-        "demo": "demos/monument-valley-game/index.html"
+        "demo": "demos/cases/monument-valley-game/index.html"
       }
     },
     {
@@ -121,7 +121,7 @@
       "title": "Persona 5 Royal · 黑金角色拼贴",
       "paths": {
         "bundle": "agent/cases/persona-kinetic.json",
-        "demo": "demos/persona-kinetic/index.html"
+        "demo": "demos/cases/persona-kinetic/index.html"
       }
     },
     {
@@ -129,7 +129,7 @@
       "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
       "paths": {
         "bundle": "agent/cases/philharmonie-music.json",
-        "demo": "demos/philharmonie-music/index.html"
+        "demo": "demos/cases/philharmonie-music/index.html"
       }
     }
   ]

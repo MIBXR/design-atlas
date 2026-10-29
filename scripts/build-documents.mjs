@@ -17,7 +17,7 @@ export function documentCatalog() {
     } else if (relative.endsWith('.md')) paths.push(relative);
   }
   for (const relative of [...files.filter(name => name.endsWith('.md')), ...folders.filter(name => name !== 'agent-skills')]) collect(relative);
-  const entries = fs.readdirSync(path.join(root, 'entries')).filter(name => name.endsWith('.json')).map(name => JSON.parse(fs.readFileSync(path.join(root, 'entries', name), 'utf8')));
+  const entries = fs.readdirSync(path.join(root, 'entries/cases')).filter(name => name.endsWith('.json')).map(name => JSON.parse(fs.readFileSync(path.join(root, 'entries/cases', name), 'utf8')));
   const research = new Set(entries.map(entry => entry.research));
   const caseTitles = new Map(entries.map(entry => [entry.id, entry.title]));
   const documents = [...new Set(paths)].map(relative => {
@@ -25,8 +25,8 @@ export function documentCatalog() {
     const heading = /^#\s+(.+?)\s*#*\s*$/m.exec(text)?.[1] || path.posix.basename(relative);
     let title = guideTitles[relative] || heading.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/<[^>]*>|[*`]/g, '').trim();
     const directory = relative.split('/')[0];
-    const group = guideTitles[relative] ? groups[0] : research.has(relative) ? groups[2] : directory === 'research' ? groups[1] : directory === 'prompts' ? groups[3] : groups[4];
-    if (directory === 'demos' && /\/(?:state-matrix|THIRD-PARTY-NOTICES)\.md$/.test(relative)) title = `${caseTitles.get(relative.split('/')[1]) || relative.split('/')[1]} · ${title}`;
+    const group = guideTitles[relative] ? groups[0] : research.has(relative) ? groups[2] : relative.startsWith('docs/research/') ? groups[1] : directory === 'prompts' ? groups[3] : groups[4];
+    if (directory === 'demos' && /\/(?:state-matrix|THIRD-PARTY-NOTICES|LICENSES)\.md$/.test(relative)) title = `${caseTitles.get(relative.split('/')[2]) || relative.split('/')[2]} · ${title}`;
     return {path:relative, title, group};
   });
   const guideOrder = Object.keys(guideTitles);

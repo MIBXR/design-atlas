@@ -41,7 +41,7 @@
     "sources": [
       {
         "caseId": "qoder-platform",
-        "locator": "entries/qoder-platform.json#interaction/0",
+        "locator": "entries/cases/qoder-platform.json#interaction/0",
         "observation": "工作台使用公开固定任务示例，点击本地“新任务”可返回输入；本地输入/Enter/发送进入固定会话而非调用模型，九个阶段按 180/480/760/1000/1200/1400/1600/1900/2250ms 展开；交付文件开关显示旁栏。",
         "evidence": "adapted",
         "referenceUrl": "https://qoder.cn/",
@@ -49,13 +49,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/qoder-platform/fidelity.md",
-      "demos/qoder-platform/index.html",
-      "demos/qoder-platform/journey.js",
-      "demos/qoder-platform/script.js",
-      "demos/qoder-platform/style.css",
-      "entries/qoder-platform.json",
-      "research/qoder-platform.md"
+      "demos/cases/qoder-platform/fidelity.md",
+      "demos/cases/qoder-platform/index.html",
+      "demos/cases/qoder-platform/journey.js",
+      "demos/cases/qoder-platform/script.js",
+      "demos/cases/qoder-platform/style.css",
+      "entries/cases/qoder-platform.json"
     ]
   },
   "sourceCases": [
@@ -64,7 +63,7 @@
       "title": "Qoder — 绿色工作台与多形态平台",
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
-        "demo": "demos/qoder-platform/index.html"
+        "demo": "demos/cases/qoder-platform/index.html"
       }
     }
   ]

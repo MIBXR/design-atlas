@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "uma-musume",
-        "locator": "entries/uma-musume.json#composition/shape",
+        "locator": "entries/cases/uma-musume.json#composition/shape",
         "observation": "向前倾斜的标题带、说明板与箭头复用斜切语言，平台下载徽章保持自己的标准轮廓。",
         "evidence": "observed",
         "referenceUrl": "https://umamusume.com/",
@@ -47,7 +47,7 @@
       },
       {
         "caseId": "persona-kinetic",
-        "locator": "entries/persona-kinetic.json#composition/shape",
+        "locator": "entries/cases/persona-kinetic.json#composition/shape",
         "observation": "斜切拼贴、金色边框、网点与剪贴字保持同一张海报的秩序。",
         "evidence": "observed",
         "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
@@ -55,7 +55,7 @@
       },
       {
         "caseId": "zenless-zone-zero",
-        "locator": "entries/zenless-zone-zero.json#composition/shape",
+        "locator": "entries/cases/zenless-zone-zero.json#composition/shape",
         "observation": "胶片齿孔、斜切面板、斜向人物窗口、粗描边胶囊和边缘编号轨道。",
         "evidence": "observed",
         "referenceUrl": "https://zzz.mihoyo.com/main",
@@ -63,28 +63,28 @@
       }
     ],
     "sourceFiles": [
-      "demos/persona-kinetic/fidelity.md",
-      "demos/persona-kinetic/index.html",
-      "demos/persona-kinetic/script.js",
-      "demos/persona-kinetic/style.css",
-      "demos/uma-musume/app.js",
-      "demos/uma-musume/fidelity.md",
-      "demos/uma-musume/index.html",
-      "demos/uma-musume/style.css",
-      "entries/persona-kinetic.json",
-      "entries/uma-musume.json",
-      "research/persona-kinetic.md",
-      "research/uma-musume.md",
-      "entries/zenless-zone-zero.json",
-      "research/zenless-zone-zero.md",
-      "demos/zenless-zone-zero/app.js",
-      "demos/zenless-zone-zero/data.js",
-      "demos/zenless-zone-zero/fidelity.md",
-      "demos/zenless-zone-zero/index.html",
-      "demos/zenless-zone-zero/mobile.html",
-      "demos/zenless-zone-zero/reference-mobile.css",
-      "demos/zenless-zone-zero/reference.css",
-      "demos/zenless-zone-zero/state.css"
+      "demos/cases/persona-kinetic/fidelity.md",
+      "demos/cases/persona-kinetic/index.html",
+      "demos/cases/persona-kinetic/script.js",
+      "demos/cases/persona-kinetic/style.css",
+      "demos/cases/uma-musume/app.js",
+      "demos/cases/uma-musume/fidelity.md",
+      "demos/cases/uma-musume/index.html",
+      "demos/cases/uma-musume/style.css",
+      "entries/cases/persona-kinetic.json",
+      "entries/cases/uma-musume.json",
+      "docs/research/persona-kinetic.md",
+      "docs/research/uma-musume.md",
+      "entries/cases/zenless-zone-zero.json",
+      "docs/research/zenless-zone-zero.md",
+      "demos/cases/zenless-zone-zero/app.js",
+      "demos/cases/zenless-zone-zero/data.js",
+      "demos/cases/zenless-zone-zero/fidelity.md",
+      "demos/cases/zenless-zone-zero/index.html",
+      "demos/cases/zenless-zone-zero/mobile.html",
+      "demos/cases/zenless-zone-zero/reference-mobile.css",
+      "demos/cases/zenless-zone-zero/reference.css",
+      "demos/cases/zenless-zone-zero/state.css"
     ]
   },
   "sourceCases": [
@@ -93,7 +93,7 @@
       "title": "Persona 5 Royal · 黑金角色拼贴",
       "paths": {
         "bundle": "agent/cases/persona-kinetic.json",
-        "demo": "demos/persona-kinetic/index.html"
+        "demo": "demos/cases/persona-kinetic/index.html"
       }
     },
     {
@@ -101,7 +101,7 @@
       "title": "赛马娘：群像赛道与斜切叙事",
       "paths": {
         "bundle": "agent/cases/uma-musume.json",
-        "demo": "demos/uma-musume/index.html"
+        "demo": "demos/cases/uma-musume/index.html"
       }
     },
     {
@@ -109,7 +109,7 @@
       "title": "绝区零 · 六章街头拼贴首页",
       "paths": {
         "bundle": "agent/cases/zenless-zone-zero.json",
-        "demo": "demos/zenless-zone-zero/index.html"
+        "demo": "demos/cases/zenless-zone-zero/index.html"
       }
     }
   ]

@@ -1,6 +1,6 @@
 # Web Atlas：从真实需求取得设计依据
 
-这是前端设计参考库。`entries/`、`patterns/`、`materials/`、研究和可运行 Demo 是内容源，`agent/` 是构建时生成的读取接口，`data/` 保存浏览器生成数据，`site/` 保存站点代码、共享运行时与图标。完整案例说明机制如何协作，设计巧思保存可独立借用的原子，内容素材保存带许可和可操作样例的实际资源。网页继续供人预览、对照和调配。真实品牌案例固定为标注日期的局部学习快照；经典风格条目是构成练习；示范作品归档公开 skill 或生成工具仓库的固定提交，虚构内容的研究边界见 [CONTRIBUTING.md](../CONTRIBUTING.md#收录边界)。`studyScope: "visual-adaptation"` 表示官方影像等资料的教学网页转译，其中的交互由本地设计；请结合研究、复现范围与巧思的证据等级取材。
+这是前端设计参考库。`entries/cases/`、`entries/patterns/`、`entries/materials/`、研究和可运行 Demo 是内容源，`agent/` 是构建时生成的读取接口，`data/` 保存浏览器生成数据，`site/` 保存站点代码、共享运行时与图标。完整案例说明机制如何协作，设计巧思保存可独立借用的原子，内容素材保存带许可和可操作样例的实际资源。网页继续供人预览、对照和调配。真实品牌案例固定为标注日期的局部学习快照；经典风格条目是构成练习；示范作品归档公开 skill 或生成工具仓库的固定提交，虚构内容的研究边界见 [CONTRIBUTING.md](../CONTRIBUTING.md#收录边界)。`studyScope: "visual-adaptation"` 表示官方影像等资料的教学网页转译，其中的交互由本地设计；请结合研究、复现范围与巧思的证据等级取材。
 
 本库收录以网页为载体的设计：观看者自己滚动、点击和阅读，画面随屏幕宽度重排。视频，以及按时间线播放的操作台与展示台，不在本库范围内。
 
@@ -8,7 +8,7 @@
 
 案例内容保存在本仓库。独立 [skill](https://github.com/MIBXR/mibxr-skills/tree/main/skills/web-atlas) 保存选型工作流、获取脚本和上游配置；它从本仓库读取目录、案例资料和文件，不保存整套网站副本。新会话解析上游默认分支的最新完整提交 SHA，后续检索、讨论和取材使用这个会话版本；需要查看刚新增的案例时显式刷新会话。也可以指定完整 SHA 复现旧版本，或指定本地仓库离线读取。
 
-“案例包”是 `agent/cases/<id>.json`：完整 `entry`、网页右侧说明 `webNotes`、文档原文 `documents`、源码与素材清单 `files`。JSON 包含资料原文及文件路径／角色；源码和二进制素材通过清单自动获取，导出时保存为可运行的原始文件。
+“案例包”是 `agent/cases/<id>.json`：完整 `entry`、网页右侧说明 `webNotes`、文档原文 `documents`、源码与素材清单 `files`（`process` 过程资料、`vendor` 第三方库、`font` 字体、`license` 许可）。JSON 包含资料原文及文件路径／角色；源码和二进制素材通过清单自动获取，导出时保存为可运行的原始文件。
 
 “巧思包”是 `agent/patterns/<id>.json`：完整 `pattern` 与 `sourceCases`。按 `agent/patterns.json` 中的 `paths.bundle` 读取原子，用 `sources.caseId`、精确字段定位和来源案例路径回到完整上下文；源码按 `sourceFiles` 及来源案例文件清单取得。每个案例包的 `patternIds` 提供反向关联。
 
@@ -58,7 +58,7 @@ node scripts/atlas.mjs export linear-workflow --out ../linear-reference
 
 内容素材用于组件、图像、声音、字体、视觉资源及 Agent Skill 的选择。读取固定提交的 `agent/materials.json`，再按 `paths.bundle` 取得完整包。摘要提供类型、分类、标签、用途、避用项与约束；素材独立于案例，包中 `material` 保留来源版本、许可、使用方法和 Prompt，`documents` 保留原文，`files` 列出完整资源与依赖。`sourceFiles` 只指向该包清单中的主要取材源码或技能原文入口。
 
-配套 skill 使用 `material-search`（查询／分类／类型）、`material-show`（完整资料，可加 `--source`）与 `material-export`（新目录，可加 `--code-only`）。素材目录、包与文件沿用同一固定会话 SHA。没有素材目录的 schema-1 仓库仍可读取案例与巧思。先核对 `upstream`、`license`、`constraints` 和可访问性。普通素材通过 `demos` 调节和验证实际参数；静态后备只说明构成，不证明 WebGPU 等特定能力已运行。`agent-skill` 通过 `skillPath`、`workflow` 和 `relatedEntries` 阅读工作流、原文快照与关联结果，可选 `gallery` 标记为作者产出效果、未复刻。素材软件许可与上游官网平台内容分别处理，详见 [内容素材库](materials.md)。
+配套 skill 使用 `material-search`（查询／分类／类型）、`material-show`（完整资料，可加 `--source`）与 `material-export`（新目录，可加 `--code-only`）。素材目录、包与文件沿用同一固定会话 SHA。没有素材目录的 schema-1 仓库仍可读取案例与巧思。先核对 `upstream`、`license`、`constraints` 和可访问性。普通素材通过 `demos` 调节和验证实际参数；静态后备只说明构成，不证明 WebGPU 等特定能力已运行。`agent-skill` 通过 `skillPath`、`workflow` 和 `relatedEntries` 阅读工作流、原文快照与关联结果，可选 `gallery` 标记为作者产出效果、未复刻。素材软件许可与上游官网平台内容分别处理，详见 [内容素材库](entries/materials/README.md)。
 
 ## 从案例适配真实任务
 

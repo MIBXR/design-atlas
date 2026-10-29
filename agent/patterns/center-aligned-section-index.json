@@ -46,7 +46,7 @@
     "sources": [
       {
         "caseId": "monument-valley-game",
-        "locator": "entries/monument-valley-game.json#interaction/1",
+        "locator": "entries/cases/monument-valley-game.json#interaction/1",
         "observation": "桌面左侧章节索引：点击以450ms swing将章节中心对齐视口中心；悬停或键盘进入索引时，标签350ms出现、内容降至0.2透明度。",
         "evidence": "adapted",
         "referenceUrl": "https://www.monumentvalleygame.com/mv1",
@@ -54,12 +54,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/monument-valley-game/app.js",
-      "demos/monument-valley-game/fidelity.md",
-      "demos/monument-valley-game/index.html",
-      "demos/monument-valley-game/style.css",
-      "entries/monument-valley-game.json",
-      "research/monument-valley-game.md"
+      "demos/cases/monument-valley-game/app.js",
+      "demos/cases/monument-valley-game/fidelity.md",
+      "demos/cases/monument-valley-game/index.html",
+      "demos/cases/monument-valley-game/style.css",
+      "entries/cases/monument-valley-game.json",
+      "docs/research/monument-valley-game.md"
     ]
   },
   "sourceCases": [
@@ -68,7 +68,7 @@
       "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
       "paths": {
         "bundle": "agent/cases/monument-valley-game.json",
-        "demo": "demos/monument-valley-game/index.html"
+        "demo": "demos/cases/monument-valley-game/index.html"
       }
     }
   ]

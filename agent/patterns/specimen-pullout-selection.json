@@ -63,7 +63,7 @@
     "sources": [
       {
         "caseId": "rhine-lab",
-        "locator": "entries/rhine-lab.json#interaction/0",
+        "locator": "entries/cases/rhine-lab.json#interaction/0",
         "observation": "本地教学改编：在原作多排立体档案的35秒原帧上提供五个观察热点及前后选择，同一状态同步观察编号、标题、正文并收起旧展开；阵列显隐仅隐藏背景阵列，保留按源端四角轮廓裁切的抬出板。五个热点不是原片中的五个可点击档案。",
         "evidence": "adapted",
         "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
@@ -71,13 +71,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/rhine-lab/index.html",
-      "demos/rhine-lab/app.js",
-      "demos/rhine-lab/style.css",
-      "demos/rhine-lab/fidelity.md",
-      "demos/rhine-lab/assets-manifest.json",
-      "entries/rhine-lab.json",
-      "research/rhine-lab.md"
+      "demos/cases/rhine-lab/index.html",
+      "demos/cases/rhine-lab/app.js",
+      "demos/cases/rhine-lab/style.css",
+      "demos/cases/rhine-lab/fidelity.md",
+      "demos/cases/rhine-lab/assets-manifest.json",
+      "entries/cases/rhine-lab.json",
+      "docs/research/rhine-lab.md"
     ]
   },
   "sourceCases": [
@@ -86,7 +86,7 @@
       "title": "莱茵生命 · 影像终端的网页转译",
       "paths": {
         "bundle": "agent/cases/rhine-lab.json",
-        "demo": "demos/rhine-lab/index.html"
+        "demo": "demos/cases/rhine-lab/index.html"
       }
     }
   ]

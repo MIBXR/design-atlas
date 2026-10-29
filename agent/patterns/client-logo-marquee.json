@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "notion-editorial",
-        "locator": "entries/notion-editorial.json#interaction/2",
+        "locator": "entries/cases/notion-editorial.json#interaction/2",
         "observation": "客户标识原生连续横移，指针停留暂停；手机保持条带，不把标识排成多行墙。",
         "evidence": "observed",
         "referenceUrl": "https://www.notion.com/",
@@ -47,7 +47,7 @@
       },
       {
         "caseId": "stripe-platform",
-        "locator": "entries/stripe-platform.json#interaction/1",
+        "locator": "entries/cases/stripe-platform.json#interaction/1",
         "observation": "Payments 进入视口 → 终端文本在 mask 内纵向轮换，checkout 同步商户和金额；客户标识连续横移，悬停可停。",
         "evidence": "observed",
         "referenceUrl": "https://stripe.com/",
@@ -55,21 +55,21 @@
       }
     ],
     "sourceFiles": [
-      "demos/notion-editorial/fidelity.md",
-      "demos/notion-editorial/index.html",
-      "demos/notion-editorial/journey.js",
-      "demos/notion-editorial/script.js",
-      "demos/notion-editorial/style.css",
-      "demos/stripe-platform/fidelity.md",
-      "demos/stripe-platform/index.html",
-      "demos/stripe-platform/journey.js",
-      "demos/stripe-platform/script.js",
-      "demos/stripe-platform/style.css",
-      "demos/stripe-platform/wave.js",
-      "entries/notion-editorial.json",
-      "entries/stripe-platform.json",
-      "research/notion-editorial.md",
-      "research/stripe-platform.md"
+      "demos/cases/notion-editorial/fidelity.md",
+      "demos/cases/notion-editorial/index.html",
+      "demos/cases/notion-editorial/journey.js",
+      "demos/cases/notion-editorial/script.js",
+      "demos/cases/notion-editorial/style.css",
+      "demos/cases/stripe-platform/fidelity.md",
+      "demos/cases/stripe-platform/index.html",
+      "demos/cases/stripe-platform/journey.js",
+      "demos/cases/stripe-platform/script.js",
+      "demos/cases/stripe-platform/style.css",
+      "demos/cases/stripe-platform/wave.js",
+      "entries/cases/notion-editorial.json",
+      "entries/cases/stripe-platform.json",
+      "docs/research/notion-editorial.md",
+      "docs/research/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -78,7 +78,7 @@
       "title": "Notion — 插画与真实工作空间",
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
-        "demo": "demos/notion-editorial/index.html"
+        "demo": "demos/cases/notion-editorial/index.html"
       }
     },
     {
@@ -86,7 +86,7 @@
       "title": "Stripe — 彩带与金融产品矩阵",
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "demo": "demos/stripe-platform/index.html"
+        "demo": "demos/cases/stripe-platform/index.html"
       }
     }
   ]

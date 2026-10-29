@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "arknights-world",
-        "locator": "entries/arknights-world.json#interaction/4",
+        "locator": "entries/cases/arknights-world.json#interaction/4",
         "observation": "WORLD使用官网Three导出、七组原始点位、粒子贴图和排斥公式；10,000粒子池中当前模型使用1785–5652点。竖屏直接打开源石详情，粒子在上/文字在下。",
         "evidence": "observed",
         "referenceUrl": "https://ak.hypergryph.com/",
@@ -48,7 +48,7 @@
       },
       {
         "caseId": "arknights-world",
-        "locator": "entries/arknights-world.json#principles/2",
+        "locator": "entries/cases/arknights-world.json#principles/2",
         "observation": "WORLD指针进入点阵 → 原始排斥公式推开附近点、移走后回聚 → 让静态工业标识可被触摸；选择术语会把点阵重组成对应原站形状。",
         "evidence": "observed",
         "referenceUrl": "https://ak.hypergryph.com/",
@@ -56,13 +56,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/arknights-world/fidelity.md",
-      "demos/arknights-world/index.html",
-      "demos/arknights-world/particles.js",
-      "demos/arknights-world/script.js",
-      "demos/arknights-world/style.css",
-      "entries/arknights-world.json",
-      "research/arknights-world.md"
+      "demos/cases/arknights-world/fidelity.md",
+      "demos/cases/arknights-world/index.html",
+      "demos/cases/arknights-world/particles.js",
+      "demos/cases/arknights-world/script.js",
+      "demos/cases/arknights-world/style.css",
+      "entries/cases/arknights-world.json",
+      "docs/research/arknights-world.md"
     ]
   },
   "sourceCases": [
@@ -71,7 +71,7 @@
       "title": "明日方舟 · 全屏档案与交互点阵",
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
-        "demo": "demos/arknights-world/index.html"
+        "demo": "demos/cases/arknights-world/index.html"
       }
     }
   ]

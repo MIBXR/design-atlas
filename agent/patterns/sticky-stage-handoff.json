@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "chatgpt-platform",
-        "locator": "entries/chatgpt-platform.json#interaction/2",
+        "locator": "entries/cases/chatgpt-platform.json#interaction/2",
         "observation": "向下/向上滚动 → 周边素材随滚动带入/收束，随后淡出；同一窗口保持 sticky，越过交接阈值再向右下移动 → 从吸引注意过渡到解释产品；在首屏下面往返滚动。",
         "evidence": "observed",
         "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
@@ -48,7 +48,7 @@
       },
       {
         "caseId": "apple-product",
-        "locator": "entries/apple-product.json#interaction/3",
+        "locator": "entries/cases/apple-product.json#interaction/3",
         "observation": "镜头长段向下/向上滚动 → 暂停的官方相机 WebM 按进度 seek，标题让出画面；后续性能和续航用官方静帧保持 sticky 媒体和前后文交接。",
         "evidence": "adapted",
         "referenceUrl": "https://www.apple.com/iphone-18-pro/",
@@ -56,21 +56,19 @@
       }
     ],
     "sourceFiles": [
-      "demos/apple-product/fidelity.md",
-      "demos/apple-product/index.html",
-      "demos/apple-product/journey.js",
-      "demos/apple-product/script.js",
-      "demos/apple-product/style.css",
-      "demos/chatgpt-platform/fidelity.md",
-      "demos/chatgpt-platform/fonts.css",
-      "demos/chatgpt-platform/index.html",
-      "demos/chatgpt-platform/motion-data.js",
-      "demos/chatgpt-platform/script.js",
-      "demos/chatgpt-platform/style.css",
-      "entries/apple-product.json",
-      "entries/chatgpt-platform.json",
-      "research/apple-product.md",
-      "research/chatgpt-platform.md"
+      "demos/cases/apple-product/fidelity.md",
+      "demos/cases/apple-product/index.html",
+      "demos/cases/apple-product/journey.js",
+      "demos/cases/apple-product/script.js",
+      "demos/cases/apple-product/style.css",
+      "demos/cases/chatgpt-platform/fidelity.md",
+      "demos/cases/chatgpt-platform/fonts.css",
+      "demos/cases/chatgpt-platform/index.html",
+      "demos/cases/chatgpt-platform/motion-data.js",
+      "demos/cases/chatgpt-platform/script.js",
+      "demos/cases/chatgpt-platform/style.css",
+      "entries/cases/apple-product.json",
+      "entries/cases/chatgpt-platform.json"
     ]
   },
   "sourceCases": [
@@ -79,7 +77,7 @@
       "title": "Apple · 滚动产品舞台",
       "paths": {
         "bundle": "agent/cases/apple-product.json",
-        "demo": "demos/apple-product/index.html"
+        "demo": "demos/cases/apple-product/index.html"
       }
     },
     {
@@ -87,7 +85,7 @@
       "title": "ChatGPT — 巨字、飞入拼贴与滚动交接",
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
-        "demo": "demos/chatgpt-platform/index.html"
+        "demo": "demos/cases/chatgpt-platform/index.html"
       }
     }
   ]

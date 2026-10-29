@@ -46,7 +46,7 @@
     "sources": [
       {
         "caseId": "zelda-world",
-        "locator": "entries/zelda-world.json#interaction/2",
+        "locator": "entries/cases/zelda-world.json#interaction/2",
         "observation": "影片片尾前1秒推进下一章；暂停画面和减少动态分支关闭自动推进。",
         "evidence": "adapted",
         "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
@@ -54,12 +54,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/zelda-world/fidelity.md",
-      "demos/zelda-world/index.html",
-      "demos/zelda-world/script.js",
-      "demos/zelda-world/style.css",
-      "entries/zelda-world.json",
-      "research/zelda-world.md"
+      "demos/cases/zelda-world/fidelity.md",
+      "demos/cases/zelda-world/index.html",
+      "demos/cases/zelda-world/script.js",
+      "demos/cases/zelda-world/style.css",
+      "entries/cases/zelda-world.json",
+      "docs/research/zelda-world.md"
     ]
   },
   "sourceCases": [
@@ -68,7 +68,7 @@
       "title": "塞尔达 · 全景世界舞台",
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
-        "demo": "demos/zelda-world/index.html"
+        "demo": "demos/cases/zelda-world/index.html"
       }
     }
   ]

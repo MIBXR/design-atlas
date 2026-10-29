@@ -46,7 +46,7 @@
     "sources": [
       {
         "caseId": "mori-art-museum",
-        "locator": "entries/mori-art-museum.json#interaction/1",
+        "locator": "entries/cases/mori-art-museum.json#interaction/1",
         "observation": "滚动超过大字标+130px／返回：50px红色紧凑导航120ms从上方进入，回到顶部80ms退出恢复大字标。 长页仍能访问机构入口；进入展览时品牌不被小导航抢占。",
         "evidence": "observed",
         "referenceUrl": "https://www.mori.art.museum/jp/",
@@ -54,12 +54,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/mori-art-museum/app.js",
-      "demos/mori-art-museum/fidelity.md",
-      "demos/mori-art-museum/index.html",
-      "demos/mori-art-museum/style.css",
-      "entries/mori-art-museum.json",
-      "research/mori-art-museum.md"
+      "demos/cases/mori-art-museum/app.js",
+      "demos/cases/mori-art-museum/fidelity.md",
+      "demos/cases/mori-art-museum/index.html",
+      "demos/cases/mori-art-museum/style.css",
+      "entries/cases/mori-art-museum.json",
+      "docs/research/mori-art-museum.md"
     ]
   },
   "sourceCases": [
@@ -68,7 +68,7 @@
       "title": "森美术馆：红色机构锚点与艺术海报",
       "paths": {
         "bundle": "agent/cases/mori-art-museum.json",
-        "demo": "demos/mori-art-museum/index.html"
+        "demo": "demos/cases/mori-art-museum/index.html"
       }
     }
   ]

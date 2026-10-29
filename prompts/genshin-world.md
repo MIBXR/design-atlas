@@ -1,6 +1,6 @@
 # 原神 · 版本群像与角色舞台 · 复用 Prompt
 
-由 [结构化案例](../entries/genshin-world.json) 自动生成。参考观察与具体边界见 [调研](../research/genshin-world.md)。
+由 [结构化案例](../entries/cases/genshin-world.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/genshin-world.md)。
 
 ## 正向 Prompt
 
@@ -23,4 +23,4 @@
 
 依据这次归档的舞台规则，设计一个虚构双角色专题：保持整屏交接、角色连背景换色、声音归属与下载层级，比较不同美术是否仍有清楚的章节识别。
 
-[查看 Demo](../demos/genshin-world/index.html) · [返回案例库](../cases.html#style/genshin-world)
+[查看 Demo](../demos/cases/genshin-world/index.html) · [返回案例库](../cases.html#style/genshin-world)

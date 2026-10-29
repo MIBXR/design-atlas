@@ -54,7 +54,7 @@
     "sources": [
       {
         "caseId": "digital-dunhuang",
-        "locator": "entries/digital-dunhuang.json#interaction/3",
+        "locator": "entries/cases/digital-dunhuang.json#interaction/3",
         "observation": "壁画：莫高窟257窟主室西壁采用源站Leaflet 1.7.1与DeepZoom 2.0.0，21515×15796逻辑像素、1024瓦片，匿名minZoom9.75/maxZoom12，公开level10–12共9瓦片实际取得。",
         "evidence": "observed",
         "referenceUrl": "https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01",
@@ -62,16 +62,16 @@
       }
     ],
     "sourceFiles": [
-      "entries/digital-dunhuang.json",
-      "research/digital-dunhuang.md",
-      "demos/digital-dunhuang/fidelity.md",
-      "demos/digital-dunhuang/index.html",
-      "demos/digital-dunhuang/style.css",
-      "demos/digital-dunhuang/app.js",
-      "demos/digital-dunhuang/state-matrix.md",
-      "demos/digital-dunhuang/viewer.html",
-      "demos/digital-dunhuang/viewer.css",
-      "demos/digital-dunhuang/viewer.js"
+      "entries/cases/digital-dunhuang.json",
+      "docs/research/digital-dunhuang.md",
+      "demos/cases/digital-dunhuang/fidelity.md",
+      "demos/cases/digital-dunhuang/index.html",
+      "demos/cases/digital-dunhuang/style.css",
+      "demos/cases/digital-dunhuang/app.js",
+      "demos/cases/digital-dunhuang/source/state-matrix.md",
+      "demos/cases/digital-dunhuang/viewer.html",
+      "demos/cases/digital-dunhuang/viewer.css",
+      "demos/cases/digital-dunhuang/viewer.js"
     ]
   },
   "sourceCases": [
@@ -80,7 +80,7 @@
       "title": "数字敦煌 · 全幅影像与真实瓦片细察",
       "paths": {
         "bundle": "agent/cases/digital-dunhuang.json",
-        "demo": "demos/digital-dunhuang/index.html"
+        "demo": "demos/cases/digital-dunhuang/index.html"
       }
     }
   ]

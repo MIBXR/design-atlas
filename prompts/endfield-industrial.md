@@ -1,6 +1,6 @@
 # 终末地 · 完整工业科幻门户 · 复用 Prompt
 
-由 [结构化案例](../entries/endfield-industrial.json) 自动生成。参考观察与具体边界见 [调研](../research/endfield-industrial.md)。
+由 [结构化案例](../entries/cases/endfield-industrial.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/endfield-industrial.md)。
 
 ## 正向 Prompt
 
@@ -23,4 +23,4 @@
 
 替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。
 
-[查看 Demo](../demos/endfield-industrial/index.html) · [返回案例库](../cases.html#style/endfield-industrial)
+[查看 Demo](../demos/cases/endfield-industrial/index.html) · [返回案例库](../cases.html#style/endfield-industrial)

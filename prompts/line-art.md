@@ -1,6 +1,6 @@
 # 线条：沿绘制顺序解释结构 · 复用 Prompt
 
-由 [结构化案例](../entries/line-art.json) 自动生成。参考观察与具体边界见 [调研](../research/line-art.md)。
+由 [结构化案例](../entries/cases/line-art.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/line-art.md)。
 
 ## 正向 Prompt
 
@@ -27,4 +27,4 @@
 
 将建筑线稿改为原创机械产品分解图，让绘制顺序对应支架、外壳、接口，并保持全文始终可读。
 
-[查看 Demo](../demos/line-art/index.html) · [返回案例库](../cases.html#style/line-art)
+[查看 Demo](../demos/cases/line-art/index.html) · [返回案例库](../cases.html#style/line-art)

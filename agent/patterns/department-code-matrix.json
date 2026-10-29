@@ -62,7 +62,7 @@
     "sources": [
       {
         "caseId": "rhine-lab",
-        "locator": "entries/rhine-lab.json#composition/typography",
+        "locator": "entries/cases/rhine-lab.json#composition/typography",
         "observation": "官方68秒原帧保留CMPT CTRL中心，以及DEF、HRI、BSN、ENG、STRU、SCIEN、ORIG、NRG、ECO九外围的环形连字、英文全称、黑白表面、透视倾斜及尺度差；网页控件使用系统字体，不替代原作字标。",
         "evidence": "observed",
         "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
@@ -70,13 +70,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/rhine-lab/index.html",
-      "demos/rhine-lab/app.js",
-      "demos/rhine-lab/style.css",
-      "demos/rhine-lab/fidelity.md",
-      "demos/rhine-lab/assets-manifest.json",
-      "entries/rhine-lab.json",
-      "research/rhine-lab.md"
+      "demos/cases/rhine-lab/index.html",
+      "demos/cases/rhine-lab/app.js",
+      "demos/cases/rhine-lab/style.css",
+      "demos/cases/rhine-lab/fidelity.md",
+      "demos/cases/rhine-lab/assets-manifest.json",
+      "entries/cases/rhine-lab.json",
+      "docs/research/rhine-lab.md"
     ]
   },
   "sourceCases": [
@@ -85,7 +85,7 @@
       "title": "莱茵生命 · 影像终端的网页转译",
       "paths": {
         "bundle": "agent/cases/rhine-lab.json",
-        "demo": "demos/rhine-lab/index.html"
+        "demo": "demos/cases/rhine-lab/index.html"
       }
     }
   ]

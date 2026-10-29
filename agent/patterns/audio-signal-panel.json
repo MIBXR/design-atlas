@@ -41,15 +41,15 @@
     "sources": [
       {
         "caseId": "retro-80s",
-        "locator": "entries/retro-80s.json#composition/layout",
+        "locator": "entries/cases/retro-80s.json#composition/layout",
         "observation": "硬件面板横向分区、预设/显示/参数/琴键；手机纵向排列",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/retro-80s/index.html",
-      "entries/retro-80s.json",
-      "research/retro-80s.md"
+      "demos/cases/retro-80s/index.html",
+      "entries/cases/retro-80s.json",
+      "docs/research/retro-80s.md"
     ]
   },
   "sourceCases": [
@@ -58,7 +58,7 @@
       "title": "80年代：合成器面板",
       "paths": {
         "bundle": "agent/cases/retro-80s.json",
-        "demo": "demos/retro-80s/index.html"
+        "demo": "demos/cases/retro-80s/index.html"
       }
     }
   ]

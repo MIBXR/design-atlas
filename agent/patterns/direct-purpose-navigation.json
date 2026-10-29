@@ -42,7 +42,7 @@
     "sources": [
       {
         "caseId": "met-museum",
-        "locator": "entries/met-museum.json#interaction/3",
+        "locator": "entries/cases/met-museum.json#interaction/3",
         "observation": "打开导航：Visit等目的地立即展开；键盘焦点可操作，局部搜索与作品dialog为本地练习补充。",
         "evidence": "adapted",
         "referenceUrl": "https://www.metmuseum.org/en",
@@ -50,7 +50,7 @@
       },
       {
         "caseId": "philharmonie-music",
-        "locator": "entries/philharmonie-music.json#interaction/1",
+        "locator": "entries/cases/philharmonie-music.json#interaction/1",
         "observation": "打开主菜单和类别：浅灰全宽导航立即出现，类别切换为目的地列表；小屏菜单在页面流中展开。 机构多种活动保留层级，交互保持直接。",
         "evidence": "observed",
         "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
@@ -58,18 +58,18 @@
       }
     ],
     "sourceFiles": [
-      "demos/met-museum/fidelity.md",
-      "demos/met-museum/index.html",
-      "demos/met-museum/script.js",
-      "demos/met-museum/style.css",
-      "demos/philharmonie-music/fidelity.md",
-      "demos/philharmonie-music/index.html",
-      "demos/philharmonie-music/script.js",
-      "demos/philharmonie-music/style.css",
-      "entries/met-museum.json",
-      "entries/philharmonie-music.json",
-      "research/met-museum.md",
-      "research/philharmonie-music.md"
+      "demos/cases/met-museum/fidelity.md",
+      "demos/cases/met-museum/index.html",
+      "demos/cases/met-museum/script.js",
+      "demos/cases/met-museum/style.css",
+      "demos/cases/philharmonie-music/fidelity.md",
+      "demos/cases/philharmonie-music/index.html",
+      "demos/cases/philharmonie-music/script.js",
+      "demos/cases/philharmonie-music/style.css",
+      "entries/cases/met-museum.json",
+      "entries/cases/philharmonie-music.json",
+      "docs/research/met-museum.md",
+      "docs/research/philharmonie-music.md"
     ]
   },
   "sourceCases": [
@@ -78,7 +78,7 @@
       "title": "The Met · 编辑式展览与馆藏陈列",
       "paths": {
         "bundle": "agent/cases/met-museum.json",
-        "demo": "demos/met-museum/index.html"
+        "demo": "demos/cases/met-museum/index.html"
       }
     },
     {
@@ -86,7 +86,7 @@
       "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
       "paths": {
         "bundle": "agent/cases/philharmonie-music.json",
-        "demo": "demos/philharmonie-music/index.html"
+        "demo": "demos/cases/philharmonie-music/index.html"
       }
     }
   ]

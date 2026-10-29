@@ -72,9 +72,9 @@
       },
       "paths": {
         "bundle": "agent/cases/apple-product.json",
-        "preview": "previews/apple-product.jpg",
-        "demo": "demos/apple-product/index.html",
-        "entry": "entries/apple-product.json"
+        "preview": "previews/cases/apple-product.jpg",
+        "demo": "demos/cases/apple-product/index.html",
+        "entry": "entries/cases/apple-product.json"
       }
     },
     {
@@ -148,9 +148,9 @@
       },
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "preview": "previews/stripe-platform.jpg",
-        "demo": "demos/stripe-platform/index.html",
-        "entry": "entries/stripe-platform.json"
+        "preview": "previews/cases/stripe-platform.jpg",
+        "demo": "demos/cases/stripe-platform/index.html",
+        "entry": "entries/cases/stripe-platform.json"
       }
     },
     {
@@ -223,9 +223,9 @@
       },
       "paths": {
         "bundle": "agent/cases/linear-workflow.json",
-        "preview": "previews/linear-workflow.jpg",
-        "demo": "demos/linear-workflow/index.html",
-        "entry": "entries/linear-workflow.json"
+        "preview": "previews/cases/linear-workflow.jpg",
+        "demo": "demos/cases/linear-workflow/index.html",
+        "entry": "entries/cases/linear-workflow.json"
       }
     },
     {
@@ -297,9 +297,9 @@
       },
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
-        "preview": "previews/notion-editorial.jpg",
-        "demo": "demos/notion-editorial/index.html",
-        "entry": "entries/notion-editorial.json"
+        "preview": "previews/cases/notion-editorial.jpg",
+        "demo": "demos/cases/notion-editorial/index.html",
+        "entry": "entries/cases/notion-editorial.json"
       }
     },
     {
@@ -368,9 +368,9 @@
       },
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
-        "preview": "previews/zelda-world.jpg",
-        "demo": "demos/zelda-world/index.html",
-        "entry": "entries/zelda-world.json"
+        "preview": "previews/cases/zelda-world.jpg",
+        "demo": "demos/cases/zelda-world/index.html",
+        "entry": "entries/cases/zelda-world.json"
       }
     },
     {
@@ -439,9 +439,9 @@
       },
       "paths": {
         "bundle": "agent/cases/persona-kinetic.json",
-        "preview": "previews/persona-kinetic.jpg",
-        "demo": "demos/persona-kinetic/index.html",
-        "entry": "entries/persona-kinetic.json"
+        "preview": "previews/cases/persona-kinetic.jpg",
+        "demo": "demos/cases/persona-kinetic/index.html",
+        "entry": "entries/cases/persona-kinetic.json"
       }
     },
     {
@@ -511,9 +511,9 @@
       },
       "paths": {
         "bundle": "agent/cases/hand-drawn.json",
-        "preview": "previews/hand-drawn.jpg",
-        "demo": "demos/hand-drawn/index.html",
-        "entry": "entries/hand-drawn.json"
+        "preview": "previews/cases/hand-drawn.jpg",
+        "demo": "demos/cases/hand-drawn/index.html",
+        "entry": "entries/cases/hand-drawn.json"
       }
     },
     {
@@ -584,9 +584,9 @@
       },
       "paths": {
         "bundle": "agent/cases/isometric-3d.json",
-        "preview": "previews/isometric-3d.jpg",
-        "demo": "demos/isometric-3d/index.html",
-        "entry": "entries/isometric-3d.json"
+        "preview": "previews/cases/isometric-3d.jpg",
+        "demo": "demos/cases/isometric-3d/index.html",
+        "entry": "entries/cases/isometric-3d.json"
       }
     },
     {
@@ -655,9 +655,9 @@
       },
       "paths": {
         "bundle": "agent/cases/line-art.json",
-        "preview": "previews/line-art.jpg",
-        "demo": "demos/line-art/index.html",
-        "entry": "entries/line-art.json"
+        "preview": "previews/cases/line-art.jpg",
+        "demo": "demos/cases/line-art/index.html",
+        "entry": "entries/cases/line-art.json"
       }
     },
     {
@@ -728,9 +728,9 @@
       },
       "paths": {
         "bundle": "agent/cases/shape-morph.json",
-        "preview": "previews/shape-morph.jpg",
-        "demo": "demos/shape-morph/index.html",
-        "entry": "entries/shape-morph.json"
+        "preview": "previews/cases/shape-morph.jpg",
+        "demo": "demos/cases/shape-morph/index.html",
+        "entry": "entries/cases/shape-morph.json"
       }
     },
     {
@@ -797,9 +797,9 @@
       },
       "paths": {
         "bundle": "agent/cases/swiss-grid.json",
-        "preview": "previews/swiss-grid.jpg",
-        "demo": "demos/swiss-grid/index.html",
-        "entry": "entries/swiss-grid.json"
+        "preview": "previews/cases/swiss-grid.jpg",
+        "demo": "demos/cases/swiss-grid/index.html",
+        "entry": "entries/cases/swiss-grid.json"
       }
     },
     {
@@ -869,9 +869,9 @@
       },
       "paths": {
         "bundle": "agent/cases/bauhaus-geometry.json",
-        "preview": "previews/bauhaus-geometry.jpg",
-        "demo": "demos/bauhaus-geometry/index.html",
-        "entry": "entries/bauhaus-geometry.json"
+        "preview": "previews/cases/bauhaus-geometry.jpg",
+        "demo": "demos/cases/bauhaus-geometry/index.html",
+        "entry": "entries/cases/bauhaus-geometry.json"
       }
     },
     {
@@ -942,9 +942,9 @@
       },
       "paths": {
         "bundle": "agent/cases/retro-80s.json",
-        "preview": "previews/retro-80s.jpg",
-        "demo": "demos/retro-80s/index.html",
-        "entry": "entries/retro-80s.json"
+        "preview": "previews/cases/retro-80s.jpg",
+        "demo": "demos/cases/retro-80s/index.html",
+        "entry": "entries/cases/retro-80s.json"
       }
     },
     {
@@ -1017,9 +1017,9 @@
       },
       "paths": {
         "bundle": "agent/cases/pixel-world.json",
-        "preview": "previews/pixel-world.jpg",
-        "demo": "demos/pixel-world/index.html",
-        "entry": "entries/pixel-world.json"
+        "preview": "previews/cases/pixel-world.jpg",
+        "demo": "demos/cases/pixel-world/index.html",
+        "entry": "entries/cases/pixel-world.json"
       }
     },
     {
@@ -1095,9 +1095,9 @@
       },
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
-        "preview": "previews/chatgpt-platform.jpg",
-        "demo": "demos/chatgpt-platform/index.html",
-        "entry": "entries/chatgpt-platform.json"
+        "preview": "previews/cases/chatgpt-platform.jpg",
+        "demo": "demos/cases/chatgpt-platform/index.html",
+        "entry": "entries/cases/chatgpt-platform.json"
       }
     },
     {
@@ -1169,9 +1169,9 @@
       },
       "paths": {
         "bundle": "agent/cases/claude-platform.json",
-        "preview": "previews/claude-platform.jpg",
-        "demo": "demos/claude-platform/index.html",
-        "entry": "entries/claude-platform.json"
+        "preview": "previews/cases/claude-platform.jpg",
+        "demo": "demos/cases/claude-platform/index.html",
+        "entry": "entries/cases/claude-platform.json"
       }
     },
     {
@@ -1243,9 +1243,9 @@
       },
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
-        "preview": "previews/qoder-platform.jpg",
-        "demo": "demos/qoder-platform/index.html",
-        "entry": "entries/qoder-platform.json"
+        "preview": "previews/cases/qoder-platform.jpg",
+        "demo": "demos/cases/qoder-platform/index.html",
+        "entry": "entries/cases/qoder-platform.json"
       }
     },
     {
@@ -1315,9 +1315,9 @@
       },
       "paths": {
         "bundle": "agent/cases/genshin-world.json",
-        "preview": "previews/genshin-world.jpg",
-        "demo": "demos/genshin-world/index.html",
-        "entry": "entries/genshin-world.json"
+        "preview": "previews/cases/genshin-world.jpg",
+        "demo": "demos/cases/genshin-world/index.html",
+        "entry": "entries/cases/genshin-world.json"
       }
     },
     {
@@ -1392,9 +1392,9 @@
       },
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
-        "preview": "previews/arknights-world.jpg",
-        "demo": "demos/arknights-world/index.html",
-        "entry": "entries/arknights-world.json"
+        "preview": "previews/cases/arknights-world.jpg",
+        "demo": "demos/cases/arknights-world/index.html",
+        "entry": "entries/cases/arknights-world.json"
       }
     },
     {
@@ -1467,9 +1467,9 @@
       },
       "paths": {
         "bundle": "agent/cases/uma-musume.json",
-        "preview": "previews/uma-musume.jpg",
-        "demo": "demos/uma-musume/index.html",
-        "entry": "entries/uma-musume.json"
+        "preview": "previews/cases/uma-musume.jpg",
+        "demo": "demos/cases/uma-musume/index.html",
+        "entry": "entries/cases/uma-musume.json"
       }
     },
     {
@@ -1541,9 +1541,9 @@
       },
       "paths": {
         "bundle": "agent/cases/blue-archive.json",
-        "preview": "previews/blue-archive.jpg",
-        "demo": "demos/blue-archive/index.html",
-        "entry": "entries/blue-archive.json"
+        "preview": "previews/cases/blue-archive.jpg",
+        "demo": "demos/cases/blue-archive/index.html",
+        "entry": "entries/cases/blue-archive.json"
       }
     },
     {
@@ -1619,9 +1619,9 @@
       },
       "paths": {
         "bundle": "agent/cases/monument-valley-game.json",
-        "preview": "previews/monument-valley-game.jpg",
-        "demo": "demos/monument-valley-game/index.html",
-        "entry": "entries/monument-valley-game.json"
+        "preview": "previews/cases/monument-valley-game.jpg",
+        "demo": "demos/cases/monument-valley-game/index.html",
+        "entry": "entries/cases/monument-valley-game.json"
       }
     },
     {
@@ -1693,9 +1693,9 @@
       },
       "paths": {
         "bundle": "agent/cases/design-sight.json",
-        "preview": "previews/design-sight.jpg",
-        "demo": "demos/design-sight/index.html",
-        "entry": "entries/design-sight.json"
+        "preview": "previews/cases/design-sight.jpg",
+        "demo": "demos/cases/design-sight/index.html",
+        "entry": "entries/cases/design-sight.json"
       }
     },
     {
@@ -1766,9 +1766,9 @@
       },
       "paths": {
         "bundle": "agent/cases/mori-art-museum.json",
-        "preview": "previews/mori-art-museum.jpg",
-        "demo": "demos/mori-art-museum/index.html",
-        "entry": "entries/mori-art-museum.json"
+        "preview": "previews/cases/mori-art-museum.jpg",
+        "demo": "demos/cases/mori-art-museum/index.html",
+        "entry": "entries/cases/mori-art-museum.json"
       }
     },
     {
@@ -1840,9 +1840,9 @@
       },
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
-        "preview": "previews/fuji-rock.jpg",
-        "demo": "demos/fuji-rock/index.html",
-        "entry": "entries/fuji-rock.json"
+        "preview": "previews/cases/fuji-rock.jpg",
+        "demo": "demos/cases/fuji-rock/index.html",
+        "entry": "entries/cases/fuji-rock.json"
       }
     },
     {
@@ -1908,9 +1908,9 @@
       },
       "paths": {
         "bundle": "agent/cases/rijksmuseum-art.json",
-        "preview": "previews/rijksmuseum-art.jpg",
-        "demo": "demos/rijksmuseum-art/index.html",
-        "entry": "entries/rijksmuseum-art.json"
+        "preview": "previews/cases/rijksmuseum-art.jpg",
+        "demo": "demos/cases/rijksmuseum-art/index.html",
+        "entry": "entries/cases/rijksmuseum-art.json"
       }
     },
     {
@@ -1978,9 +1978,9 @@
       },
       "paths": {
         "bundle": "agent/cases/met-museum.json",
-        "preview": "previews/met-museum.jpg",
-        "demo": "demos/met-museum/index.html",
-        "entry": "entries/met-museum.json"
+        "preview": "previews/cases/met-museum.jpg",
+        "demo": "demos/cases/met-museum/index.html",
+        "entry": "entries/cases/met-museum.json"
       }
     },
     {
@@ -2050,9 +2050,9 @@
       },
       "paths": {
         "bundle": "agent/cases/philharmonie-music.json",
-        "preview": "previews/philharmonie-music.jpg",
-        "demo": "demos/philharmonie-music/index.html",
-        "entry": "entries/philharmonie-music.json"
+        "preview": "previews/cases/philharmonie-music.jpg",
+        "demo": "demos/cases/philharmonie-music/index.html",
+        "entry": "entries/cases/philharmonie-music.json"
       }
     },
     {
@@ -2133,9 +2133,9 @@
       },
       "paths": {
         "bundle": "agent/cases/google-material.json",
-        "preview": "previews/google-material.jpg",
-        "demo": "demos/google-material/index.html",
-        "entry": "entries/google-material.json"
+        "preview": "previews/cases/google-material.jpg",
+        "demo": "demos/cases/google-material/index.html",
+        "entry": "entries/cases/google-material.json"
       }
     },
     {
@@ -2208,9 +2208,9 @@
       },
       "paths": {
         "bundle": "agent/cases/palace-museum.json",
-        "preview": "previews/palace-museum.jpg",
-        "demo": "demos/palace-museum/index.html",
-        "entry": "entries/palace-museum.json"
+        "preview": "previews/cases/palace-museum.jpg",
+        "demo": "demos/cases/palace-museum/index.html",
+        "entry": "entries/cases/palace-museum.json"
       }
     },
     {
@@ -2283,9 +2283,9 @@
       },
       "paths": {
         "bundle": "agent/cases/digital-dunhuang.json",
-        "preview": "previews/digital-dunhuang.jpg",
-        "demo": "demos/digital-dunhuang/index.html",
-        "entry": "entries/digital-dunhuang.json"
+        "preview": "previews/cases/digital-dunhuang.jpg",
+        "demo": "demos/cases/digital-dunhuang/index.html",
+        "entry": "entries/cases/digital-dunhuang.json"
       }
     },
     {
@@ -2358,9 +2358,9 @@
       },
       "paths": {
         "bundle": "agent/cases/suzhou-museum.json",
-        "preview": "previews/suzhou-museum.jpg",
-        "demo": "demos/suzhou-museum/index.html",
-        "entry": "entries/suzhou-museum.json"
+        "preview": "previews/cases/suzhou-museum.jpg",
+        "demo": "demos/cases/suzhou-museum/index.html",
+        "entry": "entries/cases/suzhou-museum.json"
       }
     },
     {
@@ -2437,9 +2437,9 @@
       },
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
-        "preview": "previews/endfield-industrial.jpg",
-        "demo": "demos/endfield-industrial/index.html",
-        "entry": "entries/endfield-industrial.json"
+        "preview": "previews/cases/endfield-industrial.jpg",
+        "demo": "demos/cases/endfield-industrial/index.html",
+        "entry": "entries/cases/endfield-industrial.json"
       }
     },
     {
@@ -2516,9 +2516,9 @@
       },
       "paths": {
         "bundle": "agent/cases/rhine-lab.json",
-        "preview": "previews/rhine-lab.jpg",
-        "demo": "demos/rhine-lab/index.html",
-        "entry": "entries/rhine-lab.json"
+        "preview": "previews/cases/rhine-lab.jpg",
+        "demo": "demos/cases/rhine-lab/index.html",
+        "entry": "entries/cases/rhine-lab.json"
       }
     },
     {
@@ -2593,9 +2593,9 @@
       },
       "paths": {
         "bundle": "agent/cases/zenless-zone-zero.json",
-        "preview": "previews/zenless-zone-zero.jpg",
-        "demo": "demos/zenless-zone-zero/index.html",
-        "entry": "entries/zenless-zone-zero.json"
+        "preview": "previews/cases/zenless-zone-zero.jpg",
+        "demo": "demos/cases/zenless-zone-zero/index.html",
+        "entry": "entries/cases/zenless-zone-zero.json"
       }
     },
     {
@@ -2671,9 +2671,9 @@
       },
       "paths": {
         "bundle": "agent/cases/deepseek-harness.json",
-        "preview": "previews/deepseek-harness.jpg",
-        "demo": "demos/deepseek-harness/index.html",
-        "entry": "entries/deepseek-harness.json"
+        "preview": "previews/cases/deepseek-harness.jpg",
+        "demo": "demos/cases/deepseek-harness/index.html",
+        "entry": "entries/cases/deepseek-harness.json"
       }
     },
     {
@@ -2748,9 +2748,9 @@
       },
       "paths": {
         "bundle": "agent/cases/stellar-museum.json",
-        "preview": "previews/stellar-museum.jpg",
-        "demo": "demos/stellar-museum/index.html",
-        "entry": "entries/stellar-museum.json"
+        "preview": "previews/cases/stellar-museum.jpg",
+        "demo": "demos/cases/stellar-museum/index.html",
+        "entry": "entries/cases/stellar-museum.json"
       }
     },
     {
@@ -2826,9 +2826,9 @@
       },
       "paths": {
         "bundle": "agent/cases/mira-host-photography.json",
-        "preview": "previews/mira-host-photography.jpg",
-        "demo": "demos/mira-host-photography/index.html",
-        "entry": "entries/mira-host-photography.json"
+        "preview": "previews/cases/mira-host-photography.jpg",
+        "demo": "demos/cases/mira-host-photography/index.html",
+        "entry": "entries/cases/mira-host-photography.json"
       }
     }
   ],

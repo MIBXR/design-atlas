@@ -40,13 +40,13 @@
     "sources": [
       {
         "caseId": "swiss-grid",
-        "locator": "entries/swiss-grid.json#composition/color",
+        "locator": "entries/cases/swiss-grid.json#composition/color",
         "observation": "暖白纸面、黑色信息与少量红色海报形成清晰层级。",
         "evidence": "adapted"
       },
       {
         "caseId": "met-museum",
-        "locator": "entries/met-museum.json#composition/color",
+        "locator": "entries/cases/met-museum.json#composition/color",
         "observation": "白底黑灰字和红色操作层，图像保持展览自己的颜色。",
         "evidence": "observed",
         "referenceUrl": "https://www.metmuseum.org/en",
@@ -54,7 +54,7 @@
       },
       {
         "caseId": "mori-art-museum",
-        "locator": "entries/mori-art-museum.json#composition/color",
+        "locator": "entries/cases/mori-art-museum.json#composition/color",
         "observation": "#bf0d3e机构红贯穿Logo、展期、栏目、标签；粉色公告、白色底和艺术海报虹彩承担不同角色。",
         "evidence": "observed",
         "referenceUrl": "https://www.mori.art.museum/jp/",
@@ -62,7 +62,7 @@
       },
       {
         "caseId": "endfield-industrial",
-        "locator": "entries/endfield-industrial.json#composition/color",
+        "locator": "entries/cases/endfield-industrial.json#composition/color",
         "observation": "源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。",
         "evidence": "observed",
         "referenceUrl": "https://endfield.hypergryph.com/",
@@ -70,7 +70,7 @@
       },
       {
         "caseId": "rhine-lab",
-        "locator": "entries/rhine-lab.json#composition/color",
+        "locator": "entries/cases/rhine-lab.json#composition/color",
         "observation": "源片米白透明档案与黑白机构字标保持原色，双环内缘及业务科焦点使用橙色；本地外围用米白、黑色和同源橙色节点，素材没有深绿/黄绿重着色。",
         "evidence": "adapted",
         "referenceUrl": "https://www.bilibili.com/video/BV1rr4y1b7sz/",
@@ -78,35 +78,35 @@
       }
     ],
     "sourceFiles": [
-      "demos/endfield-industrial/app.js",
-      "demos/endfield-industrial/fidelity.md",
-      "demos/endfield-industrial/index.html",
-      "demos/endfield-industrial/reference.css",
-      "demos/endfield-industrial/state.css",
-      "demos/endfield-industrial/data.js",
-      "demos/met-museum/fidelity.md",
-      "demos/met-museum/index.html",
-      "demos/met-museum/script.js",
-      "demos/met-museum/style.css",
-      "demos/mori-art-museum/app.js",
-      "demos/mori-art-museum/fidelity.md",
-      "demos/mori-art-museum/index.html",
-      "demos/mori-art-museum/style.css",
-      "demos/rhine-lab/app.js",
-      "demos/rhine-lab/fidelity.md",
-      "demos/rhine-lab/index.html",
-      "demos/rhine-lab/style.css",
-      "demos/swiss-grid/index.html",
-      "entries/endfield-industrial.json",
-      "entries/met-museum.json",
-      "entries/mori-art-museum.json",
-      "entries/rhine-lab.json",
-      "entries/swiss-grid.json",
-      "research/endfield-industrial.md",
-      "research/met-museum.md",
-      "research/mori-art-museum.md",
-      "research/rhine-lab.md",
-      "research/swiss-grid.md"
+      "demos/cases/endfield-industrial/app.js",
+      "demos/cases/endfield-industrial/fidelity.md",
+      "demos/cases/endfield-industrial/index.html",
+      "demos/cases/endfield-industrial/reference.css",
+      "demos/cases/endfield-industrial/state.css",
+      "demos/cases/endfield-industrial/data.js",
+      "demos/cases/met-museum/fidelity.md",
+      "demos/cases/met-museum/index.html",
+      "demos/cases/met-museum/script.js",
+      "demos/cases/met-museum/style.css",
+      "demos/cases/mori-art-museum/app.js",
+      "demos/cases/mori-art-museum/fidelity.md",
+      "demos/cases/mori-art-museum/index.html",
+      "demos/cases/mori-art-museum/style.css",
+      "demos/cases/rhine-lab/app.js",
+      "demos/cases/rhine-lab/fidelity.md",
+      "demos/cases/rhine-lab/index.html",
+      "demos/cases/rhine-lab/style.css",
+      "demos/cases/swiss-grid/index.html",
+      "entries/cases/endfield-industrial.json",
+      "entries/cases/met-museum.json",
+      "entries/cases/mori-art-museum.json",
+      "entries/cases/rhine-lab.json",
+      "entries/cases/swiss-grid.json",
+      "docs/research/endfield-industrial.md",
+      "docs/research/met-museum.md",
+      "docs/research/mori-art-museum.md",
+      "docs/research/rhine-lab.md",
+      "docs/research/swiss-grid.md"
     ]
   },
   "sourceCases": [
@@ -115,7 +115,7 @@
       "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
-        "demo": "demos/endfield-industrial/index.html"
+        "demo": "demos/cases/endfield-industrial/index.html"
       }
     },
     {
@@ -123,7 +123,7 @@
       "title": "The Met · 编辑式展览与馆藏陈列",
       "paths": {
         "bundle": "agent/cases/met-museum.json",
-        "demo": "demos/met-museum/index.html"
+        "demo": "demos/cases/met-museum/index.html"
       }
     },
     {
@@ -131,7 +131,7 @@
       "title": "森美术馆：红色机构锚点与艺术海报",
       "paths": {
         "bundle": "agent/cases/mori-art-museum.json",
-        "demo": "demos/mori-art-museum/index.html"
+        "demo": "demos/cases/mori-art-museum/index.html"
       }
     },
     {
@@ -139,7 +139,7 @@
       "title": "莱茵生命 · 影像终端的网页转译",
       "paths": {
         "bundle": "agent/cases/rhine-lab.json",
-        "demo": "demos/rhine-lab/index.html"
+        "demo": "demos/cases/rhine-lab/index.html"
       }
     },
     {
@@ -147,7 +147,7 @@
       "title": "瑞士设计：编辑网格",
       "paths": {
         "bundle": "agent/cases/swiss-grid.json",
-        "demo": "demos/swiss-grid/index.html"
+        "demo": "demos/cases/swiss-grid/index.html"
       }
     }
   ]

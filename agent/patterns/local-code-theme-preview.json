@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "linear-workflow",
-        "locator": "entries/linear-workflow.json#interaction/4",
+        "locator": "entries/cases/linear-workflow.json#interaction/4",
         "observation": "Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。",
         "evidence": "observed",
         "referenceUrl": "https://linear.app/",
@@ -47,13 +47,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/linear-workflow/fidelity.md",
-      "demos/linear-workflow/index.html",
-      "demos/linear-workflow/journey.js",
-      "demos/linear-workflow/script.js",
-      "demos/linear-workflow/style.css",
-      "entries/linear-workflow.json",
-      "research/linear-workflow.md"
+      "demos/cases/linear-workflow/fidelity.md",
+      "demos/cases/linear-workflow/index.html",
+      "demos/cases/linear-workflow/journey.js",
+      "demos/cases/linear-workflow/script.js",
+      "demos/cases/linear-workflow/style.css",
+      "entries/cases/linear-workflow.json"
     ]
   },
   "sourceCases": [
@@ -62,7 +61,7 @@
       "title": "Linear — 深色产品开发系统",
       "paths": {
         "bundle": "agent/cases/linear-workflow.json",
-        "demo": "demos/linear-workflow/index.html"
+        "demo": "demos/cases/linear-workflow/index.html"
       }
     }
   ]

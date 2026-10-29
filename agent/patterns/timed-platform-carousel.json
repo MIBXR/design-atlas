@@ -46,7 +46,7 @@
     "sources": [
       {
         "caseId": "qoder-platform",
-        "locator": "entries/qoder-platform.json#interaction/2",
+        "locator": "entries/cases/qoder-platform.json#interaction/2",
         "observation": "五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。",
         "evidence": "observed",
         "referenceUrl": "https://qoder.cn/",
@@ -54,13 +54,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/qoder-platform/fidelity.md",
-      "demos/qoder-platform/index.html",
-      "demos/qoder-platform/journey.js",
-      "demos/qoder-platform/script.js",
-      "demos/qoder-platform/style.css",
-      "entries/qoder-platform.json",
-      "research/qoder-platform.md"
+      "demos/cases/qoder-platform/fidelity.md",
+      "demos/cases/qoder-platform/index.html",
+      "demos/cases/qoder-platform/journey.js",
+      "demos/cases/qoder-platform/script.js",
+      "demos/cases/qoder-platform/style.css",
+      "entries/cases/qoder-platform.json"
     ]
   },
   "sourceCases": [
@@ -69,7 +68,7 @@
       "title": "Qoder — 绿色工作台与多形态平台",
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
-        "demo": "demos/qoder-platform/index.html"
+        "demo": "demos/cases/qoder-platform/index.html"
       }
     }
   ]

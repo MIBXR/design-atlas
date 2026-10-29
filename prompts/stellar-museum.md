@@ -1,6 +1,6 @@
 # 星槎 STELLAR · 太空探索博物馆 · 复用 Prompt
 
-由 [结构化案例](../entries/stellar-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/stellar-museum.md)。
+由 [结构化案例](../entries/cases/stellar-museum.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/stellar-museum.md)。
 
 ## 正向 Prompt
 
@@ -24,4 +24,4 @@
 
 在同一视口下打开主页面与 baseline.html，逐项观察结构、字体职责、色彩、局部动效与信息层级；区分作者对照说明、源码数值和实际浏览器结果。
 
-[查看 Demo](../demos/stellar-museum/index.html) · [返回案例库](../cases.html#style/stellar-museum)
+[查看 Demo](../demos/cases/stellar-museum/index.html) · [返回案例库](../cases.html#style/stellar-museum)

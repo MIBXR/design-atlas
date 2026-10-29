@@ -38,12 +38,12 @@ function textArray(value, label) {
 
 // Case-only schema-1 repositories may omit the directory.
 export function loadPatterns({ root = defaultRoot, entries } = {}) {
-  if (!entries) entries = fs.readdirSync(repositoryFile(root, 'entries')).filter(n => n.endsWith('.json')).map(n => JSON.parse(textFile(root, `entries/${n}`)));
-  const directory = repositoryFile(root, 'patterns', false);
+  if (!entries) entries = fs.readdirSync(repositoryFile(root, 'entries/cases')).filter(n => n.endsWith('.json')).map(n => JSON.parse(textFile(root, `entries/cases/${n}`)));
+  const directory = repositoryFile(root, 'entries/patterns', false);
   if (!fs.existsSync(directory)) return [];
   const cases = new Map(entries.map(e => [e.id, e]));
   const patterns = fs.readdirSync(directory).filter(n => n.endsWith('.json')).sort().map(name => {
-    const p = JSON.parse(textFile(root, `patterns/${name}`));
+    const p = JSON.parse(textFile(root, `entries/patterns/${name}`));
     if (typeof p.id !== 'string' || !idPattern.test(p.id) || name !== p.id + '.json') throw new Error(`Pattern filename/id mismatch: ${name}`);
     for (const key of ['title', 'category', 'summary', 'mechanism', 'trigger', 'effect', 'prompt']) requireText(p[key], `${p.id}.${key}`);
     if (!categories.includes(p.category)) throw new Error(`Unknown pattern category: ${p.id}`);

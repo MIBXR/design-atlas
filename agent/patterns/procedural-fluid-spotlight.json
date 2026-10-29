@@ -52,7 +52,7 @@
     "sources": [
       {
         "caseId": "deepseek-harness",
-        "locator": "entries/deepseek-harness.json#interaction/0",
+        "locator": "entries/cases/deepseek-harness.json#interaction/0",
         "observation": "Hero使用官方WebGL2流体着色器，蓝灰五色场、暖色光核与低强度光晕持续演化；30fps、DPR上限1.5、离屏暂停。输入流场是1×1中性纹理，没有指针搅动逻辑。",
         "evidence": "observed",
         "referenceUrl": "https://www.deepseek.com/harness/",
@@ -60,31 +60,31 @@
       }
     ],
     "sourceFiles": [
-      "entries/deepseek-harness.json",
-      "research/deepseek-harness.md",
-      "demos/deepseek-harness/app.js",
-      "demos/deepseek-harness/fidelity.md",
-      "demos/deepseek-harness/index.html",
-      "demos/deepseek-harness/messages.js",
-      "demos/deepseek-harness/reference.css",
-      "demos/deepseek-harness/runtime.js",
-      "demos/deepseek-harness/state.css",
-      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
-      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
-      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
-      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
-      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
-      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
-      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
-      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
-      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
-      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
-      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
-      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
-      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
-      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
-      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
-      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js"
+      "entries/cases/deepseek-harness.json",
+      "docs/research/deepseek-harness.md",
+      "demos/cases/deepseek-harness/app.js",
+      "demos/cases/deepseek-harness/fidelity.md",
+      "demos/cases/deepseek-harness/index.html",
+      "demos/cases/deepseek-harness/messages.js",
+      "demos/cases/deepseek-harness/reference.css",
+      "demos/cases/deepseek-harness/runtime.js",
+      "demos/cases/deepseek-harness/state.css",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/1798-4c32a4b3e02e20fe.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/7386dc53.5bf20d414744188e.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/7591-a9eaac0cc94f9f3e.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/1835-f521304a15b83224.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/3743-7c4be9ad33829b7f.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/5565.779b207d687b6031.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/1563-d3f244478cac7e75.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/9164-9f2478a2648a9516.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/8091.573531f4257c3cd0.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/6872-122f878b6e348922.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/8809-44db951c56e60f28.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/6336-e0040a1eb23dd92b.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/8555-7c9518c428e988c2.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/86b88eeb-5b86058878847f6a.js"
     ],
     "prompt": "为【目标页面/组件】实现「流体色场中的固定光核」。以程序化多层扭曲形成流体色场，用位置固定的光核、光晕和暗角控制明暗；文本和工作台位于独立DOM层，不随纹理变形。 触发：进入首屏并保持可见。结果：背景提供空间和氛围，阅读与操作不受纹理运动影响。 GPU层只负责装饰，不遮挡点击、正文和焦点。 源案例flowmap为中性纹理，没有指针扰动；复用时应保留离屏停止和帧率上限。 作为首屏背景与稳定工作台组合，勿叠加同区域大幅粒子、文字变形和多套指针反馈。 键盘：Canvas不进入Tab顺序；标题、CTA和工作台以DOM保持可读。 减少动态：迁移时提供静态色场或停止时间推进；源页面GPU的减少动态行为需单独核验。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
   },
@@ -94,7 +94,7 @@
       "title": "DeepSeek Harness · 可观察的产品演示",
       "paths": {
         "bundle": "agent/cases/deepseek-harness.json",
-        "demo": "demos/deepseek-harness/index.html"
+        "demo": "demos/cases/deepseek-harness/index.html"
       }
     }
   ]

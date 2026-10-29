@@ -1,6 +1,6 @@
 # 明日方舟 · 全屏档案与交互点阵 · 复用 Prompt
 
-由 [结构化案例](../entries/arknights-world.json) 自动生成。参考观察与具体边界见 [调研](../research/arknights-world.md)。
+由 [结构化案例](../entries/cases/arknights-world.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/arknights-world.md)。
 
 ## 正向 Prompt
 
@@ -25,4 +25,4 @@
 
 在已授权角色素材不变时，加入一个可查询的干员职业目录，保持工业档案的网格与状态语汇。
 
-[查看 Demo](../demos/arknights-world/index.html) · [返回案例库](../cases.html#style/arknights-world)
+[查看 Demo](../demos/cases/arknights-world/index.html) · [返回案例库](../cases.html#style/arknights-world)

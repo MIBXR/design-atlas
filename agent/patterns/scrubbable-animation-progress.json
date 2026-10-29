@@ -40,23 +40,23 @@
     "sources": [
       {
         "caseId": "line-art",
-        "locator": "entries/line-art.json#interaction/1",
+        "locator": "entries/cases/line-art.json#interaction/1",
         "observation": "进度滑块允许主动描绘或回看",
         "evidence": "adapted"
       },
       {
         "caseId": "line-art",
-        "locator": "entries/line-art.json#interaction/2",
+        "locator": "entries/cases/line-art.json#interaction/2",
         "observation": "绘制过程中可拖动滑块中止动画",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/line-art/index.html",
-      "demos/line-art/script.js",
-      "demos/line-art/style.css",
-      "entries/line-art.json",
-      "research/line-art.md"
+      "demos/cases/line-art/index.html",
+      "demos/cases/line-art/script.js",
+      "demos/cases/line-art/style.css",
+      "entries/cases/line-art.json",
+      "docs/research/line-art.md"
     ]
   },
   "sourceCases": [
@@ -65,7 +65,7 @@
       "title": "线条：沿绘制顺序解释结构",
       "paths": {
         "bundle": "agent/cases/line-art.json",
-        "demo": "demos/line-art/index.html"
+        "demo": "demos/cases/line-art/index.html"
       }
     }
   ]

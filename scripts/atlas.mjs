@@ -52,7 +52,7 @@ export function exportBundle(bundle, directory, {codeOnly = false, base = root} 
   if (fs.existsSync(out)) throw new Error('Choose a new output directory; existing directories are preserved.');
   const parent = path.dirname(out);
   if (!fs.existsSync(parent) || fs.realpathSync(parent) !== parent) throw new Error('Output parent must exist and contain no symlinks.');
-  const selected = bundle.files.filter(file => !codeOnly || ['source','context'].includes(file.role));
+  const selected = bundle.files.filter(file => !codeOnly || (['source','context','vendor','license'].includes(file.role) || file.role === 'process' && /\.(?:md|txt|json|css|js|mjs)$/i.test(file.path)));
   fs.mkdirSync(out);
   const omitted = bundle.files.filter(file => !selected.includes(file)).map(file => file.path);
   try {
@@ -102,7 +102,7 @@ function main() {
     if (positionals.length !== 1) throw new Error('Supply exactly one case ID.');
     const bundle = readBundle(catalog,positionals[0]);
     if (command === 'show') {
-      result = options.source ? {...bundle,source:bundle.files.filter(f => f.role === 'source').map(f => ({...f,content:readSource(root,f).toString('utf8')}))} : bundle;
+      result = options.source ? {...bundle,source:bundle.files.filter(f => ['source','vendor'].includes(f.role) && /\.(?:html|js|mjs|css)$/i.test(f.path)).map(f => ({...f,content:readSource(root,f).toString('utf8')}))} : bundle;
     } else {
       if (!options.out) throw new Error('Export requires --out <new-directory>.');
       result = exportBundle(bundle,options.out,{codeOnly:options['code-only']});

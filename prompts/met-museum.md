@@ -1,6 +1,6 @@
 # The Met · 编辑式展览与馆藏陈列 · 复用 Prompt
 
-由 [结构化案例](../entries/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/met-museum.md)。
+由 [结构化案例](../entries/cases/met-museum.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/met-museum.md)。
 
 ## 正向 Prompt
 
@@ -23,4 +23,4 @@
 
 用另一组真实授权展览替换四张海报，仍让每张海报保有自身视觉；检测信息区在手机是否易读。
 
-[查看 Demo](../demos/met-museum/index.html) · [返回案例库](../cases.html#style/met-museum)
+[查看 Demo](../demos/cases/met-museum/index.html) · [返回案例库](../cases.html#style/met-museum)

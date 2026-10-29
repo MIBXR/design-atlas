@@ -1,0 +1,57 @@
+{
+  "id": "web-design-engineer",
+  "title": "Web Design Engineer · 网页设计工作流",
+  "type": "agent-skill",
+  "category": "Agent 工作流",
+  "summary": "让 Agent 从需求、参考与设计系统出发，经方向确认、首版反馈和完整实现，制作有明确视觉语言的网页作品。",
+  "install": "将 agent-skills/web-design-engineer/ 复制到项目的 .agents/skills/web-design-engineer/ 或 .claude/skills/web-design-engineer/；按所用 Agent 的技能发现方式启用。",
+  "tags": ["网页设计", "设计系统", "视觉校准", "前端实现", "设计评议", "风格配方"],
+  "useCases": ["根据参考制作网页与交互原型", "延展既有产品界面", "保留业务与交互的视觉重设计", "探索设计方向并评议网页作品"],
+  "avoid": ["后端接口、命令行工具和纯逻辑开发", "把源材料转成完整长文文章", "按旁白节拍制作视频演示", "把风格参考图当作已有的可运行网页源码"],
+  "constraints": [
+    "本条目保存 garden-skills 固定提交中的技能原文、参考配方与宿主元数据，不直接执行技能或提供在线生成服务。",
+    "原文要求先核实不稳定事实、读取参考与现有设计；设计系统和可浏览首版分别经用户确认后再继续。",
+    "原文只在用户明确要求浏览器验收、响应式检查或同类实测时运行浏览器验收流程；普通开发要求不等于已授权该流程。",
+    "快照包含 25 份具名风格配方；README 中引用的配方画廊页面源码未包含在固定提交中，外部效果图不作为本条目复刻页面。",
+    "原文快照保留原语言与相对链接；指向仓库根目录、画廊或外部资源的链接仍须结合上游仓库阅读。"
+  ],
+  "upstream": {
+    "repository": "ConardLi/garden-skills",
+    "url": "https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer",
+    "commit": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+    "version": "1.3.0",
+    "verifiedAt": "2026-10-27"
+  },
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/LICENSE",
+    "scope": "garden-skills 仓库内的技能文本、参考文件与代码；根 LICENSE 原样附在快照目录。",
+    "notes": "保留 MIT 版权与许可文本。README 链接的第三方品牌、字体和外部效果图不因技能的 MIT 许可而获得再分发许可；本条目没有下载这些效果图。预览复用本库星槎案例的实际画面，其字体等来源许可见案例资料。"
+  },
+  "sources": [
+    {"title": "Web Design Engineer 技能原文", "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/SKILL.md", "note": "需求与设计上下文、五项视觉校准、设计系统确认、首版确认、完整实现和验收边界的直接依据。", "evidence": "source"},
+    {"title": "技能说明与同题示范对照", "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md", "note": "安装方式、25 份风格配方，以及太空博物馆和摄影主页有／无 skill 对照的作者说明。", "evidence": "source"},
+    {"title": "技能版本与兼容声明", "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/manifest.json", "note": "固定提交声明版本为 1.3.0；兼容列表是作者声明，不作为本库逐宿主运行验证。", "evidence": "source"}
+  ],
+  "skillPath": "agent-skills/web-design-engineer/",
+  "workflow": [
+    "核实产品、品牌与技术事实，明确受众、作品类型、约束及已有界面的保留范围。",
+    "优先阅读用户提供的代码、素材和参考，提取设计系统；按需读取一份具名风格配方。",
+    "梳理设计判断，校准视觉变化、动效强度、信息密度、素材依赖和品牌忠实度，并确定叙事角色、观看距离、视觉温度及内容容量。",
+    "声明配色、字体、间距、圆角、阴影和运动规则，等待用户确认设计系统。",
+    "制作可浏览的首版结构与关键模块，让用户确认方向，再完成组件、状态和动效。",
+    "执行交付前的代码与设计自查；用户明确要求实测时再运行浏览器验收，并按设计理念、层级、工艺、功能和独创性评议与修复。"
+  ],
+  "relatedEntries": [
+    {"kind": "case", "id": "stellar-museum", "note": "同一提示词下有 skill 和无 skill 的对照；案例保留主页面及无 skill 基线。"},
+    {"kind": "case", "id": "mira-host-photography", "note": "有 skill 的摄影主页结果；案例按固定提交归档作者公开的页面。"}
+  ],
+  "prompt": "先阅读 agent-skills/web-design-engineer/SKILL.md，依据任务选择现有界面延展、保留式重设计或完整重设计。核实事实并阅读已有代码、品牌素材和参考，明确受众与约束，给出设计判断和视觉校准，再声明设计系统并请用户确认。先展示可浏览首版，确认后完整实现并自查。需要参考结果时阅读星槎与米拉摄影案例，区分同题对照和单个有 skill 结果；不把案例品质推断为每次调用技能的保证。",
+  "accessibility": {
+    "keyboard": "技能条目通过真实链接进入原文与关联案例；应用技能制作网页时，按原文交付清单检查语义标签、替代文本和键盘导航。",
+    "reducedMotion": "本资源为工作流与文本快照，没有自动播放的演示；应用技能时根据动效强度与用户环境处理减少动态。"
+  },
+  "preview": "previews/materials/web-design-engineer.jpg",
+  "research": "docs/materials/web-design-engineer.md",
+  "sourceFiles": ["agent-skills/web-design-engineer/SKILL.md", "agent-skills/web-design-engineer/README.md"]
+}

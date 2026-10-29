@@ -50,7 +50,7 @@
     "sources": [
       {
         "caseId": "design-sight",
-        "locator": "entries/design-sight.json#interaction/1",
+        "locator": "entries/cases/design-sight.json#interaction/1",
         "observation": "海报自动切换：6000ms间隔与1000ms淡化，指针经过不暂停。 保留展览视觉的完整阅读时间。",
         "evidence": "observed",
         "referenceUrl": "https://www.2121designsight.jp/",
@@ -58,7 +58,7 @@
       },
       {
         "caseId": "fuji-rock",
-        "locator": "entries/fuji-rock.json#interaction/2",
+        "locator": "entries/cases/fuji-rock.json#interaction/2",
         "observation": "照片或Featured自动／手动切换：照片3600ms间隔、800ms淡化；Featured600ms中心循环，3600ms自动，手机露出两侧邻项。 照片传递现场氛围，中心轨道突出活动主题且提示还有内容。",
         "evidence": "observed",
         "referenceUrl": "https://www.fujirockfestival.com/",
@@ -66,7 +66,7 @@
       },
       {
         "caseId": "mira-host-photography",
-        "locator": "entries/mira-host-photography.json#interaction/6",
+        "locator": "entries/cases/mira-host-photography.json#interaction/6",
         "observation": "首屏始终使用同一张摄影，图片加载后以 1.6 秒透明度过渡显现；CSS 中的 Ken Burns 动画设置 1.6 秒启动延迟，每个单程 24 秒，从 1.04 倍且无平移变为 1.12 倍并平移至横向 -1.5%、纵向 -1%，再交替反向往返。文字保持独立叠层；来源未实现照片切换、交叉淡化、暂停或离屏停止，减少动态时停用该动画。",
         "evidence": "observed",
         "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
@@ -74,22 +74,22 @@
       }
     ],
     "sourceFiles": [
-      "demos/design-sight/app.js",
-      "demos/design-sight/fidelity.md",
-      "demos/design-sight/index.html",
-      "demos/design-sight/style.css",
-      "demos/fuji-rock/app.js",
-      "demos/fuji-rock/fidelity.md",
-      "demos/fuji-rock/index.html",
-      "demos/fuji-rock/style.css",
-      "entries/design-sight.json",
-      "entries/fuji-rock.json",
-      "research/design-sight.md",
-      "research/fuji-rock.md",
-      "demos/mira-host-photography/index.html",
-      "demos/mira-host-photography/fidelity.md",
-      "entries/mira-host-photography.json",
-      "research/mira-host-photography.md"
+      "demos/cases/design-sight/app.js",
+      "demos/cases/design-sight/fidelity.md",
+      "demos/cases/design-sight/index.html",
+      "demos/cases/design-sight/style.css",
+      "demos/cases/fuji-rock/app.js",
+      "demos/cases/fuji-rock/fidelity.md",
+      "demos/cases/fuji-rock/index.html",
+      "demos/cases/fuji-rock/style.css",
+      "entries/cases/design-sight.json",
+      "entries/cases/fuji-rock.json",
+      "docs/research/design-sight.md",
+      "docs/research/fuji-rock.md",
+      "demos/cases/mira-host-photography/index.html",
+      "demos/cases/mira-host-photography/fidelity.md",
+      "entries/cases/mira-host-photography.json",
+      "docs/research/mira-host-photography.md"
     ]
   },
   "sourceCases": [
@@ -98,7 +98,7 @@
       "title": "21_21 DESIGN SIGHT：海报与四列档案",
       "paths": {
         "bundle": "agent/cases/design-sight.json",
-        "demo": "demos/design-sight/index.html"
+        "demo": "demos/cases/design-sight/index.html"
       }
     },
     {
@@ -106,7 +106,7 @@
       "title": "Fuji Rock：现场照片与节日导览",
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
-        "demo": "demos/fuji-rock/index.html"
+        "demo": "demos/cases/fuji-rock/index.html"
       }
     },
     {
@@ -114,7 +114,7 @@
       "title": "Mira Høst · 北欧摄影作品集",
       "paths": {
         "bundle": "agent/cases/mira-host-photography.json",
-        "demo": "demos/mira-host-photography/index.html"
+        "demo": "demos/cases/mira-host-photography/index.html"
       }
     }
   ]

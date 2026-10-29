@@ -1,6 +1,6 @@
 # 森美术馆：红色机构锚点与艺术海报 · 复用 Prompt
 
-由 [结构化案例](../entries/mori-art-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/mori-art-museum.md)。
+由 [结构化案例](../entries/cases/mori-art-museum.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/mori-art-museum.md)。
 
 ## 正向 Prompt
 
@@ -24,4 +24,4 @@
 
 保持艺术海报不变，只移除红色方形馆标与展期带，观察观众还是否能迅速知道机构、展名和日期；恢复后比较信息路径。
 
-[查看 Demo](../demos/mori-art-museum/index.html) · [返回案例库](../cases.html#style/mori-art-museum)
+[查看 Demo](../demos/cases/mori-art-museum/index.html) · [返回案例库](../cases.html#style/mori-art-museum)

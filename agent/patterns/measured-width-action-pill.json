@@ -45,7 +45,7 @@
     "sources": [
       {
         "caseId": "notion-editorial",
-        "locator": "entries/notion-editorial.json#interaction/0",
+        "locator": "entries/cases/notion-editorial.json#interaction/0",
         "observation": "2500ms 自动 Think/Ship/Create/Build/Jam/Scale → 词直接替换，测量 scrollWidth 后宽度以 300ms cubic-bezier(.86,0,.07,1) 变化，底色/圆点对应变化；这是源机制，没有给文字加不存在的飞入飞出。",
         "evidence": "observed",
         "referenceUrl": "https://www.notion.com/",
@@ -53,13 +53,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/notion-editorial/fidelity.md",
-      "demos/notion-editorial/index.html",
-      "demos/notion-editorial/journey.js",
-      "demos/notion-editorial/script.js",
-      "demos/notion-editorial/style.css",
-      "entries/notion-editorial.json",
-      "research/notion-editorial.md"
+      "demos/cases/notion-editorial/fidelity.md",
+      "demos/cases/notion-editorial/index.html",
+      "demos/cases/notion-editorial/journey.js",
+      "demos/cases/notion-editorial/script.js",
+      "demos/cases/notion-editorial/style.css",
+      "entries/cases/notion-editorial.json",
+      "docs/research/notion-editorial.md"
     ]
   },
   "sourceCases": [
@@ -68,7 +68,7 @@
       "title": "Notion — 插画与真实工作空间",
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
-        "demo": "demos/notion-editorial/index.html"
+        "demo": "demos/cases/notion-editorial/index.html"
       }
     }
   ]

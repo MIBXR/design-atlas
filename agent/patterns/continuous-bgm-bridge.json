@@ -46,7 +46,7 @@
     "sources": [
       {
         "caseId": "arknights-world",
-        "locator": "entries/arknights-world.json#interaction/5",
+        "locator": "entries/cases/arknights-world.json#interaction/5",
         "observation": "真实BGM默认关闭，单独开关并使用官网600/300ms音量渐变；三人日语语音独立按需播放，换人物或离开干员章暂停旧语音。",
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
@@ -54,7 +54,7 @@
       },
       {
         "caseId": "zelda-world",
-        "locator": "entries/zelda-world.json#soundBehavior/interactionRole",
+        "locator": "entries/cases/zelda-world.json#soundBehavior/interactionRole",
         "observation": "开场 SE 对应纹章发亮扩散，BGM在入口移交世界时接续；三段影片切换时音乐不断开，维持探索节奏。",
         "evidence": "observed",
         "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
@@ -62,19 +62,19 @@
       }
     ],
     "sourceFiles": [
-      "demos/arknights-world/fidelity.md",
-      "demos/arknights-world/index.html",
-      "demos/arknights-world/particles.js",
-      "demos/arknights-world/script.js",
-      "demos/arknights-world/style.css",
-      "demos/zelda-world/fidelity.md",
-      "demos/zelda-world/index.html",
-      "demos/zelda-world/script.js",
-      "demos/zelda-world/style.css",
-      "entries/arknights-world.json",
-      "entries/zelda-world.json",
-      "research/arknights-world.md",
-      "research/zelda-world.md"
+      "demos/cases/arknights-world/fidelity.md",
+      "demos/cases/arknights-world/index.html",
+      "demos/cases/arknights-world/particles.js",
+      "demos/cases/arknights-world/script.js",
+      "demos/cases/arknights-world/style.css",
+      "demos/cases/zelda-world/fidelity.md",
+      "demos/cases/zelda-world/index.html",
+      "demos/cases/zelda-world/script.js",
+      "demos/cases/zelda-world/style.css",
+      "entries/cases/arknights-world.json",
+      "entries/cases/zelda-world.json",
+      "docs/research/arknights-world.md",
+      "docs/research/zelda-world.md"
     ]
   },
   "sourceCases": [
@@ -83,7 +83,7 @@
       "title": "明日方舟 · 全屏档案与交互点阵",
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
-        "demo": "demos/arknights-world/index.html"
+        "demo": "demos/cases/arknights-world/index.html"
       }
     },
     {
@@ -91,7 +91,7 @@
       "title": "塞尔达 · 全景世界舞台",
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
-        "demo": "demos/zelda-world/index.html"
+        "demo": "demos/cases/zelda-world/index.html"
       }
     }
   ]

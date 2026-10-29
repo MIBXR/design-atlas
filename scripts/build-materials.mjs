@@ -48,10 +48,10 @@ function walkFiles(root, relative) {
 }
 
 export function loadMaterials({ root = defaultRoot } = {}) {
-  const directory = repositoryFile(root, 'materials', false);
+  const directory = repositoryFile(root, 'entries/materials', false);
   if (!fs.existsSync(directory)) return [];
   return fs.readdirSync(directory).filter(name => name.endsWith('.json')).sort().map(name => {
-    const material = JSON.parse(readFile(root, `materials/${name}`));
+    const material = JSON.parse(readFile(root, `entries/materials/${name}`));
     if (!idPattern.test(material.id) || name !== `${material.id}.json`) throw new Error(`Material filename/id mismatch: ${name}`);
     for (const key of ['title', 'type', 'category', 'summary', 'prompt', 'research']) text(material[key], `${material.id}.${key}`);
     for (const key of ['tags', 'useCases', 'avoid', 'constraints', 'sourceFiles']) textArray(material[key], `${material.id}.${key}`);
@@ -76,7 +76,7 @@ export function loadMaterials({ root = defaultRoot } = {}) {
       if (!material.workflow.length || material.workflow.some(step => !/[\u3400-\u9fff]/.test(step))) throw new Error(`Expected Chinese skill workflow: ${material.id}`);
       if (!Array.isArray(material.relatedEntries)) throw new Error(`Expected skill related entries: ${material.id}`);
       for (const related of material.relatedEntries) {
-        const directory = {case:'entries', material:'materials', pattern:'patterns'}[related.kind];
+        const directory = {case:'entries/cases', material:'entries/materials', pattern:'entries/patterns'}[related.kind];
         if (!['case', 'material', 'pattern'].includes(related.kind) || !idPattern.test(related.id)) throw new Error(`Invalid skill related entry: ${material.id}`);
         text(related.note, `${material.id}.relatedEntries.note`);
         if (JSON.parse(readFile(root, `${directory}/${related.id}.json`)).id !== related.id) throw new Error(`Unknown skill related entry: ${material.id}/${related.id}`);
@@ -90,7 +90,7 @@ export function loadMaterials({ root = defaultRoot } = {}) {
         }
       }
     } else {
-      if (material.demo !== `material-demos/${material.id}/index.html`) throw new Error(`Unexpected material demo path: ${material.id}`);
+      if (material.demo !== `demos/materials/${material.id}/index.html`) throw new Error(`Unexpected material demo path: ${material.id}`);
       if (!Array.isArray(material.demos) || !material.demos.length) throw new Error(`Missing interactive material demos: ${material.id}`);
       if (new Set(material.demos.map(demo => demo.id)).size !== material.demos.length) throw new Error(`Duplicate material demo: ${material.id}`);
     }
@@ -112,16 +112,16 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
   const outputs = new Map();
   const bundles = [];
   const records = materials.map(material => {
-    const contentFiles = walkFiles(root, material.type === 'agent-skill' ? material.skillPath.replace(/\/$/, '') : `material-demos/${material.id}`);
+    const contentFiles = walkFiles(root, material.type === 'agent-skill' ? material.skillPath.replace(/\/$/, '') : `demos/materials/${material.id}`);
     const documentPaths = [material.research, ...contentFiles.filter(relative => relative.endsWith('.md') || /\/LICENSE(?:[^/]*\.txt)?$/.test(relative))];
     const documents = [...new Set(documentPaths)].map(relative => {
       const bytes = readFile(root, relative);
       new TextDecoder('utf-8', { fatal: true }).decode(bytes);
       return { path: relative, role: relative === material.research ? 'research' : 'context', content: bytes.toString('utf8') };
     });
-    const paths = new Set([`materials/${material.id}.json`, material.preview, ...documentPaths, ...contentFiles, ...(material.gallery || []).map(picture => picture.path)]);
+    const paths = new Set([`entries/materials/${material.id}.json`, material.preview, ...documentPaths, ...contentFiles, ...(material.gallery || []).map(picture => picture.path)]);
     const files = [...paths].sort().map(relative => {
-      const role = relative === material.preview ? 'preview' : material.type === 'agent-skill' && material.sourceFiles.includes(relative) ? 'source' : documentPaths.includes(relative) || relative === `materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
+      const role = relative === material.preview ? 'preview' : material.type === 'agent-skill' && material.sourceFiles.includes(relative) ? 'source' : documentPaths.includes(relative) || relative === `entries/materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
       return { path: relative, role };
     });
     for (const relative of material.sourceFiles) if (!files.some(file => file.path === relative && file.role === 'source')) throw new Error(`Material source is outside its source manifest: ${material.id}/${relative}`);
@@ -131,7 +131,7 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
     const bytes = encode(bundle);
     outputs.set(relative, bytes);
     bundles.push(bundle);
-    return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, skill: material.skillPath, entry: `materials/${material.id}.json`, preview: material.preview } };
+    return { ...Object.fromEntries(summaryFields.map(key => [key, material[key]])), paths: { bundle: relative, demo: material.demo, skill: material.skillPath, entry: `entries/materials/${material.id}.json`, preview: material.preview } };
   });
   const catalog = { schemaVersion: 1, repository: 'https://github.com/MIBXR/web-atlas', materialCount: records.length, materials: records };
   outputs.set('agent/materials.json', encode(catalog));

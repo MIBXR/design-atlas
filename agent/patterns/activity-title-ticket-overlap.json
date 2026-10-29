@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "philharmonie-music",
-        "locator": "entries/philharmonie-music.json#composition/layout",
+        "locator": "entries/cases/philharmonie-music.json#composition/layout",
         "observation": "主视觉左下活动名，右侧票务面板上浮；长正文与侧栏分工，手机票务回到文档流。",
         "evidence": "observed",
         "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
@@ -48,12 +48,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/philharmonie-music/fidelity.md",
-      "demos/philharmonie-music/index.html",
-      "demos/philharmonie-music/script.js",
-      "demos/philharmonie-music/style.css",
-      "entries/philharmonie-music.json",
-      "research/philharmonie-music.md"
+      "demos/cases/philharmonie-music/fidelity.md",
+      "demos/cases/philharmonie-music/index.html",
+      "demos/cases/philharmonie-music/script.js",
+      "demos/cases/philharmonie-music/style.css",
+      "entries/cases/philharmonie-music.json",
+      "docs/research/philharmonie-music.md"
     ]
   },
   "sourceCases": [
@@ -62,7 +62,7 @@
       "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
       "paths": {
         "bundle": "agent/cases/philharmonie-music.json",
-        "demo": "demos/philharmonie-music/index.html"
+        "demo": "demos/cases/philharmonie-music/index.html"
       }
     }
   ]

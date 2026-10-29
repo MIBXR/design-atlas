@@ -1,6 +1,6 @@
 # 80年代：合成器面板 · 复用 Prompt
 
-由 [结构化案例](../entries/retro-80s.json) 自动生成。参考观察与具体边界见 [调研](../research/retro-80s.md)。
+由 [结构化案例](../entries/cases/retro-80s.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/retro-80s.md)。
 
 ## 正向 Prompt
 
@@ -27,4 +27,4 @@
 
 增加一个真正可编辑的8步音序器；让步骤、速率与播放状态在视觉和声音上同步。
 
-[查看 Demo](../demos/retro-80s/index.html) · [返回案例库](../cases.html#style/retro-80s)
+[查看 Demo](../demos/cases/retro-80s/index.html) · [返回案例库](../cases.html#style/retro-80s)

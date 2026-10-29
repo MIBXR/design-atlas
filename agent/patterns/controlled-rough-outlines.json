@@ -39,17 +39,17 @@
     "sources": [
       {
         "caseId": "hand-drawn",
-        "locator": "entries/hand-drawn.json#composition/shape",
+        "locator": "entries/cases/hand-drawn.json#composition/shape",
         "observation": "适度不规则笔触与纸页质感模拟手工；按钮仍有稳定边界。",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/hand-drawn/index.html",
-      "demos/hand-drawn/script.js",
-      "demos/hand-drawn/style.css",
-      "entries/hand-drawn.json",
-      "research/hand-drawn.md"
+      "demos/cases/hand-drawn/index.html",
+      "demos/cases/hand-drawn/script.js",
+      "demos/cases/hand-drawn/style.css",
+      "entries/cases/hand-drawn.json",
+      "docs/research/hand-drawn.md"
     ]
   },
   "sourceCases": [
@@ -58,7 +58,7 @@
       "title": "手绘：把不完美变成亲近感",
       "paths": {
         "bundle": "agent/cases/hand-drawn.json",
-        "demo": "demos/hand-drawn/index.html"
+        "demo": "demos/cases/hand-drawn/index.html"
       }
     }
   ]

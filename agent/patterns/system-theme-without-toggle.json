@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "chatgpt-platform",
-        "locator": "entries/chatgpt-platform.json#themeBehavior/control",
+        "locator": "entries/cases/chatgpt-platform.json#themeBehavior/control",
         "observation": "跟随 prefers-color-scheme；页面没有全局手动主题按钮，桌面产品界面随系统换深浅，手机保持原站的浅色界面图。",
         "evidence": "observed",
         "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
@@ -47,7 +47,7 @@
       },
       {
         "caseId": "claude-platform",
-        "locator": "entries/claude-platform.json#themeBehavior/control",
+        "locator": "entries/cases/claude-platform.json#themeBehavior/control",
         "observation": "公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。",
         "evidence": "inferred",
         "referenceUrl": "https://claude.com/",
@@ -55,21 +55,19 @@
       }
     ],
     "sourceFiles": [
-      "demos/chatgpt-platform/fidelity.md",
-      "demos/chatgpt-platform/fonts.css",
-      "demos/chatgpt-platform/index.html",
-      "demos/chatgpt-platform/motion-data.js",
-      "demos/chatgpt-platform/script.js",
-      "demos/chatgpt-platform/style.css",
-      "demos/claude-platform/fidelity.md",
-      "demos/claude-platform/index.html",
-      "demos/claude-platform/journey.js",
-      "demos/claude-platform/script.js",
-      "demos/claude-platform/style.css",
-      "entries/chatgpt-platform.json",
-      "entries/claude-platform.json",
-      "research/chatgpt-platform.md",
-      "research/claude-platform.md"
+      "demos/cases/chatgpt-platform/fidelity.md",
+      "demos/cases/chatgpt-platform/fonts.css",
+      "demos/cases/chatgpt-platform/index.html",
+      "demos/cases/chatgpt-platform/motion-data.js",
+      "demos/cases/chatgpt-platform/script.js",
+      "demos/cases/chatgpt-platform/style.css",
+      "demos/cases/claude-platform/fidelity.md",
+      "demos/cases/claude-platform/index.html",
+      "demos/cases/claude-platform/journey.js",
+      "demos/cases/claude-platform/script.js",
+      "demos/cases/claude-platform/style.css",
+      "entries/cases/chatgpt-platform.json",
+      "entries/cases/claude-platform.json"
     ]
   },
   "sourceCases": [
@@ -78,7 +76,7 @@
       "title": "ChatGPT — 巨字、飞入拼贴与滚动交接",
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
-        "demo": "demos/chatgpt-platform/index.html"
+        "demo": "demos/cases/chatgpt-platform/index.html"
       }
     },
     {
@@ -86,7 +84,7 @@
       "title": "Claude — 衬线语气与 Cowork 演示",
       "paths": {
         "bundle": "agent/cases/claude-platform.json",
-        "demo": "demos/claude-platform/index.html"
+        "demo": "demos/cases/claude-platform/index.html"
       }
     }
   ]

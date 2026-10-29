@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "persona-kinetic",
-        "locator": "entries/persona-kinetic.json#interaction/2",
+        "locator": "entries/cases/persona-kinetic.json#interaction/2",
         "observation": "三位角色横移500ms并在两端停止；学校/怪盗服装300ms换装入场。本地角色内容缩减为三位。",
         "evidence": "adapted",
         "referenceUrl": "https://persona.atlus.com/p5r/?lang=en#",
@@ -48,12 +48,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/persona-kinetic/fidelity.md",
-      "demos/persona-kinetic/index.html",
-      "demos/persona-kinetic/script.js",
-      "demos/persona-kinetic/style.css",
-      "entries/persona-kinetic.json",
-      "research/persona-kinetic.md"
+      "demos/cases/persona-kinetic/fidelity.md",
+      "demos/cases/persona-kinetic/index.html",
+      "demos/cases/persona-kinetic/script.js",
+      "demos/cases/persona-kinetic/style.css",
+      "entries/cases/persona-kinetic.json",
+      "docs/research/persona-kinetic.md"
     ]
   },
   "sourceCases": [
@@ -62,7 +62,7 @@
       "title": "Persona 5 Royal · 黑金角色拼贴",
       "paths": {
         "bundle": "agent/cases/persona-kinetic.json",
-        "demo": "demos/persona-kinetic/index.html"
+        "demo": "demos/cases/persona-kinetic/index.html"
       }
     }
   ]

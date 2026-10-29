@@ -1,6 +1,6 @@
 # 碧蓝档案：学园都市的天空与光 · 复用 Prompt
 
-由 [结构化案例](../entries/blue-archive.json) 自动生成。参考观察与具体边界见 [调研](../research/blue-archive.md)。
+由 [结构化案例](../entries/cases/blue-archive.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/blue-archive.md)。
 
 ## 正向 Prompt
 
@@ -24,4 +24,4 @@
 
 改变背景映像的一个静态画面，保持Logo和下载位置，观察天空、建筑和高光是否遮挡标语，再记录允许控件落点的安全区域。
 
-[查看 Demo](../demos/blue-archive/index.html) · [返回案例库](../cases.html#style/blue-archive)
+[查看 Demo](../demos/cases/blue-archive/index.html) · [返回案例库](../cases.html#style/blue-archive)

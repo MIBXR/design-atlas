@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "blue-archive",
-        "locator": "entries/blue-archive.json#composition/hierarchy",
+        "locator": "entries/cases/blue-archive.json#composition/hierarchy",
         "observation": "背景建立世界、Logo确认产品、竖排标语补充主题；下载与漫画入口形成左右分工。",
         "evidence": "observed",
         "referenceUrl": "https://bluearchive.jp/",
@@ -47,13 +47,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/blue-archive/app.js",
-      "demos/blue-archive/character.html",
-      "demos/blue-archive/fidelity.md",
-      "demos/blue-archive/index.html",
-      "demos/blue-archive/style.css",
-      "entries/blue-archive.json",
-      "research/blue-archive.md"
+      "demos/cases/blue-archive/app.js",
+      "demos/cases/blue-archive/character.html",
+      "demos/cases/blue-archive/fidelity.md",
+      "demos/cases/blue-archive/index.html",
+      "demos/cases/blue-archive/style.css",
+      "entries/cases/blue-archive.json",
+      "docs/research/blue-archive.md"
     ]
   },
   "sourceCases": [
@@ -62,7 +62,7 @@
       "title": "碧蓝档案：学园都市的天空与光",
       "paths": {
         "bundle": "agent/cases/blue-archive.json",
-        "demo": "demos/blue-archive/index.html"
+        "demo": "demos/cases/blue-archive/index.html"
       }
     }
   ]

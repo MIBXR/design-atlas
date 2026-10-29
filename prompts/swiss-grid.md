@@ -1,6 +1,6 @@
 # 瑞士设计：编辑网格 · 复用 Prompt
 
-由 [结构化案例](../entries/swiss-grid.json) 自动生成。参考观察与具体边界见 [调研](../research/swiss-grid.md)。
+由 [结构化案例](../entries/cases/swiss-grid.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/swiss-grid.md)。
 
 ## 正向 Prompt
 
@@ -26,4 +26,4 @@
 
 将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。
 
-[查看 Demo](../demos/swiss-grid/index.html) · [返回案例库](../cases.html#style/swiss-grid)
+[查看 Demo](../demos/cases/swiss-grid/index.html) · [返回案例库](../cases.html#style/swiss-grid)

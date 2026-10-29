@@ -37,15 +37,15 @@
     "sources": [
       {
         "caseId": "swiss-grid",
-        "locator": "entries/swiss-grid.json#interaction/1",
+        "locator": "entries/cases/swiss-grid.json#interaction/1",
         "observation": "收藏按钮将展览编号存到当前浏览器，状态可再次取消。",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/swiss-grid/index.html",
-      "entries/swiss-grid.json",
-      "research/swiss-grid.md"
+      "demos/cases/swiss-grid/index.html",
+      "entries/cases/swiss-grid.json",
+      "docs/research/swiss-grid.md"
     ]
   },
   "sourceCases": [
@@ -54,7 +54,7 @@
       "title": "瑞士设计：编辑网格",
       "paths": {
         "bundle": "agent/cases/swiss-grid.json",
-        "demo": "demos/swiss-grid/index.html"
+        "demo": "demos/cases/swiss-grid/index.html"
       }
     }
   ]

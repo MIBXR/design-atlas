@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "met-museum",
-        "locator": "entries/met-museum.json#composition/hierarchy",
+        "locator": "entries/cases/met-museum.json#composition/hierarchy",
         "observation": "建筑图像呈现实体空间，欢迎区提供行动，四列信息减轻到访决策，展览海报与馆藏引导浏览。",
         "evidence": "observed",
         "referenceUrl": "https://www.metmuseum.org/en",
@@ -48,12 +48,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/met-museum/fidelity.md",
-      "demos/met-museum/index.html",
-      "demos/met-museum/script.js",
-      "demos/met-museum/style.css",
-      "entries/met-museum.json",
-      "research/met-museum.md"
+      "demos/cases/met-museum/fidelity.md",
+      "demos/cases/met-museum/index.html",
+      "demos/cases/met-museum/script.js",
+      "demos/cases/met-museum/style.css",
+      "entries/cases/met-museum.json",
+      "docs/research/met-museum.md"
     ]
   },
   "sourceCases": [
@@ -62,7 +62,7 @@
       "title": "The Met · 编辑式展览与馆藏陈列",
       "paths": {
         "bundle": "agent/cases/met-museum.json",
-        "demo": "demos/met-museum/index.html"
+        "demo": "demos/cases/met-museum/index.html"
       }
     }
   ]

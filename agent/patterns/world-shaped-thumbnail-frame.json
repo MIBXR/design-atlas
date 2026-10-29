@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "zelda-world",
-        "locator": "entries/zelda-world.json#composition/shape",
+        "locator": "entries/cases/zelda-world.json#composition/shape",
         "observation": "原始 frame_thumbnail 古代角纹 + 8点削角白线；当前与 hover 加内框，避免普通矩形卡片。",
         "evidence": "observed",
         "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
@@ -47,12 +47,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/zelda-world/fidelity.md",
-      "demos/zelda-world/index.html",
-      "demos/zelda-world/script.js",
-      "demos/zelda-world/style.css",
-      "entries/zelda-world.json",
-      "research/zelda-world.md"
+      "demos/cases/zelda-world/fidelity.md",
+      "demos/cases/zelda-world/index.html",
+      "demos/cases/zelda-world/script.js",
+      "demos/cases/zelda-world/style.css",
+      "entries/cases/zelda-world.json",
+      "docs/research/zelda-world.md"
     ]
   },
   "sourceCases": [
@@ -61,7 +61,7 @@
       "title": "塞尔达 · 全景世界舞台",
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
-        "demo": "demos/zelda-world/index.html"
+        "demo": "demos/cases/zelda-world/index.html"
       }
     }
   ]

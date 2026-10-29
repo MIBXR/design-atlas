@@ -40,21 +40,21 @@
     "sources": [
       {
         "caseId": "pixel-world",
-        "locator": "entries/pixel-world.json#interaction/2",
+        "locator": "entries/cases/pixel-world.json#interaction/2",
         "observation": "靠近地点会记录发现进度，按钮状态不只通过颜色表达。",
         "evidence": "adapted"
       },
       {
         "caseId": "pixel-world",
-        "locator": "entries/pixel-world.json#interaction/3",
+        "locator": "entries/cases/pixel-world.json#interaction/3",
         "observation": "手账仅保存当前浏览器，支持清除并重新探索。",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/pixel-world/index.html",
-      "entries/pixel-world.json",
-      "research/pixel-world.md"
+      "demos/cases/pixel-world/index.html",
+      "entries/cases/pixel-world.json",
+      "docs/research/pixel-world.md"
     ]
   },
   "sourceCases": [
@@ -63,7 +63,7 @@
       "title": "像素：微型世界",
       "paths": {
         "bundle": "agent/cases/pixel-world.json",
-        "demo": "demos/pixel-world/index.html"
+        "demo": "demos/cases/pixel-world/index.html"
       }
     }
   ]

@@ -1,6 +1,6 @@
 # 赛马娘：群像赛道与斜切叙事 · 复用 Prompt
 
-由 [结构化案例](../entries/uma-musume.json) 自动生成。参考观察与具体边界见 [调研](../research/uma-musume.md)。
+由 [结构化案例](../entries/cases/uma-musume.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/uma-musume.md)。
 
 ## 正向 Prompt
 
@@ -23,4 +23,4 @@
 
 保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。
 
-[查看 Demo](../demos/uma-musume/index.html) · [返回案例库](../cases.html#style/uma-musume)
+[查看 Demo](../demos/cases/uma-musume/index.html) · [返回案例库](../cases.html#style/uma-musume)

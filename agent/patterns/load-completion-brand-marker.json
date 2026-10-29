@@ -50,7 +50,7 @@
     "sources": [
       {
         "caseId": "design-sight",
-        "locator": "entries/design-sight.json#interaction/0",
+        "locator": "entries/cases/design-sight.json#interaction/0",
         "observation": "首次加载完成：全屏白色与蓝色50px旋转标记，300ms退场。 在海报加载期间保持机构识别。",
         "evidence": "inferred",
         "referenceUrl": "https://www.2121designsight.jp/",
@@ -58,7 +58,7 @@
       },
       {
         "caseId": "fuji-rock",
-        "locator": "entries/fuji-rock.json#interaction/0",
+        "locator": "entries/cases/fuji-rock.json#interaction/0",
         "observation": "素材载入完成：32px橙色旋转标记退出，遮层与主图1200ms线性淡化。 让真实现场图准备完毕后平稳进入。",
         "evidence": "observed",
         "referenceUrl": "https://www.fujirockfestival.com/",
@@ -66,18 +66,18 @@
       }
     ],
     "sourceFiles": [
-      "demos/design-sight/app.js",
-      "demos/design-sight/fidelity.md",
-      "demos/design-sight/index.html",
-      "demos/design-sight/style.css",
-      "demos/fuji-rock/app.js",
-      "demos/fuji-rock/fidelity.md",
-      "demos/fuji-rock/index.html",
-      "demos/fuji-rock/style.css",
-      "entries/design-sight.json",
-      "entries/fuji-rock.json",
-      "research/design-sight.md",
-      "research/fuji-rock.md"
+      "demos/cases/design-sight/app.js",
+      "demos/cases/design-sight/fidelity.md",
+      "demos/cases/design-sight/index.html",
+      "demos/cases/design-sight/style.css",
+      "demos/cases/fuji-rock/app.js",
+      "demos/cases/fuji-rock/fidelity.md",
+      "demos/cases/fuji-rock/index.html",
+      "demos/cases/fuji-rock/style.css",
+      "entries/cases/design-sight.json",
+      "entries/cases/fuji-rock.json",
+      "docs/research/design-sight.md",
+      "docs/research/fuji-rock.md"
     ]
   },
   "sourceCases": [
@@ -86,7 +86,7 @@
       "title": "21_21 DESIGN SIGHT：海报与四列档案",
       "paths": {
         "bundle": "agent/cases/design-sight.json",
-        "demo": "demos/design-sight/index.html"
+        "demo": "demos/cases/design-sight/index.html"
       }
     },
     {
@@ -94,7 +94,7 @@
       "title": "Fuji Rock：现场照片与节日导览",
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
-        "demo": "demos/fuji-rock/index.html"
+        "demo": "demos/cases/fuji-rock/index.html"
       }
     }
   ]

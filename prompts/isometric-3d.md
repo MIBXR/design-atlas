@@ -1,6 +1,6 @@
 # 等轴 3D：让空间讲述系统 · 复用 Prompt
 
-由 [结构化案例](../entries/isometric-3d.json) 自动生成。参考观察与具体边界见 [调研](../research/isometric-3d.md)。
+由 [结构化案例](../entries/cases/isometric-3d.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/isometric-3d.md)。
 
 ## 正向 Prompt
 
@@ -27,4 +27,4 @@
 
 把浮岛替换成数据平台的等轴系统图，让三种焦点分别对应计算、存储、网络，保留统一坐标与分层解释。
 
-[查看 Demo](../demos/isometric-3d/index.html) · [返回案例库](../cases.html#style/isometric-3d)
+[查看 Demo](../demos/cases/isometric-3d/index.html) · [返回案例库](../cases.html#style/isometric-3d)

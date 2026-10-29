@@ -41,35 +41,35 @@
     "sources": [
       {
         "caseId": "bauhaus-geometry",
-        "locator": "entries/bauhaus-geometry.json#interaction/1",
+        "locator": "entries/cases/bauhaus-geometry.json#interaction/1",
         "observation": "原生范围控件可用键盘旋转三角形并即时显示角度。",
         "evidence": "adapted"
       },
       {
         "caseId": "retro-80s",
-        "locator": "entries/retro-80s.json#interaction/2",
+        "locator": "entries/cases/retro-80s.json#interaction/2",
         "observation": "原生范围输入即时改变Cutoff、Attack、Output并更新读数。",
         "evidence": "adapted"
       },
       {
         "caseId": "shape-morph",
-        "locator": "entries/shape-morph.json#interaction/1",
+        "locator": "entries/cases/shape-morph.json#interaction/1",
         "observation": "间距滑块将单元从连续图案分离为碎片",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/bauhaus-geometry/index.html",
-      "demos/retro-80s/index.html",
-      "demos/shape-morph/index.html",
-      "demos/shape-morph/script.js",
-      "demos/shape-morph/style.css",
-      "entries/bauhaus-geometry.json",
-      "entries/retro-80s.json",
-      "entries/shape-morph.json",
-      "research/bauhaus-geometry.md",
-      "research/retro-80s.md",
-      "research/shape-morph.md"
+      "demos/cases/bauhaus-geometry/index.html",
+      "demos/cases/retro-80s/index.html",
+      "demos/cases/shape-morph/index.html",
+      "demos/cases/shape-morph/script.js",
+      "demos/cases/shape-morph/style.css",
+      "entries/cases/bauhaus-geometry.json",
+      "entries/cases/retro-80s.json",
+      "entries/cases/shape-morph.json",
+      "docs/research/bauhaus-geometry.md",
+      "docs/research/retro-80s.md",
+      "docs/research/shape-morph.md"
     ]
   },
   "sourceCases": [
@@ -78,7 +78,7 @@
       "title": "包豪斯：几何与实验",
       "paths": {
         "bundle": "agent/cases/bauhaus-geometry.json",
-        "demo": "demos/bauhaus-geometry/index.html"
+        "demo": "demos/cases/bauhaus-geometry/index.html"
       }
     },
     {
@@ -86,7 +86,7 @@
       "title": "80年代：合成器面板",
       "paths": {
         "bundle": "agent/cases/retro-80s.json",
-        "demo": "demos/retro-80s/index.html"
+        "demo": "demos/cases/retro-80s/index.html"
       }
     },
     {
@@ -94,7 +94,7 @@
       "title": "动态形状：同一单元，多种表达",
       "paths": {
         "bundle": "agent/cases/shape-morph.json",
-        "demo": "demos/shape-morph/index.html"
+        "demo": "demos/cases/shape-morph/index.html"
       }
     }
   ]

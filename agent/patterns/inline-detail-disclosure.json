@@ -39,13 +39,13 @@
     "sources": [
       {
         "caseId": "bauhaus-geometry",
-        "locator": "entries/bauhaus-geometry.json#interaction/3",
+        "locator": "entries/cases/bauhaus-geometry.json#interaction/3",
         "observation": "材料课程使用原生details展开具体学习内容。",
         "evidence": "adapted"
       },
       {
         "caseId": "philharmonie-music",
-        "locator": "entries/philharmonie-music.json#interaction/3",
+        "locator": "entries/cases/philharmonie-music.json#interaction/3",
         "observation": "展开Horaires／Tarifs／Programme：信息即时展开，声乐／乐器阵容以文字分段。 不离开当前详情即可完成到访和节目判断。",
         "evidence": "observed",
         "referenceUrl": "https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music",
@@ -53,7 +53,7 @@
       },
       {
         "caseId": "design-sight",
-        "locator": "entries/design-sight.json#interaction/3",
+        "locator": "entries/cases/design-sight.json#interaction/3",
         "observation": "手机展开栏目／页面回顶：四列分别先显示1／2／1／1项，“更多”即时展开；回顶按钮超过100px以200ms出现。 缩短首屏密度，档案仍可按需读全。",
         "evidence": "inferred",
         "referenceUrl": "https://www.2121designsight.jp/",
@@ -61,21 +61,21 @@
       }
     ],
     "sourceFiles": [
-      "demos/bauhaus-geometry/index.html",
-      "demos/design-sight/app.js",
-      "demos/design-sight/fidelity.md",
-      "demos/design-sight/index.html",
-      "demos/design-sight/style.css",
-      "demos/philharmonie-music/fidelity.md",
-      "demos/philharmonie-music/index.html",
-      "demos/philharmonie-music/script.js",
-      "demos/philharmonie-music/style.css",
-      "entries/bauhaus-geometry.json",
-      "entries/design-sight.json",
-      "entries/philharmonie-music.json",
-      "research/bauhaus-geometry.md",
-      "research/design-sight.md",
-      "research/philharmonie-music.md"
+      "demos/cases/bauhaus-geometry/index.html",
+      "demos/cases/design-sight/app.js",
+      "demos/cases/design-sight/fidelity.md",
+      "demos/cases/design-sight/index.html",
+      "demos/cases/design-sight/style.css",
+      "demos/cases/philharmonie-music/fidelity.md",
+      "demos/cases/philharmonie-music/index.html",
+      "demos/cases/philharmonie-music/script.js",
+      "demos/cases/philharmonie-music/style.css",
+      "entries/cases/bauhaus-geometry.json",
+      "entries/cases/design-sight.json",
+      "entries/cases/philharmonie-music.json",
+      "docs/research/bauhaus-geometry.md",
+      "docs/research/design-sight.md",
+      "docs/research/philharmonie-music.md"
     ]
   },
   "sourceCases": [
@@ -84,7 +84,7 @@
       "title": "包豪斯：几何与实验",
       "paths": {
         "bundle": "agent/cases/bauhaus-geometry.json",
-        "demo": "demos/bauhaus-geometry/index.html"
+        "demo": "demos/cases/bauhaus-geometry/index.html"
       }
     },
     {
@@ -92,7 +92,7 @@
       "title": "21_21 DESIGN SIGHT：海报与四列档案",
       "paths": {
         "bundle": "agent/cases/design-sight.json",
-        "demo": "demos/design-sight/index.html"
+        "demo": "demos/cases/design-sight/index.html"
       }
     },
     {
@@ -100,7 +100,7 @@
       "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
       "paths": {
         "bundle": "agent/cases/philharmonie-music.json",
-        "demo": "demos/philharmonie-music/index.html"
+        "demo": "demos/cases/philharmonie-music/index.html"
       }
     }
   ]

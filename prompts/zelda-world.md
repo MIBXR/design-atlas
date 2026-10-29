@@ -1,6 +1,6 @@
 # 塞尔达 · 全景世界舞台 · 复用 Prompt
 
-由 [结构化案例](../entries/zelda-world.json) 自动生成。参考观察与具体边界见 [调研](../research/zelda-world.md)。
+由 [结构化案例](../entries/cases/zelda-world.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/zelda-world.md)。
 
 ## 正向 Prompt
 
@@ -22,4 +22,4 @@
 
 将三个真实场景换成另一部已授权游戏的世界章节，保持视频、标题、目录的层级并记录保真差异。
 
-[查看 Demo](../demos/zelda-world/index.html) · [返回案例库](../cases.html#style/zelda-world)
+[查看 Demo](../demos/cases/zelda-world/index.html) · [返回案例库](../cases.html#style/zelda-world)
