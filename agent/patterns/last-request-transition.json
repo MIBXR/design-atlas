@@ -41,7 +41,7 @@
     "sources": [
       {
         "caseId": "arknights-world",
-        "locator": "entries/arknights-world.json#interaction/1",
+        "locator": "entries/cases/arknights-world.json#interaction/1",
         "observation": "场景横向遮罩裁切：桌面1000ms、竖屏600ms；同方向重复轮输入锁定，快速反向和导航使用最后目标队列，单次仅一组出/入场景。",
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
@@ -49,7 +49,7 @@
       },
       {
         "caseId": "zelda-world",
-        "locator": "entries/zelda-world.json#interaction/1",
+        "locator": "entries/cases/zelda-world.json#interaction/1",
         "observation": "点击章节 → 300ms输入锁；前片1秒模糊退场，后片1.6秒、延迟0.6秒进入；标题1.6秒、延迟1秒进入。快速选择保留最后请求。",
         "evidence": "adapted",
         "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
@@ -57,7 +57,7 @@
       },
       {
         "caseId": "qoder-platform",
-        "locator": "entries/qoder-platform.json#interaction/2",
+        "locator": "entries/cases/qoder-platform.json#interaction/2",
         "observation": "五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。",
         "evidence": "adapted",
         "referenceUrl": "https://qoder.cn/",
@@ -65,7 +65,7 @@
       },
       {
         "caseId": "chatgpt-platform",
-        "locator": "entries/chatgpt-platform.json#interaction/1",
+        "locator": "entries/cases/chatgpt-platform.json#interaction/1",
         "observation": "选择工作 → 工作的独立素材从四周进入，原模式素材离开；快速切换清理旧离场层 → 保持一套可读场景；移到“工作”再快速移到“编程”。",
         "evidence": "adapted",
         "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
@@ -73,34 +73,32 @@
       }
     ],
     "sourceFiles": [
-      "demos/arknights-world/fidelity.md",
-      "demos/arknights-world/index.html",
-      "demos/arknights-world/particles.js",
-      "demos/arknights-world/script.js",
-      "demos/arknights-world/style.css",
-      "demos/chatgpt-platform/fidelity.md",
-      "demos/chatgpt-platform/fonts.css",
-      "demos/chatgpt-platform/index.html",
-      "demos/chatgpt-platform/motion-data.js",
-      "demos/chatgpt-platform/script.js",
-      "demos/chatgpt-platform/style.css",
-      "demos/qoder-platform/fidelity.md",
-      "demos/qoder-platform/index.html",
-      "demos/qoder-platform/journey.js",
-      "demos/qoder-platform/script.js",
-      "demos/qoder-platform/style.css",
-      "demos/zelda-world/fidelity.md",
-      "demos/zelda-world/index.html",
-      "demos/zelda-world/script.js",
-      "demos/zelda-world/style.css",
-      "entries/arknights-world.json",
-      "entries/chatgpt-platform.json",
-      "entries/qoder-platform.json",
-      "entries/zelda-world.json",
-      "research/arknights-world.md",
-      "research/chatgpt-platform.md",
-      "research/qoder-platform.md",
-      "research/zelda-world.md"
+      "demos/cases/arknights-world/fidelity.md",
+      "demos/cases/arknights-world/index.html",
+      "demos/cases/arknights-world/particles.js",
+      "demos/cases/arknights-world/script.js",
+      "demos/cases/arknights-world/style.css",
+      "demos/cases/chatgpt-platform/fidelity.md",
+      "demos/cases/chatgpt-platform/fonts.css",
+      "demos/cases/chatgpt-platform/index.html",
+      "demos/cases/chatgpt-platform/motion-data.js",
+      "demos/cases/chatgpt-platform/script.js",
+      "demos/cases/chatgpt-platform/style.css",
+      "demos/cases/qoder-platform/fidelity.md",
+      "demos/cases/qoder-platform/index.html",
+      "demos/cases/qoder-platform/journey.js",
+      "demos/cases/qoder-platform/script.js",
+      "demos/cases/qoder-platform/style.css",
+      "demos/cases/zelda-world/fidelity.md",
+      "demos/cases/zelda-world/index.html",
+      "demos/cases/zelda-world/script.js",
+      "demos/cases/zelda-world/style.css",
+      "entries/cases/arknights-world.json",
+      "entries/cases/chatgpt-platform.json",
+      "entries/cases/qoder-platform.json",
+      "entries/cases/zelda-world.json",
+      "docs/research/arknights-world.md",
+      "docs/research/zelda-world.md"
     ]
   },
   "sourceCases": [
@@ -109,7 +107,7 @@
       "title": "明日方舟 · 全屏档案与交互点阵",
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
-        "demo": "demos/arknights-world/index.html"
+        "demo": "demos/cases/arknights-world/index.html"
       }
     },
     {
@@ -117,7 +115,7 @@
       "title": "ChatGPT — 巨字、飞入拼贴与滚动交接",
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
-        "demo": "demos/chatgpt-platform/index.html"
+        "demo": "demos/cases/chatgpt-platform/index.html"
       }
     },
     {
@@ -125,7 +123,7 @@
       "title": "Qoder — 绿色工作台与多形态平台",
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
-        "demo": "demos/qoder-platform/index.html"
+        "demo": "demos/cases/qoder-platform/index.html"
       }
     },
     {
@@ -133,7 +131,7 @@
       "title": "塞尔达 · 全景世界舞台",
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
-        "demo": "demos/zelda-world/index.html"
+        "demo": "demos/cases/zelda-world/index.html"
       }
     }
   ]

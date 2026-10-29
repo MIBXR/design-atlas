@@ -43,7 +43,7 @@
     "sources": [
       {
         "caseId": "qoder-platform",
-        "locator": "entries/qoder-platform.json#interaction/1",
+        "locator": "entries/cases/qoder-platform.json#interaction/1",
         "observation": "活跃热图 pointer enter/focus 120ms 显示日期/对话提示，leave/blur 80ms 关闭 → 很小的元素也有可读状态。",
         "evidence": "observed",
         "referenceUrl": "https://qoder.cn/",
@@ -51,13 +51,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/qoder-platform/fidelity.md",
-      "demos/qoder-platform/index.html",
-      "demos/qoder-platform/journey.js",
-      "demos/qoder-platform/script.js",
-      "demos/qoder-platform/style.css",
-      "entries/qoder-platform.json",
-      "research/qoder-platform.md"
+      "demos/cases/qoder-platform/fidelity.md",
+      "demos/cases/qoder-platform/index.html",
+      "demos/cases/qoder-platform/journey.js",
+      "demos/cases/qoder-platform/script.js",
+      "demos/cases/qoder-platform/style.css",
+      "entries/cases/qoder-platform.json"
     ]
   },
   "sourceCases": [
@@ -66,7 +65,7 @@
       "title": "Qoder — 绿色工作台与多形态平台",
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
-        "demo": "demos/qoder-platform/index.html"
+        "demo": "demos/cases/qoder-platform/index.html"
       }
     }
   ]

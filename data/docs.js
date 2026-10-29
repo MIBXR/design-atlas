@@ -20,217 +20,217 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "项目指南"
   },
   {
-    "path": "research/CASE-INDEX.md",
+    "path": "docs/research/CASE-INDEX.md",
     "title": "案例与代码索引",
     "group": "研究方法与索引"
   },
   {
-    "path": "research/OVERVIEW.md",
+    "path": "docs/research/OVERVIEW.md",
     "title": "调研方法与案例地图",
     "group": "研究方法与索引"
   },
   {
-    "path": "research/pattern-experiences.md",
+    "path": "docs/research/pattern-experiences.md",
     "title": "巧思的体验类型与可操作示意",
     "group": "研究方法与索引"
   },
   {
-    "path": "research/foundations.md",
+    "path": "docs/research/foundations.md",
     "title": "网页设计基础：材料、关系与体验",
     "group": "研究方法与索引"
   },
   {
-    "path": "research/COUNTRY-COMPARISON.md",
+    "path": "docs/research/COUNTRY-COMPARISON.md",
     "title": "用国别查找案例，再用设计任务作比较",
     "group": "研究方法与索引"
   },
   {
-    "path": "research/design-sight.md",
+    "path": "docs/research/design-sight.md",
     "title": "21_21 DESIGN SIGHT：海报与四列档案",
     "group": "案例研究"
   },
   {
-    "path": "research/retro-80s.md",
+    "path": "docs/research/retro-80s.md",
     "title": "80年代：合成器面板",
     "group": "案例研究"
   },
   {
-    "path": "research/philharmonie-music.md",
+    "path": "docs/research/philharmonie-music.md",
     "title": "巴黎爱乐厅 · 音乐展与音乐会详情",
     "group": "案例研究"
   },
   {
-    "path": "research/bauhaus-geometry.md",
+    "path": "docs/research/bauhaus-geometry.md",
     "title": "包豪斯：几何与实验",
     "group": "案例研究"
   },
   {
-    "path": "research/blue-archive.md",
+    "path": "docs/research/blue-archive.md",
     "title": "碧蓝档案：城市映像、人物档案与原始声线",
     "group": "案例研究"
   },
   {
-    "path": "research/isometric-3d.md",
+    "path": "docs/research/isometric-3d.md",
     "title": "等轴 3D：空间作为解释工具",
     "group": "案例研究"
   },
   {
-    "path": "research/palace-museum.md",
+    "path": "docs/research/palace-museum.md",
     "title": "故宫：建筑局部与完整文化目录",
     "group": "案例研究"
   },
   {
-    "path": "research/shape-morph.md",
+    "path": "docs/research/shape-morph.md",
     "title": "几何形状变化：让单元保持连续",
     "group": "案例研究"
   },
   {
-    "path": "research/monument-valley-game.md",
+    "path": "docs/research/monument-valley-game.md",
     "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
     "group": "案例研究"
   },
   {
-    "path": "research/zenless-zone-zero.md",
+    "path": "docs/research/zenless-zone-zero.md",
     "title": "绝区零：六章街头拼贴首页",
     "group": "案例研究"
   },
   {
-    "path": "research/rhine-lab.md",
+    "path": "docs/research/rhine-lab.md",
     "title": "莱茵生命：官方影像的网页转译",
     "group": "案例研究"
   },
   {
-    "path": "research/arknights-world.md",
+    "path": "docs/research/arknights-world.md",
     "title": "明日方舟 · 全屏档案与交互点阵",
     "group": "案例研究"
   },
   {
-    "path": "research/swiss-grid.md",
+    "path": "docs/research/swiss-grid.md",
     "title": "瑞士设计：编辑网格",
     "group": "案例研究"
   },
   {
-    "path": "research/zelda-world.md",
+    "path": "docs/research/zelda-world.md",
     "title": "塞尔达 WORLD · 单次参考快照",
     "group": "案例研究"
   },
   {
-    "path": "research/uma-musume.md",
+    "path": "docs/research/uma-musume.md",
     "title": "赛马娘：群像、斜切节奏与玩法轨道",
     "group": "案例研究"
   },
   {
-    "path": "research/mori-art-museum.md",
+    "path": "docs/research/mori-art-museum.md",
     "title": "森美术馆：红色机构锚点与艺术海报",
     "group": "案例研究"
   },
   {
-    "path": "research/hand-drawn.md",
+    "path": "docs/research/hand-drawn.md",
     "title": "手绘：受控的不完美",
     "group": "案例研究"
   },
   {
-    "path": "research/digital-dunhuang.md",
+    "path": "docs/research/digital-dunhuang.md",
     "title": "数字敦煌：完整发现路径与真实观察尺度",
     "group": "案例研究"
   },
   {
-    "path": "research/suzhou-museum.md",
+    "path": "docs/research/suzhou-museum.md",
     "title": "苏州博物馆：四屏门户、图像目的地与机构外缘",
     "group": "案例研究"
   },
   {
-    "path": "research/line-art.md",
+    "path": "docs/research/line-art.md",
     "title": "线描：用绘制顺序解释组成",
     "group": "案例研究"
   },
   {
-    "path": "research/pixel-world.md",
+    "path": "docs/research/pixel-world.md",
     "title": "像素：微型世界",
     "group": "案例研究"
   },
   {
-    "path": "research/stellar-museum.md",
+    "path": "docs/research/stellar-museum.md",
     "title": "星槎 STELLAR：太空博物馆示范页与基线",
     "group": "案例研究"
   },
   {
-    "path": "research/genshin-world.md",
+    "path": "docs/research/genshin-world.md",
     "title": "原神：版本舞台、人物换色与声线",
     "group": "案例研究"
   },
   {
-    "path": "research/endfield-industrial.md",
+    "path": "docs/research/endfield-industrial.md",
     "title": "终末地：从完整门户理解明亮工业语言",
     "group": "案例研究"
   },
   {
-    "path": "research/apple-product.md",
+    "path": "demos/cases/apple-product/fidelity.md",
     "title": "Apple iPhone 18 Pro：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "research/chatgpt-platform.md",
+    "path": "demos/cases/chatgpt-platform/fidelity.md",
     "title": "ChatGPT：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "research/claude-platform.md",
+    "path": "demos/cases/claude-platform/fidelity.md",
     "title": "Claude：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "research/deepseek-harness.md",
+    "path": "docs/research/deepseek-harness.md",
     "title": "DeepSeek Harness：可观察的产品演示",
     "group": "案例研究"
   },
   {
-    "path": "research/fuji-rock.md",
+    "path": "docs/research/fuji-rock.md",
     "title": "Fuji Rock：现场照片与节日导览",
     "group": "案例研究"
   },
   {
-    "path": "research/google-material.md",
+    "path": "docs/research/google-material.md",
     "title": "Google Material：表现力与组件秩序",
     "group": "案例研究"
   },
   {
-    "path": "research/linear-workflow.md",
+    "path": "demos/cases/linear-workflow/fidelity.md",
     "title": "Linear：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "research/mira-host-photography.md",
+    "path": "docs/research/mira-host-photography.md",
     "title": "Mira Høst：北欧摄影作品集示范页",
     "group": "案例研究"
   },
   {
-    "path": "research/notion-editorial.md",
+    "path": "docs/research/notion-editorial.md",
     "title": "Notion：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "research/persona-kinetic.md",
+    "path": "docs/research/persona-kinetic.md",
     "title": "Persona 5 Royal · 单次参考快照",
     "group": "案例研究"
   },
   {
-    "path": "research/qoder-platform.md",
+    "path": "demos/cases/qoder-platform/fidelity.md",
     "title": "Qoder CN：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "research/rijksmuseum-art.md",
+    "path": "docs/research/rijksmuseum-art.md",
     "title": "Rijksmuseum · 全幅摄影与巨大字标",
     "group": "案例研究"
   },
   {
-    "path": "research/stripe-platform.md",
+    "path": "docs/research/stripe-platform.md",
     "title": "Stripe：当前页面的设计与交互",
     "group": "案例研究"
   },
   {
-    "path": "research/met-museum.md",
+    "path": "docs/research/met-museum.md",
     "title": "The Met · 编辑式展览与馆藏陈列",
     "group": "案例研究"
   },
@@ -425,62 +425,62 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复用 Prompt"
   },
   {
-    "path": "demos/design-sight/fidelity.md",
+    "path": "demos/cases/design-sight/fidelity.md",
     "title": "21_21 DESIGN SIGHT：海报与四列档案：复现范围",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/98-css/README.md",
+    "path": "demos/materials/98-css/README.md",
     "title": "98.css 复古桌面组件工作台",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/98-css/vendor/NOTICE.md",
+    "path": "demos/materials/98-css/vendor/NOTICE.md",
     "title": "98.css 样式与字体来源",
     "group": "复现与素材"
   },
   {
-    "path": "docs/materials-98-css.md",
+    "path": "docs/materials/98-css.md",
     "title": "98.css：带有桌面记忆的 CSS 组件",
     "group": "复现与素材"
   },
   {
-    "path": "demos/philharmonie-music/fidelity.md",
+    "path": "demos/cases/philharmonie-music/fidelity.md",
     "title": "巴黎爱乐厅 · 音乐展与音乐会详情：复现范围",
     "group": "复现与素材"
   },
   {
-    "path": "demos/rhine-lab/fidelity.md",
+    "path": "demos/cases/rhine-lab/fidelity.md",
     "title": "当前复现范围：官方影像的网页转译／教学改编",
     "group": "复现与素材"
   },
   {
-    "path": "demos/palace-museum/state-matrix.md",
+    "path": "demos/cases/palace-museum/source/state-matrix.md",
     "title": "故宫 · 六章探索与宫廷视觉目录 · 故宫探索页：状态与源码对照",
     "group": "复现与素材"
   },
   {
-    "path": "demos/palace-museum/fidelity.md",
+    "path": "demos/cases/palace-museum/fidelity.md",
     "title": "故宫探索页：复现范围与证据",
     "group": "复现与素材"
   },
   {
-    "path": "demos/monument-valley-game/fidelity.md",
+    "path": "demos/cases/monument-valley-game/fidelity.md",
     "title": "纪念碑谷一代：对应范围",
     "group": "复现与素材"
   },
   {
-    "path": "demos/zenless-zone-zero/fidelity.md",
+    "path": "demos/cases/zenless-zone-zero/fidelity.md",
     "title": "绝区零首页复现说明",
     "group": "复现与素材"
   },
   {
-    "path": "demos/arknights-world/fidelity.md",
+    "path": "demos/cases/arknights-world/fidelity.md",
     "title": "明日方舟 · 全屏档案与交互点阵",
     "group": "复现与素材"
   },
   {
-    "path": "docs/materials.md",
+    "path": "docs/materials/README.md",
     "title": "内容素材库",
     "group": "复现与素材"
   },
@@ -490,237 +490,252 @@ window.DESIGN_ATLAS_DOCUMENTS = [
     "group": "复现与素材"
   },
   {
-    "path": "demos/zelda-world/fidelity.md",
+    "path": "demos/cases/zelda-world/fidelity.md",
     "title": "塞尔达 WORLD · 单次参考快照",
     "group": "复现与素材"
   },
   {
-    "path": "demos/mori-art-museum/fidelity.md",
+    "path": "demos/cases/mori-art-museum/fidelity.md",
     "title": "森美术馆：红色机构锚点与艺术海报：复现范围",
     "group": "复现与素材"
   },
   {
-    "path": "demos/digital-dunhuang/THIRD-PARTY-NOTICES.md",
+    "path": "demos/cases/digital-dunhuang/THIRD-PARTY-NOTICES.md",
     "title": "数字敦煌 · 全幅影像与真实瓦片细察 · 第三方运行库与来源署名",
     "group": "复现与素材"
   },
   {
-    "path": "demos/digital-dunhuang/state-matrix.md",
+    "path": "demos/cases/digital-dunhuang/source/state-matrix.md",
     "title": "数字敦煌 · 全幅影像与真实瓦片细察 · 数字敦煌：逐页状态与源码对照",
     "group": "复现与素材"
   },
   {
-    "path": "demos/digital-dunhuang/fidelity.md",
+    "path": "demos/cases/digital-dunhuang/LICENSES.md",
+    "title": "数字敦煌 · 全幅影像与真实瓦片细察 · 许可与出处",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/cases/digital-dunhuang/fidelity.md",
     "title": "数字敦煌：复现范围与证据",
     "group": "复现与素材"
   },
   {
-    "path": "demos/suzhou-museum/THIRD-PARTY-NOTICES.md",
+    "path": "demos/cases/suzhou-museum/THIRD-PARTY-NOTICES.md",
     "title": "苏州博物馆 · 四屏门户与图像目的地 · 第三方运行库与来源署名",
     "group": "复现与素材"
   },
   {
-    "path": "demos/suzhou-museum/state-matrix.md",
+    "path": "demos/cases/suzhou-museum/source/state-matrix.md",
     "title": "苏州博物馆 · 四屏门户与图像目的地 · 苏州博物馆：四屏状态与源码对照",
     "group": "复现与素材"
   },
   {
-    "path": "demos/suzhou-museum/fidelity.md",
+    "path": "demos/cases/suzhou-museum/LICENSES.md",
+    "title": "苏州博物馆 · 四屏门户与图像目的地 · 许可与出处",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/cases/suzhou-museum/fidelity.md",
     "title": "苏州博物馆：复现范围与证据",
     "group": "复现与素材"
   },
   {
-    "path": "demos/stellar-museum/fidelity.md",
+    "path": "demos/cases/stellar-museum/LICENSES.md",
+    "title": "星槎 STELLAR · 太空探索博物馆 · 许可与出处",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/cases/stellar-museum/fidelity.md",
     "title": "星槎示范页：来源与本地对应",
     "group": "复现与素材"
   },
   {
-    "path": "demos/endfield-industrial/state-matrix.md",
+    "path": "demos/cases/endfield-industrial/LICENSES.md",
+    "title": "终末地 · 完整工业科幻门户 · 许可与出处",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/cases/endfield-industrial/source/state-matrix.md",
     "title": "终末地 · 完整工业科幻门户 · 终末地：八章状态矩阵",
     "group": "复现与素材"
   },
   {
-    "path": "demos/endfield-industrial/fidelity.md",
+    "path": "demos/cases/endfield-industrial/fidelity.md",
     "title": "终末地：当前复现范围与证据",
     "group": "复现与素材"
   },
   {
-    "path": "demos/apple-product/fidelity.md",
-    "title": "Apple iPhone 18 Pro：当前页面的设计与交互",
+    "path": "demos/cases/apple-product/LICENSES.md",
+    "title": "Apple · 滚动产品舞台 · 许可与出处",
     "group": "复现与素材"
   },
   {
-    "path": "docs/materials-beautiful-article.md",
+    "path": "docs/materials/beautiful-article.md",
     "title": "Beautiful Article · 长文编辑工作流",
     "group": "复现与素材"
   },
   {
-    "path": "demos/blue-archive/fidelity.md",
+    "path": "demos/cases/blue-archive/fidelity.md",
     "title": "Blue Archive 复现边界",
     "group": "复现与素材"
   },
   {
-    "path": "demos/chatgpt-platform/fidelity.md",
-    "title": "ChatGPT：当前页面的设计与交互",
+    "path": "demos/cases/deepseek-harness/LICENSES.md",
+    "title": "DeepSeek Harness · 可观察的产品演示 · 许可与出处",
     "group": "复现与素材"
   },
   {
-    "path": "demos/claude-platform/fidelity.md",
-    "title": "Claude：当前页面的设计与交互",
-    "group": "复现与素材"
-  },
-  {
-    "path": "demos/deepseek-harness/fidelity.md",
+    "path": "demos/cases/deepseek-harness/fidelity.md",
     "title": "DeepSeek Harness 复现说明",
     "group": "复现与素材"
   },
   {
-    "path": "demos/deepseek-harness/assets/BRAND_GUIDELINES.zh.md",
+    "path": "demos/cases/deepseek-harness/assets/BRAND_GUIDELINES.zh.md",
     "title": "DeepSeek Harness 品牌素材使用规范",
     "group": "复现与素材"
   },
   {
-    "path": "demos/fuji-rock/fidelity.md",
+    "path": "demos/cases/fuji-rock/fidelity.md",
     "title": "Fuji Rock：现场照片与节日导览：复现范围",
     "group": "复现与素材"
   },
   {
-    "path": "demos/genshin-world/fidelity.md",
+    "path": "demos/cases/genshin-world/fidelity.md",
     "title": "Genshin 复现边界",
     "group": "复现与素材"
   },
   {
-    "path": "docs/materials-material-web.md",
+    "path": "docs/materials/material-web.md",
     "title": "Google Material Web：Material 3 官方组件",
     "group": "复现与素材"
   },
   {
-    "path": "demos/google-material/fidelity.md",
+    "path": "demos/cases/google-material/fidelity.md",
     "title": "Google Material：表现力与组件秩序：复现范围",
     "group": "复现与素材"
   },
   {
-    "path": "demos/linear-workflow/fidelity.md",
-    "title": "Linear：当前页面的设计与交互",
-    "group": "复现与素材"
-  },
-  {
-    "path": "material-demos/material-web/vendor/README.md",
+    "path": "demos/materials/material-web/vendor/README.md",
     "title": "Material Web 本地运行依赖",
     "group": "复现与素材"
   },
   {
-    "path": "demos/mira-host-photography/fidelity.md",
+    "path": "demos/cases/mira-host-photography/LICENSES.md",
+    "title": "Mira Høst · 北欧摄影作品集 · 许可与出处",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/cases/mira-host-photography/fidelity.md",
     "title": "Mira Høst：复刻范围与本地化清单",
     "group": "复现与素材"
   },
   {
-    "path": "demos/notion-editorial/fidelity.md",
+    "path": "demos/cases/notion-editorial/fidelity.md",
     "title": "Notion：当前页面的设计与交互",
     "group": "复现与素材"
   },
   {
-    "path": "demos/persona-kinetic/fidelity.md",
+    "path": "demos/cases/persona-kinetic/fidelity.md",
     "title": "Persona 5 Royal · 单次参考快照",
     "group": "复现与素材"
   },
   {
-    "path": "demos/qoder-platform/fidelity.md",
-    "title": "Qoder CN：当前页面的设计与交互",
-    "group": "复现与素材"
-  },
-  {
-    "path": "docs/materials-reacticle.md",
+    "path": "docs/materials/reacticle.md",
     "title": "Reacticle · 长文排版组件库",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/reacticle/vendor/NOTICE.md",
+    "path": "demos/materials/reacticle/vendor/NOTICE.md",
     "title": "Reacticle 第三方来源与许可",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/reacticle/README.md",
+    "path": "demos/materials/reacticle/README.md",
     "title": "Reacticle 文章样例",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/recursive/README.md",
+    "path": "demos/materials/recursive/README.md",
     "title": "Recursive 五轴字体试排",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/recursive/vendor/NOTICE.md",
+    "path": "demos/materials/recursive/vendor/NOTICE.md",
     "title": "Recursive 字体来源",
     "group": "复现与素材"
   },
   {
-    "path": "docs/materials-recursive.md",
+    "path": "docs/materials/recursive.md",
     "title": "Recursive：从界面到招牌的五轴字体",
     "group": "复现与素材"
   },
   {
-    "path": "demos/rijksmuseum-art/fidelity.md",
+    "path": "demos/cases/rijksmuseum-art/fidelity.md",
     "title": "Rijksmuseum · 全幅摄影与巨大字标：复现范围",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/shaders/README.md",
+    "path": "demos/materials/shaders/README.md",
     "title": "Shaders 开源效果实验",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/shaders/vendor/NOTICE.md",
+    "path": "demos/materials/shaders/vendor/NOTICE.md",
     "title": "Shaders 运行包与第三方许可",
     "group": "复现与素材"
   },
   {
-    "path": "demos/stripe-platform/fidelity.md",
+    "path": "demos/cases/stripe-platform/LICENSES.md",
+    "title": "Stripe — 彩带与金融产品矩阵 · 许可与出处",
+    "group": "复现与素材"
+  },
+  {
+    "path": "demos/cases/stripe-platform/fidelity.md",
     "title": "Stripe：当前页面的设计与交互",
     "group": "复现与素材"
   },
   {
-    "path": "demos/met-museum/fidelity.md",
+    "path": "demos/cases/met-museum/fidelity.md",
     "title": "The Met：复现范围",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/three-html-render/vendor/NOTICE.md",
+    "path": "demos/materials/three-html-render/vendor/NOTICE.md",
     "title": "three-html-render 运行文件与第三方许可",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/three-html-render/README.md",
+    "path": "demos/materials/three-html-render/README.md",
     "title": "three-html-render：HTML 贴图实验",
     "group": "复现与素材"
   },
   {
-    "path": "docs/materials-three-html-render.md",
+    "path": "docs/materials/three-html-render.md",
     "title": "three-html-render：HTML-in-Canvas polyfill",
     "group": "复现与素材"
   },
   {
-    "path": "demos/uma-musume/fidelity.md",
+    "path": "demos/cases/uma-musume/fidelity.md",
     "title": "Umamusume 复现边界",
     "group": "复现与素材"
   },
   {
-    "path": "docs/materials-web-design-engineer.md",
+    "path": "docs/materials/web-design-engineer.md",
     "title": "Web Design Engineer · 网页设计工作流",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/wired-elements/README.md",
+    "path": "demos/materials/wired-elements/README.md",
     "title": "Wired Elements 手绘组件工作台",
     "group": "复现与素材"
   },
   {
-    "path": "material-demos/wired-elements/vendor/NOTICE.md",
+    "path": "demos/materials/wired-elements/vendor/NOTICE.md",
     "title": "Wired Elements 运行时来源",
     "group": "复现与素材"
   },
   {
-    "path": "docs/materials-wired-elements.md",
+    "path": "docs/materials/wired-elements.md",
     "title": "Wired Elements：有手绘语言的可操作组件",
     "group": "复现与素材"
   }

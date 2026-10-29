@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "chatgpt-platform",
-        "locator": "entries/chatgpt-platform.json#interaction/5",
+        "locator": "entries/cases/chatgpt-platform.json#interaction/5",
         "observation": "用途架子保留原生横滑及左右按钮；后续价格、安全、结束行动与页尾为普通滚动。",
         "evidence": "observed",
         "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
@@ -47,7 +47,7 @@
       },
       {
         "caseId": "met-museum",
-        "locator": "entries/met-museum.json#interaction/2",
+        "locator": "entries/cases/met-museum.json#interaction/2",
         "observation": "横向浏览展览：原生水平溢出，scroll-snap:none，前后按钮与触摸可操作。",
         "evidence": "observed",
         "referenceUrl": "https://www.metmuseum.org/en",
@@ -55,7 +55,7 @@
       },
       {
         "caseId": "apple-product",
-        "locator": "entries/apple-product.json#interaction/4",
+        "locator": "entries/cases/apple-product.json#interaction/4",
         "observation": "景深四选项 → 官方 f/1.48、1.8、2.8、4.0 摄影交叉变化；旧机型 select 更新比较对象；横向摄影架子保留原生滑动。",
         "evidence": "observed",
         "referenceUrl": "https://www.apple.com/iphone-18-pro/",
@@ -63,7 +63,7 @@
       },
       {
         "caseId": "stripe-platform",
-        "locator": "entries/stripe-platform.json#interaction/5",
+        "locator": "entries/cases/stripe-platform.json#interaction/5",
         "observation": "后半段原生横向架子、四平台选择、深色开发者章节、活动架子、结束行动和页尾；上下滚动保持普通文档，不加入无来源的整屏切幕。",
         "evidence": "observed",
         "referenceUrl": "https://stripe.com/",
@@ -71,35 +71,33 @@
       }
     ],
     "sourceFiles": [
-      "demos/apple-product/fidelity.md",
-      "demos/apple-product/index.html",
-      "demos/apple-product/journey.js",
-      "demos/apple-product/script.js",
-      "demos/apple-product/style.css",
-      "demos/chatgpt-platform/fidelity.md",
-      "demos/chatgpt-platform/fonts.css",
-      "demos/chatgpt-platform/index.html",
-      "demos/chatgpt-platform/motion-data.js",
-      "demos/chatgpt-platform/script.js",
-      "demos/chatgpt-platform/style.css",
-      "demos/met-museum/fidelity.md",
-      "demos/met-museum/index.html",
-      "demos/met-museum/script.js",
-      "demos/met-museum/style.css",
-      "demos/stripe-platform/fidelity.md",
-      "demos/stripe-platform/index.html",
-      "demos/stripe-platform/journey.js",
-      "demos/stripe-platform/script.js",
-      "demos/stripe-platform/style.css",
-      "demos/stripe-platform/wave.js",
-      "entries/apple-product.json",
-      "entries/chatgpt-platform.json",
-      "entries/met-museum.json",
-      "entries/stripe-platform.json",
-      "research/apple-product.md",
-      "research/chatgpt-platform.md",
-      "research/met-museum.md",
-      "research/stripe-platform.md"
+      "demos/cases/apple-product/fidelity.md",
+      "demos/cases/apple-product/index.html",
+      "demos/cases/apple-product/journey.js",
+      "demos/cases/apple-product/script.js",
+      "demos/cases/apple-product/style.css",
+      "demos/cases/chatgpt-platform/fidelity.md",
+      "demos/cases/chatgpt-platform/fonts.css",
+      "demos/cases/chatgpt-platform/index.html",
+      "demos/cases/chatgpt-platform/motion-data.js",
+      "demos/cases/chatgpt-platform/script.js",
+      "demos/cases/chatgpt-platform/style.css",
+      "demos/cases/met-museum/fidelity.md",
+      "demos/cases/met-museum/index.html",
+      "demos/cases/met-museum/script.js",
+      "demos/cases/met-museum/style.css",
+      "demos/cases/stripe-platform/fidelity.md",
+      "demos/cases/stripe-platform/index.html",
+      "demos/cases/stripe-platform/journey.js",
+      "demos/cases/stripe-platform/script.js",
+      "demos/cases/stripe-platform/style.css",
+      "demos/cases/stripe-platform/wave.js",
+      "entries/cases/apple-product.json",
+      "entries/cases/chatgpt-platform.json",
+      "entries/cases/met-museum.json",
+      "entries/cases/stripe-platform.json",
+      "docs/research/met-museum.md",
+      "docs/research/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -108,7 +106,7 @@
       "title": "Apple · 滚动产品舞台",
       "paths": {
         "bundle": "agent/cases/apple-product.json",
-        "demo": "demos/apple-product/index.html"
+        "demo": "demos/cases/apple-product/index.html"
       }
     },
     {
@@ -116,7 +114,7 @@
       "title": "ChatGPT — 巨字、飞入拼贴与滚动交接",
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
-        "demo": "demos/chatgpt-platform/index.html"
+        "demo": "demos/cases/chatgpt-platform/index.html"
       }
     },
     {
@@ -124,7 +122,7 @@
       "title": "The Met · 编辑式展览与馆藏陈列",
       "paths": {
         "bundle": "agent/cases/met-museum.json",
-        "demo": "demos/met-museum/index.html"
+        "demo": "demos/cases/met-museum/index.html"
       }
     },
     {
@@ -132,7 +130,7 @@
       "title": "Stripe — 彩带与金融产品矩阵",
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "demo": "demos/stripe-platform/index.html"
+        "demo": "demos/cases/stripe-platform/index.html"
       }
     }
   ]

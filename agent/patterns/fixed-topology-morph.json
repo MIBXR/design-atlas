@@ -46,17 +46,17 @@
     "sources": [
       {
         "caseId": "shape-morph",
-        "locator": "entries/shape-morph.json#interaction/0",
+        "locator": "entries/cases/shape-morph.json#interaction/0",
         "observation": "三种形态按钮切换 24 个三角片的位置",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/shape-morph/index.html",
-      "demos/shape-morph/script.js",
-      "demos/shape-morph/style.css",
-      "entries/shape-morph.json",
-      "research/shape-morph.md"
+      "demos/cases/shape-morph/index.html",
+      "demos/cases/shape-morph/script.js",
+      "demos/cases/shape-morph/style.css",
+      "entries/cases/shape-morph.json",
+      "docs/research/shape-morph.md"
     ]
   },
   "sourceCases": [
@@ -65,7 +65,7 @@
       "title": "动态形状：同一单元，多种表达",
       "paths": {
         "bundle": "agent/cases/shape-morph.json",
-        "demo": "demos/shape-morph/index.html"
+        "demo": "demos/cases/shape-morph/index.html"
       }
     }
   ]

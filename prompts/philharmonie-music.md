@@ -1,6 +1,6 @@
 # 巴黎爱乐厅 · 音乐展与音乐会详情 · 复用 Prompt
 
-由 [结构化案例](../entries/philharmonie-music.json) 自动生成。参考观察与具体边界见 [调研](../research/philharmonie-music.md)。
+由 [结构化案例](../entries/cases/philharmonie-music.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/philharmonie-music.md)。
 
 ## 正向 Prompt
 
@@ -24,4 +24,4 @@
 
 再选择一场经过官方核验的音乐会，对照节目/阵容结构，保留展览与音乐会信息表达差异。
 
-[查看 Demo](../demos/philharmonie-music/index.html) · [返回案例库](../cases.html#style/philharmonie-music)
+[查看 Demo](../demos/cases/philharmonie-music/index.html) · [返回案例库](../cases.html#style/philharmonie-music)

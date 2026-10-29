@@ -1,6 +1,6 @@
 # 像素：微型世界 · 复用 Prompt
 
-由 [结构化案例](../entries/pixel-world.json) 自动生成。参考观察与具体边界见 [调研](../research/pixel-world.md)。
+由 [结构化案例](../entries/cases/pixel-world.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/pixel-world.md)。
 
 ## 正向 Prompt
 
@@ -27,4 +27,4 @@
 
 为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。
 
-[查看 Demo](../demos/pixel-world/index.html) · [返回案例库](../cases.html#style/pixel-world)
+[查看 Demo](../demos/cases/pixel-world/index.html) · [返回案例库](../cases.html#style/pixel-world)

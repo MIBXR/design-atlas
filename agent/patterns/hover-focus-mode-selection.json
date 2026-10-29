@@ -41,7 +41,7 @@
     "sources": [
       {
         "caseId": "chatgpt-platform",
-        "locator": "entries/chatgpt-platform.json#interaction/0",
+        "locator": "entries/cases/chatgpt-platform.json#interaction/0",
         "observation": "首屏悬停/聚焦/点击“聊天、工作、编程” → 当前中文逐字换强调色，中央图垂直退出/进入，20 个官方周边素材按模式替换 → 用动作表达三种用途；在首屏标题体验。",
         "evidence": "observed",
         "referenceUrl": "https://chatgpt.com/zh-Hans-CN/overview/",
@@ -49,14 +49,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/chatgpt-platform/fidelity.md",
-      "demos/chatgpt-platform/fonts.css",
-      "demos/chatgpt-platform/index.html",
-      "demos/chatgpt-platform/motion-data.js",
-      "demos/chatgpt-platform/script.js",
-      "demos/chatgpt-platform/style.css",
-      "entries/chatgpt-platform.json",
-      "research/chatgpt-platform.md"
+      "demos/cases/chatgpt-platform/fidelity.md",
+      "demos/cases/chatgpt-platform/fonts.css",
+      "demos/cases/chatgpt-platform/index.html",
+      "demos/cases/chatgpt-platform/motion-data.js",
+      "demos/cases/chatgpt-platform/script.js",
+      "demos/cases/chatgpt-platform/style.css",
+      "entries/cases/chatgpt-platform.json"
     ]
   },
   "sourceCases": [
@@ -65,7 +64,7 @@
       "title": "ChatGPT — 巨字、飞入拼贴与滚动交接",
       "paths": {
         "bundle": "agent/cases/chatgpt-platform.json",
-        "demo": "demos/chatgpt-platform/index.html"
+        "demo": "demos/cases/chatgpt-platform/index.html"
       }
     }
   ]

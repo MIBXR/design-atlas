@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "apple-product",
-        "locator": "entries/apple-product.json#themeBehavior/control",
+        "locator": "entries/cases/apple-product.json#themeBehavior/control",
         "observation": "产品摄影章节固定黑/深灰；比较、购物和环境等后段切成浅色。没有全局深浅切换。",
         "evidence": "observed",
         "referenceUrl": "https://www.apple.com/iphone-18-pro/",
@@ -47,7 +47,7 @@
       },
       {
         "caseId": "stripe-platform",
-        "locator": "entries/stripe-platform.json#themeBehavior/control",
+        "locator": "entries/cases/stripe-platform.json#themeBehavior/control",
         "observation": "首屏固定浅色及官方波浪；Global/Developers 等章节使用品牌海军蓝，属于章节配色，没有全局主题切换。",
         "evidence": "observed",
         "referenceUrl": "https://stripe.com/",
@@ -55,7 +55,7 @@
       },
       {
         "caseId": "monument-valley-game",
-        "locator": "entries/monument-valley-game.json#composition/color",
+        "locator": "entries/cases/monument-valley-game.json#composition/color",
         "observation": "固定白导航、#221f20影像/下载/画廊、粉蓝奖项、奶油媒体、粉社区与紫页尾，以整幅色带改变观看节奏。",
         "evidence": "observed",
         "referenceUrl": "https://www.monumentvalleygame.com/mv1",
@@ -63,27 +63,26 @@
       }
     ],
     "sourceFiles": [
-      "demos/apple-product/fidelity.md",
-      "demos/apple-product/index.html",
-      "demos/apple-product/journey.js",
-      "demos/apple-product/script.js",
-      "demos/apple-product/style.css",
-      "demos/monument-valley-game/app.js",
-      "demos/monument-valley-game/fidelity.md",
-      "demos/monument-valley-game/index.html",
-      "demos/monument-valley-game/style.css",
-      "demos/stripe-platform/fidelity.md",
-      "demos/stripe-platform/index.html",
-      "demos/stripe-platform/journey.js",
-      "demos/stripe-platform/script.js",
-      "demos/stripe-platform/style.css",
-      "demos/stripe-platform/wave.js",
-      "entries/apple-product.json",
-      "entries/monument-valley-game.json",
-      "entries/stripe-platform.json",
-      "research/apple-product.md",
-      "research/monument-valley-game.md",
-      "research/stripe-platform.md"
+      "demos/cases/apple-product/fidelity.md",
+      "demos/cases/apple-product/index.html",
+      "demos/cases/apple-product/journey.js",
+      "demos/cases/apple-product/script.js",
+      "demos/cases/apple-product/style.css",
+      "demos/cases/monument-valley-game/app.js",
+      "demos/cases/monument-valley-game/fidelity.md",
+      "demos/cases/monument-valley-game/index.html",
+      "demos/cases/monument-valley-game/style.css",
+      "demos/cases/stripe-platform/fidelity.md",
+      "demos/cases/stripe-platform/index.html",
+      "demos/cases/stripe-platform/journey.js",
+      "demos/cases/stripe-platform/script.js",
+      "demos/cases/stripe-platform/style.css",
+      "demos/cases/stripe-platform/wave.js",
+      "entries/cases/apple-product.json",
+      "entries/cases/monument-valley-game.json",
+      "entries/cases/stripe-platform.json",
+      "docs/research/monument-valley-game.md",
+      "docs/research/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -92,7 +91,7 @@
       "title": "Apple · 滚动产品舞台",
       "paths": {
         "bundle": "agent/cases/apple-product.json",
-        "demo": "demos/apple-product/index.html"
+        "demo": "demos/cases/apple-product/index.html"
       }
     },
     {
@@ -100,7 +99,7 @@
       "title": "纪念碑谷：电影首入、奖项进入与中心画廊",
       "paths": {
         "bundle": "agent/cases/monument-valley-game.json",
-        "demo": "demos/monument-valley-game/index.html"
+        "demo": "demos/cases/monument-valley-game/index.html"
       }
     },
     {
@@ -108,7 +107,7 @@
       "title": "Stripe — 彩带与金融产品矩阵",
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "demo": "demos/stripe-platform/index.html"
+        "demo": "demos/cases/stripe-platform/index.html"
       }
     }
   ]

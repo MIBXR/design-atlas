@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 export const ASSET_THRESHOLD = 128 * 1024;
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const mediaExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif', '.svg', '.mp4', '.webm', '.mp3', '.wav', '.ogg', '.m4a', '.aac', '.flac', '.woff', '.woff2', '.otf', '.ttf', '.bin']);
-const assetFolders = ['demos', 'previews', 'research', 'docs', 'site/vendor'];
+const assetFolders = ['demos/cases', 'demos/materials', 'previews/cases', 'previews/materials', 'docs', 'site/vendor'];
 
 export function buildAssetSources(sourceRoot = root, commit) {
   if (!/^[a-f\d]{40}$/.test(commit || '')) throw new Error('Choose a published full Git commit with --commit.');

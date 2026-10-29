@@ -61,7 +61,7 @@ function prepareLinks(fragment, sourceURL) {
       reader.hash = url.hash;
       link.href = reader.href;
     } else {
-      if (path !== null && /^demos\/[A-Za-z0-9_-]+\/?$/.test(path)) {
+      if (path !== null && /^demos\/(?:cases|materials)\/[A-Za-z0-9_-]+\/?$/.test(path)) {
         url.pathname = url.pathname.replace(/\/?$/, '/index.html');
       }
       link.href = url.href;
@@ -234,7 +234,7 @@ async function readDocument({focus = false} = {}) {
     download.download = file.split('/').pop();
     download.textContent = `下载 ${download.download}`;
     download.hidden = false;
-    const caseId = file.match(/^demos\/([A-Za-z0-9_-]+)\//)?.[1];
+    const caseId = file.match(/^demos\/cases\/([A-Za-z0-9_-]+)\//)?.[1];
     if (caseId) {
       back.href = `cases.html#style/${caseId}`;
       back.textContent = '返回案例详情';

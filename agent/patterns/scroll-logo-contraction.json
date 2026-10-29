@@ -50,7 +50,7 @@
     "sources": [
       {
         "caseId": "uma-musume",
-        "locator": "entries/uma-musume.json#interaction/1",
+        "locator": "entries/cases/uma-musume.json#interaction/1",
         "observation": "滚过画布宽度 7% 后 Logo 从 2.8 倍缩回导航，反向回首恢复；300ms cubic-bezier(.19,1,.22,1)。手机 1.72 倍与菜单切换，Play Now 打开下载层。",
         "evidence": "observed",
         "referenceUrl": "https://umamusume.com/",
@@ -58,12 +58,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/uma-musume/app.js",
-      "demos/uma-musume/fidelity.md",
-      "demos/uma-musume/index.html",
-      "demos/uma-musume/style.css",
-      "entries/uma-musume.json",
-      "research/uma-musume.md"
+      "demos/cases/uma-musume/app.js",
+      "demos/cases/uma-musume/fidelity.md",
+      "demos/cases/uma-musume/index.html",
+      "demos/cases/uma-musume/style.css",
+      "entries/cases/uma-musume.json",
+      "docs/research/uma-musume.md"
     ]
   },
   "sourceCases": [
@@ -72,7 +72,7 @@
       "title": "赛马娘：群像赛道与斜切叙事",
       "paths": {
         "bundle": "agent/cases/uma-musume.json",
-        "demo": "demos/uma-musume/index.html"
+        "demo": "demos/cases/uma-musume/index.html"
       }
     }
   ]

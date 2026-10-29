@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "apple-product",
-        "locator": "entries/apple-product.json#interaction/0",
+        "locator": "entries/cases/apple-product.json#interaction/0",
         "observation": "进入 → 官方产品 MP4 在黑色全宽舞台登场；重播只重放这段，不代替影片。",
         "evidence": "observed",
         "referenceUrl": "https://www.apple.com/iphone-18-pro/",
@@ -48,13 +48,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/apple-product/fidelity.md",
-      "demos/apple-product/index.html",
-      "demos/apple-product/journey.js",
-      "demos/apple-product/script.js",
-      "demos/apple-product/style.css",
-      "entries/apple-product.json",
-      "research/apple-product.md"
+      "demos/cases/apple-product/fidelity.md",
+      "demos/cases/apple-product/index.html",
+      "demos/cases/apple-product/journey.js",
+      "demos/cases/apple-product/script.js",
+      "demos/cases/apple-product/style.css",
+      "entries/cases/apple-product.json"
     ]
   },
   "sourceCases": [
@@ -63,7 +62,7 @@
       "title": "Apple · 滚动产品舞台",
       "paths": {
         "bundle": "agent/cases/apple-product.json",
-        "demo": "demos/apple-product/index.html"
+        "demo": "demos/cases/apple-product/index.html"
       }
     }
   ]

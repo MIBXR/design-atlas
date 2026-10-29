@@ -64,7 +64,11 @@ function walkFiles(root, relative) {
 }
 
 function fileRole(relative, entry, documentPaths) {
-  if (documentPaths.has(relative) || relative === `entries/${entry.id}.json` || /\.(?:md|txt|json)$/i.test(relative)) return 'context';
+  if (relative.includes('/source/')) return 'process';
+  if (/(?:^|\/)(?:LICENSE[^/]*|THIRD-PARTY-NOTICES[^/]*|[^/]*-LICENSE\.txt|[^/]*-OFL\.txt)$/.test(relative)) return 'license';
+  if (relative.includes('/fonts/')) return 'font';
+  if (relative.includes('/vendor/')) return 'vendor';
+  if (documentPaths.has(relative) || relative === `entries/cases/${entry.id}.json` || /\.(?:md|txt|json)$/i.test(relative)) return 'context';
   if (relative === entry.preview || relative === entry.referencePreview || relative.startsWith('previews/')) return 'preview';
   if (relative.includes('/assets/')) return 'asset';
   return /\.(?:html|js|mjs|css)$/i.test(relative) ? 'source' : 'asset';
@@ -76,8 +80,8 @@ function documentRecord(root, relative, role) {
 
 function makeBundle(root, entry, entryPath, patternIds = []) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.id)) throw new Error(`Invalid case id: ${entry.id}`);
-  if (entryPath !== `entries/${entry.id}.json`) throw new Error(`Entry filename does not match id: ${entryPath}`);
-  if (entry.demo !== `demos/${entry.id}/index.html`) throw new Error(`Unexpected demo path for ${entry.id}: ${entry.demo}`);
+  if (entryPath !== `entries/cases/${entry.id}.json`) throw new Error(`Entry filename does not match id: ${entryPath}`);
+  if (entry.demo !== `demos/cases/${entry.id}/index.html`) throw new Error(`Unexpected demo path for ${entry.id}: ${entry.demo}`);
   const definitions = [
     [entry.research, 'research'],
     [`prompts/${entry.id}.md`, 'prompt'],
@@ -87,14 +91,14 @@ function makeBundle(root, entry, entryPath, patternIds = []) {
   const documents = definitions.map(([relative, role]) => documentRecord(root, relative, role));
   const documentPaths = new Set(documents.map(doc => doc.path));
   const paths = new Set([
-    ...walkFiles(root, `demos/${entry.id}`),
+    ...walkFiles(root, `demos/cases/${entry.id}`),
     entryPath, ...documentPaths, entry.preview,
     ...sharedFiles,
     // Small shared renderer dependencies and their original license notices.
     ...walkFiles(root, 'site/vendor'),
   ]);
   if (entry.referencePreview) paths.add(entry.referencePreview);
-  const mobilePreview = `previews/mobile/${entry.id}.jpg`;
+  const mobilePreview = `previews/cases/${entry.id}-mobile.jpg`;
   const mobilePath = resolveRepositoryPath(root, mobilePreview, { mustExist: false });
   if (fs.existsSync(mobilePath)) paths.add(mobilePreview);
   const files = [...paths].sort().map(relative => ({ path: relative, role: fileRole(relative, entry, documentPaths) }));
@@ -103,9 +107,9 @@ function makeBundle(root, entry, entryPath, patternIds = []) {
 
 export function buildAgent({ root = defaultRoot, write = true } = {}) {
   assertRepositoryLineEndings(root);
-  const entryDirectory = resolveRepositoryPath(root, 'entries');
+  const entryDirectory = resolveRepositoryPath(root, 'entries/cases');
   const entries = fs.readdirSync(entryDirectory).filter(name => name.endsWith('.json')).sort().map(name => {
-    const entryPath = 'entries/' + name;
+    const entryPath = 'entries/cases/' + name;
     return { entryPath, entry: JSON.parse(readText(root, entryPath)) };
   }).sort((a, b) => a.entry.order - b.entry.order || a.entry.id.localeCompare(b.entry.id, 'en'));
   if (!entries.length) throw new Error('No entries found');
@@ -141,7 +145,7 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
     catalog.materials = { path: 'agent/materials.json', materialCount: materials.length };
   }
   outputs.set('agent/catalog.json', encode(catalog));
-  outputs.set('agent/README.md', Buffer.from("# Web Atlas · Agent 数据\n\n完整工作流见 [docs/agent.md](../docs/agent.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：案例摘要、包路径及巧思／素材目录路径。\n- cases/<id>.json：完整 entry、documents 原文、webNotes HTML、files 路径与角色、patternIds 关联。\n- [patterns.json](patterns.json)：巧思机制、来源、约束、参数、组合关系与包路径。\n- patterns/<id>.json：完整 pattern 与 sourceCases；按来源案例路径和 sourceFiles 取得上下文。\n- [materials.json](materials.json)：独立内容素材摘要和包路径。\n- materials/<id>.json：完整 material、documents、files 与主要源码 sourceFiles；来源版本和许可随包保留。\n\n所有资料使用同一个固定 Git 提交。目录按命令需要独立读取。发布索引的 source.commit/baseUrl 指向原始源码；网页播放文件可经过部署转换。\n\nwebNotes 由 site/pages/cases/atlas.js 的实际详情渲染器生成。来源 observed/adapted/inferred 保留观察、迁移与推断的边界；来源记录原文随资料保留。\n\n运行 npm run build 同步资料，npm run check 检查本地引用。受影响页面通过浏览器验收。\n", 'utf8'));
+  outputs.set('agent/README.md', Buffer.from("# Web Atlas · Agent 数据\n\n完整工作流见 [docs/agent.md](../docs/agent.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：案例摘要、包路径及巧思／素材目录路径。\n- cases/<id>.json：完整 entry、documents 原文、webNotes HTML、files 路径与角色、patternIds 关联。\n- [patterns.json](patterns.json)：巧思机制、来源、约束、参数、组合关系与包路径。\n- entries/patterns/<id>.json：完整 pattern 与 sourceCases；按来源案例路径和 sourceFiles 取得上下文。\n- [materials.json](materials.json)：独立内容素材摘要和包路径。\n- entries/materials/<id>.json：完整 material、documents、files 与主要源码 sourceFiles；来源版本和许可随包保留。\n\n所有资料使用同一个固定 Git 提交。目录按命令需要独立读取。发布索引的 source.commit/baseUrl 指向原始源码；网页播放文件可经过部署转换。\n\nwebNotes 由 site/pages/cases/atlas.js 的实际详情渲染器生成。来源 observed/adapted/inferred 保留观察、迁移与推断的边界；来源记录原文随资料保留。\n\n运行 npm run build 同步资料，npm run check 检查本地引用。受影响页面通过浏览器验收。\n", 'utf8'));
   if (write) {
     // Check the destination before creating directories or replacing any bytes.
     fs.mkdirSync(resolveRepositoryPath(root, 'agent/cases', { mustExist: false }), { recursive: true });

@@ -1,6 +1,6 @@
 # 苏州博物馆 · 四屏门户与图像目的地 · 复用 Prompt
 
-由 [结构化案例](../entries/suzhou-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/suzhou-museum.md)。
+由 [结构化案例](../entries/cases/suzhou-museum.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/suzhou-museum.md)。
 
 ## 正向 Prompt
 
@@ -22,4 +22,4 @@
 
 把同一目的地矩阵适配另一个真实文化机构，以有授权图像解释每个入口；在390px检查类目名称、DOM顺序与到访链接仍可用。
 
-[查看 Demo](../demos/suzhou-museum/index.html) · [返回案例库](../cases.html#style/suzhou-museum)
+[查看 Demo](../demos/cases/suzhou-museum/index.html) · [返回案例库](../cases.html#style/suzhou-museum)

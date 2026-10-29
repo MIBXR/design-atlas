@@ -41,7 +41,7 @@
     "sources": [
       {
         "caseId": "mori-art-museum",
-        "locator": "entries/mori-art-museum.json#composition/layout",
+        "locator": "entries/cases/mori-art-museum.json#composition/layout",
         "observation": "桌面左叠加240px方形馆标（x30/y130），宽2.5:1海报自y160开始；手机160px馆标与官方方图，后续四列展览、三列推荐、四列新闻。",
         "evidence": "observed",
         "referenceUrl": "https://www.mori.art.museum/jp/",
@@ -49,12 +49,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/mori-art-museum/app.js",
-      "demos/mori-art-museum/fidelity.md",
-      "demos/mori-art-museum/index.html",
-      "demos/mori-art-museum/style.css",
-      "entries/mori-art-museum.json",
-      "research/mori-art-museum.md"
+      "demos/cases/mori-art-museum/app.js",
+      "demos/cases/mori-art-museum/fidelity.md",
+      "demos/cases/mori-art-museum/index.html",
+      "demos/cases/mori-art-museum/style.css",
+      "entries/cases/mori-art-museum.json",
+      "docs/research/mori-art-museum.md"
     ]
   },
   "sourceCases": [
@@ -63,7 +63,7 @@
       "title": "森美术馆：红色机构锚点与艺术海报",
       "paths": {
         "bundle": "agent/cases/mori-art-museum.json",
-        "demo": "demos/mori-art-museum/index.html"
+        "demo": "demos/cases/mori-art-museum/index.html"
       }
     }
   ]

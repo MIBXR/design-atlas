@@ -1,6 +1,6 @@
 # Mira Høst · 北欧摄影作品集 · 复用 Prompt
 
-由 [结构化案例](../entries/mira-host-photography.json) 自动生成。参考观察与具体边界见 [调研](../research/mira-host-photography.md)。
+由 [结构化案例](../entries/cases/mira-host-photography.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/mira-host-photography.md)。
 
 ## 正向 Prompt
 
@@ -26,4 +26,4 @@
 
 用相同视口逐节查看来源与本地页面，核对摄影裁切、字体换行、目录悬停预览、章节导航、窄屏重排与减少动态分支；将真实可用入口和 # 占位链接分开记录。
 
-[查看 Demo](../demos/mira-host-photography/index.html) · [返回案例库](../cases.html#style/mira-host-photography)
+[查看 Demo](../demos/cases/mira-host-photography/index.html) · [返回案例库](../cases.html#style/mira-host-photography)

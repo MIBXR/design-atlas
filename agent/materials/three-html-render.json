@@ -117,7 +117,7 @@
         "title": "吊灯照亮网页",
         "component": "HTMLTexture / SpotLight / Verlet",
         "summary": "拖动吊灯照亮 MORS² 原作页面，松手观察摆动；用原面板调整光束、亮度、预设与自定义颜色。",
-        "entrypoint": "material-demos/three-html-render/index.html?demo=lamp",
+        "entrypoint": "demos/materials/three-html-render/index.html?demo=lamp",
         "parameters": [
           {
             "name": "angle",
@@ -146,7 +146,7 @@
         "title": "基础平面",
         "component": "HTMLTexture / InteractionManager",
         "summary": "将同一 MORS² 页面贴在轻微倾斜的 3D 平面上，切换五个概念并操作灯光面板。",
-        "entrypoint": "material-demos/three-html-render/index.html?demo=plane",
+        "entrypoint": "demos/materials/three-html-render/index.html?demo=plane",
         "parameters": [
           {
             "name": "倾斜",
@@ -166,111 +166,111 @@
       "keyboard": "本地无头 Edge 实测 Tab 依次聚焦 Space、Meta、Field、Rule、Latent、power、beam，focus-visible 落在文档内真实 DOM 控件；ArrowRight 将光束角度 34 调至 35。五个概念点击均成功，读屏器未验证。",
       "reducedMotion": "本地无头 Edge 的 reduce 模拟中灯固定，间隔 1 秒绘制计数保持 10；plane 在指针移动前后的矩阵相同，正常模式会改变。面板即时生效，真实设备与其他浏览器未验证。"
     },
-    "demo": "material-demos/three-html-render/index.html",
+    "demo": "demos/materials/three-html-render/index.html",
     "preview": "previews/materials/three-html-render.png",
-    "research": "docs/materials-three-html-render.md",
+    "research": "docs/materials/three-html-render.md",
     "sourceFiles": [
-      "material-demos/three-html-render/index.html",
-      "material-demos/three-html-render/demo.css",
-      "material-demos/three-html-render/demo.js",
-      "material-demos/three-html-render/mors-logo.svg"
+      "demos/materials/three-html-render/index.html",
+      "demos/materials/three-html-render/demo.css",
+      "demos/materials/three-html-render/demo.js",
+      "demos/materials/three-html-render/mors-logo.svg"
     ]
   },
   "documents": [
     {
-      "path": "docs/materials-three-html-render.md",
+      "path": "docs/materials/three-html-render.md",
       "role": "research",
-      "content": "# three-html-render：HTML-in-Canvas polyfill\n\n[本地工作台](../material-demos/three-html-render/index.html) · [结构化资料](../materials/three-html-render.json) · [固定版本源码](https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add)\n\n## 来源与许可\n\n本条目使用 repalash 的 [three-html-render npm 0.1.2](https://registry.npmjs.org/three-html-render/0.1.2)，固定提交 `63f085e3fe7be11f0679c0ac17edc2e18e743add`，核验日期 `2026-10-27`。本地版本组合为 `three@0.185.1` 与 `three-html-render@0.1.2`；Three.js 的 [固定提交](https://github.com/mrdoob/three.js/tree/2431a09f46f34c560bc8e44b33be0e567723d5b9)为 `2431a09f46f34c560bc8e44b33be0e567723d5b9`。polyfill、Three.js 核心及 InteractionManager addon 保留原始文件字节，各自采用 MIT 许可。\n\n页面实现、样式与光照代码改写自 jinruozai 的 [HTML-Light-Demo 固定提交](https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29)，采用 MIT 许可。原生移植依据为 `MorsPageSurface.tsx`、`globals.css`、`MorsLightCanvas.tsx`、`config.ts` 和 `three-html-compatibility.ts`；[mors-logo.svg](../material-demos/three-html-render/mors-logo.svg) 保持参考仓库原始字节。\n\nMORS² 品牌、文案、标志与美术方向出自 [@kaolti](https://x.com/kaolti) 原作，本仓库用于个人非商业参考。软件与参考实现代码的 MIT 许可、原作署名分别保留，原始许可和逐文件来源见 [vendor/NOTICE.md](../material-demos/three-html-render/vendor/NOTICE.md)。\n\n## 能力与演示范围\n\n[HTML-in-Canvas](https://github.com/WICG/html-in-canvas) 是 WICG 的浏览器标准提案，原生支持仍处于实验阶段。本条目收录的是提供兼容能力的 three-html-render 库，不是标准本身。`HTMLTexture` 和 `InteractionManager` 从 three r185 起由 Three.js 提供；本样例使用这些接口，three-html-render 补齐浏览器 API。\n\n| 用法 | 库与 Three.js 构成 | 本地组合与可操作状态 |\n| --- | --- | --- |\n| 吊灯照亮网页 | HTML-in-Canvas polyfill、HTMLTexture、SpotLight | 将完整 MORS² 页面放入参考光照场景；左键或单指拉灯，松手自由摆动；右键拖动调光束角度、右键单击切颜色、双击复位 |\n| 基础平面 | HTML-in-Canvas polyfill、HTMLTexture、Three.js InteractionManager | 同一 MORS² 页面贴在 3D 平面上，指针移动产生最大 8° 倾斜；保留概念切换、面板、悬停和键盘焦点 |\n\n页面保留原标志、英文文案与 Space、Meta、Field、Rule、Latent 五个概念按钮及其说明。灯光面板保留光束角度、亮度、五色预设、自定义颜色、开关和复位，使用真实 DOM 控件承担键盘与触屏操作。画面内的排版、字号、色彩和装饰按参考保留。\n\n## 参数与接入\n\n使用 `npm install three@0.185.1 three-html-render@0.1.2`。独立演示通过 importmap 指向本地 `vendor/`，不依赖 React、CDN 或运行时构建。通过静态 HTTP/HTTPS 服务访问。\n\n默认入口为 `index.html?demo=lamp`，基础平面为 `index.html?demo=plane`。吊灯初始 `angle: 34`、`brightness: 1450`、`color: #ffb36b` 与五色色板来自参考项目 `config.ts`，场景与摆锤数值按 `MorsLightCanvas.tsx` 移植。平面最大倾斜 8° 是本地演示参数。\n\n本素材处于 `0.1.x`。npm 0.1.2 不提供 README 所述的 `html-texture`／`interaction-manager` 子路径，不能按这些路径导入；本地从 Three.js 核心和 addon 使用对应能力。\n\n本版本组合需要 `texElementImage2D` 兼容垫片：Three.js 根据函数的参数数量选择上传重载，polyfill 的函数签名会触发不适用的短重载。改写自参考实现的垫片仅在 polyfill 启用且签名符合条件时包装为六参数函数，原生实现保持原样。\n\n接入还通过 polyfill 的 `pageStyles` 仅向 SVG 快照注入 `html,body{overflow:visible!important}`，使高于视口的窄版灯光面板完整光栅化；不修改 vendor 原始文件。\n\n## 输入、动态与后备\n\n桌面 CSS 视口不小于 768px 时保留原作 1440×810 页面与参考 fit 取景。小于 768px 时采用原 mobile 上下排列，让页面宽度跟随视口，并以 `height: auto`、`min-height: 1180px` 容纳完整内容；窗口 resize 同步更新 HTMLTexture 尺寸与相机取景。画面内文字按原作设计保留。\n\n正常模式下吊灯保留参考的 Verlet 摆锤与约束、指针瞄准与拉拽、松手动量、右键调节和双击复位，静止后停止渲染。`prefers-reduced-motion: reduce` 时灯固定在初始角度，平面不倾斜；面板照常即时生效，没有过渡动画。\n\n在本地 HTTP 下，无头 Edge `155.0.4283.62` 已实测运行真实 WebGL，实际使用 SVG foreignObject polyfill 路径。浏览器有原生 `texElementImage2D` 时走原生路径。\n\n1440px 同条件对照中，原作与本地的源页面均为 1440×810，投影矩形均为 `(155.4016, 144.3815, 1129.1948, 628.1824)`；标题计算字号 77px、字重 670、行高 72.38px、字体栈及控制板边界相同。初始画面观察未见明显的构图、黑位、材质或光照差异，保留参考场景的暗部表现。摆动画面的光斑边缘有轻微偏移。\n\n390px 下源页面实测为 390×1240，五个概念均可真实点击切换。Tab 依次聚焦 Space、Meta、Field、Rule、Latent、power、beam，`focus-visible` 落在文档内真实 DOM 控件；ArrowRight 将光束角度从 34 调至 35。右键单击切换下一颜色，右拖 100px 将角度从 34 调至 48。\n\n摆动后的绘制计数停在 10150，等待 1.2 秒仍为 10150，确认停止渲染。减少动态时灯固定，绘制计数间隔 1 秒保持 `10 → 10`；plane 指针移动前后的矩阵相同，正常模式矩阵会改变。CDP 单触点模拟可拖灯，无 pointercancel，拖动时 `scrollY` 保持 0；浅蓝色板可触摸选中。\n\nWebGL 不可用或初始化失败时，显示同一 MORS² HTML 页面与 CSS 静态光照，并标明“当前环境无法运行 WebGL 光照，显示的是静态示意。”禁用 WebGL 的独立 Edge 进程已验证 390px 后备：可用区域宽 375px、无横向溢出，polyfill host 清除、源页面回到 scene，原面板开关可从开启切换为关闭。\n\n适合氛围型首屏、作品集、发布页和 3D 展台中的可交互面板；避免用于信息密集页、长阅读页，以及对性能或电量敏感的移动端主流程。\n"
+      "content": "# three-html-render：HTML-in-Canvas polyfill\n\n[本地工作台](../../demos/materials/three-html-render/index.html) · [结构化资料](../../entries/materials/three-html-render.json) · [固定版本源码](https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add)\n\n## 来源与许可\n\n本条目使用 repalash 的 [three-html-render npm 0.1.2](https://registry.npmjs.org/three-html-render/0.1.2)，固定提交 `63f085e3fe7be11f0679c0ac17edc2e18e743add`，核验日期 `2026-10-27`。本地版本组合为 `three@0.185.1` 与 `three-html-render@0.1.2`；Three.js 的 [固定提交](https://github.com/mrdoob/three.js/tree/2431a09f46f34c560bc8e44b33be0e567723d5b9)为 `2431a09f46f34c560bc8e44b33be0e567723d5b9`。polyfill、Three.js 核心及 InteractionManager addon 保留原始文件字节，各自采用 MIT 许可。\n\n页面实现、样式与光照代码改写自 jinruozai 的 [HTML-Light-Demo 固定提交](https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29)，采用 MIT 许可。原生移植依据为 `MorsPageSurface.tsx`、`globals.css`、`MorsLightCanvas.tsx`、`config.ts` 和 `three-html-compatibility.ts`；[mors-logo.svg](../../demos/materials/three-html-render/mors-logo.svg) 保持参考仓库原始字节。\n\nMORS² 品牌、文案、标志与美术方向出自 [@kaolti](https://x.com/kaolti) 原作，本仓库用于个人非商业参考。软件与参考实现代码的 MIT 许可、原作署名分别保留，原始许可和逐文件来源见 [vendor/NOTICE.md](../../demos/materials/three-html-render/vendor/NOTICE.md)。\n\n## 能力与演示范围\n\n[HTML-in-Canvas](https://github.com/WICG/html-in-canvas) 是 WICG 的浏览器标准提案，原生支持仍处于实验阶段。本条目收录的是提供兼容能力的 three-html-render 库，不是标准本身。`HTMLTexture` 和 `InteractionManager` 从 three r185 起由 Three.js 提供；本样例使用这些接口，three-html-render 补齐浏览器 API。\n\n| 用法 | 库与 Three.js 构成 | 本地组合与可操作状态 |\n| --- | --- | --- |\n| 吊灯照亮网页 | HTML-in-Canvas polyfill、HTMLTexture、SpotLight | 将完整 MORS² 页面放入参考光照场景；左键或单指拉灯，松手自由摆动；右键拖动调光束角度、右键单击切颜色、双击复位 |\n| 基础平面 | HTML-in-Canvas polyfill、HTMLTexture、Three.js InteractionManager | 同一 MORS² 页面贴在 3D 平面上，指针移动产生最大 8° 倾斜；保留概念切换、面板、悬停和键盘焦点 |\n\n页面保留原标志、英文文案与 Space、Meta、Field、Rule、Latent 五个概念按钮及其说明。灯光面板保留光束角度、亮度、五色预设、自定义颜色、开关和复位，使用真实 DOM 控件承担键盘与触屏操作。画面内的排版、字号、色彩和装饰按参考保留。\n\n## 参数与接入\n\n使用 `npm install three@0.185.1 three-html-render@0.1.2`。独立演示通过 importmap 指向本地 `vendor/`，不依赖 React、CDN 或运行时构建。通过静态 HTTP/HTTPS 服务访问。\n\n默认入口为 `index.html?demo=lamp`，基础平面为 `index.html?demo=plane`。吊灯初始 `angle: 34`、`brightness: 1450`、`color: #ffb36b` 与五色色板来自参考项目 `config.ts`，场景与摆锤数值按 `MorsLightCanvas.tsx` 移植。平面最大倾斜 8° 是本地演示参数。\n\n本素材处于 `0.1.x`。npm 0.1.2 不提供 README 所述的 `html-texture`／`interaction-manager` 子路径，不能按这些路径导入；本地从 Three.js 核心和 addon 使用对应能力。\n\n本版本组合需要 `texElementImage2D` 兼容垫片：Three.js 根据函数的参数数量选择上传重载，polyfill 的函数签名会触发不适用的短重载。改写自参考实现的垫片仅在 polyfill 启用且签名符合条件时包装为六参数函数，原生实现保持原样。\n\n接入还通过 polyfill 的 `pageStyles` 仅向 SVG 快照注入 `html,body{overflow:visible!important}`，使高于视口的窄版灯光面板完整光栅化；不修改 vendor 原始文件。\n\n## 输入、动态与后备\n\n桌面 CSS 视口不小于 768px 时保留原作 1440×810 页面与参考 fit 取景。小于 768px 时采用原 mobile 上下排列，让页面宽度跟随视口，并以 `height: auto`、`min-height: 1180px` 容纳完整内容；窗口 resize 同步更新 HTMLTexture 尺寸与相机取景。画面内文字按原作设计保留。\n\n正常模式下吊灯保留参考的 Verlet 摆锤与约束、指针瞄准与拉拽、松手动量、右键调节和双击复位，静止后停止渲染。`prefers-reduced-motion: reduce` 时灯固定在初始角度，平面不倾斜；面板照常即时生效，没有过渡动画。\n\n在本地 HTTP 下，无头 Edge `155.0.4283.62` 已实测运行真实 WebGL，实际使用 SVG foreignObject polyfill 路径。浏览器有原生 `texElementImage2D` 时走原生路径。\n\n1440px 同条件对照中，原作与本地的源页面均为 1440×810，投影矩形均为 `(155.4016, 144.3815, 1129.1948, 628.1824)`；标题计算字号 77px、字重 670、行高 72.38px、字体栈及控制板边界相同。初始画面观察未见明显的构图、黑位、材质或光照差异，保留参考场景的暗部表现。摆动画面的光斑边缘有轻微偏移。\n\n390px 下源页面实测为 390×1240，五个概念均可真实点击切换。Tab 依次聚焦 Space、Meta、Field、Rule、Latent、power、beam，`focus-visible` 落在文档内真实 DOM 控件；ArrowRight 将光束角度从 34 调至 35。右键单击切换下一颜色，右拖 100px 将角度从 34 调至 48。\n\n摆动后的绘制计数停在 10150，等待 1.2 秒仍为 10150，确认停止渲染。减少动态时灯固定，绘制计数间隔 1 秒保持 `10 → 10`；plane 指针移动前后的矩阵相同，正常模式矩阵会改变。CDP 单触点模拟可拖灯，无 pointercancel，拖动时 `scrollY` 保持 0；浅蓝色板可触摸选中。\n\nWebGL 不可用或初始化失败时，显示同一 MORS² HTML 页面与 CSS 静态光照，并标明“当前环境无法运行 WebGL 光照，显示的是静态示意。”禁用 WebGL 的独立 Edge 进程已验证 390px 后备：可用区域宽 375px、无横向溢出，polyfill host 清除、源页面回到 scene，原面板开关可从开启切换为关闭。\n\n适合氛围型首屏、作品集、发布页和 3D 展台中的可交互面板；避免用于信息密集页、长阅读页，以及对性能或电量敏感的移动端主流程。\n"
     },
     {
-      "path": "material-demos/three-html-render/README.md",
+      "path": "demos/materials/three-html-render/README.md",
       "role": "context",
-      "content": "# three-html-render：HTML 贴图实验\n\n这个独立 HTML/CSS/JavaScript 示例使用 `three@0.185.1` 与 `three-html-render@0.1.2`。Three.js 提供 `HTMLTexture` 和 `InteractionManager`，three-html-render 提供 HTML-in-Canvas 浏览器 API polyfill。运行文件通过 importmap 自托管在 `vendor/`，不依赖 React、CDN 或构建器。固定版本、来源与原始许可证见 [vendor/NOTICE.md](vendor/NOTICE.md)。\n\n使用静态 HTTP 服务打开 `index.html`；直接双击 `file:` 页面不能作为运行验证。\n\n## 样例与入口\n\n| 查询参数 `demo` | 内容 | 交互与参数 |\n| --- | --- | --- |\n| `lamp`（默认） | 吊灯照亮 MORS² 页面 | 左键或单指拖拽拉灯，松手自由摆动；右键拖动调光束角度，右键单击切颜色，双击复位；保留原 DOM 灯光面板 |\n| `plane` | 同一 MORS² 页面贴在 3D 平面上 | 指针移动使平面最大倾斜 8°；Three.js InteractionManager 处理按钮交互；保留五个概念切换、灯光面板、悬停与焦点 |\n\n入口示例：`index.html?demo=lamp`、`index.html?demo=plane`。页面以原生 HTML/CSS/JavaScript 移植参考的 `MorsPageSurface.tsx` 与 `globals.css`，保留 MORS² 标志、英文文案、Space／Meta／Field／Rule／Latent 五个概念和原面板。\n\n桌面 CSS 视口不小于 768px 时使用原作 1440×810 页面并按参考 fit 取景；小于 768px 时采用原 mobile 上下排列、页面宽度跟随视口，以 `height: auto`、`min-height: 1180px` 容纳完整内容。HTMLTexture 尺寸与相机取景随窗口更新，画面内的字号与美术按原作保留。\n\n## 运行行为\n\n吊灯场景、光照、Verlet 摆锤与约束数值按 `MorsLightCanvas.tsx` 移植，保留瞄准、拉拽、松手动量和静止后停止渲染。初始光束角度 `34`、亮度 `1450`、颜色 `#ffb36b`；色板为 `#ffb36b`、`#ffd9a3`、`#8fdcff`、`#c79cff`、`#ff5f7f`。参数来自参考实现的 `config.ts`，原面板保留真实 DOM 控件、自定义颜色、开关和复位，提供键盘与触屏入口。\n\n`prefers-reduced-motion: reduce` 时灯固定在初始角度，平面不倾斜；面板参数即时生效，没有过渡动画。WebGL 不可用或初始化失败时，保留同一 HTML 页面与 CSS 径向渐变静态灯光，并显示明确的后备说明。\n\n本地 HTTP、无头 Edge `155.0.4283.62` 已实测运行真实 WebGL，使用 SVG foreignObject polyfill。1440px 对照中源页面、投影、标题样式和控制板边界相同；初始画面未观察到明显构图、黑位、材质或光照差异。摆动帧的光斑边缘略有偏移，可能与取帧时间差有关，此原因尚未独立验证。\n\n390px 源页面为 390×1240，五个概念点击成功；Tab 可遍历五个概念、power、beam，焦点落在真实 DOM 控件，方向键可将角度 34 调至 35。右键换色与右拖调角度、CDP 单触点拖灯与色板选择已验证。正常摆动结束后绘制计数稳定，减少动态时灯固定且 plane 指针移动前后矩阵不变。禁用 WebGL 的独立进程已验证同一 MORS² 后备、375px 可用宽度无横向溢出、源 DOM 恢复及原面板开关。\n\n浏览器原生支持 `texElementImage2D` 时使用原生路径；原生路径、读屏器、真实触屏设备、其他浏览器与长期性能／电量表现未验证。详细观察与边界见[素材资料](../../docs/materials-three-html-render.md)。\n\n## 版本与兼容垫片\n\nthree-html-render 0.1.2 的 npm 分发不提供 README 所述的 `html-texture`／`interaction-manager` 子路径。本样例使用 three r185 起提供的 HTMLTexture 和 Three addon InteractionManager。\n\n本版本组合需要 `texElementImage2D` 兼容垫片：Three.js 依据函数参数数量选择短重载，polyfill 的函数签名会导致不匹配。垫片仅在 polyfill 启用且签名符合条件时包装为六参数函数，保持原生实现不变。依赖处于 `0.1.x`，升级需要重新核验。\n\npolyfill 的 `pageStyles` 仅向 SVG 快照注入 `html,body{overflow:visible!important}`，避免高于视口的窄版控制板被快照裁切。该接入配置不修改 vendor 原始文件。\n\n## 文件与署名\n\n- `index.html`：MorsPageSurface 的原生 HTML 移植，含五个概念按钮与原灯光面板。\n- `demo.css`：globals.css 的页面样式移植、约定的窄屏适配与静态光照后备。\n- `demo.js`：MorsLightCanvas 的原生 JavaScript 移植、HTMLTexture、InteractionManager 和平面演示。\n- `mors-logo.svg`：参考仓库 `public/mors-logo.svg` 原始字节。\n- `vendor/three-0.185.1.module.js`、`three-0.185.1.core.js`：原始 Three.js 核心 ESM。\n- `vendor/interaction-manager-0.185.1.js`：原始 Three.js InteractionManager addon。\n- `vendor/three-html-render-polyfill-0.1.2.mjs`：原始 three-html-render polyfill ESM。\n- `vendor/NOTICE.md`、`dependencies.txt` 与 `LICENSE-*.txt`：逐文件来源、随包依赖声明与独立 MIT 许可。\n\nthree-html-render 作者 repalash，MIT；Three.js 核心与 InteractionManager addon 为 MIT。页面实现、样式与光照代码改写自 jinruozai 的 [HTML-Light-Demo](https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29)，MIT。MORS² 品牌、文案、标志与美术方向出自 [@kaolti](https://x.com/kaolti) 原作；本仓库用于个人非商业参考。软件与参考实现代码的许可、原作署名分别保留。\n"
+      "content": "# three-html-render：HTML 贴图实验\n\n这个独立 HTML/CSS/JavaScript 示例使用 `three@0.185.1` 与 `three-html-render@0.1.2`。Three.js 提供 `HTMLTexture` 和 `InteractionManager`，three-html-render 提供 HTML-in-Canvas 浏览器 API polyfill。运行文件通过 importmap 自托管在 `vendor/`，不依赖 React、CDN 或构建器。固定版本、来源与原始许可证见 [vendor/NOTICE.md](vendor/NOTICE.md)。\n\n使用静态 HTTP 服务打开 `index.html`；直接双击 `file:` 页面不能作为运行验证。\n\n## 样例与入口\n\n| 查询参数 `demo` | 内容 | 交互与参数 |\n| --- | --- | --- |\n| `lamp`（默认） | 吊灯照亮 MORS² 页面 | 左键或单指拖拽拉灯，松手自由摆动；右键拖动调光束角度，右键单击切颜色，双击复位；保留原 DOM 灯光面板 |\n| `plane` | 同一 MORS² 页面贴在 3D 平面上 | 指针移动使平面最大倾斜 8°；Three.js InteractionManager 处理按钮交互；保留五个概念切换、灯光面板、悬停与焦点 |\n\n入口示例：`index.html?demo=lamp`、`index.html?demo=plane`。页面以原生 HTML/CSS/JavaScript 移植参考的 `MorsPageSurface.tsx` 与 `globals.css`，保留 MORS² 标志、英文文案、Space／Meta／Field／Rule／Latent 五个概念和原面板。\n\n桌面 CSS 视口不小于 768px 时使用原作 1440×810 页面并按参考 fit 取景；小于 768px 时采用原 mobile 上下排列、页面宽度跟随视口，以 `height: auto`、`min-height: 1180px` 容纳完整内容。HTMLTexture 尺寸与相机取景随窗口更新，画面内的字号与美术按原作保留。\n\n## 运行行为\n\n吊灯场景、光照、Verlet 摆锤与约束数值按 `MorsLightCanvas.tsx` 移植，保留瞄准、拉拽、松手动量和静止后停止渲染。初始光束角度 `34`、亮度 `1450`、颜色 `#ffb36b`；色板为 `#ffb36b`、`#ffd9a3`、`#8fdcff`、`#c79cff`、`#ff5f7f`。参数来自参考实现的 `config.ts`，原面板保留真实 DOM 控件、自定义颜色、开关和复位，提供键盘与触屏入口。\n\n`prefers-reduced-motion: reduce` 时灯固定在初始角度，平面不倾斜；面板参数即时生效，没有过渡动画。WebGL 不可用或初始化失败时，保留同一 HTML 页面与 CSS 径向渐变静态灯光，并显示明确的后备说明。\n\n本地 HTTP、无头 Edge `155.0.4283.62` 已实测运行真实 WebGL，使用 SVG foreignObject polyfill。1440px 对照中源页面、投影、标题样式和控制板边界相同；初始画面未观察到明显构图、黑位、材质或光照差异。摆动帧的光斑边缘略有偏移，可能与取帧时间差有关，此原因尚未独立验证。\n\n390px 源页面为 390×1240，五个概念点击成功；Tab 可遍历五个概念、power、beam，焦点落在真实 DOM 控件，方向键可将角度 34 调至 35。右键换色与右拖调角度、CDP 单触点拖灯与色板选择已验证。正常摆动结束后绘制计数稳定，减少动态时灯固定且 plane 指针移动前后矩阵不变。禁用 WebGL 的独立进程已验证同一 MORS² 后备、375px 可用宽度无横向溢出、源 DOM 恢复及原面板开关。\n\n浏览器原生支持 `texElementImage2D` 时使用原生路径；原生路径、读屏器、真实触屏设备、其他浏览器与长期性能／电量表现未验证。详细观察与边界见[素材资料](../../../docs/materials/three-html-render.md)。\n\n## 版本与兼容垫片\n\nthree-html-render 0.1.2 的 npm 分发不提供 README 所述的 `html-texture`／`interaction-manager` 子路径。本样例使用 three r185 起提供的 HTMLTexture 和 Three addon InteractionManager。\n\n本版本组合需要 `texElementImage2D` 兼容垫片：Three.js 依据函数参数数量选择短重载，polyfill 的函数签名会导致不匹配。垫片仅在 polyfill 启用且签名符合条件时包装为六参数函数，保持原生实现不变。依赖处于 `0.1.x`，升级需要重新核验。\n\npolyfill 的 `pageStyles` 仅向 SVG 快照注入 `html,body{overflow:visible!important}`，避免高于视口的窄版控制板被快照裁切。该接入配置不修改 vendor 原始文件。\n\n## 文件与署名\n\n- `index.html`：MorsPageSurface 的原生 HTML 移植，含五个概念按钮与原灯光面板。\n- `demo.css`：globals.css 的页面样式移植、约定的窄屏适配与静态光照后备。\n- `demo.js`：MorsLightCanvas 的原生 JavaScript 移植、HTMLTexture、InteractionManager 和平面演示。\n- `mors-logo.svg`：参考仓库 `public/mors-logo.svg` 原始字节。\n- `vendor/three-0.185.1.module.js`、`three-0.185.1.core.js`：原始 Three.js 核心 ESM。\n- `vendor/interaction-manager-0.185.1.js`：原始 Three.js InteractionManager addon。\n- `vendor/three-html-render-polyfill-0.1.2.mjs`：原始 three-html-render polyfill ESM。\n- `vendor/NOTICE.md`、`dependencies.txt` 与 `LICENSE-*.txt`：逐文件来源、随包依赖声明与独立 MIT 许可。\n\nthree-html-render 作者 repalash，MIT；Three.js 核心与 InteractionManager addon 为 MIT。页面实现、样式与光照代码改写自 jinruozai 的 [HTML-Light-Demo](https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29)，MIT。MORS² 品牌、文案、标志与美术方向出自 [@kaolti](https://x.com/kaolti) 原作；本仓库用于个人非商业参考。软件与参考实现代码的许可、原作署名分别保留。\n"
     },
     {
-      "path": "material-demos/three-html-render/vendor/LICENSE-HTML-Light-Demo.txt",
+      "path": "demos/materials/three-html-render/vendor/LICENSE-HTML-Light-Demo.txt",
       "role": "context",
       "content": "MIT License\n\nCopyright (c) 2026 Gooooo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
     },
     {
-      "path": "material-demos/three-html-render/vendor/LICENSE-three-html-render.txt",
+      "path": "demos/materials/three-html-render/vendor/LICENSE-three-html-render.txt",
       "role": "context",
       "content": "MIT License\n\nCopyright (c) 2025 repalash <palash@shaders.app>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
     },
     {
-      "path": "material-demos/three-html-render/vendor/LICENSE-three.txt",
+      "path": "demos/materials/three-html-render/vendor/LICENSE-three.txt",
       "role": "context",
       "content": "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
     },
     {
-      "path": "material-demos/three-html-render/vendor/NOTICE.md",
+      "path": "demos/materials/three-html-render/vendor/NOTICE.md",
       "role": "context",
       "content": "# three-html-render 运行文件与第三方许可\n\n本目录自托管 `three@0.185.1` 与 `three-html-render@0.1.2` 的浏览器端 ESM。下列第三方文件保持来源原始字节；运行模块只改变文件名，通过入口 HTML 的 importmap 解析依赖，无需 CDN、框架或构建器。\n\n| 本地文件 | 原始来源 | 版本／提交 | 许可 |\n| --- | --- | --- | --- |\n| `three-0.185.1.module.js` | npm `three` 的 `build/three.module.js` | `0.185.1`／`2431a09f46f34c560bc8e44b33be0e567723d5b9` | MIT，three.js authors |\n| `three-0.185.1.core.js` | npm `three` 的 `build/three.core.js`，含 `HTMLTexture` | 同上 | MIT，three.js authors |\n| `interaction-manager-0.185.1.js` | npm `three` 的 `examples/jsm/interaction/InteractionManager.js` | 同上 | MIT，three.js authors |\n| `three-html-render-polyfill-0.1.2.mjs` | npm `three-html-render` 的 `dist/polyfill.mjs` | `0.1.2`／`63f085e3fe7be11f0679c0ac17edc2e18e743add` | MIT，repalash |\n| `dependencies.txt` | npm `three-html-render` 的 `dist/dependencies.txt` | 同上；记录打包依赖 `ts-browser-helpers@0.12.0` | MIT，repalash；完整许可原文随文件保留 |\n| `LICENSE-three.txt` | npm `three` 的 `LICENSE` | `0.185.1` | MIT，Copyright © 2010-2026 three.js authors |\n| `LICENSE-three-html-render.txt` | npm `three-html-render` 的 `LICENSE` | `0.1.2` | MIT，Copyright (c) 2025 repalash |\n| `LICENSE-HTML-Light-Demo.txt` | `jinruozai/HTML-Light-Demo` 的 `LICENSE` | `0a0bd3ba53194fff68db78654fc6857ab3faee29` | MIT，原文署名 Copyright (c) 2026 Gooooo |\n\n包与固定源码：\n\n- Three.js：[npm 发布包](https://registry.npmjs.org/three/-/three-0.185.1.tgz)、[固定源码提交](https://github.com/mrdoob/three.js/tree/2431a09f46f34c560bc8e44b33be0e567723d5b9)。\n- three-html-render：[npm 发布包](https://registry.npmjs.org/three-html-render/-/three-html-render-0.1.2.tgz)、[固定源码提交](https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add)。\n- HTML-Light-Demo：[固定参考提交](https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29)、[许可原文](https://github.com/jinruozai/HTML-Light-Demo/blob/0a0bd3ba53194fff68db78654fc6857ab3faee29/LICENSE)。\n\n本地页面实现、样式与光照代码改写自 jinruozai 的 HTML-Light-Demo：`index.html` 移植 `app/light/MorsPageSurface.tsx`，`demo.css` 移植 `app/globals.css`，`demo.js` 移植 `app/light/MorsLightCanvas.tsx`、`app/light/config.ts` 和 `app/light/three-html-compatibility.ts`。摆锤与 Verlet 约束、指针瞄准与拉拽、光束参数及兼容垫片遵循参考实现；改写代码保留其 MIT 许可。兼容垫片只包装 polyfill，不改变浏览器原生实现。\n\n本地窄版接入使页面宽度跟随视口，以 `height: auto`、`min-height: 1180px` 容纳完整面板；polyfill 的 `pageStyles` 仅在 SVG 快照中为 html/body 设置 `overflow: visible`，保留高于视口的内容。这些配置位于本地 HTML/CSS/JavaScript，不修改上述 vendor 原始文件。\n\n`../mors-logo.svg` 复制自该固定提交的 [`public/mors-logo.svg`](https://github.com/jinruozai/HTML-Light-Demo/blob/0a0bd3ba53194fff68db78654fc6857ab3faee29/public/mors-logo.svg)，保持原始字节。\n\nMORS² 品牌、文案、标志与美术方向出自 [@kaolti](https://x.com/kaolti) 原作；页面实现与光照代码改写自 jinruozai 的 MIT 参考实现。本仓库用于个人非商业参考，软件与参考实现代码的许可、原作署名分别保留。\n\n`HTMLTexture` 与 `InteractionManager` 来自 Three.js；three-html-render 提供 HTML-in-Canvas polyfill。固定版本组合为 `three@0.185.1`＋`three-html-render@0.1.2`，需配合上述兼容垫片使用。\n"
     }
   ],
   "files": [
     {
-      "path": "docs/materials-three-html-render.md",
+      "path": "demos/materials/three-html-render/README.md",
       "role": "context"
     },
     {
-      "path": "material-demos/three-html-render/README.md",
+      "path": "demos/materials/three-html-render/demo.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/three-html-render/demo.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/three-html-render/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/three-html-render/mors-logo.svg",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/three-html-render/vendor/LICENSE-HTML-Light-Demo.txt",
       "role": "context"
     },
     {
-      "path": "material-demos/three-html-render/demo.css",
-      "role": "source"
-    },
-    {
-      "path": "material-demos/three-html-render/demo.js",
-      "role": "source"
-    },
-    {
-      "path": "material-demos/three-html-render/index.html",
-      "role": "source"
-    },
-    {
-      "path": "material-demos/three-html-render/mors-logo.svg",
-      "role": "source"
-    },
-    {
-      "path": "material-demos/three-html-render/vendor/LICENSE-HTML-Light-Demo.txt",
+      "path": "demos/materials/three-html-render/vendor/LICENSE-three-html-render.txt",
       "role": "context"
     },
     {
-      "path": "material-demos/three-html-render/vendor/LICENSE-three-html-render.txt",
+      "path": "demos/materials/three-html-render/vendor/LICENSE-three.txt",
       "role": "context"
     },
     {
-      "path": "material-demos/three-html-render/vendor/LICENSE-three.txt",
+      "path": "demos/materials/three-html-render/vendor/NOTICE.md",
       "role": "context"
     },
     {
-      "path": "material-demos/three-html-render/vendor/NOTICE.md",
+      "path": "demos/materials/three-html-render/vendor/dependencies.txt",
       "role": "context"
     },
     {
-      "path": "material-demos/three-html-render/vendor/dependencies.txt",
+      "path": "demos/materials/three-html-render/vendor/interaction-manager-0.185.1.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/three-html-render/vendor/three-0.185.1.core.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/three-html-render/vendor/three-0.185.1.module.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/three-html-render/vendor/three-html-render-polyfill-0.1.2.mjs",
+      "role": "source"
+    },
+    {
+      "path": "docs/materials/three-html-render.md",
       "role": "context"
     },
     {
-      "path": "material-demos/three-html-render/vendor/interaction-manager-0.185.1.js",
-      "role": "source"
-    },
-    {
-      "path": "material-demos/three-html-render/vendor/three-0.185.1.core.js",
-      "role": "source"
-    },
-    {
-      "path": "material-demos/three-html-render/vendor/three-0.185.1.module.js",
-      "role": "source"
-    },
-    {
-      "path": "material-demos/three-html-render/vendor/three-html-render-polyfill-0.1.2.mjs",
-      "role": "source"
-    },
-    {
-      "path": "materials/three-html-render.json",
+      "path": "entries/materials/three-html-render.json",
       "role": "context"
     },
     {
@@ -279,9 +279,9 @@
     }
   ],
   "sourceFiles": [
-    "material-demos/three-html-render/index.html",
-    "material-demos/three-html-render/demo.css",
-    "material-demos/three-html-render/demo.js",
-    "material-demos/three-html-render/mors-logo.svg"
+    "demos/materials/three-html-render/index.html",
+    "demos/materials/three-html-render/demo.css",
+    "demos/materials/three-html-render/demo.js",
+    "demos/materials/three-html-render/mors-logo.svg"
   ]
 }

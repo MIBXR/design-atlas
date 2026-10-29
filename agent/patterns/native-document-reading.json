@@ -44,7 +44,7 @@
     "sources": [
       {
         "caseId": "met-museum",
-        "locator": "entries/met-museum.json#interaction/1",
+        "locator": "entries/cases/met-museum.json#interaction/1",
         "observation": "上下浏览：欢迎与到访信息、展览横轨、馆藏和会员按原生阅读节奏组织；不新增全屏转场。",
         "evidence": "observed",
         "referenceUrl": "https://www.metmuseum.org/en",
@@ -52,7 +52,7 @@
       },
       {
         "caseId": "rijksmuseum-art",
-        "locator": "entries/rijksmuseum-art.json#interaction/0",
+        "locator": "entries/cases/rijksmuseum-art.json#interaction/0",
         "observation": "进入与连续上下浏览：巨大的官方字标覆盖全幅照片，浏览采用原生连续滚动。 图像先传递艺术馆的世界，后续展览逐渐替换观看内容。",
         "evidence": "observed",
         "referenceUrl": "https://www.rijksmuseum.nl/en",
@@ -60,7 +60,7 @@
       },
       {
         "caseId": "uma-musume",
-        "locator": "entries/uma-musume.json#interaction/0",
+        "locator": "entries/cases/uma-musume.json#interaction/0",
         "observation": "正常纵向浏览连接群像、新闻、About、Gameplay 和 footer，斜切条带延续赛道方向。",
         "evidence": "observed",
         "referenceUrl": "https://umamusume.com/",
@@ -68,7 +68,7 @@
       },
       {
         "caseId": "fuji-rock",
-        "locator": "entries/fuji-rock.json#interaction/3",
+        "locator": "entries/cases/fuji-rock.json#interaction/3",
         "observation": "超过Pickup后向上／向下滚动：导览条固定后按方向显隐；语言菜单400ms展开并在离开时收起。 长页浏览随时找回实用入口，同时减少遮挡。",
         "evidence": "observed",
         "referenceUrl": "https://www.fujirockfestival.com/",
@@ -76,30 +76,30 @@
       }
     ],
     "sourceFiles": [
-      "demos/fuji-rock/app.js",
-      "demos/fuji-rock/fidelity.md",
-      "demos/fuji-rock/index.html",
-      "demos/fuji-rock/style.css",
-      "demos/met-museum/fidelity.md",
-      "demos/met-museum/index.html",
-      "demos/met-museum/script.js",
-      "demos/met-museum/style.css",
-      "demos/rijksmuseum-art/fidelity.md",
-      "demos/rijksmuseum-art/index.html",
-      "demos/rijksmuseum-art/script.js",
-      "demos/rijksmuseum-art/style.css",
-      "demos/uma-musume/app.js",
-      "demos/uma-musume/fidelity.md",
-      "demos/uma-musume/index.html",
-      "demos/uma-musume/style.css",
-      "entries/fuji-rock.json",
-      "entries/met-museum.json",
-      "entries/rijksmuseum-art.json",
-      "entries/uma-musume.json",
-      "research/fuji-rock.md",
-      "research/met-museum.md",
-      "research/rijksmuseum-art.md",
-      "research/uma-musume.md"
+      "demos/cases/fuji-rock/app.js",
+      "demos/cases/fuji-rock/fidelity.md",
+      "demos/cases/fuji-rock/index.html",
+      "demos/cases/fuji-rock/style.css",
+      "demos/cases/met-museum/fidelity.md",
+      "demos/cases/met-museum/index.html",
+      "demos/cases/met-museum/script.js",
+      "demos/cases/met-museum/style.css",
+      "demos/cases/rijksmuseum-art/fidelity.md",
+      "demos/cases/rijksmuseum-art/index.html",
+      "demos/cases/rijksmuseum-art/script.js",
+      "demos/cases/rijksmuseum-art/style.css",
+      "demos/cases/uma-musume/app.js",
+      "demos/cases/uma-musume/fidelity.md",
+      "demos/cases/uma-musume/index.html",
+      "demos/cases/uma-musume/style.css",
+      "entries/cases/fuji-rock.json",
+      "entries/cases/met-museum.json",
+      "entries/cases/rijksmuseum-art.json",
+      "entries/cases/uma-musume.json",
+      "docs/research/fuji-rock.md",
+      "docs/research/met-museum.md",
+      "docs/research/rijksmuseum-art.md",
+      "docs/research/uma-musume.md"
     ]
   },
   "sourceCases": [
@@ -108,7 +108,7 @@
       "title": "Fuji Rock：现场照片与节日导览",
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
-        "demo": "demos/fuji-rock/index.html"
+        "demo": "demos/cases/fuji-rock/index.html"
       }
     },
     {
@@ -116,7 +116,7 @@
       "title": "The Met · 编辑式展览与馆藏陈列",
       "paths": {
         "bundle": "agent/cases/met-museum.json",
-        "demo": "demos/met-museum/index.html"
+        "demo": "demos/cases/met-museum/index.html"
       }
     },
     {
@@ -124,7 +124,7 @@
       "title": "Rijksmuseum · 全幅摄影与巨大字标",
       "paths": {
         "bundle": "agent/cases/rijksmuseum-art.json",
-        "demo": "demos/rijksmuseum-art/index.html"
+        "demo": "demos/cases/rijksmuseum-art/index.html"
       }
     },
     {
@@ -132,7 +132,7 @@
       "title": "赛马娘：群像赛道与斜切叙事",
       "paths": {
         "bundle": "agent/cases/uma-musume.json",
-        "demo": "demos/uma-musume/index.html"
+        "demo": "demos/cases/uma-musume/index.html"
       }
     }
   ]

@@ -1,6 +1,6 @@
 # Rijksmuseum · 全幅摄影与巨大字标 · 复用 Prompt
 
-由 [结构化案例](../entries/rijksmuseum-art.json) 自动生成。参考观察与具体边界见 [调研](../research/rijksmuseum-art.md)。
+由 [结构化案例](../entries/cases/rijksmuseum-art.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/rijksmuseum-art.md)。
 
 ## 正向 Prompt
 
@@ -24,4 +24,4 @@
 
 替换一组经过授权的场所摄影，保留文字与图像的职责分工；检查手机裁切是否保住人物与作品。
 
-[查看 Demo](../demos/rijksmuseum-art/index.html) · [返回案例库](../cases.html#style/rijksmuseum-art)
+[查看 Demo](../demos/cases/rijksmuseum-art/index.html) · [返回案例库](../cases.html#style/rijksmuseum-art)

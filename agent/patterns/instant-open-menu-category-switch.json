@@ -47,7 +47,7 @@
     "sources": [
       {
         "caseId": "notion-editorial",
-        "locator": "entries/notion-editorial.json#interaction/3",
+        "locator": "entries/cases/notion-editorial.json#interaction/3",
         "observation": "桌面 Product/Resources 指针进入与点击 → 首次 opacity/translateY(-16px) 250ms ease-out，退出 150ms ease-in、延迟 50ms；已打开分类按源 instantSwitch 直接切换，快速反转取消旧退出，减少动态直接完成；手机打开全屏菜单 → Product/AI/Resources 原地单开，切换收起前组，再点同组收起；其他分类变灰，底部 Download app/Log in 固定。源 CSS 子展开 300ms、入口 350ms，内容/底部延迟 200/250ms；关闭/Escape 恢复滚动和焦点，维持层级与行动位置。",
         "evidence": "adapted",
         "referenceUrl": "https://www.notion.com/",
@@ -55,13 +55,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/notion-editorial/fidelity.md",
-      "demos/notion-editorial/index.html",
-      "demos/notion-editorial/journey.js",
-      "demos/notion-editorial/script.js",
-      "demos/notion-editorial/style.css",
-      "entries/notion-editorial.json",
-      "research/notion-editorial.md"
+      "demos/cases/notion-editorial/fidelity.md",
+      "demos/cases/notion-editorial/index.html",
+      "demos/cases/notion-editorial/journey.js",
+      "demos/cases/notion-editorial/script.js",
+      "demos/cases/notion-editorial/style.css",
+      "entries/cases/notion-editorial.json",
+      "docs/research/notion-editorial.md"
     ]
   },
   "sourceCases": [
@@ -70,7 +70,7 @@
       "title": "Notion — 插画与真实工作空间",
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
-        "demo": "demos/notion-editorial/index.html"
+        "demo": "demos/cases/notion-editorial/index.html"
       }
     }
   ]

@@ -70,7 +70,7 @@
     "sources": [
       {
         "caseId": "endfield-industrial",
-        "locator": "entries/endfield-industrial.json#interaction/3",
+        "locator": "entries/cases/endfield-industrial.json#interaction/3",
         "observation": "世界观：帝江号/锚点/集成工业系统/天师桩/天使/裂地者六个原bin及模型参数，Float32 xyz、按Y跨度1900规范化；实际WebGL点云、扫描、转动、拖动、分页/标题与六指标同步。最终状态实测见fidelity，不因源码抽取而自动判通过。",
         "evidence": "observed",
         "referenceUrl": "https://endfield.hypergryph.com/",
@@ -78,18 +78,18 @@
       }
     ],
     "sourceFiles": [
-      "entries/endfield-industrial.json",
-      "research/endfield-industrial.md",
-      "demos/endfield-industrial/fidelity.md",
-      "demos/endfield-industrial/state-matrix.md",
-      "demos/endfield-industrial/source-provenance.json",
-      "demos/endfield-industrial/index.html",
-      "demos/endfield-industrial/reference.css",
-      "demos/endfield-industrial/state.css",
-      "demos/endfield-industrial/app.js",
-      "demos/endfield-industrial/data.js",
-      "demos/endfield-industrial/lore.js",
-      "demos/endfield-industrial/shaders.js"
+      "entries/cases/endfield-industrial.json",
+      "docs/research/endfield-industrial.md",
+      "demos/cases/endfield-industrial/fidelity.md",
+      "demos/cases/endfield-industrial/source/state-matrix.md",
+      "demos/cases/endfield-industrial/source/source-provenance.json",
+      "demos/cases/endfield-industrial/index.html",
+      "demos/cases/endfield-industrial/reference.css",
+      "demos/cases/endfield-industrial/state.css",
+      "demos/cases/endfield-industrial/app.js",
+      "demos/cases/endfield-industrial/data.js",
+      "demos/cases/endfield-industrial/lore.js",
+      "demos/cases/endfield-industrial/shaders.js"
     ]
   },
   "sourceCases": [
@@ -98,7 +98,7 @@
       "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
-        "demo": "demos/endfield-industrial/index.html"
+        "demo": "demos/cases/endfield-industrial/index.html"
       }
     }
   ]

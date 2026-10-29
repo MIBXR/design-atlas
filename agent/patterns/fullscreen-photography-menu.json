@@ -46,7 +46,7 @@
     "sources": [
       {
         "caseId": "rijksmuseum-art",
-        "locator": "entries/rijksmuseum-art.json#interaction/1",
+        "locator": "entries/cases/rijksmuseum-art.json#interaction/1",
         "observation": "打开／关闭菜单：全屏菜单500ms线性淡入淡出，图像与分列链接同时建立目的地。 给导航独立的视觉场景，保持品牌和空间关系。",
         "evidence": "observed",
         "referenceUrl": "https://www.rijksmuseum.nl/en",
@@ -54,12 +54,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/rijksmuseum-art/fidelity.md",
-      "demos/rijksmuseum-art/index.html",
-      "demos/rijksmuseum-art/script.js",
-      "demos/rijksmuseum-art/style.css",
-      "entries/rijksmuseum-art.json",
-      "research/rijksmuseum-art.md"
+      "demos/cases/rijksmuseum-art/fidelity.md",
+      "demos/cases/rijksmuseum-art/index.html",
+      "demos/cases/rijksmuseum-art/script.js",
+      "demos/cases/rijksmuseum-art/style.css",
+      "entries/cases/rijksmuseum-art.json",
+      "docs/research/rijksmuseum-art.md"
     ]
   },
   "sourceCases": [
@@ -68,7 +68,7 @@
       "title": "Rijksmuseum · 全幅摄影与巨大字标",
       "paths": {
         "bundle": "agent/cases/rijksmuseum-art.json",
-        "demo": "demos/rijksmuseum-art/index.html"
+        "demo": "demos/cases/rijksmuseum-art/index.html"
       }
     }
   ]

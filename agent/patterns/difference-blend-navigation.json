@@ -67,7 +67,7 @@
     "sources": [
       {
         "caseId": "mira-host-photography",
-        "locator": "entries/mira-host-photography.json#theme",
+        "locator": "entries/cases/mira-host-photography.json#theme",
         "observation": "暖纸色 #f2efe8 与墨色 #161513 构成固定双色基调，联系和页脚反转为墨底浅字；固定顶栏和两侧竖排标记使用差值混合跨越深浅背景。",
         "evidence": "observed",
         "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
@@ -75,10 +75,10 @@
       }
     ],
     "sourceFiles": [
-      "demos/mira-host-photography/fidelity.md",
-      "demos/mira-host-photography/index.html",
-      "entries/mira-host-photography.json",
-      "research/mira-host-photography.md"
+      "demos/cases/mira-host-photography/fidelity.md",
+      "demos/cases/mira-host-photography/index.html",
+      "entries/cases/mira-host-photography.json",
+      "docs/research/mira-host-photography.md"
     ]
   },
   "sourceCases": [
@@ -87,7 +87,7 @@
       "title": "Mira Høst · 北欧摄影作品集",
       "paths": {
         "bundle": "agent/cases/mira-host-photography.json",
-        "demo": "demos/mira-host-photography/index.html"
+        "demo": "demos/cases/mira-host-photography/index.html"
       }
     }
   ]

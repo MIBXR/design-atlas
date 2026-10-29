@@ -40,8 +40,8 @@
       ],
       "paths": {
         "bundle": "agent/materials/98-css.json",
-        "demo": "material-demos/98-css/index.html",
-        "entry": "materials/98-css.json",
+        "demo": "demos/materials/98-css/index.html",
+        "entry": "entries/materials/98-css.json",
         "preview": "previews/materials/98-css.png"
       }
     },
@@ -82,7 +82,7 @@
       "paths": {
         "bundle": "agent/materials/beautiful-article.json",
         "skill": "agent-skills/beautiful-article/",
-        "entry": "materials/beautiful-article.json",
+        "entry": "entries/materials/beautiful-article.json",
         "preview": "previews/materials/beautiful-article.png"
       }
     },
@@ -130,8 +130,8 @@
       ],
       "paths": {
         "bundle": "agent/materials/material-web.json",
-        "demo": "material-demos/material-web/index.html",
-        "entry": "materials/material-web.json",
+        "demo": "demos/materials/material-web/index.html",
+        "entry": "entries/materials/material-web.json",
         "preview": "previews/materials/material-web.png"
       }
     },
@@ -174,8 +174,8 @@
       ],
       "paths": {
         "bundle": "agent/materials/reacticle.json",
-        "demo": "material-demos/reacticle/index.html",
-        "entry": "materials/reacticle.json",
+        "demo": "demos/materials/reacticle/index.html",
+        "entry": "entries/materials/reacticle.json",
         "preview": "previews/materials/reacticle.png"
       }
     },
@@ -221,8 +221,8 @@
       ],
       "paths": {
         "bundle": "agent/materials/recursive.json",
-        "demo": "material-demos/recursive/index.html",
-        "entry": "materials/recursive.json",
+        "demo": "demos/materials/recursive/index.html",
+        "entry": "entries/materials/recursive.json",
         "preview": "previews/materials/recursive.png"
       }
     },
@@ -265,8 +265,8 @@
       ],
       "paths": {
         "bundle": "agent/materials/shaders.json",
-        "demo": "material-demos/shaders/index.html",
-        "entry": "materials/shaders.json",
+        "demo": "demos/materials/shaders/index.html",
+        "entry": "entries/materials/shaders.json",
         "preview": "previews/materials/shaders.png"
       }
     },
@@ -310,8 +310,8 @@
       ],
       "paths": {
         "bundle": "agent/materials/three-html-render.json",
-        "demo": "material-demos/three-html-render/index.html",
-        "entry": "materials/three-html-render.json",
+        "demo": "demos/materials/three-html-render/index.html",
+        "entry": "entries/materials/three-html-render.json",
         "preview": "previews/materials/three-html-render.png"
       }
     },
@@ -351,7 +351,7 @@
       "paths": {
         "bundle": "agent/materials/web-design-engineer.json",
         "skill": "agent-skills/web-design-engineer/",
-        "entry": "materials/web-design-engineer.json",
+        "entry": "entries/materials/web-design-engineer.json",
         "preview": "previews/materials/web-design-engineer.jpg"
       }
     },
@@ -393,8 +393,8 @@
       ],
       "paths": {
         "bundle": "agent/materials/wired-elements.json",
-        "demo": "material-demos/wired-elements/index.html",
-        "entry": "materials/wired-elements.json",
+        "demo": "demos/materials/wired-elements/index.html",
+        "entry": "entries/materials/wired-elements.json",
         "preview": "previews/materials/wired-elements.png"
       }
     }

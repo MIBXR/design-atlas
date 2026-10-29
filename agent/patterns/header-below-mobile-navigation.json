@@ -46,7 +46,7 @@
     "sources": [
       {
         "caseId": "design-sight",
-        "locator": "entries/design-sight.json#interaction/2",
+        "locator": "entries/cases/design-sight.json#interaction/2",
         "observation": "手机打开菜单／关闭：64px栏下的白色导航立即显示，hamburger350ms形变；固定页面并恢复原浏览位置。 小屏将机构入口与长档案分开，关闭后继续阅读。",
         "evidence": "inferred",
         "referenceUrl": "https://www.2121designsight.jp/",
@@ -54,12 +54,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/design-sight/app.js",
-      "demos/design-sight/fidelity.md",
-      "demos/design-sight/index.html",
-      "demos/design-sight/style.css",
-      "entries/design-sight.json",
-      "research/design-sight.md"
+      "demos/cases/design-sight/app.js",
+      "demos/cases/design-sight/fidelity.md",
+      "demos/cases/design-sight/index.html",
+      "demos/cases/design-sight/style.css",
+      "entries/cases/design-sight.json",
+      "docs/research/design-sight.md"
     ]
   },
   "sourceCases": [
@@ -68,7 +68,7 @@
       "title": "21_21 DESIGN SIGHT：海报与四列档案",
       "paths": {
         "bundle": "agent/cases/design-sight.json",
-        "demo": "demos/design-sight/index.html"
+        "demo": "demos/cases/design-sight/index.html"
       }
     }
   ]

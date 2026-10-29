@@ -1,0 +1,88 @@
+{
+  "id": "material-web",
+  "title": "Google Material Web · Material 3 官方组件",
+  "type": "component-library",
+  "category": "组件与效果",
+  "summary": "Google Material Design 的官方 Web Components 实现：用色彩角色、圆角、浮动标签和状态层，体验操作层级、表单验证、偏好设置与确认对话框。",
+  "install": "npm install @material/web@2.5.0；本地 Demo 已捆绑运行依赖，直接以 HTTP/HTTPS 打开。",
+  "demoNote": "四套原创业务组合使用真实官方组件，可调配色、明暗与按钮圆角。库处于维护模式，不代表完整 Material 3 Expressive；输入和状态仅留在当前页面。",
+  "tags": ["Google", "Google Material Design", "Material Design", "Material 3", "Material Web", "Web Components", "Lit", "设计系统", "浮动标签", "色彩角色", "表单", "对话框"],
+  "useCases": ["有明确主次操作的产品工具", "需要持续显示字段含义的表单", "有即时结果预览的偏好面板", "需要确认与撤回路径的任务流程", "希望以 CSS tokens 统一色彩与形状的原生 Web 页面"],
+  "avoid": ["把本版本当作完整 Material 3 Expressive 实现", "依赖持续新增组件或官方快速响应的长期路线", "仅为套用外观而丢弃现有网站的信息结构", "需要旧浏览器而不准备原生 DOM 后备的关键流程"],
+  "constraints": ["固定 @material/web 2.5.0；官方 README 在核验时仍标注维护模式、等待新维护者。", "官方是 Web Components/Lit 实现，不等同于 Angular Material 或 MUI；本条目不覆盖整个 Material Design 规范。", "本地 vendor 合并了所选官方组件、CSS-in-JS 及 Lit/tslib 依赖，保留许可和锁文件；更换版本须重新核验 API 与 Shadow DOM 适配。", "以 HTTP/HTTPS 提供 ES module；模块失败时仅显示明确标注的静态说明，不声称真实组件已运行。", "配色、4–28px 圆角范围、中文内容与四种业务组合为本地原创演示，未接入服务端、持久化或真实账户。", "系统减少动态或手动选择时关闭局部过渡和 ripple，dialog 使用 quick；滑块值标签取消缩放过渡以保持文字至少12px；无持续动画或后台计时器。", "实际浏览器验证限定于 Chromium 桌面及390px窄屏；Safari、Firefox、真实触屏与屏幕阅读器仍需目标项目验证。"],
+  "upstream": {
+    "repository": "material-components/material-web",
+    "url": "https://github.com/material-components/material-web",
+    "commit": "b4de401eb665ec63474f39319a4ba8f2145974cc",
+    "version": "2.5.0",
+    "verifiedAt": "2026-10-16"
+  },
+  "license": {
+    "name": "Apache-2.0（Material Web）；BSD-3-Clause / 0BSD（运行依赖）",
+    "url": "https://github.com/material-components/material-web/blob/b4de401eb665ec63474f39319a4ba8f2145974cc/LICENSE",
+    "scope": "@material/web 软件代码及所选官方组件；Lit 系列和 tslib 的许可随运行包分别保留。",
+    "notes": "保留 vendor 中全部 LICENSE 文件、版权声明、行内许可和来源记录。合并/压缩是本地转换；品牌标志、官网内容及 Google 商标不因软件许可自动成为可自由使用资产。本地插图为原创 SVG。"
+  },
+  "sources": [
+    {"title": "Google Material Web 固定版本仓库", "url": "https://github.com/material-components/material-web/tree/b4de401eb665ec63474f39319a4ba8f2145974cc", "note": "官方 Web Components 实现、Material 3 定位与源码；不将其和同名设计案例或第三方 MUI 混同。", "evidence": "source"},
+    {"title": "@material/web 2.5.0 npm 元数据", "url": "https://registry.npmjs.org/@material/web/2.5.0", "note": "版本、gitHead、依赖范围、官方 tarball 与 integrity。核验时 latest 为2.5.0。", "evidence": "source"},
+    {"title": "官方维护模式公告", "url": "https://github.com/material-components/material-web/discussions/5642", "note": "官方 README 当前仍指向此公告；选型时需独立评估维护能力，不推断未来支持计划。", "evidence": "source"},
+    {"title": "按钮文档与实际交互样例", "url": "https://material-web.dev/components/button/", "note": "读取五种按钮层级、SVG icon slot、disabled及形状token；浏览器打开官方stories并点击真实按钮。本地计划卡不是官网样例复刻。", "evidence": "observed"},
+    {"title": "文本框与验证接口", "url": "https://material-web.dev/components/text-field/", "note": "required、type=email、maxlength、checkValidity、error和errorText；本地校验流程与中文错误文案为原创组合。", "evidence": "source"},
+    {"title": "开关接口", "url": "https://material-web.dev/components/switch/", "note": "selected、icons、change及aria-label用法；本地完成标记用途为演示选择。", "evidence": "source"},
+    {"title": "滑块接口", "url": "https://material-web.dev/components/slider/", "note": "min、max、step、value、ticks和labeled；1–8范围与每日目标用途为本地选择。", "evidence": "source"},
+    {"title": "对话框接口与可访问性", "url": "https://material-web.dev/components/dialog/", "note": "show、close、returnValue、closed及quick；按归档/取消区分结果，关闭后等待Lit更新再恢复焦点。", "evidence": "source"},
+    {"title": "官方 Material Theming", "url": "https://material-web.dev/theming/material-theming/", "note": "系统颜色与组件形状token的层级；官方未支持通用md-sys-motion token，本地减少动态另外处理。", "evidence": "source"},
+    {"title": "固定版本浏览器支持声明", "url": "https://github.com/material-components/material-web/blob/b4de401eb665ec63474f39319a4ba8f2145974cc/docs/support.md", "note": "上游支持目标为Chrome/Edge120+、Firefox119+、Safari16.4+；这是官方声明，不等于本次跨浏览器实测。", "evidence": "source"}
+  ],
+  "demos": [
+    {
+      "id": "actions", "title": "操作层级", "component": "MdFilledButton / MdOutlinedButton / MdTextButton",
+      "summary": "对比填充、描边与文字操作；添加后禁用主要按钮，查看安排保留次要层级，重置可重复体验。",
+      "entrypoint": "demos/materials/material-web/index.html?sample=actions",
+      "parameters": [
+        {"name": "--md-*-button-container-shape", "value": "4–28px，步长2px", "note": "接口见官方按钮tokens；本地调节filled、filled-tonal和outlined的container-shape，范围/默认20px为演示选择。"},
+        {"name": "--md-sys-color-*", "value": "鸢尾紫 / 深海绿 × 浅色 / 深色", "note": "使用官方颜色角色；演示配色与主题控件为本地选择，并可跟随Atlas主题。"},
+        {"name": "disabled", "value": "加入计划后true；重置后false", "note": "官方布尔属性；本地用于防止重复添加。"}
+      ]
+    },
+    {
+      "id": "form", "title": "表单验证", "component": "MdOutlinedTextField",
+      "summary": "保留浮动标签，比较空值、无效邮箱与校验通过；输入只在内存中，不发送或保存。",
+      "entrypoint": "demos/materials/material-web/index.html?sample=form",
+      "parameters": [
+        {"name": "required / type / maxlength", "value": "名称必填且最多24字符；邮箱必填且type=email", "note": "接口来自官方文本框文档；24字符业务限制为本地演示值。"},
+        {"name": "checkValidity / error / errorText", "value": "检查资料后显示错误或成功状态", "note": "使用上游校验接口，手动错误消息由当前业务流程提供。"}
+      ]
+    },
+    {
+      "id": "preferences", "title": "偏好设置", "component": "MdSwitch / MdSlider",
+      "summary": "开关控制预览中的完成标记，离散滑块控制目标数量；支持键盘方向键、Home/End和触摸。",
+      "entrypoint": "demos/materials/material-web/index.html?sample=preferences",
+      "parameters": [
+        {"name": "selected", "value": "true / false", "note": "官方switch状态，change后读取；本地对应完成标记显隐。"},
+        {"name": "min / max / step / value", "value": "1 / 8 / 1 / 4", "note": "官方slider接口；所有数值为每日目标示例的本地选择。"},
+        {"name": "labeled / ticks", "value": "true", "note": "官方离散刻度与值标签；本地取消标签缩放过渡，固定12px显示。"}
+      ]
+    },
+    {
+      "id": "dialog", "title": "确认对话框", "component": "MdDialog / MdFilledTonalButton",
+      "summary": "打开确认、取消/Escape返回、确认归档和恢复计划；关注局部状态、焦点与撤回路径。",
+      "entrypoint": "demos/materials/material-web/index.html?sample=dialog",
+      "parameters": [
+        {"name": "type", "value": "alert", "note": "官方针对需要用户响应的重要确认的类型；本地说明可撤回影响。"},
+        {"name": "returnValue", "value": "archive / cancel / 空值", "note": "通过官方close(value)区分本地结果，Escape作为取消处理。"},
+        {"name": "quick", "value": "减少动态或页面隐藏时true", "note": "官方跳过打开/关闭动画的布尔属性。"}
+      ]
+    }
+  ],
+  "prompt": "在已有HTML/CSS/JavaScript页面中使用Google官方@material/web 2.5.0，先读取Material Web素材包的来源、维护模式边界、许可、四种样例与依赖锁定记录。依据页面任务选择操作层级、带验证的文本框、switch/slider偏好面板或确认对话框，不复制示例业务文案。沿用当前页面导航与布局，用官方CSS系统颜色角色和组件形状token统一主题。提供真实标签、SVG功能图标、错误纠正、取消/Escape与关闭后焦点返回；所有文本包括Shadow DOM浮动标签及slider值标签在实际渲染中至少12px，取消会缩小文字的过渡。模块失败显示标注的静态后备；系统减少动态或手动减少时关闭局部过渡/ripple，dialog使用quick，页面隐藏时停止当前短动画。保持输入本地或明确接入当前项目的真实提交逻辑，不宣称示例已联网保存。保留Apache-2.0、Lit BSD-3-Clause、tslib 0BSD及转换说明；通过HTTP运行并检查桌面、窄屏、键盘、触摸和资源加载。",
+  "accessibility": {
+    "keyboard": "原生按钮切换样例，真实官方组件处理Tab、Enter/Space、滑块方向键/Home/End与Escape。所有输入和开关有标签，错误状态同步可见消息；对话框关闭后等待触发按钮渲染完成再恢复焦点。",
+    "reducedMotion": "遵循prefers-reduced-motion，并提供手动减少动效。以本地Shadow DOM样式关闭过渡、禁用ripple、dialog.quick跳过开关动画；slider值标签不使用缩放过渡。无自动循环、音频或计时器，隐藏页面结束当前短动画。"
+  },
+  "demo": "demos/materials/material-web/index.html",
+  "preview": "previews/materials/material-web.png",
+  "research": "docs/materials/material-web.md",
+  "sourceFiles": ["demos/materials/material-web/index.html", "demos/materials/material-web/demo.css", "demos/materials/material-web/demo.js", "demos/materials/material-web/source/vendor/components.mjs"]
+}

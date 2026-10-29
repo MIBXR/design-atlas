@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "stripe-platform",
-        "locator": "entries/stripe-platform.json#interaction/6",
+        "locator": "entries/cases/stripe-platform.json#interaction/6",
         "observation": "手机汉堡菜单 → 全屏顶层 Products/Solutions/Developers/Resources；选择分类后二级页以源 CSS 500ms 侧向进入、250ms 透明度衔接，Back 返回顶层。Start now/Contact sales 固定底部；关闭/Escape 恢复滚动和焦点，让长目录保持方向与核心行动。",
         "evidence": "adapted",
         "referenceUrl": "https://stripe.com/",
@@ -48,14 +48,14 @@
       }
     ],
     "sourceFiles": [
-      "demos/stripe-platform/fidelity.md",
-      "demos/stripe-platform/index.html",
-      "demos/stripe-platform/journey.js",
-      "demos/stripe-platform/script.js",
-      "demos/stripe-platform/style.css",
-      "demos/stripe-platform/wave.js",
-      "entries/stripe-platform.json",
-      "research/stripe-platform.md"
+      "demos/cases/stripe-platform/fidelity.md",
+      "demos/cases/stripe-platform/index.html",
+      "demos/cases/stripe-platform/journey.js",
+      "demos/cases/stripe-platform/script.js",
+      "demos/cases/stripe-platform/style.css",
+      "demos/cases/stripe-platform/wave.js",
+      "entries/cases/stripe-platform.json",
+      "docs/research/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -64,7 +64,7 @@
       "title": "Stripe — 彩带与金融产品矩阵",
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "demo": "demos/stripe-platform/index.html"
+        "demo": "demos/cases/stripe-platform/index.html"
       }
     }
   ]

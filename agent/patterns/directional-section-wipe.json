@@ -48,7 +48,7 @@
     "sources": [
       {
         "caseId": "arknights-world",
-        "locator": "entries/arknights-world.json#interaction/1",
+        "locator": "entries/cases/arknights-world.json#interaction/1",
         "observation": "场景横向遮罩裁切：桌面1000ms、竖屏600ms；同方向重复轮输入锁定，快速反向和导航使用最后目标队列，单次仅一组出/入场景。",
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
@@ -56,13 +56,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/arknights-world/fidelity.md",
-      "demos/arknights-world/index.html",
-      "demos/arknights-world/particles.js",
-      "demos/arknights-world/script.js",
-      "demos/arknights-world/style.css",
-      "entries/arknights-world.json",
-      "research/arknights-world.md"
+      "demos/cases/arknights-world/fidelity.md",
+      "demos/cases/arknights-world/index.html",
+      "demos/cases/arknights-world/particles.js",
+      "demos/cases/arknights-world/script.js",
+      "demos/cases/arknights-world/style.css",
+      "entries/cases/arknights-world.json",
+      "docs/research/arknights-world.md"
     ]
   },
   "sourceCases": [
@@ -71,7 +71,7 @@
       "title": "明日方舟 · 全屏档案与交互点阵",
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
-        "demo": "demos/arknights-world/index.html"
+        "demo": "demos/cases/arknights-world/index.html"
       }
     }
   ]

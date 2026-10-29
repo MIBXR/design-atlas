@@ -40,17 +40,17 @@
     "sources": [
       {
         "caseId": "hand-drawn",
-        "locator": "entries/hand-drawn.json#interaction/0",
+        "locator": "entries/cases/hand-drawn.json#interaction/0",
         "observation": "三项原生复选框更新收集进度",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/hand-drawn/index.html",
-      "demos/hand-drawn/script.js",
-      "demos/hand-drawn/style.css",
-      "entries/hand-drawn.json",
-      "research/hand-drawn.md"
+      "demos/cases/hand-drawn/index.html",
+      "demos/cases/hand-drawn/script.js",
+      "demos/cases/hand-drawn/style.css",
+      "entries/cases/hand-drawn.json",
+      "docs/research/hand-drawn.md"
     ]
   },
   "sourceCases": [
@@ -59,7 +59,7 @@
       "title": "手绘：把不完美变成亲近感",
       "paths": {
         "bundle": "agent/cases/hand-drawn.json",
-        "demo": "demos/hand-drawn/index.html"
+        "demo": "demos/cases/hand-drawn/index.html"
       }
     }
   ]

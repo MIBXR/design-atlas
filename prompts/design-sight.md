@@ -1,6 +1,6 @@
 # 21_21 DESIGN SIGHT：海报与四列档案 · 复用 Prompt
 
-由 [结构化案例](../entries/design-sight.json) 自动生成。参考观察与具体边界见 [调研](../research/design-sight.md)。
+由 [结构化案例](../entries/cases/design-sight.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/design-sight.md)。
 
 ## 正向 Prompt
 
@@ -24,4 +24,4 @@
 
 保持海报不变，将四列间距从50px改为25px，观察栏目密度；再把所有缩略图强制裁成同尺寸，记录丢失的展览信息。
 
-[查看 Demo](../demos/design-sight/index.html) · [返回案例库](../cases.html#style/design-sight)
+[查看 Demo](../demos/cases/design-sight/index.html) · [返回案例库](../cases.html#style/design-sight)

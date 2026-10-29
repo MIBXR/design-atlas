@@ -39,13 +39,13 @@
     "sources": [
       {
         "caseId": "swiss-grid",
-        "locator": "entries/swiss-grid.json#interaction/0",
+        "locator": "entries/cases/swiss-grid.json#interaction/0",
         "observation": "分类按钮筛选日程并宣布结果数。",
         "evidence": "adapted"
       },
       {
         "caseId": "mori-art-museum",
-        "locator": "entries/mori-art-museum.json#constraints/5",
+        "locator": "entries/cases/mori-art-museum.json#constraints/5",
         "observation": "本地只还原首页几个区域并加教学新闻筛选；不复制多馆门户、购票账户与追踪脚本。",
         "evidence": "adapted",
         "referenceUrl": "https://www.mori.art.museum/jp/",
@@ -53,15 +53,15 @@
       }
     ],
     "sourceFiles": [
-      "demos/mori-art-museum/app.js",
-      "demos/mori-art-museum/fidelity.md",
-      "demos/mori-art-museum/index.html",
-      "demos/mori-art-museum/style.css",
-      "demos/swiss-grid/index.html",
-      "entries/mori-art-museum.json",
-      "entries/swiss-grid.json",
-      "research/mori-art-museum.md",
-      "research/swiss-grid.md"
+      "demos/cases/mori-art-museum/app.js",
+      "demos/cases/mori-art-museum/fidelity.md",
+      "demos/cases/mori-art-museum/index.html",
+      "demos/cases/mori-art-museum/style.css",
+      "demos/cases/swiss-grid/index.html",
+      "entries/cases/mori-art-museum.json",
+      "entries/cases/swiss-grid.json",
+      "docs/research/mori-art-museum.md",
+      "docs/research/swiss-grid.md"
     ]
   },
   "sourceCases": [
@@ -70,7 +70,7 @@
       "title": "森美术馆：红色机构锚点与艺术海报",
       "paths": {
         "bundle": "agent/cases/mori-art-museum.json",
-        "demo": "demos/mori-art-museum/index.html"
+        "demo": "demos/cases/mori-art-museum/index.html"
       }
     },
     {
@@ -78,7 +78,7 @@
       "title": "瑞士设计：编辑网格",
       "paths": {
         "bundle": "agent/cases/swiss-grid.json",
-        "demo": "demos/swiss-grid/index.html"
+        "demo": "demos/cases/swiss-grid/index.html"
       }
     }
   ]

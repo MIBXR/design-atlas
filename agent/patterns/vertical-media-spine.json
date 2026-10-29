@@ -52,7 +52,7 @@
     "sources": [
       {
         "caseId": "endfield-industrial",
-        "locator": "entries/endfield-industrial.json#principles/4",
+        "locator": "entries/cases/endfield-industrial.json#principles/4",
         "observation": "AIC书脊与媒体共同组织类别；4玩法/5AIC采用源三层黑→黄→媒体的方向揭示，不用单静态工厂图替代整个相册。",
         "evidence": "observed",
         "referenceUrl": "https://endfield.hypergryph.com/",
@@ -60,16 +60,16 @@
       }
     ],
     "sourceFiles": [
-      "entries/endfield-industrial.json",
-      "research/endfield-industrial.md",
-      "demos/endfield-industrial/fidelity.md",
-      "demos/endfield-industrial/index.html",
-      "demos/endfield-industrial/reference.css",
-      "demos/endfield-industrial/state.css",
-      "demos/endfield-industrial/data.js",
-      "demos/endfield-industrial/app.js",
-      "demos/endfield-industrial/state-matrix.md",
-      "demos/endfield-industrial/source-provenance.json"
+      "entries/cases/endfield-industrial.json",
+      "docs/research/endfield-industrial.md",
+      "demos/cases/endfield-industrial/fidelity.md",
+      "demos/cases/endfield-industrial/index.html",
+      "demos/cases/endfield-industrial/reference.css",
+      "demos/cases/endfield-industrial/state.css",
+      "demos/cases/endfield-industrial/data.js",
+      "demos/cases/endfield-industrial/app.js",
+      "demos/cases/endfield-industrial/source/state-matrix.md",
+      "demos/cases/endfield-industrial/source/source-provenance.json"
     ]
   },
   "sourceCases": [
@@ -78,7 +78,7 @@
       "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
-        "demo": "demos/endfield-industrial/index.html"
+        "demo": "demos/cases/endfield-industrial/index.html"
       }
     }
   ]

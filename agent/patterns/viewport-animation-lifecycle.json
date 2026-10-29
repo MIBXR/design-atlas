@@ -51,7 +51,7 @@
     "sources": [
       {
         "caseId": "linear-workflow",
-        "locator": "entries/linear-workflow.json#interaction/3",
+        "locator": "entries/cases/linear-workflow.json#interaction/3",
         "observation": "AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。",
         "evidence": "adapted",
         "referenceUrl": "https://linear.app/",
@@ -59,7 +59,7 @@
       },
       {
         "caseId": "stripe-platform",
-        "locator": "entries/stripe-platform.json#interaction/0",
+        "locator": "entries/cases/stripe-platform.json#interaction/0",
         "observation": "进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。",
         "evidence": "adapted",
         "referenceUrl": "https://stripe.com/",
@@ -67,7 +67,7 @@
       },
       {
         "caseId": "qoder-platform",
-        "locator": "entries/qoder-platform.json#interaction/2",
+        "locator": "entries/cases/qoder-platform.json#interaction/2",
         "observation": "五平台 tab/点控/触摸 → 400ms 水平进退，20s 自动，悬停/手动暂停、后台停止；快速选择只保留一个场景。",
         "evidence": "adapted",
         "referenceUrl": "https://qoder.cn/",
@@ -75,7 +75,7 @@
       },
       {
         "caseId": "endfield-industrial",
-        "locator": "entries/endfield-industrial.json#interaction/7",
+        "locator": "entries/cases/endfield-industrial.json#interaction/7",
         "observation": "声音和业务：原BGM及四种原始操作音由桌面/手机共用声音开关启用，默认关闭；选干员与2D/3D切换播放机械短音，头像翻页和档案展开/收起分别反馈。10槽音频池保留快速重复操作的叠响；关闭声音或隐藏页面立即停止，返回不重放短效。登录、下载、云游戏、支付、社区与全文信息保留官方目的地，不复制后台或提交数据。",
         "evidence": "adapted",
         "referenceUrl": "https://endfield.hypergryph.com/",
@@ -83,7 +83,7 @@
       },
       {
         "caseId": "deepseek-harness",
-        "locator": "entries/deepseek-harness.json#interaction/5",
+        "locator": "entries/cases/deepseek-harness.json#interaction/5",
         "observation": "四组演示分别在进入视口后播放，手动暂停优先于重入；离屏或后台暂停。减少动态使用原版插件/轨迹静态回退和文件/工作流的可读状态。",
         "evidence": "observed",
         "referenceUrl": "https://www.deepseek.com/harness/",
@@ -91,7 +91,7 @@
       },
       {
         "caseId": "stellar-museum",
-        "locator": "entries/stellar-museum.json#interaction/7",
+        "locator": "entries/cases/stellar-museum.json#interaction/7",
         "observation": "首屏星球及月球、空间站、火星、银河窗口进入或离开扩展 120px 的视口范围：IntersectionObserver 以 rootMargin: '120px'、threshold: 0.0 更新各实例的 visible，统一帧循环跳过离屏实例，只渲染可见窗口；主循环和绝对时间仍持续推进，来源未实现页面后台可见性监听、用户暂停或离屏时间冻结，减少动态仅跳过对象旋转，仍更新着色器时间并渲染。",
         "evidence": "observed",
         "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
@@ -99,68 +99,66 @@
       }
     ],
     "sourceFiles": [
-      "demos/linear-workflow/fidelity.md",
-      "demos/linear-workflow/index.html",
-      "demos/linear-workflow/journey.js",
-      "demos/linear-workflow/script.js",
-      "demos/linear-workflow/style.css",
-      "demos/qoder-platform/fidelity.md",
-      "demos/qoder-platform/index.html",
-      "demos/qoder-platform/journey.js",
-      "demos/qoder-platform/script.js",
-      "demos/qoder-platform/style.css",
-      "demos/stripe-platform/fidelity.md",
-      "demos/stripe-platform/index.html",
-      "demos/stripe-platform/journey.js",
-      "demos/stripe-platform/script.js",
-      "demos/stripe-platform/style.css",
-      "demos/stripe-platform/wave.js",
-      "entries/linear-workflow.json",
-      "entries/qoder-platform.json",
-      "entries/stripe-platform.json",
-      "research/linear-workflow.md",
-      "research/qoder-platform.md",
-      "research/stripe-platform.md",
-      "entries/endfield-industrial.json",
-      "research/endfield-industrial.md",
-      "demos/endfield-industrial/fidelity.md",
-      "demos/endfield-industrial/state-matrix.md",
-      "demos/endfield-industrial/source-provenance.json",
-      "demos/endfield-industrial/index.html",
-      "demos/endfield-industrial/reference.css",
-      "demos/endfield-industrial/state.css",
-      "demos/endfield-industrial/app.js",
-      "demos/endfield-industrial/lore.js",
-      "demos/endfield-industrial/transparent-video.js",
-      "entries/deepseek-harness.json",
-      "research/deepseek-harness.md",
-      "demos/deepseek-harness/app.js",
-      "demos/deepseek-harness/fidelity.md",
-      "demos/deepseek-harness/index.html",
-      "demos/deepseek-harness/messages.js",
-      "demos/deepseek-harness/reference.css",
-      "demos/deepseek-harness/runtime.js",
-      "demos/deepseek-harness/state.css",
-      "demos/deepseek-harness/vendor/1798-4c32a4b3e02e20fe.js",
-      "demos/deepseek-harness/vendor/7386dc53.5bf20d414744188e.js",
-      "demos/deepseek-harness/vendor/7591-a9eaac0cc94f9f3e.js",
-      "demos/deepseek-harness/vendor/1835-f521304a15b83224.js",
-      "demos/deepseek-harness/vendor/3743-7c4be9ad33829b7f.js",
-      "demos/deepseek-harness/vendor/app/[locale]/harness/page-82b977ba6da9187f.js",
-      "demos/deepseek-harness/vendor/5565.779b207d687b6031.js",
-      "demos/deepseek-harness/vendor/1563-d3f244478cac7e75.js",
-      "demos/deepseek-harness/vendor/app/[locale]/template-4dc2bb6be23dc661.js",
-      "demos/deepseek-harness/vendor/9164-9f2478a2648a9516.js",
-      "demos/deepseek-harness/vendor/8091.573531f4257c3cd0.js",
-      "demos/deepseek-harness/vendor/6872-122f878b6e348922.js",
-      "demos/deepseek-harness/vendor/8809-44db951c56e60f28.js",
-      "demos/deepseek-harness/vendor/6336-e0040a1eb23dd92b.js",
-      "demos/deepseek-harness/vendor/8555-7c9518c428e988c2.js",
-      "demos/deepseek-harness/vendor/86b88eeb-5b86058878847f6a.js",
-      "demos/stellar-museum/index.html",
-      "demos/stellar-museum/fidelity.md",
-      "entries/stellar-museum.json",
-      "research/stellar-museum.md"
+      "demos/cases/linear-workflow/fidelity.md",
+      "demos/cases/linear-workflow/index.html",
+      "demos/cases/linear-workflow/journey.js",
+      "demos/cases/linear-workflow/script.js",
+      "demos/cases/linear-workflow/style.css",
+      "demos/cases/qoder-platform/fidelity.md",
+      "demos/cases/qoder-platform/index.html",
+      "demos/cases/qoder-platform/journey.js",
+      "demos/cases/qoder-platform/script.js",
+      "demos/cases/qoder-platform/style.css",
+      "demos/cases/stripe-platform/fidelity.md",
+      "demos/cases/stripe-platform/index.html",
+      "demos/cases/stripe-platform/journey.js",
+      "demos/cases/stripe-platform/script.js",
+      "demos/cases/stripe-platform/style.css",
+      "demos/cases/stripe-platform/wave.js",
+      "entries/cases/linear-workflow.json",
+      "entries/cases/qoder-platform.json",
+      "entries/cases/stripe-platform.json",
+      "docs/research/stripe-platform.md",
+      "entries/cases/endfield-industrial.json",
+      "docs/research/endfield-industrial.md",
+      "demos/cases/endfield-industrial/fidelity.md",
+      "demos/cases/endfield-industrial/source/state-matrix.md",
+      "demos/cases/endfield-industrial/source/source-provenance.json",
+      "demos/cases/endfield-industrial/index.html",
+      "demos/cases/endfield-industrial/reference.css",
+      "demos/cases/endfield-industrial/state.css",
+      "demos/cases/endfield-industrial/app.js",
+      "demos/cases/endfield-industrial/lore.js",
+      "demos/cases/endfield-industrial/transparent-video.js",
+      "entries/cases/deepseek-harness.json",
+      "docs/research/deepseek-harness.md",
+      "demos/cases/deepseek-harness/app.js",
+      "demos/cases/deepseek-harness/fidelity.md",
+      "demos/cases/deepseek-harness/index.html",
+      "demos/cases/deepseek-harness/messages.js",
+      "demos/cases/deepseek-harness/reference.css",
+      "demos/cases/deepseek-harness/runtime.js",
+      "demos/cases/deepseek-harness/state.css",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/1798-4c32a4b3e02e20fe.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/7386dc53.5bf20d414744188e.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/7591-a9eaac0cc94f9f3e.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/1835-f521304a15b83224.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/3743-7c4be9ad33829b7f.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/5565.779b207d687b6031.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/1563-d3f244478cac7e75.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/app/[locale]/template-4dc2bb6be23dc661.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/9164-9f2478a2648a9516.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/8091.573531f4257c3cd0.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/6872-122f878b6e348922.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/8809-44db951c56e60f28.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/6336-e0040a1eb23dd92b.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/8555-7c9518c428e988c2.js",
+      "demos/cases/deepseek-harness/vendor/deepseek-harness/86b88eeb-5b86058878847f6a.js",
+      "demos/cases/stellar-museum/index.html",
+      "demos/cases/stellar-museum/fidelity.md",
+      "entries/cases/stellar-museum.json",
+      "docs/research/stellar-museum.md"
     ]
   },
   "sourceCases": [
@@ -169,7 +167,7 @@
       "title": "DeepSeek Harness · 可观察的产品演示",
       "paths": {
         "bundle": "agent/cases/deepseek-harness.json",
-        "demo": "demos/deepseek-harness/index.html"
+        "demo": "demos/cases/deepseek-harness/index.html"
       }
     },
     {
@@ -177,7 +175,7 @@
       "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
-        "demo": "demos/endfield-industrial/index.html"
+        "demo": "demos/cases/endfield-industrial/index.html"
       }
     },
     {
@@ -185,7 +183,7 @@
       "title": "Linear — 深色产品开发系统",
       "paths": {
         "bundle": "agent/cases/linear-workflow.json",
-        "demo": "demos/linear-workflow/index.html"
+        "demo": "demos/cases/linear-workflow/index.html"
       }
     },
     {
@@ -193,7 +191,7 @@
       "title": "Qoder — 绿色工作台与多形态平台",
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
-        "demo": "demos/qoder-platform/index.html"
+        "demo": "demos/cases/qoder-platform/index.html"
       }
     },
     {
@@ -201,7 +199,7 @@
       "title": "星槎 STELLAR · 太空探索博物馆",
       "paths": {
         "bundle": "agent/cases/stellar-museum.json",
-        "demo": "demos/stellar-museum/index.html"
+        "demo": "demos/cases/stellar-museum/index.html"
       }
     },
     {
@@ -209,7 +207,7 @@
       "title": "Stripe — 彩带与金融产品矩阵",
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "demo": "demos/stripe-platform/index.html"
+        "demo": "demos/cases/stripe-platform/index.html"
       }
     }
   ]

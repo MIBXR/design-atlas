@@ -1,6 +1,6 @@
 # 数字敦煌 · 全幅影像与真实瓦片细察 · 复用 Prompt
 
-由 [结构化案例](../entries/digital-dunhuang.json) 自动生成。参考观察与具体边界见 [调研](../research/digital-dunhuang.md)。
+由 [结构化案例](../entries/cases/digital-dunhuang.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/digital-dunhuang.md)。
 
 ## 正向 Prompt
 
@@ -22,4 +22,4 @@
 
 用有使用权的真实瓦片图像和完整元数据替换档案；逐条件验证成员集、组合空态、URL返回以及查看器真实精度、平移和缩放边界。
 
-[查看 Demo](../demos/digital-dunhuang/index.html) · [返回案例库](../cases.html#style/digital-dunhuang)
+[查看 Demo](../demos/cases/digital-dunhuang/index.html) · [返回案例库](../cases.html#style/digital-dunhuang)

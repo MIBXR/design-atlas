@@ -1,6 +1,6 @@
 # Google Material：表现力与组件秩序 · 复用 Prompt
 
-由 [结构化案例](../entries/google-material.json) 自动生成。参考观察与具体边界见 [调研](../research/google-material.md)。
+由 [结构化案例](../entries/cases/google-material.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/google-material.md)。
 
 ## 正向 Prompt
 
@@ -24,4 +24,4 @@
 
 先用主题开关比较角色配对，再暂停全局动效并用键盘聚焦资源卡，观察没有运动时状态是否仍清楚；若换品牌色，只改一组primary／container会怎样影响正文与按钮的协调？
 
-[查看 Demo](../demos/google-material/index.html) · [返回案例库](../cases.html#style/google-material)
+[查看 Demo](../demos/cases/google-material/index.html) · [返回案例库](../cases.html#style/google-material)

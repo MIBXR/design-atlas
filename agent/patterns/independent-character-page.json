@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "blue-archive",
-        "locator": "entries/blue-archive.json#interaction/3",
+        "locator": "entries/cases/blue-archive.json#interaction/3",
         "observation": "首页导航 CHARACTER 打开本地独立 character.html；HOME 返回首页，首页仅 KV→footer，保留源站页面职责分离。",
         "evidence": "adapted",
         "referenceUrl": "https://bluearchive.jp/",
@@ -48,13 +48,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/blue-archive/app.js",
-      "demos/blue-archive/character.html",
-      "demos/blue-archive/fidelity.md",
-      "demos/blue-archive/index.html",
-      "demos/blue-archive/style.css",
-      "entries/blue-archive.json",
-      "research/blue-archive.md"
+      "demos/cases/blue-archive/app.js",
+      "demos/cases/blue-archive/character.html",
+      "demos/cases/blue-archive/fidelity.md",
+      "demos/cases/blue-archive/index.html",
+      "demos/cases/blue-archive/style.css",
+      "entries/cases/blue-archive.json",
+      "docs/research/blue-archive.md"
     ]
   },
   "sourceCases": [
@@ -63,7 +63,7 @@
       "title": "碧蓝档案：学园都市的天空与光",
       "paths": {
         "bundle": "agent/cases/blue-archive.json",
-        "demo": "demos/blue-archive/index.html"
+        "demo": "demos/cases/blue-archive/index.html"
       }
     }
   ]

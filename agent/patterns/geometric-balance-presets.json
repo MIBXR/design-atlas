@@ -40,15 +40,15 @@
     "sources": [
       {
         "caseId": "bauhaus-geometry",
-        "locator": "entries/bauhaus-geometry.json#interaction/0",
+        "locator": "entries/cases/bauhaus-geometry.json#interaction/0",
         "observation": "三个构成预设改变圆、三角和矩形之间的真实位置关系。",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/bauhaus-geometry/index.html",
-      "entries/bauhaus-geometry.json",
-      "research/bauhaus-geometry.md"
+      "demos/cases/bauhaus-geometry/index.html",
+      "entries/cases/bauhaus-geometry.json",
+      "docs/research/bauhaus-geometry.md"
     ]
   },
   "sourceCases": [
@@ -57,7 +57,7 @@
       "title": "包豪斯：几何与实验",
       "paths": {
         "bundle": "agent/cases/bauhaus-geometry.json",
-        "demo": "demos/bauhaus-geometry/index.html"
+        "demo": "demos/cases/bauhaus-geometry/index.html"
       }
     }
   ]

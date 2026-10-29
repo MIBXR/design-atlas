@@ -1,6 +1,6 @@
 # 故宫 · 六章探索与宫廷视觉目录 · 复用 Prompt
 
-由 [结构化案例](../entries/palace-museum.json) 自动生成。参考观察与具体边界见 [调研](../research/palace-museum.md)。
+由 [结构化案例](../entries/cases/palace-museum.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/palace-museum.md)。
 
 ## 正向 Prompt
 
@@ -22,4 +22,4 @@
 
 替换为另一处有授权建筑的真实屋脊/门窗细节，保持名称目录可独立阅读，并解释图像局部为什么代表其文化内容。
 
-[查看 Demo](../demos/palace-museum/index.html) · [返回案例库](../cases.html#style/palace-museum)
+[查看 Demo](../demos/cases/palace-museum/index.html) · [返回案例库](../cases.html#style/palace-museum)

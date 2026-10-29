@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "claude-platform",
-        "locator": "entries/claude-platform.json#interaction/2",
+        "locator": "entries/cases/claude-platform.json#interaction/2",
         "observation": "Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。",
         "evidence": "inferred",
         "referenceUrl": "https://claude.com/",
@@ -47,13 +47,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/claude-platform/fidelity.md",
-      "demos/claude-platform/index.html",
-      "demos/claude-platform/journey.js",
-      "demos/claude-platform/script.js",
-      "demos/claude-platform/style.css",
-      "entries/claude-platform.json",
-      "research/claude-platform.md"
+      "demos/cases/claude-platform/fidelity.md",
+      "demos/cases/claude-platform/index.html",
+      "demos/cases/claude-platform/journey.js",
+      "demos/cases/claude-platform/script.js",
+      "demos/cases/claude-platform/style.css",
+      "entries/cases/claude-platform.json"
     ]
   },
   "sourceCases": [
@@ -62,7 +61,7 @@
       "title": "Claude — 衬线语气与 Cowork 演示",
       "paths": {
         "bundle": "agent/cases/claude-platform.json",
-        "demo": "demos/claude-platform/index.html"
+        "demo": "demos/cases/claude-platform/index.html"
       }
     }
   ]

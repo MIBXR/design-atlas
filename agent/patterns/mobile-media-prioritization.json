@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "notion-editorial",
-        "locator": "entries/notion-editorial.json#interaction/1",
+        "locator": "entries/cases/notion-editorial.json#interaction/1",
         "observation": "桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。",
         "evidence": "adapted",
         "referenceUrl": "https://www.notion.com/",
@@ -47,7 +47,7 @@
       },
       {
         "caseId": "linear-workflow",
-        "locator": "entries/linear-workflow.json#interaction/5",
+        "locator": "entries/cases/linear-workflow.json#interaction/5",
         "observation": "手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。",
         "evidence": "observed",
         "referenceUrl": "https://linear.app/",
@@ -55,20 +55,19 @@
       }
     ],
     "sourceFiles": [
-      "demos/linear-workflow/fidelity.md",
-      "demos/linear-workflow/index.html",
-      "demos/linear-workflow/journey.js",
-      "demos/linear-workflow/script.js",
-      "demos/linear-workflow/style.css",
-      "demos/notion-editorial/fidelity.md",
-      "demos/notion-editorial/index.html",
-      "demos/notion-editorial/journey.js",
-      "demos/notion-editorial/script.js",
-      "demos/notion-editorial/style.css",
-      "entries/linear-workflow.json",
-      "entries/notion-editorial.json",
-      "research/linear-workflow.md",
-      "research/notion-editorial.md"
+      "demos/cases/linear-workflow/fidelity.md",
+      "demos/cases/linear-workflow/index.html",
+      "demos/cases/linear-workflow/journey.js",
+      "demos/cases/linear-workflow/script.js",
+      "demos/cases/linear-workflow/style.css",
+      "demos/cases/notion-editorial/fidelity.md",
+      "demos/cases/notion-editorial/index.html",
+      "demos/cases/notion-editorial/journey.js",
+      "demos/cases/notion-editorial/script.js",
+      "demos/cases/notion-editorial/style.css",
+      "entries/cases/linear-workflow.json",
+      "entries/cases/notion-editorial.json",
+      "docs/research/notion-editorial.md"
     ]
   },
   "sourceCases": [
@@ -77,7 +76,7 @@
       "title": "Linear — 深色产品开发系统",
       "paths": {
         "bundle": "agent/cases/linear-workflow.json",
-        "demo": "demos/linear-workflow/index.html"
+        "demo": "demos/cases/linear-workflow/index.html"
       }
     },
     {
@@ -85,7 +84,7 @@
       "title": "Notion — 插画与真实工作空间",
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
-        "demo": "demos/notion-editorial/index.html"
+        "demo": "demos/cases/notion-editorial/index.html"
       }
     }
   ]

@@ -41,13 +41,13 @@
     "sources": [
       {
         "caseId": "retro-80s",
-        "locator": "entries/retro-80s.json#interaction/0",
+        "locator": "entries/cases/retro-80s.json#interaction/0",
         "observation": "只有主动开启声音后才初始化Web Audio；可随时关闭。",
         "evidence": "adapted"
       },
       {
         "caseId": "arknights-world",
-        "locator": "entries/arknights-world.json#soundBehavior/control",
+        "locator": "entries/cases/arknights-world.json#soundBehavior/control",
         "observation": "真实原站BGM独立开关，默认静音；600ms渐入/300ms渐出。三人官方日语配音由干员按钮单独播放；页面进入后台暂停音频。",
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
@@ -55,7 +55,7 @@
       },
       {
         "caseId": "zelda-world",
-        "locator": "entries/zelda-world.json#soundBehavior/control",
+        "locator": "entries/cases/zelda-world.json#soundBehavior/control",
         "observation": "入口 ON/OFF 与顶栏 SOUND；默认静音，选择 ON 后播放原始 se.mp3 与 bgm.mp3。",
         "evidence": "observed",
         "referenceUrl": "https://www.nintendo.com/jp/zelda/totk/world/index.html",
@@ -63,7 +63,7 @@
       },
       {
         "caseId": "endfield-industrial",
-        "locator": "entries/endfield-industrial.json#soundBehavior/control",
+        "locator": "entries/cases/endfield-industrial.json#soundBehavior/control",
         "observation": "桌面声音工具与手机喇叭共用状态，默认关闭、aria-pressed同步；用户开启后播放原BGM及选干员/2D↔3D、头像翻页、档案展开/收起四种原音。关闭或后台立即停止，返回只恢复已开启BGM；预览和角色影片静音，完整影像独立控制。",
         "evidence": "adapted",
         "referenceUrl": "https://endfield.hypergryph.com/",
@@ -71,29 +71,29 @@
       }
     ],
     "sourceFiles": [
-      "demos/arknights-world/fidelity.md",
-      "demos/arknights-world/index.html",
-      "demos/arknights-world/particles.js",
-      "demos/arknights-world/script.js",
-      "demos/arknights-world/style.css",
-      "demos/retro-80s/index.html",
-      "demos/zelda-world/fidelity.md",
-      "demos/zelda-world/index.html",
-      "demos/zelda-world/script.js",
-      "demos/zelda-world/style.css",
-      "entries/arknights-world.json",
-      "entries/retro-80s.json",
-      "entries/zelda-world.json",
-      "research/arknights-world.md",
-      "research/retro-80s.md",
-      "research/zelda-world.md",
-      "entries/endfield-industrial.json",
-      "research/endfield-industrial.md",
-      "demos/endfield-industrial/fidelity.md",
-      "demos/endfield-industrial/app.js",
-      "demos/endfield-industrial/state.css",
-      "demos/endfield-industrial/assets-manifest.json",
-      "demos/endfield-industrial/source-provenance.json"
+      "demos/cases/arknights-world/fidelity.md",
+      "demos/cases/arknights-world/index.html",
+      "demos/cases/arknights-world/particles.js",
+      "demos/cases/arknights-world/script.js",
+      "demos/cases/arknights-world/style.css",
+      "demos/cases/retro-80s/index.html",
+      "demos/cases/zelda-world/fidelity.md",
+      "demos/cases/zelda-world/index.html",
+      "demos/cases/zelda-world/script.js",
+      "demos/cases/zelda-world/style.css",
+      "entries/cases/arknights-world.json",
+      "entries/cases/retro-80s.json",
+      "entries/cases/zelda-world.json",
+      "docs/research/arknights-world.md",
+      "docs/research/retro-80s.md",
+      "docs/research/zelda-world.md",
+      "entries/cases/endfield-industrial.json",
+      "docs/research/endfield-industrial.md",
+      "demos/cases/endfield-industrial/fidelity.md",
+      "demos/cases/endfield-industrial/app.js",
+      "demos/cases/endfield-industrial/state.css",
+      "demos/cases/endfield-industrial/assets-manifest.json",
+      "demos/cases/endfield-industrial/source/source-provenance.json"
     ]
   },
   "sourceCases": [
@@ -102,7 +102,7 @@
       "title": "明日方舟 · 全屏档案与交互点阵",
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
-        "demo": "demos/arknights-world/index.html"
+        "demo": "demos/cases/arknights-world/index.html"
       }
     },
     {
@@ -110,7 +110,7 @@
       "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
-        "demo": "demos/endfield-industrial/index.html"
+        "demo": "demos/cases/endfield-industrial/index.html"
       }
     },
     {
@@ -118,7 +118,7 @@
       "title": "80年代：合成器面板",
       "paths": {
         "bundle": "agent/cases/retro-80s.json",
-        "demo": "demos/retro-80s/index.html"
+        "demo": "demos/cases/retro-80s/index.html"
       }
     },
     {
@@ -126,7 +126,7 @@
       "title": "塞尔达 · 全景世界舞台",
       "paths": {
         "bundle": "agent/cases/zelda-world.json",
-        "demo": "demos/zelda-world/index.html"
+        "demo": "demos/cases/zelda-world/index.html"
       }
     }
   ]

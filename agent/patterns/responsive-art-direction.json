@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "mori-art-museum",
-        "locator": "entries/mori-art-museum.json#constraints/1",
+        "locator": "entries/cases/mori-art-museum.json#constraints/1",
         "observation": "大屏主图1600×640，小屏使用450×450官方专用图，不直接裁剪桌面海报。",
         "evidence": "observed",
         "referenceUrl": "https://www.mori.art.museum/jp/",
@@ -48,7 +48,7 @@
       },
       {
         "caseId": "fuji-rock",
-        "locator": "entries/fuji-rock.json#constraints/2",
+        "locator": "entries/cases/fuji-rock.json#constraints/2",
         "observation": "手机使用官方1200×1200图片，不单纯裁切1400×700桌面照片。",
         "evidence": "observed",
         "referenceUrl": "https://www.fujirockfestival.com/",
@@ -56,7 +56,7 @@
       },
       {
         "caseId": "uma-musume",
-        "locator": "entries/uma-musume.json#constraints/4",
+        "locator": "entries/cases/uma-musume.json#constraints/4",
         "observation": "手机使用原站竖版 KV；菜单、触摸阈值与字体排布有本地适配，减少动态取消非必要过渡。",
         "evidence": "adapted",
         "referenceUrl": "https://umamusume.com/",
@@ -64,24 +64,24 @@
       }
     ],
     "sourceFiles": [
-      "demos/fuji-rock/app.js",
-      "demos/fuji-rock/fidelity.md",
-      "demos/fuji-rock/index.html",
-      "demos/fuji-rock/style.css",
-      "demos/mori-art-museum/app.js",
-      "demos/mori-art-museum/fidelity.md",
-      "demos/mori-art-museum/index.html",
-      "demos/mori-art-museum/style.css",
-      "demos/uma-musume/app.js",
-      "demos/uma-musume/fidelity.md",
-      "demos/uma-musume/index.html",
-      "demos/uma-musume/style.css",
-      "entries/fuji-rock.json",
-      "entries/mori-art-museum.json",
-      "entries/uma-musume.json",
-      "research/fuji-rock.md",
-      "research/mori-art-museum.md",
-      "research/uma-musume.md"
+      "demos/cases/fuji-rock/app.js",
+      "demos/cases/fuji-rock/fidelity.md",
+      "demos/cases/fuji-rock/index.html",
+      "demos/cases/fuji-rock/style.css",
+      "demos/cases/mori-art-museum/app.js",
+      "demos/cases/mori-art-museum/fidelity.md",
+      "demos/cases/mori-art-museum/index.html",
+      "demos/cases/mori-art-museum/style.css",
+      "demos/cases/uma-musume/app.js",
+      "demos/cases/uma-musume/fidelity.md",
+      "demos/cases/uma-musume/index.html",
+      "demos/cases/uma-musume/style.css",
+      "entries/cases/fuji-rock.json",
+      "entries/cases/mori-art-museum.json",
+      "entries/cases/uma-musume.json",
+      "docs/research/fuji-rock.md",
+      "docs/research/mori-art-museum.md",
+      "docs/research/uma-musume.md"
     ]
   },
   "sourceCases": [
@@ -90,7 +90,7 @@
       "title": "Fuji Rock：现场照片与节日导览",
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
-        "demo": "demos/fuji-rock/index.html"
+        "demo": "demos/cases/fuji-rock/index.html"
       }
     },
     {
@@ -98,7 +98,7 @@
       "title": "森美术馆：红色机构锚点与艺术海报",
       "paths": {
         "bundle": "agent/cases/mori-art-museum.json",
-        "demo": "demos/mori-art-museum/index.html"
+        "demo": "demos/cases/mori-art-museum/index.html"
       }
     },
     {
@@ -106,7 +106,7 @@
       "title": "赛马娘：群像赛道与斜切叙事",
       "paths": {
         "bundle": "agent/cases/uma-musume.json",
-        "demo": "demos/uma-musume/index.html"
+        "demo": "demos/cases/uma-musume/index.html"
       }
     }
   ]

@@ -45,7 +45,7 @@
     "sources": [
       {
         "caseId": "google-material",
-        "locator": "entries/google-material.json#interaction/1",
+        "locator": "entries/cases/google-material.json#interaction/1",
         "observation": "点击或键盘激活按钮／卡片：CTA圆角48→16px，资源卡24→48px；200/300ms cubic-bezier(.2,0,0,1)。 形状与状态层共同表达当前动作，界面表现力来自一致的反馈。",
         "evidence": "observed",
         "referenceUrl": "https://m3.material.io/",
@@ -53,12 +53,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/google-material/app.js",
-      "demos/google-material/fidelity.md",
-      "demos/google-material/index.html",
-      "demos/google-material/style.css",
-      "entries/google-material.json",
-      "research/google-material.md"
+      "demos/cases/google-material/app.js",
+      "demos/cases/google-material/fidelity.md",
+      "demos/cases/google-material/index.html",
+      "demos/cases/google-material/style.css",
+      "entries/cases/google-material.json",
+      "docs/research/google-material.md"
     ]
   },
   "sourceCases": [
@@ -67,7 +67,7 @@
       "title": "Google Material：表现力与组件秩序",
       "paths": {
         "bundle": "agent/cases/google-material.json",
-        "demo": "demos/google-material/index.html"
+        "demo": "demos/cases/google-material/index.html"
       }
     }
   ]

@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "notion-editorial",
-        "locator": "entries/notion-editorial.json#interaction/1",
+        "locator": "entries/cases/notion-editorial.json#interaction/1",
         "observation": "桌面官方产品视频静音循环，可暂停；手机保留上方七个头像 pile，当前页面隐藏 hero 媒体区而不是塞入桌面视频。",
         "evidence": "adapted",
         "referenceUrl": "https://www.notion.com/",
@@ -47,13 +47,13 @@
       }
     ],
     "sourceFiles": [
-      "demos/notion-editorial/fidelity.md",
-      "demos/notion-editorial/index.html",
-      "demos/notion-editorial/journey.js",
-      "demos/notion-editorial/script.js",
-      "demos/notion-editorial/style.css",
-      "entries/notion-editorial.json",
-      "research/notion-editorial.md"
+      "demos/cases/notion-editorial/fidelity.md",
+      "demos/cases/notion-editorial/index.html",
+      "demos/cases/notion-editorial/journey.js",
+      "demos/cases/notion-editorial/script.js",
+      "demos/cases/notion-editorial/style.css",
+      "entries/cases/notion-editorial.json",
+      "docs/research/notion-editorial.md"
     ]
   },
   "sourceCases": [
@@ -62,7 +62,7 @@
       "title": "Notion — 插画与真实工作空间",
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
-        "demo": "demos/notion-editorial/index.html"
+        "demo": "demos/cases/notion-editorial/index.html"
       }
     }
   ]

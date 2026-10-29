@@ -1,6 +1,6 @@
 # ChatGPT — 巨字、飞入拼贴与滚动交接 · 复用 Prompt
 
-由 [结构化案例](../entries/chatgpt-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/chatgpt-platform.md)。
+由 [结构化案例](../entries/cases/chatgpt-platform.json) 自动生成。参考观察与具体边界见 [调研](../demos/cases/chatgpt-platform/fidelity.md)。
 
 ## 正向 Prompt
 
@@ -21,4 +21,4 @@
 
 以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。
 
-[查看 Demo](../demos/chatgpt-platform/index.html) · [返回案例库](../cases.html#style/chatgpt-platform)
+[查看 Demo](../demos/cases/chatgpt-platform/index.html) · [返回案例库](../cases.html#style/chatgpt-platform)

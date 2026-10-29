@@ -39,15 +39,15 @@
     "sources": [
       {
         "caseId": "bauhaus-geometry",
-        "locator": "entries/bauhaus-geometry.json#interaction/2",
+        "locator": "entries/cases/bauhaus-geometry.json#interaction/2",
         "observation": "导出按钮下载当前原创构成的SVG文件。",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/bauhaus-geometry/index.html",
-      "entries/bauhaus-geometry.json",
-      "research/bauhaus-geometry.md"
+      "demos/cases/bauhaus-geometry/index.html",
+      "entries/cases/bauhaus-geometry.json",
+      "docs/research/bauhaus-geometry.md"
     ]
   },
   "sourceCases": [
@@ -56,7 +56,7 @@
       "title": "包豪斯：几何与实验",
       "paths": {
         "bundle": "agent/cases/bauhaus-geometry.json",
-        "demo": "demos/bauhaus-geometry/index.html"
+        "demo": "demos/cases/bauhaus-geometry/index.html"
       }
     }
   ]

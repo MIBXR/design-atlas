@@ -1,6 +1,6 @@
 # Persona 5 Royal · 黑金角色拼贴 · 复用 Prompt
 
-由 [结构化案例](../entries/persona-kinetic.json) 自动生成。参考观察与具体边界见 [调研](../research/persona-kinetic.md)。
+由 [结构化案例](../entries/cases/persona-kinetic.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/persona-kinetic.md)。
 
 ## 正向 Prompt
 
@@ -22,4 +22,4 @@
 
 在虚构剧场主题中迁移当前剪纸轮廓、双生活中心轮播与星光滚动层级，换原创内容，仍记录触发、时长和边界；不追随官网未来版本。
 
-[查看 Demo](../demos/persona-kinetic/index.html) · [返回案例库](../cases.html#style/persona-kinetic)
+[查看 Demo](../demos/cases/persona-kinetic/index.html) · [返回案例库](../cases.html#style/persona-kinetic)

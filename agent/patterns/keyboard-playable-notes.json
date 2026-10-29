@@ -40,15 +40,15 @@
     "sources": [
       {
         "caseId": "retro-80s",
-        "locator": "entries/retro-80s.json#interaction/3",
+        "locator": "entries/cases/retro-80s.json#interaction/3",
         "observation": "屏幕琴键为可聚焦按钮；A S D F G H J K 可演奏白键，切出页面时停止声音。",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/retro-80s/index.html",
-      "entries/retro-80s.json",
-      "research/retro-80s.md"
+      "demos/cases/retro-80s/index.html",
+      "entries/cases/retro-80s.json",
+      "docs/research/retro-80s.md"
     ]
   },
   "sourceCases": [
@@ -57,7 +57,7 @@
       "title": "80年代：合成器面板",
       "paths": {
         "bundle": "agent/cases/retro-80s.json",
-        "demo": "demos/retro-80s/index.html"
+        "demo": "demos/cases/retro-80s/index.html"
       }
     }
   ]

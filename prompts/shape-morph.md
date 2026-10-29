@@ -1,6 +1,6 @@
 # 动态形状：同一单元，多种表达 · 复用 Prompt
 
-由 [结构化案例](../entries/shape-morph.json) 自动生成。参考观察与具体边界见 [调研](../research/shape-morph.md)。
+由 [结构化案例](../entries/cases/shape-morph.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/shape-morph.md)。
 
 ## 正向 Prompt
 
@@ -27,4 +27,4 @@
 
 将三种形态映射为一个产品的收集、处理、输出阶段，让每次变形同步切换解释文本，并保留相同三角片。
 
-[查看 Demo](../demos/shape-morph/index.html) · [返回案例库](../cases.html#style/shape-morph)
+[查看 Demo](../demos/cases/shape-morph/index.html) · [返回案例库](../cases.html#style/shape-morph)

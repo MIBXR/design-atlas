@@ -50,7 +50,7 @@
     "sources": [
       {
         "caseId": "claude-platform",
-        "locator": "entries/claude-platform.json#interaction/1",
+        "locator": "entries/cases/claude-platform.json#interaction/1",
         "observation": "桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。",
         "evidence": "inferred",
         "referenceUrl": "https://claude.com/",
@@ -58,13 +58,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/claude-platform/fidelity.md",
-      "demos/claude-platform/index.html",
-      "demos/claude-platform/journey.js",
-      "demos/claude-platform/script.js",
-      "demos/claude-platform/style.css",
-      "entries/claude-platform.json",
-      "research/claude-platform.md"
+      "demos/cases/claude-platform/fidelity.md",
+      "demos/cases/claude-platform/index.html",
+      "demos/cases/claude-platform/journey.js",
+      "demos/cases/claude-platform/script.js",
+      "demos/cases/claude-platform/style.css",
+      "entries/cases/claude-platform.json"
     ]
   },
   "sourceCases": [
@@ -73,7 +72,7 @@
       "title": "Claude — 衬线语气与 Cowork 演示",
       "paths": {
         "bundle": "agent/cases/claude-platform.json",
-        "demo": "demos/claude-platform/index.html"
+        "demo": "demos/cases/claude-platform/index.html"
       }
     }
   ]

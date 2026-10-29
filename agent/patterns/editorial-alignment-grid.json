@@ -46,15 +46,15 @@
     "sources": [
       {
         "caseId": "swiss-grid",
-        "locator": "entries/swiss-grid.json#composition/layout",
+        "locator": "entries/cases/swiss-grid.json#composition/layout",
         "observation": "12 栏、32px 基础间距、横向日程列表；手机为单列",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/swiss-grid/index.html",
-      "entries/swiss-grid.json",
-      "research/swiss-grid.md"
+      "demos/cases/swiss-grid/index.html",
+      "entries/cases/swiss-grid.json",
+      "docs/research/swiss-grid.md"
     ]
   },
   "sourceCases": [
@@ -63,7 +63,7 @@
       "title": "瑞士设计：编辑网格",
       "paths": {
         "bundle": "agent/cases/swiss-grid.json",
-        "demo": "demos/swiss-grid/index.html"
+        "demo": "demos/cases/swiss-grid/index.html"
       }
     }
   ]

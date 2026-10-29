@@ -58,7 +58,7 @@
     "sources": [
       {
         "caseId": "arknights-world",
-        "locator": "entries/arknights-world.json#interaction/0",
+        "locator": "entries/cases/arknights-world.json#interaction/0",
         "observation": "首次/缓存重载均先显示全屏LOADING；本地按五份实际图片完成数显示进度，再开放初始hash所指章节。",
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
@@ -66,7 +66,7 @@
       },
       {
         "caseId": "endfield-industrial",
-        "locator": "entries/endfield-industrial.json#interaction/0",
+        "locator": "entries/cases/endfield-industrial.json#interaction/0",
         "observation": "载入与导航：使用原Updating图形和排版，本地必要首页图、干员图与字体的实际完成数推进；失败提供重试/继续。侧栏hover300ms展开，手机菜单、章节导航和自然滚动回程沿原结构。进度是任务完成比例，不声称网络字节百分比。",
         "evidence": "adapted",
         "referenceUrl": "https://endfield.hypergryph.com/",
@@ -74,22 +74,22 @@
       }
     ],
     "sourceFiles": [
-      "demos/arknights-world/fidelity.md",
-      "demos/arknights-world/index.html",
-      "demos/arknights-world/particles.js",
-      "demos/arknights-world/script.js",
-      "demos/arknights-world/style.css",
-      "entries/arknights-world.json",
-      "research/arknights-world.md",
-      "entries/endfield-industrial.json",
-      "research/endfield-industrial.md",
-      "demos/endfield-industrial/fidelity.md",
-      "demos/endfield-industrial/state-matrix.md",
-      "demos/endfield-industrial/source-provenance.json",
-      "demos/endfield-industrial/index.html",
-      "demos/endfield-industrial/reference.css",
-      "demos/endfield-industrial/state.css",
-      "demos/endfield-industrial/app.js"
+      "demos/cases/arknights-world/fidelity.md",
+      "demos/cases/arknights-world/index.html",
+      "demos/cases/arknights-world/particles.js",
+      "demos/cases/arknights-world/script.js",
+      "demos/cases/arknights-world/style.css",
+      "entries/cases/arknights-world.json",
+      "docs/research/arknights-world.md",
+      "entries/cases/endfield-industrial.json",
+      "docs/research/endfield-industrial.md",
+      "demos/cases/endfield-industrial/fidelity.md",
+      "demos/cases/endfield-industrial/source/state-matrix.md",
+      "demos/cases/endfield-industrial/source/source-provenance.json",
+      "demos/cases/endfield-industrial/index.html",
+      "demos/cases/endfield-industrial/reference.css",
+      "demos/cases/endfield-industrial/state.css",
+      "demos/cases/endfield-industrial/app.js"
     ]
   },
   "sourceCases": [
@@ -98,7 +98,7 @@
       "title": "明日方舟 · 全屏档案与交互点阵",
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
-        "demo": "demos/arknights-world/index.html"
+        "demo": "demos/cases/arknights-world/index.html"
       }
     },
     {
@@ -106,7 +106,7 @@
       "title": "终末地 · 完整工业科幻门户",
       "paths": {
         "bundle": "agent/cases/endfield-industrial.json",
-        "demo": "demos/endfield-industrial/index.html"
+        "demo": "demos/cases/endfield-industrial/index.html"
       }
     }
   ]

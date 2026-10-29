@@ -4,13 +4,13 @@ window.DESIGN_MATERIALS = [
     "title": "98.css · 复古桌面组件",
     "type": "component-library",
     "category": "组件与效果",
-    "demo": "material-demos/98-css/index.html",
+    "demo": "demos/materials/98-css/index.html",
     "preview": "previews/materials/98-css.png",
-    "research": "docs/materials-98-css.md",
+    "research": "docs/materials/98-css.md",
     "sourceFiles": [
-      "material-demos/98-css/index.html",
-      "material-demos/98-css/demo.css",
-      "material-demos/98-css/demo.js"
+      "demos/materials/98-css/index.html",
+      "demos/materials/98-css/demo.css",
+      "demos/materials/98-css/demo.js"
     ],
     "summary": "以真实 Windows 98 风格 CSS 组合设置窗口、可筛选素材目录与可暂停进度；保留复古边框，同时提高文字与触控可用性。",
     "install": "npm install 98.css@0.1.21",
@@ -101,7 +101,7 @@ window.DESIGN_MATERIALS = [
         "title": "设置窗口",
         "component": "window / title-bar / form / tabs",
         "summary": "在外观与选项间切换，应用桌面配色与留白并重置。",
-        "entrypoint": "material-demos/98-css/index.html?demo=settings",
+        "entrypoint": "demos/materials/98-css/index.html?demo=settings",
         "parameters": [
           {
             "name": "桌面配色",
@@ -120,7 +120,7 @@ window.DESIGN_MATERIALS = [
         "title": "素材目录",
         "component": "sunken-panel / table / highlighted",
         "summary": "输入名称筛选三项示例，选中后查看用途并测试空结果。",
-        "entrypoint": "material-demos/98-css/index.html?demo=catalog",
+        "entrypoint": "demos/materials/98-css/index.html?demo=catalog",
         "parameters": [
           {
             "name": "filter",
@@ -139,7 +139,7 @@ window.DESIGN_MATERIALS = [
         "title": "传输进度",
         "component": "progress-indicator / segmented",
         "summary": "切换实心或分段进度，开始、暂停、单步、重置；不执行真实下载。",
-        "entrypoint": "material-demos/98-css/index.html?demo=progress",
+        "entrypoint": "demos/materials/98-css/index.html?demo=progress",
         "parameters": [
           {
             "name": "value",
@@ -262,7 +262,7 @@ window.DESIGN_MATERIALS = [
       "reducedMotion": "本资源为工作流与文本快照，没有自动播放的演示；文章内自由图文层若带动效，需要在技术终审中检查移动端与可访问性。"
     },
     "preview": "previews/materials/beautiful-article.png",
-    "research": "docs/materials-beautiful-article.md",
+    "research": "docs/materials/beautiful-article.md",
     "sourceFiles": [
       "agent-skills/beautiful-article/SKILL.md",
       "agent-skills/beautiful-article/README.md"
@@ -393,7 +393,7 @@ window.DESIGN_MATERIALS = [
         "title": "操作层级",
         "component": "MdFilledButton / MdOutlinedButton / MdTextButton",
         "summary": "对比填充、描边与文字操作；添加后禁用主要按钮，查看安排保留次要层级，重置可重复体验。",
-        "entrypoint": "material-demos/material-web/index.html?sample=actions",
+        "entrypoint": "demos/materials/material-web/index.html?sample=actions",
         "parameters": [
           {
             "name": "--md-*-button-container-shape",
@@ -417,7 +417,7 @@ window.DESIGN_MATERIALS = [
         "title": "表单验证",
         "component": "MdOutlinedTextField",
         "summary": "保留浮动标签，比较空值、无效邮箱与校验通过；输入只在内存中，不发送或保存。",
-        "entrypoint": "material-demos/material-web/index.html?sample=form",
+        "entrypoint": "demos/materials/material-web/index.html?sample=form",
         "parameters": [
           {
             "name": "required / type / maxlength",
@@ -436,7 +436,7 @@ window.DESIGN_MATERIALS = [
         "title": "偏好设置",
         "component": "MdSwitch / MdSlider",
         "summary": "开关控制预览中的完成标记，离散滑块控制目标数量；支持键盘方向键、Home/End和触摸。",
-        "entrypoint": "material-demos/material-web/index.html?sample=preferences",
+        "entrypoint": "demos/materials/material-web/index.html?sample=preferences",
         "parameters": [
           {
             "name": "selected",
@@ -460,7 +460,7 @@ window.DESIGN_MATERIALS = [
         "title": "确认对话框",
         "component": "MdDialog / MdFilledTonalButton",
         "summary": "打开确认、取消/Escape返回、确认归档和恢复计划；关注局部状态、焦点与撤回路径。",
-        "entrypoint": "material-demos/material-web/index.html?sample=dialog",
+        "entrypoint": "demos/materials/material-web/index.html?sample=dialog",
         "parameters": [
           {
             "name": "type",
@@ -485,14 +485,14 @@ window.DESIGN_MATERIALS = [
       "keyboard": "原生按钮切换样例，真实官方组件处理Tab、Enter/Space、滑块方向键/Home/End与Escape。所有输入和开关有标签，错误状态同步可见消息；对话框关闭后等待触发按钮渲染完成再恢复焦点。",
       "reducedMotion": "遵循prefers-reduced-motion，并提供手动减少动效。以本地Shadow DOM样式关闭过渡、禁用ripple、dialog.quick跳过开关动画；slider值标签不使用缩放过渡。无自动循环、音频或计时器，隐藏页面结束当前短动画。"
     },
-    "demo": "material-demos/material-web/index.html",
+    "demo": "demos/materials/material-web/index.html",
     "preview": "previews/materials/material-web.png",
-    "research": "docs/materials-material-web.md",
+    "research": "docs/materials/material-web.md",
     "sourceFiles": [
-      "material-demos/material-web/index.html",
-      "material-demos/material-web/demo.css",
-      "material-demos/material-web/demo.js",
-      "material-demos/material-web/vendor/components.mjs"
+      "demos/materials/material-web/index.html",
+      "demos/materials/material-web/demo.css",
+      "demos/materials/material-web/demo.js",
+      "demos/materials/material-web/source/vendor/components.mjs"
     ]
   },
   {
@@ -585,7 +585,7 @@ window.DESIGN_MATERIALS = [
         "title": "Tufte · 咖啡因与睡眠：一份关于半衰期的笔记",
         "component": "CaffeineHalfLife",
         "summary": "数据墨水风格：克制衬线、充裕页边、发丝参考线与低装饰图表，让论点和证据承载视觉层级。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=caffeine-half-life",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=caffeine-half-life",
         "parameters": [
           {
             "name": "主题",
@@ -599,7 +599,7 @@ window.DESIGN_MATERIALS = [
         "title": "Press · 活字之后",
         "component": "MovableType",
         "summary": "出版书卷风格：暖纸与从容衬线，以线代框，保留数据墨水纪律，用更外放的字号和版式组织叙事。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=movable-type",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=movable-type",
         "parameters": [
           {
             "name": "主题",
@@ -613,7 +613,7 @@ window.DESIGN_MATERIALS = [
         "title": "Shannon · 连接池耗尽：一次结算级联故障复盘",
         "component": "PoolExhaustion",
         "summary": "暗色工程风格：温暖石墨底、暖白墨与琥珀信号色，围绕日志、代码、事件与决策组织可核查证据。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=pool-exhaustion",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=pool-exhaustion",
         "parameters": [
           {
             "name": "主题",
@@ -627,7 +627,7 @@ window.DESIGN_MATERIALS = [
         "title": "Vignelli · Orbit 设计系统 · 基础规范",
         "component": "OrbitSpec",
         "summary": "瑞士国际主义风格：冷中性纸面、无衬线字号层级、严密网格与一抹结构红，适合系统规范。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=orbit-spec",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=orbit-spec",
         "parameters": [
           {
             "name": "主题",
@@ -641,7 +641,7 @@ window.DESIGN_MATERIALS = [
         "title": "Knuth · 以核特征映射线性化自注意力：一个复杂度视角",
         "component": "LinearAttention",
         "summary": "学术预印本风格：正式衬线、编号章节和图表、公式优先与密集引用，强调推导和可核查性。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=linear-attention",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=linear-attention",
         "parameters": [
           {
             "name": "主题",
@@ -655,7 +655,7 @@ window.DESIGN_MATERIALS = [
         "title": "Freddie · 第一封 Newsletter：一份不端着的上手指南",
         "component": "FirstNewsletter",
         "summary": "温暖人文风格：白纸黑墨与明黄荧光色块，俏皮衬线标题配干净无衬线正文，亲切且专业。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=first-newsletter",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=first-newsletter",
         "parameters": [
           {
             "name": "主题",
@@ -669,7 +669,7 @@ window.DESIGN_MATERIALS = [
         "title": "Andy · 把呼吸放慢：盒式呼吸与平静的神经科学",
         "component": "SlowBreathing",
         "summary": "静谧人文风格：暖奶油纸、南瓜橙、暖灰墨与圆润字体，大圆角、柔和阴影和留白帮助放慢节奏。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=slow-breathing",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=slow-breathing",
         "parameters": [
           {
             "name": "主题",
@@ -683,7 +683,7 @@ window.DESIGN_MATERIALS = [
         "title": "Bodoni · 头版的消亡",
         "component": "FrontPage",
         "summary": "黑白报刊风格：纯白纸、真黑墨与发丝栏线，大字刊头、首字下沉和粗细双线建立印刷层级。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=front-page",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=front-page",
         "parameters": [
           {
             "name": "主题",
@@ -697,7 +697,7 @@ window.DESIGN_MATERIALS = [
         "title": "Bayer · 形、色、网格：看得懂的视觉语法",
         "component": "GeometryOfMeaning",
         "summary": "包豪斯构成风格：暖纸黑墨，以红蓝黄三原色、几何无衬线、硬边与圆形数字组织清晰结构。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=geometry-of-meaning",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=geometry-of-meaning",
         "parameters": [
           {
             "name": "主题",
@@ -711,7 +711,7 @@ window.DESIGN_MATERIALS = [
         "title": "Fuller · 限流器设计规格",
         "component": "RateLimiterSpec",
         "summary": "工程蓝图风格：深蓝底、青白墨、制图青与淡方格网，搭配等宽标注、虚线分节和发丝拓扑。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=rate-limiter-spec",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=rate-limiter-spec",
         "parameters": [
           {
             "name": "主题",
@@ -725,7 +725,7 @@ window.DESIGN_MATERIALS = [
         "title": "Sottsass · 撞色不翻车",
         "component": "ColorClash",
         "summary": "孟菲斯风格：奶油纸、黑墨与粉青黄蓝撞色，以硬投影、轻旋转、彩色药丸和几何彩屑制造节奏。",
-        "entrypoint": "material-demos/reacticle/index.html?demo=color-clash",
+        "entrypoint": "demos/materials/reacticle/index.html?demo=color-clash",
         "parameters": [
           {
             "name": "主题",
@@ -740,46 +740,46 @@ window.DESIGN_MATERIALS = [
       "keyboard": "保留原报告的语义化正文、目录、真实按钮、滑块、展开控件及图表标签；键盘操作和读屏器表现需按所选文章实测，源码复用不等于全部辅助技术验收。",
       "reducedMotion": "沿用原站与主题中的 prefers-reduced-motion CSS；呼吸练习计时仍由原始开始／暂停控件控制，不增加额外动态行为。"
     },
-    "demo": "material-demos/reacticle/index.html",
+    "demo": "demos/materials/reacticle/index.html",
     "preview": "previews/materials/reacticle.png",
-    "research": "docs/materials-reacticle.md",
+    "research": "docs/materials/reacticle.md",
     "sourceFiles": [
-      "material-demos/reacticle/index.html",
-      "material-demos/reacticle/demo.js",
-      "material-demos/reacticle/caffeine-half-life/index.html",
-      "material-demos/reacticle/caffeine-half-life/assets/index-DMYwhlbL.js",
-      "material-demos/reacticle/caffeine-half-life/assets/index-WxgjeHG6.css",
-      "material-demos/reacticle/movable-type/index.html",
-      "material-demos/reacticle/movable-type/assets/index-B-dGzE72.js",
-      "material-demos/reacticle/movable-type/assets/index-CDnsII-G.css",
-      "material-demos/reacticle/pool-exhaustion/index.html",
-      "material-demos/reacticle/pool-exhaustion/assets/index-BtWtZy11.js",
-      "material-demos/reacticle/pool-exhaustion/assets/index-CxoMmBeN.css",
-      "material-demos/reacticle/orbit-spec/index.html",
-      "material-demos/reacticle/orbit-spec/assets/index-BeERXI3Z.js",
-      "material-demos/reacticle/orbit-spec/assets/index-BguD11Q8.css",
-      "material-demos/reacticle/linear-attention/index.html",
-      "material-demos/reacticle/linear-attention/assets/index-lyo_MfEB.js",
-      "material-demos/reacticle/linear-attention/assets/index-WxgjeHG6.css",
-      "material-demos/reacticle/first-newsletter/index.html",
-      "material-demos/reacticle/first-newsletter/assets/index-DlB2uEmW.css",
-      "material-demos/reacticle/first-newsletter/assets/index-DoixGDe2.js",
-      "material-demos/reacticle/slow-breathing/index.html",
-      "material-demos/reacticle/slow-breathing/assets/index-8wSZpDKQ.js",
-      "material-demos/reacticle/slow-breathing/assets/index-DlB2uEmW.css",
-      "material-demos/reacticle/front-page/index.html",
-      "material-demos/reacticle/front-page/assets/index-CZI22ZoU.js",
-      "material-demos/reacticle/front-page/assets/index-DlB2uEmW.css",
-      "material-demos/reacticle/geometry-of-meaning/index.html",
-      "material-demos/reacticle/geometry-of-meaning/assets/index-DlB2uEmW.css",
-      "material-demos/reacticle/geometry-of-meaning/assets/index-zpQvA_KQ.js",
-      "material-demos/reacticle/rate-limiter-spec/index.html",
-      "material-demos/reacticle/rate-limiter-spec/assets/index-BguD11Q8.css",
-      "material-demos/reacticle/rate-limiter-spec/assets/index-BQymDvVh.js",
-      "material-demos/reacticle/color-clash/index.html",
-      "material-demos/reacticle/color-clash/assets/index-Dd_VDUiD.js",
-      "material-demos/reacticle/color-clash/assets/index-DlB2uEmW.css",
-      "material-demos/reacticle/vendor/fonts/fonts.css"
+      "demos/materials/reacticle/index.html",
+      "demos/materials/reacticle/demo.js",
+      "demos/materials/reacticle/caffeine-half-life/index.html",
+      "demos/materials/reacticle/caffeine-half-life/assets/index-DMYwhlbL.js",
+      "demos/materials/reacticle/caffeine-half-life/assets/index-WxgjeHG6.css",
+      "demos/materials/reacticle/movable-type/index.html",
+      "demos/materials/reacticle/movable-type/assets/index-B-dGzE72.js",
+      "demos/materials/reacticle/movable-type/assets/index-CDnsII-G.css",
+      "demos/materials/reacticle/pool-exhaustion/index.html",
+      "demos/materials/reacticle/pool-exhaustion/assets/index-BtWtZy11.js",
+      "demos/materials/reacticle/pool-exhaustion/assets/index-CxoMmBeN.css",
+      "demos/materials/reacticle/orbit-spec/index.html",
+      "demos/materials/reacticle/orbit-spec/assets/index-BeERXI3Z.js",
+      "demos/materials/reacticle/orbit-spec/assets/index-BguD11Q8.css",
+      "demos/materials/reacticle/linear-attention/index.html",
+      "demos/materials/reacticle/linear-attention/assets/index-lyo_MfEB.js",
+      "demos/materials/reacticle/linear-attention/assets/index-WxgjeHG6.css",
+      "demos/materials/reacticle/first-newsletter/index.html",
+      "demos/materials/reacticle/first-newsletter/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/first-newsletter/assets/index-DoixGDe2.js",
+      "demos/materials/reacticle/slow-breathing/index.html",
+      "demos/materials/reacticle/slow-breathing/assets/index-8wSZpDKQ.js",
+      "demos/materials/reacticle/slow-breathing/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/front-page/index.html",
+      "demos/materials/reacticle/front-page/assets/index-CZI22ZoU.js",
+      "demos/materials/reacticle/front-page/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/geometry-of-meaning/index.html",
+      "demos/materials/reacticle/geometry-of-meaning/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/geometry-of-meaning/assets/index-zpQvA_KQ.js",
+      "demos/materials/reacticle/rate-limiter-spec/index.html",
+      "demos/materials/reacticle/rate-limiter-spec/assets/index-BguD11Q8.css",
+      "demos/materials/reacticle/rate-limiter-spec/assets/index-BQymDvVh.js",
+      "demos/materials/reacticle/color-clash/index.html",
+      "demos/materials/reacticle/color-clash/assets/index-Dd_VDUiD.js",
+      "demos/materials/reacticle/color-clash/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/fonts/fonts.css"
     ]
   },
   {
@@ -875,7 +875,7 @@ window.DESIGN_MATERIALS = [
         "title": "界面标题",
         "component": "Recursive Sans Linear",
         "summary": "以比例字宽、直立字形与中粗字重建立产品标题层级；可替换文字并查看混排后备。",
-        "entrypoint": "material-demos/recursive/index.html?preset=interface",
+        "entrypoint": "demos/materials/recursive/index.html?preset=interface",
         "parameters": [
           {
             "name": "MONO / CASL",
@@ -904,7 +904,7 @@ window.DESIGN_MATERIALS = [
         "title": "等宽代码",
         "component": "Recursive Mono Linear",
         "summary": "用数字、标点和多行代码观察等宽字形；明确区分字体试排与编辑器能力。",
-        "entrypoint": "material-demos/recursive/index.html?preset=code",
+        "entrypoint": "demos/materials/recursive/index.html?preset=code",
         "parameters": [
           {
             "name": "MONO",
@@ -928,7 +928,7 @@ window.DESIGN_MATERIALS = [
         "title": "个性海报",
         "component": "Recursive Sans Casual Italic",
         "summary": "以 Casual 端点、重字重和草写短标题形成招牌气质；比较倾斜与草写的独立作用。",
-        "entrypoint": "material-demos/recursive/index.html?preset=poster",
+        "entrypoint": "demos/materials/recursive/index.html?preset=poster",
         "parameters": [
           {
             "name": "MONO / CASL",
@@ -953,13 +953,13 @@ window.DESIGN_MATERIALS = [
       "keyboard": "试排标签支持方向键和 Home/End，轴滑块、CRSV 下拉、文字输入、重置和复制均使用原生控件；焦点清晰，触摸使用原生输入。",
       "reducedMotion": "没有自动动画、音频或持续绘制；减少动态和后台时保留静态试排，轴值仅随用户输入更新。"
     },
-    "demo": "material-demos/recursive/index.html",
+    "demo": "demos/materials/recursive/index.html",
     "preview": "previews/materials/recursive.png",
-    "research": "docs/materials-recursive.md",
+    "research": "docs/materials/recursive.md",
     "sourceFiles": [
-      "material-demos/recursive/index.html",
-      "material-demos/recursive/demo.css",
-      "material-demos/recursive/demo.js"
+      "demos/materials/recursive/index.html",
+      "demos/materials/recursive/demo.css",
+      "demos/materials/recursive/demo.js"
     ]
   },
   {
@@ -1064,7 +1064,7 @@ window.DESIGN_MATERIALS = [
         "title": "流动渐变",
         "component": "MeshGradient",
         "summary": "改变色块数量、旋转与平滑度，观察首部背景如何保持氛围，同时为文字留出稳定对比。",
-        "entrypoint": "material-demos/shaders/index.html?effect=mesh-gradient",
+        "entrypoint": "demos/materials/shaders/index.html?effect=mesh-gradient",
         "parameters": [
           {
             "name": "speed",
@@ -1093,7 +1093,7 @@ window.DESIGN_MATERIALS = [
         "title": "条纹玻璃",
         "component": "FlutedGlass",
         "summary": "用同一张本地参考图观察条纹密度、角度和折射强度，学习玻璃效果对底图辨识度的影响。",
-        "entrypoint": "material-demos/shaders/index.html?effect=fluted-glass",
+        "entrypoint": "demos/materials/shaders/index.html?effect=fluted-glass",
         "parameters": [
           {
             "name": "frequency",
@@ -1122,7 +1122,7 @@ window.DESIGN_MATERIALS = [
         "title": "指针涟漪",
         "component": "CursorRipples",
         "summary": "移动指针或触摸舞台，比较涟漪的半径、衰减与色散，把局部反馈限制在内容可读的范围。",
-        "entrypoint": "material-demos/shaders/index.html?effect=cursor-ripples",
+        "entrypoint": "demos/materials/shaders/index.html?effect=cursor-ripples",
         "parameters": [
           {
             "name": "intensity",
@@ -1151,7 +1151,7 @@ window.DESIGN_MATERIALS = [
         "title": "噪声溶解",
         "component": "NoiseDissolve",
         "summary": "拖动进度观察正向与反向转场，比较颗粒尺度和边缘软度；在真实页面中同步 DOM 内容与操作状态。",
-        "entrypoint": "material-demos/shaders/index.html?effect=noise-dissolve",
+        "entrypoint": "demos/materials/shaders/index.html?effect=noise-dissolve",
         "parameters": [
           {
             "name": "progress",
@@ -1176,14 +1176,14 @@ window.DESIGN_MATERIALS = [
       "keyboard": "使用真实按钮与带标签的参数控件切换、调节、重置和暂停；指针反馈作为可选视觉装饰，信息和操作由 DOM 提供。",
       "reducedMotion": "遵循 prefers-reduced-motion 停止自动运行，以静态状态保留配色和参数学习；主动演示需有可用的停止控制。"
     },
-    "demo": "material-demos/shaders/index.html",
+    "demo": "demos/materials/shaders/index.html",
     "preview": "previews/materials/shaders.png",
-    "research": "docs/materials.md",
+    "research": "docs/materials/README.md",
     "sourceFiles": [
-      "material-demos/shaders/index.html",
-      "material-demos/shaders/demo.css",
-      "material-demos/shaders/demo.js",
-      "material-demos/shaders/reference.svg"
+      "demos/materials/shaders/index.html",
+      "demos/materials/shaders/demo.css",
+      "demos/materials/shaders/demo.js",
+      "demos/materials/shaders/reference.svg"
     ]
   },
   {
@@ -1302,7 +1302,7 @@ window.DESIGN_MATERIALS = [
         "title": "吊灯照亮网页",
         "component": "HTMLTexture / SpotLight / Verlet",
         "summary": "拖动吊灯照亮 MORS² 原作页面，松手观察摆动；用原面板调整光束、亮度、预设与自定义颜色。",
-        "entrypoint": "material-demos/three-html-render/index.html?demo=lamp",
+        "entrypoint": "demos/materials/three-html-render/index.html?demo=lamp",
         "parameters": [
           {
             "name": "angle",
@@ -1331,7 +1331,7 @@ window.DESIGN_MATERIALS = [
         "title": "基础平面",
         "component": "HTMLTexture / InteractionManager",
         "summary": "将同一 MORS² 页面贴在轻微倾斜的 3D 平面上，切换五个概念并操作灯光面板。",
-        "entrypoint": "material-demos/three-html-render/index.html?demo=plane",
+        "entrypoint": "demos/materials/three-html-render/index.html?demo=plane",
         "parameters": [
           {
             "name": "倾斜",
@@ -1351,14 +1351,14 @@ window.DESIGN_MATERIALS = [
       "keyboard": "本地无头 Edge 实测 Tab 依次聚焦 Space、Meta、Field、Rule、Latent、power、beam，focus-visible 落在文档内真实 DOM 控件；ArrowRight 将光束角度 34 调至 35。五个概念点击均成功，读屏器未验证。",
       "reducedMotion": "本地无头 Edge 的 reduce 模拟中灯固定，间隔 1 秒绘制计数保持 10；plane 在指针移动前后的矩阵相同，正常模式会改变。面板即时生效，真实设备与其他浏览器未验证。"
     },
-    "demo": "material-demos/three-html-render/index.html",
+    "demo": "demos/materials/three-html-render/index.html",
     "preview": "previews/materials/three-html-render.png",
-    "research": "docs/materials-three-html-render.md",
+    "research": "docs/materials/three-html-render.md",
     "sourceFiles": [
-      "material-demos/three-html-render/index.html",
-      "material-demos/three-html-render/demo.css",
-      "material-demos/three-html-render/demo.js",
-      "material-demos/three-html-render/mors-logo.svg"
+      "demos/materials/three-html-render/index.html",
+      "demos/materials/three-html-render/demo.css",
+      "demos/materials/three-html-render/demo.js",
+      "demos/materials/three-html-render/mors-logo.svg"
     ]
   },
   {
@@ -1455,7 +1455,7 @@ window.DESIGN_MATERIALS = [
       "reducedMotion": "本资源为工作流与文本快照，没有自动播放的演示；应用技能时根据动效强度与用户环境处理减少动态。"
     },
     "preview": "previews/materials/web-design-engineer.jpg",
-    "research": "docs/materials-web-design-engineer.md",
+    "research": "docs/materials/web-design-engineer.md",
     "sourceFiles": [
       "agent-skills/web-design-engineer/SKILL.md",
       "agent-skills/web-design-engineer/README.md"
@@ -1466,13 +1466,13 @@ window.DESIGN_MATERIALS = [
     "title": "Wired Elements · 可操作的手绘草稿",
     "type": "component-library",
     "category": "组件与效果",
-    "demo": "material-demos/wired-elements/index.html",
+    "demo": "demos/materials/wired-elements/index.html",
     "preview": "previews/materials/wired-elements.png",
-    "research": "docs/materials-wired-elements.md",
+    "research": "docs/materials/wired-elements.md",
     "sourceFiles": [
-      "material-demos/wired-elements/index.html",
-      "material-demos/wired-elements/demo.css",
-      "material-demos/wired-elements/demo.js"
+      "demos/materials/wired-elements/index.html",
+      "demos/materials/wired-elements/demo.css",
+      "demos/materials/wired-elements/demo.js"
     ],
     "summary": "用真实手绘 Web Components 组合任务清单、偏好面板与概念卡片；让草图在保留讨论感的同时具备可验证的状态。",
     "install": "npm install wired-elements@2.1.2",
@@ -1576,7 +1576,7 @@ window.DESIGN_MATERIALS = [
         "title": "任务清单",
         "component": "wired-checkbox / wired-progress / wired-button",
         "summary": "勾选真实手绘复选框，计数同步进度条；可恢复默认。",
-        "entrypoint": "material-demos/wired-elements/index.html?demo=checklist",
+        "entrypoint": "demos/materials/wired-elements/index.html?demo=checklist",
         "parameters": [
           {
             "name": "checked",
@@ -1595,7 +1595,7 @@ window.DESIGN_MATERIALS = [
         "title": "偏好面板",
         "component": "wired-toggle / wired-checkbox",
         "summary": "设置专注模式与摘要，再应用到当前示例；不修改系统或保存偏好。",
-        "entrypoint": "material-demos/wired-elements/index.html?demo=preferences",
+        "entrypoint": "demos/materials/wired-elements/index.html?demo=preferences",
         "parameters": [
           {
             "name": "checked",
@@ -1609,7 +1609,7 @@ window.DESIGN_MATERIALS = [
         "title": "概念卡片",
         "component": "wired-card / wired-slider",
         "summary": "调整真实手绘卡片的层级与填色，比较概念信息的主次。",
-        "entrypoint": "material-demos/wired-elements/index.html?demo=card",
+        "entrypoint": "demos/materials/wired-elements/index.html?demo=card",
         "parameters": [
           {
             "name": "elevation",

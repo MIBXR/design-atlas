@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "rijksmuseum-art",
-        "locator": "entries/rijksmuseum-art.json#constraints/3",
+        "locator": "entries/cases/rijksmuseum-art.json#constraints/3",
         "observation": "照片底部加局部黑色渐变支撑文字对比；不对整张照片做滤镜风格化。",
         "evidence": "observed",
         "referenceUrl": "https://www.rijksmuseum.nl/en",
@@ -48,12 +48,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/rijksmuseum-art/fidelity.md",
-      "demos/rijksmuseum-art/index.html",
-      "demos/rijksmuseum-art/script.js",
-      "demos/rijksmuseum-art/style.css",
-      "entries/rijksmuseum-art.json",
-      "research/rijksmuseum-art.md"
+      "demos/cases/rijksmuseum-art/fidelity.md",
+      "demos/cases/rijksmuseum-art/index.html",
+      "demos/cases/rijksmuseum-art/script.js",
+      "demos/cases/rijksmuseum-art/style.css",
+      "entries/cases/rijksmuseum-art.json",
+      "docs/research/rijksmuseum-art.md"
     ]
   },
   "sourceCases": [
@@ -62,7 +62,7 @@
       "title": "Rijksmuseum · 全幅摄影与巨大字标",
       "paths": {
         "bundle": "agent/cases/rijksmuseum-art.json",
-        "demo": "demos/rijksmuseum-art/index.html"
+        "demo": "demos/cases/rijksmuseum-art/index.html"
       }
     }
   ]

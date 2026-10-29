@@ -40,17 +40,17 @@
     "sources": [
       {
         "caseId": "isometric-3d",
-        "locator": "entries/isometric-3d.json#composition/shape",
+        "locator": "entries/cases/isometric-3d.json#composition/shape",
         "observation": "平行边、统一30°方向和几何积木建立一致空间规则。",
         "evidence": "adapted"
       }
     ],
     "sourceFiles": [
-      "demos/isometric-3d/index.html",
-      "demos/isometric-3d/script.js",
-      "demos/isometric-3d/style.css",
-      "entries/isometric-3d.json",
-      "research/isometric-3d.md"
+      "demos/cases/isometric-3d/index.html",
+      "demos/cases/isometric-3d/script.js",
+      "demos/cases/isometric-3d/style.css",
+      "entries/cases/isometric-3d.json",
+      "docs/research/isometric-3d.md"
     ]
   },
   "sourceCases": [
@@ -59,7 +59,7 @@
       "title": "等轴 3D：让空间讲述系统",
       "paths": {
         "bundle": "agent/cases/isometric-3d.json",
-        "demo": "demos/isometric-3d/index.html"
+        "demo": "demos/cases/isometric-3d/index.html"
       }
     }
   ]

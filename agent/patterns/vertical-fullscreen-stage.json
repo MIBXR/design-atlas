@@ -42,7 +42,7 @@
     "sources": [
       {
         "caseId": "genshin-world",
-        "locator": "entries/genshin-world.json#interaction/0",
+        "locator": "entries/cases/genshin-world.json#interaction/0",
         "observation": "滚轮或竖向手势推进整屏舞台，反向返回；末尾以有限位移露出 footer，避免把正常长页当作源站 Swiper。",
         "evidence": "observed",
         "referenceUrl": "https://genshin.hoyoverse.com/en/",
@@ -50,12 +50,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/genshin-world/fidelity.md",
-      "demos/genshin-world/index.html",
-      "demos/genshin-world/script.js",
-      "demos/genshin-world/style.css",
-      "entries/genshin-world.json",
-      "research/genshin-world.md"
+      "demos/cases/genshin-world/fidelity.md",
+      "demos/cases/genshin-world/index.html",
+      "demos/cases/genshin-world/script.js",
+      "demos/cases/genshin-world/style.css",
+      "entries/cases/genshin-world.json",
+      "docs/research/genshin-world.md"
     ]
   },
   "sourceCases": [
@@ -64,7 +64,7 @@
       "title": "原神 · 版本群像与角色舞台",
       "paths": {
         "bundle": "agent/cases/genshin-world.json",
-        "demo": "demos/genshin-world/index.html"
+        "demo": "demos/cases/genshin-world/index.html"
       }
     }
   ]

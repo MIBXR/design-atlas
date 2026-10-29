@@ -9,7 +9,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(root, 'dist');
 export const files = ['index.html', 'cases.html', 'patterns.html', 'materials.html', 'lab.html', 'agent.html', 'docs.html', 'asset-cache-worker.js', 'README.md', 'CONTRIBUTING.md'];
 const runtimeFiles = ['data/asset-sources.js', 'site/runtime/asset-runtime.js', 'site/runtime/asset-cache.js', 'asset-cache-worker.js', 'site/runtime/case-loading.js', 'site/runtime/case-loading.css'];
-export const folders = ['site', 'data', 'demos', 'entries', 'patterns', 'materials', 'material-demos', 'agent-skills', 'previews', 'research', 'prompts', 'docs', 'agent'];
+export const folders = ['site', 'data', 'demos', 'entries', 'agent-skills', 'previews', 'prompts', 'docs', 'agent'];
 const localOrigin = 'https://design-atlas.invalid';
 
 function localReference(value, documentPath) {

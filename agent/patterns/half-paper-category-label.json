@@ -54,7 +54,7 @@
     "sources": [
       {
         "caseId": "palace-museum",
-        "locator": "entries/palace-museum.json#composition/shape",
+        "locator": "entries/cases/palace-museum.json#composition/shape",
         "observation": "源端观察：矩形章节与专题图像上右半幅浅纸签并置，竖排类目为独立可读文字。",
         "evidence": "observed",
         "referenceUrl": "https://www.dpm.org.cn/Explore.html",
@@ -62,13 +62,13 @@
       }
     ],
     "sourceFiles": [
-      "entries/palace-museum.json",
-      "research/palace-museum.md",
-      "demos/palace-museum/fidelity.md",
-      "demos/palace-museum/index.html",
-      "demos/palace-museum/style.css",
-      "demos/palace-museum/app.js",
-      "demos/palace-museum/state-matrix.md"
+      "entries/cases/palace-museum.json",
+      "docs/research/palace-museum.md",
+      "demos/cases/palace-museum/fidelity.md",
+      "demos/cases/palace-museum/index.html",
+      "demos/cases/palace-museum/style.css",
+      "demos/cases/palace-museum/app.js",
+      "demos/cases/palace-museum/source/state-matrix.md"
     ]
   },
   "sourceCases": [
@@ -77,7 +77,7 @@
       "title": "故宫 · 六章探索与宫廷视觉目录",
       "paths": {
         "bundle": "agent/cases/palace-museum.json",
-        "demo": "demos/palace-museum/index.html"
+        "demo": "demos/cases/palace-museum/index.html"
       }
     }
   ]

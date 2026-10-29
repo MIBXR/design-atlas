@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "stripe-platform",
-        "locator": "entries/stripe-platform.json#interaction/0",
+        "locator": "entries/cases/stripe-platform.json#interaction/0",
         "observation": "进入 → 隔离的官方 SingleWave 网格/shader/调色渲染；提供暂停，菜单/弹窗/后台/离屏暂停，GPU 失败使用官方静帧。",
         "evidence": "adapted",
         "referenceUrl": "https://stripe.com/",
@@ -48,14 +48,14 @@
       }
     ],
     "sourceFiles": [
-      "demos/stripe-platform/fidelity.md",
-      "demos/stripe-platform/index.html",
-      "demos/stripe-platform/journey.js",
-      "demos/stripe-platform/script.js",
-      "demos/stripe-platform/style.css",
-      "demos/stripe-platform/wave.js",
-      "entries/stripe-platform.json",
-      "research/stripe-platform.md"
+      "demos/cases/stripe-platform/fidelity.md",
+      "demos/cases/stripe-platform/index.html",
+      "demos/cases/stripe-platform/journey.js",
+      "demos/cases/stripe-platform/script.js",
+      "demos/cases/stripe-platform/style.css",
+      "demos/cases/stripe-platform/wave.js",
+      "entries/cases/stripe-platform.json",
+      "docs/research/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -64,7 +64,7 @@
       "title": "Stripe — 彩带与金融产品矩阵",
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "demo": "demos/stripe-platform/index.html"
+        "demo": "demos/cases/stripe-platform/index.html"
       }
     }
   ]

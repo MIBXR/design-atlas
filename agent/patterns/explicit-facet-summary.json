@@ -53,7 +53,7 @@
     "sources": [
       {
         "caseId": "digital-dunhuang",
-        "locator": "entries/digital-dunhuang.json#interaction/2",
+        "locator": "entries/cases/digital-dunhuang.json#interaction/2",
         "observation": "条件反馈：点击原条件可移除，已选条件行显示并可取消，折叠筛选耗时1000ms；北魏实测254、257、麦积127三项，叠加榆林窟为零项，浏览器返回恢复。",
         "evidence": "adapted",
         "referenceUrl": "https://www.e-dunhuang.com/section.htm",
@@ -61,16 +61,16 @@
       }
     ],
     "sourceFiles": [
-      "entries/digital-dunhuang.json",
-      "research/digital-dunhuang.md",
-      "demos/digital-dunhuang/fidelity.md",
-      "demos/digital-dunhuang/index.html",
-      "demos/digital-dunhuang/style.css",
-      "demos/digital-dunhuang/app.js",
-      "demos/digital-dunhuang/state-matrix.md",
-      "demos/digital-dunhuang/section.html",
-      "demos/digital-dunhuang/catalogue.js",
-      "demos/digital-dunhuang/filter-evidence.json"
+      "entries/cases/digital-dunhuang.json",
+      "docs/research/digital-dunhuang.md",
+      "demos/cases/digital-dunhuang/fidelity.md",
+      "demos/cases/digital-dunhuang/index.html",
+      "demos/cases/digital-dunhuang/style.css",
+      "demos/cases/digital-dunhuang/app.js",
+      "demos/cases/digital-dunhuang/source/state-matrix.md",
+      "demos/cases/digital-dunhuang/section.html",
+      "demos/cases/digital-dunhuang/catalogue.js",
+      "demos/cases/digital-dunhuang/filter-evidence.json"
     ]
   },
   "sourceCases": [
@@ -79,7 +79,7 @@
       "title": "数字敦煌 · 全幅影像与真实瓦片细察",
       "paths": {
         "bundle": "agent/cases/digital-dunhuang.json",
-        "demo": "demos/digital-dunhuang/index.html"
+        "demo": "demos/cases/digital-dunhuang/index.html"
       }
     }
   ]

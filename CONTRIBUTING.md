@@ -58,7 +58,7 @@ Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、�
 
 文档中心复用现有 Markdown 阅读页，左侧列出静态发布范围内的全部公开文档并标明当前项；页脚“项目资料”提供入口。桌面三栏位于同一居中容器内，正文行宽有上限。右侧本文目录只列一、二级标题，窄屏收起，手机通过右下角浮动按钮展开，可关闭、按 Escape 或选择章节后收起，与标题栏的全站文档目录互斥。左侧初始展开当前文档所属分类；切换文档保留手动开合与侧栏滚动，进入新分类时仅展开目标分类。目录控制与分类标题在栏内置顶。
 
-`scripts/build-documents.mjs` 按 `scripts/build-static.mjs` 的 `files`／`folders` 递归发现公开 `.md`。新增文档放在既有公开目录（如 `docs/`、`research/`、`prompts/`）；根目录的新文件或新目录先纳入发布清单。项目指南使用固定标题，其余读取首个一级标题，无标题时用文件名。分类：案例 `research` 关联的研究归为“案例研究”，`research/` 其余文档归为“研究方法与索引”，`prompts/` 归为“复用 Prompt”，其余归为“复现与素材”。`npm run build` 生成 `data/docs.js`。
+`scripts/build-documents.mjs` 按 `scripts/build-static.mjs` 的 `files`／`folders` 递归发现公开 `.md`。新增文档放在既有公开目录（如 `docs/`、`docs/research/`、`prompts/`）；根目录的新文件或新目录先纳入发布清单。项目指南使用固定标题，其余读取首个一级标题，无标题时用文件名。分类：案例 `research` 关联的研究归为“案例研究”，`docs/research/` 其余文档归为“研究方法与索引”，`prompts/` 归为“复用 Prompt”，其余归为“复现与素材”。`npm run build` 生成 `data/docs.js`。
 
 ## 观察与实现
 
@@ -69,7 +69,7 @@ Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、�
 5. 声音：独立BGM、开场音、操作音、影片声音、外部播放列表分别描述，保留原站的启用／静音／暂停流程与原音轨。游戏页面逐一核对悬停、选择、切换、开合等操作音的时机、与视觉反馈的先后、音量与关闭/后台策略；桌面/手机入口、开关状态共享和键盘触发一并核对。原站没有的策略标为本地补充；无音乐的原站不加配乐。
 6. 主题：固定、系统、手动、系统＋手动分别描述。切换时协调背景、表面、文字、强调、边界；图像保留原色。没有切换的强IP／摄影风格保留固定主题，并说明其设计作用。
 7. `fidelity.md` 描述当前实现：触发、原站响应、本地对应、设计作用，以及已复现／近似／未验证的边界。交易／预约／账号可以链接原站。
-8. **提取巧思**：按“一个触发与结果／一条构成规则”把可独立学习或组合的机制保存为 `patterns/<id>.json`，完整案例保留它们如何协作。先搜索已有巧思，同一机制合并为多来源。
+8. **提取巧思**：按“一个触发与结果／一条构成规则”把可独立学习或组合的机制保存为 `entries/patterns/<id>.json`，完整案例保留它们如何协作。先搜索已有巧思，同一机制合并为多来源。
 
 ## 原站与本地的动态对照
 
@@ -93,7 +93,19 @@ Prompt写结构、尺度、素材、关键状态及交接、音乐和主题行�
 
 ## 数据与文件
 
-终态文件包括 `entries/<id>.json`、`research/<id>.md`、`demos/<id>/`、`previews/<id>.jpg` 和 `previews/mobile/<id>.jpg`。预览来自实际浏览器：桌面为横向、手机为纵向，扩展名与真实编码一致。素材清单包含本地字体、图像、音视频及必要的独立运行模块。
+终态文件包括 `entries/cases/<id>.json`、`docs/research/<id>.md`、`demos/cases/<id>/`、`previews/cases/<id>.jpg` 和 `previews/cases/<id>-mobile.jpg`。预览来自实际浏览器：桌面为横向、手机为纵向，扩展名与真实编码一致。素材清单包含本地字体、图像、音视频及必要的独立运行模块。
+
+```text
+demos/cases/<id>/
+├── index.html           入口页面与作品代码
+├── assets/              图片、音视频与数据
+├── fonts/               字体与许可原文
+├── vendor/<库>/         第三方运行库与许可原文
+├── source/              过程资料与复刻未使用的原站素材
+├── fidelity.md          当前复现范围
+├── assets-manifest.json 素材来源与用途
+└── LICENSES.md          已收录许可原文的位置与覆盖范围
+```
 
 `composition` 包含 color、typography、layout、imagery、shape、hierarchy、motion、coherence。`sources` 至少含真实实例与理论／规范，注明每条来源支持的结论。
 
@@ -107,7 +119,7 @@ Prompt写结构、尺度、素材、关键状态及交接、音乐和主题行�
 
 ## 设计巧思的数据与证据
 
-`patterns/<语义英文-kebab-id>.json` 是人工策展的内容源。字段与校验以 `scripts/build-patterns.mjs` 为准：`summary` 一句话说明价值；`mechanism`、`trigger`、`effect` 分别说明机制、触发和可见结果；`useCases`、`avoid`、`constraints`、`prompt` 用于适配真实任务。`parameters` 为 `{name,value,note}` 数组，数值使用字符串并注明来自实测、公开代码或本地拟合。
+`entries/patterns/<语义英文-kebab-id>.json` 是人工策展的内容源。字段与校验以 `scripts/build-patterns.mjs` 为准：`summary` 一句话说明价值；`mechanism`、`trigger`、`effect` 分别说明机制、触发和可见结果；`useCases`、`avoid`、`constraints`、`prompt` 用于适配真实任务。`parameters` 为 `{name,value,note}` 数组，数值使用字符串并注明来自实测、公开代码或本地拟合。
 
 `category` 为视觉构成、交互反馈、滚动叙事、导航与状态、加载与媒体、内容组织。`experienceTypes` 是体验类型数组，至少一项、不重复，按该巧思的实际机制填写：
 
@@ -121,7 +133,7 @@ Prompt写结构、尺度、素材、关键状态及交接、音乐和主题行�
 
 `composition.role` 的 `foundation`／`support`／`accent` 表示当前区域中的骨架、衔接、反馈职责。`notes` 解释具体协作或争夺状态的问题，`pairsWellWith` 和 `conflicts` 引用真实巧思ID。`accessibility.keyboard` 与 `reducedMotion` 写成可实施策略。
 
-每个 `sources[]` 保存 `caseId`、精确 `locator`、`observation` 和 `evidence`，可选原始 `referenceUrl`／`capturedAt`。`observed` 表示归档资料记录的源端观察；`adapted` 表示本地原创或近似迁移；`inferred` 表示由公开代码／作者说明推断。`locator` 使用 `entries/<case>.json#interaction/0` 这类JSON字段定位，`observation` 保存该定位值的完整原文（对象/数组保存JSON序列化文本）；来源字段改动后，旧观察原文与新字段不同时构建报错。归档日期沿用来源案例。
+每个 `sources[]` 保存 `caseId`、精确 `locator`、`observation` 和 `evidence`，可选原始 `referenceUrl`／`capturedAt`。`observed` 表示归档资料记录的源端观察；`adapted` 表示本地原创或近似迁移；`inferred` 表示由公开代码／作者说明推断。`locator` 使用 `entries/cases/<case>.json#interaction/0` 这类JSON字段定位，`observation` 保存该定位值的完整原文（对象/数组保存JSON序列化文本）；来源字段改动后，旧观察原文与新字段不同时构建报错。归档日期沿用来源案例。
 
 `sourceFiles` 为真实仓库相对路径数组，覆盖定位字段、研究、复现边界和相关源码，每个文件都在至少一个来源案例包的文件清单中。完整运行依赖由来源案例清单提供，每个来源可回跳完整案例。
 
@@ -129,7 +141,7 @@ Prompt写结构、尺度、素材、关键状态及交接、音乐和主题行�
 
 ## 内容素材的数据与演示
 
-内容素材以 `materials/<id>.json` 为人工内容源，关联文档、`material-demos/<id>/` 与预览。条目记录类型、分类、来源 URL／核验日期、许可范围、适用与避用场景、约束、Prompt、可访问性和可操作样例；来源有软件版本或完整 Git 提交时一并记录。字段校验以 `scripts/build-materials.mjs` 为准。每个样例的 `entrypoint` 指向已收录的真实 Demo，可用查询参数选择效果。字体、图片、声音等资源按实际用途提供试排、构图或播放样例。
+内容素材以 `entries/materials/<id>.json` 为人工内容源，关联文档、`demos/materials/<id>/` 与预览。条目记录类型、分类、来源 URL／核验日期、许可范围、适用与避用场景、约束、Prompt、可访问性和可操作样例；来源有软件版本或完整 Git 提交时一并记录。字段校验以 `scripts/build-materials.mjs` 为准。每个样例的 `entrypoint` 指向已收录的真实 Demo，可用查询参数选择效果。字体、图片、声音等资源按实际用途提供试排、构图或播放样例。
 
 素材不要求关联来源案例。素材包保留条目、文档原文及递归运行依赖清单，`sourceFiles` 列主要取材源码，并在该包 `files` 中记为 `source`。第三方文件保留原字节与权利说明，与官网付费内容或平台功能分开记录许可。
 
@@ -149,7 +161,7 @@ Agent Skill 详情沿用素材页的左右布局：左侧是工作流、关联�
 
 ## 验收与提交
 
-新增案例的流程：锁定来源与范围 → 原站全模块／状态观察和参数核对 → 写入 `entries/`、研究、Demo 与预览 → 提取巧思 → 同步 README 画廊卡片、相关比较研究及公开文档 → `npm run build` → `npm run check` → 功能分支提交、推送并提出PR → 以已验证提交运行 `npm run build:site` 并发布。README 总数由构建生成，画廊介绍人工策展。
+新增案例的流程：锁定来源与范围 → 原站全模块／状态观察和参数核对 → 写入 `entries/cases/`、研究、Demo 与预览 → 提取巧思 → 同步 README 画廊卡片、相关比较研究及公开文档 → `npm run build` → `npm run check` → 功能分支提交、推送并提出PR → 以已验证提交运行 `npm run build:site` 并发布。README 总数由构建生成，画廊介绍人工策展。
 
 `npm run check` 检查页面引用的本地文件是否存在。实测1440px桌面与390px手机：初次进入、章节正反切换、快速操作、关键按钮、媒体启停、主题及减少动态；检查横向溢出、资源错误和焦点。
 

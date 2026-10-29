@@ -1,6 +1,6 @@
 # 包豪斯：几何与实验 · 复用 Prompt
 
-由 [结构化案例](../entries/bauhaus-geometry.json) 自动生成。参考观察与具体边界见 [调研](../research/bauhaus-geometry.md)。
+由 [结构化案例](../entries/cases/bauhaus-geometry.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/bauhaus-geometry.md)。
 
 ## 正向 Prompt
 
@@ -26,4 +26,4 @@
 
 加入第二组不使用原色的材料色板，检验相同几何关系是否仍能表达平衡与张力。
 
-[查看 Demo](../demos/bauhaus-geometry/index.html) · [返回案例库](../cases.html#style/bauhaus-geometry)
+[查看 Demo](../demos/cases/bauhaus-geometry/index.html) · [返回案例库](../cases.html#style/bauhaus-geometry)

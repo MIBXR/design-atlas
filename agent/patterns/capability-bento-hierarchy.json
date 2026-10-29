@@ -39,7 +39,7 @@
     "sources": [
       {
         "caseId": "stripe-platform",
-        "locator": "entries/stripe-platform.json#composition/layout",
+        "locator": "entries/cases/stripe-platform.json#composition/layout",
         "observation": "1266px内容框；48px段落式首屏；产品矩阵首行Payments跨两列、Billing一列同高，随后不同产品区；4列指标与左右案例。",
         "evidence": "observed",
         "referenceUrl": "https://stripe.com/",
@@ -47,7 +47,7 @@
       },
       {
         "caseId": "notion-editorial",
-        "locator": "entries/notion-editorial.json#composition/layout",
+        "locator": "entries/cases/notion-editorial.json#composition/layout",
         "observation": "语言提示/导航 → 动作胶囊/头像/桌面产品视频 → 标识条带 → 两列+通栏 Bento → 五用途 → 团队故事 → 结束行动 → 页尾。",
         "evidence": "observed",
         "referenceUrl": "https://www.notion.com/",
@@ -55,21 +55,21 @@
       }
     ],
     "sourceFiles": [
-      "demos/notion-editorial/fidelity.md",
-      "demos/notion-editorial/index.html",
-      "demos/notion-editorial/journey.js",
-      "demos/notion-editorial/script.js",
-      "demos/notion-editorial/style.css",
-      "demos/stripe-platform/fidelity.md",
-      "demos/stripe-platform/index.html",
-      "demos/stripe-platform/journey.js",
-      "demos/stripe-platform/script.js",
-      "demos/stripe-platform/style.css",
-      "demos/stripe-platform/wave.js",
-      "entries/notion-editorial.json",
-      "entries/stripe-platform.json",
-      "research/notion-editorial.md",
-      "research/stripe-platform.md"
+      "demos/cases/notion-editorial/fidelity.md",
+      "demos/cases/notion-editorial/index.html",
+      "demos/cases/notion-editorial/journey.js",
+      "demos/cases/notion-editorial/script.js",
+      "demos/cases/notion-editorial/style.css",
+      "demos/cases/stripe-platform/fidelity.md",
+      "demos/cases/stripe-platform/index.html",
+      "demos/cases/stripe-platform/journey.js",
+      "demos/cases/stripe-platform/script.js",
+      "demos/cases/stripe-platform/style.css",
+      "demos/cases/stripe-platform/wave.js",
+      "entries/cases/notion-editorial.json",
+      "entries/cases/stripe-platform.json",
+      "docs/research/notion-editorial.md",
+      "docs/research/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -78,7 +78,7 @@
       "title": "Notion — 插画与真实工作空间",
       "paths": {
         "bundle": "agent/cases/notion-editorial.json",
-        "demo": "demos/notion-editorial/index.html"
+        "demo": "demos/cases/notion-editorial/index.html"
       }
     },
     {
@@ -86,7 +86,7 @@
       "title": "Stripe — 彩带与金融产品矩阵",
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "demo": "demos/stripe-platform/index.html"
+        "demo": "demos/cases/stripe-platform/index.html"
       }
     }
   ]

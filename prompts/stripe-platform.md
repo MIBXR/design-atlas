@@ -1,6 +1,6 @@
 # Stripe — 彩带与金融产品矩阵 · 复用 Prompt
 
-由 [结构化案例](../entries/stripe-platform.json) 自动生成。参考观察与具体边界见 [调研](../research/stripe-platform.md)。
+由 [结构化案例](../entries/cases/stripe-platform.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/stripe-platform.md)。
 
 ## 正向 Prompt
 
@@ -21,4 +21,4 @@
 
 以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。
 
-[查看 Demo](../demos/stripe-platform/index.html) · [返回案例库](../cases.html#style/stripe-platform)
+[查看 Demo](../demos/cases/stripe-platform/index.html) · [返回案例库](../cases.html#style/stripe-platform)

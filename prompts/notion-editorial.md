@@ -1,6 +1,6 @@
 # Notion — 插画与真实工作空间 · 复用 Prompt
 
-由 [结构化案例](../entries/notion-editorial.json) 自动生成。参考观察与具体边界见 [调研](../research/notion-editorial.md)。
+由 [结构化案例](../entries/cases/notion-editorial.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/notion-editorial.md)。
 
 ## 正向 Prompt
 
@@ -21,4 +21,4 @@
 
 以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。
 
-[查看 Demo](../demos/notion-editorial/index.html) · [返回案例库](../cases.html#style/notion-editorial)
+[查看 Demo](../demos/cases/notion-editorial/index.html) · [返回案例库](../cases.html#style/notion-editorial)

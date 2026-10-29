@@ -1,6 +1,6 @@
 # DeepSeek Harness · 可观察的产品演示 · 复用 Prompt
 
-由 [结构化案例](../entries/deepseek-harness.json) 自动生成。参考观察与具体边界见 [调研](../research/deepseek-harness.md)。
+由 [结构化案例](../entries/cases/deepseek-harness.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/deepseek-harness.md)。
 
 ## 正向 Prompt
 
@@ -23,4 +23,4 @@
 
 选用一项真实能力，将输入、执行过程、可交付结果拆成三个阶段；让一个成果物在下一场景继续存在，并保留独立暂停和静态可读状态。
 
-[查看 Demo](../demos/deepseek-harness/index.html) · [返回案例库](../cases.html#style/deepseek-harness)
+[查看 Demo](../demos/cases/deepseek-harness/index.html) · [返回案例库](../cases.html#style/deepseek-harness)

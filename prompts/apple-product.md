@@ -1,6 +1,6 @@
 # Apple · 滚动产品舞台 · 复用 Prompt
 
-由 [结构化案例](../entries/apple-product.json) 自动生成。参考观察与具体边界见 [调研](../research/apple-product.md)。
+由 [结构化案例](../entries/cases/apple-product.json) 自动生成。参考观察与具体边界见 [调研](../demos/cases/apple-product/fidelity.md)。
 
 ## 正向 Prompt
 
@@ -21,4 +21,4 @@
 
 保持黑色产品舞台，使用另一款真实产品摄影练习镜头与文案的滚动交接；先记录原站进度再调整曲线。
 
-[查看 Demo](../demos/apple-product/index.html) · [返回案例库](../cases.html#style/apple-product)
+[查看 Demo](../demos/cases/apple-product/index.html) · [返回案例库](../cases.html#style/apple-product)

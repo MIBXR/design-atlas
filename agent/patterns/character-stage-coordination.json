@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "genshin-world",
-        "locator": "entries/genshin-world.json#interaction/1",
+        "locator": "entries/cases/genshin-world.json#interaction/1",
         "observation": "选择 Vesna/Vodyanitsa，100ms 交叉淡入立绘，并同步切换青绿/蓝色完整背景、姓名、简介、肖像状态与麦克风图。",
         "evidence": "observed",
         "referenceUrl": "https://genshin.hoyoverse.com/en/",
@@ -48,7 +48,7 @@
       },
       {
         "caseId": "blue-archive",
-        "locator": "entries/blue-archive.json#interaction/1",
+        "locator": "entries/cases/blue-archive.json#interaction/1",
         "observation": "阿比多斯四学生资料卡与完整立绘以 1000ms 整块水平移动；选择按钮、左右键及手势同步当前人物。",
         "evidence": "adapted",
         "referenceUrl": "https://bluearchive.jp/",
@@ -56,7 +56,7 @@
       },
       {
         "caseId": "arknights-world",
-        "locator": "entries/arknights-world.json#constraints/2",
+        "locator": "entries/cases/arknights-world.json#constraints/2",
         "observation": "干员保留3名/每人E1与E2，原站6名且阿米娅含E0；灰度背景为本地同人物图层，未移植完整背景版/6人滚动肖像轨道。",
         "evidence": "adapted",
         "referenceUrl": "https://ak.hypergryph.com/",
@@ -64,7 +64,7 @@
       },
       {
         "caseId": "zenless-zone-zero",
-        "locator": "entries/zenless-zone-zero.json#interaction/0",
+        "locator": "entries/cases/zenless-zone-zero.json#interaction/0",
         "observation": "选择角色缩略图，同时切换62人中的立绘、阴影、阵营、中文名与英文背景；桌面角色图以500ms位移/透明度进入，阴影300ms，姓名与阵营延迟交接。",
         "evidence": "observed",
         "referenceUrl": "https://zzz.mihoyo.com/main",
@@ -72,36 +72,36 @@
       }
     ],
     "sourceFiles": [
-      "demos/arknights-world/fidelity.md",
-      "demos/arknights-world/index.html",
-      "demos/arknights-world/particles.js",
-      "demos/arknights-world/script.js",
-      "demos/arknights-world/style.css",
-      "demos/blue-archive/app.js",
-      "demos/blue-archive/character.html",
-      "demos/blue-archive/fidelity.md",
-      "demos/blue-archive/index.html",
-      "demos/blue-archive/style.css",
-      "demos/genshin-world/fidelity.md",
-      "demos/genshin-world/index.html",
-      "demos/genshin-world/script.js",
-      "demos/genshin-world/style.css",
-      "entries/arknights-world.json",
-      "entries/blue-archive.json",
-      "entries/genshin-world.json",
-      "research/arknights-world.md",
-      "research/blue-archive.md",
-      "research/genshin-world.md",
-      "entries/zenless-zone-zero.json",
-      "research/zenless-zone-zero.md",
-      "demos/zenless-zone-zero/app.js",
-      "demos/zenless-zone-zero/data.js",
-      "demos/zenless-zone-zero/fidelity.md",
-      "demos/zenless-zone-zero/index.html",
-      "demos/zenless-zone-zero/mobile.html",
-      "demos/zenless-zone-zero/reference-mobile.css",
-      "demos/zenless-zone-zero/reference.css",
-      "demos/zenless-zone-zero/state.css"
+      "demos/cases/arknights-world/fidelity.md",
+      "demos/cases/arknights-world/index.html",
+      "demos/cases/arknights-world/particles.js",
+      "demos/cases/arknights-world/script.js",
+      "demos/cases/arknights-world/style.css",
+      "demos/cases/blue-archive/app.js",
+      "demos/cases/blue-archive/character.html",
+      "demos/cases/blue-archive/fidelity.md",
+      "demos/cases/blue-archive/index.html",
+      "demos/cases/blue-archive/style.css",
+      "demos/cases/genshin-world/fidelity.md",
+      "demos/cases/genshin-world/index.html",
+      "demos/cases/genshin-world/script.js",
+      "demos/cases/genshin-world/style.css",
+      "entries/cases/arknights-world.json",
+      "entries/cases/blue-archive.json",
+      "entries/cases/genshin-world.json",
+      "docs/research/arknights-world.md",
+      "docs/research/blue-archive.md",
+      "docs/research/genshin-world.md",
+      "entries/cases/zenless-zone-zero.json",
+      "docs/research/zenless-zone-zero.md",
+      "demos/cases/zenless-zone-zero/app.js",
+      "demos/cases/zenless-zone-zero/data.js",
+      "demos/cases/zenless-zone-zero/fidelity.md",
+      "demos/cases/zenless-zone-zero/index.html",
+      "demos/cases/zenless-zone-zero/mobile.html",
+      "demos/cases/zenless-zone-zero/reference-mobile.css",
+      "demos/cases/zenless-zone-zero/reference.css",
+      "demos/cases/zenless-zone-zero/state.css"
     ]
   },
   "sourceCases": [
@@ -110,7 +110,7 @@
       "title": "明日方舟 · 全屏档案与交互点阵",
       "paths": {
         "bundle": "agent/cases/arknights-world.json",
-        "demo": "demos/arknights-world/index.html"
+        "demo": "demos/cases/arknights-world/index.html"
       }
     },
     {
@@ -118,7 +118,7 @@
       "title": "碧蓝档案：学园都市的天空与光",
       "paths": {
         "bundle": "agent/cases/blue-archive.json",
-        "demo": "demos/blue-archive/index.html"
+        "demo": "demos/cases/blue-archive/index.html"
       }
     },
     {
@@ -126,7 +126,7 @@
       "title": "原神 · 版本群像与角色舞台",
       "paths": {
         "bundle": "agent/cases/genshin-world.json",
-        "demo": "demos/genshin-world/index.html"
+        "demo": "demos/cases/genshin-world/index.html"
       }
     },
     {
@@ -134,7 +134,7 @@
       "title": "绝区零 · 六章街头拼贴首页",
       "paths": {
         "bundle": "agent/cases/zenless-zone-zero.json",
-        "demo": "demos/zenless-zone-zero/index.html"
+        "demo": "demos/cases/zenless-zone-zero/index.html"
       }
     }
   ]

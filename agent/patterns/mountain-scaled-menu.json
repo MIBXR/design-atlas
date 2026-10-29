@@ -45,7 +45,7 @@
     "sources": [
       {
         "caseId": "fuji-rock",
-        "locator": "entries/fuji-rock.json#interaction/1",
+        "locator": "entries/cases/fuji-rock.json#interaction/1",
         "observation": "打开／关闭山形菜单：菜单400ms scale(.88)+rotate3d(.5,0,0,1rad)进出，页面背景1秒淡到.25。 放大导览层级，同时保留现场的空间背景。",
         "evidence": "observed",
         "referenceUrl": "https://www.fujirockfestival.com/",
@@ -53,12 +53,12 @@
       }
     ],
     "sourceFiles": [
-      "demos/fuji-rock/app.js",
-      "demos/fuji-rock/fidelity.md",
-      "demos/fuji-rock/index.html",
-      "demos/fuji-rock/style.css",
-      "entries/fuji-rock.json",
-      "research/fuji-rock.md"
+      "demos/cases/fuji-rock/app.js",
+      "demos/cases/fuji-rock/fidelity.md",
+      "demos/cases/fuji-rock/index.html",
+      "demos/cases/fuji-rock/style.css",
+      "entries/cases/fuji-rock.json",
+      "docs/research/fuji-rock.md"
     ]
   },
   "sourceCases": [
@@ -67,7 +67,7 @@
       "title": "Fuji Rock：现场照片与节日导览",
       "paths": {
         "bundle": "agent/cases/fuji-rock.json",
-        "demo": "demos/fuji-rock/index.html"
+        "demo": "demos/cases/fuji-rock/index.html"
       }
     }
   ]

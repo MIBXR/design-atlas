@@ -1,6 +1,6 @@
 # 莱茵生命 · 影像终端的网页转译 · 复用 Prompt
 
-由 [结构化案例](../entries/rhine-lab.json) 自动生成。参考观察与具体边界见 [调研](../research/rhine-lab.md)。
+由 [结构化案例](../entries/cases/rhine-lab.json) 自动生成。参考观察与具体边界见 [调研](../docs/research/rhine-lab.md)。
 
 ## 正向 Prompt
 
@@ -25,4 +25,4 @@
 
 将拥有使用权的机构影片拆为四个有明确时间范围的场景，保留原尺寸与片内时序；用语义按钮与数据状态实现章选和目录，分别审阅媒体准确度与交互可复用性。
 
-[查看 Demo](../demos/rhine-lab/index.html) · [返回案例库](../cases.html#style/rhine-lab)
+[查看 Demo](../demos/cases/rhine-lab/index.html) · [返回案例库](../cases.html#style/rhine-lab)

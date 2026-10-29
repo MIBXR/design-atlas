@@ -40,7 +40,7 @@
     "sources": [
       {
         "caseId": "claude-platform",
-        "locator": "entries/claude-platform.json#interaction/3",
+        "locator": "entries/cases/claude-platform.json#interaction/3",
         "observation": "FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。",
         "evidence": "inferred",
         "referenceUrl": "https://claude.com/",
@@ -48,7 +48,7 @@
       },
       {
         "caseId": "stripe-platform",
-        "locator": "entries/stripe-platform.json#interaction/4",
+        "locator": "entries/cases/stripe-platform.json#interaction/4",
         "observation": "Hertz/URBN/Instacart/Le Monde → 当前故事行展开高度、其他行收起，真实官方摄影及说明同步替换；来源照片中的平行四边形呼应 Stripe 品牌。",
         "evidence": "observed",
         "referenceUrl": "https://stripe.com/",
@@ -56,7 +56,7 @@
       },
       {
         "caseId": "qoder-platform",
-        "locator": "entries/qoder-platform.json#interaction/3",
+        "locator": "entries/cases/qoder-platform.json#interaction/3",
         "observation": "后续 SDK 代码和 Cloud 任务列表 → Wake 场景选择/指针强调 → 企业 → 两侧连续证言条带 → 单开 FAQ → 页尾；所有章节使用正常滚动。",
         "evidence": "observed",
         "referenceUrl": "https://qoder.cn/",
@@ -64,28 +64,26 @@
       }
     ],
     "sourceFiles": [
-      "demos/claude-platform/fidelity.md",
-      "demos/claude-platform/index.html",
-      "demos/claude-platform/journey.js",
-      "demos/claude-platform/script.js",
-      "demos/claude-platform/style.css",
-      "demos/qoder-platform/fidelity.md",
-      "demos/qoder-platform/index.html",
-      "demos/qoder-platform/journey.js",
-      "demos/qoder-platform/script.js",
-      "demos/qoder-platform/style.css",
-      "demos/stripe-platform/fidelity.md",
-      "demos/stripe-platform/index.html",
-      "demos/stripe-platform/journey.js",
-      "demos/stripe-platform/script.js",
-      "demos/stripe-platform/style.css",
-      "demos/stripe-platform/wave.js",
-      "entries/claude-platform.json",
-      "entries/qoder-platform.json",
-      "entries/stripe-platform.json",
-      "research/claude-platform.md",
-      "research/qoder-platform.md",
-      "research/stripe-platform.md"
+      "demos/cases/claude-platform/fidelity.md",
+      "demos/cases/claude-platform/index.html",
+      "demos/cases/claude-platform/journey.js",
+      "demos/cases/claude-platform/script.js",
+      "demos/cases/claude-platform/style.css",
+      "demos/cases/qoder-platform/fidelity.md",
+      "demos/cases/qoder-platform/index.html",
+      "demos/cases/qoder-platform/journey.js",
+      "demos/cases/qoder-platform/script.js",
+      "demos/cases/qoder-platform/style.css",
+      "demos/cases/stripe-platform/fidelity.md",
+      "demos/cases/stripe-platform/index.html",
+      "demos/cases/stripe-platform/journey.js",
+      "demos/cases/stripe-platform/script.js",
+      "demos/cases/stripe-platform/style.css",
+      "demos/cases/stripe-platform/wave.js",
+      "entries/cases/claude-platform.json",
+      "entries/cases/qoder-platform.json",
+      "entries/cases/stripe-platform.json",
+      "docs/research/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -94,7 +92,7 @@
       "title": "Claude — 衬线语气与 Cowork 演示",
       "paths": {
         "bundle": "agent/cases/claude-platform.json",
-        "demo": "demos/claude-platform/index.html"
+        "demo": "demos/cases/claude-platform/index.html"
       }
     },
     {
@@ -102,7 +100,7 @@
       "title": "Qoder — 绿色工作台与多形态平台",
       "paths": {
         "bundle": "agent/cases/qoder-platform.json",
-        "demo": "demos/qoder-platform/index.html"
+        "demo": "demos/cases/qoder-platform/index.html"
       }
     },
     {
@@ -110,7 +108,7 @@
       "title": "Stripe — 彩带与金融产品矩阵",
       "paths": {
         "bundle": "agent/cases/stripe-platform.json",
-        "demo": "demos/stripe-platform/index.html"
+        "demo": "demos/cases/stripe-platform/index.html"
       }
     }
   ]
