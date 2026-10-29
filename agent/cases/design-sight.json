@@ -155,7 +155,7 @@
     {
       "path": "demos/cases/design-sight/fidelity.md",
       "role": "fidelity",
-      "content": "# 21_21 DESIGN SIGHT：海报与四列档案：复现范围\n\n[案例条目](../../../entries/cases/design-sight.json) · [研究](../../../docs/cases/design-sight.md) · [Prompt](../../../prompts/cases/design-sight.md)\n\n| 机制 | 本地差异与依据 |\n| --- | --- |\n| 首次加载完成 | 依据公开common.js和CSS；不是定时假进度。 |\n| 海报自动切换 | 本地另加暂停与后台／离屏停止。 |\n| 手机打开菜单／关闭 | 手机结构和时长由公开responsive.css/common.js核对。 |\n| 手机展开栏目／页面回顶 | 减少动态即时操作，桌面保留完整列。 |\n| 悬停档案与分类 | 样式依据原站公开CSS。 |\n\n原站桌面全程与菜单已验证。原站手机DevTools视口调用重试后仍被保存权限拦截，手机行为由公开响应式脚本/CSS确认并在本地实测，不宣称原站手机操作已经通过。\n\n## 复刻未使用的原站素材\n\n- `source/assets/tour_architecture-thumb-500x333-8287.jpg`\n"
+      "content": "# 21_21 DESIGN SIGHT：海报与四列档案：复现范围\n\n## 对照结论与差异原因\n\n原作公开 CSS／common.js 与本地均对应载入完成、海报切换、手机菜单和栏目展开；原站桌面浏览及本地手机操作有记录。同视口原作/本地画面与终态的成对结论未记录，1:1 结论未建立。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| 本地增加暂停、后台／离屏停止及减少动态即时操作 | 让自动海报可暂停，并在非前台停止。 |\n| 原站手机现场操作未完成 | DevTools 视口调用重试后仍被保存权限拦截；响应式行为依据公开脚本／CSS。 |\n| 删减记录 | 现有记录未列出额外删减及原因。 |\n\n页面结构、档案布局、切换与菜单调度由本库自行实现，样式和时长依据公开 CSS／脚本；海报等素材沿用原作。\n\n[案例条目](../../../entries/cases/design-sight.json) · [研究](../../../docs/cases/design-sight.md) · [Prompt](../../../prompts/cases/design-sight.md)\n\n| 机制 | 本地差异与依据 |\n| --- | --- |\n| 首次加载完成 | 依据公开common.js和CSS；不是定时假进度。 |\n| 海报自动切换 | 本地另加暂停与后台／离屏停止。 |\n| 手机打开菜单／关闭 | 手机结构和时长由公开responsive.css/common.js核对。 |\n| 手机展开栏目／页面回顶 | 减少动态即时操作，桌面保留完整列。 |\n| 悬停档案与分类 | 样式依据原站公开CSS。 |\n\n原站桌面全程与菜单已验证。原站手机DevTools视口调用重试后仍被保存权限拦截，手机行为由公开响应式脚本/CSS确认并在本地实测，不宣称原站手机操作已经通过。\n\n## 复刻未使用的原站素材\n\n- `source/assets/tour_architecture-thumb-500x333-8287.jpg`\n"
     },
     {
       "path": "demos/cases/design-sight/assets-manifest.json",

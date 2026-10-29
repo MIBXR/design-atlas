@@ -1620,6 +1620,18 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/endfield-industrial/source/decode-profiles.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/extract-ring.js",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/endfield-industrial/source/source-provenance.json",
       "role": "process"
     },
@@ -1846,6 +1858,18 @@
     {
       "path": "demos/cases/rhine-lab/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/rhine-lab/source/clips.sh",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/rhine-lab/source/frames.js",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/rhine-lab/source/README.md",
+      "role": "process"
     },
     {
       "path": "demos/cases/rhine-lab/style.css",

@@ -140,7 +140,7 @@
     {
       "path": "demos/cases/qoder-platform/fidelity.md",
       "role": "fidelity",
-      "content": "# Qoder CN：复现范围\n\n[案例条目](../../../entries/cases/qoder-platform.json) · [研究](../../../docs/cases/qoder-platform.md) · [Prompt](../../../prompts/cases/qoder-platform.md)\n\n## 本地实现与对照\n\n本地固定演示已验证；源端发送的观察结果见研究。\n\n工作台内容、图标、热图日期分布与空间几何为缩短的本地结构，并非完整原工作台；九阶段来源时间保留，其他曲线/几何是拟合。SDK/Cloud 文本示例不执行；Wake/企业/证言内容缩短，不称真实评价逐字复制。发送仅本地状态，原网页发送未验证；没有模型、账户、文件系统与远程交付服务。\n\n## 复刻未使用的原站素材\n\n- `source/assets/logo-dark.png`\n- `source/assets/logo-light.png`\n"
+      "content": "# Qoder CN：复现范围\n\n## 对照结论与差异原因\n\n公开 NewQoderLiveDemo 的固定任务与九节点时间在本地对应；工作台几何、图标和热图为缩短结构，整体未达 1:1。本地固定演示有操作结果，源发送状态未验证，同状态成对结论未记录。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| 工作台、图标、热图与其他曲线／几何拟合 | 原因未记录。 |\n| 已决定删减 Wake、企业、证言等内容 | 原因未记录。 |\n| 已决定删减模型、账户、文件系统与远程交付服务 | 本地发送只更新固定演示状态，SDK／Cloud 示例不执行。 |\n\n工作台构成、发送状态、九阶段调度、文件旁栏及后段模块由本库自行实现；九阶段时间依据公开模块，品牌素材来自官方。\n\n[案例条目](../../../entries/cases/qoder-platform.json) · [研究](../../../docs/cases/qoder-platform.md) · [Prompt](../../../prompts/cases/qoder-platform.md)\n\n## 本地实现与对照\n\n本地固定演示已验证；源端发送的观察结果见研究。\n\n工作台内容、图标、热图日期分布与空间几何为缩短的本地结构，并非完整原工作台；九阶段来源时间保留，其他曲线/几何是拟合。SDK/Cloud 文本示例不执行；Wake/企业/证言内容缩短，不称真实评价逐字复制。发送仅本地状态，原网页发送未验证；没有模型、账户、文件系统与远程交付服务。\n\n## 复刻未使用的原站素材\n\n- `source/assets/logo-dark.png`\n- `source/assets/logo-light.png`\n"
     },
     {
       "path": "demos/cases/qoder-platform/assets-manifest.json",

@@ -340,6 +340,18 @@
       "role": "process"
     },
     {
+      "path": "demos/cases/arknights-world/source/extract-models.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/arknights-world/source/media.sh",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/arknights-world/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/arknights-world/style.css",
       "role": "source"
     },
@@ -505,6 +517,14 @@
     },
     {
       "path": "demos/cases/zelda-world/source/assets/tsumugu.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/media.sh",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/README.md",
       "role": "process"
     },
     {

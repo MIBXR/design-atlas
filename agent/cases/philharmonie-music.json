@@ -148,7 +148,7 @@
     {
       "path": "demos/cases/philharmonie-music/fidelity.md",
       "role": "fidelity",
-      "content": "# 巴黎爱乐厅 · 音乐展与音乐会详情：复现范围\n\n[案例条目](../../../entries/cases/philharmonie-music.json) · [研究](../../../docs/cases/philharmonie-music.md) · [Prompt](../../../prompts/cases/philharmonie-music.md)\n\n| 机制 | 本地差异与依据 |\n| --- | --- |\n| 浏览展览／音乐会详情 | 无额外迎宾加载或全页转场。 |\n| 打开主菜单和类别 | 本地缩减类别与链接，保留内容切换和返回；无伪造淡入动画。 |\n| 切换音乐会摄影 | 500ms及循环来自实际Slick观察，ease和6秒周期为本地近似。 |\n| 展开Horaires／Tarifs／Programme | 保留实际展开逻辑；预约链接回官方，未实现交易。 |\n| 打开Playlist | 不复制cookie受控的第三方播放器，不新增自动BGM。 |\n\n展览与音乐会合并为局部学习区域，原独立详情长度不同；第三方视频、账号与售票后端不复制。Ayano Kamei仍是官网图轨素材，但当前节目单钢琴为Chisato Taniguchi，两者不可混为当前阵容。\n"
+      "content": "# 巴黎爱乐厅 · 音乐展与音乐会详情：复现范围\n\n## 对照结论与差异原因\n\n原作展览与音乐会是两个独立详情，本地合并为局部区域；原 Slick 500ms 及循环在本地保留，ease 与 6 秒周期采用拟合，内容长度不同，整体未达 1:1。同视口成对结果未记录。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| 两独立详情合并、轮播曲线与周期拟合 | 合并与拟合的原因未记录。 |\n| 已决定删减部分菜单类别、链接和详情长度 | 原因未记录。 |\n| 已决定删减第三方 Playlist／视频、账户与售票后端 | 播放器受 cookie 控制；账户／交易使用官方入口。 |\n\n菜单、局部详情切换、摄影轮播及折叠状态由本库自行实现；摄影及节目资料取自原作，Ayano 图轨素材与 Chisato 节目阵容分别保留。\n\n[案例条目](../../../entries/cases/philharmonie-music.json) · [研究](../../../docs/cases/philharmonie-music.md) · [Prompt](../../../prompts/cases/philharmonie-music.md)\n\n| 机制 | 本地差异与依据 |\n| --- | --- |\n| 浏览展览／音乐会详情 | 无额外迎宾加载或全页转场。 |\n| 打开主菜单和类别 | 本地缩减类别与链接，保留内容切换和返回；无伪造淡入动画。 |\n| 切换音乐会摄影 | 500ms及循环来自实际Slick观察，ease和6秒周期为本地近似。 |\n| 展开Horaires／Tarifs／Programme | 保留实际展开逻辑；预约链接回官方，未实现交易。 |\n| 打开Playlist | 不复制cookie受控的第三方播放器，不新增自动BGM。 |\n\n展览与音乐会合并为局部学习区域，原独立详情长度不同；第三方视频、账号与售票后端不复制。Ayano Kamei仍是官网图轨素材，但当前节目单钢琴为Chisato Taniguchi，两者不可混为当前阵容。\n"
     },
     {
       "path": "demos/cases/philharmonie-music/assets-manifest.json",

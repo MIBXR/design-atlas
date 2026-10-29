@@ -138,7 +138,7 @@
     {
       "path": "demos/cases/met-museum/fidelity.md",
       "role": "fidelity",
-      "content": "# The Met：复现范围\n\n固定浅色与Met红，作品保持原色；采集页面无背景音乐或音频控件。完整馆藏、预约、会员、捐赠使用官方外链。局部搜索／作品dialog为练习补充，不冒称官网业务。\n\n原站入口到页尾、反向、Visit导航和媒体DOM已核对；本地另测桌面、390px手机、前后轨道、主题说明与减少动态。\n\n[研究](../../../docs/cases/met-museum.md) · [Prompt](../../../prompts/cases/met-museum.md) · [素材清单](assets-manifest.json) · [Demo](index.html)\n"
+      "content": "# The Met：复现范围\n\n## 对照结论与差异原因\n\n原站记录覆盖入口至页尾、反向滚动、Visit 导航与媒体 DOM；本地记录覆盖桌面、390px、前后轨道及减少动态。可确认这些浏览路径都有对应实现，同视口的画面／交互成对结论未记录，1:1 结论未建立。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| 本地增加搜索／作品 dialog、减少动态分支 | 提供局部作品浏览与可暂停的学习入口。 |\n| 已决定删减完整馆藏、预约、会员与捐赠业务 | 使用官方外链。 |\n| 其他视觉差异 | 现有记录没有量化结果，原因未记录。 |\n\n页面构成、轨道、导航和局部 dialog 由本库自行实现；艺术品图片和品牌素材沿用原作。\n\n固定浅色与Met红，作品保持原色；采集页面无背景音乐或音频控件。完整馆藏、预约、会员、捐赠使用官方外链。局部搜索／作品dialog为练习补充，不冒称官网业务。\n\n原站入口到页尾、反向、Visit导航和媒体DOM已核对；本地另测桌面、390px手机、前后轨道、主题说明与减少动态。\n\n[研究](../../../docs/cases/met-museum.md) · [Prompt](../../../prompts/cases/met-museum.md) · [素材清单](assets-manifest.json) · [Demo](index.html)\n"
     },
     {
       "path": "demos/cases/met-museum/assets-manifest.json",

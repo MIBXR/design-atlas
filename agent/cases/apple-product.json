@@ -136,7 +136,7 @@
     {
       "path": "demos/cases/apple-product/fidelity.md",
       "role": "fidelity",
-      "content": "# Apple iPhone 18 Pro：复现范围\n\n[案例条目](../../../entries/cases/apple-product.json) · [研究](../../../docs/cases/apple-product.md) · [Prompt](../../../prompts/cases/apple-product.md)\n\n## 本地实现与对照\n\n七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。\n\n## 复刻未使用的原站素材\n\n- `source/assets/hero_startframe__ck15fj8f67hy_large_2x.jpg`\n\n[许可原文索引](LICENSES.md)。\n"
+      "content": "# Apple iPhone 18 Pro：复现范围\n\n## 对照结论与差异原因\n\n现有研究确认七项 viewer 的 Colors 展开与原站影片层；源页处于 no-enhanced 分支，相机增强滚动视频未实际播放。本地保留摄影与滚动章节，但静帧 viewer、时序拟合和内容删减使整体未达 1:1；同视口逐状态并排结论未记录。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| 七项实时 3D 改为静帧；卡片、图库、相机 seek 与后段缩放采用本地时序 | 3D 替代及各拟合参数的原因未记录；源相机增强分支没有现场播放证据。 |\n| 已决定删减完整参数、图库和部分共享功能 | 原因未记录。 |\n| 已决定删减交易流程 | 本地收录产品展示，交易使用官方入口。 |\n\n页面构成、viewer 状态、滚动调度、比较入口和影片层由本库自行实现；摄影和影片来自官方素材。\n\n[案例条目](../../../entries/cases/apple-product.json) · [研究](../../../docs/cases/apple-product.md) · [Prompt](../../../prompts/cases/apple-product.md)\n\n## 本地实现与对照\n\n七项摄影以官方静帧替代实时 3D 旋转；说明卡 500/600ms、图库每项 5s、相机 seek/标题阈值、性能与续航静帧的缩放和交接为本地拟合。比较只显示所选对象并链接真实参数。原影片依赖 Apple 播放列表网络；出错提示原站入口。未复制交易、所有参数/图库或全部共享功能。\n\n## 复刻未使用的原站素材\n\n- `source/assets/hero_startframe__ck15fj8f67hy_large_2x.jpg`\n\n[许可原文索引](LICENSES.md)。\n"
     },
     {
       "path": "demos/cases/apple-product/assets-manifest.json",
