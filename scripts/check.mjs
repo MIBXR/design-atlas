@@ -36,5 +36,5 @@ function visit(directory,styles=false){
 }
 for(const entry of entries)for(const key of ['demo','research','preview'])if(entry[key]&&!fs.existsSync(path.join(root,entry[key])))failures.push(entry.id+': missing '+entry[key]);
 for(const file of ['index.html','cases.html','patterns.html','materials.html','agent.html','lab.html','docs.html'])checkRefs(file,fs.readFileSync(path.join(root,file),'utf8'),root);
-visit(path.join(root,'demos/cases'));visit(path.join(root,'demos/materials'));visit(path.join(root,'site'),true);
+visit(path.join(root,'demos/cases'));visit(path.join(root,'demos/materials'));visit(path.join(root,'site'),true);visit(path.join(root,'scripts/templates'),true);
 if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}else console.log('PASS: '+entries.length+' entries; case subpages, material demos and site local references resolve.');

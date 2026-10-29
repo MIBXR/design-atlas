@@ -220,16 +220,16 @@
     "research": "docs/materials/shaders.md",
     "sourceFiles": [
       "demos/materials/shaders/index.html",
-      "demos/materials/shaders/demo.css",
-      "demos/materials/shaders/demo.js",
-      "demos/materials/shaders/reference.svg"
+      "demos/materials/shaders/demo/demo.css",
+      "demos/materials/shaders/demo/demo.js",
+      "demos/materials/shaders/demo/reference.svg"
     ]
   },
   "documents": [
     {
       "path": "docs/materials/shaders.md",
       "role": "research",
-      "content": "# Shaders：图层组合与参数调节\n\n[结构化条目](../../entries/materials/shaders.json) · [打开演示](../../demos/materials/shaders/index.html)\n\n上游 [JavaScript 接口与组件说明](https://github.com/shader-effects-inc/shaders/tree/81fd4ece5d493ca6c424a2af41f0e2c361ec8258) 提供 `createShader`，按 `components` 数组组合和处理图层。四个演示使用真实上游组件；配色、参考图、参数控件与触发按钮是本库的原创演示选择。它们用于学习独立效果，不表示复刻了官网的编辑器或预设。\n\n| 演示 | 可操作内容 | 参数依据 |\n| --- | --- | --- |\n| 流动渐变 `MeshGradient` | 速度、色块数、旋转、平滑度及色彩 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/MeshGradient/index.ts) |\n| 条纹玻璃 `FlutedGlass` | 密度、折射、角度与高光 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/FlutedGlass/index.ts) |\n| 指针涟漪 `CursorRipples` | 指针或触摸反馈的强度、衰减、半径与色散 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/CursorRipples/index.ts) |\n| 噪声溶解 `NoiseDissolve` | 手动进度、噪声尺度、边缘软度与正反向转场 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/NoiseDissolve/index.ts) |\n\n参数依据保存在结构化条目的 `demos[].parameters` 中。上游源码的 `ui.min/max` 是编辑控件建议范围；本地 MeshGradient 速度采用 `0–2`（上游 UI 为 `0–10`），FlutedGlass 角度采用 `0–180`（上游 UI 为 `0–360`），其余范围沿用源码 UI 建议。演示的步长与默认值是本地选择。MeshGradient 显式设置 `stops: null`，使两色控件生效；页面实际默认值和组件组合以 [demo.js](../../demos/materials/shaders/demo.js) 为准。修改用于自己的页面时先核对当前素材包，再依据内容对比度、输入设备和舞台尺寸调整。玻璃与涟漪需要底图才能判断形变，演示使用本地原创 SVG，不取用官网的付费作品。\n\n## 运行与适配\n\n通过 HTTP/HTTPS 打开演示，浏览器需提供 WebGPU。舞台一次运行一种效果，控制区切换、参数、重置和暂停均使用标准 DOM 控件。选择效果或调节参数时，可以直接查看底图、颜色和运动的变化。\n\n演示区同时保留静态参考与明确的运行状态。WebGPU 不可用时，静态示意帮助理解构成，但不能用来判断真实着色器的视觉精度、性能或硬件兼容性。正式页面的主要内容和操作保留在 DOM；减少动态、暂停或页面隐藏时停止持续动画，按真实设备验证返回后的状态。装饰效果不得成为阅读和完成操作的条件。\n"
+      "content": "# Shaders：图层组合与参数调节\n\n[结构化条目](../../entries/materials/shaders.json) · [打开演示](../../demos/materials/shaders/index.html)\n\n上游 [JavaScript 接口与组件说明](https://github.com/shader-effects-inc/shaders/tree/81fd4ece5d493ca6c424a2af41f0e2c361ec8258) 提供 `createShader`，按 `components` 数组组合和处理图层。四个演示使用真实上游组件；配色、参考图、参数控件与触发按钮是本库的原创演示选择。它们用于学习独立效果，不表示复刻了官网的编辑器或预设。\n\n| 演示 | 可操作内容 | 参数依据 |\n| --- | --- | --- |\n| 流动渐变 `MeshGradient` | 速度、色块数、旋转、平滑度及色彩 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/MeshGradient/index.ts) |\n| 条纹玻璃 `FlutedGlass` | 密度、折射、角度与高光 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/FlutedGlass/index.ts) |\n| 指针涟漪 `CursorRipples` | 指针或触摸反馈的强度、衰减、半径与色散 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/CursorRipples/index.ts) |\n| 噪声溶解 `NoiseDissolve` | 手动进度、噪声尺度、边缘软度与正反向转场 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/NoiseDissolve/index.ts) |\n\n参数依据保存在结构化条目的 `demos[].parameters` 中。上游源码的 `ui.min/max` 是编辑控件建议范围；本地 MeshGradient 速度采用 `0–2`（上游 UI 为 `0–10`），FlutedGlass 角度采用 `0–180`（上游 UI 为 `0–360`），其余范围沿用源码 UI 建议。演示的步长与默认值是本地选择。MeshGradient 显式设置 `stops: null`，使两色控件生效；页面实际默认值和组件组合以 [demo.js](../../demos/materials/shaders/demo/demo.js) 为准。修改用于自己的页面时先核对当前素材包，再依据内容对比度、输入设备和舞台尺寸调整。玻璃与涟漪需要底图才能判断形变，演示使用本地原创 SVG，不取用官网的付费作品。\n\n## 运行与适配\n\n通过 HTTP/HTTPS 打开演示，浏览器需提供 WebGPU。舞台一次运行一种效果，控制区切换、参数、重置和暂停均使用标准 DOM 控件。选择效果或调节参数时，可以直接查看底图、颜色和运动的变化。\n\n`index.html?effect=mesh-gradient`、`fluted-glass`、`cursor-ripples`、`noise-dissolve` 定位效果；`theme=light`／`theme=dark` 指定控件主题。同源嵌入跟随 Atlas 主题，独立打开读取已保存的主题或系统偏好；舞台保持深色。\n\n`demo/demo.js` 按需加载 `vendor/shaders@4.0.4/shaders-4.0.4.js`，以 `demo/reference.svg` 为滤镜输入。切换与重置销毁原实例后按序初始化；参数通过 `shader.update('effect', props)` 更新，暂停时请求静止画面。每次创建设置 `disableTelemetry: true`，首个合成帧由官方 `onReady` 确认。复制按钮提供当前参数的 `shaders/js` 代码。软件依赖许可见[许可索引](../../demos/materials/shaders/LICENSES.md)。\n\n演示区同时保留静态参考与明确的运行状态。WebGPU 不可用时，静态示意帮助理解构成，但不能用来判断真实着色器的视觉精度、性能或硬件兼容性。正式页面的主要内容和操作保留在 DOM；减少动态、暂停或页面隐藏时停止持续动画，按真实设备验证返回后的状态。装饰效果不得成为阅读和完成操作的条件。\n"
     },
     {
       "path": "prompts/materials/shaders.md",
@@ -237,57 +237,56 @@
       "content": "# Shaders · 可调节的 WebGPU 效果 · 复用 Prompt\n\n[结构化条目](../../entries/materials/shaders.json)\n\n在现有 HTML/CSS/JavaScript 页面中使用固定版本 shaders 4.0.4 的 createShader 接口，为一个有明确任务的区域选择 MeshGradient、FlutedGlass、CursorRipples 或 NoiseDissolve。先读取本地四种演示的参数与源码，在保留真实 DOM 文本和操作的情况下调整配色、强度与图层。保持同一舞台只运行当前选中的效果，支持参数重置和暂停；页面隐藏或减少动态时停止持续动画。WebGPU 不可用时显示能继续阅读和操作的静态后备。保留原软件许可与第三方声明，不复制官网平台预设。桌面与窄屏都检查文字至少 12px、焦点、触摸及资源加载。\n\n## 制作约束\n\n- 本地 Demo 使用固定的 shaders 4.0.4 JavaScript 运行时，需要浏览器提供 WebGPU。\n- 通过 HTTP/HTTPS 访问；WebGPU 不可用时显示明确的静态示意与状态，不把它当作真实着色器运行结果。\n- 减少动态、页面隐藏或主动暂停时停止持续动画；恢复运行由页面状态与用户操作决定。\n- 保留 MIT 版权和许可文本；官网编辑器、预设与区块的使用条款与开源软件分开核验。\n- 本地参考图和四套参数是 Web Atlas 的演示选择，不代表官网预设或作者推荐。\n"
     },
     {
-      "path": "demos/materials/shaders/README.md",
-      "role": "context",
-      "content": "# Shaders 开源效果实验\n\n这个独立 HTML/CSS/JavaScript 示例运行真实的 `shaders@4.0.4` JavaScript 组件。官方 npm 运行包自托管在 `vendor/shaders-4.0.4.js`，没有 CDN、网络图片、框架或构建器的运行依赖；`reference.svg` 是本地原创输入图形。版本、源码提交和原始许可证见 [vendor/NOTICE.md](vendor/NOTICE.md)。\n\n使用静态 HTTP 服务打开 `index.html`。WebGPU 需要浏览器支持及可用设备；本地开发使用 `localhost`，公开页面使用 HTTPS。直接双击 `file:` 页面不能作为运行验证。\n\n## 效果与入口\n\n| 查询参数 `effect` | 真实组件 | 交互与参数 |\n| --- | --- | --- |\n| `mesh-gradient` | `MeshGradient` | 流动速度、颜色点数、旋涡方向、混合柔度、颜色 A/B；`stops: null` 使两个颜色控件直接控制配色 |\n| `fluted-glass` | `FlutedGlass` | 玻璃条数、折射强度、条纹方向、高光强度；以 `ImageTexture` 输入原创图形 |\n| `cursor-ripples` | `CursorRipples` | 指针移动与触摸拖动；可调波纹强度、衰减速度、影响半径和边缘色散 |\n| `noise-dissolve` | `NoiseDissolve` | 拖动溶解进度，0 为完整输入图形、1 为消失；可调噪声密度和边缘柔度 |\n\n入口示例：`index.html?effect=fluted-glass`。查询参数 `theme=light`／`theme=dark` 可指定控件主题。未指定时，同源嵌入继承父页面的 `data-atlas-theme` 并监听其变化；独立页面读取 Web Atlas 已保存的主题或系统偏好。演示舞台保持深色背景。\n\n## 运行行为\n\n页面一次只创建当前效果的实例；切换与重置先销毁原实例，快速切换按序初始化。参数使用 `shader.update('effect', props)` 更新；暂停时参数修改请求静止画面更新。每次创建传入 `disableTelemetry: true`。\n\n“暂停演示”／“开始演示”控制当前实例，页面进入后台暂停，返回时遵循用户的播放选择。`prefers-reduced-motion: reduce` 默认暂停；用户可主动开始。指针波纹只在舞台内使用触摸拖动，舞台外保留正常页面滚动。所有参数可用键盘操作，效果标签支持方向键及 Home/End。\n\n只有官方 `onReady` 回调确认首个合成帧后才显示“WebGPU 实时渲染”。浏览器缺少 WebGPU、无法取得设备或初始化失败时，显示明确标记的静态参考和原因；静态图不代表 GPU 效果或性能已验证。复制示例提供当前参数组成的 `shaders/js` 代码；安装命令固定为 `npm install shaders@4.0.4`。\n\n## 文件\n\n- `index.html`：语义化界面与实验入口。\n- `demo.css`：桌面／手机布局、主题与静态参考样式；文本至少 12px。\n- `demo.js`：四个真实组件组合、参数、实例生命周期与复制操作。\n- `reference.svg`：原创滤镜输入图形。\n- `vendor/shaders-4.0.4.js`：原始官方单文件 ESM。\n- `vendor/NOTICE.md` 与 `vendor/LICENSE-*.txt`：来源、固定版本与原始许可证。\n\n完整的组件、参数和框架用法继续查看[上游仓库](https://github.com/shader-effects-inc/shaders)与[官方文档](https://shaders.com/docs)。\n"
+      "path": "demos/materials/shaders/LICENSES.md",
+      "role": "license",
+      "content": "# Shaders 许可索引\n\n[来源与固定版本](../../../entries/materials/shaders.json)。[官方单文件运行包](vendor/shaders@4.0.4/shaders-4.0.4.js) 包含下列开源依赖。\n\n| 包 | 版本 | 许可原文 |\n| --- | --- | --- |\n| shaders | 4.0.4 | [MIT](vendor/shaders@4.0.4/LICENSE-shaders.txt) |\n| colorjs.io | 0.5.2 | [MIT](vendor/shaders@4.0.4/LICENSE-colorjs.io.txt) |\n| typegpu | 0.12.3 | [MIT](vendor/shaders@4.0.4/LICENSE-typegpu.txt) |\n| tinyest | 0.3.2 | [MIT](vendor/shaders@4.0.4/LICENSE-tinyest.txt) |\n| typed-binary | 4.3.3 | [MIT](vendor/shaders@4.0.4/LICENSE-typed-binary.txt) |\n| tsover-runtime | 0.0.7 | [Apache-2.0](vendor/shaders@4.0.4/LICENSE-tsover-runtime.txt) |\n\n[reference.svg](demo/reference.svg) 为 Web Atlas 原创几何图形。\n"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-colorjs.io.txt",
-      "role": "context",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-colorjs.io.txt",
+      "role": "license",
       "content": "MIT License\n\nCopyright (c) 2021 Lea Verou, Chris Lilley\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-shaders.txt",
-      "role": "context",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-shaders.txt",
+      "role": "license",
       "content": "MIT License\n\nCopyright (c) 2026 Shader Effects Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-tinyest.txt",
-      "role": "context",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-tinyest.txt",
+      "role": "license",
       "content": "MIT License\n\nCopyright (c) 2025 Software Mansion <swmansion.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-tsover-runtime.txt",
-      "role": "context",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-tsover-runtime.txt",
+      "role": "license",
       "content": "\n                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-typed-binary.txt",
-      "role": "context",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-typed-binary.txt",
+      "role": "license",
       "content": "MIT License\n\nCopyright (c) 2022 Iwo Plaza\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-typegpu.txt",
-      "role": "context",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-typegpu.txt",
+      "role": "license",
       "content": "MIT License\n\nCopyright (c) 2025 Software Mansion <swmansion.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
-    },
-    {
-      "path": "demos/materials/shaders/vendor/NOTICE.md",
-      "role": "context",
-      "content": "# Shaders 运行包与第三方许可\n\n`shaders-4.0.4.js` 为 npm `shaders@4.0.4` 的 `dist/js/bundle.js` 原始文件，仅改变文件名。它是官方单文件 ESM 构建，所有运行依赖已打包，无需 CDN。\n\n- 来源：[npm 发布包](https://registry.npmjs.org/shaders/-/shaders-4.0.4.tgz)\n- 对应源码提交：[`81fd4ece5d493ca6c424a2af41f0e2c361ec8258`](https://github.com/shader-effects-inc/shaders/tree/81fd4ece5d493ca6c424a2af41f0e2c361ec8258)\n- npm 包完整性：`sha512-NB+/RiK0oydteeeKdPqsLpR3iSoDTvt8bsdgw2wPb697QVCY/yadZV8gitCyCQx5t/kb4nJicIR+cbG9Q6JFfQ==`\n- 原始运行包大小：2,584,407 bytes\n- 运行包 SHA-256：`e00b8c9954c819910f1c8660c5035ca24f79814e752689f819f05c610299625e`\n- 许可原文：[LICENSE-shaders.txt](LICENSE-shaders.txt)，Copyright (c) 2026 Shader Effects Inc.\n\n包内组件、引擎与框架绑定采用 MIT 许可。官网预设、合集、页面区块和平台服务由[独立协议](https://shaders.com/license)管理；本目录的四个组合由 Web Atlas 使用开源组件自行编写，未使用官网预设或页面区块。\n\n官方构建包含的运行依赖按该提交的 [`pnpm-lock.yaml`](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/pnpm-lock.yaml) 标注，原始许可随本目录分发：\n\n| 依赖 | 版本 | 许可原文 |\n| --- | --- | --- |\n| colorjs.io | 0.5.2 | [MIT](LICENSE-colorjs.io.txt) |\n| typegpu | 0.12.3 | [MIT](LICENSE-typegpu.txt) |\n| tinyest | 0.3.2 | [MIT](LICENSE-tinyest.txt) |\n| typed-binary | 4.3.3 | [MIT](LICENSE-typed-binary.txt) |\n| tsover-runtime | 0.0.7 | [Apache-2.0](LICENSE-tsover-runtime.txt) |\n\n原始许可证保持上游字节。本地 `reference.svg` 为 Web Atlas 原创几何图形，不包含第三方照片、字体或品牌标志。\n"
     }
   ],
   "files": [
     {
-      "path": "demos/materials/shaders/README.md",
-      "role": "context"
+      "path": "demos/materials/shaders/LICENSES.md",
+      "role": "license"
     },
     {
-      "path": "demos/materials/shaders/demo.css",
+      "path": "demos/materials/shaders/demo/demo.css",
       "role": "source"
     },
     {
-      "path": "demos/materials/shaders/demo.js",
+      "path": "demos/materials/shaders/demo/demo.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/shaders/demo/reference.svg",
       "role": "source"
     },
     {
@@ -295,39 +294,31 @@
       "role": "source"
     },
     {
-      "path": "demos/materials/shaders/reference.svg",
-      "role": "source"
-    },
-    {
-      "path": "demos/materials/shaders/vendor/LICENSE-colorjs.io.txt",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-colorjs.io.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-shaders.txt",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-shaders.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-tinyest.txt",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-tinyest.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-tsover-runtime.txt",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-tsover-runtime.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-typed-binary.txt",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-typed-binary.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/shaders/vendor/LICENSE-typegpu.txt",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/LICENSE-typegpu.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/shaders/vendor/NOTICE.md",
-      "role": "context"
-    },
-    {
-      "path": "demos/materials/shaders/vendor/shaders-4.0.4.js",
+      "path": "demos/materials/shaders/vendor/shaders@4.0.4/shaders-4.0.4.js",
       "role": "vendor"
     },
     {
@@ -349,8 +340,8 @@
   ],
   "sourceFiles": [
     "demos/materials/shaders/index.html",
-    "demos/materials/shaders/demo.css",
-    "demos/materials/shaders/demo.js",
-    "demos/materials/shaders/reference.svg"
+    "demos/materials/shaders/demo/demo.css",
+    "demos/materials/shaders/demo/demo.js",
+    "demos/materials/shaders/demo/reference.svg"
   ]
 }

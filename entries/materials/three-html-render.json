@@ -124,5 +124,5 @@
   "demo": "demos/materials/three-html-render/index.html",
   "preview": "previews/materials/three-html-render.png",
   "research": "docs/materials/three-html-render.md",
-  "sourceFiles": ["demos/materials/three-html-render/index.html", "demos/materials/three-html-render/demo.css", "demos/materials/three-html-render/demo.js", "demos/materials/three-html-render/mors-logo.svg"]
+  "sourceFiles": ["demos/materials/three-html-render/index.html", "demos/materials/three-html-render/demo/demo.css", "demos/materials/three-html-render/demo/demo.js", "demos/materials/three-html-render/demo/mors-logo.svg"]
 }

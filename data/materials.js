@@ -9,8 +9,8 @@ window.DESIGN_MATERIALS = [
     "research": "docs/materials/98-css.md",
     "sourceFiles": [
       "demos/materials/98-css/index.html",
-      "demos/materials/98-css/demo.css",
-      "demos/materials/98-css/demo.js"
+      "demos/materials/98-css/demo/demo.css",
+      "demos/materials/98-css/demo/demo.js"
     ],
     "summary": "以真实 Windows 98 风格 CSS 组合设置窗口、可筛选素材目录与可暂停进度；保留复古边框，同时提高文字与触控可用性。",
     "install": "npm install 98.css@0.1.21",
@@ -491,8 +491,8 @@ window.DESIGN_MATERIALS = [
     "research": "docs/materials/material-web.md",
     "sourceFiles": [
       "demos/materials/material-web/index.html",
-      "demos/materials/material-web/demo.css",
-      "demos/materials/material-web/demo.js",
+      "demos/materials/material-web/demo/demo.css",
+      "demos/materials/material-web/demo/demo.js",
       "demos/materials/material-web/source/vendor/components.mjs"
     ]
   },
@@ -746,40 +746,40 @@ window.DESIGN_MATERIALS = [
     "research": "docs/materials/reacticle.md",
     "sourceFiles": [
       "demos/materials/reacticle/index.html",
-      "demos/materials/reacticle/demo.js",
-      "demos/materials/reacticle/caffeine-half-life/index.html",
-      "demos/materials/reacticle/caffeine-half-life/assets/index-DMYwhlbL.js",
-      "demos/materials/reacticle/caffeine-half-life/assets/index-WxgjeHG6.css",
-      "demos/materials/reacticle/movable-type/index.html",
-      "demos/materials/reacticle/movable-type/assets/index-B-dGzE72.js",
-      "demos/materials/reacticle/movable-type/assets/index-CDnsII-G.css",
-      "demos/materials/reacticle/pool-exhaustion/index.html",
-      "demos/materials/reacticle/pool-exhaustion/assets/index-BtWtZy11.js",
-      "demos/materials/reacticle/pool-exhaustion/assets/index-CxoMmBeN.css",
-      "demos/materials/reacticle/orbit-spec/index.html",
-      "demos/materials/reacticle/orbit-spec/assets/index-BeERXI3Z.js",
-      "demos/materials/reacticle/orbit-spec/assets/index-BguD11Q8.css",
-      "demos/materials/reacticle/linear-attention/index.html",
-      "demos/materials/reacticle/linear-attention/assets/index-lyo_MfEB.js",
-      "demos/materials/reacticle/linear-attention/assets/index-WxgjeHG6.css",
-      "demos/materials/reacticle/first-newsletter/index.html",
-      "demos/materials/reacticle/first-newsletter/assets/index-DlB2uEmW.css",
-      "demos/materials/reacticle/first-newsletter/assets/index-DoixGDe2.js",
-      "demos/materials/reacticle/slow-breathing/index.html",
-      "demos/materials/reacticle/slow-breathing/assets/index-8wSZpDKQ.js",
-      "demos/materials/reacticle/slow-breathing/assets/index-DlB2uEmW.css",
-      "demos/materials/reacticle/front-page/index.html",
-      "demos/materials/reacticle/front-page/assets/index-CZI22ZoU.js",
-      "demos/materials/reacticle/front-page/assets/index-DlB2uEmW.css",
-      "demos/materials/reacticle/geometry-of-meaning/index.html",
-      "demos/materials/reacticle/geometry-of-meaning/assets/index-DlB2uEmW.css",
-      "demos/materials/reacticle/geometry-of-meaning/assets/index-zpQvA_KQ.js",
-      "demos/materials/reacticle/rate-limiter-spec/index.html",
-      "demos/materials/reacticle/rate-limiter-spec/assets/index-BguD11Q8.css",
-      "demos/materials/reacticle/rate-limiter-spec/assets/index-BQymDvVh.js",
-      "demos/materials/reacticle/color-clash/index.html",
-      "demos/materials/reacticle/color-clash/assets/index-Dd_VDUiD.js",
-      "demos/materials/reacticle/color-clash/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/demo/demo.js",
+      "demos/materials/reacticle/demo/caffeine-half-life/index.html",
+      "demos/materials/reacticle/demo/caffeine-half-life/assets/index-DMYwhlbL.js",
+      "demos/materials/reacticle/demo/caffeine-half-life/assets/index-WxgjeHG6.css",
+      "demos/materials/reacticle/demo/movable-type/index.html",
+      "demos/materials/reacticle/demo/movable-type/assets/index-B-dGzE72.js",
+      "demos/materials/reacticle/demo/movable-type/assets/index-CDnsII-G.css",
+      "demos/materials/reacticle/demo/pool-exhaustion/index.html",
+      "demos/materials/reacticle/demo/pool-exhaustion/assets/index-BtWtZy11.js",
+      "demos/materials/reacticle/demo/pool-exhaustion/assets/index-CxoMmBeN.css",
+      "demos/materials/reacticle/demo/orbit-spec/index.html",
+      "demos/materials/reacticle/demo/orbit-spec/assets/index-BeERXI3Z.js",
+      "demos/materials/reacticle/demo/orbit-spec/assets/index-BguD11Q8.css",
+      "demos/materials/reacticle/demo/linear-attention/index.html",
+      "demos/materials/reacticle/demo/linear-attention/assets/index-lyo_MfEB.js",
+      "demos/materials/reacticle/demo/linear-attention/assets/index-WxgjeHG6.css",
+      "demos/materials/reacticle/demo/first-newsletter/index.html",
+      "demos/materials/reacticle/demo/first-newsletter/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/demo/first-newsletter/assets/index-DoixGDe2.js",
+      "demos/materials/reacticle/demo/slow-breathing/index.html",
+      "demos/materials/reacticle/demo/slow-breathing/assets/index-8wSZpDKQ.js",
+      "demos/materials/reacticle/demo/slow-breathing/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/demo/front-page/index.html",
+      "demos/materials/reacticle/demo/front-page/assets/index-CZI22ZoU.js",
+      "demos/materials/reacticle/demo/front-page/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/demo/geometry-of-meaning/index.html",
+      "demos/materials/reacticle/demo/geometry-of-meaning/assets/index-DlB2uEmW.css",
+      "demos/materials/reacticle/demo/geometry-of-meaning/assets/index-zpQvA_KQ.js",
+      "demos/materials/reacticle/demo/rate-limiter-spec/index.html",
+      "demos/materials/reacticle/demo/rate-limiter-spec/assets/index-BguD11Q8.css",
+      "demos/materials/reacticle/demo/rate-limiter-spec/assets/index-BQymDvVh.js",
+      "demos/materials/reacticle/demo/color-clash/index.html",
+      "demos/materials/reacticle/demo/color-clash/assets/index-Dd_VDUiD.js",
+      "demos/materials/reacticle/demo/color-clash/assets/index-DlB2uEmW.css",
       "demos/materials/reacticle/fonts/fonts.css"
     ]
   },
@@ -959,8 +959,8 @@ window.DESIGN_MATERIALS = [
     "research": "docs/materials/recursive.md",
     "sourceFiles": [
       "demos/materials/recursive/index.html",
-      "demos/materials/recursive/demo.css",
-      "demos/materials/recursive/demo.js"
+      "demos/materials/recursive/demo/demo.css",
+      "demos/materials/recursive/demo/demo.js"
     ]
   },
   {
@@ -1182,9 +1182,9 @@ window.DESIGN_MATERIALS = [
     "research": "docs/materials/shaders.md",
     "sourceFiles": [
       "demos/materials/shaders/index.html",
-      "demos/materials/shaders/demo.css",
-      "demos/materials/shaders/demo.js",
-      "demos/materials/shaders/reference.svg"
+      "demos/materials/shaders/demo/demo.css",
+      "demos/materials/shaders/demo/demo.js",
+      "demos/materials/shaders/demo/reference.svg"
     ]
   },
   {
@@ -1357,9 +1357,9 @@ window.DESIGN_MATERIALS = [
     "research": "docs/materials/three-html-render.md",
     "sourceFiles": [
       "demos/materials/three-html-render/index.html",
-      "demos/materials/three-html-render/demo.css",
-      "demos/materials/three-html-render/demo.js",
-      "demos/materials/three-html-render/mors-logo.svg"
+      "demos/materials/three-html-render/demo/demo.css",
+      "demos/materials/three-html-render/demo/demo.js",
+      "demos/materials/three-html-render/demo/mors-logo.svg"
     ]
   },
   {
@@ -1473,8 +1473,8 @@ window.DESIGN_MATERIALS = [
     "research": "docs/materials/wired-elements.md",
     "sourceFiles": [
       "demos/materials/wired-elements/index.html",
-      "demos/materials/wired-elements/demo.css",
-      "demos/materials/wired-elements/demo.js"
+      "demos/materials/wired-elements/demo/demo.css",
+      "demos/materials/wired-elements/demo/demo.js"
     ],
     "summary": "用真实手绘 Web Components 组合任务清单、偏好面板与概念卡片；让草图在保留讨论感的同时具备可验证的状态。",
     "install": "npm install wired-elements@2.1.2",

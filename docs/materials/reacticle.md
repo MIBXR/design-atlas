@@ -8,7 +8,7 @@ Reacticle 是用于文章、报告和交互长文的 React 语义化组件库，
 
 上游 README 指向的开始使用页给出 `npm install reacticle`，React 18.3 是 peer 依赖。本地样例使用上游 `src/` 与 `apps/site` 的报告组件和主题 CSS。公共入口 `ThemeProvider` 包裹文章，再组合 `Article`、`Hero`、`Section`、公式、代码、决策和媒体组件；自定义 `Raw` 内容继续使用 `--ra-*` 主题变量。
 
-11 个独立入口复用原画廊的文章容器及原站 CSS，仅渲染对应文章。入口在模块加载前设置 `Prism.manual = true`，由原 React 组件逐行高亮，保留代码行容器与换行。样例索引按 `?demo=<id>` 选择后直接打开对应静态页；每篇的 JS、CSS 与公式字体由 Vite 以相对路径构建，Google Fonts 使用共享本地文件。
+11 个独立入口位于 `demo/<样文 id>/`，复用原画廊的文章容器及原站 CSS，仅渲染对应文章。入口在模块加载前设置 `Prism.manual = true`，由原 React 组件逐行高亮，保留代码行容器与换行。样例索引按 `?demo=<id>` 选择后直接打开对应静态页；每篇的 JS、CSS 与公式字体由 Vite 以相对路径构建，Google Fonts 使用 `fonts/` 中的共享本地文件。
 
 ## 11 套主题样文
 
@@ -37,3 +37,5 @@ Reacticle 是用于文章、报告和交互长文的 React 语义化组件库，
 原站引入的 Newsreader、IBM Plex Sans、IBM Plex Mono、Source Serif 4、JetBrains Mono、Fraunces、Hanken Grotesk、Quicksand、Nunito、Playfair Display、Josefin Sans、Poppins 和 Space Grotesk 共 13 个字体家族、76 个 WOFF2 文件已本地化。保留原字重、样式与子集范围；中文继续使用原主题声明的系统字体回退。
 
 文章内目录、按钮、滑块与展开内容沿用原实现。减少动态使用原站 CSS；呼吸练习保留原始开始／暂停和计时逻辑。组件、主题、11 篇报告与依赖配置归档在 [制作源码](../../demos/materials/reacticle/source/README.md)，依赖按原 lockfile 安装；对照结论与接入差异见 [fidelity.md](../../demos/materials/reacticle/fidelity.md)。
+
+上游软件包声明保存在 `source/vendor/reacticle-package.json`，Google Fonts 原始 CSS 保存在 `source/vendor/fonts/google-fonts-original.css`。运行依赖与字体的许可原文见[许可索引](../../demos/materials/reacticle/LICENSES.md)。

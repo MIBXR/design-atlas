@@ -13,7 +13,7 @@
     "note": "Selected official components and transitive JavaScript/CSS-in-JS are bundled and minified; no component behavior source patches."
   },
   "bundle": {
-    "path": "../../vendor/material-web.js",
+    "path": "../../vendor/material-web@2.5.0/material-web.js",
     "sha256": "607e3b24b8397ae84892a574b94553cefce94075852ad7a8cd5253d39a33957e",
     "bytes": 184793
   },
@@ -24,7 +24,7 @@
       "license": "Apache-2.0",
       "files": [
         {
-          "path": "../../vendor/LICENSE-material-web-license.txt",
+          "path": "../../vendor/material-web@2.5.0/LICENSE-material-web-license.txt",
           "sha256": "295cdb4364b782931c914f5ca8c47fac87c732fa7e448b788a47aa5b25728212",
           "bytes": 11348
         }
@@ -36,7 +36,7 @@
       "license": "BSD-3-Clause",
       "files": [
         {
-          "path": "../../vendor/LICENSE-lit-license.txt",
+          "path": "../../vendor/material-web@2.5.0/LICENSE-lit-license.txt",
           "sha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
           "bytes": 1517
         }
@@ -48,7 +48,7 @@
       "license": "BSD-3-Clause",
       "files": [
         {
-          "path": "../../vendor/LICENSE-lit-element-license.txt",
+          "path": "../../vendor/material-web@2.5.0/LICENSE-lit-element-license.txt",
           "sha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
           "bytes": 1517
         }
@@ -60,7 +60,7 @@
       "license": "BSD-3-Clause",
       "files": [
         {
-          "path": "../../vendor/LICENSE-lit-html-license.txt",
+          "path": "../../vendor/material-web@2.5.0/LICENSE-lit-html-license.txt",
           "sha256": "2b66f9390afde29edfe4314daff93f01fb182e1178053e228120178987e5db75",
           "bytes": 1518
         }
@@ -72,7 +72,7 @@
       "license": "BSD-3-Clause",
       "files": [
         {
-          "path": "../../vendor/LICENSE-lit-reactive-element-license.txt",
+          "path": "../../vendor/material-web@2.5.0/LICENSE-lit-reactive-element-license.txt",
           "sha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
           "bytes": 1517
         }
@@ -84,12 +84,12 @@
       "license": "0BSD",
       "files": [
         {
-          "path": "../../vendor/LICENSE-tslib-license.txt",
+          "path": "../../vendor/material-web@2.5.0/LICENSE-tslib-license.txt",
           "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
           "bytes": 655
         },
         {
-          "path": "../../vendor/LICENSE-tslib-copyright.txt",
+          "path": "../../vendor/material-web@2.5.0/LICENSE-tslib-copyright.txt",
           "sha256": "da16ddb65f8ca390998fb99223d0112498b56b45784d00afd77ff8ce1ac4de8b",
           "bytes": 822
         }

@@ -223,8 +223,8 @@
     "research": "docs/materials/material-web.md",
     "sourceFiles": [
       "demos/materials/material-web/index.html",
-      "demos/materials/material-web/demo.css",
-      "demos/materials/material-web/demo.js",
+      "demos/materials/material-web/demo/demo.css",
+      "demos/materials/material-web/demo/demo.js",
       "demos/materials/material-web/source/vendor/components.mjs"
     ]
   },
@@ -232,7 +232,7 @@
     {
       "path": "docs/materials/material-web.md",
       "role": "research",
-      "content": "# Google Material Web：Material 3 官方组件\n\n[来源、版本、许可与使用边界](../../entries/materials/material-web.json)\n\n[操作四种样例](../../demos/materials/material-web/index.html) · [结构化条目](../../entries/materials/material-web.json) · [官方仓库](https://github.com/material-components/material-web)\n\nGoogle 的 `@material/web` 将 Material 3 设计语言实现为 Web Components，使用 Lit。这里选取的是官方 Material Web 软件，不是 MUI、Angular Material，也不是完整设计规范的复刻。四个业务组合、中文内容、配色控件与原创 SVG 属于 Web Atlas；按钮、文本框、开关、滑块和对话框使用真实官方实现。\n\n## 四个可借用的组合\n\n| 组合 | 实际操作与结果 | 参数来源与本地选择 |\n| --- | --- | --- |\n| 操作层级 | 加入计划后禁用主要操作；查看安排输出独立内容；重置恢复。 | [按钮文档](https://material-web.dev/components/button/) 定义填充、描边、文字等层级及 `disabled`；角色和卡片内容为本地组合。 |\n| 表单验证 | 空值或错误邮箱显示说明并聚焦首个错误；有效输入只报告格式检查通过；清空恢复。 | [文本框文档](https://material-web.dev/components/text-field/) 提供 `required`、`type`、`maxlength`、`checkValidity()`、`error`、`errorText`。名称24字符限制与中文消息为本地选择。 |\n| 偏好设置 | 开关显隐完成标记，滑块改变目标卡数量；键盘与触摸输入走相同状态更新。 | [开关](https://material-web.dev/components/switch/) 的 `selected` 和 `change`；[滑块](https://material-web.dev/components/slider/) 的 `input`、`min/max/step/value`、`ticks/labeled`。数量1–8、默认4为本地用途。 |\n| 确认对话框 | 归档、取消、Escape、恢复；关闭后焦点回到归档触发按钮。 | [对话框文档](https://material-web.dev/components/dialog/) 的 `show()`、`close(value)`、`returnValue`、`closed`、`quick`。归档状态只存在当前页面。 |\n\n浏览器实际打开 [官方按钮 Stories](https://material-web.dev/components/button/stories/)，观察五种按钮、图标与链接变体并操作按钮；这是源端观察。其他 API 与主题规则以官方文档和固定版本源码为依据，本地四组功能单独实测，不把本地组合写成官网完整样例复刻。\n\n## 参数与接入\n\n浏览器通过 `import './vendor/material-web.js'` 注册选用的组件。运行模块包含全部依赖与组件样式，无 CDN 或远程字体。以静态 HTTP/HTTPS 服务器提供素材导出目录，再打开 `demos/materials/material-web/index.html`。`?sample=actions`、`form`、`preferences`、`dialog` 可定位样例。\n\n[Material Theming](https://material-web.dev/theming/material-theming/) 以 CSS 自定义属性区分系统颜色角色和组件 tokens。本地两套配色覆盖 primary/on-primary、container/on-container、surface/on-surface、outline、error 等成对角色；它们是学习用配色，不是从用户图片自动生成的动态主题。主题可跟随 Atlas、系统或手动选浅/深。按钮形状使用各组件的 `container-shape`；`4–28px` 范围、`2px` 步长和 `20px` 默认值是本地教学选择，不是规范强制值。\n\n表单示例阻止提交，仅在浏览器内调用校验接口，不存储或发送内容。复用时把成功分支接入自己的真实数据处理，并保留服务端校验；示例成功提示不能作为真实账户创建或资料保存的证据。\n\n## 可读性、动效与失败状态\n\n组件自带 Shadow DOM。页面通过官方字号 token 保持正文、标签和支持文本的尺度，并对滑块 `.label` 取消缩放过渡，避免值标签进入过程中小于12px。这项 Shadow DOM 适配属于本地代码，升级版本时需复核内部选择器。功能图标使用实际 SVG，没有加载 Material Symbols 字体或用文本字符替代图标。\n\n界面没有自动循环、音频或后台计时器。系统或手动减少动态时，关闭 Shadow DOM 的局部 CSS 过渡、禁用 ripple，并设置 `dialog.quick`；页面隐藏时结束当前短动画，回到页面不自动触发新动作。确认弹窗使用上游对话框焦点约束；关闭后等待触发按钮的 Lit 渲染完成再恢复焦点。\n\n组件加载成功前显示静态结构说明，实际控件区域保持隐藏；模块加载失败时明确显示「静态后备 · 真实组件未运行」。未定义的对话框也保持隐藏。静态结构解释层级；模块加载后提供真实组件、表单和对话框。\n\n## 重建依赖\n\n`vendor/material-web.js` 由 esbuild 0.25.12 合并并压缩选用的官方模块，CSS-in-JS 随包，保留行内许可；未修改官方组件源码。`source/vendor/components.mjs`、`source/vendor/package.json`、`source/vendor/package-lock.json` 提供重建输入，[依赖说明](../../demos/materials/material-web/vendor/README.md) 给出在仓库外重建的命令。`source/vendor/provenance.json` 保存 npm integrity、bundle摘要以及全部许可文件字节数/SHA256。导出时应保留完整 vendor 目录；Agent 资料由统一构建生成完整文件路径与角色。\n\n[本地对照结果](../../demos/materials/material-web/fidelity.md)。\n"
+      "content": "# Google Material Web：Material 3 官方组件\n\n[来源、版本、许可与使用边界](../../entries/materials/material-web.json)\n\n[操作四种样例](../../demos/materials/material-web/index.html) · [结构化条目](../../entries/materials/material-web.json) · [官方仓库](https://github.com/material-components/material-web)\n\nGoogle 的 `@material/web` 将 Material 3 设计语言实现为 Web Components，使用 Lit。这里选取的是官方 Material Web 软件，不是 MUI、Angular Material，也不是完整设计规范的复刻。四个业务组合、中文内容、配色控件与原创 SVG 属于 Web Atlas；按钮、文本框、开关、滑块和对话框使用真实官方实现。\n\n## 四个可借用的组合\n\n| 组合 | 实际操作与结果 | 参数来源与本地选择 |\n| --- | --- | --- |\n| 操作层级 | 加入计划后禁用主要操作；查看安排输出独立内容；重置恢复。 | [按钮文档](https://material-web.dev/components/button/) 定义填充、描边、文字等层级及 `disabled`；角色和卡片内容为本地组合。 |\n| 表单验证 | 空值或错误邮箱显示说明并聚焦首个错误；有效输入只报告格式检查通过；清空恢复。 | [文本框文档](https://material-web.dev/components/text-field/) 提供 `required`、`type`、`maxlength`、`checkValidity()`、`error`、`errorText`。名称24字符限制与中文消息为本地选择。 |\n| 偏好设置 | 开关显隐完成标记，滑块改变目标卡数量；键盘与触摸输入走相同状态更新。 | [开关](https://material-web.dev/components/switch/) 的 `selected` 和 `change`；[滑块](https://material-web.dev/components/slider/) 的 `input`、`min/max/step/value`、`ticks/labeled`。数量1–8、默认4为本地用途。 |\n| 确认对话框 | 归档、取消、Escape、恢复；关闭后焦点回到归档触发按钮。 | [对话框文档](https://material-web.dev/components/dialog/) 的 `show()`、`close(value)`、`returnValue`、`closed`、`quick`。归档状态只存在当前页面。 |\n\n浏览器实际打开 [官方按钮 Stories](https://material-web.dev/components/button/stories/)，观察五种按钮、图标与链接变体并操作按钮；这是源端观察。其他 API 与主题规则以官方文档和固定版本源码为依据，本地四组功能单独实测，不把本地组合写成官网完整样例复刻。\n\n## 参数与接入\n\n浏览器通过 `vendor/material-web@2.5.0/material-web.js` 注册选用的组件，样例代码位于 `demo/`。运行模块包含全部依赖与组件样式，无 CDN 或远程字体。以静态 HTTP/HTTPS 服务器提供素材导出目录，再打开 `demos/materials/material-web/index.html`。`?sample=actions`、`form`、`preferences`、`dialog` 可定位样例。\n\n[Material Theming](https://material-web.dev/theming/material-theming/) 以 CSS 自定义属性区分系统颜色角色和组件 tokens。本地两套配色覆盖 primary/on-primary、container/on-container、surface/on-surface、outline、error 等成对角色；它们是学习用配色，不是从用户图片自动生成的动态主题。主题可跟随 Atlas、系统或手动选浅/深。按钮形状使用各组件的 `container-shape`；`4–28px` 范围、`2px` 步长和 `20px` 默认值是本地教学选择，不是规范强制值。\n\n表单示例阻止提交，仅在浏览器内调用校验接口，不存储或发送内容。复用时把成功分支接入自己的真实数据处理，并保留服务端校验；示例成功提示不能作为真实账户创建或资料保存的证据。\n\n## 可读性、动效与失败状态\n\n组件自带 Shadow DOM。页面通过官方字号 token 保持正文、标签和支持文本的尺度，并对滑块 `.label` 取消缩放过渡，避免值标签进入过程中小于12px。这项 Shadow DOM 适配属于本地代码，升级版本时需复核内部选择器。功能图标使用实际 SVG，没有加载 Material Symbols 字体或用文本字符替代图标。\n\n界面没有自动循环、音频或后台计时器。系统或手动减少动态时，关闭 Shadow DOM 的局部 CSS 过渡、禁用 ripple，并设置 `dialog.quick`；页面隐藏时结束当前短动画，回到页面不自动触发新动作。确认弹窗使用上游对话框焦点约束；关闭后等待触发按钮的 Lit 渲染完成再恢复焦点。\n\n组件加载成功前显示静态结构说明，实际控件区域保持隐藏；模块加载失败时明确显示「静态后备 · 真实组件未运行」。未定义的对话框也保持隐藏。静态结构解释层级；模块加载后提供真实组件、表单和对话框。\n\n## 重建依赖\n\n运行包由 esbuild 0.25.12 合并并压缩选用的官方模块，CSS-in-JS 随包，保留行内许可。`source/vendor/components.mjs`、`source/vendor/package.json`、`source/vendor/package-lock.json` 提供重建输入，`source/vendor/provenance.json` 保存来源与转换记录。\n\n将这三份重建输入复制到仓库外的临时目录，在该目录运行：\n\n```sh\nnpm ci --ignore-scripts --no-audit --no-fund\n./node_modules/.bin/esbuild components.mjs --bundle --format=esm --target=es2022 --minify --legal-comments=inline --outfile=material-web.js\n```\n\n用产物替换 `vendor/material-web@2.5.0/material-web.js`。构建依赖留在仓库外，交付目录保留运行模块与[许可索引](../../demos/materials/material-web/LICENSES.md)列出的许可原文。\n\n[本地对照结果](../../demos/materials/material-web/fidelity.md)。\n"
     },
     {
       "path": "prompts/materials/material-web.md",
@@ -240,58 +240,66 @@
       "content": "# Google Material Web · Material 3 官方组件 · 复用 Prompt\n\n[结构化条目](../../entries/materials/material-web.json)\n\n在已有HTML/CSS/JavaScript页面中使用Google官方@material/web 2.5.0，先读取Material Web素材包的来源、维护模式边界、许可、四种样例与依赖锁定记录。依据页面任务选择操作层级、带验证的文本框、switch/slider偏好面板或确认对话框，不复制示例业务文案。沿用当前页面导航与布局，用官方CSS系统颜色角色和组件形状token统一主题。提供真实标签、SVG功能图标、错误纠正、取消/Escape与关闭后焦点返回；所有文本包括Shadow DOM浮动标签及slider值标签在实际渲染中至少12px，取消会缩小文字的过渡。模块失败显示标注的静态后备；系统减少动态或手动减少时关闭局部过渡/ripple，dialog使用quick，页面隐藏时停止当前短动画。保持输入本地或明确接入当前项目的真实提交逻辑，不宣称示例已联网保存。保留Apache-2.0、Lit BSD-3-Clause、tslib 0BSD及转换说明；通过HTTP运行并检查桌面、窄屏、键盘、触摸和资源加载。\n\n## 制作约束\n\n- 固定 @material/web 2.5.0；官方 README 在核验时仍标注维护模式、等待新维护者。\n- 官方是 Web Components/Lit 实现，不等同于 Angular Material 或 MUI；本条目不覆盖整个 Material Design 规范。\n- 本地 vendor 合并了所选官方组件、CSS-in-JS 及 Lit/tslib 依赖，保留许可和锁文件；更换版本须重新核验 API 与 Shadow DOM 适配。\n- 以 HTTP/HTTPS 提供 ES module；模块失败时仅显示明确标注的静态说明，不声称真实组件已运行。\n- 配色、4–28px 圆角范围、中文内容与四种业务组合为本地原创演示，未接入服务端、持久化或真实账户。\n- 系统减少动态或手动选择时关闭局部过渡和 ripple，dialog 使用 quick；滑块值标签取消缩放过渡以保持文字至少12px；无持续动画或后台计时器。\n- 实际浏览器验证限定于 Chromium 桌面及390px窄屏；Safari、Firefox、真实触屏与屏幕阅读器仍需目标项目验证。\n"
     },
     {
+      "path": "demos/materials/material-web/LICENSES.md",
+      "role": "license",
+      "content": "# Material Web 许可索引\n\n[来源与固定版本](../../../entries/materials/material-web.json)。运行包为 [material-web.js](vendor/material-web@2.5.0/material-web.js)，包含下列组件与依赖。\n\n| 包 | 版本 | 许可原文 |\n| --- | --- | --- |\n| @material/web | 2.5.0 | [Apache-2.0](vendor/material-web@2.5.0/LICENSE-material-web-license.txt) |\n| lit | 3.3.3 | [BSD-3-Clause](vendor/material-web@2.5.0/LICENSE-lit-license.txt) |\n| lit-element | 4.2.2 | [BSD-3-Clause](vendor/material-web@2.5.0/LICENSE-lit-element-license.txt) |\n| lit-html | 3.3.3 | [BSD-3-Clause](vendor/material-web@2.5.0/LICENSE-lit-html-license.txt) |\n| @lit/reactive-element | 2.1.2 | [BSD-3-Clause](vendor/material-web@2.5.0/LICENSE-lit-reactive-element-license.txt) |\n| tslib | 2.8.1 | [0BSD](vendor/material-web@2.5.0/LICENSE-tslib-license.txt) · [版权声明](vendor/material-web@2.5.0/LICENSE-tslib-copyright.txt) |\n"
+    },
+    {
       "path": "demos/materials/material-web/fidelity.md",
-      "role": "context",
+      "role": "fidelity",
       "content": "# Material Web：对照结果\n\n本地 Chromium 在1440×900与390×844 CSS视口下验证四种样例。已实测主要操作禁用/恢复、空值和无效邮箱错误、有效邮箱通过、开关变化、滑块键盘方向键与Home/End、确认归档/恢复、Escape关闭和焦点返回、明暗/配色/圆角控件，以及减少动态模式。对可见文本及开放Shadow DOM核对计算字号与变换后的尺寸；稳定界面最小为12px，滑块标签的缩放过渡由本地适配取消。\n\n阻断本地运行模块后，页面显示明确静态后备；恢复模块后可正常加载。桌面与窄屏页面没有横向溢出。当前浏览器工具不支持触摸事件注入，真实触摸、Safari、Firefox、屏幕阅读器及真实后台切换行为仍需目标设备验收。固定版本源码中的可访问性实现与上游浏览器支持表，只作为适配依据。\n"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-lit-element-license.txt",
-      "role": "context",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-lit-element-license.txt",
+      "role": "license",
       "content": "BSD 3-Clause License\n\nCopyright (c) 2017 Google LLC. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-lit-html-license.txt",
-      "role": "context",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-lit-html-license.txt",
+      "role": "license",
       "content": "BSD 3-Clause License\n\nCopyright (c) 2017 Google LLC. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-lit-license.txt",
-      "role": "context",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-lit-license.txt",
+      "role": "license",
       "content": "BSD 3-Clause License\n\nCopyright (c) 2017 Google LLC. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-lit-reactive-element-license.txt",
-      "role": "context",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-lit-reactive-element-license.txt",
+      "role": "license",
       "content": "BSD 3-Clause License\n\nCopyright (c) 2017 Google LLC. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-material-web-license.txt",
-      "role": "context",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-material-web-license.txt",
+      "role": "license",
       "content": "\n                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright 2018-2023 Google, Inc.\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-tslib-copyright.txt",
-      "role": "context",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-tslib-copyright.txt",
+      "role": "license",
       "content": "/******************************************************************************\r\nCopyright (c) Microsoft Corporation.\r\n\r\nPermission to use, copy, modify, and/or distribute this software for any\r\npurpose with or without fee is hereby granted.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH\r\nREGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY\r\nAND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,\r\nINDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM\r\nLOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR\r\nOTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\r\nPERFORMANCE OF THIS SOFTWARE.\r\n***************************************************************************** */\r\n\r\n"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-tslib-license.txt",
-      "role": "context",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-tslib-license.txt",
+      "role": "license",
       "content": "Copyright (c) Microsoft Corporation.\r\n\r\nPermission to use, copy, modify, and/or distribute this software for any\r\npurpose with or without fee is hereby granted.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH\r\nREGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY\r\nAND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,\r\nINDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM\r\nLOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR\r\nOTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\r\nPERFORMANCE OF THIS SOFTWARE."
-    },
-    {
-      "path": "demos/materials/material-web/vendor/README.md",
-      "role": "context",
-      "content": "# Material Web 本地运行依赖\n\n`material-web.js` 是 Google 官方 `@material/web@2.5.0` 的选用组件及其运行依赖，经 esbuild `0.25.12` 合并、压缩后的 ESM。组件的 CSS-in-JS 随模块打包；运行时没有 CDN、远程字体或外部资源请求。不需要安装 Node 依赖即可通过 HTTP/HTTPS 预览。\n\n## 来源与转换\n\n官方 [npm 版本](https://registry.npmjs.org/@material/web/2.5.0) 的 `gitHead` 为 `b4de401eb665ec63474f39319a4ba8f2145974cc`。入口 `../source/vendor/components.mjs` 只导入填充、色调填充、描边、文字按钮、描边文本框、开关、滑块、对话框。合并使用浏览器生产入口，移除未使用代码，保留行内许可注释；没有修改上游组件行为源码。网站配色、Shadow DOM 减少动态处理和交互逻辑位于外层 `demo.css`、`demo.js`。\n\n`../source/vendor/provenance.json` 保存上游 npm 完整性值、转换命令、运行模块 SHA256，以及随包许可的原始字节数和 SHA256。\n\n| 实际进入运行包的依赖 | 固定版本 | 许可 |\n| --- | --- | --- |\n| @material/web | 2.5.0 | Apache-2.0 |\n| lit | 3.3.3 | BSD-3-Clause |\n| lit-element | 4.2.2 | BSD-3-Clause |\n| lit-html | 3.3.3 | BSD-3-Clause |\n| @lit/reactive-element | 2.1.2 | BSD-3-Clause |\n| tslib | 2.8.1 | 0BSD |\n\n原许可证保存在本目录的 `LICENSE-*.txt` 中；tslib 同时保留版权声明。锁文件包含 npm 解析得到的依赖和构建工具，其中 `@lit/context`、类型声明与 esbuild 的平台安装包不进入浏览器运行包。\n\n## 重建\n\n将 `../source/vendor/package.json`、`../source/vendor/package-lock.json` 和 `../source/vendor/components.mjs` 复制到仓库外的临时目录，在该目录运行：\n\n```sh\nnpm ci --ignore-scripts --no-audit --no-fund\n./node_modules/.bin/esbuild components.mjs --bundle --format=esm --target=es2022 --minify --legal-comments=inline --outfile=material-web.js\n```\n\n重建完成后替换交付模块。构建依赖留在仓库外，`source/vendor/` 保存重建输入，`vendor/` 保存浏览器模块与许可。版本维护与验收遵循 [CONTRIBUTING.md](../../../../CONTRIBUTING.md)。\n"
     }
   ],
   "files": [
     {
-      "path": "demos/materials/material-web/demo.css",
+      "path": "demos/materials/material-web/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/materials/material-web/demo/demo.css",
       "role": "source"
     },
     {
-      "path": "demos/materials/material-web/demo.js",
+      "path": "demos/materials/material-web/demo/demo.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/materials/material-web/demo/mark.svg",
       "role": "source"
     },
     {
@@ -300,10 +308,6 @@
     },
     {
       "path": "demos/materials/material-web/index.html",
-      "role": "source"
-    },
-    {
-      "path": "demos/materials/material-web/mark.svg",
       "role": "source"
     },
     {
@@ -323,39 +327,35 @@
       "role": "process"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-lit-element-license.txt",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-lit-element-license.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-lit-html-license.txt",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-lit-html-license.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-lit-license.txt",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-lit-license.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-lit-reactive-element-license.txt",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-lit-reactive-element-license.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-material-web-license.txt",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-material-web-license.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-tslib-copyright.txt",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-tslib-copyright.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/material-web/vendor/LICENSE-tslib-license.txt",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/LICENSE-tslib-license.txt",
       "role": "license"
     },
     {
-      "path": "demos/materials/material-web/vendor/README.md",
-      "role": "context"
-    },
-    {
-      "path": "demos/materials/material-web/vendor/material-web.js",
+      "path": "demos/materials/material-web/vendor/material-web@2.5.0/material-web.js",
       "role": "vendor"
     },
     {
@@ -377,8 +377,8 @@
   ],
   "sourceFiles": [
     "demos/materials/material-web/index.html",
-    "demos/materials/material-web/demo.css",
-    "demos/materials/material-web/demo.js",
+    "demos/materials/material-web/demo/demo.css",
+    "demos/materials/material-web/demo/demo.js",
     "demos/materials/material-web/source/vendor/components.mjs"
   ]
 }

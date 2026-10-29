@@ -33,8 +33,10 @@
 
 正常模式下吊灯保留参考的 Verlet 摆锤与约束、指针瞄准与拉拽、松手动量、右键调节和双击复位，静止后停止渲染。`prefers-reduced-motion: reduce` 时灯固定在初始角度，平面不倾斜；面板照常即时生效，没有过渡动画。
 
+WebGL 不可用或初始化失败时，显示同一 HTML 页面与 CSS 径向渐变静态灯光，并在页面标明后备状态。
+
 [本地对照结果](../../demos/materials/three-html-render/fidelity.md)。
 
 ## 参考接入
 
-页面实现、样式与光照代码改写自 jinruozai 的 [HTML-Light-Demo 固定提交](https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29)。原生移植依据为 `MorsPageSurface.tsx`、`globals.css`、`MorsLightCanvas.tsx`、`config.ts` 和 `three-html-compatibility.ts`；[mors-logo.svg](../../demos/materials/three-html-render/mors-logo.svg) 保持参考仓库原始字节。
+页面实现、样式与光照代码改写自 jinruozai 的 [HTML-Light-Demo 固定提交](https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29)。原生移植依据为 `MorsPageSurface.tsx`、`globals.css`、`MorsLightCanvas.tsx`、`config.ts` 和 `three-html-compatibility.ts`；[mors-logo.svg](../../demos/materials/three-html-render/demo/mors-logo.svg) 保持参考仓库原始字节。样例代码与图形位于 `demo/`，运行库分别位于 `vendor/three@0.185.1/`、`vendor/three-html-render@0.1.2/`，许可原文与署名见[许可索引](../../demos/materials/three-html-render/LICENSES.md)。
