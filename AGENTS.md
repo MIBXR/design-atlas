@@ -1,5 +1,7 @@
 # Web Atlas 维护
 
+本库是个人设计参考库：案例是可参考、可修改的范本，忠实复刻是验证制作过程的手段；定位与收录原则见 [CONTRIBUTING.md 的仓库定位与收录原则](CONTRIBUTING.md#仓库定位)。
+
 新增内容、目录或内容类型前，先阅读 [CONTRIBUTING.md 的收录边界与三类组织规范](CONTRIBUTING.md#三类组织规范)，确定其类别与文件归属。字段和新增流程以该文档为准。
 
 内容源为 `entries/`、`demos/`、`docs/`。修改这些源文件后运行 `npm run build`，再运行 `npm run check`；`prompts/`、`agent/`、`data/`、`previews/` 中截图以外的生成文件及 README 计数块由工具生成，不手改。第三方素材与原文快照保持原字节。
