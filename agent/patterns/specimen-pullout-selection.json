@@ -167,6 +167,18 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/rhine-lab/source/clips.sh",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/rhine-lab/source/frames.js",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/rhine-lab/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/rhine-lab/style.css",
       "role": "source"
     },

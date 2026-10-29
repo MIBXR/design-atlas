@@ -1,5 +1,7 @@
 # 数字敦煌：复现范围与证据
 
+制作输入、固定来源日期与处理命令见 [source/README.md](source/README.md)；命令输出到独立工作目录，具体输入与参数以该页为准。
+
 固定采集日 **2026-10-09**，来源[首页](https://www.e-dunhuang.com/index.htm)、[洞窟列表](https://www.e-dunhuang.com/section.htm) 和[第257窟西壁查看器](https://www.e-dunhuang.com/showmural/10.0001/0001/0001/0257/0001/0003/01)。本地是三个独立页面：[首页](index.html)、[完整列表](section.html)、[查看器](viewer.html)。不包含账户、订阅后台、其他壁画查看器和数字藏经洞云游戏。
 
 归档验证通过浏览器读取 DOM/CSS、原插件、运行时插入元素及 Network 瓦片，实际操作轮播、导航、条件、浏览器返回、缩放、拖动及边界。素材保留水印、字节与归属，完整出处、尺寸与 SHA-256 见[清单](assets-manifest.json)。

@@ -1,5 +1,17 @@
 # Claude：复现范围
 
+## 对照结论与差异原因
+
+源端可核对公共 AnimatedHeading、AnimatedReveal、Navbar、FAQAccordion、Tabs 模块与 CSS；源营销页访问跳转至账户页，桌面和手机实时操作没有完成。本地菜单与滚动已记录操作结果，源/本地同条件比较未完成，内容压缩和布局拟合也使整体未达 1:1。
+
+| 差异或删减 | 原因 |
+| --- | --- |
+| 局部曲线和布局拟合 | 具体拟合原因未记录；源营销页现场验证受账户页跳转阻断。 |
+| 已决定删减部分菜单、FAQ 与套餐条目 | 原因未记录。 |
+| 已决定删减认证、订阅、SSO 和下载后端 | 这些业务使用官方入口。 |
+
+页面结构、菜单、滚动、FAQ 和 Tabs 的接入与调度由本库自行实现，行为依据公开模块；Cowork 影片使用官方素材。
+
 [案例条目](../../../entries/cases/claude-platform.json) · [研究](../../../docs/cases/claude-platform.md) · [Prompt](../../../prompts/cases/claude-platform.md)
 
 ## 本地实现与对照

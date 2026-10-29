@@ -146,7 +146,7 @@
     {
       "path": "demos/cases/stripe-platform/fidelity.md",
       "role": "fidelity",
-      "content": "# Stripe：当前页面的设计与交互：复现范围\n\n[案例条目](../../../entries/cases/stripe-platform.json) · [研究](../../../docs/cases/stripe-platform.md) · [Prompt](../../../prompts/cases/stripe-platform.md)\n\n## 本地实现与对照\n\n本地 1440px 真实指针验证首入、分类高度衔接、离开再入和关闭。桌面链接数量压缩，入口位移 12px 与离开等待 140ms 为拟合；减少动态直接完成，关闭后 hidden/inert/aria 一致。\n\n手机导航按本次 390px 源快照保留四类顶层、32 个产品入口及其他分类的公开分组；本地 390×844 实测分类进入/Back、Escape、连续关闭再打开。入口位移距离、推荐卡排版为拟合，省略 Sessions 推广旁栏；链接指向已观察的公开入口，不复制账户流程。键盘焦点被限制在打开的菜单内，减少动态分支直接切换层级，底层页面恢复时解除 inert 和滚动锁。\n\n终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。\n\n[许可原文索引](LICENSES.md)。\n"
+      "content": "# Stripe：当前页面的设计与交互：复现范围\n\n制作输入、固定来源日期与处理命令见 [source/README.md](source/README.md)；命令输出到独立工作目录，具体输入与参数以该页为准。\n\n## 对照结论与差异原因\n\n原作彩带使用提取的 SingleWave 渲染模块；手机四类顶层／32 个产品入口与源快照对应，本地桌面和手机菜单有操作结果。地球、后段内容、局部布局与多个周期不同，整体未达 1:1；完整同状态成对画面对照未记录。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| 完整 3D 地球改简化线框；终端、条带、统计和折叠周期拟合 | 替代与各拟合参数的原因未记录。 |\n| 已决定删减桌面链接、客户正文、数字、后续卡片及证言 | 原因未记录。 |\n| 已决定删减 Sessions 推广旁栏 | 属于已决定删减的推广内容；具体原因未记录。 |\n| 已决定删减账户认证及金融服务 | 本地保留产品页面展示，业务入口指向官方。 |\n\n彩带算法／shader／网格沿用提取模块；最小 loader、Worker 路径接入、菜单、终端、条带、统计、线框地球和暂停策略由本库自行实现。\n\n[案例条目](../../../entries/cases/stripe-platform.json) · [研究](../../../docs/cases/stripe-platform.md) · [Prompt](../../../prompts/cases/stripe-platform.md)\n\n## 本地实现与对照\n\n本地 1440px 真实指针验证首入、分类高度衔接、离开再入和关闭。桌面链接数量压缩，入口位移 12px 与离开等待 140ms 为拟合；减少动态直接完成，关闭后 hidden/inert/aria 一致。\n\n手机导航按本次 390px 源快照保留四类顶层、32 个产品入口及其他分类的公开分组；本地 390×844 实测分类进入/Back、Escape、连续关闭再打开。入口位移距离、推荐卡排版为拟合，省略 Sessions 推广旁栏；链接指向已观察的公开入口，不复制账户流程。键盘焦点被限制在打开的菜单内，减少动态分支直接切换层级，底层页面恢复时解除 inert 和滚动锁。\n\n终端 5s/.75s、客户条带 35s、统计 6s 周期、折叠/图片 400–450ms 是拟合；Global 基础设施使用简化的品牌线框，不是原站完整 3D 地球；客户正文、数字、后续卡片数量、平台证言均压缩成学习说明，未复制金融产品服务与真实认证。\n\n[许可原文索引](LICENSES.md)。\n"
     },
     {
       "path": "demos/cases/stripe-platform/assets-manifest.json",
@@ -247,6 +247,14 @@
     {
       "path": "demos/cases/stripe-platform/script.js",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/source/README.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/stripe-platform/source/extract-wave.mjs",
+      "role": "process"
     },
     {
       "path": "demos/cases/stripe-platform/style.css",

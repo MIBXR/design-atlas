@@ -258,6 +258,14 @@
       "role": "process"
     },
     {
+      "path": "demos/cases/zelda-world/source/media.sh",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/zelda-world/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/zelda-world/style.css",
       "role": "source"
     },

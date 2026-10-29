@@ -36,4 +36,4 @@ Reacticle 是用于文章、报告和交互长文的 React 语义化组件库，
 
 原站引入的 Newsreader、IBM Plex Sans、IBM Plex Mono、Source Serif 4、JetBrains Mono、Fraunces、Hanken Grotesk、Quicksand、Nunito、Playfair Display、Josefin Sans、Poppins 和 Space Grotesk 共 13 个字体家族、76 个 WOFF2 文件已本地化。保留原字重、样式与子集范围；中文继续使用原主题声明的系统字体回退。
 
-文章内目录、按钮、滑块与展开内容沿用原实现。减少动态使用原站 CSS；呼吸练习保留原始开始／暂停和计时逻辑。源码及依赖完整保留并不等于读屏器、真实触屏和所有浏览器的行为均已实测。
+文章内目录、按钮、滑块与展开内容沿用原实现。减少动态使用原站 CSS；呼吸练习保留原始开始／暂停和计时逻辑。组件、主题、11 篇报告与依赖配置归档在 [制作源码](../../demos/materials/reacticle/source/README.md)，依赖按原 lockfile 安装；对照结论与接入差异见 [fidelity.md](../../demos/materials/reacticle/fidelity.md)。

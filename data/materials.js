@@ -533,7 +533,7 @@ window.DESIGN_MATERIALS = [
       "通过 HTTP/HTTPS 打开样例目录，JS、CSS、公式字体与本地化字体均使用相对路径；文章外链保留原作指向。",
       "原始 package.json 声明 MIT，但该固定提交的仓库内没有 LICENSE 文件；许可声明与实际缺失情况同时记录，不虚构上游许可文本。",
       "样文原文保持原样；主题风格说明为中文概括，依据 garden-skills 固定提交的 theme-profiles。",
-      "样文中的交互、阅读辅助与动态行为沿用上游实现；源码保留不等于读屏器、真实触屏或所有浏览器已经完成实测。"
+      "样文中的交互、阅读辅助与动态行为沿用上游实现；source/ 归档公共组件、主题、11 篇报告、最小入口及原依赖配置，依赖按上游 lockfile 安装；逐篇对照结论见 fidelity.md。"
     ],
     "upstream": {
       "repository": "ConardLi/reacticle",

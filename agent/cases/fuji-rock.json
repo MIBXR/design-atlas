@@ -158,7 +158,7 @@
     {
       "path": "demos/cases/fuji-rock/fidelity.md",
       "role": "fidelity",
-      "content": "# Fuji Rock：现场照片与节日导览：复现范围\n\n[案例条目](../../../entries/cases/fuji-rock.json) · [研究](../../../docs/cases/fuji-rock.md) · [Prompt](../../../prompts/cases/fuji-rock.md)\n\n| 机制 | 本地差异与依据 |\n| --- | --- |\n| 素材载入完成 | 等待load，不伪造长时间百分比。 |\n| 打开／关闭山形菜单 | 对应原CSS；快速反向从当前状态起步。 |\n| 照片或Featured自动／手动切换 | 3组照片、4条Featured缩减内容，保留循环机制；本地增设暂停及离屏／后台停止。 |\n| 超过Pickup后向上／向下滚动 | 短章节长度不同；菜单触摸横向滑动可开关。 |\n\n20张照片和6条Featured未全部复制，系统字体近似Poppins/日文原字体；交易与演出数据库使用官方外链。\n"
+      "content": "# Fuji Rock：现场照片与节日导览：复现范围\n\n## 对照结论与差异原因\n\n原作山形菜单、照片／Featured 循环与滚动导航在本地保留；原作 20 张照片、6 条 Featured 与本地 3 组照片、4 条 Featured 数量不同，章节长度及字体也不同，整体未达 1:1。同视口成对结论未记录。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| 已决定删减部分照片与 Featured | 原因未记录。 |\n| 系统字体近似 Poppins／日文字体，章节缩短 | 字体替代和缩短长度的原因未记录。 |\n| 已决定删减交易与演出数据库 | 使用官方外链。 |\n\n山形菜单、照片与 Featured 轮换、滚动导航、触摸及暂停策略由本库自行实现，依据原 CSS 与观察；摄影使用官方素材。\n\n[案例条目](../../../entries/cases/fuji-rock.json) · [研究](../../../docs/cases/fuji-rock.md) · [Prompt](../../../prompts/cases/fuji-rock.md)\n\n| 机制 | 本地差异与依据 |\n| --- | --- |\n| 素材载入完成 | 等待load，不伪造长时间百分比。 |\n| 打开／关闭山形菜单 | 对应原CSS；快速反向从当前状态起步。 |\n| 照片或Featured自动／手动切换 | 3组照片、4条Featured缩减内容，保留循环机制；本地增设暂停及离屏／后台停止。 |\n| 超过Pickup后向上／向下滚动 | 短章节长度不同；菜单触摸横向滑动可开关。 |\n\n20张照片和6条Featured未全部复制，系统字体近似Poppins/日文原字体；交易与演出数据库使用官方外链。\n"
     },
     {
       "path": "demos/cases/fuji-rock/assets-manifest.json",

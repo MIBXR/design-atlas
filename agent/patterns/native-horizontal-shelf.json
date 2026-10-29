@@ -627,6 +627,14 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/stripe-platform/source/extract-wave.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/stripe-platform/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/stripe-platform/style.css",
       "role": "source"
     },

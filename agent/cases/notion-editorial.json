@@ -140,7 +140,7 @@
     {
       "path": "demos/cases/notion-editorial/fidelity.md",
       "role": "fidelity",
-      "content": "# Notion：当前页面的设计与交互：复现范围\n\n[案例条目](../../../entries/cases/notion-editorial.json) · [研究](../../../docs/cases/notion-editorial.md) · [Prompt](../../../prompts/cases/notion-editorial.md)\n\n## 本地实现与对照\n\n本地 1440px 真实指针验证首次动画、分类即时切换、离开再入与关闭终态。旧退出计时用 token 取消，关闭后 hidden/inert/aria 一致，减少动态直接完成；桌面菜单正文与入口数量压缩。\n\n本地 390×844 实测 Product→AI（仅 AI 打开）→再次 AI 收起、Resources、Escape 和连续关闭再打开。入口和子菜单位移距离为拟合，彩色小图标用本地字符简化；公开链接保留分类关系，不复制注册或编辑器业务。菜单有焦点限制、滚动锁和关闭后焦点恢复，减少动态分支关闭这些过渡。\n\n七头像为官方原素材，组合间距、标识 24s 周期和菜单指针离开等待 150ms 是拟合；Bento 使用官方完整静帧而非全部独立浮层，三故事数量与正文缩短。详情对话框内的勾选/问答/agent 反馈是本地示范，并不声称是原站首页机制或真实模型执行。\n"
+      "content": "# Notion：当前页面的设计与交互：复现范围\n\n## 对照结论与差异原因\n\n本地 1440px／390×844 菜单已有打开、分类切换、反向与关闭结果；原作的独立浮层在本地被完整静帧替代，文案及内容范围缩短，整体未达 1:1。同状态源/本地完整成对结论未记录。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| Bento 使用完整静帧，头像间距、24s 标识周期、150ms 等待及位移拟合 | 独立浮层替代与各拟合参数的原因未记录。 |\n| 已决定删减菜单正文／入口、部分故事及正文；图标用字符简化 | 原因未记录。 |\n| 已决定删减注册和编辑器业务 | 入口指向官方；dialog 内为固定学习反馈。 |\n\n菜单事务、拼贴排布、状态切换、暂停及本地 dialog 由本库自行实现；头像、产品静帧与影片取自官方素材。\n\n[案例条目](../../../entries/cases/notion-editorial.json) · [研究](../../../docs/cases/notion-editorial.md) · [Prompt](../../../prompts/cases/notion-editorial.md)\n\n## 本地实现与对照\n\n本地 1440px 真实指针验证首次动画、分类即时切换、离开再入与关闭终态。旧退出计时用 token 取消，关闭后 hidden/inert/aria 一致，减少动态直接完成；桌面菜单正文与入口数量压缩。\n\n本地 390×844 实测 Product→AI（仅 AI 打开）→再次 AI 收起、Resources、Escape 和连续关闭再打开。入口和子菜单位移距离为拟合，彩色小图标用本地字符简化；公开链接保留分类关系，不复制注册或编辑器业务。菜单有焦点限制、滚动锁和关闭后焦点恢复，减少动态分支关闭这些过渡。\n\n七头像为官方原素材，组合间距、标识 24s 周期和菜单指针离开等待 150ms 是拟合；Bento 使用官方完整静帧而非全部独立浮层，三故事数量与正文缩短。详情对话框内的勾选/问答/agent 反馈是本地示范，并不声称是原站首页机制或真实模型执行。\n"
     },
     {
       "path": "demos/cases/notion-editorial/assets-manifest.json",
