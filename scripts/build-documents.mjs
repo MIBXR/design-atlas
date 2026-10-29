@@ -4,9 +4,9 @@ import {fileURLToPath} from 'node:url';
 import {files, folders} from './build-static.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const output = path.join(root, 'documents.js');
+const output = path.join(root, 'data/docs.js');
 const groups = ['项目指南', '研究方法与索引', '案例研究', '复用 Prompt', '复现与素材'];
-const guideTitles = {'README.md':'项目指南', 'CONTRIBUTING.md':'添加与维护案例', 'AGENT.md':'Agent 工作流与数据契约', 'agent/README.md':'Agent 资料说明'};
+const guideTitles = {'README.md':'项目指南', 'CONTRIBUTING.md':'添加与维护案例', 'docs/agent.md':'Agent 工作流与数据契约', 'agent/README.md':'Agent 资料说明'};
 
 export function documentCatalog() {
   const paths = [];

@@ -10,7 +10,7 @@ export const repository = 'https://github.com/MIBXR/web-atlas';
 export const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8');
 const catalogFields = ['id', 'title', 'category', 'tags', 'summary', 'useCases', 'avoid', 'country', 'implementation', 'studyScope', 'capturedAt', 'theoryVerifiedAt', 'tokens', 'composition', 'interaction', 'themeBehavior', 'soundBehavior'];
-const sharedFiles = ['asset-sources.js', 'asset-runtime.js', 'asset-cache.js', 'asset-cache-worker.js', 'case-loading.css', 'case-loading.js', 'theme.js', 'favicon.svg', 'document.html', 'document.js', 'document.css', 'site-nav.css', 'theme-control.css', 'site-typography.css', 'site-footer.css', 'site-shell.js'];
+const sharedFiles = ['data/asset-sources.js', 'site/runtime/asset-runtime.js', 'site/runtime/asset-cache.js', 'asset-cache-worker.js', 'site/runtime/case-loading.css', 'site/runtime/case-loading.js', 'site/shared/theme.js', 'site/icons/favicon.svg', 'docs.html', 'site/pages/docs/docs.js', 'site/pages/docs/docs.css', 'site/shared/site-nav.css', 'site/shared/theme-control.css', 'site/shared/site-typography.css', 'site/shared/site-footer.css', 'site/shared/site-shell.js'];
 
 // Public paths always use the repository's portable, relative path syntax.
 // Check every existing component rather than trusting a lexical prefix alone.
@@ -91,7 +91,7 @@ function makeBundle(root, entry, entryPath, patternIds = []) {
     entryPath, ...documentPaths, entry.preview,
     ...sharedFiles,
     // Small shared renderer dependencies and their original license notices.
-    ...walkFiles(root, 'vendor'),
+    ...walkFiles(root, 'site/vendor'),
   ]);
   if (entry.referencePreview) paths.add(entry.referencePreview);
   const mobilePreview = `previews/mobile/${entry.id}.jpg`;
@@ -112,14 +112,14 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
   if (new Set(entries.map(({ entry }) => entry.id)).size !== entries.length) throw new Error('Duplicate case ids');
   const bundles = [];
   const outputs = new Map();
-  const rendererSource = readText(root, 'atlas.js');
+  const rendererSource = readText(root, 'site/pages/cases/atlas.js');
   const originalEntries = entries.map(({ entry }) => entry);
   const patterns = loadPatterns({ root, entries: originalEntries });
   const records = entries.map(({ entry, entryPath }) => {
     const patternIds = patterns.filter(pattern => pattern.sources.some(source => source.caseId === entry.id)).map(pattern => pattern.id);
     const bundle = makeBundle(root, entry, entryPath, patternIds);
     const { notes } = renderDetailNotes({ entries: originalEntries, id: entry.id, rendererSource });
-    bundle.webNotes = { format: 'text/html', renderer: 'atlas.js', content: notes };
+    bundle.webNotes = { format: 'text/html', renderer: 'site/pages/cases/atlas.js', content: notes };
     const bundlePath = `agent/cases/${entry.id}.json`;
     const data = encode(bundle);
     outputs.set(bundlePath, data);
@@ -141,7 +141,7 @@ export function buildAgent({ root = defaultRoot, write = true } = {}) {
     catalog.materials = { path: 'agent/materials.json', materialCount: materials.length };
   }
   outputs.set('agent/catalog.json', encode(catalog));
-  outputs.set('agent/README.md', Buffer.from("# Web Atlas · Agent 数据\n\n完整工作流见 [AGENT.md](../AGENT.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：案例摘要、包路径及巧思／素材目录路径。\n- cases/<id>.json：完整 entry、documents 原文、webNotes HTML、files 路径与角色、patternIds 关联。\n- [patterns.json](patterns.json)：巧思机制、来源、约束、参数、组合关系与包路径。\n- patterns/<id>.json：完整 pattern 与 sourceCases；按来源案例路径和 sourceFiles 取得上下文。\n- [materials.json](materials.json)：独立内容素材摘要和包路径。\n- materials/<id>.json：完整 material、documents、files 与主要源码 sourceFiles；来源版本和许可随包保留。\n\n所有资料使用同一个固定 Git 提交。目录按命令需要独立读取。发布索引的 source.commit/baseUrl 指向原始源码；网页播放文件可经过部署转换。\n\nwebNotes 由 atlas.js 的实际详情渲染器生成。来源 observed/adapted/inferred 保留观察、迁移与推断的边界；来源记录原文随资料保留。\n\n运行 npm run build 同步资料，npm run check 检查本地引用。受影响页面通过浏览器验收。\n", 'utf8'));
+  outputs.set('agent/README.md', Buffer.from("# Web Atlas · Agent 数据\n\n完整工作流见 [docs/agent.md](../docs/agent.md)，维护标准见 [CONTRIBUTING.md](../CONTRIBUTING.md)。\n\n- [catalog.json](catalog.json)：案例摘要、包路径及巧思／素材目录路径。\n- cases/<id>.json：完整 entry、documents 原文、webNotes HTML、files 路径与角色、patternIds 关联。\n- [patterns.json](patterns.json)：巧思机制、来源、约束、参数、组合关系与包路径。\n- patterns/<id>.json：完整 pattern 与 sourceCases；按来源案例路径和 sourceFiles 取得上下文。\n- [materials.json](materials.json)：独立内容素材摘要和包路径。\n- materials/<id>.json：完整 material、documents、files 与主要源码 sourceFiles；来源版本和许可随包保留。\n\n所有资料使用同一个固定 Git 提交。目录按命令需要独立读取。发布索引的 source.commit/baseUrl 指向原始源码；网页播放文件可经过部署转换。\n\nwebNotes 由 site/pages/cases/atlas.js 的实际详情渲染器生成。来源 observed/adapted/inferred 保留观察、迁移与推断的边界；来源记录原文随资料保留。\n\n运行 npm run build 同步资料，npm run check 检查本地引用。受影响页面通过浏览器验收。\n", 'utf8'));
   if (write) {
     // Check the destination before creating directories or replacing any bytes.
     fs.mkdirSync(resolveRepositoryPath(root, 'agent/cases', { mustExist: false }), { recursive: true });

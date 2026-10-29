@@ -55,6 +55,6 @@
 
 人工内容源为 `materials/<id>.json`、关联文档、`material-demos/<id>/` 或 `agent-skills/<id>/` 和预览。新增素材至少提供来源 URL 与核验日期、许可范围、适用和避用场景、制作约束；有软件版本或完整 Git 提交时一并记录。可运行素材提供能实际查看或操作的样例，字体、声音和图片条目依据其体验形式提供试排、播放或构图示例。Agent Skill 使用 `skillPath`、中文步骤数组 `workflow` 和 `relatedEntries`，字段与校验规则见 [维护标准](../CONTRIBUTING.md#内容素材的数据与演示)。
 
-`npm run build` 同步网页 `materials.js`、独立目录 `agent/materials.json` 与完整包 `agent/materials/<id>.json`。素材包包含完整条目、文档原文和全部运行或快照文件清单，不依赖来源案例。主目录的 `materials` 描述保存子目录路径和数量；取材使用固定 Git 提交。读取流程与固定会话 SHA 见 [Agent 工作流](../AGENT.md#内容素材取材)。
+`npm run build` 同步网页 `data/materials.js`、独立目录 `agent/materials.json` 与完整包 `agent/materials/<id>.json`。素材包包含完整条目、文档原文和全部运行或快照文件清单，不依赖来源案例。主目录的 `materials` 描述保存子目录路径和数量；取材使用固定 Git 提交。读取流程与固定会话 SHA 见 [Agent 工作流](../docs/agent.md#内容素材取材)。
 
 构建保留来源、演示入口、文档和依赖文件路径。实际取材成功不证明 GPU 已运行。发布验收需分别记录支持 WebGPU 的浏览器中四种效果和控件的实际响应，以及不支持时的静态状态。

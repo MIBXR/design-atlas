@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const boot = document.currentScript;
-  const root = new URL('.', boot?.src || location.href);
+  const root = new URL('../../', boot?.src || location.href);
   const registry = globalThis.DesignAtlasAssetSources || { assets: {} };
   const modes = new Set(['local', 'github', 'auto']);
   const requested = new URL(location.href).searchParams.get('assets');

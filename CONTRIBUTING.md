@@ -37,7 +37,7 @@
 
 ## 站点设计与交互约束
 
-Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、内容素材库及新增页面复用既有布局、组件与字体层级；功能职责不同的内容可以有差异，浏览和交互规则保持一致。先查看现有页面、共享 CSS 和实际生效样式，再实现新增模块。
+Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、内容素材库及新增页面复用既有布局、组件与字体层级；功能职责不同的内容可以有差异，浏览和交互规则保持一致。先查看现有页面、`site/shared/` 共享 CSS 和实际生效样式，再实现新增模块。
 
 | 范围 | 当前设计要求 |
 | --- | --- |
@@ -58,7 +58,7 @@ Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、�
 
 文档中心复用现有 Markdown 阅读页，左侧列出静态发布范围内的全部公开文档并标明当前项；页脚“项目资料”提供入口。桌面三栏位于同一居中容器内，正文行宽有上限。右侧本文目录只列一、二级标题，窄屏收起，手机通过右下角浮动按钮展开，可关闭、按 Escape 或选择章节后收起，与标题栏的全站文档目录互斥。左侧初始展开当前文档所属分类；切换文档保留手动开合与侧栏滚动，进入新分类时仅展开目标分类。目录控制与分类标题在栏内置顶。
 
-`scripts/build-documents.mjs` 按 `scripts/build-static.mjs` 的 `files`／`folders` 递归发现公开 `.md`。新增文档放在既有公开目录（如 `docs/`、`research/`、`prompts/`）；根目录的新文件或新目录先纳入发布清单。项目指南使用固定标题，其余读取首个一级标题，无标题时用文件名。分类：案例 `research` 关联的研究归为“案例研究”，`research/` 其余文档归为“研究方法与索引”，`prompts/` 归为“复用 Prompt”，其余归为“复现与素材”。`npm run build` 生成 `documents.js`。
+`scripts/build-documents.mjs` 按 `scripts/build-static.mjs` 的 `files`／`folders` 递归发现公开 `.md`。新增文档放在既有公开目录（如 `docs/`、`research/`、`prompts/`）；根目录的新文件或新目录先纳入发布清单。项目指南使用固定标题，其余读取首个一级标题，无标题时用文件名。分类：案例 `research` 关联的研究归为“案例研究”，`research/` 其余文档归为“研究方法与索引”，`prompts/` 归为“复用 Prompt”，其余归为“复现与素材”。`npm run build` 生成 `data/docs.js`。
 
 ## 观察与实现
 
@@ -125,7 +125,7 @@ Prompt写结构、尺度、素材、关键状态及交接、音乐和主题行�
 
 `sourceFiles` 为真实仓库相对路径数组，覆盖定位字段、研究、复现边界和相关源码，每个文件都在至少一个来源案例包的文件清单中。完整运行依赖由来源案例清单提供，每个来源可回跳完整案例。
 
-`npm run build` 同步 `patterns.js`、`agent/patterns.json` 和 `agent/patterns/<id>.json`，在案例包记录 `patternIds`（没有巧思的案例为空数组）。验收搜索、体验类型与来源筛选、详情Prompt、组合链接与完整案例回跳。
+`npm run build` 同步 `data/patterns.js`、`agent/patterns.json` 和 `agent/patterns/<id>.json`，在案例包记录 `patternIds`（没有巧思的案例为空数组）。验收搜索、体验类型与来源筛选、详情Prompt、组合链接与完整案例回跳。
 
 ## 内容素材的数据与演示
 
@@ -137,13 +137,13 @@ Prompt写结构、尺度、素材、关键状态及交接、音乐和主题行�
 
 Agent Skill 详情沿用素材页的左右布局：左侧是工作流、关联条目、可选效果图及 `SKILL.md`／`README` 原文入口，右侧是使用边界、可访问性、来源和 Prompt。完整快照递归进入 `files`，其中 Markdown 与许可证同时保留 `documents` 原文。`scripts/build-static.mjs` 的 `folders` 包含 `agent-skills`，发布时保持原字节；`scripts/build-documents.mjs` 不扫描 `agent-skills`。
 
-`npm run build` 生成 `materials.js`、`agent/materials.json` 和 `agent/materials/<id>.json`。在同宽度下验收素材库／详情，检查真实效果运行、参数响应、输入、减少动态及不支持环境的后备。
+`npm run build` 生成 `data/materials.js`、`agent/materials.json` 和 `agent/materials/<id>.json`。在同宽度下验收素材库／详情，检查真实效果运行、参数响应、输入、减少动态及不支持环境的后备。
 
 ## 加载与素材分发
 
 本地原始素材保持原字节与尺寸。首屏必要图片、背景、可见字体与影片首帧在开场之前准备；后续区域按需提前加载，整站下载和未启用的BGM不作为进入条件。保留原站欢迎／加载机制，不叠加另一套开场。验收冷缓存与慢网络、失败重试、继续浏览、嵌入／独立打开和二次进入。
 
-大素材的GitHub备份使用公开仓库中的固定完整提交SHA。增加／改变素材时，先在功能分支提交并推送包含完整素材的代码，再运行 `node scripts/build-asset-sources.mjs --commit <已推送的完整SHA>`，提交生成的 `asset-sources.js`。原始来源与权利信息保存在各案例的 `assets-manifest.json`。
+大素材的GitHub备份使用公开仓库中的固定完整提交SHA。增加／改变素材时，先在功能分支提交并推送包含完整素材的代码，再运行 `node scripts/build-asset-sources.mjs --commit <已推送的完整SHA>`，提交生成的 `data/asset-sources.js`。原始来源与权利信息保存在各案例的 `assets-manifest.json`。
 
 `npm run build:local` 保留完整静态素材；`npm run build:site` 在部署输出中省略已映射的大文件并重写引用。跨域媒体缓存只存成功的完整响应（不存404、未知地址或部分206响应），播放器拖动保留Range读取；缓存失败不阻断页面，应用代码与文档不被媒体缓存固定为旧版本。
 
@@ -163,7 +163,7 @@ Agent 文件清单指向原始仓库路径。先构建资料并提交推送，�
 
 ### 跨平台换行与取材
 
-`.gitattributes` 将仓库自有文本统一为 UTF-8／LF；`demos/**/assets/**`、`vendor/**` 的 `-text` 文件与二进制素材保留原字节。构建在 Git checkout 中拒绝受 LF 规则约束的 CRLF／混合换行并列出路径。遇到换行问题用 `git ls-files --eol` 查看，修正后重新构建。取材和导出按二进制读写文件。
+`.gitattributes` 将仓库自有文本统一为 UTF-8／LF；`demos/**/assets/**`、`site/vendor/**` 的 `-text` 文件与二进制素材保留原字节。构建在 Git checkout 中拒绝受 LF 规则约束的 CRLF／混合换行并列出路径。遇到换行问题用 `git ls-files --eol` 查看，修正后重新构建。取材和导出按二进制读写文件。
 
 提交并推送后，用 skill 的 `--ref <完整提交SHA>` 读取采用的案例、巧思或素材，并导出到新目录检查入口与必要文件。发布使用同一源码提交打包，发布后核对线上 catalog.source 与关键交互。
 
