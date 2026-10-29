@@ -7,6 +7,7 @@ const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n', 'utf8
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const materialTypes = ['component-library', 'image', 'sound', 'font', 'poster', 'agent-skill', 'prompt-kit'];
 const summaryFields = ['id', 'title', 'type', 'category', 'summary', 'tags', 'useCases', 'avoid', 'constraints'];
+const isLicense = relative => /\/(?:LICENSE[^/]*|OFL[^/]*|[^/]*-(?:LICENSE|OFL)\.txt|reacticle-MIT-declaration\.txt|dependencies\.txt)$/i.test(relative);
 
 function repositoryFile(root, relative, mustExist = true) {
   if (typeof relative !== 'string' || !relative || /[\\\0<>:"|?*]/.test(relative) || path.posix.isAbsolute(relative) || path.win32.isAbsolute(relative) || relative.split('/').some(part => !part || part === '.' || part === '..' || /[. ]$/.test(part) || /^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(part))) throw new Error(`Unsafe material path: ${relative}`);
@@ -117,15 +118,15 @@ export function buildMaterials({ root = defaultRoot, materials, write = true } =
   const bundles = [];
   const records = materials.map(material => {
     const contentFiles = walkFiles(root, `demos/materials/${material.id}`);
-    const documentPaths = [material.research, `prompts/materials/${material.id}.md`, ...contentFiles.filter(relative => relative.endsWith('.md') || /\/LICENSE(?:[^/]*\.txt)?$/.test(relative))];
+    const documentPaths = [material.research, `prompts/materials/${material.id}.md`, ...contentFiles.filter(relative => relative.endsWith('.md') || isLicense(relative))];
     const documents = [...new Set(documentPaths)].map(relative => {
       const bytes = readFile(root, relative);
       new TextDecoder('utf-8', { fatal: true }).decode(bytes);
-      return { path: relative, role: relative === material.research ? 'research' : relative === `prompts/materials/${material.id}.md` ? 'prompt' : 'context', content: bytes.toString('utf8') };
+      return { path: relative, role: relative === material.research ? 'research' : relative === `prompts/materials/${material.id}.md` ? 'prompt' : isLicense(relative) ? 'license' : relative.includes('/source/') ? 'process' : relative.endsWith('/fidelity.md') ? 'fidelity' : 'context', content: bytes.toString('utf8') };
     });
     const paths = new Set([`entries/materials/${material.id}.json`, material.preview, ...documentPaths, ...contentFiles, ...(material.gallery || []).map(picture => picture.path)]);
     const files = [...paths].sort().map(relative => {
-      const role = relative === material.preview ? 'preview' : relative.includes('/source/') ? 'process' : /\/(?:LICENSE[^/]*|[^/]*-OFL\.txt)$/.test(relative) ? 'license' : material.sourceFiles.includes(relative) ? 'source' : relative.includes('/fonts/') ? 'font' : relative.includes('/vendor/') && !documentPaths.includes(relative) ? 'vendor' : documentPaths.includes(relative) || relative === `entries/materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
+      const role = relative === material.preview ? 'preview' : isLicense(relative) ? 'license' : relative.includes('/source/') ? 'process' : material.sourceFiles.includes(relative) ? 'source' : relative.includes('/fonts/') ? 'font' : relative.includes('/vendor/') && !documentPaths.includes(relative) ? 'vendor' : documentPaths.includes(relative) || relative === `entries/materials/${material.id}.json` || /\.(?:md|txt|json)$/i.test(relative) ? 'context' : /\.(?:html|js|mjs|css|svg)$/i.test(relative) ? 'source' : 'asset';
       return { path: relative, role };
     });
     for (const relative of material.sourceFiles) if (!files.some(file => file.path === relative)) throw new Error(`Material source is outside its source manifest: ${material.id}/${relative}`);

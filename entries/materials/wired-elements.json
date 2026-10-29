@@ -8,8 +8,8 @@
   "research": "docs/materials/wired-elements.md",
   "sourceFiles": [
     "demos/materials/wired-elements/index.html",
-    "demos/materials/wired-elements/demo.css",
-    "demos/materials/wired-elements/demo.js"
+    "demos/materials/wired-elements/demo/demo.css",
+    "demos/materials/wired-elements/demo/demo.js"
   ],
   "summary": "用真实手绘 Web Components 组合任务清单、偏好面板与概念卡片；让草图在保留讨论感的同时具备可验证的状态。",
   "install": "npm install wired-elements@2.1.2",

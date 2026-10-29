@@ -71,5 +71,5 @@
   "demo": "demos/materials/recursive/index.html",
   "preview": "previews/materials/recursive.png",
   "research": "docs/materials/recursive.md",
-  "sourceFiles": ["demos/materials/recursive/index.html", "demos/materials/recursive/demo.css", "demos/materials/recursive/demo.js"]
+  "sourceFiles": ["demos/materials/recursive/index.html", "demos/materials/recursive/demo/demo.css", "demos/materials/recursive/demo/demo.js"]
 }

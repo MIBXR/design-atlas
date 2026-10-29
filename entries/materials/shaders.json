@@ -128,5 +128,5 @@
   "demo": "demos/materials/shaders/index.html",
   "preview": "previews/materials/shaders.png",
   "research": "docs/materials/shaders.md",
-  "sourceFiles": ["demos/materials/shaders/index.html", "demos/materials/shaders/demo.css", "demos/materials/shaders/demo.js", "demos/materials/shaders/reference.svg"]
+  "sourceFiles": ["demos/materials/shaders/index.html", "demos/materials/shaders/demo/demo.css", "demos/materials/shaders/demo/demo.js", "demos/materials/shaders/demo/reference.svg"]
 }

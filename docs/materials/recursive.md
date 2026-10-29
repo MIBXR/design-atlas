@@ -30,6 +30,8 @@ Recursive 把比例字体与等宽字体放在一个可变字体文件中，并�
 
 ## 自托管
 
-`@font-face` 从本地加载完整 WOFF2，`font-weight: 300 1000` 声明字重范围，五个轴通过 `font-variation-settings` 控制。保留完整原字库；无需 CDN、框架或 JavaScript 字体库。实际文件和来源摘要见 [字体声明](../../demos/materials/recursive/vendor/NOTICE.md)。首次加载需要承担完整字体下载量，生产项目可以依据原许可评估子集化，按实际文本评估下载体积。
+`demo/demo.css` 的 `@font-face` 从 `fonts/` 加载完整 WOFF2，`font-weight: 300 1000` 声明字重范围，五个轴通过 `font-variation-settings` 控制。保留完整原字库；无需 CDN、框架或 JavaScript 字体库。实际文件与许可见[许可索引](../../demos/materials/recursive/LICENSES.md)。完整导出包含字体，`--code-only` 导出提供源码。首次加载需要承担完整字体下载量，生产项目可以依据原许可评估子集化，按实际文本评估下载体积。
 
 字体加载中使用系统后备，成功后显示明确状态；失败或浏览器不支持可变设置时继续显示文字。“模拟字体不可用”用于查看后备布局，不伪装成 Recursive 的静态版本。没有自动动画或声音，无持续后台任务，减少动态偏好下操作不变。
+
+`index.html?preset=interface`、`?preset=code`、`?preset=poster` 定位三种试排。`theme=light`／`theme=dark` 指定控件主题；同源嵌入跟随 Atlas 主题，独立打开使用已保存的主题或系统偏好。复制按钮提供当前 CSS；剪贴板不可用时选中代码供手动复制。

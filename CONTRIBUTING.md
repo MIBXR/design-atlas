@@ -76,21 +76,41 @@
 
 案例目录保存作品运行文件、素材、`source/`、复刻作品的 `fidelity.md` 及许可索引 `LICENSES.md`。`source/` 收集制作资料、上游源码与过程证据。
 
-```text
-demos/cases/<id>/
-├── index.html
-├── assets/
-├── fonts/
-├── vendor/<库>/
-├── source/
-├── fidelity.md
-├── assets-manifest.json
-└── LICENSES.md
-```
+| 路径（相对 `demos/cases/<id>/`） | 内容 |
+| --- | --- |
+| `index.html` | 作品入口，加载本案例的代码与样式 |
+| `assets/` | 图像等画面素材 |
+| `fonts/` | 字体与许可原文 |
+| `vendor/<库>/` | 第三方运行库与许可原文 |
+| `source/` | 制作资料、上游源码与过程证据 |
+| `fidelity.md` | 复刻作品的对照结果 |
+| `assets-manifest.json` | 逐文件素材来源与用途 |
+| `LICENSES.md` | 第三方许可索引 |
 
-巧思条目以 `sources` 与 `sourceFiles` 引用来源案例的机制和运行依赖；有独立本体时放入 `demos/patterns/<id>/`，素材和上游源码继续引用来源案例。
+巧思采用来源引用结构，通过 `sources` 与 `sourceFiles` 取得来源案例的机制、素材和运行依赖。
 
-可运行素材在 `demos/materials/<id>/` 保存样例页及 `vendor/`、`fonts/` 等运行依赖。文字类素材的该目录就是固定提交的原文快照，目录内只保存上游原文件与许可。`snapshotPath` 指向这个目录，`snapshotEntry` 指向先打开的主文档，Agent Skill 为 `SKILL.md`。文件收集按目录角色递归进行；素材 `type` 决定站点展示。
+| 路径／字段 | 内容 |
+| --- | --- |
+| `entries/patterns/<id>.json` | 巧思的机制、参数、来源定位与主要取材文件 |
+| `sources[].caseId`、`sources[].locator` | 来源案例及精确观察位置 |
+| `sourceFiles` | 来源案例包内的机制代码、研究与运行依赖 |
+| `demos/cases/<来源 id>/` | 被引用的作品代码、素材、上游源码与许可 |
+| `docs/patterns/<id>.md` | 有单条研究时保存机制说明 |
+| `previews/patterns/<id>.<ext>` | 巧思预览 |
+
+可运行素材按下表组织，目录按实际内容建立。使用说明统一放在 `docs/materials/<id>.md`。
+
+| 路径（相对 `demos/materials/<id>/`） | 内容 |
+| --- | --- |
+| `index.html` | 样例入口，可通过 `?demo=` 等参数切换 |
+| `demo/` | 样例代码与样式：`demo.js`、`demo.css`、各样例子目录及其素材 |
+| `vendor/<库>@<版本>/` | 固定版本运行库与各自许可原文；合并包的依赖许可随包保存 |
+| `fonts/` | 字体与许可原文 |
+| `source/` | 重建入口、依赖锁、source map、上游源码与 provenance 等制作资料 |
+| `fidelity.md` | 复刻型素材的对照结果（如有） |
+| `LICENSES.md` | 本体内第三方文件的许可索引 |
+
+文字类素材的目录是固定提交的原文快照，目录内只保存上游原文件与许可，保持原语言与原字节。`snapshotPath` 指向这个目录，`snapshotEntry` 指向先打开的主文档，Agent Skill 为 `SKILL.md`。文件收集按目录角色递归进行；素材 `type` 决定站点展示。
 
 ### 文档分工与唯一位置
 
@@ -222,15 +242,15 @@ Prompt写结构、尺度、素材、关键状态及交接、音乐和主题行�
 
 ### 案例
 
-锁定来源页面和范围，完成原站观察与状态记录。写入 `entries/cases/<id>.json`、`docs/cases/<id>.md`、`demos/cases/<id>/` 与 `previews/cases/<id>.<ext>`、`<id>-mobile.<ext>`；复刻作品附 `fidelity.md`、素材清单和许可索引。按机制提取巧思，并更新相关跨案例分析。运行 `npm run build`、`npm run check`，再按下节验收。
+锁定来源页面和范围，完成原站观察与状态记录。从 `scripts/templates/case/` 创建 `demos/cases/<id>/`，写入 `entries/cases/<id>.json`、`docs/cases/<id>.md` 与 `previews/cases/<id>.<ext>`、`<id>-mobile.<ext>`；复刻作品附 `fidelity.md`、素材清单和许可索引。按机制提取巧思，并更新相关跨案例分析。运行 `npm run build`、`npm run check`，再按下节验收。
 
 ### 巧思
 
-先搜索已有机制；同一机制合并多来源。写入 `entries/patterns/<id>.json`，定位真实观察与源码；独立本体、研究和截图按三类目录表放置。运行 `npm run build`、`npm run check`，验收搜索、体验类型和来源筛选、详情 Prompt、组合链接及完整案例回跳。
+先搜索已有机制；同一机制合并多来源。写入 `entries/patterns/<id>.json`，定位真实观察与源码；研究和截图按巧思结构表放置。运行 `npm run build`、`npm run check`，验收搜索、体验类型和来源筛选、详情 Prompt、组合链接及完整案例回跳。
 
 ### 素材
 
-锁定上游版本和许可。写入 `entries/materials/<id>.json`、`docs/materials/<id>.md`、`demos/materials/<id>/` 和 `previews/materials/`；第三方文件及文字快照保留原字节。运行 `npm run build`、`npm run check`，在相同桌面和手机宽度对照素材库与详情。实际操作样例参数、输入、减少动态和后备；文字素材打开 `snapshotEntry` 与关联条目。
+锁定上游版本和许可。可运行素材从 `scripts/templates/material-demo/` 创建 `demos/materials/<id>/`；文字素材在该目录保存上游快照。写入 `entries/materials/<id>.json`、`docs/materials/<id>.md` 和 `previews/materials/`；第三方文件及文字快照保留原字节。运行 `npm run build`、`npm run check`，在相同桌面和手机宽度对照素材库与详情。实际操作样例参数、输入、减少动态和后备；文字素材打开 `snapshotEntry` 与关联条目。
 
 构建同步三类 Prompt、单类索引、资料包、站点数据、文档目录、案例索引及 README 计数块。取材接口见 [Agent 工作流](docs/agent.md)。
 

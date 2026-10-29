@@ -84,5 +84,5 @@
   "demo": "demos/materials/material-web/index.html",
   "preview": "previews/materials/material-web.png",
   "research": "docs/materials/material-web.md",
-  "sourceFiles": ["demos/materials/material-web/index.html", "demos/materials/material-web/demo.css", "demos/materials/material-web/demo.js", "demos/materials/material-web/source/vendor/components.mjs"]
+  "sourceFiles": ["demos/materials/material-web/index.html", "demos/materials/material-web/demo/demo.css", "demos/materials/material-web/demo/demo.js", "demos/materials/material-web/source/vendor/components.mjs"]
 }

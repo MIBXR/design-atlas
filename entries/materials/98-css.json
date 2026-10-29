@@ -8,8 +8,8 @@
   "research": "docs/materials/98-css.md",
   "sourceFiles": [
     "demos/materials/98-css/index.html",
-    "demos/materials/98-css/demo.css",
-    "demos/materials/98-css/demo.js"
+    "demos/materials/98-css/demo/demo.css",
+    "demos/materials/98-css/demo/demo.js"
   ],
   "summary": "以真实 Windows 98 风格 CSS 组合设置窗口、可筛选素材目录与可暂停进度；保留复古边框，同时提高文字与触控可用性。",
   "install": "npm install 98.css@0.1.21",

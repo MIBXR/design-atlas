@@ -19,7 +19,7 @@ Google 的 `@material/web` 将 Material 3 设计语言实现为 Web Components�
 
 ## 参数与接入
 
-浏览器通过 `import './vendor/material-web.js'` 注册选用的组件。运行模块包含全部依赖与组件样式，无 CDN 或远程字体。以静态 HTTP/HTTPS 服务器提供素材导出目录，再打开 `demos/materials/material-web/index.html`。`?sample=actions`、`form`、`preferences`、`dialog` 可定位样例。
+浏览器通过 `vendor/material-web@2.5.0/material-web.js` 注册选用的组件，样例代码位于 `demo/`。运行模块包含全部依赖与组件样式，无 CDN 或远程字体。以静态 HTTP/HTTPS 服务器提供素材导出目录，再打开 `demos/materials/material-web/index.html`。`?sample=actions`、`form`、`preferences`、`dialog` 可定位样例。
 
 [Material Theming](https://material-web.dev/theming/material-theming/) 以 CSS 自定义属性区分系统颜色角色和组件 tokens。本地两套配色覆盖 primary/on-primary、container/on-container、surface/on-surface、outline、error 等成对角色；它们是学习用配色，不是从用户图片自动生成的动态主题。主题可跟随 Atlas、系统或手动选浅/深。按钮形状使用各组件的 `container-shape`；`4–28px` 范围、`2px` 步长和 `20px` 默认值是本地教学选择，不是规范强制值。
 
@@ -35,6 +35,15 @@ Google 的 `@material/web` 将 Material 3 设计语言实现为 Web Components�
 
 ## 重建依赖
 
-`vendor/material-web.js` 由 esbuild 0.25.12 合并并压缩选用的官方模块，CSS-in-JS 随包，保留行内许可；未修改官方组件源码。`source/vendor/components.mjs`、`source/vendor/package.json`、`source/vendor/package-lock.json` 提供重建输入，[依赖说明](../../demos/materials/material-web/vendor/README.md) 给出在仓库外重建的命令。`source/vendor/provenance.json` 保存 npm integrity、bundle摘要以及全部许可文件字节数/SHA256。导出时应保留完整 vendor 目录；Agent 资料由统一构建生成完整文件路径与角色。
+运行包由 esbuild 0.25.12 合并并压缩选用的官方模块，CSS-in-JS 随包，保留行内许可。`source/vendor/components.mjs`、`source/vendor/package.json`、`source/vendor/package-lock.json` 提供重建输入，`source/vendor/provenance.json` 保存来源与转换记录。
+
+将这三份重建输入复制到仓库外的临时目录，在该目录运行：
+
+```sh
+npm ci --ignore-scripts --no-audit --no-fund
+./node_modules/.bin/esbuild components.mjs --bundle --format=esm --target=es2022 --minify --legal-comments=inline --outfile=material-web.js
+```
+
+用产物替换 `vendor/material-web@2.5.0/material-web.js`。构建依赖留在仓库外，交付目录保留运行模块与[许可索引](../../demos/materials/material-web/LICENSES.md)列出的许可原文。
 
 [本地对照结果](../../demos/materials/material-web/fidelity.md)。
