@@ -1880,6 +1880,18 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/endfield-industrial/source/decode-profiles.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/extract-ring.js",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/endfield-industrial/source/source-provenance.json",
       "role": "process"
     },
@@ -2606,6 +2618,14 @@
     {
       "path": "demos/cases/stripe-platform/script.js",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/source/extract-wave.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/stripe-platform/source/README.md",
+      "role": "process"
     },
     {
       "path": "demos/cases/stripe-platform/style.css",

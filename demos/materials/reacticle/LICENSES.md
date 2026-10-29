@@ -2,6 +2,8 @@
 
 [来源与固定版本](../../../entries/materials/reacticle.json)。Reacticle 的 MIT 声明来自上游 [package.json](source/vendor/reacticle-package.json)，作者为 ConardLi；随包保存[声明记录](vendor/reacticle@0.2.6/reacticle-MIT-declaration.txt)。
 
+上游源码（`source/src/`、`source/apps/site/src/` 及配置）来自 ConardLi/reacticle 固定提交 `dcfc4baf386bbc220cd1aa6274bed3b741108465`，该提交的 [package.json](source/package.json) 声明 MIT、没有 LICENSE 文件；制作依赖由 [package-lock.json](source/package-lock.json) 固定。
+
 文章样例的编译模块包含以下运行依赖，各自的许可原文随包保存。
 
 | 包 | 版本 | 许可原文 |

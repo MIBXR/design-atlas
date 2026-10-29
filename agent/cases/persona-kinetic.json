@@ -143,7 +143,7 @@
     {
       "path": "demos/cases/persona-kinetic/fidelity.md",
       "role": "fidelity",
-      "content": "# Persona 5 Royal · 单次参考快照：复现范围\n\n[案例条目](../../../entries/cases/persona-kinetic.json) · [研究](../../../docs/cases/persona-kinetic.md) · [Prompt](../../../prompts/cases/persona-kinetic.md)\n\nCanvas2D 重写原图像与运动规则；随机抽样及 Canvas 混合近似原 PIXI 结果。暂停星光、键盘和 ?motion=reduce 为本地补充。\n\n角色横向轨道500ms切换并停在首尾，服装有独立状态。学校生活与怪盗生活原站是分别无限循环、露出相邻画面的中心轮播；本地用两个独立500ms轨道保留箭头/横触与循环交接，保留5张学校和3张怪盗真实画面。三位人物与文案缩减，入场局部装饰、所有规格与购买栏目不在本地完整重建范围；剪纸海报、真实立绘及原始箭头保留，不能以统一卡片风代替。\n\n## 复刻未使用的原站素材\n\n- `source/assets/star.png`\n- `source/assets/phantom.png`\n\n体验路径：首屏星光→原生下滚时背景不同速移动→三位角色正反切换和换装→学校轮播末尾接首项→怪盗独立轮播→购买外链和footer→向上。\n"
+      "content": "# Persona 5 Royal · 单次参考快照：复现范围\n\n## 对照结论与差异原因\n\n原作 PIXI 星光与背景运动在本地使用 Canvas2D 近似；人物只保留三位，学校／怪盗分别保留 5／3 张并独立循环，整体未达 1:1。同视口成对画面对照结论未记录。\n\n| 差异或删减 | 原因 |\n| --- | --- |\n| PIXI 改为 Canvas2D，随机抽样及混合近似 | 重写与随机算法替代的原因未记录。 |\n| 已决定删减其余人物／文案、局部入场装饰、部分规格与购买栏目 | 原因未记录。 |\n| 键盘、星光暂停与减少动态 | 本地操作补充。 |\n\nCanvas 星光、背景运动、人物／服装状态与两条轮播轨道由本库自行实现；剪纸海报、真实立绘、截图与箭头沿用原作。\n\n[案例条目](../../../entries/cases/persona-kinetic.json) · [研究](../../../docs/cases/persona-kinetic.md) · [Prompt](../../../prompts/cases/persona-kinetic.md)\n\nCanvas2D 重写原图像与运动规则；随机抽样及 Canvas 混合近似原 PIXI 结果。暂停星光、键盘和 ?motion=reduce 为本地补充。\n\n角色横向轨道500ms切换并停在首尾，服装有独立状态。学校生活与怪盗生活原站是分别无限循环、露出相邻画面的中心轮播；本地用两个独立500ms轨道保留箭头/横触与循环交接，保留5张学校和3张怪盗真实画面。三位人物与文案缩减，入场局部装饰、所有规格与购买栏目不在本地完整重建范围；剪纸海报、真实立绘及原始箭头保留，不能以统一卡片风代替。\n\n## 复刻未使用的原站素材\n\n- `source/assets/star.png`\n- `source/assets/phantom.png`\n\n体验路径：首屏星光→原生下滚时背景不同速移动→三位角色正反切换和换装→学校轮播末尾接首项→怪盗独立轮播→购买外链和footer→向上。\n"
     },
     {
       "path": "demos/cases/persona-kinetic/assets-manifest.json",

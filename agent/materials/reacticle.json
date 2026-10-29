@@ -38,7 +38,7 @@
       "通过 HTTP/HTTPS 打开样例目录，JS、CSS、公式字体与本地化字体均使用相对路径；文章外链保留原作指向。",
       "原始 package.json 声明 MIT，但该固定提交的仓库内没有 LICENSE 文件；许可声明与实际缺失情况同时记录，不虚构上游许可文本。",
       "样文原文保持原样；主题风格说明为中文概括，依据 garden-skills 固定提交的 theme-profiles。",
-      "样文中的交互、阅读辅助与动态行为沿用上游实现；源码保留不等于读屏器、真实触屏或所有浏览器已经完成实测。"
+      "样文中的交互、阅读辅助与动态行为沿用上游实现；source/ 归档公共组件、主题、11 篇报告、最小入口及原依赖配置，依赖按上游 lockfile 安装；逐篇对照结论见 fidelity.md。"
     ],
     "upstream": {
       "repository": "ConardLi/reacticle",
@@ -292,17 +292,22 @@
     {
       "path": "docs/materials/reacticle.md",
       "role": "research",
-      "content": "# Reacticle · 长文排版组件库\n\n[来源、版本、许可与使用边界](../../entries/materials/reacticle.json)\n\nReacticle 是用于文章、报告和交互长文的 React 语义化组件库，提供 11 套有独立排版契约的主题。内容通过同一套组件表达，主题决定文字层级、网格、留白、图表与代码的视觉语言。\n\n## 安装与取材\n\n上游 README 指向的开始使用页给出 `npm install reacticle`，React 18.3 是 peer 依赖。本地样例使用上游 `src/` 与 `apps/site` 的报告组件和主题 CSS。公共入口 `ThemeProvider` 包裹文章，再组合 `Article`、`Hero`、`Section`、公式、代码、决策和媒体组件；自定义 `Raw` 内容继续使用 `--ra-*` 主题变量。\n\n11 个独立入口位于 `demo/<样文 id>/`，复用原画廊的文章容器及原站 CSS，仅渲染对应文章。入口在模块加载前设置 `Prism.manual = true`，由原 React 组件逐行高亮，保留代码行容器与换行。样例索引按 `?demo=<id>` 选择后直接打开对应静态页；每篇的 JS、CSS 与公式字体由 Vite 以相对路径构建，Google Fonts 使用 `fonts/` 中的共享本地文件。\n\n## 11 套主题样文\n\n| 主题 | 文章 | 风格 |\n| --- | --- | --- |\n| Tufte | [咖啡因与睡眠：一份关于半衰期的笔记](../../demos/materials/reacticle/index.html?demo=caffeine-half-life) | 数据墨水风格：克制衬线、充裕页边、发丝参考线与低装饰图表，让论点和证据承载视觉层级。 |\n| Press | [活字之后](../../demos/materials/reacticle/index.html?demo=movable-type) | 出版书卷风格：暖纸与从容衬线，以线代框，保留数据墨水纪律，用更外放的字号和版式组织叙事。 |\n| Shannon | [连接池耗尽：一次结算级联故障复盘](../../demos/materials/reacticle/index.html?demo=pool-exhaustion) | 暗色工程风格：温暖石墨底、暖白墨与琥珀信号色，围绕日志、代码、事件与决策组织可核查证据。 |\n| Vignelli | [Orbit 设计系统 · 基础规范](../../demos/materials/reacticle/index.html?demo=orbit-spec) | 瑞士国际主义风格：冷中性纸面、无衬线字号层级、严密网格与一抹结构红，适合系统规范。 |\n| Knuth | [以核特征映射线性化自注意力：一个复杂度视角](../../demos/materials/reacticle/index.html?demo=linear-attention) | 学术预印本风格：正式衬线、编号章节和图表、公式优先与密集引用，强调推导和可核查性。 |\n| Freddie | [第一封 Newsletter：一份不端着的上手指南](../../demos/materials/reacticle/index.html?demo=first-newsletter) | 温暖人文风格：白纸黑墨与明黄荧光色块，俏皮衬线标题配干净无衬线正文，亲切且专业。 |\n| Andy | [把呼吸放慢：盒式呼吸与平静的神经科学](../../demos/materials/reacticle/index.html?demo=slow-breathing) | 静谧人文风格：暖奶油纸、南瓜橙、暖灰墨与圆润字体，大圆角、柔和阴影和留白帮助放慢节奏。 |\n| Bodoni | [头版的消亡](../../demos/materials/reacticle/index.html?demo=front-page) | 黑白报刊风格：纯白纸、真黑墨与发丝栏线，大字刊头、首字下沉和粗细双线建立印刷层级。 |\n| Bayer | [形、色、网格：看得懂的视觉语法](../../demos/materials/reacticle/index.html?demo=geometry-of-meaning) | 包豪斯构成风格：暖纸黑墨，以红蓝黄三原色、几何无衬线、硬边与圆形数字组织清晰结构。 |\n| Fuller | [限流器设计规格](../../demos/materials/reacticle/index.html?demo=rate-limiter-spec) | 工程蓝图风格：深蓝底、青白墨、制图青与淡方格网，搭配等宽标注、虚线分节和发丝拓扑。 |\n| Sottsass | [撞色不翻车](../../demos/materials/reacticle/index.html?demo=color-clash) | 孟菲斯风格：奶油纸、黑墨与粉青黄蓝撞色，以硬投影、轻旋转、彩色药丸和几何彩屑制造节奏。 |\n\n主题绑定与上游 `gallery.tsx` 完全一致。限流器文件名为 `RateLimiter.tsx`，实际组件导出为 `RateLimiterSpec`。样文保留原文、图形、公式、代码和交互；图库外壳中的官网导航、浮动返回信息和上一篇／下一篇不属于独立文章页面。\n\n## 关联工作流\n\n[beautiful-article](../../materials.html#material/beautiful-article) 提供来源整理、计划、写作、审阅、修复和交付流程，Reacticle 是它的组件与主题实现。主题写作资料见关联技能快照中的 `theme-profiles/`。\n\n## 本地资源与可访问性\n\n原站引入的 Newsreader、IBM Plex Sans、IBM Plex Mono、Source Serif 4、JetBrains Mono、Fraunces、Hanken Grotesk、Quicksand、Nunito、Playfair Display、Josefin Sans、Poppins 和 Space Grotesk 共 13 个字体家族、76 个 WOFF2 文件已本地化。保留原字重、样式与子集范围；中文继续使用原主题声明的系统字体回退。\n\n文章内目录、按钮、滑块与展开内容沿用原实现。减少动态使用原站 CSS；呼吸练习保留原始开始／暂停和计时逻辑。源码及依赖完整保留并不等于读屏器、真实触屏和所有浏览器的行为均已实测。\n\n上游软件包声明保存在 `source/vendor/reacticle-package.json`，Google Fonts 原始 CSS 保存在 `source/vendor/fonts/google-fonts-original.css`。运行依赖与字体的许可原文见[许可索引](../../demos/materials/reacticle/LICENSES.md)。\n"
+      "content": "# Reacticle · 长文排版组件库\n\n[来源、版本、许可与使用边界](../../entries/materials/reacticle.json)\n\nReacticle 是用于文章、报告和交互长文的 React 语义化组件库，提供 11 套有独立排版契约的主题。内容通过同一套组件表达，主题决定文字层级、网格、留白、图表与代码的视觉语言。\n\n## 安装与取材\n\n上游 README 指向的开始使用页给出 `npm install reacticle`，React 18.3 是 peer 依赖。本地样例使用上游 `src/` 与 `apps/site` 的报告组件和主题 CSS。公共入口 `ThemeProvider` 包裹文章，再组合 `Article`、`Hero`、`Section`、公式、代码、决策和媒体组件；自定义 `Raw` 内容继续使用 `--ra-*` 主题变量。\n\n11 个独立入口位于 `demo/<样文 id>/`，复用原画廊的文章容器及原站 CSS，仅渲染对应文章。入口在模块加载前设置 `Prism.manual = true`，由原 React 组件逐行高亮，保留代码行容器与换行。样例索引按 `?demo=<id>` 选择后直接打开对应静态页；每篇的 JS、CSS 与公式字体由 Vite 以相对路径构建，Google Fonts 使用 `fonts/` 中的共享本地文件。\n\n## 11 套主题样文\n\n| 主题 | 文章 | 风格 |\n| --- | --- | --- |\n| Tufte | [咖啡因与睡眠：一份关于半衰期的笔记](../../demos/materials/reacticle/index.html?demo=caffeine-half-life) | 数据墨水风格：克制衬线、充裕页边、发丝参考线与低装饰图表，让论点和证据承载视觉层级。 |\n| Press | [活字之后](../../demos/materials/reacticle/index.html?demo=movable-type) | 出版书卷风格：暖纸与从容衬线，以线代框，保留数据墨水纪律，用更外放的字号和版式组织叙事。 |\n| Shannon | [连接池耗尽：一次结算级联故障复盘](../../demos/materials/reacticle/index.html?demo=pool-exhaustion) | 暗色工程风格：温暖石墨底、暖白墨与琥珀信号色，围绕日志、代码、事件与决策组织可核查证据。 |\n| Vignelli | [Orbit 设计系统 · 基础规范](../../demos/materials/reacticle/index.html?demo=orbit-spec) | 瑞士国际主义风格：冷中性纸面、无衬线字号层级、严密网格与一抹结构红，适合系统规范。 |\n| Knuth | [以核特征映射线性化自注意力：一个复杂度视角](../../demos/materials/reacticle/index.html?demo=linear-attention) | 学术预印本风格：正式衬线、编号章节和图表、公式优先与密集引用，强调推导和可核查性。 |\n| Freddie | [第一封 Newsletter：一份不端着的上手指南](../../demos/materials/reacticle/index.html?demo=first-newsletter) | 温暖人文风格：白纸黑墨与明黄荧光色块，俏皮衬线标题配干净无衬线正文，亲切且专业。 |\n| Andy | [把呼吸放慢：盒式呼吸与平静的神经科学](../../demos/materials/reacticle/index.html?demo=slow-breathing) | 静谧人文风格：暖奶油纸、南瓜橙、暖灰墨与圆润字体，大圆角、柔和阴影和留白帮助放慢节奏。 |\n| Bodoni | [头版的消亡](../../demos/materials/reacticle/index.html?demo=front-page) | 黑白报刊风格：纯白纸、真黑墨与发丝栏线，大字刊头、首字下沉和粗细双线建立印刷层级。 |\n| Bayer | [形、色、网格：看得懂的视觉语法](../../demos/materials/reacticle/index.html?demo=geometry-of-meaning) | 包豪斯构成风格：暖纸黑墨，以红蓝黄三原色、几何无衬线、硬边与圆形数字组织清晰结构。 |\n| Fuller | [限流器设计规格](../../demos/materials/reacticle/index.html?demo=rate-limiter-spec) | 工程蓝图风格：深蓝底、青白墨、制图青与淡方格网，搭配等宽标注、虚线分节和发丝拓扑。 |\n| Sottsass | [撞色不翻车](../../demos/materials/reacticle/index.html?demo=color-clash) | 孟菲斯风格：奶油纸、黑墨与粉青黄蓝撞色，以硬投影、轻旋转、彩色药丸和几何彩屑制造节奏。 |\n\n主题绑定与上游 `gallery.tsx` 完全一致。限流器文件名为 `RateLimiter.tsx`，实际组件导出为 `RateLimiterSpec`。样文保留原文、图形、公式、代码和交互；图库外壳中的官网导航、浮动返回信息和上一篇／下一篇不属于独立文章页面。\n\n## 关联工作流\n\n[beautiful-article](../../materials.html#material/beautiful-article) 提供来源整理、计划、写作、审阅、修复和交付流程，Reacticle 是它的组件与主题实现。主题写作资料见关联技能快照中的 `theme-profiles/`。\n\n## 本地资源与可访问性\n\n原站引入的 Newsreader、IBM Plex Sans、IBM Plex Mono、Source Serif 4、JetBrains Mono、Fraunces、Hanken Grotesk、Quicksand、Nunito、Playfair Display、Josefin Sans、Poppins 和 Space Grotesk 共 13 个字体家族、76 个 WOFF2 文件已本地化。保留原字重、样式与子集范围；中文继续使用原主题声明的系统字体回退。\n\n文章内目录、按钮、滑块与展开内容沿用原实现。减少动态使用原站 CSS；呼吸练习保留原始开始／暂停和计时逻辑。组件、主题、11 篇报告与依赖配置归档在 [制作源码](../../demos/materials/reacticle/source/README.md)，依赖按原 lockfile 安装；对照结论与接入差异见 [fidelity.md](../../demos/materials/reacticle/fidelity.md)。\n\n上游软件包声明保存在 `source/vendor/reacticle-package.json`，Google Fonts 原始 CSS 保存在 `source/vendor/fonts/google-fonts-original.css`。运行依赖与字体的许可原文见[许可索引](../../demos/materials/reacticle/LICENSES.md)。\n"
     },
     {
       "path": "prompts/materials/reacticle.md",
       "role": "prompt",
-      "content": "# Reacticle · 长文排版组件库 · 复用 Prompt\n\n[结构化条目](../../entries/materials/reacticle.json)\n\n使用 Reacticle 0.2.6 的语义化 React 长文组件。先读 beautiful-article 对应主题的 profile，再从这 11 篇原作样文选择与文章目标一致的排版语言。通过公共入口导入 ThemeProvider、Article 与所需组件，沿用主题 token 与结构纪律；自绘 Raw 图形继续使用 --ra-* 变量。保持原始来源、论点与数据出处，图表只在帮助当前段落时加入，交互使用可访问的真实控件。参考样例时保留其完整组件与主题 CSS，不将主题简化为配色；需要离线分发时本地化字体并保留 MIT 声明和 OFL。\n\n## 制作约束\n\n- 固定 Reacticle 0.2.6 源码提交 dcfc4baf386bbc220cd1aa6274bed3b741108465；React 18.3 是上游声明的 peer 依赖，样例使用固定 lockfile 安装结果。\n- 每篇严格采用 apps/site/src/data/gallery.tsx 中的报告与主题组合；RateLimiter.tsx 导出的组件名为 RateLimiterSpec，11 个主题对应关系与任务表一致。\n- 组件、文章与主题 CSS 不作修改；独立入口保留原画廊文章容器及原站 CSS，省略官网导航、浮动返回标签与上一篇／下一篇。入口禁用 Prism 自动全页扫描，由原 React 组件保留逐行代码高亮。\n- 原站 13 个 Google Fonts 家族的 76 个 WOFF2 文件已本地化并附 OFL；中文沿用原主题的系统字体回退，不增加官网没有的中文网络字体。\n- 通过 HTTP/HTTPS 打开样例目录，JS、CSS、公式字体与本地化字体均使用相对路径；文章外链保留原作指向。\n- 原始 package.json 声明 MIT，但该固定提交的仓库内没有 LICENSE 文件；许可声明与实际缺失情况同时记录，不虚构上游许可文本。\n- 样文原文保持原样；主题风格说明为中文概括，依据 garden-skills 固定提交的 theme-profiles。\n- 样文中的交互、阅读辅助与动态行为沿用上游实现；源码保留不等于读屏器、真实触屏或所有浏览器已经完成实测。\n"
+      "content": "# Reacticle · 长文排版组件库 · 复用 Prompt\n\n[结构化条目](../../entries/materials/reacticle.json)\n\n使用 Reacticle 0.2.6 的语义化 React 长文组件。先读 beautiful-article 对应主题的 profile，再从这 11 篇原作样文选择与文章目标一致的排版语言。通过公共入口导入 ThemeProvider、Article 与所需组件，沿用主题 token 与结构纪律；自绘 Raw 图形继续使用 --ra-* 变量。保持原始来源、论点与数据出处，图表只在帮助当前段落时加入，交互使用可访问的真实控件。参考样例时保留其完整组件与主题 CSS，不将主题简化为配色；需要离线分发时本地化字体并保留 MIT 声明和 OFL。\n\n## 制作约束\n\n- 固定 Reacticle 0.2.6 源码提交 dcfc4baf386bbc220cd1aa6274bed3b741108465；React 18.3 是上游声明的 peer 依赖，样例使用固定 lockfile 安装结果。\n- 每篇严格采用 apps/site/src/data/gallery.tsx 中的报告与主题组合；RateLimiter.tsx 导出的组件名为 RateLimiterSpec，11 个主题对应关系与任务表一致。\n- 组件、文章与主题 CSS 不作修改；独立入口保留原画廊文章容器及原站 CSS，省略官网导航、浮动返回标签与上一篇／下一篇。入口禁用 Prism 自动全页扫描，由原 React 组件保留逐行代码高亮。\n- 原站 13 个 Google Fonts 家族的 76 个 WOFF2 文件已本地化并附 OFL；中文沿用原主题的系统字体回退，不增加官网没有的中文网络字体。\n- 通过 HTTP/HTTPS 打开样例目录，JS、CSS、公式字体与本地化字体均使用相对路径；文章外链保留原作指向。\n- 原始 package.json 声明 MIT，但该固定提交的仓库内没有 LICENSE 文件；许可声明与实际缺失情况同时记录，不虚构上游许可文本。\n- 样文原文保持原样；主题风格说明为中文概括，依据 garden-skills 固定提交的 theme-profiles。\n- 样文中的交互、阅读辅助与动态行为沿用上游实现；source/ 归档公共组件、主题、11 篇报告、最小入口及原依赖配置，依赖按上游 lockfile 安装；逐篇对照结论见 fidelity.md。\n"
     },
     {
       "path": "demos/materials/reacticle/LICENSES.md",
       "role": "license",
-      "content": "# Reacticle 许可索引\n\n[来源与固定版本](../../../entries/materials/reacticle.json)。Reacticle 的 MIT 声明来自上游 [package.json](source/vendor/reacticle-package.json)，作者为 ConardLi；随包保存[声明记录](vendor/reacticle@0.2.6/reacticle-MIT-declaration.txt)。\n\n文章样例的编译模块包含以下运行依赖，各自的许可原文随包保存。\n\n| 包 | 版本 | 许可原文 |\n| --- | --- | --- |\n| react | 18.3.1 | [MIT](vendor/reacticle@0.2.6/LICENSE-react.txt) |\n| react-dom | 18.3.1 | [MIT](vendor/reacticle@0.2.6/LICENSE-react-dom.txt) |\n| scheduler | 0.23.2 | [MIT](vendor/reacticle@0.2.6/LICENSE-scheduler.txt) |\n| katex | 0.17.0 | [MIT](vendor/reacticle@0.2.6/LICENSE-katex.txt) |\n| prismjs | 1.30.0 | [MIT](vendor/reacticle@0.2.6/LICENSE-prismjs.txt) |\n\nKaTeX 公式字体使用 [SIL OFL 1.1](fonts/LICENSE-katex-fonts-OFL.txt)，保留 Design Science、Khan Academy 的版权与保留字体名。原始嵌入声明与 OFL 全文随字体保存。\n\n## 共享字体\n\n[fonts.css](fonts/fonts.css) 加载 13 个字体家族、76 个本地 WOFF2 文件；上游 [Google Fonts CSS 快照](source/vendor/fonts/google-fonts-original.css) 保存在制作资料中。\n\n| 字体家族 | 许可原文 |\n| --- | --- |\n| newsreader | [SIL OFL 1.1](fonts/OFL-newsreader.txt) |\n| ibmplexsans | [SIL OFL 1.1](fonts/OFL-ibmplexsans.txt) |\n| ibmplexmono | [SIL OFL 1.1](fonts/OFL-ibmplexmono.txt) |\n| sourceserif4 | [SIL OFL 1.1](fonts/OFL-sourceserif4.txt) |\n| jetbrainsmono | [SIL OFL 1.1](fonts/OFL-jetbrainsmono.txt) |\n| fraunces | [SIL OFL 1.1](fonts/OFL-fraunces.txt) |\n| hankengrotesk | [SIL OFL 1.1](fonts/OFL-hankengrotesk.txt) |\n| quicksand | [SIL OFL 1.1](fonts/OFL-quicksand.txt) |\n| nunito | [SIL OFL 1.1](fonts/OFL-nunito.txt) |\n| playfairdisplay | [SIL OFL 1.1](fonts/OFL-playfairdisplay.txt) |\n| josefinsans | [SIL OFL 1.1](fonts/OFL-josefinsans.txt) |\n| poppins | [SIL OFL 1.1](fonts/OFL-poppins.txt) |\n| spacegrotesk | [SIL OFL 1.1](fonts/OFL-spacegrotesk.txt) |\n"
+      "content": "# Reacticle 许可索引\n\n[来源与固定版本](../../../entries/materials/reacticle.json)。Reacticle 的 MIT 声明来自上游 [package.json](source/vendor/reacticle-package.json)，作者为 ConardLi；随包保存[声明记录](vendor/reacticle@0.2.6/reacticle-MIT-declaration.txt)。\n\n上游源码（`source/src/`、`source/apps/site/src/` 及配置）来自 ConardLi/reacticle 固定提交 `dcfc4baf386bbc220cd1aa6274bed3b741108465`，该提交的 [package.json](source/package.json) 声明 MIT、没有 LICENSE 文件；制作依赖由 [package-lock.json](source/package-lock.json) 固定。\n\n文章样例的编译模块包含以下运行依赖，各自的许可原文随包保存。\n\n| 包 | 版本 | 许可原文 |\n| --- | --- | --- |\n| react | 18.3.1 | [MIT](vendor/reacticle@0.2.6/LICENSE-react.txt) |\n| react-dom | 18.3.1 | [MIT](vendor/reacticle@0.2.6/LICENSE-react-dom.txt) |\n| scheduler | 0.23.2 | [MIT](vendor/reacticle@0.2.6/LICENSE-scheduler.txt) |\n| katex | 0.17.0 | [MIT](vendor/reacticle@0.2.6/LICENSE-katex.txt) |\n| prismjs | 1.30.0 | [MIT](vendor/reacticle@0.2.6/LICENSE-prismjs.txt) |\n\nKaTeX 公式字体使用 [SIL OFL 1.1](fonts/LICENSE-katex-fonts-OFL.txt)，保留 Design Science、Khan Academy 的版权与保留字体名。原始嵌入声明与 OFL 全文随字体保存。\n\n## 共享字体\n\n[fonts.css](fonts/fonts.css) 加载 13 个字体家族、76 个本地 WOFF2 文件；上游 [Google Fonts CSS 快照](source/vendor/fonts/google-fonts-original.css) 保存在制作资料中。\n\n| 字体家族 | 许可原文 |\n| --- | --- |\n| newsreader | [SIL OFL 1.1](fonts/OFL-newsreader.txt) |\n| ibmplexsans | [SIL OFL 1.1](fonts/OFL-ibmplexsans.txt) |\n| ibmplexmono | [SIL OFL 1.1](fonts/OFL-ibmplexmono.txt) |\n| sourceserif4 | [SIL OFL 1.1](fonts/OFL-sourceserif4.txt) |\n| jetbrainsmono | [SIL OFL 1.1](fonts/OFL-jetbrainsmono.txt) |\n| fraunces | [SIL OFL 1.1](fonts/OFL-fraunces.txt) |\n| hankengrotesk | [SIL OFL 1.1](fonts/OFL-hankengrotesk.txt) |\n| quicksand | [SIL OFL 1.1](fonts/OFL-quicksand.txt) |\n| nunito | [SIL OFL 1.1](fonts/OFL-nunito.txt) |\n| playfairdisplay | [SIL OFL 1.1](fonts/OFL-playfairdisplay.txt) |\n| josefinsans | [SIL OFL 1.1](fonts/OFL-josefinsans.txt) |\n| poppins | [SIL OFL 1.1](fonts/OFL-poppins.txt) |\n| spacegrotesk | [SIL OFL 1.1](fonts/OFL-spacegrotesk.txt) |\n"
+    },
+    {
+      "path": "demos/materials/reacticle/fidelity.md",
+      "role": "fidelity",
+      "content": "# Reacticle：11 篇样文的对照与接入\n\n基线为 ConardLi/reacticle `dcfc4baf386bbc220cd1aa6274bed3b741108465`。对照对象是原画廊中各报告及其固定主题；上游报告 TSX、组件、主题 CSS、gallery.tsx 和原 site.css 已归档于 `source/`。\n\n| 本地入口 | 上游报告与主题 | 现有对照结论 |\n| --- | --- | --- |\n| caffeine-half-life | CaffeineHalfLife.tsx／tufte | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| movable-type | MovableType.tsx／press | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| pool-exhaustion | PoolExhaustion.tsx／shannon | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| orbit-spec | OrbitSpec.tsx／vignelli | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| linear-attention | LinearAttention.tsx／knuth | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| first-newsletter | FirstNewsletter.tsx／freddie | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| slow-breathing | SlowBreathing.tsx／andy | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| front-page | FrontPage.tsx／bodoni | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| geometry-of-meaning | GeometryOfMeaning.tsx／bayer | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| rate-limiter-spec | RateLimiter.tsx 的 RateLimiterSpec／fuller | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n| color-clash | ColorClash.tsx／sottsass | 报告与主题绑定相符；原作/本地同视口画面对照未记录。 |\n\n上述结论依据条目的构建记录与固定上游 gallery.tsx；现有记录没有逐篇并排截图或交互成对结果，11 篇的视觉／交互 1:1 结论未建立。\n\n## 差异、删减与原因\n\n| 范围 | 当前实现与原因 |\n| --- | --- |\n| 已决定删减画廊外壳 | 官网导航、浮动返回信息及上一篇／下一篇省略，独立入口只展示一篇文章。 |\n| 代码高亮入口 | 加载前设置 Prism.manual，由原 React 组件逐行高亮，保留行容器与换行。 |\n| 字体路径 | Google Fonts 的 13 家族／76 个 WOFF2 改为本地相对路径，用于离线静态页面；原主题中文系统回退保留。 |\n| 应用接入 | 原站画廊路由改为各篇静态入口；本库实现选择页、最小 React 入口和 Vite 构建，沿用原 gx-reader／stage／paper 容器。 |\n| 文章内部 | 现有构建记录为原报告、公共组件、主题与 site.css 直接编译；未记录逐篇视觉偏移及其原因。 |\n\n## 制作源码与重建\n\n[source/README.md](source/README.md) 给出固定提交、归档范围和命令。`source/build-samples.mjs` 在单独工作目录生成 11 个最小入口并调用 Vite，依赖由原 package-lock.json 安装；当前运行 bundle 保持原文件。\n"
     },
     {
       "path": "demos/materials/reacticle/fonts/LICENSE-katex-fonts-OFL.txt",
@@ -373,6 +378,66 @@
       "path": "demos/materials/reacticle/fonts/OFL-spacegrotesk.txt",
       "role": "license",
       "content": "Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)\r\n\r\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\r\nThis license is copied below, and is also available with a FAQ at:\r\nhttp://scripts.sil.org/OFL\r\n\r\n\r\n-----------------------------------------------------------\r\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007\r\n-----------------------------------------------------------\r\n\r\nPREAMBLE\r\nThe goals of the Open Font License (OFL) are to stimulate worldwide\r\ndevelopment of collaborative font projects, to support the font creation\r\nefforts of academic and linguistic communities, and to provide a free and\r\nopen framework in which fonts may be shared and improved in partnership\r\nwith others.\r\n\r\nThe OFL allows the licensed fonts to be used, studied, modified and\r\nredistributed freely as long as they are not sold by themselves. The\r\nfonts, including any derivative works, can be bundled, embedded, \r\nredistributed and/or sold with any software provided that any reserved\r\nnames are not used by derivative works. The fonts and derivatives,\r\nhowever, cannot be released under any other type of license. The\r\nrequirement for fonts to remain under this license does not apply\r\nto any document created using the fonts or their derivatives.\r\n\r\nDEFINITIONS\r\n\"Font Software\" refers to the set of files released by the Copyright\r\nHolder(s) under this license and clearly marked as such. This may\r\ninclude source files, build scripts and documentation.\r\n\r\n\"Reserved Font Name\" refers to any names specified as such after the\r\ncopyright statement(s).\r\n\r\n\"Original Version\" refers to the collection of Font Software components as\r\ndistributed by the Copyright Holder(s).\r\n\r\n\"Modified Version\" refers to any derivative made by adding to, deleting,\r\nor substituting -- in part or in whole -- any of the components of the\r\nOriginal Version, by changing formats or by porting the Font Software to a\r\nnew environment.\r\n\r\n\"Author\" refers to any designer, engineer, programmer, technical\r\nwriter or other person who contributed to the Font Software.\r\n\r\nPERMISSION & CONDITIONS\r\nPermission is hereby granted, free of charge, to any person obtaining\r\na copy of the Font Software, to use, study, copy, merge, embed, modify,\r\nredistribute, and sell modified and unmodified copies of the Font\r\nSoftware, subject to the following conditions:\r\n\r\n1) Neither the Font Software nor any of its individual components,\r\nin Original or Modified Versions, may be sold by itself.\r\n\r\n2) Original or Modified Versions of the Font Software may be bundled,\r\nredistributed and/or sold with any software, provided that each copy\r\ncontains the above copyright notice and this license. These can be\r\nincluded either as stand-alone text files, human-readable headers or\r\nin the appropriate machine-readable metadata fields within text or\r\nbinary files as long as those fields can be easily viewed by the user.\r\n\r\n3) No Modified Version of the Font Software may use the Reserved Font\r\nName(s) unless explicit written permission is granted by the corresponding\r\nCopyright Holder. This restriction only applies to the primary font name as\r\npresented to the users.\r\n\r\n4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font\r\nSoftware shall not be used to promote, endorse or advertise any\r\nModified Version, except to acknowledge the contribution(s) of the\r\nCopyright Holder(s) and the Author(s) or with their explicit written\r\npermission.\r\n\r\n5) The Font Software, modified or unmodified, in part or in whole,\r\nmust be distributed entirely under this license, and must not be\r\ndistributed under any other license. The requirement for fonts to\r\nremain under this license does not apply to any document created\r\nusing the Font Software.\r\n\r\nTERMINATION\r\nThis license becomes null and void if any of the above conditions are\r\nnot met.\r\n\r\nDISCLAIMER\r\nTHE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\r\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF\r\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\r\nOF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE\r\nCOPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\r\nINCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL\r\nDAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\r\nFROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM\r\nOTHER DEALINGS IN THE FONT SOFTWARE.\r\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/README.md",
+      "role": "process",
+      "content": "# Reacticle 样文制作源码\n\n上游为 [ConardLi/reacticle](https://github.com/ConardLi/reacticle/tree/dcfc4baf386bbc220cd1aa6274bed3b741108465)，固定提交 `dcfc4baf386bbc220cd1aa6274bed3b741108465`，版本 0.2.6；本条目采集日期为 2026-10-27。\n\n- `src/`：原始公共组件、主题及 CSS。\n- `apps/site/src/reports/`：11 篇样文的原始 TSX。\n- `apps/site/src/data/gallery.tsx`：原始文章／主题绑定。\n- `apps/site/src/pages/Gallery.tsx`：原始画廊容器依据。\n- `apps/site/src/site.css`：原站样式。\n- `package.json`、`package-lock.json`、`.npmrc`、`tsconfig*.json`、`vite.config.ts`：原始依赖与编译配置。\n- `build-samples.mjs`：本库独立样文入口，逐篇构建，沿用 gx-reader 容器和 Prism.manual。\n\n第三方源码与配置保留原字节。归档范围为这 11 篇样文的制作输入；文档站其他页面不在此目录。原 package.json 声明 MIT，许可索引见 [LICENSES.md](../LICENSES.md)。\n\n使用 Node.js 与 npm，在 Git Bash 中从仓库根目录执行：\n\n```bash\ntask_output=\"$(pwd)/work/reacticle-rebuilt\"\ncd demos/materials/reacticle/source\nnpm ci\nnode build-samples.mjs \"$task_output\"\n```\n\n依赖版本由原 lockfile 固定。构建入口通过 Vite alias 使用归档 `src/index.ts`，各篇只导入对应报告；正文、主题和原 site.css 沿用上游。字体使用条目内 `../fonts/` 的本地文件，KaTeX 字体由 Vite 从锁定依赖打包。产物位于 `work/reacticle-rebuilt/<样文 id>/index.html`，可通过现有 HTTP 静态服务打开；`_inputs/` 是生成的最小入口。现有 11 篇运行 bundle 保持原文件。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/andy/andy.md",
+      "role": "process",
+      "content": "# Andy · 静谧 / 温柔（Headspace Pumpkin Orange）\n\n> 流派：温暖人文派（Warm humanist） · 参照：Headspace（Pumpkin orange #FF7E1D、imperfect circle 标志、Headspace-Aperçu 圆体、Colophon Foundry）、Nunito / Quicksand 圆体\n\n这是 ReActicle 的**暖奶油 + 暖橙、柔软而平静**的主题，以 Headspace 的引导之声 Andy 命名，面向**亲切、舒缓、重在让人安心**的内容。它保留语义化组件契约，但温度与所有克制主题相反：暖奶油纸、友好的南瓜橙、暖灰墨（绝不纯黑）、通体圆体无衬线（Quicksand 标题 + Nunito 正文，仿 Headspace-Aperçu）。\n\n这是七套主题里**唯一同时使用大圆角 + 柔和暖阴影**的主题——这正是它的识别签名。与同为暖调的 `press`（衬线书卷、无圆角）、同为暖人文的 `freddie`（黄 + 黑、俏皮、适度圆角）都分明：`andy` 更柔、更圆、更慢、更\"治愈\"。协议级禁用斜体，本主题同样遵守。\n\n## 适用场景\n\n- 健康 / 心理 / 生活方式内容、引导式教程、温柔的上手与安抚、产品价值观叙事。\n- 面向普通人、希望降低压力感、传达平静与友好的内容。\n- 需要\"柔软 UI\"质感（圆角、暖色、留白、轻阴影）的解释型长文。\n\n## 不适用场景\n\n- 正式学术论文（`knuth`）、冷调系统规格（`vignelli`）、暗底工程现场（`shannon`）。\n- 极密集数据报告（`tufte`）、需要锋利严肃感的内容。\n- 需要 10 米外观看的演示幻灯片。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#FFF7EF` | 暖奶油 |\n| surface / surface-2 | `#FDEEDE` / `#F9E3D0` | 暖桃色抬升 |\n| 墨色正文 | `#443D36` | 暖灰墨（非纯黑） |\n| 标题 | `#2A2420` | 暖近黑 |\n| **南瓜橙（hero fill）** | `#FF7E1D`（`--hs-orange`） | 章节号圆圈、眉标 pill 等**填充**用真橙 |\n| 结构 / 链接（accent） | `#E0590B` | 加深的烧橙，保证奶油底上文字可读；hover 衬以桃色 pill |\n| 警示红（risk） | `#E0473D` | soft `#FFE1DE` |\n| 成功绿（success） | `#4F9D69` | soft `#E0F0E4` |\n| 友好蓝（info） | `#3D83CC` | soft `#E3EEFB`，让\"note\"保持平静、与橙品牌区分 |\n| 参考线 | `#F0E3D4` / 强 `#E6D3BD` | 暖发丝线 |\n\n关键约定：**亮南瓜橙作填充（圆圈 / pill），加深烧橙作文字**——奶油底上亮橙小字对比不足，加深后链接与结构色才清晰。多色暖调（橙 / 蓝 / 绿 / 红）以柔和 soft 色承载不同 callout 语义。\n\n## 字体排印\n\n- **标题 / 标签**：Quicksand（几何圆体）→ 呼应 Headspace 的\"圆 / imperfect circle\"气质。\n- **正文**：Nunito（人文圆体，圆润字脚、可读性好）→ 仿 Headspace-Aperçu 的微笑曲线。\n- **元数据 / 代码**：JetBrains Mono。\n- 正文约 17px，行距 1.7（舒展呼吸）；标题 `--ra-weight-display: 700`，圆体在偏粗时最friendly。\n\n## 间距与形状\n\n- **大圆角**（`12 / 20 / 30 / 40`px）+ **柔和暖阴影**（橙调、低透明、大模糊）——这是本主题唯一且核心的签名。\n- 间距比其他主题更松（节奏 `.85 / 1.15 / 1.65 / 2.2 / 3.2 / 4.5 / 6`），让页面呼吸。\n- 动效：平缓顺滑、略慢（`cubic-bezier(0.4,0,0.2,1)`，240ms），一切都不着急。\n\n## 标志性手法\n\n- **圆圈章节号**：数字嵌在实心南瓜橙圆圈里（imperfect circle 母题），带极轻阴影。\n- **枕头式 callout**：`Aside` 是无边、大圆角、带柔阴影的 soft 色块；note 用平静蓝、principle 用桃橙、capability 绿、warning 红。\n- **柔软引用 / 结语面板**：`Quote` 与 `Conclusion` 是大圆角桃色面板，而非硬线，takeaway 用圆橙点。\n- **pill 与软交互**：眉标是桃色胶囊；链接 hover 长出柔和桃色 pill 底。\n\n## 代码与公式风格\n\n代码像友好 App 文档里的代码卡片，而不是冷硬终端。\n\n- 背景用暖桃 code surface + 大圆角（随 radius token）+ 可有极轻阴影；不使用暗色编辑器窗口。\n- Prism token 从主题派生：标签 / 函数用加深橙 accent（克制），关键字用 risk 红，字符串用绿，其余走暖墨 / muted。\n- `Formula` 像温柔的标注：克制、对齐，可有圆角 surface。\n- **禁止**：彩虹语法主题、霓虹、冷蓝硬阴影、Tailwind 默认味。\n\n## 媒体风格\n\n媒体像 Headspace 风的插画与柔和摄影：温暖、圆润、令人安心。\n\n- 适合：圆润的吉祥物 / blob 插画、暖色生活摄影、柔和渐变背景（暖橙系）、友好的图标。\n- 构图：留白充足、圆角裁切、主体平静；caption 简洁温柔。\n- 色彩：暖橙为主，辅以柔蓝 / 柔绿等情绪色；保持低饱和、柔和。\n- **禁止**：冷蓝 SaaS stock、3D 渲染图标、硬边几何 hero、把 emoji 当图标（除非确为品牌语气）。\n\n## Raw 自由层风格\n\nRaw 在 `andy` 里应像一页柔软、圆润、令人放松的插图。\n\n- 首选：圆角流程 / 步骤卡、柔和进度 / 呼吸动画、圆形数据图、可点开的温柔问答、blob / imperfect-circle 装饰。\n- 构图：大留白、大圆角、暖橙系、柔阴影；填色温柔，服务安抚与理解。\n- 动效：平缓、顺滑、可有舒缓的循环（如呼吸引导），但不喧闹。\n- 代码：自定义 CSS / SVG / React 仍必须使用 `--ra-*`（橙用 `--hs-orange`）；不引入冷品牌色或硬边风格。\n- **禁止**：锋利的仪表盘大屏、冷硬玻璃拟态、紫粉霓虹、营销落地页 hero 套路。\n\n## 反模式（本主题禁止）\n\n- 用纯黑墨、硬直角、冷色——会立刻破坏\"柔软治愈\"的识别。\n- 亮南瓜橙作正文 / 小字（对比不足，用加深 accent）。\n- 把柔阴影 + 大圆角滥用成浮夸卡片堆叠（克制使用，服务平静）。\n- 紫粉渐变、霓虹、Tailwind 默认审美、用斜体强调（协议级禁用）。\n\n## 实现说明\n\n- 定义在 `andy.css`，通过根节点 `data-theme=\"andy\"` 激活。\n- 所有取值以 `--ra-*` token 暴露；亮橙签名色用主题局部变量 `--hs-orange` / `--hs-orange-soft`，只在 scoped 解剖里使用。\n- 这是唯一启用非零 `--ra-shadow-*` 的主题：阴影是暖橙调、低透明、大模糊的\"柔软 UI\"质感，仅用于少量填充块（callout / 圆圈 / 代码）。\n- Quicksand / Nunito 未加载时回退 Helvetica Neue / PingFang SC / system-ui，仍保持圆润友好气质。\n- `accent` 用加深烧橙而非亮橙——保证 Summary 序号、链接、TOC 等默认文字用法在奶油底上始终清晰。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/bayer/bayer.md",
+      "role": "process",
+      "content": "# Bayer · 包豪斯（三原色几何）\n\n> 流派：包豪斯 / 构成主义（Bauhaus constructivism） · 参照：Herbert Bayer、Universal 字母、Dessau 包豪斯、红 / 蓝 / 黄三原色 + 黑、圆 / 方 / 三角\n\n这是 ReActicle 的**响亮而理性**的主题，把三原色当**结构色**用——不是装饰。识别度来自几何：**蓝色实心圆里的章节数字、红黄蓝三色刊头条、小写无衬线导语、硬边方块**。暖包豪斯纸、近黑墨，一套几何无衬线（Josefin / Poppins）承载从容可读。活泼但有纪律——像被\"构造\"出来，而不是被\"装饰\"出来。\n\n与同样克制的 `vignelli` 分明：`vignelli` 是瑞士红黑、极简、靠字号；`bayer` 是**三原色 + 圆方几何 + 一点顽皮**，更外向、更彩色。协议级禁用斜体。\n\n## 适用场景\n\n- 教学 / 科普解释、产品介绍、宣言、品牌叙事、有构造感的长文。\n- 希望\"专业但有性格、彩色但不浮夸\"的内容。\n- 适合配几何信息图、流程图、构成式插画。\n\n## 不适用场景\n\n- 正式学术论文（`knuth`）、冷峻黑白大刊（`bodoni`）。\n- 暗底工程（`shannon` / `fuller`）、柔软治愈（`andy`）。\n- 需要极致克制中性的系统规格（`vignelli`）。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#F4F0E6` | 暖包豪斯纸 |\n| surface / surface-2 | `#ECE7D8` / `#E1DBC8` | 暖浅抬升 |\n| 墨色正文 | `#1B1A16` | 近黑 |\n| 标题 | `#100F0C` | 真黑 |\n| **包豪斯蓝（accent）** | `#1F49C0` | 结构色：链接、章节圆、TOC |\n| **包豪斯红（risk）** | `#CF2A22` | soft `#F8DDD9`，承载风险 / 警示 |\n| **包豪斯黄** | `#FFCE1F`（`--by-yellow`） | **只作填充 / 高亮**：导语块、principle callout 底；绝不作文字色 |\n| 成功绿（success） | `#2C6E49` | soft `#DCEBE0` |\n| 参考线 | `#D4CDB8` / 强 `#B9B199` | 暖发丝线 |\n\n关键约定：**蓝是结构、红是风险、黄是填充**。三原色都承载含义；黄因对比不足绝不作小字 / 链接色（用 `--by-yellow` 局部变量做色块）。\n\n## 字体排印\n\n- **标题 / 标签**：Josefin Sans（几何无衬线，包豪斯气质）；回退 Poppins / PingFang SC。\n- **正文**：Poppins（几何人文，readable）；回退 Hanken Grotesk / PingFang SC。\n- **代码 / 元数据**：JetBrains Mono。\n- 正文约 17px，行距 1.65；display 字重 700。\n- **导语小写**：Bayer 主张\"单一小写字母表\"，故 eyebrow / kicker 走 `text-transform: lowercase`（中文不受影响，仅作用于拉丁字母）。\n\n## 间距与形状\n\n- 硬几何：方块**无圆角**；数字用**正圆**（radius-full）。\n- 阴影：无（保持平整，让原色与几何做工作）。\n- 动效：干脆利落（130ms），无回弹。\n\n## 标志性手法\n\n- **蓝圆章节号**：`Section` 数字嵌在蓝色实心圆里，白字——最强识别点。\n- **三色刊头条**：`Hero` 底部与 `Conclusion` 顶部是红 / 黄 / 蓝等分硬边条（`border-image`）。\n- **黄块导语**：`Hero` 的 eyebrow 是小写 + 黄色实心块。\n- **黄底原则块**：`Aside`（principle）提升为黑字 + 黄底的包豪斯 callout；note 蓝、capability 绿、warning 红，硬边 + 粗色条。\n- **方块要点**：`Conclusion` 要点用 `■` 蓝色方块标记。\n\n## 代码与公式风格\n\n代码像构成主义文档里的代码块：理性、几何、克制。\n\n- 暖浅 code surface + 发丝线，无圆角、无暗窗。\n- Prism token：标签 / 函数走蓝 accent，关键字走红 risk，字符串走绿；**黄不作语法色**（黄只作高亮块）。\n- `Formula` 居中克制；可有极淡 surface。\n- **禁止**：彩虹高亮、霓虹、暗色 IDE 截图、把黄当语法色。\n\n## 媒体风格\n\n媒体像包豪斯 / 构成主义海报与摄影：几何、原色、强构图。\n\n- 适合：几何构成插画、原色海报、强对比黑白 / 原色摄影、网格 / 圆方三角示意。\n- 构图：强网格、果断留白、原色块面；caption 简洁。\n- 色彩：红 / 蓝 / 黄 + 黑白；不引入紫粉冷渐变。\n- **禁止**：3D 渲染、廉价渐变、玻璃拟态、emoji 图标。\n\n## Raw 自由层风格\n\nRaw 在 `bayer` 里应像一页构成主义信息图。\n\n- 首选：几何流程图、圆 / 方 / 三角构成、原色柱状 / 比例图、网格示意、带蓝圆编号的步骤。\n- 构图：强网格、硬边、红蓝黄三色 + 黑白；圆形点睛，无圆角矩形卡。\n- 动效：干脆的位移 / 显隐，无回弹、无循环装饰。\n- 代码：自定义 CSS / SVG 必须使用 `--ra-*`（黄用 `--by-yellow`）；不引入冷品牌渐变。\n- **禁止**：营销 hero、玻璃拟态、浮动光球、紫粉渐变、把黄当文字色。\n\n## 反模式（本主题禁止）\n\n- 把包豪斯黄当文字 / 链接 / 语法色（对比不足）。\n- 圆角矩形卡 + 投影堆叠（那是 `andy` / `sottsass` 的领域）。\n- 紫粉渐变、霓虹、Tailwind 默认味、emoji 当装饰。\n- 用斜体强调（协议级禁用）。\n\n## 实现说明\n\n- 定义在 `bayer.css`，通过根节点 `data-theme=\"bayer\"` 激活。\n- 所有取值以 `--ra-*` token 暴露；三原色填充用主题局部变量 `--by-red` / `--by-blue` / `--by-yellow`。\n- Josefin Sans / Poppins 在 `apps/site/index.html` 请求；未加载时回退 PingFang SC / system-ui。\n- 章节圆、三色条等用主题 scoped 解剖实现，组件 DOM 与类名不变。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/bodoni/bodoni.md",
+      "role": "process",
+      "content": "# Bodoni · 报刊 / 时装大刊（Didone 高反差）\n\n> 流派：印刷殿堂派（Editorial Didone） · 参照：Giambattista Bodoni、Didot、报纸大报（broadsheet）、Vogue / Harper's 时装刊头（masthead）\n\n这是 ReActicle 的**极致黑白、戏剧高反差**主题，面向有分量的深度内容。它把结构纪律推到印刷传统里：**纯白纸、真黑墨、发丝栏线**，用一套极端粗细对比的 Didone（Playfair Display）做刊头大字，压在一套从容可读的老式衬线正文之上。识别度来自**印刷惯例**而非颜色——刊头粗细双线、真正的首字下沉（drop cap）、小型大写导语、栏线分节——颜色几乎只留给风险。\n\n与同为衬线的 `press`、`knuth` 分明：`press` 是暖奶油书卷、`knuth` 是两端对齐的学术 arXiv；`bodoni` 是**冷峻黑白的大报 / 时装刊头**，戏剧、权威、优雅。协议级禁用斜体，本主题以小型大写与字号承载强调。\n\n## 适用场景\n\n- 宣言、深度特稿、有重量的随笔、长篇评论、文化 / 时政 / 时装报道。\n- 需要\"权威感、戏剧感、仪式感\"的开篇与封面式文章。\n- 希望读起来像一份被精心排过的大报或时装大刊。\n\n## 不适用场景\n\n- 暖调亲和叙事（`press` / `freddie`）、柔软治愈（`andy`）。\n- 冷调系统规格（`vignelli`）、暗底工程（`shannon` / `fuller`）、学术论文（`knuth`）。\n- 需要大量彩色信息图或活泼气质的内容（`bayer` / `sottsass`）。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#FDFDFB` | 明亮印刷纸白 |\n| surface / surface-2 | `#F3F2EE` / `#E8E7E1` | 暖浅灰抬升（代码 / 表头） |\n| 墨色正文 | `#16140F` | 近黑 |\n| 标题 | `#0A0908` | 真黑 |\n| 结构 / 链接（accent） | `#0A0908` | **accent 故意是黑墨**：链接、章节号都用黑，像印刷页 |\n| 风险红（risk） | `#9C1421` | 深编辑红，soft `#F3E0E0`，**几乎是唯一的颜色** |\n| 成功绿（success） | `#2C5A3F` | soft `#E2EBE4`，极少用 |\n| 参考线 | `#DDD9CF` / 强 `#B4AFA1` | 发丝栏线 |\n\n关键约定：**层级靠字号、字重（黑 900）与发丝线，不靠颜色**。整篇近乎黑白，红只在真正的风险处出现一次。\n\n## 字体排印\n\n- **标题 / 刊头**：Playfair Display（Didone，极端粗细对比）→ 戏剧高反差；回退 Bodoni 72 / Didot / Songti SC / Georgia。\n- **正文**：Source Serif 4 / Newsreader（从容老式衬线，长文可读）；回退 Georgia / Songti SC。\n- **导语 / 元数据**：正文衬线走**小型大写 + 字距**承载标签感（`--ra-font-label`）。\n- **代码**：JetBrains Mono。\n- 正文约 17px，行距 1.62；display 字重 900、字号巨大，与发丝正文形成大报式落差。\n\n## 间距与形状\n\n- 无圆角、无阴影（纯印刷平面）。\n- 大量**发丝线与粗规则线**：刊头 4px 粗线 + 1px 细线、分节 1px 顶线、结语 4px 粗线。\n- 动效：极克制（120ms），近乎静止——像翻页，不像滑动。\n\n## 标志性手法\n\n- **刊头双线**：Hero 顶部粗黑线 + 底部细线 + 小型大写导语 + 巨型 Didone 标题。\n- **首字下沉**：`Lead` 开头一个大号 Didone 首字母浮动下沉，外加首行小型大写。\n- **栏线分节**：每个 `Section` 以 1px 顶线分隔，配大号黑色 Didone 章节数字。\n- **居中铅字引文**：`Quote` 是上下发丝线之间的居中 Didone 大字，像版心的抽言。\n- **小型大写**：导语、表头、TOC 标题、结语标签统一走 caps + 字距。\n\n## 代码与公式风格\n\n代码像书页里克制的代码清单，不是炫技 IDE。\n\n- 暖浅 code surface + 发丝线，无圆角、无暗色窗口。\n- Prism token 从墨色 / 暖编辑红 / 低饱和绿派生；**不引入彩虹高亮**。\n- `Formula` 像版心里的公式：居中、克制、衬线数字。\n- **禁止**：霓虹、彩虹语法、暗色编辑器截图、把颜色当装饰。\n\n## 媒体风格\n\n媒体像大报 / 时装刊的图版：黑白或低饱和、构图讲究、题注克制。\n\n- 适合：黑白摄影、高质感人像 / 静物、纪实照片、单色信息图、版画 / 铜版质感。\n- 构图：留白果断、主体明确、可满版或裁切；caption 用小型大写或衬线小字。\n- 色彩：以黑白灰为主，慎用一抹编辑红点睛。\n- **禁止**：彩色 SaaS hero、3D 图标、廉价渐变、emoji 当图标。\n\n## Raw 自由层风格\n\nRaw 在 `bodoni` 里应像大报版面里亲手排的图版或抽言。\n\n- 首选：黑白数据图 / 折线、版式抽言、时间线、对照栏、首字下沉式开篇、刊头式标题块。\n- 构图：发丝线 + 黑白 + 大字 Didone 标题；填色极少，红只点睛。\n- 动效：克制、近乎静态；避免循环装饰与回弹。\n- 代码：自定义 CSS / SVG 仍必须使用 `--ra-*`；红用 `--ra-color-risk`，不要引入额外色相。\n- **禁止**：彩色卡片堆叠、圆角大投影、玻璃拟态、营销 hero。\n\n## 反模式（本主题禁止）\n\n- 引入除编辑红以外的颜色作装饰（破坏黑白大报识别）。\n- 圆角、阴影、卡片化、渐变、霓虹。\n- 用斜体强调（协议级禁用；改用小型大写 / 字号 / 字重）。\n- 把 Didone 当正文长段（极端粗细对比不利于长文可读，正文用老式衬线）。\n\n## 实现说明\n\n- 定义在 `bodoni.css`，通过根节点 `data-theme=\"bodoni\"` 激活。\n- 所有取值以 `--ra-*` token 暴露；无主题局部色（颜色就是黑白 + 风险红）。\n- Playfair Display 为可变字重，未加载时回退 Songti SC / Georgia 仍是衬线气质；字体在 `apps/site/index.html` 请求。\n- `accent` 故意是黑墨而非彩色——保证链接、章节号、TOC 在白底上是经典印刷黑。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/freddie/freddie.md",
+      "role": "process",
+      "content": "# Freddie · 暖黄 / 友善（Mailchimp Cavendish Yellow）\n\n> 流派：温暖人文派（Warm humanist） · 参照：Mailchimp（Collins 2018 rebrand、吉祥物 Freddie、Cavendish Yellow #FFE01B、Peppercorn #241C15）、Cooper Oldstyle / Means 衬线、Graphik grotesque\n\n这是 ReActicle 的**暖白 + 明黄、机灵而有人味**的主题，面向**轻松但仍专业**的解释与叙事。它继承结构纪律——以线代框、去垃圾表格、色彩承载含义——但把气质换成 Mailchimp 式的**黑墨配荧光黄**：纯白纸、近黑 Peppercorn 墨、Cavendish 明黄只作**荧光笔 / 色块**（绝不作正文或链接文字色，黄字不可读），配一套俏皮柔和的衬线标题（Fraunces，仿 Cooper / Means）与干净的 grotesque 正文（Hanken，仿 Graphik）。\n\n与同为暖调的 `press` 分明：`press` 是氧化血红的衬线书卷、无圆角；`freddie` 是**黄 + 黑 + 适度圆角**的双声部（衬线标题 + 无衬线正文），更跳脱、更亲切。协议级禁用斜体，本主题同样遵守。\n\n## 适用场景\n\n- 产品介绍、上手指南、changelog 叙事、功能解释、FAQ、营销味但不浮夸的长文。\n- 面向普通用户、需要亲和力与人情味的解释型内容。\n- 希望\"专业但不端着\"、带一点幽默与温度的写作。\n\n## 不适用场景\n\n- 正式学术论文（`knuth`）、冷调系统规格（`vignelli`）。\n- 暗底工程现场（`shannon`）、极密集数据报告（`tufte`）。\n- 需要 10 米外观看的演示幻灯片。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#FFFFFF` | 纯白，Mailchimp 的底 |\n| surface / surface-2 | `#F7F4EC` / `#EFE9DA` | 暖浅灰抬升（代码 / 表头） |\n| 墨色正文 | `#2C241C` | 暖近黑 |\n| 标题 | `#1D160F` | 更深 Peppercorn |\n| **Cavendish 明黄** | `#FFE01B`（`--mc-yellow`） | **只作荧光笔 / 色块**：贴纸章节号、链接高亮、callout 底、强调；绝不作文字色 |\n| 结构 / 链接墨色（accent） | `#241C15` | accent 故意是可读墨色，保证所有默认文字用法清晰；黄由 `--mc-yellow` 承载 |\n| 警示红（risk） | `#C63D1A` | soft `#F8DDD2` |\n| 成功绿（success） | `#2F7D4F` | soft `#DCEFE2` |\n| 参考线 | `#E7DFCE` / 强 `#D6CCB4` | 暖发丝线 |\n\n关键约定：**accent 是墨、黄是荧光**。链接是\"黑字 + 黄色荧光笔\"，hover 时整条黄块填满；章节号是\"黑字 + 黄色贴纸\"（略微旋转）。这是 Mailchimp 识别度的来源，也避免了黄字不可读。\n\n## 字体排印\n\n- **标题**：Fraunces（可变字体，启用 `SOFT` / `WONK` 轴）→ 仿 Cooper Oldstyle / Means 的柔软与俏皮；回退 Georgia / Songti SC。\n- **正文 / 标签**：Hanken Grotesk → 仿 Graphik 的干净中性；回退 Inter / Helvetica Neue / PingFang SC。\n- **元数据 / 代码**：JetBrains Mono。\n- 正文约 17px，行距 1.65（从容亲和）；标题分量由 `--ra-weight-display: 600` + 柔轴承载，不靠超粗。\n\n## 间距与形状\n\n- 适度友好的圆角（`6 / 10 / 16 / 22`px）——这是品牌签名，不是 slop。\n- 阴影：无（保持平整，让黄色做工作）。\n- 动效：一丝回弹（`cubic-bezier(0.34,1.4,0.5,1)`，180ms），俏皮但不滑稽。\n\n## 标志性手法\n\n- **荧光笔链接**：黑字 + 黄色 highlight，hover 时黄块从下往上填满整行。\n- **贴纸章节号**：黑字嵌在黄色圆角块里，略 `rotate(-3deg)`，像手贴的邮票 / 标签（呼应 Mailchimp 的邮政血统）。\n- **黄色 callout**：`Aside` 默认（note / principle）是黑边 + 黄底的圆角块；warning 转红、capability 转绿。\n- **双声部排版**：柔软衬线标题压在干净 grotesque 正文之上，形成温度与可读性的对比。\n\n## 代码与公式风格\n\n代码像产品文档里友好的代码片段，而不是炫技 IDE 截图。\n\n- 背景用暖浅 code surface + 发丝线 + 适度圆角；不使用暗色编辑器窗口。\n- Prism token 从主题派生：标签 / 函数走墨色或暖红，关键字用 risk 红，字符串用绿；**不要把黄当语法色**（黄只作 highlight）。\n- `Formula` 像正文里的友好标注：克制、对齐，可有极淡的圆角 surface。\n- **禁止**：彩虹语法主题、霓虹、把黄色当正文 / 语法色、Tailwind 默认味。\n\n## 媒体风格\n\n媒体像 Mailchimp 风的友好插图与界面截图：温暖、有人味、略带手作感。\n\n- 适合：精修产品截图、温暖摄影、手绘 / scruffy 风插画、流程示意、带人物的友好配图。\n- 构图：留白舒展、主体清楚、可有一点点不规整的人情味；caption 简洁。\n- 色彩：贴近黑 / 白 / 黄体系；强调用黄色块承载，不引入紫粉冷渐变。\n- **禁止**：紫粉 SaaS hero、3D 渲染图标、廉价渐变背景、把 emoji 当图标。\n\n## Raw 自由层风格\n\nRaw 在 `freddie` 里应像一页友好、带手作感的产品说明插图。\n\n- 首选：流程 / 步骤图、对比示意、带黄色 highlight 的标注、友好的小数据图、可点开的 FAQ。\n- 构图：舒展留白、黑 / 黄 / 白三色、适度圆角；填色可比 tufte 多，但黄只作强调。\n- 动效：允许短促、带一丝回弹的过渡；避免无限循环装饰。\n- 代码：自定义 CSS / SVG / React 仍必须使用 `--ra-*`（黄用 `--mc-yellow`）；不引入冷品牌色或紫粉渐变。\n- **禁止**：营销落地页 hero 套路、玻璃拟态、浮动光球、仪表盘大屏拟物。\n\n## 反模式（本主题禁止）\n\n- 把 Cavendish 黄当文字 / 链接 / 语法色（不可读，且破坏\"黑字荧光\"的识别）。\n- 紫粉渐变、霓虹、Tailwind 默认审美、把 emoji / 图标当装饰。\n- 过度圆角 + 大投影的卡片堆叠（那是 `andy` 的柔软领域，不是这里的俏皮）。\n- 用斜体强调（协议级禁用）。\n\n## 实现说明\n\n- 定义在 `freddie.css`，通过根节点 `data-theme=\"freddie\"` 激活。\n- 所有取值以 `--ra-*` token 暴露；黄色签名色用主题局部变量 `--mc-yellow` / `--mc-yellow-strong`，只在主题 scoped 解剖里使用，组件不感知。\n- Fraunces 为可变字体，未加载时回退 Georgia / Songti SC 仍是暖衬线气质；`SOFT` / `WONK` 轴在 `apps/site/index.html` 的字体请求里启用。\n- `accent` 故意是可读墨色而非黄色——保证 Summary 序号、链接、TOC 等默认文字用法在白底上始终清晰。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/fuller/fuller.md",
+      "role": "process",
+      "content": "# Fuller · 蓝图 / 工程制图（Blueprint）\n\n> 流派：工程制图派（Engineering blueprint） · 参照：Buckminster Fuller、蓝晒图（cyanotype blueprint）、制图桌、CAD / 标注尺寸线\n\n这是 ReActicle 的**冷峻技术暗色**主题：**深蓝图底 + 青白墨 + 一束制图青**，外加一层淡淡的方格网。识别度来自绘图板——**画在方格纸上的标题块 Hero、等宽尺寸标注、虚线标注分节、青色发丝线**。它是 `shannon`（暖琥珀终端）的冷色对位：同样暗底，但气质是制图桌而非命令行。面向规格、系统设计、架构、RFC、硬件 / 协议写作。\n\n## 适用场景\n\n- 技术规格、系统 / 架构设计、协议 / 接口文档、RFC、硬件 / 机械说明。\n- 需要\"精密、冷静、工程\"质感的暗底长文。\n- 适合配示意图、尺寸标注、结构 / 拓扑图。\n\n## 不适用场景\n\n- 需打印的正式文档（暗底费墨）、温暖叙事（`press` / `freddie`）。\n- 柔软治愈（`andy`）、彩色活泼（`bayer` / `sottsass`）。\n- 正式学术论文（`knuth`）、黑白大刊（`bodoni`）。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 蓝图底 | `#213749` | 去饱和普鲁士蓝图底（比霓虹更耐看） |\n| surface / surface-2 | `#29404F` / `#314A5B` | 抬升面板 |\n| 墨色正文 | `#D2DBE2` | 柔和冷白（**非纯白**） |\n| 标题 | `#EEF3F7` | 亮冷白 |\n| **制图青（accent）** | `#79C2D0` | 结构色：链接、章节号、规则线、网格。**柔和淡青而非霓虹**，避免与底色振动 |\n| 风险琥珀（risk） | `#EDA06A` | soft `#3A2E22`，在满屏青中跳出 |\n| 成功薄荷（success） | `#7FCAA6` | soft `#1C3A2E` |\n| 网格线 | `--fl-grid`（青 7% 透明） | Hero 方格纸背景，淡到不抢戏 |\n| 参考线 | `#3A4F5F` / 强 `#4E6675` | 暗青发丝线 |\n\n关键约定：**结构靠线、网格与等宽标注承载**；青是唯一的结构色，风险用暖琥珀以便在青色里辨识。暗底，所有 soft 是**深色面板**而非浅色块。底色与青色都刻意去饱和——真正的蓝晒图是普鲁士蓝上的淡线，不是霓虹，这样长时间阅读才不刺眼。\n\n## 字体排印\n\n- **正文 / 标题**：IBM Plex Sans（工程无衬线，IBM 血统）；回退 PingFang SC / system-ui。\n- **标签 / 尺寸 / 章节号 / 元数据**：IBM Plex Mono —— 等宽承载全部\"标注\"工作。\n- **代码**：IBM Plex Mono / JetBrains Mono。\n- 正文约 17px，行距 1.62；display 字重 600（工程克制，不靠超粗）。\n\n## 间距与形状\n\n- 制图平面：**无圆角、无阴影**。\n- 大量青色发丝线与虚线：Hero 标题块描边 + 顶部青线、分节虚线标注线、规格表青色表头线。\n- Hero 背景是 1.5rem 方格网（`background-image` 双线性渐变，青 13% 透明）。\n- 动效：克制（120ms），无回弹、无发光。\n\n## 标志性手法\n\n- **标题块 Hero**：描边面板 + 方格纸背景 + 等宽 mono 导语，像工程图右下角的 title block。\n- **菱形章节号**：`Section` 数字前缀 `◇`、等宽青色，配虚线标注顶线。\n- **技术注记 Aside**：描边青色面板 + 等宽大写标签；tone 用边框色区分；深色 tint 底。\n- **尺寸线收尾**：`Conclusion` 要点用 `→` 青色，像引出标注。\n- **点划下划线链接**：链接青色 + dotted 下划线（技术制图味）。\n\n## 代码与公式风格\n\n代码是暗底第一公民，但仍是工程文档而非炫技。\n\n- 暗面板 surface + 暗青发丝线 + 退后的 mono 行号；无圆角、无发光。\n- Prism token 从青 accent / 风险橙 / 薄荷绿派生；克制，不彩虹。\n- `Formula` 像规格里的公式：等宽标注、对齐、克制。\n- **禁止**：霓虹发光、彩虹高亮、亮底代码窗、玻璃拟态。\n\n## 媒体风格\n\n媒体像工程图纸 / 蓝晒图 / CAD 截图：线框、标注、冷色。\n\n- 适合：线框 / 结构 / 拓扑图、尺寸标注图、蓝晒图、CAD / 示意截图、暗底数据可视化。\n- 构图：线为主、青色描边、可叠网格；caption 等宽冷静；必配 alt。\n- 色彩：蓝青为主，风险用暖橙点睛；低饱和。\n- **禁止**：暖色生活摄影、3D 渲染图标、霓虹赛博 hero、渐变氛围图。\n\n## Raw 自由层风格\n\nRaw 在 `fuller` 里应像图纸上亲手画的标注示意。\n\n- 首选：线框 / 拓扑 / 时序图、带尺寸线的标注、方格纸坐标、等宽数据表、结构剖面。\n- 构图：青色发丝线 + 等宽标注 + 可叠方格网；暗面板，无发光、无圆角。\n- 动效：克制位移 / 描边动画；无循环霓虹。\n- 代码：自定义 CSS / SVG 必须使用 `--ra-*`（网格用 `--fl-grid`，青用 `--ra-color-accent`）。\n- **禁止**：霓虹发光、玻璃拟态、暖色渐变、营销大屏拟物。\n\n## 反模式（本主题禁止）\n\n- 把暗底当\"赛博朋克霓虹\"——本主题是冷静蓝图，无发光、无故障风。\n- 圆角、阴影、亮底卡片、暖色生活化插画。\n- 风险用青色（会与结构色混淆，风险固定暖橙）。\n- 用斜体强调（协议级禁用）。\n\n## 实现说明\n\n- 定义在 `fuller.css`，通过根节点 `data-theme=\"fuller\"` 激活。\n- 所有取值以 `--ra-*` token 暴露；网格 / 青色签名用主题局部变量 `--fl-grid` / `--fl-cyan`。\n- IBM Plex Sans / Mono 已在 `apps/site/index.html` 请求。\n- Hero 方格纸、标题块、虚线分节线等用主题 scoped 解剖实现，组件 DOM 不变。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/knuth/knuth.md",
+      "role": "process",
+      "content": "# Knuth · 学术预印本（Academic preprint · Computer Modern）\n\n> 流派：学术出版 / 科学排版（Academic publishing） · 参照：Donald Knuth《The Art of Computer Programming》与 TeX、Computer Modern / Latin Modern 字族、arXiv 预印本、Distill.pub\n\n这是一套面向**正式学术写作**的主题，给报告穿上**期刊 / 预印本**的外衣。它继承全部结构纪律——以线代框、内联注、去垃圾表格，绝不用卡片与投影——但气质换成科学排版的**正式与严谨**：Computer Modern 衬线、编号小节、图 / 表 / 公式编号、两端对齐正文、引用密集、公式优先。\n\n`tufte` 是凑近读的随笔式数据墨水（靠边注）；`knuth` 是一臂之外读一篇**正式论文**（靠编号、对齐与公式）。两者同宗而气质分明。协议级禁用斜体，本主题同样遵守。\n\n## 适用场景\n\n- 科研 / 调研写作、技术白皮书、形式化分析、文献综述。\n- 公式 / 定理 / 推导密集，或引用 / 编号密集的内容。\n- 希望保留 data-ink 纪律、但要\"像一篇正式论文\"的长文。\n\n## 不适用场景\n\n- 温暖叙事 / 出版随笔（`press`）。\n- 中性产品文档 / 规格（`vignelli`）。\n- 暗底工程现场（`shannon`）。\n- 需要 10 米外观看的演示幻灯片。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#FCFCFA` | 明亮中性印刷纸（比 tufte 更中性） |\n| surface / surface-2 | `#F3F3EE` / `#EAEAE2` | 浅纸抬升，仍以线分隔 |\n| 墨色正文 | `#1A1A18` | 印刷黑 |\n| 标题 | `#111110` | 近黑 |\n| 主色（学术蓝） | `#34507E` | hyperref 式克制深蓝：链接、引用、结构 |\n| 警示红（risk） | `#9A2D1E` | 期刊深红 |\n| 成功绿（success） | `#3C5A3A` | soft `#E4EBE1` |\n| 参考线 | `#DCDCD4` / 强 `#C7C6BB` | 中性发丝线 |\n| muted / faint | `#5A574E` / `#8A857A` | 注释 / 表头 / 图注 |\n\n主色（学术蓝）只承载链接 / 引用 / 结构，警示红只作警示。**色彩从不用于装饰。**\n\n## 字体排印\n\n- **正文与标题**：Computer Modern / Latin Modern 衬线。字体栈 `Latin Modern Roman` → CMU Serif → Source Serif 4 → Georgia → 宋体。这是 TeX 排版的标志性气质；未加载时优雅回退。\n- **标签 / 图注 / 表头**：CMU Sans / Latin Modern Sans 一脉，小字号。\n- **数学**：`Formula`（KaTeX）是第一公民；行内公式与正文字体协调，块级公式从容居中、可带编号。\n- 正文约 16.5px，行距 1.58；标题用 `--ra-weight-bold: 700` 取得论文标题的分量（衬线粗体，而非超大字号）。\n\n## 间距与形状\n\n- 紧凑而规整的间距阶梯（4 / 8 / 12 / 16 / 24 / 32 / 48 / 80）。\n- 圆角：0。阴影：无。动效：无（`0ms`）——它是一张纸。\n- 版心 `--ra-content-width: 1040px`，更聚拢、更\"单栏论文\"；正文行宽由 `<Article width>` 控制（与主题解耦）。\n\n## 标志性手法\n\n- **编号即结构**：小节编号、图 / 表 / 公式编号是层级的主要载体（`Section index` + caption 体现）。\n- **两端对齐**：正文倾向 justify，营造印刷论文的块面整齐感（需配合连字符）。\n- **公式优先**：块级公式上下留白从容，编号靠右，像正式论文的 (1) (2) (3)。\n- **去垃圾表格**：无竖线、无填色；只在表头下与表尾各一条发丝线，数字对齐，配 \"Table N.\" 式题注。\n- **引用克制**：引用 / 脚注用学术蓝或内联注呈现，不喧宾夺主。\n\n## 代码与公式风格\n\n代码像一本计算机科学专著里的代码清单：清晰、对齐、带出版物的精修感。\n\n- 背景使用浅纸 code surface，边界用线，不使用暗色编辑器窗口。\n- 行号保留、退后，允许从容的行距。\n- Prism token 从主题 token 派生：标签 / 函数用学术蓝 `--ra-color-accent`，关键字 / 风险用 `--ra-color-risk`，字符串用绿 `--ra-color-success`，注释用 muted。\n- `Formula` 是本主题的主角：块级公式允许更从容的上下留白与编号，行内公式与正文无缝衔接。\n- **禁止**：高对比终端黑底、彩虹语法主题、编辑器 chrome 截图式装饰、霓虹。\n\n## 媒体风格\n\n媒体像一篇论文里的图版（Figure）：有信息量、可核查、配正式题注。\n\n- 适合：数据图 / 实验结果图、示意图 / 流程图 / 架构图、论文截图、表格、低饱和摄影、手稿 / 推导。\n- 构图：留白充足、主体清楚、边缘干净；每张图配 \"Figure N.\" 式 caption / source。\n- 色彩：低饱和、贴近纸墨；强调只用学术蓝或警示红承载信息。\n- 视频 / 音频：用于实验记录、演示、讲解；克制嵌入，配清楚题注。\n- **禁止**：库存 hero 图、3D 插画、渐变背景、装饰光斑、emoji、无信息量氛围图。\n\n## Raw 自由层风格\n\nRaw 在 `knuth` 里应像论文中作者亲手排的一张 Figure。\n\n- 首选：内联 SVG 图表、坐标轴 / 函数曲线 / 推导示意、可交互的参数演示、定理 / 证明结构图、带编号题注的图版。\n- 构图：克制留白、清晰坐标与标注、学术蓝作结构线索；信息密度可高，每条线有含义。\n- 动效：默认无；如必须交互，只用即时响应的轻过渡，不用循环装饰动画。\n- 代码：自定义 CSS / SVG / React 仍必须使用 `--ra-*` token；不引入新品牌色或装饰渐变。\n- **禁止**：营销 hero、卡片堆叠、玻璃拟态、夸张按钮、仪表盘大屏、游戏化动效。\n\n## 反模式（本主题禁止）\n\n- 卡片、面板、填色块、投影、圆角。\n- 把学术蓝当装饰滥用（它只承载链接 / 引用 / 结构）；第二个红色用于\"警示\"以外。\n- 把 emoji 或图标当装饰；比 `#C7C6BB` 更深的网格线。\n- 媒体 / Raw 变成营销素材或 SaaS 首页，而不是论文图版。\n\n## 实现说明\n\n- 定义在 `knuth.css`，通过 ReActicle 根节点上的 `data-theme=\"knuth\"` 激活。\n- 所有取值都以 `--ra-*` token 暴露；组件只引用这些变量，主题完全掌控外观，不改任何组件解剖。\n- Computer Modern / Latin Modern 网络字体需自行加载；未加载时优雅回退到 Source Serif 4 / Georgia / 宋体，仍保持学术衬线气质。\n- 两端对齐与编号是**写作 / 组件层**约定（`Section index`、caption、KaTeX 编号），token 负责气质，结构靠作者落实。\n- 正文行宽 `--ra-measure` 由 `<Article width>` 控制（与主题解耦）。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/press/press.md",
+      "role": "process",
+      "content": "# Press · 书卷感长读物（Stripe Press）\n\n> 流派：人文出版 / 编辑排印（Warm humanist editorial） · 参照：Stripe Press（press.stripe.com）、Klim Type 的 Tiempos 系列、Stripe Press《Increments》阅读器\n\n这是一套面向**出版物级长读物**的主题。它与 `tufte` 同宗——都坚守 Data-Ink 的结构纪律（以线代框、内联注、去垃圾表格，绝不用卡片与投影）——但人格更外放：把同一篇报告当成一本**被认真设计过的书**来排。\n\n`tufte` 让你\"凑近去读\"（小字、紧、靠字重与间距强调）；`press` 请你\"从一臂之外读一本书\"（更大的字、更松的行距、更足的空气，靠一个浓郁的主色与体量对比来强调）。协议级禁用斜体，本主题同样遵守。\n\n## 适用场景\n\n- 需要从容阅读的长文、随笔、白皮书、产品手记。\n- 希望保留分析报告的严谨结构，但视觉更温暖、更\"成书\"的内容。\n\n## 不适用场景\n\n- 极度密集、需要大量边注的数据型报告（那是 `tufte` 的主场）。\n- 需要 10 米外观看的演示幻灯片。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#FBF7EE` | 比 tufte 更奶油一档的暖纸 |\n| 墨色正文 | `#211E18` | 暖近黑 |\n| 标题 | `#171410` | 近黑 |\n| 主色（氧化血红） | `#7B1E22` | 唯一自信主色：章节号、强调线、Hero、组件内链接 |\n| 警示红 | `#C23A1E` | 更热的朱红，专作\"警示/风险\"，与主色分工 |\n| 成功绿 | `#415A3A` | soft `#E7ECDD` |\n| 参考线 | `#E0D6C0` | 暖发丝线；强 `#CDC1A6` |\n| 标签 sans | `#6A6256` | 用于注释 / 表头 |\n\n主色（氧化血红）与警示红同属红系，但**深沉的主色承载品牌与结构、更热的朱红承载警示**，配合组件自身的语义标签可清晰区分。色彩从不用于纯装饰。\n\n## 字体排印\n\n- **正文与标题**：当代过渡式（transitional）衬线体。字体栈：`Newsreader`（带视觉尺寸 opsz）→ Source Serif 4 / Spectral / Georgia / 宋体。刻意区别于 tufte 的老式（old-style）Palatino/et-book，气质更现代、更\"成书\"。\n- **标签 / 注释 / 表头**：中性 grotesque sans（Söhne 一脉），仅用于极小字号。\n- **正文偏大**（约 17px，tufte 是 16），行距 1.7（tufte 1.6）—— 更从容。\n- 标题字号拉开（h1 ≈ 3rem，tufte 是 2.5rem），大标题带极轻的负字距以保持清爽；仍用字重 400 的衬线，靠体量而非黑体取得分量。\n\n## 间距与形状\n\n- 与 tufte 同源的间距阶梯，但上层留白更足（`--ra-space-6/7/8/9` 放大），整页更透气。\n- 圆角：0。阴影：无。但保留一道极轻的缓动（`160ms`，tufte 为 0ms）—— 一点\"被精修过\"的手感。\n- 版心更聚拢（`--ra-content-width: 1080px`）。正文行宽 `--ra-measure` 不再由主题写死，\n  改由 `<Article width>` 控制（与主题解耦）；press 的大字号在 `regular`(46rem) 下依然从容。\n\n## 标志性手法（与 tufte 共享结构，气质不同）\n\n- **以线代框、内联注、去垃圾表格**：协议级手法，完全继承。\n- **一个主色更放得开**：氧化血红不止用于强调，也用于章节号、目录高亮与 Hero，串起全篇的\"出版社识别色\"。\n- **体量即层级**：靠衬线大标题与充裕留白建立节奏，而非彩色块或粗黑体。\n\n## 代码与公式风格\n\n代码预览要像一本技术书里的代码页：温暖、清晰、有出版物的精修感，但不变成 IDE 截图。\n\n- 背景使用奶油纸上的浅 code surface，边界仍用线，不使用暗色编辑器窗口。\n- 行号保留，但比 tufte 更从容，允许更大的行距与留白。\n- Prism token 色彩从 press token 派生：标签 / 函数可用氧化血红 `--ra-color-accent`，\n  字符串用低饱和绿，关键字 / 风险语义用更热的 `--ra-color-risk`。\n- 代码块可以有轻微 hover 反馈和更明显的复制 affordance，但仍不使用圆角、投影、霓虹。\n- `Formula` 应像书页里的排版公式：块级公式允许更从容的上下留白，caption 像出版物题注。\n- 禁止高对比终端黑底、彩虹语法主题、编辑器 chrome 截图式装饰、过密行号。\n\n## 媒体风格\n\n媒体应该像一本当代出版物里的插图、图版或嵌入素材：有人文温度，但仍服务阅读。\n\n- 适合：暖色真实摄影、书籍 / 纸张 / 工作台细节、产品界面截图、低饱和 editorial 插图、精修过的信息图、手稿 / 笔记 / 版面草图。\n- 构图：主体清楚、留白充足、色温偏暖；图片可以更有呼吸感，但不能喧宾夺主。\n- 截图：允许比 tufte 更完整地保留产品上下文，但要裁掉噪声，避免系统 chrome 抢戏。\n- 视频：适合访谈、产品演示、过程记录、出版物式短片；控制条应安静嵌入版面，避免自动播放和强动效素材。\n- 音频：适合访谈摘录、讲解片段、口述材料；标题和 caption 必须说明听什么、为什么听。\n- 图注：像出版物 caption，简洁说明来源与上下文，不写营销口号。\n- 禁止：冷蓝紫 SaaS stock 图、3D 渲染图标、AI 感过强的超现实插画、过度锐化人像、廉价渐变背景、无信息量 hero 氛围图。\n\n## Raw 自由层风格\n\nRaw 在 `press` 里可以比 `tufte` 更有版式感，但仍应像为文章专门设计的一页内插图。\n\n- 首选：出版物式分栏示意、暖色信息图、小型交互标尺、章节间节奏图、带精细 caption 的 SVG、可轻微展开 / 切换的解释控件。\n- 构图：更大留白、更强标题层级、氧化血红作为识别线索；填色可比 tufte 多一点，但必须克制。\n- 动效：允许短促、柔和、一次性的过渡；避免无限循环的装饰动画。\n- 代码：自定义 CSS / SVG / React 仍必须使用 `--ra-*` token；不要引入新品牌色或和纸面冲突的冷色渐变。\n- 禁止：营销落地页式 hero、卡片堆叠、玻璃拟态、夸张按钮、浮动光球、强烈 3D、游戏 UI、仪表盘大屏。\n\n## 反模式（本主题禁止）\n\n- 卡片、面板、填色块、投影、圆角。\n- 把主色当装饰滥用（它只承载结构与品牌识别）。\n- 把 emoji 或图标当装饰。\n- 第二个红色用于\"警示\"以外的用途。\n- 图片或 Raw 变成营销素材、SaaS 首页、仪表盘大屏，而不是出版物里的图版。\n\n## 实现说明\n\n- 定义在 `press.css`，通过 ReActicle 根节点上的 `data-theme=\"press\"` 激活。\n- 所有取值都以 `--ra-*` token 暴露；组件只引用这些变量，主题完全掌控外观，**不改任何组件解剖**。\n- 渲染需加载 `Newsreader` + `JetBrains Mono`（文档站已加载）；未加载时优雅回退到 Georgia / 宋体。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/shannon/shannon.md",
+      "role": "process",
+      "content": "# Shannon · 暗色工程证据（Dark engineering evidence）\n\n> 流派：信息架构 × 仪器终端（Information architecture × instrument） · 参照：Claude Shannon《A Mathematical Theory of Communication》、Bloomberg Terminal、Bell Labs 实验记录本、Teenage Engineering 仪器面板、Berkeley Mono\n\n这是一套面向**工程与技术写作**的暗色主题，是 `tufte` 的\"夜间工程版\"。它完整继承 Data-Ink 的结构纪律——以线代框、内联注、去垃圾表格，绝不用卡片与投影——只是把场景从白纸学术报告搬到**暗底的工程现场**：故障复盘、系统设计、基准测试、性能分析、RAG / LLM 等技术与 AI 解释。\n\n`tufte` 让你在白纸上凑近读证据；`shannon` 让你在仪表暗底上读**工程信号**：温暖石墨底、暖白墨、唯一一束琥珀信号色。协议级禁用斜体，本主题同样遵守。\n\n## 适用场景\n\n- 故障复盘 / postmortem、系统设计文档、架构决策记录（ADR）。\n- 基准测试、性能 / 可靠性分析、监控与可观测性写作。\n- 技术 / AI / 算法解释，尤其是大量 `CodeBlock` `DiffReview` `Incident` `RiskList` `Decision` 的内容。\n\n## 不适用场景\n\n- 需要打印的正式文档（暗底费墨；打印时会被 print.css 强制白底，但气质不再）。\n- 温暖叙事、出版随笔（那是 `press` / `knuth` 的主场）。\n- 需要 10 米外观看的演示幻灯片。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#1A1916` | 温暖石墨，**非纯黑、非 #0D1117** |\n| surface / surface-2 | `#22211B` / `#2B2922` | 暗部抬升，仍以线分隔，绝不成卡片 |\n| 墨色正文 | `#E8E4D8` | 暗纸上的暖白墨 |\n| 标题 | `#F4F1E8` | 近白 |\n| 信号色（accent） | `#E0A73E` | 仪表琥珀：章节号、链接、强调、结构 —— 唯一信号色 |\n| 警示红（risk） | `#E2614A` | 更热的红橙，专作警示 / 风险分级 |\n| 成功绿（success） | `#8FAE6E` | 低饱和磷光绿 |\n| 参考线 | `#34322A` / 强 `#45423A` | 暗部发丝线；绝不更亮 |\n| muted / faint | `#9A9484` / `#6F6A5D` | 注释 / 表头 / 退后的行号 |\n\n只用一束信号色（琥珀）承载结构与强调；警示红与之分工。**色彩从不用于装饰。**\n\n## 字体排印\n\n- **正文与标题**：技术人文 sans。字体栈 `IBM Plex Sans` → Söhne → system-ui。字重 400，标题靠字号与间距取得分量，不用厚重黑体；强调靠字重 / 颜色 / 间距（协议级禁用斜体）。\n- **标签 / 注释 / 元数据 / 代码**：等宽体 `IBM Plex Mono` / `Berkeley Mono`，**在本主题里被刻意抬升**——章节号、时间戳、指标、键值都用 mono，营造工程日志感。\n- 正文约 16px，行距 1.6；标签带 `0.04em` 字距、kicker 用 `0.12em` 大写。\n\n## 间距与形状\n\n- 紧凑的间距阶梯（4 / 8 / 12 / 16 / 24 / 32 / 48）。圆角：0。阴影：无。\n- 动效：极轻（`120ms`），仅用于终端式即时反馈，绝不做装饰动画。\n\n## 标志性手法\n\n- **暗纸 data-ink**：章节之间用暗部发丝线分隔，绝不用卡片或发光边框。\n- **一束信号**：核心洞察是一行琥珀、上下各一条暗线，而非彩色提示框。\n- **mono 承载工程语义**：指标、阈值、键值、时间戳一律 mono；表格去竖线、去填色，只在表头下与表尾各一条发丝线，数字右对齐。\n- **左侧目录**：可选 `Article toc` 从各 `Section` 自动派生安静目录，带滚动高亮。\n\n## 代码与公式风格\n\n代码在暗底上是**第一公民**，但仍是工程证据而非炫技 IDE。\n\n- 背景使用暗纸上的轻微 surface（`--ra-color-surface`），边界用暗发丝线，不使用发光边框或彩色标题栏。\n- 行号可见但退后（接近 `--ra-color-faint`）；行 hover 只能是极淡的 `--ra-color-accent-soft`。\n- Prism token 必须从主题 token 派生：结构 / 标签 / 函数用琥珀 `--ra-color-accent`，关键字与风险语义用 `--ra-color-risk`，字符串 / 成功路径用低饱和绿 `--ra-color-success`。\n- `Formula` 像仪表上的标注：行内不撑高段落，块级只用发丝线与留白承载。\n- **禁止**：霓虹高亮、彩虹括号、发光边框、玻璃拟态代码卡、过饱和科技蓝紫。\n\n## 媒体风格\n\n媒体必须像仪表读数或工程证据，服务论点，不制造气氛。\n\n- 适合：真实监控图 / 火焰图 / trace、终端截图、架构 / 时序 / 拓扑细线图、暗底数据可视化、低饱和产品界面局部。\n- 构图：暗底留白充足，主体清楚，边缘干净；图片配清晰 caption / source。\n- 色彩：贴近暗纸体系，强调只用琥珀或警示红承载信息；避免高饱和氛围色。\n- 截图：裁掉无关 chrome，保留足够上下文；避免模糊、过压。\n- 视频 / 音频：只用于真实过程、实验记录、演示或访谈；克制、不自动播放、不用氛围短片。\n- **禁止**：霓虹赛博 hero、3D 渲染图标、渐变背景、装饰光斑、粒子背景、无信息量氛围图。\n\n## Raw 自由层风格\n\nRaw 在 `shannon` 里应像作者在暗底为当前段落手绘的一张仪表小图。\n\n- 首选：暗底内联 SVG、细线折线 / 散点 / 火焰图 / 时序图、可拖动阈值线、小型坐标轴、mono 标注、微型 sparkline、终端式状态条。\n- 构图：少填充、多线条；信息密度可高，但每条线都必须有含义；颜色只用 `--ra-*`。\n- 动效：默认无；如必须交互，只用即时响应或极轻过渡，不用弹跳 / 漂浮 / 循环装饰动画。\n- **禁止**：卡片网格、圆角面板、仪表盘大屏拟物、玻璃拟态、发光 blob、霓虹、游戏化动效。\n\n## 反模式（本主题禁止）\n\n- 卡片、面板、填色块、投影、圆角、发光边框。\n- 纯黑 / `#0D1117` 赛博暗底、霓虹高亮、彩虹语法、过饱和科技蓝紫。\n- 把琥珀信号色当装饰滥用（它只承载结构与强调）；第二个红色用于\"警示\"以外的用途。\n- 把 emoji 或图标当装饰；比 `#45423A` 更亮的网格线。\n- 媒体 / Raw 变成赛博朋克氛围视觉，而不是工程证据。\n\n## 实现说明\n\n- 定义在 `shannon.css`，通过 ReActicle 根节点上的 `data-theme=\"shannon\"` 激活。\n- 所有取值都以 `--ra-*` token 暴露；组件只引用这些变量，主题完全掌控外观，不改任何组件解剖。\n- 渲染建议加载 `IBM Plex Sans` + `IBM Plex Mono`（文档站已加载）；未加载时优雅回退到 system-ui / 等宽系统字体。\n- 打印时由 `print.css` 强制白底黑字以省墨——这是有意的降级，不代表本主题的气质。\n- 正文行宽 `--ra-measure` 不由主题决定，由 `<Article width>` 控制（与主题解耦）。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/sottsass/sottsass.md",
+      "role": "process",
+      "content": "# Sottsass · 孟菲斯（Memphis 80s 撞色）\n\n> 流派：后现代 / 孟菲斯（Postmodern Memphis） · 参照：Ettore Sottsass、Memphis Group（米兰 1981）、撞色粉 / 青 / 黄、Bacterio 波纹、水磨石、几何彩屑\n\n这是 ReActicle 的**最叛逆、最好玩**的主题：暖奶油纸、黑墨，外加一组**故意撞色**的孟菲斯粉彩（艳粉 / 青绿 / 阳光黄 / 钴蓝）。识别度来自 80 年代后现代游戏感——**硬投影（无模糊偏移阴影）、轻微旋转、圆角彩色药丸、波浪下划线、几何彩屑**。响亮欢快，但仍可读。面向好玩的科普、设计 / 文化写作、发布稿、任何\"个性大于精致\"的内容。\n\n与同样彩色的 `bayer` 分明：`bayer` 是三原色 + 圆方网格 + 理性纪律；`sottsass` 是**撞色粉彩 + 硬投影 + 旋转 + 波纹**，混乱、顽皮。协议级禁用斜体。\n\n## 适用场景\n\n- 好玩的科普 / 解释、设计 / 文化 / 潮流写作、产品发布与活动稿、轻松上手。\n- 希望\"有强烈个性、敢撞色、不端着\"的内容。\n- 适合配几何彩屑、撞色插画、硬投影卡片。\n\n## 不适用场景\n\n- 正式学术（`knuth`）、冷峻黑白大刊（`bodoni`）、冷调规格（`vignelli`）。\n- 暗底工程（`shannon` / `fuller`）、严肃克制的内容。\n- 需要安静治愈的（`andy` 更柔；这里更吵）。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#FCF7EF` | 暖后现代奶油 |\n| surface / surface-2 | `#F4ECDF` / `#ECE1CF` | 暖浅抬升 |\n| 墨色正文 | `#1A1714` | 近黑 |\n| 标题 / 强边 | `#0E0C0A` | 真黑（边框、硬投影） |\n| **钴蓝（accent）** | `#2C54E0` | **可读的结构色**：链接、序号、TOC |\n| 艳粉 | `#FF5D9E`（`--st-pink`） | 表头、药丸、波浪下划线 |\n| 青绿 | `#18C2BF`（`--st-teal`） | 引用块、硬投影 |\n| 阳光黄 | `#FFD23F`（`--st-yellow`） | 章节号块、引用底 |\n| 风险红玫（risk） | `#E23B6D` | soft `#FBDDE6` |\n| 成功青（success） | `#0F9B8E` | soft `#D4F1EE` |\n| 参考线 | `#E0D6C5` | 暖发丝线 |\n\n关键约定：**撞色是表达、钴蓝是结构**。粉 / 青 / 黄是大胆填充（块、阴影、下划线），但**绝不作小字色**；可读的链接 / 序号固定走钴蓝。\n\n## 字体排印\n\n- **标题 / 标签**：Space Grotesk（顽皮几何无衬线）；回退 Hanken Grotesk / PingFang SC。\n- **正文**：Hanken Grotesk（干净 grotesque，readable）；回退 PingFang SC。\n- **代码 / 元数据**：JetBrains Mono。\n- 正文约 17px，行距 1.65；display 字重 700。强调不用斜体（协议级禁用），用色块 / 高亮。\n\n## 间距与形状\n\n- **混合形状**：圆角 4 / 10 / 18 / 26px 故意不统一（孟菲斯的\"不一致\"美学）。\n- **硬投影**：`--ra-shadow-*` 是无模糊的偏移阴影（如 `5px 5px 0`），是核心识别点。\n- 动效：带回弹（`cubic-bezier(0.34,1.4,0.5,1)`，160ms），活泼但不滑稽。\n\n## 标志性手法\n\n- **彩屑刊头**：`Hero` 是黑粗边 + 青色硬投影的块，顶部一排粉 / 黄 / 蓝圆点彩屑，eyebrow 是旋转的粉色药丸。\n- **旋转黄块章节号**：`Section` 数字嵌在略转的黄色圆角块里，带黑色硬投影。\n- **撞色 callout**：`Aside` 是黑边 + tone 色硬投影的圆角块，四种 tone 故意撞色。\n- **波浪下划线**：链接钴蓝 + 粉色 wavy 下划线，hover 转青。\n- **硬投影面板**：`Quote`（黄底青影）、`Conclusion`（青底粉影）都是框 + 偏移阴影。\n\n## 代码与公式风格\n\n代码像潮流杂志里的代码卡片：有性格但仍可读。\n\n- 暖浅 code surface + 黑边 + 适度圆角，可有硬投影；不用暗色终端。\n- Prism token：标签 / 函数走钴蓝，关键字走红玫 risk，字符串走青 success；其余走墨 / muted。撞色用在边框 / 高亮，不在语法色里彩虹。\n- `Formula` 可有圆角 surface 与一抹色，克制对齐。\n- **禁止**：暗色 IDE 截图、霓虹、彩虹语法、玻璃拟态。\n\n## 媒体风格\n\n媒体像孟菲斯海报 / 80s 平面：撞色、几何、彩屑、水磨石。\n\n- 适合：几何彩屑插画、撞色海报、波纹 / 水磨石纹理、硬投影拼贴、明快人物 / 静物。\n- 构图：大胆撞色、可旋转 / 不对称、黑描边 + 硬投影；caption 简洁俏皮。\n- 色彩：粉 / 青 / 黄 / 蓝撞色 + 黑白；低俗渐变与霓虹除外。\n- **禁止**：3D 渲染、廉价柔光渐变、玻璃拟态、emoji 当图标。\n\n## Raw 自由层风格\n\nRaw 在 `sottsass` 里应像一页孟菲斯海报式的图解。\n\n- 首选：硬投影卡片、撞色几何图、彩屑 / 波纹装饰、旋转标签、明快的比例 / 步骤图。\n- 构图：黑描边 + 偏移硬投影 + 撞色块 + 混合圆角；可轻微旋转。\n- 动效：带回弹的位移 / 弹入；避免无限霓虹循环。\n- 代码：自定义 CSS / SVG 必须使用 `--ra-*`（撞色用 `--st-pink` / `--st-teal` / `--st-yellow`）；可读小字与链接走钴蓝 `--ra-color-accent`。\n- **禁止**：柔光渐变、玻璃拟态、把撞色当正文小字、营销大屏拟物。\n\n## 反模式（本主题禁止）\n\n- 把粉 / 青 / 黄当正文 / 小字 / 链接色（对比不足，可读结构固定钴蓝）。\n- 柔光模糊阴影（本主题用**无模糊硬投影**）、廉价渐变、霓虹。\n- 把\"撞色 + 硬投影\"用力过猛到读不下去——仍要保证正文从容可读。\n- 用斜体强调（协议级禁用）。\n\n## 实现说明\n\n- 定义在 `sottsass.css`，通过根节点 `data-theme=\"sottsass\"` 激活。\n- 所有取值以 `--ra-*` token 暴露；撞色签名用主题局部变量 `--st-pink` / `--st-teal` / `--st-yellow` / `--st-blue`。\n- `--ra-shadow-*` 被改写成无模糊偏移硬投影，Raw 作者可直接用。\n- Space Grotesk 在 `apps/site/index.html` 请求；未加载时回退 Hanken Grotesk / PingFang SC。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/tufte/tufte.md",
+      "role": "process",
+      "content": "# Tufte · 最大化数据墨水（Data-Ink）\n\n> 流派：信息架构（Information Architecture） · 参照：Edward Tufte，《The Visual Display of Quantitative Information》《Beautiful Evidence》，edwardtufte.com\n\n这是一套面向**分析型报告与数据驱动写作**的主题。核心思想是 Tufte 的\n**数据墨水比（data-ink ratio）**：页面上每一滴墨水都应承载信息。卡片、填色、\n阴影、圆角、装饰性色彩都属于\"图表垃圾（chart-junk）\"，一律去除。留下的只有\n文字、发丝级参考线、充裕的页边，以及由排版本身承载的含义。\n\n## 适用场景\n\n- 分析报告、科研 / 调研写作、数据驱动的叙事。\n- 以论点与证据为主角的长文阅读。\n\n## 不适用场景\n\n- 需要 10 米外观看的演示幻灯片（正文字号刻意偏小）。\n- 移动端优先的场景（小正文 + 边注需要足够宽度）。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#FBFAF6` | 暖白纸面 |\n| 墨色正文 | `#1B1B1A` | 正文文字 |\n| 标题 | `#111110` | 近黑 |\n| 青灰（数据色 1） | `#3E4A5C` | 安静的结构色：章节编号、链接、标签 |\n| 暖红（数据色 2） | `#A6300E` | 仅用于强调 / 警示 —— 必须承载含义 |\n| 参考线 | `#D8D2C2` | 发丝线；绝不更深 |\n| 标签 sans | `#5C5550` | 用于注释 / 表头 |\n\n只用两种数据色。仅当确有第三个维度需要时才引入第三色。**色彩从不用于装饰。**\n\n## 字体排印\n\n- **正文与标题**：老式（old-style）衬线体。字体栈：`et-book`（Tufte 自家字体，\n  若已安装）→ Palatino / Book Antiqua / Georgia / 宋体。字重 400；强调靠字重、\n  颜色与间距承载（协议级禁用斜体，所有主题一致）。\n- **标签 / 注释 / 表头**：人文 sans（Gill Sans / Lato），小字号，色 `#5C5550`。\n- **正文刻意偏小**（约 16px），行距 1.6 —— 让读者\"凑近去读\"。\n- 标题层级克制（h1 ≈ 2.5rem，h2 ≈ 1.7rem），字重 400，不用厚重黑体。\n\n## 间距与形状\n\n- 紧凑的间距阶梯（4 / 8 / 12 / 16 / 24 / 32 / 48）。右侧页边用来放**边注**，\n  而非单纯留白。\n- 圆角：0。阴影：无。动效：无 —— 页面是用来静静阅读的。\n\n## 标志性手法\n\n- **内联注（caption）**：来源、旁注等以正文下方一行缩进小字（带左侧发丝线）呈现，\n  而不是色块或浮层；位置紧贴所注内容，直观可读。\n- **去垃圾表格**：无竖线、无表头填色、无斑马纹 —— 只在表头下方与表尾各一条\n  发丝线。数字对齐。\n- **以线代框**：章节之间用一条发丝线分隔，绝不用卡片。\n- **直接强调**：核心洞察是一行略大的衬线、上下各一条线，而非彩色提示框。\n- **左侧目录**：可选的 `Article toc` 会从各 `Section` 自动派生一栏安静的目录，\n  并带滚动高亮。\n\n## 代码与公式风格\n\n代码预览是**工程证据**，不是炫技界面。`CodeBlock` 与文档代码块应像正文里的\n一块精密标本：安静、可读、低装饰。\n\n- 背景使用纸面上的轻微 surface，边界用发丝线，不使用深色编辑器壳、发光边框或彩色标题栏。\n- 行号可见但退后，颜色接近 `--ra-color-faint`；行 hover 只能是极淡的主题 soft 色。\n- Prism token 色彩必须从主题 token 派生：结构 / 标签用青灰 `--ra-color-accent`，\n  关键字与警示语义用暖红 `--ra-color-risk`，字符串 / 成功路径可用低饱和绿。\n- `Formula` 应像正文里的数学标注：行内公式不撑高段落，块级公式只用发丝线与留白承载，不加卡片感。\n- 代码字号偏小、行距紧凑；强调靠颜色与字重，不靠背景块。\n- 禁止 VS Code 深色主题、霓虹高亮、彩虹括号、粗边框、圆角代码卡片。\n\n## 媒体风格\n\n媒体必须像证据或图版，服务论点，不制造气氛。\n\n- 适合：真实数据图、论文 / 报告截图、表格截屏、产品界面局部、低饱和摄影、黑白或暖纸感线稿、地图 / 时间轴 / 细线示意图。\n- 构图：留白充足，主体清楚，边缘干净；图片应配清晰 caption / source，像书里的图版。\n- 色彩：低饱和、接近纸墨体系；若需要强调，只允许少量青灰或暖红承载信息。\n- 截图：优先裁掉浏览器 chrome 与无关 UI；保留足够上下文，避免模糊、暗角、过度压缩。\n- 视频：只用于真实过程、实验记录、产品操作或可核查演示；保持克制，不自动播放，不使用氛围短片。\n- 音频：只用于访谈、证据录音、讲解摘录等能补充论点的材料；必须有清楚标题和上下文 caption。\n- 禁止：库存感 hero 图、3D 插画、渐变背景、装饰光斑、表情包、强饱和科技蓝紫、卡通人物、大面积品牌色块、无信息量氛围图。\n\n## Raw 自由层风格\n\nRaw 在 `tufte` 里应该像作者为当前段落手画的一张小图，而不是一个营销组件。\n\n- 首选：内联 SVG、细线折线 / 散点 / slopegraph、小型坐标轴、可拖动阈值线、局部高亮、文本旁注、微型 sparkline。\n- 构图：少填充、多线条；信息密度可以高，但每条线都必须有含义。\n- 动效：默认无动效；如必须交互，只用即时响应或非常轻的过渡，不使用弹跳、漂浮、循环装饰动画。\n- 代码：可写一次性 React / SVG / HTML，但颜色、字体、间距必须来自 `--ra-*`；不要自造 palette。\n- 禁止：卡片网格、圆角面板、仪表盘大屏、粒子背景、渐变 blob、装饰 icon 云、玻璃拟态、游戏化动效。\n\n## 反模式（本主题禁止）\n\n- 卡片、面板、填色块、投影、圆角。\n- 把胶囊 / 徽章当装饰；比 `#D8D2C2` 更深的网格线。\n- 把 emoji 或图标当装饰。\n- 色彩用于\"承载含义\"以外的任何用途。\n- 选择与证据无关的氛围图，或在 Raw 中写出与 Data-Ink 相反的装饰性组件。\n\n## 实现说明\n\n- 定义在 `tufte.css`，通过 ReActicle 根节点上的 `data-theme=\"tufte\"` 激活。\n- 所有取值都以 `--ra-*` token 暴露；组件只引用这些变量，因此主题完全掌控外观。\n  关键扩展：`--ra-font-label`（人文 sans）、`--ra-toc-width`（左侧目录栏宽）。\n  正文行宽 `--ra-measure` **不由主题决定**，由 `<Article width>` 控制（与主题解耦）。\n"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/vignelli/vignelli.md",
+      "role": "process",
+      "content": "# Vignelli · 瑞士国际主义文档（Swiss grotesque docs）\n\n> 流派：瑞士国际主义排版（Swiss International Typographic Style） · 参照：Massimo Vignelli（NYC 地铁标识系统、Knoll、Unigrid）、Josef Müller-Brockmann《Grid Systems》、IBM Plex、Linear / Vercel 文档\n\n这是 ReActicle **唯一的 sans 正文、冷中性**主题，面向**文档与规格类内容**。它继承全部结构纪律——以线代框、内联注、去垃圾表格，绝不用卡片与投影——但把气质从温暖书卷换成**瑞士网格**：冷中性纸、一个 grotesque 字族在不同字号上建立层级、发丝网格线、一抹自信的瑞士红、等宽体承载元数据。\n\n`tufte` / `press` / `knuth` 都是暖纸衬线；`vignelli` 是**冷调无衬线的系统性文档**——清晰、模块化、不带情绪。协议级禁用斜体，本主题同样遵守。\n\n## 适用场景\n\n- 产品文档、技术规格、设计系统说明、changelog、release notes。\n- SDK / API 参考、配置说明、AI 工具 / 平台文档。\n- 需要强结构、强网格感、信息可扫读的中性内容。\n\n## 不适用场景\n\n- 温暖叙事 / 出版随笔（`press`）。\n- 正式学术论文（`knuth`）。\n- 暗底工程现场（`shannon`）。\n- 需要 10 米外观看的演示幻灯片。\n\n## 调色板\n\n| 角色 | 取值 | 说明 |\n| --- | --- | --- |\n| 纸张底色 | `#F6F7F8` | **冷中性近白**，刻意区别于三套暖纸主题 |\n| surface / surface-2 | `#ECEEEF` / `#E2E5E7` | 冷灰抬升，仍以线分隔 |\n| 墨色正文 | `#1A1C1E` | 冷近黑 |\n| 标题 | `#0D0F11` | 近黑 |\n| 主色（瑞士红） | `#D6201F` | 唯一自信主色：章节号、链接、强调线、识别色 |\n| 警示红（risk） | `#9E1410` | 更深的氧化红，专作警示 / 风险，与主色分工 |\n| 成功绿（success） | `#2F6D4F` | soft `#DFEEE7` |\n| 参考线 | `#D4D8DB` / 强 `#BCC2C6` | 冷网格发丝线 |\n| muted / faint | `#5B6166` / `#8B9197` | 注释 / 表头 / 元数据 |\n\n主色与警示红同属红系，但**亮红承载品牌与结构、深氧化红承载警示**，配合组件语义标签清晰区分（沿用 `press` 的双红逻辑）。色彩从不用于纯装饰。\n\n## 字体排印\n\n- **正文与标题**：单一 grotesque 字族在不同字号上工作。字体栈 `Söhne` → Aktiv Grotesk → Helvetica Neue → Arial。这是瑞士排版的核心：**用字号与留白、而非堆字重**来建立层级。\n- **标签 / 注释 / 表头**：同一 grotesque 字族的小字号 + 字距，不引入第二个字族。\n- **元数据 / 代码 / 标识**：等宽体 `Söhne Mono` / `JetBrains Mono`，作 metadata \"chip\"——但仍以线与字重呈现，**绝不做成彩色胶囊或卡片**。\n- 正文约 17px，行距 1.6；大标题带 `-0.012em ~ -0.02em` 负字距保持紧致清爽。\n\n## 间距与形状\n\n- 模块化网格节奏（4 / 8 / 12 / 16 / 24 / 32 / 48 / 88），均匀、可预测。\n- 圆角：0。阴影：无。动效：极轻（`120ms`，干脆即时），不做装饰动画。\n- 版心 `--ra-content-width: 1120px`；正文行宽 `--ra-measure` 由 `<Article width>` 控制（与主题解耦）。\n\n## 标志性手法\n\n- **网格即结构**：发丝线划定栏与块的边界，建立强秩序感，而非彩色块或卡片。\n- **体量即层级**：靠 grotesque 大标题与字号阶梯建立节奏；强调可用瑞士红一条线或一个红色章节号。\n- **mono 元数据**：版本号、键、状态、标签用等宽体排成一行行\"标识带\"，扫读友好。\n- **去垃圾表格**：无竖线、无填色、无斑马纹；只在表头下与表尾各一条发丝线，数字对齐——规格表尤其适合本主题。\n\n## 代码与公式风格\n\n代码像一份排版严谨的技术规格，而不是 IDE 截图。\n\n- 背景使用冷纸上的浅 code surface，边界用线，不使用暗色编辑器窗口。\n- 行号克制、退后；行 hover 只能是极淡的 `--ra-color-surface-2`。\n- Prism token 从主题 token 派生：标签 / 函数可用瑞士红 `--ra-color-accent`（克制），关键字 / 风险用 `--ra-color-risk`，字符串用绿 `--ra-color-success`，其余走墨色 / muted。\n- `Formula` 像规格里的公式：克制、对齐、发丝线与留白承载，不加卡片感。\n- **禁止**：彩虹语法主题、霓虹、左边框强调卡（彩色左边框 + 圆角卡是被点名的 slop）、Tailwind 默认味。\n\n## 媒体风格\n\n媒体像一份系统文档里的图示或界面截图：清晰、中性、服务理解。\n\n- 适合：界面截图（裁净 chrome）、信息图 / 流程图 / 网格示意、图标系统说明、线框 / 规格图、低饱和中性摄影。\n- 构图：强网格对齐、留白克制、主体清楚；caption 简洁说明来源与上下文。\n- 色彩：贴近冷中性体系；强调只用瑞士红承载信息，不引入第二品牌色。\n- 视频 / 音频：用于产品演示、操作流程、访谈；控制条安静嵌入，不自动播放。\n- **禁止**：紫粉渐变 SaaS hero、3D 渲染图标、emoji 装饰、廉价渐变背景、无信息量氛围图。\n\n## Raw 自由层风格\n\nRaw 在 `vignelli` 里应像一页严格按网格设计的系统文档插图。\n\n- 首选：网格示意、流程 / 状态图、规格对照表、键盘 / 快捷键图、可切换的参数说明、带 mono 标注的 SVG。\n- 构图：强网格、清晰层级、瑞士红作识别线索；填色可比 tufte 略多，但必须克制、服务理解。\n- 动效：允许短促、干脆、一次性的过渡；避免无限循环装饰动画。\n- 代码：自定义 CSS / SVG / React 仍必须使用 `--ra-*` token；不引入新品牌色或冷暖冲突的渐变。\n- **禁止**：营销落地页 hero、卡片堆叠、玻璃拟态、夸张按钮、浮动光球、仪表盘大屏拟物。\n\n## 反模式（本主题禁止）\n\n- 卡片、面板、填色块、投影、圆角、彩色左边框强调卡。\n- 把瑞士红当装饰滥用（它只承载结构与品牌识别）；第二个红色用于\"警示\"以外。\n- 用堆字重代替字号层级（瑞士排版靠字号与网格，不靠 bold 轰炸）。\n- 把 emoji 或图标当装饰；紫粉渐变、霓虹、Tailwind 默认审美。\n\n## 实现说明\n\n- 定义在 `vignelli.css`，通过 ReActicle 根节点上的 `data-theme=\"vignelli\"` 激活。\n- 所有取值都以 `--ra-*` token 暴露；组件只引用这些变量，主题完全掌控外观，不改任何组件解剖。\n- `Söhne` 为商业字体，未授权时优雅回退到 Helvetica Neue / Arial / system-ui——回退后仍是地道的瑞士 grotesque 气质。\n- 标题分量由字号与负字距承载：`base.css` 让 h1–h4 统一使用 `--ra-weight-normal`，本主题刻意不靠 bold，而用字号阶梯建立层级。\n- 正文行宽 `--ra-measure` 由 `<Article width>` 控制（与主题解耦）。\n"
     },
     {
       "path": "demos/materials/reacticle/vendor/reacticle@0.2.6/LICENSE-katex.txt",
@@ -3187,6 +3252,10 @@
       "role": "source"
     },
     {
+      "path": "demos/materials/reacticle/fidelity.md",
+      "role": "context"
+    },
+    {
       "path": "demos/materials/reacticle/fonts/LICENSE-katex-fonts-OFL.txt",
       "role": "license"
     },
@@ -3555,11 +3624,383 @@
       "role": "source"
     },
     {
+      "path": "demos/materials/reacticle/source/.npmrc",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/README.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/data/gallery.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/pages/Gallery.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/CaffeineHalfLife.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/ColorClash.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/FirstNewsletter.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/FrontPage.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/GeometryOfMeaning.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/LinearAttention.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/MovableType.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/OrbitSpec.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/PoolExhaustion.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/RateLimiter.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/reports/SlowBreathing.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/apps/site/src/site.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/build-samples.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/package-lock.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/package.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/decision/ActionList.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/decision/Checkpoint.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/decision/Decision.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/decision/Incident.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/decision/Pill.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/decision/RiskList.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/decision/Tradeoff.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/decision/decision.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/free/Raw.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/free/free.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/insight/Aside.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/insight/Quote.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/insight/Summary.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/insight/insight.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/interaction/Detail.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/interaction/Tabs.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/interaction/interaction.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/internal/MissingField.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/internal/MissingField.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/Article.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/Conclusion.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/Hero.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/Lead.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/Section.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/Subsection.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/TOC.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/headingDepth.ts",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structure/structure.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structured/Audio.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structured/Image.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structured/Table.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structured/Video.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/structured/structured.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/technical/CodeBlock.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/technical/DiffReview.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/technical/Formula.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/technical/HighlightedCode.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/components/technical/technical.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/export/ExportBar.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/export/ExportBar.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/export/exports.ts",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/index.ts",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/ThemeProvider.tsx",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/base.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/index.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/print.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/andy/andy.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/andy/andy.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/bayer/bayer.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/bayer/bayer.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/bodoni/bodoni.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/bodoni/bodoni.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/freddie/freddie.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/freddie/freddie.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/fuller/fuller.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/fuller/fuller.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/knuth/knuth.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/knuth/knuth.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/press/press.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/press/press.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/shannon/shannon.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/shannon/shannon.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/sottsass/sottsass.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/sottsass/sottsass.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/tufte/tufte.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/tufte/tufte.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/vignelli/vignelli.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/themes/vignelli/vignelli.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/theme/tokens.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/src/vite-env.d.ts",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/tsconfig.build.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/tsconfig.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/tsconfig.node.json",
+      "role": "process"
+    },
+    {
       "path": "demos/materials/reacticle/source/vendor/fonts/google-fonts-original.css",
       "role": "process"
     },
     {
       "path": "demos/materials/reacticle/source/vendor/reacticle-package.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/materials/reacticle/source/vite.config.ts",
       "role": "process"
     },
     {

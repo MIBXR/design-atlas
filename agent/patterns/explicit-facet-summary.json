@@ -512,6 +512,18 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/digital-dunhuang/source/decode-banner.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/source/extract-members.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/digital-dunhuang/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/digital-dunhuang/source/state-matrix.md",
       "role": "process"
     },

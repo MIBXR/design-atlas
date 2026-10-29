@@ -311,6 +311,18 @@
       "role": "process"
     },
     {
+      "path": "demos/cases/arknights-world/source/extract-models.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/arknights-world/source/media.sh",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/arknights-world/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/arknights-world/style.css",
       "role": "source"
     },

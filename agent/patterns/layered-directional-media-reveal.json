@@ -1569,6 +1569,18 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/endfield-industrial/source/decode-profiles.mjs",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/extract-ring.js",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/README.md",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/endfield-industrial/source/source-provenance.json",
       "role": "process"
     },
