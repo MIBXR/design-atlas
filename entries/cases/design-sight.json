@@ -105,7 +105,7 @@
   "negativePrompt": "不使用共同SaaS双栏hero模板，不嵌入整站iframe，不伪造官网功能或实时展期，不复制统计/交易脚本，不使用CDN和远程图像运行时依赖。",
   "demo": "demos/cases/design-sight/index.html",
   "preview": "previews/cases/design-sight.jpg",
-  "research": "docs/research/design-sight.md",
+  "research": "docs/cases/design-sight.md",
   "exercise": "保持海报不变，将四列间距从50px改为25px，观察栏目密度；再把所有缩略图强制裁成同尺寸，记录丢失的展览信息。",
   "composition": {
     "color": "蓝色固定机构标识和链接，浅灰承托白色档案，橙色NEW形成更新角色；展览海报拥有自己的配色。",

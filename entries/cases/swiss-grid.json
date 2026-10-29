@@ -88,7 +88,7 @@
   "demo": "demos/cases/swiss-grid/index.html",
   "preview": "previews/cases/swiss-grid.jpg",
   "theoryVerifiedAt": "2026-10-07",
-  "research": "docs/research/swiss-grid.md",
+  "research": "docs/cases/swiss-grid.md",
   "exercise": "将日程从 4 项扩展为 12 项，增加地点筛选，同时保持标题、日期和行动的对齐线。",
   "composition": {
     "color": "暖白纸面、黑色信息与少量红色海报形成清晰层级。",

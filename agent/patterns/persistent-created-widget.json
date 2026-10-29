@@ -62,7 +62,7 @@
     ],
     "sourceFiles": [
       "entries/cases/deepseek-harness.json",
-      "docs/research/deepseek-harness.md",
+      "docs/cases/deepseek-harness.md",
       "demos/cases/deepseek-harness/app.js",
       "demos/cases/deepseek-harness/fidelity.md",
       "demos/cases/deepseek-harness/index.html",
@@ -97,6 +97,319 @@
         "bundle": "agent/cases/deepseek-harness.json",
         "demo": "demos/cases/deepseek-harness/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/persistent-created-widget.md",
+      "role": "prompt",
+      "content": "# 已创建挂件跨场景保留 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/persistent-created-widget.json)\n\n为【目标页面/组件】实现「已创建挂件跨场景保留」。创建过程结束后将结果挂件先放大展示，再缩到固定角落；后台界面切换到管理列表时挂件持续存在，最后通过已安装项确认结果归属。 触发：创建过程完成并转入管理场景。结果：用户看到生成、可用与被管理的是同一个对象。 挂件状态不能在场景交接时重置；放大与紧凑形态共享同一内容。 手机保留挂件与管理器的对应关系，同时避免遮住列表的主要信息。 负责成果身份连续性，前序可搭配过程折叠，运行控制交给独立暂停生命周期。 键盘：暂停按钮可键盘操作；图解内部不伪造可编辑输入或可点击安装。 减少动态：呈现挂件与管理器已安装项的稳定终态，并给出过程说明。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。\n\n## 制作约束\n\n- 挂件状态不能在场景交接时重置；放大与紧凑形态共享同一内容。\n- 手机保留挂件与管理器的对应关系，同时避免遮住列表的主要信息。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/BRAND_GUIDELINES.zh.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/dm-sans-400.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/dm-sans-500.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/dm-sans-700.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/montserrat-500.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/montserrat.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/fonts/fragment-mono-latin.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/excel.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/html.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/markdown.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/pdf.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/python.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/typescript.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/word.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/feat-plugins-en.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/feat-plugins-zh.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/feat-trace-en.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/feat-trace-zh.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/qr-wechat.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/LICENSE",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/messages.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/reference.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/_next/static/css/25f198211a7e1205.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/_next/static/css/5adb47a13a2794be.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/_next/static/css/826310b8bcf73c16.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/_next/static/css/aa0e993381ed79dc.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/harness/favicon.svg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/state.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/1563-d3f244478cac7e75.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/1798-4c32a4b3e02e20fe.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/1835-f521304a15b83224.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/3743-7c4be9ad33829b7f.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/5565.779b207d687b6031.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/6336-e0040a1eb23dd92b.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/6872-122f878b6e348922.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/7386dc53.5bf20d414744188e.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/7591-a9eaac0cc94f9f3e.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/8091.573531f4257c3cd0.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/8555-7c9518c428e988c2.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/86b88eeb-5b86058878847f6a.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/8809-44db951c56e60f28.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/9164-9f2478a2648a9516.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/app/[locale]/template-4dc2bb6be23dc661.js",
+      "role": "vendor"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/deepseek-harness.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/deepseek-harness.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/persistent-created-widget.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/deepseek-harness-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/deepseek-harness.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/deepseek-harness.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/persistent-created-widget.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

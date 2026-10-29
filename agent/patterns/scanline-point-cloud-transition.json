@@ -79,7 +79,7 @@
     ],
     "sourceFiles": [
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/source/state-matrix.md",
       "demos/cases/endfield-industrial/source/source-provenance.json",
@@ -100,6 +100,1599 @@
         "bundle": "agent/cases/endfield-industrial.json",
         "demo": "demos/cases/endfield-industrial/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/scanline-point-cloud-transition.md",
+      "role": "prompt",
+      "content": "# 扫描线与射线驱动的点云交接 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/scanline-point-cloud-transition.json)\n\n为【真实模型档案】实现扫描线与射线驱动的点云交接。用有使用权的Float32 xyz点位，验证格式和边界，再以来源Y跨度1900及各模型offset/pivot/scale作研究基线。旧、新模型各自actor在多线扫描中退出/显现，射线只指向扫描附近点并设容量上限；有限旋转加速后回基速，完成后释放旧GPU资源。目录、前后、编号与DOM说明由同一模型选择驱动，转场再入策略明确，不把该机制错写成同池顶点morph。支持水平拖动与聚焦方向键，手机保留pan-y纵滚。减少动态直接给可见终态、停止自动旋转/射线/glitch；后台暂停与资源失败回退分别处理。保留有限源码/运行证据，随机射线不能声称像素逐帧相等。\n\n## 制作约束\n\n- 使用有来源的xyz点位与模型配置，先校验Float32数量可被3整除、有限值及实际边界；归一化、offset/pivot/scale与摄像机共同决定原形，不能只下载bin便声称还原。\n- 本来源为两actor扫描入/出和清理，区别于particle-model-reformation的同池目标插值；旧模型完成退出后释放geometry/material及噪声纹理，不能无限叠加。\n- 扫描、射线、旋转与转场锁属于同一交接状态；随机射线保留上限，循环索引和标题同步；手机水平触摸观察须保留纵向页面滚动。\n- 六模型可见形态、索引循环、交接锁、双向拖动和真实手机触摸已有源/本地实测；四段shader字符串对应。射线活动峰源105/本地144为随机输出，不是像素差异结论。\n- 减少动态保留终态模型与DOM说明，停自动旋转、扫描和射线；WebGL或数据失败提供可读说明/合法静帧，不能阻塞整份档案。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/01.aae95e75.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/02.e58f9497.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/02Bg.21971ce1.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/03.722342c9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/04.924992fa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/05.bc9f3f37.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260602-38ce571934dafe453b9f0a6033f353bc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260602-436a0c9185d1b40006fe6574062f9e32.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260624-76a422d1140dadf2b57ea7f1eb197275.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260624-eb1662f1d08bdd804d3e29a904b1b1b2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260710-0ffe54e3ecf2e1eae71e4e67afe9514d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260710-b37e139e9494bd716410c7fa8a7f39ca.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260714-00240a644851abbdf0153120ebb5e26f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260714-e4c3c1219db9fe092bbb6a8df8bc265a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260808-3e14f4ce6154cb327d67ce2f29cfea0b.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260808-433b8106d6cf233d222a1277789121e0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260821-3b41d8e77dba8d8c9859c7234801e760.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260821-f3b195d0491b0dd8e38cdfca476c7d62.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260901-08f343f9381e539b259d5be5adfbd22d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260901-80f367998a752fbb84c05755458e0a71.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260901-a92f49a53810d0a162584a10daa9de39.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260921-52626adfa39665ea02033d987f515608.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260930-671f07273d5ee166618887f3ce4d9353.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260930-edd8254d71b1feeb662f5eade79e9f84.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-0de5fa0d6af31fb72ee1b1f931f68d19.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-3a159afd53e02aa3754c0c546ae08397.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-44833661c5411cb6a649c136ea437a65.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-502a50e6a97f40a44f9719bb4c2d0833.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-6d709e97f4a3f65b9deebf37be6d2e30.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-db1a6b4b9c68a91c6b444219d68b9331.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/age.6871a633.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/akekuri.3603d013.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/akekuri.3df4a3dc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/akekuri.751608ae.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/alesh.bfe6a583.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/alesh.ca99268b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/alesh.d7f457d2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/android-icon.dd9c0fd6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/antal.5a3548af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/antal.763c87e4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/antal.78d45318.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/appStore.4c92ebb1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arclight.0b402b3e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arclight.e31580d7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arclight.e46ed671.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ardelia.36d836c7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ardelia.565c75af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ardelia.b46cd31c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arrow_click.a72c10.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arrow.592963ed.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/avywenna.2a592659.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/avywenna.3346feee.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/avywenna.36c72367.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/banner.7b4f80c9.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg_m.2ac1c57d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg_m.529c4e62.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg.269aa2f3.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg.51f75595.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg.9e174372.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/block-bg.f05eda37.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/blurred_logo.eccbe4f3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/button-texture.63d91da2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/button-texture.aac73492.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/camille.5f50680f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/camille.81d81ef7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/camille.a26b2443.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/card-bg.28c79684.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/catcher.68b395f9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/catcher.bc6bcfaa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/catcher.d4e72ab0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/char_click.beff5b.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/char_detail_enter.babc4e.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/chen.2a091fd4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/chen.5c7b5e46.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/chen.b0afd1ba.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/close_click.fe1dc4.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/cloud-game-active.6c5cfe38.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/cloud-game-base.a3c5eb0c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/cloud-game-icon.e214f39f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/color-bar.1f0aa038.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/content.270be30b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/dapan.7b5afdec.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/dapan.7cdb6a4e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/dapan.8a1d195a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/de-de.bec7cb34.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/deco-right.0602d8cc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/deco.dbe18bea.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/download-icon.3efcbfc6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/downloadBtn.a6050c8e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/downloadBtnH5.9894d510.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/downloadBtnPc.e0af4878.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-electric.a3874677.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-fire.97dcd67b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-ice.134e8d15.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-nature.0606ebde.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-physic.2c205b7a.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ember.235ca9f1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ember.6391acf9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ember.9364370e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/en-us.234e7bc4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endfield.bcc6fe39.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator1.3efd4769.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator1.c391b13d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator1.ec409283.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator2.1ec20a16.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator2.5ccb44a8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator2.f0bbf4fa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/es-mx.30bfdd3e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/estella.0c009bcd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/estella.38c423af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/estella.b761d517.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/fluorite.5a8add29.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/fluorite.b83d45cf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/fluorite.cf452cf1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-ExtraBold.7b2f8c.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-ExtraBold.9856d3.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-ExtraBold.b8f935.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Light.9981d6.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Light.d7cc70.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Light.dab230.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Medium.376b06.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Medium.4f7868.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Medium.543de8.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-HarmonyOS_Sans_SC_Black.f538c8.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-HarmonyOS_Sans_SC_Bold.804ac9.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-HarmonyOS_Sans_SC_Medium.8b3fa8.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-HarmonyOS_Sans_SC_Regular.56a376.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Bold.2e0acc.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Bold.3fc194.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Bold.3fdbac.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-DemiBold.089c2d.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-DemiBold.9da0ec.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-DemiBold.be3c15.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Medium.748604.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Medium.b77880.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Medium.ef16a8.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-ProtestStrike-Regular.13abe8.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-ProtestStrike-Regular.7d04dd.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-ProtestStrike-Regular.8cd908.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Black.44fd4a.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Black.6a179a.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Black.6e4071.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Regular.47822e.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Regular.6e6837.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Regular.978751.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-SpaceGrotesk.912379.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-SpaceGrotesk.d83d94.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-SpaceGrotesk.edd157.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font.42d2c0d4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/fr-fr.587afb51.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/gilberta.07ff3560.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/gilberta.724f3503.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/gilberta.92aa17d4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/id-id.2eabc1bf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/it-it.c83d684f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ja-jp.546242ee.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/jsspsi.0a31758c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/jsspsi.19ec05d9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/jsspsi.409b46fa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ko-kr.678ad151.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/kv_v1d5_h5.0dccfb24.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/kv_v1d5.d98af17e.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/laevatain.20075757.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/laevatain.d0ca2837.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/laevatain.edd103d4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lastrite.3860f541.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lastrite.4a02d8bb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lastrite.8560c002.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/left-deco-text.3ef6b598.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lifeng.41ae5d06.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lifeng.7253579c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lifeng.ef41bc3a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/liino.8d027d2a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/liino.f1730ac7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/liino.f5676406.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lizhiyan.5e6e07c8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lizhiyan.7ada7b83.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lizhiyan.9b1b7f82.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/logo.fc8e2a3c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/mask.fd049a11.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/mifu.02645cad.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/mifu.7b3a74cf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/mifu.e1d79970.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/minghe.372272bd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/minghe.6860bf19.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/minghe.d65390b1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-anchor.0e6c6a.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-enemy.6a1a19.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-factory.bd9a36.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-pile.251dc1.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-spaceship.752e25.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-trinity.d6c060.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/none.aa703403.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/notices.2c21bbe2.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/operator-selection-ring.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/operator.875a6fbd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/orig.a0e255f1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pag-button-texture.e4e732ad.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pc.9c65ea0f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pcTopBtn.ed7e25a6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/perlica.6710bc97.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/perlica.871dcf57.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pogranichnik.6983f122.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pogranichnik.73f7bcf6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pogranichnik.80f2ddbb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/points-bg.f3b559e8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pre-gacha-b.82128529.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pre-gacha.caeae773.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prelica.d0bbdb53.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-assault.2aeeaf48.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-caster.d469c805.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-guard.78502de4.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-shielder.a3c6ffc9.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-support.532f02bd.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-vanguard.b957cec2.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ps5.ff9ebc6a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pt-br.5ef4c33f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/purrche.bdb051d3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/purrche.d14c39f4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/purrche.d6659019.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/qrcode.2680d634.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ring.5ce6e2bd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/rossi.4431f348.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/rossi.b7ae95b5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/rossi.c58b721b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ru-ru.f154ac12.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/sample.2c75e2dc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/scroll_tip.351d44bc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/section_divider_icon_lore.6968c414.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/skland.46bc0df3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/snowshine.1f6d3a0e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/snowshine.844ed0a4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/snowshine.bb2c0bdc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/sound-bgm.3ce37f.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/star.c078a0a7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-deco-lb.b881dcb3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-deco-rt.6fce5d04.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-title-bolt-h5.f805e784.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-title-bolt.0f4dd4e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-title-pumper-h5.fa5fcf19.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-title-pumper.86938bc4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/switcher-active.c8843bb5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/switcher-default.c8aa9ae0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tangtang.049b8a47.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tangtang.2602b587.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tangtang.b5cd99e9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tape-wave-bg.2bce9fc0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/taptap-h5.69ec3145.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/taptap.d490d888.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/test-notice-bg.9814ba3c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/th-deco-lb.8b362c5f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/th-deco-lt.d5331bdd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/th-deco-rt.85ad2c16.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/th-th.c9cbb94e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/timeline.c5e12cc3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tips.ca2b781c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/title.38e5934f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/topBtn.1b50eaa4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tower-bottom.eb021e6c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tower-top.768f88af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/triangles.bcbd794a.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/typhoea.87cfb4cd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/typhoea.c4a79f82.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/typhoea.c68596a8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/vi-vn.dd621a3a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-01.1e0eb1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-02.9ab299.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-03.422a72.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-04.7beddb.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.0a2d0e.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.1180d2.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.13649e.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.15923c.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.29f069.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.2e3172.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.378087.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.3dc320.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.418594.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.49352f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.4f53eb.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.5809fa.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.6546d3.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.674f13.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.7100b5.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.7be713.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.7dce7b.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.7df9b2.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.88cbb6.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.8a5a49.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.8c50d1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.940700.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.949a3d.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.a66d56.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.b3fe92.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.bb0080.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.bc2b7b.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.c84d04.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.c9c90f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.d2a51a.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.da7c54.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.ed2da1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.ed8d5e.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.eef9fe.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.f77ca5.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.0bdba0.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.12d14a.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.1688c4.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.1f28ab.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.24e819.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.289409.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.2e6c26.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.4197d2.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.4b776c.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.5460af.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.5864d8.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.5c433b.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.68bcf2.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.7168ff.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.77b33e.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.7beb0c.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.804e0a.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.810977.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.885f2f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.a0ab37.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.a180a3.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.a3c7a9.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.a776c1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.b4df19.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.b4f2dd.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.befed4.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.c3a71d.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.c9b4aa.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.cb64d4.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.cd38eb.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.ce391f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.d01501.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.da7be7.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.e6e3ed.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.f95544.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/wave-bg.8955885a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/wulfgard.53a6686b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/wulfgard.609a252f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/wulfgard.b9d580b2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/xaihi.43d608d9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/xaihi.9ba3eb36.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/xaihi.9c949014.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/yvonne.9695c304.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/yvonne.a74396e6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/yvonne.c93412e1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zh-cn.e783425d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zh-tw.a41a1cc8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zhuangfy.4369b1a5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zhuangfy.50a608b8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zhuangfy.c6750f9c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/data.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/lore.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/reference.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/shaders.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/source-provenance.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/state-matrix.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/state.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/transparent-video.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/vendor/three/THREE-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/vendor/three/three.core.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/vendor/three/three.module.js",
+      "role": "vendor"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/endfield-industrial.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/endfield-industrial.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/scanline-point-cloud-transition.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/endfield-industrial-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/endfield-industrial.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/endfield-industrial.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/scanline-point-cloud-transition.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

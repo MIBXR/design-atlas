@@ -58,7 +58,7 @@
   ],
   "sourceFiles": [
     "entries/cases/deepseek-harness.json",
-    "docs/research/deepseek-harness.md",
+    "docs/cases/deepseek-harness.md",
     "demos/cases/deepseek-harness/app.js",
     "demos/cases/deepseek-harness/fidelity.md",
     "demos/cases/deepseek-harness/index.html",

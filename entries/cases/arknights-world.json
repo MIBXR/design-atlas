@@ -91,7 +91,7 @@
   "negativePrompt": "不要用普通Observer淡入冒充全屏侧向章切；不要用静态CSS晶体或虚构粒子形状；不要漏掉首次载入/反向方向/同步滚号；不要自动出声、臆造操作音/曲名/主题切换；不要把子集、外链及本地调度说成完整官网移植。",
   "demo": "demos/cases/arknights-world/index.html",
   "preview": "previews/cases/arknights-world.jpg",
-  "research": "docs/research/arknights-world.md",
+  "research": "docs/cases/arknights-world.md",
   "exercise": "在已授权角色素材不变时，加入一个可查询的干员职业目录，保持工业档案的网格与状态语汇。",
   "composition": {
     "color": "暗灰网格、青色状态与灰度背景承接罗德岛工业系统；彩色立绘、白色点阵与档案文字保持焦点和可读性。",

@@ -60,8 +60,8 @@
       "demos/cases/swiss-grid/index.html",
       "entries/cases/mori-art-museum.json",
       "entries/cases/swiss-grid.json",
-      "docs/research/mori-art-museum.md",
-      "docs/research/swiss-grid.md"
+      "docs/cases/mori-art-museum.md",
+      "docs/cases/swiss-grid.md"
     ]
   },
   "sourceCases": [
@@ -80,6 +80,223 @@
         "bundle": "agent/cases/swiss-grid.json",
         "demo": "demos/cases/swiss-grid/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/filter-count-feedback.md",
+      "role": "prompt",
+      "content": "# 筛选与结果计数同步 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/filter-count-feedback.json)\n\n为【目标页面/组件】实现「筛选与结果计数同步」。改变筛选按钮状态与列表可见性，同时在独立状态区域显示当前结果数。触发：激活分类按钮。可见结果：用户知道条件是否生效及还剩多少内容。适用任务：活动与新闻目录。结果区域用温和的状态宣布，焦点留在触发按钮。键盘：原生按钮带aria-pressed，Tab可达；结果计数使用role=status或aria-live=polite。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责用户知道条件是否生效及还剩多少内容，职责限定在当前区域。组合时结果区域用温和的状态宣布，焦点留在触发按钮。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 结果区域用温和的状态宣布，焦点留在触发按钮。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_ATRoMap41_450_225-thumb-450xauto-19213.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mamproject035_1280-thumb-450xauto-18855.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mams024_1280-thumb-450xauto-18960.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_marikomori_schoolprograms_450_225-thumb-450xauto-19151.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_1280_260916-thumb-450xauto-19115.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_1280_261001-thumb-1600xauto-19211.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_mori_mariko_450_260916-thumb-450xauto-19114.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_moricaf2026_1280-thumb-450xauto-17981.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/bnr_ronmueck_advanceticket_450_225-thumb-450xauto-19133.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo_small.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/mam_logo450_225-thumb-450xauto-18509.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/assets/TicketEc_thum_2024.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/source/assets/source-style.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/swiss-grid/index.html",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/mori-art-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/swiss-grid.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/mori-art-museum.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/swiss-grid.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/filter-count-feedback.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/mori-art-museum-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mori-art-museum-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/mori-art-museum.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/swiss-grid-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/swiss-grid.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/mori-art-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/swiss-grid.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/filter-count-feedback.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

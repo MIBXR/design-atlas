@@ -101,7 +101,7 @@
   "demo": "demos/cases/pixel-world/index.html",
   "preview": "previews/cases/pixel-world.jpg",
   "theoryVerifiedAt": "2026-10-07",
-  "research": "docs/research/pixel-world.md",
+  "research": "docs/cases/pixel-world.md",
   "exercise": "为岛屿添加一个夜间色板，在不增加第17种颜色的前提下保持地标与路径可辨认。",
   "composition": {
     "color": "有限16色调色板，以土色、草绿和水蓝区分离散地图区域。",

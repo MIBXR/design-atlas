@@ -1,21 +1,14 @@
-# Persona 5 Royal · 单次参考快照
+# Persona 5 Royal · 单次参考快照：复现范围
 
-参考 URL：https://persona.atlus.com/p5r/?lang=en#
-采集日期：2026-10-07，英文首页。归档本次所见，不维护未来官网版本。
+[案例条目](../../../entries/cases/persona-kinetic.json) · [研究](../../../docs/cases/persona-kinetic.md) · [Prompt](../../../prompts/cases/persona-kinetic.md)
 
-原站完整路径是 KV→介绍→角色→学校生活→怪盗生活→规格→底部信息与购买→页脚；本次已从入口向下走到实际 footer，再反向。角色 Next 和两个生活轮播实际操作并检查公开 CSS/JS。
-
-公开渲染模块 175/558/562 区分两层：desktop kv-canvas 是 5 颗固定位置星光，背景 bg-stars 是 15 颗随机星。星纹理从六张官方PNG随机选，SCREEN混合；透明度以 3000ms inOutSine 往复，起始延迟0–5000ms。背景星在滚动时按“旧位置减新位置”的差值除以1–3系数移动，越界重置。没有发现原站鼠标视差，本地没有添加。Canvas2D重写这些图像与运动规则，没有执行包含账号/追踪依赖的官网包；随机抽样及Canvas混合是近似，不宣称原PIXI逐帧结果。
+Canvas2D 重写原图像与运动规则；随机抽样及 Canvas 混合近似原 PIXI 结果。暂停星光、键盘和 ?motion=reduce 为本地补充。
 
 角色横向轨道500ms切换并停在首尾，服装有独立状态。学校生活与怪盗生活原站是分别无限循环、露出相邻画面的中心轮播；本地用两个独立500ms轨道保留箭头/横触与循环交接，保留5张学校和3张怪盗真实画面。三位人物与文案缩减，入场局部装饰、所有规格与购买栏目不在本地完整重建范围；剪纸海报、真实立绘及原始箭头保留，不能以统一卡片风代替。
-
-原站未见独立BGM、声音门或界面操作音。用户点击WATCH THE OFFICIAL TRAILER才打开官方YouTubePV，音乐作用于影片镜头剪辑，而不覆盖普通浏览。未见明暗主题控件，金、红、黑维持固定主题。暂停星光、键盘和?motion=reduce是本地补充。
-
-体验路径：首屏星光→原生下滚时背景不同速移动→三位角色正反切换和换装→学校轮播末尾接首项→怪盗独立轮播→购买外链和footer→向上。
-
-公开源： https://persona.atlus.com/p5r/resources/js/top.d7194e2d6bcaddee6e3c.js 和 https://persona.atlus.com/p5r/resources/css/top.bfd93acea98167fad971.css 。最终图像逐项来源见 assets-manifest.json。版权归ATLUS/SEGA。
 
 ## 复刻未使用的原站素材
 
 - `source/assets/star.png`
 - `source/assets/phantom.png`
+
+体验路径：首屏星光→原生下滚时背景不同速移动→三位角色正反切换和换装→学校轮播末尾接首项→怪盗独立轮播→购买外链和footer→向上。

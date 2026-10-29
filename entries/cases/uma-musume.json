@@ -98,7 +98,7 @@
   "negativePrompt": "不要生成泛用SaaS双栏hero、玻璃卡片墙或虚构官网音乐；不要复制运营接口、跟踪脚本、登录与付费流程；不要将新闻快照伪装成实时数据。",
   "demo": "demos/cases/uma-musume/index.html",
   "preview": "previews/cases/uma-musume.jpg",
-  "research": "docs/research/uma-musume.md",
+  "research": "docs/cases/uma-musume.md",
   "exercise": "保留群像不动，把玩法轮播改成四种玩法：检查每次切换的标题、截图、立绘与状态是否一致，并记录增加信息密度后斜切背景是否影响阅读。",
   "composition": {
     "color": "草地绿来自官方赛道KV；#c0e640斜切标题带与绿色操作入口重复，白底新闻让复杂图像后出现阅读休息。",

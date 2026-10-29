@@ -80,6 +80,6 @@
     "entries/cases/claude-platform.json",
     "entries/cases/qoder-platform.json",
     "entries/cases/stripe-platform.json",
-    "docs/research/stripe-platform.md"
+    "docs/cases/stripe-platform.md"
   ]
 }

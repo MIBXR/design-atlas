@@ -83,7 +83,7 @@
       "entries/cases/claude-platform.json",
       "entries/cases/qoder-platform.json",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -110,6 +110,359 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/cases/stripe-platform/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/single-open-accordion.md",
+      "role": "prompt",
+      "content": "# 单开内容与图像联动 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/single-open-accordion.json)\n\n为【目标页面/组件】实现「单开内容与图像联动」。激活一项收起前项并展开当前正文；内容高度与图标同步，案例故事还可同时替换旁侧摄影。触发：展开FAQ或故事行。可见结果：长文本按需阅读，当前焦点明确。适用任务：问答与客户故事。按实际内容计算高度，关闭区域不可保留可聚焦控件。键盘：按钮带aria-expanded/aria-controls，折叠内容hidden或inert；焦点保留在标题。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责长文本按需阅读，当前焦点明确，职责限定在当前区域。组合时按实际内容计算高度，关闭区域不可保留可聚焦控件。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 按实际内容计算高度，关闭区域不可保留可聚焦控件。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/cowork.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/sans.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/serif.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/claude-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/cli.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/desktop.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/ide.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/jetbrains.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/logo-cn.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/mobile.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/qoder-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/source/assets/logo-dark.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/qoder-platform/source/assets/logo-light.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/qoder-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-hertz.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-instacart.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-lemonde.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-urbn.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/kettle.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/payments-bg.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/sohne.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/stripe-wave-renderer.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/terminal.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-geometry-worker.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-palette.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-provenance.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stripe-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/three-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stripe-platform/wave.js",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/claude-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/qoder-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/stripe-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/claude-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/qoder-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/stripe-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/single-open-accordion.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/claude-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/claude-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/claude-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform-reference.png",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/claude-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/qoder-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/stripe-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/single-open-accordion.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

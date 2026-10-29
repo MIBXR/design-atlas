@@ -118,9 +118,9 @@
       "entries/cases/linear-workflow.json",
       "entries/cases/qoder-platform.json",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md",
+      "docs/cases/stripe-platform.md",
       "entries/cases/endfield-industrial.json",
-      "docs/research/endfield-industrial.md",
+      "docs/cases/endfield-industrial.md",
       "demos/cases/endfield-industrial/fidelity.md",
       "demos/cases/endfield-industrial/source/state-matrix.md",
       "demos/cases/endfield-industrial/source/source-provenance.json",
@@ -131,7 +131,7 @@
       "demos/cases/endfield-industrial/lore.js",
       "demos/cases/endfield-industrial/transparent-video.js",
       "entries/cases/deepseek-harness.json",
-      "docs/research/deepseek-harness.md",
+      "docs/cases/deepseek-harness.md",
       "demos/cases/deepseek-harness/app.js",
       "demos/cases/deepseek-harness/fidelity.md",
       "demos/cases/deepseek-harness/index.html",
@@ -158,7 +158,7 @@
       "demos/cases/stellar-museum/index.html",
       "demos/cases/stellar-museum/fidelity.md",
       "entries/cases/stellar-museum.json",
-      "docs/research/stellar-museum.md"
+      "docs/cases/stellar-museum.md"
     ]
   },
   "sourceCases": [
@@ -209,6 +209,2623 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/cases/stripe-platform/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/viewport-animation-lifecycle.md",
+      "role": "prompt",
+      "content": "# 视口与前台驱动的动态生命周期 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/viewport-animation-lifecycle.json)\n\n为【目标页面/组件】实现「视口与前台驱动的动态生命周期」。用进入/离开视口及页面可见性控制媒体和演示计时，用户暂停优先于自动恢复；减少动态直接给可读状态。触发：进入/离开视口、切后台或用户暂停。可见结果：观看控制清楚，离屏不会继续夺取状态。适用任务：自动产品演示与动态主视觉。恢复策略按任务明确，自动计时不能覆盖手动状态。键盘：暂停/播放按钮文字与实际媒体事件同步，状态可读；所有手动选择保留。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责是否运行帧/媒体计时，具体换图、任务或粒子负责内容状态。可共享可见性信号，用户暂停意图仍独立保留，重入不能无条件重启。 终末地作为本地适配补充：同时控制点云GPU帧与已主动开启的BGM，真实切后台期间时间/角度冻结，返回按先前意图恢复。此证据只证明当前本地模块，未完整观察源站相同visibility自然行为，也未逐项验收全部媒体组合；不要将适配标为原站observed。\n\n## 制作约束\n\n- 恢复策略按任务明确，自动计时不能覆盖手动状态。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n- 终末地新增来源是本地适配与真实后台/返回实测，evidence=adapted；不将本地visibility监听、BGM恢复或减少动态策略写成完整源站已观察行为。\n- 恢复只针对先前有运行意图的媒体；用户关闭声音、切为2D或选择减少动态后，后台返回不能自动推翻其选择。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/BRAND_GUIDELINES.zh.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/dm-sans-400.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/dm-sans-500.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/dm-sans-700.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/montserrat-500.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/fonts/montserrat.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/fonts/fragment-mono-latin.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/excel.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/html.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/markdown.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/pdf.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/python.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/typescript.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/icons/file-types/word.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/feat-plugins-en.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/feat-plugins-zh.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/feat-trace-en.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/feat-trace-zh.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/assets/harness/images/qr-wechat.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/LICENSE",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/messages.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/reference.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/_next/static/css/25f198211a7e1205.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/_next/static/css/5adb47a13a2794be.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/_next/static/css/826310b8bcf73c16.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/_next/static/css/aa0e993381ed79dc.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/source/assets/harness/favicon.svg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/state.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/1563-d3f244478cac7e75.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/1798-4c32a4b3e02e20fe.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/1835-f521304a15b83224.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/3743-7c4be9ad33829b7f.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/5565.779b207d687b6031.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/6336-e0040a1eb23dd92b.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/6872-122f878b6e348922.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/7386dc53.5bf20d414744188e.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/7591-a9eaac0cc94f9f3e.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/8091.573531f4257c3cd0.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/8555-7c9518c428e988c2.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/86b88eeb-5b86058878847f6a.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/8809-44db951c56e60f28.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/9164-9f2478a2648a9516.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/app/[locale]/harness/page-82b977ba6da9187f.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/deepseek-harness/vendor/deepseek-harness/app/[locale]/template-4dc2bb6be23dc661.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/01.aae95e75.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/02.e58f9497.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/02Bg.21971ce1.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/03.722342c9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/04.924992fa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/05.bc9f3f37.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260602-38ce571934dafe453b9f0a6033f353bc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260602-436a0c9185d1b40006fe6574062f9e32.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260624-76a422d1140dadf2b57ea7f1eb197275.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260624-eb1662f1d08bdd804d3e29a904b1b1b2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260710-0ffe54e3ecf2e1eae71e4e67afe9514d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260710-b37e139e9494bd716410c7fa8a7f39ca.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260714-00240a644851abbdf0153120ebb5e26f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260714-e4c3c1219db9fe092bbb6a8df8bc265a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260808-3e14f4ce6154cb327d67ce2f29cfea0b.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260808-433b8106d6cf233d222a1277789121e0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260821-3b41d8e77dba8d8c9859c7234801e760.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260821-f3b195d0491b0dd8e38cdfca476c7d62.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260901-08f343f9381e539b259d5be5adfbd22d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260901-80f367998a752fbb84c05755458e0a71.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260901-a92f49a53810d0a162584a10daa9de39.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260921-52626adfa39665ea02033d987f515608.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260930-671f07273d5ee166618887f3ce4d9353.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20260930-edd8254d71b1feeb662f5eade79e9f84.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-0de5fa0d6af31fb72ee1b1f931f68d19.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-3a159afd53e02aa3754c0c546ae08397.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-44833661c5411cb6a649c136ea437a65.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-502a50e6a97f40a44f9719bb4c2d0833.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-6d709e97f4a3f65b9deebf37be6d2e30.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/20261006-db1a6b4b9c68a91c6b444219d68b9331.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/age.6871a633.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/akekuri.3603d013.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/akekuri.3df4a3dc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/akekuri.751608ae.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/alesh.bfe6a583.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/alesh.ca99268b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/alesh.d7f457d2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/android-icon.dd9c0fd6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/antal.5a3548af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/antal.763c87e4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/antal.78d45318.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/appStore.4c92ebb1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arclight.0b402b3e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arclight.e31580d7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arclight.e46ed671.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ardelia.36d836c7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ardelia.565c75af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ardelia.b46cd31c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arrow_click.a72c10.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/arrow.592963ed.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/avywenna.2a592659.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/avywenna.3346feee.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/avywenna.36c72367.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/banner.7b4f80c9.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg_m.2ac1c57d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg_m.529c4e62.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg.269aa2f3.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg.51f75595.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/bg.9e174372.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/block-bg.f05eda37.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/blurred_logo.eccbe4f3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/button-texture.63d91da2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/button-texture.aac73492.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/camille.5f50680f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/camille.81d81ef7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/camille.a26b2443.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/card-bg.28c79684.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/catcher.68b395f9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/catcher.bc6bcfaa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/catcher.d4e72ab0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/char_click.beff5b.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/char_detail_enter.babc4e.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/chen.2a091fd4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/chen.5c7b5e46.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/chen.b0afd1ba.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/close_click.fe1dc4.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/cloud-game-active.6c5cfe38.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/cloud-game-base.a3c5eb0c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/cloud-game-icon.e214f39f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/color-bar.1f0aa038.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/content.270be30b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/dapan.7b5afdec.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/dapan.7cdb6a4e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/dapan.8a1d195a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/de-de.bec7cb34.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/deco-right.0602d8cc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/deco.dbe18bea.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/download-icon.3efcbfc6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/downloadBtn.a6050c8e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/downloadBtnH5.9894d510.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/downloadBtnPc.e0af4878.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-electric.a3874677.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-fire.97dcd67b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-ice.134e8d15.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-nature.0606ebde.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ele-physic.2c205b7a.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ember.235ca9f1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ember.6391acf9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ember.9364370e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/en-us.234e7bc4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endfield.bcc6fe39.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator1.3efd4769.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator1.c391b13d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator1.ec409283.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator2.1ec20a16.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator2.5ccb44a8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/endministrator2.f0bbf4fa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/es-mx.30bfdd3e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/estella.0c009bcd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/estella.38c423af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/estella.b761d517.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/fluorite.5a8add29.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/fluorite.b83d45cf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/fluorite.cf452cf1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-ExtraBold.7b2f8c.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-ExtraBold.9856d3.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-ExtraBold.b8f935.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Light.9981d6.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Light.d7cc70.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Light.dab230.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Medium.376b06.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Medium.4f7868.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Gilroy-Medium.543de8.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-HarmonyOS_Sans_SC_Black.f538c8.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-HarmonyOS_Sans_SC_Bold.804ac9.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-HarmonyOS_Sans_SC_Medium.8b3fa8.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-HarmonyOS_Sans_SC_Regular.56a376.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Bold.2e0acc.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Bold.3fc194.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Bold.3fdbac.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-DemiBold.089c2d.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-DemiBold.9da0ec.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-DemiBold.be3c15.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Medium.748604.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Medium.b77880.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Novecentosanswide-Medium.ef16a8.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-ProtestStrike-Regular.13abe8.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-ProtestStrike-Regular.7d04dd.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-ProtestStrike-Regular.8cd908.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Black.44fd4a.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Black.6a179a.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Black.6e4071.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Regular.47822e.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Regular.6e6837.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-Roboto-Regular.978751.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-SpaceGrotesk.912379.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-SpaceGrotesk.d83d94.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font-SpaceGrotesk.edd157.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/font.42d2c0d4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/fr-fr.587afb51.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/gilberta.07ff3560.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/gilberta.724f3503.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/gilberta.92aa17d4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/id-id.2eabc1bf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/it-it.c83d684f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ja-jp.546242ee.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/jsspsi.0a31758c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/jsspsi.19ec05d9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/jsspsi.409b46fa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ko-kr.678ad151.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/kv_v1d5_h5.0dccfb24.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/kv_v1d5.d98af17e.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/laevatain.20075757.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/laevatain.d0ca2837.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/laevatain.edd103d4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lastrite.3860f541.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lastrite.4a02d8bb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lastrite.8560c002.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/left-deco-text.3ef6b598.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lifeng.41ae5d06.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lifeng.7253579c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lifeng.ef41bc3a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/liino.8d027d2a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/liino.f1730ac7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/liino.f5676406.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lizhiyan.5e6e07c8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lizhiyan.7ada7b83.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/lizhiyan.9b1b7f82.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/logo.fc8e2a3c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/mask.fd049a11.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/mifu.02645cad.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/mifu.7b3a74cf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/mifu.e1d79970.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/minghe.372272bd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/minghe.6860bf19.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/minghe.d65390b1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-anchor.0e6c6a.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-enemy.6a1a19.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-factory.bd9a36.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-pile.251dc1.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-spaceship.752e25.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/model-trinity.d6c060.bin",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/none.aa703403.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/notices.2c21bbe2.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/operator-selection-ring.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/operator.875a6fbd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/orig.a0e255f1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pag-button-texture.e4e732ad.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pc.9c65ea0f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pcTopBtn.ed7e25a6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/perlica.6710bc97.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/perlica.871dcf57.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pogranichnik.6983f122.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pogranichnik.73f7bcf6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pogranichnik.80f2ddbb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/points-bg.f3b559e8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pre-gacha-b.82128529.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pre-gacha.caeae773.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prelica.d0bbdb53.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-assault.2aeeaf48.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-caster.d469c805.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-guard.78502de4.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-shielder.a3c6ffc9.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-support.532f02bd.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/prof-vanguard.b957cec2.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ps5.ff9ebc6a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/pt-br.5ef4c33f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/purrche.bdb051d3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/purrche.d14c39f4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/purrche.d6659019.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/qrcode.2680d634.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ring.5ce6e2bd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/rossi.4431f348.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/rossi.b7ae95b5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/rossi.c58b721b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/ru-ru.f154ac12.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/sample.2c75e2dc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/scroll_tip.351d44bc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/section_divider_icon_lore.6968c414.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/skland.46bc0df3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/snowshine.1f6d3a0e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/snowshine.844ed0a4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/snowshine.bb2c0bdc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/sound-bgm.3ce37f.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/star.c078a0a7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-deco-lb.b881dcb3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-deco-rt.6fce5d04.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-title-bolt-h5.f805e784.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-title-bolt.0f4dd4e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-title-pumper-h5.fa5fcf19.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/subpage-title-pumper.86938bc4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/switcher-active.c8843bb5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/switcher-default.c8aa9ae0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tangtang.049b8a47.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tangtang.2602b587.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tangtang.b5cd99e9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tape-wave-bg.2bce9fc0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/taptap-h5.69ec3145.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/taptap.d490d888.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/test-notice-bg.9814ba3c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/th-deco-lb.8b362c5f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/th-deco-lt.d5331bdd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/th-deco-rt.85ad2c16.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/th-th.c9cbb94e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/timeline.c5e12cc3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tips.ca2b781c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/title.38e5934f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/topBtn.1b50eaa4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tower-bottom.eb021e6c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/tower-top.768f88af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/triangles.bcbd794a.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/typhoea.87cfb4cd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/typhoea.c4a79f82.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/typhoea.c68596a8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/vi-vn.dd621a3a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-01.1e0eb1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-02.9ab299.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-03.422a72.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-04.7beddb.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.0a2d0e.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.1180d2.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.13649e.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.15923c.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.29f069.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.2e3172.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.378087.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.3dc320.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.418594.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.49352f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.4f53eb.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.5809fa.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.6546d3.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.674f13.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.7100b5.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.7be713.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.7dce7b.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.7df9b2.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.88cbb6.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.8a5a49.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.8c50d1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.940700.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.949a3d.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.a66d56.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.b3fe92.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.bb0080.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.bc2b7b.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.c84d04.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.c9c90f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.d2a51a.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.da7c54.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.ed2da1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.ed8d5e.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.eef9fe.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-enter.f77ca5.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.0bdba0.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.12d14a.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.1688c4.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.1f28ab.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.24e819.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.289409.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.2e6c26.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.4197d2.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.4b776c.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.5460af.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.5864d8.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.5c433b.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.68bcf2.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.7168ff.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.77b33e.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.7beb0c.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.804e0a.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.810977.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.885f2f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.a0ab37.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.a180a3.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.a3c7a9.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.a776c1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.b4df19.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.b4f2dd.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.befed4.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.c3a71d.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.c9b4aa.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.cb64d4.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.cd38eb.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.ce391f.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.d01501.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.da7be7.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.e6e3ed.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/video-idle.f95544.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/wave-bg.8955885a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/wulfgard.53a6686b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/wulfgard.609a252f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/wulfgard.b9d580b2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/xaihi.43d608d9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/xaihi.9ba3eb36.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/xaihi.9c949014.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/yvonne.9695c304.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/yvonne.a74396e6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/yvonne.c93412e1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zh-cn.e783425d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zh-tw.a41a1cc8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zhuangfy.4369b1a5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zhuangfy.50a608b8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/assets/zhuangfy.c6750f9c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/data.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/lore.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/reference.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/shaders.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/source-provenance.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/source/state-matrix.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/state.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/transparent-video.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/vendor/three/THREE-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/vendor/three/three.core.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/endfield-industrial/vendor/three/three.module.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets/inter.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets/karri.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/linear-workflow/assets/product-depth.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/linear-workflow/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/linear-workflow/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/linear-workflow/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/linear-workflow/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/linear-workflow/source/assets/hero-atmosphere.webp",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/linear-workflow/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/cli.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/desktop.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/ide.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/jetbrains.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/logo-cn.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/assets/mobile.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/qoder-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/qoder-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/source/assets/logo-dark.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/qoder-platform/source/assets/logo-light.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/qoder-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stellar-museum/baseline-fonts.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/baseline.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-002.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-003.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-004.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/instrument-serif-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-002.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-003.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-004.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-005.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-006.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/jetbrains-mono-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-002.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-003.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-004.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-005.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-006.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-007.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-008.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-009.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-010.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-011.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-012.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-013.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-014.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-015.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-016.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-017.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-018.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-019.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-020.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-021.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-022.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-023.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-024.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-025.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-026.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-027.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-028.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-029.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-030.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-031.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-032.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-033.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-034.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-035.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-036.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-037.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-038.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-039.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-040.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-041.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-042.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-043.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-044.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-045.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-046.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-047.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-048.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-049.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-050.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-051.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-052.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-053.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-054.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-055.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-056.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-057.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-058.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-059.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-060.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-061.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-062.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-063.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-064.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-065.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-066.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-067.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-068.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-069.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-070.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-071.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-072.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-073.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-074.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-075.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-076.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-077.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-078.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-079.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-080.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-081.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-082.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-083.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-084.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-085.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-086.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-087.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-088.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-089.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-090.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-091.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-092.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-093.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-094.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-095.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-096.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-097.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-098.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-099.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-100.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-101.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/noto-serif-sc-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/orbitron-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/orbitron-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/space-grotesk-001.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/space-grotesk-002.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/space-grotesk-003.woff2",
+      "role": "font"
+    },
+    {
+      "path": "demos/cases/stellar-museum/fonts/space-grotesk-OFL.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/GARDEN-SKILLS-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stellar-museum/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/vendor/three/THREE-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stellar-museum/vendor/three/three.module.js",
+      "role": "vendor"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-hertz.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-instacart.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-lemonde.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-urbn.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/kettle.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/payments-bg.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/sohne.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/stripe-wave-renderer.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/terminal.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-geometry-worker.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-palette.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-provenance.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stripe-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/three-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stripe-platform/wave.js",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/deepseek-harness.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/endfield-industrial.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/linear-workflow.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/qoder-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/stellar-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/stripe-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/deepseek-harness.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/endfield-industrial.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/linear-workflow.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/qoder-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/stellar-museum.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/stripe-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/viewport-animation-lifecycle.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/deepseek-harness-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/deepseek-harness.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/endfield-industrial-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/endfield-industrial.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/linear-workflow-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/linear-workflow-reference.png",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/linear-workflow.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/qoder-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stellar-museum-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stellar-museum.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform-reference.png",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/deepseek-harness.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/endfield-industrial.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/linear-workflow.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/qoder-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/stellar-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/stripe-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/viewport-animation-lifecycle.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

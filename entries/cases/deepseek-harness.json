@@ -9,7 +9,7 @@
   "implementation": "reference-study",
   "demo": "demos/cases/deepseek-harness/index.html",
   "preview": "previews/cases/deepseek-harness.jpg",
-  "research": "docs/research/deepseek-harness.md",
+  "research": "docs/cases/deepseek-harness.md",
   "fidelity": "demos/cases/deepseek-harness/fidelity.md",
   "assetManifest": "demos/cases/deepseek-harness/assets-manifest.json",
   "subtitle": "DEEPSEEK HARNESS / READY TO USE. RIGHT NOW.",

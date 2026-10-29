@@ -292,7 +292,12 @@
     {
       "path": "docs/materials/reacticle.md",
       "role": "research",
-      "content": "# Reacticle · 长文排版组件库\n\nReacticle 是用于文章、报告和交互长文的 React 语义化组件库，提供 11 套有独立排版契约的主题。内容通过同一套组件表达，主题决定文字层级、网格、留白、图表与代码的视觉语言。\n\n## 安装与取材\n\n上游 README 指向的开始使用页给出 `npm install reacticle`，React 18.3 是 peer 依赖。本库样例直接使用 Reacticle 0.2.6 固定提交 `dcfc4baf386bbc220cd1aa6274bed3b741108465` 的 `src/` 与 `apps/site`，未修改报告组件或主题 CSS。公共入口 `ThemeProvider` 包裹文章，再组合 `Article`、`Hero`、`Section`、公式、代码、决策和媒体组件；自定义 `Raw` 内容继续使用 `--ra-*` 主题变量。\n\n11 个独立入口复用原画廊的文章容器及原站 CSS，仅渲染对应文章。入口在模块加载前设置 `Prism.manual = true`，由原 React 组件逐行高亮，保留代码行容器与换行。样例索引按 `?demo=<id>` 选择后直接打开对应静态页；每篇的 JS、CSS 与公式字体由 Vite 以相对路径构建，Google Fonts 使用共享本地文件。\n\n## 11 套主题样文\n\n| 主题 | 文章 | 风格 |\n| --- | --- | --- |\n| Tufte | [咖啡因与睡眠：一份关于半衰期的笔记](../../demos/materials/reacticle/index.html?demo=caffeine-half-life) | 数据墨水风格：克制衬线、充裕页边、发丝参考线与低装饰图表，让论点和证据承载视觉层级。 |\n| Press | [活字之后](../../demos/materials/reacticle/index.html?demo=movable-type) | 出版书卷风格：暖纸与从容衬线，以线代框，保留数据墨水纪律，用更外放的字号和版式组织叙事。 |\n| Shannon | [连接池耗尽：一次结算级联故障复盘](../../demos/materials/reacticle/index.html?demo=pool-exhaustion) | 暗色工程风格：温暖石墨底、暖白墨与琥珀信号色，围绕日志、代码、事件与决策组织可核查证据。 |\n| Vignelli | [Orbit 设计系统 · 基础规范](../../demos/materials/reacticle/index.html?demo=orbit-spec) | 瑞士国际主义风格：冷中性纸面、无衬线字号层级、严密网格与一抹结构红，适合系统规范。 |\n| Knuth | [以核特征映射线性化自注意力：一个复杂度视角](../../demos/materials/reacticle/index.html?demo=linear-attention) | 学术预印本风格：正式衬线、编号章节和图表、公式优先与密集引用，强调推导和可核查性。 |\n| Freddie | [第一封 Newsletter：一份不端着的上手指南](../../demos/materials/reacticle/index.html?demo=first-newsletter) | 温暖人文风格：白纸黑墨与明黄荧光色块，俏皮衬线标题配干净无衬线正文，亲切且专业。 |\n| Andy | [把呼吸放慢：盒式呼吸与平静的神经科学](../../demos/materials/reacticle/index.html?demo=slow-breathing) | 静谧人文风格：暖奶油纸、南瓜橙、暖灰墨与圆润字体，大圆角、柔和阴影和留白帮助放慢节奏。 |\n| Bodoni | [头版的消亡](../../demos/materials/reacticle/index.html?demo=front-page) | 黑白报刊风格：纯白纸、真黑墨与发丝栏线，大字刊头、首字下沉和粗细双线建立印刷层级。 |\n| Bayer | [形、色、网格：看得懂的视觉语法](../../demos/materials/reacticle/index.html?demo=geometry-of-meaning) | 包豪斯构成风格：暖纸黑墨，以红蓝黄三原色、几何无衬线、硬边与圆形数字组织清晰结构。 |\n| Fuller | [限流器设计规格](../../demos/materials/reacticle/index.html?demo=rate-limiter-spec) | 工程蓝图风格：深蓝底、青白墨、制图青与淡方格网，搭配等宽标注、虚线分节和发丝拓扑。 |\n| Sottsass | [撞色不翻车](../../demos/materials/reacticle/index.html?demo=color-clash) | 孟菲斯风格：奶油纸、黑墨与粉青黄蓝撞色，以硬投影、轻旋转、彩色药丸和几何彩屑制造节奏。 |\n\n主题绑定与上游 `gallery.tsx` 完全一致。限流器文件名为 `RateLimiter.tsx`，实际组件导出为 `RateLimiterSpec`。样文保留原文、图形、公式、代码和交互；图库外壳中的官网导航、浮动返回信息和上一篇／下一篇不属于独立文章页面。\n\n## 适合与不适合\n\n适合数据笔记、研究分析、技术解释、故障复盘、设计规范、出版随笔和教学文章。先按内容任务选主题，再读主题 profile 与相应样例，避免将主题理解为简单换色。它不负责后台应用、复杂表单或完整网站的信息架构。\n\n## 关联工作流\n\n[beautiful-article](../../materials.html#material/beautiful-article) 提供来源整理、计划、写作、审阅、修复和交付流程，Reacticle 是它的组件与主题实现。11 套风格说明概括自 garden-skills 固定提交 `2b9a89340b70f632d31c0f1c69fce94a7912423e` 的 `theme-profiles/`，每套主题的样文在本条目的样例中。\n\n## 本地资源与可访问性\n\n原站引入的 Newsreader、IBM Plex Sans、IBM Plex Mono、Source Serif 4、JetBrains Mono、Fraunces、Hanken Grotesk、Quicksand、Nunito、Playfair Display、Josefin Sans、Poppins 和 Space Grotesk 共 13 个字体家族、76 个 WOFF2 文件已本地化。保留原字重、样式与子集范围；中文继续使用原主题声明的系统字体回退。\n\n文章内目录、按钮、滑块与展开内容沿用原实现。减少动态使用原站 CSS；呼吸练习保留原始开始／暂停和计时逻辑。源码及依赖完整保留并不等于读屏器、真实触屏和所有浏览器的行为均已实测。\n\n## 来源与许可\n\n- [Reacticle 固定源码](https://github.com/ConardLi/reacticle/tree/dcfc4baf386bbc220cd1aa6274bed3b741108465)：0.2.6，作者 ConardLi。原始 `package.json` 声明 MIT，**仓库内没有 LICENSE 文件**。原始声明保存在 `demos/materials/reacticle/vendor/reacticle-package.json`。\n- React、React DOM、scheduler、KaTeX 与 Prism：保留各自原始 MIT 许可。\n- 13 个 Google Fonts 家族：逐家族附 SIL Open Font License 1.1；KaTeX 公式字体的嵌入 OFL 声明与全文单独保留。\n- 字体、软件版本与文件说明见 [第三方声明](../../demos/materials/reacticle/vendor/NOTICE.md)；[样例说明](../../demos/materials/reacticle/README.md) 记录每篇与原始报告文件的对应。\n\n本库用于个人非商业学习，保留原文与署名，软件许可声明与字体许可分别记录。\n"
+      "content": "# Reacticle · 长文排版组件库\n\n[来源、版本、许可与使用边界](../../entries/materials/reacticle.json)\n\nReacticle 是用于文章、报告和交互长文的 React 语义化组件库，提供 11 套有独立排版契约的主题。内容通过同一套组件表达，主题决定文字层级、网格、留白、图表与代码的视觉语言。\n\n## 安装与取材\n\n上游 README 指向的开始使用页给出 `npm install reacticle`，React 18.3 是 peer 依赖。本地样例使用上游 `src/` 与 `apps/site` 的报告组件和主题 CSS。公共入口 `ThemeProvider` 包裹文章，再组合 `Article`、`Hero`、`Section`、公式、代码、决策和媒体组件；自定义 `Raw` 内容继续使用 `--ra-*` 主题变量。\n\n11 个独立入口复用原画廊的文章容器及原站 CSS，仅渲染对应文章。入口在模块加载前设置 `Prism.manual = true`，由原 React 组件逐行高亮，保留代码行容器与换行。样例索引按 `?demo=<id>` 选择后直接打开对应静态页；每篇的 JS、CSS 与公式字体由 Vite 以相对路径构建，Google Fonts 使用共享本地文件。\n\n## 11 套主题样文\n\n| 主题 | 文章 | 风格 |\n| --- | --- | --- |\n| Tufte | [咖啡因与睡眠：一份关于半衰期的笔记](../../demos/materials/reacticle/index.html?demo=caffeine-half-life) | 数据墨水风格：克制衬线、充裕页边、发丝参考线与低装饰图表，让论点和证据承载视觉层级。 |\n| Press | [活字之后](../../demos/materials/reacticle/index.html?demo=movable-type) | 出版书卷风格：暖纸与从容衬线，以线代框，保留数据墨水纪律，用更外放的字号和版式组织叙事。 |\n| Shannon | [连接池耗尽：一次结算级联故障复盘](../../demos/materials/reacticle/index.html?demo=pool-exhaustion) | 暗色工程风格：温暖石墨底、暖白墨与琥珀信号色，围绕日志、代码、事件与决策组织可核查证据。 |\n| Vignelli | [Orbit 设计系统 · 基础规范](../../demos/materials/reacticle/index.html?demo=orbit-spec) | 瑞士国际主义风格：冷中性纸面、无衬线字号层级、严密网格与一抹结构红，适合系统规范。 |\n| Knuth | [以核特征映射线性化自注意力：一个复杂度视角](../../demos/materials/reacticle/index.html?demo=linear-attention) | 学术预印本风格：正式衬线、编号章节和图表、公式优先与密集引用，强调推导和可核查性。 |\n| Freddie | [第一封 Newsletter：一份不端着的上手指南](../../demos/materials/reacticle/index.html?demo=first-newsletter) | 温暖人文风格：白纸黑墨与明黄荧光色块，俏皮衬线标题配干净无衬线正文，亲切且专业。 |\n| Andy | [把呼吸放慢：盒式呼吸与平静的神经科学](../../demos/materials/reacticle/index.html?demo=slow-breathing) | 静谧人文风格：暖奶油纸、南瓜橙、暖灰墨与圆润字体，大圆角、柔和阴影和留白帮助放慢节奏。 |\n| Bodoni | [头版的消亡](../../demos/materials/reacticle/index.html?demo=front-page) | 黑白报刊风格：纯白纸、真黑墨与发丝栏线，大字刊头、首字下沉和粗细双线建立印刷层级。 |\n| Bayer | [形、色、网格：看得懂的视觉语法](../../demos/materials/reacticle/index.html?demo=geometry-of-meaning) | 包豪斯构成风格：暖纸黑墨，以红蓝黄三原色、几何无衬线、硬边与圆形数字组织清晰结构。 |\n| Fuller | [限流器设计规格](../../demos/materials/reacticle/index.html?demo=rate-limiter-spec) | 工程蓝图风格：深蓝底、青白墨、制图青与淡方格网，搭配等宽标注、虚线分节和发丝拓扑。 |\n| Sottsass | [撞色不翻车](../../demos/materials/reacticle/index.html?demo=color-clash) | 孟菲斯风格：奶油纸、黑墨与粉青黄蓝撞色，以硬投影、轻旋转、彩色药丸和几何彩屑制造节奏。 |\n\n主题绑定与上游 `gallery.tsx` 完全一致。限流器文件名为 `RateLimiter.tsx`，实际组件导出为 `RateLimiterSpec`。样文保留原文、图形、公式、代码和交互；图库外壳中的官网导航、浮动返回信息和上一篇／下一篇不属于独立文章页面。\n\n## 关联工作流\n\n[beautiful-article](../../materials.html#material/beautiful-article) 提供来源整理、计划、写作、审阅、修复和交付流程，Reacticle 是它的组件与主题实现。主题写作资料见关联技能快照中的 `theme-profiles/`。\n\n## 本地资源与可访问性\n\n原站引入的 Newsreader、IBM Plex Sans、IBM Plex Mono、Source Serif 4、JetBrains Mono、Fraunces、Hanken Grotesk、Quicksand、Nunito、Playfair Display、Josefin Sans、Poppins 和 Space Grotesk 共 13 个字体家族、76 个 WOFF2 文件已本地化。保留原字重、样式与子集范围；中文继续使用原主题声明的系统字体回退。\n\n文章内目录、按钮、滑块与展开内容沿用原实现。减少动态使用原站 CSS；呼吸练习保留原始开始／暂停和计时逻辑。源码及依赖完整保留并不等于读屏器、真实触屏和所有浏览器的行为均已实测。\n"
+    },
+    {
+      "path": "prompts/materials/reacticle.md",
+      "role": "prompt",
+      "content": "# Reacticle · 长文排版组件库 · 复用 Prompt\n\n[结构化条目](../../entries/materials/reacticle.json)\n\n使用 Reacticle 0.2.6 的语义化 React 长文组件。先读 beautiful-article 对应主题的 profile，再从这 11 篇原作样文选择与文章目标一致的排版语言。通过公共入口导入 ThemeProvider、Article 与所需组件，沿用主题 token 与结构纪律；自绘 Raw 图形继续使用 --ra-* 变量。保持原始来源、论点与数据出处，图表只在帮助当前段落时加入，交互使用可访问的真实控件。参考样例时保留其完整组件与主题 CSS，不将主题简化为配色；需要离线分发时本地化字体并保留 MIT 声明和 OFL。\n\n## 制作约束\n\n- 固定 Reacticle 0.2.6 源码提交 dcfc4baf386bbc220cd1aa6274bed3b741108465；React 18.3 是上游声明的 peer 依赖，样例使用固定 lockfile 安装结果。\n- 每篇严格采用 apps/site/src/data/gallery.tsx 中的报告与主题组合；RateLimiter.tsx 导出的组件名为 RateLimiterSpec，11 个主题对应关系与任务表一致。\n- 组件、文章与主题 CSS 不作修改；独立入口保留原画廊文章容器及原站 CSS，省略官网导航、浮动返回标签与上一篇／下一篇。入口禁用 Prism 自动全页扫描，由原 React 组件保留逐行代码高亮。\n- 原站 13 个 Google Fonts 家族的 76 个 WOFF2 文件已本地化并附 OFL；中文沿用原主题的系统字体回退，不增加官网没有的中文网络字体。\n- 通过 HTTP/HTTPS 打开样例目录，JS、CSS、公式字体与本地化字体均使用相对路径；文章外链保留原作指向。\n- 原始 package.json 声明 MIT，但该固定提交的仓库内没有 LICENSE 文件；许可声明与实际缺失情况同时记录，不虚构上游许可文本。\n- 样文原文保持原样；主题风格说明为中文概括，依据 garden-skills 固定提交的 theme-profiles。\n- 样文中的交互、阅读辅助与动态行为沿用上游实现；源码保留不等于读屏器、真实触屏或所有浏览器已经完成实测。\n"
     },
     {
       "path": "demos/materials/reacticle/README.md",
@@ -1102,363 +1107,363 @@
     },
     {
       "path": "demos/materials/reacticle/fonts/LICENSE-katex-fonts-OFL.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-fraunces.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-hankengrotesk.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-ibmplexmono.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-ibmplexsans.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-jetbrainsmono.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-josefinsans.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-newsreader.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-nunito.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-playfairdisplay.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-poppins.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-quicksand.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-sourceserif4.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/OFL-spacegrotesk.txt",
-      "role": "context"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-001.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-002.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-003.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-004.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-005.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-006.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-007.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-008.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-009.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-010.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-011.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-012.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-013.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-014.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-015.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-016.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-017.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-018.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-019.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-020.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-021.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-022.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-023.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-024.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-025.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-026.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-027.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-028.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-029.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-030.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-031.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-032.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-033.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-034.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-035.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-036.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-037.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-038.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-039.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-040.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-041.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-042.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-043.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-044.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-045.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-046.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-047.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-048.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-049.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-050.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-051.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-052.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-053.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-054.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-055.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-056.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-057.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-058.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-059.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-060.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-061.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-062.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-063.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-064.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-065.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-066.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-067.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-068.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-069.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-070.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-071.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-072.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-073.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-074.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-075.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/font-076.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/reacticle/fonts/fonts.css",
@@ -3486,27 +3491,27 @@
     },
     {
       "path": "demos/materials/reacticle/source/vendor/fonts/google-fonts-original.css",
-      "role": "source"
+      "role": "process"
     },
     {
       "path": "demos/materials/reacticle/vendor/LICENSE-katex.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/reacticle/vendor/LICENSE-prismjs.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/reacticle/vendor/LICENSE-react-dom.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/reacticle/vendor/LICENSE-react.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/reacticle/vendor/LICENSE-scheduler.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/reacticle/vendor/NOTICE.md",
@@ -3514,11 +3519,11 @@
     },
     {
       "path": "demos/materials/reacticle/vendor/reacticle-MIT-declaration.txt",
-      "role": "context"
+      "role": "vendor"
     },
     {
       "path": "demos/materials/reacticle/vendor/reacticle-package.json",
-      "role": "context"
+      "role": "vendor"
     },
     {
       "path": "docs/materials/reacticle.md",
@@ -3531,6 +3536,10 @@
     {
       "path": "previews/materials/reacticle.png",
       "role": "preview"
+    },
+    {
+      "path": "prompts/materials/reacticle.md",
+      "role": "context"
     }
   ],
   "sourceFiles": [

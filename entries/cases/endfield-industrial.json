@@ -98,7 +98,7 @@
   "negativePrompt": "不要只做白底黄绿卡片或单人静图；不要用百分比CSS放大替代透明视频或虚构人物3D网格；不要把静态源码/数据已抽全写成每个运行状态通过；不要混入旧版本人物介绍、伪造实时业务或自动播放BGM。",
   "demo": "demos/cases/endfield-industrial/index.html",
   "preview": "previews/cases/endfield-industrial.jpg",
-  "research": "docs/research/endfield-industrial.md",
+  "research": "docs/cases/endfield-industrial.md",
   "exercise": "替换为有使用权的科研设备图像，保留斜线注册大字与竖向类别书脊，检验背景标签与正文在手机上仍有清楚的主次。",
   "composition": {
     "color": "源干员与工业白底/黑标签/淡网格/亮黄局部信号；首页活动原色、深色世界观和影像各保留，彩色人物与标定条不被统一染黄。",

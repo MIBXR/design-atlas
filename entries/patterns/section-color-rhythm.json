@@ -78,7 +78,7 @@
     "entries/cases/apple-product.json",
     "entries/cases/monument-valley-game.json",
     "entries/cases/stripe-platform.json",
-    "docs/research/monument-valley-game.md",
-    "docs/research/stripe-platform.md"
+    "docs/cases/monument-valley-game.md",
+    "docs/cases/stripe-platform.md"
   ]
 }

@@ -4,7 +4,7 @@
   "type": "agent-skill",
   "category": "Agent 工作流",
   "summary": "把已有材料经抽取、编辑规划、主题确认、逐节生成和审阅，制作成基于 Reacticle 的可分享网页文章。",
-  "install": "将 agent-skills/beautiful-article/ 复制到项目的技能目录并按所用 Agent 的发现方式启用；创作文章时按原文调用 scripts/scaffold.sh 创建 React、TypeScript 与 Vite 工作区。",
+  "install": "将 demos/materials/beautiful-article/ 复制到项目的技能目录并按所用 Agent 的发现方式启用；创作文章时按原文调用 scripts/scaffold.sh 创建 React、TypeScript 与 Vite 工作区。",
   "tags": ["长文排版", "编辑工作流", "Reacticle", "主题", "单文件 HTML", "信息保留"],
   "useCases": ["把 URL、PDF、DOCX 或 Markdown 编辑成网页文章", "保留材料信息的长文归档", "制作解释文、教程、研究报告或审阅复盘", "需要主题一致的图文与交互式讲解"],
   "avoid": ["没有材料或大纲却要求凭空生成完整内容", "后台、表单、拖拽工作台和完整仪表盘", "产品原型与通用网页应用", "未经用户确认就删减材料或选择交付形式"],
@@ -35,7 +35,8 @@
     {"title": "主题写作资料索引", "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/theme-profiles/index.json", "note": "11 份主题写作资料与运行时主题标识的对应依据。", "evidence": "source"},
     {"title": "技能版本声明", "url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/manifest.json", "note": "固定提交声明版本为 0.1.0；技能兼容声明不作为逐宿主运行实测。", "evidence": "source"}
   ],
-  "skillPath": "agent-skills/beautiful-article/",
+  "snapshotPath": "demos/materials/beautiful-article/",
+  "snapshotEntry": "SKILL.md",
   "workflow": [
     "确认目标是文章，收集源材料、目标语言和初步文章类型；将材料抽取成 Markdown，记录不确定项并检查抽取完整性。",
     "规划简报、大纲、主题与素材；按文章类型确定信息保留比例，默认保留完整信息。",
@@ -48,12 +49,12 @@
   "relatedEntries": [
     {"kind": "material", "id": "reacticle", "note": "skill 的 11 套主题由 Reacticle 实现，11 篇样文就在 Reacticle 的样例里；技能保存写作指导，组件库提供运行时。"}
   ],
-  "prompt": "先阅读 agent-skills/beautiful-article/SKILL.md，用我提供的材料制作网页文章。抽取材料并记录不确定项，提出编辑规划，逐项确认文章类型与信息保留、主题、宽度、配图和封面。先做首屏与第一节，确认后按节生成完整文章，保持文章阅读形态并使用 Reacticle 主题令牌。审阅和修复后再确认交付形式。主题选择可先打开 Reacticle 素材的 11 篇实际样文比较排版语言；未经确认不替我删减信息或导出 PDF。",
+  "prompt": "先阅读 demos/materials/beautiful-article/SKILL.md，用我提供的材料制作网页文章。抽取材料并记录不确定项，提出编辑规划，逐项确认文章类型与信息保留、主题、宽度、配图和封面。先做首屏与第一节，确认后按节生成完整文章，保持文章阅读形态并使用 Reacticle 主题令牌。审阅和修复后再确认交付形式。主题选择可先打开 Reacticle 素材的 11 篇实际样文比较排版语言；未经确认不替我删减信息或导出 PDF。",
   "accessibility": {
     "keyboard": "技能条目通过真实链接进入原文与 Reacticle 样例；创作文章时保留语义结构、可读目录，以及控件的键盘与焦点操作。",
     "reducedMotion": "本资源为工作流与文本快照，没有自动播放的演示；文章内自由图文层若带动效，需要在技术终审中检查移动端与可访问性。"
   },
   "preview": "previews/materials/beautiful-article.png",
   "research": "docs/materials/beautiful-article.md",
-  "sourceFiles": ["agent-skills/beautiful-article/SKILL.md", "agent-skills/beautiful-article/README.md"]
+  "sourceFiles": ["demos/materials/beautiful-article/SKILL.md", "demos/materials/beautiful-article/README.md"]
 }

@@ -9,7 +9,7 @@
   "implementation": "reference-study",
   "demo": "demos/cases/zenless-zone-zero/index.html",
   "preview": "previews/cases/zenless-zone-zero.jpg",
-  "research": "docs/research/zenless-zone-zero.md",
+  "research": "docs/cases/zenless-zone-zero.md",
   "fidelity": "demos/cases/zenless-zone-zero/fidelity.md",
   "assetManifest": "demos/cases/zenless-zone-zero/assets-manifest.json",
   "subtitle": "ZENLESS ZONE ZERO / OFFICIAL HOME SNAPSHOT",

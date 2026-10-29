@@ -59,7 +59,7 @@
   ],
   "sourceFiles": [
     "entries/cases/digital-dunhuang.json",
-    "docs/research/digital-dunhuang.md",
+    "docs/cases/digital-dunhuang.md",
     "demos/cases/digital-dunhuang/fidelity.md",
     "demos/cases/digital-dunhuang/index.html",
     "demos/cases/digital-dunhuang/style.css",

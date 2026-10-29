@@ -49,7 +49,7 @@
       "demos/cases/hand-drawn/script.js",
       "demos/cases/hand-drawn/style.css",
       "entries/cases/hand-drawn.json",
-      "docs/research/hand-drawn.md"
+      "docs/cases/hand-drawn.md"
     ]
   },
   "sourceCases": [
@@ -60,6 +60,131 @@
         "bundle": "agent/cases/hand-drawn.json",
         "demo": "demos/cases/hand-drawn/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/controlled-rough-outlines.md",
+      "role": "prompt",
+      "content": "# 受控不规则轮廓 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/controlled-rough-outlines.json)\n\n为【目标页面/组件】实现「受控不规则轮廓」。用固定SVG曲线、有限双线与统一排线密度制造手绘感；正文和操作边界保持清楚稳定。触发：浏览插画与短批注。可见结果：可感受到手工气质而不失去阅读秩序。适用任务：创作、文具与教育入口。不规则只作用于插画与短批注，不能侵入触控区。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责可感受到手工气质而不失去阅读秩序，职责限定在当前区域。组合时不规则只作用于插画与短批注，不能侵入触控区。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 不规则只作用于插画与短批注，不能侵入触控区。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/hand-drawn/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/hand-drawn/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/hand-drawn/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/hand-drawn.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/hand-drawn.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/controlled-rough-outlines.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/hand-drawn-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/hand-drawn.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/hand-drawn.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/controlled-rough-outlines.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

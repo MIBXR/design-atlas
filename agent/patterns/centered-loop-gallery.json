@@ -93,10 +93,10 @@
       "entries/cases/monument-valley-game.json",
       "entries/cases/persona-kinetic.json",
       "entries/cases/philharmonie-music.json",
-      "docs/research/fuji-rock.md",
-      "docs/research/monument-valley-game.md",
-      "docs/research/persona-kinetic.md",
-      "docs/research/philharmonie-music.md"
+      "docs/cases/fuji-rock.md",
+      "docs/cases/monument-valley-game.md",
+      "docs/cases/persona-kinetic.md",
+      "docs/cases/philharmonie-music.md"
     ]
   },
   "sourceCases": [
@@ -131,6 +131,655 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/cases/philharmonie-music/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/centered-loop-gallery.md",
+      "role": "prompt",
+      "content": "# 中心图与邻图预告的循环轨道 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/centered-loop-gallery.json)\n\n为【目标页面/组件】实现「中心图与邻图预告的循环轨道」。同一水平轨道移位，中心图清晰、邻图部分露出；首尾以克隆衔接后复位，手动与自动状态共享索引。触发：箭头、索引、触摸或自动周期。可见结果：浏览连续且下一项有可见预告。适用任务：作品与演出摄影画廊。克隆仅用于视觉，真实焦点与索引按内容ID管理，自动推进提供暂停。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：负责视觉连续与邻图预告，适合没有明确首尾次序的作品集合。与有界人物/玩法轨道的边界规则不同；同一轨道不能同时循环与首尾禁用。\n\n## 制作约束\n\n- 克隆仅用于视觉，真实焦点与索引按内容ID管理，自动推进提供暂停。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4spc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/4AS4QwyCS1efKr65S46uaPdnyKlI2c2PJ46xsn4ssp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aC8sy0ycHbxdRqtlOkZQXy8CrGnlxFEKz3yPwGxJ.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjpc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/aTIiCxTF0FbTasM3Dpxb7B9pdYwG5HI5l4x2tLfjsp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/buy_ticket.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/logo_mountain.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/logo_type.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon02.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon04.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon05.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon06.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/nav_icon11.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon07.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon08.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon09.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/punav_icon10.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/teHObwbhgXgjKLqX8HrBRJln7mxMNiwc5nSEcBsA.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/W2upzapTzUVTHJJK0lsN7vMw4gUaVuSQWU6Z2qUb.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJpc.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/wtdrdF0xM8yaZQoCtKBNOnud4e7Zf5LgOWNPfXVJsp.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/assets/xQh5p3rAKkRkA04nH6TGqX7Pnp7hYgJ947xpjHyJ.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/fuji-rock/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/fuji-rock/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/source/assets/source-style.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/fuji-rock/source/screenshots/fuji-rock-menu-source.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/fuji-rock/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/10-b44ce70c.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/11-bc582657.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/12-c9d7501d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/13-981028d4.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/15-56207bdd.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/16-89042586.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/17-9f2e87bd.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/3-6cd6eb91.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/4-8f27e7fa.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/5-ecebe13c.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/6-d85fcf35.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/7-802e623e.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/8-513af37d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/9-69d2baed.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/appstore-badge-d0558d91.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/background-006780ed.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/googleplay-badge-67e13ee2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/Humanist521BT-Bold.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/Humanist521BT-Roman_1.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/logo-6a71a66e.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/monument-friends-a53de6d4.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/mv-trailer-a0b9cbc1.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/style.css",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/trailer-landscape-poster-e2193d06.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/ustwo-games-logo-f5327f6a.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/wreath-left-965e57a1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/assets/wreath-right-10f731c4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/ann-school.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/ann-thief.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/arsene.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/captain-kidd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/carmen.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/carousel_arrow_left.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/carousel_arrow_right.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/characters-en.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/dot.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/hero.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/joker-school.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/joker-thief.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/logo.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/now-en.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/phantom_life_ss1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/phantom_life_ss2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/phantom_life_ss3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/ryuji-school.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/ryuji-thief.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/school_life_ss1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/school_life_ss2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/school_life_ss3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/school_life_ss4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/school_life_ss5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/school.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/star1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/star2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/star3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/star4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/star5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/star6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/assets/title-en.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/source/assets/phantom.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/source/assets/star.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/source/screenshots/persona-character-source.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/persona-kinetic/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/benjamin.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/exhibition.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/installation-1.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/installation-2.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/kamei.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/philharmonique-bold.otf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/philharmonique.otf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/sprite.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/stulz.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/fuji-rock.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/monument-valley-game.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/persona-kinetic.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/philharmonie-music.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/fuji-rock.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/monument-valley-game.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/persona-kinetic.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/philharmonie-music.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/centered-loop-gallery.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/fuji-rock-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/fuji-rock-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/fuji-rock.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/monument-valley-game-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/monument-valley-game-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/monument-valley-game.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/persona-kinetic-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/persona-kinetic-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/persona-kinetic.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/philharmonie-music-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/philharmonie-music-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/philharmonie-music.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/fuji-rock.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/monument-valley-game.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/persona-kinetic.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/philharmonie-music.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/centered-loop-gallery.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

@@ -48,7 +48,7 @@
     "sourceFiles": [
       "demos/cases/swiss-grid/index.html",
       "entries/cases/swiss-grid.json",
-      "docs/research/swiss-grid.md"
+      "docs/cases/swiss-grid.md"
     ]
   },
   "sourceCases": [
@@ -59,6 +59,123 @@
         "bundle": "agent/cases/swiss-grid.json",
         "demo": "demos/cases/swiss-grid/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/aligned-metadata-rows.md",
+      "role": "prompt",
+      "content": "# 编号与元数据对齐列表 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/aligned-metadata-rows.json)\n\n为【目标页面/组件】实现「编号与元数据对齐列表」。用稳定列宽组织每行的编号、名称、类别、日期与收藏；手机将次级元数据折到名称下方。触发：逐行浏览目录。可见结果：同类事实沿纵向落在固定位置。适用任务：多日期活动与资源清单。小屏操作仍可触达，筛选后不得失去字段标签。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责同类事实沿纵向落在固定位置，职责限定在当前区域。组合时小屏操作仍可触达，筛选后不得失去字段标签。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 小屏操作仍可触达，筛选后不得失去字段标签。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/swiss-grid/index.html",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/swiss-grid.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/swiss-grid.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/aligned-metadata-rows.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/swiss-grid-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/swiss-grid.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/swiss-grid.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/aligned-metadata-rows.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

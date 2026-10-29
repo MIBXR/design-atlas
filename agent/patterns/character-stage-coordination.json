@@ -89,11 +89,11 @@
       "entries/cases/arknights-world.json",
       "entries/cases/blue-archive.json",
       "entries/cases/genshin-world.json",
-      "docs/research/arknights-world.md",
-      "docs/research/blue-archive.md",
-      "docs/research/genshin-world.md",
+      "docs/cases/arknights-world.md",
+      "docs/cases/blue-archive.md",
+      "docs/cases/genshin-world.md",
       "entries/cases/zenless-zone-zero.json",
-      "docs/research/zenless-zone-zero.md",
+      "docs/cases/zenless-zone-zero.md",
       "demos/cases/zenless-zone-zero/app.js",
       "demos/cases/zenless-zone-zero/data.js",
       "demos/cases/zenless-zone-zero/fidelity.md",
@@ -136,6 +136,1967 @@
         "bundle": "agent/cases/zenless-zone-zero.json",
         "demo": "demos/cases/zenless-zone-zero/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/character-stage-coordination.md",
+      "role": "prompt",
+      "content": "# 人物、背景与资料成组换态 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/character-stage-coordination.json)\n\n为【目标页面/组件】实现「人物、背景与资料成组换态」。选中人物统一更新立绘、姓名、简介、肖像与背景/资料卡；人物阶段或服装作为独立状态，避免图片和声音归属错位。触发：选择人物或阶段。可见结果：人物身份与当前场景共同可读。适用任务：角色档案与人物作品展示。保留完整立绘比例，阶段内容子集明确，不能把原学院或全角色库说成已迁移。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责人物身份与当前场景共同可读，职责限定在当前区域。组合时保留完整立绘比例，阶段内容子集明确，不能把原学院或全角色库说成已迁移。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 保留完整立绘比例，阶段内容子集明确，不能把原学院或全角色库说成已迁移。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-voice.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/animation_m.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/animation.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/arknights-logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/background.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Bender-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Bender-Regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/bg2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/bgm.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-voice.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/common_mask.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/gallery_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/home-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/home.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-animation.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-integrated_strategies.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-reclamation_algorithm.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-terra_historicus.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/infected.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/integrated_strategies_m.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/integrated_strategies.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-voice.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/monster_siren_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/news-yesterday-sea.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/nomadic_city.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Novecentosanswide-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Novecentosanswide-UltraBold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/official-three.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/operator_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/originium_arts.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/originiums.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Oswald-DemiBold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/particle.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reclamation_algorithm_m.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reclamation_algorithm.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reunion.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/rhodes_island.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/rhodes-island.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/terra_historicus_m.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/terra_historicus.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/video_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/world-models.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/particles.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/source/assets/home.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/arknights-world/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/01.bd71aff1.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/02.73ff260c.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/03.83e84e04.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/04.99faa124.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bg_cover.9bd1cfea.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bg.555a8a72.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bluearhive.f833c198.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/character-background-mobile.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/character-background.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/comicEntry.2de61182.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/ffcLogo.f1e83d2f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/google-play.8c692266.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/help-enter.69f99d8a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/hoshino-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/hoshino.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/ios-play.02d9f9a4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/LogoJP.92d9dcd0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/nonomi.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-abydos-card.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-abydos.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-gehenna.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-millennium.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-trinity.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/serika.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/shiroko-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/shiroko.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/slogan.1ab23877.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/student-card.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/voice-label.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/voice-microphone.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/windows.2b8dd344.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/yostarBottom.6aef7d4b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/character.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/blue-archive/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/source/assets/app.47b744a6.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/blue-archive/source/screenshots/blue-archive-character-source.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/blue-archive/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/calendar.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-background-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-background.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-icon-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-icon-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/download.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/hero-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/hero-title.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/hero.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/logo.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/microphone-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/microphone-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/page-background.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-1-1.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-1-2.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-1-3.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-2-1.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-2-2.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-2-3.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/genshin-world/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/genshin-world/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/genshin-world/source/assets/calendar-frame.webp",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/genshin-world/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/00210c17e090.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/0111f6566352.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/020fe3bbc2bf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/03b31fcb2f21.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/03ba8bd8139c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/03c69b23c691.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/03e18abeb42b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/03eeed850898.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/05a02722d29f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/0603254bc5fe.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/06ff9870a41c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/074fd4f8bc7c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/0762f6aefda1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/08ce4786a840.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/091928c8c55f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/0980ec96a683.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/09e86c388b24.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/0d1037513d7f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1130f76e48f5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/11ec068a38d3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1367a2555c30.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/140d2ff39bd8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/15cc30cb128e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1628b9211f34.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/163919b49af3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/164309b35775.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1a422c32ab16.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1ab9e2e9ab8c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1ad11214bc51.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1b8c53faf03e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1bb805db728f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1d29b1cb3dcf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1d370378b478.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1f6a9f77af08.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1fca980a5638.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/1feca365d8dc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/20093fbc4b9f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2049fbe4ecda.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/205995ca8e0a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/20683f70f624.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/21cc93e90969.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/23e707e5323b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/25eda5279049.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/273f61069244.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/277ceaf3bdc6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/28041419b2f9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/28136c19d804.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/28289bb2dd2d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/282efa61968c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/295c797432f6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2b73d2b77f90.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2bbc2f585f24.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2e8ff44bc86b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2eb94897f5a2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2f376952ad38.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2f821bb624bc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2f86ebda6ac5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/2ffe7a617dd9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3072f5d1a900.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/30803faef6e8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/308c84cd426d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/319ef9e69f0f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/322f5c0a11e0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/336e865ee0ca.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/33d47f31c266.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/351a831ae237.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3728fc7f65b8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/380ede366a5c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/384f9f2d6190.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/39256c03ca2d.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/39fa70e516ea.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3ab719fbe782.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3b01f467440d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3b394e514980.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3b717aa07221.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3dca28daba9b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3e5e10ef80aa.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/3ef8b4335733.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/405b72f6bdb6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/41448b0ea215.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/41b26fd93414.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/41c487d42fcc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/435374d1aaf3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/44ea5c78ce7e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/463339f4ddb9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/46370985d48e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4637d8c0a17f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4662d1040b39.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/46ec9bafb74a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4763607d7074.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/499fac8901fc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4a2319db5630.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4a6e62458766.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4ae1d49f2eea.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4b79c47ecf87.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4b9a82720684.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4ce3a958a45f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4ce595f1138e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/4cf723037fba.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/501bf1255fc0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/516be2f7c99f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/52a75307a459.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5374db89f762.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/53c98eba4954.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/544c871eb82a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/550172f4ee8c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/552aafb328b3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/553fbc7ffb54.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/56076ef718f5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/58ad4025d73e.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5926a3a97d94.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5944f95eadfc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/59c418da94f9.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5a6c24a8c86d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5a78234d0ad1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5aa202beb676.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5af869559309.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5d7e3b7dfbe2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5df459aecfab.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5e4b3c8276cc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5e7a3946f03b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/5fec48168eee.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/630c6b9af435.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/636cf1a6273a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/63f3a70d6a70.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6587505aecee.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/65df6f5b4831.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6667990cb536.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/66d75453e7ed.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/67038c574080.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6707fbb22286.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/698fe257ece1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6be0a5700f5b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6cc5806c0bad.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6ddfb3a8d8da.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6e940e66546f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6ebc713f824d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6f24f8531434.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6f409f538c6d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/6fc061872d5e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/700b51cb7742.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/739400aeba2c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/7489d8f76e84.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/75ea0b230b61.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/76e6688aa327.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/7720875938d1.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/77ee9cdb8daf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/77f617c27190.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/78242a542ac7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/785199501d67.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/786896549e26.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/790b9db1f7b3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/7967840ab282.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/79d1d1b06160.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/7c7fd3c5988c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/7d4a46bdb796.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/7d883b5057b2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/7f31980b362a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/7fabbc3c4a77.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8033511fffbc.woff",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/82b51964e335.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8397a5ceba8f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/841aaf2fd9c1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8486f57f3890.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/84b72a86b805.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/85f5f87e24a3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/862590df3619.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/884434c16d98.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8c0b53eed262.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8c6b3b4b57b5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8c7fc524a3d0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8d12d894c0e5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8d27d2e42796.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8d868879c619.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8e11f0c9530d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8e7d7ea81975.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8f20637ed5ee.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8fdddfeedea4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/8ff3770e78d1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/90737ae02889.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/916b56bbbd6f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/92d5f2398a1d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/93f5c4427235.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/93f946c812c8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/942dbc23dd42.ttf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/94b1a02719cb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/954a7c985b8f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/95de6eec44bb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/9721c1d67dbd.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/97bf0cd28ad2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/99ad142d9ba5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/9a9e73bcb11f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/9b56086c41e6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/9b9f76ce26e6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/9c6e79f6b957.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/9ce3af2836af.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/9d0f8e0bc825.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/9f3a2c3ac723.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a033ff16c93d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a0aa2e59e321.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a2012521521f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a2f223e35b7b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a395e6dbb1c0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a3bbfd8b38d1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a41e65c454da.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a641689a40fc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/a75acca82b9f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/aa1f4529f759.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/aac672c88b24.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ac2f053e7417.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ac97215d024f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ad9eeb8339ed.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ae890d29297d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/aeb428229020.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b151bb13743f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b15e5b4bfeb3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b1949bf8297f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b26e5d42ad19.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b29097fe4dab.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b43f51d3fd94.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b710c1832fd8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b7f3765fa22b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b80daabf5145.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b837ba352a4e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b88911fe59c5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b8a42c8533f9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/b9dc02c6e0cf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/bb3ddfb47082.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/bd7cd0b859c0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/bdb9a108a870.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/bec8ee6738a7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/bgm.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c057124f26c7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c05743e9ac9e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c11fc0ade9c1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c140de5e9351.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c23e27a8f7e6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c24047d75b12.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c29fcafb19d1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c3ff1eed297e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c54a8dfc7546.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c75bcdb7366a.gif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c8051ed2b30a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c8a90dbd2e58.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c8eaf1796222.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/c97c463b12de.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/cad372f589d6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/cbe715fd7c68.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ccddeead1810.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ccf29f5792e0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ce5a0b320be5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/cfc0070f735c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d064d1faf817.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d0d2e01e5318.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d37a1dd86f6e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d39ea3518896.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d3fa7feb86c4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d45f6d89e28e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d4cea241c55b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d53072d357c3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d685aff9cdfe.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d7642ddb517c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d8388725cad1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/d90c8d9d4afc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/da4ca88fa4e5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/db1eb4676fd4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/db901ebb7505.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/db9a27ea69f1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/dbb041966ab8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/dea0f38d4288.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/df21cfaa3cbc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e225692afdec.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e23cb144988d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e3861e10e0a4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e3d1dbf33e39.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e3edae50b8b5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e5408763f16a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e7c4eec4ecdf.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e99f79eb85ab.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e9c57220a025.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e9cba6871c1c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/e9e73cc7dace.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ea0095968bd7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ea748e8b9701.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/eb0a40c25e36.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/eb86ca60bff1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ec05d52b1403.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ec0a66602869.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/eca41240cee2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ed6e107f022b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/edbff5dac501.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f0abc6332be1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f2410542c487.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f26bc3215991.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f2897f605ae5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f63974c78324.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f65a18789532.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f6ec4da12571.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f7de8c908e04.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/f8a2fb19fa1d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/fcc3688f3f59.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/fcd2526e80b8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/fd5e48c5e8c3.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/fd7b07a1b5fc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/fdafb11a7a14.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/fdfdb54554e6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/feaadba2dd0d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/feba0de5ee92.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ff00f66e2799.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/assets/ffa19bf13828.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/data.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/mobile.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/reference-mobile.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/reference.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/state.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/arknights-world.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/blue-archive.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/genshin-world.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/zenless-zone-zero.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/arknights-world.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/blue-archive.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/genshin-world.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/zenless-zone-zero.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/character-stage-coordination.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/arknights-world-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/arknights-world-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/arknights-world.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/blue-archive-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/blue-archive-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/blue-archive.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/genshin-world-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/genshin-world-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/genshin-world.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/zenless-zone-zero-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/zenless-zone-zero.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/arknights-world.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/blue-archive.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/genshin-world.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/zenless-zone-zero.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/character-stage-coordination.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

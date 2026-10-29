@@ -65,7 +65,7 @@
     "demos/cases/stripe-platform/wave.js",
     "entries/cases/notion-editorial.json",
     "entries/cases/stripe-platform.json",
-    "docs/research/notion-editorial.md",
-    "docs/research/stripe-platform.md"
+    "docs/cases/notion-editorial.md",
+    "docs/cases/stripe-platform.md"
   ]
 }

@@ -45,6 +45,6 @@
   "sourceFiles": [
     "demos/cases/pixel-world/index.html",
     "entries/cases/pixel-world.json",
-    "docs/research/pixel-world.md"
+    "docs/cases/pixel-world.md"
   ]
 }

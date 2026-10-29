@@ -64,8 +64,8 @@
     "entries/cases/bauhaus-geometry.json",
     "entries/cases/retro-80s.json",
     "entries/cases/shape-morph.json",
-    "docs/research/bauhaus-geometry.md",
-    "docs/research/retro-80s.md",
-    "docs/research/shape-morph.md"
+    "docs/cases/bauhaus-geometry.md",
+    "docs/cases/retro-80s.md",
+    "docs/cases/shape-morph.md"
   ]
 }

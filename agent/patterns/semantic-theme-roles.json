@@ -53,7 +53,7 @@
       "demos/cases/google-material/index.html",
       "demos/cases/google-material/style.css",
       "entries/cases/google-material.json",
-      "docs/research/google-material.md"
+      "docs/cases/google-material.md"
     ]
   },
   "sourceCases": [
@@ -64,6 +64,255 @@
         "bundle": "agent/cases/google-material.json",
         "demo": "demos/cases/google-material/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/semantic-theme-roles.md",
+      "role": "prompt",
+      "content": "# 语义颜色角色整体切换 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/semantic-theme-roles.json)\n\n为【目标页面/组件】实现「语义颜色角色整体切换」。按surface/on-surface、primary/on-primary等角色一起切换，保存手动值并明确系统变化时的优先规则，媒体保持原色。触发：手动选择或系统主题改变。可见结果：深浅环境中阅读与品牌层级都保持一致。适用任务：有双主题设计的系统与产品。本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。键盘：主题开关可聚焦、有当前名称/状态；系统策略同时以文字说明。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责深浅环境中阅读与品牌层级都保持一致，职责限定在当前区域。组合时本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 本例系统变化清除手动值的来源策略不必泛化；目标任务需说明优先级。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/google-material/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/google-material/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/google-material/assets/google-sans-475.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/google-sans-text-400.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/google-sans-text-500.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/google-sans-text-700.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/google-symbols-300-600.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/hero-poster.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/hero.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/material-logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncu38ac-home1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncu5a6f-home.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncu6xu7-home2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncu7vjc-home3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncuan2l-home5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncug5qb-home9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncuj9kj-home6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncukpj9-home7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mnculsfx-home8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncunw7s-home10.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mncup23w-home11.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpmb3q7e-homepage1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpmbh0do-homepage2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpmbr5ty-homepage3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpmc1ezt-homepage4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpme6ojb-homepage5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpmebssm-homepage6.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpmewref-m3-social.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpmf99wi-m3-social.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/assets/mpmfahpc-m3-social.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/google-material/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/google-material/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/google-material/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/google-material.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/google-material.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/semantic-theme-roles.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/google-material-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/google-material-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/google-material.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/google-material.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/semantic-theme-roles.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

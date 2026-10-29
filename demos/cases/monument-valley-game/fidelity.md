@@ -20,4 +20,4 @@
 
 背景暂停、画廊暂停、键盘/Home/End、后台与离屏节流、可见焦点和减少动态是本地明确的易用性扩展。减少动态（系统偏好或`.?motion=reduce`）下，背景初始停止、画廊不自动推进、手动切换即时、奖项保持可读。原站CSS没有同一减少动态分支，不声称整站合规。
 
-[设计研究](../../../docs/research/monument-valley-game.md) · [Prompt](../../../prompts/monument-valley-game.md) · [桌面预览](../../../previews/cases/monument-valley-game.jpg) · [手机预览](../../../previews/cases/monument-valley-game-mobile.jpg) · [Demo源码](index.html)
+[设计研究](../../../docs/cases/monument-valley-game.md) · [Prompt](../../../prompts/cases/monument-valley-game.md) · [桌面预览](../../../previews/cases/monument-valley-game.jpg) · [手机预览](../../../previews/cases/monument-valley-game-mobile.jpg) · [Demo源码](index.html)

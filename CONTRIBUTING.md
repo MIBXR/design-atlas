@@ -1,6 +1,6 @@
-# 添加与维护案例
+# Web Atlas 收录与维护
 
-品牌案例以采集页面的实际布局、素材和交互为依据；经典风格练习以原作者实例和理论为依据。同一布局只换配色不算不同设计。
+品牌案例以采集页面的布局、素材和交互为依据，经典构成练习以原作者实例和理论为依据；同一布局只换配色归为同一设计。
 
 ## 收录边界
 
@@ -11,7 +11,7 @@
 - 能从案例中单独借用的视觉、微动效、页面动效、声音与内容组织巧思
 - 组件库、字体、图像、Shader 等内容素材
 - 经典设计语言的构成练习
-- 示范作品：由公开发布的 skill 或生成工具产出、随来源仓库公开的示范页面。它不是真实品牌网站，内容可能是虚构的。归档对象是来源仓库的固定提交。
+- 示范作品：由公开发布的 skill 或生成工具产出、随来源仓库公开的示范页面，按固定提交归档，页面设定作为示范内容。
 
 案例分类包括产品与平台、游戏与 IP、经典设计语言、示范作品、艺术与文化。示范作品的研究重点是“页面用了哪些设计机制”；有基线版本时，再写“与基线相比改进了什么”。虚构内容不当作真实机构的事实来描述。
 
@@ -28,12 +28,69 @@
 
 ## 收录原则
 
-- **案例驱动**：不把 skill 或教程的文字直接搬进库。找出其中真实的 Demo 或作品，忠实复刻后收录；没有现成作品、但能实践的，自己做一个作为真实案例收录。
-- **忠实复刻**：目标是成品与原作一致，不是逐行照搬原代码。复用原作的代码、美术、字体、音频、品牌内容与文案，不简化、不臆造；与成品无关的历史包袱（另一版剪辑的分支、开发调试工具、过程中间文件）不带进库。原作缺数据或代码与成品不符时，以公开成品为准尽量补全；确实无法复刻的部分可以降低标准，在 `fidelity.md` 写明。附原作许可证，写清出处与署名。验收时在相同视口下与原作并排截图对照。
+- **案例驱动**：案例以真实 Demo 或作品为依据；没有现成作品、但能实践的，制作一个真实案例。skill、提示词与教程的原文按素材收录，作品与指导资料分别归类。
+- **忠实复刻**：目标是成品与原作一致，不是逐行照搬原代码。复用原作的代码、美术、字体、音频、品牌内容与文案，不简化、不臆造；与成品无关的历史包袱（另一版剪辑的分支、调试代码、无人读取的中间文件）不带进库。原作缺数据或代码与成品不符时，以公开成品为准尽量补全；确实无法复刻的部分可以降低标准，在 `fidelity.md` 写明。附原作许可证，写清出处与署名。验收时在相同视口下与原作并排截图对照。
+- **保留制作依赖**：收录是为了日后参考、学习和复现制作。成品运行所需之外，制作该作品必需的工具与依赖一并保留：素材生成与处理脚本、构建所需的上游源码、配乐合成库与采样，以及这些脚本读取的数据。条目专属的放在条目本体的 `source/`；多个条目共用的作为素材收录在 `demos/materials/<id>/`，由条目引用。与本库已有工具完全等价的可以不收，在条目说明中写明对应关系。
 - **语言**：网页上的说明文字一律用中文。保留原语言的只有被复刻作品本身的原文，以及作为素材收录的 skill、prompt 原文。
 - **声音**：新做的作品不用 AI 合成声音。用一条连续的公开音乐打底（如 Incompetech / Kevin MacLeod，CC BY 4.0），在 3–4 个关键节点放短音效（如 Kenney.nl，CC0），音量压在音乐之下。复刻作品沿用原作声音。
 
 复刻范围是约定参考页面的全部公开模块及定义性交互；教学用途不改变原站的字体、布局、媒体、切换和动效。来源权利记录、账户／交易外链与复刻精度分别处理。
+
+## 三类组织规范
+
+内容分为案例 `cases`、巧思 `patterns`、素材 `materials`，同一条目在各目录使用相同英文 kebab-case id。目录按实际内容建立。
+
+| 一级目录 | 角色 | 组织 |
+| --- | --- | --- |
+| `entries/` | 内容源：结构化条目 | `{cases,patterns,materials}/<id>.json` |
+| `demos/` | 内容源：条目本体 | `{cases,patterns,materials}/<id>/` |
+| `docs/` | 内容源：人读文档 | 根目录为通用文档；`{cases,patterns,materials}/<id>.md` 为单条文档；`readme/` 为 README 配图 |
+| `prompts/` | 生成的 Prompt | `{cases,patterns,materials}/<id>.md`，条目有 `prompt` 时生成 |
+| `agent/` | 生成的读取接口 | 根目录为 `catalog.json`；`{cases,patterns,materials}/index.json` 为单类索引，`<id>.json` 为资料包 |
+| `previews/` | 截图与生成预览 | `{cases,patterns,materials}/<id>.<ext>`；变体用 `-portrait`、`-mobile`、`-reference`；作者效果图放 `materials/<id>/` |
+| `data/` | 生成的站点数据 | 按用途平铺 `cases.js`、`patterns.js`、`materials.js`、`docs.js`、`asset-sources.js` |
+| `site/` | 站点代码 | `shared/`、`pages/<页>/`、`runtime/`、`playground/`、`vendor/`、`icons/` |
+| `scripts/` | 构建、服务、取材和维护工具 | 按工具命名 |
+| 根目录 | 页面与项目入口 | `index.html`、`cases.html`、`patterns.html`、`materials.html`、`lab.html`、`agent.html`、`docs.html`，三份根文档、`package.json`、Git 配置和 `.openai/` |
+
+`asset-cache-worker.js` 位于根目录，使 Service Worker 作用域覆盖 `demos/`。共享巧思示意的入口、脚本、样式与说明位于 `site/playground/`，对应方法见 [巧思体验类型](docs/pattern-experiences.md)。
+
+### 条目本体
+
+案例目录保存作品运行文件、素材、`source/`、复刻作品的 `fidelity.md` 及许可索引 `LICENSES.md`。`source/` 收集制作资料、上游源码与过程证据。
+
+```text
+demos/cases/<id>/
+├── index.html
+├── assets/
+├── fonts/
+├── vendor/<库>/
+├── source/
+├── fidelity.md
+├── assets-manifest.json
+└── LICENSES.md
+```
+
+巧思条目以 `sources` 与 `sourceFiles` 引用来源案例的机制和运行依赖；有独立本体时放入 `demos/patterns/<id>/`，素材和上游源码继续引用来源案例。
+
+可运行素材在 `demos/materials/<id>/` 保存样例页及 `vendor/`、`fonts/` 等运行依赖。文字类素材的该目录就是固定提交的原文快照，目录内只保存上游原文件与许可。`snapshotPath` 指向这个目录，`snapshotEntry` 指向先打开的主文档，Agent Skill 为 `SKILL.md`。文件收集按目录角色递归进行；素材 `type` 决定站点展示。
+
+### 文档分工与唯一位置
+
+`docs/` 根目录保存使用指南、方法、Prompt 写法、取材说明 `agent.md`、总览、国别比较、基础理论和巧思体验类型等通用文档。单个案例的原作分析和机制观察放在 `docs/cases/<id>.md`，案例索引由构建生成 `docs/cases/README.md`。素材的中文使用说明放在 `docs/materials/<id>.md`，总览为 `docs/materials/README.md`。有单条巧思文档时使用 `docs/patterns/<id>.md`。
+
+| 信息 | 唯一位置 |
+| --- | --- |
+| 来源、版本、许可、用途、适用／避用等结构化事实 | 条目 JSON；逐文件素材事实通过 `assetManifest` 引用素材清单 JSON |
+| 研究分析、机制观察 | `docs/<类>/<id>.md` |
+| 复刻删改、已接受差异、对照结果 | `demos/<类>/<id>/fidelity.md` |
+| 第三方许可原文与索引 | `demos/<类>/<id>/` 内许可原文和 `LICENSES.md` |
+| Prompt 文档、Agent 资料包、站点数据、案例索引 | 构建生成 |
+
+文档中心收录 `docs/**` 与 `prompts/**`；Demo 中的 `fidelity.md`、`LICENSES.md` 从条目详情与资料包提供。文档之间用链接引用已有信息。
+
+`README.md` 负责介绍与入口；本文负责收录规则、组织规范、字段、新增流程与验收；`AGENTS.md` 负责修改仓库时的操作约束。
+
 
 ## 站点设计与交互约束
 
@@ -42,13 +99,13 @@ Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、�
 | 范围 | 当前设计要求 |
 | --- | --- |
 | 导航 | 桌面顶栏负责页面切换，侧栏提供目录与相关入口；手机顶栏的单一“菜单”入口在“本页目录”和“全站导航”两个视图间切换，进入时先显示本页目录。主体顶部不重复添加案例库／巧思库切换按钮。站内链接使用清楚的文字，不加装饰箭头；外链可使用外链标识，上一项／下一项等方向控制保留必要方向表达。 |
-| 文案 | 页面名称表达位置或状态：案例库、巧思库、内容素材库、设计实验室、Agent 工作流；操作按钮表达动作。首页统计为纯文字，目录使用“案例分类”“巧思分类”“素材分类”。案例库默认按条目的 `order` 编号展示，编号不代表采集或入库时间。 |
+| 文案 | 页面名称表达位置或状态：案例库、巧思库、内容素材库、设计实验室、Agent 工作流；操作按钮表达动作。首页统计为纯文字，目录使用“案例分类”“巧思分类”“素材分类”。案例库默认按条目的 `order` 编号展示，编号用于既定展示顺序，采集日期见条目。 |
 | 收藏 | 案例、巧思与内容素材均可收藏，并使用同一个备份文件导入／导出；兼容已有案例收藏备份，导入合并有效条目。各库的备份弹窗只包含收藏；素材缓存由顶栏主题按钮旁的独立工具管理。侧栏工具使用相同文字缩进。 |
 | 侧栏 | 使用同一可收起菜单、文档区与底部 `LOCAL / SOURCE-BACKED`、归档日期说明。手机目录默认收在顶栏菜单中，选择后自动收起；案例与巧思日期来自关联案例归档，素材日期来自来源核验。 |
 | 首部 | 各库保留同一尺度、留白与层级的大标题和几何视觉；巧思库采用不同的几何构成。 |
 | 搜索与筛选 | 复用同一工具栏与控件高度。桌面空间足够时同排，窄屏按同一规则换行；巧思的体验类型、用途与来源筛选属于其功能差异。 |
 | 网格与卡片 | 相同页面宽度使用同一网格断点和列数。卡片图片在上并占满宽度，说明在下；标题、正文、标签、边框、悬停下划线及操作区复用案例卡片样式。 |
-| 字体 | 网站和用户界面的全部文本以最终渲染字号为准，至少为 `12px`，包括窄屏、缩放预览、地图标签、辅助信息和控件；相同职责的文字使用共享字号。小于 `12px` 的例外先取得用户同意。 |
+| 字体 | 站点正文、导航、标签、辅助信息与控件在桌面和手机最终渲染至少 `12px`；相同职责使用共享字号。案例、巧思、素材和嵌入 Demo 的画面内文字按作品设计确定。 |
 | 详情 | 共用返回与操作栏、标题、左侧 Demo／右侧说明的结构及响应式规则；预览统一适应面板、桌面 1440px、手机 ≤390px 与重播操作，高度按可用视口收敛，使控件在一屏内可操作；巧思保留机制、参数、组合、Prompt 和来源等专属信息。 |
 | 体验示意 | 工具栏提供按需打开的体验入口，跟随当前体验类型切换；不占用首部与筛选之间的固定大块空间。搜索同类型内容保留模拟状态，关闭或离开时释放声音等资源。 |
 
@@ -56,9 +113,9 @@ Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、�
 
 外层页面滚动超过一屏时显示共享“回到顶部”浮动按钮，避开手机本文目录与案例比较托盘；减少动态设置下立即回顶。
 
-文档中心复用现有 Markdown 阅读页，左侧列出静态发布范围内的全部公开文档并标明当前项；页脚“项目资料”提供入口。桌面三栏位于同一居中容器内，正文行宽有上限。右侧本文目录只列一、二级标题，窄屏收起，手机通过右下角浮动按钮展开，可关闭、按 Escape 或选择章节后收起，与标题栏的全站文档目录互斥。左侧初始展开当前文档所属分类；切换文档保留手动开合与侧栏滚动，进入新分类时仅展开目标分类。目录控制与分类标题在栏内置顶。
+文档中心复用现有 Markdown 阅读页，左侧列出`docs/**` 与 `prompts/**` 中的文档并标明当前项；页脚“项目资料”提供入口。桌面三栏位于同一居中容器内，正文行宽有上限。右侧本文目录只列一、二级标题，窄屏收起，手机通过右下角浮动按钮展开，可关闭、按 Escape 或选择章节后收起，与标题栏的全站文档目录互斥。左侧初始展开当前文档所属分类；切换文档保留手动开合与侧栏滚动，进入新分类时仅展开目标分类。目录控制与分类标题在栏内置顶。
 
-`scripts/build-documents.mjs` 按 `scripts/build-static.mjs` 的 `files`／`folders` 递归发现公开 `.md`。新增文档放在既有公开目录（如 `docs/`、`docs/research/`、`prompts/`）；根目录的新文件或新目录先纳入发布清单。项目指南使用固定标题，其余读取首个一级标题，无标题时用文件名。分类：案例 `research` 关联的研究归为“案例研究”，`docs/research/` 其余文档归为“研究方法与索引”，`prompts/` 归为“复用 Prompt”，其余归为“复现与素材”。`npm run build` 生成 `data/docs.js`。
+
 
 ## 观察与实现
 
@@ -68,12 +125,12 @@ Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、�
 4. 使用实际官方素材与正确比例。素材本地化并记录URL、归属、用途、尺寸和处理方式（转码、剪短）；不搬入追踪、统计、账户或支付逻辑。
 5. 声音：独立BGM、开场音、操作音、影片声音、外部播放列表分别描述，保留原站的启用／静音／暂停流程与原音轨。游戏页面逐一核对悬停、选择、切换、开合等操作音的时机、与视觉反馈的先后、音量与关闭/后台策略；桌面/手机入口、开关状态共享和键盘触发一并核对。原站没有的策略标为本地补充；无音乐的原站不加配乐。
 6. 主题：固定、系统、手动、系统＋手动分别描述。切换时协调背景、表面、文字、强调、边界；图像保留原色。没有切换的强IP／摄影风格保留固定主题，并说明其设计作用。
-7. `fidelity.md` 描述当前实现：触发、原站响应、本地对应、设计作用，以及已复现／近似／未验证的边界。交易／预约／账号可以链接原站。
+7. 研究记录触发、原站响应与设计作用；`fidelity.md` 记录本地对应、删改、已接受差异与对照结果。交易、预约和账号通过原站入口使用。
 8. **提取巧思**：按“一个触发与结果／一条构成规则”把可独立学习或组合的机制保存为 `entries/patterns/<id>.json`，完整案例保留它们如何协作。先搜索已有巧思，同一机制合并为多来源。
 
 ## 原站与本地的动态对照
 
-每个原站案例在研究中保留一份模块／状态矩阵，覆盖全部模块以及每种不同状态与分支：
+每个原站案例在研究中记录源端模块／状态，在 `fidelity.md` 中保留对应的对照矩阵，覆盖全部模块以及每种不同状态与分支：
 
 | 模块／状态 | 原站定位 | 起始条件与触发 | 原站可见响应与先后 | 本地对应 | 证据与判定 |
 | --- | --- | --- | --- | --- | --- |
@@ -91,92 +148,89 @@ Web Atlas 的案例库是站点界面的设计基准。案例库、巧思库、�
 
 Prompt写结构、尺度、素材、关键状态及交接、音乐和主题行为、响应式与减少动态处理。`prefers-reduced-motion` 保留内容、操作和状态；声音由用户启用，停止／静音控制可用。
 
-## 数据与文件
+## 条目字段
 
-终态文件包括 `entries/cases/<id>.json`、`docs/research/<id>.md`、`demos/cases/<id>/`、`previews/cases/<id>.jpg` 和 `previews/cases/<id>-mobile.jpg`。预览来自实际浏览器：桌面为横向、手机为纵向，扩展名与真实编码一致。素材清单包含本地字体、图像、音视频及必要的独立运行模块。
+### 案例
 
-```text
-demos/cases/<id>/
-├── index.html           入口页面与作品代码
-├── assets/              图片、音视频与数据
-├── fonts/               字体与许可原文
-├── vendor/<库>/         第三方运行库与许可原文
-├── source/              过程资料与复刻未使用的原站素材
-├── fidelity.md          当前复现范围
-├── assets-manifest.json 素材来源与用途
-└── LICENSES.md          已收录许可原文的位置与覆盖范围
-```
+`id` 对齐文件名；`order` 决定默认顺序。`title`、`subtitle`、`category`、`tags`、`summary` 描述案例；`useCases`、`avoid`、`principles`、`constraints` 与 `exercise` 提供取材和练习依据。`prompt` 与 `negativePrompt` 保存原始复用提示。
 
-`composition` 包含 color、typography、layout、imagery、shape、hierarchy、motion、coherence。`sources` 至少含真实实例与理论／规范，注明每条来源支持的结论。
+`composition` 包含 `color`、`typography`、`layout`、`imagery`、`shape`、`hierarchy`、`motion`、`coherence`。`tokens` 保存颜色等设计参数，`interaction` 保存机制。`sources` 包含真实实例和理论／规范及各自支持的结论。
 
-`themeBehavior` 包含 `mode`（fixed / system / manual / system-and-manual）、`default`（light / dark / system）、`control` 和 `designReason`。`soundBehavior` 包含 `kind`（none / background / video / external / interactive）、`control` 和 `interactionRole`。参考库显示主题与独立品牌Demo的主题分别管理。
+`themeBehavior` 包含 `mode`（`fixed`、`system`、`manual`、`system-and-manual`）、`default`（`light`、`dark`、`system`）、`control`、`designReason`；`soundBehavior` 包含 `kind`（`none`、`background`、`video`、`external`、`interactive`）、`control`、`interactionRole`。参考库与独立 Demo 分别管理主题。
 
-原站案例还需要 `implementation: "reference-study"`、`country`、`referenceUrl`、`capturedAt`（YYYY-MM-DD）、`fidelity`、`assetManifest`，可增加语言／年度标签与原站标准预览。国别指具体机构或创作来源。
+路径字段为 `research: docs/cases/<id>.md`、`demo`、`preview`，复刻作品另有 `fidelity` 和 `assetManifest`，可有 `referencePreview`。预览来自实际浏览器，桌面横向、手机纵向，扩展名与真实编码一致。
 
-以官方影像、宣传视觉等资料研究网页构成时，标记 `studyScope: "visual-adaptation"`，标题、摘要与研究写明这是网页转译，影像中的视觉观察与本地设计的交互分别记录。详情与类型标签显示“官方影像网页转译”，内容按实际用途进入现有分类。
+原站案例记录 `implementation: reference-study`、`country`、`referenceUrl`、`capturedAt`（`YYYY-MM-DD`），可加语言／年度标签。国别指具体机构或创作来源。官方影像等资料的网页转译使用 `studyScope: visual-adaptation`，标题、摘要和研究区分影像观察与本地交互；详情显示“官方影像网页转译”。经典构成练习用 `theoryVerifiedAt` 记录理论核验日期；缺失时显示“理论来源核验日期未记录”。
 
-经典风格练习的 `theoryVerifiedAt`（YYYY-MM-DD）记录归档时核验理论来源的日期；未记录时显示“理论来源核验日期未记录”。
+### 巧思
 
-## 设计巧思的数据与证据
+`title`、`summary`、`mechanism`、`trigger`、`effect` 分别说明名称、价值、机制、触发和结果；`useCases`、`avoid`、`constraints`、`prompt` 支持任务适配。`parameters` 是 `{name,value,note}` 数组，数值用字符串并注明实测、公开代码或本地拟合依据。
 
-`entries/patterns/<语义英文-kebab-id>.json` 是人工策展的内容源。字段与校验以 `scripts/build-patterns.mjs` 为准：`summary` 一句话说明价值；`mechanism`、`trigger`、`effect` 分别说明机制、触发和可见结果；`useCases`、`avoid`、`constraints`、`prompt` 用于适配真实任务。`parameters` 为 `{name,value,note}` 数组，数值使用字符串并注明来自实测、公开代码或本地拟合。
+`category` 使用视觉构成、交互反馈、滚动叙事、导航与状态、加载与媒体、内容组织。`experienceTypes` 至少一项且不重复：
 
-`category` 为视觉构成、交互反馈、滚动叙事、导航与状态、加载与媒体、内容组织。`experienceTypes` 是体验类型数组，至少一项、不重复，按该巧思的实际机制填写：
-
-| 值 | 体验类型 | 判断依据 |
+| 值 | 体验类型 | 依据 |
 | --- | --- | --- |
-| `visual` | 视觉构成 | 静态即可辨认的配色、字体、形状、图像或空间关系。 |
-| `micro-motion` | 微动效 | 控件、局部元素的交互反馈，或辅助主要信息的装饰、提示与进入退出。 |
-| `page-motion` | 主体与页面动效 | 整页开场、章节转场、滚动叙事，或承担主要信息的展示舞台与媒体交接。 |
-| `sound` | 声音与音效 | 音乐、操作音、人物语音、主动媒体声音及其启停与衔接；外部播放入口保留其站外边界。 |
-| `structure` | 信息与状态 | 内容组织、导航、条件筛选、状态协调等机制。 |
+| `visual` | 视觉构成 | 静态即可辨认的颜色、字体、形状、图像和空间关系 |
+| `micro-motion` | 微动效 | 局部反馈或辅助信息的运动 |
+| `page-motion` | 主体与页面动效 | 整页、章节、展示舞台和主要媒体的交接 |
+| `sound` | 声音与音效 | 音乐、操作音、语音、主动媒体及启停衔接 |
+| `structure` | 信息与状态 | 内容组织、导航、筛选和状态协调 |
 
-`composition.role` 的 `foundation`／`support`／`accent` 表示当前区域中的骨架、衔接、反馈职责。`notes` 解释具体协作或争夺状态的问题，`pairsWellWith` 和 `conflicts` 引用真实巧思ID。`accessibility.keyboard` 与 `reducedMotion` 写成可实施策略。
+`composition.role` 的 `foundation`、`support`、`accent` 表示骨架、衔接和反馈职责；`notes` 说明协作关系，`pairsWellWith`、`conflicts` 引用真实巧思 id。`accessibility.keyboard`、`reducedMotion` 写可实施策略。
 
-每个 `sources[]` 保存 `caseId`、精确 `locator`、`observation` 和 `evidence`，可选原始 `referenceUrl`／`capturedAt`。`observed` 表示归档资料记录的源端观察；`adapted` 表示本地原创或近似迁移；`inferred` 表示由公开代码／作者说明推断。`locator` 使用 `entries/cases/<case>.json#interaction/0` 这类JSON字段定位，`observation` 保存该定位值的完整原文（对象/数组保存JSON序列化文本）；来源字段改动后，旧观察原文与新字段不同时构建报错。归档日期沿用来源案例。
+`sources[]` 包含 `caseId`、精确 `locator`、`observation`、`evidence`，可加 `referenceUrl` 和 `capturedAt`。`observed` 表示源端观察，`adapted` 表示本地迁移，`inferred` 表示公开资料推断。`locator` 可用 `entries/cases/<id>.json#interaction/0` 等 JSON 字段定位；`observation` 保存定位值完整原文，对象／数组用 JSON 序列化文本。来源改动后原文不符时构建报错。归档日期沿用来源案例。
 
-`sourceFiles` 为真实仓库相对路径数组，覆盖定位字段、研究、复现边界和相关源码，每个文件都在至少一个来源案例包的文件清单中。完整运行依赖由来源案例清单提供，每个来源可回跳完整案例。
+`sourceFiles` 覆盖定位文件、研究、复现范围与相关源码，每个文件属于至少一个来源案例的文件清单。完整运行依赖由来源案例包提供；案例包中的 `patternIds` 提供反向关联。
 
-`npm run build` 同步 `data/patterns.js`、`agent/patterns.json` 和 `agent/patterns/<id>.json`，在案例包记录 `patternIds`（没有巧思的案例为空数组）。验收搜索、体验类型与来源筛选、详情Prompt、组合链接与完整案例回跳。
+### 素材
 
-## 内容素材的数据与演示
+`id`、`title`、`type`、`category`、`summary`、`tags` 描述素材；`upstream` 保存 `url`、`verifiedAt` 以及存在时的 `repository`、`version`、完整 `commit`；`license` 保存 `name`、`url`、`scope`、`notes`；`sources` 保存出处与依据。`useCases`、`avoid`、`constraints`、`prompt`、`accessibility` 说明使用边界。`research` 指向同 id 的中文说明，`preview` 指向素材预览，`sourceFiles` 列主要取材文件。
 
-内容素材以 `entries/materials/<id>.json` 为人工内容源，关联文档、`demos/materials/<id>/` 与预览。条目记录类型、分类、来源 URL／核验日期、许可范围、适用与避用场景、约束、Prompt、可访问性和可操作样例；来源有软件版本或完整 Git 提交时一并记录。字段校验以 `scripts/build-materials.mjs` 为准。每个样例的 `entrypoint` 指向已收录的真实 Demo，可用查询参数选择效果。字体、图片、声音等资源按实际用途提供试排、构图或播放样例。
+| `type` | 显示名 |
+| --- | --- |
+| `component-library` | 组件库 |
+| `image` | 图像 |
+| `sound` | 声音 |
+| `font` | 字体 |
+| `poster` | 海报 |
+| `agent-skill` | Agent Skill |
+| `prompt-kit` | 提示词套件 |
 
-素材不要求关联来源案例。素材包保留条目、文档原文及递归运行依赖清单，`sourceFiles` 列主要取材源码，并在该包 `files` 中记为 `source`。第三方文件保留原字节与权利说明，与官网付费内容或平台功能分开记录许可。
+可运行素材使用 `demo`、`demoNote` 和非空 `demos`；每个样例包含 `id`、`title`、`summary`、`entrypoint`，可有 `component` 与 `{name,value,note}` 参数数组。字体、图像、声音提供试排、构图或播放样例。
 
-`type: "agent-skill"` 显示为“Agent Skill”，无需 `demo`、`demos` 和 `demoNote`。它使用 `skillPath: "agent-skills/<id>/"` 指向固定提交的原文快照，保留 `SKILL.md`、`README.md`、完整目录和来源许可证；`workflow` 是非空中文步骤数组；`relatedEntries` 是 `{kind: "case"|"material"|"pattern", id, note}` 数组，关联 ID 必须真实存在，`note` 说明关系。可选 `gallery` 为 `{path, caption, replicated: false}` 数组，图片在仓库内，详情显示“作者产出效果，未复刻”。
+原文快照使用 `snapshotPath: demos/materials/<id>/` 与 `snapshotEntry`。Agent Skill 的 `workflow` 是非空中文步骤数组，`relatedEntries` 是 `{kind: case|material|pattern,id,note}` 数组且关联 id 存在。可选 `gallery` 是 `{path,caption,replicated:false}` 数组，作者效果图显示“作者产出效果，未复刻”。文字详情提供工作流、关联条目、原文主文档与 README；完整快照按目录递归进入包，Markdown 与许可保留原文。
 
-Agent Skill 详情沿用素材页的左右布局：左侧是工作流、关联条目、可选效果图及 `SKILL.md`／`README` 原文入口，右侧是使用边界、可访问性、来源和 Prompt。完整快照递归进入 `files`，其中 Markdown 与许可证同时保留 `documents` 原文。`scripts/build-static.mjs` 的 `folders` 包含 `agent-skills`，发布时保持原字节；`scripts/build-documents.mjs` 不扫描 `agent-skills`。
 
-`npm run build` 生成 `data/materials.js`、`agent/materials.json` 和 `agent/materials/<id>.json`。在同宽度下验收素材库／详情，检查真实效果运行、参数响应、输入、减少动态及不支持环境的后备。
+## 新增流程
 
-## 加载与素材分发
+### 案例
 
-本地原始素材保持原字节与尺寸。首屏必要图片、背景、可见字体与影片首帧在开场之前准备；后续区域按需提前加载，整站下载和未启用的BGM不作为进入条件。保留原站欢迎／加载机制，不叠加另一套开场。验收冷缓存与慢网络、失败重试、继续浏览、嵌入／独立打开和二次进入。
+锁定来源页面和范围，完成原站观察与状态记录。写入 `entries/cases/<id>.json`、`docs/cases/<id>.md`、`demos/cases/<id>/` 与 `previews/cases/<id>.<ext>`、`<id>-mobile.<ext>`；复刻作品附 `fidelity.md`、素材清单和许可索引。按机制提取巧思，并更新相关跨案例分析。运行 `npm run build`、`npm run check`，再按下节验收。
 
-大素材的GitHub备份使用公开仓库中的固定完整提交SHA。增加／改变素材时，先在功能分支提交并推送包含完整素材的代码，再运行 `node scripts/build-asset-sources.mjs --commit <已推送的完整SHA>`，提交生成的 `data/asset-sources.js`。原始来源与权利信息保存在各案例的 `assets-manifest.json`。
+### 巧思
 
-`npm run build:local` 保留完整静态素材；`npm run build:site` 在部署输出中省略已映射的大文件并重写引用。跨域媒体缓存只存成功的完整响应（不存404、未知地址或部分206响应），播放器拖动保留Range读取；缓存失败不阻断页面，应用代码与文档不被媒体缓存固定为旧版本。
+先搜索已有机制；同一机制合并多来源。写入 `entries/patterns/<id>.json`，定位真实观察与源码；独立本体、研究和截图按三类目录表放置。运行 `npm run build`、`npm run check`，验收搜索、体验类型和来源筛选、详情 Prompt、组合链接及完整案例回跳。
 
-## 验收与提交
+### 素材
 
-新增案例的流程：锁定来源与范围 → 原站全模块／状态观察和参数核对 → 写入 `entries/cases/`、研究、Demo 与预览 → 提取巧思 → 同步 README 画廊卡片、相关比较研究及公开文档 → `npm run build` → `npm run check` → 功能分支提交、推送并提出PR → 以已验证提交运行 `npm run build:site` 并发布。README 总数由构建生成，画廊介绍人工策展。
+锁定上游版本和许可。写入 `entries/materials/<id>.json`、`docs/materials/<id>.md`、`demos/materials/<id>/` 和 `previews/materials/`；第三方文件及文字快照保留原字节。运行 `npm run build`、`npm run check`，在相同桌面和手机宽度对照素材库与详情。实际操作样例参数、输入、减少动态和后备；文字素材打开 `snapshotEntry` 与关联条目。
 
-`npm run check` 检查页面引用的本地文件是否存在。实测1440px桌面与390px手机：初次进入、章节正反切换、快速操作、关键按钮、媒体启停、主题及减少动态；检查横向溢出、资源错误和焦点。
+构建同步三类 Prompt、单类索引、资料包、站点数据、文档目录、案例索引及 README 计数块。取材接口见 [Agent 工作流](docs/agent.md)。
 
-skill 新会话自动发现上游默认分支最新 SHA；新增案例／巧思无需改动 skill 仓库，数据 schema 或获取协议变化时同步更新 skill。未合并的功能分支可用其完整SHA发布到Site，并用 skill 的 `--ref <同一完整SHA>` 验证。
+## 验收与交付
 
-并行工作先统一范围、模块／状态矩阵与对照规则，分配明确的文件范围，再由主负责人独立验收。调试脚本、下载的整站源码、原始日志、临时截图和QA报告放在仓库外；变更背景与验证写入commit／PR。
+在相同视口、DPR、语言和主题下与原作对照，覆盖从首入到页尾及反向、定义性机制、媒体和声音、手机布局、键盘、减少动态、加载失败和返回路径。先检查独立 Demo，再检查站内嵌入；页面新增模块与既有页面在相同宽度并看。实际判定记录在作品的 `fidelity.md`。
 
-提交前获取最新主干并处理冲突，使用功能分支提出Pull Request。README、研究与复现范围描述当前可用内容。
+用包含全部交付文件的干净副本复验：从新目录运行 `npm run build`、`npm run check`，启动静态服务并重走必要入口与交互；运行所需文件均纳入 Git。`npm run check` 覆盖本地文件引用，浏览器验收页面行为。
 
-Agent 文件清单指向原始仓库路径。先构建资料并提交推送，再运行静态打包；打包要求工作树干净，并把当前提交的 GitHub Raw 基址写入部署索引 source。
+第三方素材保留原始字节、尺寸、许可和署名。`.gitattributes` 管理自有文本的 UTF-8／LF；原始素材与快照按 `-text` 保存。构建报告受 LF 规则约束的 CRLF 或混合换行路径，按项目规则修正后重新构建。
 
-### 跨平台换行与取材
+提交仅包含长期源码、内容、文档与交付预览；临时脚本、原始日志、截图、QA 报告留在工作区。提交与 PR 记录变更背景和验证结果。
 
-`.gitattributes` 将仓库自有文本统一为 UTF-8／LF；`demos/**/assets/**`、`site/vendor/**` 的 `-text` 文件与二进制素材保留原字节。构建在 Git checkout 中拒绝受 LF 规则约束的 CRLF／混合换行并列出路径。遇到换行问题用 `git ls-files --eol` 查看，修正后重新构建。取材和导出按二进制读写文件。
+### 素材分发与发布
 
-提交并推送后，用 skill 的 `--ref <完整提交SHA>` 读取采用的案例、巧思或素材，并导出到新目录检查入口与必要文件。发布使用同一源码提交打包，发布后核对线上 catalog.source 与关键交互。
+本地完整素材先写入功能分支并推送，以已推送完整 SHA 更新 `data/asset-sources.js`；来源与权利由案例素材清单记录。`npm run build:local` 保留完整素材，`npm run build:site` 在输出中使用固定 GitHub 素材地址并省略对应大文件。文字快照按原字节发布。
 
-托管方的源 Git 上传限制无法接收完整媒体历史时，用 Sites 官方 source helper 打开同一 Site 的发布 checkout，再运行 `node scripts/export-site.mjs --checkout <发布checkout绝对路径>`。该命令复制已构建的 dist，发布 checkout 不重新构建。为 `dist/**` 设置 `-text`，暂存 dist 后由官方 helper 提交、推送和打包。发布版本使用 helper 返回的源提交，Agent 的 catalog.source 保持案例仓库 GitHub 提交。
+静态打包从干净工作树执行，部署索引的 `source.commit` 和 `baseUrl` 指向同一源码提交。功能分支可使用同一完整 SHA 发布 Site 并取材；新会话按默认分支发现内容。普通新增内容由构建收录；数据协议变化时同步获取脚本。
+
+托管方需要预构建发布 checkout 时，先运行 `npm run build:site`，再用 `node scripts/export-site.mjs --checkout <绝对路径>` 同步 `dist/`，由平台 helper 提交和发布。发布 checkout 的 `dist/**` 按 `-text` 保存。发布成功后打开线上页面确认可用。

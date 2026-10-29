@@ -61,7 +61,7 @@
       "demos/cases/design-sight/index.html",
       "demos/cases/design-sight/style.css",
       "entries/cases/design-sight.json",
-      "docs/research/design-sight.md"
+      "docs/cases/design-sight.md"
     ]
   },
   "sourceCases": [
@@ -72,6 +72,199 @@
         "bundle": "agent/cases/design-sight.json",
         "demo": "demos/cases/design-sight/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/mixed-ratio-archive-columns.md",
+      "role": "prompt",
+      "content": "# 等宽栏目保留不同图像比例 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/mixed-ratio-archive-columns.json)\n\n为【目标页面/组件】实现「等宽栏目保留不同图像比例」。栏目有共同宽度与标题规则，内部竖海报、横摄影按各自比例排列；不同内容长度产生不同列高，手机逐列阅读。触发：浏览机构档案。可见结果：分类稳定而作品保持完整。适用任务：多类型文化资料库。阅读顺序按DOM栏目组织，手机避免视觉顺序与语义顺序不同。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责分类稳定而作品保持完整，职责限定在当前区域。组合时阅读顺序按DOM栏目组织，手机避免视觉顺序与语义顺序不同。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 阅读顺序按DOM栏目组织，手机避免视觉顺序与语义顺序不同。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/design-sight/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/design-sight/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/A-POC_2121_G3_2026_JAXAproject_KV_W1280H720px_ToGO-thumb-1280xauto-8340.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/about_directors-thumb-500x333-5880.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/about_top-thumb-630xauto-5883.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/events_261025-thumb-630xauto-8334.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/img_symbol.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/jp_map-thumb-500x326-7547.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/research_kyoto-01-thumb-630xauto-8320.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/slide_hojoki-thumb-1280xauto-8283.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/time_topweb-thumb-630xauto-8306.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/top_information-thumb-630xauto-7221.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/topweb_hojoki-thumb-630xauto-8245.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/assets/topweb_type_xvii-thumb-630xauto-8332.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/design-sight/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/design-sight/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/design-sight/source/assets/source-style.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/design-sight/source/assets/tour_architecture-thumb-500x333-8287.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/design-sight/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/design-sight.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/design-sight.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/mixed-ratio-archive-columns.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/design-sight-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/design-sight-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/design-sight.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/design-sight.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/mixed-ratio-archive-columns.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

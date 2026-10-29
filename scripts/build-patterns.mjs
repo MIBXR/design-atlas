@@ -122,7 +122,13 @@ export function buildPatterns({ root = defaultRoot, patterns, caseRecords, caseB
       if (!bundlesById.get(source.caseId)?.files.some(file => file.path === relative)) throw new Error(`Pattern locator is outside its stated source case: ${pattern.id}/${source.caseId}/${relative}`);
     }
     for (const relative of pattern.sourceFiles) if (!sourceCases.some(source => bundlesById.get(source.id)?.files.some(file => file.path === relative))) throw new Error(`Pattern source cannot be verified through its case manifest: ${pattern.id}/${relative}`);
-    const bundle = { schemaVersion: 1, id: pattern.id, pattern, sourceCases };
+    const prompt = `prompts/patterns/${pattern.id}.md`;
+    const research = `docs/patterns/${pattern.id}.md`;
+    const documentPaths = [prompt, ...(fs.existsSync(path.join(root, research)) ? [research] : [])];
+    const documents = documentPaths.map(relative => ({path:relative, role:relative === prompt ? 'prompt' : 'research', content:textFile(root, relative)}));
+    const files = new Map(sourceCases.flatMap(source => bundlesById.get(source.id).files).map(file => [file.path, file]));
+    for (const relative of [`entries/patterns/${pattern.id}.json`, ...documentPaths]) files.set(relative, {path:relative, role:'context'});
+    const bundle = { schemaVersion: 1, id: pattern.id, pattern, sourceCases, documents, files:[...files.values()].sort((a,b) => a.path.localeCompare(b.path)) };
     const relative = `agent/patterns/${pattern.id}.json`;
     const bytes = encode(bundle);
     outputs.set(relative, bytes);
@@ -130,7 +136,7 @@ export function buildPatterns({ root = defaultRoot, patterns, caseRecords, caseB
     return { ...pattern, paths: { bundle: relative } };
   });
   const catalog = { schemaVersion: 1, patternCount: records.length, repository: 'https://github.com/MIBXR/web-atlas', patterns: records };
-  outputs.set('agent/patterns.json', encode(catalog));
+  outputs.set('agent/patterns/index.json', encode(catalog));
   outputs.set('data/patterns.js', Buffer.from('window.DESIGN_PATTERNS = ' + JSON.stringify(patterns, null, 2) + ';\n', 'utf8'));
   if (write) {
     fs.mkdirSync(repositoryFile(root, 'agent/patterns', false), { recursive: true });

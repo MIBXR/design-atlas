@@ -65,7 +65,7 @@
     "demos/cases/philharmonie-music/style.css",
     "entries/cases/met-museum.json",
     "entries/cases/philharmonie-music.json",
-    "docs/research/met-museum.md",
-    "docs/research/philharmonie-music.md"
+    "docs/cases/met-museum.md",
+    "docs/cases/philharmonie-music.md"
   ]
 }

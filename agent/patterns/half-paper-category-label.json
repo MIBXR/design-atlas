@@ -63,7 +63,7 @@
     ],
     "sourceFiles": [
       "entries/cases/palace-museum.json",
-      "docs/research/palace-museum.md",
+      "docs/cases/palace-museum.md",
       "demos/cases/palace-museum/fidelity.md",
       "demos/cases/palace-museum/index.html",
       "demos/cases/palace-museum/style.css",
@@ -79,6 +79,567 @@
         "bundle": "agent/cases/palace-museum.json",
         "demo": "demos/cases/palace-museum/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/half-paper-category-label.md",
+      "role": "prompt",
+      "content": "# 图像与半幅纸签分类 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/half-paper-category-label.json)\n\n为【目标页面/组件】实现「图像与半幅纸签分类」。完整五类专题将左半作品图像与右半淡纸标签并置，类别独立竖排；手机按源站换图并重新编排，图像与标签作为同一真实目的地。 源专题类别：陶瓷、书画、文化、青铜器、工艺。准确类目以本页可读文字为准；五类全部保留。 标签范围：右半纸签，文字竖排。源CSS与实际桌面/手机图片。 以原站DOM/CSS/真实状态矩阵验证，素材本地化并保留出处/尺寸/hash；减少动态保留手动状态，业务与未验证状态明确。\n\n## 制作约束\n\n- 以2026-10-09指定源页面为范围，来源观察、复现和迁移选择分开。\n- 保留图像真实来源/尺寸/hash与版权归属；不能用教学示意替代定义性机制。\n- 正式业务、未取到的状态和外部服务见对应案例fidelity与state-matrix。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/palace-museum/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/0014756208d3dec1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/03930640796200f9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/042268f9c8de2349.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/0a80f7fcc46e2ebc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/0bb8b65a314fe62d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/0cc8881417eab618.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/0db82b64b6ebfe58.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/1081ff8b03e127e9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/117460d0aeaa9cfb.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/12739fedb003a5fc.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/1a27e4cf2c71b045.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/1a91429d21275b92.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/1cbe1818399a4575.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/1deeff13ea5773ae.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/1f81dd788afda17b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/1fa02a54347b160d.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/255c275c40abfd74.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/27a6fde74dacda7b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/29aa58f535f9d886.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/29eadc0be50c1068.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/2e05711a3f126c79.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/2e29a19e50798a00.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/2fa54b98ca253df1.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/30711a68e5940d23.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/32a4d643fe9b1a4b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/32df528319c46698.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/3538a02707590206.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/353aba4366472279.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/35b3f119e41593e3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/38991c56dd7d6e71.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/39bd57fcbce3a1be.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/3a609428bb4e52f2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/3b20e85094290d76.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/3c7ef2f8fb27aef3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/3d3bbd056c8b1d06.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/400e47681d31c493.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/428a3a8dc70f1166.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/442ba2e9df8432a9.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/489da39c10fe638e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/505ffb65db185793.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/5087004eea121f72.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/51323714420ce764.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/51b540d575da63f3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/5210c40a2ee0c7c7.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/53e49d500e7fc57e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/54a303c21979ee50.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/566a46154dcc52d7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/5958a5dc91380653.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/5af2bb8a3cb796c8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/5c2b6dfb3b733d2e.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/5dfa51426c9b3a23.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/64302ac3b783845c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/6761ad2852fdbcdd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/68f2fca0cb85babb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/6d72f5330098175c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/6e3963de3f0dfc25.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/7309c3363fb67e9c.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/759fad661dde7ee9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/7a5e9194f79952f5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/7e2fbd7d21d2ccde.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/7f1afa53e17a32d3.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/850eb6ab4d25f302.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/866ce9673e7b8629.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/8990e669a03c391b.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/8ab8e7f6dbb94ff3.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/8f170fabc2f35a20.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/931bcfc0ce858904.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/936348176721585e.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/93d4f7f0ef24e1d7.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/9a4cf01dcde166ca.jpeg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/9c34c252062beaad.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/9ca5eb221b7d578a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/9e615d581e160dc7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/9fda7a70c3515eef.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/a700c0229f35745a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/a907d3402f665d80.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/b4eab2204b5099ba.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/b52cdc8a29eeb79d.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/bee58ac90efdd0c9.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/c2670b66934cc485.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/c39ff11bd3a2d8f5.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/c944df0e2d0bd0a7.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/c9e0bbd0a3ae9713.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/cc5f3ca63e674f74.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/cdf20286450e87f8.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/d4702a732e01684f.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/d6ed34dc3ed70ca8.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/d8b8f27af0ae9966.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/dad85cefcb5bbc74.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/dbafb461966da6c3.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/dbb9f915c6a79c73.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/dc981412bfc1ee4a.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/dd7e52fc2937174a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/e569925833b66b28.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/e57deb780eebbfae.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/e57e599248777077.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/e64deb65760adf43.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/e993770c3131d821.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/ec836c8fd1a5c0fd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/ecadede2af5c0f88.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/eebf36ebd2657afd.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/assets/fa1954142d828fc2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/palace-museum/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/palace-museum/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/palace-museum/source/assets/1e907eda0095f899.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/palace-museum/source/assets/5d5672d6fc5bec2c.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/palace-museum/source/assets/a1e392e1b4b775ab.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/palace-museum/source/assets/b58acd418731dd48.png",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/palace-museum/source/state-matrix.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/palace-museum/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/palace-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/palace-museum.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/half-paper-category-label.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/palace-museum-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/palace-museum.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/palace-museum.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/half-paper-category-label.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

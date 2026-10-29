@@ -76,7 +76,7 @@
       "demos/cases/rhine-lab/fidelity.md",
       "demos/cases/rhine-lab/assets-manifest.json",
       "entries/cases/rhine-lab.json",
-      "docs/research/rhine-lab.md"
+      "docs/cases/rhine-lab.md"
     ]
   },
   "sourceCases": [
@@ -87,6 +87,183 @@
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/cases/rhine-lab/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/department-code-matrix.md",
+      "role": "prompt",
+      "content": "# 机构缩写的中心矩阵 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/department-code-matrix.json)\n\n把机构代码整理为中心与外围的关系矩阵，保留有使用权的专用字标、环形连字、黑白表面、倾斜和尺度差，不能全部替换成普通字体等宽卡片。中心代码与九个外围模块通过细射线和小状态节点建立关系；每个代码提供完整名称和真实内容，不依据画面大小推断权限。网页热点与正常字号目录共用一个选择状态，同步节点、aria-pressed和说明；源端图形构成与新增点击/节点移动分别归档。手机完整保留原比例图形，等价目录承担可读操作。减少动态取消节点位移，保留静态当前项，影片片段主动播放并可暂停。\n\n## 制作约束\n\n- 原作构成是一中心加九外围，代码与全称须逐项核对；新任务按真实组织替换，不能推断权限。\n- 有使用权的SVG/图片或原帧可保留专用字形，不臆造字体名或声称3D源码移植。\n- 热点点选、节点移动和说明属于网页adapted；视觉来源与触发分别记录。\n- 手机保留原比例构图并提供正常字号目录，不以强制缩小全文代替可读入口。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rhine-lab/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/archive-frame.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/archive.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/focus-node.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/lone-trail.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/matrix-frame.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/matrix.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/optics-frame.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/optics.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/permission-frame.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/permission.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/pv-cover.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/rhine-lab/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rhine-lab/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/rhine-lab.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/rhine-lab.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/department-code-matrix.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/rhine-lab-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/rhine-lab.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/rhine-lab.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/department-code-matrix.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

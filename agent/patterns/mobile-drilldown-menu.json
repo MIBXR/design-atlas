@@ -55,7 +55,7 @@
       "demos/cases/stripe-platform/style.css",
       "demos/cases/stripe-platform/wave.js",
       "entries/cases/stripe-platform.json",
-      "docs/research/stripe-platform.md"
+      "docs/cases/stripe-platform.md"
     ]
   },
   "sourceCases": [
@@ -66,6 +66,215 @@
         "bundle": "agent/cases/stripe-platform.json",
         "demo": "demos/cases/stripe-platform/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/mobile-drilldown-menu.md",
+      "role": "prompt",
+      "content": "# 手机菜单逐层进入与返回 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/mobile-drilldown-menu.json)\n\n为【目标页面/组件】实现「手机菜单逐层进入与返回」。全屏菜单先显示顶层分类，选择分类让二级页侧向进入；Back返回顶层，核心行动固定在底部。触发：手机打开分类或返回。可见结果：层级与行动位置始终可定位。适用任务：多层产品导航。关闭恢复阅读位置与焦点，长列表只在菜单内滚动。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责层级与行动位置始终可定位，职责限定在当前区域。组合时关闭恢复阅读位置与焦点，长列表只在菜单内滚动。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 关闭恢复阅读位置与焦点，长列表只在菜单内滚动。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-hertz.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-instacart.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-lemonde.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/enterprise-urbn.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/kettle.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/payments-bg.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/sohne.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/stripe-wave-renderer.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/terminal.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-geometry-worker.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-palette.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave-provenance.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/assets/wave.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/stripe-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/stripe-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stripe-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/stripe-platform/three-LICENSE.txt",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/stripe-platform/wave.js",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/stripe-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/stripe-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/mobile-drilldown-menu.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/stripe-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform-reference.png",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/stripe-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/stripe-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/mobile-drilldown-menu.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

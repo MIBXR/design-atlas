@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
 // Run the actual human-facing renderer, with original entries supplied directly
-// rather than a possibly stale generated data/catalog.js. Browser services unrelated
+// rather than a possibly stale generated data/cases.js. Browser services unrelated
 // to rendering are stubbed; route(), renderDetail(), composition() and
 // behaviors() execute unchanged and produce the production #detail.innerHTML.
 export function renderDetailNotes({ entries, id, rendererSource }) {

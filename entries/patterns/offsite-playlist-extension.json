@@ -76,8 +76,8 @@
     "entries/cases/fuji-rock.json",
     "entries/cases/persona-kinetic.json",
     "entries/cases/philharmonie-music.json",
-    "docs/research/fuji-rock.md",
-    "docs/research/persona-kinetic.md",
-    "docs/research/philharmonie-music.md"
+    "docs/cases/fuji-rock.md",
+    "docs/cases/persona-kinetic.md",
+    "docs/cases/philharmonie-music.md"
   ]
 }

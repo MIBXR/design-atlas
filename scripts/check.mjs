@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const entries=fs.readdirSync(path.join(root,'entries/cases')).filter(x=>x.endsWith('.json')).map(file=>JSON.parse(fs.readFileSync(path.join(root,'entries/cases',file),'utf8')));
+const snapshots=fs.readdirSync(path.join(root,'entries/materials')).filter(name=>name.endsWith('.json')).map(name=>JSON.parse(fs.readFileSync(path.join(root,'entries/materials',name),'utf8')).snapshotPath).filter(Boolean);
 const failures=[];
 const local=ref=>ref&&!/^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(ref);
 const resolve=(dir,ref)=>ref.startsWith('/')?path.join(root,ref):path.resolve(dir,ref);
@@ -25,6 +26,7 @@ function checkRefs(label,html,dir){
   for(const style of html.matchAll(/\bstyle=(["'])(.*?)\1/g))checkCSS(label,style[2],dir);
 }
 function visit(directory,styles=false){
+  if(snapshots.includes(path.relative(root,directory).split(path.sep).join('/')+'/'))return;
   for(const item of fs.readdirSync(directory,{withFileTypes:true})){
     const file=path.join(directory,item.name);
     if(item.isDirectory()){if(item.name!=='source')visit(file,styles);}

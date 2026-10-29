@@ -51,6 +51,6 @@
   "sourceFiles": [
     "demos/cases/swiss-grid/index.html",
     "entries/cases/swiss-grid.json",
-    "docs/research/swiss-grid.md"
+    "docs/cases/swiss-grid.md"
   ]
 }

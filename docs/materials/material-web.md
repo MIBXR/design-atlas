@@ -1,16 +1,10 @@
 # Google Material Web：Material 3 官方组件
 
+[来源、版本、许可与使用边界](../../entries/materials/material-web.json)
+
 [操作四种样例](../../demos/materials/material-web/index.html) · [结构化条目](../../entries/materials/material-web.json) · [官方仓库](https://github.com/material-components/material-web)
 
 Google 的 `@material/web` 将 Material 3 设计语言实现为 Web Components，使用 Lit。这里选取的是官方 Material Web 软件，不是 MUI、Angular Material，也不是完整设计规范的复刻。四个业务组合、中文内容、配色控件与原创 SVG 属于 Web Atlas；按钮、文本框、开关、滑块和对话框使用真实官方实现。
-
-## 来源与当前边界
-
-核验日期为 `2026-10-16`。[官方 npm 元数据](https://registry.npmjs.org/@material/web/2.5.0) 对应 `2.5.0`，`gitHead` 为 `b4de401eb665ec63474f39319a4ba8f2145974cc`；核验时 npm `latest` 同为该版本。本地运行包按此版本固定，不代表未来最新版。
-
-[官方 README](https://github.com/material-components/material-web) 仍标注维护模式并等待新维护者，指向 [维护公告](https://github.com/material-components/material-web/discussions/5642)。选择用于长期产品时，应评估团队自己的维护能力。本条目不宣称包含完整 Material 3 Expressive，也不根据设计规范的新版本推断软件已经实现。
-
-[固定版本支持说明](https://github.com/material-components/material-web/blob/b4de401eb665ec63474f39319a4ba8f2145974cc/docs/support.md) 列出 Chrome/Edge 120+、Firefox 119+、Safari 16.4+ 的上游目标。这里的浏览器验收限定于当前 Chromium；上游声明不能替代 Safari、Firefox、辅助技术和真实手机的项目验收。
 
 ## 四个可借用的组合
 
@@ -37,16 +31,10 @@ Google 的 `@material/web` 将 Material 3 设计语言实现为 Web Components�
 
 界面没有自动循环、音频或后台计时器。系统或手动减少动态时，关闭 Shadow DOM 的局部 CSS 过渡、禁用 ripple，并设置 `dialog.quick`；页面隐藏时结束当前短动画，回到页面不自动触发新动作。确认弹窗使用上游对话框焦点约束；关闭后等待触发按钮的 Lit 渲染完成再恢复焦点。
 
-组件加载成功前显示静态结构说明，实际控件区域保持隐藏；模块加载失败时明确显示「静态后备 · 真实组件未运行」。未定义的对话框也保持隐藏。静态结构可解释层级，但不代表 Web Components、表单或对话框已执行。
+组件加载成功前显示静态结构说明，实际控件区域保持隐藏；模块加载失败时明确显示「静态后备 · 真实组件未运行」。未定义的对话框也保持隐藏。静态结构解释层级；模块加载后提供真实组件、表单和对话框。
 
-## 许可证与可重建依赖
+## 重建依赖
 
-Material Web 采用 [Apache-2.0](https://github.com/material-components/material-web/blob/b4de401eb665ec63474f39319a4ba8f2145974cc/LICENSE)。随包 Lit、lit-element、lit-html、@lit/reactive-element 采用 BSD-3-Clause；tslib 采用0BSD并保留其版权声明。Google 商标与官网内容不由软件许可自动授权，本地没有复制品牌图片或远程字体。
+`vendor/material-web.js` 由 esbuild 0.25.12 合并并压缩选用的官方模块，CSS-in-JS 随包，保留行内许可；未修改官方组件源码。`source/vendor/components.mjs`、`source/vendor/package.json`、`source/vendor/package-lock.json` 提供重建输入，[依赖说明](../../demos/materials/material-web/vendor/README.md) 给出在仓库外重建的命令。`source/vendor/provenance.json` 保存 npm integrity、bundle摘要以及全部许可文件字节数/SHA256。导出时应保留完整 vendor 目录；Agent 资料由统一构建生成完整文件路径与角色。
 
-`vendor/material-web.js` 由 esbuild 0.25.12 合并并压缩选用的官方模块，CSS-in-JS 随包，保留行内许可；未修改官方组件源码。`vendor/components.mjs`、`package.json`、`package-lock.json` 提供重建输入，[依赖说明](../../demos/materials/material-web/vendor/README.md) 给出在仓库外重建的命令。`vendor/provenance.json` 保存 npm integrity、bundle摘要以及全部许可文件字节数/SHA256。导出时应保留完整 vendor 目录；Agent 资料由统一构建生成完整文件路径与角色。
-
-## 验证范围
-
-本地 Chromium 在1440×900与390×844 CSS视口下验证四种样例。已实测主要操作禁用/恢复、空值和无效邮箱错误、有效邮箱通过、开关变化、滑块键盘方向键与Home/End、确认归档/恢复、Escape关闭和焦点返回、明暗/配色/圆角控件，以及减少动态模式。对可见文本及开放Shadow DOM核对计算字号与变换后的尺寸；稳定界面最小为12px，滑块标签的缩放过渡由本地适配取消。
-
-阻断本地运行模块后，页面显示明确静态后备；恢复模块后可正常加载。桌面与窄屏页面没有横向溢出。当前浏览器工具不支持触摸事件注入，真实触摸、Safari、Firefox、屏幕阅读器及真实后台切换行为仍需目标设备验收。固定版本源码中的可访问性实现与上游浏览器支持表，只作为适配依据。
+[本地对照结果](../../demos/materials/material-web/fidelity.md)。

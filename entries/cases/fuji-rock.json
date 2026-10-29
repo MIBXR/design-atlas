@@ -105,7 +105,7 @@
   "negativePrompt": "不使用共同SaaS双栏hero模板，不嵌入整站iframe，不伪造官网功能或实时展期，不复制统计/交易脚本，不使用CDN和远程图像运行时依赖。",
   "demo": "demos/cases/fuji-rock/index.html",
   "preview": "previews/cases/fuji-rock.jpg",
-  "research": "docs/research/fuji-rock.md",
+  "research": "docs/cases/fuji-rock.md",
   "exercise": "把现场照片切换为不同地点，观察橙色header/蓝票据是否仍保持识别；再打开大菜单检验每层链接是否能被键盘找到。",
   "composition": {
     "color": "#e64219橙贯穿header/日期，#0075ba蓝用于导览/Featured/票据，#f2efeb与#e3dbd4使菜单层级清晰。",

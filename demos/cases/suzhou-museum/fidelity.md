@@ -21,6 +21,8 @@
 
 原站/本地同尺寸第三屏截图在仓库外 heritage-audit/suzhou-source-controlled-page3.jpg 与 suzhou-local-page3.jpg；完整几何JSON在 work/fidelity/independent-audit/suzhou-{source,local}-geometry.json。正式预览由实际浏览器生成。完整机制与证据边界见[状态矩阵](source/state-matrix.md)。
 
-[研究](../../../docs/research/suzhou-museum.md) · [Demo](index.html)
+[研究](../../../docs/cases/suzhou-museum.md) · [Demo](index.html)
 
 手机适配的真实截图与测量：标志、辅助链接、主导航各一行。390×843测量logo y15..63.1、辅助73.1..94.0、导航104.0..160.6，无重叠，素材broken0、页面overflow0。截图在仓库外heritage-audit/suzhou-local-mobile-final.jpg；这是同内容适配，仍不等同原WAP。
+
+[许可原文索引](LICENSES.md)。

@@ -53,7 +53,7 @@
       "demos/cases/philharmonie-music/script.js",
       "demos/cases/philharmonie-music/style.css",
       "entries/cases/philharmonie-music.json",
-      "docs/research/philharmonie-music.md"
+      "docs/cases/philharmonie-music.md"
     ]
   },
   "sourceCases": [
@@ -64,6 +64,179 @@
         "bundle": "agent/cases/philharmonie-music.json",
         "demo": "demos/cases/philharmonie-music/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/activity-title-ticket-overlap.md",
+      "role": "prompt",
+      "content": "# 活动标题与票务跨区并置 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/activity-title-ticket-overlap.json)\n\n为【目标页面/组件】实现「活动标题与票务跨区并置」。大主视觉左下放活动名称，右侧白色票务面板跨越主图/内容边界，后续正文约两列，行动约一列。触发：查看活动首屏并继续阅读。可见结果：情境、日期和预约入口关联。适用任务：展览与演出详情。手机票务回文档流，作品署名与主图主题保留。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责情境、日期和预约入口关联，职责限定在当前区域。组合时手机票务回文档流，作品署名与主图主题保留。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 手机票务回文档流，作品署名与主图主题保留。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/benjamin.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/exhibition.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/installation-1.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/installation-2.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/kamei.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/philharmonique-bold.otf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/philharmonique.otf",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/sprite.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/assets/stulz.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/philharmonie-music.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/philharmonie-music.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/activity-title-ticket-overlap.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/philharmonie-music-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/philharmonie-music-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/philharmonie-music.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/philharmonie-music.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/activity-title-ticket-overlap.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

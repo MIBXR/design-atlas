@@ -171,7 +171,12 @@
     {
       "path": "docs/materials/98-css.md",
       "role": "research",
-      "content": "# 98.css：带有桌面记忆的 CSS 组件\n\n[本地工作台](../../demos/materials/98-css/index.html) · [结构化资料](../../entries/materials/98-css.json) · [官方完整文档](https://jdan.github.io/98.css/)\n\n## 来源与许可\n\n本条目使用 [jdan/98.css](https://github.com/jdan/98.css) 的 [npm 0.1.21](https://registry.npmjs.org/98.css/0.1.21)，固定提交 `517d174b30392d39e068ef4eca457da66a189f8f`，核验日期 `2026-10-16`。CSS 保留官方原始字节，采用 Jordan Scales 的 MIT 许可。\n\n随包的 Pixelated MS Sans Serif 与 Bold 字体来自 lou 的 [MS Sans Serif](https://fontstruct.com/fontstructions/show/1384746) 和 [MS Sans Serif Bold](https://fontstruct.com/fontstructions/show/1384862)，其随包许可为 CC BY-SA 3.0，区别于 CSS 的 MIT。本站保留原始字体、署名、许可和来源链接。再分发或修改字体时遵循其独立许可，不把整包统称为 MIT。\n\n## 能力与演示范围\n\n[官方文档](https://jdan.github.io/98.css/)明确以语义化 HTML 配合 CSS，不提供 JavaScript 行为。窗口边框、蓝色标题栏、凹陷面板、表单、表格和进度条是资源能力；本地标签切换、筛选、应用设置与模拟进度为原创代码。\n\n| 用法 | 原库构成 | 本地组合与可操作状态 |\n| --- | --- | --- |\n| 设置窗口 | window / title-bar / status-bar、原生表单 | 外观和选项两页；应用配色、说明与留白；恢复默认 |\n| 素材目录 | sunken-panel、table、highlighted | 名称筛选、选中摘要、无结果分支；示例名称不是实际库存 |\n| 传输进度 | progress-indicator、segmented | 实心和分段切换、开始、暂停、10% 步进、重置与完成 |\n\n官方浏览器观察确认标准复选框可选中。源码显示默认控件为 11px；本地适配 CSS 将控件提高到 14px、辅助文字至少 12px，并扩大按钮及标签点击区域。因此本页演示可借用的复古语言，不声称像素级复刻 Windows 98。\n\n## 参数与接入\n\n使用 `npm install 98.css@0.1.21`，将样式及相邻字体一并部署；本页无 CDN、框架或构建器依赖。每个独立目录包含 HTML、适配 CSS、原创 JavaScript、官方 CSS 与字体，Agent 构建提供完整文件路径与角色。\n\n窗口类和分段进度来自[固定版本样式](https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/style.css)。三套桌面颜色、留白开关、每 240ms 增加 2% 和手动每次 10% 都是本地演示参数。真实产品应连接真实任务结果，不能以模拟计时器证明下载或安装完成。\n\n## 输入、动态与后备\n\n标签支持左右、Home、End；表单和目录条目使用标准控件，指针与触摸点击触发相同操作。减少动态时进度由手动步进推进；页面隐藏或切换用法时暂停，返回后不自动续播。没有声音，窗口舞台保留固定配色，外层说明跟随 Atlas 主题。\n\n`..?fallback=1` 可查看主动关闭交互的静态首屏；无 JavaScript 时保留样式、原生设置首屏和来源说明，应用等操作不执行。CSS 缺失时仍可阅读语义化内容，但复古外观不成立。不同读屏器、真实触屏设备和长期业务场景需要目标项目验证。\n\n适合怀旧作品、数字档案、游戏界面与主题展品；避免把“复古”当作小字、低对比度或难以操作的理由，也不将它当作有完整复杂状态和安全业务能力的现代框架。\n"
+      "content": "# 98.css：带有桌面记忆的 CSS 组件\n\n[来源、版本、许可与使用边界](../../entries/materials/98-css.json)\n\n[本地工作台](../../demos/materials/98-css/index.html) · [结构化资料](../../entries/materials/98-css.json) · [官方完整文档](https://jdan.github.io/98.css/)\n\n## 能力与演示范围\n\n[官方文档](https://jdan.github.io/98.css/)明确以语义化 HTML 配合 CSS，不提供 JavaScript 行为。窗口边框、蓝色标题栏、凹陷面板、表单、表格和进度条是资源能力；本地标签切换、筛选、应用设置与模拟进度为原创代码。\n\n| 用法 | 原库构成 | 本地组合与可操作状态 |\n| --- | --- | --- |\n| 设置窗口 | window / title-bar / status-bar、原生表单 | 外观和选项两页；应用配色、说明与留白；恢复默认 |\n| 素材目录 | sunken-panel、table、highlighted | 名称筛选、选中摘要、无结果分支；示例名称不是实际库存 |\n| 传输进度 | progress-indicator、segmented | 实心和分段切换、开始、暂停、10% 步进、重置与完成 |\n\n官方浏览器观察确认标准复选框可选中。源码显示默认控件为 11px；本地适配 CSS 将控件提高到 14px、辅助文字至少 12px，并扩大按钮及标签点击区域。因此本页演示可借用的复古语言，不声称像素级复刻 Windows 98。\n\n## 参数与接入\n\n接入方式见结构化条目；将样式及相邻字体一并部署；本页无 CDN、框架或构建器依赖。每个独立目录包含 HTML、适配 CSS、原创 JavaScript、官方 CSS 与字体，Agent 构建提供完整文件路径与角色。\n\n窗口类和分段进度来自[固定版本样式](https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/style.css)。三套桌面颜色、留白开关、每 240ms 增加 2% 和手动每次 10% 都是本地演示参数。真实产品应连接真实任务结果，不能以模拟计时器证明下载或安装完成。\n\n## 输入、动态与后备\n\n标签支持左右、Home、End；表单和目录条目使用标准控件，指针与触摸点击触发相同操作。减少动态时进度由手动步进推进；页面隐藏或切换用法时暂停，返回后不自动续播。没有声音，窗口舞台保留固定配色，外层说明跟随 Atlas 主题。\n\n`..?fallback=1` 可查看主动关闭交互的静态首屏；无 JavaScript 时保留样式、原生设置首屏和来源说明，应用等操作不执行。CSS 缺失时仍可阅读语义化内容，但复古外观不成立。不同读屏器、真实触屏设备和长期业务场景需要目标项目验证。\n"
+    },
+    {
+      "path": "prompts/materials/98-css.md",
+      "role": "prompt",
+      "content": "# 98.css · 复古桌面组件 · 复用 Prompt\n\n[结构化条目](../../entries/materials/98-css.json)\n\n使用固定版本 98.css 0.1.21，为当前任务构建一个有实际用途的复古设置窗口、素材目录或进度界面。使用原库 window、title-bar、status-bar、sunken-panel、table 和 progress-indicator 样式，行为由小量原生 JavaScript 实现。所有控件保留语义与可访问名称，标签键盘方向导航，最终文本至少 12px，扩大触控区域，窄屏自然重排，不缩小整个界面。真实任务连接真实进度；若使用教学模拟须明确标注，允许暂停、重置、手动前进，后台与减少动态时停下持续变化。保存 MIT CSS 与 CC BY-SA 3.0 字体的独立署名许可，自托管所需文件，提供静态后备。\n\n## 制作约束\n\n- 固定 98.css 0.1.21；原库仅有 CSS，本地 JavaScript 实现行为。\n- 原库控件 11px 已在适配层提高为 14px，辅助信息不低于 12px；不以缩放还原旧屏幕。\n- CSS 为 MIT；随包 MS Sans Serif 与 Bold 字体来自 lou，采用 CC BY-SA 3.0，需保留独立署名与许可。\n- 模拟进度每 240ms 增加 2% 为本地参数，不产生文件；真实任务必须接真实进度。\n- 页面隐藏或切换演示暂停，返回需用户继续；减少动态时手动步进。\n- 静态后备保留样式和说明；没有 JavaScript 时应用、筛选和演示计时不执行。\n"
     },
     {
       "path": "demos/materials/98-css/README.md",
@@ -214,27 +219,27 @@
     },
     {
       "path": "demos/materials/98-css/fonts/LICENSE-ms-sans-serif-bold.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/98-css/fonts/LICENSE-ms-sans-serif.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/98-css/fonts/ms_sans_serif.woff",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/98-css/fonts/ms_sans_serif.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/98-css/fonts/ms_sans_serif_bold.woff",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/98-css/fonts/ms_sans_serif_bold.woff2",
-      "role": "asset"
+      "role": "font"
     },
     {
       "path": "demos/materials/98-css/index.html",
@@ -242,15 +247,15 @@
     },
     {
       "path": "demos/materials/98-css/source/vendor/98.css.map",
-      "role": "asset"
+      "role": "process"
     },
     {
       "path": "demos/materials/98-css/vendor/98.css",
-      "role": "source"
+      "role": "vendor"
     },
     {
       "path": "demos/materials/98-css/vendor/LICENSE-98-css.txt",
-      "role": "context"
+      "role": "license"
     },
     {
       "path": "demos/materials/98-css/vendor/NOTICE.md",
@@ -267,6 +272,10 @@
     {
       "path": "previews/materials/98-css.png",
       "role": "preview"
+    },
+    {
+      "path": "prompts/materials/98-css.md",
+      "role": "context"
     }
   ],
   "sourceFiles": [

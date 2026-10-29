@@ -53,7 +53,7 @@
       "demos/cases/notion-editorial/script.js",
       "demos/cases/notion-editorial/style.css",
       "entries/cases/notion-editorial.json",
-      "docs/research/notion-editorial.md"
+      "docs/cases/notion-editorial.md"
     ]
   },
   "sourceCases": [
@@ -64,6 +64,223 @@
         "bundle": "agent/cases/notion-editorial.json",
         "demo": "demos/cases/notion-editorial/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/avatar-pile-personality.md",
+      "role": "prompt",
+      "content": "# 组合头像表达团队人格 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/avatar-pile-personality.json)\n\n为【目标页面/组件】实现「组合头像表达团队人格」。多张真实授权头像以小范围叠放组成一个稳定装饰层，手机调整到标题上方，文字仍是主要信息。触发：浏览团队主张。可见结果：团队主题有可识别的人格化线索。适用任务：协作与创作产品。头像只作装饰时不重复读屏，使用真实对应的授权素材。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责团队主题有可识别的人格化线索，职责限定在当前区域。组合时头像只作装饰时不重复读屏，使用真实对应的授权素材。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 头像只作装饰时不重复读屏，使用真实对应的授权素材。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/automate.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/capture.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/figma.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/find.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/hero.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/hero.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/mobile.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/notion-bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/notion-regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/openai.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-3.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-5.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-6.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/pile-7.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/assets/ramp.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/notion-editorial/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/notion-editorial/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/notion-editorial/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/notion-editorial/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/notion-editorial/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/notion-editorial.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/notion-editorial.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/avatar-pile-personality.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/notion-editorial-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/notion-editorial-reference.png",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/notion-editorial.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/notion-editorial.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/avatar-pile-personality.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

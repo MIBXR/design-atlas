@@ -59,7 +59,7 @@
   ],
   "sourceFiles": [
     "entries/cases/palace-museum.json",
-    "docs/research/palace-museum.md",
+    "docs/cases/palace-museum.md",
     "demos/cases/palace-museum/fidelity.md",
     "demos/cases/palace-museum/index.html",
     "demos/cases/palace-museum/style.css",

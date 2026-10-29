@@ -1,12 +1,8 @@
 # 98.css：带有桌面记忆的 CSS 组件
 
+[来源、版本、许可与使用边界](../../entries/materials/98-css.json)
+
 [本地工作台](../../demos/materials/98-css/index.html) · [结构化资料](../../entries/materials/98-css.json) · [官方完整文档](https://jdan.github.io/98.css/)
-
-## 来源与许可
-
-本条目使用 [jdan/98.css](https://github.com/jdan/98.css) 的 [npm 0.1.21](https://registry.npmjs.org/98.css/0.1.21)，固定提交 `517d174b30392d39e068ef4eca457da66a189f8f`，核验日期 `2026-10-16`。CSS 保留官方原始字节，采用 Jordan Scales 的 MIT 许可。
-
-随包的 Pixelated MS Sans Serif 与 Bold 字体来自 lou 的 [MS Sans Serif](https://fontstruct.com/fontstructions/show/1384746) 和 [MS Sans Serif Bold](https://fontstruct.com/fontstructions/show/1384862)，其随包许可为 CC BY-SA 3.0，区别于 CSS 的 MIT。本站保留原始字体、署名、许可和来源链接。再分发或修改字体时遵循其独立许可，不把整包统称为 MIT。
 
 ## 能力与演示范围
 
@@ -22,7 +18,7 @@
 
 ## 参数与接入
 
-使用 `npm install 98.css@0.1.21`，将样式及相邻字体一并部署；本页无 CDN、框架或构建器依赖。每个独立目录包含 HTML、适配 CSS、原创 JavaScript、官方 CSS 与字体，Agent 构建提供完整文件路径与角色。
+接入方式见结构化条目；将样式及相邻字体一并部署；本页无 CDN、框架或构建器依赖。每个独立目录包含 HTML、适配 CSS、原创 JavaScript、官方 CSS 与字体，Agent 构建提供完整文件路径与角色。
 
 窗口类和分段进度来自[固定版本样式](https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/style.css)。三套桌面颜色、留白开关、每 240ms 增加 2% 和手动每次 10% 都是本地演示参数。真实产品应连接真实任务结果，不能以模拟计时器证明下载或安装完成。
 
@@ -31,5 +27,3 @@
 标签支持左右、Home、End；表单和目录条目使用标准控件，指针与触摸点击触发相同操作。减少动态时进度由手动步进推进；页面隐藏或切换用法时暂停，返回后不自动续播。没有声音，窗口舞台保留固定配色，外层说明跟随 Atlas 主题。
 
 `..?fallback=1` 可查看主动关闭交互的静态首屏；无 JavaScript 时保留样式、原生设置首屏和来源说明，应用等操作不执行。CSS 缺失时仍可阅读语义化内容，但复古外观不成立。不同读屏器、真实触屏设备和长期业务场景需要目标项目验证。
-
-适合怀旧作品、数字档案、游戏界面与主题展品；避免把“复古”当作小字、低对比度或难以操作的理由，也不将它当作有完整复杂状态和安全业务能力的现代框架。

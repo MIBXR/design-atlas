@@ -77,7 +77,7 @@
       "demos/cases/rhine-lab/fidelity.md",
       "demos/cases/rhine-lab/assets-manifest.json",
       "entries/cases/rhine-lab.json",
-      "docs/research/rhine-lab.md"
+      "docs/cases/rhine-lab.md"
     ]
   },
   "sourceCases": [
@@ -88,6 +88,183 @@
         "bundle": "agent/cases/rhine-lab.json",
         "demo": "demos/cases/rhine-lab/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/specimen-pullout-selection.md",
+      "role": "prompt",
+      "content": "# 样本阵列的抽出选择 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/specimen-pullout-selection.json)\n\n为有使用权的机构影片建立立体档案观察目录，保留大量平行阵列与单件抽出的透视、材质、四角标定和细射线，不能换成泛化平面卡行。影片或原帧负责真实空间，本地单一状态负责热点/前后选择、编号、标题与正常方向正文。背景阵列可显隐，焦点板保持同源轮廓和可读说明。选择新项先收起旧正文；快速操作取消旧媒体回调。明确影像抽出是源端观察，点击、显隐与阅读是网页转译。按钮可Tab/左右方向键操作，aria-pressed/aria-expanded同步。手机完整展示源画面，正文另行重排。减少动态保留静态选中和阅读，影片由用户主动播放并可暂停。\n\n## 制作约束\n\n- 源端为影片；必须标注网页转译并区分原片运动与本地选择。\n- 保留来源阵列深度、焦点板四角及光学材质，可采用有使用权的影片/原帧，不臆造其3D源码。\n- 所有点击由单一选择状态同步编号/正文/aria，快速操作取消旧媒体回调。\n- 小屏不裁掉源构图；等价语义按钮和正文保证内容可读。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rhine-lab/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/archive-frame.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/archive.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/focus-node.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/lone-trail.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/matrix-frame.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/matrix.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/optics-frame.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/optics.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/permission-frame.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/permission.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/assets/pv-cover.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/rhine-lab/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/rhine-lab/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/rhine-lab/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/rhine-lab.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/rhine-lab.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/specimen-pullout-selection.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/rhine-lab-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/rhine-lab.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/rhine-lab.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/specimen-pullout-selection.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

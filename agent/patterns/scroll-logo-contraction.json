@@ -63,7 +63,7 @@
       "demos/cases/uma-musume/index.html",
       "demos/cases/uma-musume/style.css",
       "entries/cases/uma-musume.json",
-      "docs/research/uma-musume.md"
+      "docs/cases/uma-musume.md"
     ]
   },
   "sourceCases": [
@@ -74,6 +74,247 @@
         "bundle": "agent/cases/uma-musume.json",
         "demo": "demos/cases/uma-musume/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/scroll-logo-contraction.md",
+      "role": "prompt",
+      "content": "# 滚动后品牌标识收回导航 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/scroll-logo-contraction.json)\n\n为【目标页面/组件】实现「滚动后品牌标识收回导航」。首屏Logo放大，超过阈值缩回固定导航尺寸，反向回顶部恢复；手机采用对应比例和菜单变体。触发：跨越滚动阈值或返回。可见结果：主视觉先建立品牌，后续减少导航遮挡。适用任务：长游戏与节日页面。阈值按画布宽度计算，转换期间点击区域保持可达。键盘：触发控件用原生按钮或链接，显示焦点并同步选择/展开状态；提供可取消或返回的路径。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：只转换机构标识的规模，固定导航与主文档保持自身布局。不要与另一套紧凑导航阈值同时叠在相同位置；回首恢复大标识的规则需统一。\n\n## 制作约束\n\n- 阈值按画布宽度计算，转换期间点击区域保持可达。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/about_bg.BBeJqHpY.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/about_thumbnail.CGFLxShD.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/app-icon.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/badge-appstore.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/badge-googleplay.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/badge-steam.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/download-background.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_bg.BJUQipob.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_1-1.PhrOaKih.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_1-2.DY13j7tt.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_2-1.BcVJ7hBy.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_2-2.BKFdgH7d.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_3-1.BNkL4nTh.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_image_3-2.Bimj2-Ng.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_silencesuzuka.Chw3ZKQc.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_specialweek.CDUq1xrt.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/gameplay_winningticket.BucYg9KM.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/header-arrow.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/header-blue.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/horseshoe.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/kv_txt_playnow.D6KNRgME.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/kv.C6tHq3MX.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/kv.CNY-_2Hw.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/logo-umamusume.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/news_bg.nsyAwrrN.avif",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/assets/top_about.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/uma-musume/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/uma-musume/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/uma-musume.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/uma-musume.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/scroll-logo-contraction.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/uma-musume-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/uma-musume-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/uma-musume.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/uma-musume.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/scroll-logo-contraction.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

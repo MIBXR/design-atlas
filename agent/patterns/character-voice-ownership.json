@@ -81,9 +81,9 @@
       "entries/cases/arknights-world.json",
       "entries/cases/blue-archive.json",
       "entries/cases/genshin-world.json",
-      "docs/research/arknights-world.md",
-      "docs/research/blue-archive.md",
-      "docs/research/genshin-world.md"
+      "docs/cases/arknights-world.md",
+      "docs/cases/blue-archive.md",
+      "docs/cases/genshin-world.md"
     ]
   },
   "sourceCases": [
@@ -110,6 +110,671 @@
         "bundle": "agent/cases/genshin-world.json",
         "demo": "demos/cases/genshin-world/index.html"
       }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/character-voice-ownership.md",
+      "role": "prompt",
+      "content": "# 声线主动播放并归属于当前人物 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/character-voice-ownership.json)\n\n为【目标页面/组件】实现「声线主动播放并归属于当前人物」。麦克风主动播放当前人物对应音轨，再次点击暂停；换人、离开角色区域或后台停止旧声音。触发：点击人物VOICE或换人。可见结果：台词为人物身份补充听觉线索。适用任务：有真实授权语音的角色档案。语音对应关系按素材核验，播放状态由真实音频事件更新。键盘：麦克风用有角色名的button，aria-pressed与实际播放/暂停一致。减少动态：停用自动推进与大幅运动，手动选择即时完成，终态内容及状态说明保持可见。组合边界：该原子负责台词为人物身份补充听觉线索，职责限定在当前区域。组合时语音对应关系按素材核验，播放状态由真实音频事件更新。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- 语音对应关系按素材核验，播放状态由真实音频事件更新。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya-voice.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/amiya.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/animation_m.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/animation.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/arknights-logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/background.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Bender-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Bender-Regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/bg2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/bgm.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen-voice.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/chen.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/common_mask.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/gallery_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/home-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/home.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-animation.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-integrated_strategies.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-reclamation_algorithm.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/icon-terra_historicus.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/infected.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/integrated_strategies_m.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/integrated_strategies.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-e2.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit-voice.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/kaltsit.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/monster_siren_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/news-yesterday-sea.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/nomadic_city.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Novecentosanswide-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Novecentosanswide-UltraBold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/official-three.js",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/operator_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/originium_arts.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/originiums.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/Oswald-DemiBold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/particle.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reclamation_algorithm_m.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reclamation_algorithm.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/reunion.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/rhodes_island.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/rhodes-island.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/terra_historicus_m.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/terra_historicus.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/video_active.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/arknights-world/assets/world-models.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/arknights-world/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/particles.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/arknights-world/source/assets/home.m3u8",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/arknights-world/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/01.bd71aff1.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/02.73ff260c.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/03.83e84e04.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/04.99faa124.wav",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bg_cover.9bd1cfea.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bg.555a8a72.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/bluearhive.f833c198.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/character-background-mobile.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/character-background.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/comicEntry.2de61182.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/ffcLogo.f1e83d2f.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/google-play.8c692266.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/help-enter.69f99d8a.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/hoshino-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/hoshino.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/ios-play.02d9f9a4.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/LogoJP.92d9dcd0.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/nonomi.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-abydos-card.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-abydos.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-gehenna.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-millennium.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/school-trinity.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/serika.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/shiroko-thumb.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/shiroko.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/slogan.1ab23877.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/student-card.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/voice-label.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/voice-microphone.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/windows.2b8dd344.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/assets/yostarBottom.6aef7d4b.png",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/blue-archive/character.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/blue-archive/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/blue-archive/source/assets/app.47b744a6.css",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/blue-archive/source/screenshots/blue-archive-character-source.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/blue-archive/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/calendar.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-background-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-background.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-icon-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/character-icon-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/download.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/hero-poster.jpg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/hero-title.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/hero.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/logo.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/microphone-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/microphone-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/page-background.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-1-1.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-1-2.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-1-3.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-2-1.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-2-2.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/assets/voice-2-3.mp3",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/genshin-world/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/genshin-world/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/genshin-world/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/genshin-world/source/assets/calendar-frame.webp",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/genshin-world/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/arknights-world.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/blue-archive.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/genshin-world.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/arknights-world.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/blue-archive.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/genshin-world.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/character-voice-ownership.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/arknights-world-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/arknights-world-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/arknights-world.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/blue-archive-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/blue-archive-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/blue-archive.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/genshin-world-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/genshin-world-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/genshin-world.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/arknights-world.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/blue-archive.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/genshin-world.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/character-voice-ownership.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
     }
   ]
 }

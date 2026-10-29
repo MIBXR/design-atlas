@@ -117,7 +117,7 @@
   "negativePrompt": "不要把江南设计简化为水墨背景；不要去掉图像入口名称；不要统一圆角卡片、强制手机整屏滚轮或复制预约商城业务。",
   "demo": "demos/cases/suzhou-museum/index.html",
   "preview": "previews/cases/suzhou-museum.jpg",
-  "research": "docs/research/suzhou-museum.md",
+  "research": "docs/cases/suzhou-museum.md",
   "fidelity": "demos/cases/suzhou-museum/fidelity.md",
   "assetManifest": "demos/cases/suzhou-museum/assets-manifest.json"
 }

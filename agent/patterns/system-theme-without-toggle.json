@@ -87,5 +87,378 @@
         "demo": "demos/cases/claude-platform/index.html"
       }
     }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/system-theme-without-toggle.md",
+      "role": "prompt",
+      "content": "# 跟随系统的媒体与文字主题 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/system-theme-without-toggle.json)\n\n为【目标页面/组件】实现「跟随系统的媒体与文字主题」。根据prefers-color-scheme选用对应的表面、文字与产品截图；主题范围明确到实际有变体的区域。触发：系统深浅偏好改变。可见结果：界面适应环境且图像保持合理配色。适用任务：已有双版本资产的营销页。ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。键盘：保留语义标题、顺序阅读与图像替代文字；装饰不进入Tab顺序。减少动态：布局与内容保持可读；不为静态构成增加自动运动。组合边界：该原子负责界面适应环境且图像保持合理配色，职责限定在当前区域。组合时ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。角色表示局部职责，配对与冲突是适配建议，需按目标任务判断。\n\n## 制作约束\n\n- ChatGPT手机保持浅色界面图，Claude主题为公共CSS依据，范围不等于所有媒体。\n- 迁移时替换为有使用权的素材与真实内容，来源快照的数值需按目标任务重新验证。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-coding-opt-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-finance.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-health-opt-5.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-images.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-voice-opt-2.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-work-opt-4.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/card-writing.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/chat-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/chat.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/code.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/globe-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-chat-shape.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-code-ascii.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-code-picker-light-1.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-deck.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-preso.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/merge-work-shape-transparent.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Bold.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Medium.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISans-Regular.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-000.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-001.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-002.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/OpenAISansSC-Variable-003.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-flower.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-scribble.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/overview-chat-tomato.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/scribble.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-large-dark.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-large-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-small-dark.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/star-small-light.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/work-dark.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/assets/work.webp",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/fonts.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/motion-data.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/chatgpt-motion-evidence.json",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-handoff.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-mode-rail.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/source/screenshots/chatgpt-work-scroll.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/chatgpt-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/cowork.mp4",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/logo.svg",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/sans.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/assets/serif.woff2",
+      "role": "asset"
+    },
+    {
+      "path": "demos/cases/claude-platform/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/claude-platform/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/journey.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/script.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/chatgpt-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "docs/cases/claude-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/chatgpt-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/claude-platform.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/system-theme-without-toggle.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/chatgpt-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/claude-platform-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/claude-platform-reference.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/claude-platform.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/chatgpt-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/cases/claude-platform.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/system-theme-without-toggle.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
+    }
   ]
 }

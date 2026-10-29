@@ -78,8 +78,8 @@
     "entries/cases/arknights-world.json",
     "entries/cases/blue-archive.json",
     "entries/cases/genshin-world.json",
-    "docs/research/arknights-world.md",
-    "docs/research/blue-archive.md",
-    "docs/research/genshin-world.md"
+    "docs/cases/arknights-world.md",
+    "docs/cases/blue-archive.md",
+    "docs/cases/genshin-world.md"
   ]
 }

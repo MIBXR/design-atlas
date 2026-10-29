@@ -1,0 +1,20 @@
+# Shaders：图层组合与参数调节
+
+[结构化条目](../../entries/materials/shaders.json) · [打开演示](../../demos/materials/shaders/index.html)
+
+上游 [JavaScript 接口与组件说明](https://github.com/shader-effects-inc/shaders/tree/81fd4ece5d493ca6c424a2af41f0e2c361ec8258) 提供 `createShader`，按 `components` 数组组合和处理图层。四个演示使用真实上游组件；配色、参考图、参数控件与触发按钮是本库的原创演示选择。它们用于学习独立效果，不表示复刻了官网的编辑器或预设。
+
+| 演示 | 可操作内容 | 参数依据 |
+| --- | --- | --- |
+| 流动渐变 `MeshGradient` | 速度、色块数、旋转、平滑度及色彩 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/MeshGradient/index.ts) |
+| 条纹玻璃 `FlutedGlass` | 密度、折射、角度与高光 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/FlutedGlass/index.ts) |
+| 指针涟漪 `CursorRipples` | 指针或触摸反馈的强度、衰减、半径与色散 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/CursorRipples/index.ts) |
+| 噪声溶解 `NoiseDissolve` | 手动进度、噪声尺度、边缘软度与正反向转场 | [固定提交源码](https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/NoiseDissolve/index.ts) |
+
+参数依据保存在结构化条目的 `demos[].parameters` 中。上游源码的 `ui.min/max` 是编辑控件建议范围；本地 MeshGradient 速度采用 `0–2`（上游 UI 为 `0–10`），FlutedGlass 角度采用 `0–180`（上游 UI 为 `0–360`），其余范围沿用源码 UI 建议。演示的步长与默认值是本地选择。MeshGradient 显式设置 `stops: null`，使两色控件生效；页面实际默认值和组件组合以 [demo.js](../../demos/materials/shaders/demo.js) 为准。修改用于自己的页面时先核对当前素材包，再依据内容对比度、输入设备和舞台尺寸调整。玻璃与涟漪需要底图才能判断形变，演示使用本地原创 SVG，不取用官网的付费作品。
+
+## 运行与适配
+
+通过 HTTP/HTTPS 打开演示，浏览器需提供 WebGPU。舞台一次运行一种效果，控制区切换、参数、重置和暂停均使用标准 DOM 控件。选择效果或调节参数时，可以直接查看底图、颜色和运动的变化。
+
+演示区同时保留静态参考与明确的运行状态。WebGPU 不可用时，静态示意帮助理解构成，但不能用来判断真实着色器的视觉精度、性能或硬件兼容性。正式页面的主要内容和操作保留在 DOM；减少动态、暂停或页面隐藏时停止持续动画，按真实设备验证返回后的状态。装饰效果不得成为阅读和完成操作的条件。

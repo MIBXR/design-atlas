@@ -129,7 +129,7 @@
   "negativePrompt": "不要把敦煌只概括成飞天贴图和土黄色卡片；不要把低分辨率缩略图宣称高清；不要复制登录订阅或云游戏业务。",
   "demo": "demos/cases/digital-dunhuang/index.html",
   "preview": "previews/cases/digital-dunhuang.jpg",
-  "research": "docs/research/digital-dunhuang.md",
+  "research": "docs/cases/digital-dunhuang.md",
   "fidelity": "demos/cases/digital-dunhuang/fidelity.md",
   "assetManifest": "demos/cases/digital-dunhuang/assets-manifest.json"
 }

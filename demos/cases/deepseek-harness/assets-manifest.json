@@ -1,6 +1,4 @@
 {
-  "source": "https://www.deepseek.com/harness/",
-  "capturedAt": "2026-10-11",
   "rights": "营销页面代码、品牌、图像与字体分别归 DeepSeek 及各权利人；deepseek-harness 产品仓库 MIT 不自动授权营销网站或品牌。本目录仅作有来源的设计研究，重用需自行确认许可。",
   "scope": "官方公开页面所需依赖在 vendor 下保持原字节；本地 runtime 仅注册模块，不执行 Next 路由入口。reference.css 的字体及图片 URL 本地化。",
   "assets": [

@@ -94,7 +94,7 @@
   "negativePrompt": "不要凭空重画品牌摄影；不要给全部页面套同一种淡入、圆角或整屏切幕；不要捏造原站音乐、全局主题、账户和远程执行；不要把未验证状态写成通过。",
   "demo": "demos/cases/claude-platform/index.html",
   "preview": "previews/cases/claude-platform.jpg",
-  "research": "demos/cases/claude-platform/fidelity.md",
+  "research": "docs/cases/claude-platform.md",
   "exercise": "以同一来源截图为基准，改变一个局部信息层级并记录对比：标题/图片比例、主按钮或状态反馈。保持品牌素材比例和移动端可读性。",
   "referenceUrl": "https://claude.com/",
   "implementation": "reference-study",
