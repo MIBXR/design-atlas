@@ -1716,6 +1716,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/met-museum/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/met-museum/script.js",
       "role": "source"
     },
@@ -1792,6 +1796,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/mori-art-museum/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/mori-art-museum/source/assets/source-style.css",
       "role": "process"
     },
@@ -1858,6 +1866,10 @@
     {
       "path": "demos/cases/rhine-lab/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/rhine-lab/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/rhine-lab/source/clips.sh",

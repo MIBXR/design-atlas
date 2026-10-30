@@ -242,6 +242,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/zelda-world/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/zelda-world/script.js",
       "role": "source"
     },

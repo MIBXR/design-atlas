@@ -39,5 +39,5 @@
       disconnect() { observer.disconnect(); window.removeEventListener('resize', resize); },
     };
   }
-  window.DesignAtlasPreview = { mount };
+  window.AtlasPreview = { mount };
 })();

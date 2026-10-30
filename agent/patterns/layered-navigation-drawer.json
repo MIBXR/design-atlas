@@ -216,6 +216,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/google-material/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/google-material/style.css",
       "role": "source"
     },

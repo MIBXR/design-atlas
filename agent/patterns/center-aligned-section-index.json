@@ -213,6 +213,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/monument-valley-game/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/monument-valley-game/style.css",
       "role": "source"
     },

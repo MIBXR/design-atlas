@@ -128,7 +128,7 @@
     {
       "path": "docs/cases/claude-platform.md",
       "role": "research",
-      "content": "# Claude：当前页面的设计与交互\n\n以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。\n\n## 触发、视觉响应与用途\n\n- 标题按单词 1s opacity 过渡，总交错跨度 .2s；内容组 750ms、10px、100ms 交错，在视口底部 −20% 触发 → 以较小运动保留阅读节奏。\n\n- 桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。\n\n- Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。\n\n- FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。\n\n- Continue with email → 对应原站邮箱登录 URL，不捏造首页内的邮箱注册表单；本地入口需离开演示到原站。视频和减少动态使用真实暂停状态。\n\n## 完整浏览路径\n\nThink fast 主张/入口+Cowork 视频 → 套餐切换 → FAQ → 页尾；完整结构来自匿名 HTTP HTML 与当前公开模块。\n\n## 主题与声音\n\n公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。\n\n官方 Cowork 演示静音循环，暂停/播放依据媒体真实事件；未发现首页背景音乐。 静音工作场景与低幅文字动画维持克制、可阅读的产品语气。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 观察依据\n\n公开源 AnimatedHeading、AnimatedReveal、Navbar、FAQAccordion、Tabs 已提取；具体时间和阈值来自这些模块/CSS。此浏览器访问 claude.com 被重定向到 claude.ai/new，已停止账户页面操作。因此源营销页桌面/手机实时操作均未验证，不能把公共代码核对称为现场浏览通过。\n"
+      "content": "# Claude：当前页面的设计与交互\n\n以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。\n\n## 触发、视觉响应与用途\n\n- 标题按单词 1s opacity 过渡，总交错跨度 .2s；内容组 750ms、10px、100ms 交错，在视口底部 −20% 触发 → 以较小运动保留阅读节奏。\n\n- 桌面菜单 pointer enter 展开，pointer leave 150ms 延迟关闭，其他导航降低强调；手机菜单 800ms 顶到下 clip 进入、400ms 退出，项目 320ms 起每项80ms交错。\n\n- Individual/Team and Enterprise → 移动选中底板，替换三/两张套餐卡；没有添加原页面没有的年/月账期控件。\n\n- FAQ → 只开一项，grid 0fr→1fr 与 opacity 400ms，图标同步；连续选项关闭前项，避免文本突然跳变。\n\n- Continue with email → 对应原站邮箱登录 URL，不捏造首页内的邮箱注册表单；本地入口需离开演示到原站。视频和减少动态使用真实暂停状态。\n\n## 完整浏览路径\n\nThink fast 主张/入口+Cowork 视频 → 套餐切换 → FAQ → 页尾；完整结构来自匿名 HTTP HTML 与当前公开模块。\n\n## 主题与声音\n\n公共 CSS root 根据 prefers-color-scheme 使用奶油浅色/近黑深色；首页没有核实到手动全局按钮。官方 Cowork 视频自身保持素材配色。\n\n官方 Cowork 演示静音循环，暂停/播放依据媒体真实事件；未发现首页背景音乐。 静音工作场景与低幅文字动画维持克制、可阅读的产品语气。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：以衬线主张、圆角入口和安静的工作视频表达效率；菜单、标题、FAQ 使用公共源可核对的具体机制。\n\n## 观察依据\n\n公开源 AnimatedHeading、AnimatedReveal、Navbar、FAQAccordion、Tabs 已提取；具体时间和阈值来自这些模块/CSS。源营销页桌面与手机的实时操作未验证。\n"
     },
     {
       "path": "prompts/cases/claude-platform.md",
@@ -144,6 +144,11 @@
       "path": "demos/cases/claude-platform/assets-manifest.json",
       "role": "asset-manifest",
       "content": "{\n  \"scope\": \"本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。\",\n  \"assets\": [\n    {\n      \"file\": \"assets/cowork.mp4\",\n      \"sourceUrl\": \"https://assets.claude.ai/videos/cowork-login-hero.mp4\",\n      \"purpose\": \"官网右栏Cowork视频\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"video/mp4\",\n      \"bytes\": 3811999,\n      \"status\": \"downloaded\",\n      \"sha256\": \"4e8fa322a4948bba7c5ff1cc461a63714f7b682b4f4ec86d6261eb2a50a6dd62\"\n    },\n    {\n      \"file\": \"assets/sans.woff2\",\n      \"sourceUrl\": \"https://claude.com/_next/static/media/AnthropicSans_Roman_Web-s.p.050e7498.woff2\",\n      \"purpose\": \"官网Anthropic Sans字体\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"font/woff2\",\n      \"bytes\": 118340,\n      \"status\": \"downloaded\",\n      \"sha256\": \"1b75c8ee81a05fa77331366e9602b82072bb5223593c928a6488dfe6fd023f1b\"\n    },\n    {\n      \"file\": \"assets/serif.woff2\",\n      \"sourceUrl\": \"https://claude.com/_next/static/media/AnthropicSerif_Roman_Web-s.p.c28786b4.woff2\",\n      \"purpose\": \"官网Anthropic Serif字体\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"font/woff2\",\n      \"bytes\": 175356,\n      \"status\": \"downloaded\",\n      \"sha256\": \"e96fe97bb7ba2190a9a227d27380e0c79894408bfc6acea5a511774d93a16f69\"\n    },\n    {\n      \"file\": \"assets/logo.svg\",\n      \"sourceUrl\": \"https://claude.com/\",\n      \"purpose\": \"官方首页原样提取的品牌SVG\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅本地私人学习，无品牌关联。\",\n      \"status\": \"downloaded\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 7969,\n      \"sha256\": \"04bdac6bbb584728ac9ba637d3a89535bf133a32aaa7baae06d8823baf78186a\"\n    }\n  ]\n}\n"
+    },
+    {
+      "path": "demos/cases/claude-platform/LICENSES.md",
+      "role": "license",
+      "content": "# 许可与出处\n\n| 许可原文或权利记录 | 覆盖范围 |\n| --- | --- |\n| [assets-manifest.json](assets-manifest.json) | `assets/cowork.mp4` 的来源与权利记录 |\n| [assets-manifest.json](assets-manifest.json) | `assets/logo.svg` 的来源与权利记录 |\n| [assets-manifest.json](assets-manifest.json) | `assets/sans.woff2`, `assets/serif.woff2` 的来源与权利记录 |\n"
     }
   ],
   "files": [
@@ -154,6 +159,10 @@
     {
       "path": "data/asset-sources.js",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/claude-platform/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/claude-platform/assets-manifest.json",

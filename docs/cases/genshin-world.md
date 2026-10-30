@@ -6,7 +6,7 @@
 
 选择 Vesna 与 Vodyanitsa 时，立绘和姓名以 100ms opacity 变化，完整人物背景也从青绿变为蓝色，肖像与麦克风随人改变。麦克风实际加载官方音频；公开配置明确 `playMode: random`、`clickOnPlaying: pause`，英文语言包为每位角色列出 3 条 MP3。源首页只有静音循环主视觉视频，没有发现独立背景音乐。
 
-代码依据：[公开 setups](https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/setups.d850a780.js)、[公开配置](https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/config.73224177.js)。这些是本次快照的佐证，不作为另一个设计版本。
+代码依据：[公开 setups](https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/setups.d850a780.js)、[公开配置](https://act.hoyoverse.com/puzzle/hk4e/pz_5yRXZTt_wZ/config.73224177.js)。这些代码佐证本次快照。
 
 ## 触发 → 响应 → 目的
 
@@ -20,6 +20,6 @@
 
 群像和巨标题负责情绪，下载区域负责行动；章节换色属于信息分组和视觉层级。人物、肖像、字体、金色边饰与完整背景协同维持幻想游戏语言。此快照为固定 IP 主题，未见深浅切换；角色背景变化是人物状态，不是系统主题。
 
-[W3C Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) 支持本地持续动画暂停，[Modal Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) 支持本地焦点和关闭流程。这些是本地可访问性依据，不是源站已完整满足规范的结论。
+[W3C Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) 支持本地持续动画暂停，[Modal Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) 支持本地焦点和关闭流程。这些规范用于本地可访问性适配。
 
 [本地对照与差异](../../demos/cases/genshin-world/fidelity.md)

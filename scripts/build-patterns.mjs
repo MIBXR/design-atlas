@@ -36,11 +36,9 @@ function textArray(value, label) {
   if (new Set(value).size !== value.length) throw new Error(`Duplicate pattern value: ${label}`);
 }
 
-// Case-only schema-1 repositories may omit the directory.
 export function loadPatterns({ root = defaultRoot, entries } = {}) {
   if (!entries) entries = fs.readdirSync(repositoryFile(root, 'entries/cases')).filter(n => n.endsWith('.json')).map(n => JSON.parse(textFile(root, `entries/cases/${n}`)));
-  const directory = repositoryFile(root, 'entries/patterns', false);
-  if (!fs.existsSync(directory)) return [];
+  const directory = repositoryFile(root, 'entries/patterns');
   const cases = new Map(entries.map(e => [e.id, e]));
   const patterns = fs.readdirSync(directory).filter(n => n.endsWith('.json')).sort().map(name => {
     const p = JSON.parse(textFile(root, `entries/patterns/${name}`));
@@ -137,7 +135,7 @@ export function buildPatterns({ root = defaultRoot, patterns, caseRecords, caseB
   });
   const catalog = { schemaVersion: 1, patternCount: records.length, repository: 'https://github.com/MIBXR/web-atlas', patterns: records };
   outputs.set('agent/patterns/index.json', encode(catalog));
-  outputs.set('data/patterns.js', Buffer.from('window.DESIGN_PATTERNS = ' + JSON.stringify(patterns, null, 2) + ';\n', 'utf8'));
+  outputs.set('data/patterns.js', Buffer.from('window.ATLAS_PATTERNS = ' + JSON.stringify(patterns, null, 2) + ';\n', 'utf8'));
   if (write) {
     fs.mkdirSync(repositoryFile(root, 'agent/patterns', false), { recursive: true });
     for (const [relative, bytes] of outputs) fs.writeFileSync(repositoryFile(root, relative, false), bytes);

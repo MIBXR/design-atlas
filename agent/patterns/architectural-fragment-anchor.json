@@ -521,6 +521,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/palace-museum/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/palace-museum/source/assets/1e907eda0095f899.png",
       "role": "process"
     },

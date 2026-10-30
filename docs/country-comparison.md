@@ -1,6 +1,6 @@
 # 用国别查找案例，再用设计任务作比较
 
-各样本的采集日期见对应研究与条目；本表不会以新条目的日期重新核验既有快照。这里的国别主要指参考机构、品牌或创作者来源，页面地区版本另记。碧蓝档案是韩国开发来源、观察日本官网；赛马娘观察国际英文版；Qoder 按“中国大陆版 Qoder.cn”收录，不据此判断国际运营主体。以下是选定样本的观察与分析推断，不是国家统计，也不把网站表现归因于国民性。
+各样本的采集日期见对应研究与条目。这里的国别主要指参考机构、品牌或创作者来源，页面地区版本另记。碧蓝档案是韩国开发来源、观察日本官网；赛马娘观察国际英文版；Qoder 按“中国大陆版 Qoder.cn”收录。以下比较选定样本的设计任务与机制。
 
 日本六例内部就有明显差异。[Nintendo 世界页](https://www.nintendo.com/jp/zelda/totk/world/index.html) 把真实游戏景色铺满屏幕，以日文字标和三个玩法动词引导探索；[Persona 5 Royal 英文页](https://persona.atlus.com/p5r/?lang=en#) 使用黑金群像、剪切标题和服装切换，制造角色登场感；[赛马娘国际页](https://umamusume.com/) 则以草绿赛道、荧绿斜切带、立绘与竖屏玩法画面组织竞技主题。三者都突出 IP，但依靠的图像尺度、字体姿态和操作节奏并不相同。
 
@@ -17,15 +17,15 @@
 | [森美术馆](cases/mori-art-museum.md) | 机构红、白底；海报与正文分工 | 叠加馆标、宽海报、展期带 | 当前展览、新闻与购票 |
 | [Fuji Rock](cases/fuji-rock.md) | 橙蓝、灰米；窄高 Logo | 现场摄影、山形菜单、竖票据 | 实用导览与特集浏览 |
 
-美国样本也不能合并成一种风格。[Apple](https://www.apple.com/iphone-18-pro/) 的黑底、无衬线巨字和硬件特写，通过滚动缩放与文案交接解释细节；[Claude](https://claude.com/) 的奶油底、衬线标题和 Cowork 视频，形成更接近编辑阅读的语气。前者让材质成为证据，后者让工作过程成为证据。见 [Apple 拆解](../demos/cases/apple-product/fidelity.md)、[Claude 拆解](../demos/cases/claude-platform/fidelity.md)。
+美国样本中，[Apple](https://www.apple.com/iphone-18-pro/) 的黑底、无衬线巨字和硬件特写，通过滚动缩放与文案交接解释细节；[Claude](https://claude.com/) 的奶油底、衬线标题和 Cowork 视频，形成更接近编辑阅读的语气。前者让材质成为证据，后者让工作过程成为证据。见 [Apple 拆解](../demos/cases/apple-product/fidelity.md)、[Claude 拆解](../demos/cases/claude-platform/fidelity.md)。
 
-中国的[原神](https://genshin.hoyoverse.com/en/) 采用红色版本群像、装饰标题与青绿角色舞台；[明日方舟](https://ak.hypergryph.com/) 使用黑灰网格、青色索引、裁切巨字及人物档案。[中国大陆版 Qoder.cn](https://qoder.cn/) 则以绿色工作台和形态标签展示软件任务。共同可学的是视觉与产品证据的对应关系，而非“中式配色”。见 [原神](cases/genshin-world.md)、[方舟](cases/arknights-world.md)、[Qoder](../demos/cases/qoder-platform/fidelity.md)。
+中国的[原神](https://genshin.hoyoverse.com/en/) 采用红色版本群像、装饰标题与青绿角色舞台；[明日方舟](https://ak.hypergryph.com/) 使用黑灰网格、青色索引、裁切巨字及人物档案。[中国大陆版 Qoder.cn](https://qoder.cn/) 则以绿色工作台和形态标签展示软件任务。共同可学的是视觉与产品证据的对应关系。见 [原神](cases/genshin-world.md)、[方舟](cases/arknights-world.md)、[Qoder](../demos/cases/qoder-platform/fidelity.md)。
 
 [故宫探索页](https://www.dpm.org.cn/Explore.html) 的朱红面板、屋脊部件与文化对象入口，让建筑本身参与章节识别；[数字敦煌](https://www.e-dunhuang.com/) 先以石窟／壁画影像建立观看对象，再用洞窟与朝代目录支持资料检索；[苏州博物馆](https://www.szmuseum.com/) 的白底、黑灰建筑轮廓与多尺度图像入口，连接实体空间和来馆任务。这三种文化门户属于现有艺术/文化分类，宫廷、石窟与江南空间用标签检索，无需各自成为顶层类别。对应分析与近似边界见 [故宫](cases/palace-museum.md)、[数字敦煌](cases/digital-dunhuang.md)、[苏博](cases/suzhou-museum.md)。
 
 | 中国文化样本 | 可观察构成 | 资料与行动 | 本库复用重点 |
 | --- | --- | --- | --- |
-| 故宫探索页 | 朱红章节、金色建筑局部、独立文化图像 | 建筑、馆藏与文化内容入口 | 以具体建筑部件锚定章节，而非任意加古风边框 |
+| 故宫探索页 | 朱红章节、金色建筑局部、独立文化图像 | 建筑、馆藏与文化内容入口 | 以具体建筑部件锚定章节 |
 | 数字敦煌 | 石窟与壁画图像、编号与时代索引 | 朝代条件、洞窟档案与细节查看 | 保留影像主体，筛选条件与当前结果可回看 |
 | 苏州博物馆 | 白底、建筑影像中的黑灰轮廓、大小不同的图像入口 | 建筑介绍、展览与参观目的地 | 多尺度图像组织目的地，文字保证入口可识别 |
 

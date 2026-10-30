@@ -228,6 +228,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/persona-kinetic/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/persona-kinetic/script.js",
       "role": "source"
     },

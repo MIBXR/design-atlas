@@ -148,6 +148,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/rijksmuseum-art/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/rijksmuseum-art/script.js",
       "role": "source"
     },

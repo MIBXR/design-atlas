@@ -163,6 +163,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/met-museum/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/met-museum/script.js",
       "role": "source"
     },
@@ -217,6 +221,10 @@
     {
       "path": "demos/cases/philharmonie-music/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/philharmonie-music/script.js",

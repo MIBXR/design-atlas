@@ -3,8 +3,8 @@
 ## 真实来源与理论
 
 - [The Met official English homepage](https://www.metmuseum.org/en)（实例）：2026-10-07采集英语首页：建筑静图、白底欢迎区、参观信息与原生展览横架。
-- [The Met Image and Data Resources](https://www.metmuseum.org/policies/image-resources)（规范）：Open Access区分公众领域与受限制作品；本地OA藏品资源不扩大为海报、字体、品牌及首页影像的CC0许可。
-- [W3C WAI Disclosure Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)（规范）：内容显隐按钮与状态语义的实现参考，不表示机构采用该理论或已全面合规。
+- [The Met Image and Data Resources](https://www.metmuseum.org/policies/image-resources)（规范）：Open Access区分公众领域与受限制作品；本地OA藏品采用各自的许可记录；海报、字体、品牌及首页影像的权利记录见素材清单。
+- [W3C WAI Disclosure Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)（规范）：内容显隐按钮与状态语义的实现参考。
 
 ## 构成与设计逻辑
 

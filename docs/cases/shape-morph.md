@@ -1,6 +1,6 @@
 # 几何形状变化：让单元保持连续
 
-核验日期：2026-10-07。将用户的“集合形状变化”解释为几何单元组成和变形。原作 [In Pieces](https://species-in-pieces.com/) 本次 web 读取失败；以 [Bryan James 原作者制作文章](https://www.smashingmagazine.com/2015/06/the-making-of-in-pieces/) 与 [CSSconf EU 原作者访谈](https://blog.cssconf.eu/2015/09/24/introducing-bryan-james/) 核实，不能称为当日官网视觉观察。
+核验日期：2026-10-07。将用户的“集合形状变化”解释为几何单元组成和变形。依据为 [Bryan James 原作者制作文章](https://www.smashingmagazine.com/2015/06/the-making-of-in-pieces/) 与 [CSSconf EU 原作者访谈](https://blog.cssconf.eu/2015/09/24/introducing-bryan-james/)；原作 [In Pieces](https://species-in-pieces.com/) 的当日视觉与实时交互未验证。
 
 ## 已核验事实
 
@@ -8,13 +8,13 @@
 
 CSSconf 访谈再次解释从 CSS 多边形实验到核心概念的形成。[原作者访谈](https://blog.cssconf.eu/2015/09/24/introducing-bryan-james/)
 
-本条为依据2015年原作者制作文章完成的经典风格练习。本条不承诺原站当前可交互、兼容现代浏览器，也未复制原作物种、图形坐标或其他素材。
+本条为依据2015年原作者制作文章完成的经典风格练习，图形与素材为本地原创。
 
 ## 理论和设计推断
 
 多边形由有序顶点定义。[MDN polygon()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/basic-shape/polygon)。让同一几何片保持顶点数量与顺序，才有明确的连续插值关系。
 
-本条推断：形态变化应跟随语义变化；相同单元可让多个状态共享身份。当变形只为炫技且持续自动播放，主体信息可能被压过。这里未将这些推断包装成视觉注意力或转化率实验。
+本条推断：形态变化应跟随语义变化；相同单元可让多个状态共享身份。当变形只为炫技且持续自动播放，主体信息可能被压过。
 
 ## Demo 映射
 

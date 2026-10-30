@@ -371,6 +371,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/arknights-world/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/arknights-world/particles.js",
       "role": "source"
     },
@@ -547,6 +551,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/blue-archive/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/blue-archive/source/assets/app.47b744a6.css",
       "role": "process"
     },
@@ -653,6 +661,10 @@
     {
       "path": "demos/cases/genshin-world/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/genshin-world/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/genshin-world/script.js",
@@ -1925,6 +1937,10 @@
     {
       "path": "demos/cases/zenless-zone-zero/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/zenless-zone-zero/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/zenless-zone-zero/mobile.html",

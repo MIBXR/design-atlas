@@ -231,6 +231,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/blue-archive/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/blue-archive/source/assets/app.47b744a6.css",
       "role": "process"
     },

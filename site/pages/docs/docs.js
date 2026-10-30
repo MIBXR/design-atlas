@@ -1,6 +1,6 @@
 const content = document.querySelector('#content');
 let file = new URLSearchParams(location.search).get('file') || 'docs/guide.md';
-const documents = window.DESIGN_ATLAS_DOCUMENTS || [];
+const documents = window.ATLAS_DOCUMENTS || [];
 const documentPaths = new Set(documents.map(item => item.path));
 const libraryURL = new URL('.', document.baseURI);
 let activeRequest;

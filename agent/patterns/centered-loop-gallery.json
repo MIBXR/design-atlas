@@ -254,6 +254,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/fuji-rock/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/fuji-rock/source/assets/source-style.css",
       "role": "process"
     },
@@ -388,6 +392,10 @@
     {
       "path": "demos/cases/monument-valley-game/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/monument-valley-game/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/monument-valley-game/style.css",
@@ -534,6 +542,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/persona-kinetic/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/persona-kinetic/script.js",
       "role": "source"
     },
@@ -600,6 +612,10 @@
     {
       "path": "demos/cases/philharmonie-music/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/philharmonie-music/script.js",

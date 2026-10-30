@@ -6,7 +6,7 @@
 
 Gameplay 三态由真实角色立绘、两张游戏截图与文字板共同水平移动，源样式为 **400ms cubic-bezier(.25,1,.5,1)**；第 1 态禁用 Previous，第 3 态禁用 Next。没有确认角色区域持续滚动的 marquee，因此本地没有凭空补上。
 
-About 缩略图点击后在站内出现原生视频：[top_about.mp4](https://umamusume.com/assets/videos/top_about.mp4)。原始 MP4 容器仅有视频轨道、没有音轨；现场播放器 unmuted 不能证明有声音。关闭返回长页，比赛画面的剪辑承担节奏。官网其他 PV 外链的声音未在本地核实，未发现独立 BGM。
+About 缩略图点击后在站内出现原生视频：[top_about.mp4](https://umamusume.com/assets/videos/top_about.mp4)。原始 MP4 容器仅有视频轨道、没有音轨。关闭返回长页，比赛画面的剪辑承担节奏。官网其他 PV 外链的声音未在本地核实，未发现独立 BGM。
 
 ## 触发 → 响应 → 目的
 

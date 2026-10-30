@@ -231,6 +231,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/fuji-rock/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/fuji-rock/source/assets/source-style.css",
       "role": "process"
     },
@@ -309,6 +313,10 @@
     {
       "path": "demos/cases/mori-art-museum/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/mori-art-museum/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/mori-art-museum/source/assets/source-style.css",
@@ -437,6 +445,10 @@
     {
       "path": "demos/cases/uma-musume/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/uma-musume/style.css",

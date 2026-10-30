@@ -31,7 +31,7 @@
       worker.postMessage({type}, [channel.port2]);
     });
   }
-  window.DesignAtlasAssetCache = Object.freeze({ready,
+  window.AtlasAssetCache = Object.freeze({ready,
     status:() => request('atlas-cache-status'), clear:() => request('atlas-cache-clear'),
     remember:urls => ready.then(available => {
       if (available) navigator.serviceWorker.controller?.postMessage({type:'atlas-cache-remember', urls});

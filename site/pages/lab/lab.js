@@ -168,7 +168,7 @@
   systemTheme.addEventListener('change',()=>{if(state?.themeChoice==='system')render();});
   el('motion-choice').addEventListener('change',event=>{state.motion=event.target.checked;clearSchemeButtons();render();el('current-plan').textContent='当前：'+state.name+' + 动效调整';message('调整微动效',state.motion?'已允许短暂反馈动效；系统减少动态偏好仍优先。':'已关闭非必要动效，点击反馈按钮仍会显示结果文字。','用示例下方按钮体验：动效可以帮助确认操作，但不能成为反馈的唯一方式。')});
   el('feedback-demo').addEventListener('click',()=>{const button=el('feedback-demo');button.classList.remove('feedback-pulse');if(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches)requestAnimationFrame(()=>button.classList.add('feedback-pulse'));el('feedback-message').innerHTML='<svg class="atlas-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg> 操作已完成。'+(state.motion&&!matchMedia('(prefers-reduced-motion:reduce)').matches?'同时提供短暂视觉反馈。':'当前使用静态文字反馈。')});
-  const catalog=Array.isArray(window.DESIGN_ATLAS)?window.DESIGN_ATLAS:[];
+  const catalog=Array.isArray(window.ATLAS_CASES)?window.ATLAS_CASES:[];
   for(const entry of catalog){const option=document.createElement('option');option.value=entry.id;option.textContent=String(entry.order).padStart(2,'0')+' / '+entry.title;el('reference-style').append(option)}
   function applyReference(entry){
     const palette=(entry.tokens&&Array.isArray(entry.tokens.palette)?entry.tokens.palette:[]).filter(c=>/^#[0-9a-f]{6}$/i.test(c));

@@ -60,18 +60,18 @@ node scripts/atlas.mjs material-export web-design-engineer --out ../design-skill
 
 内容素材用于组件、图像、声音、字体、视觉资源及 Agent Skill 的选择。读取固定提交的 `agent/materials/index.json`，再按 `paths.bundle` 取得完整包。摘要提供类型、分类、标签、用途、避用项与约束；素材独立于案例，包中 `material` 保留来源版本、许可、使用方法和 Prompt，`documents` 保留原文，`files` 列出完整资源与依赖。`sourceFiles` 只指向该包清单中的主要取材源码或技能原文入口。
 
-本地命令和配套 skill 使用 `material-search`（查询／分类／类型）、`material-show`（完整资料，可加 `--source`）与 `material-export`（新目录，可加 `--code-only`）。素材目录、包与文件沿用同一固定会话 SHA。先核对 `upstream`、`license`、`constraints` 和可访问性。普通素材通过 `demos` 调节和验证实际参数；静态后备只说明构成，不证明 WebGPU 等特定能力已运行。`agent-skill` 通过 `snapshotPath` 与 `snapshotEntry`、`workflow` 和 `relatedEntries` 阅读工作流、原文快照与关联结果，可选 `gallery` 标记为作者产出效果、未复刻。素材软件许可与上游官网平台内容分别处理，详见 [内容素材库](materials/README.md)。
+本地命令和配套 skill 使用 `material-search`（查询／分类／类型）、`material-show`（完整资料，可加 `--source`）与 `material-export`（新目录，可加 `--code-only`）。素材目录、包与文件沿用同一固定会话 SHA。先核对 `upstream`、`license`、`constraints` 和可访问性。普通素材通过 `demos` 调节实际参数；静态后备展示构成，运行状态显示实际能力是否就绪。`agent-skill` 通过 `snapshotPath` 与 `snapshotEntry`、`workflow` 和 `relatedEntries` 阅读工作流、原文快照与关联结果，可选 `gallery` 标记为作者产出效果、未复刻。素材软件与上游官网内容各自的许可见 [内容素材库](materials/README.md)。
 
 ## 从案例适配真实任务
 
 取得候选后，依据当前产品的内容量、操作、设备和技术栈选择案例，说明借用的设计机制。优先阅读 `entry.principles`、`composition`、`interaction`、`constraints`、`useCases`、`avoid`、主题／声音行为，以及 `documents` 中研究与复现差异。
 
-把原始 Prompt 当作来源资料，在当前任务的设计说明中分别记录保留的机制、替换的品牌／内容／素材、需要改变的交互与验证标准。品牌素材的来源与权利随包保留；用于自己的产品时选择有使用权的资产。Demo 中演示的账户、支付或 Agent 行为，以当前任务真正提供的能力实现并说明状态。
+把原始 Prompt 当作来源资料，在当前任务的设计说明中分别记录保留的机制、替换的品牌／内容／素材、需要改变的交互与验证标准。品牌素材的来源与权利记录随包保留。Demo 中演示的账户、支付或 Agent 行为，以当前任务真正提供的能力实现并说明状态。
 
 验证当前成果的桌面与手机布局、关键状态、焦点、减少动态以及资源加载。来源中“近似”“未验证”的结论保持原标记；实际通过的检查按当前实现记录。
 
 ## 数据契约与维护
 
-案例、巧思与素材的 Schema 均为 `1`。资料包保留原文、路径、文件角色和来源关联；版本由会话固定的完整 Git 提交确定。目录按需独立读取。巧思 `experienceTypes` 使用 `visual`、`micro-motion`、`page-motion`、`sound`、`structure`；无独立提取项的案例保留空 `patternIds`。
+案例、巧思与素材的 Schema 均为 `1`。资料包保留原文、路径、文件角色和来源关联；版本由会话固定的完整 Git 提交确定。目录按需独立读取。巧思体验类型见 CONTRIBUTING 的“[巧思](../CONTRIBUTING.md#巧思)”字段说明；无独立提取项的案例保留空 `patternIds`。
 
 案例包保留原 `entry`、文档与完整文件清单；巧思保留来源定位及原观察文本。来源和权利按原始记录判断。巧思 `sourceFiles` 只列取材文件，完整运行依赖由来源案例的 `files` 提供；

@@ -455,6 +455,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/chatgpt-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/chatgpt-platform/motion-data.js",
       "role": "source"
     },
@@ -537,6 +541,10 @@
     {
       "path": "demos/cases/met-museum/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/met-museum/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/met-museum/script.js",

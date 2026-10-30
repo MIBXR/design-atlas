@@ -181,6 +181,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/genshin-world/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/genshin-world/script.js",
       "role": "source"
     },

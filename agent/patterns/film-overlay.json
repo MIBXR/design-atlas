@@ -392,6 +392,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/monument-valley-game/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/monument-valley-game/style.css",
       "role": "source"
     },
@@ -514,6 +518,10 @@
     {
       "path": "demos/cases/uma-musume/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/uma-musume/style.css",

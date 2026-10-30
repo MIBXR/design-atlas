@@ -125,6 +125,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/claude-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/claude-platform/script.js",
       "role": "source"
     },

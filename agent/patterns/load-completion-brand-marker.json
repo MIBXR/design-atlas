@@ -179,6 +179,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/design-sight/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/design-sight/source/assets/source-style.css",
       "role": "process"
     },
@@ -293,6 +297,10 @@
     {
       "path": "demos/cases/fuji-rock/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/fuji-rock/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/fuji-rock/source/assets/source-style.css",

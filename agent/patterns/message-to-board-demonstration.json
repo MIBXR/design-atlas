@@ -115,6 +115,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/linear-workflow/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/linear-workflow/script.js",
       "role": "source"
     },

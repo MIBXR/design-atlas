@@ -20,7 +20,7 @@ fs.mkdirSync(path.join(root,'data'), {recursive:true});
 const assetSources = loadAssetSources(root);
 assetSources.assets = Object.fromEntries(Object.entries(assetSources.assets).filter(([relative]) => fs.existsSync(path.join(root, relative))));
 fs.writeFileSync(path.join(root,'data/asset-sources.js'), serializeAssetSources(assetSources), 'utf8');
-fs.writeFileSync(path.join(root,'data/cases.js'), 'window.DESIGN_ATLAS = ' + JSON.stringify(entries,null,2) + ';\n');
+fs.writeFileSync(path.join(root,'data/cases.js'), 'window.ATLAS_CASES = ' + JSON.stringify(entries,null,2) + ';\n');
 for (const file of ['index.html', 'cases.html']) {
   const filePath = path.join(root, file);
   const html = fs.readFileSync(filePath, 'utf8')

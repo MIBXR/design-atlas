@@ -277,6 +277,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/blue-archive/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/blue-archive/source/assets/app.47b744a6.css",
       "role": "process"
     },
@@ -429,6 +433,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/persona-kinetic/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/persona-kinetic/script.js",
       "role": "source"
     },
@@ -567,6 +575,10 @@
     {
       "path": "demos/cases/uma-musume/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/uma-musume/style.css",

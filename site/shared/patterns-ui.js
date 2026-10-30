@@ -1,8 +1,8 @@
 (() => {
   'use strict';
-  const patterns = window.DESIGN_PATTERNS || [];
-  const favoriteStore = window.DesignAtlasFavorites;
-  const entries = window.DESIGN_ATLAS || [];
+  const patterns = window.ATLAS_PATTERNS || [];
+  const favoriteStore = window.AtlasFavorites;
+  const entries = window.ATLAS_CASES || [];
   const $ = selector => document.querySelector(selector);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, x => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
   const categories = [...new Set(patterns.map(pattern => pattern.category))];
@@ -90,7 +90,7 @@
   let previewObserver;
   function clearDetail() {
     previewObserver?.disconnect();
-    if (window.DesignAtlasPlayground) $('#pattern-detail').querySelectorAll('[data-pattern-playground]').forEach(root => window.DesignAtlasPlayground.dispose(root));
+    if (window.AtlasPlayground) $('#pattern-detail').querySelectorAll('[data-pattern-playground]').forEach(root => window.AtlasPlayground.dispose(root));
     $('#pattern-detail').innerHTML = '';
   }
   function previewPanel(pattern) {
@@ -102,8 +102,8 @@
   function initPreviewPanel(pattern) {
     previewObserver?.disconnect();
     const local = $('#pattern-detail [data-pattern-playground]');
-    if (local && window.DesignAtlasPlayground) {
-      window.DesignAtlasPlayground.mount(local);
+    if (local && window.AtlasPlayground) {
+      window.AtlasPlayground.mount(local);
       if (pattern.id === 'state-shape-feedback') local.querySelector('[data-feedback]').value = local.querySelector('.pg-micro').dataset.feedback = 'shape';
     }
     const frame = $('#pattern-live-frame');
@@ -112,7 +112,7 @@
     let loaded = false;
     const source = () => entries.find(entry => entry.id === $('#pattern-demo-source').value) || entries.find(entry => entry.id === pattern.sources[0].caseId);
     const controls = document.querySelectorAll('#pattern-detail [data-viewport]');
-    previewObserver = window.DesignAtlasPreview.mount(frame, controls, source().id === 'chatgpt-platform' ? 'wide' : 'desktop');
+    previewObserver = window.AtlasPreview.mount(frame, controls, source().id === 'chatgpt-platform' ? 'wide' : 'desktop');
     const load = () => {
       const entry = source();
       const restoreFocus = document.activeElement === start;
@@ -148,7 +148,7 @@
     readState(new URLSearchParams(rawQuery));
     clearDetail();
     $('#patterns-library').hidden = true; $('#pattern-detail').hidden = true;
-    window.DesignAtlasPlayground?.disposeDetached();
+    window.AtlasPlayground?.disposeDetached();
     updateNavigation(true);
     if (path === 'patterns') {
       $('#patterns-library').hidden = false;
@@ -218,5 +218,5 @@
     $('#pattern-search').focus();
     return true;
   }
-  window.DesignAtlasPatterns = { init, renderRoute, caseLinks, focusSearch };
+  window.AtlasPatterns = { init, renderRoute, caseLinks, focusSearch };
 })();
