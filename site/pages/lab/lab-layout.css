@@ -9,6 +9,7 @@
 .lab-page .lab-rail .atlas-section-nav{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;margin:0;padding:10px 0 0}
 .lab-page .lab-rail .atlas-section-nav>a{display:flex;justify-content:flex-start;width:100%;min-height:44px;margin:0;padding:12px;border:0;border-radius:7px;background:none;color:#d5dacb;font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;text-align:left;white-space:normal}
 .lab-page .lab-rail .atlas-section-nav>a:hover{background:#353a2e}
+.lab-page .lab-rail .atlas-section-nav>a[aria-current=location],.lab-page .lab-rail .atlas-section-nav>a[aria-current=location]:hover{background:#d4ef76;color:#252822;font-weight:650}
 .lab-page .lab-rail a:focus-visible,.lab-page .lab-rail summary:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
 
 /* A narrow workspace stacks controls; desktop gives the experiment its own column. */

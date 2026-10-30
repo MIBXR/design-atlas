@@ -1,4 +1,6 @@
 const content = document.querySelector('#content');
+const documentRail = document.querySelector('.document-rail');
+const searchContainer = document.querySelector('.document-search-container');
 let file = new URLSearchParams(location.search).get('file') || 'docs/guide.md';
 const documents = window.ATLAS_DOCUMENTS || [];
 const documentSources = window.ATLAS_DOCUMENT_SOURCES;
@@ -38,7 +40,7 @@ function renderDirectory() {
     navigation.append(section);
   }
   const active = navigation.querySelector('[aria-current="page"]');
-  if (active) navigation.scrollTop = Math.max(0, active.getBoundingClientRect().top - navigation.getBoundingClientRect().top);
+  if (active) documentRail.scrollTop = Math.max(0, active.getBoundingClientRect().top - documentRail.getBoundingClientRect().top - searchContainer.getBoundingClientRect().height - active.closest('.document-group').querySelector('summary').getBoundingClientRect().height);
 }
 function filterDirectory() {
   const query = document.querySelector('#document-search').value.trim().toLowerCase();
@@ -215,7 +217,9 @@ function renderOutline(headings) {
 }
 async function renderMarkdown(text, sourceURL, signal) {
   if (!window.marked || !window.DOMPurify) throw new Error('文档渲染器加载失败，请刷新后重试。');
-  const html = marked.parse(text.replace(/^[\u200B-\u200F\uFEFF]+/u, ''), {gfm:true, async:false});
+  const {documentContent} = await import('./document-title.mjs');
+  const {title, body} = documentContent(text, file);
+  const html = marked.parse(body, {gfm:true, async:false});
   const fragment = DOMPurify.sanitize(html, {
     USE_PROFILES:{html:true}, RETURN_DOM_FRAGMENT:true,
     FORBID_TAGS:['style', 'iframe', 'form'], FORBID_ATTR:['style']
@@ -233,7 +237,6 @@ async function renderMarkdown(text, sourceURL, signal) {
   }
   const heading = fragment.querySelector('h1');
   const headings = [...fragment.querySelectorAll('h1,h2')];
-  const title = heading?.textContent.trim() || file.split('/').pop();
   // The page header already displays the document's leading title.
   heading?.remove();
   await prepareLinks(fragment, sourceURL, signal);
@@ -328,6 +331,11 @@ window.addEventListener('popstate', () => {
   if ((new URLSearchParams(location.search).get('file') || 'docs/guide.md') !== file) readDocument({focus:true});
   else focusDocument();
 });
+function syncSearchHeight() {
+  documentRail.style.setProperty('--document-search-height', searchContainer.getBoundingClientRect().height + 'px');
+}
+new ResizeObserver(syncSearchHeight).observe(searchContainer);
+syncSearchHeight();
 renderDirectory();
 document.querySelector('#document-search').addEventListener('input', filterDirectory);
 readDocument();

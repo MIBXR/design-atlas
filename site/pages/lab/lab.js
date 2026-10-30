@@ -208,6 +208,19 @@
   setScheme('paper');
   const requested=new URLSearchParams(location.search).get('style');
   if(requested){const entry=catalog.find(item=>item.id===requested);if(entry)applyReference(entry);else el('style-context').textContent='未找到这个风格编号，已保留纸页基础方案。请从选择器重新选择。'}
+  const sectionLinks=[...document.querySelectorAll('.atlas-section-nav>a')];
+  function setCurrentSection(hash){
+    for(const link of sectionLinks){
+      if(link.hash===hash)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    }
+  }
+  for(const link of sectionLinks)link.addEventListener('click',()=>setCurrentSection(link.hash));
+  setCurrentSection(sectionLinks.some(link=>link.hash===location.hash)?location.hash:sectionLinks[0].hash);
+  const sectionObserver=new IntersectionObserver(entries=>{
+    for(const entry of entries)if(entry.isIntersecting)setCurrentSection('#'+entry.target.id);
+  },{rootMargin:'-30% 0px -60% 0px'});
+  for(const link of sectionLinks)sectionObserver.observe(document.querySelector(link.hash));
   if(document.documentElement.dataset.labEmbed==='home' && window.parent!==window){
     const experiment=el('lab');
     let reportedHeight=0;

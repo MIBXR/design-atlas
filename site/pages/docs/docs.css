@@ -34,23 +34,23 @@
 .document-page [hidden]{display:none!important}
 .document-page a:focus-visible,.document-page select:focus-visible,.document-page button:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
 .document-layout{display:grid;grid-template-columns:228px minmax(0,1fr) 228px;grid-template-areas:"rail main outline";column-gap:32px;width:100%;max-width:none;margin:0;padding:0 32px;align-items:start}
-.document-rail{grid-area:rail;display:flex;flex-direction:column;position:sticky;top:calc(var(--atlas-header-height) + 24px);max-height:calc(100svh - var(--atlas-header-height) - 48px);margin:24px 0;padding:16px;overflow-y:auto;border-radius:12px;background:#242721;color:#f5f4ed}
-.document-menu{display:flex;flex-direction:column;gap:12px;min-height:0}
+.document-rail{grid-area:rail;position:sticky;top:calc(var(--atlas-header-height) + 24px);max-height:calc(100svh - var(--atlas-header-height) - 48px);margin:24px 0;padding:16px;overflow-y:auto;overflow-anchor:none;overscroll-behavior:contain;border-radius:12px;background:#242721;color:#f5f4ed}
+.document-search-container{position:sticky;top:-16px;z-index:2;padding:16px 0 8px;margin:-16px 0 0;background:#242721}
 .document-search{display:flex;align-items:center;gap:10px;flex:none;height:44px;min-height:44px;padding:0 12px;border:1px solid #4b5442;border-radius:7px;background:#30362a;color:#f5f4ed}
 .document-search svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8}
 .document-search input{width:100%;min-width:0;height:100%;padding:0;border:0;outline:none;background:transparent;color:inherit;font:inherit;font-size:14px;line-height:1.5}
 .document-search input::placeholder{color:#b8bfb0}
 .document-search:focus-within{outline:3px solid #d4ef76;outline-offset:2px}
-.document-menu>nav{min-height:0;overflow-y:auto;overflow-anchor:none;overscroll-behavior:contain;scrollbar-gutter:stable;scroll-padding-top:52px}
 #document-empty{margin:0;color:#d5dacb;font-size:14px}
 .document-group+.document-group{margin-top:8px}
-.document-group>summary{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;padding:10px 13px;border:1px solid #4b5442;border-radius:7px;background:#30362a;color:#f5f4ed;font-size:14px;font-weight:600;line-height:1.5;list-style:none;cursor:pointer;touch-action:manipulation}
+.document-group>summary{position:sticky;top:calc(var(--document-search-height) - 16px);z-index:1;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;padding:10px 13px;border:1px solid #4b5442;border-radius:7px;background:#30362a;color:#f5f4ed;font-size:14px;font-weight:600;line-height:1.5;list-style:none;cursor:pointer;touch-action:manipulation}
 .document-group>summary::-webkit-details-marker{display:none}
 .document-group>summary::after{content:'';display:inline-block;width:1em;height:1em;flex:none;background:currentColor;color:#d4ef76;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14M12 5v14' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;font-size:18px;font-weight:400;line-height:1}
 .document-group[open]>summary::after{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E")}
 .document-group>summary:focus-visible{outline:3px solid #d4ef76;outline-offset:-3px}
 .document-group>summary:hover{border-color:#d4ef76}
 .document-rail ul{list-style:none;margin:0;padding:0}
+.document-group>ul{padding-top:10px}
 .document-rail a{display:block;min-height:44px;padding:12px;border-radius:7px;background:none;color:#d5dacb;font-size:14px;line-height:1.6;text-decoration:none;overflow-wrap:anywhere}
 .document-rail a:hover{background:#353a2e;text-decoration:none}
 .document-rail a[aria-current=page],.document-rail a[aria-current=page]:hover{background:#d4ef76;color:#252822;font-weight:650}

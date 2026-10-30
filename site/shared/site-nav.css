@@ -359,4 +359,4 @@ html[data-lab-embed=home] .atlas-page-directory{display:none!important}
 @media(min-width:801px) and (max-width:1159px){.atlas-site-header-inner{padding:0 24px}}
 html{scrollbar-width:thin;scrollbar-color:var(--atlas-shell-line) transparent}
 body *{scrollbar-width:thin;scrollbar-color:var(--atlas-shell-line) transparent}
-.cases-page .rail,.document-rail,.document-rail *,.atlas-page-directory[data-directory-open],.atlas-page-directory[data-directory-open] *{scrollbar-color:#4b5442 transparent}
+.cases-page .rail,.document-rail,.lab-rail,.atlas-page-directory[data-directory-open]{scrollbar-width:none}

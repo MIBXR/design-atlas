@@ -1,12 +1,12 @@
 window.ATLAS_DOCUMENTS = [
   {
     "path": "docs/guide.md",
-    "title": "项目指南",
+    "title": "Web Atlas 使用指南",
     "group": "项目指南"
   },
   {
     "path": "docs/agent.md",
-    "title": "Agent 工作流与数据契约",
+    "title": "Web Atlas：从需求取材",
     "group": "项目指南"
   },
   {
@@ -223,6 +223,56 @@ window.ATLAS_DOCUMENTS = [
     "path": "docs/cases/met-museum.md",
     "title": "The Met · 编辑式展览与馆藏陈列",
     "group": "案例研究"
+  },
+  {
+    "path": "docs/materials/98-css.md",
+    "title": "98.css：带有桌面记忆的 CSS 组件",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/README.md",
+    "title": "内容素材使用说明",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/beautiful-article.md",
+    "title": "Beautiful Article：阅读与使用资料",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/material-web.md",
+    "title": "Google Material Web：Material 3 官方组件",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/reacticle.md",
+    "title": "Reacticle · 长文排版组件库",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/recursive.md",
+    "title": "Recursive：从界面到招牌的五轴字体",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/shaders.md",
+    "title": "Shaders：图层组合与参数调节",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/three-html-render.md",
+    "title": "three-html-render：HTML-in-Canvas polyfill",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/web-design-engineer.md",
+    "title": "Web Design Engineer：阅读与使用资料",
+    "group": "素材使用"
+  },
+  {
+    "path": "docs/materials/wired-elements.md",
+    "title": "Wired Elements：有手绘语言的可操作组件",
+    "group": "素材使用"
   },
   {
     "path": "prompts/cases/design-sight.md",
@@ -1150,68 +1200,18 @@ window.ATLAS_DOCUMENTS = [
     "group": "复用 Prompt"
   },
   {
-    "path": "docs/materials/98-css.md",
-    "title": "98.css：带有桌面记忆的 CSS 组件",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/README.md",
-    "title": "内容素材使用说明",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/beautiful-article.md",
-    "title": "Beautiful Article：阅读与使用资料",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/material-web.md",
-    "title": "Google Material Web：Material 3 官方组件",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/reacticle.md",
-    "title": "Reacticle · 长文排版组件库",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/recursive.md",
-    "title": "Recursive：从界面到招牌的五轴字体",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/shaders.md",
-    "title": "Shaders：图层组合与参数调节",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/three-html-render.md",
-    "title": "three-html-render：HTML-in-Canvas polyfill",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/web-design-engineer.md",
-    "title": "Web Design Engineer：阅读与使用资料",
-    "group": "素材使用"
-  },
-  {
-    "path": "docs/materials/wired-elements.md",
-    "title": "Wired Elements：有手绘语言的可操作组件",
-    "group": "素材使用"
-  },
-  {
     "path": "README.md",
-    "title": "项目介绍",
+    "title": "WEB ATLAS",
     "group": "项目说明"
   },
   {
     "path": "CONTRIBUTING.md",
-    "title": "贡献指南",
+    "title": "Web Atlas 收录与维护",
     "group": "项目说明"
   },
   {
     "path": "AGENTS.md",
-    "title": "维护要点",
+    "title": "Web Atlas 维护",
     "group": "项目说明"
   }
 ];

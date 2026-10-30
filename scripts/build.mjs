@@ -61,7 +61,7 @@ const {catalog} = buildAgent();
 console.log(`Built ${catalog.entryCount} Agent case bundles.`);
 console.log(`Built ${catalog.patterns?.patternCount || 0} curated design patterns with linked, verifiable sources.`);
 console.log(`Built ${catalog.materials?.materialCount || 0} source-backed materials.`);
-const documents = [...documentCatalog(), ...Object.entries({'README.md':'项目介绍', 'CONTRIBUTING.md':'贡献指南', 'AGENTS.md':'维护要点'}).map(([path,title]) => ({path,title,group:'项目说明'}))];
+const documents = documentCatalog();
 const documentSources = [];
 for (const kind of ['cases', 'patterns', 'materials']) {
   for (const name of fs.readdirSync(path.join(root,'entries',kind)).filter(name => name.endsWith('.json'))) {
