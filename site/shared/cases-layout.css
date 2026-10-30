@@ -3,29 +3,29 @@
 .cases-page .case-layout{display:grid;grid-template-columns:var(--case-rail-width) minmax(0,1fr);gap:var(--case-column-gap);width:100%;max-width:none;margin:0;padding:0 var(--case-gutter);align-items:start}
 .cases-page .rail{position:sticky;inset:auto;top:calc(var(--atlas-header-height,88px) + 24px);width:100%;height:auto;max-height:calc(100svh - var(--atlas-header-height,88px) - 48px);margin:24px 0;padding:16px;overflow-y:auto;border-radius:12px;display:block;z-index:2}
 .cases-page .rail .case-menu{width:100%;margin:0;padding:0}
-.cases-page .rail .case-menu>summary{color:#f5f4ed;background:#30362a;border-color:#4b5442}
-.cases-page .rail .case-menu>summary::after{color:#d4ef76}
+.cases-page .rail .case-menu>summary{color:var(--atlas-ink);background:var(--atlas-surface-2);border-color:var(--atlas-surface-line)}
+.cases-page .rail .case-menu>summary::after{color:var(--atlas-accent)}
 .cases-page .rail .case-menu-content{padding-top:10px}
 .cases-page .rail .rail-label{display:none}
 .cases-page .rail nav{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;margin:0;overflow:visible}
 .cases-page .rail .nav-item,.cases-page .rail .rail-link{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;margin:0;padding:12px;border:0;border-radius:7px;font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;letter-spacing:0;text-align:left;text-decoration:none;white-space:normal}
-.cases-page .rail .nav-item.active{background:#d4ef76;color:#252822;font-weight:650}
-.cases-page .rail .nav-item.active b{color:#3c4a26}
+.cases-page .rail .nav-item.active{background:var(--atlas-accent);color:var(--atlas-accent-ink);font-weight:650}
+.cases-page .rail .nav-item.active b{color:var(--atlas-accent-ink)}
 .cases-page .rail .nav-item b,.cases-page .rail .rail-link b{flex:none;font:11px/1.6 ui-monospace,monospace;font-weight:400}
-.cases-page .rail .rail-link{background:none;color:#d5dacb;cursor:pointer}
-.cases-page .rail .rail-link:hover{background:#353a2e}
+.cases-page .rail .rail-link{background:none;color:var(--atlas-ink);cursor:pointer}
+.cases-page .rail .rail-link:hover{background:var(--atlas-hover)}
 .cases-page .rail .rail-rule{display:block;margin:20px 12px 12px}
 .cases-page .rail .rail-bottom{display:block;margin:24px 12px 4px}
-.cases-page .rail a:focus-visible,.cases-page .rail button:focus-visible,.cases-page .rail summary:focus-visible{outline:3px solid #d4ef76;outline-offset:2px}
+.cases-page .rail a:focus-visible,.cases-page .rail button:focus-visible,.cases-page .rail summary:focus-visible{outline:3px solid var(--atlas-focus);outline-offset:2px}
 .cases-page .case-layout>main{margin:0;padding:0;max-width:none;min-width:0}
 .cases-page .search svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;flex:none}
 .sort-control{display:flex;align-items:center;gap:8px;min-width:0}
 .sort-control .sort{min-width:0}
-body.cases-page .case-layout main .sort-dir{display:grid;place-items:center;flex:none;width:var(--atlas-control-height);height:var(--atlas-control-height);min-height:var(--atlas-control-height);padding:0;border:1px solid var(--line);border-radius:var(--atlas-control-radius);background:var(--field);color:var(--ink);cursor:pointer}
+body.cases-page .case-layout main .sort-dir{display:grid;place-items:center;flex:none;width:var(--atlas-control-height);height:var(--atlas-control-height);min-height:var(--atlas-control-height);padding:0;border:1px solid var(--atlas-surface-line);border-radius:var(--atlas-control-radius);background:var(--atlas-surface);color:var(--atlas-ink);cursor:pointer}
 .sort-dir svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.sort-dir:focus-visible{outline:3px solid var(--select-accent);outline-offset:3px}
-.case-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;border-bottom:1px solid var(--line);font:10px/1.6 ui-monospace,monospace;color:var(--muted)}
-.case-toolbar .text-button{min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:7px;background:var(--field);color:var(--ink);font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;white-space:nowrap}
+.sort-dir:focus-visible{outline:3px solid var(--atlas-focus);outline-offset:3px}
+.case-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;border-bottom:1px solid var(--atlas-line);font:10px/1.6 ui-monospace,monospace;color:var(--atlas-muted)}
+.case-toolbar .text-button{min-height:44px;padding:10px 12px;border:1px solid var(--atlas-surface-line);border-radius:7px;background:var(--atlas-surface);color:var(--atlas-ink);font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;white-space:nowrap}
 .cases-page .hero{padding:36px 0}
 .cases-page .hero h1{font-size:clamp(40px,4.3vw,64px)}
 .cases-page.has-tray .case-layout>main{padding-bottom:115px}
@@ -67,27 +67,27 @@ body.cases-page .case-layout main .sort-dir{display:grid;place-items:center;flex
 
 /* Each semantic section is one native table row. Row height follows the
    longest cell and grows with text, zoom and font loading without truncation. */
-.compare-scroll{width:100%;overflow-x:auto;overscroll-behavior-inline:contain;margin:20px 0 40px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
-.compare-scroll:focus-visible{outline:3px solid var(--select-accent);outline-offset:4px}
+.compare-scroll{width:100%;overflow-x:auto;overscroll-behavior-inline:contain;margin:20px 0 40px;border:1px solid var(--atlas-surface-line);border-radius:8px;background:var(--atlas-surface)}
+.compare-scroll:focus-visible{outline:3px solid var(--atlas-focus);outline-offset:4px}
 .compare-table{width:100%;min-width:1000px;table-layout:fixed;border-collapse:separate;border-spacing:0;text-align:left;font-size:16px;line-height:1.85}
 .compare-table.two{min-width:720px}
-.compare-table caption{padding:16px 20px;text-align:left;font-size:14px;color:var(--muted);border-bottom:1px solid var(--line)}
+.compare-table caption{padding:16px 20px;text-align:left;font-size:14px;color:var(--atlas-muted);border-bottom:1px solid var(--atlas-surface-line)}
 .compare-table .compare-label-col{width:112px}
-.compare-table th,.compare-table td{padding:20px;vertical-align:top;border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.compare-table th,.compare-table td{padding:20px;vertical-align:top;border-right:1px solid var(--atlas-surface-line);border-bottom:1px solid var(--atlas-surface-line);overflow-wrap:anywhere}
 .compare-table tr>*:last-child{border-right:0}
 .compare-table tbody tr:last-child>*{border-bottom:0}
-.compare-table thead th{font-weight:400}
-.compare-table .compare-corner,.compare-table .compare-row-label{font-size:14px;font-weight:600;color:var(--noteheading);background:var(--surface)}
+.compare-table thead th{font-weight:400;background:var(--atlas-surface-2)}
+.compare-table .compare-corner,.compare-table .compare-row-label{font-size:14px;font-weight:600;color:var(--atlas-ink);background:var(--atlas-surface-2)}
 .compare-table .compare-corner{vertical-align:bottom}
-.compare-table thead img{width:100%;aspect-ratio:1.6;display:block;object-fit:cover;object-position:top;border:1px solid var(--line);border-radius:5px}
+.compare-table thead img{width:100%;aspect-ratio:1.6;display:block;object-fit:cover;object-position:top;border:1px solid var(--atlas-surface-line);border-radius:5px}
 .compare-table h2{font-size:20px;line-height:1.5;margin:14px 0 0;letter-spacing:-.3px}
-.compare-table p,.compare-table ul{margin:0;color:var(--note)}
+.compare-table p,.compare-table ul{margin:0;color:var(--atlas-muted)}
 .compare-table ul{padding-left:20px}
 .compare-table li+li{margin-top:8px}
 .compare-table .behavior-block{margin-top:20px;padding-top:16px}
-.compare-table .behavior-block h3{font-size:16px;margin:8px 0;color:var(--noteheading)}
+.compare-table .behavior-block h3{font-size:16px;margin:8px 0;color:var(--atlas-ink)}
 .compare-table .behavior-block p+p{margin-top:10px}
 .compare-table .swatches{margin:16px 0 0}
 .compare-table .compare-actions{display:flex;flex-wrap:wrap;gap:10px}
-.compare-scroll-hint{color:var(--muted);font-size:14px;margin:0}
+.compare-scroll-hint{color:var(--atlas-muted);font-size:14px;margin:0}
 @media(max-width:650px){.compare-table{min-width:980px}.compare-table.two{min-width:700px}.compare-table .compare-label-col{width:96px}.compare-table th,.compare-table td{padding:16px}.compare-table .compare-row-label{font-size:14px}.compare-scroll{margin-bottom:28px}}

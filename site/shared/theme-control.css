@@ -14,10 +14,10 @@
   max-height:44px;
   margin:0;
   padding:0;
-  border:1px solid var(--atlas-shell-line);
+  border:1px solid var(--atlas-surface-line);
   border-radius:var(--atlas-ui-radius);
-  background:var(--atlas-shell-field);
-  color:var(--atlas-shell-ink);
+  background:var(--atlas-surface);
+  color:var(--atlas-ink);
   font:inherit;
   line-height:1;
   cursor:pointer;
@@ -25,11 +25,11 @@
   transition:background-color 150ms ease,border-color 150ms ease;
 }
 .atlas-site-header .atlas-site-theme button:is(.atlas-theme-toggle,.atlas-cache-toggle):hover{
-  border-color:var(--atlas-shell-focus);
-  background:var(--atlas-shell-surface);
+  border-color:var(--atlas-focus);
+  background:var(--atlas-hover);
 }
 .atlas-site-header .atlas-site-theme button:is(.atlas-theme-toggle,.atlas-cache-toggle):focus-visible{
-  outline:3px solid var(--atlas-shell-focus);
+  outline:3px solid var(--atlas-focus);
   outline-offset:3px;
 }
 .atlas-site-header .atlas-theme-toggle .atlas-theme-icon,
