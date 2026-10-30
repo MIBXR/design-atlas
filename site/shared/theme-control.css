@@ -15,7 +15,7 @@
   margin:0;
   padding:0;
   border:1px solid var(--atlas-surface-line);
-  border-radius:var(--atlas-ui-radius);
+  border-radius:var(--r);
   background:var(--atlas-surface);
   color:var(--atlas-ink);
   font:inherit;

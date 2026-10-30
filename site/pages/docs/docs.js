@@ -15,7 +15,6 @@ function isAllowedDocument(value) {
 }
 function renderDirectory() {
   const navigation = document.querySelector('#document-navigation');
-  document.querySelector('#document-count').textContent = String(documents.length);
   for (const group of new Set(documents.map(item => item.group))) {
     const section = document.createElement('details');
     section.className = 'document-group';
@@ -23,6 +22,7 @@ function renderDirectory() {
     section.open = documents.some(item => item.group === group && item.path === file);
     const title = document.createElement('summary');
     title.textContent = group;
+    title.insertAdjacentHTML('beforeend',AtlasIcons.disclosure());
     section.append(title);
     const links = document.createElement('ul');
     for (const item of documents.filter(item => item.group === group)) {
@@ -109,7 +109,7 @@ async function prepareLinks(fragment, sourceURL, signal) {
         link.href = upstream;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.insertAdjacentHTML('beforeend', ' <span class="atlas-external-icon" aria-hidden="true"><svg class="atlas-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></span>');
+        link.insertAdjacentHTML('beforeend', ' <span class="atlas-external-icon" aria-hidden="true">' + AtlasIcons.svg('external') + '</span>');
       } else link.replaceWith(document.createTextNode(link.textContent));
       return;
     }
@@ -269,9 +269,6 @@ async function readDocument({focus = false} = {}) {
   content.setAttribute('aria-busy', 'true');
   document.querySelector('#document-outline').hidden = true;
   document.querySelector('#download').hidden = true;
-  const back = document.querySelector('#back');
-  back.href = 'cases.html';
-  back.textContent = '返回案例库';
   try {
     if (!documents.length) throw new Error('文档目录加载失败，请刷新后重试。');
     if (!isAllowedDocument(file)) throw new Error('请选择本站已公开的 Markdown 文档。');
@@ -292,19 +289,17 @@ async function readDocument({focus = false} = {}) {
       titleElement.replaceChildren(label);
       titleElement.dataset.documentAnchor = anchor;
     }
-    document.querySelector('#path').textContent = file;
+    const path=document.querySelector('#path');
+    path.textContent=(documents.find(item=>item.path===file)?.group || '条目资料')+' / '+file;
+    path.title=path.textContent;
     document.title = `${title} · Web Atlas`;
     cleanupOutline = renderOutline(headings);
     const download = document.querySelector('#download');
     download.href = file;
     download.download = file.split('/').pop();
-    download.textContent = `下载 ${download.download}`;
+    download.innerHTML = AtlasIcons.svg('download')+'<span>下载原文</span>';
+    download.title = `下载 ${download.download}`;
     download.hidden = false;
-    const caseId = file.match(/^demos\/cases\/([A-Za-z0-9_-]+)\//)?.[1];
-    if (caseId) {
-      back.href = `cases.html#style/${caseId}`;
-      back.textContent = '返回案例详情';
-    }
     if (focus) focusDocument();
   } catch (error) {
     if (activeRequest !== request) return;
@@ -339,3 +334,5 @@ syncSearchHeight();
 renderDirectory();
 document.querySelector('#document-search').addEventListener('input', filterDirectory);
 readDocument();
+
+document.addEventListener('keydown',event=>{if(event.key==='/'&&!/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)){event.preventDefault();if(matchMedia('(max-width:800px)').matches&&!documentRail.hasAttribute('data-directory-open'))document.querySelector('[data-nav-toggle]').click();document.querySelector('#document-search').focus();}});

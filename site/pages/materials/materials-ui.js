@@ -8,8 +8,8 @@
   const types = [...new Set(materials.map(item => item.type))];
   const categories = [...new Set(materials.map(item => item.category))];
   const items = values => `<ul>${values.map(value => `<li>${esc(value)}</li>`).join('')}</ul>`;
-  const star = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.3.9-4.5 4.4 1.1 6.2-5.7-3-5.7 3 1.1-6.2L3.2 9.6l6.3-.9Z"/></svg>';
-  let state = {query:'',type:'all',category:'all',favorites:false};
+  const star = AtlasIcons.svg('star');
+  let state = {query:'',type:'all',category:'all',favorites:false,sort:'curated',dir:'asc'};
   let toastTimer;
   let preview;
   function toast(message) { $('#toast').textContent = message; $('#toast').classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 3000); }
@@ -20,16 +20,23 @@
     if (state.type !== 'all') params.set('type',state.type);
     if (state.category !== 'all') params.set('category',state.category);
     if (state.favorites) params.set('favorites','1');
+    if(state.sort==='title')params.set('sort','title');
+    if(state.dir==='desc')params.set('dir','desc');
     return params.size ? '?' + params : '';
   }
   const href = id => `#material/${encodeURIComponent(id)}${query()}`;
   function navigation() {
-    $('#material-navigation').innerHTML = `<a class="nav-item ${!state.favorites && state.type === 'all' ? 'active' : ''}" href="#materials"><span>全部内容素材</span><b>${materials.length}</b></a>` + types.map(type => `<a class="nav-item ${!state.favorites && state.type === type ? 'active' : ''}" href="#materials?type=${encodeURIComponent(type)}"><span>${esc(typeLabels[type] || type)}</span><b>${materials.filter(item => item.type === type).length}</b></a>`).join('') + `<a class="nav-item ${state.favorites ? 'active' : ''}" href="#materials?favorites=1"><span>我的收藏</span><b>${favorites.ids('materials').length}</b></a>`;
+    $('#material-navigation').innerHTML = `<a class="nav-item ${!state.favorites && state.type === 'all' ? 'active' : ''}" href="#materials"><span>全部内容素材</span><b>${materials.length}</b></a>` + types.map(type => `<a class="nav-item ${!state.favorites && state.type === type ? 'active' : ''}" href="#materials?type=${encodeURIComponent(type)}"><span>${esc(typeLabels[type] || type)}</span><b>${materials.filter(item => item.type === type).length}</b></a>`).join('');
+    const link=$('#material-favorites');link.classList.toggle('active',state.favorites);link.setAttribute('aria-current',state.favorites?'page':'false');$('#material-fav-count').textContent=favorites.ids('materials').length;
   }
   function cards() {
     const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
     const results = materials.filter(item => (state.type === 'all' || item.type === state.type) && (state.category === 'all' || item.category === state.category) && (!state.favorites || favorites.has('materials',item.id)) && terms.every(term => [item.title,item.summary,item.category,...item.tags,...item.useCases,...(item.workflow || []),...(item.demos || []).map(demo => demo.title + ' ' + demo.summary)].join(' ').toLocaleLowerCase().includes(term)));
-    $('#material-cards').innerHTML = results.map(item => `<article class="card"><a class="card-preview" href="${href(item.id)}" aria-label="查看${esc(item.title)}使用方法"><img src="${esc(item.preview)}" alt="${esc(item.title)}代表性预览" loading="lazy"><span class="card-number">${esc(item.category)}</span></a><div class="card-body"><div class="card-title"><h2><a href="${href(item.id)}">${esc(item.title)}</a></h2>${favorite(item)}</div><p class="subtitle">${esc(item.upstream.repository || new URL(item.upstream.url).hostname)} · ${['agent-skill','prompt-kit'].includes(item.type) ? '工作流与原文快照' : item.demos.length + ' 个互动样例'}</p><p class="card-summary">${esc(item.summary)}</p><div class="tags"><span class="tag">${esc(typeLabels[item.type] || item.type)}</span>${item.tags.slice(0,3).map(tag => `<span class="tag">${esc(tag)}</span>`).join('')}</div><div class="card-bottom"><a href="${esc(item.upstream.url)}" target="_blank" rel="noopener noreferrer">来源仓库</a><a href="${href(item.id)}">${['agent-skill','prompt-kit'].includes(item.type) ? '工作流与使用方法' : '样例与使用方法'}</a></div></div></article>`).join('');
+    if(state.sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));
+    if(state.dir==='desc')results.reverse();
+    $('#material-sort').value=state.sort;
+    const direction=$('#material-sort-dir');direction.setAttribute('aria-label',state.dir==='desc'?'反序':'正序');direction.setAttribute('aria-pressed',String(state.dir==='desc'));direction.innerHTML=AtlasIcons.svg(state.dir==='desc'?'sortDesc':'sortAsc');
+    $('#material-cards').innerHTML = results.map(item => `<article class="card"><a class="card-preview" href="${href(item.id)}" aria-label="查看${esc(item.title)}使用方法"><img src="${esc(item.preview)}" alt="${esc(item.title)}代表性预览" loading="lazy"></a><div class="card-body"><div class="card-title"><h2><a href="${href(item.id)}">${esc(item.title)}</a></h2>${favorite(item)}</div><p class="subtitle">${esc(item.upstream.repository || new URL(item.upstream.url).hostname)} · ${['agent-skill','prompt-kit'].includes(item.type) ? '工作流与原文快照' : item.demos.length + ' 个互动样例'}</p><p class="card-summary">${esc(item.summary)}</p><div class="tags"><span class="tag">${esc(typeLabels[item.type] || item.type)}</span>${item.tags.slice(0,3).map(tag => `<span class="tag">${esc(tag)}</span>`).join('')}</div><div class="card-bottom"><a href="${esc(item.upstream.url)}" target="_blank" rel="noopener noreferrer">来源仓库</a><a href="${href(item.id)}">${['agent-skill','prompt-kit'].includes(item.type) ? '工作流与使用方法' : '样例与使用方法'}</a></div></div></article>`).join('');
     $('#material-results-label').textContent = `${state.favorites ? '我的收藏' : state.type === 'all' ? '全部内容素材' : typeLabels[state.type] || state.type} / ${results.length} 个资源${state.query ? ' · '+state.query : ''}`;
     $('#materials-empty').hidden = !!results.length;
     navigation();
@@ -50,7 +57,7 @@
       function load() {
         frame.innerHTML = `<iframe class="demo-frame" title="${esc(material.title)}交互样例" src="${esc(entrypoint)}"></iframe>`;
         $('#material-demo-open').href = entrypoint;
-        $('#material-demo-replay').hidden = false;
+        $('#material-demo-replay').hidden = false;$('#material-demo-replay').disabled = false;
         preview.refresh();
       }
       $('#material-demo-start').addEventListener('click', () => {load();$('#material-demo-replay').focus({preventScroll:true});});
@@ -67,9 +74,10 @@
     });
   }
   function route() {
+    window.AtlasDetail.clear();
     const [route = 'materials',params = ''] = (location.hash.slice(1) || 'materials').split('?');
     const values = new URLSearchParams(params);
-    state = {query:values.get('q') || '',type:types.includes(values.get('type')) ? values.get('type') : 'all',category:categories.includes(values.get('category')) ? values.get('category') : 'all',favorites:values.get('favorites') === '1'};
+    state = {query:values.get('q') || '',type:types.includes(values.get('type')) ? values.get('type') : 'all',category:categories.includes(values.get('category')) ? values.get('category') : 'all',favorites:values.get('favorites') === '1',sort:values.get('sort')==='title'?'title':'curated',dir:values.get('dir')==='desc'?'desc':'asc'};
     const isDetail = route.startsWith('material/');
     preview?.disconnect();preview = null;
     $('#materials-library').hidden = isDetail;$('#material-detail').hidden = !isDetail;$('#material-detail').innerHTML = '';
@@ -77,7 +85,7 @@
     navigation();
     if (isDetail) {
       const material = materials.find(item => item.id === route.slice(9));
-      if (material) detail(material);
+      if (material) {detail(material);window.AtlasDetail.mount($('#material-detail'),'素材库');}
       else $('#material-detail').innerHTML = '<div class="detail-top"><a class="back" href="#materials">返回素材库</a></div><h1>没有找到这个素材</h1><p>请回到素材库重新选择。</p>';
     } else cards();
   }
@@ -90,10 +98,12 @@
   $('#material-category').insertAdjacentHTML('beforeend',categories.map(category => `<option value="${esc(category)}">${esc(category)}</option>`).join(''));
   $('#material-search').addEventListener('input',filter);
   $('#material-type').addEventListener('change',filter);$('#material-category').addEventListener('change',filter);
+  $('#material-sort').addEventListener('change',event=>{state.sort=event.target.value;history.replaceState(null,'','#materials'+query());cards();});
+  $('#material-sort-dir').addEventListener('click',()=>{state.dir=state.dir==='asc'?'desc':'asc';history.replaceState(null,'','#materials'+query());cards();});
   $('#material-reset').addEventListener('click', () => {location.hash = 'materials';route();});
   document.addEventListener('click',event => {const button = event.target.closest('[data-material-fav]');if (button) favorites.toggle('materials',button.dataset.materialFav);});
-  document.addEventListener('keydown',event => {if (event.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) && !$('#materials-library').hidden && !$('#favorite-dialog').open) {event.preventDefault();$('#material-search').focus();}});
-  favorites.subscribe(({error}) => {if (!$('#materials-library').hidden) cards();else navigation();document.querySelectorAll('[data-material-fav]').forEach(button => {const selected = favorites.has('materials',button.dataset.materialFav);button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));});if (error) toast(error);});
+  document.addEventListener('keydown',event => {if (event.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) && !$('#materials-library').hidden ) {event.preventDefault();$('#material-search').focus();}});
+  favorites.subscribe(({error}) => {if (!$('#materials-library').hidden) cards();else navigation();document.querySelectorAll('[data-material-fav]').forEach(button => {const selected = favorites.has('materials',button.dataset.materialFav);button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));window.AtlasDetail.paintFavorite(button,selected);});if (error) toast(error);});
   window.addEventListener('hashchange', () => {route();window.scrollTo({top:0,behavior:'instant'});});
   route();
 })();

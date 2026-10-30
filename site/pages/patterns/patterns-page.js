@@ -15,6 +15,7 @@
     currentType = type;
     const exampleType = type === 'all' ? 'visual' : type;
     const label = window.AtlasPlayground.labels[exampleType];
+    openShowcase.innerHTML=AtlasIcons.svg('play')+'<span>体验'+label+'</span>';
     document.querySelector('#pattern-showcase-label').textContent = `体验示意 · ${label}${type === 'all' ? '（全部类型预览）' : ''}`;
     document.querySelector('#pattern-showcase-description').textContent = `${type === 'all' ? '全部类型浏览时展示视觉构成示意；选择体验类型后同步切换。' : `当前为${label}示意。`}示意使用通用内容，原始样式与组合请在来源案例核对。`;
     openShowcase.hidden = document.querySelector('#patterns-library').hidden;
@@ -37,7 +38,7 @@
   openShowcase.addEventListener('click', () => { panel.showModal(); syncShowcase(); });
   panel.addEventListener('close', () => syncShowcase());
   document.addEventListener('keydown', event => {
-    if (panel.open || document.querySelector('#favorite-dialog').open || document.querySelector('#asset-cache-dialog')?.open || event.key !== '/' || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
+    if (panel.open || document.querySelector('#asset-cache-dialog')?.open || event.key !== '/' || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
     event.preventDefault(); window.AtlasPatterns.focusSearch();
   });
   function restoreRoute() {

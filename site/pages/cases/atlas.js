@@ -4,7 +4,8 @@ const entries = window.ATLAS_CASES || [];
 const $ = selector => document.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const docHref = file => `docs.html?file=${encodeURIComponent(file)}`;
-const externalIcon = href => {try {const url=new URL(href,location.href);return /^https?:$/.test(url.protocol)&&url.origin!==location.origin?'<span class="atlas-external-icon" aria-hidden="true"><svg class="atlas-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></span>':'';}catch{return '';}};
+const siteIcon = name => window.AtlasIcons?.svg(name) || '';
+const externalIcon = href => {try {const url=new URL(href,location.href);return /^https?:$/.test(url.protocol)&&url.origin!==location.origin?siteIcon('external'):'';}catch{return '';}};
 const favoriteStore=window.AtlasFavorites;
 let favorites=favoriteStore.ids('cases');
 let previewObserver;
@@ -49,7 +50,7 @@ const list = values => `<ul>${values.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
 const swatches = e => `<div class="swatches">${e.tokens.palette.map(x=>`<span class="swatch"><i style="background:${esc(x)}"></i>${esc(x)}</span>`).join('')}</div>`;
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').classList.remove('visible'),2300);}
 function toggleFavorite(id){favoriteStore.toggle('cases',id);}
-const favoriteStar='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.3.9-4.5 4.4 1.1 6.2-5.7-3-5.7 3 1.1-6.2L3.2 9.6l6.3-.9Z"/></svg>';
+const favoriteStar = siteIcon('star');
 function favoriteButton(e){return `<button class="favorite ${favorites.includes(e.id)?'selected':''}" data-fav="${e.id}" aria-label="收藏${esc(e.title)}" aria-pressed="${favorites.includes(e.id)}">${favoriteStar}</button>`;}
 function updateTray(){const count=selected.length;document.body.classList.toggle('has-tray',count>0);$('#compare-count').textContent=count;$('#compare-tray').hidden=!count;$('#tray-text').textContent=`已选择 ${count} 项：${selected.map(id=>entries.find(e=>e.id===id)?.title).join(' · ')}`;$('#compare-go').disabled=count<2;}
 function selectCompare(id,checked){if(checked && !selected.includes(id)){if(selected.length===3){toast('一次最多比较 3 项，请先取消一个条目。');renderCards();return;}selected.push(id);}else if(!checked){selected=selected.filter(x=>x!==id);}updateTray();}
@@ -57,10 +58,11 @@ function syncSortDirection(){
   const button=$('#sort-dir');
   button.setAttribute('aria-label',dir==='desc'?'反序':'正序');
   button.setAttribute('aria-pressed',String(dir==='desc'));
-  $('#sort-dir path').setAttribute('d',dir==='desc'?'M12 5v14M12 19l-6-6M12 19l6-6':'M12 19V5M12 5l-6 6M12 5l6 6');
+  button.innerHTML=siteIcon(dir==='desc'?'sortDesc':'sortAsc');
 }
-function renderCards(){let results=entries.filter(e=>(filter==='all'||filter==='favorites'&&favorites.includes(e.id)||e.category===filter)).filter(e=>country==='all'||e.country===country);if(query){results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));}if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));if(dir==='desc')results.reverse();$('#cards').innerHTML=results.map(e=>`<article class="card"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy"><span class="card-number">${String(e.order).padStart(2,'0')} / ${esc(e.category)}</span></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><a href="#style/${e.id}">拆解 & demo</a></div></div></article>`).join('');$('#results-label').textContent=`${labels[filter]} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;$('#empty').hidden=!!results.length;}
+function renderCards(){let results=entries.filter(e=>(filter==='all'||filter==='favorites'&&favorites.includes(e.id)||e.category===filter)).filter(e=>country==='all'||e.country===country);if(query){results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));}if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));if(dir==='desc')results.reverse();$('#cards').innerHTML=results.map(e=>`<article class="card"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy"></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><a href="#style/${e.id}">拆解 & demo</a></div></div></article>`).join('');$('#results-label').textContent=`${labels[filter]} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;$('#empty').hidden=!!results.length;}
 function route(){
+  window.AtlasDetail?.clear();
   previewObserver?.disconnect();
   readCollectionState();
   let hash;
@@ -68,7 +70,7 @@ function route(){
   $('#collection').hidden=true;$('#detail').hidden=true;$('#comparison').hidden=true;
   if(hash.startsWith('#style/')){
     const entry=entries.find(x=>x.id===hash.slice(7));
-    if(entry){renderDetail(entry);$('#detail').hidden=false;}
+    if(entry){renderDetail(entry);$('#detail').hidden=false;window.AtlasDetail?.mount($('#detail'),'案例库');}
     else{const url=new URL(location.href);url.hash='';history.replaceState(null,'',url);$('#collection').hidden=false;renderCards();}
   }else if(hash==='#compare'){renderComparison();$('#comparison').hidden=false;}
   else{$('#collection').hidden=false;renderCards();}
@@ -97,8 +99,9 @@ function renderComparison(){
     ['avoid','谨慎使用',e=>`<p>${e.avoid.map(esc).join(' / ')}</p>`],
     ['materials','操作与取材',e=>`<div class="compare-actions"><a class="copy-button" href="agent.html#${encodeURIComponent(e.id)}">Agent 取材</a><a class="copy-button" href="agent/cases/${encodeURIComponent(e.id)}.json" download="${esc(e.id)}-context.json">下载完整案例包</a><a class="primary-button" href="${esc(e.demo)}" target="_blank" rel="noopener noreferrer">操作 demo</a></div>`],
   ];
-  $('#comparison').innerHTML=`<div class="detail-top"><a href="#" class="back">返回案例库</a><button id="return-select" class="copy-button">调整选择</button></div><h1 style="font-size:36px">看见风格之间的差异。</h1><p class="compare-tip">比较信息层级、交互目的与设计约束，再选择适合项目的设计语言。每个章节按行对齐，保留完整内容。</p>${chosen.length<2?'<p class="compare-empty">请先在案例库选择 2–3 个条目。</p>':`<p id="compare-scroll-hint" class="compare-scroll-hint">窄屏可左右滑动；键盘可聚焦比较区域后，用方向键横向查看。</p><div class="compare-scroll" role="region" aria-label="案例逐节比较" aria-describedby="compare-scroll-hint" tabindex="0"><table class="compare-table ${chosen.length===2?'two':''}"><caption>${chosen.map(e=>esc(e.title)).join(' · ')} / 逐节对照</caption><colgroup><col class="compare-label-col">${chosen.map(()=>'<col>').join('')}</colgroup><thead><tr><th class="compare-corner" scope="col">比较维度</th>${chosen.map(e=>`<th scope="col" id="compare-case-${esc(e.id)}"><a href="#style/${encodeURIComponent(e.id)}"><img src="${esc(e.preview)}" alt="${esc(e.title)} demo"><h2>${esc(e.title)}</h2></a></th>`).join('')}</tr></thead><tbody>${sections.map(([id,title,content])=>`<tr data-compare-section="${id}"><th scope="row" class="compare-row-label" id="compare-section-${id}">${title}</th>${chosen.map(e=>`<td headers="compare-section-${id} compare-case-${esc(e.id)}">${content(e)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}`;
+  $('#comparison').innerHTML=`<div class="detail-top"><a href="#" class="back copy-button">返回案例库</a><button id="return-select" class="copy-button">调整选择</button></div><h1 class="compare-title">看见风格之间的差异。</h1><p class="compare-tip">比较信息层级、交互目的与设计约束，再选择适合项目的设计语言。每个章节按行对齐，保留完整内容。</p>${chosen.length<2?'<p class="compare-empty">请先在案例库选择 2–3 个条目。</p>':`<p id="compare-scroll-hint" class="compare-scroll-hint">窄屏可左右滑动；键盘可聚焦比较区域后，用方向键横向查看。</p><div class="compare-scroll" role="region" aria-label="案例逐节比较" aria-describedby="compare-scroll-hint" tabindex="0"><table class="compare-table ${chosen.length===2?'two':''}"><caption>${chosen.map(e=>esc(e.title)).join(' · ')} / 逐节对照</caption><colgroup><col class="compare-label-col">${chosen.map(()=>'<col>').join('')}</colgroup><thead><tr><th class="compare-corner" scope="col">比较维度</th>${chosen.map(e=>`<th scope="col" id="compare-case-${esc(e.id)}"><a href="#style/${encodeURIComponent(e.id)}"><img src="${esc(e.preview)}" alt="${esc(e.title)} demo"><h2>${esc(e.title)}</h2></a></th>`).join('')}</tr></thead><tbody>${sections.map(([id,title,content])=>`<tr data-compare-section="${id}"><th scope="row" class="compare-row-label" id="compare-section-${id}">${title}</th>${chosen.map(e=>`<td headers="compare-section-${id} compare-case-${esc(e.id)}">${content(e)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}`;
   $('#return-select').onclick=()=>{location.hash='';};
+  window.AtlasIcons?.paint($('#comparison'));
 }
 document.addEventListener('click',event=>{const button=event.target.closest('[data-fav]');if(button)toggleFavorite(button.dataset.fav);});
 document.addEventListener('change',event=>{const item=event.target.closest('[data-compare]');if(item)selectCompare(item.dataset.compare,item.checked);});
@@ -135,7 +138,7 @@ $('#compare-open').onclick=()=>{
 $('#compare-go').onclick=()=>{if(selected.length>=2)location.hash='#compare';};
 $('#compare-clear').onclick=()=>{selected=[];updateTray();if(location.hash==='#compare')renderComparison();else if(!$('#collection').hidden)renderCards();};
 document.addEventListener('keydown',event=>{
-  if($('#favorite-dialog').open||$('#asset-cache-dialog')?.open)return;
+  if($('#asset-cache-dialog')?.open)return;
   if(event.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){
     event.preventDefault();
     if($('#collection').hidden)writeCollectionState({showCollection:true});
@@ -157,7 +160,7 @@ const countries=[...new Set(entries.map(e=>e.country).filter(Boolean))].sort((a,
 favoriteStore.subscribe(({error})=>{
   favorites=favoriteStore.ids('cases');
   $('#fav-count').textContent=String(favorites.length).padStart(2,'0');
-  document.querySelectorAll('[data-fav]').forEach(button=>{const selected=favorites.includes(button.dataset.fav);button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));});
+  document.querySelectorAll('[data-fav]').forEach(button=>{const selected=favorites.includes(button.dataset.fav);button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));window.AtlasDetail?.paintFavorite(button,selected);});
   if(error)toast(error);
   if(filter==='favorites'&&!$('#collection').hidden)renderCards();
 });

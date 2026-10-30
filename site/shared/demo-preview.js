@@ -6,13 +6,12 @@
       const frame = wrap.querySelector('iframe');
       if (!frame || !wrap.clientWidth) return;
       const panel = wrap.closest('.demo-panel');
-      const headerHeight = document.querySelector('.atlas-site-header').getBoundingClientRect().height;
       const controlsHeight = wrap.getBoundingClientRect().top - panel.getBoundingClientRect().top;
-      const height = Math.max(1, window.innerHeight - headerHeight - controlsHeight - 36);
+      const height = Math.max(1, window.innerHeight - (panel.getBoundingClientRect().top + window.scrollY) - controlsHeight - 24);
       const style = getComputedStyle(wrap);
       const inset = ['borderTopWidth', 'borderBottomWidth', 'paddingTop', 'paddingBottom'].reduce((total, property) => total + parseFloat(style[property]), 0);
       const contentHeight = Math.max(1, height - inset);
-      const scale = mode === 'wide' && scaleWide ? Math.min(1, wrap.clientWidth / 1440) : 1;
+      const scale = mode === 'wide' && scaleWide ? Math.min(1, (wrap.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight)) / 1440) : 1;
       wrap.style.height = `${height}px`;
       wrap.style.setProperty('--preview-scale', scale);
       frame.style.height = `${contentHeight / scale}px`;
