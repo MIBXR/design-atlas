@@ -1198,5 +1198,244 @@ window.ATLAS_DOCUMENTS = [
     "path": "docs/materials/wired-elements.md",
     "title": "Wired Elements：有手绘语言的可操作组件",
     "group": "素材使用"
+  },
+  {
+    "path": "README.md",
+    "title": "项目介绍",
+    "group": "项目说明"
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "title": "贡献指南",
+    "group": "项目说明"
+  },
+  {
+    "path": "AGENTS.md",
+    "title": "维护要点",
+    "group": "项目说明"
+  }
+];
+window.ATLAS_DOCUMENT_SOURCES = [
+  {
+    "path": "demos/cases/mira-host-photography/",
+    "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+    "sources": [
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md#L434-L446",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/SKILL.md#L175-L182"
+    ]
+  },
+  {
+    "path": "demos/cases/stellar-museum/",
+    "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
+    "sources": [
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1.html",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md#L417-L433",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/SKILL.md#L61-L71"
+    ]
+  },
+  {
+    "path": "demos/patterns/aspect-recomposed-3d-hero/",
+    "sources": [
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html"
+    ]
+  },
+  {
+    "path": "demos/patterns/difference-blend-navigation/",
+    "sources": [
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html"
+    ]
+  },
+  {
+    "path": "demos/patterns/inline-row-photo-preview/",
+    "sources": [
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html"
+    ]
+  },
+  {
+    "path": "demos/patterns/photo-crossfade-cycle/",
+    "sources": [
+      "https://www.2121designsight.jp/",
+      "https://www.fujirockfestival.com/",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html"
+    ]
+  },
+  {
+    "path": "demos/patterns/viewport-animation-lifecycle/",
+    "sources": [
+      "https://linear.app/",
+      "https://stripe.com/",
+      "https://qoder.cn/",
+      "https://endfield.hypergryph.com/",
+      "https://www.deepseek.com/harness/",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html"
+    ]
+  },
+  {
+    "path": "demos/materials/98-css/",
+    "upstream": {
+      "repository": "jdan/98.css",
+      "url": "https://github.com/jdan/98.css/tree/517d174b30392d39e068ef4eca457da66a189f8f",
+      "commit": "517d174b30392d39e068ef4eca457da66a189f8f",
+      "version": "0.1.21",
+      "verifiedAt": "2026-10-16"
+    },
+    "sources": [
+      "https://github.com/jdan/98.css/tree/517d174b30392d39e068ef4eca457da66a189f8f",
+      "https://jdan.github.io/98.css/",
+      "https://registry.npmjs.org/98.css/0.1.21",
+      "https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/style.css",
+      "https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/fonts/src/ms-sans-serif/license.txt",
+      "https://github.com/jdan/98.css/blob/517d174b30392d39e068ef4eca457da66a189f8f/fonts/src/ms-sans-serif-bold/license.txt"
+    ]
+  },
+  {
+    "path": "demos/materials/beautiful-article/",
+    "upstream": {
+      "repository": "ConardLi/garden-skills",
+      "url": "https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article",
+      "commit": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+      "version": "0.1.0",
+      "verifiedAt": "2026-10-27"
+    },
+    "sources": [
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/SKILL.md",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/README.md",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/theme-profiles/index.json",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/manifest.json"
+    ]
+  },
+  {
+    "path": "demos/materials/material-web/",
+    "upstream": {
+      "repository": "material-components/material-web",
+      "url": "https://github.com/material-components/material-web",
+      "commit": "b4de401eb665ec63474f39319a4ba8f2145974cc",
+      "version": "2.5.0",
+      "verifiedAt": "2026-10-16"
+    },
+    "sources": [
+      "https://github.com/material-components/material-web/tree/b4de401eb665ec63474f39319a4ba8f2145974cc",
+      "https://registry.npmjs.org/@material/web/2.5.0",
+      "https://github.com/material-components/material-web/discussions/5642",
+      "https://material-web.dev/components/button/",
+      "https://material-web.dev/components/text-field/",
+      "https://material-web.dev/components/switch/",
+      "https://material-web.dev/components/slider/",
+      "https://material-web.dev/components/dialog/",
+      "https://material-web.dev/theming/material-theming/",
+      "https://github.com/material-components/material-web/blob/b4de401eb665ec63474f39319a4ba8f2145974cc/docs/support.md"
+    ]
+  },
+  {
+    "path": "demos/materials/reacticle/",
+    "upstream": {
+      "repository": "ConardLi/reacticle",
+      "url": "https://github.com/ConardLi/reacticle",
+      "commit": "dcfc4baf386bbc220cd1aa6274bed3b741108465",
+      "version": "0.2.6",
+      "verifiedAt": "2026-10-27"
+    },
+    "sources": [
+      "https://github.com/ConardLi/reacticle/tree/dcfc4baf386bbc220cd1aa6274bed3b741108465",
+      "https://github.com/ConardLi/reacticle/blob/dcfc4baf386bbc220cd1aa6274bed3b741108465/apps/site/src/data/gallery.tsx",
+      "https://rearticle.mmh1.top/#/gallery",
+      "https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/theme-profiles",
+      "https://github.com/ConardLi/reacticle/blob/dcfc4baf386bbc220cd1aa6274bed3b741108465/apps/site/index.html"
+    ]
+  },
+  {
+    "path": "demos/materials/recursive/",
+    "upstream": {
+      "repository": "arrowtype/recursive",
+      "url": "https://github.com/arrowtype/recursive",
+      "commit": "5f4be025122d72d4710267e959128e8986ebe435",
+      "version": "1.085",
+      "verifiedAt": "2026-10-16"
+    },
+    "sources": [
+      "https://github.com/arrowtype/recursive/blob/5f4be025122d72d4710267e959128e8986ebe435/README.md",
+      "https://github.com/arrowtype/recursive/releases/tag/v1.085",
+      "https://www.recursive.design/",
+      "https://github.com/arrowtype/recursive/blob/5f4be025122d72d4710267e959128e8986ebe435/fonts/ArrowType-Recursive-1.085/Recursive_Web/woff2_variable/Recursive_VF_1.085.woff2",
+      "https://github.com/arrowtype/recursive/releases/tag/v1.084"
+    ]
+  },
+  {
+    "path": "demos/materials/shaders/",
+    "upstream": {
+      "repository": "shader-effects-inc/shaders",
+      "url": "https://github.com/shader-effects-inc/shaders",
+      "commit": "81fd4ece5d493ca6c424a2af41f0e2c361ec8258",
+      "version": "4.0.4",
+      "verifiedAt": "2026-10-13"
+    },
+    "sources": [
+      "https://github.com/shader-effects-inc/shaders/tree/81fd4ece5d493ca6c424a2af41f0e2c361ec8258",
+      "https://registry.npmjs.org/shaders/4.0.4",
+      "https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/MeshGradient/index.ts",
+      "https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/FlutedGlass/index.ts",
+      "https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/CursorRipples/index.ts",
+      "https://github.com/shader-effects-inc/shaders/blob/81fd4ece5d493ca6c424a2af41f0e2c361ec8258/packages/core/src/shaders/NoiseDissolve/index.ts",
+      "https://shaders.com/license"
+    ]
+  },
+  {
+    "path": "demos/materials/three-html-render/",
+    "upstream": {
+      "repository": "repalash/three-html-render",
+      "url": "https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add",
+      "commit": "63f085e3fe7be11f0679c0ac17edc2e18e743add",
+      "version": "0.1.2",
+      "threeVersion": "0.185.1",
+      "verifiedAt": "2026-10-27"
+    },
+    "sources": [
+      "https://github.com/repalash/three-html-render/tree/63f085e3fe7be11f0679c0ac17edc2e18e743add",
+      "https://registry.npmjs.org/three-html-render/0.1.2",
+      "https://registry.npmjs.org/three/0.185.1",
+      "https://github.com/mrdoob/three.js/blob/2431a09f46f34c560bc8e44b33be0e567723d5b9/src/textures/HTMLTexture.js",
+      "https://github.com/mrdoob/three.js/blob/2431a09f46f34c560bc8e44b33be0e567723d5b9/examples/jsm/interaction/InteractionManager.js",
+      "https://github.com/WICG/html-in-canvas",
+      "https://github.com/jinruozai/HTML-Light-Demo/tree/0a0bd3ba53194fff68db78654fc6857ab3faee29",
+      "https://github.com/jinruozai/HTML-Light-Demo/blob/0a0bd3ba53194fff68db78654fc6857ab3faee29/public/mors-logo.svg",
+      "https://x.com/kaolti"
+    ]
+  },
+  {
+    "path": "demos/materials/web-design-engineer/",
+    "upstream": {
+      "repository": "ConardLi/garden-skills",
+      "url": "https://github.com/ConardLi/garden-skills/tree/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer",
+      "commit": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+      "version": "1.3.0",
+      "verifiedAt": "2026-10-27"
+    },
+    "sources": [
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/SKILL.md",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md",
+      "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/manifest.json"
+    ]
+  },
+  {
+    "path": "demos/materials/wired-elements/",
+    "upstream": {
+      "repository": "rough-stuff/wired-elements",
+      "url": "https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b",
+      "commit": "04756df72181e08b4255f8b6dfefea130398e24b",
+      "version": "2.1.2",
+      "verifiedAt": "2026-10-16"
+    },
+    "sources": [
+      "https://github.com/rough-stuff/wired-elements/tree/04756df72181e08b4255f8b6dfefea130398e24b",
+      "https://registry.npmjs.org/wired-elements/2.1.2",
+      "https://wiredjs.com/showcase",
+      "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-card/README.md",
+      "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-slider/README.md",
+      "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-checkbox/README.md",
+      "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-toggle/README.md",
+      "https://github.com/rough-stuff/wired-elements/blob/04756df72181e08b4255f8b6dfefea130398e24b/packages/wired-progress/README.md"
+    ]
   }
 ];

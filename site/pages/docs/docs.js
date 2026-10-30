@@ -1,13 +1,15 @@
 const content = document.querySelector('#content');
 let file = new URLSearchParams(location.search).get('file') || 'docs/guide.md';
 const documents = window.ATLAS_DOCUMENTS || [];
+const documentSources = window.ATLAS_DOCUMENT_SOURCES;
 const documentPaths = new Set(documents.map(item => item.path));
 const libraryURL = new URL('.', document.baseURI);
 let activeRequest;
 let cleanupOutline = () => {};
-let currentHeadings = [];
+let currentGroup = documents.find(item => item.path === file)?.group;
+let directoryOpenState;
 function isAllowedDocument(value) {
-  return (documentPaths.has(value) || /^demos\/(?:cases|patterns|materials)\/[a-z0-9-]+\/(?:fidelity|LICENSES)\.md$/.test(value) || value === 'site/playground/fidelity.md') && !value.includes('\\') && !value.split('/').some(part => !part || part.startsWith('.'));
+  return (documentPaths.has(value) || /^demos\/(?:cases|patterns|materials)\/[a-z0-9-]+\/(?:fidelity|LICENSES)\.md$/.test(value) || /^demos\/materials\/[a-z0-9-]+\/(?:README|SKILL)\.md$/.test(value) || value === 'site/playground/fidelity.md') && !value.includes('\\') && !value.split('/').some(part => !part || part.startsWith('.'));
 }
 function renderDirectory() {
   const navigation = document.querySelector('#document-navigation');
@@ -35,38 +37,89 @@ function renderDirectory() {
     section.append(links);
     navigation.append(section);
   }
-  navigation.querySelector('[aria-current="page"]')?.scrollIntoView({block:'nearest'});
+  const active = navigation.querySelector('[aria-current="page"]');
+  if (active) navigation.scrollTop = Math.max(0, active.getBoundingClientRect().top - navigation.getBoundingClientRect().top);
+}
+function filterDirectory() {
+  const query = document.querySelector('#document-search').value.trim().toLowerCase();
+  const groups = [...document.querySelectorAll('.document-group')];
+  if (query && !directoryOpenState) directoryOpenState = new Map(groups.map(group => [group.dataset.documentGroup, group.open]));
+  let matches = 0;
+  for (const group of groups) {
+    let count = 0;
+    for (const link of group.querySelectorAll('[data-document-file]')) {
+      const match = !query || (link.textContent + ' ' + link.dataset.documentFile).toLowerCase().includes(query);
+      link.parentElement.hidden = !match;
+      if (match) count++;
+    }
+    group.hidden = !count;
+    if (query) group.open = !!count;
+    else if (directoryOpenState) group.open = directoryOpenState.get(group.dataset.documentGroup);
+    matches += count;
+  }
+  document.querySelector('#document-empty').hidden = !!matches;
+  if (!query) directoryOpenState = undefined;
 }
 function syncDirectory() {
   for (const link of document.querySelector('#document-navigation').querySelectorAll('[data-document-file]')) {
     if (link.getAttribute('data-document-file') === file) {
       link.setAttribute('aria-current', 'page');
-      link.closest('.document-group').open = true;
+      const group = link.closest('.document-group');
+      if (group.dataset.documentGroup !== currentGroup) {
+        group.open = true;
+        directoryOpenState?.set(group.dataset.documentGroup, true);
+      }
     } else link.removeAttribute('aria-current');
   }
+  currentGroup = documents.find(item => item.path === file)?.group;
 }
 function localPath(url) {
   if (url.origin !== libraryURL.origin || !url.pathname.startsWith(libraryURL.pathname)) return null;
   return decodeURIComponent(url.pathname.slice(libraryURL.pathname.length));
 }
-function prepareLinks(fragment, sourceURL) {
-  for (const link of fragment.querySelectorAll('a[href]')) {
+function upstreamLink(sourceURL, reference) {
+  const sourcePath = localPath(sourceURL);
+  const source = documentSources.find(item => sourcePath.startsWith(item.path));
+  if (!source) return null;
+  const pinned = [source.upstream?.url, source.referenceUrl, ...source.sources].filter(Boolean)
+    .map(url => url.match(/^https:\/\/github\.com\/([^/]+\/[^/]+)\/(blob|tree)\/([a-f\d]{40})(?:\/([^?#]*))?/i)).find(Boolean);
+  if (!pinned) return null;
+  const repository = source.upstream?.repository || pinned[1];
+  const commit = source.upstream?.commit || pinned[3];
+  const directory = pinned[2] === 'tree' ? (pinned[4] || '').replace(/\/$/, '') : (pinned[4] || '').split('/').slice(0,-1).join('/');
+  const upstreamSource = new URL((directory ? directory + '/' : '') + sourcePath.slice(source.path.length), 'https://github.com/');
+  const target = new URL(reference, upstreamSource);
+  const type = target.pathname.endsWith('/') || !target.pathname.split('/').pop().includes('.') ? 'tree' : 'blob';
+  return `https://github.com/${repository}/${type}/${commit}${target.pathname}${target.search}${target.hash}`;
+}
+async function prepareLinks(fragment, sourceURL, signal) {
+  await Promise.all([...fragment.querySelectorAll('a[href]')].map(async link => {
     const reference = link.getAttribute('href');
-    if (reference.startsWith('#')) continue;
+    if (reference.startsWith('#')) return;
     const url = new URL(reference, sourceURL);
     const path = localPath(url);
+    if (path !== null && /^demos\/(?:cases|materials)\/[A-Za-z0-9_-]+\/?$/.test(path)) {
+      url.pathname = url.pathname.replace(/\/?$/, '/index.html');
+    }
+    if (path !== null && !(await fetch(url, {method:'HEAD', signal})).ok) {
+      const upstream = upstreamLink(sourceURL, reference);
+      if (upstream) {
+        link.href = upstream;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.insertAdjacentHTML('beforeend', ' <span class="atlas-external-icon" aria-hidden="true"><svg class="atlas-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></span>');
+      } else link.replaceWith(document.createTextNode(link.textContent));
+      return;
+    }
     if (path !== null && isAllowedDocument(path)) {
       const reader = new URL('docs.html', libraryURL);
       reader.searchParams.set('file', path);
       reader.hash = url.hash;
       link.href = reader.href;
     } else {
-      if (path !== null && /^demos\/(?:cases|materials)\/[A-Za-z0-9_-]+\/?$/.test(path)) {
-        url.pathname = url.pathname.replace(/\/?$/, '/index.html');
-      }
-      link.href = url.href;
+      link.href = path !== null ? (localPath(url) || './') + url.search + url.hash : url.href;
     }
-  }
+  }));
   for (const image of fragment.querySelectorAll('img[src]')) {
     image.src = new URL(image.getAttribute('src'), sourceURL).href;
     image.loading = 'lazy';
@@ -85,27 +138,20 @@ function renderOutline(headings) {
     target.addEventListener(type, callback, options);
     listeners.push(() => target.removeEventListener(type, callback, options));
   }
-  const reserved = new Set([...document.querySelectorAll('[id]')].filter(node => !headings.includes(node)).map(node => node.id));
   const links = headings.map(heading => {
-    const base = heading.id || heading.textContent.trim().toLowerCase().replace(/[^\p{L}\p{N}_\s-]/gu, '').replace(/[\s-]+/g, '-') || 'section';
-    let id = base;
-    let number = 2;
-    while (reserved.has(id)) id = `${base}-${number++}`;
-    reserved.add(id);
-    heading.id = id;
+    const id = heading.dataset.documentAnchor || heading.id;
     heading.tabIndex = -1;
     const link = document.createElement('a');
     link.href = '#' + encodeURIComponent(id);
     link.textContent = heading.textContent;
     link.className = 'outline-level-' + heading.tagName.slice(1);
     link.addEventListener('click', () => {
-      if (!wide.matches) setOpen(false);
+      if (compact.matches) setOpen(false);
       heading.focus({preventScroll:true});
     });
     navigation.append(link);
     return link;
   });
-  const wide = window.matchMedia('(min-width:1200px)');
   const compact = window.matchMedia('(max-width:800px)');
   const summary = menu.querySelector('summary');
   function setOpen(open, {restoreFocus = false} = {}) {
@@ -118,15 +164,13 @@ function renderOutline(headings) {
     const active = document.activeElement;
     const inside = menu.contains(active);
     const controlFocused = active === toggle || active === closeButton;
-    setOpen(wide.matches);
+    setOpen(!compact.matches);
     toggle.hidden = !compact.matches;
     closeButton.hidden = !compact.matches;
     if (compact.matches && inside) toggle.focus({preventScroll:true});
-    else if (wide.matches && (controlFocused || active === summary)) (navigation.querySelector('[aria-current="location"]') || links[0])?.focus({preventScroll:true});
-    else if (!compact.matches && !wide.matches && (controlFocused || inside)) summary.focus({preventScroll:true});
+    else if (!compact.matches && (controlFocused || active === summary)) (navigation.querySelector('[aria-current="location"]') || links[0])?.focus({preventScroll:true});
   };
   syncLayout();
-  listen(wide, 'change', syncLayout);
   listen(compact, 'change', syncLayout);
   listen(toggle, 'click', () => {
     setOpen(!menu.open);
@@ -164,24 +208,35 @@ function renderOutline(headings) {
     requestAnimationFrame(() => { pending = false; updateCurrent(); });
   }, {passive:true});
   listen(window, 'resize', updateCurrent);
-  const target = headings.find(heading => location.hash === '#' + encodeURIComponent(heading.id));
+  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
   target?.scrollIntoView({block:'start'});
   updateCurrent();
   return () => listeners.forEach(remove => remove());
 }
-function renderMarkdown(text, sourceURL) {
+async function renderMarkdown(text, sourceURL, signal) {
   if (!window.marked || !window.DOMPurify) throw new Error('文档渲染器加载失败，请刷新后重试。');
   const html = marked.parse(text.replace(/^[\u200B-\u200F\uFEFF]+/u, ''), {gfm:true, async:false});
   const fragment = DOMPurify.sanitize(html, {
     USE_PROFILES:{html:true}, RETURN_DOM_FRAGMENT:true,
     FORBID_TAGS:['style', 'iframe', 'form'], FORBID_ATTR:['style']
   });
+  const titleElement = document.querySelector('#title');
+  const reserved = new Set([...document.querySelectorAll('[id]')].filter(node => !content.contains(node) && (node === titleElement || !titleElement.contains(node))).map(node => node.id));
+  for (const heading of fragment.querySelectorAll('h1,h2,h3,h4,h5,h6')) {
+    const base = heading.id || heading.textContent.trim().toLowerCase().replace(/[^\p{L}\p{N}_\s-]/gu, '').replace(/[\s-]+/g, '-') || 'section';
+    let id = base;
+    let number = 2;
+    while (reserved.has(id)) id = `${base}-${number++}`;
+    reserved.add(id);
+    heading.id = id;
+    heading.tabIndex = -1;
+  }
   const heading = fragment.querySelector('h1');
   const headings = [...fragment.querySelectorAll('h1,h2')];
   const title = heading?.textContent.trim() || file.split('/').pop();
   // The page header already displays the document's leading title.
   heading?.remove();
-  prepareLinks(fragment, sourceURL);
+  await prepareLinks(fragment, sourceURL, signal);
   for (const table of fragment.querySelectorAll('table')) {
     const wrapper = document.createElement('div');
     wrapper.className = 'table-scroll';
@@ -191,11 +246,12 @@ function renderMarkdown(text, sourceURL) {
     table.replaceWith(wrapper);
     wrapper.append(table);
   }
+  signal.throwIfAborted();
   content.replaceChildren(fragment);
-  return {title, headings:headings.map(node => node === heading ? document.querySelector('#title') : node)};
+  return {title, anchor:heading?.id, headings:headings.map(node => node === heading ? titleElement : node)};
 }
 function focusDocument() {
-  const target = currentHeadings.find(heading => location.hash === '#' + encodeURIComponent(heading.id));
+  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)))?.closest('h1,h2,h3,h4,h5,h6');
   (target || document.querySelector('#main')).scrollIntoView({block:'start'});
   (target || document.querySelector('#title')).focus({preventScroll:true});
 }
@@ -204,7 +260,6 @@ async function readDocument({focus = false} = {}) {
   const request = activeRequest = new AbortController();
   file = new URLSearchParams(location.search).get('file') || 'docs/guide.md';
   cleanupOutline();
-  currentHeadings = [];
   syncDirectory();
   content.textContent = '正在读取文档…';
   content.removeAttribute('role');
@@ -223,9 +278,17 @@ async function readDocument({focus = false} = {}) {
     // Decode the actual bytes explicitly; never let a browser guess a legacy charset.
     const text = new TextDecoder('utf-8', {fatal:true}).decode(await response.arrayBuffer());
     if (activeRequest !== request) return;
-    const {title, headings} = renderMarkdown(text, sourceURL);
-    currentHeadings = headings;
-    document.querySelector('#title').textContent = title;
+    const {title, anchor, headings} = await renderMarkdown(text, sourceURL, request.signal);
+    const titleElement = document.querySelector('#title');
+    titleElement.textContent = title;
+    delete titleElement.dataset.documentAnchor;
+    if (anchor) {
+      const label = document.createElement('span');
+      label.id = anchor;
+      label.textContent = title;
+      titleElement.replaceChildren(label);
+      titleElement.dataset.documentAnchor = anchor;
+    }
     document.querySelector('#path').textContent = file;
     document.title = `${title} · Web Atlas`;
     cleanupOutline = renderOutline(headings);
@@ -266,4 +329,5 @@ window.addEventListener('popstate', () => {
   else focusDocument();
 });
 renderDirectory();
+document.querySelector('#document-search').addEventListener('input', filterDirectory);
 readDocument();

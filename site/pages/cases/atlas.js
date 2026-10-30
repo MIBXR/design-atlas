@@ -8,7 +8,7 @@ const externalIcon = href => {try {const url=new URL(href,location.href);return 
 const favoriteStore=window.AtlasFavorites;
 let favorites=favoriteStore.ids('cases');
 let previewObserver;
-let country='all'; let selected=[]; let filter='all'; let query=''; let sort='curated';
+let country='all'; let selected=[]; let filter='all'; let query=''; let sort='curated'; let dir='asc';
 let renderedLocation='';
 const categoryFilters={products:'产品',games:'游戏/IP',classics:'经典风格',showcases:'示范作品',culture:'艺术/文化',favorites:'favorites'};
 function readCollectionState(){
@@ -18,9 +18,11 @@ function readCollectionState(){
   country=countries.includes(params.get('country'))?params.get('country'):'all';
   query=(params.get('q')||'').trim();
   sort=params.get('sort')==='title'?'title':'curated';
+  dir=params.get('dir')==='desc'?'desc':'asc';
   $('#search').value=query;
   $('#country').value=country;
   $('#sort').value=sort;
+  syncSortDirection();
   document.querySelectorAll('[data-filter]').forEach(button=>{
     const active=button.dataset.filter===filter;
     button.classList.toggle('active',active);
@@ -30,12 +32,12 @@ function readCollectionState(){
 function writeCollectionState({replace=false,showCollection=false}={}){
   const url=new URL(location.href);
   const category=Object.keys(categoryFilters).find(key=>categoryFilters[key]===filter);
-  const values={category,country:country==='all'?null:country,q:query,sort:sort==='curated'?null:sort};
+  const values={category,country:country==='all'?null:country,q:query,sort:sort==='curated'?null:sort,dir:dir==='desc'?'desc':null};
   Object.entries(values).forEach(([key,value])=>value?url.searchParams.set(key,value):url.searchParams.delete(key));
   if(showCollection)url.hash='';
   if(url.href!==location.href)history[replace?'replaceState':'pushState'](null,'',url);
   if(showCollection)route();
-  else{renderCards();renderedLocation=location.href;}
+  else{syncSortDirection();renderCards();renderedLocation=location.href;}
 }
 const elementLabels={color:'配色角色',typography:'字体排版',layout:'布局留白',imagery:'图像图标',shape:'线条形状',hierarchy:'信息层级',motion:'动效反馈',coherence:'协调逻辑'};
 const composition = e => `<dl class="element-map">${Object.entries(e.composition||{}).map(([k,v])=>`<div class="${k==='coherence'?'coherence':''}"><dt>${elementLabels[k]||esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
@@ -51,7 +53,13 @@ const favoriteStar='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false
 function favoriteButton(e){return `<button class="favorite ${favorites.includes(e.id)?'selected':''}" data-fav="${e.id}" aria-label="收藏${esc(e.title)}" aria-pressed="${favorites.includes(e.id)}">${favoriteStar}</button>`;}
 function updateTray(){const count=selected.length;document.body.classList.toggle('has-tray',count>0);$('#compare-count').textContent=count;$('#compare-tray').hidden=!count;$('#tray-text').textContent=`已选择 ${count} 项：${selected.map(id=>entries.find(e=>e.id===id)?.title).join(' · ')}`;$('#compare-go').disabled=count<2;}
 function selectCompare(id,checked){if(checked && !selected.includes(id)){if(selected.length===3){toast('一次最多比较 3 项，请先取消一个条目。');renderCards();return;}selected.push(id);}else if(!checked){selected=selected.filter(x=>x!==id);}updateTray();}
-function renderCards(){let results=entries.filter(e=>(filter==='all'||filter==='favorites'&&favorites.includes(e.id)||e.category===filter)).filter(e=>country==='all'||e.country===country);if(query){results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));}if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));$('#cards').innerHTML=results.map(e=>`<article class="card" style="--bg:${esc(e.background)}"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy"><span class="card-number">${String(e.order).padStart(2,'0')} / ${esc(e.category)}</span></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><a href="#style/${e.id}">拆解 & demo</a></div></div></article>`).join('');$('#results-label').textContent=`${labels[filter]} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;$('#empty').hidden=!!results.length;}
+function syncSortDirection(){
+  const button=$('#sort-dir');
+  button.setAttribute('aria-label',dir==='desc'?'反序':'正序');
+  button.setAttribute('aria-pressed',String(dir==='desc'));
+  $('#sort-dir path').setAttribute('d',dir==='desc'?'M12 5v14M12 19l-6-6M12 19l6-6':'M12 19V5M12 5l-6 6M12 5l6 6');
+}
+function renderCards(){let results=entries.filter(e=>(filter==='all'||filter==='favorites'&&favorites.includes(e.id)||e.category===filter)).filter(e=>country==='all'||e.country===country);if(query){results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));}if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));if(dir==='desc')results.reverse();$('#cards').innerHTML=results.map(e=>`<article class="card" style="--bg:${esc(e.background)}"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy"><span class="card-number">${String(e.order).padStart(2,'0')} / ${esc(e.category)}</span></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><a href="#style/${e.id}">拆解 & demo</a></div></div></article>`).join('');$('#results-label').textContent=`${labels[filter]} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;$('#empty').hidden=!!results.length;}
 function route(){
   previewObserver?.disconnect();
   readCollectionState();
@@ -100,8 +108,9 @@ document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListen
 }));
 $('#search').addEventListener('input',event=>{query=event.target.value.trim();writeCollectionState({replace:true});});
 $('#sort').addEventListener('change',event=>{sort=event.target.value;writeCollectionState();});
+$('#sort-dir').addEventListener('click',()=>{dir=dir==='desc'?'asc':'desc';writeCollectionState();});
 $('#reset-search').onclick=()=>{
-  query='';filter='all';country='all';sort='curated';
+  query='';filter='all';country='all';sort='curated';dir='asc';
   writeCollectionState({showCollection:true});
 };
 function showCompareSelection(){

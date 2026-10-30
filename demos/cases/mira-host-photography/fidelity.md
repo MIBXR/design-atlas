@@ -78,7 +78,7 @@ Mira Høst 是 [来源 README 第 441 行](https://github.com/ConardLi/garden-sk
 
 ## 模块对照结果
 
-定位均相对来源 `demo2-with-skill.html`；本地对应为同名选择器，主文件为 [本地 Demo](../../demos/cases/mira-host-photography/index.html)。源码说明与浏览器实测分开记录；实测条件和证据范围见下节。
+定位均相对来源 `demo2-with-skill.html`；本地对应为同名选择器，主文件为 [本地 Demo](index.html)。源码说明与浏览器实测分开记录；实测条件和证据范围见下节。
 
 | 模块／状态 | 本地对应 | 证据与判定 |
 | --- | --- | --- |
