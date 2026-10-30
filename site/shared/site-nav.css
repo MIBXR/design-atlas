@@ -44,10 +44,10 @@ html{scrollbar-gutter:stable;scroll-padding-top:calc(var(--atlas-header-height) 
   align-items:center;
   gap:28px;
   width:100%;
-  max-width:1280px;
+  max-width:none;
   height:calc(var(--atlas-header-height) - 1px);
-  margin:0 auto;
-  padding:0 40px;
+  margin:0;
+  padding:0 32px;
 }
 .atlas-site-header .atlas-site-brand{
   box-sizing:border-box;
@@ -356,6 +356,7 @@ html[data-lab-embed=home] .atlas-page-directory{display:none!important}
 
 @media(min-width:801px){.atlas-site-header-inner{grid-template-columns:190px minmax(0,1fr) 116px;gap:20px}.atlas-site-header .atlas-site-theme{width:116px}}
 @media(min-width:801px) and (max-width:1050px){.atlas-site-header-inner{grid-template-columns:44px minmax(0,1fr) 116px}}
+@media(min-width:801px) and (max-width:1159px){.atlas-site-header-inner{padding:0 24px}}
 html{scrollbar-width:thin;scrollbar-color:var(--atlas-shell-line) transparent}
 body *{scrollbar-width:thin;scrollbar-color:var(--atlas-shell-line) transparent}
 .cases-page .rail,.document-rail,.document-rail *,.atlas-page-directory[data-directory-open],.atlas-page-directory[data-directory-open] *{scrollbar-color:#4b5442 transparent}
