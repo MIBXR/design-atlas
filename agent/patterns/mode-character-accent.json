@@ -248,6 +248,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/chatgpt-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/chatgpt-platform/motion-data.js",
       "role": "source"
     },

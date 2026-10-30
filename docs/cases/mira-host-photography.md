@@ -4,9 +4,9 @@
 
 [来源 README 第 436 行](https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md#L436) 记录的原始提示词为：
 
-[第 438–446 行](https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md#L438-L446) 将其列为“有 Skill”示范，第 441 行明确 Mira Høst 为虚构北欧摄影师。页面中的工作年限、杂志发表、收藏、展览、地址与联系信息仅属于示范内容，不作为真实人物或机构事实。README 没有给出可核实的生成模型、完整对话和迭代次数，本研究不补充这些信息。
+[第 438–446 行](https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/web-design-engineer/README.zh-CN.md#L438-L446) 将其列为“有 Skill”示范，第 441 行明确 Mira Høst 为虚构北欧摄影师。页面中的工作年限、杂志发表、收藏、展览、地址与联系信息均为示范内容。生成模型、完整对话和迭代次数未记录。
 
-README 第 440 行的文件路径多写一层 `demo2/`，归档采用固定提交中实际存在的 `demo/web-design-demo/demo2-with-skill.html`。来源的 [`demo/web-design-demo/demo2/index.html`](https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2/index.html) 是“林月”摄影作品集，内容不同，README 也没有说明它是否为无技能版本，因此不作为基线对照。
+归档主页面为固定提交中的 `demo/web-design-demo/demo2-with-skill.html`。来源的 [`demo/web-design-demo/demo2/index.html`](https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2/index.html) 是“林月”摄影作品集，内容不同，其生成条件未记录；本案例按单个示范页分析。
 
 ## 页面结构
 
@@ -16,7 +16,7 @@ README 第 440 行的文件路径多写一层 `demo2/`，归档采用固定提�
 
 ## 设计机制
 
-以下参数来自固定提交源码，不把它们描述成浏览器测量结果。
+以下参数来自固定提交源码。
 
 | 维度 | 来源实现与作用 |
 | --- | --- |

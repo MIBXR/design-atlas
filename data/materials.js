@@ -1,4 +1,4 @@
-window.DESIGN_MATERIALS = [
+window.ATLAS_MATERIALS = [
   {
     "id": "98-css",
     "title": "98.css · 复古桌面组件",

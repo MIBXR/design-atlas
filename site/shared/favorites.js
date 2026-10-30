@@ -1,45 +1,35 @@
 (() => {
   'use strict';
-  const key = 'atlas-favorites-v2', legacyKey = 'atlas-favorites';
-  const format = 'design-atlas-favorites';
+  const key = 'web-atlas-favorites';
+  const format = 'web-atlas-favorites';
   const valid = {
-    cases: new Set((window.DESIGN_ATLAS || []).map(entry => entry.id)),
-    patterns: new Set((window.DESIGN_PATTERNS || []).map(pattern => pattern.id)),
-    materials: new Set((window.DESIGN_MATERIALS || []).map(material => material.id)),
+    cases: new Set((window.ATLAS_CASES || []).map(entry => entry.id)),
+    patterns: new Set((window.ATLAS_PATTERNS || []).map(pattern => pattern.id)),
+    materials: new Set((window.ATLAS_MATERIALS || []).map(material => material.id)),
   };
   const clean = (kind, ids) => [...new Set(ids.filter(id => typeof id === 'string' && valid[kind].has(id)))];
   const listeners = new Set();
   let state = { cases: [], patterns: [], materials: [] }, persisted = true, error = '';
   function readBackup(value) {
     const data = typeof value === 'string' ? JSON.parse(value) : value;
-    if (Array.isArray(data)) return { cases: clean('cases', data), patterns: [], materials: [] };
-    if (data?.version === 2 && data.format === format && Array.isArray(data.cases) && Array.isArray(data.patterns)) {
-      if (data.materials !== undefined && !Array.isArray(data.materials)) throw new Error('素材收藏必须为列表。');
-      return { cases: clean('cases', data.cases), patterns: clean('patterns', data.patterns), materials: clean('materials', data.materials || []) };
-    }
-    if (Array.isArray(data?.favorites) && (data.version === undefined || data.version === 1)) {
-      return { cases: clean('cases', data.favorites), patterns: [], materials: [] };
+    if (data?.format === format && Array.isArray(data.cases) && Array.isArray(data.patterns) && Array.isArray(data.materials)) {
+      return { cases: clean('cases', data.cases), patterns: clean('patterns', data.patterns), materials: clean('materials', data.materials) };
     }
     throw new Error('格式错误，请粘贴导出的收藏 JSON。');
   }
-  function readLegacy() {
-    const value = localStorage.getItem(legacyKey);
-    return value === null ? [] : readBackup(value).cases;
-  }
   try {
     const value = localStorage.getItem(key);
-    state = value === null ? { cases: readLegacy(), patterns: [], materials: [] } : readBackup(value);
+    if (value !== null) state = readBackup(value);
   } catch {
     persisted = false; error = '无法读取本地收藏，可导入备份恢复。';
   }
-  const payload = () => ({ format, version: 2, cases: [...state.cases], patterns: [...state.patterns], materials: [...state.materials] });
+  const payload = () => ({ format, cases: [...state.cases], patterns: [...state.patterns], materials: [...state.materials] });
   function notify() {
     listeners.forEach(listener => listener({ persisted, error }));
   }
-  function save(mirrorCases) {
+  function save() {
     try {
       localStorage.setItem(key, JSON.stringify(payload()));
-      if (mirrorCases) localStorage.setItem(legacyKey, JSON.stringify(state.cases));
       persisted = true; error = '';
     } catch {
       persisted = false; error = '未能完整保存本地收藏，本次修改保留在当前页面。请导出备份。';
@@ -54,9 +44,9 @@
       if (!valid[kind].has(id)) return { selected: false, persisted };
       const selected = !api.has(kind, id);
       state[kind] = selected ? [...state[kind], id] : state[kind].filter(value => value !== id);
-      return { selected, persisted: save(kind === 'cases') };
+      return { selected, persisted: save() };
     },
-    exportBackup: () => ({ ...payload(), exportedAt: new Date().toISOString() }),
+    exportBackup: payload,
     importBackup(value) {
       const incoming = readBackup(value);
       const added = {};
@@ -65,7 +55,7 @@
         added[kind] = merged.length - state[kind].length;
         state[kind] = merged;
       }
-      return { added, total: { cases: state.cases.length, patterns: state.patterns.length, materials: state.materials.length }, persisted: save(added.cases > 0) };
+      return { added, total: { cases: state.cases.length, patterns: state.patterns.length, materials: state.materials.length }, persisted: save() };
     },
     subscribe(listener) {
       listeners.add(listener); listener({ persisted, error });
@@ -73,17 +63,13 @@
     },
   };
   window.addEventListener('storage', event => {
-    if (event.key !== key && event.key !== legacyKey && event.key !== null) return;
+    if (event.key !== key && event.key !== null) return;
     try {
-      if (event.key === null) state = { cases: [], patterns: [], materials: [] };
-      else if (event.key === legacyKey) {
-        state.cases = event.newValue === null ? [] : readBackup(event.newValue).cases;
-        save(false); return;
-      } else state = event.newValue === null ? { cases: readLegacy(), patterns: [], materials: [] } : readBackup(event.newValue);
+      state = event.newValue === null ? { cases: [], patterns: [], materials: [] } : readBackup(event.newValue);
       persisted = true; error = ''; notify();
     } catch {
       persisted = false; error = '无法读取另一页面的收藏更新，当前收藏仍保留。'; notify();
     }
   });
-  window.DesignAtlasFavorites = api;
+  window.AtlasFavorites = api;
 })();

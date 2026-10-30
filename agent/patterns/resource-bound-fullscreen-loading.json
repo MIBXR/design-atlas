@@ -343,6 +343,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/arknights-world/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/arknights-world/particles.js",
       "role": "source"
     },

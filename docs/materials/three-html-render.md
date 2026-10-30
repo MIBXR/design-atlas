@@ -6,7 +6,7 @@
 
 ## 能力与演示范围
 
-[HTML-in-Canvas](https://github.com/WICG/html-in-canvas) 是 WICG 的浏览器标准提案，原生支持仍处于实验阶段。本条目收录的是提供兼容能力的 three-html-render 库，不是标准本身。`HTMLTexture` 和 `InteractionManager` 从 three r185 起由 Three.js 提供；本样例使用这些接口，three-html-render 补齐浏览器 API。
+[HTML-in-Canvas](https://github.com/WICG/html-in-canvas) 是 WICG 的浏览器标准提案，原生支持仍处于实验阶段。本条目收录提供兼容能力的 three-html-render 库。`HTMLTexture` 和 `InteractionManager` 从 three r185 起由 Three.js 提供；本样例使用这些接口，three-html-render 补齐浏览器 API。
 
 | 用法 | 库与 Three.js 构成 | 本地组合与可操作状态 |
 | --- | --- | --- |
@@ -21,7 +21,7 @@
 
 默认入口为 `index.html?demo=lamp`，基础平面为 `index.html?demo=plane`。吊灯初始 `angle: 34`、`brightness: 1450`、`color: #ffb36b` 与五色色板来自参考项目 `config.ts`，场景与摆锤数值按 `MorsLightCanvas.tsx` 移植。平面最大倾斜 8° 是本地演示参数。
 
-本素材处于 `0.1.x`。npm 0.1.2 不提供 README 所述的 `html-texture`／`interaction-manager` 子路径，不能按这些路径导入；本地从 Three.js 核心和 addon 使用对应能力。
+本素材处于 `0.1.x`。npm 0.1.2 不提供 README 所述的 `html-texture`／`interaction-manager` 子路径；本地从 Three.js 核心和 addon 使用对应能力。
 
 本版本组合需要 `texElementImage2D` 兼容垫片：Three.js 根据函数的参数数量选择上传重载，polyfill 的函数签名会触发不适用的短重载。改写自参考实现的垫片仅在 polyfill 启用且签名符合条件时包装为六参数函数，原生实现保持原样。
 

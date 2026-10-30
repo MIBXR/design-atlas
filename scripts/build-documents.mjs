@@ -30,7 +30,7 @@ export function documentCatalog() {
 
 export function buildDocuments() {
   const documents = documentCatalog();
-  fs.writeFileSync(path.join(root,'data/docs.js'), 'window.DESIGN_ATLAS_DOCUMENTS = ' + JSON.stringify(documents,null,2) + ';\n', 'utf8');
+  fs.writeFileSync(path.join(root,'data/docs.js'), 'window.ATLAS_DOCUMENTS = ' + JSON.stringify(documents,null,2) + ';\n', 'utf8');
   return documents;
 }
 

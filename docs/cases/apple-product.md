@@ -28,8 +28,8 @@
 
 ## 配色、排版与元素协调
 
-主题和运动共同建立产品重点：以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。
+主题和运动共同建立产品重点：以官方摄影和影片建立硬件主角，保留细节卡的展开/收起、图库进度、景深比较及滚动媒体/文字交接。
 
 ## 观察依据
 
-匿名浏览器实测了七项 viewer 中 Colors 卡的 inline 展开与原站影片层；源影片 muted=false，首屏其他媒体 muted=true。源公共组件包含 StaggeredFadeIn、ProductViewer 与 VideoScrub。此环境源页处于 no-enhanced 分支，相机增强滚动视频未实际播放，不能称该状态现场验证通过。
+匿名浏览器实测了七项 viewer 中 Colors 卡的 inline 展开与原站影片层；源影片 muted=false，首屏其他媒体 muted=true。源公共组件包含 StaggeredFadeIn、ProductViewer 与 VideoScrub。源页处于 no-enhanced 分支，相机增强滚动视频的实时播放未验证。

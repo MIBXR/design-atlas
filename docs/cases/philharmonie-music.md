@@ -1,6 +1,6 @@
 # 巴黎爱乐厅 · 音乐展与音乐会详情
 
-观察：**2026-10-07**。[真实页面](https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music)。国家／地区指参考机构来源，不概括一个国家的所有设计。
+观察：**2026-10-07**。[真实页面](https://philharmoniedeparis.fr/fr/activite/exposition/28822-video-games-music)。国家／地区记录参考机构来源。
 
 ## 观察范围
 

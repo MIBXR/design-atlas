@@ -1952,6 +1952,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/linear-workflow/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/linear-workflow/script.js",
       "role": "source"
     },
@@ -2002,6 +2006,10 @@
     {
       "path": "demos/cases/qoder-platform/journey.js",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/qoder-platform/script.js",

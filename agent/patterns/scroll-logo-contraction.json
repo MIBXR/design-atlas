@@ -213,6 +213,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/uma-musume/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/uma-musume/style.css",
       "role": "source"
     },

@@ -161,6 +161,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/claude-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/claude-platform/script.js",
       "role": "source"
     },
@@ -207,6 +211,10 @@
     {
       "path": "demos/cases/qoder-platform/journey.js",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/qoder-platform/script.js",

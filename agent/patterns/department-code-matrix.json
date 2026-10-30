@@ -166,6 +166,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/rhine-lab/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/rhine-lab/source/clips.sh",
       "role": "process"
     },

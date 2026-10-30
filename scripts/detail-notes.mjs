@@ -21,7 +21,7 @@ export function renderDetailNotes({ entries, id, rendererSource }) {
   }
   const location = new URL(`http://atlas.local/cases.html#style/${id}`);
   const document = { querySelector: node, querySelectorAll: () => [], createElement: tag => node(`created:${tag}`), body: node('body'), activeElement: { tagName: 'BODY' }, addEventListener() {} };
-  const window = { DESIGN_ATLAS: entries, DesignAtlasPreview: { mount: () => ({ refresh() {}, disconnect() {} }) }, addEventListener() {}, scrollTo() {} };
+  const window = { ATLAS_CASES: entries, AtlasPreview: { mount: () => ({ refresh() {}, disconnect() {} }) }, addEventListener() {}, scrollTo() {} };
   const sandbox = { window, document, location, URL, console, localStorage: { getItem: () => null, setItem() {} }, history: { replaceState() {}, pushState() {} }, navigator: { clipboard: { writeText: async () => {} } }, ResizeObserver: class { observe() {} disconnect() {} }, setTimeout: () => 0, clearTimeout() {}, Blob };
   const context = vm.createContext(sandbox);
   new vm.Script(fs.readFileSync(new URL('../site/shared/favorites.js', import.meta.url), 'utf8')).runInContext(context, { timeout: 2000 });

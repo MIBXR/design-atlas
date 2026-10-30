@@ -363,6 +363,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/arknights-world/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/arknights-world/particles.js",
       "role": "source"
     },
@@ -2033,6 +2037,10 @@
     {
       "path": "demos/cases/zelda-world/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/zelda-world/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/zelda-world/script.js",

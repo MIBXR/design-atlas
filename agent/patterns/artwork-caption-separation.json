@@ -178,6 +178,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/design-sight/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/design-sight/source/assets/source-style.css",
       "role": "process"
     },
@@ -244,6 +248,10 @@
     {
       "path": "demos/cases/met-museum/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/met-museum/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/met-museum/script.js",

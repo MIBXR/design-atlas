@@ -24,7 +24,7 @@
       const button = cacheDialog.querySelector('#cache-clear');
       status.textContent = clear ? '正在清除素材缓存…' : '正在检查素材缓存…';
       button.disabled = true;
-      if (!window.DesignAtlasAssetCache) {
+      if (!window.AtlasAssetCache) {
         cacheReady ||= new Promise(resolve => {
           const script = document.createElement('script');
           script.src = 'site/runtime/asset-cache.js';
@@ -33,7 +33,7 @@
         });
         await cacheReady;
       }
-      const api = window.DesignAtlasAssetCache;
+      const api = window.AtlasAssetCache;
       const result = api ? await api[clear ? 'clear' : 'status']() : { available: false };
       status.textContent = result.available ? `${result.files} 项 · ${(result.bytes / 1024 / 1024).toFixed(1)} MiB${clear ? ' · 下次打开时按需重新下载' : ''}` : '此浏览器暂不支持持久素材缓存，页面仍可正常加载。';
       button.disabled = !result.available;

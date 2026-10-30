@@ -97,7 +97,7 @@ function injectAssets(text, documentPath, assetsMode) {
   const relative = name => path.posix.relative(directory === '.' ? '' : directory, name) || name;
   const hasRuntime = /<script\b[^>]*\bsrc\s*=\s*["'][^"']*asset-runtime\.js["']/i.test(text);
   const scripts = hasRuntime ? '' : `<script src="${relative('data/asset-sources.js')}"></script><script src="${relative('site/runtime/asset-runtime.js')}"></script>`;
-  const setup = `<script data-design-atlas-assets>window.DesignAtlasAssetMode=${JSON.stringify(assetsMode === 'github' ? 'github' : 'auto')};</script>${scripts}`;
+  const setup = `<script data-atlas-assets>window.AtlasAssetMode=${JSON.stringify(assetsMode === 'github' ? 'github' : 'auto')};</script>${scripts}`;
   if (!/<head\b[^>]*>/i.test(text)) throw new Error('Asset runtime requires a head element: ' + documentPath);
   // Resolve the library theme before asset loading can delay the first paint.
   const head = /<head\b[^>]*>[\s\S]*?<\/head\s*>/i.exec(text)?.[0] || '';

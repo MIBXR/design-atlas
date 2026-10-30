@@ -157,6 +157,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/mori-art-museum/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/mori-art-museum/source/assets/source-style.css",
       "role": "process"
     },

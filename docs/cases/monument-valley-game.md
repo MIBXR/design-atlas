@@ -6,9 +6,9 @@
 - [ustwo games：Monument Valley作品页](https://ustwogames.co.uk/our-games/monument-valley/)（实例）：开发者介绍Ida、不可思议建筑和视觉幻象，支撑产品重点；本地使用实际游戏画面。
 - [ustwo games：联系信息](https://ustwogames.co.uk/contact-us/)（实例）：官方伦敦工作室地址是国家分类的依据。
 - [W3C WAI：Carousels Tutorial](https://www.w3.org/WAI/tutorials/carousels/)（规范）：画廊用户控制、键盘和当前状态的规范参考。
-- [W3C：Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)（规范）：本地减少动态分支约束：停止自动推进与背景，取消非必要位移；不声称原站合规。
+- [W3C：Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)（规范）：本地减少动态分支约束：停止自动推进与背景，取消非必要位移。
 - [MV1 官方公开交互脚本](https://www.monumentvalleygame.com/js/main.js)（实例）：同一页面1000ms loader、450ms章节定位、中心活动区、手机奖项分组、Slick14图及媒体播放器机制。
-- [MV1 官方公开样式](https://www.monumentvalleygame.com/style.css)（实例）：同一归档页Humanist字体、350ms奖项/高度/标签过渡及画廊0.5侧图透明度；MV2专属动画不作为MV1证据。
+- [MV1 官方公开样式](https://www.monumentvalleygame.com/style.css)（实例）：同一归档页Humanist字体、350ms奖项/高度/标签过渡及画廊0.5侧图透明度。
 
 [原站首屏](../../previews/cases/monument-valley-game-reference.jpg) · [本地桌面](../../previews/cases/monument-valley-game.jpg) · [本地手机](../../previews/cases/monument-valley-game-mobile.jpg)
 
@@ -16,7 +16,7 @@
 
 **可观察事实：**MV1从一秒加载和静音影片进入，按下载、预告、奖项、社交、媒体、十四图画廊、社区、页尾展开。当前活动区由视口中心决定；奖项350ms双向出现，画廊500ms轨道与3000ms自动、悬停/焦点暂停。真实Humanist字体与品牌资产维持作品比例。
 
-**本库分析：**影片与竖屏游戏图承担细节；几何字标、小索引、月桂与整幅色带只建立秩序。奖项在阅读中心出现强调事实，中心画廊让当前作品突出而侧图提示探索。此分析不冒充品牌作者声明。
+**本库分析：**影片与竖屏游戏图承担细节；几何字标、小索引、月桂与整幅色带只建立秩序。奖项在阅读中心出现强调事实，中心画廊让当前作品突出而侧图提示探索。
 
 | 维度 | 设计职责与约束 |
 |---|---|

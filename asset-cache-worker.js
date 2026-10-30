@@ -1,6 +1,6 @@
 /* Cache only immutable, explicitly mapped media. HTML and application code stay fresh. */
 importScripts('data/asset-sources.js');
-const manifest = globalThis.DesignAtlasAssetSources;
+const manifest = globalThis.AtlasAssetSources;
 const cacheName = 'design-atlas-media-v1-' + manifest.commit;
 const prefix = 'design-atlas-media-v1-';
 const limit = 256 * 1024 * 1024;

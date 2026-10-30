@@ -136,7 +136,7 @@
     {
       "path": "docs/cases/linear-workflow.md",
       "role": "research",
-      "content": "# Linear：当前页面的设计与交互\n\n固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。\n\n## 触发、视觉响应与用途\n\n- 进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。\n\n- Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。\n\n- Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。\n\n- AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。\n\n- Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。\n\n- 手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。\n\n## 完整浏览路径\n\n首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。\n\n## 主题与声音\n\n营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。\n\n当前首页没有配乐、音效和音视频播放器。 消息、任务板和代码状态承担产品叙事，不靠声音强调任务。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。 使用第一方字标、字体/摄影时保持比例，按钮、边框、选中态、间距和信息密度归属于同一品牌语言。复杂场景优先保留状态关系和过渡顺序，缩短正文不会成为删去交互的理由。\n\n## 观察依据\n\n源公共模块提供首屏 1.3s+1.5s、Intake 2000/1000/1400/800ms，以及 AI 思考/交错时间；匿名源 Send “create issues” 实测回复和卡插入。\n"
+      "content": "# Linear：当前页面的设计与交互\n\n固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。\n\n## 触发、视觉响应与用途\n\n- 进入 → 首屏产品 UI 延迟 1.3s 后 1.5s 带入，背景扫光/mask 配合；下滚让首屏遮罩交给后续章节。\n\n- Favorites → 独立 issue、看板、统计项目表和项目 overview；内部任务状态、收藏与 Run agent 是本地工作示例。\n\n- Intake Send “create issues” → 2s 后 Linear 回复、再 1s 后 2 张卡插入 Todo；下一次 Send → 1.4s 回复、800ms 后卡从 Todo 移到 In progress；Replay 恢复初态 → 把自然语言请求变成可见工作。\n\n- AI 章节进入视口 → 三列代理思考/回答以 5s 与后续交错时间演示，离开/后台停止；暂停按钮与减少动态分支可保持结果。\n\n- Build → 编辑代码内容、六种 syntax 主题选择更新局部代码颜色和行数反馈；不改变官网的固定全局暗色。\n\n- 手机保留完整应用缩放裁切、Intake 消息线程；按原站隐藏 Planning/AI/Build 的复杂图示并保留标题正文。\n\n## 完整浏览路径\n\n首屏 UI → 客户标识与三个价值点 → Intake → Planning → AI → Build → 结束行动 → 页尾；本地压缩后段数量。手机保持源站的内容/复杂图示区别。\n\n## 主题与声音\n\n营销页固定近黑。Build 中的六种代码主题是局部语法预览控件，不改变全页主题。\n\n当前首页没有配乐、音效和音视频播放器。 消息、任务板和代码状态承担产品叙事，不靠声音强调任务。\n\n## 配色、排版与元素协调\n\n主题和运动共同建立产品重点：固定暗色的工作系统通过首屏面板、Intake 消息到任务板、AI 代理状态和可编辑代码说明产品价值。\n\n## 观察依据\n\n源公共模块提供首屏 1.3s+1.5s、Intake 2000/1000/1400/800ms，以及 AI 思考/交错时间；匿名源 Send “create issues” 实测回复和卡插入。\n"
     },
     {
       "path": "prompts/cases/linear-workflow.md",
@@ -152,6 +152,11 @@
       "path": "demos/cases/linear-workflow/assets-manifest.json",
       "role": "asset-manifest",
       "content": "{\n  \"scope\": \"本地私人学习页面，所有素材均由官方公开页面观察或HTML提取。\",\n  \"assets\": [\n    {\n      \"file\": \"source/assets/hero-atmosphere.webp\",\n      \"sourceUrl\": \"https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/6600ca96-e49b-4fd9-c03a-7979faddad00/f=auto,fit=scale-down,metadata=none,width=2560\",\n      \"purpose\": \"官方首屏氛围图片\",\n      \"width\": 2560,\n      \"height\": 1188,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"contentType\": \"image/png\",\n      \"bytes\": 106586,\n      \"status\": \"downloaded\",\n      \"sha256\": \"922674803bbd9b3ac8c3b097e34d101fd4bac349cbd953e58fb32df2092cb7cf\"\n    },\n    {\n      \"file\": \"assets/product-depth.webp\",\n      \"sourceUrl\": \"https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/c7fa8f5f-d439-4329-6a65-de549b51e300/f=auto,fit=scale-down,metadata=none,width=2560\",\n      \"purpose\": \"官方首屏第二张氛围/深度图片\",\n      \"width\": 2560,\n      \"height\": 1429,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 162273,\n      \"status\": \"downloaded\",\n      \"sha256\": \"6553308a3ae76d09f080a96ba62a19cffd28fb6e444b37bf87f4bce466d4be26\"\n    },\n    {\n      \"file\": \"assets/karri.png\",\n      \"sourceUrl\": \"https://webassets.linear.app/images/ornj730p/production/f79251b06e9edeeacbf2875384defe629e000b3c-352x352.png?w=72&q=95&auto=format&dpr=2\",\n      \"purpose\": \"官网issue人物头像\",\n      \"width\": 144,\n      \"height\": 144,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 24269,\n      \"status\": \"downloaded\",\n      \"sha256\": \"caaca14c6685ae0a9003f29a63007c4062373259248174a59ea898dce94350f4\"\n    },\n    {\n      \"file\": \"assets/inter.woff2\",\n      \"sourceUrl\": \"https://static.linear.app/fonts/InterVariable.woff2?v=4.1\",\n      \"purpose\": \"官方页面Inter变量字体\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅用于本地私人学习和设计参考，不代表品牌授权或关联。\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 352240,\n      \"status\": \"downloaded\",\n      \"sha256\": \"693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3\"\n    },\n    {\n      \"file\": \"assets/logo.svg\",\n      \"sourceUrl\": \"https://linear.app/\",\n      \"purpose\": \"官方首页原样提取的品牌SVG\",\n      \"width\": null,\n      \"height\": null,\n      \"copyright\": \"品牌及原作者所有；仅本地私人学习，无品牌关联。\",\n      \"status\": \"downloaded\",\n      \"retrievedAt\": \"2026-10-07\",\n      \"bytes\": 3116,\n      \"sha256\": \"4925c827664f5db037b12e815b8091d0b62b8fd702fe230e7b8ba14ccc240f1b\"\n    }\n  ]\n}\n"
+    },
+    {
+      "path": "demos/cases/linear-workflow/LICENSES.md",
+      "role": "license",
+      "content": "# 许可与出处\n\n| 许可原文或权利记录 | 覆盖范围 |\n| --- | --- |\n| [assets-manifest.json](assets-manifest.json) | `assets/karri.png` 的来源与权利记录 |\n| [assets-manifest.json](assets-manifest.json) | `assets/logo.svg` 的来源与权利记录 |\n| [assets-manifest.json](assets-manifest.json) | `assets/product-depth.webp` 的来源与权利记录 |\n| [assets-manifest.json](assets-manifest.json) | `assets/inter.woff2` 的来源与权利记录 |\n| [assets-manifest.json](assets-manifest.json) | `source/assets/hero-atmosphere.webp` 的来源与权利记录 |\n"
     }
   ],
   "files": [
@@ -162,6 +167,10 @@
     {
       "path": "data/asset-sources.js",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/linear-workflow/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/linear-workflow/assets-manifest.json",

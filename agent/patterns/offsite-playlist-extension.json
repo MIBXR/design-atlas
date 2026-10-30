@@ -231,6 +231,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/fuji-rock/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/fuji-rock/source/assets/source-style.css",
       "role": "process"
     },
@@ -383,6 +387,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/persona-kinetic/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/persona-kinetic/script.js",
       "role": "source"
     },
@@ -449,6 +457,10 @@
     {
       "path": "demos/cases/philharmonie-music/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/philharmonie-music/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/philharmonie-music/script.js",

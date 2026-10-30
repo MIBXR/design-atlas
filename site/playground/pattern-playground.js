@@ -117,7 +117,7 @@
   }
   function dispose(root) { cleanups.get(root)?.(); cleanups.delete(root); }
   function disposeDetached() { for (const root of cleanups.keys()) if (!root.isConnected) dispose(root); }
-  window.DesignAtlasPlayground = { mount, dispose, disposeDetached, labels };
+  window.AtlasPlayground = { mount, dispose, disposeDetached, labels };
   const init = () => document.querySelectorAll('[data-pattern-playground]').forEach(root => mount(root));
   window.addEventListener('pagehide', () => { for (const root of cleanups.keys()) dispose(root); });
   window.addEventListener('pageshow', event => { if (event.persisted) document.querySelectorAll('[data-pattern-playground]').forEach(root => { if (!root.closest('[hidden]')) mount(root); }); });

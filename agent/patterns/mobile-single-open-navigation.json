@@ -177,6 +177,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/notion-editorial/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/notion-editorial/script.js",
       "role": "source"
     },

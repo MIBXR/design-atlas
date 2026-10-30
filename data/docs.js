@@ -1,4 +1,4 @@
-window.DESIGN_ATLAS_DOCUMENTS = [
+window.ATLAS_DOCUMENTS = [
   {
     "path": "docs/guide.md",
     "title": "项目指南",

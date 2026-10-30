@@ -368,6 +368,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/arknights-world/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/arknights-world/particles.js",
       "role": "source"
     },
@@ -560,6 +564,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/chatgpt-platform/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/chatgpt-platform/motion-data.js",
       "role": "source"
     },
@@ -626,6 +634,10 @@
     {
       "path": "demos/cases/qoder-platform/journey.js",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/qoder-platform/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/qoder-platform/script.js",
@@ -790,6 +802,10 @@
     {
       "path": "demos/cases/zelda-world/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/zelda-world/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/zelda-world/script.js",

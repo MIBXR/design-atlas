@@ -3,10 +3,10 @@
   'use strict';
   const boot = document.currentScript;
   const root = new URL('../../', boot?.src || location.href);
-  const registry = globalThis.DesignAtlasAssetSources || { assets: {} };
+  const registry = globalThis.AtlasAssetSources || { assets: {} };
   const modes = new Set(['local', 'github', 'auto']);
   const requested = new URL(location.href).searchParams.get('assets');
-  let mode = modes.has(requested) ? requested : modes.has(globalThis.DesignAtlasAssetMode) ? globalThis.DesignAtlasAssetMode : 'auto';
+  let mode = modes.has(requested) ? requested : modes.has(globalThis.AtlasAssetMode) ? globalThis.AtlasAssetMode : 'auto';
   const sources = new Map(), reverse = new Map(), records = new WeakMap(), handled = new WeakSet();
   const localFailures = new Set(), mirrorFailures = new Set();
   const baseMirror = typeof registry.baseUrl === 'string' ? registry.baseUrl : '';

@@ -153,6 +153,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/design-sight/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/design-sight/source/assets/source-style.css",
       "role": "process"
     },

@@ -1,10 +1,10 @@
 (() => {
   'use strict';
-  const entries = window.DESIGN_ATLAS;
+  const entries = window.ATLAS_CASES;
   if (Array.isArray(entries)) {
     const showcases = entries.filter(entry => entry.category === '示范作品').length;
     const studies = entries.filter(entry => entry.implementation === 'reference-study' && entry.category !== '示范作品').length;
-    const counts = {all: entries.length, studies, showcases, classics: entries.length - studies - showcases, patterns: Array.isArray(window.DESIGN_PATTERNS) ? window.DESIGN_PATTERNS.length : 129};
+    const counts = {all: entries.length, studies, showcases, classics: entries.length - studies - showcases, patterns: Array.isArray(window.ATLAS_PATTERNS) ? window.ATLAS_PATTERNS.length : 129};
     document.querySelectorAll('[data-home-count]').forEach(element => {
       element.textContent = String(counts[element.dataset.homeCount]);
     });
@@ -18,10 +18,10 @@
       choice.setAttribute('aria-pressed', String(selected));
       const panel = document.getElementById(`home-pattern-${choice.dataset.homePattern}`);
       const playground = panel.querySelector('[data-pattern-playground]');
-      window.DesignAtlasPlayground.dispose(playground);
+      window.AtlasPlayground.dispose(playground);
       panel.hidden = !selected;
       panel.inert = !selected;
-      if (selected) window.DesignAtlasPlayground.mount(playground);
+      if (selected) window.AtlasPlayground.mount(playground);
     });
   }));
 

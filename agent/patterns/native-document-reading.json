@@ -257,6 +257,10 @@
       "role": "source"
     },
     {
+      "path": "demos/cases/fuji-rock/LICENSES.md",
+      "role": "license"
+    },
+    {
       "path": "demos/cases/fuji-rock/source/assets/source-style.css",
       "role": "process"
     },
@@ -323,6 +327,10 @@
     {
       "path": "demos/cases/met-museum/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/met-museum/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/met-museum/script.js",
@@ -395,6 +403,10 @@
     {
       "path": "demos/cases/rijksmuseum-art/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/rijksmuseum-art/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/rijksmuseum-art/script.js",
@@ -523,6 +535,10 @@
     {
       "path": "demos/cases/uma-musume/index.html",
       "role": "source"
+    },
+    {
+      "path": "demos/cases/uma-musume/LICENSES.md",
+      "role": "license"
     },
     {
       "path": "demos/cases/uma-musume/style.css",

@@ -1,6 +1,6 @@
 # DeepSeek Harness：可观察的产品演示
 
-来源：[官方中文页](https://www.deepseek.com/harness/)、[英文页](https://www.deepseek.com/en/harness/)，2026-10-11完整落地页快照。不是产品安装或运行结果。全部四卡为DOM/CSS演示，首屏与页尾另有GPU视觉层，页面没有视频。
+来源：[官方中文页](https://www.deepseek.com/harness/)、[英文页](https://www.deepseek.com/en/harness/)，2026-10-11完整落地页快照。全部四卡为DOM/CSS演示，首屏与页尾另有GPU视觉层，页面没有视频。
 
 ## 页面构成
 
@@ -32,7 +32,7 @@ Hero使用全屏triangle strip，五色`#000/#000/#204a7e/#cec8bb/#000`，light 
 
 页尾使用196个`BoxGeometry(.05,.05,.015)`，目标为`((x-12)*.18,(12-y)*.18,0)`。球面散布半径2.5–5，滚动聚合量`clamp(1-(top+.5*height)/innerHeight,0,1)`，以2.5×dt跟随；相机(0,0,22)、fov50，30fps、DPR≤1.5。保留原始实例数据与shader，不用随机星点代替。
 
-减少动态下，插件和轨迹采用官网中英WebP，成果使用静态文件组，工作流显示完成态。不能把这些回退图当作默认动态实现，也不能仅凭CSS回退推断全部GPU层都已停止。
+减少动态下，插件和轨迹采用官网中英WebP，成果使用静态文件组，工作流显示完成态。默认模式使用动态实现；减少动态时全部 GPU 层的停止范围未验证。
 
 ## 巧思与验证
 
