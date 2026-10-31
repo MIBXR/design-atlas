@@ -69,6 +69,6 @@ html[data-lab-embed=home] body.lab-page .sample :is(.sample-copy>p,.sample-compo
 .atlas-external-icon{display:inline-flex;align-items:center;flex:none;white-space:nowrap;text-decoration:none}
 .atlas-icon-label{display:inline-flex;align-items:center;gap:8px}
 body:is(.landing-page,.cases-page,.agent-page,.document-page,.lab-page) :is(button,.copy-button,.primary-button,.atlas-ui-button,.landing-button,.search) .atlas-icon:not(.sample *){width:16px;height:16px}
-body .atlas-site-header .atlas-site-nav-toggle,body .atlas-directory-heading button{gap:8px}
+body .atlas-site-header .atlas-site-nav-toggle{gap:8px}
 @media(max-width:1050px){body .atlas-site-header .atlas-site-wordmark strong{font-size:14px}body .atlas-site-header .atlas-site-nav>a{font-size:12px}}
 @media(max-width:800px){body .atlas-site-header .atlas-site-nav>a{font-size:14px}}

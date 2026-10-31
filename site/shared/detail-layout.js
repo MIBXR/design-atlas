@@ -85,12 +85,26 @@
     const escape=event=>{if(event.key==='Escape'&&!menu.hidden){setOpen(false);trigger.focus();event.preventDefault();}};
     menu.addEventListener('click',event=>{if(event.target.closest('a'))setOpen(false);});
     document.addEventListener('click',outside);document.addEventListener('keydown',escape);compact.addEventListener('change',sync);
-    const syncActions=()=>root.style.setProperty('--atlas-actions-height',actions.getBoundingClientRect().height+'px');
-    const actionsObserver=new ResizeObserver(syncActions);actionsObserver.observe(actions);
-    disposeMenu=()=>{document.removeEventListener('click',outside);document.removeEventListener('keydown',escape);compact.removeEventListener('change',sync);actionsObserver.disconnect();};
+    const header=document.querySelector('.atlas-site-header');
+    const syncColumns=()=>{
+      const headerHeight=header.getBoundingClientRect().height;
+      const actionsHeight=actions.getBoundingClientRect().height;
+      const stageHeight=stage.getBoundingClientRect().height;
+      const notesHeight=notes.getBoundingClientRect().height;
+      const shorter=stageHeight<=notesHeight?stage:notes;
+      const height=Math.min(stageHeight,notesHeight);
+      const available=window.innerHeight-headerHeight-actionsHeight-48;
+      const top=height<=available?headerHeight+actionsHeight+24:window.innerHeight-height-24;
+      root.style.setProperty('--atlas-detail-sticky-top',top+'px');
+      for(const column of [stage,notes])column.classList.toggle('detail-sticky',window.innerWidth>=1160&&column===shorter);
+    };
+    const columnsObserver=new ResizeObserver(syncColumns);
+    for(const element of [header,actions,stage,notes])columnsObserver.observe(element);
+    window.addEventListener('resize',syncColumns);
+    disposeMenu=()=>{document.removeEventListener('click',outside);document.removeEventListener('keydown',escape);compact.removeEventListener('change',sync);columnsObserver.disconnect();window.removeEventListener('resize',syncColumns);};
     sync();
     window.AtlasIcons.paint(root);
-    syncActions();
+    syncColumns();
   }
   window.AtlasDetail = {mount, paintFavorite, clear: () => {disposeMenu();document.body.classList.remove('atlas-detail');}};
 })();
