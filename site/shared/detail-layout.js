@@ -91,12 +91,10 @@
       const actionsHeight=actions.getBoundingClientRect().height;
       const stageHeight=stage.getBoundingClientRect().height;
       const notesHeight=notes.getBoundingClientRect().height;
-      const shorter=stageHeight<=notesHeight?stage:notes;
-      const height=Math.min(stageHeight,notesHeight);
-      const available=window.innerHeight-headerHeight-actionsHeight-48;
-      const top=height<=available?headerHeight+actionsHeight+24:window.innerHeight-height-24;
+      const top=headerHeight+actionsHeight+24;
       root.style.setProperty('--atlas-detail-sticky-top',top+'px');
-      for(const column of [stage,notes])column.classList.toggle('detail-sticky',window.innerWidth>=1160&&column===shorter);
+      stage.classList.toggle('detail-sticky',window.innerWidth>=1160);
+      notes.classList.toggle('detail-sticky',window.innerWidth>=1160&&stageHeight>notesHeight);
     };
     const columnsObserver=new ResizeObserver(syncColumns);
     for(const element of [header,actions,stage,notes])columnsObserver.observe(element);
