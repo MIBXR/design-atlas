@@ -160,6 +160,11 @@ window.ATLAS_DOCUMENTS = [
     "group": "案例研究"
   },
   {
+    "path": "docs/cases/atlas-sister-sites.md",
+    "title": "Atlas 姊妹站 · 参考库界面骨架",
+    "group": "案例研究"
+  },
+  {
     "path": "docs/cases/chatgpt-platform.md",
     "title": "ChatGPT：当前页面的设计与交互",
     "group": "案例研究"
@@ -415,6 +420,11 @@ window.ATLAS_DOCUMENTS = [
     "group": "复用 Prompt"
   },
   {
+    "path": "prompts/patterns/current-item-emphasis-tiers.md",
+    "title": "当前项分级强调与中性悬停 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
     "path": "prompts/patterns/current-state-svg-export.md",
     "title": "导出当前构成 · 复用 Prompt",
     "group": "复用 Prompt"
@@ -437,6 +447,11 @@ window.ATLAS_DOCUMENTS = [
   {
     "path": "prompts/cases/isometric-3d.md",
     "title": "等轴 3D：让空间讲述系统 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/persistent-header-page-transition.md",
+    "title": "顶栏不动的页面切换 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
@@ -577,6 +592,11 @@ window.ATLAS_DOCUMENTS = [
   {
     "path": "prompts/patterns/inline-product-detail-viewer.md",
     "title": "胶囊原位展开产品说明 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/patterns/shorter-column-sticky.md",
+    "title": "较短一栏吸附的两栏详情 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
@@ -1060,6 +1080,11 @@ window.ATLAS_DOCUMENTS = [
     "group": "复用 Prompt"
   },
   {
+    "path": "prompts/patterns/accent-role-tiers.md",
+    "title": "主题色分层：五个配色角色 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
     "path": "prompts/patterns/responsive-art-direction.md",
     "title": "桌面与手机使用专门主图 · 复用 Prompt",
     "group": "复用 Prompt"
@@ -1092,6 +1117,11 @@ window.ATLAS_DOCUMENTS = [
   {
     "path": "prompts/cases/apple-product.md",
     "title": "Apple · 滚动产品舞台 · 复用 Prompt",
+    "group": "复用 Prompt"
+  },
+  {
+    "path": "prompts/cases/atlas-sister-sites.md",
+    "title": "Atlas 姊妹站 · 参考库界面骨架 · 复用 Prompt",
     "group": "复用 Prompt"
   },
   {
@@ -1217,6 +1247,16 @@ window.ATLAS_DOCUMENTS = [
 ];
 window.ATLAS_DOCUMENT_SOURCES = [
   {
+    "path": "demos/cases/atlas-sister-sites/",
+    "referenceUrl": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+    "sources": [
+      "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+      "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site",
+      "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+      "https://motion-atlas.mibxranime.chatgpt.site/"
+    ]
+  },
+  {
     "path": "demos/cases/mira-host-photography/",
     "referenceUrl": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html",
     "sources": [
@@ -1236,9 +1276,25 @@ window.ATLAS_DOCUMENT_SOURCES = [
     ]
   },
   {
+    "path": "demos/patterns/accent-role-tiers/",
+    "sources": [
+      "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+      "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+      "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site"
+    ]
+  },
+  {
     "path": "demos/patterns/aspect-recomposed-3d-hero/",
     "sources": [
       "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo1-with-skill.html"
+    ]
+  },
+  {
+    "path": "demos/patterns/current-item-emphasis-tiers/",
+    "sources": [
+      "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+      "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+      "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site"
     ]
   },
   {
@@ -1254,11 +1310,27 @@ window.ATLAS_DOCUMENT_SOURCES = [
     ]
   },
   {
+    "path": "demos/patterns/persistent-header-page-transition/",
+    "sources": [
+      "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+      "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+      "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site"
+    ]
+  },
+  {
     "path": "demos/patterns/photo-crossfade-cycle/",
     "sources": [
       "https://www.2121designsight.jp/",
       "https://www.fujirockfestival.com/",
       "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/demo/web-design-demo/demo2-with-skill.html"
+    ]
+  },
+  {
+    "path": "demos/patterns/shorter-column-sticky/",
+    "sources": [
+      "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+      "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+      "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site"
     ]
   },
   {

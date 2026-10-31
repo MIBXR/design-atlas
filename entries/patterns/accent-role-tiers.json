@@ -1,0 +1,91 @@
+{
+  "id": "accent-role-tiers",
+  "title": "主题色分层：五个配色角色",
+  "category": "视觉构成",
+  "experienceTypes": [
+    "visual"
+  ],
+  "summary": "让同一品牌色按链接、强调字、实心底、高亮条与柔和底分别工作。",
+  "mechanism": "先规定五个配色职责，再按品牌与深浅主题赋值；实心底配独立墨色，高亮条可在深色主题单独降低明度，品牌标志与装饰色独立保存。",
+  "trigger": "阅读链接、标题、当前项与主操作，或切换品牌和主题",
+  "effect": "相同功能在不同品牌与主题中保留稳定的颜色语义。",
+  "useCases": [
+    "品牌主题系统",
+    "参考库与文档界面",
+    "同时有深浅主题的内容工具"
+  ],
+  "avoid": [
+    "把所有强调位置合并成一个色值",
+    "用装饰色替代正文链接色"
+  ],
+  "constraints": [
+    "五个角色分别用于深色强调、强调文字、实心底、高亮条和柔和底；实心字与实心底成对使用。",
+    "沿用来源各主题实际值，品牌图形和作品图版保留独立配色。"
+  ],
+  "composition": {
+    "role": "foundation",
+    "notes": "负责颜色在界面中的职责，与当前项分级组合；版式和页面路由分别由其他机制承担。",
+    "pairsWellWith": [
+      "current-item-emphasis-tiers"
+    ],
+    "conflicts": []
+  },
+  "accessibility": {
+    "keyboard": "链接和按钮使用原生元素，焦点轮廓用 --accent-1；当前项同时提供 aria-current 和字重。",
+    "reducedMotion": "角色和值不依赖运动，减少动态时主题直接更新。"
+  },
+  "parameters": [
+    {
+      "name": "Web 浅色角色",
+      "value": "#4b6118 / #5f7a1f / #d4ef76 / #d4ef76 / #eef6d2",
+      "note": "固定提交源码，顺序为强调、强调字、实心、高亮、柔和。"
+    },
+    {
+      "name": "Web 深色高亮",
+      "value": "#526438",
+      "note": "固定提交源码；浅色标题对其为 5.62，按钮仍用亮绿。"
+    },
+    {
+      "name": "Motion 浅色角色",
+      "value": "#b8330f / #d0401a / #ef4d24 / rgba(239,77,36,.35) / #fbe4dc",
+      "note": "固定提交源码，实心文字 #ffffff。"
+    }
+  ],
+  "prompt": "把品牌主题分成深色强调 --accent-1、强调文字 --accent-2、实心底 --accent-3、高亮条 --accent-mark、柔和底 --accent-4 五个角色。实心字使用 --accent-3-ink。链接与焦点用 -1，眉题和侧栏当前项文字用 -2，顶栏当前页和复制 Prompt 用 -3，高亮条与按钮底分别赋值，侧栏状态用 -4。为品牌与深浅主题定义完整变量组，切换只更新根选择器；标志、装饰与作品图版独立配色。数值从来源 style.css 取用，研究原件的对比度见 docs；当前状态同时有文字、字重或 aria-current，减少动态时直接切换。",
+  "sources": [
+    {
+      "caseId": "atlas-sister-sites",
+      "locator": "entries/cases/atlas-sister-sites.json#interaction/0",
+      "observation": "品牌切换在同一 DOM 上更新 data-brand；主题按跟随系统、深色、浅色循环，四组变量分别控制页面底、表面、文字、五层主题色、标志与圆角，页面不刷新。",
+      "evidence": "adapted",
+      "referenceUrl": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+      "capturedAt": "2026-10-31"
+    },
+    {
+      "caseId": "atlas-sister-sites",
+      "locator": "entries/cases/atlas-sister-sites.json#sources/0",
+      "observation": "{\"title\":\"Web Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site\",\"type\":\"实例\",\"note\":\"Web 配色、字体、顶栏、侧栏、卡片、文档与详情吸附、过渡的数值来源。\"}",
+      "evidence": "adapted",
+      "referenceUrl": "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+      "capturedAt": "2026-10-31"
+    },
+    {
+      "caseId": "atlas-sister-sites",
+      "locator": "entries/cases/atlas-sister-sites.json#sources/1",
+      "observation": "{\"title\":\"Motion Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site\",\"type\":\"实例\",\"note\":\"Motion 品牌路径、暖色主题、圆角和胶囊当前项及共享骨架来源。\"}",
+      "evidence": "adapted",
+      "referenceUrl": "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site",
+      "capturedAt": "2026-10-31"
+    }
+  ],
+  "sourceFiles": [
+    "entries/cases/atlas-sister-sites.json",
+    "docs/cases/atlas-sister-sites.md",
+    "demos/cases/atlas-sister-sites/index.html",
+    "demos/cases/atlas-sister-sites/style.css",
+    "demos/cases/atlas-sister-sites/app.js",
+    "demos/cases/atlas-sister-sites/fidelity.md",
+    "demos/cases/atlas-sister-sites/LICENSES.md",
+    "demos/cases/atlas-sister-sites/source/accent-tiers.html"
+  ]
+}

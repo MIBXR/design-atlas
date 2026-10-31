@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>主题色层级预览</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 28px; background: #e9e9e7; color: #1d1d1f; font: 14px/1.6 "Segoe UI", "Microsoft YaHei", sans-serif; }
+  h1 { font-size: 22px; margin: 0 0 6px; } h2 { font-size: 17px; margin: 26px 0 10px; }
+  p.lead { margin: 0 0 6px; color: #555; max-width: 1000px; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .panel { background: var(--bg); color: var(--tx); border-radius: 12px; padding: 16px; border: 1px solid rgba(0,0,0,.15); }
+  .panel h3 { margin: 0 0 10px; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  td, th { padding: 6px 6px; text-align: left; border-bottom: 1px solid var(--ln); vertical-align: middle; }
+  th { color: var(--tx2); font-weight: 600; }
+  .sw { display: inline-block; width: 34px; height: 20px; border-radius: 5px; border: 1px solid rgba(127,127,127,.35); vertical-align: middle; margin-right: 6px; }
+  .demo { margin-top: 12px; display: grid; gap: 8px; background: var(--sf); border: 1px solid var(--sl); border-radius: 10px; padding: 12px; }
+  .eyebrow { font: 600 11px/1.4 monospace; letter-spacing: .1em; color: var(--t2); }
+  .h { font-size: 18px; font-weight: 700; }
+  .h mark { background: linear-gradient(transparent 62%, var(--t3) 62%, var(--t3) 92%, transparent 92%); color: inherit; }
+  .link { color: var(--t1); text-decoration: underline; text-underline-offset: 3px; }
+  .tabs { display: flex; gap: 14px; border-bottom: 1px solid var(--sl); }
+  .tabs span { padding: 4px 0; color: var(--tx2); } .tabs .on { color: var(--t1); border-bottom: 2px solid var(--t1); font-weight: 600; }
+  .bar { height: 6px; border-radius: 3px; background: var(--sl); overflow: hidden; } .bar i { display: block; width: 55%; height: 100%; background: var(--t1); }
+  .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .btn { padding: 5px 12px; border-radius: 7px; background: var(--t3); color: var(--t3x); font-weight: 600; }
+  .nav { padding: 3px 9px; border-radius: 6px; background: var(--t3); color: var(--t3x); font-weight: 600; }
+  .side { padding: 4px 9px; border-radius: 5px; background: var(--t4); color: var(--t2); font-weight: 650; }
+  .hint { padding: 6px 10px; border-radius: 7px; background: var(--t4); color: var(--tx); font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>主题色层级预览</h1>
+<p class="lead">四个层级：① 深色强调（链接、进度、标签下划线、时间码、曲线）；② 强调文字（眉题、编号、强调词、侧栏当前项文字）；③ 实心底（主按钮、顶栏当前项、标题高亮条，上面的字用“③ 上的字”）；④ 柔和底（侧栏当前项底、提示块、手机本页目录当前项）。对比度为该色与其使用背景之间的值（文字建议 ≥ 4.5，大字与图形 ≥ 3）。</p>
+<div id="root"></div>
+<script>
+const sets = [
+  ['Web · 浅色', { bg:'#f4f5ee', sf:'#ffffff', sl:'#dfe1d7', ln:'#dcded4', tx:'#252822', tx2:'#62695b', t1:'#4b6118', t2:'#5f7a1f', t3:'#d4ef76', t3x:'#252822', t4:'#eef6d2' }],
+  ['Web · 深色', { bg:'#121313', sf:'#1c201b', sl:'#343b31', ln:'#2c2f2b', tx:'#edf0e6', tx2:'#b3b8ad', t1:'#d4ef76', t2:'#bcd86a', t3:'#d4ef76', t3x:'#252822', t4:'#2a3320' }],
+  ['Motion · 浅色', { bg:'#f6f4ef', sf:'#ffffff', sl:'#e2ddd2', ln:'#d9d3c6', tx:'#17181b', tx2:'#6a6862', t1:'#b8330f', t2:'#d0401a', t3:'#ef4d24', t3x:'#ffffff', t4:'#fbe4dc' }],
+  ['Motion · 深色', { bg:'#0c0d0f', sf:'#1a1816', sl:'#2f2b27', ln:'#2a2d33', tx:'#ecebe6', tx2:'#9a948c', t1:'#ff7a52', t2:'#ff6a3f', t3:'#ff5b2e', t3x:'#160804', t4:'#3a1d14' }],
+];
+const lum = h => { const c=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(v=>v<=.03928?v/12.92:((v+.055)/1.055)**2.4); return .2126*c[0]+.7152*c[1]+.0722*c[2]; };
+const cr = (a,b) => { const [x,y]=[lum(a),lum(b)].sort((p,q)=>q-p); return ((x+.05)/(y+.05)).toFixed(2); };
+const root = document.getElementById('root'); let html = '<div class="grid">';
+for (const [name, v] of sets) {
+  const style = Object.entries(v).map(([k,x])=>`--${k}:${x}`).join(';');
+  const rows = [
+    ['① 深色强调', v.t1, `对页面底 ${cr(v.t1,v.bg)} · 对卡片 ${cr(v.t1,v.sf)}`],
+    ['② 强调文字', v.t2, `对页面底 ${cr(v.t2,v.bg)} · 对柔和底 ${cr(v.t2,v.t4)}`],
+    ['③ 实心底', v.t3, `其上文字 ${cr(v.t3,v.t3x)} · 对页面底 ${cr(v.t3,v.bg)}`],
+    ['④ 柔和底', v.t4, `对页面底 ${cr(v.t4,v.bg)}（区分度）`],
+  ];
+  html += `<div class="panel" style="${style}"><h3>${name}</h3><table><tr><th>层级</th><th>色值</th><th>对比度</th></tr>${rows.map(r=>`<tr><td>${r[0]}</td><td><span class="sw" style="background:${r[1]}"></span>${r[1]}</td><td>${r[2]}</td></tr>`).join('')}</table>
+  <div class="demo"><span class="eyebrow">03 / CASE · 眉题（②）</span><span class="h">做出<mark>你的设计</mark>（③ 高亮条）</span>
+  <span>正文里的 <a class="link">一个链接</a>（①）。</span>
+  <div class="tabs"><span class="on">实现 Prompt</span><span>视频生成 Prompt</span><span>负向约束</span></div>
+  <div class="bar"><i></i></div>
+  <div class="row"><span class="nav">案例库</span><span class="side">全部风格</span><span class="btn">复制 Prompt</span></div>
+  <div class="hint">提示块（④ 底）：调配这个风格的设计要素</div></div></div>`;
+}
+root.innerHTML = html + '</div>';
+</script>
+</body>
+</html>

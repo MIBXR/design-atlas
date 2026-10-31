@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "entryCount": 38,
+  "entryCount": 39,
   "repository": "https://github.com/MIBXR/web-atlas",
   "entries": [
     {
@@ -2830,11 +2830,114 @@
         "demo": "demos/cases/mira-host-photography/index.html",
         "entry": "entries/cases/mira-host-photography.json"
       }
+    },
+    {
+      "id": "atlas-sister-sites",
+      "title": "Atlas 姊妹站 · 参考库界面骨架",
+      "category": "示范作品",
+      "tags": [
+        "示范作品",
+        "参考库",
+        "品牌主题",
+        "配色角色",
+        "两栏吸附",
+        "文档阅读",
+        "页面过渡"
+      ],
+      "summary": "用列表、详情与文档三页抽象 Web Atlas 和 Motion Atlas 的共享骨架，切换品牌、深浅主题与说明长度，观察五层主题色、当前项分级、两栏吸附和固定顶栏过渡怎样协作。",
+      "useCases": [
+        "参考库与素材库",
+        "品牌主题系统",
+        "双栏作品详情",
+        "项目文档中心",
+        "设计机制教学"
+      ],
+      "avoid": [
+        "把全部强调角色合并为一个色值",
+        "用导航悬停模拟持续当前状态",
+        "把两栏各自设为滚动容器",
+        "把虚构案例文案写成真实机构资料"
+      ],
+      "country": "中国",
+      "implementation": "reference-study",
+      "capturedAt": "2026-10-31",
+      "tokens": {
+        "palette": [
+          "#f4f5ee",
+          "#ffffff",
+          "#dcded4",
+          "#252822",
+          "#62695b",
+          "#4b6118",
+          "#5f7a1f",
+          "#d4ef76",
+          "#eef6d2"
+        ],
+        "type": "Inter, Segoe UI Variable, Segoe UI, PingFang SC, Microsoft YaHei, sans-serif；等宽 JetBrains Mono, Cascadia Mono, Consolas, monospace；界面 12／14／16／20／28px，列表标题最大 52px。",
+        "layout": "Web 圆角 4／7／10px；顶栏 68px、水平 32／24／16px；侧栏 228px；卡片最小 300px、间距 18px、内边距 16px；详情 2:1、间距 32px；文档正文最大 860px。",
+        "motion": "根 View Transition 140ms ease-out、顶栏无动画；卡片上移 3px、预览放大 1.025；减少动态直接更新页面并停止舞台形状动画。",
+        "accentRoles": {
+          "light": {
+            "accent1": "#4b6118",
+            "accent2": "#5f7a1f",
+            "accent3": "#d4ef76",
+            "accent3Ink": "#252822",
+            "accentMark": "#d4ef76",
+            "accent4": "#eef6d2"
+          },
+          "dark": {
+            "accent1": "#d4ef76",
+            "accent2": "#bcd86a",
+            "accent3": "#d4ef76",
+            "accent3Ink": "#252822",
+            "accentMark": "#526438",
+            "accent4": "#2a3320"
+          }
+        }
+      },
+      "composition": {
+        "color": "浅色偏绿底与白卡片、深色中性底与微绿卡片；五个主题色角色区分链接、强调字、主操作、高亮条和柔和状态。Motion 替换相同角色的品牌数值。",
+        "typography": "系统无衬线与等宽元数据共用两站字体栈；两行大标题、20px 卡片标题、16px 正文与 12px 标签形成稳定层级。",
+        "layout": "列表为 228px 侧栏与自填充网格，详情为 2:1 吸附双栏，文档为 228px 目录、最大 860px 正文与右侧章节列表。",
+        "imagery": "12 张虚构作品图版采用 CSS 渐变、圆、三角、斜矩形与细线；舞台使用同一图版规则并提供手机画面宽度。",
+        "shape": "Web 交叉长条与小圆角，Motion 双圆与较大圆角及胶囊当前项；卡片内层边框与次级面区分内容深度。",
+        "hierarchy": "品牌和页面位置 → 标题与设计决策 → 当前筛选或舞台 → 内容说明与取材动作；文档把查找和章节定位放在正文两侧。",
+        "motion": "主体短淡化保持浏览连续，顶栏独立快照保留位置感；轻微卡片位移与画面缩放反馈可进入详情，舞台播放由用户控制。",
+        "coherence": "三种页面沿用相同字体、控件高度、间距、图标与配色职责；品牌切换保留布局、导航和当前阅读任务。"
+      },
+      "interaction": [
+        "品牌切换在同一 DOM 上更新 data-brand；主题按跟随系统、深色、浅色循环，四组变量分别控制页面底、表面、文字、五层主题色、标志与圆角，页面不刷新。",
+        "顶栏当前页与手机全站导航当前页使用 --accent-3 底和 --accent-3-ink 字；侧栏和本文目录使用 --accent-4 底、--accent-2 字与 650 字重，非当前导航悬停使用次级面与正文色。",
+        "列表可搜索标题、摘要和标签，按编号或名称双向排序，分类与收藏筛选同步结果；标题和预览进入详情，收藏在列表与详情共享并可导入、导出。",
+        "详情以 ResizeObserver 读取顶栏、操作栏、舞台列与说明栏：1160px 起舞台列始终 sticky，说明比舞台短时同时 sticky；top 为顶栏 68px 加操作栏实高加 24px，两栏在容器末尾按自然 sticky 边界结束；1159px 及以下单列。",
+        "hash 驱动列表、详情与文档的 DOM 更新；支持 startViewTransition 且不减少动态时开启 140ms ease-out 根过渡，atlas-header 快照无动画、旧快照隐藏；不支持或减少动态时直接更新。",
+        "舞台工具条切换桌面与手机画面、播放与暂停，并以右栏较长／较短按钮切换 8 节或 2 节说明；上一个和下一个更换虚构作品，复制 Prompt 复制完整的实现提示词。",
+        "文档左侧按标题搜索并折叠分组，长标题单行省略；右侧本文目录随滚动同步高亮，点击回到对应 h2／h3；仓库 Markdown 链接在文档阅读器打开。",
+        "800px 及以下顶栏用单个菜单打开本页目录或全站导航，前者单列、后者两列；品牌与主题控制位于面板底部，选择、外部点击或 Escape 关闭；文档本文目录通过右下角按钮打开。",
+        "卡片悬停上移 3px、增加阴影、内层画面放大 1.025，卡片底色保持原样；按钮悬停使用 --accent-4 底、--accent-1 字与边框，焦点轮廓使用 --accent-1。"
+      ],
+      "themeBehavior": {
+        "mode": "system-and-manual",
+        "default": "system",
+        "control": "主题按钮按跟随系统、深色、浅色循环，品牌分段控件独立切换 Web 与 Motion；两种偏好保存在本地。",
+        "designReason": "布局和配色职责保持一致，通过品牌数值、标志与圆角展示两站差异；作品图版保留原色。"
+      },
+      "soundBehavior": {
+        "kind": "none",
+        "control": "无声音；舞台播放只控制 CSS 形状动画。",
+        "interactionRole": "通过布局、状态颜色和页面交接表达反馈。"
+      },
+      "paths": {
+        "bundle": "agent/cases/atlas-sister-sites.json",
+        "preview": "previews/cases/atlas-sister-sites.jpg",
+        "demo": "demos/cases/atlas-sister-sites/index.html",
+        "entry": "entries/cases/atlas-sister-sites.json"
+      }
     }
   ],
   "patterns": {
     "path": "agent/patterns/index.json",
-    "patternCount": 138
+    "patternCount": 142
   },
   "materials": {
     "path": "agent/materials/index.json",
@@ -2842,6 +2945,6 @@
   },
   "cases": {
     "path": "agent/cases/index.json",
-    "entryCount": 38
+    "entryCount": 39
   }
 }

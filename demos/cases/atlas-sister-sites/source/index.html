@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>底色与卡片对照</title>
+<style>
+  :root { --page: #e9e9e7; --ink: #1d1d1f; --muted: #666; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px; background: var(--page); color: var(--ink); font: 14px/1.6 "Segoe UI", "Microsoft YaHei", sans-serif; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 18px; margin: 36px 0 4px; }
+  p.lead { margin: 0 0 8px; color: var(--muted); max-width: 980px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(440px, 1fr)); gap: 22px; margin-top: 14px; }
+  figure { margin: 0; }
+  figcaption { margin-top: 8px; font-size: 13px; line-height: 1.55; }
+  figcaption b { font-size: 14px; }
+  figcaption span { color: var(--muted); display: block; }
+  .tag { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 4px; background: #2b6; color: #fff; margin-left: 6px; vertical-align: 1px; }
+  .tag.now { background: #888; }
+
+  /* 迷你页面 */
+  .mock { --r: 8px; border-radius: 10px; overflow: hidden; background: var(--bg); color: var(--tx); border: 1px solid rgba(0,0,0,.15); aspect-ratio: 16 / 10; display: grid; grid-template-rows: 30px 1fr; font-size: 9px; }
+  .hd { display: flex; align-items: center; gap: 14px; padding: 0 12px; border-bottom: 1px solid var(--ln); }
+  .hd .logo { width: 11px; height: 11px; border-radius: 3px; background: var(--ac); }
+  .hd i { font-style: normal; color: var(--tx2); }
+  .hd i.on { background: var(--ac); color: var(--acx); padding: 2px 6px; border-radius: 5px; }
+  .bd { display: grid; grid-template-columns: 26% 1fr; gap: 12px; padding: 12px; min-height: 0; }
+  .rail { background: var(--rail); color: var(--railtx); border-radius: var(--r); padding: 9px; display: flex; flex-direction: column; gap: 5px; border: 1px solid var(--railln); }
+  .rail .s { height: 16px; border-radius: 5px; border: 1px solid var(--railln); background: var(--railfield); }
+  .rail .it { height: 15px; border-radius: 5px; display: flex; align-items: center; padding: 0 6px; }
+  .rail .it.on { background: var(--ac); color: var(--acx); font-weight: 600; }
+  .main { display: grid; grid-template-rows: auto 1fr; gap: 10px; min-width: 0; }
+  .ttl { font-size: 15px; font-weight: 700; letter-spacing: -.3px; }
+  .ttl em { font-style: normal; color: var(--acTxt); }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+  .card { background: var(--card); border: 1px solid var(--cardln); border-radius: var(--r); overflow: hidden; display: flex; flex-direction: column; }
+  .shot { aspect-ratio: 16 / 10; border-bottom: 1px solid var(--cardln); display: grid; place-items: center; font-size: 8px; }
+  .shot.white { background: #fff; color: #222; }
+  .shot.black { background: #000; color: #ddd; }
+  .shot.gray { background: #ededed; color: #333; }
+  .cb { padding: 6px 7px 8px; }
+  .cb b { display: block; font-size: 9px; }
+  .cb small { display: block; color: var(--tx2); font-size: 7.5px; margin-top: 2px; }
+  .cb .chip { display: inline-block; margin-top: 5px; padding: 0 5px; border-radius: 4px; border: 1px solid var(--cardln); font-size: 7px; color: var(--tx2); }
+</style>
+</head>
+<body>
+<h1>底色与卡片对照</h1>
+<p class="lead">每个方案是同一套迷你页面：顶栏、左侧栏、卡片网格。三张卡片分别放纯白、纯黑和浅灰的“作品截图”，用来检验作品与页面的边界是否清楚。标“现状”的是两个站点现在的配色，其余是备选方案。</p>
+
+<h2>Web Atlas · 浅色</h2>
+<div class="grid" id="web-light"></div>
+<h2>Web Atlas · 深色</h2>
+<div class="grid" id="web-dark"></div>
+<h2>Motion Atlas · 浅色</h2>
+<div class="grid" id="motion-light"></div>
+<h2>Motion Atlas · 深色</h2>
+<div class="grid" id="motion-dark"></div>
+
+<script>
+const W = { ac: '#d4ef76', acx: '#252822', acTxt: '#6e8839' };
+const M = { ac: '#ff5b2e', acx: '#fff', acTxt: '#ff5b2e' };
+const darkRail = { rail: '#242721', railtx: '#d5dacb', railln: '#4b5442', railfield: '#30362a' };
+
+const groups = {
+  'web-light': [
+    { name: 'A · 底偏绿 + 卡片偏绿 + 深色侧栏', now: true, note: '现状。底、卡片同色相，层次主要靠边框；深色侧栏是全页对比最强的一块。',
+      v: { ...W, bg: '#f7f6f2', tx: '#252822', tx2: '#62695b', ln: '#dcded4', card: '#ecefe5', cardln: '#dcded4', ...darkRail } },
+    { name: 'B · 底偏绿 + 白卡片 + 深色侧栏', note: '按“浅色底偏、卡片正”调整卡片，保留深色侧栏的辨识度。',
+      v: { ...W, bg: '#f4f5ee', tx: '#252822', tx2: '#62695b', ln: '#dcded4', card: '#ffffff', cardln: '#dfe1d7', ...darkRail } },
+    { name: 'C · 底偏绿 + 白卡片 + 浅色侧栏', rec: true, note: '推荐。侧栏跟随主题，用带绿调的浅面板，当前项仍是亮绿；左右轻重平衡，注意力回到卡片。',
+      v: { ...W, bg: '#f4f5ee', tx: '#252822', tx2: '#62695b', ln: '#dcded4', card: '#ffffff', cardln: '#dfe1d7', rail: '#e9ece0', railtx: '#3d4237', railln: '#d6dacb', railfield: '#f7f8f2' } },
+    { name: 'D · 中性底 + 偏绿卡片', note: '反例：底正、卡片偏。卡片像色块，白色截图在卡片里显得发灰。',
+      v: { ...W, bg: '#f6f6f6', tx: '#252822', tx2: '#62695b', ln: '#e0e0e0', card: '#eaf0d9', cardln: '#d6dec2', rail: '#ffffff', railtx: '#3d4237', railln: '#e0e0e0', railfield: '#f6f6f6' } },
+  ],
+  'web-dark': [
+    { name: 'A · 底偏绿 + 卡片偏绿', now: true, note: '现状。大面积绿黑底略显发闷，纯黑截图与底的边界靠绿色相区分。',
+      v: { ...W, bg: '#1a1e19', tx: '#edf0e6', tx2: '#b8bfb0', ln: '#40483b', card: '#252c23', cardln: '#40483b', ...darkRail } },
+    { name: 'B · 中性底 + 偏绿卡片', rec: true, note: '推荐。底收回到中性近黑，绿色留给抬升的卡片和侧栏；纯黑截图靠卡片的明度差和边框分开。',
+      v: { ...W, bg: '#121313', tx: '#edf0e6', tx2: '#b3b8ad', ln: '#2c2f2b', card: '#1c201b', cardln: '#343b31', rail: '#1c201b', railtx: '#d5dacb', railln: '#343b31', railfield: '#252b23' } },
+    { name: 'C · 中性底 + 中性卡片', note: '最“干净”的高级感，但失去品牌色倾向，和 Motion 现状几乎一样。',
+      v: { ...W, bg: '#111214', tx: '#ecebe6', tx2: '#a9a7a1', ln: '#2a2d33', card: '#1a1c1f', cardln: '#2e3137', rail: '#1a1c1f', railtx: '#d0cec8', railln: '#2e3137', railfield: '#222428' } },
+    { name: 'D · 偏绿底 + 中性卡片', note: '反例：底偏、卡片正。卡片发灰发冷，像嵌在绿色里的补丁。',
+      v: { ...W, bg: '#1a1e19', tx: '#edf0e6', tx2: '#b8bfb0', ln: '#40483b', card: '#1f1f21', cardln: '#3a3a3d', ...darkRail } },
+  ],
+  'motion-light': [
+    { name: 'A · 底偏暖 + 卡片偏暖', now: true, note: '现状。底和卡片都是暖白，层次靠微小的明度差。',
+      v: { ...M, bg: '#f1eee7', tx: '#17181b', tx2: '#6a6862', ln: '#d9d3c6', card: '#faf8f3', cardln: '#d9d3c6', rail: '#faf8f3', railtx: '#3a3b3f', railln: '#d9d3c6', railfield: '#f2eee5' } },
+    { name: 'B · 底偏暖 + 白卡片', rec: true, note: '推荐。底保留暖调，卡片和侧栏用纯白；白色截图有清楚的边框，橙色只用于强调。',
+      v: { ...M, bg: '#f1eee7', tx: '#17181b', tx2: '#6a6862', ln: '#d9d3c6', card: '#ffffff', cardln: '#e2ddd2', rail: '#ffffff', railtx: '#3a3b3f', railln: '#e2ddd2', railfield: '#f6f4ef' } },
+  ],
+  'motion-dark': [
+    { name: 'A · 中性底 + 中性卡片', now: true, note: '现状。干净、高级，品牌只在强调色上出现。',
+      v: { ...M, bg: '#0c0d0f', tx: '#ecebe6', tx2: '#8f8d87', ln: '#2a2d33', card: '#16181b', cardln: '#2a2d33', rail: '#16181b', railtx: '#c9c7c0', railln: '#2a2d33', railfield: '#1c1f23' } },
+    { name: 'B · 中性底 + 微暖卡片', rec: true, note: '推荐。底不变，卡片和侧栏混入极少量橙色（色度约 2%），层级更有温度，仍保持深色的克制。',
+      v: { ...M, bg: '#0c0d0f', tx: '#ecebe6', tx2: '#9a948c', ln: '#2a2d33', card: '#1a1816', cardln: '#2f2b27', rail: '#1a1816', railtx: '#cfc9c0', railln: '#2f2b27', railfield: '#221f1c' } },
+  ],
+};
+
+for (const [id, list] of Object.entries(groups)) {
+  const root = document.getElementById(id);
+  for (const g of list) {
+    const style = Object.entries(g.v).map(([k, v]) => `--${k}:${v}`).join(';');
+    root.insertAdjacentHTML('beforeend', `<figure>
+      <div class="mock" style="${style}">
+        <div class="hd"><span class="logo"></span><i>首页</i><i class="on">案例库</i><i>巧思库</i><i>素材库</i><i>文档中心</i></div>
+        <div class="bd">
+          <div class="rail"><div class="s"></div><div class="it on">全部风格</div><div class="it">产品与平台</div><div class="it">游戏与 IP</div><div class="it">艺术与文化</div><div class="it">我的收藏</div></div>
+          <div class="main">
+            <div class="ttl">从看见风格，到掌握它的<em>语言</em></div>
+            <div class="cards">
+              <div class="card"><div class="shot white">白色作品</div><div class="cb"><b>Stripe</b><small>彩带与金融产品矩阵</small><span class="chip">产品</span></div></div>
+              <div class="card"><div class="shot black">黑色作品</div><div class="cb"><b>Linear</b><small>深色产品开发系统</small><span class="chip">产品</span></div></div>
+              <div class="card"><div class="shot gray">浅灰作品</div><div class="cb"><b>Apple</b><small>滚动产品舞台</small><span class="chip">产品</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption><b>${g.name}</b>${g.now ? '<span class="tag now">现状</span>' : ''}${g.rec ? '<span class="tag">推荐</span>' : ''}<span>${g.note}</span></figcaption>
+    </figure>`);
+  }
+}
+</script>
+</body>
+</html>

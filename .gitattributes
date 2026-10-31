@@ -8,3 +8,4 @@ demos/**/fonts/** -text -whitespace
 site/vendor/** -text -whitespace
 demos/materials/beautiful-article/** -text -whitespace
 demos/materials/web-design-engineer/** -text -whitespace
+demos/cases/atlas-sister-sites/source/*.html -text -whitespace

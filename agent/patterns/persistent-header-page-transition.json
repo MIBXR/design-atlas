@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "id": "persistent-header-page-transition",
+  "pattern": {
+    "id": "persistent-header-page-transition",
+    "title": "顶栏不动的页面切换",
+    "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
+    "summary": "为顶栏单独命名快照，主体短淡化切换，持续保留页面位置。",
+    "mechanism": "支持 View Transition 且不减少动态时，把 hash 路由的 DOM 更新包入 startViewTransition；根过渡 140ms ease-out，atlas-header 组与新快照无动画，隐藏旧顶栏快照。",
+    "trigger": "列表、详情与文档之间切换，或前后更换详情",
+    "effect": "主体平顺交接，顶栏在同一位置保持连续。",
+    "useCases": [
+      "多页参考库",
+      "同文档 hash 路由",
+      "共享顶栏的内容工具"
+    ],
+    "avoid": [
+      "整页和顶栏一起淡化",
+      "减少动态时仍强制创建过渡"
+    ],
+    "constraints": [
+      "固定的 view-transition-name 必须只对应一个顶栏元素；顶栏在首次切换前已经存在。",
+      "不支持 startViewTransition 或命中减少动态时直接更新 DOM，滚动和焦点处理归路由。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责主体交接时保留顶栏，布局和作品内部播放保持独立；与吸附双栏组合时先释放旧页观察器。",
+      "pairsWellWith": [
+        "shorter-column-sticky"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "路由更新后将焦点放到正文容器并防止额外滚动；原生导航可由键盘激活，当前页同步 aria-current。",
+      "reducedMotion": "不调用 startViewTransition，直接执行同一个 DOM 更新函数。"
+    },
+    "parameters": [
+      {
+        "name": "根过渡",
+        "value": "140ms ease-out",
+        "note": "两站固定提交共享 CSS。"
+      },
+      {
+        "name": "顶栏名称",
+        "value": "atlas-header",
+        "note": "两站固定提交；Demo 沿用相同名称。"
+      },
+      {
+        "name": "顶栏快照",
+        "value": "group/new animation:none；old display:none",
+        "note": "固定提交共享 CSS。"
+      }
+    ],
+    "prompt": "在共享顶栏的 hash 路由中，支持 document.startViewTransition 且 prefers-reduced-motion 不为 reduce 时，用 startViewTransition 包住 DOM 更新，其他情况直接调用同一更新函数。在不减少动态的媒体查询中给唯一顶栏 view-transition-name:atlas-header；根 group、old、new 过渡 140ms ease-out；atlas-header 组与新快照 animation:none，旧快照 display:none，新快照 mix-blend-mode:normal。路由负责滚动复位、正文焦点与 aria-current。跨文档站点另用 @view-transition{navigation:auto}；Demo 只演示同文档切换。",
+    "sources": [
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#interaction/4",
+        "observation": "hash 驱动列表、详情与文档的 DOM 更新；支持 startViewTransition 且不减少动态时开启 140ms ease-out 根过渡，atlas-header 快照无动画、旧快照隐藏；不支持或减少动态时直接更新。",
+        "evidence": "adapted",
+        "referenceUrl": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/0",
+        "observation": "{\"title\":\"Web Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site\",\"type\":\"实例\",\"note\":\"Web 配色、字体、顶栏、侧栏、卡片、文档与详情吸附、过渡的数值来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/1",
+        "observation": "{\"title\":\"Motion Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site\",\"type\":\"实例\",\"note\":\"Motion 品牌路径、暖色主题、圆角和胶囊当前项及共享骨架来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site",
+        "capturedAt": "2026-10-31"
+      }
+    ],
+    "sourceFiles": [
+      "entries/cases/atlas-sister-sites.json",
+      "docs/cases/atlas-sister-sites.md",
+      "demos/cases/atlas-sister-sites/index.html",
+      "demos/cases/atlas-sister-sites/style.css",
+      "demos/cases/atlas-sister-sites/app.js",
+      "demos/cases/atlas-sister-sites/fidelity.md",
+      "demos/cases/atlas-sister-sites/LICENSES.md"
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "atlas-sister-sites",
+      "title": "Atlas 姊妹站 · 参考库界面骨架",
+      "paths": {
+        "bundle": "agent/cases/atlas-sister-sites.json",
+        "demo": "demos/cases/atlas-sister-sites/index.html"
+      }
+    }
+  ],
+  "documents": [
+    {
+      "path": "prompts/patterns/persistent-header-page-transition.md",
+      "role": "prompt",
+      "content": "# 顶栏不动的页面切换 · 复用 Prompt\n\n[结构化条目](../../entries/patterns/persistent-header-page-transition.json)\n\n在共享顶栏的 hash 路由中，支持 document.startViewTransition 且 prefers-reduced-motion 不为 reduce 时，用 startViewTransition 包住 DOM 更新，其他情况直接调用同一更新函数。在不减少动态的媒体查询中给唯一顶栏 view-transition-name:atlas-header；根 group、old、new 过渡 140ms ease-out；atlas-header 组与新快照 animation:none，旧快照 display:none，新快照 mix-blend-mode:normal。路由负责滚动复位、正文焦点与 aria-current。跨文档站点另用 @view-transition{navigation:auto}；Demo 只演示同文档切换。\n\n## 制作约束\n\n- 固定的 view-transition-name 必须只对应一个顶栏元素；顶栏在首次切换前已经存在。\n- 不支持 startViewTransition 或命中减少动态时直接更新 DOM，滚动和焦点处理归路由。\n"
+    }
+  ],
+  "files": [
+    {
+      "path": "asset-cache-worker.js",
+      "role": "source"
+    },
+    {
+      "path": "data/asset-sources.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/app.js",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/assets-manifest.json",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/fidelity.md",
+      "role": "context"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/index.html",
+      "role": "source"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/LICENSES.md",
+      "role": "license"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/source/accent-tiers.html",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/source/emphasis.html",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/source/index.html",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/source/README.md",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/style.css",
+      "role": "source"
+    },
+    {
+      "path": "docs.html",
+      "role": "source"
+    },
+    {
+      "path": "docs/cases/atlas-sister-sites.md",
+      "role": "context"
+    },
+    {
+      "path": "entries/cases/atlas-sister-sites.json",
+      "role": "context"
+    },
+    {
+      "path": "entries/patterns/persistent-header-page-transition.json",
+      "role": "context"
+    },
+    {
+      "path": "previews/cases/atlas-sister-sites-mobile.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "previews/cases/atlas-sister-sites.jpg",
+      "role": "preview"
+    },
+    {
+      "path": "prompts/cases/atlas-sister-sites.md",
+      "role": "context"
+    },
+    {
+      "path": "prompts/patterns/persistent-header-page-transition.md",
+      "role": "context"
+    },
+    {
+      "path": "site/icons/favicon.svg",
+      "role": "asset"
+    },
+    {
+      "path": "site/pages/docs/docs.css",
+      "role": "source"
+    },
+    {
+      "path": "site/pages/docs/docs.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-cache.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/asset-runtime.js",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.css",
+      "role": "source"
+    },
+    {
+      "path": "site/runtime/case-loading.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-footer.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-nav.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-shell.js",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/site-typography.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme-control.css",
+      "role": "source"
+    },
+    {
+      "path": "site/shared/theme.js",
+      "role": "source"
+    },
+    {
+      "path": "site/vendor/LICENSES.txt",
+      "role": "license"
+    },
+    {
+      "path": "site/vendor/marked.umd.js",
+      "role": "vendor"
+    },
+    {
+      "path": "site/vendor/purify.min.js",
+      "role": "vendor"
+    }
+  ]
+}
