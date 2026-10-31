@@ -150,6 +150,18 @@
       "role": "process"
     },
     {
+      "path": "demos/cases/atlas-sister-sites/source/previews/accent-tiers.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/source/previews/emphasis.jpg",
+      "role": "process"
+    },
+    {
+      "path": "demos/cases/atlas-sister-sites/source/previews/surfaces.jpg",
+      "role": "process"
+    },
+    {
       "path": "demos/cases/atlas-sister-sites/source/README.md",
       "role": "process"
     },

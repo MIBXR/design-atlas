@@ -21,6 +21,9 @@
     },
     { "file": "source/index.html", "author": "MIBXR", "purpose": "底色与卡片方案研究", "license": "作者提供的研究原件", "transform": "原始字节复制。", "retrievedAt": "2026-10-31" },
     { "file": "source/emphasis.html", "author": "MIBXR", "purpose": "当前项强调 A／B／C 对照", "license": "作者提供的研究原件", "transform": "原始字节复制。", "retrievedAt": "2026-10-31" },
-    { "file": "source/accent-tiers.html", "author": "MIBXR", "purpose": "主题色角色与对比度研究", "license": "作者提供的研究原件", "transform": "原始字节复制。", "retrievedAt": "2026-10-31" }
+    { "file": "source/accent-tiers.html", "author": "MIBXR", "purpose": "主题色角色与对比度研究", "license": "作者提供的研究原件", "transform": "原始字节复制。", "retrievedAt": "2026-10-31" },
+    { "file": "source/previews/surfaces.jpg", "sourceFile": "source/index.html", "author": "MIBXR", "purpose": "底色与卡片章节插图，展示 Web 浅色与深色方案", "license": "作者研究页面的截图", "contentType": "image/jpeg", "width": 1440, "height": 1540, "transform": "无头 Edge，1440×900 视口、浅色系统主题，裁取代表区域，JPEG 质量 85。", "retrievedAt": "2026-10-31" },
+    { "file": "source/previews/emphasis.jpg", "sourceFile": "source/emphasis.html", "author": "MIBXR", "purpose": "当前项章节插图，展示 A／B／C 三组方案", "license": "作者研究页面的截图", "contentType": "image/jpeg", "width": 1440, "height": 988, "transform": "无头 Edge，1440×900 视口、浅色系统主题，裁取代表区域，JPEG 质量 85。", "retrievedAt": "2026-10-31" },
+    { "file": "source/previews/accent-tiers.jpg", "sourceFile": "source/accent-tiers.html", "author": "MIBXR", "purpose": "主题色层级章节插图，展示四个品牌与主题面板", "license": "作者研究页面的截图", "contentType": "image/jpeg", "width": 1440, "height": 1021, "transform": "无头 Edge，1440×900 视口、浅色系统主题，裁取代表区域，JPEG 质量 85。", "retrievedAt": "2026-10-31" }
   ]
 }

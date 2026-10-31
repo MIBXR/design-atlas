@@ -2,11 +2,11 @@
 
 ## 来源与制作方式
 
-本案例把 Web Atlas 与 Motion Atlas 的界面抽象为列表、详情、文档三页，用同一套 DOM 与布局切换两种品牌。卡片内容为中性虚构条目，画面由 CSS 渐变与几何形状生成。研究关注页面采用的设计机制。
+本案例把 Web Atlas 与 Motion Atlas 的界面抽象为列表、详情、文档三页，并通过决策原件页呈现方案对照，用同一套 DOM 与布局切换两种品牌。卡片内容为中性虚构条目，画面由 CSS 渐变与几何形状生成。研究关注页面采用的设计机制。
 
 配色、圆角、标志、字体、顶栏、侧栏、卡片与吸附逻辑取自 [Web Atlas 固定提交](https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site)和 [Motion Atlas 固定提交](https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site)。设计决策依据作者提供的任务说明与配色研究原件；合并说明见 [Web #50](https://github.com/MIBXR/web-atlas/pull/50)、[Web #51](https://github.com/MIBXR/web-atlas/pull/51)、[Web #52–55 的素材规则](https://github.com/MIBXR/web-atlas/pull/55)及 [Motion #33–39 中的共享骨架与过渡](https://github.com/MIBXR/motion-atlas/pull/36)。
 
-制作从仓库案例模板建立独立 HTML，再把品牌值映射到 `data-brand` 与 `data-theme`。三页共享顶栏，hash 路由负责内容替换；配色与品牌切换只更新变量。默认收起的设计决策面板把每页机制连到本文相应章节。
+制作从仓库案例模板建立独立 HTML，再把品牌值映射到 `data-brand` 与 `data-theme`。四页共享顶栏，hash 路由负责内容替换；配色与品牌切换只更新变量。默认收起的设计决策面板把每页机制连到本文相应章节，相关要点可直接打开原件。
 
 ## 页面结构
 
@@ -15,6 +15,7 @@
 | 列表 | 分类／收藏侧栏、两行主标题、搜索与双向排序、12 张虚构案例卡片；标题或画面进入详情 | [列表 Demo](../../demos/cases/atlas-sister-sites/index.html#list) |
 | 详情 | 吸附操作栏、2:1 舞台与说明、桌面／手机视图、播放／暂停、8／2 节说明切换、收藏与复制 | [详情 Demo](../../demos/cases/atlas-sister-sites/index.html#detail) |
 | 文档 | 左侧可搜索分组目录、居中正文、右侧滚动同步目录；表格、代码块与标题层级 | [文档 Demo](../../demos/cases/atlas-sister-sites/index.html#docs) |
+| 决策原件 | 三段控件切换底色与卡片、当前项 A/B/C、主题色层级；iframe 按原样加载研究页面，选择保存在 hash 查询中 | [决策原件](../../demos/cases/atlas-sister-sites/index.html#studies) |
 | 共用状态 | Web／Motion × 浅／深、系统主题循环、手机菜单两视图、减少动态 | 顶栏与手机菜单底部 |
 
 ## 设计机制
@@ -49,6 +50,9 @@
 
 **尝试**：[底色与卡片研究原件](../../demos/cases/atlas-sister-sites/source/index.html)把白、黑、灰三种作品放入相同画面。Web 浅色 A 是偏绿底＋偏绿卡片＋深色侧栏，B 改白卡片但保留深侧栏，C 改浅侧栏，D 反转为中性底＋偏绿卡片。Web 深色 A 为绿底绿卡片，B 为中性底绿卡片，C 为中性底中性卡片，D 为绿底中性卡片。Motion 浅色比较 A 暖底暖卡与 B 暖底白卡；深色比较 A 中性底中性卡与 B 中性底微暖卡，原件各两案。
 
+[![底色与卡片研究原件](../../demos/cases/atlas-sister-sites/source/previews/surfaces.jpg)](../../demos/cases/atlas-sister-sites/index.html#studies?doc=surfaces)
+点图在 Demo 中打开可交互的原件。
+
 **最终方案**：Web 浅色取 C 的关系，实际侧栏与卡片统一白色；深色取 B。Motion 两种主题都取 B；浅色底随后从 `#f1eee7` 收敛为 `#f6f4ef`。深色侧栏方案被舍弃，因为其重量压过作品，也使浅色页面出现一个独立深色系统。浅色让底色带品牌倾向、内容面正白；深色让大底接近中性，品牌色留在抬升的表面。
 
 | 品牌与主题 | 页面底 | 卡片／侧栏 | 内层次级面 | 正文／次要文字 | 页面线／表面线 |
@@ -66,6 +70,9 @@
 **问题**：一枚明亮主题色同时当正文链接、眉题、按钮底和高亮条时，各背景上的对比不同。把所有操作都涂成品牌色，又会让动作与数据争抢注意。
 
 **尝试**：第一轮把“通用操作控件中性”扩大成“主题色只留给当前项与复制按钮”，正文链接、时间码、进度、能量曲线与提示块一起失去色彩。恢复这些内容角色后，用[主题色层级原件](../../demos/cases/atlas-sister-sites/source/accent-tiers.html)逐项比较。原件先合并实心底与高亮条，深色标题因此需要单独拆出高亮色。
+
+[![主题色层级研究原件](../../demos/cases/atlas-sister-sites/source/previews/accent-tiers.jpg)](../../demos/cases/atlas-sister-sites/index.html#studies?doc=accent-tiers)
+点图在 Demo 中打开可交互的原件。
 
 **最终方案**：五层是深色强调、强调文字、实心底、高亮条、柔和底。实心底配独立的 `--accent-3-ink`；焦点用 `--accent-1`，按钮悬停用 `--accent-4` 底和 `--accent-1` 文字与边框。播放、视图、收藏、下载等通用控件的常态保持中性。恢复的主题色用于链接、眉题、当前项、提示及数据可视化。
 
@@ -95,6 +102,9 @@ Web 深色高亮条取 `#526438`，浅色标题 `#edf0e6` 对其为 5.62；它�
 **问题**：顶栏与侧栏承担不同层级，但同样的实心色块让它们一样重。把悬停也涂成柔和主题色，则临时经过的位置看起来像另一个当前项。
 
 **尝试**：[当前项对照原件](../../demos/cases/atlas-sister-sites/source/emphasis.html)列出 A 全实心、B 顶栏实心＋侧栏柔和、C 全柔和。A 的侧栏争抢注意；C 削弱了全站位置。选 B 后，导航悬停一度使用 `--accent-4`，再依据 [Web #51](https://github.com/MIBXR/web-atlas/pull/51)改回中性。
+
+[![当前项 A/B/C 研究原件](../../demos/cases/atlas-sister-sites/source/previews/emphasis.jpg)](../../demos/cases/atlas-sister-sites/index.html#studies?doc=emphasis)
+点图在 Demo 中打开可交互的原件。
 
 **最终方案**：顶栏与手机“全站导航”当前项实心；侧栏、手机“本页目录”和本文目录当前项使用柔和底、强调文字与 650 字重。非当前导航悬停为次级面＋正文色，不加主题色描边。当前项悬停保持当前样式。卡片与正文链接悬停保留其各自反馈，按钮继续用主题色柔和反馈。
 
@@ -129,7 +139,7 @@ Web 深色高亮条取 `#526438`，浅色标题 `#edf0e6` 对其为 5.62；它�
 
 **尝试**：先给两站跨页加入 `@view-transition { navigation:auto }`，再把列表／详情、详情／详情和文档切换的 DOM 更新包进 `document.startViewTransition`。Motion 首帧需要等共享顶栏生成，才能把它纳入独立快照。
 
-**最终方案**：顶栏命名为 `atlas-header`，该组与新快照无动画、旧快照隐藏，主体根过渡保留。浏览器不支持或系统减少动态时直接更新 DOM。Demo 的三个页面使用同一 HTML，因此演示页内过渡。
+**最终方案**：顶栏命名为 `atlas-header`，该组与新快照无动画、旧快照隐藏，主体根过渡保留。浏览器不支持或系统减少动态时直接更新 DOM。Demo 的四个页面使用同一 HTML，因此演示页内过渡。
 
 **数值与排查结论**：根过渡 140ms、ease-out。维护者记录 Edge 偶发 `ViewTransition opt-in disabled`，可发生于任意页面，频率约 1/4；没有可见影响，保留原状。该记录与减少动态时主动绕开过渡是两种状态。
 

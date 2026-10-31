@@ -55,12 +55,18 @@
   const webSource = 'https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site';
   const motionSource = 'https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site';
   const prompt = '制作一个有清楚配色角色的参考库界面。用 68px 通栏顶栏、228px 左侧目录和 300px 最小宽度卡片组织列表；详情为 2:1 双栏，舞台吸附在操作栏下方，较短说明栏同时吸附。正文链接、强调字、实心操作、高亮条与柔和状态分别使用五个主题色角色。手机把目录收入一个菜单，保留单行操作与顺序阅读。';
+  const studies = {
+    surfaces:{title:'底色与卡片',file:'index.html',description:'同一套迷你页面，比较各模式下底色、卡片与侧栏的组合；白、黑、灰三张作品截图检验边界。'},
+    emphasis:{title:'当前项 A/B/C',file:'emphasis.html',description:'顶栏与侧栏当前项的三种加重组合，两站浅深各一。最终选 B。'},
+    'accent-tiers':{title:'主题色层级',file:'accent-tiers.html',description:'五个配色角色在四组品牌与主题下的色值、对比度与示例。'}
+  };
   const decisions = {
     list:[['骨架负责位置，品牌只替换配色、标志和圆角。','skeleton'],['白卡片衬托作品，次级面区分内层内容。','surfaces'],['当前项分级强调，悬停用中性次级面。','emphasis']],
     detail:[['舞台始终贴在操作栏下方，较短说明栏同时吸附。','sticky'],['复制 Prompt 使用实心底，通用操作保持中性。','accent-tiers'],['顶栏保留独立快照，主体以 140ms 交接。','transitions']],
-    docs:[['三栏分别负责找文档、阅读和定位当前章节。','docs-reader'],['正文保留行宽上限，目录标题单行省略。','docs-reader'],['链接与状态各用自己的配色角色。','accent-tiers']]
+    docs:[['三栏分别负责找文档、阅读和定位当前章节。','docs-reader'],['正文保留行宽上限，目录标题单行省略。','docs-reader'],['链接与状态各用自己的配色角色。','accent-tiers']],
+    studies:[['原件按原样保留。','surfaces'],['最终选择写在研究文档。','skeleton']]
   };
-  const decision = page => `<details class="decision"><summary>${icon('chevronDown')}这一页的设计决策</summary><ul>${decisions[page].map(([text,anchor])=>`<li>${text} <a href="../../../docs.html?file=docs/cases/atlas-sister-sites.md#${anchor}" target="_top">阅读依据</a></li>`).join('')}</ul></details>`;
+  const decision = page => `<details class="decision"><summary>${icon('chevronDown')}这一页的设计决策</summary><ul>${decisions[page].map(([text,anchor])=>`<li>${text} <a href="../../../docs.html?file=docs/cases/atlas-sister-sites.md#${anchor}" target="_top">阅读这一节</a>${page!=='studies'&&studies[anchor]?` · <a href="#studies?doc=${anchor}">看原件</a>`:''}</li>`).join('')}</ul></details>`;
   const art = c => `<div class="art" data-variant="${c.id%4}" style="--art-a:${c.palette[0]};--art-b:${c.palette[1]};--art-c:${c.palette[2]};--art-ink:${c.palette[3]}"><div class="art-copy"><small>FORM / ${String(c.id+1).padStart(2,'0')}</small><strong>${c.artTitle}</strong></div><i class="art-lines"></i></div>`;
   function controls() {
     return `<div class="segmented brand-switch" aria-label="切换品牌"><button type="button" data-brand="web" aria-pressed="${brand==='web'}">Web</button><button type="button" data-brand="motion" aria-pressed="${brand==='motion'}">Motion</button></div><button type="button" class="button icon-button" data-theme-toggle aria-label="显示主题：${modeNames[theme]}；点击切换为${modeNames[modes[(modes.indexOf(theme)+1)%3]]}" title="显示主题：${modeNames[theme]}">${icon(theme)}</button>`;
@@ -93,11 +99,11 @@
   function docsNavigation() {
     return `<div class="doc-search-wrap"><label class="search">${icon('search')}<input id="doc-search" type="search" placeholder="搜索文档标题" aria-label="搜索文档标题"></label></div>${docGroups.map(([name,docs])=>`<details class="rail-group" open><summary>${name}${disclosure}</summary><div class="rail-list">${docs.map(([title,file])=>`<a class="rail-item" data-document title="${title}" href="${file==='demo'?'#docs':'../../../docs.html?file='+file}" ${file==='demo'?'aria-current="page"':'target="_top"'}>${title}</a>`).join('')}</div></details>`).join('')}`;
   }
-  function syncNavigation(page) {
+  function syncNavigation(page, doc) {
     for (const link of document.querySelectorAll('.site-nav a,.mobile-site a')) {
       if(link.hash==='#'+page)link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
     }
-    document.querySelector('.mobile-page').innerHTML = page==='list' ? filterNavigation() : page==='docs' ? docsNavigation() : `<a class="rail-item" href="#list">返回列表</a>${[['detail-title','作品概览'],['stage','作品舞台'],['note-0','设计要点'],['note-1','配色角色']].map(([id,title])=>`<button class="rail-item" type="button" data-scroll="${id}">${title}</button>`).join('')}`;
+    document.querySelector('.mobile-page').innerHTML = page==='list' ? filterNavigation() : page==='docs' ? docsNavigation() : page==='studies' ? Object.entries(studies).map(([id,study])=>`<a class="rail-item" href="#studies?doc=${id}" ${id===doc?'aria-current="page"':''}>${study.title}</a>`).join('') : `<a class="rail-item" href="#list">返回列表</a>${[['detail-title','作品概览'],['stage','作品舞台'],['note-0','设计要点'],['note-1','配色角色']].map(([id,title])=>`<button class="rail-item" type="button" data-scroll="${id}">${title}</button>`).join('')}`;
   }
   function setMenu(open) {
     const menu = document.querySelector('.mobile-menu');
@@ -191,13 +197,25 @@
     disposePage=()=>window.removeEventListener('scroll',syncOutline);
     syncOutline();
   }
+  function studiesPage(doc) {
+    const study=studies[doc];
+    if(!study)throw new Error('未知原件：'+doc);
+    main.innerHTML=`<div class="studies-page"><header class="studies-heading"><h1>决策原件</h1><p class="studies-intro">当时用来比较方案的研究页面，按原样保留。</p>${decision('studies')}<div class="segmented studies-tabs" aria-label="选择决策原件">${Object.entries(studies).map(([id,item])=>`<button type="button" data-study="${id}" aria-pressed="${id===doc}">${item.title}</button>`).join('')}</div><div class="studies-caption"><p>${study.description}</p><a href="../../../docs.html?file=docs/cases/atlas-sister-sites.md#${doc}" target="_top">阅读这一节</a><a href="source/${study.file}" target="_blank" rel="noreferrer">新窗口打开原件</a></div></header><iframe class="study-frame" title="${study.title}研究原件" src="source/${study.file}" loading="lazy"></iframe></div>`;
+    const container=document.querySelector('.studies-page');
+    const heading=document.querySelector('.studies-heading');
+    const observer=new ResizeObserver(()=>container.style.setProperty('--studies-heading-height',heading.getBoundingClientRect().height+'px'));
+    observer.observe(heading);
+    disposePage=()=>observer.disconnect();
+  }
   function updatePage() {
     disposePage();disposePage=()=>{};
-    const page=location.hash.slice(1)||'list';
-    if(!['list','detail','docs'].includes(page))throw new Error('未知页面：'+page);
+    const [route,query='']=location.hash.slice(1).split('?');
+    const page=route||'list';
+    const doc=new URLSearchParams(query).get('doc')||'surfaces';
+    if(!['list','detail','docs','studies'].includes(page))throw new Error('未知页面：'+page);
     root.dataset.page=page;
-    ({list:listPage,detail:detailPage,docs:docsPage})[page]();
-    syncNavigation(page);setMenu(false);window.scrollTo(0,0);
+    ({list:listPage,detail:detailPage,docs:docsPage,studies:()=>studiesPage(doc)})[page]();
+    syncNavigation(page,doc);setMenu(false);window.scrollTo(0,0);
     main.focus({preventScroll:true});
   }
   function transition(update) {
@@ -211,6 +229,7 @@
     if(target.matches('[data-theme-toggle]')){theme=modes[(modes.indexOf(theme)+1)%3];localStorage.setItem('atlas-sister-theme',theme);applyBrandTheme();}
     if(target.matches('.menu-toggle'))setMenu(document.querySelector('.mobile-menu').hidden);
     if(target.matches('[data-menu-view]'))setMenuView(target.dataset.menuView);
+    if(target.matches('[data-study]'))location.hash='studies?doc='+target.dataset.study;
     if(target.matches('[data-category]')){
       category=target.dataset.category;
       document.querySelector('.layout>.rail').innerHTML=filterNavigation();syncNavigation('list');renderCards();setMenu(false);

@@ -11,3 +11,5 @@
 从仓库根目录运行 `PORT=4393 node scripts/serve.mjs`，访问 `http://127.0.0.1:4393/demos/cases/atlas-sister-sites/source/`。单个文件也支持直接打开。
 
 原件来自本案例的配色研究输入。最终界面变量与决策依据见[研究文档](../../../../docs/cases/atlas-sister-sites.md)。
+
+`previews/` 保存三份原件的代表性截图，用于研究文档中的可点击插图。
