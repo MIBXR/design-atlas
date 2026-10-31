@@ -1,10 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {documentContent} from '../site/pages/docs/document-title.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const groups = ['项目指南', '研究方法与索引', '案例研究', '巧思研究', '复用 Prompt', '素材使用'];
+const groups = ['项目指南', '研究方法与索引', '案例研究', '巧思研究', '素材使用', '复用 Prompt', '项目说明'];
 const guideTitles = {'docs/guide.md':'项目指南', 'docs/agent.md':'Agent 工作流与数据契约'};
+const projectOrder = ['README.md', 'CONTRIBUTING.md', 'AGENTS.md'];
 
 export function documentCatalog() {
   const paths = [];
@@ -16,15 +18,15 @@ export function documentCatalog() {
     }
   }
   for (const directory of ['docs', 'prompts']) collect(directory);
+  paths.push(...projectOrder);
   const documents = paths.map(relative => {
     const text = fs.readFileSync(path.join(root, relative), 'utf8');
-    const heading = /^#\s+(.+?)\s*#*\s*$/m.exec(text)?.[1] || path.posix.basename(relative);
-    const title = guideTitles[relative] || heading.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/<[^>]*>|[*`]/g, '').trim();
-    const group = guideTitles[relative] ? groups[0] : relative.startsWith('prompts/') ? groups[4] : relative.startsWith('docs/cases/') ? groups[2] : relative.startsWith('docs/patterns/') ? groups[3] : relative.startsWith('docs/materials/') ? groups[5] : groups[1];
+    const {title} = documentContent(text, relative);
+    const group = guideTitles[relative] ? groups[0] : projectOrder.includes(relative) ? groups[6] : relative.startsWith('prompts/') ? groups[5] : relative.startsWith('docs/cases/') ? groups[2] : relative.startsWith('docs/patterns/') ? groups[3] : relative.startsWith('docs/materials/') ? groups[4] : groups[1];
     return {path:relative, title, group};
   });
   const guideOrder = Object.keys(guideTitles);
-  documents.sort((a,b) => groups.indexOf(a.group)-groups.indexOf(b.group) || (a.group === groups[0] ? guideOrder.indexOf(a.path)-guideOrder.indexOf(b.path) : a.title.localeCompare(b.title,'zh-CN')) || a.path.localeCompare(b.path));
+  documents.sort((a,b) => groups.indexOf(a.group)-groups.indexOf(b.group) || (a.group === groups[0] ? guideOrder.indexOf(a.path)-guideOrder.indexOf(b.path) : a.group === groups[6] ? projectOrder.indexOf(a.path)-projectOrder.indexOf(b.path) : a.title.localeCompare(b.title,'zh-CN')) || a.path.localeCompare(b.path));
   return documents;
 }
 

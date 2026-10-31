@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {buildAgent} from './build-agent.mjs';
 import {assertRepositoryLineEndings} from './check-line-endings.mjs';
-import {buildDocuments} from './build-documents.mjs';
+import {documentCatalog} from './build-documents.mjs';
 import {loadAssetSources, serializeAssetSources} from './build-asset-sources.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 assertRepositoryLineEndings(root);
@@ -61,4 +61,15 @@ const {catalog} = buildAgent();
 console.log(`Built ${catalog.entryCount} Agent case bundles.`);
 console.log(`Built ${catalog.patterns?.patternCount || 0} curated design patterns with linked, verifiable sources.`);
 console.log(`Built ${catalog.materials?.materialCount || 0} source-backed materials.`);
-console.log(`Built ${buildDocuments().length} public Markdown documents.`);
+const documents = documentCatalog();
+const documentSources = [];
+for (const kind of ['cases', 'patterns', 'materials']) {
+  for (const name of fs.readdirSync(path.join(root,'entries',kind)).filter(name => name.endsWith('.json'))) {
+    const entry = JSON.parse(fs.readFileSync(path.join(root,'entries',kind,name),'utf8'));
+    const sources = (entry.sources || []).map(source => source.url || source.referenceUrl).filter(Boolean);
+    if (!entry.upstream && !sources.some(url => /^https:\/\/github\.com\/[^/]+\/[^/]+\/(?:blob|tree)\/[a-f\d]{40}(?:\/|$)/i.test(url))) continue;
+    documentSources.push({path:entry.snapshotPath || `demos/${kind}/${entry.id}/`, upstream:entry.upstream, referenceUrl:entry.referenceUrl, sources});
+  }
+}
+fs.writeFileSync(path.join(root,'data/docs.js'), 'window.ATLAS_DOCUMENTS = ' + JSON.stringify(documents,null,2) + ';\nwindow.ATLAS_DOCUMENT_SOURCES = ' + JSON.stringify(documentSources,null,2) + ';\n', 'utf8');
+console.log(`Built ${documents.length} public Markdown documents.`);

@@ -1,7 +1,6 @@
 (() => {
   'use strict';
   const key = 'atlas-color-scheme';
-  const iconBase = new URL('../icons/', document.currentScript.src);
   const modes = ['system', 'dark', 'light'];
   const names = { system: '跟随系统', dark: '深色', light: '浅色' };
   const preference = matchMedia('(prefers-color-scheme: dark)');
@@ -22,10 +21,6 @@
     // Set in the head, before the header exists, so its icon and page theme agree at first paint.
     document.documentElement.dataset.atlasThemeChoice = choice;
     document.documentElement.style.colorScheme = resolved;
-    document.querySelectorAll('link[rel~="icon"]').forEach(icon => {
-      const href = new URL(`favicon-${resolved}.svg?v=atlas-cross-1`, iconBase).href;
-      if (icon.getAttribute('href') !== href) icon.setAttribute('href', href);
-    });
     document.querySelectorAll('button[data-theme-toggle]').forEach(button => {
       const description = `显示主题：${names[choice]}；点击切换为${names[nextChoice()]}`;
       button.dataset.themeState = choice;
