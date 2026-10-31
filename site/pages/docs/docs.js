@@ -241,13 +241,26 @@ async function renderMarkdown(text, sourceURL, signal) {
   // The page header already displays the document's leading title.
   heading?.remove();
   await prepareLinks(fragment, sourceURL, signal);
+  for (const pre of fragment.querySelectorAll('pre')) {
+    const button=document.createElement('button');
+    button.type='button';button.className='atlas-ui-button markdown-copy';
+    button.innerHTML=AtlasIcons.svg('copy')+'<span>复制</span>';
+    button.addEventListener('click',async()=>{
+      await navigator.clipboard.writeText(pre.querySelector('code').textContent);
+      button.querySelector('span').textContent='已复制';
+    });
+    pre.append(button);
+  }
   for (const table of fragment.querySelectorAll('table')) {
+    const frame=document.createElement('div');
+    frame.className='table-frame';
     const wrapper = document.createElement('div');
     wrapper.className = 'table-scroll';
     wrapper.tabIndex = 0;
     wrapper.setAttribute('role', 'region');
     wrapper.setAttribute('aria-label', '表格');
-    table.replaceWith(wrapper);
+    table.replaceWith(frame);
+    frame.append(wrapper);
     wrapper.append(table);
   }
   signal.throwIfAborted();
