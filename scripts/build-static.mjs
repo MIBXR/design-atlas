@@ -136,8 +136,6 @@ export function prepareStatic(assetsMode = 'local') {
   }
   if (assetsMode === 'github') {
     fs.writeFileSync(path.join(output, 'data/asset-sources.js'), serializeAssetSources(sources), 'utf8');
-    const redirects = Object.entries(sources.assets).map(([filename, asset]) => `/${filename.split('/').map(encodeURIComponent).join('/')} ${asset.url} 302`);
-    fs.writeFileSync(path.join(output, '_redirects'), redirects.join('\n') + '\n', 'utf8');
   }
   let markedDocuments = 0;
   let totalBytes = 0;
@@ -148,7 +146,7 @@ export function prepareStatic(assetsMode = 'local') {
       if (item.isDirectory()) finalize(target);
       else if (item.isFile()) {
         const canonical = path.relative(output, target).split(path.sep).join('/');
-        if (snapshotPaths.some(prefix => canonical.startsWith(prefix))) {
+        if (snapshotPaths.some(prefix => canonical.startsWith(prefix)) && !/\.(?:html|css)$/.test(item.name)) {
           totalBytes += fs.statSync(target).size;
           continue;
         }

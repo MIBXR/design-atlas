@@ -286,7 +286,7 @@ npm run check
 
 ### 素材分发与发布
 
-完整原始素材随源码收录，来源与权利由案例素材清单记录。`npm run build:local` 保留完整素材；`npm run build:site` 根据当前源码提交生成发布素材清单，至少 128 KiB 的图像、音视频、字体等从固定 GitHub 提交加载，原文快照同样适用。发布包的 `_redirects` 将原素材路径临时跳转到对应 GitHub 地址，快照原文与相对目录结构保持原样。
+完整原始素材随源码收录，来源与权利由案例素材清单记录。`npm run build:local` 保留完整素材；`npm run build:site` 根据当前源码提交生成发布素材清单，至少 128 KiB 的图像、音视频、字体等从固定 GitHub 提交加载，原文快照同样适用。仓库原件、原始素材与目录结构保持原样；发布副本的 HTML/CSS 改写素材地址并接入现有素材解析器，文档中心的素材链接直接指向 GitHub。快照内的 Markdown、许可等原文不改写。
 
 仓库内的 `data/asset-sources.js` 用于本地素材回退，通过 `node scripts/build-asset-sources.mjs --commit <已推送素材提交的完整 SHA>` 生成；发布构建独立生成 `dist/data/asset-sources.js`。
 
