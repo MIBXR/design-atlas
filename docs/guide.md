@@ -79,7 +79,7 @@ Web Atlas 也在使用自己的案例库。首页借鉴收录的 [ChatGPT 案例
 
 | 首页中的真实实验室 | 案例库 |
 | --- | --- |
-| ![设计实验室：调配元素与操作巧思示意](readme/workflow.jpg) | ![浏览案例界面：筛选设计方向与查看案例预览](readme/cases.png) |
+| ![设计实验室：调配元素与操作巧思示意](readme/workflow.jpg) | ![浏览案例界面：筛选设计方向与查看案例预览](readme/cases.jpg) |
 
 以上为网站本体的实际浏览器截图；各案例的独立 Demo 预览见[案例画廊](overview.md#案例画廊)。
 

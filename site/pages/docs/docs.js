@@ -4,14 +4,13 @@ const searchContainer = document.querySelector('.document-search-container');
 let file = new URLSearchParams(location.search).get('file') || 'docs/guide.md';
 const documents = window.ATLAS_DOCUMENTS || [];
 const documentSources = window.ATLAS_DOCUMENT_SOURCES;
-const documentPaths = new Set(documents.map(item => item.path));
 const libraryURL = new URL('.', document.baseURI);
 let activeRequest;
 let cleanupOutline = () => {};
 let currentGroup = documents.find(item => item.path === file)?.group;
 let directoryOpenState;
 function isAllowedDocument(value) {
-  return (documentPaths.has(value) || /^demos\/(?:cases|patterns|materials)\/[a-z0-9-]+\/(?:fidelity|LICENSES)\.md$/.test(value) || /^demos\/materials\/[a-z0-9-]+\/(?:README|SKILL)\.md$/.test(value) || value === 'site/playground/fidelity.md') && !value.includes('\\') && !value.split('/').some(part => !part || part.startsWith('.'));
+  return localPath(new URL(value, libraryURL))?.endsWith('.md');
 }
 function renderDirectory() {
   const navigation = document.querySelector('#document-navigation');
@@ -101,6 +100,13 @@ async function prepareLinks(fragment, sourceURL, signal) {
     if (reference.startsWith('#')) return;
     const url = new URL(reference, sourceURL);
     const path = localPath(url);
+    if (path !== null && path.endsWith('.md')) {
+      const reader = new URL('docs.html', libraryURL);
+      reader.searchParams.set('file', path);
+      reader.hash = url.hash;
+      link.href = reader.href;
+      return;
+    }
     if (path !== null && /^demos\/(?:cases|materials)\/[A-Za-z0-9_-]+\/?$/.test(path)) {
       url.pathname = url.pathname.replace(/\/?$/, '/index.html');
     }
@@ -114,14 +120,7 @@ async function prepareLinks(fragment, sourceURL, signal) {
       } else link.replaceWith(document.createTextNode(link.textContent));
       return;
     }
-    if (path !== null && isAllowedDocument(path)) {
-      const reader = new URL('docs.html', libraryURL);
-      reader.searchParams.set('file', path);
-      reader.hash = url.hash;
-      link.href = reader.href;
-    } else {
-      link.href = path !== null ? (localPath(url) || './') + url.search + url.hash : url.href;
-    }
+    link.href = path !== null ? (localPath(url) || './') + url.search + url.hash : url.href;
   }));
   for (const image of fragment.querySelectorAll('img[src]')) {
     image.src = new URL(image.getAttribute('src'), sourceURL).href;

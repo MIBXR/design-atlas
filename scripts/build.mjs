@@ -11,9 +11,11 @@ const entries = fs.readdirSync(path.join(root,'entries/cases')).filter(x=>x.ends
 const showcaseCount = entries.filter(entry=>entry.category==='示范作品').length;
 const referenceCount = entries.filter(entry=>entry.implementation==='reference-study'&&entry.category!=='示范作品').length;
 const classicCount = entries.length-referenceCount-showcaseCount;
+const patternCount = fs.readdirSync(path.join(root,'entries/patterns')).filter(name=>name.endsWith('.json')).length;
+const materialCount = fs.readdirSync(path.join(root,'entries/materials')).filter(name=>name.endsWith('.json')).length;
 const readmePath = path.join(root,'README.md');
 const readme = fs.readFileSync(readmePath,'utf8');
-const counts = `<!-- atlas-counts:start -->\n**${entries.length} 个案例**　·　**${referenceCount} 个品牌／文化研究**　·　**${classicCount} 种经典设计语言**　·　**${showcaseCount} 个示范作品**\n<!-- atlas-counts:end -->`;
+const counts = `<!-- atlas-counts:start -->\n**${entries.length} 个案例**　·　**${patternCount} 个巧思**　·　**${materialCount} 个素材**\n<!-- atlas-counts:end -->`;
 if(!readme.includes('<!-- atlas-counts:start -->') || !readme.includes('<!-- atlas-counts:end -->'))throw new Error('README case count markers are missing');
 fs.writeFileSync(readmePath,readme.replace(/<!-- atlas-counts:start -->[\s\S]*?<!-- atlas-counts:end -->/,counts),'utf8');
 fs.mkdirSync(path.join(root,'data'), {recursive:true});
