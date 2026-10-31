@@ -153,7 +153,7 @@ function restoreRoute(){
 }
 window.addEventListener('popstate',restoreRoute);
 window.addEventListener('hashchange',restoreRoute);
-$('#all-count').textContent=entries.length;$('#hero-count').textContent=entries.length;
+$('#all-count').textContent=entries.length;
 $('#footer-count').textContent=entries.length+' DEMOS · '+entries.filter(e=>e.implementation!=='reference-study').length+' CLASSIC STYLES · GIT ARCHIVE';
 document.querySelectorAll('[data-category-count]').forEach(el=>el.textContent=String(entries.filter(e=>e.category===el.dataset.categoryCount).length).padStart(2,'0'));
 const countries=[...new Set(entries.map(e=>e.country).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));$('#country').innerHTML='<option value="all">全部地区</option>'+countries.map(c=>'<option value="'+esc(c)+'">'+esc(c)+'</option>').join('');$('#country').onchange=event=>{country=event.target.value;writeCollectionState();};

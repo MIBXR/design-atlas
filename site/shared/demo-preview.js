@@ -7,7 +7,8 @@
       if (!frame || !wrap.clientWidth) return;
       const panel = wrap.closest('.demo-panel');
       const controlsHeight = wrap.getBoundingClientRect().top - panel.getBoundingClientRect().top;
-      const height = Math.max(1, window.innerHeight - (panel.getBoundingClientRect().top + window.scrollY) - controlsHeight - 24);
+      const panelTop = panel.getBoundingClientRect().top + (getComputedStyle(panel).position === 'sticky' ? 0 : window.scrollY);
+      const height = Math.max(1, window.innerHeight - panelTop - controlsHeight - 24);
       const style = getComputedStyle(wrap);
       const inset = ['borderTopWidth', 'borderBottomWidth', 'paddingTop', 'paddingBottom'].reduce((total, property) => total + parseFloat(style[property]), 0);
       const contentHeight = Math.max(1, height - inset);

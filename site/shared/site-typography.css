@@ -43,7 +43,7 @@ body.cases-page .case-layout main .sort-dir{width:44px;height:44px;min-height:44
 body .tag{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border:1px solid var(--atlas-surface-line);border-radius:var(--r-sm);font-size:12px;line-height:1.5;white-space:nowrap}
 body :is(.subtitle,.source-badge,.behavior-label,.eyebrow){font-size:12px}
 body :is(.favorite,.dialog-close):not(.sample *){box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;min-width:44px;min-height:44px;padding:0;border-radius:var(--r)}
-.favorite.selected [data-icon=star] path{fill:var(--atlas-accent)}
+.favorite.selected [data-icon=star] path{fill:currentColor}
 body :is(.demo-toolbar,.demo-caption,.notes details,.evidence-links,.source-comparison,.compare-tray>span,.toast,.compare-tip,.element-map div,.source-item small){font-size:14px}
 body :is(.notes p,.notes li,.source-item>a,.agent-lead,.agent-start p,.agent-local p,.agent-case p,.lead,.section-copy,.layer p,.element p,.principle-list p,.workflow p,.reading-note){font-size:16px}
 body :is(.notes h2,.card-title h2){font-size:20px}

@@ -93,7 +93,7 @@
     state.query = $('#material-search').value.trim();state.type = $('#material-type').value;state.category = $('#material-category').value;
     history.replaceState(null,'', '#materials' + query());cards();
   }
-  $('#materials-total').textContent = materials.length;
+
   $('#material-type').insertAdjacentHTML('beforeend',types.map(type => `<option value="${esc(type)}">${esc(typeLabels[type] || type)}</option>`).join(''));
   $('#material-category').insertAdjacentHTML('beforeend',categories.map(category => `<option value="${esc(category)}">${esc(category)}</option>`).join(''));
   $('#material-search').addEventListener('input',filter);

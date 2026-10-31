@@ -21,7 +21,8 @@ function renderDirectory() {
     section.setAttribute('data-document-group', group);
     section.open = documents.some(item => item.group === group && item.path === file);
     const title = document.createElement('summary');
-    title.textContent = group;
+    const label=document.createElement('span');label.className='document-group-title';label.textContent=group;
+    title.append(label);title.title=group;
     title.insertAdjacentHTML('beforeend',AtlasIcons.disclosure());
     section.append(title);
     const links = document.createElement('ul');
@@ -30,7 +31,7 @@ function renderDirectory() {
       const link = document.createElement('a');
       link.href = 'docs.html?file=' + encodeURIComponent(item.path);
       link.textContent = item.title;
-      link.title = item.path;
+      link.title = item.title;
       link.setAttribute('data-document-file', item.path);
       if (item.path === file) link.setAttribute('aria-current', 'page');
       row.append(link);

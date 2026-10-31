@@ -23,6 +23,8 @@
 .document-group>summary::-webkit-details-marker{display:none}
 .document-group>summary:focus-visible{outline:3px solid var(--atlas-focus);outline-offset:-3px}
 .document-group>summary:hover{border-color:transparent}
+.document-group>summary{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.document-group-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .document-rail ul{list-style:none;margin:0;padding:0}
 .document-group>ul{padding-top:10px}
 .document-rail a{display:block;min-height:44px;padding:12px;border-radius:var(--r-sm);background:none;color:var(--atlas-ink);font-size:14px;line-height:1.6;text-decoration:none;overflow-wrap:anywhere}

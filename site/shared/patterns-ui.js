@@ -184,7 +184,7 @@
     if (!$('#patterns-library')) return;
     onStateChange = options.onStateChange || onStateChange;
     if ($('#pattern-count')) $('#pattern-count').textContent = patterns.length;
-    $('#patterns-total').textContent = patterns.length;
+
     $('#pattern-category').innerHTML = '<option value="all">全部用途</option>' + categories.map(category => `<option value="${esc(category)}">${esc(category)}</option>`).join('');
     $('#pattern-source').innerHTML = '<option value="all">全部案例</option>' + sourceEntries.map(entry => `<option value="${esc(entry.id)}">${esc(entry.title)}</option>`).join('');
     $('#pattern-navigation').innerHTML = '<a class="nav-item" href="#patterns"><span>全部设计巧思</span><b>' + patterns.length + '</b></a>' + Object.entries(typeLabels).map(([type, label]) => '<a class="nav-item" data-pattern-type="' + type + '" href="#patterns?type=' + type + '"><span>' + label + '</span><b>' + patterns.filter(pattern => pattern.experienceTypes?.includes(type)).length + '</b></a>').join('');

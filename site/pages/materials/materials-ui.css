@@ -22,4 +22,4 @@
 .materials-page #material-detail .detail-title .tags{align-items:start}
 @media(max-width:650px){.material-examples{grid-template-columns:1fr}.materials-page .demo-toolbar>div{justify-content:flex-start}.materials-page .detail-top{gap:12px;flex-wrap:wrap}}
 .material-examples a:hover{background:var(--atlas-hover)}
-.material-examples a[aria-current=true]{background:var(--atlas-accent-soft)}
+.material-examples a[aria-current=true]{background:var(--atlas-surface-2)}

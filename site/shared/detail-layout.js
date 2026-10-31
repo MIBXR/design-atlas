@@ -85,9 +85,12 @@
     const escape=event=>{if(event.key==='Escape'&&!menu.hidden){setOpen(false);trigger.focus();event.preventDefault();}};
     menu.addEventListener('click',event=>{if(event.target.closest('a'))setOpen(false);});
     document.addEventListener('click',outside);document.addEventListener('keydown',escape);compact.addEventListener('change',sync);
-    disposeMenu=()=>{document.removeEventListener('click',outside);document.removeEventListener('keydown',escape);compact.removeEventListener('change',sync);};
+    const syncActions=()=>root.style.setProperty('--atlas-actions-height',actions.getBoundingClientRect().height+'px');
+    const actionsObserver=new ResizeObserver(syncActions);actionsObserver.observe(actions);
+    disposeMenu=()=>{document.removeEventListener('click',outside);document.removeEventListener('keydown',escape);compact.removeEventListener('change',sync);actionsObserver.disconnect();};
     sync();
     window.AtlasIcons.paint(root);
+    syncActions();
   }
   window.AtlasDetail = {mount, paintFavorite, clear: () => {disposeMenu();document.body.classList.remove('atlas-detail');}};
 })();

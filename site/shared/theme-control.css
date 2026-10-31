@@ -50,7 +50,8 @@
 :root:not([data-atlas-theme-choice]) .atlas-site-header .atlas-theme-icon[data-theme-icon=system],
 :root[data-atlas-theme-choice=system] .atlas-site-header .atlas-theme-icon[data-theme-icon=system],
 :root[data-atlas-theme-choice=dark] .atlas-site-header .atlas-theme-icon[data-theme-icon=dark],
-:root[data-atlas-theme-choice=light] .atlas-site-header .atlas-theme-icon[data-theme-icon=light]{display:block}
+:root[data-atlas-theme-choice=light] .atlas-site-header .atlas-theme-icon[data-theme-icon=light]{display:grid;place-items:center}
+.atlas-site-header .atlas-theme-icon>.atlas-icon{display:block;margin:0;vertical-align:0}
 html[data-lab-embed=home] .atlas-site-theme{display:none}
 @media(prefers-reduced-motion:reduce){
   .atlas-site-header .atlas-site-theme button:is(.atlas-theme-toggle,.atlas-cache-toggle){transition:none}
