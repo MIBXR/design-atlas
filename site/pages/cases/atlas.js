@@ -69,7 +69,7 @@ function route(){
   try{hash=decodeURIComponent(location.hash);}catch{hash='';}
   $('#collection').hidden=true;$('#detail').hidden=true;$('#comparison').hidden=true;
   // Hidden demos keep running (audio included); remove them so leaving a view releases them.
-  $('#detail').replaceChildren();$('#comparison').replaceChildren();
+  $('#detail').innerHTML='';$('#comparison').innerHTML='';
   if(hash.startsWith('#style/')){
     const entry=entries.find(x=>x.id===hash.slice(7));
     if(entry){renderDetail(entry);$('#detail').hidden=false;window.AtlasDetail?.mount($('#detail'),'案例库');}
