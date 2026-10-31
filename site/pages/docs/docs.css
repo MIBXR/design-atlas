@@ -58,7 +58,6 @@
 .markdown-body ul,.markdown-body ol{padding-left:1.6em;margin:0 0 1.3em}
 .markdown-body li+li{margin-top:.35em}
 .markdown-body a{color:var(--accent-1)}
-.markdown-body a:hover{background:var(--accent-4);border-color:var(--accent-1)}
 .markdown-body blockquote{margin:1.5em 0;padding:16px;border:1px solid var(--atlas-surface-line);border-radius:var(--r-lg);color:var(--atlas-muted);background:var(--atlas-surface)}
 .markdown-body blockquote>:last-child{margin-bottom:0}
 .markdown-body code{font-family:var(--atlas-font-mono);font-size:14px;padding:1px 6px;border:1px solid var(--atlas-surface-line);border-radius:var(--r-sm);background:var(--atlas-surface);color:var(--atlas-ink)}

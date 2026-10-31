@@ -25,4 +25,3 @@
 .agent-command pre,.agent-case code{padding:12px;border:1px solid var(--atlas-surface-line);border-radius:var(--r);background:var(--atlas-surface-2)}
 
 .agent-main :is(p,li)>a:not(.copy-button){color:var(--accent-1)}
-.agent-main :is(p,li)>a:not(.copy-button):hover{background:var(--accent-4)}
