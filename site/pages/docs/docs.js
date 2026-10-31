@@ -110,6 +110,11 @@ async function prepareLinks(fragment, sourceURL, signal) {
     if (path !== null && /^demos\/(?:cases|materials)\/[A-Za-z0-9_-]+\/?$/.test(path)) {
       url.pathname = url.pathname.replace(/\/?$/, '/index.html');
     }
+    const asset = AtlasAssets.resolve(url.href);
+    if (asset !== url.href) {
+      link.href = asset;
+      return;
+    }
     if (path !== null && !(await fetch(url, {method:'HEAD', signal})).ok) {
       const upstream = upstreamLink(sourceURL, reference);
       if (upstream) {
