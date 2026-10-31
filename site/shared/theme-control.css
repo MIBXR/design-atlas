@@ -25,11 +25,12 @@
   transition:background-color 150ms ease,border-color 150ms ease;
 }
 .atlas-site-header .atlas-site-theme button:is(.atlas-theme-toggle,.atlas-cache-toggle):hover{
-  border-color:var(--atlas-focus);
-  background:var(--atlas-hover);
+  border-color:var(--accent-1);
+  background:var(--accent-4);
+  color:var(--accent-1);
 }
 .atlas-site-header .atlas-site-theme button:is(.atlas-theme-toggle,.atlas-cache-toggle):focus-visible{
-  outline:3px solid var(--atlas-focus);
+  outline:3px solid var(--accent-1);
   outline-offset:3px;
 }
 .atlas-site-header .atlas-theme-toggle .atlas-theme-icon,

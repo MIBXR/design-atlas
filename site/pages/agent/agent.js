@@ -10,7 +10,7 @@
       let area = document.getElementById('copy-fallback');
       if(!area) {
         area=document.createElement('textarea');area.id='copy-fallback';area.setAttribute('aria-label','手动复制的 Agent 入口');
-        area.style.cssText='position:fixed;left:5vw;bottom:20px;width:90vw;height:150px;z-index:45;padding:14px;background:var(--atlas-surface);color:var(--atlas-ink);border:2px solid var(--atlas-focus)';document.body.append(area);
+        area.style.cssText='position:fixed;left:5vw;bottom:20px;width:90vw;height:150px;z-index:45;padding:14px;background:var(--atlas-surface);color:var(--atlas-ink);border:2px solid var(--accent-1)';document.body.append(area);
       }
       area.value=value;area.focus();area.select();toast('已显示并选中文字，请按 Ctrl+C 复制；按 Escape 收起。');
       area.addEventListener('keydown',event=>{if(event.key==='Escape')area.remove();},{once:true});
