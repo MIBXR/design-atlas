@@ -13,7 +13,7 @@
 .cases-page .rail .nav-item.active b{color:inherit}
 .cases-page .rail .nav-item b,.cases-page .rail .rail-link b{flex:none;font:12px/1.6 var(--atlas-font-mono);font-weight:400}
 .cases-page .rail .rail-link{background:none;color:var(--atlas-ink);cursor:pointer}
-.cases-page .rail .rail-link:hover{background:var(--accent-4);color:var(--accent-1);border-color:var(--accent-1)}
+.cases-page .rail .rail-link:hover{background:var(--atlas-surface-2);color:var(--atlas-ink)}
 .cases-page .rail .rail-rule{display:block;margin:20px 12px 12px}
 .cases-page .rail .rail-bottom{display:block;margin:24px 12px 4px}
 .cases-page .rail a:focus-visible,.cases-page .rail button:focus-visible,.cases-page .rail summary:focus-visible{outline:3px solid var(--accent-1);outline-offset:2px}
