@@ -2060,10 +2060,6 @@ globalThis.AtlasAssetSources = {
       "url": "https://raw.githubusercontent.com/MIBXR/web-atlas/3486b5c899fbf1903599aa9a6f560888150ff313/demos/materials/recursive/fonts/Recursive_VF_1.085.woff2",
       "bytes": 718680
     },
-    "docs/readme/cases.png": {
-      "url": "https://raw.githubusercontent.com/MIBXR/web-atlas/3486b5c899fbf1903599aa9a6f560888150ff313/docs/readme/cases.png",
-      "bytes": 219480
-    },
     "docs/readme/cover.webp": {
       "url": "https://raw.githubusercontent.com/MIBXR/web-atlas/3486b5c899fbf1903599aa9a6f560888150ff313/docs/readme/cover.webp",
       "bytes": 1387532
