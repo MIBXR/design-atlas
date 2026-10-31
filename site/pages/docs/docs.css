@@ -31,7 +31,7 @@
 .document-group>ul{padding-top:calc(var(--document-rail-fade) + 2px)}
 .document-rail a{display:block;min-width:0;max-width:100%;min-height:44px;padding:12px;border-radius:var(--r-sm);background:none;color:var(--atlas-ink);font-size:14px;line-height:1.6;text-decoration:none;overflow:hidden}
 .document-rail a:hover{background:var(--atlas-hover);text-decoration:none}
-.document-rail a[aria-current=page],.document-rail a[aria-current=page]:hover{background:var(--atlas-accent);color:var(--atlas-accent-ink);font-weight:600}
+.document-rail a[aria-current=page],.document-rail a[aria-current=page]:hover{background:var(--atlas-accent-soft);color:var(--atlas-accent-soft-ink);font-weight:650}
 .document-rail :is(a,summary):focus-visible{outline:3px solid var(--atlas-focus)}
 .document-main{grid-area:main;width:100%;max-width:860px;min-width:0;margin:0 auto;padding:30px 0 80px}
 .document-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:nowrap;margin:0 0 28px;min-width:0}

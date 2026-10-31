@@ -12,6 +12,7 @@
   --atlas-surface-line:#dfe1d7;
   --atlas-hover:#eef0e6;
   --atlas-accent-soft:#eef6d2;
+  --atlas-accent-soft-ink:#4b6118;
   --atlas-accent:#d4ef76;
   --atlas-accent-ink:#252822;
   --atlas-primary:#252822;
@@ -40,6 +41,7 @@
   --atlas-surface-line:#343b31;
   --atlas-hover:#262c24;
   --atlas-accent-soft:#2a3320;
+  --atlas-accent-soft-ink:var(--atlas-accent);
   --atlas-primary:var(--atlas-accent);
   --atlas-primary-ink:var(--atlas-accent-ink);
   --atlas-ink:#edf0e6;
