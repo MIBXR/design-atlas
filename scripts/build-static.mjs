@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {loadMaterials} from './build-materials.mjs';
-import {loadAssetSources} from './build-asset-sources.mjs';
+import {buildAssetSources, loadAssetSources, serializeAssetSources} from './build-asset-sources.mjs';
 import {assertRepositoryLineEndings} from './check-line-endings.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -114,13 +114,13 @@ export function prepareStatic(assetsMode = 'local') {
   const runtimeReady = includedRuntime.includes('site/runtime/asset-runtime.js') && includedRuntime.includes('data/asset-sources.js');
   if (assetsMode === 'github' && !runtimeReady) throw new Error('GitHub mode requires data/asset-sources.js and site/runtime/asset-runtime.js in the source checkout.');
   const snapshotPaths = loadMaterials({root}).filter(material => material.snapshotPath).map(material => material.snapshotPath);
-  const sources = includedRuntime.includes('data/asset-sources.js') ? loadAssetSources() : {assets:{}};
   // Hosted HTML/CSS is rewritten for playback, and Markdown gains a UTF-8 BOM.
   // Agent source must come from the original Git bytes, not those display files.
   const revision = spawnSync('git', ['rev-parse', 'HEAD'], {cwd:root, encoding:'utf8'});
   const clean = spawnSync('git', ['status', '--porcelain'], {cwd:root, encoding:'utf8'});
   const sourceCommit = revision.stdout?.trim();
   if (revision.status !== 0 || clean.status !== 0 || clean.stdout.trim() || !/^[a-f\d]{40}$/.test(sourceCommit)) throw new Error('Commit the verified source before static packaging so Agent source URLs identify the exact original bytes.');
+  const sources = assetsMode === 'github' ? buildAssetSources(root, sourceCommit) : includedRuntime.includes('data/asset-sources.js') ? loadAssetSources() : {assets:{}};
   fs.rmSync(output, {recursive:true, force:true});
   fs.mkdirSync(output);
   const omitted = new Set(assetsMode === 'github' ? Object.keys(sources.assets) : []);
@@ -133,6 +133,11 @@ export function prepareStatic(assetsMode = 'local') {
       if (omitted.has(canonical)) { omittedBytes += sources.assets[canonical].bytes; return false; }
       return true;
     }});
+  }
+  if (assetsMode === 'github') {
+    fs.writeFileSync(path.join(output, 'data/asset-sources.js'), serializeAssetSources(sources), 'utf8');
+    const redirects = Object.entries(sources.assets).map(([filename, asset]) => `/${filename.split('/').map(encodeURIComponent).join('/')} ${asset.url} 302`);
+    fs.writeFileSync(path.join(output, '_redirects'), redirects.join('\n') + '\n', 'utf8');
   }
   let markedDocuments = 0;
   let totalBytes = 0;
