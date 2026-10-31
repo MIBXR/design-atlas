@@ -87,12 +87,10 @@
     document.addEventListener('click',outside);document.addEventListener('keydown',escape);compact.addEventListener('change',sync);
     const header=document.querySelector('.atlas-site-header');
     const syncColumns=()=>{
-      const headerHeight=header.getBoundingClientRect().height;
       const actionsHeight=actions.getBoundingClientRect().height;
       const stageHeight=stage.getBoundingClientRect().height;
       const notesHeight=notes.getBoundingClientRect().height;
-      const top=headerHeight+actionsHeight+24;
-      root.style.setProperty('--atlas-detail-sticky-top',top+'px');
+      root.style.setProperty('--atlas-detail-sticky-top',`calc(var(--atlas-visible-header-height) + ${actionsHeight}px + 24px)`);
       stage.classList.toggle('detail-sticky',window.innerWidth>=1160);
       notes.classList.toggle('detail-sticky',window.innerWidth>=1160&&stageHeight>notesHeight);
     };

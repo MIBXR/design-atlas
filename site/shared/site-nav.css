@@ -297,7 +297,7 @@ body button.atlas-ui-button.atlas-back-to-top{min-height:44px}
 }
 @media(max-width:800px){
   :root{--atlas-header-height:68px}
-  .atlas-site-header-inner{position:relative;display:flex;gap:8px;padding:0 32px}
+  .atlas-site-header-inner{position:relative;display:flex;gap:8px;padding:0 16px}
   .atlas-site-header .atlas-site-brand{flex:1;min-width:0}
   .atlas-site-header .atlas-site-wordmark{display:block}
   .atlas-site-header .atlas-site-wordmark small{display:none}
