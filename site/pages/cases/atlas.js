@@ -9,13 +9,14 @@ const externalIcon = href => {try {const url=new URL(href,location.href);return 
 const favoriteStore=window.AtlasFavorites;
 let favorites=favoriteStore.ids('cases');
 let previewObserver;
-let country='all'; let selected=[]; let filter='all'; let query=''; let sort='curated'; let dir='asc';
+let country='all'; let selected=[]; let filter='all'; let favoriteCategory='all'; let query=''; let sort='curated'; let dir='asc';
 let renderedLocation='';
 const categoryFilters={products:'产品',games:'游戏/IP',classics:'经典风格',showcases:'示范作品',culture:'艺术/文化',favorites:'favorites'};
 function readCollectionState(){
   const params=new URL(location.href).searchParams;
   const category=params.get('category');
   filter=Object.hasOwn(categoryFilters,category)?categoryFilters[category]:'all';
+  favoriteCategory=filter==='favorites'&&Object.hasOwn(categoryFilters,params.get('type'))&&params.get('type')!=='favorites'?categoryFilters[params.get('type')]:'all';
   country=countries.includes(params.get('country'))?params.get('country'):'all';
   query=(params.get('q')||'').trim();
   sort=params.get('sort')==='title'?'title':'curated';
@@ -33,7 +34,8 @@ function readCollectionState(){
 function writeCollectionState({replace=false,showCollection=false}={}){
   const url=new URL(location.href);
   const category=Object.keys(categoryFilters).find(key=>categoryFilters[key]===filter);
-  const values={category,country:country==='all'?null:country,q:query,sort:sort==='curated'?null:sort,dir:dir==='desc'?'desc':null};
+  const type=filter==='favorites'?Object.keys(categoryFilters).find(key=>categoryFilters[key]===favoriteCategory):null;
+  const values={category,type,country:country==='all'?null:country,q:query,sort:sort==='curated'?null:sort,dir:dir==='desc'?'desc':null};
   Object.entries(values).forEach(([key,value])=>value?url.searchParams.set(key,value):url.searchParams.delete(key));
   if(showCollection)url.hash='';
   if(url.href!==location.href)history[replace?'replaceState':'pushState'](null,'',url);
@@ -60,7 +62,16 @@ function syncSortDirection(){
   button.setAttribute('aria-pressed',String(dir==='desc'));
   button.innerHTML=siteIcon(dir==='desc'?'sortDesc':'sortAsc');
 }
-function renderCards(){let results=entries.filter(e=>(filter==='all'||filter==='favorites'&&favorites.includes(e.id)||e.category===filter)).filter(e=>country==='all'||e.country===country);if(query){results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));}if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));if(dir==='desc')results.reverse();$('#cards').innerHTML=results.map(e=>`<article class="card"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy"></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><a href="#style/${e.id}">拆解 & demo</a></div></div></article>`).join('');$('#results-label').textContent=`${labels[filter]} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;$('#empty').hidden=!!results.length;}
+function renderCards(){
+  const saved=entries.filter(e=>favorites.includes(e.id));
+  const categorySelect=$('#favorite-category');
+  categorySelect.hidden=filter!=='favorites';
+  if(filter==='favorites'){
+    categorySelect.innerHTML=`<option value="all">全部分类 ${String(saved.length).padStart(2,'0')}</option>`+Object.entries(categoryFilters).filter(([key])=>key!=='favorites').map(([,category])=>`<option value="${esc(category)}">${esc(labels[category])} ${String(saved.filter(e=>e.category===category).length).padStart(2,'0')}</option>`).join('');
+    categorySelect.value=favoriteCategory;
+  }
+  let results=(filter==='favorites'?saved.filter(e=>favoriteCategory==='all'||e.category===favoriteCategory):entries.filter(e=>filter==='all'||e.category===filter)).filter(e=>country==='all'||e.country===country);if(query){results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));}if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));if(dir==='desc')results.reverse();$('#cards').innerHTML=results.map(e=>`<article class="card"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy"></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><a href="#style/${e.id}">拆解 & demo</a></div></div></article>`).join('');$('#results-label').textContent=`${labels[filter]}${filter==='favorites'&&favoriteCategory!=='all'?' · '+labels[favoriteCategory]:''} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;$('#empty').hidden=!!results.length;
+}
 function route(){
   window.AtlasDetail?.clear();
   previewObserver?.disconnect();
@@ -108,9 +119,12 @@ function renderComparison(){
 document.addEventListener('click',event=>{const button=event.target.closest('[data-fav]');if(button)toggleFavorite(button.dataset.fav);});
 document.addEventListener('change',event=>{const item=event.target.closest('[data-compare]');if(item)selectCompare(item.dataset.compare,item.checked);});
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+  if(button.dataset.filter==='favorites'&&filter==='favorites')return;
   filter=button.dataset.filter;
+  favoriteCategory='all';
   writeCollectionState({showCollection:true});
 }));
+$('#favorite-category').addEventListener('change',event=>{favoriteCategory=event.target.value;writeCollectionState();});
 $('#search').addEventListener('input',event=>{query=event.target.value.trim();writeCollectionState({replace:true});});
 $('#sort').addEventListener('change',event=>{sort=event.target.value;writeCollectionState();});
 $('#sort-dir').addEventListener('click',()=>{dir=dir==='desc'?'asc':'desc';writeCollectionState();});
