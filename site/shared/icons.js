@@ -17,6 +17,7 @@
   "play": "<path d=\"M8 5.5v13l10.5-6.5z\" fill=\"currentColor\"/>",
   "pause": "<path d=\"M7 5h3.5v14H7zM13.5 5H17v14h-3.5z\" fill=\"currentColor\"/>",
   "filter": "<path d=\"M4 6h16M7 12h10M10 18h4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/>",
+  "compare": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M12 5v14\" stroke=\"currentColor\" stroke-width=\"1.8\"/>",
   "up": "<path d=\"M12 19V5M6 11l6-6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>",
   "arrow": "<path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>",
   "down": "<path d=\"M12 5v14M6 13l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>",

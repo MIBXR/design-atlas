@@ -65,7 +65,7 @@
     typeSelect.hidden = !state.favorites;
     if (state.favorites) {
       const saved = patterns.filter(pattern => favoriteStore.has('patterns', pattern.id));
-      typeSelect.innerHTML = `<option value="all">全部类型 ${saved.length}</option>` + Object.entries(typeLabels).map(([type, label]) => `<option value="${type}">${label} ${saved.filter(pattern => pattern.experienceTypes?.includes(type)).length}</option>`).join('');
+      typeSelect.innerHTML = '<option value="all">全部类型</option>' + Object.entries(typeLabels).filter(([type]) => saved.some(pattern => pattern.experienceTypes?.includes(type))).map(([type, label]) => `<option value="${type}">${label}</option>`).join('');
     }
     typeSelect.value = state.type;
     const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
@@ -84,6 +84,7 @@
     $('#pattern-results-label').textContent = `${title} / ${results.length} 个机制${state.source !== 'all' ? ' · ' + caseTitle(state.source) : ''}${state.query ? ' · ' + state.query : ''}`;
     $('#patterns-empty').hidden = !!results.length;
     updateNavigation(true);
+    window.AtlasCollectionFilters?.sync();
   }
   function updateNavigation(active) {
     document.querySelectorAll('#pattern-navigation a,[data-pattern-favorites]').forEach(link => {

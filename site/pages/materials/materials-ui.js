@@ -34,7 +34,7 @@
     typeSelect.hidden = !state.favorites;
     if (state.favorites) {
       const saved = materials.filter(item => favorites.has('materials',item.id));
-      typeSelect.innerHTML = `<option value="all">全部类型 ${saved.length}</option>` + types.map(type => `<option value="${esc(type)}">${esc(typeLabels[type] || type)} ${saved.filter(item => item.type === type).length}</option>`).join('');
+      typeSelect.innerHTML = '<option value="all">全部类型</option>' + types.filter(type => saved.some(item => item.type === type)).map(type => `<option value="${esc(type)}">${esc(typeLabels[type] || type)}</option>`).join('');
     }
     typeSelect.value = state.type;
     const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
@@ -48,6 +48,7 @@
     $('#material-results-label').textContent = `${title} / ${results.length} 个资源${state.query ? ' · '+state.query : ''}`;
     $('#materials-empty').hidden = !!results.length;
     navigation();
+    window.AtlasCollectionFilters?.sync();
   }
   function skillPanel(material) {
     const snapshots = material.snapshotPath;

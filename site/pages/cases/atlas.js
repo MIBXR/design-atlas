@@ -67,10 +67,11 @@ function renderCards(){
   const categorySelect=$('#favorite-category');
   categorySelect.hidden=filter!=='favorites';
   if(filter==='favorites'){
-    categorySelect.innerHTML=`<option value="all">全部分类 ${String(saved.length).padStart(2,'0')}</option>`+Object.entries(categoryFilters).filter(([key])=>key!=='favorites').map(([,category])=>`<option value="${esc(category)}">${esc(labels[category])} ${String(saved.filter(e=>e.category===category).length).padStart(2,'0')}</option>`).join('');
+    categorySelect.innerHTML='<option value="all">全部分类</option>'+Object.entries(categoryFilters).filter(([key,category])=>key!=='favorites'&&saved.some(e=>e.category===category)).map(([,category])=>`<option value="${esc(category)}">${esc(labels[category])}</option>`).join('');
     categorySelect.value=favoriteCategory;
   }
   let results=(filter==='favorites'?saved.filter(e=>favoriteCategory==='all'||e.category===favoriteCategory):entries.filter(e=>filter==='all'||e.category===filter)).filter(e=>country==='all'||e.country===country);if(query){results=results.filter(e=>JSON.stringify(e).toLowerCase().includes(query.toLowerCase()));}if(sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));if(dir==='desc')results.reverse();$('#cards').innerHTML=results.map(e=>`<article class="card"><a class="card-preview" href="#style/${e.id}" aria-label="查看${esc(e.title)}"><img src="${esc(e.preview)}" alt="${esc(e.title)}代码 demo 的实际首屏" loading="lazy"></a><div class="card-body"><div class="card-title"><h2><a href="#style/${e.id}">${esc(e.title)}</a></h2>${favoriteButton(e)}</div><p class="subtitle">${esc(e.subtitle)}</p><p class="card-summary">${esc(e.summary)}</p><div class="tags">${[...new Set([e.country,...e.tags].filter(Boolean))].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="card-bottom"><label class="compare-label"><input type="checkbox" data-compare="${e.id}" ${selected.includes(e.id)?'checked':''} aria-label="比较${esc(e.title)}">加入比较</label><a href="#style/${e.id}">拆解 & demo</a></div></div></article>`).join('');$('#results-label').textContent=`${labels[filter]}${filter==='favorites'&&favoriteCategory!=='all'?' · '+labels[favoriteCategory]:''} / ${results.length} 个条目${country!=='all'?' · '+country:''}${query?' · '+query:''}`;$('#empty').hidden=!!results.length;
+  window.AtlasCollectionFilters?.sync();
 }
 function route(){
   window.AtlasDetail?.clear();
