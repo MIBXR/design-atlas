@@ -61,6 +61,13 @@
     return `<button class="favorite ${selected ? 'selected' : ''}" data-pattern-fav="${esc(pattern.id)}" aria-label="收藏${esc(pattern.title)}" aria-pressed="${selected}">${favoriteStar}</button>`;
   }
   function renderCards() {
+    const typeSelect = $('#pattern-type');
+    typeSelect.hidden = !state.favorites;
+    if (state.favorites) {
+      const saved = patterns.filter(pattern => favoriteStore.has('patterns', pattern.id));
+      typeSelect.innerHTML = '<option value="all">全部类型</option>' + Object.entries(typeLabels).filter(([type]) => saved.some(pattern => pattern.experienceTypes?.includes(type))).map(([type, label]) => `<option value="${type}">${label}</option>`).join('');
+    }
+    typeSelect.value = state.type;
     const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
     const results = patterns.filter(pattern => (state.category === 'all' || pattern.category === state.category)
       && (!state.favorites || favoriteStore.has('patterns', pattern.id))
@@ -73,9 +80,11 @@
     $('#pattern-sort').value=state.sort;
     const direction=$('#pattern-sort-dir');direction.setAttribute('aria-label',state.dir==='desc'?'反序':'正序');direction.setAttribute('aria-pressed',String(state.dir==='desc'));direction.innerHTML=AtlasIcons.svg(state.dir==='desc'?'sortDesc':'sortAsc');
     $('#pattern-cards').innerHTML = results.map(pattern => `<article class="card"><a class="card-preview" href="${patternHref(pattern.id)}" aria-label="查看${esc(pattern.title)}与实操"><img src="${esc(entries.find(entry => entry.id === pattern.sources[0].caseId)?.preview || '')}" alt="${esc(caseTitle(pattern.sources[0].caseId))}来源案例首屏" loading="lazy"></a><div class="card-body"><div class="card-title"><h2><a href="${patternHref(pattern.id)}">${esc(pattern.title)}</a></h2>${favoriteButton(pattern)}</div><p class="subtitle">来源 · ${esc(caseTitle(pattern.sources[0].caseId))}</p><p class="card-summary">${esc(pattern.summary)}</p><div class="tags">${badges(pattern)}<span class="tag">${esc(roleLabels[pattern.composition?.role] || '可复用机制')}</span></div><div class="card-bottom"><a href="${caseHref(pattern.sources[0].caseId)}">查看来源案例</a><a href="${patternHref(pattern.id)}">机制 & 实操</a></div></div></article>`).join('');
-    $('#pattern-results-label').textContent = `${state.favorites ? '我的收藏 · ' : ''}${state.type !== 'all' ? typeLabels[state.type] : state.category === 'all' ? '全部设计巧思' : state.category} / ${results.length} 个机制${state.source !== 'all' ? ' · ' + caseTitle(state.source) : ''}${state.query ? ' · ' + state.query : ''}`;
+    const title = state.favorites ? '我的收藏' + (state.type !== 'all' ? ' · ' + typeLabels[state.type] : '') : state.type !== 'all' ? typeLabels[state.type] : state.category === 'all' ? '全部设计巧思' : state.category;
+    $('#pattern-results-label').textContent = `${title} / ${results.length} 个机制${state.source !== 'all' ? ' · ' + caseTitle(state.source) : ''}${state.query ? ' · ' + state.query : ''}`;
     $('#patterns-empty').hidden = !!results.length;
     updateNavigation(true);
+    window.AtlasCollectionFilters?.sync();
   }
   function updateNavigation(active) {
     document.querySelectorAll('#pattern-navigation a,[data-pattern-favorites]').forEach(link => {
@@ -188,6 +197,13 @@
     $('#pattern-category').innerHTML = '<option value="all">全部用途</option>' + categories.map(category => `<option value="${esc(category)}">${esc(category)}</option>`).join('');
     $('#pattern-source').innerHTML = '<option value="all">全部案例</option>' + sourceEntries.map(entry => `<option value="${esc(entry.id)}">${esc(entry.title)}</option>`).join('');
     $('#pattern-navigation').innerHTML = '<a class="nav-item" href="#patterns"><span>全部设计巧思</span><b>' + patterns.length + '</b></a>' + Object.entries(typeLabels).map(([type, label]) => '<a class="nav-item" data-pattern-type="' + type + '" href="#patterns?type=' + type + '"><span>' + label + '</span><b>' + patterns.filter(pattern => pattern.experienceTypes?.includes(type)).length + '</b></a>').join('');
+    document.querySelectorAll('[data-pattern-favorites]').forEach(link => link.addEventListener('click', event => {
+      event.preventDefault();
+      if (state.favorites) return;
+      state.favorites = true;
+      state.type = 'all';
+      location.hash = `patterns${stateQuery()}`;
+    }));
     document.addEventListener('click', event => {
       const button = event.target.closest('[data-pattern-fav]');
       if (button) favoriteStore.toggle('patterns', button.dataset.patternFav);

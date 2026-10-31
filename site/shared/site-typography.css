@@ -30,6 +30,7 @@ body .search input::placeholder{color:var(--atlas-muted)}
 body .search:focus-within{border-color:var(--accent-1);outline:2px solid var(--accent-1);outline-offset:0}
 body .search kbd{box-sizing:border-box;display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border:1px solid var(--atlas-surface-line);border-radius:var(--r-sm);font:400 12px/1 var(--atlas-font-mono);color:var(--atlas-muted)}
 body .select-wrap>select{padding:0 36px 0 14px;background-image:none}
+body :is(.collection-tools,.collection-filter-dialog) select{appearance:none;box-sizing:border-box;height:44px;min-height:44px;padding:0 36px 0 14px;border:1px solid var(--atlas-surface-line);border-radius:var(--r);background-color:var(--atlas-surface);color:var(--atlas-ink);font-size:14px;line-height:1.5;cursor:pointer}
 .select-wrap{position:relative;display:inline-flex;min-width:0;vertical-align:middle}
 .select-wrap>select{width:100%;min-width:0}
 .select-wrap>.atlas-icon{position:absolute;right:12px;top:14px;width:16px;height:16px;pointer-events:none}

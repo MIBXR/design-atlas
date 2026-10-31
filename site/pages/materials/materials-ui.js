@@ -30,6 +30,13 @@
     const link=$('#material-favorites');link.classList.toggle('active',state.favorites);link.setAttribute('aria-current',state.favorites?'page':'false');$('#material-fav-count').textContent=favorites.ids('materials').length;
   }
   function cards() {
+    const typeSelect = $('#material-type');
+    typeSelect.hidden = !state.favorites;
+    if (state.favorites) {
+      const saved = materials.filter(item => favorites.has('materials',item.id));
+      typeSelect.innerHTML = '<option value="all">全部类型</option>' + types.filter(type => saved.some(item => item.type === type)).map(type => `<option value="${esc(type)}">${esc(typeLabels[type] || type)}</option>`).join('');
+    }
+    typeSelect.value = state.type;
     const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
     const results = materials.filter(item => (state.type === 'all' || item.type === state.type) && (state.category === 'all' || item.category === state.category) && (!state.favorites || favorites.has('materials',item.id)) && terms.every(term => [item.title,item.summary,item.category,...item.tags,...item.useCases,...(item.workflow || []),...(item.demos || []).map(demo => demo.title + ' ' + demo.summary)].join(' ').toLocaleLowerCase().includes(term)));
     if(state.sort==='title')results.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));
@@ -37,9 +44,11 @@
     $('#material-sort').value=state.sort;
     const direction=$('#material-sort-dir');direction.setAttribute('aria-label',state.dir==='desc'?'反序':'正序');direction.setAttribute('aria-pressed',String(state.dir==='desc'));direction.innerHTML=AtlasIcons.svg(state.dir==='desc'?'sortDesc':'sortAsc');
     $('#material-cards').innerHTML = results.map(item => `<article class="card"><a class="card-preview" href="${href(item.id)}" aria-label="查看${esc(item.title)}使用方法"><img src="${esc(item.preview)}" alt="${esc(item.title)}代表性预览" loading="lazy"></a><div class="card-body"><div class="card-title"><h2><a href="${href(item.id)}">${esc(item.title)}</a></h2>${favorite(item)}</div><p class="subtitle">${esc(item.upstream.repository || new URL(item.upstream.url).hostname)} · ${['agent-skill','prompt-kit'].includes(item.type) ? '工作流与原文快照' : item.demos.length + ' 个互动样例'}</p><p class="card-summary">${esc(item.summary)}</p><div class="tags"><span class="tag">${esc(typeLabels[item.type] || item.type)}</span>${item.tags.slice(0,3).map(tag => `<span class="tag">${esc(tag)}</span>`).join('')}</div><div class="card-bottom"><a href="${esc(item.upstream.url)}" target="_blank" rel="noopener noreferrer">来源仓库</a><a href="${href(item.id)}">${['agent-skill','prompt-kit'].includes(item.type) ? '工作流与使用方法' : '样例与使用方法'}</a></div></div></article>`).join('');
-    $('#material-results-label').textContent = `${state.favorites ? '我的收藏' : state.type === 'all' ? '全部内容素材' : typeLabels[state.type] || state.type} / ${results.length} 个资源${state.query ? ' · '+state.query : ''}`;
+    const title = state.favorites ? '我的收藏' + (state.type !== 'all' ? ' · ' + (typeLabels[state.type] || state.type) : '') : state.type === 'all' ? '全部内容素材' : typeLabels[state.type] || state.type;
+    $('#material-results-label').textContent = `${title} / ${results.length} 个资源${state.query ? ' · '+state.query : ''}`;
     $('#materials-empty').hidden = !!results.length;
     navigation();
+    window.AtlasCollectionFilters?.sync();
   }
   function skillPanel(material) {
     const snapshots = material.snapshotPath;
@@ -89,14 +98,21 @@
       else $('#material-detail').innerHTML = '<div class="detail-top"><a class="back" href="#materials">返回素材库</a></div><h1>没有找到这个素材</h1><p>请回到素材库重新选择。</p>';
     } else cards();
   }
-  function filter() {
+  function filter({replace = false} = {}) {
     state.query = $('#material-search').value.trim();state.type = $('#material-type').value;state.category = $('#material-category').value;
-    history.replaceState(null,'', '#materials' + query());cards();
+    history[replace ? 'replaceState' : 'pushState'](null,'', '#materials' + query());cards();
   }
 
   $('#material-type').insertAdjacentHTML('beforeend',types.map(type => `<option value="${esc(type)}">${esc(typeLabels[type] || type)}</option>`).join(''));
   $('#material-category').insertAdjacentHTML('beforeend',categories.map(category => `<option value="${esc(category)}">${esc(category)}</option>`).join(''));
-  $('#material-search').addEventListener('input',filter);
+  $('#material-favorites').addEventListener('click',event => {
+    event.preventDefault();
+    if (state.favorites) return;
+    state.favorites = true;
+    state.type = 'all';
+    location.hash = 'materials' + query();
+  });
+  $('#material-search').addEventListener('input',() => filter({replace:true}));
   $('#material-type').addEventListener('change',filter);$('#material-category').addEventListener('change',filter);
   $('#material-sort').addEventListener('change',event=>{state.sort=event.target.value;history.replaceState(null,'','#materials'+query());cards();});
   $('#material-sort-dir').addEventListener('click',()=>{state.dir=state.dir==='asc'?'desc':'asc';history.replaceState(null,'','#materials'+query());cards();});
