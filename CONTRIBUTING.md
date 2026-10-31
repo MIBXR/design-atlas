@@ -286,10 +286,10 @@ npm run check
 
 ### 素材分发与发布
 
-完整原始素材随源码收录，来源与权利由案例素材清单记录。`npm run build:local` 保留完整素材；`npm run build:site` 根据当前源码提交生成发布素材清单，至少 128 KiB 的图像、音视频、字体等从固定 GitHub 提交加载，原文快照同样适用。Site 请求入口将原素材路径临时跳转到对应 GitHub 地址，其余请求交给静态资源绑定；快照原文与相对目录结构保持原样。
+完整原始素材随源码收录，来源与权利由案例素材清单记录。`npm run build:local` 保留完整素材；`npm run build:site` 根据当前源码提交生成发布素材清单，至少 128 KiB 的图像、音视频、字体等从固定 GitHub 提交加载，原文快照同样适用。发布包的 `_redirects` 将原素材路径临时跳转到对应 GitHub 地址，快照原文与相对目录结构保持原样。
 
 仓库内的 `data/asset-sources.js` 用于本地素材回退，通过 `node scripts/build-asset-sources.mjs --commit <已推送素材提交的完整 SHA>` 生成；发布构建独立生成 `dist/data/asset-sources.js`。
 
-站点打包从干净工作树执行，发布使用已通过 PR 合并并推送的源提交；部署索引的 `source.commit` 和 `baseUrl` 指向该提交。发布输出为 `dist/client/` 静态内容和 `dist/server/` 请求入口，`.openai/hosting.json` 保留 Site 身份并使用 Worker 发布。新会话按默认分支发现内容。普通新增内容由构建收录；数据协议变化时同步获取脚本。
+静态打包从干净工作树执行，发布使用已通过 PR 合并并推送的源提交；部署索引的 `source.commit` 和 `baseUrl` 指向该提交。新会话按默认分支发现内容。普通新增内容由构建收录；数据协议变化时同步获取脚本。
 
 托管方需要预构建发布 checkout 时，先运行 `npm run build:site`，再用 `node scripts/export-site.mjs --checkout <绝对路径>` 同步 `dist/`，由平台 helper 提交和发布。发布 checkout 的 `dist/**` 按 `-text` 保存。发布成功后打开线上页面确认可用。

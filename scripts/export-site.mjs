@@ -39,11 +39,11 @@ export function exportSite(checkout, {sourceRoot = root} = {}) {
   const sourceCommit = git(sourceRoot, ['rev-parse', 'HEAD']);
   const sourceHosting = json(path.join(sourceRoot, '.openai', 'hosting.json'));
   const nativeHosting = json(path.join(checkout, '.openai', 'hosting.json'));
-  if (!sourceHosting.project_id || nativeHosting.project_id !== sourceHosting.project_id) throw new Error('Native hosting must identify the same Site.');
+  if (!sourceHosting.project_id || nativeHosting.project_id !== sourceHosting.project_id || nativeHosting.static?.directory !== 'dist') throw new Error('Native hosting must identify the same Site and serve dist.');
   const sourceDist = plainPath(path.join(sourceRoot, 'dist'));
   const targetDist = plainPath(path.join(checkout, 'dist'));
   if (fs.existsSync(targetDist) && !fs.lstatSync(targetDist).isDirectory()) throw new Error('Existing dist must be a directory.');
-  const catalog = json(path.join(sourceDist, 'client', 'agent', 'catalog.json'));
+  const catalog = json(path.join(sourceDist, 'agent', 'catalog.json'));
   if (catalog.source?.repository !== repository || catalog.source?.commit !== sourceCommit) throw new Error('Build dist from the current committed source before exporting.');
   const staging = fs.mkdtempSync(path.join(checkout, '.site-export-stage-'));
   const stagedDist = path.join(staging, 'dist');
@@ -60,7 +60,6 @@ export function exportSite(checkout, {sourceRoot = root} = {}) {
       movedPrevious = true;
     }
     fs.renameSync(stagedDist, targetDist);
-    fs.copyFileSync(path.join(sourceRoot, '.openai', 'hosting.json'), path.join(checkout, '.openai', 'hosting.json'));
     return {checkout, sourceCommit};
   } catch (error) {
     if (movedPrevious && !fs.existsSync(targetDist)) fs.renameSync(previousDist, targetDist);

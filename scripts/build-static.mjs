@@ -7,7 +7,7 @@ import {buildAssetSources, loadAssetSources, serializeAssetSources} from './buil
 import {assertRepositoryLineEndings} from './check-line-endings.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const dist = path.resolve(root, 'dist');
+const output = path.resolve(root, 'dist');
 export const files = ['index.html', 'cases.html', 'patterns.html', 'materials.html', 'lab.html', 'agent.html', 'docs.html', 'asset-cache-worker.js', 'README.md', 'CONTRIBUTING.md', 'AGENTS.md'];
 const runtimeFiles = ['data/asset-sources.js', 'site/runtime/asset-runtime.js', 'site/runtime/asset-cache.js', 'asset-cache-worker.js', 'site/runtime/case-loading.js', 'site/runtime/case-loading.css'];
 export const folders = ['site', 'data', 'demos', 'entries', 'previews', 'prompts', 'docs', 'agent', 'scripts/templates'];
@@ -109,8 +109,7 @@ function injectAssets(text, documentPath, assetsMode) {
 export function prepareStatic(assetsMode = 'local') {
   assertRepositoryLineEndings(root);
   if (!['local', 'github'].includes(assetsMode)) throw new Error('Asset mode must be local or github.');
-  if (path.relative(root, dist) !== 'dist' || fs.lstatSync(dist, {throwIfNoEntry:false})?.isSymbolicLink()) throw new Error('Static output must be the real dist directory inside this repository.');
-  const output = assetsMode === 'github' ? path.join(dist, 'client') : dist;
+  if (path.relative(root, output) !== 'dist' || fs.lstatSync(output, {throwIfNoEntry:false})?.isSymbolicLink()) throw new Error('Static output must be the real dist directory inside this repository.');
   const includedRuntime = runtimeFiles.filter(name => fs.existsSync(path.join(root, name)));
   const runtimeReady = includedRuntime.includes('site/runtime/asset-runtime.js') && includedRuntime.includes('data/asset-sources.js');
   if (assetsMode === 'github' && !runtimeReady) throw new Error('GitHub mode requires data/asset-sources.js and site/runtime/asset-runtime.js in the source checkout.');
@@ -122,8 +121,8 @@ export function prepareStatic(assetsMode = 'local') {
   const sourceCommit = revision.stdout?.trim();
   if (revision.status !== 0 || clean.status !== 0 || clean.stdout.trim() || !/^[a-f\d]{40}$/.test(sourceCommit)) throw new Error('Commit the verified source before static packaging so Agent source URLs identify the exact original bytes.');
   const sources = assetsMode === 'github' ? buildAssetSources(root, sourceCommit) : includedRuntime.includes('data/asset-sources.js') ? loadAssetSources() : {assets:{}};
-  fs.rmSync(dist, {recursive:true, force:true});
-  fs.mkdirSync(output, {recursive:true});
+  fs.rmSync(output, {recursive:true, force:true});
+  fs.mkdirSync(output);
   const omitted = new Set(assetsMode === 'github' ? Object.keys(sources.assets) : []);
   let omittedBytes = 0;
   for (const name of [...files, ...folders]) {
@@ -137,11 +136,8 @@ export function prepareStatic(assetsMode = 'local') {
   }
   if (assetsMode === 'github') {
     fs.writeFileSync(path.join(output, 'data/asset-sources.js'), serializeAssetSources(sources), 'utf8');
-    const media = Object.fromEntries(Object.entries(sources.assets).map(([filename, asset]) => ['/' + filename, asset.url]));
-    const server = path.join(dist, 'server');
-    fs.mkdirSync(server, {recursive:true});
-    fs.writeFileSync(path.join(server, 'index.js'), `const media = ${JSON.stringify(media)};\nexport default {\n  fetch(request, env) {\n    const target = media[decodeURIComponent(new URL(request.url).pathname)];\n    if (target) return new Response(null, {status:302, headers:{Location:target, 'Cache-Control':'no-store'}});\n    return env.ASSETS.fetch(request);\n  }\n};\n`, 'utf8');
-    fs.writeFileSync(path.join(server, 'wrangler.json'), JSON.stringify({main:'index.js', compatibility_date:'2026-10-30', assets:{directory:'../client', binding:'ASSETS', run_worker_first:true, not_found_handling:'none'}}, null, 2) + '\n', 'utf8');
+    const redirects = Object.entries(sources.assets).map(([filename, asset]) => `/${filename.split('/').map(encodeURIComponent).join('/')} ${asset.url} 302`);
+    fs.writeFileSync(path.join(output, '_redirects'), redirects.join('\n') + '\n', 'utf8');
   }
   let markedDocuments = 0;
   let totalBytes = 0;
