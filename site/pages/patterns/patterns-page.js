@@ -42,7 +42,9 @@
     event.preventDefault(); window.AtlasPatterns.focusSearch();
   });
   function restoreRoute() {
-    if (renderedLocation !== location.href) route();
+    if (renderedLocation === location.href) return;
+    renderedLocation = location.href;
+    window.AtlasViewTransition(route);
   }
   window.addEventListener('hashchange', restoreRoute);
   window.addEventListener('popstate', restoreRoute);

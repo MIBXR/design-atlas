@@ -1,6 +1,12 @@
 (() => {
   'use strict';
   if (document.documentElement?.dataset.labEmbed === 'home') return;
+  window.AtlasViewTransition = update => {
+    if (document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return document.startViewTransition(update);
+    }
+    return update();
+  };
   const themeControl = document.querySelector('[data-theme-toggle]');
   if (themeControl) {
     const cacheButton = document.createElement('button');

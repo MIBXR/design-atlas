@@ -149,7 +149,8 @@ $('.skip').addEventListener('click',event=>{event.preventDefault();$('#main').fo
 function restoreRoute(){
   // Back/Forward can emit both events for one hash navigation. Render once.
   if(renderedLocation===location.href)return;
-  route();$('#main').focus({preventScroll:true});
+  renderedLocation=location.href;
+  window.AtlasViewTransition(()=>{route();$('#main').focus({preventScroll:true});});
 }
 window.addEventListener('popstate',restoreRoute);
 window.addEventListener('hashchange',restoreRoute);

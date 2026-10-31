@@ -334,10 +334,10 @@ document.addEventListener('click', event => {
   if (nextFile === file && url.hash) return;
   event.preventDefault();
   history.pushState(null, '', url);
-  readDocument({focus:true});
+  window.AtlasViewTransition(() => readDocument({focus:true}));
 });
 window.addEventListener('popstate', () => {
-  if ((new URLSearchParams(location.search).get('file') || 'docs/guide.md') !== file) readDocument({focus:true});
+  if ((new URLSearchParams(location.search).get('file') || 'docs/guide.md') !== file) window.AtlasViewTransition(() => readDocument({focus:true}));
   else focusDocument();
 });
 function syncSearchHeight() {

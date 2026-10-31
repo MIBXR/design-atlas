@@ -104,6 +104,6 @@
   document.addEventListener('click',event => {const button = event.target.closest('[data-material-fav]');if (button) favorites.toggle('materials',button.dataset.materialFav);});
   document.addEventListener('keydown',event => {if (event.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) && !$('#materials-library').hidden ) {event.preventDefault();$('#material-search').focus();}});
   favorites.subscribe(({error}) => {if (!$('#materials-library').hidden) cards();else navigation();document.querySelectorAll('[data-material-fav]').forEach(button => {const selected = favorites.has('materials',button.dataset.materialFav);button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));window.AtlasDetail.paintFavorite(button,selected);});if (error) toast(error);});
-  window.addEventListener('hashchange', () => {route();window.scrollTo({top:0,behavior:'instant'});});
+  window.addEventListener('hashchange', () => window.AtlasViewTransition(() => {route();window.scrollTo({top:0,behavior:'instant'});}));
   route();
 })();
