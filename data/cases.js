@@ -4703,5 +4703,171 @@ window.ATLAS_CASES = [
       "control": "来源没有音频、背景音乐或声音控制。",
       "interactionRole": "摄影、排版、滚动与局部悬停承担叙事，不添加声音。"
     }
+  },
+  {
+    "id": "atlas-sister-sites",
+    "order": 72,
+    "title": "Atlas 姊妹站 · 参考库界面骨架",
+    "subtitle": "一套骨架，两种品牌：Web Atlas 与 Motion Atlas 的界面决策",
+    "category": "示范作品",
+    "implementation": "reference-study",
+    "country": "中国",
+    "tags": [
+      "示范作品",
+      "参考库",
+      "品牌主题",
+      "配色角色",
+      "两栏吸附",
+      "文档阅读",
+      "页面过渡"
+    ],
+    "summary": "用列表、详情与文档三页抽象 Web Atlas 和 Motion Atlas 的共享骨架，切换品牌、深浅主题与说明长度，观察五层主题色、当前项分级、两栏吸附和固定顶栏过渡怎样协作。",
+    "accent": "#d4ef76",
+    "background": "#f4f5ee",
+    "principles": [
+      "共享顶栏、侧栏、网格、控件与阅读顺序；品牌通过主题色、标志、圆角与底色色相表达。",
+      "深色强调、强调文字、实心底、高亮条、柔和底分别承担配色职责，实心底文字使用独立墨色。",
+      "顶栏当前页实心，侧栏当前项柔和；非当前导航悬停使用中性次级面与正文色。",
+      "详情保持一个页面滚动条，舞台始终贴住操作栏下方；舞台更长时说明栏也吸附。",
+      "文档查找、正文阅读与章节定位各占一栏，正文保留行宽上限；页面交接中顶栏保持原位。"
+    ],
+    "productFocus": "把 MIBXR 两个参考库在固定提交中的界面机制制作成可操作的示范骨架，供观察与迁移；12 个条目名称、摘要和 CSS 图版为本案例虚构内容。",
+    "interaction": [
+      "品牌切换在同一 DOM 上更新 data-brand；主题按跟随系统、深色、浅色循环，四组变量分别控制页面底、表面、文字、五层主题色、标志与圆角，页面不刷新。",
+      "顶栏当前页与手机全站导航当前页使用 --accent-3 底和 --accent-3-ink 字；侧栏和本文目录使用 --accent-4 底、--accent-2 字与 650 字重，非当前导航悬停使用次级面与正文色。",
+      "列表可搜索标题、摘要和标签，按编号或名称双向排序，分类与收藏筛选同步结果；标题和预览进入详情，收藏在列表与详情共享并可导入、导出。",
+      "详情以 ResizeObserver 读取顶栏、操作栏、舞台列与说明栏：1160px 起舞台列始终 sticky，说明比舞台短时同时 sticky；top 为顶栏 68px 加操作栏实高加 24px，两栏在容器末尾按自然 sticky 边界结束；1159px 及以下单列。",
+      "hash 驱动列表、详情与文档的 DOM 更新；支持 startViewTransition 且不减少动态时开启 140ms ease-out 根过渡，atlas-header 快照无动画、旧快照隐藏；不支持或减少动态时直接更新。",
+      "舞台工具条切换桌面与手机画面、播放与暂停，并以右栏较长／较短按钮切换 8 节或 2 节说明；上一个和下一个更换虚构作品，复制 Prompt 复制完整的实现提示词。",
+      "文档左侧按标题搜索并折叠分组，长标题单行省略；右侧本文目录随滚动同步高亮，点击回到对应 h2／h3；仓库 Markdown 链接在文档阅读器打开。",
+      "800px 及以下顶栏用单个菜单打开本页目录或全站导航，前者单列、后者两列；品牌与主题控制位于面板底部，选择、外部点击或 Escape 关闭；文档本文目录通过右下角按钮打开。",
+      "卡片悬停上移 3px、增加阴影、内层画面放大 1.025，卡片底色保持原样；按钮悬停使用 --accent-4 底、--accent-1 字与边框，焦点轮廓使用 --accent-1。"
+    ],
+    "theme": "Web 浅色为偏绿页面底、白内容面，深色为中性近黑底与微绿内容面；Motion 使用暖浅底与微暖深色表面。品牌图形和装饰色独立于五个内容配色角色。",
+    "constraints": [
+      "数值取自 Web Atlas 2541e56a21d5321717b9397c14ae09462d562ee4 与 Motion Atlas 80aac18cd2fcef4a97e53b1ef9227a223136ff60 的 site/ 源码。",
+      "独立 Demo 由 index.html、style.css、app.js 组成，不引用 site/ 文件；字体使用两站共用的系统字体栈。",
+      "卡片与舞台画面使用 CSS 渐变与几何形状；研究原件保存在 source/，保持原始字节。",
+      "列表、详情与文档使用相同品牌层；800px 及以下使用手机菜单，1159px 及以下详情回到单列。",
+      "研究中记录被否决方案与数值；源码保持当前实现，复现范围与线上对照见 fidelity.md。"
+    ],
+    "useCases": [
+      "参考库与素材库",
+      "品牌主题系统",
+      "双栏作品详情",
+      "项目文档中心",
+      "设计机制教学"
+    ],
+    "avoid": [
+      "把全部强调角色合并为一个色值",
+      "用导航悬停模拟持续当前状态",
+      "把两栏各自设为滚动容器",
+      "把虚构案例文案写成真实机构资料"
+    ],
+    "tokens": {
+      "palette": [
+        "#f4f5ee",
+        "#ffffff",
+        "#dcded4",
+        "#252822",
+        "#62695b",
+        "#4b6118",
+        "#5f7a1f",
+        "#d4ef76",
+        "#eef6d2"
+      ],
+      "type": "Inter, Segoe UI Variable, Segoe UI, PingFang SC, Microsoft YaHei, sans-serif；等宽 JetBrains Mono, Cascadia Mono, Consolas, monospace；界面 12／14／16／20／28px，列表标题最大 52px。",
+      "layout": "Web 圆角 4／7／10px；顶栏 68px、水平 32／24／16px；侧栏 228px；卡片最小 300px、间距 18px、内边距 16px；详情 2:1、间距 32px；文档正文最大 860px。",
+      "motion": "根 View Transition 140ms ease-out、顶栏无动画；卡片上移 3px、预览放大 1.025；减少动态直接更新页面并停止舞台形状动画。",
+      "accentRoles": {
+        "light": {
+          "accent1": "#4b6118",
+          "accent2": "#5f7a1f",
+          "accent3": "#d4ef76",
+          "accent3Ink": "#252822",
+          "accentMark": "#d4ef76",
+          "accent4": "#eef6d2"
+        },
+        "dark": {
+          "accent1": "#d4ef76",
+          "accent2": "#bcd86a",
+          "accent3": "#d4ef76",
+          "accent3Ink": "#252822",
+          "accentMark": "#526438",
+          "accent4": "#2a3320"
+        }
+      }
+    },
+    "composition": {
+      "color": "浅色偏绿底与白卡片、深色中性底与微绿卡片；五个主题色角色区分链接、强调字、主操作、高亮条和柔和状态。Motion 替换相同角色的品牌数值。",
+      "typography": "系统无衬线与等宽元数据共用两站字体栈；两行大标题、20px 卡片标题、16px 正文与 12px 标签形成稳定层级。",
+      "layout": "列表为 228px 侧栏与自填充网格，详情为 2:1 吸附双栏，文档为 228px 目录、最大 860px 正文与右侧章节列表。",
+      "imagery": "12 张虚构作品图版采用 CSS 渐变、圆、三角、斜矩形与细线；舞台使用同一图版规则并提供手机画面宽度。",
+      "shape": "Web 交叉长条与小圆角，Motion 双圆与较大圆角及胶囊当前项；卡片内层边框与次级面区分内容深度。",
+      "hierarchy": "品牌和页面位置 → 标题与设计决策 → 当前筛选或舞台 → 内容说明与取材动作；文档把查找和章节定位放在正文两侧。",
+      "motion": "主体短淡化保持浏览连续，顶栏独立快照保留位置感；轻微卡片位移与画面缩放反馈可进入详情，舞台播放由用户控制。",
+      "coherence": "三种页面沿用相同字体、控件高度、间距、图标与配色职责；品牌切换保留布局、导航和当前阅读任务。"
+    },
+    "sources": [
+      {
+        "title": "Web Atlas · 固定提交源码",
+        "url": "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+        "type": "实例",
+        "note": "Web 配色、字体、顶栏、侧栏、卡片、文档与详情吸附、过渡的数值来源。"
+      },
+      {
+        "title": "Motion Atlas · 固定提交源码",
+        "url": "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site",
+        "type": "实例",
+        "note": "Motion 品牌路径、暖色主题、圆角和胶囊当前项及共享骨架来源。"
+      },
+      {
+        "title": "Web Atlas · 线上界面",
+        "url": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+        "type": "实例",
+        "note": "1440×900 下顶栏、列表、详情与文档的对照对象。"
+      },
+      {
+        "title": "Motion Atlas · 线上界面",
+        "url": "https://motion-atlas.mibxranime.chatgpt.site/",
+        "type": "实例",
+        "note": "同视口下品牌差异与骨架数值的对照对象。"
+      }
+    ],
+    "prompt": "为一个参考库制作可运行的列表、详情、文档三页，hash 路由为 #list、#detail、#docs。共用 68px 通栏顶栏和 Inter 系统字体栈，左右内边距 32px、801–1159px 为 24px、800px 及以下为 16px。Web 品牌用固定源码中的交叉长条、小圆角 4／7／10px；Motion 用双圆、8／12／16px 和 999px 胶囊当前项。四组品牌与深浅主题变量直接沿用本案例源码。把主题色分成深色强调、强调文字、实心底与独立墨色、高亮条、柔和底五个角色；顶栏当前项实心、侧栏当前项柔和，非当前导航悬停用中性次级面。列表左栏 228px，主区两行大标题、设计决策折叠、搜索、双向排序及 12 张虚构案例卡；卡片最小 300px、间距 18px、内边距 16px，CSS 几何图版保持独立配色。详情采用 2:1 双栏与 32px 间距，操作栏吸附，舞台列在 1160px 起始终吸附于顶栏加操作栏实高加 24px 处，说明较短时也吸附，只有页面一个滚动条；提供桌面／手机、播放／暂停及 8／2 节说明切换。文档为三栏，左侧分组标题搜索、正文最大 860px、右侧滚动同步目录，示例文含表格和代码块。800px 及以下通过一个菜单切换单列本页目录与两列全站导航，品牌和主题在底部。页面 DOM 更新用 startViewTransition，根 140ms ease-out、顶栏 atlas-header 不动；不支持或减少动态时直接切换。卡片悬停只上移 3px、加阴影与图版放大 1.025，按钮悬停用柔和主题底，键盘焦点用深色强调。主题按系统、深色、浅色循环，舞台默认暂停，无声音。",
+    "negativePrompt": "不使用外部图片，不从 site/ 加载运行文件，不改变固定提交配色与标志路径，不给顶栏过渡加淡化，不让导航悬停与当前项共用主题色底，不为两栏增加内部滚动，不把虚构条目当成真实机构。",
+    "demo": "demos/cases/atlas-sister-sites/index.html",
+    "preview": "previews/cases/atlas-sister-sites.jpg",
+    "research": "docs/cases/atlas-sister-sites.md",
+    "fidelity": "demos/cases/atlas-sister-sites/fidelity.md",
+    "assetManifest": "demos/cases/atlas-sister-sites/assets-manifest.json",
+    "referenceUrl": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+    "capturedAt": "2026-10-31",
+    "patternIds": [
+      "accent-role-tiers",
+      "shorter-column-sticky",
+      "current-item-emphasis-tiers",
+      "persistent-header-page-transition"
+    ],
+    "exercise": "在 1440×900 与 390×844 下切换 Web／Motion 和浅／深主题，依次浏览三页，操作搜索、排序、收藏、菜单、文档目录与舞台；切换右栏长度并滚到底，观察吸附和底部对齐；对照固定源码及 fidelity 中的尺寸。",
+    "themeBehavior": {
+      "mode": "system-and-manual",
+      "default": "system",
+      "control": "主题按钮按跟随系统、深色、浅色循环，品牌分段控件独立切换 Web 与 Motion；两种偏好保存在本地。",
+      "designReason": "布局和配色职责保持一致，通过品牌数值、标志与圆角展示两站差异；作品图版保留原色。"
+    },
+    "soundBehavior": {
+      "kind": "none",
+      "control": "无声音；舞台播放只控制 CSS 形状动画。",
+      "interactionRole": "通过布局、状态颜色和页面交接表达反馈。"
+    },
+    "migration": {
+      "entrypoint": "demos/cases/atlas-sister-sites/index.html",
+      "files": [
+        "demos/cases/atlas-sister-sites/style.css",
+        "demos/cases/atlas-sister-sites/app.js"
+      ],
+      "editGuide": "app.js 的 cases、noteSections、docsPage() 分别保存图版与文案、详情说明和文章；style.css 开头四组变量负责品牌与主题。"
+    }
   }
 ];

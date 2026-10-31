@@ -1,5 +1,96 @@
 window.ATLAS_PATTERNS = [
   {
+    "id": "accent-role-tiers",
+    "title": "主题色分层：五个配色角色",
+    "category": "视觉构成",
+    "experienceTypes": [
+      "visual"
+    ],
+    "summary": "让同一品牌色按链接、强调字、实心底、高亮条与柔和底分别工作。",
+    "mechanism": "先规定五个配色职责，再按品牌与深浅主题赋值；实心底配独立墨色，高亮条可在深色主题单独降低明度，品牌标志与装饰色独立保存。",
+    "trigger": "阅读链接、标题、当前项与主操作，或切换品牌和主题",
+    "effect": "相同功能在不同品牌与主题中保留稳定的颜色语义。",
+    "useCases": [
+      "品牌主题系统",
+      "参考库与文档界面",
+      "同时有深浅主题的内容工具"
+    ],
+    "avoid": [
+      "把所有强调位置合并成一个色值",
+      "用装饰色替代正文链接色"
+    ],
+    "constraints": [
+      "五个角色分别用于深色强调、强调文字、实心底、高亮条和柔和底；实心字与实心底成对使用。",
+      "沿用来源各主题实际值，品牌图形和作品图版保留独立配色。"
+    ],
+    "composition": {
+      "role": "foundation",
+      "notes": "负责颜色在界面中的职责，与当前项分级组合；版式和页面路由分别由其他机制承担。",
+      "pairsWellWith": [
+        "current-item-emphasis-tiers"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "链接和按钮使用原生元素，焦点轮廓用 --accent-1；当前项同时提供 aria-current 和字重。",
+      "reducedMotion": "角色和值不依赖运动，减少动态时主题直接更新。"
+    },
+    "parameters": [
+      {
+        "name": "Web 浅色角色",
+        "value": "#4b6118 / #5f7a1f / #d4ef76 / #d4ef76 / #eef6d2",
+        "note": "固定提交源码，顺序为强调、强调字、实心、高亮、柔和。"
+      },
+      {
+        "name": "Web 深色高亮",
+        "value": "#526438",
+        "note": "固定提交源码；浅色标题对其为 5.62，按钮仍用亮绿。"
+      },
+      {
+        "name": "Motion 浅色角色",
+        "value": "#b8330f / #d0401a / #ef4d24 / rgba(239,77,36,.35) / #fbe4dc",
+        "note": "固定提交源码，实心文字 #ffffff。"
+      }
+    ],
+    "prompt": "把品牌主题分成深色强调 --accent-1、强调文字 --accent-2、实心底 --accent-3、高亮条 --accent-mark、柔和底 --accent-4 五个角色。实心字使用 --accent-3-ink。链接与焦点用 -1，眉题和侧栏当前项文字用 -2，顶栏当前页和复制 Prompt 用 -3，高亮条与按钮底分别赋值，侧栏状态用 -4。为品牌与深浅主题定义完整变量组，切换只更新根选择器；标志、装饰与作品图版独立配色。数值从来源 style.css 取用，研究原件的对比度见 docs；当前状态同时有文字、字重或 aria-current，减少动态时直接切换。",
+    "sources": [
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#interaction/0",
+        "observation": "品牌切换在同一 DOM 上更新 data-brand；主题按跟随系统、深色、浅色循环，四组变量分别控制页面底、表面、文字、五层主题色、标志与圆角，页面不刷新。",
+        "evidence": "adapted",
+        "referenceUrl": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/0",
+        "observation": "{\"title\":\"Web Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site\",\"type\":\"实例\",\"note\":\"Web 配色、字体、顶栏、侧栏、卡片、文档与详情吸附、过渡的数值来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/1",
+        "observation": "{\"title\":\"Motion Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site\",\"type\":\"实例\",\"note\":\"Motion 品牌路径、暖色主题、圆角和胶囊当前项及共享骨架来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site",
+        "capturedAt": "2026-10-31"
+      }
+    ],
+    "sourceFiles": [
+      "entries/cases/atlas-sister-sites.json",
+      "docs/cases/atlas-sister-sites.md",
+      "demos/cases/atlas-sister-sites/index.html",
+      "demos/cases/atlas-sister-sites/style.css",
+      "demos/cases/atlas-sister-sites/app.js",
+      "demos/cases/atlas-sister-sites/fidelity.md",
+      "demos/cases/atlas-sister-sites/LICENSES.md",
+      "demos/cases/atlas-sister-sites/source/accent-tiers.html"
+    ]
+  },
+  {
     "id": "activity-title-ticket-overlap",
     "title": "活动标题与票务跨区并置",
     "category": "视觉构成",
@@ -1526,6 +1617,98 @@ window.ATLAS_PATTERNS = [
       "demos/cases/hand-drawn/style.css",
       "entries/cases/hand-drawn.json",
       "docs/cases/hand-drawn.md"
+    ]
+  },
+  {
+    "id": "current-item-emphasis-tiers",
+    "title": "当前项分级强调与中性悬停",
+    "category": "导航与状态",
+    "experienceTypes": [
+      "visual",
+      "structure"
+    ],
+    "summary": "顶栏当前页实心、侧栏当前范围柔和，悬停用中性次级面表达短暂反馈。",
+    "mechanism": "按导航层级分配实心与柔和当前状态，非当前导航悬停改用次级面与正文色；当前项悬停维持原状态，动作按钮单独采用主题色悬停。",
+    "trigger": "切换页面、分类或章节，并悬停非当前导航项",
+    "effect": "全站位置、局部范围与短暂经过各有明确的视觉重量。",
+    "useCases": [
+      "双层导航",
+      "分组目录与文档中心",
+      "带分类侧栏的参考库"
+    ],
+    "avoid": [
+      "让悬停和当前项共用柔和主题底",
+      "把侧栏每一层都做成实心按钮"
+    ],
+    "constraints": [
+      "实心底配 --accent-3-ink，柔和底配 --accent-2 与 650 字重。",
+      "非当前导航悬停使用次级面与正文色；按钮、卡片和正文链接保留各自反馈。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责导航状态的层级分配，与五层配色角色共享语义值；不改变卡片或普通按钮的交互规则。",
+      "pairsWellWith": [
+        "accent-role-tiers"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "使用 aria-current 表达页面、分类与章节位置；Tab 焦点用 --accent-1 轮廓，与悬停状态独立。",
+      "reducedMotion": "当前项和悬停即时更新，减少动态时保留字重、文字与颜色状态。"
+    },
+    "parameters": [
+      {
+        "name": "全站当前页",
+        "value": "--accent-3 / --accent-3-ink",
+        "note": "固定提交顶栏与手机全站导航。"
+      },
+      {
+        "name": "局部当前项",
+        "value": "--accent-4 / --accent-2；font-weight:650",
+        "note": "固定提交侧栏、手机本页目录；Demo 本文目录采用同样柔和样式。"
+      },
+      {
+        "name": "导航悬停",
+        "value": "surface-2 / ink",
+        "note": "Web #51 与固定提交源码，中性次级面，无主题色描边。"
+      }
+    ],
+    "prompt": "把导航当前项分成两级：顶栏与手机全站导航用 --accent-3 实心底、--accent-3-ink 字；侧栏、手机本页目录及本文目录用 --accent-4 柔和底、--accent-2 字和 650 字重。非当前导航悬停使用 surface-2 底加 ink 正文色，无主题色描边；当前项悬停维持当前样式。每个位置同步 aria-current，焦点轮廓用 --accent-1。通用按钮悬停仍可用柔和主题底，卡片与正文链接沿用自己的反馈。Web 当前项圆角 4px，Motion 顶栏 999px 胶囊；减少动态即时更新状态。",
+    "sources": [
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#interaction/1",
+        "observation": "顶栏当前页与手机全站导航当前页使用 --accent-3 底和 --accent-3-ink 字；侧栏和本文目录使用 --accent-4 底、--accent-2 字与 650 字重，非当前导航悬停使用次级面与正文色。",
+        "evidence": "adapted",
+        "referenceUrl": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/0",
+        "observation": "{\"title\":\"Web Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site\",\"type\":\"实例\",\"note\":\"Web 配色、字体、顶栏、侧栏、卡片、文档与详情吸附、过渡的数值来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/1",
+        "observation": "{\"title\":\"Motion Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site\",\"type\":\"实例\",\"note\":\"Motion 品牌路径、暖色主题、圆角和胶囊当前项及共享骨架来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site",
+        "capturedAt": "2026-10-31"
+      }
+    ],
+    "sourceFiles": [
+      "entries/cases/atlas-sister-sites.json",
+      "docs/cases/atlas-sister-sites.md",
+      "demos/cases/atlas-sister-sites/index.html",
+      "demos/cases/atlas-sister-sites/style.css",
+      "demos/cases/atlas-sister-sites/app.js",
+      "demos/cases/atlas-sister-sites/fidelity.md",
+      "demos/cases/atlas-sister-sites/LICENSES.md",
+      "demos/cases/atlas-sister-sites/source/emphasis.html"
     ]
   },
   {
@@ -6081,6 +6264,96 @@ window.ATLAS_PATTERNS = [
     "prompt": "为【目标页面/组件】实现「已创建挂件跨场景保留」。创建过程结束后将结果挂件先放大展示，再缩到固定角落；后台界面切换到管理列表时挂件持续存在，最后通过已安装项确认结果归属。 触发：创建过程完成并转入管理场景。结果：用户看到生成、可用与被管理的是同一个对象。 挂件状态不能在场景交接时重置；放大与紧凑形态共享同一内容。 手机保留挂件与管理器的对应关系，同时避免遮住列表的主要信息。 负责成果身份连续性，前序可搭配过程折叠，运行控制交给独立暂停生命周期。 键盘：暂停按钮可键盘操作；图解内部不伪造可编辑输入或可点击安装。 减少动态：呈现挂件与管理器已安装项的稳定终态，并给出过程说明。 实施前读取来源源码、研究与复现边界，不以本Prompt替代代码。"
   },
   {
+    "id": "persistent-header-page-transition",
+    "title": "顶栏不动的页面切换",
+    "category": "导航与状态",
+    "experienceTypes": [
+      "page-motion"
+    ],
+    "summary": "为顶栏单独命名快照，主体短淡化切换，持续保留页面位置。",
+    "mechanism": "支持 View Transition 且不减少动态时，把 hash 路由的 DOM 更新包入 startViewTransition；根过渡 140ms ease-out，atlas-header 组与新快照无动画，隐藏旧顶栏快照。",
+    "trigger": "列表、详情与文档之间切换，或前后更换详情",
+    "effect": "主体平顺交接，顶栏在同一位置保持连续。",
+    "useCases": [
+      "多页参考库",
+      "同文档 hash 路由",
+      "共享顶栏的内容工具"
+    ],
+    "avoid": [
+      "整页和顶栏一起淡化",
+      "减少动态时仍强制创建过渡"
+    ],
+    "constraints": [
+      "固定的 view-transition-name 必须只对应一个顶栏元素；顶栏在首次切换前已经存在。",
+      "不支持 startViewTransition 或命中减少动态时直接更新 DOM，滚动和焦点处理归路由。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责主体交接时保留顶栏，布局和作品内部播放保持独立；与吸附双栏组合时先释放旧页观察器。",
+      "pairsWellWith": [
+        "shorter-column-sticky"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "路由更新后将焦点放到正文容器并防止额外滚动；原生导航可由键盘激活，当前页同步 aria-current。",
+      "reducedMotion": "不调用 startViewTransition，直接执行同一个 DOM 更新函数。"
+    },
+    "parameters": [
+      {
+        "name": "根过渡",
+        "value": "140ms ease-out",
+        "note": "两站固定提交共享 CSS。"
+      },
+      {
+        "name": "顶栏名称",
+        "value": "atlas-header",
+        "note": "两站固定提交；Demo 沿用相同名称。"
+      },
+      {
+        "name": "顶栏快照",
+        "value": "group/new animation:none；old display:none",
+        "note": "固定提交共享 CSS。"
+      }
+    ],
+    "prompt": "在共享顶栏的 hash 路由中，支持 document.startViewTransition 且 prefers-reduced-motion 不为 reduce 时，用 startViewTransition 包住 DOM 更新，其他情况直接调用同一更新函数。在不减少动态的媒体查询中给唯一顶栏 view-transition-name:atlas-header；根 group、old、new 过渡 140ms ease-out；atlas-header 组与新快照 animation:none，旧快照 display:none，新快照 mix-blend-mode:normal。路由负责滚动复位、正文焦点与 aria-current。跨文档站点另用 @view-transition{navigation:auto}；Demo 只演示同文档切换。",
+    "sources": [
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#interaction/4",
+        "observation": "hash 驱动列表、详情与文档的 DOM 更新；支持 startViewTransition 且不减少动态时开启 140ms ease-out 根过渡，atlas-header 快照无动画、旧快照隐藏；不支持或减少动态时直接更新。",
+        "evidence": "adapted",
+        "referenceUrl": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/0",
+        "observation": "{\"title\":\"Web Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site\",\"type\":\"实例\",\"note\":\"Web 配色、字体、顶栏、侧栏、卡片、文档与详情吸附、过渡的数值来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/1",
+        "observation": "{\"title\":\"Motion Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site\",\"type\":\"实例\",\"note\":\"Motion 品牌路径、暖色主题、圆角和胶囊当前项及共享骨架来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site",
+        "capturedAt": "2026-10-31"
+      }
+    ],
+    "sourceFiles": [
+      "entries/cases/atlas-sister-sites.json",
+      "docs/cases/atlas-sister-sites.md",
+      "demos/cases/atlas-sister-sites/index.html",
+      "demos/cases/atlas-sister-sites/style.css",
+      "demos/cases/atlas-sister-sites/app.js",
+      "demos/cases/atlas-sister-sites/fidelity.md",
+      "demos/cases/atlas-sister-sites/LICENSES.md"
+    ]
+  },
+  {
     "id": "photo-crossfade-cycle",
     "title": "给摄影留阅读时间的淡化轮换",
     "category": "加载与媒体",
@@ -7722,6 +7995,102 @@ window.ATLAS_PATTERNS = [
       "demos/cases/line-art/style.css",
       "entries/cases/line-art.json",
       "docs/cases/line-art.md"
+    ]
+  },
+  {
+    "id": "shorter-column-sticky",
+    "title": "较短一栏吸附的两栏详情",
+    "category": "内容组织",
+    "experienceTypes": [
+      "structure"
+    ],
+    "summary": "一个页面滚动条中保持舞台可见，说明更短时也吸附，最终随容器结束。",
+    "mechanism": "ResizeObserver 读取操作栏和两栏实高，舞台列始终设为 sticky；说明比舞台短时同时 sticky。两栏共享正 top 与网格容器，末尾由自然 sticky 边界收束。",
+    "trigger": "上下滚动双栏详情，或改变说明长度与视口尺寸",
+    "effect": "阅读说明时能持续观看舞台，较短说明也保留在阅读范围。",
+    "useCases": [
+      "作品与说明并行的详情页",
+      "演示与 Prompt 双栏",
+      "高度可变的参考资料"
+    ],
+    "avoid": [
+      "按高栏计算负 top 让舞台先消失",
+      "让左右栏分别内部滚动"
+    ],
+    "constraints": [
+      "舞台始终吸附，说明较短时也吸附；top 为顶栏加操作栏实高加留白。",
+      "网格 align-items:start，两栏及最后子项无下外边距；单列时取消吸附。"
+    ],
+    "composition": {
+      "role": "support",
+      "notes": "负责舞台与说明的空间协调，保留原生页面滚动；与页面过渡组合时路由离开要释放观察器。",
+      "pairsWellWith": [
+        "native-document-reading",
+        "persistent-header-page-transition"
+      ],
+      "conflicts": []
+    },
+    "accessibility": {
+      "keyboard": "操作按钮使用原生 button；Tab 按文档顺序经过舞台控制和说明，焦点轮廓清楚。",
+      "reducedMotion": "吸附依靠布局，减少动态时保留滚动与可达内容，取消画面动画和视图宽度过渡。"
+    },
+    "parameters": [
+      {
+        "name": "桌面网格",
+        "value": "minmax(0,2fr) minmax(340px,1fr); gap:32px",
+        "note": "Web 固定提交 cases-layout.css。"
+      },
+      {
+        "name": "吸附偏移",
+        "value": "68px + 操作栏实高 + 24px",
+        "note": "Web 固定提交 detail-layout.js；Demo 操作栏 69px，top 161px。"
+      },
+      {
+        "name": "断点",
+        "value": "1160px 起吸附；≤1159px 单列",
+        "note": "固定提交源码。"
+      },
+      {
+        "name": "教学长度",
+        "value": "8 节 / 2 节",
+        "note": "本案例本地新增，切换两栏长短分支。"
+      }
+    ],
+    "prompt": "为作品详情实现共享页面滚动的 2:1 双栏，间距 32px、align-items:start，说明栏最小 340px。舞台列在 1160px 起始终 position:sticky；读取顶栏、操作栏、舞台、说明的实际高度，top 为顶栏高加操作栏高加 24px。说明比舞台短时也使用同一 sticky 偏移。用 ResizeObserver 和 resize 重算，路由离开断开观察器；两栏不加固定高或内部滚动。末尾由网格容器自然约束 sticky，两栏和最后子项下外边距为 0，容器后留 48px 接页脚。≤1159px 回单列并取消吸附。用 8 节与 2 节说明按钮演示长短关系，保留键盘操作和减少动态下的内容。",
+    "sources": [
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#interaction/3",
+        "observation": "详情以 ResizeObserver 读取顶栏、操作栏、舞台列与说明栏：1160px 起舞台列始终 sticky，说明比舞台短时同时 sticky；top 为顶栏 68px 加操作栏实高加 24px，两栏在容器末尾按自然 sticky 边界结束；1159px 及以下单列。",
+        "evidence": "adapted",
+        "referenceUrl": "https://mibxr-design-atlas.mibxranime.chatgpt.site/",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/0",
+        "observation": "{\"title\":\"Web Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site\",\"type\":\"实例\",\"note\":\"Web 配色、字体、顶栏、侧栏、卡片、文档与详情吸附、过渡的数值来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/web-atlas/tree/2541e56a21d5321717b9397c14ae09462d562ee4/site",
+        "capturedAt": "2026-10-31"
+      },
+      {
+        "caseId": "atlas-sister-sites",
+        "locator": "entries/cases/atlas-sister-sites.json#sources/1",
+        "observation": "{\"title\":\"Motion Atlas · 固定提交源码\",\"url\":\"https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site\",\"type\":\"实例\",\"note\":\"Motion 品牌路径、暖色主题、圆角和胶囊当前项及共享骨架来源。\"}",
+        "evidence": "adapted",
+        "referenceUrl": "https://github.com/MIBXR/motion-atlas/tree/80aac18cd2fcef4a97e53b1ef9227a223136ff60/site",
+        "capturedAt": "2026-10-31"
+      }
+    ],
+    "sourceFiles": [
+      "entries/cases/atlas-sister-sites.json",
+      "docs/cases/atlas-sister-sites.md",
+      "demos/cases/atlas-sister-sites/index.html",
+      "demos/cases/atlas-sister-sites/style.css",
+      "demos/cases/atlas-sister-sites/app.js",
+      "demos/cases/atlas-sister-sites/fidelity.md",
+      "demos/cases/atlas-sister-sites/LICENSES.md"
     ]
   },
   {

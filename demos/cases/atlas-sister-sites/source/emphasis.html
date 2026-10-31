@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>当前项加重样式对照</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 28px; background: #e9e9e7; color: #1d1d1f; font: 14px/1.6 "Segoe UI", "Microsoft YaHei", sans-serif; }
+  h1 { font-size: 22px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 30px 0 10px; }
+  p.lead { margin: 0; color: #555; max-width: 980px; }
+  .row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .cap { font-size: 12px; color: #555; margin: 6px 0 0; }
+  .mock { border-radius: 10px; overflow: hidden; background: var(--bg); color: var(--tx); border: 1px solid rgba(0,0,0,.15); font-size: 11px; }
+  .hd { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-bottom: 1px solid var(--ln); }
+  .logo { width: 12px; height: 12px; border-radius: var(--rs); background: var(--ac); margin-right: 4px; }
+  .nav { padding: 3px 8px; border-radius: var(--rn); color: var(--tx2); }
+  .bd { display: grid; grid-template-columns: 42% 1fr; gap: 10px; padding: 10px; }
+  .rail { background: var(--sf); border: 1px solid var(--sl); border-radius: var(--rl); padding: 8px; display: grid; gap: 3px; }
+  .rail small { color: var(--tx2); font-size: 9px; letter-spacing: .1em; margin: 2px 4px; }
+  .it { display: flex; justify-content: space-between; padding: 5px 7px; border-radius: var(--rs); color: var(--tx2); }
+  .main { display: grid; gap: 8px; align-content: start; }
+  .card { background: var(--sf); border: 1px solid var(--sl); border-radius: var(--rl); height: 54px; }
+  .btn { justify-self: end; padding: 5px 10px; border-radius: var(--rb); background: var(--ac); color: var(--acx); font-weight: 600; }
+  .strong { background: var(--ac); color: var(--acx); font-weight: 650; }
+  .soft { background: var(--soft); color: var(--softx); font-weight: 650; }
+</style>
+</head>
+<body>
+<h1>当前项加重样式对照</h1>
+<p class="lead">每格是同一套迷你页面：顶栏当前项“案例库”、侧栏当前项“全部”、主按钮“复制 Prompt”。三种组合（A／B／C）各画两站的浅色与深色。“复制 Prompt”在三种组合里都是主题色实心。</p>
+<div id="root"></div>
+<script>
+const sites = {
+  web: { name: 'Web', rs: '4px', rn: '4px', rl: '10px', rb: '7px',
+    light: { bg: '#f4f5ee', tx: '#252822', tx2: '#62695b', ln: '#dcded4', sf: '#ffffff', sl: '#dfe1d7', ac: '#d4ef76', acx: '#252822', soft: '#eef6d2', softx: '#4b6118' },
+    dark: { bg: '#121313', tx: '#edf0e6', tx2: '#b3b8ad', ln: '#2c2f2b', sf: '#1c201b', sl: '#343b31', ac: '#d4ef76', acx: '#252822', soft: '#2a3320', softx: '#d4ef76' } },
+  motion: { name: 'Motion', rs: '8px', rn: '999px', rl: '16px', rb: '12px',
+    light: { bg: '#f6f4ef', tx: '#17181b', tx2: '#6a6862', ln: '#d9d3c6', sf: '#ffffff', sl: '#e2ddd2', ac: '#df3f17', acx: '#ffffff', soft: 'rgba(223,63,23,.1)', softx: '#df3f17' },
+    dark: { bg: '#0c0d0f', tx: '#ecebe6', tx2: '#9a948c', ln: '#2a2d33', sf: '#1a1816', sl: '#2f2b27', ac: '#ff5b2e', acx: '#160804', soft: 'rgba(255,91,46,.18)', softx: '#ff5b2e' } },
+};
+const combos = [
+  ['A · 都用强调', 'strong', 'strong', '顶栏与侧栏当前项都是主题色实心（Web 现状）。'],
+  ['B · 顶栏强调、侧栏柔和', 'strong', 'soft', '顶栏像可点的按钮用实心；侧栏表示状态用浅底 + 主题色字（Motion 现状）。'],
+  ['C · 都用柔和', 'soft', 'soft', '顶栏与侧栏当前项都用浅底 + 主题色字；实心只留给“复制 Prompt”。'],
+];
+const root = document.getElementById('root');
+for (const [title, navCls, railCls, note] of combos) {
+  let html = `<h2>${title}</h2><p class="lead">${note}</p><div class="row">`;
+  for (const key of ['web', 'motion']) for (const mode of ['light', 'dark']) {
+    const s = sites[key], v = { ...s[mode], rs: s.rs, rn: s.rn, rl: s.rl, rb: s.rb };
+    const style = Object.entries(v).map(([k, val]) => `--${k}:${val}`).join(';');
+    html += `<div><div class="mock" style="${style}">
+      <div class="hd"><span class="logo"></span><span class="nav">首页</span><span class="nav ${navCls}">案例库</span><span class="nav">巧思库</span></div>
+      <div class="bd"><div class="rail"><small>分类</small><span class="it ${railCls}">全部<b>19</b></span><span class="it">影像视频<b>18</b></span><span class="it">交互操作台<b>1</b></span></div>
+      <div class="main"><span class="btn">复制 Prompt</span><div class="card"></div><div class="card"></div></div></div>
+    </div><p class="cap">${s.name} · ${mode === 'light' ? '浅色' : '深色'}</p></div>`;
+  }
+  root.insertAdjacentHTML('beforeend', html + '</div>');
+}
+</script>
+</body>
+</html>
